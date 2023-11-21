@@ -1,0 +1,20 @@
+<preCompilationAnalysis file="C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play_utils.c">
+  <fCall global="true" name="ReadUnsigned"/>
+  <fCall global="true" name="ReadUnsigned.maxcores"/>
+  <fCall global="true" name="f_read.maxcores"/>
+  <fCall global="true" name="ReadUnsigned.maxtimers"/>
+  <fCall global="true" name="f_read.maxtimers"/>
+  <fCall global="true" name="ReadUnsigned.maxchanends"/>
+  <fCall global="true" name="f_read.maxchanends"/>
+  <fCall global="true" name="WriteHexString"/>
+  <fCall global="true" name="WriteHexString.nstackwords"/>
+  <fCall global="true" name="debug_printf.nstackwords"/>
+  <fCall global="true" name="WriteHexString.maxcores"/>
+  <fCall global="true" name="debug_printf.maxcores"/>
+  <fCall global="true" name="WriteHexString.maxtimers"/>
+  <fCall global="true" name="debug_printf.maxtimers"/>
+  <fCall global="true" name="WriteHexString.maxchanends"/>
+  <fCall global="true" name="debug_printf.maxchanends"/>
+  <fCall global="true" name="f_read"/>
+  <fCall global="true" name="debug_printf"/>
+</preCompilationAnalysis>

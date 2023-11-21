@@ -1,0 +1,5 @@
+<preCompilationAnalysis file="C:/Users/takaaki/git/lib_trycatch/lib_trycatch/src/trycatch_asm.S">
+  <fCall global="true" name="trycatch_trap_handler"/>
+  <fCall global="true" name="trycatch_state"/>
+  <fCall global="true" name="longjmp"/>
+</preCompilationAnalysis>

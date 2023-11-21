@@ -1,0 +1,8 @@
+<preCompilationAnalysis file="C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/ogg_mapping.c">
+  <fCall global="true" name="FLAC__OGG_MAPPING_PACKET_TYPE_LEN"/>
+  <fCall global="true" name="FLAC__OGG_MAPPING_FIRST_HEADER_PACKET_TYPE"/>
+  <fCall global="true" name="FLAC__OGG_MAPPING_MAGIC"/>
+  <fCall global="true" name="FLAC__OGG_MAPPING_VERSION_MAJOR_LEN"/>
+  <fCall global="true" name="FLAC__OGG_MAPPING_VERSION_MINOR_LEN"/>
+  <fCall global="true" name="FLAC__OGG_MAPPING_NUM_HEADERS_LEN"/>
+</preCompilationAnalysis>

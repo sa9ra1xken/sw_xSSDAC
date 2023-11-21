@@ -1,0 +1,14 @@
+ .build/_m_human_interface/src/display_control.xc.o:
+ .build/_m_flash_memory_server/src/qspi_access.xc.o:
+ .build/_m_human_interface/src/button_listener.xc.o:
+ .build/_m_hw_support_xSSDAC-SD-V1/src/audiohw.xc.o:
+ .build/_m_i2c_single_port/src/i2c-sp.xc.o:
+ .build/_m_oled_SSD1306/src/OLED_SSD1306.xc.o:
+ .build/_m_sd_audio/src/decoupler.xc.o:
+ .build/_m_sd_audio/src/main.xc.o:
+ .build/_m_sd_audio/src/timing.xc.o:
+ .build/_m_ssdac/src/ring_buffer.xc.o:
+ .build/_m_ssdac/src/sinc4.xc.o:
+ .build/_m_sdcard4bit/src/SDCardHost4Bit.xc.o:
+ .build/_m_ssdac/src/sinc8.xc.o:
+ .build/_m_ssdac/src/ssdac.xc.o:

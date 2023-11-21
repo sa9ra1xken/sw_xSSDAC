@@ -1,0 +1,9 @@
+<preCompilationAnalysis file="C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/cpu.c">
+  <fCall global="true" name="FLAC__cpu_info"/>
+  <fCall global="true" name="FLAC__cpu_info.nstackwords"/>
+  <fCall global="true" name="memset.nstackwords"/>
+  <fCall global="true" name="FLAC__cpu_info.maxcores"/>
+  <fCall global="true" name="FLAC__cpu_info.maxtimers"/>
+  <fCall global="true" name="FLAC__cpu_info.maxchanends"/>
+  <fCall global="true" name="memset"/>
+</preCompilationAnalysis>

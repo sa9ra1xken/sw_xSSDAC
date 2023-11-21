@@ -1,0 +1,45 @@
+.build/_m_sd_audio/src/play_flac.c.d .build/_m_sd_audio/src/play_flac.c.o .build/_m_sd_audio/src/play_flac.c.pca.xml: \
+  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/play_flac.c \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api\xcore_c.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_chanend.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src\xcore_c_chan_impl.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src/xcore_c_resource_impl.h \
+  C:/Users/takaaki/git/lib_xassert/lib_xassert/api\xassert.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src/xcore_c_macros.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src\xcore_c_exception_impl.h \
+  C:/Users/takaaki/git/lib_trycatch/lib_trycatch/api\trycatch.h \
+  C:/Users/takaaki/git/lib_trycatch/lib_trycatch/src\trycatch_impl.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api\xcore_c_error_codes.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_channel.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_channel_streaming.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_channel_transaction.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_clock.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src\xcore_c_clock_impl.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_hwtimer.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src\xcore_c_hwtimer_impl.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_interrupt.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src\xcore_c_interrupt_impl.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_lock.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src\xcore_c_lock_impl.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_port.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src\xcore_c_port_impl.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_port_protocol.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_select.h \
+  C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src\xcore_c_select_impl.h \
+  C:/Users/takaaki/git/lib_logging/lib_logging/api\debug_print.h \
+  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_human_interface/src\button_listener.h \
+  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\ff.h \
+  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src/integer.h \
+  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src/ffconf.h \
+  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/timing.h \
+  ./././src\customdefines.h \
+  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/decoupler.h \
+  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.h \
+  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_human_interface/src\display_control.h \
+  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play_utils.h \
+  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC\stream_decoder.h \
+  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/export.h \
+  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h \
+  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/ordinals.h \
+  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/test_user_control.h
+
