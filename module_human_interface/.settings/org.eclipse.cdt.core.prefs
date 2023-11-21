@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+environment/project/com.xmos.cdt.toolchain.190249444/XDE_BUILD/delimiter=;
+environment/project/com.xmos.cdt.toolchain.190249444/XDE_BUILD/operation=append
+environment/project/com.xmos.cdt.toolchain.190249444/XDE_BUILD/value=true
+environment/project/com.xmos.cdt.toolchain.190249444/XMOS_MODULE_PATH/delimiter=;
+environment/project/com.xmos.cdt.toolchain.190249444/XMOS_MODULE_PATH/operation=append
+environment/project/com.xmos.cdt.toolchain.190249444/XMOS_MODULE_PATH/value=C\:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE036\\app_usb_aud_xk_216_mc
+environment/project/com.xmos.cdt.toolchain.190249444/append=true
+environment/project/com.xmos.cdt.toolchain.190249444/appendContributed=true
