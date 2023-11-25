@@ -1,0 +1,12 @@
+<preCompilationAnalysis file="C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src/xcore_c_interrupt.c">
+  <fCall global="true" name="interrupt_mask_all"/>
+  <fCall global="true" name="interrupt_mask_all.nstackwords"/>
+  <fCall global="true" name="interrupt_mask_all.maxcores"/>
+  <fCall global="true" name="interrupt_mask_all.maxtimers"/>
+  <fCall global="true" name="interrupt_mask_all.maxchanends"/>
+  <fCall global="true" name="interrupt_unmask_all"/>
+  <fCall global="true" name="interrupt_unmask_all.nstackwords"/>
+  <fCall global="true" name="interrupt_unmask_all.maxcores"/>
+  <fCall global="true" name="interrupt_unmask_all.maxtimers"/>
+  <fCall global="true" name="interrupt_unmask_all.maxchanends"/>
+</preCompilationAnalysis>

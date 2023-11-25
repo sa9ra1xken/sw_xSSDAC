@@ -3,6 +3,8 @@
 	<name>app_sdc_ssdac_xSSDAC-SD-V2</name>
 	<comment></comment>
 	<projects>
+		<project>module_i2c_shared</project>
+		<project>module_i2c_single_port</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -3,6 +3,8 @@
 	<name>module_hw_support_xSSDAC-SD-V1</name>
 	<comment></comment>
 	<projects>
+		<project>module_i2c_shared</project>
+		<project>module_i2c_single_port</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

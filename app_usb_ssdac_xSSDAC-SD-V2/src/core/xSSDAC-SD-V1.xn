@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://www.xmos.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xmos.com http://www.xmos.com">
+  <Type>Board</Type>
+  <Name>xSSDAC_SD-V1</Name>
+  <Declarations>
+    <Declaration>tileref tile[2]</Declaration>
+    <Declaration>tileref usb_tile</Declaration>
+  </Declarations>
+  <Packages>
+    <!-- Package id="0" Type="XS2-UEnA-512-FB236"-->
+    <Package id="0" Type="XS2-UEnA-512-TQ128">
+      <Nodes>
+        <Node Id="0" InPackageId="0" Type="XS2-L16A-512" OscillatorSrc="1" SystemFrequency="500MHz">
+          <Boot>
+            <Source Location="bootFlash"/>
+          </Boot>
+          <Tile Number="0" Reference="tile[0]">
+            <Port Location="XS1_PORT_1B" Name="PORT_SQI_CS"/>
+            <Port Location="XS1_PORT_1C" Name="PORT_SQI_SCLK"/>
+            <Port Location="XS1_PORT_4B" Name="PORT_SQI_SIO"/>
+            <Port Location="XS1_PORT_4A"  Name="PORT_I2C"/>
+			<Port Location="XS1_PORT_8B"  Name="PORT_USER_GPIO"/>
+
+         	<!-- Audio Ports -->
+         	
+			<Port Location="XS1_PORT_1E"  Name="PORT_SPIDAC_MCLK_IN"/>
+			<Port Location="XS1_PORT_1G"  Name="PORT_SPIDAC_CS_N_1"/>
+          	<Port Location="XS1_PORT_1H"  Name="PORT_SPIDAC_CLK_GATE_1"/>
+          	<Port Location="XS1_PORT_1I"  Name="PORT_SPIDAC_RIGHT"/>
+          	<Port Location="XS1_PORT_1J"  Name="PORT_SPIDAC_CLK_GATE_0"/>
+          	<Port Location="XS1_PORT_1K"  Name="PORT_SPIDAC_CS_N_0"/>
+          	<Port Location="XS1_PORT_1L"  Name="PORT_SPIDAC_LEFT"/>
+            
+            <Port Location="XS1_PORT_1M"  Name="PORT_TP23_SOLVER"/>
+			<Port Location="XS1_PORT_1N"  Name="PORT_TP24_INTERPOLATOR"/>
+            <Port Location="XS1_PORT_1O"  Name="PORT_TP25"/>
+			
+          </Tile>
+          <Tile Number="1" Reference="tile[1]">
+            <Port Location="XS1_PORT_1H"  Name="PORT_USB_TX_READYIN"/>
+            <Port Location="XS1_PORT_1J"  Name="PORT_USB_CLK"/>
+            <Port Location="XS1_PORT_1K"  Name="PORT_USB_TX_READYOUT"/>
+            <Port Location="XS1_PORT_1I"  Name="PORT_USB_RX_READY"/>
+            <Port Location="XS1_PORT_1E"  Name="PORT_USB_FLAG0"/>
+            <Port Location="XS1_PORT_1F"  Name="PORT_USB_FLAG1"/>
+            <Port Location="XS1_PORT_1G"  Name="PORT_USB_FLAG2"/>
+            <Port Location="XS1_PORT_8A"  Name="PORT_USB_TXD"/>
+            <Port Location="XS1_PORT_8B"  Name="PORT_USB_RXD"/>
+            <!-- Audio Ports -->
+            <Port Location="XS1_PORT_16B" Name="PORT_MCLK_COUNT"/>              
+         
+         	<Port Location="XS1_PORT_8D"  Name="PORT_HUMAN_INTERFACE"/>
+         	<Port Location="XS1_PORT_4F"  Name="PORT_OLED"/>
+
+     		<Port Location="XS1_PORT_1B"  Name="PORT_SDC_CLK"/>
+     		<Port Location="XS1_PORT_1A"  Name="PORT_SDC_CMD"/>
+     		<Port Location="XS1_PORT_4E"  Name="PORT_SDC_DATA"/>
+         
+         	<Port Location="XS1_PORT_1L"  Name="PORT_TP51_FILE_ACCESS"/>
+         
+         </Tile>
+        </Node>
+        <Node Id="1" InPackageId="1" Type="periph:XS1-SU" Reference="usb_tile" Oscillator="24MHz">
+        </Node>
+      </Nodes>
+      <Links>
+        <Link Encoding="5wire">
+          <LinkEndpoint NodeId="0" Link="8" Delays="52clk,52clk"/>
+          <LinkEndpoint NodeId="1" Link="XL0" Delays="1clk,1clk"/>
+        </Link>
+      </Links>
+    </Package>
+  </Packages>
+  <Nodes>
+    <Node Id="2" Type="device:" RoutingId="0x8000">
+      <Service Id="0" Proto="xscope_host_data(chanend c);">
+        <Chanend Identifier="c" end="3"/>
+      </Service>
+    </Node>
+  </Nodes>
+  <Links>
+    <Link Encoding="2wire" Delays="5clk" Flags="XSCOPE">
+      <LinkEndpoint NodeId="0" Link="XL0"/>
+      <LinkEndpoint NodeId="2" Chanend="1"/>
+    </Link>
+  </Links>
+  <ExternalDevices>
+    <!-- Device NodeId="0" Tile="0" Class="SQIFlash" Name="bootFlash" Type="S25FL116K"-->
+    <Device NodeId="0" Tile="0" Class="SQIFlash" Name="bootFlash" Type="IS25LQ080B">
+      <Attribute Name="PORT_SQI_CS" Value="PORT_SQI_CS"/>
+      <Attribute Name="PORT_SQI_SCLK"   Value="PORT_SQI_SCLK"/>
+      <Attribute Name="PORT_SQI_SIO"  Value="PORT_SQI_SIO"/>
+      <Attribute Name="QE_REGISTER" Value="quad_spi_qe_location_status_reg_0"/>
+      <Attribute Name="QE_BIT" Value="quad_spi_qe_bit_6"/>
+    </Device>
+  </ExternalDevices>
+  <JTAGChain>
+    <JTAGDevice NodeId="0"/>
+  </JTAGChain>
+</Network>

@@ -1,0 +1,410 @@
+<preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc">
+<fDef name="_safe_memcmp" global="true" noreturn="false" doNotSpecialize="true" numParams="3"/>
+<fDef name="_safe_memmove" global="true" noreturn="false" doNotSpecialize="true" numParams="3"/>
+<fDef name="_safe_memset" global="true" noreturn="false" doNotSpecialize="true" numParams="3"/>
+<fDef name="delay_microseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
+<fDef name="delay_milliseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
+<fDef name="delay_seconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
+<fDef name="qspi_if_read" global="true" noreturn="false" doNotSpecialize="false" numParams="4"/>
+<fDef name="qspi_if_write" global="true" noreturn="false" doNotSpecialize="false" numParams="4"/>
+<fDef name="qspi_server" global="true" noreturn="true" doNotSpecialize="false" numParams="1"/>
+<fCall name="delay_ticks_longlong" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="delay_ticks_longlong" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="delay_ticks_longlong" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="memcmp" global="true" numArgs="3">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2">
+    <passThroughArg param="2" caller="_safe_memcmp" global="true"/>
+    <values>
+    </values>
+  </arg>
+</fCall>
+<fCall name="__builtin_array_bound" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="__builtin_trap" global="true" numArgs="0">
+</fCall>
+<fCall name="memmove" global="true" numArgs="3">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2">
+    <passThroughArg param="2" caller="_safe_memmove" global="true"/>
+    <values>
+    </values>
+  </arg>
+</fCall>
+<fCall name="__builtin_array_bound" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="__builtin_trap" global="true" numArgs="0">
+</fCall>
+<fCall name="memset" global="true" numArgs="3">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <passThroughArg param="1" caller="_safe_memset" global="true"/>
+    <values>
+    </values>
+  </arg>
+  <arg num="2">
+    <passThroughArg param="2" caller="_safe_memset" global="true"/>
+    <values>
+    </values>
+  </arg>
+</fCall>
+<fCall name="fl_connectToDevice" global="true" numArgs="3">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2">
+    <values>
+      <value type="intval"><intval isSigned="false" val="6"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="printf" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="fflush" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="__getstdout" global="true" numArgs="0">
+</fCall>
+<fCall name="printf" global="true" numArgs="2">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="fl_getFlashType" global="true" numArgs="0">
+</fCall>
+<fCall name="printf" global="true" numArgs="2">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="fl_getFlashSize" global="true" numArgs="0">
+</fCall>
+<fCall name="printf" global="true" numArgs="2">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="fl_getDataPartitionSize" global="true" numArgs="0">
+</fCall>
+<fCall name="printf" global="true" numArgs="2">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="fl_getNumDataSectors" global="true" numArgs="0">
+</fCall>
+<fCall name="printf" global="true" numArgs="2">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="fl_getDataSectorSize" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="0"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="printf" global="true" numArgs="2">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="fl_getWriteScratchSize" global="true" numArgs="2">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="0"/></value>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="intval"><intval isSigned="true" val="64"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="fflush" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="__getstdout" global="true" numArgs="0">
+</fCall>
+<fCall name="fl_getWriteScratchSize" global="true" numArgs="2">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="_safe_malloc" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="printf" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="fl_writeData" global="true" numArgs="4">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="3">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="printf" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="free" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="free" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="_safe_malloc" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="__builtin_memcpy_xc" global="true" numArgs="3">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <passThroughArg param="2" caller="write" global="true" interface="qspi_access"/>
+    <values>
+    </values>
+  </arg>
+  <arg num="2">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="_safe_malloc" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="fl_readData" global="true" numArgs="3">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="__builtin_memcpy_xc" global="true" numArgs="3">
+  <arg num="0">
+    <passThroughArg param="2" caller="read" global="true" interface="qspi_access"/>
+    <values>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="read" global="true" interface="qspi_access" numArgs="3">
+  <arg num="0">
+    <passThroughArg param="1" caller="qspi_if_read" global="true"/>
+    <values>
+    </values>
+  </arg>
+  <arg num="1">
+    <passThroughArg param="2" caller="qspi_if_read" global="true"/>
+    <values>
+    </values>
+  </arg>
+  <arg num="2">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="write" global="true" interface="qspi_access" numArgs="3">
+  <arg num="0">
+    <passThroughArg param="1" caller="qspi_if_write" global="true"/>
+    <values>
+    </values>
+  </arg>
+  <arg num="1">
+    <passThroughArg param="2" caller="qspi_if_write" global="true"/>
+    <values>
+    </values>
+  </arg>
+  <arg num="2">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+</preCompilationAnalysis>
