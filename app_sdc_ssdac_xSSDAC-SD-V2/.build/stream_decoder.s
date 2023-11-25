@@ -14,20 +14,20 @@
 .Lsection_debug_loc:
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source\\stream_decoder.c"
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\stream_decoder.c"
 	.file	2 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h"
-	.file	3 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC\\ordinals.h"
-	.file	4 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC\\stream_decoder.h"
-	.file	5 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC\\format.h"
+	.file	3 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC\\ordinals.h"
+	.file	4 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC\\stream_decoder.h"
+	.file	5 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC\\format.h"
 	.file	6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys\\_types.h"
 	.file	7 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys\\types.h"
-	.file	8 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected\\stream_decoder.h"
+	.file	8 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected\\stream_decoder.h"
 	.file	9 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h"
 	.file	10 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys\\reent.h"
 	.file	11 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys\\lock.h"
 	.file	12 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h"
-	.file	13 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private\\bitreader.h"
-	.file	14 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private\\md5.h"
+	.file	13 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private\\bitreader.h"
+	.file	14 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private\\md5.h"
 	.section	.cp.rodata.cst4,"aMc",@progbits,4
 	.cc_top .LCPI0_0.data,.LCPI0_0
 	.align	4
@@ -2882,7 +2882,7 @@ FLAC__stream_decoder_set_metadata_respond_application:
 	.loc	1 712 5
 	bf r0, .LBB13_3
 .Ltmp302:
-	.file	15 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share\\alloc.h"
+	.file	15 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share\\alloc.h"
 	.loc	15 275 5
 	bf r1, .LBB13_5
 .Ltmp303:
@@ -22249,9 +22249,9 @@ ID3V2_TAG_:
 .Linfo_string0:
 .asciiz"XMOS-235-acbb966-Dec-01-2019 clang version 3.6.0  (based on LLVM 3.6.0svn)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source\\stream_decoder.c"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\stream_decoder.c"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 .Linfo_string3:
 .asciiz"FLAC_API_SUPPORTS_OGG_FLAC"
 .Linfo_string4:

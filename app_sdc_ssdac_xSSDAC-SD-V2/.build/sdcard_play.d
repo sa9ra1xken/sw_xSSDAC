@@ -1,5 +1,5 @@
 sdcard_play.o: \
-  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.c \
+  C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c \
   C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api\xcore_c.h \
   C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_chanend.h \
   C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src\xcore_c_chan_impl.h \
@@ -27,12 +27,12 @@ sdcard_play.o: \
   C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_select.h \
   C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src\xcore_c_select_impl.h \
   C:/Users/takaaki/git/lib_logging/lib_logging/api\debug_print.h \
-  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\ff.h \
-  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src/integer.h \
-  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src/ffconf.h \
-  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/timing.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\ff.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src/integer.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src/ffconf.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/timing.h \
   .././src\customdefines.h \
-  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_human_interface/src\button_listener.h \
-  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.h \
-  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_human_interface/src\display_control.h \
-  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_flash_memory_server/src\qspi_access.h
+  C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\button_listener.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\display_control.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\qspi_access.h

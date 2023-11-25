@@ -163,7 +163,7 @@ swlock_release:
 .Linfo_string1:
 .asciiz"C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.c"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 .Linfo_string3:
 .asciiz"SWLOCK_NOT_ACQUIRED"
 .Linfo_string4:

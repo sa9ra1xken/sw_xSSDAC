@@ -1,10 +1,10 @@
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/test_user_control.c"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 289 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/test_user_control.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c" 2
 
 
 
@@ -12,8 +12,8 @@
 
 
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.h" 1
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.h" 1
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.h"
 typedef enum {
     _RC_REWIND,
     _RC_NEXT_TRACK,
@@ -23,10 +23,10 @@ typedef enum {
     _RC_PREVIOUS_FOLDER,
     _RC_ERROR
 } PLAY_TRACK_RC;
-# 8 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/test_user_control.c" 2
+# 8 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/test_user_control.h" 1
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/test_user_control.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.h" 1
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.h"
 # 1 "C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api\\xcore_c.h" 1
 
 
@@ -1828,7 +1828,7 @@ uint32_t select_wait_ordered(const resource_t ids[]);
 # 103 "C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_select.h"
 uint32_t select_no_wait_ordered(uint32_t no_wait_id, const resource_t ids[]);
 # 18 "C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api\\xcore_c.h" 2
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/test_user_control.h" 2
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.h" 2
 
 
 typedef enum{
@@ -1846,15 +1846,15 @@ USER_CONTROL_TYPE TestUserControl(
         PLAY_TRACK_RC *rc,
         SKIP_RESULT (*skip_callback)(int)
 );
-# 9 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/test_user_control.c" 2
+# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stdbool.h" 1 3
-# 10 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/test_user_control.c" 2
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c" 2
 
 
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_human_interface/src\\button_listener.h" 1
-# 17 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_human_interface/src\\button_listener.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 1
+# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
 typedef enum {
     _PENDING_Q = 0,
     _INPUT_Q = 1,
@@ -1877,7 +1877,7 @@ typedef enum {
 unsigned QueryChannel(chanend ch, unsigned command);
 
 void button_listener(chanend c_play_control, chanend c_dac_control);
-# 13 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/test_user_control.c" 2
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c" 2
 
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 1 3
@@ -2477,13 +2477,13 @@ typedef struct
   cookie_close_function_t *close;
 } cookie_io_functions_t;
 FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __functions);
-# 15 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/test_user_control.c" 2
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c" 2
 
 
 # 1 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h" 1
 # 77 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h"
 void debug_printf(char fmt[], ...);
-# 17 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/test_user_control.c" 2
+# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c" 2
 
 
 

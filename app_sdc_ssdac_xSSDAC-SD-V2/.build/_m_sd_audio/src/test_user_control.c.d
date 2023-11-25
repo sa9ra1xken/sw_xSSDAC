@@ -1,7 +1,7 @@
 .build/_m_sd_audio/src/test_user_control.c.d .build/_m_sd_audio/src/test_user_control.c.o .build/_m_sd_audio/src/test_user_control.c.pca.xml: \
-  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/test_user_control.c \
-  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.h \
-  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/test_user_control.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c \
+  C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.h \
   C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api\xcore_c.h \
   C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_chanend.h \
   C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src\xcore_c_chan_impl.h \
@@ -28,6 +28,6 @@
   C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_port_protocol.h \
   C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_select.h \
   C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src\xcore_c_select_impl.h \
-  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_human_interface/src\button_listener.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\button_listener.h \
   C:/Users/takaaki/git/lib_logging/lib_logging/api\debug_print.h
 

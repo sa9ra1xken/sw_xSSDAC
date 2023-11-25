@@ -1,15 +1,15 @@
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/cpu.c"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/cpu.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 289 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/cpu.c" 2
-# 37 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/cpu.c"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/cpu.h" 1
-# 37 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/cpu.h"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/ordinals.h" 1
-# 55 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/ordinals.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/cpu.c" 2
+# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/cpu.c"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/cpu.h" 1
+# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/cpu.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/ordinals.h" 1
+# 55 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/ordinals.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h" 1 3
 # 45 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h" 3
 typedef signed char int8_t ;
@@ -72,7 +72,7 @@ typedef uint64_t uint_least64_t;
 # 247 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h" 3
 typedef signed int intptr_t;
 typedef unsigned int uintptr_t;
-# 56 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/ordinals.h" 2
+# 56 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/ordinals.h" 2
 
 typedef int8_t FLAC__int8;
 typedef uint8_t FLAC__uint8;
@@ -89,8 +89,8 @@ typedef uint64_t FLAC__uint64;
 typedef int FLAC__bool;
 
 typedef FLAC__uint8 FLAC__byte;
-# 38 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/cpu.h" 2
-# 154 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/cpu.h"
+# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/cpu.h" 2
+# 154 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/cpu.h"
 typedef enum {
  FLAC__CPUINFO_TYPE_IA32,
  FLAC__CPUINFO_TYPE_X86_64,
@@ -132,9 +132,9 @@ void FLAC__cpu_info(FLAC__CPUInfo *info);
 FLAC__uint32 FLAC__cpu_have_cpuid_asm_ia32(void);
 
 void FLAC__cpu_info_asm_ia32(FLAC__uint32 level, FLAC__uint32 *eax, FLAC__uint32 *ebx, FLAC__uint32 *ecx, FLAC__uint32 *edx);
-# 38 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/cpu.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h" 1
-# 42 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h"
+# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/cpu.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 1
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
 # 55 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 3
 typedef int ptrdiff_t;
@@ -142,13 +142,13 @@ typedef int ptrdiff_t;
 typedef unsigned int size_t;
 # 94 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 3
 typedef unsigned char wchar_t;
-# 43 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h" 2
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stdarg.h" 1 3
 # 31 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stdarg.h" 3
 typedef __builtin_va_list va_list;
 # 51 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stdarg.h" 3
 typedef __builtin_va_list __gnuc_va_list;
-# 44 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h" 2
+# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 2
 
 
 
@@ -602,8 +602,8 @@ ssize_t readlink (const char *__path, char *__buf, size_t __buflen);
 
 int symlink (const char *__name1, const char *__name2);
 # 4 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\unistd.h" 2 3
-# 50 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h" 2
-# 122 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h"
+# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 2
+# 122 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\utime.h" 1 3
 
 
@@ -620,11 +620,11 @@ struct utimbuf
   time_t modtime;
 };
 # 8 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\utime.h" 2 3
-# 123 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h" 2
-# 230 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h"
+# 123 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 2
+# 230 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h"
 int flac_snprintf(char *str, size_t size, const char *fmt, ...);
 int flac_vsnprintf(char *str, size_t size, const char *fmt, va_list va);
-# 39 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/cpu.c" 2
+# 39 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/cpu.c" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdlib.h" 1 3
 # 14 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdlib.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
@@ -876,7 +876,7 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-# 40 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/cpu.c" 2
+# 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/cpu.c" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 1 3
 # 15 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
@@ -948,12 +948,12 @@ char *strupr (char *);
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys/string.h" 1 3
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 2 3
-# 41 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/cpu.c" 2
-# 158 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/cpu.c"
+# 41 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/cpu.c" 2
+# 158 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/cpu.c"
 static void
 x86_cpu_info (FLAC__CPUInfo *info)
 {
-# 227 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/cpu.c"
+# 227 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/cpu.c"
  info->use_asm = 0;
 
 }
@@ -961,7 +961,7 @@ x86_cpu_info (FLAC__CPUInfo *info)
 static void
 ppc_cpu_info (FLAC__CPUInfo *info)
 {
-# 267 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/cpu.c"
+# 267 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/cpu.c"
  info->ppc.arch_2_07 = 0;
  info->ppc.arch_3_00 = 0;
 
@@ -970,7 +970,7 @@ ppc_cpu_info (FLAC__CPUInfo *info)
 void FLAC__cpu_info (FLAC__CPUInfo *info)
 {
  memset(info, 0, sizeof(*info));
-# 283 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/cpu.c"
+# 283 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/cpu.c"
  info->type = FLAC__CPUINFO_TYPE_UNKNOWN;
 
 

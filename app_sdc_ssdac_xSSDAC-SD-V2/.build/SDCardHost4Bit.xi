@@ -1,17 +1,17 @@
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sdcard4bit/src/SDCardHost4Bit.xc"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 141 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sdcard4bit/src/SDCardHost4Bit.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc" 2
 # 1 ".././src\\customdefines.h" 1
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sdcard4bit/src/SDCardHost4Bit.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\diskio.h" 1
-# 12 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\diskio.h"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src/integer.h" 1
-# 16 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src/integer.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\diskio.h" 1
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\diskio.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src/integer.h" 1
+# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src/integer.h"
 typedef int INT;
 typedef unsigned int UINT;
 
@@ -30,7 +30,7 @@ typedef unsigned short WCHAR;
 typedef long LONG;
 typedef unsigned long ULONG;
 typedef unsigned long DWORD;
-# 12 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\diskio.h" 2
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\diskio.h" 2
 
 
 
@@ -58,7 +58,7 @@ DRESULT disk_read (BYTE, BYTE[], DWORD, BYTE);
 DRESULT disk_write (BYTE, const BYTE[], DWORD, BYTE);
 
 DRESULT disk_ioctl (BYTE, BYTE, BYTE[]);
-# 2 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sdcard4bit/src/SDCardHost4Bit.xc" 2
+# 2 "C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc" 2
 
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 1 3
@@ -445,7 +445,7 @@ unsigned get_local_tile_id(void);
 unsigned get_tile_id(tileref t);
 # 2136 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 3
 unsigned get_logical_core_id(void);
-# 4 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sdcard4bit/src/SDCardHost4Bit.xc" 2
+# 4 "C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 1 3
 # 35 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
@@ -454,12 +454,12 @@ unsigned bitrev(unsigned x);
 unsigned byterev(unsigned x);
 # 59 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 int clz(unsigned x);
-# 5 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sdcard4bit/src/SDCardHost4Bit.xc" 2
+# 5 "C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
-# 1 "C:\\\\MEGA\\\\HobbyElec\\\\SSDAC\\\\xSSDAC\\\\xTIME\\\\WORKSPACE\\\\app_sdc_ssdac_xSSDAC-SD-V2\\\\.build\\\\xSSDAC-SD-V2.h" 1 3
-# 13 "C:\\\\MEGA\\\\HobbyElec\\\\SSDAC\\\\xSSDAC\\\\xTIME\\\\WORKSPACE\\\\app_sdc_ssdac_xSSDAC-SD-V2\\\\.build\\\\xSSDAC-SD-V2.h" 3
+# 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_sdc_ssdac_xSSDAC-SD-V2\\\\.build\\\\xSSDAC-SD-V2.h" 1 3
+# 13 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_sdc_ssdac_xSSDAC-SD-V2\\\\.build\\\\xSSDAC-SD-V2.h" 3
 extern tileref tile[2];
 extern tileref usb_tile;
 
@@ -468,7 +468,7 @@ extern tileref usb_tile;
 
 service xscope_host_data(chanend c);;
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 6 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sdcard4bit/src/SDCardHost4Bit.xc" 2
+# 6 "C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc" 2
 
 
 typedef struct SDHostInterface
@@ -476,12 +476,12 @@ typedef struct SDHostInterface
   out port Clk;
   port Cmd;
   port Dat;
-# 28 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sdcard4bit/src/SDCardHost4Bit.xc"
+# 28 "C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
   unsigned long Rca;
   unsigned char Ccs;
   unsigned long BlockNr;
 } SDHostInterface;
-# 40 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sdcard4bit/src/SDCardHost4Bit.xc"
+# 40 "C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 on tile[1]: static SDHostInterface SDif[] =
 
 {
@@ -499,7 +499,7 @@ typedef enum RespType
 {R0, R1, R1B, R2, R3, R6, R7} RESP_TYPE;
 
 typedef unsigned char RESP[17];
-# 71 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sdcard4bit/src/SDCardHost4Bit.xc"
+# 71 "C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 int Is_XS1_G_Core = 0;
 
 #pragma unsafe arrays
@@ -870,9 +870,9 @@ DSTATUS disk_initialize(BYTE IfNum)
   if(IfNum >= sizeof(SDif)/sizeof(SDHostInterface)) return RES_PARERR;
 
   read_sswitch_reg(
-# 440 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sdcard4bit/src/SDCardHost4Bit.xc"
+# 440 "C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 #pragma warning "get_core_id is deprecated, use get_local_tile_id instead"
-# 440 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sdcard4bit/src/SDCardHost4Bit.xc"
+# 440 "C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
  get_local_tile_id(), 0, i);
   Is_XS1_G_Core = ((i & 0xFFFF) == 0x0200) ? 1 : 0;
 

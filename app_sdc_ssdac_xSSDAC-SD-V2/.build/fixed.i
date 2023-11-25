@@ -1,11 +1,11 @@
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/fixed.c"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 289 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/fixed.c" 2
-# 37 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/fixed.c"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c" 2
+# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\math.h" 1 3
 
 
@@ -613,7 +613,7 @@ enum __fdlibm_version
 
 
 extern enum __fdlibm_version __fdlib_version;
-# 38 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/fixed.c" 2
+# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 1 3
 # 15 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
@@ -687,21 +687,21 @@ char *strupr (char *);
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys/string.h" 1 3
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 2 3
-# 39 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/fixed.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h" 1
-# 42 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h"
+# 39 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 1
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
 # 55 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 3
 typedef int ptrdiff_t;
 # 94 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 3
 typedef unsigned char wchar_t;
-# 43 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h" 2
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stdarg.h" 1 3
 # 31 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stdarg.h" 3
 typedef __builtin_va_list va_list;
 # 51 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stdarg.h" 3
 typedef __builtin_va_list __gnuc_va_list;
-# 44 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h" 2
+# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 2
 
 
 
@@ -1006,8 +1006,8 @@ ssize_t readlink (const char *__path, char *__buf, size_t __buflen);
 
 int symlink (const char *__name1, const char *__name2);
 # 4 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\unistd.h" 2 3
-# 50 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h" 2
-# 122 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h"
+# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 2
+# 122 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\utime.h" 1 3
 
 
@@ -1024,15 +1024,15 @@ struct utimbuf
   time_t modtime;
 };
 # 8 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\utime.h" 2 3
-# 123 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h" 2
-# 230 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h"
+# 123 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 2
+# 230 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h"
 int flac_snprintf(char *str, size_t size, const char *fmt, ...);
 int flac_vsnprintf(char *str, size_t size, const char *fmt, va_list va);
-# 40 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/fixed.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitmath.h" 1
-# 37 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitmath.h"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/ordinals.h" 1
-# 55 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/ordinals.h"
+# 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 1
+# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/ordinals.h" 1
+# 55 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/ordinals.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h" 1 3
 # 45 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h" 3
 typedef signed char int8_t ;
@@ -1095,7 +1095,7 @@ typedef uint64_t uint_least64_t;
 # 247 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h" 3
 typedef signed int intptr_t;
 typedef unsigned int uintptr_t;
-# 56 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/ordinals.h" 2
+# 56 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/ordinals.h" 2
 
 typedef int8_t FLAC__int8;
 typedef uint8_t FLAC__uint8;
@@ -1112,10 +1112,10 @@ typedef uint64_t FLAC__uint64;
 typedef int FLAC__bool;
 
 typedef FLAC__uint8 FLAC__byte;
-# 38 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitmath.h" 2
+# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/assert.h" 1
-# 40 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitmath.h" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/assert.h" 1
+# 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
 
 
 
@@ -1161,7 +1161,7 @@ static inline uint32_t FLAC__clz_uint32(FLAC__uint32 v)
 
 
  return __builtin_clz(v);
-# 94 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitmath.h"
+# 94 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -1177,7 +1177,7 @@ static inline uint32_t FLAC__clz_uint64(FLAC__uint64 v)
                     ;
 
  return __builtin_clzll(v);
-# 118 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitmath.h"
+# 118 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -1194,11 +1194,11 @@ static inline uint32_t FLAC__clz2_uint64(FLAC__uint64 v)
   return 64;
  return FLAC__clz_uint64(v);
 }
-# 158 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitmath.h"
+# 158 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 static inline uint32_t FLAC__bitmath_ilog2(FLAC__uint32 v)
 {
                     ;
-# 170 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitmath.h"
+# 170 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
  return FLAC__clz_uint32(v) ^ 31U;
 
 }
@@ -1208,15 +1208,15 @@ static inline uint32_t FLAC__bitmath_ilog2_wide(FLAC__uint64 v)
                     ;
 
  return __builtin_clzll(v) ^ 63U;
-# 208 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitmath.h"
+# 208 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 uint32_t FLAC__bitmath_silog2(FLAC__int64 v);
-# 41 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/fixed.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/fixed.h" 1
-# 41 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/fixed.h"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/cpu.h" 1
-# 154 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/cpu.h"
+# 41 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/fixed.h" 1
+# 41 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/fixed.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/cpu.h" 1
+# 154 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/cpu.h"
 typedef enum {
  FLAC__CPUINFO_TYPE_IA32,
  FLAC__CPUINFO_TYPE_X86_64,
@@ -1258,20 +1258,20 @@ void FLAC__cpu_info(FLAC__CPUInfo *info);
 FLAC__uint32 FLAC__cpu_have_cpuid_asm_ia32(void);
 
 void FLAC__cpu_info_asm_ia32(FLAC__uint32 level, FLAC__uint32 *eax, FLAC__uint32 *ebx, FLAC__uint32 *ecx, FLAC__uint32 *edx);
-# 42 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/fixed.h" 2
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/fixed.h" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/float.h" 1
-# 56 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/float.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/float.h" 1
+# 56 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/float.h"
 typedef float FLAC__real;
-# 44 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/fixed.h" 2
+# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/fixed.h" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h" 1
-# 36 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/export.h" 1
-# 107 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/export.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h" 1
+# 36 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/export.h" 1
+# 107 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/export.h"
 extern int FLAC_API_SUPPORTS_OGG_FLAC;
-# 37 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h" 2
-# 159 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h" 2
+# 159 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
 extern const char *FLAC__VERSION_STRING;
 
 
@@ -1290,7 +1290,7 @@ extern const uint32_t FLAC__STREAM_SYNC;
 
 
 extern const uint32_t FLAC__STREAM_SYNC_LEN;
-# 191 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 191 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
 typedef enum {
  FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE = 0,
 
@@ -1461,7 +1461,7 @@ typedef struct {
  } data;
  uint32_t wasted_bits;
 } FLAC__Subframe;
-# 369 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 369 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
 extern const uint32_t FLAC__SUBFRAME_ZERO_PAD_LEN;
 extern const uint32_t FLAC__SUBFRAME_TYPE_LEN;
 extern const uint32_t FLAC__SUBFRAME_WASTED_BITS_FLAG_LEN;
@@ -1470,7 +1470,7 @@ extern const uint32_t FLAC__SUBFRAME_TYPE_CONSTANT_BYTE_ALIGNED_MASK;
 extern const uint32_t FLAC__SUBFRAME_TYPE_VERBATIM_BYTE_ALIGNED_MASK;
 extern const uint32_t FLAC__SUBFRAME_TYPE_FIXED_BYTE_ALIGNED_MASK;
 extern const uint32_t FLAC__SUBFRAME_TYPE_LPC_BYTE_ALIGNED_MASK;
-# 388 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 388 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
 typedef enum {
  FLAC__CHANNEL_ASSIGNMENT_INDEPENDENT = 0,
  FLAC__CHANNEL_ASSIGNMENT_LEFT_SIDE = 1,
@@ -1568,7 +1568,7 @@ typedef struct {
  FLAC__Subframe subframes[(8u)];
  FLAC__FrameFooter footer;
 } FLAC__Frame;
-# 496 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 496 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
 typedef enum {
 
  FLAC__METADATA_TYPE_STREAMINFO = 0,
@@ -1669,14 +1669,14 @@ typedef struct {
 extern const uint32_t FLAC__STREAM_METADATA_SEEKPOINT_SAMPLE_NUMBER_LEN;
 extern const uint32_t FLAC__STREAM_METADATA_SEEKPOINT_STREAM_OFFSET_LEN;
 extern const uint32_t FLAC__STREAM_METADATA_SEEKPOINT_FRAME_SAMPLES_LEN;
-# 604 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 604 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
 extern const FLAC__uint64 FLAC__STREAM_METADATA_SEEKPOINT_PLACEHOLDER;
-# 619 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 619 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
 typedef struct {
  uint32_t num_points;
  FLAC__StreamMetadata_SeekPoint *points;
 } FLAC__StreamMetadata_SeekTable;
-# 631 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 631 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
 typedef struct {
  FLAC__uint32 length;
  FLAC__byte *entry;
@@ -1827,7 +1827,7 @@ typedef struct {
 
 
  char *mime_type;
-# 791 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 791 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
  FLAC__byte *description;
 
 
@@ -1907,44 +1907,44 @@ typedef struct FLAC__StreamMetadata {
 extern const uint32_t FLAC__STREAM_METADATA_IS_LAST_LEN;
 extern const uint32_t FLAC__STREAM_METADATA_TYPE_LEN;
 extern const uint32_t FLAC__STREAM_METADATA_LENGTH_LEN;
-# 890 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 890 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
          FLAC__bool FLAC__format_sample_rate_is_valid(uint32_t sample_rate);
-# 902 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 902 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
          FLAC__bool FLAC__format_blocksize_is_subset(uint32_t blocksize, uint32_t sample_rate);
-# 913 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 913 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
          FLAC__bool FLAC__format_sample_rate_is_subset(uint32_t sample_rate);
-# 927 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 927 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
          FLAC__bool FLAC__format_vorbiscomment_entry_name_is_legal(const char *name);
-# 943 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 943 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
          FLAC__bool FLAC__format_vorbiscomment_entry_value_is_legal(const FLAC__byte *value, uint32_t length);
-# 960 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 960 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
          FLAC__bool FLAC__format_vorbiscomment_entry_is_legal(const FLAC__byte *entry, uint32_t length);
-# 972 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 972 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
          FLAC__bool FLAC__format_seektable_is_legal(const FLAC__StreamMetadata_SeekTable *seek_table);
-# 986 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 986 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
          uint32_t FLAC__format_seektable_sort(FLAC__StreamMetadata_SeekTable *seek_table);
-# 1006 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 1006 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
          FLAC__bool FLAC__format_cuesheet_is_legal(const FLAC__StreamMetadata_CueSheet *cue_sheet, FLAC__bool check_cd_da_subset, const char **violation);
-# 1024 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC/format.h"
+# 1024 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/format.h"
          FLAC__bool FLAC__format_picture_is_legal(const FLAC__StreamMetadata_Picture *picture, const char **violation);
-# 46 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/fixed.h" 2
-# 60 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/fixed.h"
+# 46 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/fixed.h" 2
+# 60 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/fixed.h"
 uint32_t FLAC__fixed_compute_best_predictor(const FLAC__int32 data[], uint32_t data_len, float residual_bits_per_sample[(4u)+1]);
 uint32_t FLAC__fixed_compute_best_predictor_wide(const FLAC__int32 data[], uint32_t data_len, float residual_bits_per_sample[(4u)+1]);
 uint32_t FLAC__fixed_compute_best_predictor_limit_residual(const FLAC__int32 data[], uint32_t data_len, float residual_bits_per_sample[(4u)+1]);
 uint32_t FLAC__fixed_compute_best_predictor_limit_residual_33bit(const FLAC__int64 data[], uint32_t data_len, float residual_bits_per_sample[(4u)+1]);
-# 94 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/fixed.h"
+# 94 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/fixed.h"
 void FLAC__fixed_compute_residual(const FLAC__int32 data[], uint32_t data_len, uint32_t order, FLAC__int32 residual[]);
 void FLAC__fixed_compute_residual_wide(const FLAC__int32 data[], uint32_t data_len, uint32_t order, FLAC__int32 residual[]);
 void FLAC__fixed_compute_residual_wide_33bit(const FLAC__int64 data[], uint32_t data_len, uint32_t order, FLAC__int32 residual[]);
-# 111 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/fixed.h"
+# 111 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/fixed.h"
 void FLAC__fixed_restore_signal(const FLAC__int32 residual[], uint32_t data_len, uint32_t order, FLAC__int32 data[]);
 void FLAC__fixed_restore_signal_wide(const FLAC__int32 residual[], uint32_t data_len, uint32_t order, FLAC__int32 data[]);
 void FLAC__fixed_restore_signal_wide_33bit(const FLAC__int32 residual[], uint32_t data_len, uint32_t order, FLAC__int64 data[]);
-# 42 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/fixed.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/macros.h" 1
-# 43 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/fixed.c" 2
-# 222 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/fixed.c"
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/macros.h" 1
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c" 2
+# 222 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c"
 uint32_t FLAC__fixed_compute_best_predictor(const FLAC__int32 data[], uint32_t data_len, float residual_bits_per_sample[(4u)+1])
 
 
@@ -1952,7 +1952,7 @@ uint32_t FLAC__fixed_compute_best_predictor(const FLAC__int32 data[], uint32_t d
 {
  FLAC__uint32 total_error_0 = 0, total_error_1 = 0, total_error_2 = 0, total_error_3 = 0, total_error_4 = 0;
  uint32_t order;
-# 252 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/fixed.c"
+# 252 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c"
  int i;
  for(i = 0; i < (int)data_len; i++) {
   total_error_0 += ((uint32_t)((data[i])<0? -(data[i]) : (data[i])));
@@ -1990,7 +1990,7 @@ uint32_t FLAC__fixed_compute_best_predictor(const FLAC__int32 data[], uint32_t d
  residual_bits_per_sample[2] = (float)((total_error_2 > 0) ? log(0.69314718055994530942 * (double)total_error_2 / (double)data_len) / 0.69314718055994530942 : 0.0);
  residual_bits_per_sample[3] = (float)((total_error_3 > 0) ? log(0.69314718055994530942 * (double)total_error_3 / (double)data_len) / 0.69314718055994530942 : 0.0);
  residual_bits_per_sample[4] = (float)((total_error_4 > 0) ? log(0.69314718055994530942 * (double)total_error_4 / (double)data_len) / 0.69314718055994530942 : 0.0);
-# 297 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/fixed.c"
+# 297 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c"
  return order;
 }
 
@@ -2038,10 +2038,10 @@ uint32_t FLAC__fixed_compute_best_predictor_wide(const FLAC__int32 data[], uint3
  residual_bits_per_sample[2] = (float)((total_error_2 > 0) ? log(0.69314718055994530942 * (double)total_error_2 / (double)data_len) / 0.69314718055994530942 : 0.0);
  residual_bits_per_sample[3] = (float)((total_error_3 > 0) ? log(0.69314718055994530942 * (double)total_error_3 / (double)data_len) / 0.69314718055994530942 : 0.0);
  residual_bits_per_sample[4] = (float)((total_error_4 > 0) ? log(0.69314718055994530942 * (double)total_error_4 / (double)data_len) / 0.69314718055994530942 : 0.0);
-# 352 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/fixed.c"
+# 352 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c"
  return order;
 }
-# 377 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/fixed.c"
+# 377 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c"
 uint32_t FLAC__fixed_compute_best_predictor_limit_residual(const FLAC__int32 data[], uint32_t data_len, float residual_bits_per_sample[(4u)+1])
 
 
@@ -2227,7 +2227,7 @@ void FLAC__fixed_compute_residual_wide_33bit(const FLAC__int64 data[], uint32_t 
                   ;
  }
 }
-# 571 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/fixed.c"
+# 571 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c"
 void FLAC__fixed_restore_signal(const FLAC__int32 residual[], uint32_t data_len, uint32_t order, FLAC__int32 data[])
 {
  int i, idata_len = (int)data_len;
@@ -2287,7 +2287,7 @@ void FLAC__fixed_restore_signal_wide(const FLAC__int32 residual[], uint32_t data
                   ;
  }
 }
-# 639 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/fixed.c"
+# 639 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c"
 void FLAC__fixed_restore_signal_wide_33bit(const FLAC__int32 residual[], uint32_t data_len, uint32_t order, FLAC__int64 data[])
 {
  int i, idata_len = (int)data_len;

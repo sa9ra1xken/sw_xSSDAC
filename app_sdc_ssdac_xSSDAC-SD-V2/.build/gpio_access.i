@@ -1,14 +1,14 @@
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_hw_support_xSSDAC-SD-V1/src/gpio_access.c"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/gpio_access.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 289 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_hw_support_xSSDAC-SD-V1/src/gpio_access.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_hw_support_xSSDAC-SD-V1/src/gpio_access.h" 1
-# 30 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_hw_support_xSSDAC-SD-V1/src/gpio_access.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/gpio_access.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/gpio_access.h" 1
+# 30 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/gpio_access.h"
 void set_gpio(unsigned bit, unsigned value);
-# 2 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_hw_support_xSSDAC-SD-V1/src/gpio_access.c" 2
+# 2 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/gpio_access.c" 2
 # 1 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h" 1
 
 
@@ -116,7 +116,7 @@ int swlock_try_acquire(swlock_t *lock);
 void swlock_acquire(swlock_t *lock);
 # 67 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h"
 void swlock_release(swlock_t *lock);
-# 3 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_hw_support_xSSDAC-SD-V1/src/gpio_access.c" 2
+# 3 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/gpio_access.c" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 1 3
 # 23 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/timer.h" 1 3
@@ -206,7 +206,7 @@ __attribute__((deprecated)) static inline unsigned get_core_id(void) {
 __attribute__((deprecated)) static inline unsigned get_thread_id(void) {
   return __builtin_getid();
 }
-# 4 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_hw_support_xSSDAC-SD-V1/src/gpio_access.c" 2
+# 4 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/gpio_access.c" 2
 
 swlock_t gpo_swlock = 0;
 

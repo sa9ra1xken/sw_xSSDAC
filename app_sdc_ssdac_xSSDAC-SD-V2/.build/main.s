@@ -1,5 +1,5 @@
 	.text
-	.file	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc"
+	.file	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
                                         # Start of file scope inline assembly
 	.inline_definition delay_seconds
 	.inline_definition delay_milliseconds
@@ -76,7 +76,7 @@
 	main.parinfo.debugstring0:
 	.asciiz "# -1 \"\""
 	main.parinfo.debugstring1:
-	.asciiz "# 96 \"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc\""
+	.asciiz "# 96 \"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc\""
 	.cc_top main.parinfo.cc, main.parinfo
 	.globl main.parinfo
 	.type main.parinfo, @object
@@ -144,21 +144,21 @@
 	.call usage.anon.2,delay_ticks_longlong
 	.call usage.anon.1,delay_ticks_longlong
 	.call usage.anon.0,delay_ticks_longlong
-	.par sdcard_play,decoupler,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par sdcard_play,button_listener,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par sdcard_play,display_control,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par sdcard_play,audio_xss,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par sdcard_play,qspi_server,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par decoupler,button_listener,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par decoupler,display_control,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par decoupler,audio_xss,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par decoupler,qspi_server,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par button_listener,display_control,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par button_listener,audio_xss,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par button_listener,qspi_server,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par display_control,audio_xss,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par display_control,qspi_server,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par audio_xss,qspi_server,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par sdcard_play,decoupler,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par sdcard_play,button_listener,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par sdcard_play,display_control,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par sdcard_play,audio_xss,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par sdcard_play,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par decoupler,button_listener,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par decoupler,display_control,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par decoupler,audio_xss,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par decoupler,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par button_listener,display_control,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par button_listener,audio_xss,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par button_listener,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par display_control,audio_xss,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par display_control,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par audio_xss,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:68:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
 	.set main.locnoside, 0
 	.set main.locnochandec, 0
 	.overlay_subgraph_conflict __main__main_tile_1_task_sdcard_play_0, __main__main_tile_1_task_decoupler_1, __main__main_tile_1_task_button_listener_2, __main__main_tile_1_task_display_control_3
@@ -582,8 +582,8 @@ _i.qspi_access._chan_yield.write:       # @_i.qspi_access._chan_yield.write
 	.cc_top thread_speed.function,thread_speed
 thread_speed:                           # @thread_speed
 .Lfunc_begin4:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src\\main.xc"
-	.loc	1 49 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:49:0
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\main.xc"
+	.loc	1 49 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:49:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -592,7 +592,7 @@ thread_speed:                           # @thread_speed
 		nop
 		dualentsp 0
 	}
-	.loc	1 54 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:54:0
+	.loc	1 54 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:54:0
 .Ltmp18:
 	clrsr 128
 	{
@@ -759,7 +759,7 @@ __main__main_tile_1:                    # @__main__main_tile_1
 	.cc_top __main__main_tile_1_task_sdcard_play_0.function,__main__main_tile_1_task_sdcard_play_0
 __main__main_tile_1_task_sdcard_play_0: # @__main__main_tile_1_task_sdcard_play_0
 .Lfunc_begin6:
-	.loc	1 69 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:69:0
+	.loc	1 69 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -772,7 +772,7 @@ __main__main_tile_1_task_sdcard_play_0: # @__main__main_tile_1_task_sdcard_play_
 		ldc r1, 52
 		dualentsp 2
 	}
-	.loc	1 69 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:69:0
+	.loc	1 69 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:0
 .Ltmp30:
 	{
 		add r1, r0, r1
@@ -786,13 +786,13 @@ __main__main_tile_1_task_sdcard_play_0: # @__main__main_tile_1_task_sdcard_play_
 		nop
 		ldw r1, r0[11]
 	}
-	.loc	1 69 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:69:0
+	.loc	1 69 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:0
 	{
 		mov r0, r3
 		ldw r2, r0[1]
 	}
 .Ltmp31:
-	.loc	1 69 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:69:0
+	.loc	1 69 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:0
 .Lxta.call_labels0:
 	bl sdcard_play
 	{
@@ -816,7 +816,7 @@ __main__main_tile_1_task_sdcard_play_0: # @__main__main_tile_1_task_sdcard_play_
 	.cc_top __main__main_tile_1_task_decoupler_1.function,__main__main_tile_1_task_decoupler_1
 __main__main_tile_1_task_decoupler_1:   # @__main__main_tile_1_task_decoupler_1
 .Lfunc_begin7:
-	.loc	1 70 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:70:0
+	.loc	1 70 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:70:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -829,7 +829,7 @@ __main__main_tile_1_task_decoupler_1:   # @__main__main_tile_1_task_decoupler_1
 		ldc r1, 56
 		dualentsp 2
 	}
-	.loc	1 70 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:70:0
+	.loc	1 70 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:70:0
 .Ltmp36:
 	{
 		add r1, r0, r1
@@ -839,13 +839,13 @@ __main__main_tile_1_task_decoupler_1:   # @__main__main_tile_1_task_decoupler_1
 		nop
 		ldw r2, r1[0]
 	}
-	.loc	1 70 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:70:0
+	.loc	1 70 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:70:0
 	{
 		mov r0, r2
 		ldw r1, r0[9]
 	}
 .Ltmp37:
-	.loc	1 70 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:70:0
+	.loc	1 70 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:70:0
 .Lxta.call_labels1:
 	bl decoupler
 	{
@@ -869,7 +869,7 @@ __main__main_tile_1_task_decoupler_1:   # @__main__main_tile_1_task_decoupler_1
 	.cc_top __main__main_tile_1_task_button_listener_2.function,__main__main_tile_1_task_button_listener_2
 __main__main_tile_1_task_button_listener_2: # @__main__main_tile_1_task_button_listener_2
 .Lfunc_begin8:
-	.loc	1 71 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:71:0
+	.loc	1 71 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:71:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -882,7 +882,7 @@ __main__main_tile_1_task_button_listener_2: # @__main__main_tile_1_task_button_l
 		ldc r1, 48
 		dualentsp 2
 	}
-	.loc	1 71 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:71:0
+	.loc	1 71 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:71:0
 .Ltmp42:
 	{
 		add r1, r0, r1
@@ -892,13 +892,13 @@ __main__main_tile_1_task_button_listener_2: # @__main__main_tile_1_task_button_l
 		nop
 		ldw r2, r1[0]
 	}
-	.loc	1 71 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:71:0
+	.loc	1 71 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:71:0
 	{
 		mov r0, r2
 		ldw r1, r0[7]
 	}
 .Ltmp43:
-	.loc	1 71 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:71:0
+	.loc	1 71 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:71:0
 .Lxta.call_labels2:
 	bl button_listener
 	{
@@ -922,7 +922,7 @@ __main__main_tile_1_task_button_listener_2: # @__main__main_tile_1_task_button_l
 	.cc_top __main__main_tile_1_task_display_control_3.function,__main__main_tile_1_task_display_control_3
 __main__main_tile_1_task_display_control_3: # @__main__main_tile_1_task_display_control_3
 .Lfunc_begin9:
-	.loc	1 80 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:80:0
+	.loc	1 80 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:80:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -935,7 +935,7 @@ __main__main_tile_1_task_display_control_3: # @__main__main_tile_1_task_display_
 .Ltmp47:
 	.cfi_offset 15, 0
 	#DEBUG_VALUE: __main__main_tile_1_task_display_control_3:frame <- R0
-	.loc	1 80 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:80:0
+	.loc	1 80 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:80:0
 .Ltmp48:
 .Lxta.call_labels3:
 	bl display_control
@@ -1015,7 +1015,7 @@ __main__main_tile_0:                    # @__main__main_tile_0
 	.cc_top __main__main_tile_0_task_audio_xss_4.function,__main__main_tile_0_task_audio_xss_4
 __main__main_tile_0_task_audio_xss_4:   # @__main__main_tile_0_task_audio_xss_4
 .Lfunc_begin11:
-	.loc	1 81 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:81:0
+	.loc	1 81 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:81:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1032,14 +1032,14 @@ __main__main_tile_0_task_audio_xss_4:   # @__main__main_tile_0_task_audio_xss_4
 		nop
 		ldw r2, r0[10]
 	}
-	.loc	1 81 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:81:0
+	.loc	1 81 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:81:0
 .Ltmp57:
 	{
 		mov r0, r2
 		ldw r1, r0[8]
 	}
 .Ltmp58:
-	.loc	1 81 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:81:0
+	.loc	1 81 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:81:0
 .Lxta.call_labels4:
 	bl audio_xss
 	{
@@ -1063,7 +1063,7 @@ __main__main_tile_0_task_audio_xss_4:   # @__main__main_tile_0_task_audio_xss_4
 	.cc_top __main__main_tile_0_task_qspi_server_5.function,__main__main_tile_0_task_qspi_server_5
 __main__main_tile_0_task_qspi_server_5: # @__main__main_tile_0_task_qspi_server_5
 .Lfunc_begin12:
-	.loc	1 93 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:93:0
+	.loc	1 93 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:93:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1081,7 +1081,7 @@ __main__main_tile_0_task_qspi_server_5: # @__main__main_tile_0_task_qspi_server_
 		ldw r0, r0[0]
 	}
 .Ltmp63:
-	.loc	1 93 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc:93:0
+	.loc	1 93 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:93:0
 .Lxta.call_labels5:
 	bl _Sqspi_server_0
 .Ltmp64:
@@ -1139,9 +1139,9 @@ par.desc.2:
 .Linfo_string0:
 .asciiz"XMOS 32-bit XC Compiler Community_14.4.1 (build 235-acbb966, Dec-01-2019)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 .Linfo_string3:
 .asciiz"_i.qspi_access._chan.read"
 .Linfo_string4:
@@ -2114,40 +2114,40 @@ par.desc.2:
 .Lentries_start0:
 	.long	.Lentries_end1-.Lentries_start0
 	.long	0
-	.ascii	"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 	.byte	0
 .cc_top cc_0,.Lxta.call_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
 	.long	69
 	.long	.Lxta.call_labels0
 .cc_bottom cc_0
 .cc_top cc_1,.Lxta.call_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
 	.long	70
 	.long	.Lxta.call_labels1
 .cc_bottom cc_1
 .cc_top cc_2,.Lxta.call_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
 	.long	71
 	.long	.Lxta.call_labels2
 .cc_bottom cc_2
 .cc_top cc_3,.Lxta.call_labels3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
 	.long	80
 	.long	.Lxta.call_labels3
 .cc_bottom cc_3
 .cc_top cc_4,.Lxta.call_labels4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
 	.long	81
 	.long	.Lxta.call_labels4
 .cc_bottom cc_4
 .cc_top cc_5,.Lxta.call_labels5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
 	.long	93
 	.long	.Lxta.call_labels5
@@ -2157,24 +2157,24 @@ par.desc.2:
 .Lentries_start2:
 	.long	.Lentries_end3-.Lentries_start2
 	.long	0
-	.ascii	"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 	.byte	0
 .cc_top cc_6,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
 	.long	49
 	.long	49
 	.long	.Lxtalabel0
 .cc_bottom cc_6
 .cc_top cc_7,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
 	.long	54
 	.long	54
 	.long	.Lxtalabel0
 .cc_bottom cc_7
 .cc_top cc_8,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/main.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
 	.long	56
 	.long	56

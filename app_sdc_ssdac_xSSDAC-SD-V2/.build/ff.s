@@ -14,10 +14,10 @@
 .Lsection_debug_loc:
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\integer.h"
-	.file	2 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\ff.h"
-	.file	3 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\ff.c"
-	.file	4 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\diskio.h"
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\integer.h"
+	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h"
+	.file	3 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.c"
+	.file	4 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\diskio.h"
 	.text
 	.globl	ff_convert
 	.align	4
@@ -22665,15 +22665,15 @@ Fsid:
 .Ldebug_end1:
 	.text
 .Ldebug_end2:
-	.file	5 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\ff.c"
+	.file	5 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.c"
 	.file	6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stdarg.h"
 	.section	.debug_str,"MS",@progbits,1
 .Linfo_string0:
 .asciiz"XMOS-235-acbb966-Dec-01-2019 clang version 3.6.0  (based on LLVM 3.6.0svn)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\ff.c"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.c"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 .Linfo_string3:
 .asciiz"FatFs"
 .Linfo_string4:

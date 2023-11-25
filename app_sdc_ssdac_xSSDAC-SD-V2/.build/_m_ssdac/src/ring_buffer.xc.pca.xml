@@ -1,4 +1,4 @@
-<preCompilationAnalysis file="C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc">
+<preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc">
 <fDef name="add_sample" global="true" noreturn="false" doNotSpecialize="false" numParams="2"/>
 <fDef name="init_ring_buff" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
 <fDef name="sample_at" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>

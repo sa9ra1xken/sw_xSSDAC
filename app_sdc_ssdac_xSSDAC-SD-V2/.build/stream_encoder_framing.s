@@ -14,9 +14,9 @@
 .Lsection_debug_loc:
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC\\format.h"
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC\\format.h"
 	.file	2 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h"
-	.file	3 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC\\ordinals.h"
+	.file	3 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC\\ordinals.h"
 	.text
 	.globl	FLAC__add_metadata_block
 	.align	4
@@ -24,7 +24,7 @@
 	.cc_top FLAC__add_metadata_block.function,FLAC__add_metadata_block
 FLAC__add_metadata_block:
 .Lfunc_begin0:
-	.file	4 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source\\stream_encoder_framing.c"
+	.file	4 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\stream_encoder_framing.c"
 	.loc	4 48 0
 	.cfi_startproc
 	.issue_mode dual
@@ -3055,7 +3055,7 @@ FLAC__subframe_add_fixed:
 .Ltmp350:
 	.size	FLAC__subframe_add_fixed, .Ltmp350-FLAC__subframe_add_fixed
 .Lfunc_end3:
-	.file	5 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private\\bitwriter.h"
+	.file	5 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private\\bitwriter.h"
 	.cfi_endproc
 
 	.align	4
@@ -4164,9 +4164,9 @@ FLAC__subframe_add_verbatim:
 .Linfo_string0:
 .asciiz"XMOS-235-acbb966-Dec-01-2019 clang version 3.6.0  (based on LLVM 3.6.0svn)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source\\stream_encoder_framing.c"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\stream_encoder_framing.c"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 .Linfo_string3:
 .asciiz"FLAC__METADATA_TYPE_STREAMINFO"
 .Linfo_string4:

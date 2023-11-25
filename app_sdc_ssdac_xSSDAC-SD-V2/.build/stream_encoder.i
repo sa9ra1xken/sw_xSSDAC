@@ -1,11 +1,11 @@
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 289 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 37 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\limits.h" 1 3
 
 
@@ -15,7 +15,7 @@
 # 131 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\limits.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\limits.h" 1 3
 # 131 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\limits.h" 2 3
-# 38 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
+# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 1 3
 # 29 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/_ansi.h" 1 3
@@ -634,7 +634,7 @@ typedef struct
   cookie_close_function_t *close;
 } cookie_io_functions_t;
 FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __functions);
-# 39 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
+# 39 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdlib.h" 1 3
 # 14 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdlib.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
@@ -804,7 +804,7 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-# 40 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
+# 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 1 3
 # 15 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
@@ -876,18 +876,18 @@ char *strupr (char *);
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys/string.h" 1 3
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 2 3
-# 41 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
+# 41 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
 
 
 
 
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h" 1
-# 42 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 1
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
-# 43 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h" 2
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stdarg.h" 1 3
-# 44 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h" 2
+# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 2
 
 
 
@@ -1080,8 +1080,8 @@ ssize_t readlink (const char *__path, char *__buf, size_t __buflen);
 
 int symlink (const char *__name1, const char *__name2);
 # 4 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\unistd.h" 2 3
-# 50 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h" 2
-# 122 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h"
+# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 2
+# 122 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\utime.h" 1 3
 
 
@@ -1098,23 +1098,23 @@ struct utimbuf
   time_t modtime;
 };
 # 8 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\utime.h" 2 3
-# 123 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h" 2
-# 230 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/compat.h"
+# 123 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 2
+# 230 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h"
 int flac_snprintf(char *str, size_t size, const char *fmt, ...);
 int flac_vsnprintf(char *str, size_t size, const char *fmt, va_list va);
-# 47 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/assert.h" 1
-# 48 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h" 1
-# 37 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/export.h" 1
-# 107 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/export.h"
+# 47 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h" 1
+# 48 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h" 1
+# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/export.h" 1
+# 107 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/export.h"
 extern int FLAC_API_SUPPORTS_OGG_FLAC;
-# 38 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h" 1
-# 37 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/ordinals.h" 1
-# 55 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/ordinals.h"
+# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h" 1
+# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/ordinals.h" 1
+# 55 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/ordinals.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h" 1 3
 # 45 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h" 3
 typedef signed char int8_t ;
@@ -1177,7 +1177,7 @@ typedef uint64_t uint_least64_t;
 # 247 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h" 3
 typedef signed int intptr_t;
 typedef unsigned int uintptr_t;
-# 56 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/ordinals.h" 2
+# 56 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/ordinals.h" 2
 
 typedef int8_t FLAC__int8;
 typedef uint8_t FLAC__uint8;
@@ -1194,8 +1194,8 @@ typedef uint64_t FLAC__uint64;
 typedef int FLAC__bool;
 
 typedef FLAC__uint8 FLAC__byte;
-# 38 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h" 2
-# 159 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h" 2
+# 159 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
 extern const char *FLAC__VERSION_STRING;
 
 
@@ -1214,7 +1214,7 @@ extern const uint32_t FLAC__STREAM_SYNC;
 
 
 extern const uint32_t FLAC__STREAM_SYNC_LEN;
-# 191 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 191 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
 typedef enum {
  FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE = 0,
 
@@ -1385,7 +1385,7 @@ typedef struct {
  } data;
  uint32_t wasted_bits;
 } FLAC__Subframe;
-# 369 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 369 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
 extern const uint32_t FLAC__SUBFRAME_ZERO_PAD_LEN;
 extern const uint32_t FLAC__SUBFRAME_TYPE_LEN;
 extern const uint32_t FLAC__SUBFRAME_WASTED_BITS_FLAG_LEN;
@@ -1394,7 +1394,7 @@ extern const uint32_t FLAC__SUBFRAME_TYPE_CONSTANT_BYTE_ALIGNED_MASK;
 extern const uint32_t FLAC__SUBFRAME_TYPE_VERBATIM_BYTE_ALIGNED_MASK;
 extern const uint32_t FLAC__SUBFRAME_TYPE_FIXED_BYTE_ALIGNED_MASK;
 extern const uint32_t FLAC__SUBFRAME_TYPE_LPC_BYTE_ALIGNED_MASK;
-# 388 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 388 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
 typedef enum {
  FLAC__CHANNEL_ASSIGNMENT_INDEPENDENT = 0,
  FLAC__CHANNEL_ASSIGNMENT_LEFT_SIDE = 1,
@@ -1492,7 +1492,7 @@ typedef struct {
  FLAC__Subframe subframes[(8u)];
  FLAC__FrameFooter footer;
 } FLAC__Frame;
-# 496 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 496 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
 typedef enum {
 
  FLAC__METADATA_TYPE_STREAMINFO = 0,
@@ -1593,14 +1593,14 @@ typedef struct {
 extern const uint32_t FLAC__STREAM_METADATA_SEEKPOINT_SAMPLE_NUMBER_LEN;
 extern const uint32_t FLAC__STREAM_METADATA_SEEKPOINT_STREAM_OFFSET_LEN;
 extern const uint32_t FLAC__STREAM_METADATA_SEEKPOINT_FRAME_SAMPLES_LEN;
-# 604 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 604 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
 extern const FLAC__uint64 FLAC__STREAM_METADATA_SEEKPOINT_PLACEHOLDER;
-# 619 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 619 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
 typedef struct {
  uint32_t num_points;
  FLAC__StreamMetadata_SeekPoint *points;
 } FLAC__StreamMetadata_SeekTable;
-# 631 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 631 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
 typedef struct {
  FLAC__uint32 length;
  FLAC__byte *entry;
@@ -1751,7 +1751,7 @@ typedef struct {
 
 
  char *mime_type;
-# 791 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 791 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
  FLAC__byte *description;
 
 
@@ -1831,28 +1831,28 @@ typedef struct FLAC__StreamMetadata {
 extern const uint32_t FLAC__STREAM_METADATA_IS_LAST_LEN;
 extern const uint32_t FLAC__STREAM_METADATA_TYPE_LEN;
 extern const uint32_t FLAC__STREAM_METADATA_LENGTH_LEN;
-# 890 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 890 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
          FLAC__bool FLAC__format_sample_rate_is_valid(uint32_t sample_rate);
-# 902 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 902 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
          FLAC__bool FLAC__format_blocksize_is_subset(uint32_t blocksize, uint32_t sample_rate);
-# 913 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 913 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
          FLAC__bool FLAC__format_sample_rate_is_subset(uint32_t sample_rate);
-# 927 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 927 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
          FLAC__bool FLAC__format_vorbiscomment_entry_name_is_legal(const char *name);
-# 943 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 943 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
          FLAC__bool FLAC__format_vorbiscomment_entry_value_is_legal(const FLAC__byte *value, uint32_t length);
-# 960 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 960 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
          FLAC__bool FLAC__format_vorbiscomment_entry_is_legal(const FLAC__byte *entry, uint32_t length);
-# 972 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 972 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
          FLAC__bool FLAC__format_seektable_is_legal(const FLAC__StreamMetadata_SeekTable *seek_table);
-# 986 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 986 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
          uint32_t FLAC__format_seektable_sort(FLAC__StreamMetadata_SeekTable *seek_table);
-# 1006 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 1006 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
          FLAC__bool FLAC__format_cuesheet_is_legal(const FLAC__StreamMetadata_CueSheet *cue_sheet, FLAC__bool check_cd_da_subset, const char **violation);
-# 1024 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/format.h"
+# 1024 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
          FLAC__bool FLAC__format_picture_is_legal(const FLAC__StreamMetadata_Picture *picture, const char **violation);
-# 39 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h" 2
-# 202 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 39 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h" 2
+# 202 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
 typedef enum {
 
  FLAC__STREAM_DECODER_SEARCH_FOR_METADATA = 0,
@@ -1951,7 +1951,7 @@ typedef enum {
 
 
  FLAC__STREAM_DECODER_READ_STATUS_END_OF_STREAM,
-# 310 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 310 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
  FLAC__STREAM_DECODER_READ_STATUS_ABORT
 
 
@@ -2052,7 +2052,7 @@ typedef enum {
 
 
 extern const char * const FLAC__StreamDecoderWriteStatusString[];
-# 431 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 431 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
 typedef enum {
 
  FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC,
@@ -2078,7 +2078,7 @@ typedef enum {
 
 
 extern const char * const FLAC__StreamDecoderErrorStatusString[];
-# 464 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 464 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
 struct FLAC__StreamDecoderProtected;
 struct FLAC__StreamDecoderPrivate;
 
@@ -2089,23 +2089,23 @@ typedef struct {
  struct FLAC__StreamDecoderProtected *protected_;
  struct FLAC__StreamDecoderPrivate *private_;
 } FLAC__StreamDecoder;
-# 524 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 524 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
 typedef FLAC__StreamDecoderReadStatus (*FLAC__StreamDecoderReadCallback)(const FLAC__StreamDecoder *decoder, FLAC__byte buffer[], size_t *bytes, void *client_data);
-# 559 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 559 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
 typedef FLAC__StreamDecoderSeekStatus (*FLAC__StreamDecoderSeekCallback)(const FLAC__StreamDecoder *decoder, FLAC__uint64 absolute_byte_offset, void *client_data);
-# 597 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 597 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
 typedef FLAC__StreamDecoderTellStatus (*FLAC__StreamDecoderTellCallback)(const FLAC__StreamDecoder *decoder, FLAC__uint64 *absolute_byte_offset, void *client_data);
-# 635 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 635 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
 typedef FLAC__StreamDecoderLengthStatus (*FLAC__StreamDecoderLengthCallback)(const FLAC__StreamDecoder *decoder, FLAC__uint64 *stream_length, void *client_data);
-# 662 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 662 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
 typedef FLAC__bool (*FLAC__StreamDecoderEofCallback)(const FLAC__StreamDecoder *decoder, void *client_data);
-# 690 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 690 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
 typedef FLAC__StreamDecoderWriteStatus (*FLAC__StreamDecoderWriteCallback)(const FLAC__StreamDecoder *decoder, const FLAC__Frame *frame, const FLAC__int32 * const buffer[], void *client_data);
-# 717 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 717 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
 typedef void (*FLAC__StreamDecoderMetadataCallback)(const FLAC__StreamDecoder *decoder, const FLAC__StreamMetadata *metadata, void *client_data);
-# 734 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 734 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
 typedef void (*FLAC__StreamDecoderErrorCallback)(const FLAC__StreamDecoder *decoder, FLAC__StreamDecoderErrorStatus status, void *client_data);
-# 750 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 750 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__StreamDecoder *FLAC__stream_decoder_new(void);
 
 
@@ -2115,45 +2115,45 @@ typedef void (*FLAC__StreamDecoderErrorCallback)(const FLAC__StreamDecoder *deco
 
 
          void FLAC__stream_decoder_delete(FLAC__StreamDecoder *decoder);
-# 783 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 783 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_set_ogg_serial_number(FLAC__StreamDecoder *decoder, long serial_number);
-# 805 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 805 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_set_md5_checking(FLAC__StreamDecoder *decoder, FLAC__bool value);
-# 819 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 819 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_set_metadata_respond(FLAC__StreamDecoder *decoder, FLAC__MetadataType type);
-# 834 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 834 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_set_metadata_respond_application(FLAC__StreamDecoder *decoder, const FLAC__byte id[4]);
-# 846 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 846 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_set_metadata_respond_all(FLAC__StreamDecoder *decoder);
-# 860 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 860 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_set_metadata_ignore(FLAC__StreamDecoder *decoder, FLAC__MetadataType type);
-# 875 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 875 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_set_metadata_ignore_application(FLAC__StreamDecoder *decoder, const FLAC__byte id[4]);
-# 887 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 887 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_set_metadata_ignore_all(FLAC__StreamDecoder *decoder);
-# 897 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 897 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__StreamDecoderState FLAC__stream_decoder_get_state(const FLAC__StreamDecoder *decoder);
-# 907 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 907 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          const char *FLAC__stream_decoder_get_resolved_state_string(const FLAC__StreamDecoder *decoder);
-# 921 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 921 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_get_md5_checking(const FLAC__StreamDecoder *decoder);
-# 933 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 933 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__uint64 FLAC__stream_decoder_get_total_samples(const FLAC__StreamDecoder *decoder);
-# 945 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 945 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          uint32_t FLAC__stream_decoder_get_channels(const FLAC__StreamDecoder *decoder);
-# 957 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 957 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__ChannelAssignment FLAC__stream_decoder_get_channel_assignment(const FLAC__StreamDecoder *decoder);
-# 969 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 969 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          uint32_t FLAC__stream_decoder_get_bits_per_sample(const FLAC__StreamDecoder *decoder);
-# 981 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 981 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          uint32_t FLAC__stream_decoder_get_sample_rate(const FLAC__StreamDecoder *decoder);
-# 993 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 993 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          uint32_t FLAC__stream_decoder_get_blocksize(const FLAC__StreamDecoder *decoder);
-# 1014 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1014 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_get_decode_position(const FLAC__StreamDecoder *decoder, FLAC__uint64 *position);
-# 1024 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1024 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          const void *FLAC__stream_decoder_get_client_data(FLAC__StreamDecoder *decoder);
-# 1090 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1090 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_stream(
  FLAC__StreamDecoder *decoder,
  FLAC__StreamDecoderReadCallback read_callback,
@@ -2166,7 +2166,7 @@ typedef void (*FLAC__StreamDecoderErrorCallback)(const FLAC__StreamDecoder *deco
  FLAC__StreamDecoderErrorCallback error_callback,
  void *client_data
 );
-# 1171 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1171 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_ogg_stream(
  FLAC__StreamDecoder *decoder,
  FLAC__StreamDecoderReadCallback read_callback,
@@ -2179,7 +2179,7 @@ typedef void (*FLAC__StreamDecoderErrorCallback)(const FLAC__StreamDecoder *deco
  FLAC__StreamDecoderErrorCallback error_callback,
  void *client_data
 );
-# 1221 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1221 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_FILE(
  FLAC__StreamDecoder *decoder,
  FILE *file,
@@ -2188,7 +2188,7 @@ typedef void (*FLAC__StreamDecoderErrorCallback)(const FLAC__StreamDecoder *deco
  FLAC__StreamDecoderErrorCallback error_callback,
  void *client_data
 );
-# 1271 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1271 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_ogg_FILE(
  FLAC__StreamDecoder *decoder,
  FILE *file,
@@ -2197,7 +2197,7 @@ typedef void (*FLAC__StreamDecoderErrorCallback)(const FLAC__StreamDecoder *deco
  FLAC__StreamDecoderErrorCallback error_callback,
  void *client_data
 );
-# 1317 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1317 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_file(
  FLAC__StreamDecoder *decoder,
  const char *filename,
@@ -2206,7 +2206,7 @@ typedef void (*FLAC__StreamDecoderErrorCallback)(const FLAC__StreamDecoder *deco
  FLAC__StreamDecoderErrorCallback error_callback,
  void *client_data
 );
-# 1367 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1367 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_ogg_file(
  FLAC__StreamDecoder *decoder,
  const char *filename,
@@ -2215,27 +2215,27 @@ typedef void (*FLAC__StreamDecoderErrorCallback)(const FLAC__StreamDecoder *deco
  FLAC__StreamDecoderErrorCallback error_callback,
  void *client_data
 );
-# 1395 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1395 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_finish(FLAC__StreamDecoder *decoder);
-# 1410 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1410 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_flush(FLAC__StreamDecoder *decoder);
-# 1442 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1442 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_reset(FLAC__StreamDecoder *decoder);
-# 1475 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1475 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_process_single(FLAC__StreamDecoder *decoder);
-# 1496 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1496 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_process_until_end_of_metadata(FLAC__StreamDecoder *decoder);
-# 1517 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1517 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_process_until_end_of_stream(FLAC__StreamDecoder *decoder);
-# 1558 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1558 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_skip_single_frame(FLAC__StreamDecoder *decoder);
-# 1576 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC/stream_decoder.h"
+# 1576 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_seek_absolute(FLAC__StreamDecoder *decoder, FLAC__uint64 sample);
-# 49 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/stream_encoder.h" 1
-# 37 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/stream_encoder.h"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h" 1
-# 241 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 49 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/stream_encoder.h" 1
+# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/stream_encoder.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h" 1
+# 241 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
 typedef enum {
 
  FLAC__STREAM_ENCODER_OK = 0,
@@ -2331,7 +2331,7 @@ typedef enum {
 
 
  FLAC__STREAM_ENCODER_INIT_STATUS_INVALID_METADATA,
-# 344 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 344 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
  FLAC__STREAM_ENCODER_INIT_STATUS_ALREADY_INITIALIZED
 
 
@@ -2438,7 +2438,7 @@ typedef enum {
 
 
 extern const char * const FLAC__StreamEncoderTellStatusString[];
-# 458 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 458 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
 struct FLAC__StreamEncoderProtected;
 struct FLAC__StreamEncoderPrivate;
 
@@ -2449,19 +2449,19 @@ typedef struct {
  struct FLAC__StreamEncoderProtected *protected_;
  struct FLAC__StreamEncoderPrivate *private_;
 } FLAC__StreamEncoder;
-# 518 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 518 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
 typedef FLAC__StreamEncoderReadStatus (*FLAC__StreamEncoderReadCallback)(const FLAC__StreamEncoder *encoder, FLAC__byte buffer[], size_t *bytes, void *client_data);
-# 556 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 556 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
 typedef FLAC__StreamEncoderWriteStatus (*FLAC__StreamEncoderWriteCallback)(const FLAC__StreamEncoder *encoder, const FLAC__byte buffer[], size_t bytes, uint32_t samples, uint32_t current_frame, void *client_data);
-# 590 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 590 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
 typedef FLAC__StreamEncoderSeekStatus (*FLAC__StreamEncoderSeekCallback)(const FLAC__StreamEncoder *encoder, FLAC__uint64 absolute_byte_offset, void *client_data);
-# 635 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 635 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
 typedef FLAC__StreamEncoderTellStatus (*FLAC__StreamEncoderTellCallback)(const FLAC__StreamEncoder *encoder, FLAC__uint64 *absolute_byte_offset, void *client_data);
-# 654 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 654 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
 typedef void (*FLAC__StreamEncoderMetadataCallback)(const FLAC__StreamEncoder *encoder, const FLAC__StreamMetadata *metadata, void *client_data);
-# 677 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 677 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
 typedef void (*FLAC__StreamEncoderProgressCallback)(const FLAC__StreamEncoder *encoder, FLAC__uint64 bytes_written, FLAC__uint64 samples_written, uint32_t frames_written, uint32_t total_frames_estimate, void *client_data);
-# 693 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 693 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__StreamEncoder *FLAC__stream_encoder_new(void);
 
 
@@ -2471,113 +2471,113 @@ typedef void (*FLAC__StreamEncoderProgressCallback)(const FLAC__StreamEncoder *e
 
 
          void FLAC__stream_encoder_delete(FLAC__StreamEncoder *encoder);
-# 727 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 727 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_ogg_serial_number(FLAC__StreamEncoder *encoder, long serial_number);
-# 743 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 743 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_verify(FLAC__StreamEncoder *encoder, FLAC__bool value);
-# 761 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 761 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_streamable_subset(FLAC__StreamEncoder *encoder, FLAC__bool value);
-# 773 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 773 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_channels(FLAC__StreamEncoder *encoder, uint32_t value);
-# 789 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 789 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_bits_per_sample(FLAC__StreamEncoder *encoder, uint32_t value);
-# 801 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 801 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_sample_rate(FLAC__StreamEncoder *encoder, uint32_t value);
-# 864 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 864 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_compression_level(FLAC__StreamEncoder *encoder, uint32_t value);
-# 879 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 879 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_blocksize(FLAC__StreamEncoder *encoder, uint32_t value);
-# 893 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 893 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_do_mid_side_stereo(FLAC__StreamEncoder *encoder, FLAC__bool value);
-# 909 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 909 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_loose_mid_side_stereo(FLAC__StreamEncoder *encoder, FLAC__bool value);
-# 991 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 991 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_apodization(FLAC__StreamEncoder *encoder, const char *specification);
-# 1003 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1003 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_max_lpc_order(FLAC__StreamEncoder *encoder, uint32_t value);
-# 1017 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1017 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_qlp_coeff_precision(FLAC__StreamEncoder *encoder, uint32_t value);
-# 1031 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1031 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_do_qlp_coeff_prec_search(FLAC__StreamEncoder *encoder, FLAC__bool value);
-# 1043 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1043 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_do_escape_coding(FLAC__StreamEncoder *encoder, FLAC__bool value);
-# 1057 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1057 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_do_exhaustive_model_search(FLAC__StreamEncoder *encoder, FLAC__bool value);
-# 1080 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1080 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_min_residual_partition_order(FLAC__StreamEncoder *encoder, uint32_t value);
-# 1103 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1103 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_max_residual_partition_order(FLAC__StreamEncoder *encoder, uint32_t value);
-# 1115 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1115 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_rice_parameter_search_dist(FLAC__StreamEncoder *encoder, uint32_t value);
-# 1131 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1131 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_total_samples_estimate(FLAC__StreamEncoder *encoder, FLAC__uint64 value);
-# 1214 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1214 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_metadata(FLAC__StreamEncoder *encoder, FLAC__StreamMetadata **metadata, uint32_t num_blocks);
-# 1232 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1232 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_set_limit_min_bitrate(FLAC__StreamEncoder *encoder, FLAC__bool value);
-# 1242 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1242 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__StreamEncoderState FLAC__stream_encoder_get_state(const FLAC__StreamEncoder *encoder);
-# 1254 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1254 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__StreamDecoderState FLAC__stream_encoder_get_verify_decoder_state(const FLAC__StreamEncoder *encoder);
-# 1267 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1267 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          const char *FLAC__stream_encoder_get_resolved_state_string(const FLAC__StreamEncoder *encoder);
-# 1286 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1286 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          void FLAC__stream_encoder_get_verify_decoder_error_stats(const FLAC__StreamEncoder *encoder, FLAC__uint64 *absolute_sample, uint32_t *frame_number, uint32_t *channel, uint32_t *sample, FLAC__int32 *expected, FLAC__int32 *got);
-# 1296 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1296 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_get_verify(const FLAC__StreamEncoder *encoder);
-# 1306 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1306 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_get_streamable_subset(const FLAC__StreamEncoder *encoder);
-# 1316 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1316 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          uint32_t FLAC__stream_encoder_get_channels(const FLAC__StreamEncoder *encoder);
-# 1326 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1326 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          uint32_t FLAC__stream_encoder_get_bits_per_sample(const FLAC__StreamEncoder *encoder);
-# 1336 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1336 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          uint32_t FLAC__stream_encoder_get_sample_rate(const FLAC__StreamEncoder *encoder);
-# 1346 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1346 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          uint32_t FLAC__stream_encoder_get_blocksize(const FLAC__StreamEncoder *encoder);
-# 1356 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1356 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_get_do_mid_side_stereo(const FLAC__StreamEncoder *encoder);
-# 1366 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1366 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_get_loose_mid_side_stereo(const FLAC__StreamEncoder *encoder);
-# 1376 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1376 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          uint32_t FLAC__stream_encoder_get_max_lpc_order(const FLAC__StreamEncoder *encoder);
-# 1386 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1386 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          uint32_t FLAC__stream_encoder_get_qlp_coeff_precision(const FLAC__StreamEncoder *encoder);
-# 1396 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1396 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_get_do_qlp_coeff_prec_search(const FLAC__StreamEncoder *encoder);
-# 1406 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1406 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_get_do_escape_coding(const FLAC__StreamEncoder *encoder);
-# 1416 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1416 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_get_do_exhaustive_model_search(const FLAC__StreamEncoder *encoder);
-# 1426 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1426 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          uint32_t FLAC__stream_encoder_get_min_residual_partition_order(const FLAC__StreamEncoder *encoder);
-# 1436 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1436 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          uint32_t FLAC__stream_encoder_get_max_residual_partition_order(const FLAC__StreamEncoder *encoder);
-# 1446 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1446 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          uint32_t FLAC__stream_encoder_get_rice_parameter_search_dist(const FLAC__StreamEncoder *encoder);
-# 1459 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1459 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__uint64 FLAC__stream_encoder_get_total_samples_estimate(const FLAC__StreamEncoder *encoder);
-# 1469 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1469 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_get_limit_min_bitrate(const FLAC__StreamEncoder *encoder);
-# 1532 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1532 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__StreamEncoderInitStatus FLAC__stream_encoder_init_stream(FLAC__StreamEncoder *encoder, FLAC__StreamEncoderWriteCallback write_callback, FLAC__StreamEncoderSeekCallback seek_callback, FLAC__StreamEncoderTellCallback tell_callback, FLAC__StreamEncoderMetadataCallback metadata_callback, void *client_data);
-# 1600 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1600 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__StreamEncoderInitStatus FLAC__stream_encoder_init_ogg_stream(FLAC__StreamEncoder *encoder, FLAC__StreamEncoderReadCallback read_callback, FLAC__StreamEncoderWriteCallback write_callback, FLAC__StreamEncoderSeekCallback seek_callback, FLAC__StreamEncoderTellCallback tell_callback, FLAC__StreamEncoderMetadataCallback metadata_callback, void *client_data);
-# 1635 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1635 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__StreamEncoderInitStatus FLAC__stream_encoder_init_FILE(FLAC__StreamEncoder *encoder, FILE *file, FLAC__StreamEncoderProgressCallback progress_callback, void *client_data);
-# 1670 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1670 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__StreamEncoderInitStatus FLAC__stream_encoder_init_ogg_FILE(FLAC__StreamEncoder *encoder, FILE *file, FLAC__StreamEncoderProgressCallback progress_callback, void *client_data);
-# 1706 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1706 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__StreamEncoderInitStatus FLAC__stream_encoder_init_file(FLAC__StreamEncoder *encoder, const char *filename, FLAC__StreamEncoderProgressCallback progress_callback, void *client_data);
-# 1742 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1742 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__StreamEncoderInitStatus FLAC__stream_encoder_init_ogg_file(FLAC__StreamEncoder *encoder, const char *filename, FLAC__StreamEncoderProgressCallback progress_callback, void *client_data);
-# 1770 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1770 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_finish(FLAC__StreamEncoder *encoder);
-# 1797 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1797 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_process(FLAC__StreamEncoder *encoder, const FLAC__int32 * const buffer[], uint32_t samples);
-# 1829 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
+# 1829 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_encoder.h"
          FLAC__bool FLAC__stream_encoder_process_interleaved(FLAC__StreamEncoder *encoder, const FLAC__int32 buffer[], uint32_t samples);
-# 38 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/stream_encoder.h" 2
+# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/stream_encoder.h" 2
 
 
 
@@ -2585,10 +2585,10 @@ typedef void (*FLAC__StreamEncoderProgressCallback)(const FLAC__StreamEncoder *e
 
 
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../private/float.h" 1
-# 56 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../private/float.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../private/float.h" 1
+# 56 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../private/float.h"
 typedef float FLAC__real;
-# 46 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/stream_encoder.h" 2
+# 46 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/stream_encoder.h" 2
 
 
 
@@ -2668,9 +2668,9 @@ typedef struct FLAC__StreamEncoderProtected {
 
 
 } FLAC__StreamEncoderProtected;
-# 50 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitwriter.h" 1
-# 42 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitwriter.h"
+# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitwriter.h" 1
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitwriter.h"
 struct FLAC__BitWriter;
 typedef struct FLAC__BitWriter FLAC__BitWriter;
 
@@ -2696,7 +2696,7 @@ FLAC__bool FLAC__bitwriter_get_write_crc8(FLAC__BitWriter *bw, FLAC__byte *crc);
 
 FLAC__bool FLAC__bitwriter_is_byte_aligned(const FLAC__BitWriter *bw);
 uint32_t FLAC__bitwriter_get_input_bits_unconsumed(const FLAC__BitWriter *bw);
-# 75 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitwriter.h"
+# 75 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitwriter.h"
 FLAC__bool FLAC__bitwriter_get_buffer(FLAC__BitWriter *bw, const FLAC__byte **buffer, size_t *bytes);
 void FLAC__bitwriter_release_buffer(FLAC__BitWriter *bw);
 
@@ -2725,9 +2725,9 @@ FLAC__bool FLAC__bitwriter_write_rice_signed_block(FLAC__BitWriter *bw, const FL
 FLAC__bool FLAC__bitwriter_write_utf8_uint32(FLAC__BitWriter *bw, FLAC__uint32 val);
 FLAC__bool FLAC__bitwriter_write_utf8_uint64(FLAC__BitWriter *bw, FLAC__uint64 val);
 FLAC__bool FLAC__bitwriter_zero_pad_to_byte_boundary(FLAC__BitWriter *bw);
-# 51 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitmath.h" 1
-# 48 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitmath.h"
+# 51 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 1
+# 48 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 static inline uint32_t FLAC__clz_soft_uint32(FLAC__uint32 word)
 {
  static const uint8_t byte_to_unary_table[] = {
@@ -2765,7 +2765,7 @@ static inline uint32_t FLAC__clz_uint32(FLAC__uint32 v)
 
 
  return __builtin_clz(v);
-# 94 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitmath.h"
+# 94 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -2781,7 +2781,7 @@ static inline uint32_t FLAC__clz_uint64(FLAC__uint64 v)
                     ;
 
  return __builtin_clzll(v);
-# 118 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitmath.h"
+# 118 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -2798,11 +2798,11 @@ static inline uint32_t FLAC__clz2_uint64(FLAC__uint64 v)
   return 64;
  return FLAC__clz_uint64(v);
 }
-# 158 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitmath.h"
+# 158 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 static inline uint32_t FLAC__bitmath_ilog2(FLAC__uint32 v)
 {
                     ;
-# 170 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitmath.h"
+# 170 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
  return FLAC__clz_uint32(v) ^ 31U;
 
 }
@@ -2812,13 +2812,13 @@ static inline uint32_t FLAC__bitmath_ilog2_wide(FLAC__uint64 v)
                     ;
 
  return __builtin_clzll(v) ^ 63U;
-# 208 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/bitmath.h"
+# 208 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 uint32_t FLAC__bitmath_silog2(FLAC__int64 v);
-# 52 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/crc.h" 1
-# 43 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/crc.h"
+# 52 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/crc.h" 1
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/crc.h"
 FLAC__uint8 FLAC__crc8(const FLAC__byte *data, uint32_t len);
 
 
@@ -2836,9 +2836,9 @@ extern FLAC__uint16 const FLAC__crc16_table[8][256];
 FLAC__uint16 FLAC__crc16(const FLAC__byte *data, uint32_t len);
 FLAC__uint16 FLAC__crc16_update_words32(const FLAC__uint32 *words, uint32_t len, FLAC__uint16 crc);
 FLAC__uint16 FLAC__crc16_update_words64(const FLAC__uint64 *words, uint32_t len, FLAC__uint16 crc);
-# 53 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/cpu.h" 1
-# 154 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/cpu.h"
+# 53 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/cpu.h" 1
+# 154 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/cpu.h"
 typedef enum {
  FLAC__CPUINFO_TYPE_IA32,
  FLAC__CPUINFO_TYPE_X86_64,
@@ -2880,62 +2880,62 @@ void FLAC__cpu_info(FLAC__CPUInfo *info);
 FLAC__uint32 FLAC__cpu_have_cpuid_asm_ia32(void);
 
 void FLAC__cpu_info_asm_ia32(FLAC__uint32 level, FLAC__uint32 *eax, FLAC__uint32 *ebx, FLAC__uint32 *ecx, FLAC__uint32 *edx);
-# 54 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/fixed.h" 1
-# 60 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/fixed.h"
+# 54 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/fixed.h" 1
+# 60 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/fixed.h"
 uint32_t FLAC__fixed_compute_best_predictor(const FLAC__int32 data[], uint32_t data_len, float residual_bits_per_sample[(4u)+1]);
 uint32_t FLAC__fixed_compute_best_predictor_wide(const FLAC__int32 data[], uint32_t data_len, float residual_bits_per_sample[(4u)+1]);
 uint32_t FLAC__fixed_compute_best_predictor_limit_residual(const FLAC__int32 data[], uint32_t data_len, float residual_bits_per_sample[(4u)+1]);
 uint32_t FLAC__fixed_compute_best_predictor_limit_residual_33bit(const FLAC__int64 data[], uint32_t data_len, float residual_bits_per_sample[(4u)+1]);
-# 94 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/fixed.h"
+# 94 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/fixed.h"
 void FLAC__fixed_compute_residual(const FLAC__int32 data[], uint32_t data_len, uint32_t order, FLAC__int32 residual[]);
 void FLAC__fixed_compute_residual_wide(const FLAC__int32 data[], uint32_t data_len, uint32_t order, FLAC__int32 residual[]);
 void FLAC__fixed_compute_residual_wide_33bit(const FLAC__int64 data[], uint32_t data_len, uint32_t order, FLAC__int32 residual[]);
-# 111 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/fixed.h"
+# 111 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/fixed.h"
 void FLAC__fixed_restore_signal(const FLAC__int32 residual[], uint32_t data_len, uint32_t order, FLAC__int32 data[]);
 void FLAC__fixed_restore_signal_wide(const FLAC__int32 residual[], uint32_t data_len, uint32_t order, FLAC__int32 data[]);
 void FLAC__fixed_restore_signal_wide_33bit(const FLAC__int32 residual[], uint32_t data_len, uint32_t order, FLAC__int64 data[]);
-# 55 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/format.h" 1
-# 42 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/format.h"
+# 55 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/format.h" 1
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/format.h"
 uint32_t FLAC__format_get_max_rice_partition_order_from_blocksize(uint32_t blocksize);
 uint32_t FLAC__format_get_max_rice_partition_order_from_blocksize_limited_max_and_predictor_order(uint32_t limit, uint32_t blocksize, uint32_t predictor_order);
 void FLAC__format_entropy_coding_method_partitioned_rice_contents_init(FLAC__EntropyCodingMethod_PartitionedRiceContents *object);
 void FLAC__format_entropy_coding_method_partitioned_rice_contents_clear(FLAC__EntropyCodingMethod_PartitionedRiceContents *object);
 FLAC__bool FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_size(FLAC__EntropyCodingMethod_PartitionedRiceContents *object, uint32_t max_partition_order);
-# 56 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/lpc.h" 1
-# 60 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/lpc.h"
+# 56 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/lpc.h" 1
+# 60 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/lpc.h"
 void FLAC__lpc_window_data(const FLAC__int32 in[], const FLAC__real window[], FLAC__real out[], uint32_t data_len);
 void FLAC__lpc_window_data_wide(const FLAC__int64 in[], const FLAC__real window[], FLAC__real out[], uint32_t data_len);
 void FLAC__lpc_window_data_partial(const FLAC__int32 in[], const FLAC__real window[], FLAC__real out[], uint32_t data_len, uint32_t part_size, uint32_t data_shift);
 void FLAC__lpc_window_data_partial_wide(const FLAC__int64 in[], const FLAC__real window[], FLAC__real out[], uint32_t data_len, uint32_t part_size, uint32_t data_shift);
-# 77 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/lpc.h"
+# 77 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/lpc.h"
 void FLAC__lpc_compute_autocorrelation(const FLAC__real data[], uint32_t data_len, uint32_t lag, double autoc[]);
-# 133 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/lpc.h"
+# 133 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/lpc.h"
 void FLAC__lpc_compute_lp_coefficients(const double autoc[], uint32_t *max_order, FLAC__real lp_coeff[][(32u)], double error[]);
-# 155 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/lpc.h"
+# 155 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/lpc.h"
 int FLAC__lpc_quantize_coefficients(const FLAC__real lp_coeff[], uint32_t order, uint32_t precision, FLAC__int32 qlp_coeff[], int *shift);
-# 170 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/lpc.h"
+# 170 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/lpc.h"
 void FLAC__lpc_compute_residual_from_qlp_coefficients(const FLAC__int32 *data, uint32_t data_len, const FLAC__int32 qlp_coeff[], uint32_t order, int lp_quantization, FLAC__int32 residual[]);
 void FLAC__lpc_compute_residual_from_qlp_coefficients_wide(const FLAC__int32 *data, uint32_t data_len, const FLAC__int32 qlp_coeff[], uint32_t order, int lp_quantization, FLAC__int32 residual[]);
 FLAC__bool FLAC__lpc_compute_residual_from_qlp_coefficients_limit_residual(const FLAC__int32 *data, uint32_t data_len, const FLAC__int32 qlp_coeff[], uint32_t order, int lp_quantization, FLAC__int32 residual[]);
 FLAC__bool FLAC__lpc_compute_residual_from_qlp_coefficients_limit_residual_33bit(const FLAC__int64 *data, uint32_t data_len, const FLAC__int32 qlp_coeff[], uint32_t order, int lp_quantization, FLAC__int32 residual[]);
-# 199 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/lpc.h"
+# 199 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/lpc.h"
 uint32_t FLAC__lpc_max_prediction_before_shift_bps(uint32_t subframe_bps, const FLAC__int32 qlp_coeff[], uint32_t order);
 uint32_t FLAC__lpc_max_residual_bps(uint32_t subframe_bps, const FLAC__int32 qlp_coeff[], uint32_t order, int lp_quantization);
-# 217 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/lpc.h"
+# 217 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/lpc.h"
 void FLAC__lpc_restore_signal(const FLAC__int32 residual[], uint32_t data_len, const FLAC__int32 qlp_coeff[], uint32_t order, int lp_quantization, FLAC__int32 data[]);
 void FLAC__lpc_restore_signal_wide(const FLAC__int32 residual[], uint32_t data_len, const FLAC__int32 qlp_coeff[], uint32_t order, int lp_quantization, FLAC__int32 data[]);
 void FLAC__lpc_restore_signal_wide_33bit(const FLAC__int32 residual[], uint32_t data_len, const FLAC__int32 qlp_coeff[], uint32_t order, int lp_quantization, FLAC__int64 data[]);
-# 233 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/lpc.h"
+# 233 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/lpc.h"
 double FLAC__lpc_compute_expected_bits_per_residual_sample(double lpc_error, uint32_t total_samples);
 double FLAC__lpc_compute_expected_bits_per_residual_sample_with_error_scale(double lpc_error, double error_scale);
-# 249 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/lpc.h"
+# 249 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/lpc.h"
 uint32_t FLAC__lpc_compute_best_order(const double lpc_error[], uint32_t max_order, uint32_t total_samples, uint32_t overhead_bits_per_order);
-# 57 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/md5.h" 1
-# 32 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/md5.h"
+# 57 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/md5.h" 1
+# 32 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/md5.h"
 typedef union {
  FLAC__byte *p8;
  FLAC__int16 *p16;
@@ -2954,9 +2954,9 @@ void FLAC__MD5Init(FLAC__MD5Context *context);
 void FLAC__MD5Final(FLAC__byte digest[16], FLAC__MD5Context *context);
 
 FLAC__bool FLAC__MD5Accumulate(FLAC__MD5Context *ctx, const FLAC__int32 * const signal[], uint32_t channels, uint32_t samples, uint32_t bytes_per_sample);
-# 58 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/memory.h" 1
-# 50 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/memory.h"
+# 58 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/memory.h" 1
+# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/memory.h"
 void *FLAC__memory_alloc_aligned(size_t bytes, void **aligned_address);
 FLAC__bool FLAC__memory_alloc_aligned_int32_array(size_t elements, FLAC__int32 **unaligned_pointer, FLAC__int32 **aligned_pointer);
 FLAC__bool FLAC__memory_alloc_aligned_uint32_array(size_t elements, FLAC__uint32 **unaligned_pointer, FLAC__uint32 **aligned_pointer);
@@ -2966,26 +2966,26 @@ FLAC__bool FLAC__memory_alloc_aligned_uint64_array(size_t elements, FLAC__uint64
 FLAC__bool FLAC__memory_alloc_aligned_real_array(size_t elements, FLAC__real **unaligned_pointer, FLAC__real **aligned_pointer);
 
 void *safe_malloc_mul_2op_p(size_t size1, size_t size2);
-# 59 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/macros.h" 1
-# 60 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
+# 59 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/macros.h" 1
+# 60 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
 
 
 
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/stream_encoder.h" 1
-# 65 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/stream_encoder_framing.h" 1
-# 40 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/stream_encoder_framing.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/stream_encoder.h" 1
+# 65 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/stream_encoder_framing.h" 1
+# 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/stream_encoder_framing.h"
 FLAC__bool FLAC__add_metadata_block(const FLAC__StreamMetadata *metadata, FLAC__BitWriter *bw);
 FLAC__bool FLAC__frame_add_header(const FLAC__FrameHeader *header, FLAC__BitWriter *bw);
 FLAC__bool FLAC__subframe_add_constant(const FLAC__Subframe_Constant *subframe, uint32_t subframe_bps, uint32_t wasted_bits, FLAC__BitWriter *bw);
 FLAC__bool FLAC__subframe_add_fixed(const FLAC__Subframe_Fixed *subframe, uint32_t residual_samples, uint32_t subframe_bps, uint32_t wasted_bits, FLAC__BitWriter *bw);
 FLAC__bool FLAC__subframe_add_lpc(const FLAC__Subframe_LPC *subframe, uint32_t residual_samples, uint32_t subframe_bps, uint32_t wasted_bits, FLAC__BitWriter *bw);
 FLAC__bool FLAC__subframe_add_verbatim(const FLAC__Subframe_Verbatim *subframe, uint32_t samples, uint32_t subframe_bps, uint32_t wasted_bits, FLAC__BitWriter *bw);
-# 66 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/window.h" 1
-# 56 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/window.h"
+# 66 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/window.h" 1
+# 56 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/window.h"
 void FLAC__window_bartlett(FLAC__real *window, const FLAC__int32 L);
 void FLAC__window_bartlett_hann(FLAC__real *window, const FLAC__int32 L);
 void FLAC__window_blackman(FLAC__real *window, const FLAC__int32 L);
@@ -3003,12 +3003,12 @@ void FLAC__window_tukey(FLAC__real *window, const FLAC__int32 L, const FLAC__rea
 void FLAC__window_partial_tukey(FLAC__real *window, const FLAC__int32 L, const FLAC__real p, const FLAC__real start, const FLAC__real end);
 void FLAC__window_punchout_tukey(FLAC__real *window, const FLAC__int32 L, const FLAC__real p, const FLAC__real start, const FLAC__real end);
 void FLAC__window_welch(FLAC__real *window, const FLAC__int32 L);
-# 67 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/alloc.h" 1
-# 44 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/alloc.h"
+# 67 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h" 1
+# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\limits.h" 1 3
-# 45 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/alloc.h" 2
-# 85 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/alloc.h"
+# 45 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h" 2
+# 85 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h"
 static inline void *safe_malloc_(size_t size)
 {
 
@@ -3021,7 +3021,7 @@ static inline void *safe_malloc_(size_t size)
   size++;
  return malloc(size);
 }
-# 112 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/alloc.h"
+# 112 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h"
 static inline void *safe_calloc_(size_t nmemb, size_t size)
 {
 
@@ -3121,7 +3121,7 @@ static inline void *safe_realloc_(void *ptr, size_t size)
   free(oldptr);
  return newptr;
 }
-# 225 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/alloc.h"
+# 225 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h"
 static inline void *safe_realloc_nofree_add_2op_(void *ptr, size_t size1, size_t size2)
 {
  size2 += size1;
@@ -3213,17 +3213,17 @@ static inline void *safe_realloc_nofree_muladd2_(void *ptr, size_t size1, size_t
   return 0;
  return safe_realloc_nofree_mul_2op_(ptr, size1, size2);
 }
-# 68 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/private.h" 1
-# 39 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share/private.h"
+# 68 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/private.h" 1
+# 39 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/private.h"
          FLAC__bool FLAC__stream_encoder_disable_instruction_set(FLAC__StreamEncoder *encoder, FLAC__bool value);
          FLAC__bool FLAC__stream_encoder_disable_constant_subframes(FLAC__StreamEncoder *encoder, FLAC__bool value);
          FLAC__bool FLAC__stream_encoder_disable_fixed_subframes(FLAC__StreamEncoder *encoder, FLAC__bool value);
          FLAC__bool FLAC__stream_encoder_disable_verbatim_subframes(FLAC__StreamEncoder *encoder, FLAC__bool value);
          FLAC__bool FLAC__stream_encoder_set_do_md5(FLAC__StreamEncoder *encoder, FLAC__bool value);
          FLAC__bool FLAC__stream_encoder_get_do_md5(const FLAC__StreamEncoder *encoder);
-# 69 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c" 2
-# 84 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 69 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
+# 84 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
 typedef struct {
  FLAC__int32 *data[(8u)];
  uint32_t size;
@@ -3266,7 +3266,7 @@ static const struct CompressionLevels {
  { 1 , 0, 12, 0, 0, 0, 0, 0, 6, 0, "subdivide_tukey(3)" }
 
 };
-# 134 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 134 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
 static void set_defaults_(FLAC__StreamEncoder *encoder);
 static void free_(FLAC__StreamEncoder *encoder);
 static FLAC__bool resize_buffers_(FLAC__StreamEncoder *encoder, uint32_t new_blocksize);
@@ -3438,7 +3438,7 @@ static FLAC__StreamEncoderSeekStatus file_seek_callback_(const FLAC__StreamEncod
 static FLAC__StreamEncoderTellStatus file_tell_callback_(const FLAC__StreamEncoder *encoder, FLAC__uint64 *absolute_byte_offset, void *client_data);
 static FLAC__StreamEncoderWriteStatus file_write_callback_(const FLAC__StreamEncoder *encoder, const FLAC__byte buffer[], size_t bytes, uint32_t samples, uint32_t current_frame, void *client_data);
 static FILE *get_binary_stdout_(void);
-# 313 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 313 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
 typedef struct FLAC__StreamEncoderPrivate {
  uint32_t input_capacity;
  FLAC__int32 *integer_signal[(8u)];
@@ -3616,7 +3616,7 @@ typedef struct FLAC__StreamEncoderPrivate {
  "FLAC__STREAM_ENCODER_TELL_STATUS_ERROR",
  "FLAC__STREAM_ENCODER_TELL_STATUS_UNSUPPORTED"
 };
-# 502 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 502 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
 static const uint32_t OVERREAD_ = 1;
 
 
@@ -3860,7 +3860,7 @@ static FLAC__StreamEncoderInitStatus init_stream_internal_(
   encoder->protected_->max_residual_partition_order = (1u << FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE_ORDER_LEN) - 1;
  if(encoder->protected_->min_residual_partition_order >= encoder->protected_->max_residual_partition_order)
   encoder->protected_->min_residual_partition_order = encoder->protected_->max_residual_partition_order;
-# 762 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 762 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
  if(0 != encoder->protected_->metadata && encoder->protected_->num_metadata_blocks > 0) {
   uint32_t i2;
   for(i2 = 0; i2 < encoder->protected_->num_metadata_blocks; i2++) {
@@ -3957,7 +3957,7 @@ static FLAC__StreamEncoderInitStatus init_stream_internal_(
  encoder->private_->raw_bits_per_partition_unaligned = encoder->private_->raw_bits_per_partition = 0;
 
  encoder->private_->loose_mid_side_stereo_frames = (uint32_t)((double)encoder->protected_->sample_rate * 0.4 / (double)encoder->protected_->blocksize + 0.5);
-# 867 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 867 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
  if(encoder->private_->loose_mid_side_stereo_frames == 0)
   encoder->private_->loose_mid_side_stereo_frames = 1;
  encoder->private_->loose_mid_side_stereo_frame_count = 0;
@@ -3993,13 +3993,13 @@ static FLAC__StreamEncoderInitStatus init_stream_internal_(
  encoder->private_->local_lpc_compute_residual_from_qlp_coefficients = FLAC__lpc_compute_residual_from_qlp_coefficients;
  encoder->private_->local_lpc_compute_residual_from_qlp_coefficients_64bit = FLAC__lpc_compute_residual_from_qlp_coefficients_wide;
  encoder->private_->local_lpc_compute_residual_from_qlp_coefficients_16bit = FLAC__lpc_compute_residual_from_qlp_coefficients;
-# 949 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 949 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
  if(encoder->private_->cpuinfo.use_asm) {
-# 1046 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 1046 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
  }
-# 1070 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 1070 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
  encoder->protected_->state = FLAC__STREAM_ENCODER_OK;
-# 1080 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 1080 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
  encoder->private_->read_callback = read_callback;
  encoder->private_->write_callback = write_callback;
  encoder->private_->seek_callback = seek_callback;
@@ -4116,7 +4116,7 @@ static FLAC__StreamEncoderInitStatus init_stream_internal_(
  encoder->private_->streaminfo.data.stream_info.min_framesize = (1u << FLAC__STREAM_METADATA_STREAMINFO_MIN_FRAME_SIZE_LEN) - 1;
 
  encoder->private_->streaminfo.data.stream_info.total_samples = 0;
-# 1207 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 1207 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
  if(!metadata_has_vorbis_comment) {
   FLAC__StreamMetadata vorbis_comment;
   vorbis_comment.type = FLAC__METADATA_TYPE_VORBIS_COMMENT;
@@ -4235,7 +4235,7 @@ static FLAC__StreamEncoderInitStatus init_FILE_internal_(
 
  if(file == (__getstdout()))
   file = get_binary_stdout_();
-# 1334 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 1334 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
  encoder->private_->file = file;
 
  encoder->private_->progress_callback = progress_callback;
@@ -5708,7 +5708,7 @@ FLAC__StreamEncoderWriteStatus write_frame_(FLAC__StreamEncoder *encoder, const 
    }
   }
  }
-# 2823 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 2823 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
  status = encoder->private_->write_callback(encoder, buffer, bytes, samples, encoder->private_->current_frame_number, encoder->private_->client_data);
 
  if(status == FLAC__STREAM_ENCODER_WRITE_STATUS_OK) {
@@ -5738,7 +5738,7 @@ void update_metadata_(const FLAC__StreamEncoder *encoder)
  FLAC__StreamEncoderSeekStatus seek_status;
 
                                                                ;
-# 2861 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 2861 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
  {
   const uint32_t md5_offset =
    (4u) +
@@ -5874,7 +5874,7 @@ void update_metadata_(const FLAC__StreamEncoder *encoder)
   }
  }
 }
-# 3188 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 3188 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
 FLAC__bool process_frame_(FLAC__StreamEncoder *encoder, FLAC__bool is_last_block)
 {
  FLAC__uint16 crc;
@@ -6273,7 +6273,7 @@ FLAC__bool process_subframe_(
 
  if(frame_header->blocksize > (4u)) {
   uint32_t signal_is_constant = 0;
-# 3594 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 3594 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
   if(subframe_bps < 28){
    if(subframe_bps + FLAC__bitmath_ilog2((frame_header->blocksize-(4u))*17) < 32)
     guess_fixed_order = encoder->private_->local_fixed_compute_best_predictor(((FLAC__int32 *)integer_signal)+(4u), frame_header->blocksize-(4u), fixed_residual_bits_per_sample);
@@ -6556,7 +6556,7 @@ FLAC__bool add_subframe_(
 
  return 1;
 }
-# 3908 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 3908 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
 uint32_t evaluate_constant_subframe_(
  FLAC__StreamEncoder *encoder,
  const FLAC__int64 signal,
@@ -6996,7 +6996,7 @@ void precompute_partition_info_escapes_(
   }
  }
 }
-# 4365 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 4365 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
 static inline uint32_t count_rice_bits_in_partition_(
  const uint32_t rice_parameter,
  const uint32_t partition_samples,
@@ -7004,7 +7004,7 @@ static inline uint32_t count_rice_bits_in_partition_(
 )
 {
  return (uint32_t)(((FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE_PARAMETER_LEN + (1+rice_parameter) * partition_samples + ( rice_parameter? (abs_residual_partition_sum >> (rice_parameter-1)) : (abs_residual_partition_sum << 1) ) - (partition_samples >> 1)) <= (4294967295U) ? (FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE_PARAMETER_LEN + (1+rice_parameter) * partition_samples + ( rice_parameter? (abs_residual_partition_sum >> (rice_parameter-1)) : (abs_residual_partition_sum << 1) ) - (partition_samples >> 1)) : (4294967295U)));
-# 4386 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 4386 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
  ;
 }
 
@@ -7053,7 +7053,7 @@ FLAC__bool set_partitioned_rice_(
     partition_samples -= predictor_order;
   }
   mean = abs_residual_partition_sums[partition];
-# 4449 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 4449 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
   if(mean <= 0x80000000/8) {
 
    FLAC__uint32 k2, mean2 = (FLAC__uint32) mean;
@@ -7084,7 +7084,7 @@ FLAC__bool set_partitioned_rice_(
   }
 
   best_partition_bits = 4294967295U;
-# 4501 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 4501 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
    partition_bits = count_rice_bits_in_partition_(rice_parameter, partition_samples, abs_residual_partition_sums[partition]);
 
    if(partition_bits < best_partition_bits) {
@@ -7325,14 +7325,14 @@ FLAC__StreamEncoderTellStatus file_tell_callback_(const FLAC__StreamEncoder *enc
   return FLAC__STREAM_ENCODER_TELL_STATUS_OK;
  }
 }
-# 4754 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 4754 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
 FLAC__StreamEncoderWriteStatus file_write_callback_(const FLAC__StreamEncoder *encoder, const FLAC__byte buffer[], size_t bytes, uint32_t samples, uint32_t current_frame, void *client_data)
 {
  (void)client_data, (void)current_frame;
 
  if(fwrite(buffer, sizeof(FLAC__byte), bytes, encoder->private_->file) == bytes) {
   FLAC__bool call_it = 0 != encoder->private_->progress_callback && (
-# 4769 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 4769 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
    samples > 0
   );
   if(call_it) {
@@ -7354,6 +7354,6 @@ FLAC__StreamEncoderWriteStatus file_write_callback_(const FLAC__StreamEncoder *e
 
 FILE *get_binary_stdout_(void)
 {
-# 4800 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/stream_encoder.c"
+# 4800 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
  return (__getstdout());
 }

@@ -1,10 +1,10 @@
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.c"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 289 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 
 
@@ -1814,7 +1814,7 @@ uint32_t select_wait_ordered(const resource_t ids[]);
 # 103 "C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_select.h"
 uint32_t select_no_wait_ordered(uint32_t no_wait_id, const resource_t ids[]);
 # 18 "C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api\\xcore_c.h" 2
-# 9 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.c" 2
+# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 1 3
 # 34 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 3
@@ -2413,7 +2413,7 @@ typedef struct
   cookie_close_function_t *close;
 } cookie_io_functions_t;
 FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __functions);
-# 10 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.c" 2
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 1 3
@@ -2487,18 +2487,18 @@ char *strupr (char *);
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys/string.h" 1 3
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 2 3
-# 12 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.c" 2
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 
 # 1 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h" 1
 # 77 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h"
 void debug_printf(char fmt[], ...);
-# 14 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.c" 2
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\ff.h" 1
-# 24 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\ff.h"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src/integer.h" 1
-# 16 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src/integer.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h" 1
+# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src/integer.h" 1
+# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src/integer.h"
 typedef int INT;
 typedef unsigned int UINT;
 
@@ -2517,13 +2517,13 @@ typedef unsigned short WCHAR;
 typedef long LONG;
 typedef unsigned long ULONG;
 typedef unsigned long DWORD;
-# 24 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\ff.h" 2
+# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src/ffconf.h" 1
-# 25 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\ff.h" 2
-# 66 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\ff.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src/ffconf.h" 1
+# 25 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h" 2
+# 66 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h"
 typedef char TCHAR;
-# 77 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\ff.h"
+# 77 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h"
 typedef struct {
   BYTE fs_type;
   BYTE drv;
@@ -2573,7 +2573,7 @@ typedef struct {
 
   DWORD dir_sect;
   BYTE* dir_ptr;
-# 136 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\ff.h"
+# 136 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h"
 } FIL;
 
 
@@ -2670,7 +2670,7 @@ int f_putc (TCHAR, FIL*);
 int f_puts (const TCHAR*, FIL*);
 int f_printf (FIL*, const TCHAR*, ...);
 TCHAR* f_gets (TCHAR*, int, FIL*);
-# 250 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_FatFs/src\\ff.h"
+# 250 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h"
 DWORD get_fattime (void);
 
 
@@ -2678,18 +2678,18 @@ DWORD get_fattime (void);
 
 WCHAR ff_convert (WCHAR, UINT);
 WCHAR ff_wtoupper (WCHAR);
-# 15 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.c" 2
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/timing.h" 1
-# 10 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/timing.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/timing.h" 1
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/timing.h"
 unsigned int get_time(void);
-# 16 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.c" 2
+# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 # 1 ".././src\\customdefines.h" 1
-# 17 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.c" 2
+# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_human_interface/src\\button_listener.h" 1
-# 17 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_human_interface/src\\button_listener.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 1
+# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
 typedef enum {
     _PENDING_Q = 0,
     _INPUT_Q = 1,
@@ -2712,11 +2712,11 @@ typedef enum {
 unsigned QueryChannel(chanend ch, unsigned command);
 
 void button_listener(chanend c_play_control, chanend c_dac_control);
-# 18 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.c" 2
+# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.h" 1
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.h" 1
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.h"
 typedef enum {
     _RC_REWIND,
     _RC_NEXT_TRACK,
@@ -2726,11 +2726,11 @@ typedef enum {
     _RC_PREVIOUS_FOLDER,
     _RC_ERROR
 } PLAY_TRACK_RC;
-# 20 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.c" 2
+# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_human_interface/src\\display_control.h" 1
-# 26 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_human_interface/src\\display_control.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h" 1
+# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
@@ -2746,18 +2746,18 @@ typedef enum {
 
 CONSOLE_MODE get_console_mode();
 void set_console_mode(CONSOLE_MODE value);
-# 22 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.c" 2
+# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_flash_memory_server/src\\qspi_access.h" 1
-# 12 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_flash_memory_server/src\\qspi_access.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h" 1
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h"
 int qspi_write(int offset, int size, char * buffer, char * scratch);
 
 int qspi_read(int offset, int size, char * buffer);
-# 32 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_flash_memory_server/src\\qspi_access.h"
+# 32 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h"
 void qspi_if_write(unsigned i, int offset, int size, char buffer[]);
 
 void qspi_if_read(unsigned i, int offset, int size, char buffer[]);
-# 23 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.c" 2
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 
 PLAY_TRACK_RC PlayRIFF(FIL* file, chanend c_handshake, chanend c_control);
@@ -2980,7 +2980,7 @@ void sdcard_play(
 
         while (state == IDLE){
             debug_printf("\nIDLE");
-# 255 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/sdcard_play.c"
+# 255 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
             PLAY_COMMAND reply = QueryChannel(c_play_control, _INPUT_Q);
             switch (reply){
             case _PLAY_CMD_PREV_TRACK:

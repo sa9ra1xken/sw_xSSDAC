@@ -1,17 +1,17 @@
 	.text
-	.file	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc"
+	.file	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc"
                                         # Start of file scope inline assembly
-	.globread sample_at,current,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:37:26: note: object used here\n    unsigned int ptr = ( current + offset) & ring_buff_mask;\n                         ^~~~~~~"
-	.globread sample_at,ring_buff_r,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:38:31: note: object used here\n    return {ring_buff_l[ptr], ring_buff_r[ptr]};\n                              ^~~~~~~~~~~~~~~~"
-	.globread sample_at,ring_buff_l,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:38:13: note: object used here\n    return {ring_buff_l[ptr], ring_buff_r[ptr]};\n            ^~~~~~~~~~~~~~~~"
-	.globread sample_at,ring_buff_mask,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:37:46: note: object used here\n    unsigned int ptr = ( current + offset) & ring_buff_mask;\n                                             ^~~~~~~~~~~~~~"
-	.globread add_sample,ring_buff_mask,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:29:59: note: object used here\n    unsigned int ptr = ( current + RING_BUFF_SIZE / 2 ) & ring_buff_mask;\n                                                          ^~~~~~~~~~~~~~"
-	.globwrite add_sample,current,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:32:5: note: object used here\n    current++;\n    ^~~~~~~"
-	.globwrite add_sample,ring_buff_r,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:31:5: note: object used here\n    ring_buff_r[ptr] = right;\n    ^~~~~~~~~~~~~~~~"
-	.globwrite add_sample,ring_buff_l,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:30:5: note: object used here\n    ring_buff_l[ptr] = left;\n    ^~~~~~~~~~~~~~~~"
-	.globwrite init_ring_buff,current,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:25:5: note: object used here\n    current = 0;\n    ^~~~~~~"
-	.globwrite init_ring_buff,ring_buff_r,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:23:9: note: object used here\n        ring_buff_r[i] = 0;\n        ^~~~~~~~~~~~~~"
-	.globwrite init_ring_buff,ring_buff_l,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:22:9: note: object used here\n        ring_buff_l[i] = 0;\n        ^~~~~~~~~~~~~~"
+	.globread sample_at,current,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:37:26: note: object used here\n    unsigned int ptr = ( current + offset) & ring_buff_mask;\n                         ^~~~~~~"
+	.globread sample_at,ring_buff_r,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:38:31: note: object used here\n    return {ring_buff_l[ptr], ring_buff_r[ptr]};\n                              ^~~~~~~~~~~~~~~~"
+	.globread sample_at,ring_buff_l,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:38:13: note: object used here\n    return {ring_buff_l[ptr], ring_buff_r[ptr]};\n            ^~~~~~~~~~~~~~~~"
+	.globread sample_at,ring_buff_mask,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:37:46: note: object used here\n    unsigned int ptr = ( current + offset) & ring_buff_mask;\n                                             ^~~~~~~~~~~~~~"
+	.globread add_sample,ring_buff_mask,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:29:59: note: object used here\n    unsigned int ptr = ( current + RING_BUFF_SIZE / 2 ) & ring_buff_mask;\n                                                          ^~~~~~~~~~~~~~"
+	.globwrite add_sample,current,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:32:5: note: object used here\n    current++;\n    ^~~~~~~"
+	.globwrite add_sample,ring_buff_r,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:31:5: note: object used here\n    ring_buff_r[ptr] = right;\n    ^~~~~~~~~~~~~~~~"
+	.globwrite add_sample,ring_buff_l,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:30:5: note: object used here\n    ring_buff_l[ptr] = left;\n    ^~~~~~~~~~~~~~~~"
+	.globwrite init_ring_buff,current,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:25:5: note: object used here\n    current = 0;\n    ^~~~~~~"
+	.globwrite init_ring_buff,ring_buff_r,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:23:9: note: object used here\n        ring_buff_r[i] = 0;\n        ^~~~~~~~~~~~~~"
+	.globwrite init_ring_buff,ring_buff_l,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:22:9: note: object used here\n        ring_buff_l[i] = 0;\n        ^~~~~~~~~~~~~~"
 	.set init_ring_buff.locnoside, 0
 	.set add_sample.locnoside, 0
 	.set init_ring_buff.locnoglobalaccess, 0
@@ -33,7 +33,7 @@
 .Lsection_debug_loc:
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src\\ring_buffer.xc"
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ring_buffer.xc"
 	.text
 	.globl	init_ring_buff
 	.align	4
@@ -41,7 +41,7 @@
 	.cc_top init_ring_buff.function,init_ring_buff
 init_ring_buff:                         # @init_ring_buff
 .Lfunc_begin0:
-	.loc	1 20 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:20:0
+	.loc	1 20 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:20:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -75,26 +75,26 @@ init_ring_buff:                         # @init_ring_buff
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel1:
 	#DEBUG_VALUE: i <- 0
-	.loc	1 22 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:22:0
+	.loc	1 22 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:22:0
 .Ltmp3:
 	stw r0, r1[r11]
-	.loc	1 23 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:23:0
+	.loc	1 23 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:23:0
 	stw r0, r2[r11]
-	.loc	1 21 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:21:0
+	.loc	1 21 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:21:0
 	{
 		add r11, r11, 1
 		nop
 	}
 .Ltmp4:
 	#DEBUG_VALUE: i <- R11
-	.loc	1 21 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:21:0
+	.loc	1 21 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:21:0
 	{
 		lss r4, r11, r3
 		nop
 	}
 .Lxta.loop_labels0:
 	# LOOPMARKER 0
-	.loc	1 21 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:21:0
+	.loc	1 21 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:21:0
 	bt r4, .LBB0_1
 .Ltmp5:
 # BB#2:                                 # %ifdone
@@ -103,7 +103,7 @@ init_ring_buff:                         # @init_ring_buff
 		ldc r0, 0
 		nop
 	}
-	.loc	1 25 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:25:0
+	.loc	1 25 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:25:0
 	stw r0, dp[current]
 	{
 		ldaw sp, sp[2]
@@ -135,7 +135,7 @@ init_ring_buff:                         # @init_ring_buff
 	.cc_top add_sample.function,add_sample
 add_sample:                             # @add_sample
 .Lfunc_begin1:
-	.loc	1 28 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:28:0
+	.loc	1 28 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:28:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -158,25 +158,25 @@ add_sample:                             # @add_sample
 	.cfi_offset 4, -8
 	#DEBUG_VALUE: add_sample:left <- R0
 	#DEBUG_VALUE: add_sample:right <- R1
-	.loc	1 29 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:29:0
+	.loc	1 29 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:29:0
 .Ltmp10:
 	ldw r2, dp[current]
 	ldc r3, 128
-	.loc	1 29 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:29:0
+	.loc	1 29 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:29:0
 	{
 		add r11, r2, r3
 		nop
 	}
-	.loc	1 29 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:29:0
+	.loc	1 29 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:29:0
 	ldw r3, dp[ring_buff_mask]
-	.loc	1 29 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:29:0
+	.loc	1 29 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:29:0
 	{
 		and r11, r11, r3
 		nop
 	}
 .Ltmp11:
 	#DEBUG_VALUE: ptr <- R11
-	.loc	1 30 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:30:0
+	.loc	1 30 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:30:0
 	{
 		shr r4, r11, 8
 		nop
@@ -189,26 +189,26 @@ add_sample:                             # @add_sample
 	#DEBUG_VALUE: add_sample:left <- R0
 	#DEBUG_VALUE: add_sample:right <- R1
 	#DEBUG_VALUE: ptr <- R11
-	.loc	1 30 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:30:0
+	.loc	1 30 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:30:0
 	ldaw r4, dp[ring_buff_l]
-	.loc	1 30 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:30:0
+	.loc	1 30 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:30:0
 	stw r0, r4[r11]
-	.loc	1 31 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:31:0
+	.loc	1 31 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:31:0
 	ldaw r0, dp[ring_buff_r]
 .Ltmp12:
-	.loc	1 31 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:31:0
+	.loc	1 31 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:31:0
 	stw r1, r0[r11]
-	.loc	1 32 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:32:0
+	.loc	1 32 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:32:0
 	{
 		add r0, r2, 1
 		nop
 	}
-	.loc	1 33 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:33:0
+	.loc	1 33 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:33:0
 	{
 		and r0, r0, r3
 		nop
 	}
-	.loc	1 33 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:33:0
+	.loc	1 33 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:33:0
 	stw r0, dp[current]
 	{
 		ldaw sp, sp[2]
@@ -240,7 +240,7 @@ add_sample:                             # @add_sample
 	.cc_top sample_at.function,sample_at
 sample_at:                              # @sample_at
 .Lfunc_begin2:
-	.loc	1 36 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:36:0
+	.loc	1 36 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:36:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -250,25 +250,25 @@ sample_at:                              # @sample_at
 		dualentsp 0
 	}
 	#DEBUG_VALUE: sample_at:offset <- R0
-	.loc	1 37 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:37:0
+	.loc	1 37 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:37:0
 .Ltmp15:
 	ldw r1, dp[current]
-	.loc	1 37 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:37:0
+	.loc	1 37 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:37:0
 	{
 		add r0, r1, r0
 		nop
 	}
 .Ltmp16:
-	.loc	1 37 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:37:0
+	.loc	1 37 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:37:0
 	ldw r1, dp[ring_buff_mask]
-	.loc	1 37 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:37:0
+	.loc	1 37 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:37:0
 	{
 		and r1, r0, r1
 		nop
 	}
 .Ltmp17:
 	#DEBUG_VALUE: ptr <- R1
-	.loc	1 38 5                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:38:5
+	.loc	1 38 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:38:5
 	{
 		shr r0, r1, 8
 		nop
@@ -279,13 +279,13 @@ sample_at:                              # @sample_at
 		nop
 	}
 	#DEBUG_VALUE: ptr <- R1
-	.loc	1 38 5                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:38:5
+	.loc	1 38 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:38:5
 	ldaw r0, dp[ring_buff_l]
 	{
 		nop
 		ldw r0, r0[r1]
 	}
-	.loc	1 38 5                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:38:5
+	.loc	1 38 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:38:5
 	ldaw r2, dp[ring_buff_r]
 	{
 		nop
@@ -362,9 +362,9 @@ current:
 .Linfo_string0:
 .asciiz"XMOS 32-bit XC Compiler Community_14.4.1 (build 235-acbb966, Dec-01-2019)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 .Linfo_string3:
 .asciiz"ring_buff_mask"
 .Linfo_string4:
@@ -846,38 +846,38 @@ current:
 .Lentries_start0:
 	.long	.Lentries_end1-.Lentries_start0
 	.long	0
-	.ascii	"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 	.byte	0
 .cc_top cc_0,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc"
 	.byte	0
 	.long	21
 	.long	21
 	.long	.Lxtalabel0
 .cc_bottom cc_0
 .cc_top cc_1,.Lxtalabel1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc"
 	.byte	0
 	.long	22
 	.long	24
 	.long	.Lxtalabel1
 .cc_bottom cc_1
 .cc_top cc_2,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc"
 	.byte	0
 	.long	25
 	.long	26
 	.long	.Lxtalabel2
 .cc_bottom cc_2
 .cc_top cc_3,.Lxtalabel3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc"
 	.byte	0
 	.long	29
 	.long	34
 	.long	.Lxtalabel3
 .cc_bottom cc_3
 .cc_top cc_4,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc"
 	.byte	0
 	.long	37
 	.long	39
@@ -888,10 +888,10 @@ current:
 .Lentries_start2:
 	.long	.Lentries_end3-.Lentries_start2
 	.long	0
-	.ascii	"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 	.byte	0
 .cc_top cc_5,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc"
 	.byte	0
 	.long	22
 	.long	24
@@ -904,7 +904,7 @@ current:
 	.long	1
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str0:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:30:5: error: out of bounds array access\n    ring_buff_l[ptr] = left;\n    ^~~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:30:5: error: out of bounds array access\n    ring_buff_l[ptr] = left;\n    ^~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_0,.Ltrap_info0
 	.long	.Ltrap_info0
@@ -912,7 +912,7 @@ current:
 .cc_bottom cc_trapinfo_0
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/ring_buffer.xc:38:13: error: out of bounds array access\n    return {ring_buff_l[ptr], ring_buff_r[ptr]};\n            ^~~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc:38:13: error: out of bounds array access\n    return {ring_buff_l[ptr], ring_buff_r[ptr]};\n            ^~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_1,.Ltrap_info1
 	.long	.Ltrap_info1

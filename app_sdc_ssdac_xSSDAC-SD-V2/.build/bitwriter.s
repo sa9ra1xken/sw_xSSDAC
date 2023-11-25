@@ -15,8 +15,8 @@
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
 	.file	1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h"
-	.file	2 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source\\bitwriter.c"
-	.file	3 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC\\ordinals.h"
+	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\bitwriter.c"
+	.file	3 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\ordinals.h"
 	.text
 	.globl	FLAC__bitwriter_new
 	.align	4
@@ -129,7 +129,7 @@ FLAC__bitwriter_delete:
 .Ltmp15:
 	.size	FLAC__bitwriter_delete, .Ltmp15-FLAC__bitwriter_delete
 .Lfunc_end1:
-	.file	4 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private\\bitwriter.h"
+	.file	4 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private\\bitwriter.h"
 	.cfi_endproc
 
 	.globl	FLAC__bitwriter_free
@@ -576,7 +576,7 @@ FLAC__bitwriter_get_buffer:
 		nop
 		ldw r0, r6[0]
 	}
-	.file	5 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share\\alloc.h"
+	.file	5 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share\\alloc.h"
 	.loc	5 286 5
 .Ltmp72:
 	bf r8, .LBB6_9
@@ -4602,9 +4602,9 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 .Linfo_string0:
 .asciiz"XMOS-235-acbb966-Dec-01-2019 clang version 3.6.0  (based on LLVM 3.6.0svn)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source\\bitwriter.c"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\bitwriter.c"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 .Linfo_string3:
 .asciiz"FLAC__BITWRITER_DEFAULT_CAPACITY"
 .Linfo_string4:

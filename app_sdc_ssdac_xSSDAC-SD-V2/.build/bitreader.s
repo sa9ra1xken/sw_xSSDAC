@@ -15,8 +15,8 @@
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
 	.file	1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h"
-	.file	2 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source\\bitreader.c"
-	.file	3 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC\\ordinals.h"
+	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\bitreader.c"
+	.file	3 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC\\ordinals.h"
 	.text
 	.globl	FLAC__bitreader_new
 	.align	4
@@ -130,7 +130,7 @@ FLAC__bitreader_delete:
 	.size	FLAC__bitreader_delete, .Ltmp15-FLAC__bitreader_delete
 .Lfunc_end1:
 	.file	4 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h"
-	.file	5 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private\\bitreader.h"
+	.file	5 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private\\bitreader.h"
 	.cfi_endproc
 
 	.globl	FLAC__bitreader_free
@@ -4165,7 +4165,7 @@ FLAC__bitreader_read_unary_unsigned:
 	bu .LBB25_12
 .Ltmp482:
 .LBB25_4:
-	.file	6 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private\\bitmath.h"
+	.file	6 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private\\bitmath.h"
 	.loc	6 84 9
 	{
 		clz r0, r0
@@ -5919,9 +5919,9 @@ FLAC__bitreader_read_utf8_uint64:
 .Linfo_string0:
 .asciiz"XMOS-235-acbb966-Dec-01-2019 clang version 3.6.0  (based on LLVM 3.6.0svn)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source\\bitreader.c"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\bitreader.c"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 .Linfo_string3:
 .asciiz"FLAC__BITREADER_DEFAULT_CAPACITY"
 .Linfo_string4:

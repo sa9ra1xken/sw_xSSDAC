@@ -15,12 +15,12 @@
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
 	.file	1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h"
-	.file	2 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source\\ogg_helper.c"
-	.file	3 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../FLAC\\stream_encoder.h"
-	.file	4 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected\\stream_encoder.h"
-	.file	5 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC\\format.h"
-	.file	6 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC\\ordinals.h"
-	.file	7 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/protected/../private\\float.h"
+	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\ogg_helper.c"
+	.file	3 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC\\stream_encoder.h"
+	.file	4 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected\\stream_encoder.h"
+	.file	5 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\format.h"
+	.file	6 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC\\ordinals.h"
+	.file	7 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../private\\float.h"
 	.text
 	.globl	simple_ogg_page__init
 	.align	4
@@ -240,7 +240,7 @@ simple_ogg_page__get_at:
 	bt r0, .LBB2_2
 .Ltmp30:
 	ldc r0, 282
-	.file	8 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/share\\alloc.h"
+	.file	8 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share\\alloc.h"
 	.loc	8 95 9
 .Ltmp31:
 	bl malloc
@@ -1051,14 +1051,14 @@ simple_ogg_page__set_at:
 	.cc_bottom .L.str1.data
 	.text
 .Ldebug_end0:
-	.file	10 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../ogg\\ogg.h"
+	.file	10 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../ogg\\ogg.h"
 	.section	.debug_str,"MS",@progbits,1
 .Linfo_string0:
 .asciiz"XMOS-235-acbb966-Dec-01-2019 clang version 3.6.0  (based on LLVM 3.6.0svn)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source\\ogg_helper.c"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\ogg_helper.c"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 .Linfo_string3:
 .asciiz"OGG_HEADER_FIXED_PORTION_LEN"
 .Linfo_string4:

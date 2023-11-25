@@ -21,7 +21,7 @@
 	.cc_top FLAC__bitmath_silog2.function,FLAC__bitmath_silog2
 FLAC__bitmath_silog2:
 .Lfunc_begin0:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source\\bitmath.c"
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\bitmath.c"
 	.loc	1 64 0
 	.cfi_startproc
 	.issue_mode dual
@@ -59,7 +59,7 @@ FLAC__bitmath_silog2:
 	ashr r2, r1, 32
 	.loc	1 71 2
 	xor r1, r2, r1
-	.file	2 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private\\bitmath.h"
+	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private\\bitmath.h"
 	.loc	2 178 9
 .Ltmp2:
 	bt r1, .LBB0_5
@@ -103,7 +103,7 @@ FLAC__bitmath_silog2:
 	.size	FLAC__bitmath_silog2, .Ltmp7-FLAC__bitmath_silog2
 .Lfunc_end0:
 	.file	3 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h"
-	.file	4 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC\\ordinals.h"
+	.file	4 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC\\ordinals.h"
 	.cfi_endproc
 
 .Ldebug_end0:
@@ -111,9 +111,9 @@ FLAC__bitmath_silog2:
 .Linfo_string0:
 .asciiz"XMOS-235-acbb966-Dec-01-2019 clang version 3.6.0  (based on LLVM 3.6.0svn)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source\\bitmath.c"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\bitmath.c"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 .Linfo_string3:
 .asciiz"FLAC__bitmath_ilog2_wide"
 .Linfo_string4:

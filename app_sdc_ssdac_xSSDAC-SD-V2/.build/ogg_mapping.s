@@ -15,8 +15,8 @@
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
 	.file	1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h"
-	.file	2 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source\\ogg_mapping.c"
-	.file	3 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC\\ordinals.h"
+	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\ogg_mapping.c"
+	.file	3 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC\\ordinals.h"
 	.section	.cp.rodata.4,"ac",@progbits
 	.cc_top FLAC__OGG_MAPPING_PACKET_TYPE_LEN.data,FLAC__OGG_MAPPING_PACKET_TYPE_LEN
 	.globl	FLAC__OGG_MAPPING_PACKET_TYPE_LEN
@@ -83,9 +83,9 @@ FLAC__OGG_MAPPING_NUM_HEADERS_LEN:
 .Linfo_string0:
 .asciiz"XMOS-235-acbb966-Dec-01-2019 clang version 3.6.0  (based on LLVM 3.6.0svn)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source\\ogg_mapping.c"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\ogg_mapping.c"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 .Linfo_string3:
 .asciiz"FLAC__OGG_MAPPING_PACKET_TYPE_LEN"
 .Linfo_string4:

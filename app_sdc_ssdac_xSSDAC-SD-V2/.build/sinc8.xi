@@ -1,10 +1,10 @@
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/sinc8.xc"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 141 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/sinc8.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc" 2
 
 
 
@@ -396,7 +396,7 @@ unsigned get_local_tile_id(void);
 unsigned get_tile_id(tileref t);
 # 2136 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h" 3
 unsigned get_logical_core_id(void);
-# 8 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/sinc8.xc" 2
+# 8 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 
@@ -1027,10 +1027,10 @@ int _safe_fclose(FILE * movable fp);
 int _safe_remove(const char file[]);
 int _safe_rename(const char from[], const char to[]);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 2 3
-# 9 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/sinc8.xc" 2
+# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src\\ssdac.h" 1
-# 31 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src\\ssdac.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h" 1
+# 31 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
 typedef enum {
     _GET_INTERPOLATION_MODE =1,
     _SET_INTERPOLATION_MODE =2
@@ -1080,9 +1080,9 @@ unsigned start_fir(chanend c_in, unsigned sample_rate);
 unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
 
 void audio_xss(chanend c_in, chanend ?c_control);
-# 10 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/sinc8.xc" 2
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src\\audiohw.h" 1
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\audiohw.h" 1
 
 
 
@@ -1098,20 +1098,20 @@ void AudioHwConfig(unsigned samFreq, unsigned mClk, chanend ?c_codec, unsigned d
 void ReleaseMute();
 
 void ClipIndicator(unsigned state);
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/sinc8.xc" 2
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src\\ring_buffer.h" 1
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src\\ring_buffer.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ring_buffer.h" 1
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ring_buffer.h"
 void init_ring_buff();
 void add_sample(int left, int right);
 {int, int} sample_at(int offset);
-# 12 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/sinc8.xc" 2
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc" 2
 
 # 1 ".././src\\customdefines.h" 1
-# 13 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/sinc8.xc" 2
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src\\do_sample_transfer.h" 1
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src\\do_sample_transfer.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h" 1
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 static int samplesOut[(2)];
 
 #pragma unsafe arrays
@@ -1136,12 +1136,12 @@ static inline unsigned DoSampleTransfer(chanend c_out, const unsigned underflowW
     }
     return 0;
 }
-# 14 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/sinc8.xc" 2
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc" 2
 
 
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src\\fir_interpolator.h" 1
-# 15 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src\\fir_interpolator.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h" 1
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h"
 extern unsigned ring_buff_mask;
 extern ring_buff_l[];
 extern ring_buff_r[];
@@ -1149,11 +1149,11 @@ extern int current;
 
 extern port tp23_solver;
 extern port tp24_interpolator;
-# 101 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src\\fir_interpolator.h"
+# 101 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h"
 {DAC_RETURN_CODE, unsigned} fir_sinc8(chanend c_in, streaming chanend c_out, chanend ?c_control, unsigned sample_rate);
 
 {DAC_RETURN_CODE, unsigned} fir_sinc4(chanend c_in, streaming chanend c_out, chanend ?c_control, unsigned sample_rate);
-# 17 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/sinc8.xc" 2
+# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc" 2
 
 
 
@@ -1226,15 +1226,15 @@ const int fir_tap_sinc8_q30[31 * 2 + 1][8]={
 };
 
 {DAC_RETURN_CODE, unsigned} fir_sinc8 (chanend c_in, streaming chanend c_out, chanend ?c_control, unsigned sample_rate){ int acc_l_msb[4]; unsigned acc_l_lsb[4]; int acc_r_msb[4]; unsigned acc_r_lsb[4]; printf("\nfir_sinc4 started, sps:%d", sample_rate); fflush((__getstdout())); ReleaseMute(); while (1){ tp23_solver <: 1; if (!isnull(c_control)){ INTERPOLATION_MODE mode; c_control <: _GET_INTERPOLATION_MODE; c_control :> mode; if ( mode != _SINC8 ){ __builtin_soutct(c_out, 0x1); return {_INTERPOLATION_MODE_CHANGE, 0}; } } tp23_solver <: 0; unsigned command = DoSampleTransfer(c_in, 0); if (command){ __builtin_soutct(c_out, 0x1); return {_AUDIO_FORMAT_CHANGE, command}; } add_sample(samplesOut[0] >> 4,samplesOut[1] >> 4);
-# 88 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/sinc8.xc"
+# 88 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
 #pragma unsafe arrays
-# 88 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/sinc8.xc"
+# 88 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
 #pragma loop unroll
-# 88 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/sinc8.xc"
+# 88 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
  for (unsigned m = 0 ; m < 8 ; m++ ){ par (int i = 0 ; i < 4 ; i++ ) { { acc_l_msb[i] = 0; acc_l_lsb[i] = 0; acc_r_msb[i] = 0; acc_r_lsb[i] = 0;
-# 88 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/sinc8.xc"
+# 88 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
 #pragma unsafe arrays
-# 88 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/sinc8.xc"
+# 88 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
 #pragma loop unroll
-# 88 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_ssdac/src/sinc8.xc"
+# 88 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
  for ( int n = ( - ( 48 / 2 ) ) + i * (48 / 4); n < ( - ( 48 / 2 ) ) + (i + 1) * (48 / 4); n++ ) { {acc_l_msb[i], acc_l_lsb[i]} = __builtin_macs(ring_buff_l[( current + n) & ring_buff_mask], fir_tap_sinc8_q30[-n + 31 - 1][m], acc_l_msb[i], acc_l_lsb[i]); {acc_r_msb[i], acc_r_lsb[i]} = __builtin_macs(ring_buff_r[( current + n) & ring_buff_mask], fir_tap_sinc8_q30[-n + 31 - 1][m], acc_r_msb[i], acc_r_lsb[i]); } } } int out_l = 0; int out_r = 0; for (int i = 0 ; i < 4 ; i++){ out_l += acc_l_msb[i]; out_r += acc_r_msb[i]; } c_out <: ( out_l << 3); c_out <: ( out_r << 3); } }}

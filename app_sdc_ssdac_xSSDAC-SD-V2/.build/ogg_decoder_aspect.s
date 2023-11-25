@@ -15,10 +15,10 @@
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
 	.file	1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h"
-	.file	2 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source\\ogg_decoder_aspect.c"
-	.file	3 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private\\ogg_decoder_aspect.h"
+	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\ogg_decoder_aspect.c"
+	.file	3 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private\\ogg_decoder_aspect.h"
 	.file	4 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h"
-	.file	5 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/FLAC\\ordinals.h"
+	.file	5 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\ordinals.h"
 	.text
 	.globl	FLAC__ogg_decoder_aspect_init
 	.align	4
@@ -489,8 +489,8 @@ FLAC__ogg_decoder_aspect_reset:
 .Ltmp41:
 	.size	FLAC__ogg_decoder_aspect_reset, .Ltmp41-FLAC__ogg_decoder_aspect_reset
 .Lfunc_end5:
-	.file	6 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../ogg\\ogg.h"
-	.file	7 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/ogg\\config_types.h"
+	.file	6 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../ogg\\ogg.h"
+	.file	7 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg\\config_types.h"
 	.cfi_endproc
 
 	.globl	FLAC__ogg_decoder_aspect_read_callback_wrapper
@@ -1400,14 +1400,14 @@ FLAC__ogg_decoder_aspect_read_callback_wrapper:
 	.cfi_endproc
 
 .Ldebug_end0:
-	.file	8 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source/private/../FLAC\\stream_decoder.h"
+	.file	8 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC\\stream_decoder.h"
 	.section	.debug_str,"MS",@progbits,1
 .Linfo_string0:
 .asciiz"XMOS-235-acbb966-Dec-01-2019 clang version 3.6.0  (based on LLVM 3.6.0svn)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_libFLAC/source\\ogg_decoder_aspect.c"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\ogg_decoder_aspect.c"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 .Linfo_string3:
 .asciiz"OGG_BYTES_CHUNK"
 .Linfo_string4:

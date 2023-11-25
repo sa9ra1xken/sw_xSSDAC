@@ -1,10 +1,10 @@
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 141 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc" 2
 
 
 
@@ -395,12 +395,12 @@ unsigned get_local_tile_id(void);
 unsigned get_tile_id(tileref t);
 # 2136 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 3
 unsigned get_logical_core_id(void);
-# 7 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc" 2
+# 7 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
-# 1 "C:\\\\MEGA\\\\HobbyElec\\\\SSDAC\\\\xSSDAC\\\\xTIME\\\\WORKSPACE\\\\app_sdc_ssdac_xSSDAC-SD-V2\\\\.build\\\\xSSDAC-SD-V2.h" 1 3
-# 13 "C:\\\\MEGA\\\\HobbyElec\\\\SSDAC\\\\xSSDAC\\\\xTIME\\\\WORKSPACE\\\\app_sdc_ssdac_xSSDAC-SD-V2\\\\.build\\\\xSSDAC-SD-V2.h" 3
+# 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_sdc_ssdac_xSSDAC-SD-V2\\\\.build\\\\xSSDAC-SD-V2.h" 1 3
+# 13 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_sdc_ssdac_xSSDAC-SD-V2\\\\.build\\\\xSSDAC-SD-V2.h" 3
 extern tileref tile[2];
 extern tileref usb_tile;
 
@@ -409,10 +409,10 @@ extern tileref usb_tile;
 
 service xscope_host_data(chanend c);;
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 8 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc" 2
+# 8 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc" 2
 
 # 1 ".././src\\customdefines.h" 1
-# 9 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc" 2
+# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 
@@ -1043,7 +1043,7 @@ int _safe_fclose(FILE * movable fp);
 int _safe_remove(const char file[]);
 int _safe_rename(const char from[], const char to[]);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 2 3
-# 10 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc" 2
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc" 2
 
 
 

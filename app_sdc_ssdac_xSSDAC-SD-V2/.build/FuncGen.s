@@ -1,5 +1,5 @@
 	.text
-	.file	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc"
+	.file	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
                                         # Start of file scope inline assembly
 	.inline_definition delay_seconds
 	.inline_definition delay_milliseconds
@@ -36,8 +36,8 @@
 	.cc_top FuncGen.function,FuncGen
 FuncGen:                                # @FuncGen
 .Lfunc_begin0:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src\\FuncGen.xc"
-	.loc	1 19 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc:19:0
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\FuncGen.xc"
+	.loc	1 19 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:19:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -66,11 +66,11 @@ FuncGen:                                # @FuncGen
 		mov r5, r0
 	}
 .Ltmp5:
-	.loc	1 20 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc:20:0
+	.loc	1 20 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:20:0
 .Lxta.call_labels0:
 	bl InitFG
 .Ltmp6:
-	.loc	1 21 21                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc:21:21
+	.loc	1 21 21                 # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:21:21
 .Lxta.endpoint_labels0:
 	{
 		out res[r4], r5
@@ -81,25 +81,25 @@ FuncGen:                                # @FuncGen
 .Lxtalabel1:
 .Ltmp7:
 	#DEBUG_VALUE: FuncGen:c_out <- R4
-	.loc	1 24 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc:24:0
+	.loc	1 24 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:24:0
 .Lxta.call_labels1:
 	bl NextSample
 .Ltmp8:
 	#DEBUG_VALUE: y <- R0
-	.loc	1 27 19                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc:27:19
+	.loc	1 27 19                 # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:27:19
 .Lxta.endpoint_labels1:
 	{
 		out res[r4], r0
 		nop
 	}
-	.loc	1 28 19                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc:28:19
+	.loc	1 28 19                 # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:28:19
 .Lxta.endpoint_labels2:
 	{
 		out res[r4], r0
 		nop
 	}
 .Ltmp9:
-	.loc	1 22 5                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc:22:5
+	.loc	1 22 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:22:5
 	bu .LBB0_1
 .Ltmp10:
 	.cc_bottom FuncGen.function
@@ -122,9 +122,9 @@ FuncGen:                                # @FuncGen
 .Linfo_string0:
 .asciiz"XMOS 32-bit XC Compiler Community_14.4.1 (build 235-acbb966, Dec-01-2019)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 .Linfo_string3:
 .asciiz"delay_seconds"
 .Linfo_string4:
@@ -473,16 +473,16 @@ FuncGen:                                # @FuncGen
 .Lentries_start0:
 	.long	.Lentries_end1-.Lentries_start0
 	.long	0
-	.ascii	"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 	.byte	0
 .cc_top cc_0,.Lxta.call_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 	.byte	0
 	.long	20
 	.long	.Lxta.call_labels0
 .cc_bottom cc_0
 .cc_top cc_1,.Lxta.call_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 	.byte	0
 	.long	24
 	.long	.Lxta.call_labels1
@@ -492,22 +492,22 @@ FuncGen:                                # @FuncGen
 .Lentries_start2:
 	.long	.Lentries_end3-.Lentries_start2
 	.long	0
-	.ascii	"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 	.byte	0
 .cc_top cc_2,.Lxta.endpoint_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 	.byte	0
 	.long	21
 	.long	.Lxta.endpoint_labels0
 .cc_bottom cc_2
 .cc_top cc_3,.Lxta.endpoint_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 	.byte	0
 	.long	27
 	.long	.Lxta.endpoint_labels1
 .cc_bottom cc_3
 .cc_top cc_4,.Lxta.endpoint_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 	.byte	0
 	.long	28
 	.long	.Lxta.endpoint_labels2
@@ -517,24 +517,24 @@ FuncGen:                                # @FuncGen
 .Lentries_start4:
 	.long	.Lentries_end5-.Lentries_start4
 	.long	0
-	.ascii	"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 	.byte	0
 .cc_top cc_5,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 	.byte	0
 	.long	20
 	.long	22
 	.long	.Lxtalabel0
 .cc_bottom cc_5
 .cc_top cc_6,.Lxtalabel1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 	.byte	0
 	.long	24
 	.long	24
 	.long	.Lxtalabel1
 .cc_bottom cc_6
 .cc_top cc_7,.Lxtalabel1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/FuncGen.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 	.byte	0
 	.long	27
 	.long	29

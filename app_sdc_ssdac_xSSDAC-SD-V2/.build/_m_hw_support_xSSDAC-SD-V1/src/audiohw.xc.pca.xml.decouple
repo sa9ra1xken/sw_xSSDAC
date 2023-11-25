@@ -1,4 +1,4 @@
-<preCompilationAnalysis file="C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc">
+<preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc">
 <fDef name="AudioHwConfig" global="true" noreturn="false" doNotSpecialize="false" numParams="6"/>
 <fDef name="AudioHwInit" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
 <fDef name="ClipIndicator" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>

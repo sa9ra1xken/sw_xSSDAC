@@ -1,5 +1,5 @@
 	.text
-	.file	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/timing.xc"
+	.file	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/timing.xc"
                                         # Start of file scope inline assembly
 	.inline_definition delay_seconds
 	.inline_definition delay_milliseconds
@@ -7,7 +7,7 @@
 	.set usage.anon.0,0
 	.set usage.anon.1,0
 	.set usage.anon.2,0
-	.globwrite get_time,t,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/timing.xc:16:3: note: object used here\n  t :> time;\n  ^"
+	.globwrite get_time,t,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/timing.xc:16:3: note: object used here\n  t :> time;\n  ^"
 	.call usage.anon.2,delay_ticks_longlong
 	.call usage.anon.1,delay_ticks_longlong
 	.call usage.anon.0,delay_ticks_longlong
@@ -29,7 +29,7 @@
 .Lsection_debug_loc:
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src\\timing.xc"
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\timing.xc"
 	.text
 	.globl	get_time
 	.align	4
@@ -80,9 +80,9 @@ t:
 .Linfo_string0:
 .asciiz"XMOS 32-bit XC Compiler Community_14.4.1 (build 235-acbb966, Dec-01-2019)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/timing.xc"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/timing.xc"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 .Linfo_string3:
 .asciiz"t"
 .Linfo_string4:
@@ -334,17 +334,17 @@ t:
 .Lentries_start0:
 	.long	.Lentries_end1-.Lentries_start0
 	.long	0
-	.ascii	"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build"
 	.byte	0
 .cc_top cc_0,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/timing.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/timing.xc"
 	.byte	0
 	.long	13
 	.long	14
 	.long	.Lxtalabel0
 .cc_bottom cc_0
 .cc_top cc_1,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/timing.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/timing.xc"
 	.byte	0
 	.long	16
 	.long	18

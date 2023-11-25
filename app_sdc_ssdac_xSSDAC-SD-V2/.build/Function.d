@@ -1,2 +1,1 @@
-Function.o: \
-  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_sd_audio/src/Function.c
+Function.o: C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/Function.c

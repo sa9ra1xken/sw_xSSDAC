@@ -1,4 +1,4 @@
-<preCompilationAnalysis file="C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src/OLED_SSD1306.xc">
+<preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc">
 <fDef name="OLED_SSD1306_begin" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
 <fDef name="OLED_SSD1306_put_string" global="true" noreturn="false" doNotSpecialize="false" numParams="2"/>
 <fDef name="OLED_SSD1306_shift_left" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
