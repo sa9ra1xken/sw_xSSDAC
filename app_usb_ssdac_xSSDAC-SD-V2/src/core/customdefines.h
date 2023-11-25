@@ -7,7 +7,7 @@
 #ifndef _CUSTOMDEFINES_H_
 #define _CUSTOMDEFINES_H_
 
-//#include "user_main.h" // removed by sakurai
+//#include "user_main.h" // removed by Sakurai
 
 /*
  * Device configuration option defines to override default defines found devicedefines.h
