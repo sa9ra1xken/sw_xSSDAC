@@ -1265,10 +1265,10 @@ void add_sample(int left, int right);
 
 
 
-void AudioHwInit(chanend ?c_codec);
+void AudioHwInit( );
 
 
-void AudioHwConfig(unsigned samFreq, unsigned mClk, chanend ?c_codec, unsigned dsdMode,
+void AudioHwConfig(unsigned samFreq, unsigned mClk, unsigned dsdMode,
         unsigned sampRes_DAC, unsigned sampRes_ADC);
 
 void ReleaseMute();
@@ -1276,12 +1276,13 @@ void ReleaseMute();
 void ClipIndicator(unsigned state);
 # 23 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
-# 1 ".././src\\customdefines.h" 1
-# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+
+# 1 ".././src\\ssdac_conf.h" 1
+# 25 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h" 1
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
-static int samplesOut[(2)];
+static int samplesOut[2];
 
 #pragma unsafe arrays
 static inline unsigned DoSampleTransfer(chanend c_out, const unsigned underflowWord)
@@ -1297,7 +1298,7 @@ static inline unsigned DoSampleTransfer(chanend c_out, const unsigned underflowW
     else
     {
 #pragma loop unroll
- for(int i = 0; i < (2); i++)
+ for(int i = 0; i < 2; i++)
         {
             int tmp = __builtin_in_uint(c_out);
             samplesOut[i] = tmp;
@@ -1305,8 +1306,8 @@ static inline unsigned DoSampleTransfer(chanend c_out, const unsigned underflowW
     }
     return 0;
 }
-# 25 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
-# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 on tile[0]: port tp5 = on tile[0]: 0x10200;
 on tile[0]: port tp23_solver = on tile[0]: 0x10c00;
 on tile[0]: port tp24_interpolator = on tile[0]: 0x10d00;
@@ -1315,7 +1316,7 @@ on tile[0]: port tp24_interpolator = on tile[0]: 0x10d00;
 
 
 on tile[0]: port p_spidac_mclk_in = on tile[0]: 0x10600;
-on tile[0]: __clock_t clk_spi = 0x406;
+on tile[0]: __clock_t clk_spi = 0x106;
 
 on tile[0]: buffered out port:32 p_data_left = on tile[0]: 0x10900;
 on tile[0]: buffered out port:32 p_data_right = on tile[0]: 0x10500;
@@ -1341,7 +1342,7 @@ void ConfigureSerialDacPorts(){
 
 
     configure_clock_src(clk_spi, p_spidac_mclk_in);
-# 87 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+# 88 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
     configure_out_port_strobed_master(p_data_left, p_cs_n_0, clk_spi, 0x00);
     configure_out_port_strobed_master(p_data_right, p_cs_n_1, clk_spi,0x00);
 
@@ -1428,7 +1429,7 @@ void serial_dac_driver_preserve(streaming chanend c_in, unsigned space_count ){
     unsigned data_left, data_right;
     unsigned left, right;
     timer t;
-# 187 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+# 188 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
     time = __builtin_partout_timestamped(p_data_left, 16, __builtin_bitrev(0x80000000));
     time = __builtin_partout_timestamped(p_data_right, 16, __builtin_bitrev(0x80000000));
 
@@ -1459,7 +1460,7 @@ void serial_dac_driver_preserve(streaming chanend c_in, unsigned space_count ){
 
         data_left = __builtin_bitrev(left + 0x80000000);
         data_right = __builtin_bitrev(right + 0x80000000);
-# 225 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+# 226 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
         time += space_count;
 
 
@@ -1958,11 +1959,11 @@ void audio_xss(chanend c_in, chanend ?c_control)
 
     unsigned command;
     unsigned firstRun = 1;
-    AudioHwInit(null);
+    AudioHwInit( );
     while(1)
     {
         debug_printf("\naudio hw config:%d", curSamFreq);
-        AudioHwConfig(curSamFreq, 0, null, 0, 0, 0);
+        AudioHwConfig(curSamFreq, 0, 0, 0, 0);
 
         if(!firstRun)
         {

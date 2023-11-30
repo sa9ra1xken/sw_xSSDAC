@@ -9,9 +9,7 @@
 # 30 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/gpio_access.h"
 void set_gpio(unsigned bit, unsigned value);
 # 2 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/gpio_access.c" 2
-# 1 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h" 1
-
-
+# 1 "C:/Users/takaaki/git/lib_locks/lib_locks/api\\swlock.h" 1
 
 
 
@@ -94,11 +92,11 @@ typedef unsigned out_buffered_port_32_t;
 
 
 typedef unsigned clock;
-# 9 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h" 2
+# 7 "C:/Users/takaaki/git/lib_locks/lib_locks/api\\swlock.h" 2
 
 
 typedef unsigned swlock_t;
-# 23 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h"
+# 21 "C:/Users/takaaki/git/lib_locks/lib_locks/api\\swlock.h"
 enum {
   SWLOCK_NOT_ACQUIRED = 0
 };
@@ -110,11 +108,11 @@ enum {
 
 
 void swlock_init(swlock_t *lock);
-# 46 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h"
+# 44 "C:/Users/takaaki/git/lib_locks/lib_locks/api\\swlock.h"
 int swlock_try_acquire(swlock_t *lock);
-# 57 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h"
+# 55 "C:/Users/takaaki/git/lib_locks/lib_locks/api\\swlock.h"
 void swlock_acquire(swlock_t *lock);
-# 67 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h"
+# 65 "C:/Users/takaaki/git/lib_locks/lib_locks/api\\swlock.h"
 void swlock_release(swlock_t *lock);
 # 3 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/gpio_access.c" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 1 3
@@ -207,6 +205,8 @@ __attribute__((deprecated)) static inline unsigned get_thread_id(void) {
   return __builtin_getid();
 }
 # 4 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/gpio_access.c" 2
+# 1 ".././src\\ssdac_conf.h" 1
+# 5 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/gpio_access.c" 2
 
 swlock_t gpo_swlock = 0;
 

@@ -1,6 +1,6 @@
 <preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc">
-<fDef name="AudioHwConfig" global="true" noreturn="false" doNotSpecialize="false" numParams="6"/>
-<fDef name="AudioHwInit" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
+<fDef name="AudioHwConfig" global="true" noreturn="false" doNotSpecialize="false" numParams="5"/>
+<fDef name="AudioHwInit" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
 <fDef name="ClipIndicator" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
 <fDef name="ConfigSi5351A" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
 <fDef name="ConfigSi5351_RB" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
@@ -37,15 +37,15 @@
     </values>
   </arg>
 </fCall>
-<fCall name="i2c_shared_master_write_reg" global="true" numArgs="5">
+<fCall name="i2c_master_write_reg" global="true" numArgs="5">
   <arg num="0">
     <values>
-      <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="96"/></value>
     </values>
   </arg>
   <arg num="1">
     <values>
-      <value type="intval"><intval isSigned="true" val="96"/></value>
+      <value type="unknown"/>
     </values>
   </arg>
   <arg num="2">
@@ -55,39 +55,39 @@
   </arg>
   <arg num="3">
     <values>
-      <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="1"/></value>
     </values>
   </arg>
   <arg num="4">
     <values>
-      <value type="intval"><intval isSigned="true" val="1"/></value>
-    </values>
-  </arg>
-</fCall>
-<fCall name="i2c_shared_master_write_reg" global="true" numArgs="5">
-  <arg num="0">
-    <values>
       <value type="unknown"/>
     </values>
   </arg>
-  <arg num="1">
+</fCall>
+<fCall name="i2c_master_write_reg" global="true" numArgs="5">
+  <arg num="0">
     <values>
       <value type="intval"><intval isSigned="true" val="96"/></value>
     </values>
   </arg>
-  <arg num="2">
+  <arg num="1">
     <values>
       <value type="intval"><intval isSigned="true" val="177"/></value>
     </values>
   </arg>
-  <arg num="3">
+  <arg num="2">
     <values>
       <value type="unknown"/>
     </values>
   </arg>
-  <arg num="4">
+  <arg num="3">
     <values>
       <value type="intval"><intval isSigned="true" val="1"/></value>
+    </values>
+  </arg>
+  <arg num="4">
+    <values>
+      <value type="unknown"/>
     </values>
   </arg>
 </fCall>
@@ -98,15 +98,15 @@
     </values>
   </arg>
 </fCall>
-<fCall name="i2c_shared_master_write_reg" global="true" numArgs="5">
+<fCall name="i2c_master_write_reg" global="true" numArgs="5">
   <arg num="0">
     <values>
-      <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="96"/></value>
     </values>
   </arg>
   <arg num="1">
     <values>
-      <value type="intval"><intval isSigned="true" val="96"/></value>
+      <value type="unknown"/>
     </values>
   </arg>
   <arg num="2">
@@ -116,24 +116,24 @@
   </arg>
   <arg num="3">
     <values>
-      <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="1"/></value>
     </values>
   </arg>
   <arg num="4">
     <values>
-      <value type="intval"><intval isSigned="true" val="1"/></value>
+      <value type="unknown"/>
     </values>
   </arg>
 </fCall>
-<fCall name="i2c_shared_master_read_reg" global="true" numArgs="5">
+<fCall name="i2c_master_read_reg" global="true" numArgs="5">
   <arg num="0">
     <values>
-      <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="96"/></value>
     </values>
   </arg>
   <arg num="1">
     <values>
-      <value type="intval"><intval isSigned="true" val="96"/></value>
+      <value type="unknown"/>
     </values>
   </arg>
   <arg num="2">
@@ -143,39 +143,39 @@
   </arg>
   <arg num="3">
     <values>
-      <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="1"/></value>
     </values>
   </arg>
   <arg num="4">
     <values>
-      <value type="intval"><intval isSigned="true" val="1"/></value>
-    </values>
-  </arg>
-</fCall>
-<fCall name="i2c_shared_master_write_reg" global="true" numArgs="5">
-  <arg num="0">
-    <values>
       <value type="unknown"/>
     </values>
   </arg>
-  <arg num="1">
+</fCall>
+<fCall name="i2c_master_write_reg" global="true" numArgs="5">
+  <arg num="0">
     <values>
       <value type="intval"><intval isSigned="true" val="96"/></value>
     </values>
   </arg>
-  <arg num="2">
+  <arg num="1">
     <values>
       <value type="intval"><intval isSigned="true" val="177"/></value>
     </values>
   </arg>
-  <arg num="3">
+  <arg num="2">
     <values>
       <value type="unknown"/>
     </values>
   </arg>
-  <arg num="4">
+  <arg num="3">
     <values>
       <value type="intval"><intval isSigned="true" val="1"/></value>
+    </values>
+  </arg>
+  <arg num="4">
+    <values>
+      <value type="unknown"/>
     </values>
   </arg>
 </fCall>

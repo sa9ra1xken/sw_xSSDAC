@@ -219,6 +219,11 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_human_interface/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_xc_ptr/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_i2c/api}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_locks/api}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_locks/doc/rst}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_locks/doc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_locks}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_locks/src}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.xc.compiler.input.1590558043" name="XC" superClass="com.xmos.cdt.xc.compiler.input"/>
 							</tool>
@@ -566,6 +571,11 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_human_interface/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_xc_ptr/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_i2c/api}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_locks/api}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_locks/doc/rst}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_locks/doc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_locks}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_locks/src}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.c.compiler.input.c.1831437030" name="C" superClass="com.xmos.cdt.c.compiler.input.c"/>
 							</tool>
@@ -918,6 +928,11 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_human_interface/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_xc_ptr/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_i2c/api}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_locks/api}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_locks/doc/rst}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_locks/doc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_locks}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_locks/src}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.cxx.compiler.input.cpp.1719991151" name="C++" superClass="com.xmos.cdt.cxx.compiler.input.cpp"/>
 							</tool>

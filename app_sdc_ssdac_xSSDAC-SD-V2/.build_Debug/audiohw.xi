@@ -1341,7 +1341,7 @@ unsigned char user_led_save;
 
 
 on tile [0] : struct r_i2c r_i2c = {0x40000};
-# 47 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
 void ConfigSi5351A(const si5351a_revb_register_t param[]){
 
     i2c_shared_master_init(r_i2c);
@@ -1349,26 +1349,27 @@ void ConfigSi5351A(const si5351a_revb_register_t param[]){
     unsigned char data[1] = {0};
     for (int i = 0 ; i < 61; i++ ){
 
-        {data[0] = param[i].value; i2c_shared_master_write_reg(r_i2c, (0x60), param[i].address, data, 1);};
+        {data[0] = param[i].value; i2c_master_write_reg((0x60), param[i].address, data, 1, r_i2c);};
     }
 
-    {data[0] = (0x80) | (0x20); i2c_shared_master_write_reg(r_i2c, (0x60), (0xB1), data, 1);};
+    {data[0] = (0x80) | (0x20); i2c_master_write_reg((0x60), (0xB1), data, 1, r_i2c);};
 }
 
 void ConfigSi5351_RB(const si5351a_revb_register_t param[]){
 
     i2c_shared_master_init(r_i2c);
 
+
     unsigned char data[1] = {0};
     for (int i = 0 ; i < 61; i++ ){
 
         do {
-            {data[0] = param[i].value; i2c_shared_master_write_reg(r_i2c, (0x60), param[i].address, data, 1);};
-            {i2c_shared_master_read_reg(r_i2c, (0x60), param[i].address, data, 1);};
+            {data[0] = param[i].value; i2c_master_write_reg((0x60), param[i].address, data, 1, r_i2c);};
+            {i2c_master_read_reg((0x60), param[i].address, data, 1, r_i2c);};
         } while (param[i].value != data[0]);
     }
 
-    {data[0] = (0x80) | (0x20); i2c_shared_master_write_reg(r_i2c, (0x60), (0xB1), data, 1);};
+    {data[0] = (0x80) | (0x20); i2c_master_write_reg((0x60), (0xB1), data, 1, r_i2c);};
 }
 
 void wait_us(int microseconds)
@@ -1380,7 +1381,7 @@ void wait_us(int microseconds)
     t when __builtin_timer_after(time + (microseconds * 100)) :> void;
 }
 
-void AudioHwInit(chanend ?c_codec)
+void AudioHwInit( )
 {
     ConfigSi5351A(si5351a_revb_441);
     ConfigureSerialDacPorts();
@@ -1389,7 +1390,7 @@ void AudioHwInit(chanend ?c_codec)
 
 
 
-void AudioHwConfig(unsigned samFreq, unsigned mClk, chanend ?c_codec, unsigned dsdMode,
+void AudioHwConfig(unsigned samFreq, unsigned mClk, unsigned dsdMode,
     unsigned sampRes_DAC, unsigned sampRes_ADC)
 {
 

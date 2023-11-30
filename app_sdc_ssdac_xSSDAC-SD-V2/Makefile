@@ -11,7 +11,7 @@ APP_NAME = app_sdc_ssdac_xSSDAC-SD
 
 
 # The USED_MODULES variable lists other module used by the application.
-USED_MODULES = lib_logging lib_trycatch lib_xassert lib_xcore_c module_FatFs module_flash_memory_server module_human_interface module_hw_support_xSSDAC-SD-V1 module_i2c_shared module_i2c_single_port module_libFLAC module_memory_sharing module_oled_SSD1306 module_sd_audio module_sdcard4bit module_ssdac module_xc_ptr
+USED_MODULES = lib_locks lib_logging lib_trycatch lib_xassert lib_xcore_c module_FatFs module_flash_memory_server module_human_interface module_hw_support_xSSDAC-SD-V1 module_i2c_shared module_i2c_single_port module_libFLAC module_memory_sharing module_oled_SSD1306 module_sd_audio module_sdcard4bit module_ssdac module_xc_ptr
 
 # The flags passed to xcc when building the application
 # You can also set the following to override flags for a particular language:
