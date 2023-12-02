@@ -1316,7 +1316,7 @@ on tile[0]: port tp24_interpolator = on tile[0]: 0x10d00;
 
 
 on tile[0]: port p_spidac_mclk_in = on tile[0]: 0x10600;
-on tile[0]: __clock_t clk_spi = 0x106;
+on tile[0]: __clock_t clk_spi = 0x406;
 
 on tile[0]: buffered out port:32 p_data_left = on tile[0]: 0x10900;
 on tile[0]: buffered out port:32 p_data_right = on tile[0]: 0x10500;

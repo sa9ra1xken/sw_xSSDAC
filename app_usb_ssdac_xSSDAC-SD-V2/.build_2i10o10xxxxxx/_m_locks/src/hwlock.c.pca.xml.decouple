@@ -1,4 +1,4 @@
-<preCompilationAnalysis file="C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE040/module_locks/src/hwlock.c">
+<preCompilationAnalysis file="C:/Users/takaaki/git/sc_util/module_locks/src/hwlock.c">
   <fCall global="true" name="hwlock_alloc"/>
   <fCall global="true" name="hwlock_alloc.nstackwords"/>
   <fCall global="true" name="hwlock_alloc.maxcores"/>

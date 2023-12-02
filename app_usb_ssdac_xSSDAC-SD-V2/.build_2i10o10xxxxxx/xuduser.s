@@ -138,7 +138,7 @@ XUD_UserResume:
 .Linfo_string1:
 .asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/xuduser\\xuduser.c"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 .Linfo_string3:
 .asciiz"XUD_UserSuspend"
 .Linfo_string4:

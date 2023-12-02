@@ -243,17 +243,10 @@ int i2c_shared_master_write_part(
         int offset
         );
 # 2 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src/i2c_shared.c" 2
-# 1 "C:/Users/takaaki/git/lib_locks/lib_locks/api\\swlock.h" 1
-
-
-
-
-
-
-
-
+# 1 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h" 1
+# 11 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h"
 typedef unsigned swlock_t;
-# 21 "C:/Users/takaaki/git/lib_locks/lib_locks/api\\swlock.h"
+# 23 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h"
 enum {
   SWLOCK_NOT_ACQUIRED = 0
 };
@@ -265,11 +258,11 @@ enum {
 
 
 void swlock_init(swlock_t *lock);
-# 44 "C:/Users/takaaki/git/lib_locks/lib_locks/api\\swlock.h"
+# 46 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h"
 int swlock_try_acquire(swlock_t *lock);
-# 55 "C:/Users/takaaki/git/lib_locks/lib_locks/api\\swlock.h"
+# 57 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h"
 void swlock_acquire(swlock_t *lock);
-# 65 "C:/Users/takaaki/git/lib_locks/lib_locks/api\\swlock.h"
+# 67 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h"
 void swlock_release(swlock_t *lock);
 # 3 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src/i2c_shared.c" 2
 

@@ -1,6 +1,7 @@
 #include "gpio_access.h"
 #include "swlock.h"
 #include <xs1.h>
+#include "ssdac_conf.h"
 
 swlock_t gpo_swlock = SWLOCK_INITIAL_VALUE;
 

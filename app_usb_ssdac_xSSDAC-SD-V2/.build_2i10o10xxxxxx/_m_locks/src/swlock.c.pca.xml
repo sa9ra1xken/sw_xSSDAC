@@ -1,4 +1,4 @@
-<preCompilationAnalysis file="C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE040/module_locks/src/swlock.c">
+<preCompilationAnalysis file="C:/Users/takaaki/git/sc_util/module_locks/src/swlock.c">
   <fCall global="true" name="swlock_init"/>
   <fCall global="true" name="swlock_init.nstackwords"/>
   <fCall global="true" name="swlock_init.maxcores"/>

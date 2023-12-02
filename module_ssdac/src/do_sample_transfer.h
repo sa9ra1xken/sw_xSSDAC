@@ -8,7 +8,7 @@
 #ifndef DO_SAMPLE_TRANSFER_H_
 #define DO_SAMPLE_TRANSFER_H_
 
-static int samplesOut[NUM_USB_CHAN_OUT];
+static int samplesOut[NUM_SSDAC_CHAN];
 
 #pragma unsafe arrays
 static inline unsigned DoSampleTransfer(chanend c_out, const unsigned underflowWord)
@@ -24,7 +24,7 @@ static inline unsigned DoSampleTransfer(chanend c_out, const unsigned underflowW
     else
     {
 #pragma loop unroll
-        for(int i = 0; i < NUM_USB_CHAN_OUT; i++)
+        for(int i = 0; i < NUM_SSDAC_CHAN; i++)
         {
             int tmp = inuint(c_out);
             samplesOut[i] = tmp;

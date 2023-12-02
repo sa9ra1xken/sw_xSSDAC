@@ -10,7 +10,8 @@
 #include "ssdac.h"
 #include "audiohw.h"
 #include "ring_buffer.h"
-#include "customdefines.h"
+//#include "customdefines.h"
+#include "ssdac_conf.h"
 #include "do_sample_transfer.h"
 #define FIR_LEN 48
 #define NUM_THREAD 4

@@ -14,7 +14,7 @@
 .Lsection_debug_loc:
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE040/module_locks/src\\swlock.h"
+	.file	1 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h"
 	.text
 	.globl	swlock_init
 	.align	4
@@ -22,7 +22,7 @@
 	.cc_top swlock_init.function,swlock_init
 swlock_init:
 .Lfunc_begin0:
-	.file	2 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE040/module_locks/src\\swlock.c"
+	.file	2 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.c"
 	.loc	2 10 0
 	.cfi_startproc
 	.issue_mode dual
@@ -161,9 +161,9 @@ swlock_release:
 .Linfo_string0:
 .asciiz"XMOS-235-acbb966-Dec-01-2019 clang version 3.6.0  (based on LLVM 3.6.0svn)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE040/module_locks/src\\swlock.c"
+.asciiz"C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.c"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 .Linfo_string3:
 .asciiz"SWLOCK_NOT_ACQUIRED"
 .Linfo_string4:

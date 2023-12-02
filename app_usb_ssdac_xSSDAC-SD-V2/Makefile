@@ -43,18 +43,18 @@ USED_MODULES = \
 	module_oled_SSD1306 \
 	module_hw_support_xSSDAC-SD-V1 \
 	module_usb_shared \
-	module_xud \
 	module_usb_audio \
 	module_spdif_tx \
 	module_spdif_rx \
 	module_usb_midi \
 	module_dfu \
-	module_usb_device \
 	module_i2c_shared \
 	module_i2c_single_port \
 	module_adat_tx \
 	module_adat_rx \
-	module_human_interface
+	module_human_interface \
+	module_xud \
+	module_usb_device
 
 # Build config naming scheme:
 

@@ -1613,7 +1613,7 @@ adat_tx:                                # @adat_tx
 .Linfo_string1:
 .asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx.xc"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 .Linfo_string3:
 .asciiz"delay_seconds"
 .Linfo_string4:
@@ -2608,7 +2608,7 @@ adat_tx:                                # @adat_tx
 .Lentries_start0:
 	.long	.Lentries_end1-.Lentries_start0
 	.long	0
-	.ascii	"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_0,.Lxta.call_labels1
 	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx.xc"
@@ -2627,7 +2627,7 @@ adat_tx:                                # @adat_tx
 .Lentries_start2:
 	.long	.Lentries_end3-.Lentries_start2
 	.long	0
-	.ascii	"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_2,.Lxta.endpoint_labels0
 	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx.xc"
@@ -2892,7 +2892,7 @@ adat_tx:                                # @adat_tx
 .Lentries_start4:
 	.long	.Lentries_end5-.Lentries_start4
 	.long	0
-	.ascii	"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_45,.Lxtalabel0
 	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx.xc"
@@ -4089,7 +4089,7 @@ adat_tx:                                # @adat_tx
 .Lentries_start6:
 	.long	.Lentries_end7-.Lentries_start6
 	.long	0
-	.ascii	"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_215,.Lxta.loop_labels1
 	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx.xc"

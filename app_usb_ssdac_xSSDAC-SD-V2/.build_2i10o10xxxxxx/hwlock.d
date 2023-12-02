@@ -1,3 +1,2 @@
-hwlock.o: \
-  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE040/module_locks/src/hwlock.c \
-  C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE040/module_locks/src/hwlock.h
+hwlock.o: C:/Users/takaaki/git/sc_util/module_locks/src/hwlock.c \
+  C:/Users/takaaki/git/sc_util/module_locks/src/hwlock.h

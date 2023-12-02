@@ -561,7 +561,7 @@ itoa.digits:
 .Linfo_string1:
 .asciiz"C:/Users/takaaki/git/lib_logging/lib_logging/src\\debug_printf.c"
 .Linfo_string2:
-.asciiz"C:\\MEGA\\HobbyElec\\SSDAC\\xSSDAC\\xTIME\\WORKSPACE\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 .Linfo_string3:
 .asciiz"digits"
 .Linfo_string4:

@@ -14,5 +14,5 @@ MODULE_XCC_XC_FLAGS = $(XCC_XC_FLAGS)
 # The following specifies the dependencies of the module. When an application
 # includes a module it will also include all its dependencies.
 
-DEPENDENT_MODULES = module_human_interface
+# DEPENDENT_MODULES = module_human_interface
  

@@ -1,2 +1,2 @@
-swlock.o: C:/Users/takaaki/git/lib_locks/lib_locks/src/swlock.c \
-  C:/Users/takaaki/git/lib_locks/lib_locks/api\swlock.h
+swlock.o: C:/Users/takaaki/git/sc_util/module_locks/src/swlock.c \
+  C:/Users/takaaki/git/sc_util/module_locks/src/swlock.h

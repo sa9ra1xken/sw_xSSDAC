@@ -1089,10 +1089,10 @@ void audio_xss(chanend c_in, chanend ?c_control);
 
 
 
-void AudioHwInit(chanend ?c_codec);
+void AudioHwInit( );
 
 
-void AudioHwConfig(unsigned samFreq, unsigned mClk, chanend ?c_codec, unsigned dsdMode,
+void AudioHwConfig(unsigned samFreq, unsigned mClk, unsigned dsdMode,
         unsigned sampRes_DAC, unsigned sampRes_ADC);
 
 void ReleaseMute();
@@ -1107,12 +1107,13 @@ void add_sample(int left, int right);
 {int, int} sample_at(int offset);
 # 12 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc" 2
 
-# 1 ".././src/core\\customdefines.h" 1
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc" 2
+
+# 1 ".././src/core\\ssdac_conf.h" 1
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h" 1
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
-static int samplesOut[(2)];
+static int samplesOut[2];
 
 #pragma unsafe arrays
 static inline unsigned DoSampleTransfer(chanend c_out, const unsigned underflowWord)
@@ -1128,7 +1129,7 @@ static inline unsigned DoSampleTransfer(chanend c_out, const unsigned underflowW
     else
     {
 #pragma loop unroll
- for(int i = 0; i < (2); i++)
+ for(int i = 0; i < 2; i++)
         {
             int tmp = __builtin_in_uint(c_out);
             samplesOut[i] = tmp;
@@ -1136,7 +1137,7 @@ static inline unsigned DoSampleTransfer(chanend c_out, const unsigned underflowW
     }
     return 0;
 }
-# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc" 2
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc" 2
 
 
 
@@ -1153,7 +1154,7 @@ extern port tp24_interpolator;
 {DAC_RETURN_CODE, unsigned} fir_sinc8(chanend c_in, streaming chanend c_out, chanend ?c_control, unsigned sample_rate);
 
 {DAC_RETURN_CODE, unsigned} fir_sinc4(chanend c_in, streaming chanend c_out, chanend ?c_control, unsigned sample_rate);
-# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc" 2
+# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc" 2
 
 
 
@@ -1226,15 +1227,15 @@ const int fir_tap_sinc8_q30[31 * 2 + 1][8]={
 };
 
 {DAC_RETURN_CODE, unsigned} fir_sinc8 (chanend c_in, streaming chanend c_out, chanend ?c_control, unsigned sample_rate){ int acc_l_msb[4]; unsigned acc_l_lsb[4]; int acc_r_msb[4]; unsigned acc_r_lsb[4]; printf("\nfir_sinc4 started, sps:%d", sample_rate); fflush((__getstdout())); ReleaseMute(); while (1){ tp23_solver <: 1; if (!isnull(c_control)){ INTERPOLATION_MODE mode; c_control <: _GET_INTERPOLATION_MODE; c_control :> mode; if ( mode != _SINC8 ){ __builtin_soutct(c_out, 0x1); return {_INTERPOLATION_MODE_CHANGE, 0}; } } tp23_solver <: 0; unsigned command = DoSampleTransfer(c_in, 0); if (command){ __builtin_soutct(c_out, 0x1); return {_AUDIO_FORMAT_CHANGE, command}; } add_sample(samplesOut[0] >> 4,samplesOut[1] >> 4);
-# 88 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
+# 89 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
 #pragma unsafe arrays
-# 88 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
+# 89 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
 #pragma loop unroll
-# 88 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
+# 89 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
  for (unsigned m = 0 ; m < 8 ; m++ ){ par (int i = 0 ; i < 4 ; i++ ) { { acc_l_msb[i] = 0; acc_l_lsb[i] = 0; acc_r_msb[i] = 0; acc_r_lsb[i] = 0;
-# 88 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
+# 89 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
 #pragma unsafe arrays
-# 88 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
+# 89 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
 #pragma loop unroll
-# 88 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
+# 89 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc"
  for ( int n = ( - ( 48 / 2 ) ) + i * (48 / 4); n < ( - ( 48 / 2 ) ) + (i + 1) * (48 / 4); n++ ) { {acc_l_msb[i], acc_l_lsb[i]} = __builtin_macs(ring_buff_l[( current + n) & ring_buff_mask], fir_tap_sinc8_q30[-n + 31 - 1][m], acc_l_msb[i], acc_l_lsb[i]); {acc_r_msb[i], acc_r_lsb[i]} = __builtin_macs(ring_buff_r[( current + n) & ring_buff_mask], fir_tap_sinc8_q30[-n + 31 - 1][m], acc_r_msb[i], acc_r_lsb[i]); } } } int out_l = 0; int out_r = 0; for (int i = 0 ; i < 4 ; i++){ out_l += acc_l_msb[i]; out_r += acc_r_msb[i]; } c_out <: ( out_l << 3); c_out <: ( out_r << 3); } }}

@@ -8,7 +8,7 @@
 	.globalresource 0x10c00,"tp23_solver","tile[0]"
 	.globalresource 0x10d00,"tp24_interpolator","tile[0]"
 	.globalresource 0x10600,"p_spidac_mclk_in","tile[0]"
-	.globalresource 0x106,"clk_spi","tile[0]"
+	.globalresource 0x406,"clk_spi","tile[0]"
 	.globalresource 0x10900,"p_data_left","tile[0]"
 	.globalresource 0x10500,"p_data_right","tile[0]"
 	.globalresource 0x10b00,"p_cs_n_0","tile[0]"
@@ -39,7 +39,7 @@ p_spidac_mclk_in.info:
 	.long tile + 0
 .globl clk_spi.info, "ck"
 clk_spi.info:
-	.int 0x00000106
+	.int 0x00000406
 	.long tile + 0
 .globl p_data_left.info, "bo:p:32"
 p_data_left.info:

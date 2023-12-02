@@ -5,7 +5,7 @@
 
 /*
  * Platform description header file.
- * Automatically generated from "..\.\src\core\xSSDAC-SD-V2.xn".
+ * Automatically generated from "C:\Users\takaaki\git\sw_xSSDAC\module_hw_support_xSSDAC-SD-V1\src\xSSDAC-SD-V2.xn".
  */
 
 #ifdef __XC__

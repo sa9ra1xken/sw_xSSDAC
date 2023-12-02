@@ -1464,12 +1464,7 @@
     </values>
   </arg>
 </fCall>
-<fCall name="AudioHwInit" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="null"/>
-    </values>
-  </arg>
+<fCall name="AudioHwInit" global="true" numArgs="0">
 </fCall>
 <fCall name="debug_printf" global="true" numArgs="2">
   <arg num="0">
@@ -1483,7 +1478,7 @@
     </values>
   </arg>
 </fCall>
-<fCall name="AudioHwConfig" global="true" numArgs="6">
+<fCall name="AudioHwConfig" global="true" numArgs="5">
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -1496,7 +1491,7 @@
   </arg>
   <arg num="2">
     <values>
-      <value type="null"/>
+      <value type="intval"><intval isSigned="true" val="0"/></value>
     </values>
   </arg>
   <arg num="3">
@@ -1505,11 +1500,6 @@
     </values>
   </arg>
   <arg num="4">
-    <values>
-      <value type="intval"><intval isSigned="true" val="0"/></value>
-    </values>
-  </arg>
-  <arg num="5">
     <values>
       <value type="intval"><intval isSigned="true" val="0"/></value>
     </values>

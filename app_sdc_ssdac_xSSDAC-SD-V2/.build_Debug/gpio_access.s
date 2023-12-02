@@ -14,7 +14,7 @@
 .Lsection_debug_loc:
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
-	.file	1 "C:/Users/takaaki/git/lib_locks/lib_locks/api\\swlock.h"
+	.file	1 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h"
 	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\gpio_access.c"
 	.text
 	.globl	p_gpio_lock
@@ -372,7 +372,7 @@ gpo_swlock:
 	.long	60
 	.long	.Linfo_string5
 	.byte	1
-	.byte	9
+	.byte	11
 	.byte	4
 	.long	.Linfo_string4
 	.byte	7

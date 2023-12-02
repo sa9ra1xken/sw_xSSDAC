@@ -14,7 +14,7 @@
 .Lsection_debug_loc:
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
-	.file	1 "C:/Users/takaaki/git/lib_locks/lib_locks/api\\swlock.h"
+	.file	1 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h"
 	.file	2 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.c"
 	.text
 	.globl	i2c_shared_master_init
@@ -611,7 +611,7 @@ i2c_swlock:
 	.long	60
 	.long	.Linfo_string5
 	.byte	1
-	.byte	9
+	.byte	11
 	.byte	4
 	.long	.Linfo_string4
 	.byte	7

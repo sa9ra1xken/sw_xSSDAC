@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include "gpio_access.h"
 #include "i2c_shared.h"
-
+#include "i2c.h"
 /* added for ssdac by sakurai */
 #include "si5351a.h"
 #include "Si5351A-441-Registers.h"
@@ -35,19 +35,22 @@ unsigned char user_led_save; // defined by sakurai
 
 #ifndef IAP
 /* If IAP not enabled, i2c ports not declared - still needs for DAC config */
-on tile [0] : struct r_i2c r_i2c = {XS1_PORT_4A};
+on tile [0] : struct r_i2c r_i2c = {XS1_PORT_4A}; //sakurai
 #else
 extern struct r_i2c r_i2c;
 #endif
 
 /* added i2c interface for clock generator Si5351A */
-#define SI5351A_REGWRITE(reg, val) {data[0] = val; i2c_shared_master_write_reg(r_i2c, SI5351A_I2C_ADDR, reg, data, 1);}
-#define SI5351A_REGREAD(reg, val)  {i2c_shared_master_read_reg(r_i2c, SI5351A_I2C_ADDR, reg, val, 1);}
+//#define SI5351A_REGWRITE(reg, val) {data[0] = val; i2c_shared_master_write_reg(r_i2c, SI5351A_I2C_ADDR, reg, data, 1);}
+#define SI5351A_REGWRITE(reg, val) {data[0] = val; i2c_master_write_reg(SI5351A_I2C_ADDR, reg, data, 1, r_i2c);}
+
+//#define SI5351A_REGREAD(reg, val)  {i2c_shared_master_read_reg(r_i2c, SI5351A_I2C_ADDR, reg, val, 1);}
+#define SI5351A_REGREAD(reg, val)  {i2c_master_read_reg(SI5351A_I2C_ADDR, reg, val, 1, r_i2c);}
 
 void ConfigSi5351A(const si5351a_revb_register_t param[]){
     /* Init the i2c module */
     i2c_shared_master_init(r_i2c);
-
+    //i2c_master_init(r_i2c);
     unsigned char data[1] = {0};
     for (int i = 0 ; i < SI5351A_REVB_REG_CONFIG_NUM_REGS; i++ ){
         //printf("\nadr=%04x data=%02x",param[i].address, param[i].value );
@@ -60,6 +63,7 @@ void ConfigSi5351A(const si5351a_revb_register_t param[]){
 void ConfigSi5351_RB(const si5351a_revb_register_t param[]){
     /* Init the i2c module */
     i2c_shared_master_init(r_i2c);
+    //i2c_master_init(r_i2c);
 
     unsigned char data[1] = {0};
     for (int i = 0 ; i < SI5351A_REVB_REG_CONFIG_NUM_REGS; i++ ){
@@ -82,7 +86,7 @@ void wait_us(int microseconds)
     t when timerafter(time + (microseconds * 100)) :> void;
 }
 
-void AudioHwInit(chanend ?c_codec)
+void AudioHwInit(/*chanend ?c_codec*/)
 {
     ConfigSi5351A(si5351a_revb_441);
     ConfigureSerialDacPorts();
@@ -91,7 +95,7 @@ void AudioHwInit(chanend ?c_codec)
 /* Configures the external audio hardware for the required sample frequency.
  * See gpio.h for I2C helper functions and gpio access
  */
-void AudioHwConfig(unsigned samFreq, unsigned mClk, chanend ?c_codec, unsigned dsdMode,
+void AudioHwConfig(unsigned samFreq, unsigned mClk, /*chanend ?c_codec,*/ unsigned dsdMode,
     unsigned sampRes_DAC, unsigned sampRes_ADC)
 {
     //unsigned char data[1] = {0};

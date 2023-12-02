@@ -497,7 +497,7 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="AudioHwConfig" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="6">
+<fInfo name="AudioHwConfig" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="5">
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
@@ -510,7 +510,7 @@
   </arg>
   <arg num="2" specialize="true">
     <values>
-      <value type="null"/>
+      <value type="intval"><intval isSigned="true" val="0"/></value>
     </values>
   </arg>
   <arg num="3" specialize="true">
@@ -523,33 +523,17 @@
       <value type="intval"><intval isSigned="true" val="0"/></value>
     </values>
   </arg>
-  <arg num="5" specialize="true">
-    <values>
-      <value type="intval"><intval isSigned="true" val="0"/></value>
-    </values>
-  </arg>
  <specializations>
    <specialization id="0">
     <arg num="0"><values><value type="unknown"/></values></arg>
     <arg num="1"><values><value type="intval"><intval isSigned="true" val="0"/></value></values></arg>
-    <arg num="2"><values><value type="null"/></values></arg>
+    <arg num="2"><values><value type="intval"><intval isSigned="true" val="0"/></value></values></arg>
     <arg num="3"><values><value type="intval"><intval isSigned="true" val="0"/></value></values></arg>
     <arg num="4"><values><value type="intval"><intval isSigned="true" val="0"/></value></values></arg>
-    <arg num="5"><values><value type="intval"><intval isSigned="true" val="0"/></value></values></arg>
    </specialization>
  </specializations>
 </fInfo>
-<fInfo name="AudioHwInit" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="1">
-  <arg num="0" specialize="true">
-    <values>
-      <value type="null"/>
-    </values>
-  </arg>
- <specializations>
-   <specialization id="0">
-    <arg num="0"><values><value type="null"/></values></arg>
-   </specialization>
- </specializations>
+<fInfo name="AudioHwInit" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
 <fInfo name="ClipIndicator" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
@@ -1707,6 +1691,7 @@
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="96"/></value>
     </values>
   </arg>
   <arg num="1" specialize="false">
@@ -1722,6 +1707,7 @@
   <arg num="3" specialize="false">
     <values>
       <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="1"/></value>
     </values>
   </arg>
   <arg num="4" specialize="false">
@@ -1734,6 +1720,7 @@
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="96"/></value>
     </values>
   </arg>
   <arg num="1" specialize="false">
@@ -1744,6 +1731,7 @@
   <arg num="2" specialize="false">
     <values>
       <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="1"/></value>
     </values>
   </arg>
   <arg num="3" specialize="false">
@@ -1793,11 +1781,13 @@
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="96"/></value>
     </values>
   </arg>
   <arg num="1" specialize="false">
     <values>
       <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="177"/></value>
     </values>
   </arg>
   <arg num="2" specialize="false">
@@ -1808,6 +1798,7 @@
   <arg num="3" specialize="false">
     <values>
       <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="1"/></value>
     </values>
   </arg>
   <arg num="4" specialize="false">

@@ -16,7 +16,7 @@ MODULE_XCC_XC_FLAGS = $(XCC_XC_FLAGS)
 # DEPENDENT_MODULES =
  
 
-DEPENDENT_MODULES = module_locks module_i2c_single_port
+# DEPENDENT_MODULES = module_locks module_i2c_single_port
 
 MODULE_XCC_XC_FLAGS = $(XCC_FLAGS) -g -Os -save-temps
  

@@ -37,6 +37,9 @@
 			
           </Tile>
           <Tile Number="1" Reference="tile[1]">
+            <Port Location="XS1_PORT_1C"  Name="PORT_TP39"/>
+            <Port Location="XS1_PORT_1D"  Name="PORT_TP40"/>
+            
             <Port Location="XS1_PORT_1H"  Name="PORT_USB_TX_READYIN"/>
             <Port Location="XS1_PORT_1J"  Name="PORT_USB_CLK"/>
             <Port Location="XS1_PORT_1K"  Name="PORT_USB_TX_READYOUT"/>
@@ -90,8 +93,8 @@
       <Attribute Name="PORT_SQI_CS" Value="PORT_SQI_CS"/>
       <Attribute Name="PORT_SQI_SCLK"   Value="PORT_SQI_SCLK"/>
       <Attribute Name="PORT_SQI_SIO"  Value="PORT_SQI_SIO"/>
-      <Attribute Name="QE_REGISTER" Value="quad_spi_qe_location_status_reg_0"/>
-      <Attribute Name="QE_BIT" Value="quad_spi_qe_bit_6"/>
+    <!--   <Attribute Name="QE_REGISTER" Value="quad_spi_qe_location_status_reg_0"/>
+      <Attribute Name="QE_BIT" Value="quad_spi_qe_bit_6"/> -->
     </Device>
   </ExternalDevices>
   <JTAGChain>

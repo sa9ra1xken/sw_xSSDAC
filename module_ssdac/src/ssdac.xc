@@ -21,7 +21,8 @@
 #include "fir_interpolator.h"
 #include "ring_buffer.h"
 #include "audiohw.h"
-#include "customdefines.h"
+//#include "customdefines.h"
+#include "ssdac_conf.h"
 #include <do_sample_transfer.h>
 //#include "xc_ptr.h" required for tool version 15?
 //#include "display_control.h"
@@ -49,7 +50,7 @@ on tile[AUDIO_IO_TILE]: port    tp24_interpolator               = PORT_TP24_INTE
 **********************************************************/
 on tile[AUDIO_IO_TILE]: port    p_spidac_mclk_in                = PORT_SPIDAC_MCLK_IN;
 on tile[AUDIO_IO_TILE]: clock   clk_spi                         = XS1_CLKBLK_4;
-
+//TODO AN00246 on tile[AUDIO_IO_TILE]: clock   clk_spi                         = XS1_CLKBLK_1;
 on tile[AUDIO_IO_TILE]: buffered out port:32 p_data_left        = PORT_SPIDAC_LEFT;
 on tile[AUDIO_IO_TILE]: buffered out port:32 p_data_right       = PORT_SPIDAC_RIGHT;
 
@@ -720,11 +721,11 @@ void audio_xss(chanend c_in, chanend ?c_control)
 
     unsigned command;
     unsigned firstRun = 1;
-    AudioHwInit(null);
+    AudioHwInit(/*null*/);
     while(1)
     {
         debug_printf("\naudio hw config:%d", curSamFreq);
-        AudioHwConfig(curSamFreq, 0, null, 0, 0, 0);
+        AudioHwConfig(curSamFreq, 0, /*null,*/ 0, 0, 0);
 
         if(!firstRun)
         {
