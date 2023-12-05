@@ -1,5 +1,5 @@
 	.text
-	.file	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.file	"../src/core/main.xc"
                                         # Start of file scope inline assembly
 	.inline_definition delay_seconds
 	.inline_definition delay_milliseconds
@@ -86,7 +86,7 @@
 	main.parinfo.debugstring0:
 	.asciiz "# -1 \"\""
 	main.parinfo.debugstring1:
-	.asciiz "# 725 \"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc\""
+	.asciiz "# 725 \"../src/core/main.xc\""
 	.cc_top main.parinfo.cc, main.parinfo
 	.globl main.parinfo
 	.type main.parinfo, @object
@@ -143,8 +143,8 @@
 	.set usage.anon.8,0
 	.set usage.anon.9,0
 	.set usage.anon.10,0
-	.globwrite usage.anon.7,epTypeTableIn,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:339:36: note: object used here\n            c_sof, epTypeTableOut, epTypeTableIn, p_usb_rst,\n                                   ^~~~~~~~~~~~~"
-	.globwrite usage.anon.7,epTypeTableOut,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:339:20: note: object used here\n            c_sof, epTypeTableOut, epTypeTableIn, p_usb_rst,\n                   ^~~~~~~~~~~~~~"
+	.globwrite usage.anon.7,epTypeTableIn,"../src/core/main.xc:339:36: note: object used here\n            c_sof, epTypeTableOut, epTypeTableIn, p_usb_rst,\n                                   ^~~~~~~~~~~~~"
+	.globwrite usage.anon.7,epTypeTableOut,"../src/core/main.xc:339:20: note: object used here\n            c_sof, epTypeTableOut, epTypeTableIn, p_usb_rst,\n                   ^~~~~~~~~~~~~~"
 	.call main,usb_audio_io
 	.call main,usb_audio_core
 	.call main,display_control
@@ -171,18 +171,18 @@
 	.call usage.anon.2,delay_ticks_longlong
 	.call usage.anon.1,delay_ticks_longlong
 	.call usage.anon.0,delay_ticks_longlong
-	.par usb_audio_core,usb_audio_io,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usb_audio_core,display_control,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usb_audio_core,button_listener,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usb_audio_io,display_control,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usb_audio_io,button_listener,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par display_control,button_listener,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usage.anon.7,usage.anon.8,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:334:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usage.anon.7,usage.anon.9,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:334:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usage.anon.7,usage.anon.10,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:334:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usage.anon.8,usage.anon.9,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:334:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usage.anon.8,usage.anon.10,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:334:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usage.anon.9,usage.anon.10,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:334:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usb_audio_core,usb_audio_io,"../src/core/main.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usb_audio_core,display_control,"../src/core/main.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usb_audio_core,button_listener,"../src/core/main.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usb_audio_io,display_control,"../src/core/main.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usb_audio_io,button_listener,"../src/core/main.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par display_control,button_listener,"../src/core/main.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usage.anon.7,usage.anon.8,"../src/core/main.xc:334:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usage.anon.7,usage.anon.9,"../src/core/main.xc:334:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usage.anon.7,usage.anon.10,"../src/core/main.xc:334:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usage.anon.8,usage.anon.9,"../src/core/main.xc:334:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usage.anon.8,usage.anon.10,"../src/core/main.xc:334:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usage.anon.9,usage.anon.10,"../src/core/main.xc:334:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
 	.set usage.anon.3.locnoside, 0
 	.set usage.anon.6.locnoside, 0
 	.set usb_audio_core.locnoside, 0
@@ -191,8 +191,8 @@
 	.set usb_audio_core.locnochandec, 0
 	.set main.locnochandec, 0
 	.set usb_audio_core.locnoglobalaccess, 0
-	.globpassesref XUD_Manager, epTypeTableIn,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:338:9: error: call to `XUD_Manager\' in `usb_audio_core\' makes alias of global \'epTypeTableIn\'\n        XUD_Manager(c_xud_out, ENDPOINT_COUNT_OUT, c_xud_in, ENDPOINT_COUNT_IN,\n        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref XUD_Manager, epTypeTableOut,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:338:9: error: call to `XUD_Manager\' in `usb_audio_core\' makes alias of global \'epTypeTableOut\'\n        XUD_Manager(c_xud_out, ENDPOINT_COUNT_OUT, c_xud_in, ENDPOINT_COUNT_IN,\n        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref XUD_Manager, epTypeTableIn,"../src/core/main.xc:338:9: error: call to `XUD_Manager\' in `usb_audio_core\' makes alias of global \'epTypeTableIn\'\n        XUD_Manager(c_xud_out, ENDPOINT_COUNT_OUT, c_xud_in, ENDPOINT_COUNT_IN,\n        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref XUD_Manager, epTypeTableOut,"../src/core/main.xc:338:9: error: call to `XUD_Manager\' in `usb_audio_core\' makes alias of global \'epTypeTableOut\'\n        XUD_Manager(c_xud_out, ENDPOINT_COUNT_OUT, c_xud_in, ENDPOINT_COUNT_IN,\n        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 	.overlay_subgraph_conflict usb_audio_core.task.XUD_Manager.0, usb_audio_core.task.buffer.1, usb_audio_core.task.Endpoint0.2, usb_audio_core.task.decouple.3
 	.overlay_subgraph_conflict _Susb_audio_core_0.task.XUD_Manager.0, _Susb_audio_core_0.task.buffer.1, _Susb_audio_core_0.task.Endpoint0.2, _Susb_audio_core_0.task.decouple.3
 	.overlay_subgraph_conflict __main__main_tile_1_task_usb_audio_core_1, __main__main_tile_1_task_display_control_3, __main__main_tile_1_task_button_listener_4
@@ -212,8 +212,8 @@
 .Lsection_debug_loc:
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\main.xc"
-	.file	2 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+	.file	1 "../src/core\\main.xc"
+	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.text
 	.weak	_i.i_dfu._chan.finish
 	.align	4
@@ -608,7 +608,7 @@ _i.i_dfu._chan_yield.HandleDfuRequest:  # @_i.i_dfu._chan_yield.HandleDfuRequest
 	.cc_top thread_speed.function,thread_speed
 thread_speed:                           # @thread_speed
 .Lfunc_begin4:
-	.loc	1 276 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:276:0
+	.loc	1 276 0                 # ../src/core/main.xc:276:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -617,7 +617,7 @@ thread_speed:                           # @thread_speed
 		nop
 		dualentsp 0
 	}
-	.loc	1 281 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:281:0
+	.loc	1 281 0 prologue_end    # ../src/core/main.xc:281:0
 .Ltmp16:
 	clrsr 128
 	{
@@ -646,7 +646,7 @@ thread_speed:                           # @thread_speed
 	.cc_top xscope_user_init.function,xscope_user_init
 xscope_user_init:                       # @xscope_user_init
 .Lfunc_begin5:
-	.loc	1 287 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:287:0
+	.loc	1 287 0                 # ../src/core/main.xc:287:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -659,7 +659,7 @@ xscope_user_init:                       # @xscope_user_init
 	.cfi_def_cfa_offset 8
 .Ltmp20:
 	.cfi_offset 15, 0
-	.loc	1 288 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:288:0
+	.loc	1 288 0 prologue_end    # ../src/core/main.xc:288:0
 .Ltmp21:
 	ldaw r11, cp[.str3]
 	{
@@ -685,7 +685,7 @@ xscope_user_init:                       # @xscope_user_init
 		mkmsk r0, 1
 		nop
 	}
-	.loc	1 290 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:290:0
+	.loc	1 290 0                 # ../src/core/main.xc:290:0
 .Lxta.call_labels1:
 	bl xscope_config_io
 	{
@@ -714,7 +714,7 @@ xscope_user_init:                       # @xscope_user_init
 	.cc_top usb_audio_core.function,usb_audio_core
 usb_audio_core:                         # @usb_audio_core
 .Lfunc_begin6:
-	.loc	1 312 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:312:0
+	.loc	1 312 0                 # ../src/core/main.xc:312:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -740,142 +740,142 @@ usb_audio_core:                         # @usb_audio_core
 		getr r0, 2
 		stw r3, sp[3]
 	}
-	.loc	1 313 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:313:0
+	.loc	1 313 0 prologue_end    # ../src/core/main.xc:313:0
 .Ltmp26:
 	{
 		getr r1, 2
 		nop
 	}
 .Ltmp27:
-	.loc	1 313 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:313:0
+	.loc	1 313 0                 # ../src/core/main.xc:313:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	1 313 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:313:0
+	.loc	1 313 0                 # ../src/core/main.xc:313:0
 	{
 		setd res[r1], r0
 		stw r0, sp[4]
 	}
-	.loc	1 313 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:313:0
+	.loc	1 313 0                 # ../src/core/main.xc:313:0
 	{
 		getr r0, 2
 		stw r1, sp[5]
 	}
-	.loc	1 314 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:314:0
+	.loc	1 314 0                 # ../src/core/main.xc:314:0
 .Ltmp28:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	1 314 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:314:0
+	.loc	1 314 0                 # ../src/core/main.xc:314:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	1 314 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:314:0
+	.loc	1 314 0                 # ../src/core/main.xc:314:0
 	{
 		setd res[r1], r0
 		stw r0, sp[7]
 	}
-	.loc	1 314 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:314:0
+	.loc	1 314 0                 # ../src/core/main.xc:314:0
 	{
 		getr r0, 2
 		stw r1, sp[9]
 	}
-	.loc	1 314 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:314:0
+	.loc	1 314 0                 # ../src/core/main.xc:314:0
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	1 314 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:314:0
+	.loc	1 314 0                 # ../src/core/main.xc:314:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	1 314 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:314:0
+	.loc	1 314 0                 # ../src/core/main.xc:314:0
 	{
 		setd res[r1], r0
 		stw r0, sp[6]
 	}
-	.loc	1 314 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:314:0
+	.loc	1 314 0                 # ../src/core/main.xc:314:0
 	{
 		getr r0, 2
 		stw r1, sp[8]
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 .Ltmp29:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		setd res[r1], r0
 		stw r0, sp[12]
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		getr r0, 2
 		stw r1, sp[15]
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		setd res[r1], r0
 		stw r0, sp[11]
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		getr r0, 2
 		stw r1, sp[14]
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		setd res[r1], r0
 		stw r0, sp[10]
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		getr r0, 2
 		stw r1, sp[13]
 	}
-	.loc	1 316 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:316:0
+	.loc	1 316 0                 # ../src/core/main.xc:316:0
 .Ltmp30:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	1 316 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:316:0
+	.loc	1 316 0                 # ../src/core/main.xc:316:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	1 316 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:316:0
+	.loc	1 316 0                 # ../src/core/main.xc:316:0
 	{
 		setd res[r1], r0
 		stw r0, sp[16]
@@ -884,7 +884,7 @@ usb_audio_core:                         # @usb_audio_core
 		nop
 		stw r1, sp[17]
 	}
-	.loc	1 332 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:332:0
+	.loc	1 332 0                 # ../src/core/main.xc:332:0
 	ldaw r11, cp[.str8]
 	{
 		mov r0, r11
@@ -892,12 +892,12 @@ usb_audio_core:                         # @usb_audio_core
 	}
 .Lxta.call_labels2:
 	bl iprintf
-	.loc	1 333 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:333:0
+	.loc	1 333 0                 # ../src/core/main.xc:333:0
 	bl __getstdout
-	.loc	1 333 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:333:0
+	.loc	1 333 0                 # ../src/core/main.xc:333:0
 .Lxta.call_labels3:
 	bl fflush
-	.loc	1 333 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:333:0
+	.loc	1 333 0                 # ../src/core/main.xc:333:0
 	ldaw r1, dp[par.desc.1]
 	{
 		ldaw r0, sp[1]
@@ -987,7 +987,7 @@ usb_audio_core:                         # @usb_audio_core
 	.cc_top usb_audio_core.task.XUD_Manager.0.function,usb_audio_core.task.XUD_Manager.0
 usb_audio_core.task.XUD_Manager.0:      # @usb_audio_core.task.XUD_Manager.0
 .Lfunc_begin7:
-	.loc	1 338 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:338:0
+	.loc	1 338 0                 # ../src/core/main.xc:338:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1005,12 +1005,12 @@ usb_audio_core.task.XUD_Manager.0:      # @usb_audio_core.task.XUD_Manager.0
 .Ltmp37:
 	.cfi_offset 5, -4
 	#DEBUG_VALUE: usb_audio_core.task.XUD_Manager.0:frame <- R0
-	.loc	1 338 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:338:0
+	.loc	1 338 0 prologue_end    # ../src/core/main.xc:338:0
 .Ltmp38:
 	ldaw r11, r0[5]
-	.loc	1 338 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:338:0
+	.loc	1 338 0                 # ../src/core/main.xc:338:0
 	ldaw r2, r0[9]
-	.loc	1 338 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:338:0
+	.loc	1 338 0                 # ../src/core/main.xc:338:0
 	{
 		ldc r1, 2
 		ldw r0, r0[3]
@@ -1020,7 +1020,7 @@ usb_audio_core.task.XUD_Manager.0:      # @usb_audio_core.task.XUD_Manager.0
 		mkmsk r3, 2
 		nop
 	}
-	.loc	1 338 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:338:0
+	.loc	1 338 0                 # ../src/core/main.xc:338:0
 	std r1, r3, sp[5]
 	{
 		mkmsk r4, 1
@@ -1064,7 +1064,7 @@ usb_audio_core.task.XUD_Manager.0:      # @usb_audio_core.task.XUD_Manager.0
 	.cc_top usb_audio_core.task.buffer.1.function,usb_audio_core.task.buffer.1
 usb_audio_core.task.buffer.1:           # @usb_audio_core.task.buffer.1
 .Lfunc_begin8:
-	.loc	1 348 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:348:0
+	.loc	1 348 0                 # ../src/core/main.xc:348:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1084,26 +1084,26 @@ usb_audio_core.task.buffer.1:           # @usb_audio_core.task.buffer.1
 .Ltmp44:
 	.cfi_offset 4, -8
 	#DEBUG_VALUE: usb_audio_core.task.buffer.1:frame <- R0
-	.loc	1 281 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:281:0
+	.loc	1 281 0 prologue_end    # ../src/core/main.xc:281:0
 .Ltmp45:
 	clrsr 128
 .Ltmp46:
-	.loc	1 366 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:366:0
+	.loc	1 366 0                 # ../src/core/main.xc:366:0
 	{
 		ldc r1, 56
 		ldw r11, r0[8]
 	}
-	.loc	1 366 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:366:0
+	.loc	1 366 0                 # ../src/core/main.xc:366:0
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 366 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:366:0
+	.loc	1 366 0                 # ../src/core/main.xc:366:0
 	{
 		ldc r2, 52
 		ldw r1, r1[0]
 	}
-	.loc	1 366 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:366:0
+	.loc	1 366 0                 # ../src/core/main.xc:366:0
 	{
 		add r2, r0, r2
 		nop
@@ -1112,12 +1112,12 @@ usb_audio_core.task.buffer.1:           # @usb_audio_core.task.buffer.1
 		nop
 		ldw r2, r2[0]
 	}
-	.loc	1 366 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:366:0
+	.loc	1 366 0                 # ../src/core/main.xc:366:0
 	{
 		ldc r4, 60
 		ldw r3, r0[4]
 	}
-	.loc	1 366 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:366:0
+	.loc	1 366 0                 # ../src/core/main.xc:366:0
 	{
 		add r0, r0, r4
 		nop
@@ -1127,7 +1127,7 @@ usb_audio_core.task.buffer.1:           # @usb_audio_core.task.buffer.1
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 366 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:366:0
+	.loc	1 366 0                 # ../src/core/main.xc:366:0
 	{
 		mov r0, r11
 		stw r0, sp[1]
@@ -1159,7 +1159,7 @@ usb_audio_core.task.buffer.1:           # @usb_audio_core.task.buffer.1
 	.cc_top usb_audio_core.task.Endpoint0.2.function,usb_audio_core.task.Endpoint0.2
 usb_audio_core.task.Endpoint0.2:        # @usb_audio_core.task.Endpoint0.2
 .Lfunc_begin9:
-	.loc	1 411 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:411:0
+	.loc	1 411 0                 # ../src/core/main.xc:411:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1179,7 +1179,7 @@ usb_audio_core.task.Endpoint0.2:        # @usb_audio_core.task.Endpoint0.2
 .Ltmp52:
 	.cfi_offset 4, -8
 	#DEBUG_VALUE: usb_audio_core.task.Endpoint0.2:frame <- R0
-	.loc	1 281 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:281:0
+	.loc	1 281 0 prologue_end    # ../src/core/main.xc:281:0
 .Ltmp53:
 	clrsr 128
 	{
@@ -1198,17 +1198,17 @@ usb_audio_core.task.Endpoint0.2:        # @usb_audio_core.task.Endpoint0.2
 	}
 	ldc r1, 64
 .Ltmp54:
-	.loc	1 413 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:413:0
+	.loc	1 413 0                 # ../src/core/main.xc:413:0
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 413 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:413:0
+	.loc	1 413 0                 # ../src/core/main.xc:413:0
 	{
 		ldc r1, 48
 		ldw r2, r1[0]
 	}
-	.loc	1 413 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:413:0
+	.loc	1 413 0                 # ../src/core/main.xc:413:0
 	{
 		add r1, r0, r1
 		nop
@@ -1217,13 +1217,13 @@ usb_audio_core.task.Endpoint0.2:        # @usb_audio_core.task.Endpoint0.2
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 413 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:413:0
+	.loc	1 413 0                 # ../src/core/main.xc:413:0
 	{
 		ldc r3, 0
 		ldw r0, r0[7]
 	}
 .Ltmp55:
-	.loc	1 413 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:413:0
+	.loc	1 413 0                 # ../src/core/main.xc:413:0
 	std r11, r3, sp[1]
 	{
 		nop
@@ -1256,7 +1256,7 @@ usb_audio_core.task.Endpoint0.2:        # @usb_audio_core.task.Endpoint0.2
 	.cc_top usb_audio_core.task.decouple.3.function,usb_audio_core.task.decouple.3
 usb_audio_core.task.decouple.3:         # @usb_audio_core.task.decouple.3
 .Lfunc_begin10:
-	.loc	1 417 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:417:0
+	.loc	1 417 0                 # ../src/core/main.xc:417:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1270,7 +1270,7 @@ usb_audio_core.task.decouple.3:         # @usb_audio_core.task.decouple.3
 .Ltmp59:
 	.cfi_offset 15, 0
 	#DEBUG_VALUE: usb_audio_core.task.decouple.3:frame <- R0
-	.loc	1 281 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:281:0
+	.loc	1 281 0 prologue_end    # ../src/core/main.xc:281:0
 .Ltmp60:
 	clrsr 128
 	{
@@ -1278,7 +1278,7 @@ usb_audio_core.task.decouple.3:         # @usb_audio_core.task.decouple.3
 		ldw r0, r0[0]
 	}
 .Ltmp61:
-	.loc	1 419 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:419:0
+	.loc	1 419 0                 # ../src/core/main.xc:419:0
 .Lxta.call_labels7:
 	bl decouple
 	{
@@ -1303,7 +1303,7 @@ usb_audio_core.task.decouple.3:         # @usb_audio_core.task.decouple.3
 	.cc_top _Susb_audio_core_0.function,_Susb_audio_core_0
 _Susb_audio_core_0:                     # @_Susb_audio_core_0
 .Lfunc_begin11:
-	.loc	1 312 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:312:0
+	.loc	1 312 0                 # ../src/core/main.xc:312:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1327,146 +1327,146 @@ _Susb_audio_core_0:                     # @_Susb_audio_core_0
 		stw r1, sp[2]
 	}
 .Ltmp67:
-	.loc	1 309 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:309:0
+	.loc	1 309 0 prologue_end    # ../src/core/main.xc:309:0
 	{
 		getr r0, 2
 		stw r0, sp[3]
 	}
-	.loc	1 313 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:313:0
+	.loc	1 313 0                 # ../src/core/main.xc:313:0
 .Ltmp68:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	1 313 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:313:0
+	.loc	1 313 0                 # ../src/core/main.xc:313:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	1 313 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:313:0
+	.loc	1 313 0                 # ../src/core/main.xc:313:0
 	{
 		setd res[r1], r0
 		stw r0, sp[4]
 	}
-	.loc	1 313 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:313:0
+	.loc	1 313 0                 # ../src/core/main.xc:313:0
 	{
 		getr r0, 2
 		stw r1, sp[5]
 	}
-	.loc	1 314 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:314:0
+	.loc	1 314 0                 # ../src/core/main.xc:314:0
 .Ltmp69:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	1 314 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:314:0
+	.loc	1 314 0                 # ../src/core/main.xc:314:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	1 314 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:314:0
+	.loc	1 314 0                 # ../src/core/main.xc:314:0
 	{
 		setd res[r1], r0
 		stw r0, sp[7]
 	}
-	.loc	1 314 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:314:0
+	.loc	1 314 0                 # ../src/core/main.xc:314:0
 	{
 		getr r0, 2
 		stw r1, sp[9]
 	}
-	.loc	1 314 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:314:0
+	.loc	1 314 0                 # ../src/core/main.xc:314:0
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	1 314 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:314:0
+	.loc	1 314 0                 # ../src/core/main.xc:314:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	1 314 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:314:0
+	.loc	1 314 0                 # ../src/core/main.xc:314:0
 	{
 		setd res[r1], r0
 		stw r0, sp[6]
 	}
-	.loc	1 314 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:314:0
+	.loc	1 314 0                 # ../src/core/main.xc:314:0
 	{
 		getr r0, 2
 		stw r1, sp[8]
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 .Ltmp70:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		setd res[r1], r0
 		stw r0, sp[12]
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		getr r0, 2
 		stw r1, sp[15]
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		setd res[r1], r0
 		stw r0, sp[11]
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		getr r0, 2
 		stw r1, sp[14]
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		setd res[r1], r0
 		stw r0, sp[10]
 	}
-	.loc	1 315 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:315:0
+	.loc	1 315 0                 # ../src/core/main.xc:315:0
 	{
 		getr r0, 2
 		stw r1, sp[13]
 	}
-	.loc	1 316 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:316:0
+	.loc	1 316 0                 # ../src/core/main.xc:316:0
 .Ltmp71:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	1 316 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:316:0
+	.loc	1 316 0                 # ../src/core/main.xc:316:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	1 316 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:316:0
+	.loc	1 316 0                 # ../src/core/main.xc:316:0
 	{
 		setd res[r1], r0
 		stw r0, sp[16]
@@ -1475,7 +1475,7 @@ _Susb_audio_core_0:                     # @_Susb_audio_core_0
 		nop
 		stw r1, sp[17]
 	}
-	.loc	1 332 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:332:0
+	.loc	1 332 0                 # ../src/core/main.xc:332:0
 	ldaw r11, cp[.str11]
 	{
 		mov r0, r11
@@ -1483,12 +1483,12 @@ _Susb_audio_core_0:                     # @_Susb_audio_core_0
 	}
 .Lxta.call_labels8:
 	bl iprintf
-	.loc	1 333 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:333:0
+	.loc	1 333 0                 # ../src/core/main.xc:333:0
 	bl __getstdout
-	.loc	1 333 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:333:0
+	.loc	1 333 0                 # ../src/core/main.xc:333:0
 .Lxta.call_labels9:
 	bl fflush
-	.loc	1 333 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:333:0
+	.loc	1 333 0                 # ../src/core/main.xc:333:0
 	ldaw r1, dp[par.desc.2]
 	{
 		ldaw r0, sp[1]
@@ -1578,7 +1578,7 @@ _Susb_audio_core_0:                     # @_Susb_audio_core_0
 	.cc_top _Susb_audio_core_0.task.XUD_Manager.0.function,_Susb_audio_core_0.task.XUD_Manager.0
 _Susb_audio_core_0.task.XUD_Manager.0:  # @_Susb_audio_core_0.task.XUD_Manager.0
 .Lfunc_begin12:
-	.loc	1 338 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:338:0
+	.loc	1 338 0                 # ../src/core/main.xc:338:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1596,12 +1596,12 @@ _Susb_audio_core_0.task.XUD_Manager.0:  # @_Susb_audio_core_0.task.XUD_Manager.0
 .Ltmp78:
 	.cfi_offset 5, -4
 	#DEBUG_VALUE: _Susb_audio_core_0.task.XUD_Manager.0:frame <- R0
-	.loc	1 338 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:338:0
+	.loc	1 338 0 prologue_end    # ../src/core/main.xc:338:0
 .Ltmp79:
 	ldaw r11, r0[5]
-	.loc	1 338 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:338:0
+	.loc	1 338 0                 # ../src/core/main.xc:338:0
 	ldaw r2, r0[9]
-	.loc	1 338 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:338:0
+	.loc	1 338 0                 # ../src/core/main.xc:338:0
 	{
 		ldc r1, 2
 		ldw r0, r0[3]
@@ -1611,7 +1611,7 @@ _Susb_audio_core_0.task.XUD_Manager.0:  # @_Susb_audio_core_0.task.XUD_Manager.0
 		mkmsk r3, 2
 		nop
 	}
-	.loc	1 338 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:338:0
+	.loc	1 338 0                 # ../src/core/main.xc:338:0
 	std r1, r3, sp[5]
 	{
 		mkmsk r4, 1
@@ -1655,7 +1655,7 @@ _Susb_audio_core_0.task.XUD_Manager.0:  # @_Susb_audio_core_0.task.XUD_Manager.0
 	.cc_top _Susb_audio_core_0.task.buffer.1.function,_Susb_audio_core_0.task.buffer.1
 _Susb_audio_core_0.task.buffer.1:       # @_Susb_audio_core_0.task.buffer.1
 .Lfunc_begin13:
-	.loc	1 348 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:348:0
+	.loc	1 348 0                 # ../src/core/main.xc:348:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1675,26 +1675,26 @@ _Susb_audio_core_0.task.buffer.1:       # @_Susb_audio_core_0.task.buffer.1
 .Ltmp85:
 	.cfi_offset 4, -8
 	#DEBUG_VALUE: _Susb_audio_core_0.task.buffer.1:frame <- R0
-	.loc	1 281 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:281:0
+	.loc	1 281 0 prologue_end    # ../src/core/main.xc:281:0
 .Ltmp86:
 	clrsr 128
 .Ltmp87:
-	.loc	1 366 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:366:0
+	.loc	1 366 0                 # ../src/core/main.xc:366:0
 	{
 		ldc r1, 56
 		ldw r11, r0[8]
 	}
-	.loc	1 366 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:366:0
+	.loc	1 366 0                 # ../src/core/main.xc:366:0
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 366 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:366:0
+	.loc	1 366 0                 # ../src/core/main.xc:366:0
 	{
 		ldc r2, 52
 		ldw r1, r1[0]
 	}
-	.loc	1 366 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:366:0
+	.loc	1 366 0                 # ../src/core/main.xc:366:0
 	{
 		add r2, r0, r2
 		nop
@@ -1703,12 +1703,12 @@ _Susb_audio_core_0.task.buffer.1:       # @_Susb_audio_core_0.task.buffer.1
 		nop
 		ldw r2, r2[0]
 	}
-	.loc	1 366 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:366:0
+	.loc	1 366 0                 # ../src/core/main.xc:366:0
 	{
 		ldc r4, 60
 		ldw r3, r0[4]
 	}
-	.loc	1 366 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:366:0
+	.loc	1 366 0                 # ../src/core/main.xc:366:0
 	{
 		add r0, r0, r4
 		nop
@@ -1718,7 +1718,7 @@ _Susb_audio_core_0.task.buffer.1:       # @_Susb_audio_core_0.task.buffer.1
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 366 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:366:0
+	.loc	1 366 0                 # ../src/core/main.xc:366:0
 	{
 		mov r0, r11
 		stw r0, sp[1]
@@ -1750,7 +1750,7 @@ _Susb_audio_core_0.task.buffer.1:       # @_Susb_audio_core_0.task.buffer.1
 	.cc_top _Susb_audio_core_0.task.Endpoint0.2.function,_Susb_audio_core_0.task.Endpoint0.2
 _Susb_audio_core_0.task.Endpoint0.2:    # @_Susb_audio_core_0.task.Endpoint0.2
 .Lfunc_begin14:
-	.loc	1 411 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:411:0
+	.loc	1 411 0                 # ../src/core/main.xc:411:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1770,7 +1770,7 @@ _Susb_audio_core_0.task.Endpoint0.2:    # @_Susb_audio_core_0.task.Endpoint0.2
 .Ltmp93:
 	.cfi_offset 4, -8
 	#DEBUG_VALUE: _Susb_audio_core_0.task.Endpoint0.2:frame <- R0
-	.loc	1 281 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:281:0
+	.loc	1 281 0 prologue_end    # ../src/core/main.xc:281:0
 .Ltmp94:
 	clrsr 128
 	{
@@ -1789,17 +1789,17 @@ _Susb_audio_core_0.task.Endpoint0.2:    # @_Susb_audio_core_0.task.Endpoint0.2
 	}
 	ldc r1, 64
 .Ltmp95:
-	.loc	1 413 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:413:0
+	.loc	1 413 0                 # ../src/core/main.xc:413:0
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 413 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:413:0
+	.loc	1 413 0                 # ../src/core/main.xc:413:0
 	{
 		ldc r1, 48
 		ldw r2, r1[0]
 	}
-	.loc	1 413 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:413:0
+	.loc	1 413 0                 # ../src/core/main.xc:413:0
 	{
 		add r1, r0, r1
 		nop
@@ -1808,13 +1808,13 @@ _Susb_audio_core_0.task.Endpoint0.2:    # @_Susb_audio_core_0.task.Endpoint0.2
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 413 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:413:0
+	.loc	1 413 0                 # ../src/core/main.xc:413:0
 	{
 		ldc r3, 0
 		ldw r0, r0[7]
 	}
 .Ltmp96:
-	.loc	1 413 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:413:0
+	.loc	1 413 0                 # ../src/core/main.xc:413:0
 	std r11, r3, sp[1]
 	{
 		nop
@@ -1847,7 +1847,7 @@ _Susb_audio_core_0.task.Endpoint0.2:    # @_Susb_audio_core_0.task.Endpoint0.2
 	.cc_top _Susb_audio_core_0.task.decouple.3.function,_Susb_audio_core_0.task.decouple.3
 _Susb_audio_core_0.task.decouple.3:     # @_Susb_audio_core_0.task.decouple.3
 .Lfunc_begin15:
-	.loc	1 417 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:417:0
+	.loc	1 417 0                 # ../src/core/main.xc:417:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1861,7 +1861,7 @@ _Susb_audio_core_0.task.decouple.3:     # @_Susb_audio_core_0.task.decouple.3
 .Ltmp100:
 	.cfi_offset 15, 0
 	#DEBUG_VALUE: _Susb_audio_core_0.task.decouple.3:frame <- R0
-	.loc	1 281 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:281:0
+	.loc	1 281 0 prologue_end    # ../src/core/main.xc:281:0
 .Ltmp101:
 	clrsr 128
 	{
@@ -1869,7 +1869,7 @@ _Susb_audio_core_0.task.decouple.3:     # @_Susb_audio_core_0.task.decouple.3
 		ldw r0, r0[0]
 	}
 .Ltmp102:
-	.loc	1 419 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:419:0
+	.loc	1 419 0                 # ../src/core/main.xc:419:0
 .Lxta.call_labels13:
 	bl decouple
 	{
@@ -1910,9 +1910,9 @@ usb_audio_io:                           # @usb_audio_io
 	#DEBUG_VALUE: usb_audio_io:c_spdif_rx <- R3
 	#DEBUG_VALUE: usb_audio_io:c_adat_rx <- [SP+12]
 	ldd r1, r2, sp[3]
-	.loc	1 281 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:281:0
+	.loc	1 281 0                 # ../src/core/main.xc:281:0
 	clrsr 128
-	.loc	1 495 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:495:0
+	.loc	1 495 0                 # ../src/core/main.xc:495:0
 .Lxta.call_labels14:
 	bl audio_xss
 	{
@@ -1951,9 +1951,9 @@ _Susb_audio_io_0:                       # @_Susb_audio_io_0
 .Ltmp109:
 	.cfi_offset 15, 0
 	#DEBUG_VALUE: usb_audio_io:dfuInterface <- R1
-	.loc	1 281 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:281:0
+	.loc	1 281 0                 # ../src/core/main.xc:281:0
 	clrsr 128
-	.loc	1 495 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:495:0
+	.loc	1 495 0                 # ../src/core/main.xc:495:0
 	{
 		mov r1, r2
 		nop
@@ -2045,7 +2045,7 @@ __main__main_tile_1:                    # @__main__main_tile_1
 	.cc_top __main__main_tile_1_task_usb_audio_core_1.function,__main__main_tile_1_task_usb_audio_core_1
 __main__main_tile_1_task_usb_audio_core_1: # @__main__main_tile_1_task_usb_audio_core_1
 .Lfunc_begin19:
-	.loc	1 607 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:607:0
+	.loc	1 607 0                 # ../src/core/main.xc:607:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -2062,14 +2062,14 @@ __main__main_tile_1_task_usb_audio_core_1: # @__main__main_tile_1_task_usb_audio
 		nop
 		ldw r2, r0[9]
 	}
-	.loc	1 607 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:607:0
+	.loc	1 607 0 prologue_end    # ../src/core/main.xc:607:0
 .Ltmp116:
 	{
 		mov r0, r2
 		ldw r1, r0[3]
 	}
 .Ltmp117:
-	.loc	1 607 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:607:0
+	.loc	1 607 0                 # ../src/core/main.xc:607:0
 .Lxta.call_labels16:
 	bl _Susb_audio_core_0
 	{
@@ -2093,7 +2093,7 @@ __main__main_tile_1_task_usb_audio_core_1: # @__main__main_tile_1_task_usb_audio
 	.cc_top __main__main_tile_1_task_display_control_3.function,__main__main_tile_1_task_display_control_3
 __main__main_tile_1_task_display_control_3: # @__main__main_tile_1_task_display_control_3
 .Lfunc_begin20:
-	.loc	1 707 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:707:0
+	.loc	1 707 0                 # ../src/core/main.xc:707:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -2106,7 +2106,7 @@ __main__main_tile_1_task_display_control_3: # @__main__main_tile_1_task_display_
 .Ltmp121:
 	.cfi_offset 15, 0
 	#DEBUG_VALUE: __main__main_tile_1_task_display_control_3:frame <- R0
-	.loc	1 707 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:707:0
+	.loc	1 707 0 prologue_end    # ../src/core/main.xc:707:0
 .Ltmp122:
 .Lxta.call_labels17:
 	bl display_control
@@ -2132,7 +2132,7 @@ __main__main_tile_1_task_display_control_3: # @__main__main_tile_1_task_display_
 	.cc_top __main__main_tile_1_task_button_listener_4.function,__main__main_tile_1_task_button_listener_4
 __main__main_tile_1_task_button_listener_4: # @__main__main_tile_1_task_button_listener_4
 .Lfunc_begin21:
-	.loc	1 710 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:710:0
+	.loc	1 710 0                 # ../src/core/main.xc:710:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -2150,7 +2150,7 @@ __main__main_tile_1_task_button_listener_4: # @__main__main_tile_1_task_button_l
 		ldw r0, r0[1]
 	}
 .Ltmp128:
-	.loc	1 710 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:710:0
+	.loc	1 710 0 prologue_end    # ../src/core/main.xc:710:0
 .Lxta.call_labels18:
 	bl _Sbutton_listener_0
 .Ltmp129:
@@ -2187,11 +2187,11 @@ __main__main_tile_0:                    # @__main__main_tile_0
 	#DEBUG_VALUE: __main__main_tile_0:formal.c_mix_out4 <- R0
 	#DEBUG_VALUE: __main__main_tile_0:formal.dfuInterface5 <- R1
 	#DEBUG_VALUE: __main__main_tile_0:formal.c_dac_control6 <- R2
-	.loc	1 281 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:281:0
+	.loc	1 281 0 prologue_end    # ../src/core/main.xc:281:0
 .Ltmp133:
 	clrsr 128
 .Ltmp134:
-	.loc	1 495 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:495:0
+	.loc	1 495 0                 # ../src/core/main.xc:495:0
 	{
 		mov r1, r2
 		nop
@@ -2341,7 +2341,7 @@ par.desc.3:
 .Linfo_string0:
 .asciiz"XMOS 32-bit XC Compiler Community_14.4.1 (build 235-acbb966, Dec-01-2019)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+.asciiz"../src/core/main.xc"
 .Linfo_string2:
 .asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 .Linfo_string3:
@@ -4628,121 +4628,121 @@ par.desc.3:
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_0,.Lxta.call_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	288
 	.long	.Lxta.call_labels0
 .cc_bottom cc_0
 .cc_top cc_1,.Lxta.call_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	290
 	.long	.Lxta.call_labels1
 .cc_bottom cc_1
 .cc_top cc_2,.Lxta.call_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	332
 	.long	.Lxta.call_labels2
 .cc_bottom cc_2
 .cc_top cc_3,.Lxta.call_labels8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	332
 	.long	.Lxta.call_labels8
 .cc_bottom cc_3
 .cc_top cc_4,.Lxta.call_labels3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	333
 	.long	.Lxta.call_labels3
 .cc_bottom cc_4
 .cc_top cc_5,.Lxta.call_labels9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	333
 	.long	.Lxta.call_labels9
 .cc_bottom cc_5
 .cc_top cc_6,.Lxta.call_labels4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	338
 	.long	.Lxta.call_labels4
 .cc_bottom cc_6
 .cc_top cc_7,.Lxta.call_labels10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	338
 	.long	.Lxta.call_labels10
 .cc_bottom cc_7
 .cc_top cc_8,.Lxta.call_labels5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	366
 	.long	.Lxta.call_labels5
 .cc_bottom cc_8
 .cc_top cc_9,.Lxta.call_labels11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	366
 	.long	.Lxta.call_labels11
 .cc_bottom cc_9
 .cc_top cc_10,.Lxta.call_labels6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	413
 	.long	.Lxta.call_labels6
 .cc_bottom cc_10
 .cc_top cc_11,.Lxta.call_labels12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	413
 	.long	.Lxta.call_labels12
 .cc_bottom cc_11
 .cc_top cc_12,.Lxta.call_labels7
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	419
 	.long	.Lxta.call_labels7
 .cc_bottom cc_12
 .cc_top cc_13,.Lxta.call_labels13
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	419
 	.long	.Lxta.call_labels13
 .cc_bottom cc_13
 .cc_top cc_14,.Lxta.call_labels14
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	495
 	.long	.Lxta.call_labels14
 .cc_bottom cc_14
 .cc_top cc_15,.Lxta.call_labels15
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	495
 	.long	.Lxta.call_labels15
 .cc_bottom cc_15
 .cc_top cc_16,.Lxta.call_labels19
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	495
 	.long	.Lxta.call_labels19
 .cc_bottom cc_16
 .cc_top cc_17,.Lxta.call_labels16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	607
 	.long	.Lxta.call_labels16
 .cc_bottom cc_17
 .cc_top cc_18,.Lxta.call_labels17
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	707
 	.long	.Lxta.call_labels17
 .cc_bottom cc_18
 .cc_top cc_19,.Lxta.call_labels18
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	710
 	.long	.Lxta.call_labels18
@@ -4755,609 +4755,609 @@ par.desc.3:
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_20,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	276
 	.long	276
 	.long	.Lxtalabel0
 .cc_bottom cc_20
 .cc_top cc_21,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	276
 	.long	276
 	.long	.Lxtalabel4
 .cc_bottom cc_21
 .cc_top cc_22,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	276
 	.long	276
 	.long	.Lxtalabel9
 .cc_bottom cc_22
 .cc_top cc_23,.Lxtalabel5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	276
 	.long	276
 	.long	.Lxtalabel5
 .cc_bottom cc_23
 .cc_top cc_24,.Lxtalabel8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	276
 	.long	276
 	.long	.Lxtalabel8
 .cc_bottom cc_24
 .cc_top cc_25,.Lxtalabel7
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	276
 	.long	276
 	.long	.Lxtalabel7
 .cc_bottom cc_25
 .cc_top cc_26,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	276
 	.long	276
 	.long	.Lxtalabel12
 .cc_bottom cc_26
 .cc_top cc_27,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	276
 	.long	276
 	.long	.Lxtalabel11
 .cc_bottom cc_27
 .cc_top cc_28,.Lxtalabel10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	276
 	.long	276
 	.long	.Lxtalabel10
 .cc_bottom cc_28
 .cc_top cc_29,.Lxtalabel3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	276
 	.long	276
 	.long	.Lxtalabel3
 .cc_bottom cc_29
 .cc_top cc_30,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	281
 	.long	281
 	.long	.Lxtalabel9
 .cc_bottom cc_30
 .cc_top cc_31,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	281
 	.long	281
 	.long	.Lxtalabel0
 .cc_bottom cc_31
 .cc_top cc_32,.Lxtalabel3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	281
 	.long	281
 	.long	.Lxtalabel3
 .cc_bottom cc_32
 .cc_top cc_33,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	281
 	.long	281
 	.long	.Lxtalabel4
 .cc_bottom cc_33
 .cc_top cc_34,.Lxtalabel8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	281
 	.long	281
 	.long	.Lxtalabel8
 .cc_bottom cc_34
 .cc_top cc_35,.Lxtalabel5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	281
 	.long	281
 	.long	.Lxtalabel5
 .cc_bottom cc_35
 .cc_top cc_36,.Lxtalabel7
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	281
 	.long	281
 	.long	.Lxtalabel7
 .cc_bottom cc_36
 .cc_top cc_37,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	281
 	.long	281
 	.long	.Lxtalabel12
 .cc_bottom cc_37
 .cc_top cc_38,.Lxtalabel10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	281
 	.long	281
 	.long	.Lxtalabel10
 .cc_bottom cc_38
 .cc_top cc_39,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	281
 	.long	281
 	.long	.Lxtalabel11
 .cc_bottom cc_39
 .cc_top cc_40,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	283
 	.long	283
 	.long	.Lxtalabel0
 .cc_bottom cc_40
 .cc_top cc_41,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	283
 	.long	283
 	.long	.Lxtalabel4
 .cc_bottom cc_41
 .cc_top cc_42,.Lxtalabel5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	283
 	.long	283
 	.long	.Lxtalabel5
 .cc_bottom cc_42
 .cc_top cc_43,.Lxtalabel10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	283
 	.long	283
 	.long	.Lxtalabel10
 .cc_bottom cc_43
 .cc_top cc_44,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	283
 	.long	283
 	.long	.Lxtalabel11
 .cc_bottom cc_44
 .cc_top cc_45,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	283
 	.long	283
 	.long	.Lxtalabel12
 .cc_bottom cc_45
 .cc_top cc_46,.Lxtalabel7
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	283
 	.long	283
 	.long	.Lxtalabel7
 .cc_bottom cc_46
 .cc_top cc_47,.Lxtalabel8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	283
 	.long	283
 	.long	.Lxtalabel8
 .cc_bottom cc_47
 .cc_top cc_48,.Lxtalabel3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	283
 	.long	283
 	.long	.Lxtalabel3
 .cc_bottom cc_48
 .cc_top cc_49,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	283
 	.long	283
 	.long	.Lxtalabel9
 .cc_bottom cc_49
 .cc_top cc_50,.Lxtalabel1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	287
 	.long	288
 	.long	.Lxtalabel1
 .cc_bottom cc_50
 .cc_top cc_51,.Lxtalabel1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	290
 	.long	291
 	.long	.Lxtalabel1
 .cc_bottom cc_51
 .cc_top cc_52,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	312
 	.long	316
 	.long	.Lxtalabel2
 .cc_bottom cc_52
 .cc_top cc_53,.Lxtalabel6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	312
 	.long	316
 	.long	.Lxtalabel6
 .cc_bottom cc_53
 .cc_top cc_54,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	332
 	.long	335
 	.long	.Lxtalabel2
 .cc_bottom cc_54
 .cc_top cc_55,.Lxtalabel6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	332
 	.long	335
 	.long	.Lxtalabel6
 .cc_bottom cc_55
 .cc_top cc_56,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	338
 	.long	339
 	.long	.Lxtalabel2
 .cc_bottom cc_56
 .cc_top cc_57,.Lxtalabel6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	338
 	.long	339
 	.long	.Lxtalabel6
 .cc_bottom cc_57
 .cc_top cc_58,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	340
 	.long	340
 	.long	.Lxtalabel2
 .cc_bottom cc_58
 .cc_top cc_59,.Lxtalabel6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	340
 	.long	340
 	.long	.Lxtalabel6
 .cc_bottom cc_59
 .cc_top cc_60,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	348
 	.long	350
 	.long	.Lxtalabel2
 .cc_bottom cc_60
 .cc_top cc_61,.Lxtalabel6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	348
 	.long	350
 	.long	.Lxtalabel6
 .cc_bottom cc_61
 .cc_top cc_62,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	366
 	.long	367
 	.long	.Lxtalabel2
 .cc_bottom cc_62
 .cc_top cc_63,.Lxtalabel6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	366
 	.long	367
 	.long	.Lxtalabel6
 .cc_bottom cc_63
 .cc_top cc_64,.Lxtalabel6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	369
 	.long	369
 	.long	.Lxtalabel6
 .cc_bottom cc_64
 .cc_top cc_65,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	369
 	.long	369
 	.long	.Lxtalabel2
 .cc_bottom cc_65
 .cc_top cc_66,.Lxtalabel6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	398
 	.long	398
 	.long	.Lxtalabel6
 .cc_bottom cc_66
 .cc_top cc_67,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	398
 	.long	398
 	.long	.Lxtalabel2
 .cc_bottom cc_67
 .cc_top cc_68,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	406
 	.long	406
 	.long	.Lxtalabel2
 .cc_bottom cc_68
 .cc_top cc_69,.Lxtalabel6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	406
 	.long	406
 	.long	.Lxtalabel6
 .cc_bottom cc_69
 .cc_top cc_70,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	408
 	.long	408
 	.long	.Lxtalabel2
 .cc_bottom cc_70
 .cc_top cc_71,.Lxtalabel6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	408
 	.long	408
 	.long	.Lxtalabel6
 .cc_bottom cc_71
 .cc_top cc_72,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	411
 	.long	414
 	.long	.Lxtalabel2
 .cc_bottom cc_72
 .cc_top cc_73,.Lxtalabel6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	411
 	.long	414
 	.long	.Lxtalabel6
 .cc_bottom cc_73
 .cc_top cc_74,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	417
 	.long	419
 	.long	.Lxtalabel2
 .cc_bottom cc_74
 .cc_top cc_75,.Lxtalabel6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	417
 	.long	419
 	.long	.Lxtalabel6
 .cc_bottom cc_75
 .cc_top cc_76,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	423
 	.long	424
 	.long	.Lxtalabel2
 .cc_bottom cc_76
 .cc_top cc_77,.Lxtalabel6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	423
 	.long	424
 	.long	.Lxtalabel6
 .cc_bottom cc_77
 .cc_top cc_78,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	426
 	.long	427
 	.long	.Lxtalabel2
 .cc_bottom cc_78
 .cc_top cc_79,.Lxtalabel6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	426
 	.long	427
 	.long	.Lxtalabel6
 .cc_bottom cc_79
 .cc_top cc_80,.Lxtalabel10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	449
 	.long	449
 	.long	.Lxtalabel10
 .cc_bottom cc_80
 .cc_top cc_81,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	449
 	.long	449
 	.long	.Lxtalabel12
 .cc_bottom cc_81
 .cc_top cc_82,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	449
 	.long	449
 	.long	.Lxtalabel11
 .cc_bottom cc_82
 .cc_top cc_83,.Lxtalabel10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	460
 	.long	461
 	.long	.Lxtalabel10
 .cc_bottom cc_83
 .cc_top cc_84,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	460
 	.long	461
 	.long	.Lxtalabel12
 .cc_bottom cc_84
 .cc_top cc_85,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	460
 	.long	461
 	.long	.Lxtalabel11
 .cc_bottom cc_85
 .cc_top cc_86,.Lxtalabel10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	470
 	.long	471
 	.long	.Lxtalabel10
 .cc_bottom cc_86
 .cc_top cc_87,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	470
 	.long	471
 	.long	.Lxtalabel11
 .cc_bottom cc_87
 .cc_top cc_88,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	470
 	.long	471
 	.long	.Lxtalabel12
 .cc_bottom cc_88
 .cc_top cc_89,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	495
 	.long	495
 	.long	.Lxtalabel11
 .cc_bottom cc_89
 .cc_top cc_90,.Lxtalabel10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	495
 	.long	495
 	.long	.Lxtalabel10
 .cc_bottom cc_90
 .cc_top cc_91,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	495
 	.long	495
 	.long	.Lxtalabel12
 .cc_bottom cc_91
 .cc_top cc_92,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	496
 	.long	496
 	.long	.Lxtalabel11
 .cc_bottom cc_92
 .cc_top cc_93,.Lxtalabel10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	496
 	.long	496
 	.long	.Lxtalabel10
 .cc_bottom cc_93
 .cc_top cc_94,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	496
 	.long	496
 	.long	.Lxtalabel12
 .cc_bottom cc_94
 .cc_top cc_95,.Lxtalabel10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	500
 	.long	500
 	.long	.Lxtalabel10
 .cc_bottom cc_95
 .cc_top cc_96,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	500
 	.long	500
 	.long	.Lxtalabel11
 .cc_bottom cc_96
 .cc_top cc_97,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	500
 	.long	500
 	.long	.Lxtalabel12
 .cc_bottom cc_97
 .cc_top cc_98,.Lxtalabel10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	502
 	.long	502
 	.long	.Lxtalabel10
 .cc_bottom cc_98
 .cc_top cc_99,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	502
 	.long	502
 	.long	.Lxtalabel11
 .cc_bottom cc_99
 .cc_top cc_100,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	502
 	.long	502
 	.long	.Lxtalabel12
 .cc_bottom cc_100
 .cc_top cc_101,.Lxtalabel10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	504
 	.long	504
 	.long	.Lxtalabel10
 .cc_bottom cc_101
 .cc_top cc_102,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	504
 	.long	504
 	.long	.Lxtalabel12
 .cc_bottom cc_102
 .cc_top cc_103,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	504
 	.long	504
 	.long	.Lxtalabel11
 .cc_bottom cc_103
 .cc_top cc_104,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	516
 	.long	517
 	.long	.Lxtalabel11
 .cc_bottom cc_104
 .cc_top cc_105,.Lxtalabel10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	516
 	.long	517
 	.long	.Lxtalabel10
 .cc_bottom cc_105
 .cc_top cc_106,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc"
+	.ascii	"../src/core/main.xc"
 	.byte	0
 	.long	516
 	.long	517
@@ -5370,7 +5370,7 @@ par.desc.3:
 	.long	1
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str0:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:413:110: error: passing null argument to a non-null parameter\n            Endpoint0( c_xud_out[0], c_xud_in[0], c_aud_ctl, c_mix_ctl, c_clk_ctl, c_EANativeTransport_ctrl, dfuInterface);\n                                                                                                             ^~~~~~~~~~~~\n"
+.asciiz"../src/core/main.xc:413:110: error: passing null argument to a non-null parameter\n            Endpoint0( c_xud_out[0], c_xud_in[0], c_aud_ctl, c_mix_ctl, c_clk_ctl, c_EANativeTransport_ctrl, dfuInterface);\n                                                                                                             ^~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_0,.Ltrap_info0
 	.long	.Ltrap_info0
@@ -5378,7 +5378,7 @@ par.desc.3:
 .cc_bottom cc_trapinfo_0
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/main.xc:413:110: error: passing null argument to a non-null parameter\n            Endpoint0( c_xud_out[0], c_xud_in[0], c_aud_ctl, c_mix_ctl, c_clk_ctl, c_EANativeTransport_ctrl, dfuInterface);\n                                                                                                             ^~~~~~~~~~~~\n"
+.asciiz"../src/core/main.xc:413:110: error: passing null argument to a non-null parameter\n            Endpoint0( c_xud_out[0], c_xud_in[0], c_aud_ctl, c_mix_ctl, c_clk_ctl, c_EANativeTransport_ctrl, dfuInterface);\n                                                                                                             ^~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_1,.Ltrap_info1
 	.long	.Ltrap_info1

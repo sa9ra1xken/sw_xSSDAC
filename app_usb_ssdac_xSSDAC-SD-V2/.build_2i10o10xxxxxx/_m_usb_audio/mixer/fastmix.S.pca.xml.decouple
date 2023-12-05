@@ -1,4 +1,4 @@
-<preCompilationAnalysis file="C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/mixer/fastmix.S">
+<preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/mixer/fastmix.S">
   <fCall global="true" name="doMix0"/>
   <fCall global="true" name="doMix0.nstackwords"/>
   <fCall global="true" name="doMix0.maxcores"/>

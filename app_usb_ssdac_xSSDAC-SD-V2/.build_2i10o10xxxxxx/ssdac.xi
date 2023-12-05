@@ -1838,7 +1838,7 @@ unsigned config_audo_core(chanend c_in, chanend ?c_control, unsigned sample_rate
     streaming chan c_clipped;
     streaming chan c_over;
 
-    INTERPOLATION_MODE proposed_mode;
+    INTERPOLATION_MODE proposed_mode = _QUAD;
 
     debug_printf("\ninitializing ring buffer");
 

@@ -1,4 +1,4 @@
-<preCompilationAnalysis file="C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0\dbcalc.h">
+<preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0\dbcalc.h">
 <fDef name="array_to_xc_ptr" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="delay_microseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="delay_milliseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>

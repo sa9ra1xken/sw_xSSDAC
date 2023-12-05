@@ -13,7 +13,6 @@
 #include "decoupler.h"
 #include <xclib.h>
 //#include <stdbool.h>
-
 //#include "xc_ptr.h"
 
 unsigned int buff_id = 0;
@@ -50,18 +49,23 @@ void send_sample(chanend c){
 
     unsigned temp;
 
+    if (sm_sample_rate[tx_id]!= cur_freq){
+        set_frequency(c);
+    }
+
     if (sm_new_track[tx_id]==_TRUE){
-        sm_new_track[tx_id] = _FALSE;
 
-        if (sm_sample_rate[tx_id]!= cur_freq){
-            set_frequency(c);
-        }
+        //if (sm_sample_rate[tx_id]!= cur_freq){
+        //    set_frequency(c);
+        //}
 
-        for (ch = 0 ; ch < sm_ch_count[tx_id] ; ch++ ){
-            samplesOut[ch]=0;
-        }
+        //for (ch = 0 ; ch < sm_ch_count[tx_id] ; ch++ ){
+        //    samplesOut[ch]=0;
+        //}
+
         ch = 0;
         digit = 0;
+        sm_new_track[tx_id] = _FALSE;
     }
 
     samplesOut[ch]= ( samplesOut[ch] << 8 ) + audio_buffer[tx_id][byte_ptr];
@@ -76,6 +80,7 @@ void send_sample(chanend c){
 
             for (ch = 0 ; ch < sm_ch_count[tx_id] ; ch++ ){
                 outuint(c, byterev(samplesOut[ch]));
+                samplesOut[ch]=0;
             }
             ch = 0;
         }

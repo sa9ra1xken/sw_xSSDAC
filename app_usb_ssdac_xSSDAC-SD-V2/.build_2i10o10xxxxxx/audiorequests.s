@@ -1,5 +1,5 @@
 	.text
-	.file	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.file	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
                                         # Start of file scope inline assembly
 	.inline_definition delay_seconds
 	.inline_definition delay_milliseconds
@@ -35,31 +35,31 @@
 	.set usage.anon.23,0
 	.set usage.anon.24,0
 	.set usage.anon.25,0
-	.globread usage.anon.25,volsIn,0,4,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:248:39: note: object used here (bytes 0..4)\n                unsigned master_vol = volsIn[0] == 0x8000 ? 0 : db_to_mult(volsIn[0], 8, 29);\n                                      ^~~~~~~~~"
-	.globread usage.anon.25,volsIn,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:249:33: note: object used here\n                 unsigned vol = volsIn[channel] == 0x8000 ? 0 : db_to_mult(volsIn[channel], 8, 29);\n                                ^~~~~~~~~~~~~~~"
-	.globread usage.anon.25,volsOut,0,4,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:226:39: note: object used here (bytes 0..4)\n                unsigned master_vol = volsOut[0] == 0x8000 ? 0 : db_to_mult(volsOut[0], 8, 29);\n                                      ^~~~~~~~~~"
-	.globread usage.anon.25,volsOut,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:227:32: note: object used here\n                unsigned vol = volsOut[channel] == 0x8000 ? 0 : db_to_mult(volsOut[channel], 8, 29);\n                               ^~~~~~~~~~~~~~~~"
-	.globread usage.anon.25,multIn,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:211:39: note: object used here\n    xc_ptr p_multIn = array_to_xc_ptr(multIn);\n                                      ^~~~~~"
-	.globread usage.anon.25,multOut,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:208:40: note: object used here\n    xc_ptr p_multOut = array_to_xc_ptr(multOut);\n                                       ^~~~~~~"
-	.globread usage.anon.24,mutesIn,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:251:67: note: object used here\n                x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[channel];\n                                                                  ^~~~~~~~~~~~~~~~"
-	.globread usage.anon.22,mutesIn,0,4,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:251:53: note: object used here (bytes 0..4)\n                x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[channel];\n                                                    ^~~~~~~~~~"
-	.globread usage.anon.21,mutesOut,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:229:68: note: object used here\n                x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[channel];\n                                                                   ^~~~~~~~~~~~~~~~~"
-	.globread usage.anon.19,mutesOut,0,4,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:229:53: note: object used here (bytes 0..4)\n                x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[channel];\n                                                    ^~~~~~~~~~~"
-	.globread usage.anon.18,volsIn,0,4,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:175:39: note: object used here (bytes 0..4)\n                unsigned master_vol = volsIn[0] == 0x8000 ? 0 : db_to_mult(volsIn[0], 8, 29);\n                                      ^~~~~~~~~"
-	.globread usage.anon.18,volsIn,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:180:36: note: object used here\n                    unsigned vol = volsIn[i] == 0x8000 ? 0 : db_to_mult(volsIn[i], 8, 29);\n                                   ^~~~~~~~~"
-	.globread usage.anon.18,volsOut,0,4,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:148:39: note: object used here (bytes 0..4)\n                unsigned master_vol = volsOut[0] == 0x8000 ? 0 : db_to_mult(volsOut[0], 8, 29);\n                                      ^~~~~~~~~~"
-	.globread usage.anon.18,volsOut,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:154:36: note: object used here\n                    unsigned vol = volsOut[i] == 0x8000 ? 0 : db_to_mult(volsOut[i], 8, 29);\n                                   ^~~~~~~~~~"
-	.globread usage.anon.18,multIn,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:142:39: note: object used here\n    xc_ptr p_multIn = array_to_xc_ptr(multIn);\n                                      ^~~~~~"
-	.globread usage.anon.18,multOut,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:139:40: note: object used here\n    xc_ptr p_multOut = array_to_xc_ptr(multOut);\n                                       ^~~~~~~"
-	.globread usage.anon.17,mutesIn,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:182:71: note: object used here\n                    x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[i];\n                                                                      ^~~~~~~~~~"
-	.globread usage.anon.15,mutesIn,0,4,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:182:57: note: object used here (bytes 0..4)\n                    x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[i];\n                                                        ^~~~~~~~~~"
-	.globread usage.anon.14,mutesOut,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:156:72: note: object used here\n                    x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[i];\n                                                                       ^~~~~~~~~~~"
-	.globread usage.anon.12,mutesOut,0,4,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:156:57: note: object used here (bytes 0..4)\n                    x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[i];\n                                                        ^~~~~~~~~~~"
-	.globwrite AudioClassRequests_2,g_curSamFreq,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:325:41: note: object used here\n                                        g_curSamFreq = newSampleRate;\n                                        ^~~~~~~~~~~~"
-	.globwrite AudioClassRequests_2,mutesIn,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:599:41: note: object used here\n                                        mutesIn[ sp.wValue&0xff ] = buffer[0];\n                                        ^~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globwrite AudioClassRequests_2,volsIn,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:547:41: note: object used here\n                                        volsIn[ sp.wValue&0xff ] = buffer[0] | (((int) (signed char) buffer[1]) << 8);\n                                        ^~~~~~~~~~~~~~~~~~~~~~~~"
-	.globwrite AudioClassRequests_2,mutesOut,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:590:41: note: object used here\n                                        mutesOut[sp.wValue & 0xff] = buffer[0];\n                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globwrite AudioClassRequests_2,volsOut,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:538:41: note: object used here\n                                        volsOut[ sp.wValue&0xff ] = buffer[0] | (((int) (signed char) buffer[1]) << 8);\n                                        ^~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globread usage.anon.25,volsIn,0,4,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:248:39: note: object used here (bytes 0..4)\n                unsigned master_vol = volsIn[0] == 0x8000 ? 0 : db_to_mult(volsIn[0], 8, 29);\n                                      ^~~~~~~~~"
+	.globread usage.anon.25,volsIn,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:249:33: note: object used here\n                 unsigned vol = volsIn[channel] == 0x8000 ? 0 : db_to_mult(volsIn[channel], 8, 29);\n                                ^~~~~~~~~~~~~~~"
+	.globread usage.anon.25,volsOut,0,4,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:226:39: note: object used here (bytes 0..4)\n                unsigned master_vol = volsOut[0] == 0x8000 ? 0 : db_to_mult(volsOut[0], 8, 29);\n                                      ^~~~~~~~~~"
+	.globread usage.anon.25,volsOut,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:227:32: note: object used here\n                unsigned vol = volsOut[channel] == 0x8000 ? 0 : db_to_mult(volsOut[channel], 8, 29);\n                               ^~~~~~~~~~~~~~~~"
+	.globread usage.anon.25,multIn,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:211:39: note: object used here\n    xc_ptr p_multIn = array_to_xc_ptr(multIn);\n                                      ^~~~~~"
+	.globread usage.anon.25,multOut,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:208:40: note: object used here\n    xc_ptr p_multOut = array_to_xc_ptr(multOut);\n                                       ^~~~~~~"
+	.globread usage.anon.24,mutesIn,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:251:67: note: object used here\n                x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[channel];\n                                                                  ^~~~~~~~~~~~~~~~"
+	.globread usage.anon.22,mutesIn,0,4,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:251:53: note: object used here (bytes 0..4)\n                x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[channel];\n                                                    ^~~~~~~~~~"
+	.globread usage.anon.21,mutesOut,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:229:68: note: object used here\n                x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[channel];\n                                                                   ^~~~~~~~~~~~~~~~~"
+	.globread usage.anon.19,mutesOut,0,4,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:229:53: note: object used here (bytes 0..4)\n                x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[channel];\n                                                    ^~~~~~~~~~~"
+	.globread usage.anon.18,volsIn,0,4,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:175:39: note: object used here (bytes 0..4)\n                unsigned master_vol = volsIn[0] == 0x8000 ? 0 : db_to_mult(volsIn[0], 8, 29);\n                                      ^~~~~~~~~"
+	.globread usage.anon.18,volsIn,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:180:36: note: object used here\n                    unsigned vol = volsIn[i] == 0x8000 ? 0 : db_to_mult(volsIn[i], 8, 29);\n                                   ^~~~~~~~~"
+	.globread usage.anon.18,volsOut,0,4,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:148:39: note: object used here (bytes 0..4)\n                unsigned master_vol = volsOut[0] == 0x8000 ? 0 : db_to_mult(volsOut[0], 8, 29);\n                                      ^~~~~~~~~~"
+	.globread usage.anon.18,volsOut,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:154:36: note: object used here\n                    unsigned vol = volsOut[i] == 0x8000 ? 0 : db_to_mult(volsOut[i], 8, 29);\n                                   ^~~~~~~~~~"
+	.globread usage.anon.18,multIn,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:142:39: note: object used here\n    xc_ptr p_multIn = array_to_xc_ptr(multIn);\n                                      ^~~~~~"
+	.globread usage.anon.18,multOut,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:139:40: note: object used here\n    xc_ptr p_multOut = array_to_xc_ptr(multOut);\n                                       ^~~~~~~"
+	.globread usage.anon.17,mutesIn,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:182:71: note: object used here\n                    x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[i];\n                                                                      ^~~~~~~~~~"
+	.globread usage.anon.15,mutesIn,0,4,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:182:57: note: object used here (bytes 0..4)\n                    x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[i];\n                                                        ^~~~~~~~~~"
+	.globread usage.anon.14,mutesOut,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:156:72: note: object used here\n                    x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[i];\n                                                                       ^~~~~~~~~~~"
+	.globread usage.anon.12,mutesOut,0,4,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:156:57: note: object used here (bytes 0..4)\n                    x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[i];\n                                                        ^~~~~~~~~~~"
+	.globwrite AudioClassRequests_2,g_curSamFreq,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:325:41: note: object used here\n                                        g_curSamFreq = newSampleRate;\n                                        ^~~~~~~~~~~~"
+	.globwrite AudioClassRequests_2,mutesIn,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:599:41: note: object used here\n                                        mutesIn[ sp.wValue&0xff ] = buffer[0];\n                                        ^~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globwrite AudioClassRequests_2,volsIn,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:547:41: note: object used here\n                                        volsIn[ sp.wValue&0xff ] = buffer[0] | (((int) (signed char) buffer[1]) << 8);\n                                        ^~~~~~~~~~~~~~~~~~~~~~~~"
+	.globwrite AudioClassRequests_2,mutesOut,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:590:41: note: object used here\n                                        mutesOut[sp.wValue & 0xff] = buffer[0];\n                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globwrite AudioClassRequests_2,volsOut,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:538:41: note: object used here\n                                        volsOut[ sp.wValue&0xff ] = buffer[0] | (((int) (signed char) buffer[1]) << 8);\n                                        ^~~~~~~~~~~~~~~~~~~~~~~~~"
 	.call AudioClassRequests_2,usage.anon.9
 	.call AudioClassRequests_2,usage.anon.25
 	.call AudioClassRequests_2,usage.anon.10
@@ -93,14 +93,14 @@
 	.call usage.anon.2,delay_ticks_longlong
 	.call usage.anon.1,delay_ticks_longlong
 	.call usage.anon.0,delay_ticks_longlong
-	.par usage.anon.23,usage.anon.24,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:251:21: error: use of `%s\' causes an ambiguous evaluation\n                x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[channel];\n                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.par usage.anon.11,usage.anon.22,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:251:21: error: use of `%s\' causes an ambiguous evaluation\n                x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[channel];\n                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.par usage.anon.20,usage.anon.21,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:229:21: error: use of `%s\' causes an ambiguous evaluation\n                x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[channel];\n                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.par usage.anon.11,usage.anon.19,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:229:21: error: use of `%s\' causes an ambiguous evaluation\n                x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[channel];\n                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.par usage.anon.16,usage.anon.17,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:182:25: error: use of `%s\' causes an ambiguous evaluation\n                    x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[i];\n                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.par usage.anon.11,usage.anon.15,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:182:25: error: use of `%s\' causes an ambiguous evaluation\n                    x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[i];\n                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.par usage.anon.13,usage.anon.14,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:156:25: error: use of `%s\' causes an ambiguous evaluation\n                    x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[i];\n                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.par usage.anon.11,usage.anon.12,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:156:25: error: use of `%s\' causes an ambiguous evaluation\n                    x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[i];\n                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.par usage.anon.23,usage.anon.24,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:251:21: error: use of `%s\' causes an ambiguous evaluation\n                x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[channel];\n                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.par usage.anon.11,usage.anon.22,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:251:21: error: use of `%s\' causes an ambiguous evaluation\n                x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[channel];\n                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.par usage.anon.20,usage.anon.21,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:229:21: error: use of `%s\' causes an ambiguous evaluation\n                x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[channel];\n                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.par usage.anon.11,usage.anon.19,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:229:21: error: use of `%s\' causes an ambiguous evaluation\n                x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[channel];\n                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.par usage.anon.16,usage.anon.17,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:182:25: error: use of `%s\' causes an ambiguous evaluation\n                    x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[i];\n                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.par usage.anon.11,usage.anon.15,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:182:25: error: use of `%s\' causes an ambiguous evaluation\n                    x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[i];\n                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.par usage.anon.13,usage.anon.14,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:156:25: error: use of `%s\' causes an ambiguous evaluation\n                    x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[i];\n                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.par usage.anon.11,usage.anon.12,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:156:25: error: use of `%s\' causes an ambiguous evaluation\n                    x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[i];\n                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 	.set usage.anon.3.locnoside, 0
 	.set usage.anon.6.locnoside, 0
 	.set usage.anon.7.locnoside, 0
@@ -113,10 +113,10 @@
 	.set usage.anon.18.locnoglobalaccess, 0
 	.set usage.anon.25.locnoglobalaccess, 0
 	.set AudioClassRequests_2.locnoglobalaccess, 0
-	.globpassesref usage.anon.7, multIn,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:211:23: error: call to `array_to_xc_ptr\' in `updateVol\' makes alias of global \'multIn\'\n    xc_ptr p_multIn = array_to_xc_ptr(multIn);\n                      ^~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref usage.anon.7, multOut,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:208:24: error: call to `array_to_xc_ptr\' in `updateVol\' makes alias of global \'multOut\'\n    xc_ptr p_multOut = array_to_xc_ptr(multOut);\n                       ^~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref usage.anon.7, multIn,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:142:23: error: call to `array_to_xc_ptr\' in `updateMasterVol\' makes alias of global \'multIn\'\n    xc_ptr p_multIn = array_to_xc_ptr(multIn);\n                      ^~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref usage.anon.7, multOut,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:139:24: error: call to `array_to_xc_ptr\' in `updateMasterVol\' makes alias of global \'multOut\'\n    xc_ptr p_multOut = array_to_xc_ptr(multOut);\n                       ^~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref usage.anon.7, multIn,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:211:23: error: call to `array_to_xc_ptr\' in `updateVol\' makes alias of global \'multIn\'\n    xc_ptr p_multIn = array_to_xc_ptr(multIn);\n                      ^~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref usage.anon.7, multOut,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:208:24: error: call to `array_to_xc_ptr\' in `updateVol\' makes alias of global \'multOut\'\n    xc_ptr p_multOut = array_to_xc_ptr(multOut);\n                       ^~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref usage.anon.7, multIn,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:142:23: error: call to `array_to_xc_ptr\' in `updateMasterVol\' makes alias of global \'multIn\'\n    xc_ptr p_multIn = array_to_xc_ptr(multIn);\n                      ^~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref usage.anon.7, multOut,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:139:24: error: call to `array_to_xc_ptr\' in `updateMasterVol\' makes alias of global \'multOut\'\n    xc_ptr p_multOut = array_to_xc_ptr(multOut);\n                       ^~~~~~~~~~~~~~~~~~~~~~~~"
 
                                         # End of file scope inline assembly
 	.section	.debug_info,"",@progbits
@@ -133,15 +133,15 @@
 .Lsection_debug_loc:
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0\\audiorequests.xc"
-	.file	2 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0\\audiorequests.xc"
+	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.text
 	.align	4
 	.type	storeInt,@function
 	.cc_top storeInt.function,storeInt
 storeInt:                               # @storeInt
 .Lfunc_begin0:
-	.loc	1 57 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:57:0
+	.loc	1 57 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:57:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -158,7 +158,7 @@ storeInt:                               # @storeInt
 	.cfi_def_cfa_offset 8
 .Ltmp1:
 	.cfi_offset 4, -8
-	.loc	1 58 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:58:0
+	.loc	1 58 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:58:0
 .Ltmp2:
 	{
 		add r11, r1, 3
@@ -168,7 +168,7 @@ storeInt:                               # @storeInt
 		ldc r3, 9
 		nop
 	}
-	.loc	1 58 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:58:0
+	.loc	1 58 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:58:0
 	{
 		shr r4, r11, r3
 		nop
@@ -178,19 +178,19 @@ storeInt:                               # @storeInt
 		ecallt r4
 		nop
 	}
-	.loc	1 58 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:58:0
+	.loc	1 58 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:58:0
 	{
 		shr r4, r2, 24
 		nop
 	}
-	.loc	1 58 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:58:0
+	.loc	1 58 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:58:0
 	st8 r4, r0[r11]
-	.loc	1 59 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:59:0
+	.loc	1 59 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:59:0
 	{
 		add r11, r1, 2
 		nop
 	}
-	.loc	1 59 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:59:0
+	.loc	1 59 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:59:0
 	{
 		shr r4, r11, r3
 		nop
@@ -200,19 +200,19 @@ storeInt:                               # @storeInt
 		ecallt r4
 		nop
 	}
-	.loc	1 59 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:59:0
+	.loc	1 59 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:59:0
 	{
 		shr r4, r2, 16
 		nop
 	}
-	.loc	1 59 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:59:0
+	.loc	1 59 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:59:0
 	st8 r4, r0[r11]
-	.loc	1 60 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:60:0
+	.loc	1 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:60:0
 	{
 		add r11, r1, 1
 		nop
 	}
-	.loc	1 60 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:60:0
+	.loc	1 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:60:0
 	{
 		shr r4, r11, r3
 		nop
@@ -222,14 +222,14 @@ storeInt:                               # @storeInt
 		ecallt r4
 		nop
 	}
-	.loc	1 60 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:60:0
+	.loc	1 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:60:0
 	{
 		shr r4, r2, 8
 		nop
 	}
-	.loc	1 60 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:60:0
+	.loc	1 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:60:0
 	st8 r4, r0[r11]
-	.loc	1 61 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:61:0
+	.loc	1 61 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:61:0
 	{
 		shr r3, r1, r3
 		nop
@@ -239,7 +239,7 @@ storeInt:                               # @storeInt
 		ecallt r3
 		nop
 	}
-	.loc	1 61 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:61:0
+	.loc	1 61 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:61:0
 	st8 r2, r0[r1]
 	{
 		ldaw sp, sp[2]
@@ -266,7 +266,7 @@ storeInt:                               # @storeInt
 	.cc_top storeFreq.function,storeFreq
 storeFreq:                              # @storeFreq
 .Lfunc_begin1:
-	.loc	1 72 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:72:0
+	.loc	1 72 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:72:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -297,7 +297,7 @@ storeFreq:                              # @storeFreq
 		mov r6, r0
 		ldw r7, r4[0]
 	}
-	.loc	1 73 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:73:0
+	.loc	1 73 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:73:0
 .Ltmp11:
 	{
 		mov r1, r7
@@ -305,31 +305,31 @@ storeFreq:                              # @storeFreq
 	}
 .Lxta.call_labels0:
 	bl storeInt
-	.loc	1 74 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:74:0
+	.loc	1 74 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:74:0
 	{
 		add r1, r7, 4
 		mov r0, r6
 	}
-	.loc	1 75 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:75:0
+	.loc	1 75 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:75:0
 	{
 		mov r2, r5
 		nop
 	}
 .Lxta.call_labels1:
 	bl storeInt
-	.loc	1 76 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:76:0
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:76:0
 	{
 		add r1, r7, 8
 		ldc r2, 0
 	}
-	.loc	1 77 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:77:0
+	.loc	1 77 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:77:0
 	{
 		mov r0, r6
 		nop
 	}
 .Lxta.call_labels2:
 	bl storeInt
-	.loc	1 78 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:78:0
+	.loc	1 78 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:78:0
 	ldaw r0, r7[3]
 	{
 		nop
@@ -375,7 +375,7 @@ storeFreq:                              # @storeFreq
 	.cc_top FeedbackStabilityDelay.function,FeedbackStabilityDelay
 FeedbackStabilityDelay:                 # @FeedbackStabilityDelay
 .Lfunc_begin2:
-	.loc	1 84 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:84:0
+	.loc	1 84 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:84:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -384,20 +384,20 @@ FeedbackStabilityDelay:                 # @FeedbackStabilityDelay
 		nop
 		dualentsp 0
 	}
-	.loc	1 90 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:90:0
+	.loc	1 90 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:90:0
 .Ltmp14:
 	#APP
 	ldw   r0, dp[g_curUsbSpeed]
 	#NO_APP
 .Ltmp15:
 	#DEBUG_VALUE: usbSpeed <- R0
-	.loc	1 92 5                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:92:5
+	.loc	1 92 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:92:5
 	{
 		eq r0, r0, 2
 		nop
 	}
 .Ltmp16:
-	.loc	1 94 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:94:0
+	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:94:0
 	bt r0, .LBB2_1
 # BB#2:                                 # %allocas
 .Lxtalabel3:
@@ -409,30 +409,30 @@ FeedbackStabilityDelay:                 # @FeedbackStabilityDelay
 .Lxtalabel4:
 .Ltmp17:
 	#DEBUG_VALUE: time <- R1
-	.loc	1 101 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:101:0
+	.loc	1 101 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:101:0
 	{
 		gettime r1
 		get r11, id
 	}
 .Ltmp18:
-	.loc	1 102 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:102:0
+	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:102:0
 	ldaw r2, dp[__timers]
-	.loc	1 102 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:102:0
+	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:102:0
 	{
 		add r0, r0, r1
 		ldw r2, r2[r11]
 	}
-	.loc	1 102 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:102:0
+	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:102:0
 	{
 		setd res[r2], r0
 		nop
 	}
-	.loc	1 102 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:102:0
+	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:102:0
 	{
 		setc res[r2], 9
 		nop
 	}
-	.loc	1 102 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:102:0
+	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:102:0
 .Ltmp19:
 .Lxta.endpoint_labels0:
 	{
@@ -460,7 +460,7 @@ FeedbackStabilityDelay:                 # @FeedbackStabilityDelay
 	.cc_top updateVol.function,updateVol
 updateVol:                              # @updateVol
 .Lfunc_begin3:
-	.loc	1 205 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:205:0
+	.loc	1 205 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:205:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -494,8 +494,8 @@ updateVol:                              # @updateVol
 		mov r4, r1
 		stw r10, sp[8]
 	}
-	.file	3 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\\xc_ptr.h"
-	.loc	3 13 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\xc_ptr.h:13:0
+	.file	3 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
+	.loc	3 13 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
 .Ltmp31:
 	ldaw r6, dp[multOut]
 .Ltmp32:
@@ -506,24 +506,24 @@ updateVol:                              # @updateVol
 	#DEBUG_VALUE: x <- R0
 	#DEBUG_VALUE: p_multOut <- R0
 	#DEBUG_VALUE: p_multIn <- R0
-	.loc	1 220 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:220:0
+	.loc	1 220 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:220:0
 	{
 		eq r1, r0, 11
 		nop
 	}
-	.loc	1 214 5                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:214:5
+	.loc	1 214 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:214:5
 	bf r4, .LBB3_1
 .Ltmp33:
 # BB#13:                                # %iffalse
 .Lxtalabel6:
-	.loc	1 220 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:220:0
+	.loc	1 220 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:220:0
 	bf r1, .LBB3_14
 # BB#23:                                # %switchcase2
 .Lxtalabel7:
 .Ltmp34:
 	#DEBUG_VALUE: p_multOut <- R0
 	#DEBUG_VALUE: p_multIn <- R0
-	.loc	1 248 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:248:0
+	.loc	1 248 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:248:0
 	ldc r7, volsIn.globound
 .Ltrap_info4:
 	{
@@ -533,20 +533,20 @@ updateVol:                              # @updateVol
 	#DEBUG_VALUE: p_multOut <- R0
 	#DEBUG_VALUE: p_multIn <- R0
 .Ltmp35:
-	.loc	3 13 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\xc_ptr.h:13:0
+	.loc	3 13 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
 	ldaw r6, dp[multIn]
 .Ltmp36:
 	#DEBUG_VALUE: array_to_xc_ptr:a <- R6
-	.loc	1 248 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:248:0
+	.loc	1 248 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:248:0
 	ldw r0, dp[volsIn]
 .Ltmp37:
 	ldc r8, 32768
-	.loc	1 248 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:248:0
+	.loc	1 248 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:248:0
 	{
 		eq r1, r0, r8
 		nop
 	}
-	.loc	1 248 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:248:0
+	.loc	1 248 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:248:0
 	bf r1, .LBB3_36
 .Ltmp38:
 # BB#24:
@@ -557,7 +557,7 @@ updateVol:                              # @updateVol
 	bu .LBB3_25
 .LBB3_1:                                # %iftrue
 .Lxtalabel8:
-	.loc	1 144 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:144:0
+	.loc	1 144 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:144:0
 .Ltmp39:
 	bf r1, .LBB3_2
 # BB#11:                                # %switchcase1.i
@@ -565,10 +565,10 @@ updateVol:                              # @updateVol
 .Ltmp40:
 	#DEBUG_VALUE: p_multOut <- R0
 	#DEBUG_VALUE: p_multIn <- R0
-	.loc	1 175 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:175:0
+	.loc	1 175 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:175:0
 	ldc r0, volsIn.globound
 .Ltmp41:
-	.loc	1 216 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:216:0
+	.loc	1 216 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:216:0
 .Ltrap_info5:
 	{
 		ecallf r0
@@ -577,11 +577,11 @@ updateVol:                              # @updateVol
 .Ltmp42:
 	#DEBUG_VALUE: p_multOut <- R0
 	#DEBUG_VALUE: p_multIn <- R0
-	.loc	1 175 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:175:0
+	.loc	1 175 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:175:0
 	ldw r0, dp[volsIn]
 .Ltmp43:
 	ldc r1, 32768
-	.loc	1 175 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:175:0
+	.loc	1 175 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:175:0
 	{
 		eq r1, r0, r1
 		nop
@@ -591,7 +591,7 @@ updateVol:                              # @updateVol
 .Ltmp44:
 	#DEBUG_VALUE: p_multOut <- R0
 	#DEBUG_VALUE: p_multIn <- R0
-	.loc	1 175 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:175:0
+	.loc	1 175 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:175:0
 .Lxta.call_labels3:
 	bl _Sdb_to_mult_0
 .Ltmp45:
@@ -606,7 +606,7 @@ updateVol:                              # @updateVol
 	bf r0, .LBB3_31
 # BB#15:                                # %switchcase
 .Lxtalabel11:
-	.loc	1 226 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:226:0
+	.loc	1 226 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:226:0
 .Ltmp47:
 	ldc r8, volsOut.globound
 .Ltrap_info6:
@@ -614,15 +614,15 @@ updateVol:                              # @updateVol
 		ecallf r8
 		nop
 	}
-	.loc	1 226 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:226:0
+	.loc	1 226 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:226:0
 	ldw r0, dp[volsOut]
 	ldc r7, 32768
-	.loc	1 226 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:226:0
+	.loc	1 226 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:226:0
 	{
 		eq r1, r0, r7
 		nop
 	}
-	.loc	1 226 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:226:0
+	.loc	1 226 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:226:0
 	bf r1, .LBB3_34
 .Ltmp48:
 # BB#16:
@@ -640,26 +640,26 @@ updateVol:                              # @updateVol
 	bf r0, .LBB3_31
 # BB#3:                                 # %switchcase.i
 .Lxtalabel13:
-	.loc	1 148 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:148:0
+	.loc	1 148 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:148:0
 .Ltmp49:
 	ldc r3, volsOut.globound
 .Ltmp50:
-	.loc	1 216 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:216:0
+	.loc	1 216 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:216:0
 .Ltrap_info7:
 	{
 		ecallf r3
 		nop
 	}
-	.loc	3 13 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\xc_ptr.h:13:0
+	.loc	3 13 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
 .Ltmp51:
 	#APP
 	mov r6, r6
 	#NO_APP
 .Ltmp52:
-	.loc	1 148 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:148:0
+	.loc	1 148 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:148:0
 	ldw r0, dp[volsOut]
 	ldc r10, 32768
-	.loc	1 148 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:148:0
+	.loc	1 148 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:148:0
 	{
 		eq r1, r0, r10
 		ldc r7, 0
@@ -674,7 +674,7 @@ updateVol:                              # @updateVol
 		mov r4, r3
 		nop
 	}
-	.loc	1 148 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:148:0
+	.loc	1 148 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:148:0
 .Lxta.call_labels4:
 	bl _Sdb_to_mult_0
 	{
@@ -689,10 +689,10 @@ updateVol:                              # @updateVol
 .Ltmp53:
 	#DEBUG_VALUE: i <- 1
 	ldaw r11, dp[volsOut]
-	.loc	1 156 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:156:0
+	.loc	1 156 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:156:0
 .Ltmp54:
 	ldc r5, mutesOut.globound
-	.loc	1 156 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:156:0
+	.loc	1 156 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:156:0
 	ldaw r4, dp[mutesOut]
 	{
 		mkmsk r8, 2
@@ -702,13 +702,13 @@ updateVol:                              # @updateVol
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel14:
 	#DEBUG_VALUE: i <- 1
-	.loc	1 154 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:154:0
+	.loc	1 154 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:154:0
 	{
 		lsu r0, r9, r3
 		nop
 	}
 .Ltmp55:
-	.loc	1 216 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:216:0
+	.loc	1 216 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:216:0
 .Ltrap_info8:
 	{
 		ecallf r0
@@ -719,7 +719,7 @@ updateVol:                              # @updateVol
 		nop
 		ldw r1, r11[r9]
 	}
-	.loc	1 154 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:154:0
+	.loc	1 154 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:154:0
 .Ltmp56:
 	{
 		eq r2, r1, r10
@@ -729,7 +729,7 @@ updateVol:                              # @updateVol
 # BB#33:                                # %afterboundcheck20.i
                                         #   in Loop: Header=BB3_5 Depth=1
 	#DEBUG_VALUE: i <- 1
-	.loc	1 154 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:154:0
+	.loc	1 154 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:154:0
 	{
 		mov r0, r1
 		mov r7, r10
@@ -772,7 +772,7 @@ updateVol:                              # @updateVol
 	#DEBUG_VALUE: longMul:b <- R0
 	#DEBUG_VALUE: prec <- 29
 	#DEBUG_VALUE: master_vol <- [SP+4]
-	.loc	1 216 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:216:0
+	.loc	1 216 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:216:0
 .Ltrap_info9:
 	{
 		ecallf r5
@@ -780,14 +780,14 @@ updateVol:                              # @updateVol
 	}
 	#DEBUG_VALUE: i <- 1
 	#DEBUG_VALUE: master_vol <- [SP+4]
-	.loc	1 156 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:156:0
+	.loc	1 156 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:156:0
 .Ltmp58:
 	{
 		lsu r1, r9, r5
 		nop
 	}
 .Ltmp59:
-	.loc	1 216 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:216:0
+	.loc	1 216 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:216:0
 .Ltrap_info10:
 	{
 		ecallf r1
@@ -795,10 +795,10 @@ updateVol:                              # @updateVol
 	}
 	#DEBUG_VALUE: i <- 1
 	#DEBUG_VALUE: master_vol <- [SP+4]
-	.loc	1 156 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:156:0
+	.loc	1 156 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:156:0
 .Ltmp60:
 	ldw r2, dp[mutesOut]
-	.loc	1 156 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:156:0
+	.loc	1 156 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:156:0
 	{
 		mov r1, r7
 		nop
@@ -813,22 +813,22 @@ updateVol:                              # @updateVol
 		nop
 		ldw r1, sp[1]
 	}
-	.loc	1 113 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:113:0
+	.loc	1 113 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:113:0
 .Ltmp62:
 	#APP
 	lmul r0, r1, r1, r0, r7, r7
 	#NO_APP
-	.loc	1 116 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:116:0
+	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:116:0
 	{
 		shl r0, r0, 3
 		ldc r2, 29
 	}
-	.loc	1 116 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:116:0
+	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:116:0
 	{
 		shr r1, r1, r2
 		nop
 	}
-	.loc	1 116 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:116:0
+	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:116:0
 	{
 		or r1, r0, r1
 		nop
@@ -839,7 +839,7 @@ updateVol:                              # @updateVol
                                         #   in Loop: Header=BB3_5 Depth=1
 	#DEBUG_VALUE: i <- 1
 	#DEBUG_VALUE: master_vol <- [SP+4]
-	.loc	1 156 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:156:0
+	.loc	1 156 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:156:0
 	{
 		mov r0, r7
 		ldw r2, r4[r9]
@@ -850,7 +850,7 @@ updateVol:                              # @updateVol
                                         #   in Loop: Header=BB3_5 Depth=1
 	#DEBUG_VALUE: i <- 1
 	#DEBUG_VALUE: master_vol <- [SP+4]
-	.loc	1 156 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:156:0
+	.loc	1 156 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:156:0
 	{
 		mov r0, r1
 		nop
@@ -861,22 +861,22 @@ updateVol:                              # @updateVol
 	#DEBUG_VALUE: i <- 1
 	#DEBUG_VALUE: master_vol <- [SP+4]
 	#DEBUG_VALUE: x <- R0
-	.loc	1 167 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:167:0
+	.loc	1 167 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:167:0
 	{
 		sub r1, r9, 1
 		nop
 	}
-	.loc	1 167 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:167:0
+	.loc	1 167 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:167:0
 	#APP
 	stw r0, r6[r1]
 	#NO_APP
 .Ltmp66:
-	.loc	1 150 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:150:0
+	.loc	1 150 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:150:0
 	{
 		add r9, r9, 1
 		nop
 	}
-	.loc	1 150 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:150:0
+	.loc	1 150 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:150:0
 	{
 		lss r0, r9, r8
 		nop
@@ -890,7 +890,7 @@ updateVol:                              # @updateVol
 .LBB3_36:                               # %afterboundcheck53
 	#DEBUG_VALUE: p_multOut <- R0
 	#DEBUG_VALUE: p_multIn <- R0
-	.loc	1 248 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:248:0
+	.loc	1 248 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:248:0
 .Lxta.call_labels6:
 	bl _Sdb_to_mult_0
 .Ltmp69:
@@ -902,7 +902,7 @@ updateVol:                              # @updateVol
 .Ltmp70:
 	#DEBUG_VALUE: p_multOut <- R0
 	#DEBUG_VALUE: p_multIn <- R0
-	.loc	1 249 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:249:0
+	.loc	1 249 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:249:0
 	{
 		lsu r0, r4, r7
 		nop
@@ -916,19 +916,19 @@ updateVol:                              # @updateVol
 .Ltmp72:
 	#DEBUG_VALUE: p_multOut <- R0
 	#DEBUG_VALUE: p_multIn <- R0
-	.loc	1 249 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:249:0
+	.loc	1 249 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:249:0
 	ldaw r0, dp[volsIn]
 .Ltmp73:
 	{
 		nop
 		ldw r1, r0[r4]
 	}
-	.loc	1 249 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:249:0
+	.loc	1 249 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:249:0
 	{
 		eq r2, r1, r8
 		ldc r7, 0
 	}
-	.loc	1 249 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:249:0
+	.loc	1 249 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:249:0
 	{
 		mov r0, r7
 		nop
@@ -938,7 +938,7 @@ updateVol:                              # @updateVol
 .Ltmp74:
 	#DEBUG_VALUE: p_multOut <- R0
 	#DEBUG_VALUE: p_multIn <- R0
-	.loc	1 249 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:249:0
+	.loc	1 249 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:249:0
 	{
 		mov r0, r1
 		nop
@@ -954,7 +954,7 @@ updateVol:                              # @updateVol
 	#DEBUG_VALUE: longMul:b <- R0
 	#DEBUG_VALUE: prec <- 29
 	#DEBUG_VALUE: master_vol <- R5
-	.loc	1 251 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:251:0
+	.loc	1 251 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:251:0
 	ldc r1, mutesIn.globound
 .Ltrap_info12:
 	{
@@ -964,7 +964,7 @@ updateVol:                              # @updateVol
 	#DEBUG_VALUE: p_multOut <- R0
 	#DEBUG_VALUE: p_multIn <- R0
 	#DEBUG_VALUE: master_vol <- R5
-	.loc	1 251 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:251:0
+	.loc	1 251 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:251:0
 	{
 		lsu r1, r4, r1
 		nop
@@ -977,14 +977,14 @@ updateVol:                              # @updateVol
 	#DEBUG_VALUE: p_multOut <- R0
 	#DEBUG_VALUE: p_multIn <- R0
 	#DEBUG_VALUE: master_vol <- R5
-	.loc	1 251 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:251:0
+	.loc	1 251 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:251:0
 	ldaw r2, dp[mutesIn]
 	ldw r11, dp[mutesIn]
 	{
 		ldc r1, 0
 		nop
 	}
-	.loc	1 251 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:251:0
+	.loc	1 251 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:251:0
 	{
 		mov r3, r1
 		nop
@@ -995,22 +995,22 @@ updateVol:                              # @updateVol
 	#DEBUG_VALUE: p_multOut <- R0
 	#DEBUG_VALUE: p_multIn <- R0
 	#DEBUG_VALUE: master_vol <- R5
-	.loc	1 113 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:113:0
+	.loc	1 113 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:113:0
 	#APP
 	lmul r0, r3, r5, r0, r7, r7
 	#NO_APP
 .Ltmp78:
-	.loc	1 116 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:116:0
+	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:116:0
 	{
 		shl r0, r0, 3
 		ldc r11, 29
 	}
-	.loc	1 116 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:116:0
+	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:116:0
 	{
 		shr r3, r3, r11
 		nop
 	}
-	.loc	1 116 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:116:0
+	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:116:0
 	{
 		or r3, r0, r3
 		nop
@@ -1020,7 +1020,7 @@ updateVol:                              # @updateVol
 .LBB3_28:                               # %afterboundcheck84
 	#DEBUG_VALUE: p_multOut <- R0
 	#DEBUG_VALUE: p_multIn <- R0
-	.loc	3 13 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\xc_ptr.h:13:0
+	.loc	3 13 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
 	#APP
 	mov r0, r6
 	#NO_APP
@@ -1034,7 +1034,7 @@ updateVol:                              # @updateVol
 # BB#29:                                # %afterboundcheck84
 	#DEBUG_VALUE: p_multOut <- R0
 	#DEBUG_VALUE: p_multIn <- R0
-	.loc	1 251 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:251:0
+	.loc	1 251 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:251:0
 	{
 		mov r1, r3
 		nop
@@ -1044,19 +1044,19 @@ updateVol:                              # @updateVol
 	#DEBUG_VALUE: p_multOut <- R0
 	#DEBUG_VALUE: p_multIn <- R0
 	#DEBUG_VALUE: x <- R1
-	.loc	1 262 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:262:0
+	.loc	1 262 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:262:0
 	{
 		sub r2, r4, 1
 		nop
 	}
-	.loc	1 262 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:262:0
+	.loc	1 262 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:262:0
 	#APP
 	stw r1, r0[r2]
 	#NO_APP
 	bu .LBB3_31
 .Ltmp83:
 .LBB3_34:                               # %afterboundcheck6
-	.loc	1 226 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:226:0
+	.loc	1 226 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:226:0
 .Lxta.call_labels8:
 	bl _Sdb_to_mult_0
 	{
@@ -1064,7 +1064,7 @@ updateVol:                              # @updateVol
 		nop
 	}
 .LBB3_17:                               # %expdone
-	.loc	1 227 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:227:0
+	.loc	1 227 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:227:0
 .Ltmp84:
 	{
 		lsu r0, r4, r8
@@ -1075,25 +1075,25 @@ updateVol:                              # @updateVol
 		ecallf r0
 		nop
 	}
-	.loc	1 227 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:227:0
+	.loc	1 227 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:227:0
 	ldaw r0, dp[volsOut]
 	{
 		nop
 		ldw r1, r0[r4]
 	}
-	.loc	1 227 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:227:0
+	.loc	1 227 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:227:0
 	{
 		eq r2, r1, r7
 		ldc r7, 0
 	}
-	.loc	1 227 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:227:0
+	.loc	1 227 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:227:0
 	{
 		mov r0, r7
 		nop
 	}
 	bt r2, .LBB3_18
 # BB#35:                                # %afterboundcheck21
-	.loc	1 227 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:227:0
+	.loc	1 227 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:227:0
 	{
 		mov r0, r1
 		nop
@@ -1106,7 +1106,7 @@ updateVol:                              # @updateVol
 	#DEBUG_VALUE: longMul:b <- R0
 	#DEBUG_VALUE: prec <- 29
 	#DEBUG_VALUE: master_vol <- R5
-	.loc	1 229 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:229:0
+	.loc	1 229 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:229:0
 	ldc r1, mutesOut.globound
 .Ltrap_info15:
 	{
@@ -1114,7 +1114,7 @@ updateVol:                              # @updateVol
 		nop
 	}
 	#DEBUG_VALUE: master_vol <- R5
-	.loc	1 229 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:229:0
+	.loc	1 229 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:229:0
 	{
 		lsu r1, r4, r1
 		nop
@@ -1125,14 +1125,14 @@ updateVol:                              # @updateVol
 		nop
 	}
 	#DEBUG_VALUE: master_vol <- R5
-	.loc	1 229 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:229:0
+	.loc	1 229 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:229:0
 	ldaw r2, dp[mutesOut]
 	ldw r11, dp[mutesOut]
 	{
 		ldc r1, 0
 		nop
 	}
-	.loc	1 229 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:229:0
+	.loc	1 229 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:229:0
 	{
 		mov r3, r1
 		nop
@@ -1141,21 +1141,21 @@ updateVol:                              # @updateVol
 .Ltmp86:
 # BB#19:                                # %afterboundcheck33
 	#DEBUG_VALUE: master_vol <- R5
-	.loc	1 113 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:113:0
+	.loc	1 113 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:113:0
 	#APP
 	lmul r0, r3, r5, r0, r7, r7
 	#NO_APP
-	.loc	1 116 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:116:0
+	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:116:0
 	{
 		shl r0, r0, 3
 		ldc r11, 29
 	}
-	.loc	1 116 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:116:0
+	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:116:0
 	{
 		shr r3, r3, r11
 		nop
 	}
-	.loc	1 116 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:116:0
+	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:116:0
 	{
 		or r3, r0, r3
 		nop
@@ -1163,7 +1163,7 @@ updateVol:                              # @updateVol
 .Ltmp87:
 	#DEBUG_VALUE: ret <- R3
 .LBB3_20:                               # %afterboundcheck33
-	.loc	3 13 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\xc_ptr.h:13:0
+	.loc	3 13 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
 	#APP
 	mov r0, r6
 	#NO_APP
@@ -1174,7 +1174,7 @@ updateVol:                              # @updateVol
 	bt r2, .LBB3_22
 .Ltmp88:
 # BB#21:                                # %afterboundcheck33
-	.loc	1 229 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:229:0
+	.loc	1 229 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:229:0
 	{
 		mov r1, r3
 		nop
@@ -1182,12 +1182,12 @@ updateVol:                              # @updateVol
 .LBB3_22:                               # %afterboundcheck33
 .Ltmp89:
 	#DEBUG_VALUE: x <- R1
-	.loc	1 240 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:240:0
+	.loc	1 240 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:240:0
 	{
 		sub r2, r4, 1
 		nop
 	}
-	.loc	1 240 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:240:0
+	.loc	1 240 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:240:0
 	#APP
 	stw r1, r0[r2]
 	#NO_APP
@@ -1266,7 +1266,7 @@ updateVol:                              # @updateVol
 	.cc_top AudioClassRequests_2.function,AudioClassRequests_2
 AudioClassRequests_2:                   # @AudioClassRequests_2
 .Lfunc_begin4:
-	.loc	1 277 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:277:0
+	.loc	1 277 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:277:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1325,13 +1325,13 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld8u r0, r6[r7]
 	}
-	.loc	1 284 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:284:0
+	.loc	1 284 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:284:0
 .Ltmp104:
 	{
 		eq r1, r0, 2
 		mkmsk r10, 1
 	}
-	.loc	1 284 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:284:0
+	.loc	1 284 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:284:0
 	bf r1, .LBB4_1
 .Ltmp105:
 # BB#7:                                 # %switchcase1
@@ -1340,7 +1340,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R11
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- R6
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 843 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:843:0
+	.loc	1 843 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:843:0
 	{
 		add r0, r6, 6
 		ldc r4, 0
@@ -1350,12 +1350,12 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		ld16s r0, r0[r4]
 	}
 	ldc r1, 65280
-	.loc	1 843 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:843:0
+	.loc	1 843 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:843:0
 	{
 		and r0, r0, r1
 		nop
 	}
-	.loc	1 843 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:843:0
+	.loc	1 843 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:843:0
 	{
 		shr r0, r0, 8
 		nop
@@ -1363,7 +1363,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 .Ltmp106:
 	#DEBUG_VALUE: unitID <- R0
 	ldw r1, cp[.LCPI4_0]
-	.loc	1 845 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:845:0
+	.loc	1 845 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:845:0
 	{
 		add r1, r0, r1
 		nop
@@ -1421,20 +1421,20 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: maxFreq <- 192000
 	#DEBUG_VALUE: currentFreq48 <- 8000
 	#DEBUG_VALUE: currentFreq44 <- 11025
-	.loc	1 869 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:869:0
+	.loc	1 869 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:869:0
 	#APP
 	ldw   r0, dp[g_curUsbSpeed]
 	#NO_APP
 .Ltmp111:
 	#DEBUG_VALUE: usbSpeed <- R0
-	.loc	1 871 33                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:871:33
+	.loc	1 871 33                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:871:33
 	{
 		eq r0, r0, 1
 		nop
 	}
 .Ltmp112:
 	#DEBUG_VALUE: maxFreq <- 96000
-	.loc	1 871 33                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:871:33
+	.loc	1 871 33                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:871:33
 	bt r0, .LBB4_80
 .Ltmp113:
 # BB#81:                                # %afterboundcheck600
@@ -1480,7 +1480,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_out <- R5
 	ldw r4, sp[146]
 	#DEBUG_VALUE: AudioClassRequests_2:c_clk_ctl <- R4
-	.loc	1 291 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:291:0
+	.loc	1 291 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:291:0
 	{
 		add r0, r6, 6
 		ldc r3, 0
@@ -1490,12 +1490,12 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		ld16s r1, r0[r3]
 	}
 	ldc r0, 65280
-	.loc	1 291 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:291:0
+	.loc	1 291 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:291:0
 	{
 		and r1, r1, r0
 		nop
 	}
-	.loc	1 291 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:291:0
+	.loc	1 291 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:291:0
 	{
 		shr r8, r1, 8
 		nop
@@ -1503,7 +1503,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 .Ltmp118:
 	#DEBUG_VALUE: unitID <- R8
 	ldw r1, cp[.LCPI4_0]
-	.loc	1 293 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:293:0
+	.loc	1 293 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:293:0
 	{
 		add r1, r8, r1
 		nop
@@ -1523,7 +1523,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
 	#DEBUG_VALUE: AudioClassRequests_2:c_clk_ctl <- R4
 	#DEBUG_VALUE: unitID <- R8
-	.loc	1 301 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:301:0
+	.loc	1 301 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:301:0
 	{
 		add r2, r6, 4
 		nop
@@ -1532,17 +1532,17 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld16s r2, r2[r3]
 	}
-	.loc	1 301 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:301:0
+	.loc	1 301 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:301:0
 	{
 		and r0, r2, r0
 		nop
 	}
-	.loc	1 301 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:301:0
+	.loc	1 301 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:301:0
 	{
 		shr r0, r0, 8
 		nop
 	}
-	.loc	1 301 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:301:0
+	.loc	1 301 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:301:0
 	{
 		eq r2, r0, 1
 		nop
@@ -1566,7 +1566,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld8u r0, r6[r0]
 	}
-	.loc	1 307 29                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:307:29
+	.loc	1 307 29                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:307:29
 	bf r0, .LBB4_20
 .Ltmp122:
 # BB#29:                                # %iffalse
@@ -1589,9 +1589,9 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R4
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- R6
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 404 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:404:0
+	.loc	1 404 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:404:0
 	ldw r0, dp[g_curSamFreq]
-	.loc	1 404 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:404:0
+	.loc	1 404 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:404:0
 	{
 		add r0, r6, 8
 		stw r0, sp[8]
@@ -1600,7 +1600,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld16s r0, r0[r3]
 	}
-	.loc	1 405 41                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:405:41
+	.loc	1 405 41                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:405:41
 	{
 		zext r0, 16
 		nop
@@ -1610,7 +1610,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		stw r0, sp[1]
 	}
 	ldc r0, 512
-	.loc	1 405 41                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:405:41
+	.loc	1 405 41                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:405:41
 	{
 		ldaw r2, sp[8]
 		stw r0, sp[2]
@@ -1671,7 +1671,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld8u r0, r9[r3]
 	}
-	.loc	1 939 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:939:0
+	.loc	1 939 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:939:0
 	{
 		eq r2, r0, 2
 		mov r0, r10
@@ -1688,56 +1688,56 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		mkmsk r0, 1
 		ldaw r2, sp[8]
 	}
-	.loc	1 67 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:67:0
+	.loc	1 67 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:67:0
 .Ltmp131:
 	{
 		or r11, r2, r0
 		nop
 	}
-	.loc	1 67 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:67:0
+	.loc	1 67 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:67:0
 	st8 r4, r11[r4]
-	.loc	1 68 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:68:0
+	.loc	1 68 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:68:0
 	st8 r0, r2[r4]
 .Ltmp132:
-	.loc	1 67 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:67:0
+	.loc	1 67 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:67:0
 	{
 		or r11, r2, r7
 		nop
 	}
 	ldc r5, 129
-	.loc	1 67 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:67:0
+	.loc	1 67 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:67:0
 	st8 r5, r11[r4]
-	.loc	1 68 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:68:0
+	.loc	1 68 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:68:0
 	{
 		or r11, r2, r6
 		nop
 	}
-	.loc	1 68 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:68:0
+	.loc	1 68 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:68:0
 	st8 r4, r11[r4]
 .Ltmp133:
-	.loc	1 67 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:67:0
+	.loc	1 67 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:67:0
 	st8 r4, r2[r3]
 	{
 		ldc r3, 4
 		nop
 	}
-	.loc	1 68 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:68:0
+	.loc	1 68 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:68:0
 	st8 r4, r2[r3]
 	{
 		mkmsk r3, 3
 		nop
 	}
 .Ltmp134:
-	.loc	1 67 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:67:0
+	.loc	1 67 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:67:0
 	st8 r0, r2[r3]
 	{
 		ldc r0, 6
 		nop
 	}
-	.loc	1 68 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:68:0
+	.loc	1 68 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:68:0
 	st8 r4, r2[r0]
 .Ltmp135:
-	.loc	1 948 29                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:948:29
+	.loc	1 948 29                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:948:29
 	{
 		add r0, r9, 8
 		nop
@@ -1746,7 +1746,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld16s r3, r0[r4]
 	}
-	.loc	1 948 29                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:948:29
+	.loc	1 948 29                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:948:29
 	{
 		zext r3, 16
 		nop
@@ -1756,7 +1756,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		stw r3, sp[1]
 	}
 	ldc r0, 512
-	.loc	1 948 29                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:948:29
+	.loc	1 948 29                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:948:29
 	{
 		mov r0, r8
 		stw r0, sp[2]
@@ -1786,12 +1786,12 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R11
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- R6
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 522 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:522:0
+	.loc	1 522 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:522:0
 	{
 		add r1, r6, 4
 		nop
 	}
-	.loc	1 522 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:522:0
+	.loc	1 522 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:522:0
 	{
 		mov r9, r3
 		ld16s r4, r1[r3]
@@ -1800,12 +1800,12 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		zext r4, 16
 		nop
 	}
-	.loc	1 522 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:522:0
+	.loc	1 522 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:522:0
 	{
 		shr r2, r4, 8
 		nop
 	}
-	.loc	1 522 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:522:0
+	.loc	1 522 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:522:0
 	{
 		eq r3, r2, 1
 		nop
@@ -1822,7 +1822,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld8u r0, r6[r0]
 	}
-	.loc	1 578 29                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:578:29
+	.loc	1 578 29                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:578:29
 	bf r0, .LBB4_61
 .Ltmp139:
 # BB#70:                                # %iffalse431
@@ -1837,12 +1837,12 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		eq r0, r8, 10
 	}
 .Ltmp140:
-	.loc	1 609 37                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:609:37
+	.loc	1 609 37                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:609:37
 	{
 		zext r4, 8
 		nop
 	}
-	.loc	1 607 33                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:607:33
+	.loc	1 607 33                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:607:33
 	bf r0, .LBB4_73
 .Ltmp141:
 # BB#71:                                # %iftrue501
@@ -1851,7 +1851,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R1
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- R6
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 609 37                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:609:37
+	.loc	1 609 37                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:609:37
 	{
 		lsu r2, r4, r7
 		mov r0, r10
@@ -1870,9 +1870,9 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R1
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- R6
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 611 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:611:0
+	.loc	1 611 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:611:0
 	ldc r0, mutesOut.globound
-	.loc	1 611 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:611:0
+	.loc	1 611 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:611:0
 	{
 		lsu r0, r4, r0
 		nop
@@ -1886,7 +1886,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R1
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- R6
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 611 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:611:0
+	.loc	1 611 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:611:0
 	ldaw r0, dp[mutesOut]
 	{
 		nop
@@ -1934,7 +1934,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- [SP+16]
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
 	#DEBUG_VALUE: i <- [R9+0]
-	.loc	1 903 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:903:0
+	.loc	1 903 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:903:0
 	{
 		mov r0, r7
 		mov r1, r9
@@ -1948,7 +1948,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 .Ltmp148:
 	#DEBUG_VALUE: num_freqs <- R4
 	#DEBUG_VALUE: currentFreq48 <- R8
-	.loc	1 904 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:904:0
+	.loc	1 904 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:904:0
 	{
 		add r4, r4, 1
 		shl r8, r8, 1
@@ -1961,7 +1961,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- [SP+20]
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- [SP+16]
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 893 37                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:893:37
+	.loc	1 893 37                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:893:37
 	{
 		lsu r0, r5, r10
 		nop
@@ -1989,7 +1989,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- [SP+16]
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
 	#DEBUG_VALUE: i <- [R9+0]
-	.loc	1 895 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:895:0
+	.loc	1 895 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:895:0
 	{
 		mov r0, r7
 		mov r1, r9
@@ -2003,7 +2003,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 .Ltmp152:
 	#DEBUG_VALUE: num_freqs <- R4
 	#DEBUG_VALUE: currentFreq44 <- R10
-	.loc	1 896 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:896:0
+	.loc	1 896 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:896:0
 	{
 		add r4, r4, 1
 		shl r10, r10, 1
@@ -2016,12 +2016,12 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- [SP+20]
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- [SP+16]
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 900 37                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:900:37
+	.loc	1 900 37                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:900:37
 	{
 		lsu r0, r5, r8
 		nop
 	}
-	.loc	1 900 37                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:900:37
+	.loc	1 900 37                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:900:37
 	bf r0, .LBB4_87
 .Ltmp154:
 # BB#88:                                # %LoopEnd631
@@ -2034,22 +2034,22 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		mkmsk r0, 1
 		nop
 	}
-	.loc	1 67 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:67:0
+	.loc	1 67 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:67:0
 .Ltmp155:
 	{
 		or r0, r7, r0
 		shr r1, r4, 8
 	}
 .Ltmp156:
-	.loc	1 923 33                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:923:33
+	.loc	1 923 33                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:923:33
 	{
 		ldc r2, 0
 		nop
 	}
-	.loc	1 67 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:67:0
+	.loc	1 67 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:67:0
 .Ltmp157:
 	st8 r1, r0[r2]
-	.loc	1 68 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:68:0
+	.loc	1 68 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:68:0
 	st8 r4, r7[r2]
 	{
 		nop
@@ -2060,7 +2060,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		ldw r0, sp[4]
 	}
 .Ltmp158:
-	.loc	1 923 33                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:923:33
+	.loc	1 923 33                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:923:33
 	{
 		add r0, r0, 8
 		nop
@@ -2069,7 +2069,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld16s r0, r0[r2]
 	}
-	.loc	1 923 33                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:923:33
+	.loc	1 923 33                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:923:33
 	{
 		zext r0, 16
 		nop
@@ -2087,14 +2087,14 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ldw r0, sp[3]
 	}
-	.loc	1 923 33                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:923:33
+	.loc	1 923 33                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:923:33
 	{
 		mov r2, r7
 		ldw r1, sp[5]
 	}
 .Ltmp159:
 .LBB4_91:                               # %return
-	.loc	1 948 29                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:948:29
+	.loc	1 948 29                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:948:29
 .Lxta.call_labels12:
 	bl XUD_DoGetRequest
 	bu .LBB4_92
@@ -2131,7 +2131,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		mov r9, r3
 		ldc r0, 41
 	}
-	.loc	1 420 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:420:0
+	.loc	1 420 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:420:0
 	{
 		eq r0, r8, r0
 		nop
@@ -2200,33 +2200,33 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- R6
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
 	#DEBUG_VALUE: AudioClassRequests_2:c_clk_ctl <- R4
-	.loc	1 448 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:448:0
+	.loc	1 448 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:448:0
 .Lxta.endpoint_labels1:
 	{
 		out res[r4], r7
 		mkmsk r3, 1
 	}
-	.loc	1 449 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:449:0
+	.loc	1 449 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:449:0
 .Lxta.endpoint_labels2:
 	{
 		out res[r4], r3
 		nop
 	}
-	.loc	1 450 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:450:0
+	.loc	1 450 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:450:0
 .Lxta.endpoint_labels3:
 	{
 		outct res[r4], 1
 		nop
 	}
-	.loc	1 451 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:451:0
+	.loc	1 451 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:451:0
 .Lxta.endpoint_labels4:
 	{
 		in r0, res[r4]
 		ldaw r2, sp[8]
 	}
-	.loc	1 451 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:451:0
+	.loc	1 451 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:451:0
 	st8 r0, r2[r9]
-	.loc	1 452 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:452:0
+	.loc	1 452 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:452:0
 	{
 		chkct res[r4], 1
 		add r0, r6, 8
@@ -2235,7 +2235,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld16s r0, r0[r9]
 	}
-	.loc	1 453 41                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:453:41
+	.loc	1 453 41                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:453:41
 	{
 		zext r0, 16
 		nop
@@ -2278,12 +2278,12 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld8u r1, r6[r1]
 	}
-	.loc	1 475 21                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:475:21
+	.loc	1 475 21                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:475:21
 	{
 		eq r1, r1, 1
 		nop
 	}
-	.loc	1 475 21                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:475:21
+	.loc	1 475 21                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:475:21
 	bf r1, .LBB4_14
 .Ltmp171:
 # BB#34:                                # %iftrue157
@@ -2297,7 +2297,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld8u r0, r6[r0]
 	}
-	.loc	1 478 25                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:478:25
+	.loc	1 478 25                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:478:25
 	bf r0, .LBB4_35
 .Ltmp172:
 # BB#40:                                # %iffalse175
@@ -2311,7 +2311,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		ldaw r2, sp[8]
 		mkmsk r1, 1
 	}
-	.loc	1 502 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:502:0
+	.loc	1 502 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:502:0
 	st8 r1, r2[r3]
 	{
 		mov r0, r5
@@ -2328,27 +2328,27 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- R6
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
 	#DEBUG_VALUE: AudioClassRequests_2:c_clk_ctl <- R4
-	.loc	1 505 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:505:0
+	.loc	1 505 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:505:0
 .Lxta.endpoint_labels5:
 	{
 		out res[r4], r3
 		nop
 	}
-	.loc	1 506 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:506:0
+	.loc	1 506 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:506:0
 .Lxta.endpoint_labels6:
 	{
 		outct res[r4], 1
 		nop
 	}
-	.loc	1 507 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:507:0
+	.loc	1 507 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:507:0
 .Lxta.endpoint_labels7:
 	{
 		in r1, res[r4]
 		nop
 	}
-	.loc	1 507 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:507:0
+	.loc	1 507 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:507:0
 	st8 r1, r2[r3]
-	.loc	1 508 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:508:0
+	.loc	1 508 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:508:0
 	{
 		chkct res[r4], 1
 		nop
@@ -2360,7 +2360,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R11
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- R6
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 510 29                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:510:29
+	.loc	1 510 29                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:510:29
 	{
 		add r1, r6, 8
 		nop
@@ -2369,7 +2369,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld16s r1, r1[r3]
 	}
-	.loc	1 510 29                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:510:29
+	.loc	1 510 29                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:510:29
 	{
 		zext r1, 16
 		nop
@@ -2379,7 +2379,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		stw r1, sp[1]
 	}
 	ldc r1, 512
-	.loc	1 510 29                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:510:29
+	.loc	1 510 29                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:510:29
 	{
 		ldaw r2, sp[8]
 		stw r1, sp[2]
@@ -2412,7 +2412,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld8u r0, r6[r0]
 	}
-	.loc	1 526 29                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:526:29
+	.loc	1 526 29                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:526:29
 	bf r0, .LBB4_48
 .Ltmp178:
 # BB#54:                                # %iffalse266
@@ -2427,12 +2427,12 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		eq r0, r8, 10
 	}
 .Ltmp179:
-	.loc	1 557 37                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:557:37
+	.loc	1 557 37                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:557:37
 	{
 		zext r4, 8
 		nop
 	}
-	.loc	1 555 33                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:555:33
+	.loc	1 555 33                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:555:33
 	bf r0, .LBB4_57
 .Ltmp180:
 # BB#55:                                # %iftrue342
@@ -2441,7 +2441,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R1
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- R6
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 557 37                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:557:37
+	.loc	1 557 37                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:557:37
 	{
 		lsu r2, r4, r7
 		mov r0, r10
@@ -2460,9 +2460,9 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R1
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- R6
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 559 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:559:0
+	.loc	1 559 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:559:0
 	ldc r0, volsOut.globound
-	.loc	1 559 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:559:0
+	.loc	1 559 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:559:0
 	{
 		lsu r0, r4, r0
 		nop
@@ -2476,7 +2476,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R1
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- R6
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 559 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:559:0
+	.loc	1 559 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:559:0
 	ldaw r0, dp[volsOut]
 	{
 		nop
@@ -2505,7 +2505,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	}
 .Ltmp185:
 	ldc r3, 512
-	.loc	1 310 33                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:310:33
+	.loc	1 310 33                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:310:33
 	{
 		mov r0, r5
 		nop
@@ -2525,7 +2525,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ldw r0, sp[7]
 	}
-	.loc	1 315 33                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:315:33
+	.loc	1 315 33                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:315:33
 	{
 		eq r0, r0, 4
 		nop
@@ -2543,9 +2543,9 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	}
 .Ltmp189:
 	#DEBUG_VALUE: newSampleRate <- R0
-	.loc	1 321 37                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:321:37
+	.loc	1 321 37                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:321:37
 	ldw r1, dp[g_curSamFreq]
-	.loc	1 321 37                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:321:37
+	.loc	1 321 37                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:321:37
 	{
 		eq r1, r0, r1
 		nop
@@ -2558,25 +2558,25 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:c_audioControl <- R9
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
 	#DEBUG_VALUE: newSampleRate <- R0
-	.loc	1 325 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:325:0
+	.loc	1 325 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:325:0
 	stw r0, dp[g_curSamFreq]
 	{
 		ldc r1, 4
 		nop
 	}
-	.loc	1 361 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:361:0
+	.loc	1 361 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:361:0
 .Lxta.endpoint_labels8:
 	{
 		out res[r9], r1
 		nop
 	}
-	.loc	1 362 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:362:0
+	.loc	1 362 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:362:0
 .Lxta.endpoint_labels9:
 	{
 		out res[r9], r0
 		nop
 	}
-	.loc	1 365 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:365:0
+	.loc	1 365 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:365:0
 	{
 		chkct res[r9], 1
 		nop
@@ -2586,19 +2586,19 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 .Lxtalabel67:
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R4
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 90 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:90:0
 	#APP
 	ldw   r0, dp[g_curUsbSpeed]
 	#NO_APP
 .Ltmp192:
 	#DEBUG_VALUE: usbSpeed <- R0
-	.loc	1 92 5                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:92:5
+	.loc	1 92 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:92:5
 	{
 		eq r0, r0, 2
 		nop
 	}
 .Ltmp193:
-	.loc	1 94 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:94:0
+	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:94:0
 	bt r0, .LBB4_25
 .Ltmp194:
 # BB#26:                                # %ifdone44
@@ -2642,7 +2642,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 .Ltmp198:
 	#DEBUG_VALUE: datalength <- [R2+0]
 	ldc r3, 512
-	.loc	1 581 33                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:581:33
+	.loc	1 581 33                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:581:33
 	{
 		mov r0, r5
 		mov r1, r4
@@ -2666,19 +2666,19 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		ldc r0, 4
 		nop
 	}
-	.loc	1 588 37                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:588:37
+	.loc	1 588 37                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:588:37
 	{
 		eq r0, r8, 10
 		ld8u r1, r6[r0]
 	}
-	.loc	1 586 33                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:586:33
+	.loc	1 586 33                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:586:33
 	bf r0, .LBB4_66
 .Ltmp201:
 # BB#63:                                # %iftrue440
 .Lxtalabel71:
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- [SP+20]
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 588 37                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:588:37
+	.loc	1 588 37                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:588:37
 	{
 		lsu r2, r1, r7
 		mov r0, r10
@@ -2689,9 +2689,9 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 .Lxtalabel72:
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- [SP+20]
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 590 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:590:0
+	.loc	1 590 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:590:0
 	ldc r0, mutesOut.globound
-	.loc	1 590 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:590:0
+	.loc	1 590 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:590:0
 	{
 		lsu r0, r1, r0
 		nop
@@ -2703,7 +2703,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	}
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- [SP+20]
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 590 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:590:0
+	.loc	1 590 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:590:0
 	ldaw r0, dp[mutesOut]
 	{
 		nop
@@ -2731,7 +2731,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R1
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- R6
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 619 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:619:0
+	.loc	1 619 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:619:0
 	ldc r0, mutesIn.globound
 .Ltrap_info20:
 	{
@@ -2742,7 +2742,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R1
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- R6
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 619 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:619:0
+	.loc	1 619 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:619:0
 	ldw r0, dp[mutesIn]
 .Ltmp206:
 .LBB4_75:                               # %return
@@ -2750,9 +2750,9 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		ldaw r2, sp[8]
 		nop
 	}
-	.loc	1 619 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:619:0
+	.loc	1 619 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:619:0
 	st8 r0, r2[r9]
-	.loc	1 620 41                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:620:41
+	.loc	1 620 41                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:620:41
 	{
 		add r0, r6, 8
 		nop
@@ -2761,7 +2761,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld16s r3, r0[r9]
 	}
-	.loc	1 620 41                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:620:41
+	.loc	1 620 41                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:620:41
 	{
 		zext r3, 16
 		nop
@@ -2772,7 +2772,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	}
 .LBB4_76:                               # %return
 	ldc r0, 512
-	.loc	1 620 41                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:620:41
+	.loc	1 620 41                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:620:41
 	{
 		mov r0, r11
 		stw r0, sp[2]
@@ -2789,9 +2789,9 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		ldaw r2, sp[8]
 		mkmsk r3, 1
 	}
-	.loc	1 425 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:425:0
+	.loc	1 425 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:425:0
 	st8 r3, r2[r9]
-	.loc	1 426 37                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:426:37
+	.loc	1 426 37                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:426:37
 	{
 		add r0, r6, 8
 		nop
@@ -2800,7 +2800,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld16s r0, r0[r9]
 	}
-	.loc	1 426 37                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:426:37
+	.loc	1 426 37                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:426:37
 	{
 		zext r0, 16
 		nop
@@ -2810,12 +2810,12 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		stw r0, sp[1]
 	}
 	ldc r0, 512
-	.loc	1 426 37                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:426:37
+	.loc	1 426 37                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:426:37
 	{
 		mov r0, r5
 		stw r0, sp[2]
 	}
-	.loc	1 510 29                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:510:29
+	.loc	1 510 29                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:510:29
 	{
 		mov r1, r11
 		nop
@@ -2848,7 +2848,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 .Ltmp210:
 	#DEBUG_VALUE: datalength <- [R2+0]
 	ldc r3, 512
-	.loc	1 529 33                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:529:33
+	.loc	1 529 33                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:529:33
 	{
 		mov r0, r5
 		mov r1, r4
@@ -2872,19 +2872,19 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		ldc r0, 4
 		nop
 	}
-	.loc	1 536 37                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:536:37
+	.loc	1 536 37                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:536:37
 	{
 		eq r0, r8, 10
 		ld8u r1, r6[r0]
 	}
-	.loc	1 534 33                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:534:33
+	.loc	1 534 33                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:534:33
 	bf r0, .LBB4_52
 .Ltmp213:
 # BB#50:                                # %iftrue275
 .Lxtalabel78:
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- [SP+20]
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 536 37                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:536:37
+	.loc	1 536 37                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:536:37
 	{
 		lsu r2, r1, r7
 		mov r0, r10
@@ -2895,9 +2895,9 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 .Lxtalabel79:
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- [SP+20]
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 538 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:538:0
+	.loc	1 538 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:538:0
 	ldc r0, volsOut.globound
-	.loc	1 538 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:538:0
+	.loc	1 538 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:538:0
 	{
 		lsu r0, r1, r0
 		nop
@@ -2909,26 +2909,26 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	}
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- [SP+20]
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 538 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:538:0
+	.loc	1 538 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:538:0
 	ldaw r0, dp[volsOut]
 	{
 		nop
 		ld16s r2, r4[r3]
 	}
 	ldw r3, cp[.LCPI4_3]
-	.loc	1 538 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:538:0
+	.loc	1 538 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:538:0
 	{
 		and r3, r2, r3
 		zext r2, 8
 	}
-	.loc	1 538 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:538:0
+	.loc	1 538 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:538:0
 	{
 		or r2, r3, r2
 		nop
 	}
 .Ltmp215:
 .LBB4_65:                               # %return
-	.loc	1 590 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:590:0
+	.loc	1 590 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:590:0
 	stw r2, r0[r1]
 	{
 		ldc r0, 10
@@ -2956,7 +2956,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R1
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- R6
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 568 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:568:0
+	.loc	1 568 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:568:0
 	ldc r0, volsIn.globound
 .Ltrap_info22:
 	{
@@ -2967,7 +2967,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R1
 	#DEBUG_VALUE: AudioClassRequests_2:sp <- R6
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 568 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:568:0
+	.loc	1 568 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:568:0
 	ldw r0, dp[volsIn]
 .Ltmp219:
 .LBB4_59:                               # %return
@@ -2975,20 +2975,20 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		ldaw r2, sp[8]
 		nop
 	}
-	.loc	1 568 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:568:0
+	.loc	1 568 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:568:0
 	st8 r0, r2[r9]
 	{
 		mkmsk r3, 1
 		nop
 	}
-	.loc	1 569 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:569:0
+	.loc	1 569 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:569:0
 	{
 		or r3, r2, r3
 		shr r0, r0, 8
 	}
-	.loc	1 569 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:569:0
+	.loc	1 569 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:569:0
 	st8 r0, r3[r9]
-	.loc	1 570 41                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:570:41
+	.loc	1 570 41                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:570:41
 	{
 		add r0, r6, 8
 		nop
@@ -2997,7 +2997,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld16s r0, r0[r9]
 	}
-	.loc	1 570 41                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:570:41
+	.loc	1 570 41                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:570:41
 	{
 		zext r0, 16
 		nop
@@ -3007,12 +3007,12 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		stw r0, sp[1]
 	}
 	ldc r0, 512
-	.loc	1 570 41                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:570:41
+	.loc	1 570 41                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:570:41
 	{
 		ldc r3, 2
 		stw r0, sp[2]
 	}
-	.loc	1 620 41                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:620:41
+	.loc	1 620 41                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:620:41
 	{
 		mov r0, r11
 		nop
@@ -3046,7 +3046,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	}
 .Ltmp223:
 	ldc r3, 512
-	.loc	1 480 29                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:480:29
+	.loc	1 480 29                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:480:29
 	{
 		mov r0, r5
 		mov r1, r6
@@ -3070,7 +3070,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ldw r0, sp[7]
 	}
-	.loc	1 486 29                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:486:29
+	.loc	1 486 29                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:486:29
 	{
 		eq r1, r0, 1
 		mov r0, r10
@@ -3093,19 +3093,19 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		mkmsk r0, 1
 		nop
 	}
-	.loc	1 490 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:490:0
+	.loc	1 490 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:490:0
 .Lxta.endpoint_labels10:
 	{
 		out res[r4], r0
 		ld8u r0, r6[r2]
 	}
-	.loc	1 491 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:491:0
+	.loc	1 491 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:491:0
 .Lxta.endpoint_labels11:
 	{
 		out res[r4], r0
 		nop
 	}
-	.loc	1 492 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:492:0
+	.loc	1 492 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:492:0
 .Lxta.endpoint_labels12:
 	{
 		outct res[r4], 1
@@ -3116,7 +3116,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 .Lxtalabel86:
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R7
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 495 33                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:495:33
+	.loc	1 495 33                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:495:33
 	{
 		mov r0, r7
 		nop
@@ -3139,7 +3139,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 .Lxtalabel88:
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- [SP+20]
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 599 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:599:0
+	.loc	1 599 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:599:0
 	ldc r0, mutesIn.globound
 .Ltrap_info23:
 	{
@@ -3152,7 +3152,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ld8u r0, r4[r3]
 	}
-	.loc	1 599 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:599:0
+	.loc	1 599 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:599:0
 	stw r0, dp[mutesIn]
 	bu .LBB4_68
 .Ltmp231:
@@ -3166,30 +3166,30 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R4
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
 	#DEBUG_VALUE: time <- R1
-	.loc	1 101 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:101:0
+	.loc	1 101 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:101:0
 	{
 		gettime r1
 		get r11, id
 	}
 .Ltmp233:
-	.loc	1 102 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:102:0
+	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:102:0
 	ldaw r2, dp[__timers]
-	.loc	1 102 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:102:0
+	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:102:0
 	{
 		add r0, r0, r1
 		ldw r2, r2[r11]
 	}
-	.loc	1 102 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:102:0
+	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:102:0
 	{
 		setd res[r2], r0
 		nop
 	}
-	.loc	1 102 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:102:0
+	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:102:0
 	{
 		setc res[r2], 9
 		nop
 	}
-	.loc	1 102 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:102:0
+	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:102:0
 .Ltmp234:
 .Lxta.endpoint_labels13:
 	{
@@ -3201,7 +3201,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 .Lxtalabel90:
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- R4
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 374 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:374:0
+	.loc	1 374 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:374:0
 	{
 		mov r0, r4
 		nop
@@ -3228,7 +3228,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 .Lxtalabel92:
 	#DEBUG_VALUE: AudioClassRequests_2:ep0_in <- [SP+20]
 	#DEBUG_VALUE: AudioClassRequests_2:c_mix_ctl <- [SP+580]
-	.loc	1 547 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:547:0
+	.loc	1 547 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:547:0
 	ldc r0, volsIn.globound
 .Ltrap_info24:
 	{
@@ -3242,21 +3242,21 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		ld16s r0, r4[r3]
 	}
 	ldw r1, cp[.LCPI4_3]
-	.loc	1 547 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:547:0
+	.loc	1 547 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:547:0
 	{
 		and r1, r0, r1
 		zext r0, 8
 	}
-	.loc	1 547 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:547:0
+	.loc	1 547 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:547:0
 	{
 		or r0, r1, r0
 		nop
 	}
-	.loc	1 547 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:547:0
+	.loc	1 547 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:547:0
 	stw r0, dp[volsIn]
 .Ltmp238:
 .LBB4_68:                               # %return
-	.loc	1 600 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:600:0
+	.loc	1 600 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:600:0
 	{
 		mov r0, r8
 		mov r1, r3
@@ -3268,7 +3268,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		nop
 		ldw r0, sp[5]
 	}
-	.loc	1 601 41                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:601:41
+	.loc	1 601 41                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:601:41
 .Lxta.call_labels20:
 	bl XUD_DoSetRequestStatus
 .Ltmp239:
@@ -3315,7 +3315,7 @@ g_curSamFreq:
 .Linfo_string0:
 .asciiz"XMOS 32-bit XC Compiler Community_14.4.1 (build 235-acbb966, Dec-01-2019)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 .Linfo_string2:
 .asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 .Linfo_string3:
@@ -6855,127 +6855,127 @@ g_curSamFreq:
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_0,.Lxta.call_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	73
 	.long	.Lxta.call_labels0
 .cc_bottom cc_0
 .cc_top cc_1,.Lxta.call_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	75
 	.long	.Lxta.call_labels1
 .cc_bottom cc_1
 .cc_top cc_2,.Lxta.call_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	77
 	.long	.Lxta.call_labels2
 .cc_bottom cc_2
 .cc_top cc_3,.Lxta.call_labels4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	148
 	.long	.Lxta.call_labels4
 .cc_bottom cc_3
 .cc_top cc_4,.Lxta.call_labels5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	154
 	.long	.Lxta.call_labels5
 .cc_bottom cc_4
 .cc_top cc_5,.Lxta.call_labels3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	175
 	.long	.Lxta.call_labels3
 .cc_bottom cc_5
 .cc_top cc_6,.Lxta.call_labels8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	226
 	.long	.Lxta.call_labels8
 .cc_bottom cc_6
 .cc_top cc_7,.Lxta.call_labels9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	227
 	.long	.Lxta.call_labels9
 .cc_bottom cc_7
 .cc_top cc_8,.Lxta.call_labels6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	248
 	.long	.Lxta.call_labels6
 .cc_bottom cc_8
 .cc_top cc_9,.Lxta.call_labels7
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	249
 	.long	.Lxta.call_labels7
 .cc_bottom cc_9
 .cc_top cc_10,.Lxta.call_labels13
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	310
 	.long	.Lxta.call_labels13
 .cc_bottom cc_10
 .cc_top cc_11,.Lxta.call_labels18
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	374
 	.long	.Lxta.call_labels18
 .cc_bottom cc_11
 .cc_top cc_12,.Lxta.call_labels16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	480
 	.long	.Lxta.call_labels16
 .cc_bottom cc_12
 .cc_top cc_13,.Lxta.call_labels17
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	495
 	.long	.Lxta.call_labels17
 .cc_bottom cc_13
 .cc_top cc_14,.Lxta.call_labels15
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	529
 	.long	.Lxta.call_labels15
 .cc_bottom cc_14
 .cc_top cc_15,.Lxta.call_labels14
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	581
 	.long	.Lxta.call_labels14
 .cc_bottom cc_15
 .cc_top cc_16,.Lxta.call_labels19
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	600
 	.long	.Lxta.call_labels19
 .cc_bottom cc_16
 .cc_top cc_17,.Lxta.call_labels20
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	601
 	.long	.Lxta.call_labels20
 .cc_bottom cc_17
 .cc_top cc_18,.Lxta.call_labels11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	895
 	.long	.Lxta.call_labels11
 .cc_bottom cc_18
 .cc_top cc_19,.Lxta.call_labels10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	903
 	.long	.Lxta.call_labels10
 .cc_bottom cc_19
 .cc_top cc_20,.Lxta.call_labels12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	948
 	.long	.Lxta.call_labels12
@@ -6988,85 +6988,85 @@ g_curSamFreq:
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_21,.Lxta.endpoint_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	102
 	.long	.Lxta.endpoint_labels0
 .cc_bottom cc_21
 .cc_top cc_22,.Lxta.endpoint_labels13
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	102
 	.long	.Lxta.endpoint_labels13
 .cc_bottom cc_22
 .cc_top cc_23,.Lxta.endpoint_labels8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	361
 	.long	.Lxta.endpoint_labels8
 .cc_bottom cc_23
 .cc_top cc_24,.Lxta.endpoint_labels9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	362
 	.long	.Lxta.endpoint_labels9
 .cc_bottom cc_24
 .cc_top cc_25,.Lxta.endpoint_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	448
 	.long	.Lxta.endpoint_labels1
 .cc_bottom cc_25
 .cc_top cc_26,.Lxta.endpoint_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	449
 	.long	.Lxta.endpoint_labels2
 .cc_bottom cc_26
 .cc_top cc_27,.Lxta.endpoint_labels3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	450
 	.long	.Lxta.endpoint_labels3
 .cc_bottom cc_27
 .cc_top cc_28,.Lxta.endpoint_labels4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	451
 	.long	.Lxta.endpoint_labels4
 .cc_bottom cc_28
 .cc_top cc_29,.Lxta.endpoint_labels10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	490
 	.long	.Lxta.endpoint_labels10
 .cc_bottom cc_29
 .cc_top cc_30,.Lxta.endpoint_labels11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	491
 	.long	.Lxta.endpoint_labels11
 .cc_bottom cc_30
 .cc_top cc_31,.Lxta.endpoint_labels12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	492
 	.long	.Lxta.endpoint_labels12
 .cc_bottom cc_31
 .cc_top cc_32,.Lxta.endpoint_labels5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	505
 	.long	.Lxta.endpoint_labels5
 .cc_bottom cc_32
 .cc_top cc_33,.Lxta.endpoint_labels6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	506
 	.long	.Lxta.endpoint_labels6
 .cc_bottom cc_33
 .cc_top cc_34,.Lxta.endpoint_labels7
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	507
 	.long	.Lxta.endpoint_labels7
@@ -7079,2338 +7079,2338 @@ g_curSamFreq:
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_35,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	57
 	.long	62
 	.long	.Lxtalabel0
 .cc_bottom cc_35
 .cc_top cc_36,.Lxtalabel32
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	66
 	.long	69
 	.long	.Lxtalabel32
 .cc_bottom cc_36
 .cc_top cc_37,.Lxtalabel32
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	66
 	.long	69
 	.long	.Lxtalabel32
 .cc_bottom cc_37
 .cc_top cc_38,.Lxtalabel32
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	66
 	.long	69
 	.long	.Lxtalabel32
 .cc_bottom cc_38
 .cc_top cc_39,.Lxtalabel45
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	66
 	.long	69
 	.long	.Lxtalabel45
 .cc_bottom cc_39
 .cc_top cc_40,.Lxtalabel32
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	66
 	.long	69
 	.long	.Lxtalabel32
 .cc_bottom cc_40
 .cc_top cc_41,.Lxtalabel1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	72
 	.long	80
 	.long	.Lxtalabel1
 .cc_bottom cc_41
 .cc_top cc_42,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	84
 	.long	88
 	.long	.Lxtalabel2
 .cc_bottom cc_42
 .cc_top cc_43,.Lxtalabel68
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	84
 	.long	88
 	.long	.Lxtalabel68
 .cc_bottom cc_43
 .cc_top cc_44,.Lxtalabel89
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	84
 	.long	88
 	.long	.Lxtalabel89
 .cc_bottom cc_44
 .cc_top cc_45,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	84
 	.long	88
 	.long	.Lxtalabel4
 .cc_bottom cc_45
 .cc_top cc_46,.Lxtalabel3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	84
 	.long	88
 	.long	.Lxtalabel3
 .cc_bottom cc_46
 .cc_top cc_47,.Lxtalabel67
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	84
 	.long	88
 	.long	.Lxtalabel67
 .cc_bottom cc_47
 .cc_top cc_48,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	90
 	.long	90
 	.long	.Lxtalabel2
 .cc_bottom cc_48
 .cc_top cc_49,.Lxtalabel3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	90
 	.long	90
 	.long	.Lxtalabel3
 .cc_bottom cc_49
 .cc_top cc_50,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	90
 	.long	90
 	.long	.Lxtalabel4
 .cc_bottom cc_50
 .cc_top cc_51,.Lxtalabel68
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	90
 	.long	90
 	.long	.Lxtalabel68
 .cc_bottom cc_51
 .cc_top cc_52,.Lxtalabel67
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	90
 	.long	90
 	.long	.Lxtalabel67
 .cc_bottom cc_52
 .cc_top cc_53,.Lxtalabel89
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	90
 	.long	90
 	.long	.Lxtalabel89
 .cc_bottom cc_53
 .cc_top cc_54,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	92
 	.long	92
 	.long	.Lxtalabel2
 .cc_bottom cc_54
 .cc_top cc_55,.Lxtalabel3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	92
 	.long	92
 	.long	.Lxtalabel3
 .cc_bottom cc_55
 .cc_top cc_56,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	92
 	.long	92
 	.long	.Lxtalabel4
 .cc_bottom cc_56
 .cc_top cc_57,.Lxtalabel67
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	92
 	.long	92
 	.long	.Lxtalabel67
 .cc_bottom cc_57
 .cc_top cc_58,.Lxtalabel68
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	92
 	.long	92
 	.long	.Lxtalabel68
 .cc_bottom cc_58
 .cc_top cc_59,.Lxtalabel89
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	92
 	.long	92
 	.long	.Lxtalabel89
 .cc_bottom cc_59
 .cc_top cc_60,.Lxtalabel3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	101
 	.long	103
 	.long	.Lxtalabel3
 .cc_bottom cc_60
 .cc_top cc_61,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	101
 	.long	103
 	.long	.Lxtalabel2
 .cc_bottom cc_61
 .cc_top cc_62,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	101
 	.long	103
 	.long	.Lxtalabel4
 .cc_bottom cc_62
 .cc_top cc_63,.Lxtalabel68
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	101
 	.long	103
 	.long	.Lxtalabel68
 .cc_bottom cc_63
 .cc_top cc_64,.Lxtalabel89
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	101
 	.long	103
 	.long	.Lxtalabel89
 .cc_bottom cc_64
 .cc_top cc_65,.Lxtalabel67
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	101
 	.long	103
 	.long	.Lxtalabel67
 .cc_bottom cc_65
 .cc_top cc_66,.Lxtalabel15
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel15
 .cc_bottom cc_66
 .cc_top cc_67,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel16
 .cc_bottom cc_67
 .cc_top cc_68,.Lxtalabel17
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel17
 .cc_bottom cc_68
 .cc_top cc_69,.Lxtalabel17
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	113
 	.long	113
 	.long	.Lxtalabel17
 .cc_bottom cc_69
 .cc_top cc_70,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	113
 	.long	113
 	.long	.Lxtalabel16
 .cc_bottom cc_70
 .cc_top cc_71,.Lxtalabel15
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	113
 	.long	113
 	.long	.Lxtalabel15
 .cc_bottom cc_71
 .cc_top cc_72,.Lxtalabel17
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	116
 	.long	118
 	.long	.Lxtalabel17
 .cc_bottom cc_72
 .cc_top cc_73,.Lxtalabel15
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	116
 	.long	118
 	.long	.Lxtalabel15
 .cc_bottom cc_73
 .cc_top cc_74,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	116
 	.long	118
 	.long	.Lxtalabel16
 .cc_bottom cc_74
 .cc_top cc_75,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel12
 .cc_bottom cc_75
 .cc_top cc_76,.Lxtalabel8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel8
 .cc_bottom cc_76
 .cc_top cc_77,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	139
 	.long	139
 	.long	.Lxtalabel12
 .cc_bottom cc_77
 .cc_top cc_78,.Lxtalabel8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	139
 	.long	139
 	.long	.Lxtalabel8
 .cc_bottom cc_78
 .cc_top cc_79,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	142
 	.long	142
 	.long	.Lxtalabel12
 .cc_bottom cc_79
 .cc_top cc_80,.Lxtalabel8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	142
 	.long	142
 	.long	.Lxtalabel8
 .cc_bottom cc_80
 .cc_top cc_81,.Lxtalabel8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	144
 	.long	146
 	.long	.Lxtalabel8
 .cc_bottom cc_81
 .cc_top cc_82,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	144
 	.long	146
 	.long	.Lxtalabel12
 .cc_bottom cc_82
 .cc_top cc_83,.Lxtalabel13
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	147
 	.long	148
 	.long	.Lxtalabel13
 .cc_bottom cc_83
 .cc_top cc_84,.Lxtalabel13
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	150
 	.long	150
 	.long	.Lxtalabel13
 .cc_bottom cc_84
 .cc_top cc_85,.Lxtalabel14
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	151
 	.long	151
 	.long	.Lxtalabel14
 .cc_bottom cc_85
 .cc_top cc_86,.Lxtalabel14
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	154
 	.long	154
 	.long	.Lxtalabel14
 .cc_bottom cc_86
 .cc_top cc_87,.Lxtalabel14
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	156
 	.long	156
 	.long	.Lxtalabel14
 .cc_bottom cc_87
 .cc_top cc_88,.Lxtalabel14
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	167
 	.long	167
 	.long	.Lxtalabel14
 .cc_bottom cc_88
 .cc_top cc_89,.Lxtalabel14
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	169
 	.long	169
 	.long	.Lxtalabel14
 .cc_bottom cc_89
 .cc_top cc_90,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	174
 	.long	176
 	.long	.Lxtalabel9
 .cc_bottom cc_90
 .cc_top cc_91,.Lxtalabel8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	200
 	.long	201
 	.long	.Lxtalabel8
 .cc_bottom cc_91
 .cc_top cc_92,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	200
 	.long	201
 	.long	.Lxtalabel12
 .cc_bottom cc_92
 .cc_top cc_93,.Lxtalabel5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	205
 	.long	206
 	.long	.Lxtalabel5
 .cc_bottom cc_93
 .cc_top cc_94,.Lxtalabel5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	208
 	.long	208
 	.long	.Lxtalabel5
 .cc_bottom cc_94
 .cc_top cc_95,.Lxtalabel5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	211
 	.long	211
 	.long	.Lxtalabel5
 .cc_bottom cc_95
 .cc_top cc_96,.Lxtalabel5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	214
 	.long	214
 	.long	.Lxtalabel5
 .cc_bottom cc_96
 .cc_top cc_97,.Lxtalabel8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	215
 	.long	217
 	.long	.Lxtalabel8
 .cc_bottom cc_97
 .cc_top cc_98,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	215
 	.long	217
 	.long	.Lxtalabel12
 .cc_bottom cc_98
 .cc_top cc_99,.Lxtalabel6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	218
 	.long	222
 	.long	.Lxtalabel6
 .cc_bottom cc_99
 .cc_top cc_100,.Lxtalabel10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	218
 	.long	222
 	.long	.Lxtalabel10
 .cc_bottom cc_100
 .cc_top cc_101,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	223
 	.long	223
 	.long	.Lxtalabel11
 .cc_bottom cc_101
 .cc_top cc_102,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	226
 	.long	227
 	.long	.Lxtalabel11
 .cc_bottom cc_102
 .cc_top cc_103,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	229
 	.long	229
 	.long	.Lxtalabel11
 .cc_bottom cc_103
 .cc_top cc_104,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	240
 	.long	240
 	.long	.Lxtalabel11
 .cc_bottom cc_104
 .cc_top cc_105,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	242
 	.long	244
 	.long	.Lxtalabel11
 .cc_bottom cc_105
 .cc_top cc_106,.Lxtalabel7
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	245
 	.long	245
 	.long	.Lxtalabel7
 .cc_bottom cc_106
 .cc_top cc_107,.Lxtalabel7
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	248
 	.long	249
 	.long	.Lxtalabel7
 .cc_bottom cc_107
 .cc_top cc_108,.Lxtalabel7
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	251
 	.long	251
 	.long	.Lxtalabel7
 .cc_bottom cc_108
 .cc_top cc_109,.Lxtalabel7
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	262
 	.long	262
 	.long	.Lxtalabel7
 .cc_bottom cc_109
 .cc_top cc_110,.Lxtalabel7
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	264
 	.long	266
 	.long	.Lxtalabel7
 .cc_bottom cc_110
 .cc_top cc_111,.Lxtalabel18
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	268
 	.long	268
 	.long	.Lxtalabel18
 .cc_bottom cc_111
 .cc_top cc_112,.Lxtalabel19
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	277
 	.long	281
 	.long	.Lxtalabel19
 .cc_bottom cc_112
 .cc_top cc_113,.Lxtalabel24
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	277
 	.long	281
 	.long	.Lxtalabel24
 .cc_bottom cc_113
 .cc_top cc_114,.Lxtalabel19
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	284
 	.long	285
 	.long	.Lxtalabel19
 .cc_bottom cc_114
 .cc_top cc_115,.Lxtalabel24
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	284
 	.long	285
 	.long	.Lxtalabel24
 .cc_bottom cc_115
 .cc_top cc_116,.Lxtalabel19
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	288
 	.long	288
 	.long	.Lxtalabel19
 .cc_bottom cc_116
 .cc_top cc_117,.Lxtalabel24
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	288
 	.long	288
 	.long	.Lxtalabel24
 .cc_bottom cc_117
 .cc_top cc_118,.Lxtalabel52
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	289
 	.long	289
 	.long	.Lxtalabel52
 .cc_bottom cc_118
 .cc_top cc_119,.Lxtalabel33
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	289
 	.long	289
 	.long	.Lxtalabel33
 .cc_bottom cc_119
 .cc_top cc_120,.Lxtalabel25
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	289
 	.long	289
 	.long	.Lxtalabel25
 .cc_bottom cc_120
 .cc_top cc_121,.Lxtalabel52
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	291
 	.long	291
 	.long	.Lxtalabel52
 .cc_bottom cc_121
 .cc_top cc_122,.Lxtalabel25
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	291
 	.long	291
 	.long	.Lxtalabel25
 .cc_bottom cc_122
 .cc_top cc_123,.Lxtalabel33
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	291
 	.long	291
 	.long	.Lxtalabel33
 .cc_bottom cc_123
 .cc_top cc_124,.Lxtalabel52
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	293
 	.long	294
 	.long	.Lxtalabel52
 .cc_bottom cc_124
 .cc_top cc_125,.Lxtalabel25
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	293
 	.long	294
 	.long	.Lxtalabel25
 .cc_bottom cc_125
 .cc_top cc_126,.Lxtalabel33
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	293
 	.long	294
 	.long	.Lxtalabel33
 .cc_bottom cc_126
 .cc_top cc_127,.Lxtalabel52
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	296
 	.long	296
 	.long	.Lxtalabel52
 .cc_bottom cc_127
 .cc_top cc_128,.Lxtalabel25
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	296
 	.long	296
 	.long	.Lxtalabel25
 .cc_bottom cc_128
 .cc_top cc_129,.Lxtalabel33
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	296
 	.long	296
 	.long	.Lxtalabel33
 .cc_bottom cc_129
 .cc_top cc_130,.Lxtalabel25
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	297
 	.long	297
 	.long	.Lxtalabel25
 .cc_bottom cc_130
 .cc_top cc_131,.Lxtalabel33
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	297
 	.long	297
 	.long	.Lxtalabel33
 .cc_bottom cc_131
 .cc_top cc_132,.Lxtalabel52
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	297
 	.long	297
 	.long	.Lxtalabel52
 .cc_bottom cc_132
 .cc_top cc_133,.Lxtalabel26
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	299
 	.long	299
 	.long	.Lxtalabel26
 .cc_bottom cc_133
 .cc_top cc_134,.Lxtalabel46
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	299
 	.long	299
 	.long	.Lxtalabel46
 .cc_bottom cc_134
 .cc_top cc_135,.Lxtalabel46
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	301
 	.long	302
 	.long	.Lxtalabel46
 .cc_bottom cc_135
 .cc_top cc_136,.Lxtalabel26
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	301
 	.long	302
 	.long	.Lxtalabel26
 .cc_bottom cc_136
 .cc_top cc_137,.Lxtalabel26
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	304
 	.long	304
 	.long	.Lxtalabel26
 .cc_bottom cc_137
 .cc_top cc_138,.Lxtalabel46
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	304
 	.long	304
 	.long	.Lxtalabel46
 .cc_bottom cc_138
 .cc_top cc_139,.Lxtalabel27
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	305
 	.long	305
 	.long	.Lxtalabel27
 .cc_bottom cc_139
 .cc_top cc_140,.Lxtalabel27
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	307
 	.long	307
 	.long	.Lxtalabel27
 .cc_bottom cc_140
 .cc_top cc_141,.Lxtalabel63
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	308
 	.long	308
 	.long	.Lxtalabel63
 .cc_bottom cc_141
 .cc_top cc_142,.Lxtalabel63
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	310
 	.long	310
 	.long	.Lxtalabel63
 .cc_bottom cc_142
 .cc_top cc_143,.Lxtalabel63
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	311
 	.long	313
 	.long	.Lxtalabel63
 .cc_bottom cc_143
 .cc_top cc_144,.Lxtalabel64
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	315
 	.long	315
 	.long	.Lxtalabel64
 .cc_bottom cc_144
 .cc_top cc_145,.Lxtalabel65
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	316
 	.long	316
 	.long	.Lxtalabel65
 .cc_bottom cc_145
 .cc_top cc_146,.Lxtalabel65
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	318
 	.long	318
 	.long	.Lxtalabel65
 .cc_bottom cc_146
 .cc_top cc_147,.Lxtalabel65
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	321
 	.long	321
 	.long	.Lxtalabel65
 .cc_bottom cc_147
 .cc_top cc_148,.Lxtalabel66
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	322
 	.long	323
 	.long	.Lxtalabel66
 .cc_bottom cc_148
 .cc_top cc_149,.Lxtalabel66
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	325
 	.long	325
 	.long	.Lxtalabel66
 .cc_bottom cc_149
 .cc_top cc_150,.Lxtalabel66
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	361
 	.long	361
 	.long	.Lxtalabel66
 .cc_bottom cc_150
 .cc_top cc_151,.Lxtalabel66
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	362
 	.long	362
 	.long	.Lxtalabel66
 .cc_bottom cc_151
 .cc_top cc_152,.Lxtalabel66
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	365
 	.long	365
 	.long	.Lxtalabel66
 .cc_bottom cc_152
 .cc_top cc_153,.Lxtalabel66
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	367
 	.long	367
 	.long	.Lxtalabel66
 .cc_bottom cc_153
 .cc_top cc_154,.Lxtalabel68
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	370
 	.long	371
 	.long	.Lxtalabel68
 .cc_bottom cc_154
 .cc_top cc_155,.Lxtalabel67
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	370
 	.long	371
 	.long	.Lxtalabel67
 .cc_bottom cc_155
 .cc_top cc_156,.Lxtalabel89
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	370
 	.long	371
 	.long	.Lxtalabel89
 .cc_bottom cc_156
 .cc_top cc_157,.Lxtalabel90
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	374
 	.long	375
 	.long	.Lxtalabel90
 .cc_bottom cc_157
 .cc_top cc_158,.Lxtalabel28
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	377
 	.long	381
 	.long	.Lxtalabel28
 .cc_bottom cc_158
 .cc_top cc_159,.Lxtalabel28
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	382
 	.long	382
 	.long	.Lxtalabel28
 .cc_bottom cc_159
 .cc_top cc_160,.Lxtalabel29
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	404
 	.long	406
 	.long	.Lxtalabel29
 .cc_bottom cc_160
 .cc_top cc_161,.Lxtalabel29
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	408
 	.long	408
 	.long	.Lxtalabel29
 .cc_bottom cc_161
 .cc_top cc_162,.Lxtalabel28
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	410
 	.long	411
 	.long	.Lxtalabel28
 .cc_bottom cc_162
 .cc_top cc_163,.Lxtalabel28
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	413
 	.long	413
 	.long	.Lxtalabel28
 .cc_bottom cc_163
 .cc_top cc_164,.Lxtalabel48
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	419
 	.long	422
 	.long	.Lxtalabel48
 .cc_bottom cc_164
 .cc_top cc_165,.Lxtalabel49
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	419
 	.long	422
 	.long	.Lxtalabel49
 .cc_bottom cc_165
 .cc_top cc_166,.Lxtalabel47
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	419
 	.long	422
 	.long	.Lxtalabel47
 .cc_bottom cc_166
 .cc_top cc_167,.Lxtalabel75
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	425
 	.long	427
 	.long	.Lxtalabel75
 .cc_bottom cc_167
 .cc_top cc_168,.Lxtalabel75
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	429
 	.long	429
 	.long	.Lxtalabel75
 .cc_bottom cc_168
 .cc_top cc_169,.Lxtalabel50
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	432
 	.long	432
 	.long	.Lxtalabel50
 .cc_bottom cc_169
 .cc_top cc_170,.Lxtalabel50
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	442
 	.long	442
 	.long	.Lxtalabel50
 .cc_bottom cc_170
 .cc_top cc_171,.Lxtalabel50
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	444
 	.long	444
 	.long	.Lxtalabel50
 .cc_bottom cc_171
 .cc_top cc_172,.Lxtalabel51
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	447
 	.long	447
 	.long	.Lxtalabel51
 .cc_bottom cc_172
 .cc_top cc_173,.Lxtalabel51
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	448
 	.long	448
 	.long	.Lxtalabel51
 .cc_bottom cc_173
 .cc_top cc_174,.Lxtalabel51
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	449
 	.long	449
 	.long	.Lxtalabel51
 .cc_bottom cc_174
 .cc_top cc_175,.Lxtalabel51
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	450
 	.long	450
 	.long	.Lxtalabel51
 .cc_bottom cc_175
 .cc_top cc_176,.Lxtalabel51
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	451
 	.long	451
 	.long	.Lxtalabel51
 .cc_bottom cc_176
 .cc_top cc_177,.Lxtalabel51
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	452
 	.long	452
 	.long	.Lxtalabel51
 .cc_bottom cc_177
 .cc_top cc_178,.Lxtalabel51
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	453
 	.long	454
 	.long	.Lxtalabel51
 .cc_bottom cc_178
 .cc_top cc_179,.Lxtalabel49
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	459
 	.long	460
 	.long	.Lxtalabel49
 .cc_bottom cc_179
 .cc_top cc_180,.Lxtalabel48
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	459
 	.long	460
 	.long	.Lxtalabel48
 .cc_bottom cc_180
 .cc_top cc_181,.Lxtalabel47
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	459
 	.long	460
 	.long	.Lxtalabel47
 .cc_bottom cc_181
 .cc_top cc_182,.Lxtalabel26
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	466
 	.long	466
 	.long	.Lxtalabel26
 .cc_bottom cc_182
 .cc_top cc_183,.Lxtalabel46
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	466
 	.long	466
 	.long	.Lxtalabel46
 .cc_bottom cc_183
 .cc_top cc_184,.Lxtalabel46
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	468
 	.long	468
 	.long	.Lxtalabel46
 .cc_bottom cc_184
 .cc_top cc_185,.Lxtalabel26
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	468
 	.long	468
 	.long	.Lxtalabel26
 .cc_bottom cc_185
 .cc_top cc_186,.Lxtalabel53
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	474
 	.long	475
 	.long	.Lxtalabel53
 .cc_bottom cc_186
 .cc_top cc_187,.Lxtalabel54
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	476
 	.long	476
 	.long	.Lxtalabel54
 .cc_bottom cc_187
 .cc_top cc_188,.Lxtalabel54
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	478
 	.long	478
 	.long	.Lxtalabel54
 .cc_bottom cc_188
 .cc_top cc_189,.Lxtalabel82
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	479
 	.long	480
 	.long	.Lxtalabel82
 .cc_bottom cc_189
 .cc_top cc_190,.Lxtalabel82
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	481
 	.long	483
 	.long	.Lxtalabel82
 .cc_bottom cc_190
 .cc_top cc_191,.Lxtalabel83
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	486
 	.long	486
 	.long	.Lxtalabel83
 .cc_bottom cc_191
 .cc_top cc_192,.Lxtalabel84
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	487
 	.long	488
 	.long	.Lxtalabel84
 .cc_bottom cc_192
 .cc_top cc_193,.Lxtalabel85
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	489
 	.long	489
 	.long	.Lxtalabel85
 .cc_bottom cc_193
 .cc_top cc_194,.Lxtalabel85
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	490
 	.long	490
 	.long	.Lxtalabel85
 .cc_bottom cc_194
 .cc_top cc_195,.Lxtalabel85
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	491
 	.long	491
 	.long	.Lxtalabel85
 .cc_bottom cc_195
 .cc_top cc_196,.Lxtalabel85
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	492
 	.long	492
 	.long	.Lxtalabel85
 .cc_bottom cc_196
 .cc_top cc_197,.Lxtalabel85
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	493
 	.long	493
 	.long	.Lxtalabel85
 .cc_bottom cc_197
 .cc_top cc_198,.Lxtalabel86
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	495
 	.long	496
 	.long	.Lxtalabel86
 .cc_bottom cc_198
 .cc_top cc_199,.Lxtalabel83
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	498
 	.long	498
 	.long	.Lxtalabel83
 .cc_bottom cc_199
 .cc_top cc_200,.Lxtalabel55
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	499
 	.long	500
 	.long	.Lxtalabel55
 .cc_bottom cc_200
 .cc_top cc_201,.Lxtalabel55
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	502
 	.long	503
 	.long	.Lxtalabel55
 .cc_bottom cc_201
 .cc_top cc_202,.Lxtalabel56
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	504
 	.long	504
 	.long	.Lxtalabel56
 .cc_bottom cc_202
 .cc_top cc_203,.Lxtalabel56
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	505
 	.long	505
 	.long	.Lxtalabel56
 .cc_bottom cc_203
 .cc_top cc_204,.Lxtalabel56
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	506
 	.long	506
 	.long	.Lxtalabel56
 .cc_bottom cc_204
 .cc_top cc_205,.Lxtalabel56
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	507
 	.long	507
 	.long	.Lxtalabel56
 .cc_bottom cc_205
 .cc_top cc_206,.Lxtalabel56
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	508
 	.long	508
 	.long	.Lxtalabel56
 .cc_bottom cc_206
 .cc_top cc_207,.Lxtalabel56
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	509
 	.long	509
 	.long	.Lxtalabel56
 .cc_bottom cc_207
 .cc_top cc_208,.Lxtalabel57
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	510
 	.long	510
 	.long	.Lxtalabel57
 .cc_bottom cc_208
 .cc_top cc_209,.Lxtalabel57
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	512
 	.long	512
 	.long	.Lxtalabel57
 .cc_bottom cc_209
 .cc_top cc_210,.Lxtalabel83
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	513
 	.long	513
 	.long	.Lxtalabel83
 .cc_bottom cc_210
 .cc_top cc_211,.Lxtalabel33
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	519
 	.long	519
 	.long	.Lxtalabel33
 .cc_bottom cc_211
 .cc_top cc_212,.Lxtalabel52
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	519
 	.long	519
 	.long	.Lxtalabel52
 .cc_bottom cc_212
 .cc_top cc_213,.Lxtalabel25
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	519
 	.long	519
 	.long	.Lxtalabel25
 .cc_bottom cc_213
 .cc_top cc_214,.Lxtalabel58
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	522
 	.long	524
 	.long	.Lxtalabel58
 .cc_bottom cc_214
 .cc_top cc_215,.Lxtalabel34
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	522
 	.long	524
 	.long	.Lxtalabel34
 .cc_bottom cc_215
 .cc_top cc_216,.Lxtalabel59
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	526
 	.long	526
 	.long	.Lxtalabel59
 .cc_bottom cc_216
 .cc_top cc_217,.Lxtalabel76
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	527
 	.long	527
 	.long	.Lxtalabel76
 .cc_bottom cc_217
 .cc_top cc_218,.Lxtalabel76
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	529
 	.long	529
 	.long	.Lxtalabel76
 .cc_bottom cc_218
 .cc_top cc_219,.Lxtalabel76
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	530
 	.long	532
 	.long	.Lxtalabel76
 .cc_bottom cc_219
 .cc_top cc_220,.Lxtalabel77
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	534
 	.long	534
 	.long	.Lxtalabel77
 .cc_bottom cc_220
 .cc_top cc_221,.Lxtalabel78
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	535
 	.long	536
 	.long	.Lxtalabel78
 .cc_bottom cc_221
 .cc_top cc_222,.Lxtalabel79
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	537
 	.long	541
 	.long	.Lxtalabel79
 .cc_bottom cc_222
 .cc_top cc_223,.Lxtalabel78
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	542
 	.long	542
 	.long	.Lxtalabel78
 .cc_bottom cc_223
 .cc_top cc_224,.Lxtalabel91
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	543
 	.long	545
 	.long	.Lxtalabel91
 .cc_bottom cc_224
 .cc_top cc_225,.Lxtalabel92
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	546
 	.long	550
 	.long	.Lxtalabel92
 .cc_bottom cc_225
 .cc_top cc_226,.Lxtalabel91
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	551
 	.long	551
 	.long	.Lxtalabel91
 .cc_bottom cc_226
 .cc_top cc_227,.Lxtalabel60
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	553
 	.long	555
 	.long	.Lxtalabel60
 .cc_bottom cc_227
 .cc_top cc_228,.Lxtalabel61
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	556
 	.long	557
 	.long	.Lxtalabel61
 .cc_bottom cc_228
 .cc_top cc_229,.Lxtalabel62
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	558
 	.long	562
 	.long	.Lxtalabel62
 .cc_bottom cc_229
 .cc_top cc_230,.Lxtalabel61
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	563
 	.long	563
 	.long	.Lxtalabel61
 .cc_bottom cc_230
 .cc_top cc_231,.Lxtalabel80
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	564
 	.long	566
 	.long	.Lxtalabel80
 .cc_bottom cc_231
 .cc_top cc_232,.Lxtalabel81
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	567
 	.long	571
 	.long	.Lxtalabel81
 .cc_bottom cc_232
 .cc_top cc_233,.Lxtalabel80
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	572
 	.long	572
 	.long	.Lxtalabel80
 .cc_bottom cc_233
 .cc_top cc_234,.Lxtalabel35
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	578
 	.long	578
 	.long	.Lxtalabel35
 .cc_bottom cc_234
 .cc_top cc_235,.Lxtalabel69
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	579
 	.long	579
 	.long	.Lxtalabel69
 .cc_bottom cc_235
 .cc_top cc_236,.Lxtalabel69
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	581
 	.long	581
 	.long	.Lxtalabel69
 .cc_bottom cc_236
 .cc_top cc_237,.Lxtalabel69
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	582
 	.long	584
 	.long	.Lxtalabel69
 .cc_bottom cc_237
 .cc_top cc_238,.Lxtalabel70
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	586
 	.long	586
 	.long	.Lxtalabel70
 .cc_bottom cc_238
 .cc_top cc_239,.Lxtalabel71
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	587
 	.long	588
 	.long	.Lxtalabel71
 .cc_bottom cc_239
 .cc_top cc_240,.Lxtalabel72
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	589
 	.long	593
 	.long	.Lxtalabel72
 .cc_bottom cc_240
 .cc_top cc_241,.Lxtalabel71
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	594
 	.long	594
 	.long	.Lxtalabel71
 .cc_bottom cc_241
 .cc_top cc_242,.Lxtalabel87
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	595
 	.long	597
 	.long	.Lxtalabel87
 .cc_bottom cc_242
 .cc_top cc_243,.Lxtalabel88
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	598
 	.long	602
 	.long	.Lxtalabel88
 .cc_bottom cc_243
 .cc_top cc_244,.Lxtalabel87
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	603
 	.long	603
 	.long	.Lxtalabel87
 .cc_bottom cc_244
 .cc_top cc_245,.Lxtalabel36
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	605
 	.long	607
 	.long	.Lxtalabel36
 .cc_bottom cc_245
 .cc_top cc_246,.Lxtalabel37
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	608
 	.long	609
 	.long	.Lxtalabel37
 .cc_bottom cc_246
 .cc_top cc_247,.Lxtalabel38
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	610
 	.long	613
 	.long	.Lxtalabel38
 .cc_bottom cc_247
 .cc_top cc_248,.Lxtalabel37
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	614
 	.long	614
 	.long	.Lxtalabel37
 .cc_bottom cc_248
 .cc_top cc_249,.Lxtalabel73
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	615
 	.long	617
 	.long	.Lxtalabel73
 .cc_bottom cc_249
 .cc_top cc_250,.Lxtalabel74
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	618
 	.long	621
 	.long	.Lxtalabel74
 .cc_bottom cc_250
 .cc_top cc_251,.Lxtalabel73
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	622
 	.long	622
 	.long	.Lxtalabel73
 .cc_bottom cc_251
 .cc_top cc_252,.Lxtalabel58
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	628
 	.long	629
 	.long	.Lxtalabel58
 .cc_bottom cc_252
 .cc_top cc_253,.Lxtalabel34
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	628
 	.long	629
 	.long	.Lxtalabel34
 .cc_bottom cc_253
 .cc_top cc_254,.Lxtalabel25
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	835
 	.long	835
 	.long	.Lxtalabel25
 .cc_bottom cc_254
 .cc_top cc_255,.Lxtalabel33
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	835
 	.long	835
 	.long	.Lxtalabel33
 .cc_bottom cc_255
 .cc_top cc_256,.Lxtalabel52
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	835
 	.long	835
 	.long	.Lxtalabel52
 .cc_bottom cc_256
 .cc_top cc_257,.Lxtalabel25
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	837
 	.long	837
 	.long	.Lxtalabel25
 .cc_bottom cc_257
 .cc_top cc_258,.Lxtalabel33
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	837
 	.long	837
 	.long	.Lxtalabel33
 .cc_bottom cc_258
 .cc_top cc_259,.Lxtalabel52
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	837
 	.long	837
 	.long	.Lxtalabel52
 .cc_bottom cc_259
 .cc_top cc_260,.Lxtalabel30
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	842
 	.long	843
 	.long	.Lxtalabel30
 .cc_bottom cc_260
 .cc_top cc_261,.Lxtalabel20
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	842
 	.long	843
 	.long	.Lxtalabel20
 .cc_bottom cc_261
 .cc_top cc_262,.Lxtalabel30
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	845
 	.long	846
 	.long	.Lxtalabel30
 .cc_bottom cc_262
 .cc_top cc_263,.Lxtalabel20
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	845
 	.long	846
 	.long	.Lxtalabel20
 .cc_bottom cc_263
 .cc_top cc_264,.Lxtalabel30
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	848
 	.long	848
 	.long	.Lxtalabel30
 .cc_bottom cc_264
 .cc_top cc_265,.Lxtalabel20
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	848
 	.long	848
 	.long	.Lxtalabel20
 .cc_bottom cc_265
 .cc_top cc_266,.Lxtalabel30
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	849
 	.long	849
 	.long	.Lxtalabel30
 .cc_bottom cc_266
 .cc_top cc_267,.Lxtalabel20
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	849
 	.long	849
 	.long	.Lxtalabel20
 .cc_bottom cc_267
 .cc_top cc_268,.Lxtalabel21
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	853
 	.long	855
 	.long	.Lxtalabel21
 .cc_bottom cc_268
 .cc_top cc_269,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	858
 	.long	860
 	.long	.Lxtalabel39
 .cc_bottom cc_269
 .cc_top cc_270,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	858
 	.long	860
 	.long	.Lxtalabel22
 .cc_bottom cc_270
 .cc_top cc_271,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	858
 	.long	860
 	.long	.Lxtalabel23
 .cc_bottom cc_271
 .cc_top cc_272,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	863
 	.long	865
 	.long	.Lxtalabel23
 .cc_bottom cc_272
 .cc_top cc_273,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	863
 	.long	865
 	.long	.Lxtalabel39
 .cc_bottom cc_273
 .cc_top cc_274,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	863
 	.long	865
 	.long	.Lxtalabel22
 .cc_bottom cc_274
 .cc_top cc_275,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	868
 	.long	869
 	.long	.Lxtalabel23
 .cc_bottom cc_275
 .cc_top cc_276,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	868
 	.long	869
 	.long	.Lxtalabel39
 .cc_bottom cc_276
 .cc_top cc_277,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	868
 	.long	869
 	.long	.Lxtalabel22
 .cc_bottom cc_277
 .cc_top cc_278,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	871
 	.long	871
 	.long	.Lxtalabel39
 .cc_bottom cc_278
 .cc_top cc_279,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	871
 	.long	871
 	.long	.Lxtalabel23
 .cc_bottom cc_279
 .cc_top cc_280,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	871
 	.long	871
 	.long	.Lxtalabel22
 .cc_bottom cc_280
 .cc_top cc_281,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	872
 	.long	874
 	.long	.Lxtalabel22
 .cc_bottom cc_281
 .cc_top cc_282,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	872
 	.long	874
 	.long	.Lxtalabel39
 .cc_bottom cc_282
 .cc_top cc_283,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	872
 	.long	874
 	.long	.Lxtalabel23
 .cc_bottom cc_283
 .cc_top cc_284,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	877
 	.long	877
 	.long	.Lxtalabel22
 .cc_bottom cc_284
 .cc_top cc_285,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	877
 	.long	877
 	.long	.Lxtalabel23
 .cc_bottom cc_285
 .cc_top cc_286,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	877
 	.long	877
 	.long	.Lxtalabel39
 .cc_bottom cc_286
 .cc_top cc_287,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	879
 	.long	879
 	.long	.Lxtalabel22
 .cc_bottom cc_287
 .cc_top cc_288,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	879
 	.long	879
 	.long	.Lxtalabel39
 .cc_bottom cc_288
 .cc_top cc_289,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	879
 	.long	879
 	.long	.Lxtalabel23
 .cc_bottom cc_289
 .cc_top cc_290,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	880
 	.long	881
 	.long	.Lxtalabel39
 .cc_bottom cc_290
 .cc_top cc_291,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	880
 	.long	881
 	.long	.Lxtalabel39
 .cc_bottom cc_291
 .cc_top cc_292,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	880
 	.long	881
 	.long	.Lxtalabel22
 .cc_bottom cc_292
 .cc_top cc_293,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	880
 	.long	881
 	.long	.Lxtalabel39
 .cc_bottom cc_293
 .cc_top cc_294,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	880
 	.long	881
 	.long	.Lxtalabel39
 .cc_bottom cc_294
 .cc_top cc_295,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	880
 	.long	881
 	.long	.Lxtalabel39
 .cc_bottom cc_295
 .cc_top cc_296,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	880
 	.long	881
 	.long	.Lxtalabel23
 .cc_bottom cc_296
 .cc_top cc_297,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	880
 	.long	881
 	.long	.Lxtalabel22
 .cc_bottom cc_297
 .cc_top cc_298,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	880
 	.long	881
 	.long	.Lxtalabel23
 .cc_bottom cc_298
 .cc_top cc_299,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	880
 	.long	881
 	.long	.Lxtalabel23
 .cc_bottom cc_299
 .cc_top cc_300,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	880
 	.long	881
 	.long	.Lxtalabel23
 .cc_bottom cc_300
 .cc_top cc_301,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	880
 	.long	881
 	.long	.Lxtalabel22
 .cc_bottom cc_301
 .cc_top cc_302,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	880
 	.long	881
 	.long	.Lxtalabel22
 .cc_bottom cc_302
 .cc_top cc_303,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	880
 	.long	881
 	.long	.Lxtalabel23
 .cc_bottom cc_303
 .cc_top cc_304,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	880
 	.long	881
 	.long	.Lxtalabel22
 .cc_bottom cc_304
 .cc_top cc_305,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	886
 	.long	886
 	.long	.Lxtalabel39
 .cc_bottom cc_305
 .cc_top cc_306,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	886
 	.long	886
 	.long	.Lxtalabel39
 .cc_bottom cc_306
 .cc_top cc_307,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	886
 	.long	886
 	.long	.Lxtalabel23
 .cc_bottom cc_307
 .cc_top cc_308,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	886
 	.long	886
 	.long	.Lxtalabel39
 .cc_bottom cc_308
 .cc_top cc_309,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	886
 	.long	886
 	.long	.Lxtalabel39
 .cc_bottom cc_309
 .cc_top cc_310,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	886
 	.long	886
 	.long	.Lxtalabel22
 .cc_bottom cc_310
 .cc_top cc_311,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	886
 	.long	886
 	.long	.Lxtalabel22
 .cc_bottom cc_311
 .cc_top cc_312,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	886
 	.long	886
 	.long	.Lxtalabel22
 .cc_bottom cc_312
 .cc_top cc_313,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	886
 	.long	886
 	.long	.Lxtalabel23
 .cc_bottom cc_313
 .cc_top cc_314,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	886
 	.long	886
 	.long	.Lxtalabel39
 .cc_bottom cc_314
 .cc_top cc_315,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	886
 	.long	886
 	.long	.Lxtalabel22
 .cc_bottom cc_315
 .cc_top cc_316,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	886
 	.long	886
 	.long	.Lxtalabel22
 .cc_bottom cc_316
 .cc_top cc_317,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	886
 	.long	886
 	.long	.Lxtalabel23
 .cc_bottom cc_317
 .cc_top cc_318,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	886
 	.long	886
 	.long	.Lxtalabel23
 .cc_bottom cc_318
 .cc_top cc_319,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	886
 	.long	886
 	.long	.Lxtalabel23
 .cc_bottom cc_319
 .cc_top cc_320,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	889
 	.long	891
 	.long	.Lxtalabel39
 .cc_bottom cc_320
 .cc_top cc_321,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	889
 	.long	891
 	.long	.Lxtalabel39
 .cc_bottom cc_321
 .cc_top cc_322,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	889
 	.long	891
 	.long	.Lxtalabel22
 .cc_bottom cc_322
 .cc_top cc_323,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	889
 	.long	891
 	.long	.Lxtalabel22
 .cc_bottom cc_323
 .cc_top cc_324,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	889
 	.long	891
 	.long	.Lxtalabel23
 .cc_bottom cc_324
 .cc_top cc_325,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	889
 	.long	891
 	.long	.Lxtalabel23
 .cc_bottom cc_325
 .cc_top cc_326,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	889
 	.long	891
 	.long	.Lxtalabel22
 .cc_bottom cc_326
 .cc_top cc_327,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	889
 	.long	891
 	.long	.Lxtalabel23
 .cc_bottom cc_327
 .cc_top cc_328,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	889
 	.long	891
 	.long	.Lxtalabel23
 .cc_bottom cc_328
 .cc_top cc_329,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	889
 	.long	891
 	.long	.Lxtalabel23
 .cc_bottom cc_329
 .cc_top cc_330,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	889
 	.long	891
 	.long	.Lxtalabel22
 .cc_bottom cc_330
 .cc_top cc_331,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	889
 	.long	891
 	.long	.Lxtalabel22
 .cc_bottom cc_331
 .cc_top cc_332,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	889
 	.long	891
 	.long	.Lxtalabel39
 .cc_bottom cc_332
 .cc_top cc_333,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	889
 	.long	891
 	.long	.Lxtalabel39
 .cc_bottom cc_333
 .cc_top cc_334,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	889
 	.long	891
 	.long	.Lxtalabel39
 .cc_bottom cc_334
 .cc_top cc_335,.Lxtalabel41
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	892
 	.long	893
 	.long	.Lxtalabel41
 .cc_bottom cc_335
 .cc_top cc_336,.Lxtalabel42
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	892
 	.long	893
 	.long	.Lxtalabel42
 .cc_bottom cc_336
 .cc_top cc_337,.Lxtalabel43
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	894
 	.long	898
 	.long	.Lxtalabel43
 .cc_bottom cc_337
 .cc_top cc_338,.Lxtalabel44
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	900
 	.long	900
 	.long	.Lxtalabel44
 .cc_bottom cc_338
 .cc_top cc_339,.Lxtalabel40
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	901
 	.long	901
 	.long	.Lxtalabel40
 .cc_bottom cc_339
 .cc_top cc_340,.Lxtalabel40
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	903
 	.long	906
 	.long	.Lxtalabel40
 .cc_bottom cc_340
 .cc_top cc_341,.Lxtalabel45
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	907
 	.long	910
 	.long	.Lxtalabel45
 .cc_bottom cc_341
 .cc_top cc_342,.Lxtalabel40
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	911
 	.long	911
 	.long	.Lxtalabel40
 .cc_bottom cc_342
 .cc_top cc_343,.Lxtalabel45
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	921
 	.long	921
 	.long	.Lxtalabel45
 .cc_bottom cc_343
 .cc_top cc_344,.Lxtalabel45
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	923
 	.long	925
 	.long	.Lxtalabel45
 .cc_bottom cc_344
 .cc_top cc_345,.Lxtalabel45
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	927
 	.long	927
 	.long	.Lxtalabel45
 .cc_bottom cc_345
 .cc_top cc_346,.Lxtalabel21
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	929
 	.long	930
 	.long	.Lxtalabel21
 .cc_bottom cc_346
 .cc_top cc_347,.Lxtalabel21
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	932
 	.long	932
 	.long	.Lxtalabel21
 .cc_bottom cc_347
 .cc_top cc_348,.Lxtalabel21
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	935
 	.long	935
 	.long	.Lxtalabel21
 .cc_bottom cc_348
 .cc_top cc_349,.Lxtalabel30
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	936
 	.long	936
 	.long	.Lxtalabel30
 .cc_bottom cc_349
 .cc_top cc_350,.Lxtalabel20
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	936
 	.long	936
 	.long	.Lxtalabel20
 .cc_bottom cc_350
 .cc_top cc_351,.Lxtalabel31
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	939
 	.long	940
 	.long	.Lxtalabel31
 .cc_bottom cc_351
 .cc_top cc_352,.Lxtalabel31
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	942
 	.long	942
 	.long	.Lxtalabel31
 .cc_bottom cc_352
 .cc_top cc_353,.Lxtalabel32
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	944
 	.long	949
 	.long	.Lxtalabel32
 .cc_bottom cc_353
 .cc_top cc_354,.Lxtalabel32
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	951
 	.long	951
 	.long	.Lxtalabel32
 .cc_bottom cc_354
 .cc_top cc_355,.Lxtalabel31
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	953
 	.long	953
 	.long	.Lxtalabel31
 .cc_bottom cc_355
 .cc_top cc_356,.Lxtalabel31
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	955
 	.long	955
 	.long	.Lxtalabel31
 .cc_bottom cc_356
 .cc_top cc_357,.Lxtalabel31
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	956
 	.long	956
 	.long	.Lxtalabel31
 .cc_bottom cc_357
 .cc_top cc_358,.Lxtalabel31
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	969
 	.long	969
 	.long	.Lxtalabel31
 .cc_bottom cc_358
 .cc_top cc_359,.Lxtalabel20
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	971
 	.long	971
 	.long	.Lxtalabel20
 .cc_bottom cc_359
 .cc_top cc_360,.Lxtalabel30
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	971
 	.long	971
 	.long	.Lxtalabel30
 .cc_bottom cc_360
 .cc_top cc_361,.Lxtalabel30
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	973
 	.long	973
 	.long	.Lxtalabel30
 .cc_bottom cc_361
 .cc_top cc_362,.Lxtalabel20
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	973
 	.long	973
 	.long	.Lxtalabel20
 .cc_bottom cc_362
 .cc_top cc_363,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\\xc_ptr.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
 	.byte	0
 	.long	11
 	.long	15
 	.long	.Lxtalabel12
 .cc_bottom cc_363
 .cc_top cc_364,.Lxtalabel8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\\xc_ptr.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
 	.byte	0
 	.long	11
 	.long	15
 	.long	.Lxtalabel8
 .cc_bottom cc_364
 .cc_top cc_365,.Lxtalabel5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\\xc_ptr.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
 	.byte	0
 	.long	11
 	.long	15
 	.long	.Lxtalabel5
 .cc_bottom cc_365
 .cc_top cc_366,.Lxtalabel5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\\xc_ptr.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
 	.byte	0
 	.long	11
 	.long	15
 	.long	.Lxtalabel5
 .cc_bottom cc_366
 .cc_top cc_367,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\\xc_ptr.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
 	.byte	0
 	.long	11
 	.long	15
 	.long	.Lxtalabel12
 .cc_bottom cc_367
 .cc_top cc_368,.Lxtalabel8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\\xc_ptr.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
 	.byte	0
 	.long	11
 	.long	15
@@ -9424,35 +9424,35 @@ g_curSamFreq:
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_369,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	151
 	.long	151
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_369
 .cc_top cc_370,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	154
 	.long	154
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_370
 .cc_top cc_371,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	156
 	.long	156
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_371
 .cc_top cc_372,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	167
 	.long	167
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_372
 .cc_top cc_373,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"
 	.byte	0
 	.long	169
 	.long	169
@@ -9465,7 +9465,7 @@ g_curSamFreq:
 	.long	1
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str0:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:58:5: error: out of bounds array access\n    buffer[index+3] = val>>24;\n    ^~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:58:5: error: out of bounds array access\n    buffer[index+3] = val>>24;\n    ^~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_0,.Ltrap_info0
 	.long	.Ltrap_info0
@@ -9473,7 +9473,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_0
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:59:5: error: out of bounds array access\n    buffer[index+2] = val>>16;\n    ^~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:59:5: error: out of bounds array access\n    buffer[index+2] = val>>16;\n    ^~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_1,.Ltrap_info1
 	.long	.Ltrap_info1
@@ -9481,7 +9481,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_1
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str2:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:60:5: error: out of bounds array access\n    buffer[index+1] = val>>8;\n    ^~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:60:5: error: out of bounds array access\n    buffer[index+1] = val>>8;\n    ^~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_2,.Ltrap_info2
 	.long	.Ltrap_info2
@@ -9489,7 +9489,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_2
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str3:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:61:5: error: out of bounds array access\n    buffer[index]  =  val;\n    ^~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:61:5: error: out of bounds array access\n    buffer[index]  =  val;\n    ^~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_3,.Ltrap_info3
 	.long	.Ltrap_info3
@@ -9497,7 +9497,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_3
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str4:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:248:39: error: out of bounds array access\n                unsigned master_vol = volsIn[0] == 0x8000 ? 0 : db_to_mult(volsIn[0], 8, 29);\n                                      ^~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:248:39: error: out of bounds array access\n                unsigned master_vol = volsIn[0] == 0x8000 ? 0 : db_to_mult(volsIn[0], 8, 29);\n                                      ^~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_4,.Ltrap_info4
 	.long	.Ltrap_info4
@@ -9505,7 +9505,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_4
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str5:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:175:39: error: out of bounds array access\n                unsigned master_vol = volsIn[0] == 0x8000 ? 0 : db_to_mult(volsIn[0], 8, 29);\n                                      ^~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:175:39: error: out of bounds array access\n                unsigned master_vol = volsIn[0] == 0x8000 ? 0 : db_to_mult(volsIn[0], 8, 29);\n                                      ^~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_5,.Ltrap_info5
 	.long	.Ltrap_info5
@@ -9513,7 +9513,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_5
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str6:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:226:39: error: out of bounds array access\n                unsigned master_vol = volsOut[0] == 0x8000 ? 0 : db_to_mult(volsOut[0], 8, 29);\n                                      ^~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:226:39: error: out of bounds array access\n                unsigned master_vol = volsOut[0] == 0x8000 ? 0 : db_to_mult(volsOut[0], 8, 29);\n                                      ^~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_6,.Ltrap_info6
 	.long	.Ltrap_info6
@@ -9521,7 +9521,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_6
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str7:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:148:39: error: out of bounds array access\n                unsigned master_vol = volsOut[0] == 0x8000 ? 0 : db_to_mult(volsOut[0], 8, 29);\n                                      ^~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:148:39: error: out of bounds array access\n                unsigned master_vol = volsOut[0] == 0x8000 ? 0 : db_to_mult(volsOut[0], 8, 29);\n                                      ^~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_7,.Ltrap_info7
 	.long	.Ltrap_info7
@@ -9529,7 +9529,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_7
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str8:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:154:36: error: out of bounds array access\n                    unsigned vol = volsOut[i] == 0x8000 ? 0 : db_to_mult(volsOut[i], 8, 29);\n                                   ^~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:154:36: error: out of bounds array access\n                    unsigned vol = volsOut[i] == 0x8000 ? 0 : db_to_mult(volsOut[i], 8, 29);\n                                   ^~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_8,.Ltrap_info8
 	.long	.Ltrap_info8
@@ -9537,7 +9537,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_8
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str9:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:156:57: error: out of bounds array access\n                    x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[i];\n                                                        ^~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:156:57: error: out of bounds array access\n                    x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[i];\n                                                        ^~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_9,.Ltrap_info9
 	.long	.Ltrap_info9
@@ -9545,7 +9545,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_9
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str10:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:156:72: error: out of bounds array access\n                    x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[i];\n                                                                       ^~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:156:72: error: out of bounds array access\n                    x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[i];\n                                                                       ^~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_10,.Ltrap_info10
 	.long	.Ltrap_info10
@@ -9553,7 +9553,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_10
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str11:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:249:33: error: out of bounds array access\n                 unsigned vol = volsIn[channel] == 0x8000 ? 0 : db_to_mult(volsIn[channel], 8, 29);\n                                ^~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:249:33: error: out of bounds array access\n                 unsigned vol = volsIn[channel] == 0x8000 ? 0 : db_to_mult(volsIn[channel], 8, 29);\n                                ^~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_11,.Ltrap_info11
 	.long	.Ltrap_info11
@@ -9561,7 +9561,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_11
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str12:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:251:53: error: out of bounds array access\n                x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[channel];\n                                                    ^~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:251:53: error: out of bounds array access\n                x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[channel];\n                                                    ^~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_12,.Ltrap_info12
 	.long	.Ltrap_info12
@@ -9569,7 +9569,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_12
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str13:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:251:67: error: out of bounds array access\n                x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[channel];\n                                                                  ^~~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:251:67: error: out of bounds array access\n                x = longMul(master_vol, vol, 29) * !mutesIn[0] * !mutesIn[channel];\n                                                                  ^~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_13,.Ltrap_info13
 	.long	.Ltrap_info13
@@ -9577,7 +9577,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_13
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str14:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:227:32: error: out of bounds array access\n                unsigned vol = volsOut[channel] == 0x8000 ? 0 : db_to_mult(volsOut[channel], 8, 29);\n                               ^~~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:227:32: error: out of bounds array access\n                unsigned vol = volsOut[channel] == 0x8000 ? 0 : db_to_mult(volsOut[channel], 8, 29);\n                               ^~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_14,.Ltrap_info14
 	.long	.Ltrap_info14
@@ -9585,7 +9585,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_14
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str15:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:229:53: error: out of bounds array access\n                x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[channel];\n                                                    ^~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:229:53: error: out of bounds array access\n                x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[channel];\n                                                    ^~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_15,.Ltrap_info15
 	.long	.Ltrap_info15
@@ -9593,7 +9593,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_15
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str16:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:229:68: error: out of bounds array access\n                x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[channel];\n                                                                   ^~~~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:229:68: error: out of bounds array access\n                x = longMul(master_vol, vol, 29) * !mutesOut[0] * !mutesOut[channel];\n                                                                   ^~~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_16,.Ltrap_info16
 	.long	.Ltrap_info16
@@ -9601,7 +9601,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_16
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str17:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:611:53: error: out of bounds array access\n                                        buffer[0] = mutesOut[sp.wValue&0xff];\n                                                    ^~~~~~~~~~~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:611:53: error: out of bounds array access\n                                        buffer[0] = mutesOut[sp.wValue&0xff];\n                                                    ^~~~~~~~~~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_17,.Ltrap_info17
 	.long	.Ltrap_info17
@@ -9609,7 +9609,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_17
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str18:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:559:53: error: out of bounds array access\n                                        buffer[0] = volsOut[ sp.wValue&0xff ];\n                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:559:53: error: out of bounds array access\n                                        buffer[0] = volsOut[ sp.wValue&0xff ];\n                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_18,.Ltrap_info18
 	.long	.Ltrap_info18
@@ -9617,7 +9617,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_18
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str19:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:590:41: error: out of bounds array access\n                                        mutesOut[sp.wValue & 0xff] = buffer[0];\n                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:590:41: error: out of bounds array access\n                                        mutesOut[sp.wValue & 0xff] = buffer[0];\n                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_19,.Ltrap_info19
 	.long	.Ltrap_info19
@@ -9625,7 +9625,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_19
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str20:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:619:53: error: out of bounds array access\n                                        buffer[0] = mutesIn[ sp.wValue&0xff ];\n                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:619:53: error: out of bounds array access\n                                        buffer[0] = mutesIn[ sp.wValue&0xff ];\n                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_20,.Ltrap_info20
 	.long	.Ltrap_info20
@@ -9633,7 +9633,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_20
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str21:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:538:41: error: out of bounds array access\n                                        volsOut[ sp.wValue&0xff ] = buffer[0] | (((int) (signed char) buffer[1]) << 8);\n                                        ^~~~~~~~~~~~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:538:41: error: out of bounds array access\n                                        volsOut[ sp.wValue&0xff ] = buffer[0] | (((int) (signed char) buffer[1]) << 8);\n                                        ^~~~~~~~~~~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_21,.Ltrap_info21
 	.long	.Ltrap_info21
@@ -9641,7 +9641,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_21
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str22:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:568:53: error: out of bounds array access\n                                        buffer[0] = volsIn[ sp.wValue&0xff ];\n                                                    ^~~~~~~~~~~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:568:53: error: out of bounds array access\n                                        buffer[0] = volsIn[ sp.wValue&0xff ];\n                                                    ^~~~~~~~~~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_22,.Ltrap_info22
 	.long	.Ltrap_info22
@@ -9649,7 +9649,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_22
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str23:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:599:41: error: out of bounds array access\n                                        mutesIn[ sp.wValue&0xff ] = buffer[0];\n                                        ^~~~~~~~~~~~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:599:41: error: out of bounds array access\n                                        mutesIn[ sp.wValue&0xff ] = buffer[0];\n                                        ^~~~~~~~~~~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_23,.Ltrap_info23
 	.long	.Ltrap_info23
@@ -9657,7 +9657,7 @@ g_curSamFreq:
 .cc_bottom cc_trapinfo_23
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str24:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.xc:547:41: error: out of bounds array access\n                                        volsIn[ sp.wValue&0xff ] = buffer[0] | (((int) (signed char) buffer[1]) << 8);\n                                        ^~~~~~~~~~~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:547:41: error: out of bounds array access\n                                        volsIn[ sp.wValue&0xff ] = buffer[0] | (((int) (signed char) buffer[1]) << 8);\n                                        ^~~~~~~~~~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_24,.Ltrap_info24
 	.long	.Ltrap_info24

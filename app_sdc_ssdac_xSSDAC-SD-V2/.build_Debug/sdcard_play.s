@@ -993,7 +993,7 @@ PlayTrack:
 	.loc	1 174 9
 	bf r0, .LBB5_6
 .Ltmp138:
-	.loc	1 180 9
+	.loc	1 179 9
 	ldaw r11, cp[.L.str12]
 	{
 		ldaw r0, sp[4]
@@ -1004,19 +1004,19 @@ PlayTrack:
 		nop
 	}
 	bl strncmp
-	.loc	1 180 9
+	.loc	1 179 9
 	bf r0, .LBB5_9
 .Ltmp139:
-	.loc	1 187 9
+	.loc	1 185 9
 	ldaw r11, cp[.L.str13]
 	{
 		mov r0, r11
 		nop
 	}
 	bl debug_printf
-	.loc	1 188 16
+	.loc	1 186 16
 	bl __getstdout
-	.loc	1 188 9
+	.loc	1 186 9
 	bl fflush
 .Ltmp140:
 .LBB5_11:
@@ -1050,7 +1050,7 @@ PlayTrack:
 		nop
 	}
 .Ltmp144:
-	.loc	1 181 14
+	.loc	1 180 14
 	{
 		mov r0, r7
 		mov r1, r6
@@ -1069,11 +1069,11 @@ PlayTrack:
 	}
 .Ltmp146:
 .LBB5_12:
-	.loc	1 189 15
+	.loc	1 187 15
 	bl f_close
 .Ltmp147:
 .LBB5_13:
-	.loc	1 192 1
+	.loc	1 190 1
 	{
 		mov r0, r4
 		nop
@@ -1107,7 +1107,7 @@ PlayTrack:
 	.cc_top sdcard_play.function,sdcard_play
 sdcard_play:
 .Lfunc_begin6:
-	.loc	1 206 0
+	.loc	1 204 0
 	.cfi_startproc
 	.issue_mode dual
 	DUALENTSP_lu6 234
@@ -1151,7 +1151,7 @@ sdcard_play:
 		ldc r4, 2
 		stw r0, sp[10]
 	}
-	.loc	1 208 5 prologue_end
+	.loc	1 206 5 prologue_end
 .Ltmp162:
 	{
 		mov r0, r4
@@ -1162,7 +1162,7 @@ sdcard_play:
 		mkmsk r0, 1
 		nop
 	}
-	.loc	1 209 5
+	.loc	1 207 5
 	bl set_display_control_flag
 .Ltmp163:
 	{
@@ -1171,14 +1171,14 @@ sdcard_play:
 	}
 	ldaw r1, sp[77]
 .Ltmp164:
-	.loc	1 215 5
+	.loc	1 213 5
 	{
 		mov r0, r7
 		nop
 	}
 	bl f_mount
 .Ltmp165:
-	.loc	1 217 12
+	.loc	1 215 12
 	{
 		mov r0, r5
 		mov r5, r7
@@ -1188,21 +1188,21 @@ sdcard_play:
 		nop
 	}
 	bl QueryChannel
-	.loc	1 217 12
+	.loc	1 215 12
 	{
 		zext r0, 1
 		nop
 	}
 	bf r0, .LBB6_2
 .Ltmp166:
-	.loc	1 219 9
+	.loc	1 217 9
 	ldaw r11, cp[.L.str14]
 	{
 		mov r0, r11
 		nop
 	}
 	bl debug_printf
-	.loc	1 221 9
+	.loc	1 219 9
 	ldaw r3, dp[folder_string]
 	ldc r4, 256
 	{
@@ -1219,9 +1219,9 @@ sdcard_play:
 		mkmsk r5, 2
 	}
 	ldaw r0, dp[folder_string+252]
-	.loc	1 222 9
+	.loc	1 220 9
 	st8 r7, r0[r5]
-	.loc	1 224 9
+	.loc	1 222 9
 	ldaw r3, dp[track_string]
 	{
 		mov r0, r6
@@ -1233,13 +1233,13 @@ sdcard_play:
 	}
 	bl qspi_if_read
 	ldaw r0, dp[track_string+252]
-	.loc	1 226 9
+	.loc	1 224 9
 	st8 r7, r0[r5]
 	{
 		mov r5, r7
 		nop
 	}
-	.loc	1 228 9
+	.loc	1 226 9
 	ldaw r11, cp[.L.str15]
 	{
 		mov r0, r11
@@ -1285,14 +1285,14 @@ sdcard_play:
 	}
 	bl qspi_if_write
 .Ltmp170:
-	.loc	1 234 5
+	.loc	1 232 5
 	ldaw r11, cp[.L.str16]
 	{
 		mov r0, r11
 		mov r1, r4
 	}
 	bl debug_printf
-	.loc	1 235 5
+	.loc	1 233 5
 	ldaw r1, dp[track_string]
 .Ltmp171:
 	ldaw r11, cp[.L.str17]
@@ -1340,7 +1340,7 @@ sdcard_play:
 .Ltmp179:
 	ldaw r7, dp[track_string]
 .Ltmp180:
-	.loc	1 238 5
+	.loc	1 236 5
 	{
 		mov r4, r8
 		nop
@@ -1390,7 +1390,7 @@ sdcard_play:
 	}
 .Ltmp187:
 .LBB6_9:
-	.loc	1 239 5
+	.loc	1 237 5
 	ldaw r11, cp[.L.str18]
 	{
 		mov r0, r11
@@ -1425,12 +1425,12 @@ sdcard_play:
 		mov r8, r5
 		nop
 	}
-	.loc	1 243 9
+	.loc	1 241 9
 	ldw r0, dp[state]
-	.loc	1 243 9
+	.loc	1 241 9
 	bf r0, .LBB6_11
 .Ltmp191:
-	.loc	1 283 9
+	.loc	1 281 9
 	ldaw r11, cp[.L.str25]
 	{
 		mov r0, r11
@@ -1518,7 +1518,7 @@ sdcard_play:
 	}
 .Ltmp203:
 .LBB6_35:
-	.loc	1 286 9
+	.loc	1 284 9
 	{
 		mov r3, r7
 		nop
@@ -1527,7 +1527,7 @@ sdcard_play:
 		zext r3, 8
 		nop
 	}
-	.loc	1 286 9
+	.loc	1 284 9
 	ldaw r11, cp[.L.str26]
 	{
 		mov r0, r11
@@ -1546,7 +1546,7 @@ sdcard_play:
 		nop
 		ld8u r0, r10[r5]
 	}
-	.loc	1 287 12
+	.loc	1 285 12
 .Ltmp204:
 	bf r0, .LBB6_36
 .Ltmp205:
@@ -1554,18 +1554,18 @@ sdcard_play:
 		ldc r1, 16
 		nop
 	}
-	.loc	1 298 18
+	.loc	1 296 18
 .Ltmp206:
 	{
 		and r1, r7, r1
 		nop
 	}
-	.loc	1 298 18
+	.loc	1 296 18
 	bt r1, .LBB6_40
 .Ltmp207:
-	.loc	1 311 13
+	.loc	1 309 13
 	ldaw r9, dp[track_string]
-	.loc	1 311 13
+	.loc	1 309 13
 	{
 		mov r0, r9
 		mov r1, r10
@@ -1576,14 +1576,14 @@ sdcard_play:
 		nop
 	}
 	bl strncpy
-	.loc	1 313 13
+	.loc	1 311 13
 	ldaw r11, cp[.L.str29]
 	{
 		mov r0, r11
 		mov r1, r9
 	}
 	bl debug_printf
-	.loc	1 315 13
+	.loc	1 313 13
 	{
 		mov r1, r5
 		ldw r0, sp[11]
@@ -1597,9 +1597,9 @@ sdcard_play:
 		mkmsk r0, 1
 		nop
 	}
-	.loc	1 317 13
+	.loc	1 315 13
 	bl set_display_control_flag
-	.loc	1 320 18
+	.loc	1 318 18
 	{
 		mov r0, r9
 		ldw r1, sp[10]
@@ -1613,7 +1613,7 @@ sdcard_play:
 		mov r5, r0
 		nop
 	}
-	.loc	1 321 13
+	.loc	1 319 13
 	{
 		sub r0, r5, 1
 		ldc r1, 5
@@ -1641,21 +1641,21 @@ sdcard_play:
 	}
 .Ltmp210:
 .LBB6_22:
-	.loc	1 244 13
+	.loc	1 242 13
 	ldaw r11, cp[.L.str19]
 	{
 		mov r0, r11
 		nop
 	}
 	bl debug_printf
-	.loc	1 255 34
+	.loc	1 253 34
 	{
 		mkmsk r1, 1
 		ldw r0, sp[12]
 	}
 	bl QueryChannel
 .Ltmp211:
-	.loc	1 256 13
+	.loc	1 254 13
 	{
 		sub r0, r0, 1
 		mkmsk r1, 3
@@ -1682,16 +1682,16 @@ sdcard_play:
 		nop
 		ldw r0, sp[11]
 	}
-	.loc	1 262 25
+	.loc	1 260 25
 .Ltmp215:
 	bl ClimbUp
-	.loc	1 262 25
+	.loc	1 260 25
 	{
 		sub r4, r0, 1
 		nop
 	}
 .Ltmp216:
-	.loc	1 263 17
+	.loc	1 261 17
 	ldaw r11, cp[.L.str21]
 	bu .LBB6_25
 .Ltmp217:
@@ -1725,7 +1725,7 @@ sdcard_play:
 	}
 .Ltmp220:
 .LBB6_16:
-	.loc	1 286 9
+	.loc	1 284 9
 	{
 		mov r3, r7
 		nop
@@ -1734,7 +1734,7 @@ sdcard_play:
 		zext r3, 8
 		nop
 	}
-	.loc	1 286 9
+	.loc	1 284 9
 	ldaw r11, cp[.L.str26]
 	{
 		mov r0, r11
@@ -1759,7 +1759,7 @@ sdcard_play:
 		ldc r1, 16
 		nop
 	}
-	.loc	1 298 18
+	.loc	1 296 18
 .Ltmp222:
 	{
 		and r1, r7, r1
@@ -1772,7 +1772,7 @@ sdcard_play:
 		ldc r1, 46
 		nop
 	}
-	.loc	1 300 16
+	.loc	1 298 16
 .Ltmp224:
 	{
 		eq r0, r0, r1
@@ -1780,7 +1780,7 @@ sdcard_play:
 	}
 	bf r0, .LBB6_42
 .Ltmp225:
-	.loc	1 301 16
+	.loc	1 299 16
 	ldaw r11, cp[.L.str27]
 	{
 		mov r0, r11
@@ -1792,7 +1792,7 @@ sdcard_play:
 	}
 	bl debug_printf
 .Ltmp226:
-	.loc	1 302 16
+	.loc	1 300 16
 	{
 		add r4, r4, 1
 		mov r5, r8
@@ -1801,14 +1801,14 @@ sdcard_play:
 	bu .LBB6_10
 .Ltmp228:
 .LBB6_36:
-	.loc	1 289 13
+	.loc	1 287 13
 	{
 		mov r0, r6
 		nop
 	}
 	ldc r1, 256
 	bl f_getcwd
-	.loc	1 290 17
+	.loc	1 288 17
 .Ltmp229:
 	ldaw r11, cp[.L.str6]
 	{
@@ -1826,10 +1826,10 @@ sdcard_play:
 		nop
 		ldw r0, sp[11]
 	}
-	.loc	1 295 25
+	.loc	1 293 25
 .Ltmp231:
 	bl ClimbUp
-	.loc	1 295 25
+	.loc	1 293 25
 	{
 		add r4, r0, 1
 		nop
@@ -1838,7 +1838,7 @@ sdcard_play:
 	bu .LBB6_38
 .Ltmp233:
 .LBB6_42:
-	.loc	1 305 16
+	.loc	1 303 16
 	ldaw r11, cp[.L.str28]
 	{
 		mov r0, r11
@@ -1912,7 +1912,7 @@ sdcard_play:
 	bu .LBB6_10
 .Ltmp239:
 .LBB6_18:
-	.loc	1 311 13
+	.loc	1 309 13
 	ldaw r9, dp[track_string]
 	{
 		mov r0, r9
@@ -1924,14 +1924,14 @@ sdcard_play:
 		nop
 	}
 	bl strncpy
-	.loc	1 313 13
+	.loc	1 311 13
 	ldaw r11, cp[.L.str29]
 	{
 		mov r0, r11
 		mov r1, r9
 	}
 	bl debug_printf
-	.loc	1 315 13
+	.loc	1 313 13
 	{
 		mov r1, r5
 		ldw r0, sp[11]
@@ -1945,9 +1945,9 @@ sdcard_play:
 		mkmsk r0, 1
 		nop
 	}
-	.loc	1 317 13
+	.loc	1 315 13
 	bl set_display_control_flag
-	.loc	1 320 18
+	.loc	1 318 18
 	{
 		mov r0, r9
 		ldw r1, sp[10]
@@ -1961,7 +1961,7 @@ sdcard_play:
 		mov r5, r0
 		nop
 	}
-	.loc	1 321 13
+	.loc	1 319 13
 	{
 		sub r0, r5, 1
 		ldc r1, 5
@@ -1983,13 +1983,13 @@ sdcard_play:
 	.jmptable32 .LBB6_45,.LBB6_46,.LBB6_20,.LBB6_47,.LBB6_48,.LBB6_52
 .Ltmp241:
 .LBB6_45:
-	.loc	1 324 17
+	.loc	1 322 17
 	{
 		add r4, r4, 1
 		nop
 	}
 .Ltmp242:
-	.loc	1 325 17
+	.loc	1 323 17
 	ldaw r11, cp[.L.str30]
 	{
 		mov r0, r11
@@ -2007,38 +2007,38 @@ sdcard_play:
 		nop
 		ldw r0, sp[11]
 	}
-	.loc	1 274 25
+	.loc	1 272 25
 .Ltmp244:
 	bl ClimbUp
-	.loc	1 274 25
+	.loc	1 272 25
 	{
 		add r4, r0, 1
 		nop
 	}
 .Ltmp245:
-	.loc	1 275 17
+	.loc	1 273 17
 	ldaw r11, cp[.L.str24]
 	bu .LBB6_25
 .Ltmp246:
 .LBB6_24:
-	.loc	1 258 17
+	.loc	1 256 17
 	{
 		sub r4, r4, 1
 		nop
 	}
 .Ltmp247:
-	.loc	1 259 17
+	.loc	1 257 17
 	ldaw r11, cp[.L.str20]
 	bu .LBB6_25
 .Ltmp248:
 .LBB6_28:
-	.loc	1 270 17
+	.loc	1 268 17
 	{
 		add r4, r4, 1
 		nop
 	}
 .Ltmp249:
-	.loc	1 271 17
+	.loc	1 269 17
 	ldaw r11, cp[.L.str23]
 	bu .LBB6_25
 .Ltmp250:
@@ -2047,13 +2047,13 @@ sdcard_play:
 		mkmsk r0, 1
 		nop
 	}
-	.loc	1 266 17
+	.loc	1 264 17
 	stw r0, dp[state]
-	.loc	1 267 17
+	.loc	1 265 17
 	ldaw r11, cp[.L.str22]
 .Ltmp251:
 .LBB6_25:
-	.loc	1 259 17
+	.loc	1 257 17
 	{
 		mov r0, r11
 		nop
@@ -2062,13 +2062,13 @@ sdcard_play:
 	bu .LBB6_10
 .Ltmp252:
 .LBB6_46:
-	.loc	1 329 17
+	.loc	1 327 17
 	{
 		sub r4, r4, 1
 		nop
 	}
 .Ltmp253:
-	.loc	1 330 17
+	.loc	1 328 17
 	ldaw r11, cp[.L.str31]
 	{
 		mov r0, r11
@@ -2082,7 +2082,7 @@ sdcard_play:
 	bu .LBB6_10
 .Ltmp254:
 .LBB6_20:
-	.loc	1 334 17
+	.loc	1 332 17
 	ldaw r11, cp[.L.str19]
 	{
 		mov r0, r11
@@ -2096,7 +2096,7 @@ sdcard_play:
 	bu .LBB6_21
 .Ltmp255:
 .LBB6_47:
-	.loc	1 339 17
+	.loc	1 337 17
 	ldaw r11, cp[.L.str32]
 	{
 		mov r0, r11
@@ -2107,10 +2107,10 @@ sdcard_play:
 		nop
 		ldw r0, sp[11]
 	}
-	.loc	1 340 25
+	.loc	1 338 25
 	bl ClimbUp
 .Ltmp256:
-	.loc	1 340 25
+	.loc	1 338 25
 	{
 		add r4, r0, 1
 		ldc r5, 4
@@ -2123,7 +2123,7 @@ sdcard_play:
 		nop
 		stw r7, sp[8]
 	}
-	.loc	1 344 17
+	.loc	1 342 17
 	ldaw r11, cp[.L.str33]
 	{
 		mov r0, r11
@@ -2200,14 +2200,14 @@ sdcard_play:
 	bu .LBB6_10
 .Ltmp268:
 .LBB6_52:
-	.loc	1 349 17
+	.loc	1 347 17
 	ldaw r11, cp[.L.str34]
 	{
 		mov r0, r11
 		nop
 	}
 	bl debug_printf
-	.loc	1 350 21
+	.loc	1 348 21
 .Ltmp269:
 	{
 		eq r0, r8, 2
@@ -2220,12 +2220,12 @@ sdcard_play:
 		ldc r0, 0
 		nop
 	}
-	.loc	1 335 17
+	.loc	1 333 17
 	stw r0, dp[state]
 	bu .LBB6_22
 .Ltmp271:
 .LBB6_53:
-	.loc	1 356 21
+	.loc	1 354 21
 	{
 		add r4, r4, 1
 		ldc r5, 6
@@ -2955,7 +2955,7 @@ scratch:
 	.long	292
 	.byte	1
 	.byte	1
-	.byte	199
+	.byte	197
 	.byte	5
 	.byte	3
 	.long	state
@@ -2963,11 +2963,11 @@ scratch:
 	.long	303
 	.long	.Linfo_string10
 	.byte	1
-	.byte	197
+	.byte	195
 	.byte	16
 	.byte	4
 	.byte	1
-	.byte	194
+	.byte	192
 	.byte	17
 	.long	.Linfo_string8
 	.byte	0
@@ -3740,55 +3740,55 @@ scratch:
 	.byte	1
 	.long	.Linfo_string116
 	.byte	1
-	.byte	201
+	.byte	199
 	.byte	1
 	.byte	1
 	.byte	26
 	.long	.Ldebug_loc32
 	.long	.Linfo_string120
 	.byte	1
-	.byte	202
+	.byte	200
 	.long	2308
 	.byte	26
 	.long	.Ldebug_loc33
 	.long	.Linfo_string134
 	.byte	1
-	.byte	203
+	.byte	201
 	.long	2308
 	.byte	26
 	.long	.Ldebug_loc34
 	.long	.Linfo_string93
 	.byte	1
-	.byte	204
+	.byte	202
 	.long	1362
 	.byte	32
 	.byte	3
 	.long	.Linfo_string92
 	.byte	1
-	.byte	212
+	.byte	210
 	.long	2263
 	.byte	28
 	.long	.Ldebug_loc35
 	.long	.Linfo_string135
 	.byte	1
-	.byte	214
+	.byte	212
 	.long	890
 	.byte	28
 	.long	.Ldebug_loc40
 	.long	.Linfo_string136
 	.byte	1
-	.byte	237
+	.byte	235
 	.long	737
 	.byte	20
 	.long	.Linfo_string139
 	.byte	1
-	.byte	211
+	.byte	209
 	.long	2263
 	.byte	29
 	.long	1693
 	.long	.Ldebug_ranges9
 	.byte	1
-	.byte	232
+	.byte	230
 	.byte	8
 	.long	.Ldebug_loc36
 	.long	1707
@@ -3800,7 +3800,7 @@ scratch:
 	.long	629
 	.long	.Ldebug_ranges10
 	.byte	1
-	.byte	238
+	.byte	236
 	.byte	8
 	.long	.Ldebug_loc39
 	.long	643
@@ -3828,18 +3828,18 @@ scratch:
 	.byte	33
 	.long	.Linfo_string88
 	.byte	1
-	.short	280
+	.short	278
 	.long	744
 	.byte	33
 	.long	.Linfo_string140
 	.byte	1
-	.short	281
+	.short	279
 	.long	1135
 	.byte	34
 	.long	1730
 	.long	.Ldebug_ranges11
 	.byte	1
-	.short	285
+	.short	283
 	.byte	8
 	.long	.Ldebug_loc46
 	.long	1744
@@ -3863,7 +3863,7 @@ scratch:
 	.long	1829
 	.long	.Ldebug_ranges13
 	.byte	1
-	.short	345
+	.short	343
 	.byte	8
 	.long	.Ldebug_loc52
 	.long	1843
@@ -3872,7 +3872,7 @@ scratch:
 	.long	1693
 	.long	.Ldebug_ranges14
 	.byte	1
-	.short	306
+	.short	304
 	.byte	8
 	.long	.Ldebug_loc51
 	.long	1718
@@ -3885,7 +3885,7 @@ scratch:
 	.byte	52
 	.long	.Linfo_string117
 	.byte	1
-	.short	288
+	.short	286
 	.long	2274
 	.byte	0
 	.byte	10
@@ -3894,7 +3894,7 @@ scratch:
 	.long	.Ldebug_loc50
 	.long	.Linfo_string137
 	.byte	1
-	.byte	255
+	.byte	253
 	.long	2478
 	.byte	0
 	.byte	0

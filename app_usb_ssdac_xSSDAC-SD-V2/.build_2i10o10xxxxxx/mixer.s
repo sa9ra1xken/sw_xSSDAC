@@ -1,5 +1,5 @@
 	.text
-	.file	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0\\dbcalc.h"
+	.file	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0\\dbcalc.h"
                                         # Start of file scope inline assembly
 	.inline_definition delay_seconds
 	.inline_definition delay_milliseconds
@@ -32,12 +32,12 @@
 	.text
 .Ldebug_end0:
 	.file	1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\timer.h"
-	.file	2 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\\xc_ptr.h"
+	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
 	.section	.debug_str,"MS",@progbits,1
 .Linfo_string0:
 .asciiz"XMOS 32-bit XC Compiler Community_14.4.1 (build 235-acbb966, Dec-01-2019)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0\\dbcalc.h"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0\\dbcalc.h"
 .Linfo_string2:
 .asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 .Linfo_string3:

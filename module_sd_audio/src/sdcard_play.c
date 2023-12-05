@@ -176,13 +176,11 @@ PLAY_TRACK_RC PlayTrack(const TCHAR* fn, chanend c_handshake, chanend c_control)
         res = f_close (&file);
         return rc;
     }
-#if 1
     if (strncmp(&file_format_id, "fLaC", 4)==0){
         rc = PlayFLAC(&file, c_handshake, c_control);
         res = f_close (&file);
         return rc;
     }
-#endif
     else{
         debug_printf(" - Unknown format");
         fflush(stdout);

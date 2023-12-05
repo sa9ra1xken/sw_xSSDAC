@@ -1,5 +1,5 @@
 	.text
-	.file	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.file	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
                                         # Start of file scope inline assembly
 	.inline_definition delay_seconds
 	.inline_definition delay_milliseconds
@@ -35,8 +35,8 @@
 	.cc_top midi_get_ack_or_data.function,midi_get_ack_or_data
 midi_get_ack_or_data:                   # @midi_get_ack_or_data
 .Lfunc_begin0:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
-	.loc	1 49 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\usb_midi.h:49:0
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
+	.loc	1 49 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\usb_midi.h:49:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -48,7 +48,7 @@ midi_get_ack_or_data:                   # @midi_get_ack_or_data
 		testct r3, res[r0]
 		dualentsp 0
 	}
-	.loc	1 50 3 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\usb_midi.h:50:3
+	.loc	1 50 3 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\usb_midi.h:50:3
 .Ltmp0:
 	bf r3, .LBB0_2
 .Ltmp1:
@@ -60,26 +60,26 @@ midi_get_ack_or_data:                   # @midi_get_ack_or_data
 		mkmsk r2, 1
 		nop
 	}
-	.loc	1 51 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\usb_midi.h:51:0
+	.loc	1 51 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\usb_midi.h:51:0
 .Lxta.endpoint_labels0:
 	{
 		inct r1, res[r0]
 		stw r2, r1[0]
 	}
 .Ltmp2:
-	.loc	1 53 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\usb_midi.h:53:0
+	.loc	1 53 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\usb_midi.h:53:0
 .Lxta.endpoint_labels1:
 	{
 		int r1, res[r0]
 		nop
 	}
-	.loc	1 54 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\usb_midi.h:54:0
+	.loc	1 54 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\usb_midi.h:54:0
 .Lxta.endpoint_labels2:
 	{
 		int r1, res[r0]
 		nop
 	}
-	.loc	1 55 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\usb_midi.h:55:0
+	.loc	1 55 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\usb_midi.h:55:0
 .Lxta.endpoint_labels3:
 	{
 		int r0, res[r0]
@@ -97,7 +97,7 @@ midi_get_ack_or_data:                   # @midi_get_ack_or_data
 		ldc r3, 0
 		nop
 	}
-	.loc	1 58 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\usb_midi.h:58:0
+	.loc	1 58 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\usb_midi.h:58:0
 .Lxta.endpoint_labels4:
 	{
 		in r0, res[r0]
@@ -134,7 +134,7 @@ midi_get_ack_or_data:                   # @midi_get_ack_or_data
 	.cc_top midi_send_ack.function,midi_send_ack
 midi_send_ack:                          # @midi_send_ack
 .Lfunc_begin1:
-	.loc	1 64 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\usb_midi.h:64:0
+	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\usb_midi.h:64:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -144,26 +144,26 @@ midi_send_ack:                          # @midi_send_ack
 		ldc r1, 20
 		dualentsp 0
 	}
-	.loc	1 65 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\usb_midi.h:65:0
+	.loc	1 65 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\usb_midi.h:65:0
 .Ltmp8:
 .Lxta.endpoint_labels5:
 	{
 		outct res[r0], r1
 		ldc r1, 0
 	}
-	.loc	1 66 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\usb_midi.h:66:0
+	.loc	1 66 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\usb_midi.h:66:0
 .Lxta.endpoint_labels6:
 	{
 		outt res[r0], r1
 		nop
 	}
-	.loc	1 67 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\usb_midi.h:67:0
+	.loc	1 67 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\usb_midi.h:67:0
 .Lxta.endpoint_labels7:
 	{
 		outt res[r0], r1
 		nop
 	}
-	.loc	1 68 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\usb_midi.h:68:0
+	.loc	1 68 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\usb_midi.h:68:0
 .Lxta.endpoint_labels8:
 	{
 		outt res[r0], r1
@@ -191,7 +191,7 @@ midi_send_ack:                          # @midi_send_ack
 .Linfo_string0:
 .asciiz"XMOS 32-bit XC Compiler Community_14.4.1 (build 235-acbb966, Dec-01-2019)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 .Linfo_string2:
 .asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 .Linfo_string3:
@@ -558,55 +558,55 @@ midi_send_ack:                          # @midi_send_ack
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_0,.Lxta.endpoint_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	52
 	.long	.Lxta.endpoint_labels0
 .cc_bottom cc_0
 .cc_top cc_1,.Lxta.endpoint_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	53
 	.long	.Lxta.endpoint_labels1
 .cc_bottom cc_1
 .cc_top cc_2,.Lxta.endpoint_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	54
 	.long	.Lxta.endpoint_labels2
 .cc_bottom cc_2
 .cc_top cc_3,.Lxta.endpoint_labels3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	55
 	.long	.Lxta.endpoint_labels3
 .cc_bottom cc_3
 .cc_top cc_4,.Lxta.endpoint_labels4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	59
 	.long	.Lxta.endpoint_labels4
 .cc_bottom cc_4
 .cc_top cc_5,.Lxta.endpoint_labels5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	65
 	.long	.Lxta.endpoint_labels5
 .cc_bottom cc_5
 .cc_top cc_6,.Lxta.endpoint_labels6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	66
 	.long	.Lxta.endpoint_labels6
 .cc_bottom cc_6
 .cc_top cc_7,.Lxta.endpoint_labels7
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	67
 	.long	.Lxta.endpoint_labels7
 .cc_bottom cc_7
 .cc_top cc_8,.Lxta.endpoint_labels8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	68
 	.long	.Lxta.endpoint_labels8
@@ -619,56 +619,56 @@ midi_send_ack:                          # @midi_send_ack
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_9,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	50
 	.long	50
 	.long	.Lxtalabel0
 .cc_bottom cc_9
 .cc_top cc_10,.Lxtalabel1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	51
 	.long	56
 	.long	.Lxtalabel1
 .cc_bottom cc_10
 .cc_top cc_11,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	57
 	.long	60
 	.long	.Lxtalabel2
 .cc_bottom cc_11
 .cc_top cc_12,.Lxtalabel3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	65
 	.long	65
 	.long	.Lxtalabel3
 .cc_bottom cc_12
 .cc_top cc_13,.Lxtalabel3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	66
 	.long	66
 	.long	.Lxtalabel3
 .cc_bottom cc_13
 .cc_top cc_14,.Lxtalabel3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	67
 	.long	67
 	.long	.Lxtalabel3
 .cc_bottom cc_14
 .cc_top cc_15,.Lxtalabel3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	68
 	.long	68
 	.long	.Lxtalabel3
 .cc_bottom cc_15
 .cc_top cc_16,.Lxtalabel3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_midi/src\\usb_midi.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_midi/src\\usb_midi.h"
 	.byte	0
 	.long	69
 	.long	69

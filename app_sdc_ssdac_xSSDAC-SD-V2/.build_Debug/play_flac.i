@@ -3820,12 +3820,12 @@ extern unsigned int SecElapsed;
 
 
 extern unsigned int buff_id;
-extern unsigned char audio_buffer[4][2048];
-extern unsigned int sm_sample_rate[4];
-extern unsigned int sm_ch_count[4];
-extern unsigned int sm_byte_per_sample[4];
-extern unsigned int sm_byte_count[4];
-extern BOOL sm_new_track[4];
+extern unsigned char audio_buffer[8][2048];
+extern unsigned int sm_sample_rate[8];
+extern unsigned int sm_ch_count[8];
+extern unsigned int sm_byte_per_sample[8];
+extern unsigned int sm_byte_count[8];
+extern BOOL sm_new_track[8];
 BOOL new_track;
 chanend chan_handshake;
 
@@ -3962,7 +3962,7 @@ write_callback(
                 audio_buffer[buff_id][buff_ptr + byte_pos] = sample & 0x000000FF;
                 sample = ( sample >> 8 );
             }
-            buff_ptr += 2;
+            buff_ptr += BytesPerSample;
         }
         block_ptr++;
 
@@ -3975,7 +3975,7 @@ write_callback(
             if (new_track==1) new_track = 0;
             chan_out_word(chan_handshake, buff_id);
             buff_id ++;
-            if (buff_id >= 4) buff_id = 0;
+            if (buff_id >= 8) buff_id = 0;
             buff_ptr = 0;
         }
         if (block_ptr >= BlockSize){
@@ -4074,8 +4074,11 @@ PLAY_TRACK_RC PlayFLAC(FIL* p_file, chanend handshake, chanend c_control)
 {
     ptr_file = p_file;
     f_lseek(ptr_file, 0);
-    debug_printf("\nTrying to play FLAC");
+    debug_printf("\nEntered PlayFLAC function");
     chan_handshake = handshake;
+    debug_printf("\nhasdshake copied");
+
+
     decoder = FLAC__stream_decoder_new();
     if(decoder == ((void*)0)){
         debug_printf("\nFailed to create decoder");
@@ -4083,7 +4086,6 @@ PLAY_TRACK_RC PlayFLAC(FIL* p_file, chanend handshake, chanend c_control)
     }
 
     FLAC__stream_decoder_set_md5_checking(decoder, 0);
-
     FLAC__StreamDecoderInitStatus init_status =
     FLAC__stream_decoder_init_stream(
         decoder,
@@ -4102,10 +4104,11 @@ PLAY_TRACK_RC PlayFLAC(FIL* p_file, chanend handshake, chanend c_control)
         debug_printf("\nFailed to initialize decoder: %s\n", FLAC__StreamDecoderInitStatusString[init_status]);
 
 
+
         return _RC_ERROR;
     }
-
     debug_printf("\nDecoder initialized");
+
 
     new_track = 1;;
     CurrentPosition = 0;
@@ -4130,6 +4133,7 @@ PLAY_TRACK_RC PlayFLAC(FIL* p_file, chanend handshake, chanend c_control)
         }
         switch (decoder_state){
             case FLAC__STREAM_DECODER_END_OF_STREAM:
+                debug_printf("\nEnd of Stream\n");
                 FLAC__stream_decoder_delete(decoder);
                 return _RC_NEXT_TRACK;
             default:

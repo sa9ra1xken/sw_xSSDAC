@@ -1,5 +1,5 @@
 	.text
-	.file	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/src/XUD_Ports.xc"
+	.file	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/src/XUD_Ports.xc"
                                         # Start of file scope inline assembly
 	.inline_definition delay_seconds
 	.inline_definition delay_milliseconds
@@ -95,8 +95,8 @@ rx_usb_clk.info:
 .Lsection_debug_loc:
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/src\\XUD_Ports.xc"
-	.file	2 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/src\\XUD_Ports.xc"
+	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.text
 .Ldebug_end0:
 	.file	3 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\timer.h"
@@ -104,7 +104,7 @@ rx_usb_clk.info:
 .Linfo_string0:
 .asciiz"XMOS 32-bit XC Compiler Community_14.4.1 (build 235-acbb966, Dec-01-2019)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/src/XUD_Ports.xc"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_xud/src/XUD_Ports.xc"
 .Linfo_string2:
 .asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 .Linfo_string3:

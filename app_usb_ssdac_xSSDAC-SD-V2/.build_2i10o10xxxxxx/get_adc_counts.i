@@ -1,11 +1,11 @@
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer/get_adc_counts.c"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/get_adc_counts.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 289 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer/get_adc_counts.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h" 1
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/get_adc_counts.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h" 1
 
 
 
@@ -104,12 +104,12 @@ __attribute__((deprecated)) static inline unsigned get_core_id(void) {
 __attribute__((deprecated)) static inline unsigned get_thread_id(void) {
   return __builtin_getid();
 }
-# 9 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h" 2
+# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
 # 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_ssdac_xSSDAC-SD-V2\\\\.build_2i10o10xxxxxx\\\\xSSDAC-SD-V2.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 10 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h" 2
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 1 3
 # 34 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 3
 int printchar(char value);
@@ -211,7 +211,7 @@ int printbinln(unsigned value);
 int printstr(const char *s);
 # 147 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 3
 int printstrln(const char *s);
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h" 2
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 1 3
 # 122 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 3
 typedef unsigned chanend;
@@ -285,11 +285,11 @@ typedef unsigned out_buffered_port_16_t;
 
 
 typedef unsigned out_buffered_port_32_t;
-# 12 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h" 2
-# 23 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include/xud_defines.h" 1
-# 24 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h" 2
-# 91 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h" 2
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include/xud_defines.h" 1
+# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h" 2
+# 91 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 typedef enum XUD_EpTransferType
 {
     XUD_EPTYPE_ISO = 0,
@@ -332,21 +332,21 @@ typedef enum XUD_Result
     XUD_RES_OKAY = 0,
     XUD_RES_ERR,
 } XUD_Result_t;
-# 202 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 202 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_GetBuffer(XUD_ep ep_out, unsigned char buffer[], unsigned *length);
-# 212 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 212 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_GetSetupBuffer(XUD_ep ep_out, unsigned char buffer[], unsigned *length);
-# 224 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 224 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_SetBuffer(XUD_ep ep_in, unsigned char buffer[], unsigned datalength);
-# 238 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 238 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_SetBuffer_EpMax(XUD_ep ep_in, unsigned char buffer[], unsigned datalength, unsigned epMax);
-# 255 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 255 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_DoGetRequest(XUD_ep ep_out, XUD_ep ep_in, unsigned char buffer[], unsigned length, unsigned requested);
-# 264 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 264 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_DoSetRequestStatus(XUD_ep ep_in);
-# 273 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 273 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_SetDevAddr(unsigned addr);
-# 287 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 287 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_BusSpeed_t XUD_ResetEndpoint(XUD_ep one, XUD_ep *two);
 
 
@@ -356,9 +356,9 @@ XUD_BusSpeed_t XUD_ResetEndpoint(XUD_ep one, XUD_ep *two);
 
 
 XUD_ep XUD_InitEp(chanend c_ep);
-# 304 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 304 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 void XUD_SetStallByAddr(int epNum);
-# 313 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 313 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 void XUD_ClearStallByAddr(int epNum);
 
 
@@ -375,7 +375,7 @@ void XUD_SetStall(XUD_ep ep);
 
 
 void XUD_ClearStall(XUD_ep ep);
-# 340 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 340 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 void XUD_ResetEpStateByAddr(unsigned epNum);
 
 
@@ -385,13 +385,13 @@ void XUD_ResetEpStateByAddr(unsigned epNum);
 
 
 void XUD_SetTestMode(XUD_ep ep, unsigned testMode);
-# 364 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 364 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_GetData(XUD_ep ep_out, unsigned char buffer[], unsigned *length);
-# 374 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 374 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_GetSetupData(XUD_ep ep_out, unsigned char buffer[], unsigned *length);
-# 385 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 385 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_SetData(XUD_ep ep_in, unsigned char buffer[], unsigned datalength, unsigned startIndex, unsigned pidToggle);
-# 400 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 400 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 inline int XUD_SetReady_Out(XUD_ep ep, unsigned char buffer[])
 {
     int chan_array_ptr;
@@ -410,7 +410,7 @@ inline int XUD_SetReady_Out(XUD_ep ep, unsigned char buffer[])
 
     return 0;
 }
-# 426 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 426 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 inline int XUD_SetReady_OutPtr(XUD_ep ep, unsigned addr)
 {
     int chan_array_ptr;
@@ -428,10 +428,10 @@ inline int XUD_SetReady_OutPtr(XUD_ep ep, unsigned addr)
 
     return XUD_RES_OKAY;
 }
-# 2 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer/get_adc_counts.c" 2
+# 2 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/get_adc_counts.c" 2
 
 extern XUD_BusSpeed_t g_curUsbSpeed;
-# 29 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer/get_adc_counts.c"
+# 29 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/get_adc_counts.c"
 void GetADCCounts(unsigned samFreq, int *min, int *mid, int *max)
 {
     unsigned frameTime;

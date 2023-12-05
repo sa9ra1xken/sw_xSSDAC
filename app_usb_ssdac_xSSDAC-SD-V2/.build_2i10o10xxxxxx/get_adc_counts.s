@@ -14,7 +14,7 @@
 .Lsection_debug_loc:
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.text
 	.globl	GetADCCounts
 	.align	4
@@ -22,7 +22,7 @@
 	.cc_top GetADCCounts.function,GetADCCounts
 GetADCCounts:
 .Lfunc_begin0:
-	.file	2 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\\get_adc_counts.c"
+	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\get_adc_counts.c"
 	.loc	2 30 0
 	.cfi_startproc
 	.issue_mode dual
@@ -133,7 +133,7 @@ GetADCCounts:
 .Linfo_string0:
 .asciiz"XMOS-235-acbb966-Dec-01-2019 clang version 3.6.0  (based on LLVM 3.6.0svn)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\\get_adc_counts.c"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\get_adc_counts.c"
 .Linfo_string2:
 .asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 .Linfo_string3:

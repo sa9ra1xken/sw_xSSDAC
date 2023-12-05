@@ -179,7 +179,7 @@ write_callback(
                 audio_buffer[buff_id][buff_ptr + byte_pos] = sample & 0x000000FF;
                 sample = ( sample >> 8 );
             }
-            buff_ptr += 2;
+            buff_ptr += /*2*/BytesPerSample;
         }
         block_ptr++;
 
@@ -291,8 +291,11 @@ PLAY_TRACK_RC PlayFLAC(FIL* p_file, chanend handshake, chanend c_control)
 {
     ptr_file = p_file;
     f_lseek(ptr_file, 0);
-    debug_printf("\nTrying to play FLAC");
+    debug_printf("\nEntered PlayFLAC function");
     chan_handshake = handshake;
+    debug_printf("\nhasdshake copied");
+
+    //============================================
     decoder = FLAC__stream_decoder_new();
     if(decoder == NULL){
         debug_printf("\nFailed to create decoder");
@@ -300,7 +303,6 @@ PLAY_TRACK_RC PlayFLAC(FIL* p_file, chanend handshake, chanend c_control)
     }
 
     FLAC__stream_decoder_set_md5_checking(decoder, false);
-
     FLAC__StreamDecoderInitStatus init_status =
     FLAC__stream_decoder_init_stream(
         decoder,
@@ -318,13 +320,14 @@ PLAY_TRACK_RC PlayFLAC(FIL* p_file, chanend handshake, chanend c_control)
     if (init_status != FLAC__STREAM_DECODER_INIT_STATUS_OK ) {
         debug_printf(
                 "\nFailed to initialize decoder: %s\n",
-                FLAC__StreamDecoderInitStatusString[init_status]);
+                FLAC__StreamDecoderInitStatusString[init_status]
+        );
         return _RC_ERROR;
     }
-
     debug_printf("\nDecoder initialized");
+    //============================================
 
-    new_track = true;;
+    new_track = true;; //TODO do we need this?
     CurrentPosition = 0;
     SecElapsed = 0;
 
@@ -347,6 +350,7 @@ PLAY_TRACK_RC PlayFLAC(FIL* p_file, chanend handshake, chanend c_control)
         }
         switch (decoder_state){
             case FLAC__STREAM_DECODER_END_OF_STREAM:
+                debug_printf("\nEnd of Stream\n");
                 FLAC__stream_decoder_delete(decoder);
                 return _RC_NEXT_TRACK;
             default:

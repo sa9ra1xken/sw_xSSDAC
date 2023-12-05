@@ -2801,12 +2801,12 @@ extern char TotalTimeString[];
 extern char information_string[];
 
 extern unsigned int buff_id;
-extern unsigned char audio_buffer[4][2048];
-extern unsigned int sm_sample_rate[4];
-extern unsigned int sm_ch_count[4];
-extern unsigned int sm_byte_per_sample[4];
-extern unsigned int sm_byte_count[4];
-extern BOOL sm_new_track[4];
+extern unsigned char audio_buffer[8][2048];
+extern unsigned int sm_sample_rate[8];
+extern unsigned int sm_ch_count[8];
+extern unsigned int sm_byte_per_sample[8];
+extern unsigned int sm_byte_count[8];
+extern BOOL sm_new_track[8];
 
 FIL* p_file;
 chanend c_handshake;
@@ -2850,7 +2850,7 @@ static void PlaySingleBuffer(){
 
     chan_out_word(c_handshake, buff_id);
     buff_id ++;
-    if (buff_id >= 4) buff_id = 0;
+    if (buff_id >= 8) buff_id = 0;
 }
 # 93 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c"
 static SKIP_RESULT Skip(int sec_skip){

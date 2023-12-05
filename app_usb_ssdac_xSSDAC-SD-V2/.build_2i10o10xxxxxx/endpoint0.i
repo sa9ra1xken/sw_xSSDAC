@@ -1,10 +1,10 @@
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 289 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
 
 
 
@@ -103,7 +103,7 @@ __attribute__((deprecated)) static inline unsigned get_core_id(void) {
 __attribute__((deprecated)) static inline unsigned get_thread_id(void) {
   return __builtin_getid();
 }
-# 9 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
+# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\safestring.h" 1 3
 # 39 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\safestring.h" 3
 void safestrcpy(char s1[], const char s2[]);
@@ -149,7 +149,7 @@ int safememcmp(const unsigned char s1[], const unsigned char s2[],
                unsigned length);
 # 247 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\safestring.h" 3
 int safememchr(const unsigned char s[], int c, unsigned length);
-# 10 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
 # 55 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 3
 typedef int ptrdiff_t;
@@ -157,9 +157,9 @@ typedef int ptrdiff_t;
 typedef unsigned int size_t;
 # 94 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 3
 typedef unsigned char wchar_t;
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h" 1
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h" 1
 
 
 
@@ -172,7 +172,7 @@ typedef unsigned char wchar_t;
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
 # 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_ssdac_xSSDAC-SD-V2\\\\.build_2i10o10xxxxxx\\\\xSSDAC-SD-V2.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 10 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h" 2
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 1 3
 # 34 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 3
 int printchar(char value);
@@ -274,7 +274,7 @@ int printbinln(unsigned value);
 int printstr(const char *s);
 # 147 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 3
 int printstrln(const char *s);
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h" 2
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 1 3
 # 122 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 3
 typedef unsigned chanend;
@@ -348,11 +348,11 @@ typedef unsigned out_buffered_port_16_t;
 
 
 typedef unsigned out_buffered_port_32_t;
-# 12 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h" 2
-# 23 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include/xud_defines.h" 1
-# 24 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h" 2
-# 91 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h" 2
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include/xud_defines.h" 1
+# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h" 2
+# 91 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 typedef enum XUD_EpTransferType
 {
     XUD_EPTYPE_ISO = 0,
@@ -395,21 +395,21 @@ typedef enum XUD_Result
     XUD_RES_OKAY = 0,
     XUD_RES_ERR,
 } XUD_Result_t;
-# 202 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 202 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_GetBuffer(XUD_ep ep_out, unsigned char buffer[], unsigned *length);
-# 212 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 212 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_GetSetupBuffer(XUD_ep ep_out, unsigned char buffer[], unsigned *length);
-# 224 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 224 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_SetBuffer(XUD_ep ep_in, unsigned char buffer[], unsigned datalength);
-# 238 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 238 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_SetBuffer_EpMax(XUD_ep ep_in, unsigned char buffer[], unsigned datalength, unsigned epMax);
-# 255 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 255 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_DoGetRequest(XUD_ep ep_out, XUD_ep ep_in, unsigned char buffer[], unsigned length, unsigned requested);
-# 264 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 264 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_DoSetRequestStatus(XUD_ep ep_in);
-# 273 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 273 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_SetDevAddr(unsigned addr);
-# 287 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 287 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_BusSpeed_t XUD_ResetEndpoint(XUD_ep one, XUD_ep *two);
 
 
@@ -419,9 +419,9 @@ XUD_BusSpeed_t XUD_ResetEndpoint(XUD_ep one, XUD_ep *two);
 
 
 XUD_ep XUD_InitEp(chanend c_ep);
-# 304 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 304 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 void XUD_SetStallByAddr(int epNum);
-# 313 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 313 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 void XUD_ClearStallByAddr(int epNum);
 
 
@@ -438,7 +438,7 @@ void XUD_SetStall(XUD_ep ep);
 
 
 void XUD_ClearStall(XUD_ep ep);
-# 340 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 340 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 void XUD_ResetEpStateByAddr(unsigned epNum);
 
 
@@ -448,13 +448,13 @@ void XUD_ResetEpStateByAddr(unsigned epNum);
 
 
 void XUD_SetTestMode(XUD_ep ep, unsigned testMode);
-# 364 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 364 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_GetData(XUD_ep ep_out, unsigned char buffer[], unsigned *length);
-# 374 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 374 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_GetSetupData(XUD_ep ep_out, unsigned char buffer[], unsigned *length);
-# 385 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 385 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 XUD_Result_t XUD_SetData(XUD_ep ep_in, unsigned char buffer[], unsigned datalength, unsigned startIndex, unsigned pidToggle);
-# 400 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 400 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 inline int XUD_SetReady_Out(XUD_ep ep, unsigned char buffer[])
 {
     int chan_array_ptr;
@@ -473,7 +473,7 @@ inline int XUD_SetReady_Out(XUD_ep ep, unsigned char buffer[])
 
     return 0;
 }
-# 426 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_xud/include\\xud.h"
+# 426 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 inline int XUD_SetReady_OutPtr(XUD_ep ep, unsigned addr)
 {
     int chan_array_ptr;
@@ -491,14 +491,14 @@ inline int XUD_SetReady_OutPtr(XUD_ep ep, unsigned addr)
 
     return XUD_RES_OKAY;
 }
-# 13 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_shared/src\\usb_std_requests.h" 1
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src\\usb_std_requests.h" 1
 
 
 
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_shared/src/usb_defs.h" 1
-# 10 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_shared/src/usb_defs.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src/usb_defs.h" 1
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src/usb_defs.h"
 typedef enum
 {
     USB_CLASS_USE_CLASS = 0x00,
@@ -521,7 +521,7 @@ typedef enum
     USB_CLASS_MAPPED_INDEX_END = 17,
     USB_CLASS_VENDOR_SPECIFIC = 0xFF
 } USB_ClassCode_t;
-# 6 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_shared/src\\usb_std_requests.h" 2
+# 6 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src\\usb_std_requests.h" 2
 
 
 
@@ -566,8 +566,8 @@ void USB_PrintSetupPacket(USB_SetupPacket_t sp);
 void USB_ComposeSetupBuffer(USB_SetupPacket_t sp, unsigned char buffer[]);
 
 void USB_ParseSetupPacket(unsigned char b[], USB_SetupPacket_t *p);
-# 14 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_shared/src\\usbaudio20.h" 1
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src\\usbaudio20.h" 1
 
 
 
@@ -575,12 +575,12 @@ void USB_ParseSetupPacket(unsigned char b[], USB_SetupPacket_t *p);
 
 
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_shared/src/usbaudiocommon.h" 1
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src/usbaudiocommon.h" 1
 
 
 
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\devicedefines.h" 1
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h" 1
 
 
 
@@ -590,8 +590,8 @@ void USB_ParseSetupPacket(unsigned char b[], USB_SetupPacket_t *p);
 
 
 # 1 ".././src/core\\customdefines.h" 1
-# 10 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\devicedefines.h" 2
-# 1108 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\devicedefines.h"
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h" 2
+# 1108 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h"
 enum USBEndpointNumber_In
 {
     ENDPOINT_NUMBER_IN_CONTROL,
@@ -599,7 +599,7 @@ enum USBEndpointNumber_In
     ENDPOINT_NUMBER_IN_FEEDBACK,
 
     ENDPOINT_NUMBER_IN_AUDIO,
-# 1133 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\devicedefines.h"
+# 1133 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h"
     ENDPOINT_COUNT_IN
 };
 
@@ -607,10 +607,10 @@ enum USBEndpointNumber_Out
 {
     ENDPOINT_NUMBER_OUT_CONTROL,
     ENDPOINT_NUMBER_OUT_AUDIO,
-# 1149 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\devicedefines.h"
+# 1149 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h"
     ENDPOINT_COUNT_OUT
 };
-# 6 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_shared/src/usbaudiocommon.h" 2
+# 6 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src/usbaudiocommon.h" 2
 
 
 typedef struct
@@ -642,7 +642,7 @@ typedef struct
     unsigned short bmControls;
     unsigned char iTerminal;
 } __attribute__((packed))USB_Descriptor_Audio_InputTerminal_t;
-# 57 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_shared/src/usbaudiocommon.h"
+# 57 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src/usbaudiocommon.h"
 typedef struct
 {
     unsigned char bLength;
@@ -656,7 +656,7 @@ typedef struct
     unsigned short bmControls;
     unsigned char iTerminal;
 } __attribute__((packed)) USB_Descriptor_Audio_OutputTerminal_t;
-# 88 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_shared/src/usbaudiocommon.h"
+# 88 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src/usbaudiocommon.h"
 typedef struct
 {
     unsigned char bLength;
@@ -692,7 +692,7 @@ typedef struct
     unsigned bmChannelConfig;
     unsigned char iChannelNames;
 } __attribute__((packed)) USB_Descriptor_Audio_Interface_AS_t;
-# 140 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_shared/src/usbaudiocommon.h"
+# 140 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src/usbaudiocommon.h"
 typedef struct
 {
     unsigned char bLength;
@@ -703,8 +703,8 @@ typedef struct
     unsigned char bLockDelayUnits;
     unsigned short wLockDelay;
 } __attribute__((packed)) USB_Descriptor_Audio_Class_AS_Endpoint_t;
-# 9 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_shared/src\\usbaudio20.h" 2
-# 20 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_shared/src\\usbaudio20.h"
+# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src\\usbaudio20.h" 2
+# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src\\usbaudio20.h"
 enum USB_Audio_FuncProtocolCodes_t
 {
     UAC_FUNC_PROTOCOL_UNDEFINED = 0x00,
@@ -788,13 +788,13 @@ enum UAC_CS_AS_InterfaceDescriptorSubtype_t
     UAC_CS_AS_INTERFACE_SUBTYPE_ENCODER = 0x03,
     UAC_CS_AS_INTERFACE_SUBTYPE_DECODER = 0x04
 };
-# 118 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_shared/src\\usbaudio20.h"
+# 118 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src\\usbaudio20.h"
 enum UAC_CS_EndpointDescriptorSubtype_t
 {
     UAC_CS_ENDPOINT_SUBTYPE_UNDEFINED = 0x00,
     UAC_CS_ENDPOINT_SUBTYPE_EP_GENERAL = 0x01
 };
-# 161 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_shared/src\\usbaudio20.h"
+# 161 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src\\usbaudio20.h"
 typedef struct
 {
     unsigned char bLength;
@@ -949,7 +949,7 @@ enum USB_Audio_Fmt_DataFormat_TypeII_t
     UAC_FORMAT_TYPEII_DTS = 0x00000008,
     UAC_FORMAT_TYPEII_RAW_DATA = 0x80000000
 };
-# 331 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_shared/src\\usbaudio20.h"
+# 331 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src\\usbaudio20.h"
 enum USB_Audio_TT_InputTermType_t
 {
     UAC_TT_INPUT_TERMTYPE_INPUT_UNDEFINED = 0x0200,
@@ -974,12 +974,12 @@ enum USB_Audio_TT_OutputTermType_t
     UAC_TT_OUTPUT_TERMTYPE_COMMUNICATION_SPEAKER = 0x0306,
     UAC_TT_OUTPUT_TERMTYPE_LOW_FREQ_EFFECTS_SPEAKER = 0x0307
 };
-# 15 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\devicedefines.h" 1
-# 17 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_device/src\\usb_device.h" 1
-# 55 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_device/src\\usb_device.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h" 1
+# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_device/src\\usb_device.h" 1
+# 55 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_device/src\\usb_device.h"
 XUD_Result_t USB_StandardRequests(XUD_ep ep_out, XUD_ep ep_in,
     unsigned char *devDesc_hs, int devDescLength_hs,
     unsigned char *cfgDesc_hs, int cfgDescLength_hs,
@@ -999,29 +999,29 @@ XUD_Result_t USB_StandardRequests(XUD_ep ep_out, XUD_ep ep_in,
 
 
 XUD_Result_t USB_GetSetupPacket(XUD_ep ep_out, XUD_ep ep_in, USB_SetupPacket_t *sp);
-# 18 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h" 1
-# 10 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h" 1
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\devicedefines.h" 1
-# 12 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptor_defs.h" 1
-# 33 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptor_defs.h"
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h" 1
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptor_defs.h" 1
+# 33 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptor_defs.h"
 enum USBInterfaceNumber
 {
     INTERFACE_NUMBER_AUDIO_CONTROL = 0,
 
     INTERFACE_NUMBER_AUDIO_OUTPUT,
-# 47 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptor_defs.h"
+# 47 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptor_defs.h"
     INTERFACE_NUMBER_DFU,
-# 58 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptor_defs.h"
+# 58 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptor_defs.h"
     INTERFACE_COUNT
 };
-# 13 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h" 2
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h" 2
 
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_shared/src\\usb_std_descriptors.h" 1
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src\\usb_std_descriptors.h" 1
 
 
 
@@ -1152,8 +1152,8 @@ typedef struct
     unsigned short bString[];
 
 } __attribute__((packed)) USB_Descriptor_String_t;
-# 16 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h" 2
-# 32 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h" 2
+# 32 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
 typedef struct
 {
     char *langID;
@@ -1166,7 +1166,7 @@ typedef struct
     char *inputInterfaceStr_Audio2;
     char *usbInputTermStr_Audio2;
     char *usbOutputTermStr_Audio2;
-# 53 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 53 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
     char *clockSelectorStr;
     char *internalClockSourceStr;
 
@@ -1187,7 +1187,7 @@ typedef struct
 
 
     char *outputChanStr_2;
-# 294 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 294 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
     char *iAPInterfaceStr;
 
 
@@ -1204,7 +1204,7 @@ StringDescTable_t g_strTable =
     .inputInterfaceStr_Audio2 = "xCORE USB Audio 2.0" " """,
     .usbInputTermStr_Audio2 = "xCORE USB Audio 2.0" " """,
     .usbOutputTermStr_Audio2 = "xCORE USB Audio 2.0" " """,
-# 318 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 318 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
     .clockSelectorStr = "XMOS"" ""Clock Selector",
     .internalClockSourceStr = "XMOS"" ""Internal Clock",
 
@@ -1222,7 +1222,7 @@ StringDescTable_t g_strTable =
 
 
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/chanstrings.h" 1
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/chanstrings.h" 1
 
 
 
@@ -1232,22 +1232,22 @@ StringDescTable_t g_strTable =
 
 
     .outputChanStr_1 = ""
-# 45 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/chanstrings.h"
+# 45 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/chanstrings.h"
         ,
 
 
 
     .outputChanStr_2 = ""
-# 85 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/chanstrings.h"
+# 85 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/chanstrings.h"
         ,
-# 335 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h" 2
-# 371 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 335 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h" 2
+# 371 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
     .iAPInterfaceStr = "iAP Interface",
 
 
 
 };
-# 401 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 401 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
 USB_Descriptor_Device_t devDesc_Audio2 =
 {
     .bLength = sizeof(USB_Descriptor_Device_t),
@@ -1306,7 +1306,7 @@ unsigned char devQualDesc_Audio2[] =
     0x01,
     0x00
 };
-# 478 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 478 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
 unsigned char devQualDesc_Null[] =
 {
     10,
@@ -1320,7 +1320,7 @@ unsigned char devQualDesc_Null[] =
     0x01,
     0x00
 };
-# 610 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 610 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
 typedef struct
 {
 
@@ -1343,7 +1343,7 @@ typedef struct
     USB_Descriptor_Audio_FeatureUnit_Out_t Audio_Out_FeatureUnit;
 
     USB_Descriptor_Audio_OutputTerminal_t Audio_Out_OutputTerminal;
-# 654 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 654 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
 } __attribute__((packed)) USB_CfgDesc_Audio2_CS_Control_Int;
 
 typedef struct
@@ -1375,9 +1375,9 @@ typedef struct
     USB_Descriptor_Audio_Class_AS_Endpoint_t Audio_Out_ClassEndpoint_2;
 
     USB_Descriptor_Endpoint_t Audio_Out_Fb_Endpoint_2;
-# 728 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 728 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
     unsigned char configDesc_DFU[(18)];
-# 752 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 752 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
 }__attribute__((packed)) USB_Config_Descriptor_Audio2_t;
 
 
@@ -1464,7 +1464,7 @@ USB_Config_Descriptor_Audio2_t cfgDesc_Audio2=
             .bAssocTerminal = 0x00,
             .iClockSource = __builtin_offsetof(StringDescTable_t, internalClockSourceStr)/sizeof(char *),
         },
-# 889 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 889 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
         .Audio_ClockSelector =
         {
             .bLength = sizeof(USB_Descriptor_Audio_ClockSelector_1_t),
@@ -1501,7 +1501,7 @@ USB_Config_Descriptor_Audio2_t cfgDesc_Audio2=
             .bmControls = 0x0000,
             .iTerminal = __builtin_offsetof(StringDescTable_t, usbInputTermStr_Audio2)/sizeof(char *)
         },
-# 945 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 945 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
         .Audio_Out_FeatureUnit =
         {
             .bLength = sizeof(USB_Descriptor_Audio_FeatureUnit_Out_t),
@@ -1520,7 +1520,7 @@ USB_Config_Descriptor_Audio2_t cfgDesc_Audio2=
 
 
                 0x0000000F,
-# 1058 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 1058 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
             },
             0,
         },
@@ -1544,7 +1544,7 @@ USB_Config_Descriptor_Audio2_t cfgDesc_Audio2=
             0x0000,
             0,
         },
-# 1365 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 1365 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
     },
 
 
@@ -1719,7 +1719,7 @@ USB_Config_Descriptor_Audio2_t cfgDesc_Audio2=
         0x0004,
         4,
     },
-# 1967 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 1967 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
     {0x09,
     0x04,
     INTERFACE_NUMBER_DFU,
@@ -1729,7 +1729,7 @@ USB_Config_Descriptor_Audio2_t cfgDesc_Audio2=
     0x01,
     0x01,
     __builtin_offsetof(StringDescTable_t, dfuStr)/sizeof(char *),
-# 1988 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 1988 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
     0x09,
     0x21,
     0x07,
@@ -1739,9 +1739,9 @@ USB_Config_Descriptor_Audio2_t cfgDesc_Audio2=
     0x00,
     0x10,
     0x01},
-# 2145 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 2145 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
 };
-# 2165 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/descriptors.h"
+# 2165 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/descriptors.h"
 unsigned char cfgDesc_Null[] =
 {
     0x09,
@@ -1769,36 +1769,36 @@ unsigned char cfgDesc_Null[] =
     0x00,
     0x09,
 };
-# 19 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\commands.h" 1
+# 19 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\commands.h" 1
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/devicedefines.h" 1
-# 3 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\commands.h" 2
-# 29 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\commands.h"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/dsd_support.h" 1
-# 30 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\commands.h" 2
-# 20 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/audiostream\\audiostream.h" 1
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/audiostream\\audiostream.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h" 1
+# 3 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\commands.h" 2
+# 29 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\commands.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/dsd_support.h" 1
+# 30 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\commands.h" 2
+# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/audiostream\\audiostream.h" 1
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/audiostream\\audiostream.h"
 void UserAudioStreamStart(void);
 
 
 void UserAudioStreamStop(void);
-# 21 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/hostactive\\hostactive.h" 1
+# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/hostactive\\hostactive.h" 1
 
 void UserHostActive(int active);
-# 22 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/vendorrequests.h" 1
-# 14 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/vendorrequests.h"
+# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/vendorrequests.h" 1
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/vendorrequests.h"
 int VendorAudioRequests(XUD_ep ep0_out, XUD_ep ep0_in, unsigned char bRequest, unsigned char cs, unsigned char cn,
     unsigned short unitId, unsigned char direction, chanend c_audioControl,
     chanend c_mix_ctl,
     chanend c_clk_ctL);
-# 23 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_dfu/src\\dfu_types.h" 1
-# 24 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\\xc_ptr.h" 1
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_dfu/src\\dfu_types.h" 1
+# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h" 1
 
 
 
@@ -1814,8 +1814,8 @@ inline xc_ptr array_to_xc_ptr(const unsigned a[])
     asm("mov %0, %1":"=r"(x):"r"(a));
     return x;
 }
-# 25 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/audiorequests.h" 1
+# 25 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.h" 1
 
 
 
@@ -1833,10 +1833,10 @@ int AudioEndpointRequests_1(XUD_ep ep0_out, XUD_ep ep0_in, USB_SetupPacket_t *sp
 
 
 void VendorAudioRequestsInit(chanend c_audioControl, chanend c_mix_ctl, chanend c_clk_ctl);
-# 26 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
-# 58 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_dfu/src\\dfu.h" 1
-# 33 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_dfu/src\\dfu.h"
+# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
+# 58 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_dfu/src\\dfu.h" 1
+# 33 "C:/Users/takaaki/git/sw_xSSDAC/module_dfu/src\\dfu.h"
 unsigned char DFUdevDesc[] = {
     18,
     1,
@@ -1899,7 +1899,7 @@ int DFUDeviceRequests(XUD_ep c_ep0_out, XUD_ep *ep0_in, USB_SetupPacket_t *sp,
 
 
 void DFUDelay(unsigned d);
-# 59 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c" 2
+# 59 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c" 2
 
 extern void device_reboot(chanend);
 
@@ -1913,7 +1913,7 @@ unsigned int mutesOut[(2) + 1];
 
 int volsIn[(0) + 1];
 unsigned int mutesIn[(0) + 1];
-# 84 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c"
+# 84 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c"
 int min(int x, int y);
 
 
@@ -2055,7 +2055,7 @@ void Endpoint0(chanend c_ep0_out, chanend c_ep0_in, chanend c_audioControl,
         volsIn[i] = 0;
         mutesIn[i] = 0;
     }
-# 286 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c"
+# 286 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c"
     if (DFUReportResetState(0))
     {
 
@@ -2119,12 +2119,12 @@ void Endpoint0(chanend c_ep0_out, chanend c_ep0_in, chanend c_audioControl,
                                     }
                                 }
                                 break;
-# 404 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c"
+# 404 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c"
                             default:
 
                                 break;
                         }
-# 430 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c"
+# 430 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c"
                         if(sp.wIndex == INTERFACE_NUMBER_AUDIO_OUTPUT)
                         {
                             if(sp.wValue && (!g_interfaceAlt[INTERFACE_NUMBER_AUDIO_OUTPUT]))
@@ -2138,7 +2138,7 @@ void Endpoint0(chanend c_ep0_out, chanend c_ep0_in, chanend c_audioControl,
                                 UserAudioStreamStop();
                             }
                         }
-# 458 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c"
+# 458 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c"
                     }
 
                     break;
@@ -2147,7 +2147,7 @@ void Endpoint0(chanend c_ep0_out, chanend c_ep0_in, chanend c_audioControl,
 
                     switch(sp.bRequest)
                     {
-# 491 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c"
+# 491 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c"
                         default:
                             break;
                    }
@@ -2187,7 +2187,7 @@ void Endpoint0(chanend c_ep0_out, chanend c_ep0_in, chanend c_audioControl,
 
                         if ((epNum == (ENDPOINT_NUMBER_OUT_AUDIO)) || (epNum == (ENDPOINT_NUMBER_IN_AUDIO | 0x80)))
             {
-# 538 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c"
+# 538 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c"
                         }
 
                     }
@@ -2245,9 +2245,9 @@ void Endpoint0(chanend c_ep0_out, chanend c_ep0_in, chanend c_audioControl,
 
                             )
                         {
-# 605 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c"
+# 605 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c"
                             result = AudioClassRequests_2(ep0_out, ep0_in, &sp, c_audioControl, c_mix_ctl, c_clk_ctl);
-# 621 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c"
+# 621 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c"
                         }
                     }
                     break;
@@ -2263,7 +2263,7 @@ void Endpoint0(chanend c_ep0_out, chanend c_ep0_in, chanend c_audioControl,
 
             if (!DFU_mode_active)
             {
-# 650 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c"
+# 650 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c"
                 if(g_curUsbSpeed == XUD_SPEED_HS)
                 {
 
@@ -2280,7 +2280,7 @@ void Endpoint0(chanend c_ep0_out, chanend c_ep0_in, chanend c_audioControl,
                     cfgDesc_Audio2.Audio_Out_Format_2.bBitResolution = 16;
                     cfgDesc_Audio2.Audio_Out_Endpoint_2.wMaxPacketSize = ((((((192000)+7999)/8000)+1) * (2)) * (16/8));
                     cfgDesc_Audio2.Audio_Out_ClassStreamInterface_2.bNrChannels = (2);
-# 682 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c"
+# 682 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c"
                 }
                 else
                 {
@@ -2298,7 +2298,7 @@ void Endpoint0(chanend c_ep0_out, chanend c_ep0_in, chanend c_audioControl,
                     cfgDesc_Audio2.Audio_Out_Format_2.bBitResolution = 16;
                     cfgDesc_Audio2.Audio_Out_Endpoint_2.wMaxPacketSize = (((((96000 +999)/1000)+1) * ((2))) * (16/8));
                     cfgDesc_Audio2.Audio_Out_ClassStreamInterface_2.bNrChannels = ((2));
-# 715 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c"
+# 715 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c"
                 }
 
                 result = USB_StandardRequests(ep0_out, ep0_in,
@@ -2310,7 +2310,7 @@ void Endpoint0(chanend c_ep0_out, chanend c_ep0_in, chanend c_audioControl,
 
 
                     (char**)&g_strTable, sizeof(g_strTable)/sizeof(char *), &sp, g_curUsbSpeed);
-# 745 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c"
+# 745 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c"
             }
             else
             {

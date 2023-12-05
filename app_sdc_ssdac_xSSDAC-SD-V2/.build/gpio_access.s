@@ -23,7 +23,7 @@
 	.cc_top p_gpio_lock.function,p_gpio_lock
 p_gpio_lock:
 .Lfunc_begin0:
-	.loc	2 8 0
+	.loc	2 9 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -34,7 +34,7 @@ p_gpio_lock:
 	.cfi_def_cfa_offset 8
 .Ltmp1:
 	.cfi_offset 15, 0
-	.loc	2 9 5 prologue_end
+	.loc	2 10 5 prologue_end
 .Ltmp2:
 	ldaw r0, dp[gpo_swlock]
 	bl swlock_acquire
@@ -42,7 +42,7 @@ p_gpio_lock:
 		nop
 		retsp 2
 	}
-	.loc	2 10 1
+	.loc	2 11 1
 	# RETURN_REG_HOLDER
 .Ltmp3:
 	.cc_bottom p_gpio_lock.function
@@ -65,7 +65,7 @@ p_gpio_lock:
 	.cc_top p_gpio_unlock.function,p_gpio_unlock
 p_gpio_unlock:
 .Lfunc_begin1:
-	.loc	2 13 0
+	.loc	2 14 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -76,7 +76,7 @@ p_gpio_unlock:
 	.cfi_def_cfa_offset 8
 .Ltmp6:
 	.cfi_offset 15, 0
-	.loc	2 14 5 prologue_end
+	.loc	2 15 5 prologue_end
 .Ltmp7:
 	ldaw r0, dp[gpo_swlock]
 	bl swlock_release
@@ -84,7 +84,7 @@ p_gpio_unlock:
 		nop
 		retsp 2
 	}
-	.loc	2 15 1
+	.loc	2 16 1
 	# RETURN_REG_HOLDER
 .Ltmp8:
 	.cc_bottom p_gpio_unlock.function
@@ -107,7 +107,7 @@ p_gpio_unlock:
 	.cc_top p_gpio_peek.function,p_gpio_peek
 p_gpio_peek:
 .Lfunc_begin2:
-	.loc	2 18 0
+	.loc	2 19 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -118,16 +118,16 @@ p_gpio_peek:
 	.cfi_def_cfa_offset 8
 .Ltmp11:
 	.cfi_offset 15, 0
-	.loc	2 22 5 prologue_end
+	.loc	2 23 5 prologue_end
 .Ltmp12:
 	ldaw r0, dp[gpo_swlock]
 	bl swlock_acquire
-	.loc	2 24 5
+	.loc	2 25 5
 	#APP
 	ldw r0, dp[p_gpio]
 	#NO_APP
 .Ltmp13:
-	.loc	2 25 5
+	.loc	2 26 5
 	#APP
 	peek r0, res[r0]
 	#NO_APP
@@ -136,7 +136,7 @@ p_gpio_peek:
 		nop
 		retsp 2
 	}
-	.loc	2 27 5
+	.loc	2 28 5
 	# RETURN_REG_HOLDER
 .Ltmp15:
 	.cc_bottom p_gpio_peek.function
@@ -159,7 +159,7 @@ p_gpio_peek:
 	.cc_top p_gpio_out.function,p_gpio_out
 p_gpio_out:
 .Lfunc_begin3:
-	.loc	2 31 0
+	.loc	2 32 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -170,17 +170,17 @@ p_gpio_out:
 	.cfi_def_cfa_offset 8
 .Ltmp18:
 	.cfi_offset 15, 0
-	.loc	2 34 5 prologue_end
+	.loc	2 35 5 prologue_end
 .Ltmp19:
 	#APP
 	ldw r1, dp[p_gpio]
 	#NO_APP
 .Ltmp20:
-	.loc	2 35 5
+	.loc	2 36 5
 	#APP
 	out res[r1], r0
 	#NO_APP
-	.loc	2 38 5
+	.loc	2 39 5
 	ldaw r0, dp[gpo_swlock]
 .Ltmp21:
 	bl swlock_release
@@ -189,7 +189,7 @@ p_gpio_out:
 		nop
 		retsp 2
 	}
-	.loc	2 39 1
+	.loc	2 40 1
 	# RETURN_REG_HOLDER
 .Ltmp23:
 	.cc_bottom p_gpio_out.function
@@ -212,7 +212,7 @@ p_gpio_out:
 	.cc_top set_gpio.function,set_gpio
 set_gpio:
 .Lfunc_begin4:
-	.loc	2 42 0
+	.loc	2 43 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -234,23 +234,23 @@ set_gpio:
 		mov r4, r0
 	}
 .Ltmp30:
-	.loc	2 22 5 prologue_end
+	.loc	2 23 5 prologue_end
 	ldaw r0, dp[gpo_swlock]
 	bl swlock_acquire
-	.loc	2 24 5
+	.loc	2 25 5
 	#APP
 	ldw r0, dp[p_gpio]
 	#NO_APP
 .Ltmp31:
-	.loc	2 25 5
+	.loc	2 26 5
 	#APP
 	peek r0, res[r0]
 	#NO_APP
 .Ltmp32:
-	.loc	2 45 6
+	.loc	2 46 6
 	bf r5, .LBB4_1
 .Ltmp33:
-	.loc	2 46 7
+	.loc	2 47 7
 	{
 		or r0, r0, r4
 		nop
@@ -259,27 +259,27 @@ set_gpio:
 	bu .LBB4_3
 .Ltmp35:
 .LBB4_1:
-	.loc	2 45 18
+	.loc	2 46 18
 	{
 		andnot r0, r4
 		nop
 	}
 .Ltmp36:
 .LBB4_3:
-	.loc	2 34 5
+	.loc	2 35 5
 	#APP
 	ldw r1, dp[p_gpio]
 	#NO_APP
 .Ltmp37:
-	.loc	2 35 5
+	.loc	2 36 5
 	#APP
 	out res[r1], r0
 	#NO_APP
-	.loc	2 38 5
+	.loc	2 39 5
 	ldaw r0, dp[gpo_swlock]
 	bl swlock_release
 .Ltmp38:
-	.loc	2 48 1
+	.loc	2 49 1
 	ldd r5, r4, sp[1]
 	{
 		nop
@@ -364,7 +364,7 @@ gpo_swlock:
 	.long	49
 	.byte	1
 	.byte	2
-	.byte	5
+	.byte	6
 	.byte	5
 	.byte	3
 	.long	gpo_swlock
@@ -384,7 +384,7 @@ gpo_swlock:
 	.byte	1
 	.long	.Linfo_string10
 	.byte	2
-	.byte	7
+	.byte	8
 	.byte	1
 	.byte	5
 	.long	.Ldebug_ranges1
@@ -393,7 +393,7 @@ gpo_swlock:
 	.byte	1
 	.long	.Linfo_string11
 	.byte	2
-	.byte	12
+	.byte	13
 	.byte	1
 	.byte	6
 	.long	.Ldebug_ranges2
@@ -425,37 +425,37 @@ gpo_swlock:
 	.byte	10
 	.long	.Linfo_string6
 	.byte	2
-	.byte	17
+	.byte	18
 	.long	60
 	.byte	1
 	.byte	1
 	.byte	11
 	.long	.Linfo_string7
 	.byte	2
-	.byte	19
+	.byte	20
 	.long	60
 	.byte	11
 	.long	.Linfo_string8
 	.byte	2
-	.byte	19
+	.byte	20
 	.long	60
 	.byte	0
 	.byte	12
 	.long	.Linfo_string9
 	.byte	2
-	.byte	30
+	.byte	31
 	.byte	1
 	.byte	1
 	.byte	1
 	.byte	13
 	.long	.Linfo_string8
 	.byte	2
-	.byte	30
+	.byte	31
 	.long	60
 	.byte	11
 	.long	.Linfo_string7
 	.byte	2
-	.byte	32
+	.byte	33
 	.long	60
 	.byte	0
 	.byte	14
@@ -465,32 +465,32 @@ gpo_swlock:
 	.byte	1
 	.long	.Linfo_string12
 	.byte	2
-	.byte	41
+	.byte	42
 	.byte	1
 	.byte	1
 	.byte	15
 	.long	.Ldebug_loc3
 	.long	.Linfo_string13
 	.byte	2
-	.byte	41
+	.byte	42
 	.long	60
 	.byte	15
 	.long	.Ldebug_loc4
 	.long	.Linfo_string14
 	.byte	2
-	.byte	41
+	.byte	42
 	.long	60
 	.byte	16
 	.long	.Ldebug_loc6
 	.long	.Linfo_string15
 	.byte	2
-	.byte	43
+	.byte	44
 	.long	60
 	.byte	17
 	.long	157
 	.long	.Ldebug_ranges5
 	.byte	2
-	.byte	44
+	.byte	45
 	.byte	7
 	.long	.Ldebug_loc5
 	.long	170
@@ -502,7 +502,7 @@ gpo_swlock:
 	.long	193
 	.long	.Ldebug_ranges6
 	.byte	2
-	.byte	47
+	.byte	48
 	.byte	18
 	.byte	1
 	.byte	80

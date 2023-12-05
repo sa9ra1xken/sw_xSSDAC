@@ -531,7 +531,7 @@ PlayRIFF:
 	st8 r6, r5[r9]
 	ldc r8, 2048
 	{
-		mkmsk r7, 2
+		mkmsk r7, 3
 		nop
 	}
 .Ltmp54:
@@ -3653,12 +3653,12 @@ InitialRun:
 	.typestring information_string, "a(*:uc)"
 	.typestring SecElapsed, "ui"
 	.typestring buff_id, "ui"
-	.typestring audio_buffer, "a(4:a(2048:uc))"
-	.typestring sm_sample_rate, "a(4:ui)"
-	.typestring sm_ch_count, "a(4:ui)"
-	.typestring sm_byte_per_sample, "a(4:ui)"
-	.typestring sm_byte_count, "a(4:ui)"
-	.typestring sm_new_track, "a(4:e(){m(_FALSE){0},m(_TRUE){1}})"
+	.typestring audio_buffer, "a(8:a(2048:uc))"
+	.typestring sm_sample_rate, "a(8:ui)"
+	.typestring sm_ch_count, "a(8:ui)"
+	.typestring sm_byte_per_sample, "a(8:ui)"
+	.typestring sm_byte_count, "a(8:ui)"
+	.typestring sm_new_track, "a(8:e(){m(_FALSE){0},m(_TRUE){1}})"
 	.section	.trap_info,"",@progbits
 .Ltrap_info_entries_start0:
 	.long	.Ltrap_info_entries_end0-.Ltrap_info_entries_start0

@@ -21,7 +21,7 @@
 	.cc_top UserAudioStreamStop.function,UserAudioStreamStop
 UserAudioStreamStop:
 .Lfunc_begin0:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/audiostream\\audiostream.c"
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/audiostream\\audiostream.c"
 	.loc	1 5 0
 	.cfi_startproc
 	.issue_mode dual
@@ -99,7 +99,7 @@ UserAudioStreamStart:
 .Linfo_string0:
 .asciiz"XMOS-235-acbb966-Dec-01-2019 clang version 3.6.0  (based on LLVM 3.6.0svn)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/audiostream\\audiostream.c"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/audiostream\\audiostream.c"
 .Linfo_string2:
 .asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 .Linfo_string3:

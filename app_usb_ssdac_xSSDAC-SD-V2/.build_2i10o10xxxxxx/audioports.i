@@ -1,10 +1,10 @@
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/ports/audioports.c"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/ports/audioports.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 289 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/ports/audioports.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/ports/audioports.c" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 1 3
 # 23 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 3
@@ -97,15 +97,15 @@ __attribute__((deprecated)) static inline unsigned get_core_id(void) {
 __attribute__((deprecated)) static inline unsigned get_thread_id(void) {
   return __builtin_getid();
 }
-# 3 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/ports/audioports.c" 2
+# 3 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/ports/audioports.c" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
 # 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_ssdac_xSSDAC-SD-V2\\\\.build_2i10o10xxxxxx\\\\xSSDAC-SD-V2.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 5 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/ports/audioports.c" 2
+# 5 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/ports/audioports.c" 2
 
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\devicedefines.h" 1
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h" 1
 
 
 
@@ -115,8 +115,8 @@ __attribute__((deprecated)) static inline unsigned get_thread_id(void) {
 
 
 # 1 ".././src/core\\customdefines.h" 1
-# 10 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\devicedefines.h" 2
-# 1108 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\devicedefines.h"
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h" 2
+# 1108 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h"
 enum USBEndpointNumber_In
 {
     ENDPOINT_NUMBER_IN_CONTROL,
@@ -124,7 +124,7 @@ enum USBEndpointNumber_In
     ENDPOINT_NUMBER_IN_FEEDBACK,
 
     ENDPOINT_NUMBER_IN_AUDIO,
-# 1133 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\devicedefines.h"
+# 1133 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h"
     ENDPOINT_COUNT_IN
 };
 
@@ -132,11 +132,11 @@ enum USBEndpointNumber_Out
 {
     ENDPOINT_NUMBER_OUT_CONTROL,
     ENDPOINT_NUMBER_OUT_AUDIO,
-# 1149 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\devicedefines.h"
+# 1149 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h"
     ENDPOINT_COUNT_OUT
 };
-# 7 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/ports/audioports.c" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/ports/audioports.h" 1
+# 7 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/ports/audioports.c" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/ports/audioports.h" 1
 
 
 
@@ -213,16 +213,16 @@ typedef unsigned out_buffered_port_16_t;
 
 
 typedef unsigned out_buffered_port_32_t;
-# 5 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/ports/audioports.h" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio\\devicedefines.h" 1
-# 6 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/ports/audioports.h" 2
-# 32 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/ports/audioports.h"
+# 5 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/ports/audioports.h" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h" 1
+# 6 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/ports/audioports.h" 2
+# 32 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/ports/audioports.h"
 void ConfigAudioPorts(
-# 52 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/ports/audioports.h"
+# 52 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/ports/audioports.h"
                 unsigned int divide, unsigned int curSamFreq);
-# 80 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/ports/audioports.h"
+# 80 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/ports/audioports.h"
 void ConfigAudioPortsWrapper(
-# 93 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/ports/audioports.h"
+# 93 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/ports/audioports.h"
                 unsigned int divide, unsigned curSamFreq, unsigned int dsdMode);
 
 
@@ -232,8 +232,8 @@ void ConfigAudioPortsWrapper(
 
 
 void EnableBufferedPort(port p, unsigned transferWidth);
-# 8 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/ports/audioports.c" 2
-# 25 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/ports/audioports.c"
+# 8 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/ports/audioports.c" 2
+# 25 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/ports/audioports.c"
 void EnableBufferedPort(port p, unsigned transferWidth)
 {
     asm volatile("setc res[%0], %1"::"r"(p), "r"(0x8));
@@ -243,10 +243,10 @@ void EnableBufferedPort(port p, unsigned transferWidth)
 
 
 void ConfigAudioPortsWrapper(
-# 46 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/ports/audioports.c"
+# 46 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/ports/audioports.c"
 unsigned int divide, unsigned curSamFreq, unsigned int dsdMode)
 {
         ConfigAudioPorts(
-# 62 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/ports/audioports.c"
+# 62 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/ports/audioports.c"
                 divide, curSamFreq);
 }

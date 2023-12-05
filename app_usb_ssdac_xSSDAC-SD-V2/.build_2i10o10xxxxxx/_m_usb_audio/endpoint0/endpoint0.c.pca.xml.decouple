@@ -1,4 +1,4 @@
-<preCompilationAnalysis file="C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/endpoint0/endpoint0.c">
+<preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c">
   <fCall global="true" name="Endpoint0"/>
   <fCall global="true" name="Endpoint0.nstackwords"/>
   <fCall global="true" name="XUD_InitEp.nstackwords"/>

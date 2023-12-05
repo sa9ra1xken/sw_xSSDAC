@@ -2914,13 +2914,11 @@ PLAY_TRACK_RC PlayTrack(const TCHAR* fn, chanend c_handshake, chanend c_control)
         res = f_close (&file);
         return rc;
     }
-
     if (strncmp(&file_format_id, "fLaC", 4)==0){
         rc = PlayFLAC(&file, c_handshake, c_control);
         res = f_close (&file);
         return rc;
     }
-
     else{
         debug_printf(" - Unknown format");
         fflush((__getstdout()));
@@ -2980,7 +2978,7 @@ void sdcard_play(
 
         while (state == IDLE){
             debug_printf("\nIDLE");
-# 255 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
+# 253 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
             PLAY_COMMAND reply = QueryChannel(c_play_control, _INPUT_Q);
             switch (reply){
             case _PLAY_CMD_PREV_TRACK:

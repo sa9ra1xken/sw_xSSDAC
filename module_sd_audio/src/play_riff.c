@@ -6,7 +6,8 @@
  *      Author: takaaki
  */
 
-#include <xcore_c.h>
+//#include <xcore_c.h>
+//#include <xcore_c_chan.h>
 #include <stdio.h> /* for the printf function */
 #define DEBUG_UNIT SD_AUDIO
 #include <debug_print.h>

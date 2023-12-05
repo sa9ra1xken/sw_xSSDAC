@@ -1,5 +1,5 @@
 	.text
-	.file	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer/xc_ptr.xc"
+	.file	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/xc_ptr.xc"
                                         # Start of file scope inline assembly
 	.set array_to_xc_ptr.locnoside, 0
 
@@ -25,8 +25,8 @@
 	.cc_top array_to_xc_ptr.function,array_to_xc_ptr
 array_to_xc_ptr:                        # @array_to_xc_ptr
 .Lfunc_begin0:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\\xc_ptr.h"
-	.loc	1 11 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\xc_ptr.h:11:0
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
+	.loc	1 11 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:11:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -36,7 +36,7 @@ array_to_xc_ptr:                        # @array_to_xc_ptr
 		dualentsp 0
 	}
 	#DEBUG_VALUE: array_to_xc_ptr:a <- R0
-	.loc	1 13 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\xc_ptr.h:13:0
+	.loc	1 13 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
 .Ltmp0:
 	#APP
 	mov r0, r0
@@ -68,7 +68,7 @@ array_to_xc_ptr:                        # @array_to_xc_ptr
 .Linfo_string0:
 .asciiz"XMOS 32-bit XC Compiler Community_14.4.1 (build 235-acbb966, Dec-01-2019)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer/xc_ptr.xc"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/xc_ptr.xc"
 .Linfo_string2:
 .asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 .Linfo_string3:
@@ -316,7 +316,7 @@ array_to_xc_ptr:                        # @array_to_xc_ptr
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_0,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer\\xc_ptr.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
 	.byte	0
 	.long	11
 	.long	15

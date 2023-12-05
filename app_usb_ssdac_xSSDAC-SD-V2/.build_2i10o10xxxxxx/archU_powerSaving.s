@@ -1,5 +1,5 @@
 	.text
-	.file	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/powersave/archU_powerSaving.xc"
+	.file	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/powersave/archU_powerSaving.xc"
 	.section	.debug_info,"",@progbits
 .Lsection_info:
 	.section	.debug_abbrev,"",@progbits
@@ -20,7 +20,7 @@
 .Linfo_string0:
 .asciiz"XMOS 32-bit XC Compiler Community_14.4.1 (build 235-acbb966, Dec-01-2019)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/powersave/archU_powerSaving.xc"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/powersave/archU_powerSaving.xc"
 .Linfo_string2:
 .asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.section	.debug_info,"",@progbits

@@ -1,4 +1,4 @@
-<preCompilationAnalysis file="C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_usb_audio/usb_buffer/testct_byref.xc">
+<preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/testct_byref.xc">
 <fDef name="delay_microseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="delay_milliseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="delay_seconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>

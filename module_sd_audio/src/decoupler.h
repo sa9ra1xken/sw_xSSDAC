@@ -9,7 +9,7 @@
 #define DECOUPLER_H_
 
 #define BUF_SIZE /*1024*/2048
-#define NUM_BUF /*16*/4
+#define NUM_BUF 8 //eight buffers are required for gapless playback with Flac 44.1K sps.
 
 /* c_audioControl */
 #define SET_SAMPLE_FREQ         4

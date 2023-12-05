@@ -1,5 +1,5 @@
 	.text
-	.file	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.file	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
                                         # Start of file scope inline assembly
 	.inline_definition delay_seconds
 	.inline_definition delay_milliseconds
@@ -8,13 +8,13 @@
 	.set usage.anon.1,0
 	.set usage.anon.2,0
 	.set usage.anon.3,0
-	.globread SpdifTransmit_4,preambleWords_4,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:666:32: note: object used here\n            encoded_preamble = preambleWords_4[(word & 0xF)*2+1];\n                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globread SpdifTransmit_4,dataWords_4,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:32: note: object used here\n                encoded_byte = dataWords_4[(word & 0xF)*2+1];\n                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globread SpdifTransmit_2,preableWords_2,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:560:32: note: object used here\n            encoded_preamble = preableWords_2[word & 0xF];\n                               ^~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globread SpdifTransmit_2,dataWords_2,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:574:32: note: object used here\n                encoded_byte = dataWords_2[word & 0xF];\n                               ^~~~~~~~~~~~~~~~~~~~~~~"
-	.globread SpdifTransmit_1,preableWords_1,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:417:32: note: object used here\n            encoded_preamble = preableWords_1[word & 0xF];\n                               ^~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globread SpdifTransmit_1,dataWords_1,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:425:28: note: object used here\n            encoded_word = dataWords_1[word & 0xFF];\n                           ^~~~~~~~~~~~~~~~~~~~~~~~"
-	.globread SpdifTransmit_1,dataWords_1_Nibble,"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:442:28: note: object used here\n            encoded_word = dataWords_1_Nibble[word & 0xF];\n                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globread SpdifTransmit_4,preambleWords_4,"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:666:32: note: object used here\n            encoded_preamble = preambleWords_4[(word & 0xF)*2+1];\n                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globread SpdifTransmit_4,dataWords_4,"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:32: note: object used here\n                encoded_byte = dataWords_4[(word & 0xF)*2+1];\n                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globread SpdifTransmit_2,preableWords_2,"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:560:32: note: object used here\n            encoded_preamble = preableWords_2[word & 0xF];\n                               ^~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globread SpdifTransmit_2,dataWords_2,"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:574:32: note: object used here\n                encoded_byte = dataWords_2[word & 0xF];\n                               ^~~~~~~~~~~~~~~~~~~~~~~"
+	.globread SpdifTransmit_1,preableWords_1,"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:417:32: note: object used here\n            encoded_preamble = preableWords_1[word & 0xF];\n                               ^~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globread SpdifTransmit_1,dataWords_1,"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:425:28: note: object used here\n            encoded_word = dataWords_1[word & 0xFF];\n                           ^~~~~~~~~~~~~~~~~~~~~~~~"
+	.globread SpdifTransmit_1,dataWords_1_Nibble,"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:442:28: note: object used here\n            encoded_word = dataWords_1_Nibble[word & 0xF];\n                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 	.call SpdifTransmit,SpdifTransmit_4
 	.call SpdifTransmit,SpdifTransmit_2
 	.call SpdifTransmit,SpdifTransmit_1
@@ -52,7 +52,7 @@
 .Lsection_debug_loc:
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
-	.file	1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src\\SpdifTransmit.xc"
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src\\SpdifTransmit.xc"
 	.text
 	.globl	SpdifTransmitPortConfig
 	.align	4
@@ -60,7 +60,7 @@
 	.cc_top SpdifTransmitPortConfig.function,SpdifTransmitPortConfig
 SpdifTransmitPortConfig:                # @SpdifTransmitPortConfig
 .Lfunc_begin0:
-	.loc	1 22 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:22:0
+	.loc	1 22 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:22:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -90,7 +90,7 @@ SpdifTransmitPortConfig:                # @SpdifTransmitPortConfig
 	}
 .Ltmp5:
 	#DEBUG_VALUE: SpdifTransmitPortConfig:p_mclk <- R1
-	.loc	1 24 0 prologue_end     # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:24:0
+	.loc	1 24 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:24:0
 	{
 		mov r0, r4
 		mov r1, r2
@@ -105,16 +105,16 @@ SpdifTransmitPortConfig:                # @SpdifTransmitPortConfig
 		mov r0, r5
 	}
 .Ltmp8:
-	.loc	1 27 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:27:0
+	.loc	1 27 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:27:0
 	{
 		mov r1, r4
 		nop
 	}
 .Lxta.call_labels1:
 	bl configure_out_port
-	.loc	1 30 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:30:0
+	.loc	1 30 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:30:0
 	setc res[r4], 32831
-	.loc	1 33 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:33:0
+	.loc	1 33 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:33:0
 	{
 		setc res[r4], 15
 		nop
@@ -169,7 +169,7 @@ SpdifTransmitPortConfig:                # @SpdifTransmitPortConfig
 	.cc_top SpdifTransmit_1.function,SpdifTransmit_1
 SpdifTransmit_1:                        # @SpdifTransmit_1
 .Lfunc_begin1:
-	.loc	1 382 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:382:0
+	.loc	1 382 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:382:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -218,13 +218,13 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 	#DEBUG_VALUE: SpdifTransmit_1:ctrl_left <- R2
 	#DEBUG_VALUE: SpdifTransmit_1:ctrl_right <- R3
 	#DEBUG_VALUE: xor <- 0
-	.loc	1 397 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:397:0
+	.loc	1 397 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:397:0
 .Lxta.endpoint_labels0:
 	{
 		in r6, res[r1]
 		nop
 	}
-	.loc	1 398 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:398:0
+	.loc	1 398 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:398:0
 .Lxta.endpoint_labels1:
 	{
 		in r11, res[r1]
@@ -270,7 +270,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 	}
 .Ltmp25:
 	#DEBUG_VALUE: SpdifTransmit_1:ctrl_right <- [SP+44]
-	.loc	1 466 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:466:0
+	.loc	1 466 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:466:0
 	ldw r2, dp[preableWords_1+4]
 .Ltmp26:
 	#DEBUG_VALUE: encoded_preamble <- [SP+48]
@@ -319,7 +319,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 	}
 .Ltmp29:
 	#DEBUG_VALUE: controlRight <- R4
-	.loc	1 515 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:515:0
+	.loc	1 515 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:515:0
 	{
 		ldc r1, 32
 		ldw r4, r1[1]
@@ -362,7 +362,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 		mov r1, r3
 		stw r4, sp[17]
 	}
-	.loc	1 397 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:397:0
+	.loc	1 397 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:397:0
 	{
 		shr r4, r6, 6
 		stw r1, sp[14]
@@ -371,21 +371,21 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 		shr r3, r6, 4
 		shl r7, r1, r2
 	}
-	.loc	1 411 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:411:0
+	.loc	1 411 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:411:0
 .Ltmp34:
 	{
 		or r3, r7, r3
 		nop
 	}
 	ldw r1, cp[.LCPI1_0]
-	.loc	1 413 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:413:0
+	.loc	1 413 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:413:0
 	{
 		and r3, r3, r1
 		nop
 	}
 .Ltmp35:
 	#DEBUG_VALUE: parity32:x <- R3
-	.loc	1 41 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:41:0
+	.loc	1 41 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:41:0
 	{
 		mov r7, r3
 		mkmsk r1, 1
@@ -398,21 +398,21 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 		nop
 	}
 .Ltmp37:
-	.loc	1 413 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:413:0
+	.loc	1 413 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:413:0
 	{
 		shl r7, r7, r1
 		nop
 	}
 .Ltmp38:
 	#DEBUG_VALUE: parity <- R7
-	.loc	1 414 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:414:0
+	.loc	1 414 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:414:0
 	{
 		or r3, r7, r3
 		nop
 	}
 .Ltmp39:
 	#DEBUG_VALUE: word <- R3
-	.loc	1 417 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:417:0
+	.loc	1 417 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:417:0
 	ldaw r1, dp[preableWords_1]
 	{
 		nop
@@ -420,20 +420,20 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 	}
 .Ltmp40:
 	#DEBUG_VALUE: encoded_preamble <- R7
-	.loc	1 418 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:418:0
+	.loc	1 418 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:418:0
 	xor r5, r7, r10
 .Ltmp41:
 	#DEBUG_VALUE: encoded_preamble <- R5
-	.loc	1 419 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:419:0
+	.loc	1 419 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:419:0
 .Lxta.endpoint_labels2:
 	outpw res[r0], r5, 8
-	.loc	1 420 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:420:0
+	.loc	1 420 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:420:0
 	{
 		sext r5, 8
 		nop
 	}
 .Ltmp42:
-	.loc	1 420 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:420:0
+	.loc	1 420 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:420:0
 	ashr r5, r5, 8
 .Ltmp43:
 	#DEBUG_VALUE: xor <- R5
@@ -442,7 +442,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 		mov r8, r9
 		nop
 	}
-	.loc	1 425 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:425:0
+	.loc	1 425 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:425:0
 	{
 		and r4, r4, r8
 		nop
@@ -458,18 +458,18 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 	}
 .Ltmp44:
 	#DEBUG_VALUE: encoded_word <- R4
-	.loc	1 426 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:426:0
+	.loc	1 426 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:426:0
 	xor r4, r4, r5
 .Ltmp45:
-	.loc	1 427 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:427:0
+	.loc	1 427 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:427:0
 .Lxta.endpoint_labels3:
 	outpw res[r0], r4, 16
-	.loc	1 428 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:428:0
+	.loc	1 428 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:428:0
 	{
 		sext r4, 16
 		nop
 	}
-	.loc	1 428 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:428:0
+	.loc	1 428 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:428:0
 	ashr r4, r4, 16
 .Ltmp46:
 	#DEBUG_VALUE: xor <- R4
@@ -477,12 +477,12 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 		mov r11, r6
 		ldc r6, 14
 	}
-	.loc	1 430 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:430:0
+	.loc	1 430 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:430:0
 	{
 		shr r5, r11, r6
 		nop
 	}
-	.loc	1 435 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:435:0
+	.loc	1 435 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:435:0
 	{
 		and r5, r5, r8
 		nop
@@ -497,20 +497,20 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 	}
 .Ltmp47:
 	#DEBUG_VALUE: encoded_word <- R5
-	.loc	1 436 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:436:0
+	.loc	1 436 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:436:0
 	xor r4, r5, r4
 .Ltmp48:
 	#DEBUG_VALUE: encoded_word <- R4
-	.loc	1 437 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:437:0
+	.loc	1 437 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:437:0
 .Lxta.endpoint_labels4:
 	outpw res[r0], r4, 16
-	.loc	1 438 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:438:0
+	.loc	1 438 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:438:0
 	{
 		sext r4, 16
 		nop
 	}
 .Ltmp49:
-	.loc	1 438 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:438:0
+	.loc	1 438 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:438:0
 	ashr r4, r4, 16
 .Ltmp50:
 	#DEBUG_VALUE: xor <- R4
@@ -518,7 +518,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 		mov r5, r2
 		ldc r1, 22
 	}
-	.loc	1 440 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:440:0
+	.loc	1 440 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:440:0
 	{
 		shr r2, r11, r1
 		mov r11, r1
@@ -527,7 +527,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 		ldc r9, 60
 		nop
 	}
-	.loc	1 442 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:442:0
+	.loc	1 442 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:442:0
 	{
 		and r2, r2, r9
 		nop
@@ -543,34 +543,34 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 	}
 .Ltmp51:
 	#DEBUG_VALUE: encoded_word <- R2
-	.loc	1 443 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:443:0
+	.loc	1 443 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:443:0
 	xor r2, r2, r4
 .Ltmp52:
-	.loc	1 444 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:444:0
+	.loc	1 444 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:444:0
 .Lxta.endpoint_labels5:
 	outpw res[r0], r2, 8
-	.loc	1 445 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:445:0
+	.loc	1 445 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:445:0
 	{
 		sext r2, 8
 		nop
 	}
-	.loc	1 445 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:445:0
+	.loc	1 445 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:445:0
 	ashr r2, r2, 8
 .Ltmp53:
 	#DEBUG_VALUE: xor <- R2
-	.loc	1 451 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:451:0
+	.loc	1 451 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:451:0
 	{
 		shr r3, r3, r11
 		nop
 	}
 .Ltmp54:
 	ldc r1, 828
-	.loc	1 447 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:447:0
+	.loc	1 447 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:447:0
 	{
 		and r3, r3, r1
 		nop
 	}
-	.loc	1 451 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:451:0
+	.loc	1 451 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:451:0
 	{
 		add r3, r7, r3
 		nop
@@ -581,20 +581,20 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 	}
 .Ltmp55:
 	#DEBUG_VALUE: encoded_word <- R3
-	.loc	1 452 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:452:0
+	.loc	1 452 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:452:0
 	xor r2, r3, r2
 .Ltmp56:
 	#DEBUG_VALUE: encoded_word <- R2
-	.loc	1 453 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:453:0
+	.loc	1 453 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:453:0
 .Lxta.endpoint_labels6:
 	outpw res[r0], r2, 16
-	.loc	1 454 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:454:0
+	.loc	1 454 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:454:0
 	{
 		sext r2, 16
 		nop
 	}
 .Ltmp57:
-	.loc	1 454 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:454:0
+	.loc	1 454 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:454:0
 	ashr r2, r2, 16
 .Ltmp58:
 	#DEBUG_VALUE: xor <- R2
@@ -602,20 +602,20 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 		nop
 		ldw r1, sp[12]
 	}
-	.loc	1 467 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:467:0
+	.loc	1 467 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:467:0
 	xor r2, r1, r2
 .Ltmp59:
 	#DEBUG_VALUE: encoded_preamble <- R2
-	.loc	1 468 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:468:0
+	.loc	1 468 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:468:0
 .Lxta.endpoint_labels7:
 	outpw res[r0], r2, 8
-	.loc	1 469 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:469:0
+	.loc	1 469 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:469:0
 	{
 		sext r2, 8
 		nop
 	}
 .Ltmp60:
-	.loc	1 469 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:469:0
+	.loc	1 469 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:469:0
 	ashr r2, r2, 8
 .Ltmp61:
 	#DEBUG_VALUE: xor <- R2
@@ -623,12 +623,12 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 		nop
 		ldw r4, sp[16]
 	}
-	.loc	1 471 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:471:0
+	.loc	1 471 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:471:0
 	{
 		shr r3, r4, 6
 		nop
 	}
-	.loc	1 474 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:474:0
+	.loc	1 474 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:474:0
 	{
 		and r3, r3, r8
 		nop
@@ -643,29 +643,29 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 	}
 .Ltmp62:
 	#DEBUG_VALUE: encoded_word <- R3
-	.loc	1 475 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:475:0
+	.loc	1 475 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:475:0
 	xor r2, r3, r2
 .Ltmp63:
 	#DEBUG_VALUE: encoded_word <- R2
-	.loc	1 476 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:476:0
+	.loc	1 476 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:476:0
 .Lxta.endpoint_labels8:
 	outpw res[r0], r2, 16
-	.loc	1 477 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:477:0
+	.loc	1 477 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:477:0
 	{
 		sext r2, 16
 		nop
 	}
 .Ltmp64:
-	.loc	1 477 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:477:0
+	.loc	1 477 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:477:0
 	ashr r2, r2, 16
 .Ltmp65:
 	#DEBUG_VALUE: xor <- R2
-	.loc	1 479 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:479:0
+	.loc	1 479 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:479:0
 	{
 		shr r3, r4, r6
 		nop
 	}
-	.loc	1 481 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:481:0
+	.loc	1 481 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:481:0
 	{
 		and r3, r3, r8
 		nop
@@ -680,29 +680,29 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 	}
 .Ltmp66:
 	#DEBUG_VALUE: encoded_word <- R3
-	.loc	1 482 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:482:0
+	.loc	1 482 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:482:0
 	xor r2, r3, r2
 .Ltmp67:
 	#DEBUG_VALUE: encoded_word <- R2
-	.loc	1 483 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:483:0
+	.loc	1 483 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:483:0
 .Lxta.endpoint_labels9:
 	outpw res[r0], r2, 16
-	.loc	1 484 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:484:0
+	.loc	1 484 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:484:0
 	{
 		sext r2, 16
 		nop
 	}
 .Ltmp68:
-	.loc	1 484 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:484:0
+	.loc	1 484 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:484:0
 	ashr r2, r2, 16
 .Ltmp69:
 	#DEBUG_VALUE: xor <- R2
-	.loc	1 486 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:486:0
+	.loc	1 486 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:486:0
 	{
 		shr r3, r4, r11
 		nop
 	}
-	.loc	1 490 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:490:0
+	.loc	1 490 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:490:0
 	{
 		and r3, r3, r9
 		nop
@@ -717,11 +717,11 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 	}
 .Ltmp70:
 	#DEBUG_VALUE: encoded_word <- R3
-	.loc	1 491 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:491:0
+	.loc	1 491 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:491:0
 	xor r2, r3, r2
 .Ltmp71:
 	#DEBUG_VALUE: encoded_word <- R2
-	.loc	1 492 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:492:0
+	.loc	1 492 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:492:0
 .Lxta.endpoint_labels10:
 	outpw res[r0], r2, 8
 	{
@@ -730,7 +730,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 	}
 .Ltmp72:
 	#DEBUG_VALUE: SpdifTransmit_1:c_tx0 <- R1
-	.loc	1 498 13                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:498:13
+	.loc	1 498 13                # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:498:13
 	{
 		testct r3, res[r1]
 		nop
@@ -749,12 +749,12 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 	#DEBUG_VALUE: encoded_word <- R2
 	#DEBUG_VALUE: preamble <- 1
 	#DEBUG_VALUE: newblock <- 0
-	.loc	1 449 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:449:0
+	.loc	1 449 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:449:0
 	{
 		shr r3, r4, 4
 		ldw r4, sp[17]
 	}
-	.loc	1 459 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:459:0
+	.loc	1 459 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:459:0
 	{
 		shl r4, r4, r5
 		mov r9, r11
@@ -764,7 +764,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 		nop
 	}
 	ldw r5, cp[.LCPI1_1]
-	.loc	1 459 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:459:0
+	.loc	1 459 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:459:0
 	{
 		and r4, r4, r5
 		nop
@@ -772,7 +772,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 .Ltmp74:
 	#DEBUG_VALUE: control <- R4
 	ldw r5, cp[.LCPI1_2]
-	.loc	1 449 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:449:0
+	.loc	1 449 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:449:0
 	{
 		and r5, r3, r5
 		nop
@@ -780,13 +780,13 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 .Ltmp75:
 	#DEBUG_VALUE: sample <- R5
 	#DEBUG_VALUE: parity32:x <- R5
-	.loc	1 461 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:461:0
+	.loc	1 461 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:461:0
 	{
 		or r5, r4, r5
 		ldc r6, 0
 	}
 .Ltmp76:
-	.loc	1 41 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:41:0
+	.loc	1 41 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:41:0
 	crc32 r5, r6, r11
 	{
 		mov r11, r7
@@ -797,40 +797,40 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 		or r3, r4, r3
 	}
 .Ltmp77:
-	.loc	1 461 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:461:0
+	.loc	1 461 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:461:0
 	{
 		shl r4, r5, r7
 		nop
 	}
 .Ltmp78:
 	#DEBUG_VALUE: parity <- R4
-	.loc	1 462 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:462:0
+	.loc	1 462 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:462:0
 	{
 		or r3, r3, r4
 		nop
 	}
-	.loc	1 508 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:508:0
+	.loc	1 508 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:508:0
 	{
 		shr r3, r3, r9
 		nop
 	}
-	.loc	1 495 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:495:0
+	.loc	1 495 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:495:0
 	{
 		and r3, r3, r8
 		sext r2, 8
 	}
 .Ltmp79:
-	.loc	1 493 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:493:0
+	.loc	1 493 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:493:0
 	ashr r4, r2, 8
 .Ltmp80:
 	#DEBUG_VALUE: xor <- R4
-	.loc	1 505 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:505:0
+	.loc	1 505 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:505:0
 .Lxta.endpoint_labels11:
 	{
 		in r6, res[r1]
 		nop
 	}
-	.loc	1 506 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:506:0
+	.loc	1 506 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:506:0
 .Lxta.endpoint_labels12:
 	{
 		in r1, res[r1]
@@ -839,7 +839,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 .Ltmp81:
 	#DEBUG_VALUE: sample2 <- [SP+64]
 	#DEBUG_VALUE: SpdifTransmit_1:c_tx0 <- [SP+52]
-	.loc	1 508 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:508:0
+	.loc	1 508 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:508:0
 	{
 		add r3, r11, r3
 		stw r1, sp[16]
@@ -850,18 +850,18 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 	}
 .Ltmp82:
 	#DEBUG_VALUE: encoded_word <- R3
-	.loc	1 509 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:509:0
+	.loc	1 509 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:509:0
 	xor r3, r3, r4
 .Ltmp83:
-	.loc	1 510 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:510:0
+	.loc	1 510 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:510:0
 .Lxta.endpoint_labels13:
 	outpw res[r0], r3, 16
-	.loc	1 511 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:511:0
+	.loc	1 511 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:511:0
 	{
 		sext r3, 16
 		nop
 	}
-	.loc	1 511 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:511:0
+	.loc	1 511 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:511:0
 	ashr r5, r3, 16
 .Ltmp84:
 	#DEBUG_VALUE: xor <- R5
@@ -869,7 +869,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 		nop
 		ldw r1, sp[15]
 	}
-	.loc	1 513 13                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:513:13
+	.loc	1 513 13                # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:513:13
 	{
 		eq r3, r1, r7
 		nop
@@ -887,7 +887,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 	#DEBUG_VALUE: sample2 <- [SP+64]
 	#DEBUG_VALUE: preamble <- 1
 	#DEBUG_VALUE: newblock <- 0
-	.loc	1 407 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:407:0
+	.loc	1 407 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:407:0
 	{
 		add r7, r1, 1
 		nop
@@ -897,7 +897,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 .Lxta.loop_labels0:
 	# LOOPMARKER 0
 	ldc r1, 191
-	.loc	1 407 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:407:0
+	.loc	1 407 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:407:0
 	{
 		lss r1, r1, r7
 		ldw r3, sp[9]
@@ -937,7 +937,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 		nop
 		ldw r1, sp[14]
 	}
-	.loc	1 433 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:433:0
+	.loc	1 433 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:433:0
 	ashr r3, r1, 1
 .Ltmp90:
 	#DEBUG_VALUE: controlLeft <- R3
@@ -945,7 +945,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 		nop
 		ldw r1, sp[17]
 	}
-	.loc	1 488 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:488:0
+	.loc	1 488 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:488:0
 	ashr r4, r1, 1
 .Ltmp91:
 	#DEBUG_VALUE: controlRight <- R4
@@ -965,7 +965,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 .Lxtalabel7:
 	#DEBUG_VALUE: SpdifTransmit_1:c_tx0 <- R1
 	#DEBUG_VALUE: xor <- 0
-	.loc	1 392 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:392:0
+	.loc	1 392 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:392:0
 	{
 		chkct res[r1], 1
 		ldw r10, sp[24]
@@ -1015,7 +1015,7 @@ SpdifTransmit_1:                        # @SpdifTransmit_1
 	.cc_top SpdifTransmit_2.function,SpdifTransmit_2
 SpdifTransmit_2:                        # @SpdifTransmit_2
 .Lfunc_begin2:
-	.loc	1 523 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:523:0
+	.loc	1 523 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:523:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1087,7 +1087,7 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 	#DEBUG_VALUE: i <- 0
 	#DEBUG_VALUE: newblock <- 2
 	#DEBUG_VALUE: SpdifTransmit_2:ctrl_right <- [SP+44]
-	.loc	1 542 13 prologue_end   # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:542:13
+	.loc	1 542 13 prologue_end   # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:542:13
 	{
 		testct r2, res[r4]
 		stw r1, sp[17]
@@ -1104,7 +1104,7 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 	#DEBUG_VALUE: newblock <- 2
 	#DEBUG_VALUE: i <- 0
 	#DEBUG_VALUE: controlRight <- [SP+68]
-	.loc	1 591 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:591:0
+	.loc	1 591 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:591:0
 	ldw r2, dp[preableWords_2+4]
 .Ltmp111:
 	#DEBUG_VALUE: encoded_preamble <- [SP+48]
@@ -1137,19 +1137,19 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		in r8, res[r4]
 		stw r0, sp[14]
 	}
-	.loc	1 549 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:549:0
+	.loc	1 549 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:549:0
 	{
 		shr r6, r8, 4
 		ldc r9, 30
 	}
-	.loc	1 552 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:552:0
+	.loc	1 552 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:552:0
 	{
 		shl r11, r0, r9
 		nop
 	}
 .Ltmp113:
 	#DEBUG_VALUE: sample2 <- [SP+60]
-	.loc	1 549 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:549:0
+	.loc	1 549 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:549:0
 .Lxta.endpoint_labels15:
 	{
 		in r0, res[r4]
@@ -1162,7 +1162,7 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 	ldw r4, cp[.LCPI2_0]
 .Ltmp114:
 	#DEBUG_VALUE: SpdifTransmit_2:c_tx0 <- [SP+52]
-	.loc	1 552 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:552:0
+	.loc	1 552 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:552:0
 	{
 		and r11, r11, r4
 		nop
@@ -1172,7 +1172,7 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 	ldw r3, cp[.LCPI2_1]
 .Ltmp116:
 	#DEBUG_VALUE: parity32:x <- R6
-	.loc	1 554 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:554:0
+	.loc	1 554 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:554:0
 	{
 		and r6, r6, r3
 		mkmsk r2, 1
@@ -1182,25 +1182,25 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		ldc r0, 0
 		nop
 	}
-	.loc	1 41 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:41:0
+	.loc	1 41 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:41:0
 .Ltmp118:
 	crc32 r6, r0, r2
 .Ltmp119:
-	.loc	1 554 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:554:0
+	.loc	1 554 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:554:0
 	{
 		shl r6, r6, r7
 		nop
 	}
 .Ltmp120:
 	#DEBUG_VALUE: parity <- R6
-	.loc	1 555 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:555:0
+	.loc	1 555 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:555:0
 	{
 		or r6, r11, r6
 		nop
 	}
 .Ltmp121:
 	#DEBUG_VALUE: word <- R6
-	.loc	1 560 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:560:0
+	.loc	1 560 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:560:0
 	ldaw r11, dp[preableWords_2]
 .Ltmp122:
 	{
@@ -1209,22 +1209,22 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 	}
 .Ltmp123:
 	#DEBUG_VALUE: encoded_preamble <- R11
-	.loc	1 561 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:561:0
+	.loc	1 561 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:561:0
 	xor r11, r11, r1
 .Ltmp124:
-	.loc	1 562 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:562:0
+	.loc	1 562 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:562:0
 .Lxta.endpoint_labels16:
 	outpw res[r10], r11, 16
-	.loc	1 563 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:563:0
+	.loc	1 563 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:563:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 563 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:563:0
+	.loc	1 563 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:563:0
 	ashr r11, r11, 16
 .Ltmp125:
 	#DEBUG_VALUE: xor <- R11
-	.loc	1 564 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:564:0
+	.loc	1 564 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:564:0
 	{
 		shr r5, r8, 6
 		ldc r0, 60
@@ -1233,7 +1233,7 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		mov r1, r0
 		nop
 	}
-	.loc	1 574 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:574:0
+	.loc	1 574 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:574:0
 .Ltmp126:
 	{
 		and r5, r5, r1
@@ -1250,32 +1250,32 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 	}
 .Ltmp127:
 	#DEBUG_VALUE: encoded_byte <- R5
-	.loc	1 575 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:575:0
+	.loc	1 575 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:575:0
 	xor r11, r5, r11
 .Ltmp128:
 	#DEBUG_VALUE: encoded_byte <- R11
-	.loc	1 576 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:576:0
+	.loc	1 576 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:576:0
 .Lxta.endpoint_labels17:
 	outpw res[r10], r11, 16
-	.loc	1 577 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:577:0
+	.loc	1 577 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:577:0
 	{
 		sext r11, 16
 		nop
 	}
 .Ltmp129:
-	.loc	1 577 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:577:0
+	.loc	1 577 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:577:0
 	ashr r11, r11, 16
 	{
 		ldc r2, 10
 		nop
 	}
 .Ltmp130:
-	.loc	1 564 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:564:0
+	.loc	1 564 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:564:0
 	{
 		shr r5, r8, r2
 		nop
 	}
-	.loc	1 574 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:574:0
+	.loc	1 574 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:574:0
 .Ltmp131:
 	{
 		and r5, r5, r1
@@ -1289,29 +1289,29 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		nop
 		ldw r5, r5[0]
 	}
-	.loc	1 575 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:575:0
+	.loc	1 575 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:575:0
 	xor r11, r5, r11
-	.loc	1 576 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:576:0
+	.loc	1 576 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:576:0
 .Lxta.endpoint_labels18:
 	outpw res[r10], r11, 16
-	.loc	1 577 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:577:0
+	.loc	1 577 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:577:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 577 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:577:0
+	.loc	1 577 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:577:0
 	ashr r11, r11, 16
 	{
 		ldc r3, 14
 		nop
 	}
 .Ltmp132:
-	.loc	1 564 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:564:0
+	.loc	1 564 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:564:0
 	{
 		shr r5, r8, r3
 		nop
 	}
-	.loc	1 574 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:574:0
+	.loc	1 574 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:574:0
 .Ltmp133:
 	{
 		and r5, r5, r1
@@ -1325,29 +1325,29 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		nop
 		ldw r5, r5[0]
 	}
-	.loc	1 575 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:575:0
+	.loc	1 575 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:575:0
 	xor r11, r5, r11
-	.loc	1 576 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:576:0
+	.loc	1 576 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:576:0
 .Lxta.endpoint_labels19:
 	outpw res[r10], r11, 16
-	.loc	1 577 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:577:0
+	.loc	1 577 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:577:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 577 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:577:0
+	.loc	1 577 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:577:0
 	ashr r11, r11, 16
 	{
 		ldc r4, 18
 		nop
 	}
 .Ltmp134:
-	.loc	1 564 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:564:0
+	.loc	1 564 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:564:0
 	{
 		shr r5, r8, r4
 		nop
 	}
-	.loc	1 574 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:574:0
+	.loc	1 574 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:574:0
 .Ltmp135:
 	{
 		and r5, r5, r1
@@ -1361,9 +1361,9 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		nop
 		ldw r5, r5[0]
 	}
-	.loc	1 575 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:575:0
+	.loc	1 575 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:575:0
 	xor r11, r5, r11
-	.loc	1 576 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:576:0
+	.loc	1 576 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:576:0
 .Lxta.endpoint_labels20:
 	outpw res[r10], r11, 16
 .Ltmp136:
@@ -1373,19 +1373,19 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		sext r11, 16
 	}
 .Ltmp137:
-	.loc	1 577 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:577:0
+	.loc	1 577 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:577:0
 	ashr r11, r11, 16
 	{
 		ldc r9, 22
 		nop
 	}
 .Ltmp138:
-	.loc	1 564 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:564:0
+	.loc	1 564 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:564:0
 	{
 		shr r5, r8, r9
 		mov r10, r1
 	}
-	.loc	1 574 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:574:0
+	.loc	1 574 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:574:0
 .Ltmp139:
 	{
 		and r5, r5, r10
@@ -1399,17 +1399,17 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		nop
 		ldw r5, r5[0]
 	}
-	.loc	1 575 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:575:0
+	.loc	1 575 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:575:0
 	xor r11, r5, r11
-	.loc	1 576 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:576:0
+	.loc	1 576 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:576:0
 .Lxta.endpoint_labels21:
 	outpw res[r0], r11, 16
-	.loc	1 577 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:577:0
+	.loc	1 577 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:577:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 577 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:577:0
+	.loc	1 577 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:577:0
 	ashr r11, r11, 16
 	{
 		ldc r1, 26
@@ -1419,18 +1419,18 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		mov r2, r1
 		nop
 	}
-	.loc	1 574 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:574:0
+	.loc	1 574 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:574:0
 	{
 		shr r5, r8, r2
 		ldc r8, 0
 	}
 .Ltmp140:
-	.loc	1 564 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:564:0
+	.loc	1 564 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:564:0
 	{
 		and r5, r5, r10
 		mov r1, r10
 	}
-	.loc	1 574 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:574:0
+	.loc	1 574 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:574:0
 .Ltmp141:
 	{
 		add r5, r7, r5
@@ -1440,19 +1440,19 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		nop
 		ldw r5, r5[0]
 	}
-	.loc	1 575 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:575:0
+	.loc	1 575 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:575:0
 	xor r11, r5, r11
-	.loc	1 576 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:576:0
+	.loc	1 576 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:576:0
 .Lxta.endpoint_labels22:
 	outpw res[r0], r11, 16
-	.loc	1 577 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:577:0
+	.loc	1 577 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:577:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 577 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:577:0
+	.loc	1 577 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:577:0
 	ashr r11, r11, 16
-	.loc	1 574 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:574:0
+	.loc	1 574 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:574:0
 	{
 		shr r5, r6, r2
 		nop
@@ -1465,17 +1465,17 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		nop
 		ldw r5, r5[0]
 	}
-	.loc	1 575 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:575:0
+	.loc	1 575 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:575:0
 	xor r11, r5, r11
-	.loc	1 576 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:576:0
+	.loc	1 576 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:576:0
 .Lxta.endpoint_labels23:
 	outpw res[r0], r11, 16
-	.loc	1 577 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:577:0
+	.loc	1 577 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:577:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 577 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:577:0
+	.loc	1 577 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:577:0
 	ashr r11, r11, 16
 .Ltmp142:
 	#DEBUG_VALUE: xor <- R11
@@ -1485,7 +1485,7 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 	}
 .Ltmp143:
 	#DEBUG_VALUE: sample2 <- R10
-	.loc	1 581 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:581:0
+	.loc	1 581 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:581:0
 	{
 		shr r5, r10, 4
 		ldw r6, sp[17]
@@ -1495,18 +1495,18 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		ldc r3, 30
 		nop
 	}
-	.loc	1 583 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:583:0
+	.loc	1 583 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:583:0
 	{
 		shl r6, r6, r3
 		nop
 	}
-	.loc	1 581 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:581:0
+	.loc	1 581 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:581:0
 	{
 		or r5, r5, r6
 		nop
 	}
 	ldw r3, cp[.LCPI2_0]
-	.loc	1 583 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:583:0
+	.loc	1 583 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:583:0
 	{
 		and r6, r6, r3
 		nop
@@ -1516,55 +1516,55 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 	ldw r3, cp[.LCPI2_1]
 .Ltmp146:
 	#DEBUG_VALUE: parity32:x <- R5
-	.loc	1 585 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:585:0
+	.loc	1 585 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:585:0
 	{
 		and r5, r5, r3
 		mkmsk r3, 1
 	}
 .Ltmp147:
-	.loc	1 41 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:41:0
+	.loc	1 41 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:41:0
 	crc32 r5, r8, r3
 	{
 		mkmsk r8, 5
 		nop
 	}
 .Ltmp148:
-	.loc	1 585 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:585:0
+	.loc	1 585 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:585:0
 	{
 		shl r5, r5, r8
 		nop
 	}
 .Ltmp149:
 	#DEBUG_VALUE: parity <- R5
-	.loc	1 586 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:586:0
+	.loc	1 586 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:586:0
 	{
 		or r6, r6, r5
 		ldw r5, sp[12]
 	}
 .Ltmp150:
-	.loc	1 592 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:592:0
+	.loc	1 592 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:592:0
 	xor r11, r5, r11
 .Ltmp151:
 	#DEBUG_VALUE: encoded_preamble <- R11
-	.loc	1 593 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:593:0
+	.loc	1 593 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:593:0
 .Lxta.endpoint_labels24:
 	outpw res[r0], r11, 16
-	.loc	1 594 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:594:0
+	.loc	1 594 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:594:0
 	{
 		sext r11, 16
 		nop
 	}
 .Ltmp152:
-	.loc	1 594 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:594:0
+	.loc	1 594 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:594:0
 	ashr r11, r11, 16
 .Ltmp153:
 	#DEBUG_VALUE: xor <- R11
-	.loc	1 595 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:595:0
+	.loc	1 595 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:595:0
 	{
 		shr r5, r10, 6
 		nop
 	}
-	.loc	1 604 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:604:0
+	.loc	1 604 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:604:0
 .Ltmp154:
 	{
 		and r5, r5, r1
@@ -1580,32 +1580,32 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 	}
 .Ltmp155:
 	#DEBUG_VALUE: encoded_byte <- R5
-	.loc	1 605 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:605:0
+	.loc	1 605 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:605:0
 	xor r11, r5, r11
 .Ltmp156:
 	#DEBUG_VALUE: encoded_byte <- R11
-	.loc	1 606 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:606:0
+	.loc	1 606 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:606:0
 .Lxta.endpoint_labels25:
 	outpw res[r0], r11, 16
-	.loc	1 607 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:607:0
+	.loc	1 607 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:607:0
 	{
 		sext r11, 16
 		nop
 	}
 .Ltmp157:
-	.loc	1 607 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:607:0
+	.loc	1 607 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:607:0
 	ashr r11, r11, 16
 	{
 		ldc r3, 10
 		nop
 	}
 .Ltmp158:
-	.loc	1 595 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:595:0
+	.loc	1 595 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:595:0
 	{
 		shr r5, r10, r3
 		nop
 	}
-	.loc	1 604 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:604:0
+	.loc	1 604 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:604:0
 .Ltmp159:
 	{
 		and r5, r5, r1
@@ -1619,29 +1619,29 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		nop
 		ldw r5, r5[0]
 	}
-	.loc	1 605 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:605:0
+	.loc	1 605 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:605:0
 	xor r11, r5, r11
-	.loc	1 606 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:606:0
+	.loc	1 606 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:606:0
 .Lxta.endpoint_labels26:
 	outpw res[r0], r11, 16
-	.loc	1 607 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:607:0
+	.loc	1 607 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:607:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 607 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:607:0
+	.loc	1 607 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:607:0
 	ashr r11, r11, 16
 	{
 		ldc r3, 14
 		nop
 	}
 .Ltmp160:
-	.loc	1 595 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:595:0
+	.loc	1 595 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:595:0
 	{
 		shr r5, r10, r3
 		nop
 	}
-	.loc	1 604 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:604:0
+	.loc	1 604 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:604:0
 .Ltmp161:
 	{
 		and r5, r5, r1
@@ -1655,25 +1655,25 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		nop
 		ldw r5, r5[0]
 	}
-	.loc	1 605 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:605:0
+	.loc	1 605 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:605:0
 	xor r11, r5, r11
-	.loc	1 606 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:606:0
+	.loc	1 606 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:606:0
 .Lxta.endpoint_labels27:
 	outpw res[r0], r11, 16
-	.loc	1 607 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:607:0
+	.loc	1 607 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:607:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 607 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:607:0
+	.loc	1 607 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:607:0
 	ashr r11, r11, 16
 .Ltmp162:
-	.loc	1 595 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:595:0
+	.loc	1 595 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:595:0
 	{
 		shr r5, r10, r4
 		nop
 	}
-	.loc	1 604 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:604:0
+	.loc	1 604 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:604:0
 .Ltmp163:
 	{
 		and r5, r5, r1
@@ -1687,25 +1687,25 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		nop
 		ldw r5, r5[0]
 	}
-	.loc	1 605 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:605:0
+	.loc	1 605 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:605:0
 	xor r11, r5, r11
-	.loc	1 606 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:606:0
+	.loc	1 606 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:606:0
 .Lxta.endpoint_labels28:
 	outpw res[r0], r11, 16
-	.loc	1 607 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:607:0
+	.loc	1 607 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:607:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 607 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:607:0
+	.loc	1 607 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:607:0
 	ashr r11, r11, 16
 .Ltmp164:
-	.loc	1 595 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:595:0
+	.loc	1 595 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:595:0
 	{
 		shr r5, r10, r9
 		nop
 	}
-	.loc	1 604 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:604:0
+	.loc	1 604 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:604:0
 .Ltmp165:
 	{
 		and r5, r5, r1
@@ -1719,30 +1719,30 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		nop
 		ldw r5, r5[0]
 	}
-	.loc	1 605 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:605:0
+	.loc	1 605 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:605:0
 	xor r11, r5, r11
-	.loc	1 606 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:606:0
+	.loc	1 606 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:606:0
 .Lxta.endpoint_labels29:
 	outpw res[r0], r11, 16
-	.loc	1 607 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:607:0
+	.loc	1 607 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:607:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 607 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:607:0
+	.loc	1 607 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:607:0
 	ashr r11, r11, 16
-	.loc	1 604 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:604:0
+	.loc	1 604 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:604:0
 	{
 		shr r5, r10, r2
 		nop
 	}
 .Ltmp166:
-	.loc	1 595 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:595:0
+	.loc	1 595 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:595:0
 	{
 		and r5, r5, r1
 		nop
 	}
-	.loc	1 604 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:604:0
+	.loc	1 604 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:604:0
 .Ltmp167:
 	{
 		add r5, r7, r5
@@ -1752,19 +1752,19 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		nop
 		ldw r5, r5[0]
 	}
-	.loc	1 605 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:605:0
+	.loc	1 605 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:605:0
 	xor r11, r5, r11
-	.loc	1 606 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:606:0
+	.loc	1 606 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:606:0
 .Lxta.endpoint_labels30:
 	outpw res[r0], r11, 16
-	.loc	1 607 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:607:0
+	.loc	1 607 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:607:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 607 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:607:0
+	.loc	1 607 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:607:0
 	ashr r11, r11, 16
-	.loc	1 604 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:604:0
+	.loc	1 604 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:604:0
 	{
 		shr r5, r6, r2
 		nop
@@ -1777,9 +1777,9 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		nop
 		ldw r5, r5[0]
 	}
-	.loc	1 605 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:605:0
+	.loc	1 605 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:605:0
 	xor r11, r5, r11
-	.loc	1 606 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:606:0
+	.loc	1 606 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:606:0
 .Lxta.endpoint_labels31:
 	outpw res[r0], r11, 16
 .Ltmp168:
@@ -1789,7 +1789,7 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		sext r11, 16
 	}
 .Ltmp169:
-	.loc	1 607 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:607:0
+	.loc	1 607 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:607:0
 	ashr r3, r11, 16
 .Ltmp170:
 	#DEBUG_VALUE: xor <- R3
@@ -1802,7 +1802,7 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 	#DEBUG_VALUE: i <- 1
 	#DEBUG_VALUE: preamble <- 1
 	#DEBUG_VALUE: newblock <- 0
-	.loc	1 611 13                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:611:13
+	.loc	1 611 13                # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:611:13
 	{
 		eq r11, r1, r0
 		mov r7, r0
@@ -1875,7 +1875,7 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 .Lxta.loop_labels1:
 	# LOOPMARKER 0
 	ldc r0, 191
-	.loc	1 539 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:539:0
+	.loc	1 539 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:539:0
 	{
 		lss r11, r0, r1
 		nop
@@ -1897,7 +1897,7 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 	}
 .Ltmp179:
 	#DEBUG_VALUE: i <- [SP+64]
-	.loc	1 597 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:597:0
+	.loc	1 597 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:597:0
 	ashr r2, r2, 1
 .Ltmp180:
 	#DEBUG_VALUE: controlRight <- R2
@@ -1906,7 +1906,7 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 		mov r0, r5
 		stw r2, sp[17]
 	}
-	.loc	1 567 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:567:0
+	.loc	1 567 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:567:0
 	ashr r0, r0, 1
 .Ltmp181:
 .LBB2_7:                                # %LoopBody5.backedge
@@ -1975,7 +1975,7 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 	}
 .Ltmp186:
 	#DEBUG_VALUE: SpdifTransmit_2:c_tx0 <- R4
-	.loc	1 542 13                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:542:13
+	.loc	1 542 13                # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:542:13
 	{
 		testct r6, res[r4]
 		ldc r1, 0
@@ -1998,7 +1998,7 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 	#DEBUG_VALUE: xor <- 0
 	#DEBUG_VALUE: newblock <- 2
 	#DEBUG_VALUE: i <- 0
-	.loc	1 544 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:544:0
+	.loc	1 544 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:544:0
 	{
 		chkct res[r4], 1
 		ldw r10, sp[24]
@@ -2049,7 +2049,7 @@ SpdifTransmit_2:                        # @SpdifTransmit_2
 	.cc_top SpdifTransmit_4.function,SpdifTransmit_4
 SpdifTransmit_4:                        # @SpdifTransmit_4
 .Lfunc_begin3:
-	.loc	1 623 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:623:0
+	.loc	1 623 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:623:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -2126,7 +2126,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 .Ltmp202:
 	#DEBUG_VALUE: controlLeft <- R4
 	#DEBUG_VALUE: SpdifTransmit_4:ctrl_left <- [SP+64]
-	.loc	1 630 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:630:0
+	.loc	1 630 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:630:0
 	{
 		setc res[r6], 23
 		ldw r4, r2[0]
@@ -2141,7 +2141,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	#DEBUG_VALUE: i <- 0
 	#DEBUG_VALUE: newblock <- 2
 	#DEBUG_VALUE: SpdifTransmit_4:ctrl_right <- [SP+68]
-	.loc	1 642 13                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:642:13
+	.loc	1 642 13                # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:642:13
 	{
 		testct r2, res[r1]
 		stw r2, sp[25]
@@ -2158,7 +2158,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	#DEBUG_VALUE: newblock <- 2
 	#DEBUG_VALUE: i <- 0
 	#DEBUG_VALUE: controlRight <- [SP+100]
-	.loc	1 704 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:704:0
+	.loc	1 704 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:704:0
 	ldw r2, dp[preambleWords_4+12]
 .Ltmp206:
 	#DEBUG_VALUE: encoded_preamble <- [SP+76]
@@ -2166,7 +2166,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		stw r2, sp[19]
 	}
-	.loc	1 708 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:708:0
+	.loc	1 708 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:708:0
 	ldw r2, dp[preambleWords_4+8]
 .Ltmp207:
 	#DEBUG_VALUE: encoded_preamble <- [SP+72]
@@ -2199,19 +2199,19 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		in r2, res[r1]
 		stw r4, sp[21]
 	}
-	.loc	1 650 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:650:0
+	.loc	1 650 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:650:0
 	{
 		shr r10, r2, 4
 		mov r7, r2
 	}
-	.loc	1 654 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:654:0
+	.loc	1 654 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:654:0
 	{
 		shl r4, r4, r3
 		nop
 	}
 .Ltmp209:
 	#DEBUG_VALUE: sample2 <- [SP+92]
-	.loc	1 650 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:650:0
+	.loc	1 650 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:650:0
 .Lxta.endpoint_labels33:
 	{
 		in r1, res[r1]
@@ -2225,7 +2225,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	ldw r1, cp[.LCPI3_0]
 .Ltmp211:
 	#DEBUG_VALUE: SpdifTransmit_4:c_tx0 <- [SP+80]
-	.loc	1 654 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:654:0
+	.loc	1 654 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:654:0
 	{
 		and r4, r4, r1
 		nop
@@ -2235,13 +2235,13 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	ldw r9, cp[.LCPI3_1]
 .Ltmp213:
 	#DEBUG_VALUE: parity32:x <- R8
-	.loc	1 658 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:658:0
+	.loc	1 658 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:658:0
 	{
 		and r8, r8, r9
 		mkmsk r2, 1
 	}
 .Ltmp214:
-	.loc	1 41 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:41:0
+	.loc	1 41 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:41:0
 	crc32 r8, r5, r2
 	{
 		mkmsk r9, 5
@@ -2249,25 +2249,25 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	}
 .Ltmp215:
 	#DEBUG_VALUE: parity <- R8
-	.loc	1 658 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:658:0
+	.loc	1 658 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:658:0
 	{
 		shl r8, r8, r9
 		or r4, r10, r4
 	}
 .Ltmp216:
-	.loc	1 661 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:661:0
+	.loc	1 661 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:661:0
 	{
 		or r4, r4, r8
 		nop
 	}
 .Ltmp217:
 	#DEBUG_VALUE: word <- [SP+88]
-	.loc	1 666 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:666:0
+	.loc	1 666 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:666:0
 	{
 		or r4, r11, r2
 		stw r4, sp[22]
 	}
-	.loc	1 666 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:666:0
+	.loc	1 666 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:666:0
 	ldaw r9, dp[preambleWords_4]
 	{
 		nop
@@ -2275,10 +2275,10 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	}
 .Ltmp218:
 	#DEBUG_VALUE: encoded_preamble <- R4
-	.loc	1 667 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:667:0
+	.loc	1 667 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:667:0
 	xor r4, r4, r0
 .Ltmp219:
-	.loc	1 668 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:668:0
+	.loc	1 668 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:668:0
 .Lxta.endpoint_labels34:
 	outpw res[r6], r4, 16
 	{
@@ -2287,18 +2287,18 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	}
 .Ltmp220:
 	#DEBUG_VALUE: encoded_preamble <- R11
-	.loc	1 671 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:671:0
+	.loc	1 671 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:671:0
 	xor r11, r11, r0
 .Ltmp221:
-	.loc	1 672 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:672:0
+	.loc	1 672 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:672:0
 .Lxta.endpoint_labels35:
 	outpw res[r6], r11, 16
-	.loc	1 673 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:673:0
+	.loc	1 673 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:673:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 673 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:673:0
+	.loc	1 673 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:673:0
 	ashr r11, r11, 16
 .Ltmp222:
 	#DEBUG_VALUE: xor <- R11
@@ -2306,23 +2306,23 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		mov r5, r7
 		nop
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 .Ltmp223:
 	{
 		shr r4, r5, 7
 		nop
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		and r4, r4, r3
 		nop
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		or r7, r4, r2
 		nop
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	ldaw r0, dp[dataWords_4]
 	{
 		nop
@@ -2330,10 +2330,10 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	}
 .Ltmp224:
 	#DEBUG_VALUE: encoded_byte <- R7
-	.loc	1 685 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:685:0
+	.loc	1 685 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:685:0
 	xor r7, r7, r11
 .Ltmp225:
-	.loc	1 686 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:686:0
+	.loc	1 686 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:686:0
 .Lxta.endpoint_labels36:
 	outpw res[r6], r7, 16
 	{
@@ -2342,36 +2342,36 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	}
 .Ltmp226:
 	#DEBUG_VALUE: encoded_byte <- R4
-	.loc	1 688 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:688:0
+	.loc	1 688 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:688:0
 	xor r11, r4, r11
 .Ltmp227:
 	#DEBUG_VALUE: encoded_byte <- R11
-	.loc	1 689 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:689:0
+	.loc	1 689 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:689:0
 .Lxta.endpoint_labels37:
 	outpw res[r6], r11, 16
-	.loc	1 690 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:690:0
+	.loc	1 690 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:690:0
 	{
 		sext r11, 16
 		nop
 	}
 .Ltmp228:
-	.loc	1 690 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:690:0
+	.loc	1 690 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:690:0
 	ashr r11, r11, 16
 	{
 		ldc r9, 11
 		nop
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		shr r4, r5, r9
 		nop
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		and r4, r4, r3
 		mov r9, r3
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		or r7, r4, r2
 		nop
@@ -2380,42 +2380,42 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		ldw r7, r0[r7]
 	}
-	.loc	1 685 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:685:0
+	.loc	1 685 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:685:0
 	xor r7, r7, r11
-	.loc	1 686 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:686:0
+	.loc	1 686 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:686:0
 .Lxta.endpoint_labels38:
 	outpw res[r6], r7, 16
 	{
 		nop
 		ldw r4, r0[r4]
 	}
-	.loc	1 688 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:688:0
+	.loc	1 688 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:688:0
 	xor r11, r4, r11
-	.loc	1 689 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:689:0
+	.loc	1 689 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:689:0
 .Lxta.endpoint_labels39:
 	outpw res[r6], r11, 16
-	.loc	1 690 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:690:0
+	.loc	1 690 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:690:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 690 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:690:0
+	.loc	1 690 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:690:0
 	ashr r11, r11, 16
 	{
 		mkmsk r8, 4
 		nop
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		shr r4, r5, r8
 		nop
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		and r4, r4, r9
 		nop
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		or r7, r4, r2
 		nop
@@ -2424,42 +2424,42 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		ldw r7, r0[r7]
 	}
-	.loc	1 685 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:685:0
+	.loc	1 685 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:685:0
 	xor r7, r7, r11
-	.loc	1 686 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:686:0
+	.loc	1 686 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:686:0
 .Lxta.endpoint_labels40:
 	outpw res[r6], r7, 16
 	{
 		nop
 		ldw r4, r0[r4]
 	}
-	.loc	1 688 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:688:0
+	.loc	1 688 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:688:0
 	xor r11, r4, r11
-	.loc	1 689 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:689:0
+	.loc	1 689 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:689:0
 .Lxta.endpoint_labels41:
 	outpw res[r6], r11, 16
-	.loc	1 690 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:690:0
+	.loc	1 690 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:690:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 690 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:690:0
+	.loc	1 690 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:690:0
 	ashr r11, r11, 16
 	{
 		ldc r4, 19
 		nop
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		shr r4, r5, r4
 		nop
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		and r4, r4, r9
 		nop
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		or r7, r4, r2
 		nop
@@ -2468,42 +2468,42 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		ldw r7, r0[r7]
 	}
-	.loc	1 685 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:685:0
+	.loc	1 685 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:685:0
 	xor r7, r7, r11
-	.loc	1 686 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:686:0
+	.loc	1 686 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:686:0
 .Lxta.endpoint_labels42:
 	outpw res[r6], r7, 16
 	{
 		nop
 		ldw r4, r0[r4]
 	}
-	.loc	1 688 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:688:0
+	.loc	1 688 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:688:0
 	xor r11, r4, r11
-	.loc	1 689 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:689:0
+	.loc	1 689 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:689:0
 .Lxta.endpoint_labels43:
 	outpw res[r6], r11, 16
-	.loc	1 690 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:690:0
+	.loc	1 690 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:690:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 690 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:690:0
+	.loc	1 690 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:690:0
 	ashr r11, r11, 16
 	{
 		ldc r4, 23
 		nop
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		shr r4, r5, r4
 		nop
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		and r4, r4, r9
 		nop
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		or r7, r4, r2
 		nop
@@ -2512,32 +2512,32 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		ldw r7, r0[r7]
 	}
-	.loc	1 685 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:685:0
+	.loc	1 685 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:685:0
 	xor r7, r7, r11
-	.loc	1 686 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:686:0
+	.loc	1 686 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:686:0
 .Lxta.endpoint_labels44:
 	outpw res[r6], r7, 16
 	{
 		nop
 		ldw r4, r0[r4]
 	}
-	.loc	1 688 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:688:0
+	.loc	1 688 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:688:0
 	xor r11, r4, r11
-	.loc	1 689 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:689:0
+	.loc	1 689 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:689:0
 .Lxta.endpoint_labels45:
 	outpw res[r6], r11, 16
-	.loc	1 690 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:690:0
+	.loc	1 690 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:690:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 690 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:690:0
+	.loc	1 690 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:690:0
 	ashr r11, r11, 16
 	{
 		ldc r8, 25
 		nop
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		shr r4, r5, r8
 		ldc r10, 4
@@ -2547,7 +2547,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 	}
 	ldc r7, 124
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		and r5, r5, r7
 		nop
@@ -2560,13 +2560,13 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		ldw r5, r5[0]
 	}
-	.loc	1 685 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:685:0
+	.loc	1 685 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:685:0
 	xor r5, r5, r11
-	.loc	1 686 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:686:0
+	.loc	1 686 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:686:0
 .Lxta.endpoint_labels46:
 	outpw res[r6], r5, 16
 	ldc r5, 120
-	.loc	1 687 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:687:0
+	.loc	1 687 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:687:0
 	{
 		and r4, r4, r5
 		nop
@@ -2579,23 +2579,23 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	1 688 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:688:0
+	.loc	1 688 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:688:0
 	xor r11, r4, r11
-	.loc	1 689 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:689:0
+	.loc	1 689 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:689:0
 .Lxta.endpoint_labels47:
 	outpw res[r6], r11, 16
-	.loc	1 690 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:690:0
+	.loc	1 690 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:690:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 690 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:690:0
+	.loc	1 690 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:690:0
 	ashr r11, r11, 16
 	{
 		nop
 		ldw r3, sp[22]
 	}
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		shr r4, r3, r8
 		nop
@@ -2605,7 +2605,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 	}
 	ldc r7, 100
-	.loc	1 684 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:684:0
+	.loc	1 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:684:0
 	{
 		and r5, r5, r7
 		nop
@@ -2618,13 +2618,13 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		ldw r5, r5[0]
 	}
-	.loc	1 685 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:685:0
+	.loc	1 685 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:685:0
 	xor r5, r5, r11
-	.loc	1 686 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:686:0
+	.loc	1 686 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:686:0
 .Lxta.endpoint_labels48:
 	outpw res[r6], r5, 16
 	ldc r5, 96
-	.loc	1 687 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:687:0
+	.loc	1 687 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:687:0
 	{
 		and r4, r4, r5
 		nop
@@ -2637,17 +2637,17 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	1 688 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:688:0
+	.loc	1 688 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:688:0
 	xor r11, r4, r11
-	.loc	1 689 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:689:0
+	.loc	1 689 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:689:0
 .Lxta.endpoint_labels49:
 	outpw res[r6], r11, 16
-	.loc	1 690 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:690:0
+	.loc	1 690 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:690:0
 	{
 		sext r11, 16
 		nop
 	}
-	.loc	1 690 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:690:0
+	.loc	1 690 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:690:0
 	ashr r11, r11, 16
 .Ltmp229:
 	#DEBUG_VALUE: xor <- R11
@@ -2657,19 +2657,19 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	}
 .Ltmp230:
 	#DEBUG_VALUE: sample2 <- R3
-	.loc	1 694 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:694:0
+	.loc	1 694 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:694:0
 	{
 		shr r4, r3, 4
 		ldw r5, sp[25]
 	}
-	.loc	1 698 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:698:0
+	.loc	1 698 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:698:0
 	{
 		shl r5, r5, r9
 		nop
 	}
 .Ltmp231:
 	#DEBUG_VALUE: control <- R5
-	.loc	1 694 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:694:0
+	.loc	1 694 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:694:0
 	{
 		or r7, r4, r5
 		and r5, r5, r1
@@ -2678,13 +2678,13 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	ldw r1, cp[.LCPI3_1]
 .Ltmp233:
 	#DEBUG_VALUE: parity32:x <- R7
-	.loc	1 700 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:700:0
+	.loc	1 700 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:700:0
 	{
 		and r7, r7, r1
 		ldc r1, 0
 	}
 .Ltmp234:
-	.loc	1 41 0                  # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:41:0
+	.loc	1 41 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:41:0
 	crc32 r7, r1, r2
 	{
 		mkmsk r1, 5
@@ -2692,42 +2692,42 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	}
 .Ltmp235:
 	#DEBUG_VALUE: parity <- R7
-	.loc	1 700 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:700:0
+	.loc	1 700 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:700:0
 	{
 		shl r7, r7, r1
 		or r4, r4, r5
 	}
 .Ltmp236:
-	.loc	1 701 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:701:0
+	.loc	1 701 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:701:0
 	{
 		or r7, r4, r7
 		ldw r1, sp[19]
 	}
-	.loc	1 705 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:705:0
+	.loc	1 705 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:705:0
 	xor r4, r1, r11
 .Ltmp237:
 	#DEBUG_VALUE: encoded_preamble <- R4
-	.loc	1 706 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:706:0
+	.loc	1 706 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:706:0
 .Lxta.endpoint_labels50:
 	outpw res[r6], r4, 16
 	{
 		nop
 		ldw r1, sp[18]
 	}
-	.loc	1 709 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:709:0
+	.loc	1 709 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:709:0
 	xor r11, r1, r11
 .Ltmp238:
 	#DEBUG_VALUE: encoded_preamble <- R11
-	.loc	1 710 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:710:0
+	.loc	1 710 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:710:0
 .Lxta.endpoint_labels51:
 	outpw res[r6], r11, 16
-	.loc	1 711 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:711:0
+	.loc	1 711 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:711:0
 	{
 		sext r11, 16
 		nop
 	}
 .Ltmp239:
-	.loc	1 711 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:711:0
+	.loc	1 711 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:711:0
 	ashr r11, r11, 16
 .Ltmp240:
 	#DEBUG_VALUE: xor <- R11
@@ -2737,17 +2737,17 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	}
 .Ltmp241:
 	#DEBUG_VALUE: sample2 <- R1
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		shr r4, r1, 7
 		nop
 	}
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		and r4, r4, r9
 		nop
 	}
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		or r5, r4, r2
 		nop
@@ -2758,10 +2758,10 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	}
 .Ltmp242:
 	#DEBUG_VALUE: encoded_byte <- R5
-	.loc	1 723 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:723:0
+	.loc	1 723 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:723:0
 	xor r5, r5, r11
 .Ltmp243:
-	.loc	1 724 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:724:0
+	.loc	1 724 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:724:0
 .Lxta.endpoint_labels52:
 	outpw res[r6], r5, 16
 	{
@@ -2770,11 +2770,11 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	}
 .Ltmp244:
 	#DEBUG_VALUE: encoded_byte <- R4
-	.loc	1 726 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:726:0
+	.loc	1 726 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:726:0
 	xor r11, r4, r11
 .Ltmp245:
 	#DEBUG_VALUE: encoded_byte <- R11
-	.loc	1 727 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:727:0
+	.loc	1 727 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:727:0
 	{
 		mov r4, r11
 		nop
@@ -2783,27 +2783,27 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		sext r4, 16
 		nop
 	}
-	.loc	1 727 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:727:0
+	.loc	1 727 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:727:0
 	ashr r4, r4, 16
-	.loc	1 729 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:729:0
+	.loc	1 729 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:729:0
 .Lxta.endpoint_labels53:
 	outpw res[r6], r11, 16
 	{
 		ldc r3, 11
 		nop
 	}
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		shr r11, r1, r3
 		nop
 	}
 .Ltmp246:
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		and r11, r11, r9
 		nop
 	}
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		or r5, r11, r2
 		nop
@@ -2812,18 +2812,18 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		ldw r5, r0[r5]
 	}
-	.loc	1 723 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:723:0
+	.loc	1 723 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:723:0
 	xor r5, r5, r4
-	.loc	1 724 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:724:0
+	.loc	1 724 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:724:0
 .Lxta.endpoint_labels54:
 	outpw res[r6], r5, 16
 	{
 		nop
 		ldw r11, r0[r11]
 	}
-	.loc	1 726 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:726:0
+	.loc	1 726 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:726:0
 	xor r11, r11, r4
-	.loc	1 727 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:727:0
+	.loc	1 727 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:727:0
 	{
 		mov r4, r11
 		nop
@@ -2832,26 +2832,26 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		sext r4, 16
 		nop
 	}
-	.loc	1 727 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:727:0
+	.loc	1 727 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:727:0
 	ashr r4, r4, 16
-	.loc	1 729 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:729:0
+	.loc	1 729 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:729:0
 .Lxta.endpoint_labels55:
 	outpw res[r6], r11, 16
 	{
 		mkmsk r3, 4
 		nop
 	}
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		shr r11, r1, r3
 		nop
 	}
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		and r11, r11, r9
 		nop
 	}
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		or r5, r11, r2
 		nop
@@ -2860,18 +2860,18 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		ldw r5, r0[r5]
 	}
-	.loc	1 723 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:723:0
+	.loc	1 723 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:723:0
 	xor r5, r5, r4
-	.loc	1 724 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:724:0
+	.loc	1 724 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:724:0
 .Lxta.endpoint_labels56:
 	outpw res[r6], r5, 16
 	{
 		nop
 		ldw r11, r0[r11]
 	}
-	.loc	1 726 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:726:0
+	.loc	1 726 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:726:0
 	xor r11, r11, r4
-	.loc	1 727 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:727:0
+	.loc	1 727 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:727:0
 	{
 		mov r4, r11
 		nop
@@ -2880,26 +2880,26 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		sext r4, 16
 		nop
 	}
-	.loc	1 727 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:727:0
+	.loc	1 727 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:727:0
 	ashr r4, r4, 16
-	.loc	1 729 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:729:0
+	.loc	1 729 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:729:0
 .Lxta.endpoint_labels57:
 	outpw res[r6], r11, 16
 	{
 		ldc r3, 19
 		nop
 	}
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		shr r11, r1, r3
 		nop
 	}
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		and r11, r11, r9
 		nop
 	}
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		or r5, r11, r2
 		nop
@@ -2908,18 +2908,18 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		ldw r5, r0[r5]
 	}
-	.loc	1 723 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:723:0
+	.loc	1 723 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:723:0
 	xor r5, r5, r4
-	.loc	1 724 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:724:0
+	.loc	1 724 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:724:0
 .Lxta.endpoint_labels58:
 	outpw res[r6], r5, 16
 	{
 		nop
 		ldw r11, r0[r11]
 	}
-	.loc	1 726 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:726:0
+	.loc	1 726 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:726:0
 	xor r11, r11, r4
-	.loc	1 727 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:727:0
+	.loc	1 727 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:727:0
 	{
 		mov r4, r11
 		nop
@@ -2928,26 +2928,26 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		sext r4, 16
 		nop
 	}
-	.loc	1 727 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:727:0
+	.loc	1 727 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:727:0
 	ashr r4, r4, 16
-	.loc	1 729 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:729:0
+	.loc	1 729 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:729:0
 .Lxta.endpoint_labels59:
 	outpw res[r6], r11, 16
 	{
 		ldc r3, 23
 		nop
 	}
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		shr r11, r1, r3
 		mov r3, r9
 	}
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		and r11, r11, r3
 		nop
 	}
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		or r5, r11, r2
 		nop
@@ -2956,18 +2956,18 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		ldw r5, r0[r5]
 	}
-	.loc	1 723 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:723:0
+	.loc	1 723 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:723:0
 	xor r5, r5, r4
-	.loc	1 724 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:724:0
+	.loc	1 724 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:724:0
 .Lxta.endpoint_labels60:
 	outpw res[r6], r5, 16
 	{
 		nop
 		ldw r11, r0[r11]
 	}
-	.loc	1 726 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:726:0
+	.loc	1 726 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:726:0
 	xor r11, r11, r4
-	.loc	1 727 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:727:0
+	.loc	1 727 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:727:0
 	{
 		mov r4, r11
 		nop
@@ -2976,12 +2976,12 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		sext r4, 16
 		nop
 	}
-	.loc	1 727 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:727:0
+	.loc	1 727 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:727:0
 	ashr r4, r4, 16
-	.loc	1 729 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:729:0
+	.loc	1 729 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:729:0
 .Lxta.endpoint_labels61:
 	outpw res[r6], r11, 16
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		shr r2, r1, r8
 		nop
@@ -2992,7 +2992,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	}
 	ldc r1, 124
 .Ltmp247:
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		and r11, r11, r1
 		nop
@@ -3005,13 +3005,13 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		ldw r11, r11[0]
 	}
-	.loc	1 723 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:723:0
+	.loc	1 723 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:723:0
 	xor r11, r11, r4
-	.loc	1 724 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:724:0
+	.loc	1 724 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:724:0
 .Lxta.endpoint_labels62:
 	outpw res[r6], r11, 16
 	ldc r1, 120
-	.loc	1 725 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:725:0
+	.loc	1 725 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:725:0
 	{
 		and r2, r2, r1
 		nop
@@ -3024,9 +3024,9 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		ldw r2, r2[0]
 	}
-	.loc	1 726 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:726:0
+	.loc	1 726 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:726:0
 	xor r2, r2, r4
-	.loc	1 727 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:727:0
+	.loc	1 727 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:727:0
 	{
 		mov r11, r2
 		nop
@@ -3035,12 +3035,12 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		sext r11, 16
 		nop
 	}
-	.loc	1 727 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:727:0
+	.loc	1 727 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:727:0
 	ashr r11, r11, 16
-	.loc	1 729 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:729:0
+	.loc	1 729 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:729:0
 .Lxta.endpoint_labels63:
 	outpw res[r6], r2, 16
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		shr r2, r7, r8
 		nop
@@ -3050,7 +3050,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 	}
 	ldc r1, 100
-	.loc	1 722 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:722:0
+	.loc	1 722 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:722:0
 	{
 		and r4, r4, r1
 		nop
@@ -3063,13 +3063,13 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	1 723 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:723:0
+	.loc	1 723 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:723:0
 	xor r4, r4, r11
-	.loc	1 724 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:724:0
+	.loc	1 724 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:724:0
 .Lxta.endpoint_labels64:
 	outpw res[r6], r4, 16
 	ldc r1, 96
-	.loc	1 725 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:725:0
+	.loc	1 725 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:725:0
 	{
 		and r2, r2, r1
 		nop
@@ -3082,9 +3082,9 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		nop
 		ldw r2, r2[0]
 	}
-	.loc	1 726 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:726:0
+	.loc	1 726 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:726:0
 	xor r2, r2, r11
-	.loc	1 727 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:727:0
+	.loc	1 727 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:727:0
 	{
 		mov r11, r2
 		nop
@@ -3093,11 +3093,11 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		sext r11, 16
 		nop
 	}
-	.loc	1 727 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:727:0
+	.loc	1 727 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:727:0
 	ashr r0, r11, 16
 .Ltmp248:
 	#DEBUG_VALUE: xor <- R0
-	.loc	1 729 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:729:0
+	.loc	1 729 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:729:0
 .Lxta.endpoint_labels65:
 	outpw res[r6], r2, 16
 	{
@@ -3105,7 +3105,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		ldw r11, sp[24]
 	}
 .Ltmp249:
-	.loc	1 732 13                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:732:13
+	.loc	1 732 13                # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:732:13
 	{
 		eq r2, r11, r1
 		nop
@@ -3183,7 +3183,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 .Lxta.loop_labels2:
 	# LOOPMARKER 0
 	ldc r2, 191
-	.loc	1 639 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:639:0
+	.loc	1 639 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:639:0
 	{
 		lss r2, r2, r11
 		nop
@@ -3205,7 +3205,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	}
 .Ltmp258:
 	#DEBUG_VALUE: i <- [SP+96]
-	.loc	1 714 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:714:0
+	.loc	1 714 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:714:0
 	ashr r4, r4, 1
 .Ltmp259:
 	#DEBUG_VALUE: controlRight <- R4
@@ -3214,7 +3214,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		mov r4, r1
 		stw r4, sp[25]
 	}
-	.loc	1 677 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:677:0
+	.loc	1 677 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:677:0
 	ashr r4, r4, 1
 .Ltmp260:
 .LBB3_7:                                # %LoopBody5.backedge
@@ -3235,7 +3235,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 		ldw r1, sp[20]
 	}
 .Ltmp261:
-	.loc	1 642 13                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:642:13
+	.loc	1 642 13                # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:642:13
 	{
 		testct r2, res[r1]
 		mov r11, r5
@@ -3282,7 +3282,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	}
 .Ltmp264:
 	#DEBUG_VALUE: SpdifTransmit_4:c_tx0 <- R1
-	.loc	1 642 13                # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:642:13
+	.loc	1 642 13                # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:642:13
 	{
 		testct r2, res[r1]
 		ldc r5, 0
@@ -3299,7 +3299,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	#DEBUG_VALUE: xor <- 0
 	#DEBUG_VALUE: newblock <- 2
 	#DEBUG_VALUE: i <- 0
-	.loc	1 645 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:645:0
+	.loc	1 645 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:645:0
 	{
 		chkct res[r1], 1
 		ldw r10, sp[32]
@@ -3354,7 +3354,7 @@ SpdifTransmit_4:                        # @SpdifTransmit_4
 	.cc_top SpdifTransmitError.function,SpdifTransmitError
 SpdifTransmitError:                     # @SpdifTransmitError
 .Lfunc_begin4:
-	.loc	1 742 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:742:0
+	.loc	1 742 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:742:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -3368,14 +3368,14 @@ SpdifTransmitError:                     # @SpdifTransmitError
                                         #   in Loop: Header=BB4_2 Depth=1
 .Lxtalabel23:
 	#DEBUG_VALUE: SpdifTransmitError:c_in <- R0
-	.loc	1 757 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:757:0
+	.loc	1 757 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:757:0
 .Ltmp268:
 .Lxta.endpoint_labels66:
 	{
 		in r1, res[r0]
 		nop
 	}
-	.loc	1 758 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:758:0
+	.loc	1 758 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:758:0
 .Lxta.endpoint_labels67:
 	{
 		in r1, res[r0]
@@ -3384,7 +3384,7 @@ SpdifTransmitError:                     # @SpdifTransmitError
 .LBB4_2:                                # %ifdone2
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel24:
-	.loc	1 751 9                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:751:9
+	.loc	1 751 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:751:9
 	{
 		testct r1, res[r0]
 		nop
@@ -3393,7 +3393,7 @@ SpdifTransmitError:                     # @SpdifTransmitError
 # BB#3:                                 # %iftrue1
 .Lxtalabel25:
 	#DEBUG_VALUE: SpdifTransmitError:c_in <- R0
-	.loc	1 753 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:753:0
+	.loc	1 753 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:753:0
 	{
 		chkct res[r0], 1
 		retsp 0
@@ -3555,7 +3555,7 @@ SpdifTransmitError:                     # @SpdifTransmitError
 	.cc_top SpdifTransmit.function,SpdifTransmit
 SpdifTransmit:                          # @SpdifTransmit
 .Lfunc_begin5:
-	.loc	1 778 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:778:0
+	.loc	1 778 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:778:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -3574,7 +3574,7 @@ SpdifTransmit:                          # @SpdifTransmit
 		dualentsp 6
 	}
 .Ltmp274:
-	.loc	1 786 0 prologue_end    # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:786:0
+	.loc	1 786 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:786:0
 .Lxta.endpoint_labels69:
 	{
 		in r3, res[r1]
@@ -3583,7 +3583,7 @@ SpdifTransmit:                          # @SpdifTransmit
 .Ltmp275:
 	#DEBUG_VALUE: mclkFreq <- R3
 	ldw r11, cp[.LCPI5_0]
-	.loc	1 789 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:789:0
+	.loc	1 789 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:789:0
 	{
 		lss r11, r11, r2
 		nop
@@ -3757,7 +3757,7 @@ SpdifTransmit:                          # @SpdifTransmit
 	#DEBUG_VALUE: SpdifTransmit:c_in <- R1
 	#DEBUG_VALUE: samFreq <- R2
 	#DEBUG_VALUE: mclkFreq <- R3
-	.loc	1 824 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:824:0
+	.loc	1 824 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:824:0
 	{
 		ldc r11, 11
 		stw r11, sp[2]
@@ -3766,17 +3766,17 @@ SpdifTransmit:                          # @SpdifTransmit
 		nop
 		stw r11, sp[5]
 	}
-	.loc	1 829 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:829:0
+	.loc	1 829 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:829:0
 	{
 		shl r2, r2, 7
 		stw r11, sp[3]
 	}
 .Ltmp291:
-	.loc	1 832 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:832:0
+	.loc	1 832 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:832:0
 	divu r2, r3, r2
 .Ltmp292:
 	#DEBUG_VALUE: divide <- R2
-	.loc	1 834 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:834:0
+	.loc	1 834 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:834:0
 	{
 		eq r3, r2, 1
 		nop
@@ -3802,7 +3802,7 @@ SpdifTransmit:                          # @SpdifTransmit
 		ldaw r2, sp[4]
 		ldaw r3, sp[2]
 	}
-	.loc	1 843 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:843:0
+	.loc	1 843 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:843:0
 .Lxta.call_labels2:
 	bl SpdifTransmit_2
 .Ltmp296:
@@ -3820,7 +3820,7 @@ SpdifTransmit:                          # @SpdifTransmit
 		ldaw r2, sp[4]
 		ldaw r3, sp[2]
 	}
-	.loc	1 838 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:838:0
+	.loc	1 838 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:838:0
 .Lxta.call_labels3:
 	bl SpdifTransmit_1
 .Ltmp298:
@@ -3848,7 +3848,7 @@ SpdifTransmit:                          # @SpdifTransmit
 		ldaw r2, sp[4]
 		ldaw r3, sp[2]
 	}
-	.loc	1 848 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:848:0
+	.loc	1 848 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:848:0
 .Lxta.call_labels4:
 	bl SpdifTransmit_4
 .Ltmp301:
@@ -3862,13 +3862,13 @@ SpdifTransmit:                          # @SpdifTransmit
 .Lxtalabel47:
 .Ltmp302:
 	#DEBUG_VALUE: SpdifTransmit:c_in <- R1
-	.loc	1 757 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:757:0
+	.loc	1 757 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:757:0
 .Lxta.endpoint_labels70:
 	{
 		in r0, res[r1]
 		nop
 	}
-	.loc	1 758 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:758:0
+	.loc	1 758 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:758:0
 .Lxta.endpoint_labels71:
 	{
 		in r0, res[r1]
@@ -3878,7 +3878,7 @@ SpdifTransmit:                          # @SpdifTransmit
 .LBB5_14:                               # %ifdone2.i
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel48:
-	.loc	1 751 9                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:751:9
+	.loc	1 751 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:751:9
 	{
 		testct r0, res[r1]
 		nop
@@ -3889,7 +3889,7 @@ SpdifTransmit:                          # @SpdifTransmit
 .Ltmp304:
 	#DEBUG_VALUE: SpdifTransmit:c_in <- R1
 	#DEBUG_VALUE: SpdifTransmitError:c_in <- R1
-	.loc	1 753 0                 # C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc:753:0
+	.loc	1 753 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc:753:0
 	{
 		chkct res[r1], 1
 		retsp 6
@@ -4314,7 +4314,7 @@ preambleWords_4:
 .Linfo_string0:
 .asciiz"XMOS 32-bit XC Compiler Community_14.4.1 (build 235-acbb966, Dec-01-2019)"
 .Linfo_string1:
-.asciiz"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 .Linfo_string2:
 .asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 .Linfo_string3:
@@ -7604,31 +7604,31 @@ preambleWords_4:
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_0,.Lxta.call_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	24
 	.long	.Lxta.call_labels0
 .cc_bottom cc_0
 .cc_top cc_1,.Lxta.call_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	27
 	.long	.Lxta.call_labels1
 .cc_bottom cc_1
 .cc_top cc_2,.Lxta.call_labels3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	838
 	.long	.Lxta.call_labels3
 .cc_bottom cc_2
 .cc_top cc_3,.Lxta.call_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	843
 	.long	.Lxta.call_labels2
 .cc_bottom cc_3
 .cc_top cc_4,.Lxta.call_labels4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	848
 	.long	.Lxta.call_labels4
@@ -7641,433 +7641,433 @@ preambleWords_4:
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_5,.Lxta.endpoint_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	397
 	.long	.Lxta.endpoint_labels0
 .cc_bottom cc_5
 .cc_top cc_6,.Lxta.endpoint_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	398
 	.long	.Lxta.endpoint_labels1
 .cc_bottom cc_6
 .cc_top cc_7,.Lxta.endpoint_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	419
 	.long	.Lxta.endpoint_labels2
 .cc_bottom cc_7
 .cc_top cc_8,.Lxta.endpoint_labels3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	427
 	.long	.Lxta.endpoint_labels3
 .cc_bottom cc_8
 .cc_top cc_9,.Lxta.endpoint_labels4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	437
 	.long	.Lxta.endpoint_labels4
 .cc_bottom cc_9
 .cc_top cc_10,.Lxta.endpoint_labels5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	444
 	.long	.Lxta.endpoint_labels5
 .cc_bottom cc_10
 .cc_top cc_11,.Lxta.endpoint_labels6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	453
 	.long	.Lxta.endpoint_labels6
 .cc_bottom cc_11
 .cc_top cc_12,.Lxta.endpoint_labels7
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	468
 	.long	.Lxta.endpoint_labels7
 .cc_bottom cc_12
 .cc_top cc_13,.Lxta.endpoint_labels8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	476
 	.long	.Lxta.endpoint_labels8
 .cc_bottom cc_13
 .cc_top cc_14,.Lxta.endpoint_labels9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	483
 	.long	.Lxta.endpoint_labels9
 .cc_bottom cc_14
 .cc_top cc_15,.Lxta.endpoint_labels10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	492
 	.long	.Lxta.endpoint_labels10
 .cc_bottom cc_15
 .cc_top cc_16,.Lxta.endpoint_labels11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	505
 	.long	.Lxta.endpoint_labels11
 .cc_bottom cc_16
 .cc_top cc_17,.Lxta.endpoint_labels12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	506
 	.long	.Lxta.endpoint_labels12
 .cc_bottom cc_17
 .cc_top cc_18,.Lxta.endpoint_labels13
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	510
 	.long	.Lxta.endpoint_labels13
 .cc_bottom cc_18
 .cc_top cc_19,.Lxta.endpoint_labels14
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	549
 	.long	.Lxta.endpoint_labels14
 .cc_bottom cc_19
 .cc_top cc_20,.Lxta.endpoint_labels15
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	550
 	.long	.Lxta.endpoint_labels15
 .cc_bottom cc_20
 .cc_top cc_21,.Lxta.endpoint_labels16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	562
 	.long	.Lxta.endpoint_labels16
 .cc_bottom cc_21
 .cc_top cc_22,.Lxta.endpoint_labels17
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	576
 	.long	.Lxta.endpoint_labels17
 .cc_bottom cc_22
 .cc_top cc_23,.Lxta.endpoint_labels18
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	576
 	.long	.Lxta.endpoint_labels18
 .cc_bottom cc_23
 .cc_top cc_24,.Lxta.endpoint_labels19
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	576
 	.long	.Lxta.endpoint_labels19
 .cc_bottom cc_24
 .cc_top cc_25,.Lxta.endpoint_labels20
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	576
 	.long	.Lxta.endpoint_labels20
 .cc_bottom cc_25
 .cc_top cc_26,.Lxta.endpoint_labels21
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	576
 	.long	.Lxta.endpoint_labels21
 .cc_bottom cc_26
 .cc_top cc_27,.Lxta.endpoint_labels22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	576
 	.long	.Lxta.endpoint_labels22
 .cc_bottom cc_27
 .cc_top cc_28,.Lxta.endpoint_labels23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	576
 	.long	.Lxta.endpoint_labels23
 .cc_bottom cc_28
 .cc_top cc_29,.Lxta.endpoint_labels24
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	593
 	.long	.Lxta.endpoint_labels24
 .cc_bottom cc_29
 .cc_top cc_30,.Lxta.endpoint_labels25
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	606
 	.long	.Lxta.endpoint_labels25
 .cc_bottom cc_30
 .cc_top cc_31,.Lxta.endpoint_labels26
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	606
 	.long	.Lxta.endpoint_labels26
 .cc_bottom cc_31
 .cc_top cc_32,.Lxta.endpoint_labels27
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	606
 	.long	.Lxta.endpoint_labels27
 .cc_bottom cc_32
 .cc_top cc_33,.Lxta.endpoint_labels28
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	606
 	.long	.Lxta.endpoint_labels28
 .cc_bottom cc_33
 .cc_top cc_34,.Lxta.endpoint_labels29
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	606
 	.long	.Lxta.endpoint_labels29
 .cc_bottom cc_34
 .cc_top cc_35,.Lxta.endpoint_labels30
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	606
 	.long	.Lxta.endpoint_labels30
 .cc_bottom cc_35
 .cc_top cc_36,.Lxta.endpoint_labels31
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	606
 	.long	.Lxta.endpoint_labels31
 .cc_bottom cc_36
 .cc_top cc_37,.Lxta.endpoint_labels32
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	650
 	.long	.Lxta.endpoint_labels32
 .cc_bottom cc_37
 .cc_top cc_38,.Lxta.endpoint_labels33
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	651
 	.long	.Lxta.endpoint_labels33
 .cc_bottom cc_38
 .cc_top cc_39,.Lxta.endpoint_labels34
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	668
 	.long	.Lxta.endpoint_labels34
 .cc_bottom cc_39
 .cc_top cc_40,.Lxta.endpoint_labels35
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	672
 	.long	.Lxta.endpoint_labels35
 .cc_bottom cc_40
 .cc_top cc_41,.Lxta.endpoint_labels36
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	686
 	.long	.Lxta.endpoint_labels36
 .cc_bottom cc_41
 .cc_top cc_42,.Lxta.endpoint_labels38
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	686
 	.long	.Lxta.endpoint_labels38
 .cc_bottom cc_42
 .cc_top cc_43,.Lxta.endpoint_labels40
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	686
 	.long	.Lxta.endpoint_labels40
 .cc_bottom cc_43
 .cc_top cc_44,.Lxta.endpoint_labels42
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	686
 	.long	.Lxta.endpoint_labels42
 .cc_bottom cc_44
 .cc_top cc_45,.Lxta.endpoint_labels44
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	686
 	.long	.Lxta.endpoint_labels44
 .cc_bottom cc_45
 .cc_top cc_46,.Lxta.endpoint_labels46
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	686
 	.long	.Lxta.endpoint_labels46
 .cc_bottom cc_46
 .cc_top cc_47,.Lxta.endpoint_labels48
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	686
 	.long	.Lxta.endpoint_labels48
 .cc_bottom cc_47
 .cc_top cc_48,.Lxta.endpoint_labels43
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	689
 	.long	.Lxta.endpoint_labels43
 .cc_bottom cc_48
 .cc_top cc_49,.Lxta.endpoint_labels37
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	689
 	.long	.Lxta.endpoint_labels37
 .cc_bottom cc_49
 .cc_top cc_50,.Lxta.endpoint_labels45
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	689
 	.long	.Lxta.endpoint_labels45
 .cc_bottom cc_50
 .cc_top cc_51,.Lxta.endpoint_labels41
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	689
 	.long	.Lxta.endpoint_labels41
 .cc_bottom cc_51
 .cc_top cc_52,.Lxta.endpoint_labels47
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	689
 	.long	.Lxta.endpoint_labels47
 .cc_bottom cc_52
 .cc_top cc_53,.Lxta.endpoint_labels39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	689
 	.long	.Lxta.endpoint_labels39
 .cc_bottom cc_53
 .cc_top cc_54,.Lxta.endpoint_labels49
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	689
 	.long	.Lxta.endpoint_labels49
 .cc_bottom cc_54
 .cc_top cc_55,.Lxta.endpoint_labels50
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	706
 	.long	.Lxta.endpoint_labels50
 .cc_bottom cc_55
 .cc_top cc_56,.Lxta.endpoint_labels51
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	710
 	.long	.Lxta.endpoint_labels51
 .cc_bottom cc_56
 .cc_top cc_57,.Lxta.endpoint_labels52
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	724
 	.long	.Lxta.endpoint_labels52
 .cc_bottom cc_57
 .cc_top cc_58,.Lxta.endpoint_labels62
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	724
 	.long	.Lxta.endpoint_labels62
 .cc_bottom cc_58
 .cc_top cc_59,.Lxta.endpoint_labels54
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	724
 	.long	.Lxta.endpoint_labels54
 .cc_bottom cc_59
 .cc_top cc_60,.Lxta.endpoint_labels56
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	724
 	.long	.Lxta.endpoint_labels56
 .cc_bottom cc_60
 .cc_top cc_61,.Lxta.endpoint_labels58
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	724
 	.long	.Lxta.endpoint_labels58
 .cc_bottom cc_61
 .cc_top cc_62,.Lxta.endpoint_labels60
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	724
 	.long	.Lxta.endpoint_labels60
 .cc_bottom cc_62
 .cc_top cc_63,.Lxta.endpoint_labels64
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	724
 	.long	.Lxta.endpoint_labels64
 .cc_bottom cc_63
 .cc_top cc_64,.Lxta.endpoint_labels55
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	729
 	.long	.Lxta.endpoint_labels55
 .cc_bottom cc_64
 .cc_top cc_65,.Lxta.endpoint_labels57
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	729
 	.long	.Lxta.endpoint_labels57
 .cc_bottom cc_65
 .cc_top cc_66,.Lxta.endpoint_labels59
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	729
 	.long	.Lxta.endpoint_labels59
 .cc_bottom cc_66
 .cc_top cc_67,.Lxta.endpoint_labels61
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	729
 	.long	.Lxta.endpoint_labels61
 .cc_bottom cc_67
 .cc_top cc_68,.Lxta.endpoint_labels53
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	729
 	.long	.Lxta.endpoint_labels53
 .cc_bottom cc_68
 .cc_top cc_69,.Lxta.endpoint_labels63
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	729
 	.long	.Lxta.endpoint_labels63
 .cc_bottom cc_69
 .cc_top cc_70,.Lxta.endpoint_labels65
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	729
 	.long	.Lxta.endpoint_labels65
 .cc_bottom cc_70
 .cc_top cc_71,.Lxta.endpoint_labels66
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	757
 	.long	.Lxta.endpoint_labels66
 .cc_bottom cc_71
 .cc_top cc_72,.Lxta.endpoint_labels70
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	757
 	.long	.Lxta.endpoint_labels70
 .cc_bottom cc_72
 .cc_top cc_73,.Lxta.endpoint_labels67
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	758
 	.long	.Lxta.endpoint_labels67
 .cc_bottom cc_73
 .cc_top cc_74,.Lxta.endpoint_labels71
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	758
 	.long	.Lxta.endpoint_labels71
 .cc_bottom cc_74
 .cc_top cc_75,.Lxta.endpoint_labels68
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	783
 	.long	.Lxta.endpoint_labels68
 .cc_bottom cc_75
 .cc_top cc_76,.Lxta.endpoint_labels69
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	786
 	.long	.Lxta.endpoint_labels69
@@ -8080,2443 +8080,2443 @@ preambleWords_4:
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_77,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	22
 	.long	22
 	.long	.Lxtalabel0
 .cc_bottom cc_77
 .cc_top cc_78,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	24
 	.long	24
 	.long	.Lxtalabel0
 .cc_bottom cc_78
 .cc_top cc_79,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	27
 	.long	27
 	.long	.Lxtalabel0
 .cc_bottom cc_79
 .cc_top cc_80,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	30
 	.long	30
 	.long	.Lxtalabel0
 .cc_bottom cc_80
 .cc_top cc_81,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	33
 	.long	33
 	.long	.Lxtalabel0
 .cc_bottom cc_81
 .cc_top cc_82,.Lxtalabel0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	34
 	.long	34
 	.long	.Lxtalabel0
 .cc_bottom cc_82
 .cc_top cc_83,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	40
 	.long	40
 	.long	.Lxtalabel9
 .cc_bottom cc_83
 .cc_top cc_84,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	40
 	.long	40
 	.long	.Lxtalabel16
 .cc_bottom cc_84
 .cc_top cc_85,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	40
 	.long	40
 	.long	.Lxtalabel4
 .cc_bottom cc_85
 .cc_top cc_86,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	40
 	.long	40
 	.long	.Lxtalabel16
 .cc_bottom cc_86
 .cc_top cc_87,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	40
 	.long	40
 	.long	.Lxtalabel4
 .cc_bottom cc_87
 .cc_top cc_88,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	40
 	.long	40
 	.long	.Lxtalabel9
 .cc_bottom cc_88
 .cc_top cc_89,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	41
 	.long	41
 	.long	.Lxtalabel4
 .cc_bottom cc_89
 .cc_top cc_90,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	41
 	.long	41
 	.long	.Lxtalabel9
 .cc_bottom cc_90
 .cc_top cc_91,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	41
 	.long	41
 	.long	.Lxtalabel16
 .cc_bottom cc_91
 .cc_top cc_92,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	41
 	.long	41
 	.long	.Lxtalabel16
 .cc_bottom cc_92
 .cc_top cc_93,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	41
 	.long	41
 	.long	.Lxtalabel9
 .cc_bottom cc_93
 .cc_top cc_94,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	41
 	.long	41
 	.long	.Lxtalabel4
 .cc_bottom cc_94
 .cc_top cc_95,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	42
 	.long	43
 	.long	.Lxtalabel16
 .cc_bottom cc_95
 .cc_top cc_96,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	42
 	.long	43
 	.long	.Lxtalabel4
 .cc_bottom cc_96
 .cc_top cc_97,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	42
 	.long	43
 	.long	.Lxtalabel4
 .cc_bottom cc_97
 .cc_top cc_98,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	42
 	.long	43
 	.long	.Lxtalabel16
 .cc_bottom cc_98
 .cc_top cc_99,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	42
 	.long	43
 	.long	.Lxtalabel9
 .cc_bottom cc_99
 .cc_top cc_100,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	42
 	.long	43
 	.long	.Lxtalabel9
 .cc_bottom cc_100
 .cc_top cc_101,.Lxtalabel1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	382
 	.long	385
 	.long	.Lxtalabel1
 .cc_bottom cc_101
 .cc_top cc_102,.Lxtalabel1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	387
 	.long	387
 	.long	.Lxtalabel1
 .cc_bottom cc_102
 .cc_top cc_103,.Lxtalabel1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	390
 	.long	390
 	.long	.Lxtalabel1
 .cc_bottom cc_103
 .cc_top cc_104,.Lxtalabel7
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	391
 	.long	391
 	.long	.Lxtalabel7
 .cc_bottom cc_104
 .cc_top cc_105,.Lxtalabel7
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	392
 	.long	392
 	.long	.Lxtalabel7
 .cc_bottom cc_105
 .cc_top cc_106,.Lxtalabel7
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	393
 	.long	394
 	.long	.Lxtalabel7
 .cc_bottom cc_106
 .cc_top cc_107,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	397
 	.long	398
 	.long	.Lxtalabel2
 .cc_bottom cc_107
 .cc_top cc_108,.Lxtalabel2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	401
 	.long	401
 	.long	.Lxtalabel2
 .cc_bottom cc_108
 .cc_top cc_109,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	408
 	.long	408
 	.long	.Lxtalabel4
 .cc_bottom cc_109
 .cc_top cc_110,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	411
 	.long	414
 	.long	.Lxtalabel4
 .cc_bottom cc_110
 .cc_top cc_111,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	417
 	.long	418
 	.long	.Lxtalabel4
 .cc_bottom cc_111
 .cc_top cc_112,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	419
 	.long	419
 	.long	.Lxtalabel4
 .cc_bottom cc_112
 .cc_top cc_113,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	420
 	.long	420
 	.long	.Lxtalabel4
 .cc_bottom cc_113
 .cc_top cc_114,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	422
 	.long	422
 	.long	.Lxtalabel4
 .cc_bottom cc_114
 .cc_top cc_115,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	425
 	.long	426
 	.long	.Lxtalabel4
 .cc_bottom cc_115
 .cc_top cc_116,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	427
 	.long	427
 	.long	.Lxtalabel4
 .cc_bottom cc_116
 .cc_top cc_117,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	428
 	.long	428
 	.long	.Lxtalabel4
 .cc_bottom cc_117
 .cc_top cc_118,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	430
 	.long	430
 	.long	.Lxtalabel4
 .cc_bottom cc_118
 .cc_top cc_119,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	432
 	.long	433
 	.long	.Lxtalabel4
 .cc_bottom cc_119
 .cc_top cc_120,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	435
 	.long	436
 	.long	.Lxtalabel4
 .cc_bottom cc_120
 .cc_top cc_121,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	437
 	.long	437
 	.long	.Lxtalabel4
 .cc_bottom cc_121
 .cc_top cc_122,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	438
 	.long	438
 	.long	.Lxtalabel4
 .cc_bottom cc_122
 .cc_top cc_123,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	440
 	.long	440
 	.long	.Lxtalabel4
 .cc_bottom cc_123
 .cc_top cc_124,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	442
 	.long	443
 	.long	.Lxtalabel4
 .cc_bottom cc_124
 .cc_top cc_125,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	444
 	.long	444
 	.long	.Lxtalabel4
 .cc_bottom cc_125
 .cc_top cc_126,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	445
 	.long	445
 	.long	.Lxtalabel4
 .cc_bottom cc_126
 .cc_top cc_127,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	447
 	.long	447
 	.long	.Lxtalabel4
 .cc_bottom cc_127
 .cc_top cc_128,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	449
 	.long	449
 	.long	.Lxtalabel4
 .cc_bottom cc_128
 .cc_top cc_129,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	451
 	.long	452
 	.long	.Lxtalabel4
 .cc_bottom cc_129
 .cc_top cc_130,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	453
 	.long	453
 	.long	.Lxtalabel4
 .cc_bottom cc_130
 .cc_top cc_131,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	454
 	.long	454
 	.long	.Lxtalabel4
 .cc_bottom cc_131
 .cc_top cc_132,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	459
 	.long	462
 	.long	.Lxtalabel4
 .cc_bottom cc_132
 .cc_top cc_133,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	466
 	.long	467
 	.long	.Lxtalabel4
 .cc_bottom cc_133
 .cc_top cc_134,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	468
 	.long	468
 	.long	.Lxtalabel4
 .cc_bottom cc_134
 .cc_top cc_135,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	469
 	.long	469
 	.long	.Lxtalabel4
 .cc_bottom cc_135
 .cc_top cc_136,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	471
 	.long	471
 	.long	.Lxtalabel4
 .cc_bottom cc_136
 .cc_top cc_137,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	474
 	.long	475
 	.long	.Lxtalabel4
 .cc_bottom cc_137
 .cc_top cc_138,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	476
 	.long	476
 	.long	.Lxtalabel4
 .cc_bottom cc_138
 .cc_top cc_139,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	477
 	.long	477
 	.long	.Lxtalabel4
 .cc_bottom cc_139
 .cc_top cc_140,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	479
 	.long	479
 	.long	.Lxtalabel4
 .cc_bottom cc_140
 .cc_top cc_141,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	481
 	.long	482
 	.long	.Lxtalabel4
 .cc_bottom cc_141
 .cc_top cc_142,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	483
 	.long	483
 	.long	.Lxtalabel4
 .cc_bottom cc_142
 .cc_top cc_143,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	484
 	.long	484
 	.long	.Lxtalabel4
 .cc_bottom cc_143
 .cc_top cc_144,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	486
 	.long	486
 	.long	.Lxtalabel4
 .cc_bottom cc_144
 .cc_top cc_145,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	488
 	.long	488
 	.long	.Lxtalabel4
 .cc_bottom cc_145
 .cc_top cc_146,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	490
 	.long	491
 	.long	.Lxtalabel4
 .cc_bottom cc_146
 .cc_top cc_147,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	492
 	.long	492
 	.long	.Lxtalabel4
 .cc_bottom cc_147
 .cc_top cc_148,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	493
 	.long	493
 	.long	.Lxtalabel4
 .cc_bottom cc_148
 .cc_top cc_149,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	495
 	.long	495
 	.long	.Lxtalabel4
 .cc_bottom cc_149
 .cc_top cc_150,.Lxtalabel4
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	498
 	.long	498
 	.long	.Lxtalabel4
 .cc_bottom cc_150
 .cc_top cc_151,.Lxtalabel5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	505
 	.long	506
 	.long	.Lxtalabel5
 .cc_bottom cc_151
 .cc_top cc_152,.Lxtalabel5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	508
 	.long	509
 	.long	.Lxtalabel5
 .cc_bottom cc_152
 .cc_top cc_153,.Lxtalabel5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	510
 	.long	510
 	.long	.Lxtalabel5
 .cc_bottom cc_153
 .cc_top cc_154,.Lxtalabel5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	511
 	.long	511
 	.long	.Lxtalabel5
 .cc_bottom cc_154
 .cc_top cc_155,.Lxtalabel5
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	513
 	.long	513
 	.long	.Lxtalabel5
 .cc_bottom cc_155
 .cc_top cc_156,.Lxtalabel3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	514
 	.long	516
 	.long	.Lxtalabel3
 .cc_bottom cc_156
 .cc_top cc_157,.Lxtalabel6
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	517
 	.long	517
 	.long	.Lxtalabel6
 .cc_bottom cc_157
 .cc_top cc_158,.Lxtalabel3
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	517
 	.long	517
 	.long	.Lxtalabel3
 .cc_bottom cc_158
 .cc_top cc_159,.Lxtalabel8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	523
 	.long	526
 	.long	.Lxtalabel8
 .cc_bottom cc_159
 .cc_top cc_160,.Lxtalabel8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	528
 	.long	528
 	.long	.Lxtalabel8
 .cc_bottom cc_160
 .cc_top cc_161,.Lxtalabel8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	530
 	.long	530
 	.long	.Lxtalabel8
 .cc_bottom cc_161
 .cc_top cc_162,.Lxtalabel8
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	533
 	.long	533
 	.long	.Lxtalabel8
 .cc_bottom cc_162
 .cc_top cc_163,.Lxtalabel13
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	534
 	.long	537
 	.long	.Lxtalabel13
 .cc_bottom cc_163
 .cc_top cc_164,.Lxtalabel13
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	539
 	.long	539
 	.long	.Lxtalabel13
 .cc_bottom cc_164
 .cc_top cc_165,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	540
 	.long	540
 	.long	.Lxtalabel12
 .cc_bottom cc_165
 .cc_top cc_166,.Lxtalabel12
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	542
 	.long	542
 	.long	.Lxtalabel12
 .cc_bottom cc_166
 .cc_top cc_167,.Lxtalabel14
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	543
 	.long	543
 	.long	.Lxtalabel14
 .cc_bottom cc_167
 .cc_top cc_168,.Lxtalabel14
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	544
 	.long	544
 	.long	.Lxtalabel14
 .cc_bottom cc_168
 .cc_top cc_169,.Lxtalabel14
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	545
 	.long	546
 	.long	.Lxtalabel14
 .cc_bottom cc_169
 .cc_top cc_170,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	549
 	.long	550
 	.long	.Lxtalabel9
 .cc_bottom cc_170
 .cc_top cc_171,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	552
 	.long	555
 	.long	.Lxtalabel9
 .cc_bottom cc_171
 .cc_top cc_172,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	560
 	.long	561
 	.long	.Lxtalabel9
 .cc_bottom cc_172
 .cc_top cc_173,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	562
 	.long	562
 	.long	.Lxtalabel9
 .cc_bottom cc_173
 .cc_top cc_174,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	563
 	.long	564
 	.long	.Lxtalabel9
 .cc_bottom cc_174
 .cc_top cc_175,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	566
 	.long	567
 	.long	.Lxtalabel9
 .cc_bottom cc_175
 .cc_top cc_176,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	572
 	.long	572
 	.long	.Lxtalabel9
 .cc_bottom cc_176
 .cc_top cc_177,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	573
 	.long	575
 	.long	.Lxtalabel9
 .cc_bottom cc_177
 .cc_top cc_178,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	573
 	.long	575
 	.long	.Lxtalabel9
 .cc_bottom cc_178
 .cc_top cc_179,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	573
 	.long	575
 	.long	.Lxtalabel9
 .cc_bottom cc_179
 .cc_top cc_180,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	573
 	.long	575
 	.long	.Lxtalabel9
 .cc_bottom cc_180
 .cc_top cc_181,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	573
 	.long	575
 	.long	.Lxtalabel9
 .cc_bottom cc_181
 .cc_top cc_182,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	573
 	.long	575
 	.long	.Lxtalabel9
 .cc_bottom cc_182
 .cc_top cc_183,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	573
 	.long	575
 	.long	.Lxtalabel9
 .cc_bottom cc_183
 .cc_top cc_184,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	576
 	.long	576
 	.long	.Lxtalabel9
 .cc_bottom cc_184
 .cc_top cc_185,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	576
 	.long	576
 	.long	.Lxtalabel9
 .cc_bottom cc_185
 .cc_top cc_186,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	576
 	.long	576
 	.long	.Lxtalabel9
 .cc_bottom cc_186
 .cc_top cc_187,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	576
 	.long	576
 	.long	.Lxtalabel9
 .cc_bottom cc_187
 .cc_top cc_188,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	576
 	.long	576
 	.long	.Lxtalabel9
 .cc_bottom cc_188
 .cc_top cc_189,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	576
 	.long	576
 	.long	.Lxtalabel9
 .cc_bottom cc_189
 .cc_top cc_190,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	576
 	.long	576
 	.long	.Lxtalabel9
 .cc_bottom cc_190
 .cc_top cc_191,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	577
 	.long	579
 	.long	.Lxtalabel9
 .cc_bottom cc_191
 .cc_top cc_192,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	577
 	.long	579
 	.long	.Lxtalabel9
 .cc_bottom cc_192
 .cc_top cc_193,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	577
 	.long	579
 	.long	.Lxtalabel9
 .cc_bottom cc_193
 .cc_top cc_194,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	577
 	.long	579
 	.long	.Lxtalabel9
 .cc_bottom cc_194
 .cc_top cc_195,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	577
 	.long	579
 	.long	.Lxtalabel9
 .cc_bottom cc_195
 .cc_top cc_196,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	577
 	.long	579
 	.long	.Lxtalabel9
 .cc_bottom cc_196
 .cc_top cc_197,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	577
 	.long	579
 	.long	.Lxtalabel9
 .cc_bottom cc_197
 .cc_top cc_198,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	581
 	.long	581
 	.long	.Lxtalabel9
 .cc_bottom cc_198
 .cc_top cc_199,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	583
 	.long	586
 	.long	.Lxtalabel9
 .cc_bottom cc_199
 .cc_top cc_200,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	591
 	.long	592
 	.long	.Lxtalabel9
 .cc_bottom cc_200
 .cc_top cc_201,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	593
 	.long	593
 	.long	.Lxtalabel9
 .cc_bottom cc_201
 .cc_top cc_202,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	594
 	.long	595
 	.long	.Lxtalabel9
 .cc_bottom cc_202
 .cc_top cc_203,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	597
 	.long	597
 	.long	.Lxtalabel9
 .cc_bottom cc_203
 .cc_top cc_204,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	602
 	.long	602
 	.long	.Lxtalabel9
 .cc_bottom cc_204
 .cc_top cc_205,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	603
 	.long	605
 	.long	.Lxtalabel9
 .cc_bottom cc_205
 .cc_top cc_206,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	603
 	.long	605
 	.long	.Lxtalabel9
 .cc_bottom cc_206
 .cc_top cc_207,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	603
 	.long	605
 	.long	.Lxtalabel9
 .cc_bottom cc_207
 .cc_top cc_208,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	603
 	.long	605
 	.long	.Lxtalabel9
 .cc_bottom cc_208
 .cc_top cc_209,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	603
 	.long	605
 	.long	.Lxtalabel9
 .cc_bottom cc_209
 .cc_top cc_210,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	603
 	.long	605
 	.long	.Lxtalabel9
 .cc_bottom cc_210
 .cc_top cc_211,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	603
 	.long	605
 	.long	.Lxtalabel9
 .cc_bottom cc_211
 .cc_top cc_212,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	606
 	.long	606
 	.long	.Lxtalabel9
 .cc_bottom cc_212
 .cc_top cc_213,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	606
 	.long	606
 	.long	.Lxtalabel9
 .cc_bottom cc_213
 .cc_top cc_214,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	606
 	.long	606
 	.long	.Lxtalabel9
 .cc_bottom cc_214
 .cc_top cc_215,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	606
 	.long	606
 	.long	.Lxtalabel9
 .cc_bottom cc_215
 .cc_top cc_216,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	606
 	.long	606
 	.long	.Lxtalabel9
 .cc_bottom cc_216
 .cc_top cc_217,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	606
 	.long	606
 	.long	.Lxtalabel9
 .cc_bottom cc_217
 .cc_top cc_218,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	606
 	.long	606
 	.long	.Lxtalabel9
 .cc_bottom cc_218
 .cc_top cc_219,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	607
 	.long	609
 	.long	.Lxtalabel9
 .cc_bottom cc_219
 .cc_top cc_220,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	607
 	.long	609
 	.long	.Lxtalabel9
 .cc_bottom cc_220
 .cc_top cc_221,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	607
 	.long	609
 	.long	.Lxtalabel9
 .cc_bottom cc_221
 .cc_top cc_222,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	607
 	.long	609
 	.long	.Lxtalabel9
 .cc_bottom cc_222
 .cc_top cc_223,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	607
 	.long	609
 	.long	.Lxtalabel9
 .cc_bottom cc_223
 .cc_top cc_224,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	607
 	.long	609
 	.long	.Lxtalabel9
 .cc_bottom cc_224
 .cc_top cc_225,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	607
 	.long	609
 	.long	.Lxtalabel9
 .cc_bottom cc_225
 .cc_top cc_226,.Lxtalabel9
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	611
 	.long	611
 	.long	.Lxtalabel9
 .cc_bottom cc_226
 .cc_top cc_227,.Lxtalabel10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	612
 	.long	614
 	.long	.Lxtalabel10
 .cc_bottom cc_227
 .cc_top cc_228,.Lxtalabel10
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	615
 	.long	615
 	.long	.Lxtalabel10
 .cc_bottom cc_228
 .cc_top cc_229,.Lxtalabel11
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	615
 	.long	615
 	.long	.Lxtalabel11
 .cc_bottom cc_229
 .cc_top cc_230,.Lxtalabel15
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	623
 	.long	626
 	.long	.Lxtalabel15
 .cc_bottom cc_230
 .cc_top cc_231,.Lxtalabel15
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	628
 	.long	628
 	.long	.Lxtalabel15
 .cc_bottom cc_231
 .cc_top cc_232,.Lxtalabel15
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	630
 	.long	630
 	.long	.Lxtalabel15
 .cc_bottom cc_232
 .cc_top cc_233,.Lxtalabel15
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	633
 	.long	633
 	.long	.Lxtalabel15
 .cc_bottom cc_233
 .cc_top cc_234,.Lxtalabel20
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	634
 	.long	637
 	.long	.Lxtalabel20
 .cc_bottom cc_234
 .cc_top cc_235,.Lxtalabel20
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	639
 	.long	639
 	.long	.Lxtalabel20
 .cc_bottom cc_235
 .cc_top cc_236,.Lxtalabel19
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	640
 	.long	640
 	.long	.Lxtalabel19
 .cc_bottom cc_236
 .cc_top cc_237,.Lxtalabel19
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	642
 	.long	642
 	.long	.Lxtalabel19
 .cc_bottom cc_237
 .cc_top cc_238,.Lxtalabel21
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	643
 	.long	643
 	.long	.Lxtalabel21
 .cc_bottom cc_238
 .cc_top cc_239,.Lxtalabel21
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	645
 	.long	645
 	.long	.Lxtalabel21
 .cc_bottom cc_239
 .cc_top cc_240,.Lxtalabel21
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	646
 	.long	647
 	.long	.Lxtalabel21
 .cc_bottom cc_240
 .cc_top cc_241,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	650
 	.long	651
 	.long	.Lxtalabel16
 .cc_bottom cc_241
 .cc_top cc_242,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	654
 	.long	655
 	.long	.Lxtalabel16
 .cc_bottom cc_242
 .cc_top cc_243,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	658
 	.long	658
 	.long	.Lxtalabel16
 .cc_bottom cc_243
 .cc_top cc_244,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	661
 	.long	661
 	.long	.Lxtalabel16
 .cc_bottom cc_244
 .cc_top cc_245,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	666
 	.long	667
 	.long	.Lxtalabel16
 .cc_bottom cc_245
 .cc_top cc_246,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	668
 	.long	668
 	.long	.Lxtalabel16
 .cc_bottom cc_246
 .cc_top cc_247,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	670
 	.long	671
 	.long	.Lxtalabel16
 .cc_bottom cc_247
 .cc_top cc_248,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	672
 	.long	672
 	.long	.Lxtalabel16
 .cc_bottom cc_248
 .cc_top cc_249,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	673
 	.long	674
 	.long	.Lxtalabel16
 .cc_bottom cc_249
 .cc_top cc_250,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	676
 	.long	677
 	.long	.Lxtalabel16
 .cc_bottom cc_250
 .cc_top cc_251,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	682
 	.long	682
 	.long	.Lxtalabel16
 .cc_bottom cc_251
 .cc_top cc_252,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	683
 	.long	685
 	.long	.Lxtalabel16
 .cc_bottom cc_252
 .cc_top cc_253,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	683
 	.long	685
 	.long	.Lxtalabel16
 .cc_bottom cc_253
 .cc_top cc_254,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	683
 	.long	685
 	.long	.Lxtalabel16
 .cc_bottom cc_254
 .cc_top cc_255,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	683
 	.long	685
 	.long	.Lxtalabel16
 .cc_bottom cc_255
 .cc_top cc_256,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	683
 	.long	685
 	.long	.Lxtalabel16
 .cc_bottom cc_256
 .cc_top cc_257,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	683
 	.long	685
 	.long	.Lxtalabel16
 .cc_bottom cc_257
 .cc_top cc_258,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	683
 	.long	685
 	.long	.Lxtalabel16
 .cc_bottom cc_258
 .cc_top cc_259,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	686
 	.long	686
 	.long	.Lxtalabel16
 .cc_bottom cc_259
 .cc_top cc_260,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	686
 	.long	686
 	.long	.Lxtalabel16
 .cc_bottom cc_260
 .cc_top cc_261,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	686
 	.long	686
 	.long	.Lxtalabel16
 .cc_bottom cc_261
 .cc_top cc_262,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	686
 	.long	686
 	.long	.Lxtalabel16
 .cc_bottom cc_262
 .cc_top cc_263,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	686
 	.long	686
 	.long	.Lxtalabel16
 .cc_bottom cc_263
 .cc_top cc_264,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	686
 	.long	686
 	.long	.Lxtalabel16
 .cc_bottom cc_264
 .cc_top cc_265,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	686
 	.long	686
 	.long	.Lxtalabel16
 .cc_bottom cc_265
 .cc_top cc_266,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	687
 	.long	688
 	.long	.Lxtalabel16
 .cc_bottom cc_266
 .cc_top cc_267,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	687
 	.long	688
 	.long	.Lxtalabel16
 .cc_bottom cc_267
 .cc_top cc_268,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	687
 	.long	688
 	.long	.Lxtalabel16
 .cc_bottom cc_268
 .cc_top cc_269,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	687
 	.long	688
 	.long	.Lxtalabel16
 .cc_bottom cc_269
 .cc_top cc_270,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	687
 	.long	688
 	.long	.Lxtalabel16
 .cc_bottom cc_270
 .cc_top cc_271,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	687
 	.long	688
 	.long	.Lxtalabel16
 .cc_bottom cc_271
 .cc_top cc_272,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	687
 	.long	688
 	.long	.Lxtalabel16
 .cc_bottom cc_272
 .cc_top cc_273,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	689
 	.long	689
 	.long	.Lxtalabel16
 .cc_bottom cc_273
 .cc_top cc_274,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	689
 	.long	689
 	.long	.Lxtalabel16
 .cc_bottom cc_274
 .cc_top cc_275,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	689
 	.long	689
 	.long	.Lxtalabel16
 .cc_bottom cc_275
 .cc_top cc_276,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	689
 	.long	689
 	.long	.Lxtalabel16
 .cc_bottom cc_276
 .cc_top cc_277,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	689
 	.long	689
 	.long	.Lxtalabel16
 .cc_bottom cc_277
 .cc_top cc_278,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	689
 	.long	689
 	.long	.Lxtalabel16
 .cc_bottom cc_278
 .cc_top cc_279,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	689
 	.long	689
 	.long	.Lxtalabel16
 .cc_bottom cc_279
 .cc_top cc_280,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	690
 	.long	692
 	.long	.Lxtalabel16
 .cc_bottom cc_280
 .cc_top cc_281,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	690
 	.long	692
 	.long	.Lxtalabel16
 .cc_bottom cc_281
 .cc_top cc_282,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	690
 	.long	692
 	.long	.Lxtalabel16
 .cc_bottom cc_282
 .cc_top cc_283,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	690
 	.long	692
 	.long	.Lxtalabel16
 .cc_bottom cc_283
 .cc_top cc_284,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	690
 	.long	692
 	.long	.Lxtalabel16
 .cc_bottom cc_284
 .cc_top cc_285,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	690
 	.long	692
 	.long	.Lxtalabel16
 .cc_bottom cc_285
 .cc_top cc_286,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	690
 	.long	692
 	.long	.Lxtalabel16
 .cc_bottom cc_286
 .cc_top cc_287,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	694
 	.long	694
 	.long	.Lxtalabel16
 .cc_bottom cc_287
 .cc_top cc_288,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	698
 	.long	701
 	.long	.Lxtalabel16
 .cc_bottom cc_288
 .cc_top cc_289,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	704
 	.long	705
 	.long	.Lxtalabel16
 .cc_bottom cc_289
 .cc_top cc_290,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	706
 	.long	706
 	.long	.Lxtalabel16
 .cc_bottom cc_290
 .cc_top cc_291,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	708
 	.long	709
 	.long	.Lxtalabel16
 .cc_bottom cc_291
 .cc_top cc_292,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	710
 	.long	710
 	.long	.Lxtalabel16
 .cc_bottom cc_292
 .cc_top cc_293,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	711
 	.long	712
 	.long	.Lxtalabel16
 .cc_bottom cc_293
 .cc_top cc_294,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	714
 	.long	714
 	.long	.Lxtalabel16
 .cc_bottom cc_294
 .cc_top cc_295,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	720
 	.long	720
 	.long	.Lxtalabel16
 .cc_bottom cc_295
 .cc_top cc_296,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	721
 	.long	723
 	.long	.Lxtalabel16
 .cc_bottom cc_296
 .cc_top cc_297,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	721
 	.long	723
 	.long	.Lxtalabel16
 .cc_bottom cc_297
 .cc_top cc_298,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	721
 	.long	723
 	.long	.Lxtalabel16
 .cc_bottom cc_298
 .cc_top cc_299,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	721
 	.long	723
 	.long	.Lxtalabel16
 .cc_bottom cc_299
 .cc_top cc_300,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	721
 	.long	723
 	.long	.Lxtalabel16
 .cc_bottom cc_300
 .cc_top cc_301,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	721
 	.long	723
 	.long	.Lxtalabel16
 .cc_bottom cc_301
 .cc_top cc_302,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	721
 	.long	723
 	.long	.Lxtalabel16
 .cc_bottom cc_302
 .cc_top cc_303,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	724
 	.long	724
 	.long	.Lxtalabel16
 .cc_bottom cc_303
 .cc_top cc_304,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	724
 	.long	724
 	.long	.Lxtalabel16
 .cc_bottom cc_304
 .cc_top cc_305,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	724
 	.long	724
 	.long	.Lxtalabel16
 .cc_bottom cc_305
 .cc_top cc_306,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	724
 	.long	724
 	.long	.Lxtalabel16
 .cc_bottom cc_306
 .cc_top cc_307,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	724
 	.long	724
 	.long	.Lxtalabel16
 .cc_bottom cc_307
 .cc_top cc_308,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	724
 	.long	724
 	.long	.Lxtalabel16
 .cc_bottom cc_308
 .cc_top cc_309,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	724
 	.long	724
 	.long	.Lxtalabel16
 .cc_bottom cc_309
 .cc_top cc_310,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	725
 	.long	728
 	.long	.Lxtalabel16
 .cc_bottom cc_310
 .cc_top cc_311,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	725
 	.long	728
 	.long	.Lxtalabel16
 .cc_bottom cc_311
 .cc_top cc_312,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	725
 	.long	728
 	.long	.Lxtalabel16
 .cc_bottom cc_312
 .cc_top cc_313,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	725
 	.long	728
 	.long	.Lxtalabel16
 .cc_bottom cc_313
 .cc_top cc_314,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	725
 	.long	728
 	.long	.Lxtalabel16
 .cc_bottom cc_314
 .cc_top cc_315,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	725
 	.long	728
 	.long	.Lxtalabel16
 .cc_bottom cc_315
 .cc_top cc_316,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	725
 	.long	728
 	.long	.Lxtalabel16
 .cc_bottom cc_316
 .cc_top cc_317,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	729
 	.long	729
 	.long	.Lxtalabel16
 .cc_bottom cc_317
 .cc_top cc_318,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	729
 	.long	729
 	.long	.Lxtalabel16
 .cc_bottom cc_318
 .cc_top cc_319,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	729
 	.long	729
 	.long	.Lxtalabel16
 .cc_bottom cc_319
 .cc_top cc_320,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	729
 	.long	729
 	.long	.Lxtalabel16
 .cc_bottom cc_320
 .cc_top cc_321,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	729
 	.long	729
 	.long	.Lxtalabel16
 .cc_bottom cc_321
 .cc_top cc_322,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	729
 	.long	729
 	.long	.Lxtalabel16
 .cc_bottom cc_322
 .cc_top cc_323,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	729
 	.long	729
 	.long	.Lxtalabel16
 .cc_bottom cc_323
 .cc_top cc_324,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	730
 	.long	730
 	.long	.Lxtalabel16
 .cc_bottom cc_324
 .cc_top cc_325,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	730
 	.long	730
 	.long	.Lxtalabel16
 .cc_bottom cc_325
 .cc_top cc_326,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	730
 	.long	730
 	.long	.Lxtalabel16
 .cc_bottom cc_326
 .cc_top cc_327,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	730
 	.long	730
 	.long	.Lxtalabel16
 .cc_bottom cc_327
 .cc_top cc_328,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	730
 	.long	730
 	.long	.Lxtalabel16
 .cc_bottom cc_328
 .cc_top cc_329,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	730
 	.long	730
 	.long	.Lxtalabel16
 .cc_bottom cc_329
 .cc_top cc_330,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	730
 	.long	730
 	.long	.Lxtalabel16
 .cc_bottom cc_330
 .cc_top cc_331,.Lxtalabel16
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	732
 	.long	732
 	.long	.Lxtalabel16
 .cc_bottom cc_331
 .cc_top cc_332,.Lxtalabel17
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	733
 	.long	735
 	.long	.Lxtalabel17
 .cc_bottom cc_332
 .cc_top cc_333,.Lxtalabel17
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	736
 	.long	736
 	.long	.Lxtalabel17
 .cc_bottom cc_333
 .cc_top cc_334,.Lxtalabel18
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	736
 	.long	736
 	.long	.Lxtalabel18
 .cc_bottom cc_334
 .cc_top cc_335,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	742
 	.long	742
 	.long	.Lxtalabel22
 .cc_bottom cc_335
 .cc_top cc_336,.Lxtalabel22
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	748
 	.long	748
 	.long	.Lxtalabel22
 .cc_bottom cc_336
 .cc_top cc_337,.Lxtalabel24
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	749
 	.long	749
 	.long	.Lxtalabel24
 .cc_bottom cc_337
 .cc_top cc_338,.Lxtalabel48
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	749
 	.long	749
 	.long	.Lxtalabel48
 .cc_bottom cc_338
 .cc_top cc_339,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	749
 	.long	749
 	.long	.Lxtalabel23
 .cc_bottom cc_339
 .cc_top cc_340,.Lxtalabel47
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	749
 	.long	749
 	.long	.Lxtalabel47
 .cc_bottom cc_340
 .cc_top cc_341,.Lxtalabel24
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	751
 	.long	751
 	.long	.Lxtalabel24
 .cc_bottom cc_341
 .cc_top cc_342,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	751
 	.long	751
 	.long	.Lxtalabel23
 .cc_bottom cc_342
 .cc_top cc_343,.Lxtalabel47
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	751
 	.long	751
 	.long	.Lxtalabel47
 .cc_bottom cc_343
 .cc_top cc_344,.Lxtalabel48
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	751
 	.long	751
 	.long	.Lxtalabel48
 .cc_bottom cc_344
 .cc_top cc_345,.Lxtalabel25
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	752
 	.long	752
 	.long	.Lxtalabel25
 .cc_bottom cc_345
 .cc_top cc_346,.Lxtalabel49
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	752
 	.long	752
 	.long	.Lxtalabel49
 .cc_bottom cc_346
 .cc_top cc_347,.Lxtalabel49
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	753
 	.long	753
 	.long	.Lxtalabel49
 .cc_bottom cc_347
 .cc_top cc_348,.Lxtalabel25
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	753
 	.long	753
 	.long	.Lxtalabel25
 .cc_bottom cc_348
 .cc_top cc_349,.Lxtalabel25
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	754
 	.long	755
 	.long	.Lxtalabel25
 .cc_bottom cc_349
 .cc_top cc_350,.Lxtalabel49
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	754
 	.long	755
 	.long	.Lxtalabel49
 .cc_bottom cc_350
 .cc_top cc_351,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	757
 	.long	757
 	.long	.Lxtalabel23
 .cc_bottom cc_351
 .cc_top cc_352,.Lxtalabel24
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	757
 	.long	757
 	.long	.Lxtalabel24
 .cc_bottom cc_352
 .cc_top cc_353,.Lxtalabel47
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	757
 	.long	757
 	.long	.Lxtalabel47
 .cc_bottom cc_353
 .cc_top cc_354,.Lxtalabel48
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	757
 	.long	757
 	.long	.Lxtalabel48
 .cc_bottom cc_354
 .cc_top cc_355,.Lxtalabel24
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	758
 	.long	758
 	.long	.Lxtalabel24
 .cc_bottom cc_355
 .cc_top cc_356,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	758
 	.long	758
 	.long	.Lxtalabel23
 .cc_bottom cc_356
 .cc_top cc_357,.Lxtalabel47
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	758
 	.long	758
 	.long	.Lxtalabel47
 .cc_bottom cc_357
 .cc_top cc_358,.Lxtalabel48
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	758
 	.long	758
 	.long	.Lxtalabel48
 .cc_bottom cc_358
 .cc_top cc_359,.Lxtalabel23
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	759
 	.long	759
 	.long	.Lxtalabel23
 .cc_bottom cc_359
 .cc_top cc_360,.Lxtalabel24
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	759
 	.long	759
 	.long	.Lxtalabel24
 .cc_bottom cc_360
 .cc_top cc_361,.Lxtalabel48
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	759
 	.long	759
 	.long	.Lxtalabel48
 .cc_bottom cc_361
 .cc_top cc_362,.Lxtalabel47
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	759
 	.long	759
 	.long	.Lxtalabel47
 .cc_bottom cc_362
 .cc_top cc_363,.Lxtalabel28
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	778
 	.long	780
 	.long	.Lxtalabel28
 .cc_bottom cc_363
 .cc_top cc_364,.Lxtalabel34
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	778
 	.long	780
 	.long	.Lxtalabel34
 .cc_bottom cc_364
 .cc_top cc_365,.Lxtalabel29
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	778
 	.long	780
 	.long	.Lxtalabel29
 .cc_bottom cc_365
 .cc_top cc_366,.Lxtalabel38
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	778
 	.long	780
 	.long	.Lxtalabel38
 .cc_bottom cc_366
 .cc_top cc_367,.Lxtalabel27
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	778
 	.long	780
 	.long	.Lxtalabel27
 .cc_bottom cc_367
 .cc_top cc_368,.Lxtalabel36
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	778
 	.long	780
 	.long	.Lxtalabel36
 .cc_bottom cc_368
 .cc_top cc_369,.Lxtalabel30
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	778
 	.long	780
 	.long	.Lxtalabel30
 .cc_bottom cc_369
 .cc_top cc_370,.Lxtalabel26
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	778
 	.long	780
 	.long	.Lxtalabel26
 .cc_bottom cc_370
 .cc_top cc_371,.Lxtalabel32
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	778
 	.long	780
 	.long	.Lxtalabel32
 .cc_bottom cc_371
 .cc_top cc_372,.Lxtalabel32
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	783
 	.long	783
 	.long	.Lxtalabel32
 .cc_bottom cc_372
 .cc_top cc_373,.Lxtalabel34
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	783
 	.long	783
 	.long	.Lxtalabel34
 .cc_bottom cc_373
 .cc_top cc_374,.Lxtalabel36
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	783
 	.long	783
 	.long	.Lxtalabel36
 .cc_bottom cc_374
 .cc_top cc_375,.Lxtalabel38
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	783
 	.long	783
 	.long	.Lxtalabel38
 .cc_bottom cc_375
 .cc_top cc_376,.Lxtalabel26
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	783
 	.long	783
 	.long	.Lxtalabel26
 .cc_bottom cc_376
 .cc_top cc_377,.Lxtalabel30
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	783
 	.long	783
 	.long	.Lxtalabel30
 .cc_bottom cc_377
 .cc_top cc_378,.Lxtalabel27
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	783
 	.long	783
 	.long	.Lxtalabel27
 .cc_bottom cc_378
 .cc_top cc_379,.Lxtalabel29
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	783
 	.long	783
 	.long	.Lxtalabel29
 .cc_bottom cc_379
 .cc_top cc_380,.Lxtalabel28
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	783
 	.long	783
 	.long	.Lxtalabel28
 .cc_bottom cc_380
 .cc_top cc_381,.Lxtalabel30
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	786
 	.long	786
 	.long	.Lxtalabel30
 .cc_bottom cc_381
 .cc_top cc_382,.Lxtalabel36
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	786
 	.long	786
 	.long	.Lxtalabel36
 .cc_bottom cc_382
 .cc_top cc_383,.Lxtalabel32
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	786
 	.long	786
 	.long	.Lxtalabel32
 .cc_bottom cc_383
 .cc_top cc_384,.Lxtalabel28
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	786
 	.long	786
 	.long	.Lxtalabel28
 .cc_bottom cc_384
 .cc_top cc_385,.Lxtalabel29
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	786
 	.long	786
 	.long	.Lxtalabel29
 .cc_bottom cc_385
 .cc_top cc_386,.Lxtalabel34
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	786
 	.long	786
 	.long	.Lxtalabel34
 .cc_bottom cc_386
 .cc_top cc_387,.Lxtalabel27
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	786
 	.long	786
 	.long	.Lxtalabel27
 .cc_bottom cc_387
 .cc_top cc_388,.Lxtalabel26
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	786
 	.long	786
 	.long	.Lxtalabel26
 .cc_bottom cc_388
 .cc_top cc_389,.Lxtalabel38
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	786
 	.long	786
 	.long	.Lxtalabel38
 .cc_bottom cc_389
 .cc_top cc_390,.Lxtalabel28
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	789
 	.long	791
 	.long	.Lxtalabel28
 .cc_bottom cc_390
 .cc_top cc_391,.Lxtalabel36
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	789
 	.long	791
 	.long	.Lxtalabel36
 .cc_bottom cc_391
 .cc_top cc_392,.Lxtalabel30
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	789
 	.long	791
 	.long	.Lxtalabel30
 .cc_bottom cc_392
 .cc_top cc_393,.Lxtalabel29
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	789
 	.long	791
 	.long	.Lxtalabel29
 .cc_bottom cc_393
 .cc_top cc_394,.Lxtalabel34
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	789
 	.long	791
 	.long	.Lxtalabel34
 .cc_bottom cc_394
 .cc_top cc_395,.Lxtalabel38
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	789
 	.long	791
 	.long	.Lxtalabel38
 .cc_bottom cc_395
 .cc_top cc_396,.Lxtalabel27
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	789
 	.long	791
 	.long	.Lxtalabel27
 .cc_bottom cc_396
 .cc_top cc_397,.Lxtalabel26
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	789
 	.long	791
 	.long	.Lxtalabel26
 .cc_bottom cc_397
 .cc_top cc_398,.Lxtalabel32
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	789
 	.long	791
 	.long	.Lxtalabel32
 .cc_bottom cc_398
 .cc_top cc_399,.Lxtalabel31
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	797
 	.long	799
 	.long	.Lxtalabel31
 .cc_bottom cc_399
 .cc_top cc_400,.Lxtalabel31
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	801
 	.long	801
 	.long	.Lxtalabel31
 .cc_bottom cc_400
 .cc_top cc_401,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	802
 	.long	804
 	.long	.Lxtalabel39
 .cc_bottom cc_401
 .cc_top cc_402,.Lxtalabel39
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	806
 	.long	806
 	.long	.Lxtalabel39
 .cc_bottom cc_402
 .cc_top cc_403,.Lxtalabel37
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	807
 	.long	809
 	.long	.Lxtalabel37
 .cc_bottom cc_403
 .cc_top cc_404,.Lxtalabel37
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	811
 	.long	811
 	.long	.Lxtalabel37
 .cc_bottom cc_404
 .cc_top cc_405,.Lxtalabel35
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	812
 	.long	814
 	.long	.Lxtalabel35
 .cc_bottom cc_405
 .cc_top cc_406,.Lxtalabel35
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	816
 	.long	816
 	.long	.Lxtalabel35
 .cc_bottom cc_406
 .cc_top cc_407,.Lxtalabel33
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	817
 	.long	819
 	.long	.Lxtalabel33
 .cc_bottom cc_407
 .cc_top cc_408,.Lxtalabel33
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	821
 	.long	821
 	.long	.Lxtalabel33
 .cc_bottom cc_408
 .cc_top cc_409,.Lxtalabel40
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	823
 	.long	825
 	.long	.Lxtalabel40
 .cc_bottom cc_409
 .cc_top cc_410,.Lxtalabel40
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	827
 	.long	827
 	.long	.Lxtalabel40
 .cc_bottom cc_410
 .cc_top cc_411,.Lxtalabel42
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	828
 	.long	829
 	.long	.Lxtalabel42
 .cc_bottom cc_411
 .cc_top cc_412,.Lxtalabel45
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	828
 	.long	829
 	.long	.Lxtalabel45
 .cc_bottom cc_412
 .cc_top cc_413,.Lxtalabel41
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	828
 	.long	829
 	.long	.Lxtalabel41
 .cc_bottom cc_413
 .cc_top cc_414,.Lxtalabel41
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	832
 	.long	832
 	.long	.Lxtalabel41
 .cc_bottom cc_414
 .cc_top cc_415,.Lxtalabel42
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	832
 	.long	832
 	.long	.Lxtalabel42
 .cc_bottom cc_415
 .cc_top cc_416,.Lxtalabel45
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	832
 	.long	832
 	.long	.Lxtalabel45
 .cc_bottom cc_416
 .cc_top cc_417,.Lxtalabel41
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	834
 	.long	836
 	.long	.Lxtalabel41
 .cc_bottom cc_417
 .cc_top cc_418,.Lxtalabel42
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	834
 	.long	836
 	.long	.Lxtalabel42
 .cc_bottom cc_418
 .cc_top cc_419,.Lxtalabel45
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	834
 	.long	836
 	.long	.Lxtalabel45
 .cc_bottom cc_419
 .cc_top cc_420,.Lxtalabel44
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	838
 	.long	839
 	.long	.Lxtalabel44
 .cc_bottom cc_420
 .cc_top cc_421,.Lxtalabel44
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	841
 	.long	841
 	.long	.Lxtalabel44
 .cc_bottom cc_421
 .cc_top cc_422,.Lxtalabel43
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	843
 	.long	844
 	.long	.Lxtalabel43
 .cc_bottom cc_422
 .cc_top cc_423,.Lxtalabel43
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	846
 	.long	846
 	.long	.Lxtalabel43
 .cc_bottom cc_423
 .cc_top cc_424,.Lxtalabel46
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	848
 	.long	849
 	.long	.Lxtalabel46
 .cc_bottom cc_424
 .cc_top cc_425,.Lxtalabel46
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	851
 	.long	851
@@ -10530,651 +10530,651 @@ preambleWords_4:
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
 .cc_top cc_426,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	408
 	.long	408
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_426
 .cc_top cc_427,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	411
 	.long	414
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_427
 .cc_top cc_428,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	417
 	.long	418
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_428
 .cc_top cc_429,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	419
 	.long	419
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_429
 .cc_top cc_430,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	420
 	.long	420
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_430
 .cc_top cc_431,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	422
 	.long	422
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_431
 .cc_top cc_432,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	425
 	.long	426
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_432
 .cc_top cc_433,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	427
 	.long	427
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_433
 .cc_top cc_434,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	428
 	.long	428
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_434
 .cc_top cc_435,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	430
 	.long	430
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_435
 .cc_top cc_436,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	432
 	.long	433
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_436
 .cc_top cc_437,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	435
 	.long	436
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_437
 .cc_top cc_438,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	437
 	.long	437
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_438
 .cc_top cc_439,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	438
 	.long	438
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_439
 .cc_top cc_440,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	440
 	.long	440
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_440
 .cc_top cc_441,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	442
 	.long	443
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_441
 .cc_top cc_442,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	444
 	.long	444
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_442
 .cc_top cc_443,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	445
 	.long	445
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_443
 .cc_top cc_444,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	447
 	.long	447
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_444
 .cc_top cc_445,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	449
 	.long	449
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_445
 .cc_top cc_446,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	451
 	.long	452
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_446
 .cc_top cc_447,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	453
 	.long	453
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_447
 .cc_top cc_448,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	454
 	.long	454
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_448
 .cc_top cc_449,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	459
 	.long	462
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_449
 .cc_top cc_450,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	466
 	.long	467
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_450
 .cc_top cc_451,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	468
 	.long	468
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_451
 .cc_top cc_452,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	469
 	.long	469
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_452
 .cc_top cc_453,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	471
 	.long	471
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_453
 .cc_top cc_454,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	474
 	.long	475
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_454
 .cc_top cc_455,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	476
 	.long	476
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_455
 .cc_top cc_456,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	477
 	.long	477
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_456
 .cc_top cc_457,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	479
 	.long	479
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_457
 .cc_top cc_458,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	481
 	.long	482
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_458
 .cc_top cc_459,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	483
 	.long	483
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_459
 .cc_top cc_460,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	484
 	.long	484
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_460
 .cc_top cc_461,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	486
 	.long	486
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_461
 .cc_top cc_462,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	488
 	.long	488
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_462
 .cc_top cc_463,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	490
 	.long	491
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_463
 .cc_top cc_464,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	492
 	.long	492
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_464
 .cc_top cc_465,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	493
 	.long	493
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_465
 .cc_top cc_466,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	495
 	.long	495
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_466
 .cc_top cc_467,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	498
 	.long	499
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_467
 .cc_top cc_468,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	500
 	.long	500
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_468
 .cc_top cc_469,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	501
 	.long	502
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_469
 .cc_top cc_470,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	505
 	.long	506
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_470
 .cc_top cc_471,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	508
 	.long	509
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_471
 .cc_top cc_472,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	510
 	.long	510
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_472
 .cc_top cc_473,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	511
 	.long	511
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_473
 .cc_top cc_474,.Lxta.loop_labels0
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	513
 	.long	517
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_474
 .cc_top cc_475,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	540
 	.long	540
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_475
 .cc_top cc_476,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	542
 	.long	543
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_476
 .cc_top cc_477,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	544
 	.long	544
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_477
 .cc_top cc_478,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	545
 	.long	546
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_478
 .cc_top cc_479,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	549
 	.long	550
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_479
 .cc_top cc_480,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	552
 	.long	555
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_480
 .cc_top cc_481,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	560
 	.long	561
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_481
 .cc_top cc_482,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	562
 	.long	562
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_482
 .cc_top cc_483,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	563
 	.long	564
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_483
 .cc_top cc_484,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	566
 	.long	567
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_484
 .cc_top cc_485,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	572
 	.long	572
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_485
 .cc_top cc_486,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	581
 	.long	581
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_486
 .cc_top cc_487,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	583
 	.long	586
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_487
 .cc_top cc_488,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	591
 	.long	592
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_488
 .cc_top cc_489,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	593
 	.long	593
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_489
 .cc_top cc_490,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	594
 	.long	595
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_490
 .cc_top cc_491,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	597
 	.long	597
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_491
 .cc_top cc_492,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	602
 	.long	602
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_492
 .cc_top cc_493,.Lxta.loop_labels1
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	611
 	.long	615
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_493
 .cc_top cc_494,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	640
 	.long	640
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_494
 .cc_top cc_495,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	642
 	.long	643
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_495
 .cc_top cc_496,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	645
 	.long	645
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_496
 .cc_top cc_497,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	646
 	.long	647
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_497
 .cc_top cc_498,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	650
 	.long	651
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_498
 .cc_top cc_499,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	654
 	.long	655
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_499
 .cc_top cc_500,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	658
 	.long	658
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_500
 .cc_top cc_501,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	661
 	.long	661
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_501
 .cc_top cc_502,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	666
 	.long	667
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_502
 .cc_top cc_503,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	668
 	.long	668
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_503
 .cc_top cc_504,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	670
 	.long	671
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_504
 .cc_top cc_505,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	672
 	.long	672
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_505
 .cc_top cc_506,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	673
 	.long	674
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_506
 .cc_top cc_507,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	676
 	.long	677
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_507
 .cc_top cc_508,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	682
 	.long	682
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_508
 .cc_top cc_509,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	694
 	.long	694
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_509
 .cc_top cc_510,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	698
 	.long	701
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_510
 .cc_top cc_511,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	704
 	.long	705
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_511
 .cc_top cc_512,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	706
 	.long	706
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_512
 .cc_top cc_513,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	708
 	.long	709
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_513
 .cc_top cc_514,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	710
 	.long	710
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_514
 .cc_top cc_515,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	711
 	.long	712
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_515
 .cc_top cc_516,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	714
 	.long	714
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_516
 .cc_top cc_517,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	720
 	.long	720
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_517
 .cc_top cc_518,.Lxta.loop_labels2
-	.ascii	"C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_spdif_tx/src/SpdifTransmit.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc"
 	.byte	0
 	.long	732
 	.long	736

@@ -1,10 +1,10 @@
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx.xc"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx.xc"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 141 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx.xc" 2
 
 
 
@@ -420,7 +420,7 @@ extern tileref usb_tile;
 
 service xscope_host_data(chanend c);;
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 10 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx.xc" 2
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx.xc" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 1 3
 # 35 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 unsigned bitrev(unsigned x);
@@ -428,7 +428,7 @@ unsigned bitrev(unsigned x);
 unsigned byterev(unsigned x);
 # 59 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 int clz(unsigned x);
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx.xc" 2
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx.xc" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 1 3
 # 34 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 3
 int printchar(char value);
@@ -535,8 +535,8 @@ int printbinln(unsigned value);
 int printstr(const char (& alias s)[]);
 # 145 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 3
 int printstrln(const char (& alias s)[]);
-# 12 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx.xc" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src\\adat_lookups.h" 1
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src\\adat_lookups.h" 1
 
 
 
@@ -545,7 +545,7 @@ int printstrln(const char (& alias s)[]);
 extern unsigned int lookup40w[256];
 extern unsigned char lookup40b[256];
 extern unsigned lookup20[256];
-# 13 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx.xc" 2
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx.xc" 2
 
 
 
@@ -564,7 +564,7 @@ void adat_transmit_until_ct_4x(chanend c_data, chanend c_port, int smux)
     unsigned w[8];
     w[0] = __builtin_in_uint(c_data);
     w[1] = __builtin_in_uint(c_data);
-# 46 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx.xc"
+# 46 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx.xc"
     if (last_lookup & 0x80) {
       __builtin_out_uint(c_port, __builtin_byterev(~0));
       __builtin_out_uint(c_port, __builtin_byterev(~start));
@@ -622,7 +622,7 @@ void adat_transmit_until_ct_2x(chanend c_data, chanend c_port, int smux)
     unsigned w[8];
     w[0] = __builtin_in_uint(c_data);
     w[1] = __builtin_in_uint(c_data);
-# 125 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx.xc"
+# 125 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx.xc"
     if (last_lookup & 0x80000) {
       __builtin_out_uint(c_port, __builtin_byterev(~start));
       last_lookup = ((~start >> 31) & 1) << 19;

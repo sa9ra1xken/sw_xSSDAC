@@ -1074,12 +1074,12 @@ int clz(unsigned x);
 
 unsigned int buff_id = 0;
 
-unsigned char audio_buffer[4][2048];
-unsigned int sm_sample_rate[4];
-unsigned int sm_ch_count[4];
-unsigned int sm_byte_per_sample[4];
-unsigned int sm_byte_count[4];
-BOOL sm_new_track[4];
+unsigned char audio_buffer[8][2048];
+unsigned int sm_sample_rate[8];
+unsigned int sm_ch_count[8];
+unsigned int sm_byte_per_sample[8];
+unsigned int sm_byte_count[8];
+BOOL sm_new_track[8];
 
 unsigned rx_id;
 unsigned tx_id;
@@ -1106,16 +1106,13 @@ void send_sample(chanend c){
 
     unsigned temp;
 
+    if (sm_sample_rate[tx_id]!= cur_freq){
+        set_frequency(c);
+    }
+
     if (sm_new_track[tx_id]==_TRUE){
         sm_new_track[tx_id] = _FALSE;
-
-        if (sm_sample_rate[tx_id]!= cur_freq){
-            set_frequency(c);
-        }
-
-        for (ch = 0 ; ch < sm_ch_count[tx_id] ; ch++ ){
-            samplesOut[ch]=0;
-        }
+# 67 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
         ch = 0;
         digit = 0;
     }
@@ -1132,6 +1129,7 @@ void send_sample(chanend c){
 
             for (ch = 0 ; ch < sm_ch_count[tx_id] ; ch++ ){
                 __builtin_out_uint(c, __builtin_byterev(samplesOut[ch]));
+                samplesOut[ch]=0;
             }
             ch = 0;
         }
@@ -1168,7 +1166,7 @@ void decoupler(
         if (state == EMPTY){
             int tmp;
             c_buff_control :> tmp;
-            rx_id = (tmp + 1) % 4;
+            rx_id = (tmp + 1) % 8;
             tx_id = tmp;
             byte_ptr = 0;
             state = FREE;
@@ -1178,15 +1176,15 @@ void decoupler(
             select{
             case c_buff_control :> tmp:
                 rx_id = tmp + 1;
-                if (rx_id == 4) rx_id = 0;
-                if ( ( (rx_id + 1) % 4) == tx_id) state = FULL;
+                if (rx_id == 8) rx_id = 0;
+                if ( ( (rx_id + 1) % 8) == tx_id) state = FULL;
                 break;
             default:
                 send_sample(c_out);
                 if (byte_ptr == sm_byte_count[tx_id]){
                     byte_ptr = 0;
                     tx_id++;
-                    if ( tx_id == 4) tx_id = 0;
+                    if ( tx_id == 8) tx_id = 0;
                     if ( tx_id == rx_id ) state = EMPTY;
                 }
                 break;
@@ -1199,7 +1197,7 @@ void decoupler(
             }
             byte_ptr = 0;
             tx_id++;
-            if ( tx_id == 4) tx_id = 0;
+            if ( tx_id == 8) tx_id = 0;
             state = FREE;
         }
     }

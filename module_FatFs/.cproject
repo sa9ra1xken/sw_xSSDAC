@@ -175,6 +175,11 @@
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include/xc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include/clang&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AN00246_xua_example}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AN00246_xua_example/doc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AN00246_xua_example/doc/rst}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AN00246_xua_example/doc/rst/images}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AN00246_xua_example/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
@@ -480,6 +485,11 @@
 								<option id="com.xmos.c.compiler.option.include.paths.380969473" name="com.xmos.c.compiler.option.include.paths" superClass="com.xmos.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include/clang&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AN00246_xua_example}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AN00246_xua_example/doc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AN00246_xua_example/doc/rst}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AN00246_xua_example/doc/rst/images}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AN00246_xua_example/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
@@ -790,6 +800,11 @@
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include/clang&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include/c++/v1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AN00246_xua_example}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AN00246_xua_example/doc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AN00246_xua_example/doc/rst}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AN00246_xua_example/doc/rst/images}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AN00246_xua_example/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
@@ -812,4 +827,5 @@
 		<project id="module_FatFs.null.1961858918" name="module_FatFs"/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope"/>
 </cproject>

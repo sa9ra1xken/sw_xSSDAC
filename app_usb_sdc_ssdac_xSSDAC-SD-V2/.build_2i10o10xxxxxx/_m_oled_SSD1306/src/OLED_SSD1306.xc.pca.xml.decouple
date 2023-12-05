@@ -1,0 +1,224 @@
+<preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc">
+<fDef name="OLED_SSD1306_begin" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
+<fDef name="OLED_SSD1306_put_string" global="true" noreturn="false" doNotSpecialize="false" numParams="2"/>
+<fDef name="OLED_SSD1306_shift_left" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
+<fDef name="_safe_memcmp" global="true" noreturn="false" doNotSpecialize="true" numParams="3"/>
+<fDef name="_safe_memmove" global="true" noreturn="false" doNotSpecialize="true" numParams="3"/>
+<fDef name="_safe_memset" global="true" noreturn="false" doNotSpecialize="true" numParams="3"/>
+<fDef name="delay_microseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
+<fDef name="delay_milliseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
+<fDef name="delay_seconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
+<fDef name="send_page" global="true" noreturn="false" doNotSpecialize="false" numParams="2"/>
+<fCall name="delay_ticks_longlong" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="delay_ticks_longlong" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="delay_ticks_longlong" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="memcmp" global="true" numArgs="3">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2">
+    <passThroughArg param="2" caller="_safe_memcmp" global="true"/>
+    <values>
+    </values>
+  </arg>
+</fCall>
+<fCall name="__builtin_array_bound" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="__builtin_trap" global="true" numArgs="0">
+</fCall>
+<fCall name="memmove" global="true" numArgs="3">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2">
+    <passThroughArg param="2" caller="_safe_memmove" global="true"/>
+    <values>
+    </values>
+  </arg>
+</fCall>
+<fCall name="__builtin_array_bound" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="__builtin_trap" global="true" numArgs="0">
+</fCall>
+<fCall name="memset" global="true" numArgs="3">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <passThroughArg param="1" caller="_safe_memset" global="true"/>
+    <values>
+    </values>
+  </arg>
+  <arg num="2">
+    <passThroughArg param="2" caller="_safe_memset" global="true"/>
+    <values>
+    </values>
+  </arg>
+</fCall>
+<fCall name="i2c_shared_master_init" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="i2c_shared_master_write_reg" global="true" numArgs="5">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="intval"><intval isSigned="true" val="60"/></value>
+    </values>
+  </arg>
+  <arg num="2">
+    <values>
+      <value type="intval"><intval isSigned="true" val="0"/></value>
+    </values>
+  </arg>
+  <arg num="3">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="4">
+    <values>
+      <value type="intval"><intval isSigned="false" val="28"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="i2c_shared_master_write_reg" global="true" numArgs="5">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="intval"><intval isSigned="true" val="60"/></value>
+    </values>
+  </arg>
+  <arg num="2">
+    <values>
+      <value type="intval"><intval isSigned="true" val="0"/></value>
+    </values>
+  </arg>
+  <arg num="3">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="4">
+    <values>
+      <value type="intval"><intval isSigned="false" val="3"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="i2c_shared_master_write_part" global="true" numArgs="7">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="intval"><intval isSigned="true" val="60"/></value>
+    </values>
+  </arg>
+  <arg num="2">
+    <values>
+      <value type="intval"><intval isSigned="true" val="64"/></value>
+    </values>
+  </arg>
+  <arg num="3">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="4">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="5">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="6">
+    <passThroughArg param="1" caller="send_page" global="true"/>
+    <values>
+    </values>
+  </arg>
+</fCall>
+<fCall name="send_page" global="true" numArgs="2">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="send_page" global="true" numArgs="2">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+</preCompilationAnalysis>

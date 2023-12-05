@@ -1,10 +1,10 @@
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx_port.xc"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx_port.xc"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 141 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx_port.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx_port.xc" 2
 
 
 
@@ -420,7 +420,7 @@ extern tileref usb_tile;
 
 service xscope_host_data(chanend c);;
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 10 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx_port.xc" 2
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx_port.xc" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 1 3
 # 35 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 unsigned bitrev(unsigned x);
@@ -428,7 +428,7 @@ unsigned bitrev(unsigned x);
 unsigned byterev(unsigned x);
 # 59 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 int clz(unsigned x);
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx_port.xc" 2
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx_port.xc" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 1 3
 # 34 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 3
 int printchar(char value);
@@ -535,8 +535,8 @@ int printbinln(unsigned value);
 int printstr(const char (& alias s)[]);
 # 145 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 3
 int printstrln(const char (& alias s)[]);
-# 12 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx_port.xc" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src\\adat_lookups.h" 1
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx_port.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src\\adat_lookups.h" 1
 
 
 
@@ -545,7 +545,7 @@ int printstrln(const char (& alias s)[]);
 extern unsigned int lookup40w[256];
 extern unsigned char lookup40b[256];
 extern unsigned lookup20[256];
-# 13 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx_port.xc" 2
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx_port.xc" 2
 
 #pragma unsafe arrays
 void adat_transmit_port_until_ct_4x(chanend c_data, buffered out port:32 p_data, int smux)
@@ -556,7 +556,7 @@ void adat_transmit_port_until_ct_4x(chanend c_data, buffered out port:32 p_data,
 
 
   volatile unsigned * unsafe bufferPtr;
-# 39 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx_port.xc"
+# 39 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx_port.xc"
   switch (smux) {
     case 0:
     case 1: start = 0b00001111111111111111111100000000; break;
@@ -598,7 +598,7 @@ void adat_transmit_port_until_ct_4x(chanend c_data, buffered out port:32 p_data,
 
 #pragma loop unroll
  for (int i = 0; i < 8; i++) {
-# 89 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx_port.xc"
+# 89 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx_port.xc"
 #pragma loop unroll
  for (int j = 24; j >= 8; j -= 8) {
         if (last_lookup & 0x80) {
@@ -629,7 +629,7 @@ void adat_transmit_port_until_ct_2x(chanend c_data, buffered out port:32 p_data,
 
 
   volatile unsigned * unsafe bufferPtr;
-# 137 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx_port.xc"
+# 137 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx_port.xc"
   switch (smux)
   {
     case 0:
@@ -670,7 +670,7 @@ void adat_transmit_port_until_ct_2x(chanend c_data, buffered out port:32 p_data,
 
         __builtin_out_uint(c_data, 0);
     }
-# 190 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx_port.xc"
+# 190 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx_port.xc"
     if (last_lookup & 0x80000) {
       p_data <: ~start;
       last_lookup = ((~start >> 31) & 1) << 19;
@@ -684,7 +684,7 @@ void adat_transmit_port_until_ct_2x(chanend c_data, buffered out port:32 p_data,
     for (int i = 0; i < 8; i += 2) {
       unsigned next_lookup;
       if (i > 0) {
-# 214 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE041/module_adat_tx/src/adat_tx_port.xc"
+# 214 "C:/Users/takaaki/git/sw_xSSDAC/module_adat_tx/src/adat_tx_port.xc"
       }
 
       if (last_lookup & 0x80000)
