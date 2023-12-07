@@ -1485,8 +1485,6 @@
   <arg num="0" specialize="false">
     <values>
       <value type="intval"><intval isSigned="true" val="16"/></value>
-      <value type="intval"><intval isSigned="true" val="32"/></value>
-      <value type="intval"><intval isSigned="true" val="64"/></value>
       <value type="intval"><intval isSigned="true" val="256"/></value>
       <value type="intval"><intval isSigned="true" val="512"/></value>
     </values>
@@ -2123,8 +2121,6 @@
   <arg num="0" specialize="false">
     <values>
       <value type="intval"><intval isSigned="true" val="16"/></value>
-      <value type="intval"><intval isSigned="true" val="32"/></value>
-      <value type="intval"><intval isSigned="true" val="64"/></value>
       <value type="intval"><intval isSigned="true" val="256"/></value>
       <value type="intval"><intval isSigned="true" val="512"/></value>
     </values>
@@ -2302,10 +2298,10 @@
 </fInfo>
 <fInfo name="xscope_user_init" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
-<fCall name="usb_audio_core" global="true" callerUnit="../src/core/main.xc" numArgs="4" impId="1" specializationId="0">
+<fCall name="usb_audio_core" global="true" callerUnit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" numArgs="4" impId="1" specializationId="0">
 </fCall>
-<fCall name="usb_audio_io" global="true" callerUnit="../src/core/main.xc" numArgs="9" impId="2" specializationId="0">
+<fCall name="usb_audio_io" global="true" callerUnit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" numArgs="9" impId="2" specializationId="0">
 </fCall>
-<fCall name="button_listener" global="true" callerUnit="../src/core/main.xc" numArgs="2" impId="4" specializationId="0">
+<fCall name="button_listener" global="true" callerUnit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" numArgs="2" impId="4" specializationId="0">
 </fCall>
 </preCompilationAnalysis>

@@ -17,21 +17,6 @@
  * Note, we check if they are already defined in Makefile
  */
 
-// Application option
-#define _USB_AUDIO_SUPPORT          1
-#define _SDC_AUDIO_SUPPORT          0
-
-// Interparation mode selector option
-#define _DAC_MODE_SELECTOR_NONE     1
-#define _DAC_MODE_SELECTOR_EXPLORER 2
-#define _DAC_MODE_SELECTOR_BTN_LSTN 3
-
-#define _DAC_MODE_SELECTOR _DAC_MODE_SELECTOR_BTN_LSTN
-
-#define _USB_AUDIO_USE_DISPLAY 1
-
-#define USEJKFF         0
-#define MCLK_PORARITY   1
 
 /* Default to board version version 2.0 */
 #ifndef XCORE_200_MC_AUDIO_HW_VERSION

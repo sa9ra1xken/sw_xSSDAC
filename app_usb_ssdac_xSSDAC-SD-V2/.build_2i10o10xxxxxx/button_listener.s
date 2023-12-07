@@ -36,7 +36,6 @@ p_key.info:
 	.globwrite HandlePlayCommand,play_command,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:77:9: note: object used here\n        play_command = _PLAY_CMD_EMPTY;\n        ^~~~~~~~~~~~"
 	.globwrite HandlePlayCommand,p_key,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:87:9: note: object used here\n        p_key :> temp;\n        ^~~~~"
 	.call button_listener,set_display_control_flag
-	.call button_listener,set_console_mode
 	.call button_listener,HandleDacCommand
 	.call button_listener,ExamineKeyInput
 	.call ExamineKeyInput,KeyEvent
@@ -254,16 +253,13 @@ button_listener:                        # @button_listener
 	}
 	.loc	1 295 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:295:0
 	stw r0, dp[scan_time]
-	.loc	1 300 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:300:0
-.Ltmp16:
-.Lxta.call_labels0:
-	bl _Sset_console_mode_0
 	{
 		ldc r0, 16
 		nop
 	}
 	.loc	1 302 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:302:0
-.Lxta.call_labels1:
+.Ltmp16:
+.Lxta.call_labels0:
 	bl set_display_control_flag
 	.loc	1 318 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:318:9
 .Ltmp17:
@@ -298,7 +294,7 @@ button_listener:                        # @button_listener
 	}
 .Ltmp20:
 	.loc	1 331 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:331:0
-.Lxta.call_labels2:
+.Lxta.call_labels1:
 	bl ExamineKeyInput
 	.loc	1 332 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:332:0
 	ldw r0, dp[scan_time]
@@ -463,19 +459,19 @@ button_listener:                        # @button_listener
 		mov r0, r4
 		nop
 	}
-.Lxta.call_labels3:
+.Lxta.call_labels2:
 	bl HandleDacCommand
 .Ltmp28:
 	bu .LBB1_1
 .Ltmp29:
 	.cc_bottom button_listener.function
-	.set	button_listener.nstackwords,((_Sset_console_mode_0.nstackwords $M set_display_control_flag.nstackwords $M HandleDacCommand.nstackwords $M ExamineKeyInput.nstackwords) + 8)
+	.set	button_listener.nstackwords,((set_display_control_flag.nstackwords $M HandleDacCommand.nstackwords $M ExamineKeyInput.nstackwords) + 8)
 	.globl	button_listener.nstackwords
-	.set	button_listener.maxcores,ExamineKeyInput.maxcores $M HandleDacCommand.maxcores $M _Sset_console_mode_0.maxcores $M set_display_control_flag.maxcores $M 1
+	.set	button_listener.maxcores,ExamineKeyInput.maxcores $M HandleDacCommand.maxcores $M set_display_control_flag.maxcores $M 1
 	.globl	button_listener.maxcores
-	.set	button_listener.maxtimers,ExamineKeyInput.maxtimers $M HandleDacCommand.maxtimers $M _Sset_console_mode_0.maxtimers $M set_display_control_flag.maxtimers $M 0
+	.set	button_listener.maxtimers,ExamineKeyInput.maxtimers $M HandleDacCommand.maxtimers $M set_display_control_flag.maxtimers $M 0
 	.globl	button_listener.maxtimers
-	.set	button_listener.maxchanends,ExamineKeyInput.maxchanends $M HandleDacCommand.maxchanends $M _Sset_console_mode_0.maxchanends $M set_display_control_flag.maxchanends $M 0
+	.set	button_listener.maxchanends,ExamineKeyInput.maxchanends $M HandleDacCommand.maxchanends $M set_display_control_flag.maxchanends $M 0
 	.globl	button_listener.maxchanends
 .Ltmp30:
 	.size	button_listener, .Ltmp30-button_listener
@@ -557,16 +553,13 @@ _Sbutton_listener_0:                    # @_Sbutton_listener_0
 	}
 	.loc	1 295 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:295:0
 	stw r0, dp[scan_time]
-	.loc	1 300 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:300:0
-.Ltmp39:
-.Lxta.call_labels4:
-	bl _Sset_console_mode_0
 	{
 		ldc r0, 16
 		nop
 	}
 	.loc	1 302 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:302:0
-.Lxta.call_labels5:
+.Ltmp39:
+.Lxta.call_labels3:
 	bl set_display_control_flag
 	.loc	1 318 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:318:9
 .Ltmp40:
@@ -600,7 +593,7 @@ _Sbutton_listener_0:                    # @_Sbutton_listener_0
 	}
 .Ltmp43:
 	.loc	1 331 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:331:0
-.Lxta.call_labels6:
+.Lxta.call_labels4:
 	bl ExamineKeyInput
 	.loc	1 332 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:332:0
 	ldw r0, dp[scan_time]
@@ -760,19 +753,19 @@ _Sbutton_listener_0:                    # @_Sbutton_listener_0
 		mov r0, r4
 		nop
 	}
-.Lxta.call_labels7:
+.Lxta.call_labels5:
 	bl HandleDacCommand
 .Ltmp51:
 	bu .LBB2_1
 .Ltmp52:
 	.cc_bottom _Sbutton_listener_0.function
-	.set	_Sbutton_listener_0.nstackwords,((_Sset_console_mode_0.nstackwords $M set_display_control_flag.nstackwords $M HandleDacCommand.nstackwords $M ExamineKeyInput.nstackwords) + 6)
+	.set	_Sbutton_listener_0.nstackwords,((set_display_control_flag.nstackwords $M HandleDacCommand.nstackwords $M ExamineKeyInput.nstackwords) + 6)
 	.globl	_Sbutton_listener_0.nstackwords
-	.set	_Sbutton_listener_0.maxcores,ExamineKeyInput.maxcores $M HandleDacCommand.maxcores $M _Sset_console_mode_0.maxcores $M set_display_control_flag.maxcores $M 1
+	.set	_Sbutton_listener_0.maxcores,ExamineKeyInput.maxcores $M HandleDacCommand.maxcores $M set_display_control_flag.maxcores $M 1
 	.globl	_Sbutton_listener_0.maxcores
-	.set	_Sbutton_listener_0.maxtimers,ExamineKeyInput.maxtimers $M HandleDacCommand.maxtimers $M _Sset_console_mode_0.maxtimers $M set_display_control_flag.maxtimers $M 0
+	.set	_Sbutton_listener_0.maxtimers,ExamineKeyInput.maxtimers $M HandleDacCommand.maxtimers $M set_display_control_flag.maxtimers $M 0
 	.globl	_Sbutton_listener_0.maxtimers
-	.set	_Sbutton_listener_0.maxchanends,ExamineKeyInput.maxchanends $M HandleDacCommand.maxchanends $M _Sset_console_mode_0.maxchanends $M set_display_control_flag.maxchanends $M 0
+	.set	_Sbutton_listener_0.maxchanends,ExamineKeyInput.maxchanends $M HandleDacCommand.maxchanends $M set_display_control_flag.maxchanends $M 0
 	.globl	_Sbutton_listener_0.maxchanends
 .Ltmp53:
 	.size	_Sbutton_listener_0, .Ltmp53-_Sbutton_listener_0
@@ -1047,7 +1040,7 @@ HandleDacCommand:                       # @HandleDacCommand
 	ldc r0, 512
 .Ltmp71:
 	.loc	1 103 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:103:0
-.Lxta.call_labels8:
+.Lxta.call_labels6:
 	bl set_display_control_flag
 .Ltmp72:
 	{
@@ -1065,7 +1058,7 @@ HandleDacCommand:                       # @HandleDacCommand
 		mov r0, r11
 		nop
 	}
-.Lxta.call_labels9:
+.Lxta.call_labels7:
 	bl debug_printf
 .Ltmp74:
 	{
@@ -1118,7 +1111,7 @@ SwitchConsoleMode:                      # @SwitchConsoleMode
 	}
 .Ltmp80:
 	.loc	1 113 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:113:0
-.Lxta.call_labels10:
+.Lxta.call_labels8:
 	bl set_display_control_flag
 	{
 		nop
@@ -1189,12 +1182,12 @@ KeyEvent:                               # @KeyEvent
 		mov r2, r4
 		nop
 	}
-.Lxta.call_labels11:
+.Lxta.call_labels9:
 	bl iprintf
 	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:122:0
 	bl __getstdout
 	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:122:0
-.Lxta.call_labels12:
+.Lxta.call_labels10:
 	bl fflush
 	.loc	1 124 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:124:0
 	{
@@ -1220,7 +1213,7 @@ KeyEvent:                               # @KeyEvent
 		eq r0, r4, 7
 		nop
 	}
-	bf r0, .LBB6_27
+	bf r0, .LBB6_25
 	bu .LBB6_17
 .Ltmp91:
 .LBB6_14:                               # %switchcase26
@@ -1247,7 +1240,7 @@ KeyEvent:                               # @KeyEvent
 		nop
 		bru r1
 	}
-	.jmptable32 .LBB6_19,.LBB6_20,.LBB6_21,.LBB6_22,.LBB6_23,.LBB6_18,.LBB6_24
+	.jmptable32 .LBB6_19,.LBB6_20,.LBB6_21,.LBB6_22,.LBB6_23,.LBB6_18,.LBB6_25
 .LBB6_19:                               # %switchcase36
 .Lxtalabel33:
 	{
@@ -1263,7 +1256,7 @@ KeyEvent:                               # @KeyEvent
 		eq r0, r5, 1
 		nop
 	}
-	bf r0, .LBB6_27
+	bf r0, .LBB6_25
 .Ltmp94:
 # BB#3:                                 # %switchcase
 .Lxtalabel35:
@@ -1281,7 +1274,7 @@ KeyEvent:                               # @KeyEvent
 		lsu r1, r2, r1
 		nop
 	}
-	bt r1, .LBB6_27
+	bt r1, .LBB6_25
 .Ltmp95:
 # BB#4:                                 # %switchcase
 .Lxtalabel36:
@@ -1293,7 +1286,7 @@ KeyEvent:                               # @KeyEvent
 		nop
 		bru r0
 	}
-	.jmptable32 .LBB6_11,.LBB6_27,.LBB6_27,.LBB6_17,.LBB6_27,.LBB6_27,.LBB6_27,.LBB6_6,.LBB6_7,.LBB6_9,.LBB6_27,.LBB6_12,.LBB6_27,.LBB6_27,.LBB6_27,.LBB6_27,.LBB6_27,.LBB6_5,.LBB6_8,.LBB6_10,.LBB6_27,.LBB6_13
+	.jmptable32 .LBB6_11,.LBB6_25,.LBB6_25,.LBB6_17,.LBB6_25,.LBB6_25,.LBB6_25,.LBB6_6,.LBB6_7,.LBB6_9,.LBB6_25,.LBB6_12,.LBB6_25,.LBB6_25,.LBB6_25,.LBB6_25,.LBB6_25,.LBB6_5,.LBB6_8,.LBB6_10,.LBB6_25,.LBB6_13
 .LBB6_11:                               # %switchcase16
 .Lxtalabel37:
 	{
@@ -1302,7 +1295,7 @@ KeyEvent:                               # @KeyEvent
 	}
 	.loc	1 146 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:146:0
 	stw r0, dp[play_command]
-	bu .LBB6_27
+	bu .LBB6_25
 .LBB6_18:                               # %switchdefault34
 .Lxtalabel38:
 	.loc	1 207 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:207:0
@@ -1310,7 +1303,7 @@ KeyEvent:                               # @KeyEvent
 	ldw r0, dp[proposed_intpol_mode]
 	.loc	1 207 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:207:0
 	stw r0, dp[fixed_intpol_mode]
-	bu .LBB6_27
+	bu .LBB6_25
 .Ltmp97:
 .LBB6_17:                               # %switchcase22
 .Lxtalabel39:
@@ -1321,151 +1314,128 @@ KeyEvent:                               # @KeyEvent
 		mkmsk r1, 2
 		nop
 	}
-.Ltmp98:
-.LBB6_25:                               # %return
-.Lxtalabel40:
 	.loc	1 112 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:112:0
 	{
 		ldc r0, 16
 		stw r1, r0[0]
 	}
-	bu .LBB6_26
-.Ltmp99:
+	bu .LBB6_24
+.Ltmp98:
 .LBB6_20:                               # %switchcase37
-.Lxtalabel41:
+.Lxtalabel40:
 	{
 		ldc r0, 2
 		nop
 	}
 	bu .LBB6_23
 .LBB6_21:                               # %switchcase39
-.Lxtalabel42:
+.Lxtalabel41:
 	{
 		ldc r0, 4
 		nop
 	}
 	bu .LBB6_23
 .LBB6_22:                               # %switchcase42
-.Lxtalabel43:
+.Lxtalabel42:
 	{
 		ldc r0, 5
 		nop
 	}
 .LBB6_23:                               # %switchcase45
-.Lxtalabel44:
+.Lxtalabel43:
 	.loc	1 194 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:194:0
+.Ltmp99:
 	stw r0, dp[proposed_intpol_mode]
 	ldc r0, 256
-.LBB6_26:                               # %return
-.Lxtalabel45:
-	.loc	1 113 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:113:0
-.Ltmp100:
-.Lxta.call_labels13:
+.LBB6_24:                               # %return
+.Lxtalabel44:
+	.loc	1 195 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:195:0
+.Lxta.call_labels11:
 	bl set_display_control_flag
-.Ltmp101:
-.LBB6_27:                               # %return
-.Lxtalabel46:
+.Ltmp100:
+.LBB6_25:                               # %return
+.Lxtalabel45:
 	ldd r5, r4, sp[1]               # 4-byte Folded Reload
 	{
 		nop
 		retsp 4
 	}
 	# RETURN_REG_HOLDER
-.LBB6_24:                               # %switchcase48
-.Lxtalabel47:
-	.loc	1 201 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:201:0
-	ldaw r11, cp[.str2]
-	{
-		mov r0, r11
-		nop
-	}
-.Lxta.call_labels14:
-	bl iprintf
-.Ltmp102:
-	#DEBUG_VALUE: SwitchConsoleMode:mode <- 2
-	.loc	1 112 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:112:0
-	ldw r0, dp[p_console_mode]
-	{
-		ldc r1, 2
-		nop
-	}
-	bu .LBB6_25
-.Ltmp103:
 .LBB6_6:                                # %switchcase7
-.Lxtalabel48:
+.Lxtalabel46:
 	{
 		mkmsk r0, 2
 		nop
 	}
 	.loc	1 131 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:131:0
 	stw r0, dp[play_command]
-	bu .LBB6_27
+	bu .LBB6_25
 .LBB6_7:                                # %switchcase8
-.Lxtalabel49:
+.Lxtalabel47:
 	{
 		ldc r0, 6
 		nop
 	}
 	.loc	1 134 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:134:0
 	stw r0, dp[play_command]
-	bu .LBB6_27
+	bu .LBB6_25
 .LBB6_9:                                # %switchcase12
-.Lxtalabel50:
+.Lxtalabel48:
 	{
 		ldc r0, 8
 		nop
 	}
 	.loc	1 140 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:140:0
 	stw r0, dp[play_command]
-	bu .LBB6_27
+	bu .LBB6_25
 .LBB6_12:                               # %switchcase18
-.Lxtalabel51:
+.Lxtalabel49:
 	{
 		ldc r0, 4
 		nop
 	}
 	.loc	1 149 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:149:0
 	stw r0, dp[play_command]
-	bu .LBB6_27
+	bu .LBB6_25
 .LBB6_5:                                # %switchcase6
-.Lxtalabel52:
+.Lxtalabel50:
 	{
 		mkmsk r0, 1
 		nop
 	}
 	.loc	1 128 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:128:0
 	stw r0, dp[play_command]
-	bu .LBB6_27
+	bu .LBB6_25
 .LBB6_8:                                # %switchcase10
-.Lxtalabel53:
+.Lxtalabel51:
 	{
 		ldc r0, 5
 		nop
 	}
 	.loc	1 137 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:137:0
 	stw r0, dp[play_command]
-	bu .LBB6_27
+	bu .LBB6_25
 .LBB6_10:                               # %switchcase14
-.Lxtalabel54:
+.Lxtalabel52:
 	{
 		ldc r0, 9
 		nop
 	}
 	.loc	1 143 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:143:0
 	stw r0, dp[play_command]
-	bu .LBB6_27
+	bu .LBB6_25
 .LBB6_13:                               # %switchcase20
-.Lxtalabel55:
+.Lxtalabel53:
 	{
 		ldc r0, 2
 		nop
 	}
 	.loc	1 152 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:152:0
 	stw r0, dp[play_command]
-	bu .LBB6_27
-.Ltmp104:
+	bu .LBB6_25
+.Ltmp101:
 	.cc_bottom KeyEvent.function
-	.set	KeyEvent.nstackwords,((__getstdout.nstackwords $M fflush.nstackwords $M set_display_control_flag.nstackwords $M iprintf.nstackwords) + 4)
+	.set	KeyEvent.nstackwords,((iprintf.nstackwords $M __getstdout.nstackwords $M fflush.nstackwords $M set_display_control_flag.nstackwords) + 4)
 	.globl	KeyEvent.nstackwords
 	.set	KeyEvent.maxcores,__getstdout.maxcores $M fflush.maxcores $M iprintf.maxcores $M set_display_control_flag.maxcores $M 1
 	.globl	KeyEvent.maxcores
@@ -1473,8 +1443,8 @@ KeyEvent:                               # @KeyEvent
 	.globl	KeyEvent.maxtimers
 	.set	KeyEvent.maxchanends,__getstdout.maxchanends $M fflush.maxchanends $M iprintf.maxchanends $M set_display_control_flag.maxchanends $M 0
 	.globl	KeyEvent.maxchanends
-.Ltmp105:
-	.size	KeyEvent, .Ltmp105-KeyEvent
+.Ltmp102:
+	.size	KeyEvent, .Ltmp102-KeyEvent
 .Lfunc_end6:
 	.cfi_endproc
 
@@ -1504,26 +1474,26 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
-.Lxtalabel56:
+.Lxtalabel54:
 	{
 		nop
 		dualentsp 6
 	}
-.Ltmp106:
+.Ltmp103:
 	.cfi_def_cfa_offset 24
-.Ltmp107:
+.Ltmp104:
 	.cfi_offset 15, 0
 	.loc	1 217 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:217:0
-.Ltmp108:
+.Ltmp105:
 	std r5, r4, sp[1]               # 4-byte Folded Spill
-.Ltmp109:
+.Ltmp106:
 	.cfi_offset 4, -16
-.Ltmp110:
+.Ltmp107:
 	.cfi_offset 5, -12
 	std r7, r6, sp[2]               # 4-byte Folded Spill
-.Ltmp111:
+.Ltmp108:
 	.cfi_offset 6, -8
-.Ltmp112:
+.Ltmp109:
 	.cfi_offset 7, -4
 	ldw r0, dp[key_buff+4]
 	.loc	1 217 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:217:0
@@ -1554,20 +1524,20 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bf r3, .LBB7_47
 # BB#1:                                 # %allocas
-.Lxtalabel57:
+.Lxtalabel55:
 	{
 		eq r2, r2, r0
 		nop
 	}
 	bt r2, .LBB7_47
 # BB#2:                                 # %iftrue
-.Lxtalabel58:
+.Lxtalabel56:
 	.loc	1 223 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:223:0
 	{
 		gettime r2
 		nop
 	}
-.Ltmp113:
+.Ltmp110:
 	#DEBUG_VALUE: now <- R2
 	.loc	1 224 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:224:0
 	ldw r3, dp[last_event_time]
@@ -1585,9 +1555,9 @@ ExamineKeyInput:                        # @ExamineKeyInput
 		nop
 	}
 	bt r4, .LBB7_5
-.Ltmp114:
+.Ltmp111:
 # BB#3:                                 # %iftrue
-.Lxtalabel59:
+.Lxtalabel57:
 	{
 		mkmsk r0, 6
 		nop
@@ -1598,14 +1568,14 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bf r0, .LBB7_47
 # BB#4:                                 # %switchcase14
-.Lxtalabel60:
+.Lxtalabel58:
 	{
 		mkmsk r0, 1
 		nop
 	}
 	bu .LBB7_46
 .LBB7_5:                                # %iftrue
-.Lxtalabel61:
+.Lxtalabel59:
 	ldc r4, 110
 	{
 		lss r5, r4, r1
@@ -1613,7 +1583,7 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bt r5, .LBB7_8
 # BB#6:                                 # %iftrue
-.Lxtalabel62:
+.Lxtalabel60:
 	ldc r0, 95
 	{
 		eq r0, r1, r0
@@ -1621,14 +1591,14 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bf r0, .LBB7_47
 # BB#7:                                 # %switchcase80
-.Lxtalabel63:
+.Lxtalabel61:
 	{
 		ldc r0, 2
 		nop
 	}
 	bu .LBB7_46
 .LBB7_8:                                # %iftrue
-.Lxtalabel64:
+.Lxtalabel62:
 	ldc r5, 118
 	{
 		lss r6, r5, r1
@@ -1636,7 +1606,7 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bt r6, .LBB7_11
 # BB#9:                                 # %iftrue
-.Lxtalabel65:
+.Lxtalabel63:
 	ldc r0, 111
 	{
 		eq r0, r1, r0
@@ -1644,18 +1614,18 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bf r0, .LBB7_47
 # BB#10:                                # %switchcase82
-.Lxtalabel66:
+.Lxtalabel64:
 	{
 		mkmsk r0, 2
 		nop
 	}
 .LBB7_46:                               # %return
-.Lxtalabel67:
+.Lxtalabel65:
 	.loc	1 279 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:279:0
-.Lxta.call_labels15:
+.Lxta.call_labels12:
 	bl KeyEvent
 .LBB7_47:                               # %return
-.Lxtalabel68:
+.Lxtalabel66:
 	ldd r7, r6, sp[2]               # 4-byte Folded Reload
 	ldd r5, r4, sp[1]               # 4-byte Folded Reload
 	{
@@ -1664,7 +1634,7 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	# RETURN_REG_HOLDER
 .LBB7_11:                               # %iftrue
-.Lxtalabel69:
+.Lxtalabel67:
 	ldw r6, cp[.LCPI7_0]
 	{
 		add r1, r1, r6
@@ -1676,7 +1646,7 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bt r7, .LBB7_47
 # BB#12:                                # %iftrue
-.Lxtalabel70:
+.Lxtalabel68:
 
 	.xtabranch .Ljumptable2+4,.Ljumptable2+8,.Ljumptable2+12,.Ljumptable2+16,.Ljumptable2+20,.Ljumptable2+24,.Ljumptable2+28,.Ljumptable2+32,.Ljumptable2+36
 .Ljumptable2:
@@ -1687,43 +1657,43 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	.jmptable32 .LBB7_42,.LBB7_47,.LBB7_47,.LBB7_47,.LBB7_43,.LBB7_47,.LBB7_44,.LBB7_45,.LBB7_13
 .LBB7_42:                               # %switchcase84
-.Lxtalabel71:
+.Lxtalabel69:
 	{
 		ldc r0, 4
 		nop
 	}
 	bu .LBB7_46
 .LBB7_43:                               # %switchcase86
-.Lxtalabel72:
+.Lxtalabel70:
 	{
 		ldc r0, 5
 		nop
 	}
 	bu .LBB7_46
 .LBB7_44:                               # %switchcase88
-.Lxtalabel73:
+.Lxtalabel71:
 	{
 		ldc r0, 6
 		nop
 	}
 	bu .LBB7_46
 .LBB7_45:                               # %switchcase90
-.Lxtalabel74:
+.Lxtalabel72:
 	{
 		mkmsk r0, 3
 		nop
 	}
 	bu .LBB7_46
 .LBB7_13:                               # %switchcase
-.Lxtalabel75:
-.Ltmp115:
+.Lxtalabel73:
+.Ltmp112:
 	#DEBUG_VALUE: elapsed_time <- R1
 	.loc	1 224 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:224:0
 	{
 		sub r1, r2, r3
 		zext r0, 7
 	}
-.Ltmp116:
+.Ltmp113:
 	.loc	1 229 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:229:0
 	{
 		lss r2, r11, r0
@@ -1731,7 +1701,7 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bt r2, .LBB7_17
 # BB#14:                                # %switchcase
-.Lxtalabel76:
+.Lxtalabel74:
 	{
 		mkmsk r2, 6
 		nop
@@ -1742,7 +1712,7 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bf r0, .LBB7_47
 # BB#15:                                # %switchcase19
-.Lxtalabel77:
+.Lxtalabel75:
 	ldw r0, cp[.LCPI7_1]
 	.loc	1 231 19                # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:231:19
 	{
@@ -1758,14 +1728,14 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bu .LBB7_46
 .LBB7_17:                               # %switchcase
-.Lxtalabel78:
+.Lxtalabel76:
 	{
 		lss r2, r4, r0
 		nop
 	}
 	bt r2, .LBB7_21
 # BB#18:                                # %switchcase
-.Lxtalabel79:
+.Lxtalabel77:
 	ldc r2, 95
 	{
 		eq r0, r0, r2
@@ -1773,7 +1743,7 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bf r0, .LBB7_47
 # BB#19:                                # %switchcase20
-.Lxtalabel80:
+.Lxtalabel78:
 	ldw r0, cp[.LCPI7_1]
 	.loc	1 235 19                # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:235:19
 	{
@@ -1789,14 +1759,14 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bu .LBB7_46
 .LBB7_21:                               # %switchcase
-.Lxtalabel81:
+.Lxtalabel79:
 	{
 		lss r2, r5, r0
 		nop
 	}
 	bt r2, .LBB7_25
 # BB#22:                                # %switchcase
-.Lxtalabel82:
+.Lxtalabel80:
 	ldc r2, 111
 	{
 		eq r0, r0, r2
@@ -1804,7 +1774,7 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bf r0, .LBB7_47
 # BB#23:                                # %switchcase26
-.Lxtalabel83:
+.Lxtalabel81:
 	ldw r0, cp[.LCPI7_1]
 	.loc	1 239 19                # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:239:19
 	{
@@ -1820,14 +1790,14 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bu .LBB7_46
 .LBB7_27:                               # %iffalse
-.Lxtalabel84:
+.Lxtalabel82:
 	{
 		ldc r0, 11
 		nop
 	}
 	bu .LBB7_46
 .LBB7_25:                               # %switchcase
-.Lxtalabel85:
+.Lxtalabel83:
 	{
 		add r0, r0, r6
 		mkmsk r2, 3
@@ -1838,7 +1808,7 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bt r2, .LBB7_47
 # BB#26:                                # %switchcase
-.Lxtalabel86:
+.Lxtalabel84:
 
 	.xtabranch .Ljumptable3+4,.Ljumptable3+8,.Ljumptable3+12,.Ljumptable3+16,.Ljumptable3+20,.Ljumptable3+24,.Ljumptable3+28,.Ljumptable3+32
 .Ljumptable3:
@@ -1849,7 +1819,7 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	.jmptable32 .LBB7_30,.LBB7_47,.LBB7_47,.LBB7_47,.LBB7_33,.LBB7_47,.LBB7_36,.LBB7_39
 .LBB7_30:                               # %switchcase35
-.Lxtalabel87:
+.Lxtalabel85:
 	ldw r0, cp[.LCPI7_1]
 	.loc	1 243 19                # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:243:19
 	{
@@ -1865,21 +1835,21 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bu .LBB7_46
 .LBB7_28:                               # %iffalse33
-.Lxtalabel88:
+.Lxtalabel86:
 	{
 		ldc r0, 12
 		nop
 	}
 	bu .LBB7_46
 .LBB7_29:                               # %iffalse42
-.Lxtalabel89:
+.Lxtalabel87:
 	{
 		ldc r0, 13
 		nop
 	}
 	bu .LBB7_46
 .LBB7_33:                               # %switchcase44
-.Lxtalabel90:
+.Lxtalabel88:
 	ldw r0, cp[.LCPI7_1]
 	.loc	1 247 19                # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:247:19
 	{
@@ -1895,7 +1865,7 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bu .LBB7_46
 .LBB7_36:                               # %switchcase53
-.Lxtalabel91:
+.Lxtalabel89:
 	ldw r0, cp[.LCPI7_1]
 	.loc	1 251 19                # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:251:19
 	{
@@ -1911,7 +1881,7 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bu .LBB7_46
 .LBB7_39:                               # %switchcase62
-.Lxtalabel92:
+.Lxtalabel90:
 	ldw r0, cp[.LCPI7_1]
 	.loc	1 255 19                # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:255:19
 	{
@@ -1920,7 +1890,7 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	.loc	1 255 19                # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc:255:19
 	bf r0, .LBB7_41
-.Ltmp117:
+.Ltmp114:
 # BB#40:                                # %iftrue71
 	{
 		ldc r0, 27
@@ -1928,28 +1898,28 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	}
 	bu .LBB7_46
 .LBB7_32:                               # %iffalse51
-.Lxtalabel93:
+.Lxtalabel91:
 	{
 		ldc r0, 14
 		nop
 	}
 	bu .LBB7_46
 .LBB7_35:                               # %iffalse60
-.Lxtalabel94:
+.Lxtalabel92:
 	{
 		mkmsk r0, 4
 		nop
 	}
 	bu .LBB7_46
 .LBB7_38:                               # %iffalse69
-.Lxtalabel95:
+.Lxtalabel93:
 	{
 		ldc r0, 16
 		nop
 	}
 	bu .LBB7_46
 .LBB7_41:                               # %iffalse77
-.Lxtalabel96:
+.Lxtalabel94:
 	{
 		ldc r0, 17
 		nop
@@ -1964,8 +1934,8 @@ ExamineKeyInput:                        # @ExamineKeyInput
 	.globl	ExamineKeyInput.maxtimers
 	.set	ExamineKeyInput.maxchanends,KeyEvent.maxchanends $M 0
 	.globl	ExamineKeyInput.maxchanends
-.Ltmp118:
-	.size	ExamineKeyInput, .Ltmp118-ExamineKeyInput
+.Ltmp115:
+	.size	ExamineKeyInput, .Ltmp115-ExamineKeyInput
 .Lfunc_end7:
 	.cfi_endproc
 
@@ -2054,13 +2024,6 @@ last_event_time:
 .str1:
 .asciiz"\nMode:%d KeyEvent:%d"
 	.cc_bottom .str1.data
-	.cc_top .str2.data,.str2
-	.align	4
-	.type	.str2,@object
-	.size	.str2, 29
-.str2:
-.asciiz"\nSwitching to USB Audio Menu"
-	.cc_bottom .str2.data
 	.section	.dp.bss.4,"awd",@nobits
 .Ldebug_end1:
 	.section	.dp.bss,"awd",@nobits
@@ -2271,11 +2234,11 @@ last_event_time:
 .asciiz"delay"
 	.section	.debug_info,"",@progbits
 .L.debug_info_begin0:
-	.long	1774                    # Length of Unit
+	.long	1756                    # Length of Unit
 	.short	3                       # DWARF version number
 	.long	.Lsection_abbrev        # Offset Into Abbrev. Section
 	.byte	4                       # Address Size (in bytes)
-	.byte	1                       # Abbrev [1] 0xb:0x6e7 DW_TAG_compile_unit
+	.byte	1                       # Abbrev [1] 0xb:0x6d5 DW_TAG_compile_unit
 	.long	.Linfo_string0          # DW_AT_producer
 	.short	49152                   # DW_AT_language
 	.long	.Linfo_string1          # DW_AT_name
@@ -2779,7 +2742,7 @@ last_event_time:
 	.long	.Linfo_string79         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	65                      # DW_AT_decl_line
-	.long	1748                    # DW_AT_type
+	.long	1730                    # DW_AT_type
 	.byte	12                      # Abbrev [12] 0x3ea:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc1            # DW_AT_location
 	.long	.Linfo_string81         # DW_AT_name
@@ -2812,20 +2775,20 @@ last_event_time:
 	.long	.Linfo_string83         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	285                     # DW_AT_decl_line
-	.long	1748                    # DW_AT_type
+	.long	1730                    # DW_AT_type
 	.byte	16                      # Abbrev [16] 0x431:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc3            # DW_AT_location
 	.long	.Linfo_string84         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	285                     # DW_AT_decl_line
-	.long	1748                    # DW_AT_type
+	.long	1730                    # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x441:0x3a DW_TAG_lexical_block
 	.long	.Ldebug_ranges5         # DW_AT_ranges
 	.byte	17                      # Abbrev [17] 0x446:0xc DW_TAG_variable
 	.long	.Linfo_string86         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	289                     # DW_AT_decl_line
-	.long	1755                    # DW_AT_type
+	.long	1737                    # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x452:0x28 DW_TAG_lexical_block
 	.long	.Ldebug_ranges4         # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x457:0x10 DW_TAG_variable
@@ -2860,7 +2823,7 @@ last_event_time:
 	.long	.Linfo_string84         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	285                     # DW_AT_decl_line
-	.long	1748                    # DW_AT_type
+	.long	1730                    # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x4a0:0x50 DW_TAG_lexical_block
 	.long	.Ldebug_ranges10        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x4a5:0x10 DW_TAG_variable
@@ -2868,14 +2831,14 @@ last_event_time:
 	.long	.Linfo_string83         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	285                     # DW_AT_decl_line
-	.long	1748                    # DW_AT_type
+	.long	1730                    # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x4b5:0x3a DW_TAG_lexical_block
 	.long	.Ldebug_ranges9         # DW_AT_ranges
 	.byte	17                      # Abbrev [17] 0x4ba:0xc DW_TAG_variable
 	.long	.Linfo_string86         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	289                     # DW_AT_decl_line
-	.long	1755                    # DW_AT_type
+	.long	1737                    # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x4c6:0x28 DW_TAG_lexical_block
 	.long	.Ldebug_ranges8         # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x4cb:0x10 DW_TAG_variable
@@ -2911,7 +2874,7 @@ last_event_time:
 	.long	.Linfo_string89         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	72                      # DW_AT_decl_line
-	.long	1748                    # DW_AT_type
+	.long	1730                    # DW_AT_type
 	.byte	12                      # Abbrev [12] 0x513:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc9            # DW_AT_location
 	.long	.Linfo_string90         # DW_AT_name
@@ -2943,7 +2906,7 @@ last_event_time:
 	.long	.Linfo_string89         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	93                      # DW_AT_decl_line
-	.long	1748                    # DW_AT_type
+	.long	1730                    # DW_AT_type
 	.byte	12                      # Abbrev [12] 0x55a:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc12           # DW_AT_location
 	.long	.Linfo_string81         # DW_AT_name
@@ -2956,7 +2919,7 @@ last_event_time:
 	.long	.Linfo_string92         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	99                      # DW_AT_decl_line
-	.long	1762                    # DW_AT_type
+	.long	1744                    # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x579:0x15 DW_TAG_lexical_block
 	.long	.Ldebug_ranges14        # DW_AT_ranges
 	.byte	20                      # Abbrev [20] 0x57e:0xf DW_TAG_variable
@@ -2991,7 +2954,7 @@ last_event_time:
 	.byte	111                     # DW_AT_decl_line
 	.long	623                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	19                      # Abbrev [19] 0x5bf:0x7e DW_TAG_subprogram
+	.byte	19                      # Abbrev [19] 0x5bf:0x6c DW_TAG_subprogram
 	.long	.Ldebug_ranges17        # DW_AT_ranges
 	.byte	1                       # DW_AT_frame_base
 	.byte	94
@@ -3007,52 +2970,43 @@ last_event_time:
 	.byte	1                       # DW_AT_decl_file
 	.byte	116                     # DW_AT_decl_line
 	.long	650                     # DW_AT_type
-	.byte	13                      # Abbrev [13] 0x5e1:0x5b DW_TAG_lexical_block
-	.long	.Ldebug_ranges22        # DW_AT_ranges
+	.byte	13                      # Abbrev [13] 0x5e1:0x49 DW_TAG_lexical_block
+	.long	.Ldebug_ranges21        # DW_AT_ranges
 	.byte	20                      # Abbrev [20] 0x5e6:0xf DW_TAG_variable
 	.long	.Ldebug_loc16           # DW_AT_location
 	.long	.Linfo_string69         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	118                     # DW_AT_decl_line
 	.long	785                     # DW_AT_type
-	.byte	13                      # Abbrev [13] 0x5f5:0x34 DW_TAG_lexical_block
-	.long	.Ldebug_ranges20        # DW_AT_ranges
+	.byte	13                      # Abbrev [13] 0x5f5:0x22 DW_TAG_lexical_block
+	.long	.Ldebug_ranges19        # DW_AT_ranges
 	.byte	21                      # Abbrev [21] 0x5fa:0xb DW_TAG_variable
 	.long	.Linfo_string94         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	169                     # DW_AT_decl_line
-	.long	1767                    # DW_AT_type
-	.byte	13                      # Abbrev [13] 0x605:0x23 DW_TAG_lexical_block
-	.long	.Ldebug_ranges19        # DW_AT_ranges
+	.long	1749                    # DW_AT_type
+	.byte	13                      # Abbrev [13] 0x605:0x11 DW_TAG_lexical_block
+	.long	.Ldebug_ranges18        # DW_AT_ranges
 	.byte	21                      # Abbrev [21] 0x60a:0xb DW_TAG_variable
 	.long	.Linfo_string95         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	170                     # DW_AT_decl_line
-	.long	1772                    # DW_AT_type
-	.byte	26                      # Abbrev [26] 0x615:0x12 DW_TAG_inlined_subroutine
+	.long	1754                    # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	26                      # Abbrev [26] 0x617:0x12 DW_TAG_inlined_subroutine
 	.long	1446                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges18        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.byte	202                     # DW_AT_call_line
-	.byte	27                      # Abbrev [27] 0x620:0x6 DW_TAG_formal_parameter
-	.byte	2                       # DW_AT_const_value
-	.long	1459                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	26                      # Abbrev [26] 0x629:0x12 DW_TAG_inlined_subroutine
-	.long	1446                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges21        # DW_AT_ranges
+	.long	.Ldebug_ranges20        # DW_AT_ranges
 	.byte	1                       # DW_AT_call_file
 	.byte	155                     # DW_AT_call_line
-	.byte	27                      # Abbrev [27] 0x634:0x6 DW_TAG_formal_parameter
+	.byte	27                      # Abbrev [27] 0x622:0x6 DW_TAG_formal_parameter
 	.byte	3                       # DW_AT_const_value
 	.long	1459                    # DW_AT_abstract_origin
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
-	.byte	19                      # Abbrev [19] 0x63d:0x4f DW_TAG_subprogram
-	.long	.Ldebug_ranges23        # DW_AT_ranges
+	.byte	19                      # Abbrev [19] 0x62b:0x4f DW_TAG_subprogram
+	.long	.Ldebug_ranges22        # DW_AT_ranges
 	.byte	1                       # DW_AT_frame_base
 	.byte	94
 	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
@@ -3061,24 +3015,24 @@ last_event_time:
 	.byte	1                       # DW_AT_decl_file
 	.byte	214                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
-	.byte	13                      # Abbrev [13] 0x650:0x3b DW_TAG_lexical_block
-	.long	.Ldebug_ranges26        # DW_AT_ranges
-	.byte	21                      # Abbrev [21] 0x655:0xb DW_TAG_variable
+	.byte	13                      # Abbrev [13] 0x63e:0x3b DW_TAG_lexical_block
+	.long	.Ldebug_ranges25        # DW_AT_ranges
+	.byte	21                      # Abbrev [21] 0x643:0xb DW_TAG_variable
 	.long	.Linfo_string86         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	215                     # DW_AT_decl_line
-	.long	1755                    # DW_AT_type
-	.byte	13                      # Abbrev [13] 0x660:0x2a DW_TAG_lexical_block
-	.long	.Ldebug_ranges25        # DW_AT_ranges
-	.byte	20                      # Abbrev [20] 0x665:0xf DW_TAG_variable
+	.long	1737                    # DW_AT_type
+	.byte	13                      # Abbrev [13] 0x64e:0x2a DW_TAG_lexical_block
+	.long	.Ldebug_ranges24        # DW_AT_ranges
+	.byte	20                      # Abbrev [20] 0x653:0xf DW_TAG_variable
 	.long	.Ldebug_loc17           # DW_AT_location
 	.long	.Linfo_string96         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	216                     # DW_AT_decl_line
 	.long	95                      # DW_AT_type
-	.byte	13                      # Abbrev [13] 0x674:0x15 DW_TAG_lexical_block
-	.long	.Ldebug_ranges24        # DW_AT_ranges
-	.byte	20                      # Abbrev [20] 0x679:0xf DW_TAG_variable
+	.byte	13                      # Abbrev [13] 0x662:0x15 DW_TAG_lexical_block
+	.long	.Ldebug_ranges23        # DW_AT_ranges
+	.byte	20                      # Abbrev [20] 0x667:0xf DW_TAG_variable
 	.long	.Ldebug_loc18           # DW_AT_location
 	.long	.Linfo_string97         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
@@ -3088,55 +3042,55 @@ last_event_time:
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
-	.byte	28                      # Abbrev [28] 0x68c:0x18 DW_TAG_subprogram
+	.byte	28                      # Abbrev [28] 0x67a:0x18 DW_TAG_subprogram
 	.long	.Linfo_string70         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string70         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
 	.byte	46                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
-	.byte	25                      # Abbrev [25] 0x698:0xb DW_TAG_formal_parameter
+	.byte	25                      # Abbrev [25] 0x686:0xb DW_TAG_formal_parameter
 	.long	.Linfo_string98         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
 	.byte	46                      # DW_AT_decl_line
 	.long	95                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	28                      # Abbrev [28] 0x6a4:0x18 DW_TAG_subprogram
+	.byte	28                      # Abbrev [28] 0x692:0x18 DW_TAG_subprogram
 	.long	.Linfo_string71         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string71         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
 	.byte	54                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
-	.byte	25                      # Abbrev [25] 0x6b0:0xb DW_TAG_formal_parameter
+	.byte	25                      # Abbrev [25] 0x69e:0xb DW_TAG_formal_parameter
 	.long	.Linfo_string98         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
 	.byte	54                      # DW_AT_decl_line
 	.long	95                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	28                      # Abbrev [28] 0x6bc:0x18 DW_TAG_subprogram
+	.byte	28                      # Abbrev [28] 0x6aa:0x18 DW_TAG_subprogram
 	.long	.Linfo_string72         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string72         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
 	.byte	62                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
-	.byte	25                      # Abbrev [25] 0x6c8:0xb DW_TAG_formal_parameter
+	.byte	25                      # Abbrev [25] 0x6b6:0xb DW_TAG_formal_parameter
 	.long	.Linfo_string98         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
 	.byte	62                      # DW_AT_decl_line
 	.long	95                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	3                       # Abbrev [3] 0x6d4:0x7 DW_TAG_base_type
+	.byte	3                       # Abbrev [3] 0x6c2:0x7 DW_TAG_base_type
 	.long	.Linfo_string80         # DW_AT_name
 	.byte	7                       # DW_AT_encoding
 	.byte	4                       # DW_AT_byte_size
-	.byte	3                       # Abbrev [3] 0x6db:0x7 DW_TAG_base_type
+	.byte	3                       # Abbrev [3] 0x6c9:0x7 DW_TAG_base_type
 	.long	.Linfo_string87         # DW_AT_name
 	.byte	7                       # DW_AT_encoding
 	.byte	4                       # DW_AT_byte_size
-	.byte	7                       # Abbrev [7] 0x6e2:0x5 DW_TAG_pointer_type
+	.byte	7                       # Abbrev [7] 0x6d0:0x5 DW_TAG_pointer_type
 	.long	521                     # DW_AT_type
-	.byte	7                       # Abbrev [7] 0x6e7:0x5 DW_TAG_pointer_type
+	.byte	7                       # Abbrev [7] 0x6d5:0x5 DW_TAG_pointer_type
 	.long	812                     # DW_AT_type
-	.byte	7                       # Abbrev [7] 0x6ec:0x5 DW_TAG_pointer_type
+	.byte	7                       # Abbrev [7] 0x6da:0x5 DW_TAG_pointer_type
 	.long	863                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 .L.debug_info_end0:
@@ -3622,12 +3576,12 @@ last_event_time:
 	.long	0
 	.long	0
 .Ldebug_ranges18:
-	.long	.Ltmp98
+	.long	.Ltmp91
+	.long	.Ltmp92
+	.long	.Ltmp96
+	.long	.Ltmp97
 	.long	.Ltmp99
 	.long	.Ltmp100
-	.long	.Ltmp101
-	.long	.Ltmp102
-	.long	.Ltmp103
 	.long	0
 	.long	0
 .Ldebug_ranges19:
@@ -3635,308 +3589,299 @@ last_event_time:
 	.long	.Ltmp92
 	.long	.Ltmp96
 	.long	.Ltmp97
-	.long	.Ltmp98
-	.long	.Ltmp103
+	.long	.Ltmp99
+	.long	.Ltmp100
 	.long	0
 	.long	0
 .Ldebug_ranges20:
-	.long	.Ltmp91
-	.long	.Ltmp92
-	.long	.Ltmp96
 	.long	.Ltmp97
 	.long	.Ltmp98
-	.long	.Ltmp103
 	.long	0
 	.long	0
 .Ldebug_ranges21:
-	.long	.Ltmp97
-	.long	.Ltmp98
+	.long	.Ltmp87
+	.long	.Ltmp101
 	.long	0
 	.long	0
 .Ldebug_ranges22:
-	.long	.Ltmp87
-	.long	.Ltmp104
-	.long	0
-	.long	0
-.Ldebug_ranges23:
 	.long	.Lfunc_begin7
 	.long	.Lfunc_end7
 	.long	0
 	.long	0
+.Ldebug_ranges23:
+	.long	.Ltmp110
+	.long	.Ltmp114
+	.long	0
+	.long	0
 .Ldebug_ranges24:
-	.long	.Ltmp113
-	.long	.Ltmp117
+	.long	.Ltmp105
+	.long	.Ltmp114
 	.long	0
 	.long	0
 .Ldebug_ranges25:
-	.long	.Ltmp108
-	.long	.Ltmp117
-	.long	0
-	.long	0
-.Ldebug_ranges26:
-	.long	.Ltmp108
-	.long	.Ltmp117
+	.long	.Ltmp105
+	.long	.Ltmp114
 	.long	0
 	.long	0
 	.section	.debug_loc,"",@progbits
 .Ldebug_loc0:
 	.long	.Lfunc_begin0
 	.long	.Ltmp2
-.Lset0 = .Ltmp120-.Ltmp119              # Loc expr size
+.Lset0 = .Ltmp117-.Ltmp116              # Loc expr size
 	.short	.Lset0
-.Ltmp119:
+.Ltmp116:
 	.byte	80                      # DW_OP_reg0
-.Ltmp120:
+.Ltmp117:
 	.long	0
 	.long	0
 .Ldebug_loc1:
 	.long	.Lfunc_begin0
 	.long	.Ltmp1
-.Lset1 = .Ltmp122-.Ltmp121              # Loc expr size
+.Lset1 = .Ltmp119-.Ltmp118              # Loc expr size
 	.short	.Lset1
-.Ltmp121:
+.Ltmp118:
 	.byte	81                      # DW_OP_reg1
-.Ltmp122:
+.Ltmp119:
 	.long	0
 	.long	0
 .Ldebug_loc2:
 	.long	.Lfunc_begin1
 	.long	.Ltmp14
-.Lset2 = .Ltmp124-.Ltmp123              # Loc expr size
+.Lset2 = .Ltmp121-.Ltmp120              # Loc expr size
 	.short	.Lset2
-.Ltmp123:
+.Ltmp120:
 	.byte	80                      # DW_OP_reg0
-.Ltmp124:
+.Ltmp121:
 	.long	.Ltmp14
 	.long	.Lfunc_end1
-.Lset3 = .Ltmp126-.Ltmp125              # Loc expr size
+.Lset3 = .Ltmp123-.Ltmp122              # Loc expr size
 	.short	.Lset3
-.Ltmp125:
+.Ltmp122:
 	.byte	85                      # DW_OP_reg5
-.Ltmp126:
+.Ltmp123:
 	.long	0
 	.long	0
 .Ldebug_loc3:
 	.long	.Lfunc_begin1
 	.long	.Ltmp12
-.Lset4 = .Ltmp128-.Ltmp127              # Loc expr size
+.Lset4 = .Ltmp125-.Ltmp124              # Loc expr size
 	.short	.Lset4
-.Ltmp127:
+.Ltmp124:
 	.byte	81                      # DW_OP_reg1
-.Ltmp128:
+.Ltmp125:
 	.long	.Ltmp12
 	.long	.Ltmp13
-.Lset5 = .Ltmp130-.Ltmp129              # Loc expr size
+.Lset5 = .Ltmp127-.Ltmp126              # Loc expr size
 	.short	.Lset5
-.Ltmp129:
+.Ltmp126:
 	.byte	84                      # DW_OP_reg4
-.Ltmp130:
+.Ltmp127:
 	.long	.Ltmp18
 	.long	.Lfunc_end1
-.Lset6 = .Ltmp132-.Ltmp131              # Loc expr size
+.Lset6 = .Ltmp129-.Ltmp128              # Loc expr size
 	.short	.Lset6
-.Ltmp131:
+.Ltmp128:
 	.byte	84                      # DW_OP_reg4
-.Ltmp132:
+.Ltmp129:
 	.long	0
 	.long	0
 .Ldebug_loc4:
 	.long	.Ltmp27
 	.long	.Ltmp28
-.Lset7 = .Ltmp134-.Ltmp133              # Loc expr size
+.Lset7 = .Ltmp131-.Ltmp130              # Loc expr size
 	.short	.Lset7
-.Ltmp133:
+.Ltmp130:
 	.byte	81                      # DW_OP_reg1
-.Ltmp134:
+.Ltmp131:
 	.long	0
 	.long	0
 .Ldebug_loc5:
 	.long	.Lfunc_begin2
 	.long	.Ltmp37
-.Lset8 = .Ltmp136-.Ltmp135              # Loc expr size
+.Lset8 = .Ltmp133-.Ltmp132              # Loc expr size
 	.short	.Lset8
-.Ltmp135:
+.Ltmp132:
 	.byte	80                      # DW_OP_reg0
-.Ltmp136:
+.Ltmp133:
 	.long	.Ltmp37
 	.long	.Lfunc_end2
-.Lset9 = .Ltmp138-.Ltmp137              # Loc expr size
+.Lset9 = .Ltmp135-.Ltmp134              # Loc expr size
 	.short	.Lset9
-.Ltmp137:
+.Ltmp134:
 	.byte	84                      # DW_OP_reg4
-.Ltmp138:
+.Ltmp135:
 	.long	0
 	.long	0
 .Ldebug_loc6:
 	.long	.Ltmp46
 	.long	.Ltmp47
-.Lset10 = .Ltmp140-.Ltmp139             # Loc expr size
+.Lset10 = .Ltmp137-.Ltmp136             # Loc expr size
 	.short	.Lset10
-.Ltmp139:
+.Ltmp136:
 	.byte	87                      # DW_OP_reg7
-.Ltmp140:
+.Ltmp137:
 	.long	0
 	.long	0
 .Ldebug_loc7:
 	.long	.Ltmp50
 	.long	.Ltmp51
-.Lset11 = .Ltmp142-.Ltmp141             # Loc expr size
+.Lset11 = .Ltmp139-.Ltmp138             # Loc expr size
 	.short	.Lset11
-.Ltmp141:
+.Ltmp138:
 	.byte	81                      # DW_OP_reg1
-.Ltmp142:
+.Ltmp139:
 	.long	0
 	.long	0
 .Ldebug_loc8:
 	.long	.Lfunc_begin3
 	.long	.Ltmp56
-.Lset12 = .Ltmp144-.Ltmp143             # Loc expr size
+.Lset12 = .Ltmp141-.Ltmp140             # Loc expr size
 	.short	.Lset12
-.Ltmp143:
+.Ltmp140:
 	.byte	80                      # DW_OP_reg0
-.Ltmp144:
+.Ltmp141:
 	.long	.Ltmp57
 	.long	.Ltmp61
-.Lset13 = .Ltmp146-.Ltmp145             # Loc expr size
+.Lset13 = .Ltmp143-.Ltmp142             # Loc expr size
 	.short	.Lset13
-.Ltmp145:
+.Ltmp142:
 	.byte	80                      # DW_OP_reg0
-.Ltmp146:
+.Ltmp143:
 	.long	0
 	.long	0
 .Ldebug_loc9:
 	.long	.Lfunc_begin3
 	.long	.Ltmp56
-.Lset14 = .Ltmp148-.Ltmp147             # Loc expr size
+.Lset14 = .Ltmp145-.Ltmp144             # Loc expr size
 	.short	.Lset14
-.Ltmp147:
+.Ltmp144:
 	.byte	81                      # DW_OP_reg1
-.Ltmp148:
+.Ltmp145:
 	.long	.Ltmp59
 	.long	.Ltmp60
-.Lset15 = .Ltmp150-.Ltmp149             # Loc expr size
+.Lset15 = .Ltmp147-.Ltmp146             # Loc expr size
 	.short	.Lset15
-.Ltmp149:
+.Ltmp146:
 	.byte	81                      # DW_OP_reg1
-.Ltmp150:
+.Ltmp147:
 	.long	0
 	.long	0
 .Ldebug_loc10:
 	.long	.Ltmp58
 	.long	.Ltmp59
-.Lset16 = .Ltmp152-.Ltmp151             # Loc expr size
+.Lset16 = .Ltmp149-.Ltmp148             # Loc expr size
 	.short	.Lset16
-.Ltmp151:
+.Ltmp148:
 	.byte	81                      # DW_OP_reg1
-.Ltmp152:
+.Ltmp149:
 	.long	0
 	.long	0
 .Ldebug_loc11:
 	.long	.Lfunc_begin4
 	.long	.Ltmp71
-.Lset17 = .Ltmp154-.Ltmp153             # Loc expr size
+.Lset17 = .Ltmp151-.Ltmp150             # Loc expr size
 	.short	.Lset17
-.Ltmp153:
+.Ltmp150:
 	.byte	80                      # DW_OP_reg0
-.Ltmp154:
+.Ltmp151:
 	.long	0
 	.long	0
 .Ldebug_loc12:
 	.long	.Lfunc_begin4
 	.long	.Ltmp67
-.Lset18 = .Ltmp156-.Ltmp155             # Loc expr size
+.Lset18 = .Ltmp153-.Ltmp152             # Loc expr size
 	.short	.Lset18
-.Ltmp155:
+.Ltmp152:
 	.byte	81                      # DW_OP_reg1
-.Ltmp156:
+.Ltmp153:
 	.long	.Ltmp68
 	.long	.Ltmp69
-.Lset19 = .Ltmp158-.Ltmp157             # Loc expr size
+.Lset19 = .Ltmp155-.Ltmp154             # Loc expr size
 	.short	.Lset19
-.Ltmp157:
+.Ltmp154:
 	.byte	81                      # DW_OP_reg1
-.Ltmp158:
+.Ltmp155:
 	.long	.Ltmp73
 	.long	.Ltmp74
-.Lset20 = .Ltmp160-.Ltmp159             # Loc expr size
+.Lset20 = .Ltmp157-.Ltmp156             # Loc expr size
 	.short	.Lset20
-.Ltmp159:
+.Ltmp156:
 	.byte	81                      # DW_OP_reg1
-.Ltmp160:
+.Ltmp157:
 	.long	0
 	.long	0
 .Ldebug_loc13:
 	.long	.Ltmp70
 	.long	.Ltmp72
-.Lset21 = .Ltmp162-.Ltmp161             # Loc expr size
+.Lset21 = .Ltmp159-.Ltmp158             # Loc expr size
 	.short	.Lset21
-.Ltmp161:
+.Ltmp158:
 	.byte	81                      # DW_OP_reg1
-.Ltmp162:
+.Ltmp159:
 	.long	0
 	.long	0
 .Ldebug_loc14:
 	.long	.Lfunc_begin5
 	.long	.Ltmp80
-.Lset22 = .Ltmp164-.Ltmp163             # Loc expr size
+.Lset22 = .Ltmp161-.Ltmp160             # Loc expr size
 	.short	.Lset22
-.Ltmp163:
+.Ltmp160:
 	.byte	80                      # DW_OP_reg0
-.Ltmp164:
+.Ltmp161:
 	.long	0
 	.long	0
 .Ldebug_loc15:
 	.long	.Lfunc_begin6
 	.long	.Ltmp87
-.Lset23 = .Ltmp166-.Ltmp165             # Loc expr size
+.Lset23 = .Ltmp163-.Ltmp162             # Loc expr size
 	.short	.Lset23
-.Ltmp165:
+.Ltmp162:
 	.byte	80                      # DW_OP_reg0
-.Ltmp166:
+.Ltmp163:
 	.long	.Ltmp87
 	.long	.Ltmp92
-.Lset24 = .Ltmp168-.Ltmp167             # Loc expr size
+.Lset24 = .Ltmp165-.Ltmp164             # Loc expr size
 	.short	.Lset24
-.Ltmp167:
+.Ltmp164:
 	.byte	84                      # DW_OP_reg4
-.Ltmp168:
+.Ltmp165:
 	.long	.Ltmp93
 	.long	.Ltmp95
-.Lset25 = .Ltmp170-.Ltmp169             # Loc expr size
+.Lset25 = .Ltmp167-.Ltmp166             # Loc expr size
 	.short	.Lset25
-.Ltmp169:
+.Ltmp166:
 	.byte	84                      # DW_OP_reg4
-.Ltmp170:
+.Ltmp167:
 	.long	0
 	.long	0
 .Ldebug_loc16:
 	.long	.Ltmp88
 	.long	.Ltmp89
-.Lset26 = .Ltmp172-.Ltmp171             # Loc expr size
+.Lset26 = .Ltmp169-.Ltmp168             # Loc expr size
 	.short	.Lset26
-.Ltmp171:
+.Ltmp168:
 	.byte	85                      # DW_OP_reg5
-.Ltmp172:
+.Ltmp169:
 	.long	0
 	.long	0
 .Ldebug_loc17:
-	.long	.Ltmp113
-	.long	.Ltmp114
-.Lset27 = .Ltmp174-.Ltmp173             # Loc expr size
+	.long	.Ltmp110
+	.long	.Ltmp111
+.Lset27 = .Ltmp171-.Ltmp170             # Loc expr size
 	.short	.Lset27
-.Ltmp173:
+.Ltmp170:
 	.byte	82                      # DW_OP_reg2
-.Ltmp174:
+.Ltmp171:
 	.long	0
 	.long	0
 .Ldebug_loc18:
-	.long	.Ltmp115
-	.long	.Ltmp116
-.Lset28 = .Ltmp176-.Ltmp175             # Loc expr size
+	.long	.Ltmp112
+	.long	.Ltmp113
+.Lset28 = .Ltmp173-.Ltmp172             # Loc expr size
 	.short	.Lset28
-.Ltmp175:
+.Ltmp172:
 	.byte	81                      # DW_OP_reg1
-.Ltmp176:
+.Ltmp173:
 	.long	0
 	.long	0
 	.section	.debug_pubnames,"",@progbits
@@ -3947,7 +3892,7 @@ last_event_time:
 	.long	.L.debug_info_begin0    # Offset of Compilation Unit Info
 .Lset30 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
 	.long	.Lset30
-	.long	1597                    # DIE offset
+	.long	1579                    # DIE offset
 .asciiz"ExamineKeyInput"                # External Name
 	.long	1265                    # DIE offset
 .asciiz"HandlePlayCommand"              # External Name
@@ -3973,17 +3918,17 @@ last_event_time:
 .asciiz"scan_time"                      # External Name
 	.long	185                     # DIE offset
 .asciiz"play_command"                   # External Name
-	.long	1700                    # DIE offset
+	.long	1682                    # DIE offset
 .asciiz"delay_milliseconds"             # External Name
 	.long	1336                    # DIE offset
 .asciiz"HandleDacCommand"               # External Name
-	.long	1724                    # DIE offset
+	.long	1706                    # DIE offset
 .asciiz"delay_microseconds"             # External Name
 	.long	31                      # DIE offset
 .asciiz"p_key"                          # External Name
 	.long	422                     # DIE offset
 .asciiz"play_command_request"           # External Name
-	.long	1676                    # DIE offset
+	.long	1658                    # DIE offset
 .asciiz"delay_seconds"                  # External Name
 	.long	0                       # End Mark
 .LpubNames_end0:
@@ -4003,13 +3948,13 @@ last_event_time:
 .asciiz"__TYPE_3"                       # External Name
 	.long	863                     # DIE offset
 .asciiz"__TYPE_4"                       # External Name
-	.long	1748                    # DIE offset
+	.long	1730                    # DIE offset
 .asciiz"chanend"                        # External Name
 	.long	53                      # DIE offset
 .asciiz"port"                           # External Name
 	.long	650                     # DIE offset
 .asciiz"__TYPE_10"                      # External Name
-	.long	1755                    # DIE offset
+	.long	1737                    # DIE offset
 .asciiz"timer"                          # External Name
 	.long	95                      # DIE offset
 .asciiz"unsigned int"                   # External Name
@@ -4025,7 +3970,6 @@ last_event_time:
 	.typestring button_listener, "f{0}(n:chd,n:chd)"
 	.typestring _Sbutton_listener_0, "f{0}(n:chd)"
 	.typestring set_display_control_flag, "f{0}(ui)"
-	.typestring _Sset_console_mode_0, "f{0}(0)"
 	.typestring __getstdout, "f{u:q(s(__sFILE){})}(0)"
 	.typestring fflush, "f{si}(u:q(s(__sFILE){}))"
 	.typestring iprintf, "f{si}(u:q(c:uc),va)"
@@ -4051,102 +3995,84 @@ last_event_time:
 	.long	0
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
-.cc_top cc_0,.Lxta.call_labels8
+.cc_top cc_0,.Lxta.call_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	103
-	.long	.Lxta.call_labels8
+	.long	.Lxta.call_labels6
 .cc_bottom cc_0
-.cc_top cc_1,.Lxta.call_labels9
+.cc_top cc_1,.Lxta.call_labels7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	106
-	.long	.Lxta.call_labels9
+	.long	.Lxta.call_labels7
 .cc_bottom cc_1
-.cc_top cc_2,.Lxta.call_labels10
+.cc_top cc_2,.Lxta.call_labels8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	113
-	.long	.Lxta.call_labels10
+	.long	.Lxta.call_labels8
 .cc_bottom cc_2
-.cc_top cc_3,.Lxta.call_labels13
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	113
-	.long	.Lxta.call_labels13
-.cc_bottom cc_3
-.cc_top cc_4,.Lxta.call_labels11
+.cc_top cc_3,.Lxta.call_labels9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	121
-	.long	.Lxta.call_labels11
-.cc_bottom cc_4
-.cc_top cc_5,.Lxta.call_labels12
+	.long	.Lxta.call_labels9
+.cc_bottom cc_3
+.cc_top cc_4,.Lxta.call_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	122
-	.long	.Lxta.call_labels12
-.cc_bottom cc_5
-.cc_top cc_6,.Lxta.call_labels14
+	.long	.Lxta.call_labels10
+.cc_bottom cc_4
+.cc_top cc_5,.Lxta.call_labels11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	201
-	.long	.Lxta.call_labels14
-.cc_bottom cc_6
-.cc_top cc_7,.Lxta.call_labels15
+	.long	195
+	.long	.Lxta.call_labels11
+.cc_bottom cc_5
+.cc_top cc_6,.Lxta.call_labels12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	279
-	.long	.Lxta.call_labels15
-.cc_bottom cc_7
-.cc_top cc_8,.Lxta.call_labels0
+	.long	.Lxta.call_labels12
+.cc_bottom cc_6
+.cc_top cc_7,.Lxta.call_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	300
+	.long	302
 	.long	.Lxta.call_labels0
-.cc_bottom cc_8
-.cc_top cc_9,.Lxta.call_labels4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	300
-	.long	.Lxta.call_labels4
-.cc_bottom cc_9
-.cc_top cc_10,.Lxta.call_labels1
+.cc_bottom cc_7
+.cc_top cc_8,.Lxta.call_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	302
-	.long	.Lxta.call_labels1
-.cc_bottom cc_10
-.cc_top cc_11,.Lxta.call_labels5
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	302
-	.long	.Lxta.call_labels5
-.cc_bottom cc_11
-.cc_top cc_12,.Lxta.call_labels3
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	327
 	.long	.Lxta.call_labels3
-.cc_bottom cc_12
-.cc_top cc_13,.Lxta.call_labels7
+.cc_bottom cc_8
+.cc_top cc_9,.Lxta.call_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	327
-	.long	.Lxta.call_labels7
-.cc_bottom cc_13
-.cc_top cc_14,.Lxta.call_labels2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	331
 	.long	.Lxta.call_labels2
-.cc_bottom cc_14
-.cc_top cc_15,.Lxta.call_labels6
+.cc_bottom cc_9
+.cc_top cc_10,.Lxta.call_labels5
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	327
+	.long	.Lxta.call_labels5
+.cc_bottom cc_10
+.cc_top cc_11,.Lxta.call_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	331
-	.long	.Lxta.call_labels6
-.cc_bottom cc_15
+	.long	.Lxta.call_labels1
+.cc_bottom cc_11
+.cc_top cc_12,.Lxta.call_labels4
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	331
+	.long	.Lxta.call_labels4
+.cc_bottom cc_12
 .Lentries_end1:
 	.section	.xtaendpointtable,"",@progbits
 .Lentries_start2:
@@ -4154,102 +4080,102 @@ last_event_time:
 	.long	0
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
-.cc_top cc_16,.Lxta.endpoint_labels0
+.cc_top cc_13,.Lxta.endpoint_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	67
 	.long	.Lxta.endpoint_labels0
-.cc_bottom cc_16
-.cc_top cc_17,.Lxta.endpoint_labels1
+.cc_bottom cc_13
+.cc_top cc_14,.Lxta.endpoint_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	68
 	.long	.Lxta.endpoint_labels1
-.cc_bottom cc_17
-.cc_top cc_18,.Lxta.endpoint_labels12
+.cc_bottom cc_14
+.cc_top cc_15,.Lxta.endpoint_labels12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	76
 	.long	.Lxta.endpoint_labels12
-.cc_bottom cc_18
-.cc_top cc_19,.Lxta.endpoint_labels10
+.cc_bottom cc_15
+.cc_top cc_16,.Lxta.endpoint_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	87
 	.long	.Lxta.endpoint_labels10
-.cc_bottom cc_19
-.cc_top cc_20,.Lxta.endpoint_labels11
+.cc_bottom cc_16
+.cc_top cc_17,.Lxta.endpoint_labels11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	88
 	.long	.Lxta.endpoint_labels11
-.cc_bottom cc_20
-.cc_top cc_21,.Lxta.endpoint_labels13
+.cc_bottom cc_17
+.cc_top cc_18,.Lxta.endpoint_labels13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	96
 	.long	.Lxta.endpoint_labels13
-.cc_bottom cc_21
-.cc_top cc_22,.Lxta.endpoint_labels14
+.cc_bottom cc_18
+.cc_top cc_19,.Lxta.endpoint_labels14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	101
 	.long	.Lxta.endpoint_labels14
-.cc_bottom cc_22
-.cc_top cc_23,.Lxta.endpoint_labels15
+.cc_bottom cc_19
+.cc_top cc_20,.Lxta.endpoint_labels15
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	219
 	.long	.Lxta.endpoint_labels15
-.cc_bottom cc_23
-.cc_top cc_24,.Lxta.endpoint_labels2
+.cc_bottom cc_20
+.cc_top cc_21,.Lxta.endpoint_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	291
 	.long	.Lxta.endpoint_labels2
-.cc_bottom cc_24
-.cc_top cc_25,.Lxta.endpoint_labels6
+.cc_bottom cc_21
+.cc_top cc_22,.Lxta.endpoint_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	291
 	.long	.Lxta.endpoint_labels6
-.cc_bottom cc_25
-.cc_top cc_26,.Lxta.endpoint_labels4
+.cc_bottom cc_22
+.cc_top cc_23,.Lxta.endpoint_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	310
 	.long	.Lxta.endpoint_labels4
-.cc_bottom cc_26
-.cc_top cc_27,.Lxta.endpoint_labels8
+.cc_bottom cc_23
+.cc_top cc_24,.Lxta.endpoint_labels8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	310
 	.long	.Lxta.endpoint_labels8
-.cc_bottom cc_27
-.cc_top cc_28,.Lxta.endpoint_labels3
+.cc_bottom cc_24
+.cc_top cc_25,.Lxta.endpoint_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	318
 	.long	.Lxta.endpoint_labels3
-.cc_bottom cc_28
-.cc_top cc_29,.Lxta.endpoint_labels5
+.cc_bottom cc_25
+.cc_top cc_26,.Lxta.endpoint_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	318
 	.long	.Lxta.endpoint_labels5
-.cc_bottom cc_29
-.cc_top cc_30,.Lxta.endpoint_labels7
+.cc_bottom cc_26
+.cc_top cc_27,.Lxta.endpoint_labels7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	318
 	.long	.Lxta.endpoint_labels7
-.cc_bottom cc_30
-.cc_top cc_31,.Lxta.endpoint_labels9
+.cc_bottom cc_27
+.cc_top cc_28,.Lxta.endpoint_labels9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	318
 	.long	.Lxta.endpoint_labels9
-.cc_bottom cc_31
+.cc_bottom cc_28
 .Lentries_end3:
 	.section	.xtalabeltable,"",@progbits
 .Lentries_start4:
@@ -4257,979 +4183,951 @@ last_event_time:
 	.long	0
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
-.cc_top cc_32,.Lxtalabel0
+.cc_top cc_29,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	66
 	.long	70
 	.long	.Lxtalabel0
-.cc_bottom cc_32
-.cc_top cc_33,.Lxtalabel19
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	74
-	.long	75
-	.long	.Lxtalabel19
-.cc_bottom cc_33
-.cc_top cc_34,.Lxtalabel16
+.cc_bottom cc_29
+.cc_top cc_30,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	74
 	.long	75
 	.long	.Lxtalabel16
-.cc_bottom cc_34
-.cc_top cc_35,.Lxtalabel15
+.cc_bottom cc_30
+.cc_top cc_31,.Lxtalabel15
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	74
 	.long	75
 	.long	.Lxtalabel15
-.cc_bottom cc_35
-.cc_top cc_36,.Lxtalabel20
+.cc_bottom cc_31
+.cc_top cc_32,.Lxtalabel19
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	74
+	.long	75
+	.long	.Lxtalabel19
+.cc_bottom cc_32
+.cc_top cc_33,.Lxtalabel20
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	76
 	.long	78
 	.long	.Lxtalabel20
-.cc_bottom cc_36
-.cc_top cc_37,.Lxtalabel20
+.cc_bottom cc_33
+.cc_top cc_34,.Lxtalabel20
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	80
 	.long	80
 	.long	.Lxtalabel20
-.cc_bottom cc_37
-.cc_top cc_38,.Lxtalabel17
+.cc_bottom cc_34
+.cc_top cc_35,.Lxtalabel17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	81
 	.long	83
 	.long	.Lxtalabel17
-.cc_bottom cc_38
-.cc_top cc_39,.Lxtalabel17
+.cc_bottom cc_35
+.cc_top cc_36,.Lxtalabel17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	85
 	.long	85
 	.long	.Lxtalabel17
-.cc_bottom cc_39
-.cc_top cc_40,.Lxtalabel18
+.cc_bottom cc_36
+.cc_top cc_37,.Lxtalabel18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	86
 	.long	90
 	.long	.Lxtalabel18
-.cc_bottom cc_40
-.cc_top cc_41,.Lxtalabel21
+.cc_bottom cc_37
+.cc_top cc_38,.Lxtalabel21
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	91
 	.long	91
 	.long	.Lxtalabel21
-.cc_bottom cc_41
-.cc_top cc_42,.Lxtalabel22
+.cc_bottom cc_38
+.cc_top cc_39,.Lxtalabel22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	94
 	.long	95
 	.long	.Lxtalabel22
-.cc_bottom cc_42
-.cc_top cc_43,.Lxtalabel24
+.cc_bottom cc_39
+.cc_top cc_40,.Lxtalabel24
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	94
 	.long	95
 	.long	.Lxtalabel24
-.cc_bottom cc_43
-.cc_top cc_44,.Lxtalabel23
+.cc_bottom cc_40
+.cc_top cc_41,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	96
 	.long	98
 	.long	.Lxtalabel23
-.cc_bottom cc_44
-.cc_top cc_45,.Lxtalabel25
+.cc_bottom cc_41
+.cc_top cc_42,.Lxtalabel25
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	99
 	.long	105
 	.long	.Lxtalabel25
-.cc_bottom cc_45
-.cc_top cc_46,.Lxtalabel26
+.cc_bottom cc_42
+.cc_top cc_43,.Lxtalabel26
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	106
 	.long	106
 	.long	.Lxtalabel26
-.cc_bottom cc_46
-.cc_top cc_47,.Lxtalabel26
+.cc_bottom cc_43
+.cc_top cc_44,.Lxtalabel26
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	107
 	.long	108
 	.long	.Lxtalabel26
-.cc_bottom cc_47
-.cc_top cc_48,.Lxtalabel27
+.cc_bottom cc_44
+.cc_top cc_45,.Lxtalabel27
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	112
 	.long	114
 	.long	.Lxtalabel27
-.cc_bottom cc_48
-.cc_top cc_49,.Lxtalabel47
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	112
-	.long	114
-	.long	.Lxtalabel47
-.cc_bottom cc_49
-.cc_top cc_50,.Lxtalabel39
+.cc_bottom cc_45
+.cc_top cc_46,.Lxtalabel39
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	112
 	.long	114
 	.long	.Lxtalabel39
+.cc_bottom cc_46
+.cc_top cc_47,.Lxtalabel28
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	118
+	.long	119
+	.long	.Lxtalabel28
+.cc_bottom cc_47
+.cc_top cc_48,.Lxtalabel29
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	118
+	.long	119
+	.long	.Lxtalabel29
+.cc_bottom cc_48
+.cc_top cc_49,.Lxtalabel34
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	118
+	.long	119
+	.long	.Lxtalabel34
+.cc_bottom cc_49
+.cc_top cc_50,.Lxtalabel28
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	121
+	.long	122
+	.long	.Lxtalabel28
 .cc_bottom cc_50
-.cc_top cc_51,.Lxtalabel28
+.cc_top cc_51,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	118
-	.long	119
-	.long	.Lxtalabel28
+	.long	121
+	.long	122
+	.long	.Lxtalabel29
 .cc_bottom cc_51
-.cc_top cc_52,.Lxtalabel29
+.cc_top cc_52,.Lxtalabel34
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	118
-	.long	119
-	.long	.Lxtalabel29
+	.long	121
+	.long	122
+	.long	.Lxtalabel34
 .cc_bottom cc_52
-.cc_top cc_53,.Lxtalabel34
+.cc_top cc_53,.Lxtalabel28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	118
-	.long	119
-	.long	.Lxtalabel34
+	.long	124
+	.long	125
+	.long	.Lxtalabel28
 .cc_bottom cc_53
-.cc_top cc_54,.Lxtalabel28
+.cc_top cc_54,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	121
-	.long	122
-	.long	.Lxtalabel28
+	.long	124
+	.long	125
+	.long	.Lxtalabel29
 .cc_bottom cc_54
-.cc_top cc_55,.Lxtalabel29
+.cc_top cc_55,.Lxtalabel34
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	121
-	.long	122
-	.long	.Lxtalabel29
+	.long	124
+	.long	125
+	.long	.Lxtalabel34
 .cc_bottom cc_55
-.cc_top cc_56,.Lxtalabel34
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	121
-	.long	122
-	.long	.Lxtalabel34
-.cc_bottom cc_56
-.cc_top cc_57,.Lxtalabel29
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	124
-	.long	125
-	.long	.Lxtalabel29
-.cc_bottom cc_57
-.cc_top cc_58,.Lxtalabel34
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	124
-	.long	125
-	.long	.Lxtalabel34
-.cc_bottom cc_58
-.cc_top cc_59,.Lxtalabel28
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	124
-	.long	125
-	.long	.Lxtalabel28
-.cc_bottom cc_59
-.cc_top cc_60,.Lxtalabel35
+.cc_top cc_56,.Lxtalabel35
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	126
 	.long	127
 	.long	.Lxtalabel35
-.cc_bottom cc_60
-.cc_top cc_61,.Lxtalabel36
+.cc_bottom cc_56
+.cc_top cc_57,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	126
 	.long	127
 	.long	.Lxtalabel36
-.cc_bottom cc_61
-.cc_top cc_62,.Lxtalabel52
+.cc_bottom cc_57
+.cc_top cc_58,.Lxtalabel50
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	128
 	.long	130
-	.long	.Lxtalabel52
-.cc_bottom cc_62
-.cc_top cc_63,.Lxtalabel48
+	.long	.Lxtalabel50
+.cc_bottom cc_58
+.cc_top cc_59,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	131
 	.long	133
-	.long	.Lxtalabel48
-.cc_bottom cc_63
-.cc_top cc_64,.Lxtalabel49
+	.long	.Lxtalabel46
+.cc_bottom cc_59
+.cc_top cc_60,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	134
 	.long	136
-	.long	.Lxtalabel49
-.cc_bottom cc_64
-.cc_top cc_65,.Lxtalabel53
+	.long	.Lxtalabel47
+.cc_bottom cc_60
+.cc_top cc_61,.Lxtalabel51
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	137
 	.long	139
-	.long	.Lxtalabel53
-.cc_bottom cc_65
-.cc_top cc_66,.Lxtalabel50
+	.long	.Lxtalabel51
+.cc_bottom cc_61
+.cc_top cc_62,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	140
 	.long	142
-	.long	.Lxtalabel50
-.cc_bottom cc_66
-.cc_top cc_67,.Lxtalabel54
+	.long	.Lxtalabel48
+.cc_bottom cc_62
+.cc_top cc_63,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	143
 	.long	145
-	.long	.Lxtalabel54
-.cc_bottom cc_67
-.cc_top cc_68,.Lxtalabel37
+	.long	.Lxtalabel52
+.cc_bottom cc_63
+.cc_top cc_64,.Lxtalabel37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	146
 	.long	148
 	.long	.Lxtalabel37
-.cc_bottom cc_68
-.cc_top cc_69,.Lxtalabel51
+.cc_bottom cc_64
+.cc_top cc_65,.Lxtalabel49
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	149
 	.long	151
-	.long	.Lxtalabel51
-.cc_bottom cc_69
-.cc_top cc_70,.Lxtalabel55
+	.long	.Lxtalabel49
+.cc_bottom cc_65
+.cc_top cc_66,.Lxtalabel53
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	152
 	.long	154
-	.long	.Lxtalabel55
-.cc_bottom cc_70
-.cc_top cc_71,.Lxtalabel39
+	.long	.Lxtalabel53
+.cc_bottom cc_66
+.cc_top cc_67,.Lxtalabel39
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	155
 	.long	157
 	.long	.Lxtalabel39
-.cc_bottom cc_71
-.cc_top cc_72,.Lxtalabel30
+.cc_bottom cc_67
+.cc_top cc_68,.Lxtalabel30
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	160
 	.long	161
 	.long	.Lxtalabel30
+.cc_bottom cc_68
+.cc_top cc_69,.Lxtalabel32
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	169
+	.long	174
+	.long	.Lxtalabel32
+.cc_bottom cc_69
+.cc_top cc_70,.Lxtalabel31
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	169
+	.long	174
+	.long	.Lxtalabel31
+.cc_bottom cc_70
+.cc_top cc_71,.Lxtalabel32
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	176
+	.long	177
+	.long	.Lxtalabel32
+.cc_bottom cc_71
+.cc_top cc_72,.Lxtalabel31
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	176
+	.long	177
+	.long	.Lxtalabel31
 .cc_bottom cc_72
-.cc_top cc_73,.Lxtalabel31
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	169
-	.long	174
-	.long	.Lxtalabel31
-.cc_bottom cc_73
-.cc_top cc_74,.Lxtalabel32
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	169
-	.long	174
-	.long	.Lxtalabel32
-.cc_bottom cc_74
-.cc_top cc_75,.Lxtalabel32
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	176
-	.long	177
-	.long	.Lxtalabel32
-.cc_bottom cc_75
-.cc_top cc_76,.Lxtalabel31
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	176
-	.long	177
-	.long	.Lxtalabel31
-.cc_bottom cc_76
-.cc_top cc_77,.Lxtalabel33
+.cc_top cc_73,.Lxtalabel33
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	178
 	.long	181
 	.long	.Lxtalabel33
-.cc_bottom cc_77
-.cc_top cc_78,.Lxtalabel41
+.cc_bottom cc_73
+.cc_top cc_74,.Lxtalabel40
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	182
 	.long	185
-	.long	.Lxtalabel41
-.cc_bottom cc_78
-.cc_top cc_79,.Lxtalabel42
+	.long	.Lxtalabel40
+.cc_bottom cc_74
+.cc_top cc_75,.Lxtalabel41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	186
 	.long	189
-	.long	.Lxtalabel42
-.cc_bottom cc_79
-.cc_top cc_80,.Lxtalabel43
+	.long	.Lxtalabel41
+.cc_bottom cc_75
+.cc_top cc_76,.Lxtalabel42
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	190
 	.long	193
-	.long	.Lxtalabel43
-.cc_bottom cc_80
-.cc_top cc_81,.Lxtalabel44
+	.long	.Lxtalabel42
+.cc_bottom cc_76
+.cc_top cc_77,.Lxtalabel43
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	194
 	.long	197
-	.long	.Lxtalabel44
-.cc_bottom cc_81
-.cc_top cc_82,.Lxtalabel47
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	201
-	.long	202
-	.long	.Lxtalabel47
-.cc_bottom cc_82
-.cc_top cc_83,.Lxtalabel47
+	.long	.Lxtalabel43
+.cc_bottom cc_77
+.cc_top cc_78,.Lxtalabel32
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	204
 	.long	205
-	.long	.Lxtalabel47
-.cc_bottom cc_83
-.cc_top cc_84,.Lxtalabel38
+	.long	.Lxtalabel32
+.cc_bottom cc_78
+.cc_top cc_79,.Lxtalabel31
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	204
+	.long	205
+	.long	.Lxtalabel31
+.cc_bottom cc_79
+.cc_top cc_80,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	207
 	.long	209
 	.long	.Lxtalabel38
-.cc_bottom cc_84
-.cc_top cc_85,.Lxtalabel40
+.cc_bottom cc_80
+.cc_top cc_81,.Lxtalabel44
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	212
 	.long	212
-	.long	.Lxtalabel40
-.cc_bottom cc_85
-.cc_top cc_86,.Lxtalabel45
+	.long	.Lxtalabel44
+.cc_bottom cc_81
+.cc_top cc_82,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	212
 	.long	212
 	.long	.Lxtalabel45
-.cc_bottom cc_86
-.cc_top cc_87,.Lxtalabel46
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	212
-	.long	212
-	.long	.Lxtalabel46
-.cc_bottom cc_87
-.cc_top cc_88,.Lxtalabel57
+.cc_bottom cc_82
+.cc_top cc_83,.Lxtalabel55
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	215
 	.long	219
+	.long	.Lxtalabel55
+.cc_bottom cc_83
+.cc_top cc_84,.Lxtalabel54
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	215
+	.long	219
+	.long	.Lxtalabel54
+.cc_bottom cc_84
+.cc_top cc_85,.Lxtalabel54
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	221
+	.long	221
+	.long	.Lxtalabel54
+.cc_bottom cc_85
+.cc_top cc_86,.Lxtalabel55
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	221
+	.long	221
+	.long	.Lxtalabel55
+.cc_bottom cc_86
+.cc_top cc_87,.Lxtalabel59
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	223
+	.long	225
+	.long	.Lxtalabel59
+.cc_bottom cc_87
+.cc_top cc_88,.Lxtalabel57
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	223
+	.long	225
 	.long	.Lxtalabel57
 .cc_bottom cc_88
 .cc_top cc_89,.Lxtalabel56
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	215
-	.long	219
+	.long	223
+	.long	225
 	.long	.Lxtalabel56
 .cc_bottom cc_89
-.cc_top cc_90,.Lxtalabel56
+.cc_top cc_90,.Lxtalabel68
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	221
-	.long	221
-	.long	.Lxtalabel56
+	.long	223
+	.long	225
+	.long	.Lxtalabel68
 .cc_bottom cc_90
-.cc_top cc_91,.Lxtalabel57
+.cc_top cc_91,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	221
-	.long	221
-	.long	.Lxtalabel57
+	.long	223
+	.long	225
+	.long	.Lxtalabel67
 .cc_bottom cc_91
-.cc_top cc_92,.Lxtalabel69
+.cc_top cc_92,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	223
 	.long	225
-	.long	.Lxtalabel69
+	.long	.Lxtalabel63
 .cc_bottom cc_92
-.cc_top cc_93,.Lxtalabel59
+.cc_top cc_93,.Lxtalabel62
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	223
 	.long	225
-	.long	.Lxtalabel59
+	.long	.Lxtalabel62
 .cc_bottom cc_93
-.cc_top cc_94,.Lxtalabel64
+.cc_top cc_94,.Lxtalabel60
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	223
 	.long	225
-	.long	.Lxtalabel64
+	.long	.Lxtalabel60
 .cc_bottom cc_94
-.cc_top cc_95,.Lxtalabel58
+.cc_top cc_95,.Lxtalabel62
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	223
-	.long	225
-	.long	.Lxtalabel58
-.cc_bottom cc_95
-.cc_top cc_96,.Lxtalabel65
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	223
-	.long	225
-	.long	.Lxtalabel65
-.cc_bottom cc_96
-.cc_top cc_97,.Lxtalabel70
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	223
-	.long	225
-	.long	.Lxtalabel70
-.cc_bottom cc_97
-.cc_top cc_98,.Lxtalabel62
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	223
-	.long	225
+	.long	227
+	.long	228
 	.long	.Lxtalabel62
-.cc_bottom cc_98
-.cc_top cc_99,.Lxtalabel61
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	223
-	.long	225
-	.long	.Lxtalabel61
-.cc_bottom cc_99
-.cc_top cc_100,.Lxtalabel65
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	227
-	.long	228
-	.long	.Lxtalabel65
-.cc_bottom cc_100
-.cc_top cc_101,.Lxtalabel64
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	227
-	.long	228
-	.long	.Lxtalabel64
-.cc_bottom cc_101
-.cc_top cc_102,.Lxtalabel69
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	227
-	.long	228
-	.long	.Lxtalabel69
-.cc_bottom cc_102
-.cc_top cc_103,.Lxtalabel59
+.cc_bottom cc_95
+.cc_top cc_96,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	227
 	.long	228
 	.long	.Lxtalabel59
+.cc_bottom cc_96
+.cc_top cc_97,.Lxtalabel63
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	227
+	.long	228
+	.long	.Lxtalabel63
+.cc_bottom cc_97
+.cc_top cc_98,.Lxtalabel67
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	227
+	.long	228
+	.long	.Lxtalabel67
+.cc_bottom cc_98
+.cc_top cc_99,.Lxtalabel60
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	227
+	.long	228
+	.long	.Lxtalabel60
+.cc_bottom cc_99
+.cc_top cc_100,.Lxtalabel68
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	227
+	.long	228
+	.long	.Lxtalabel68
+.cc_bottom cc_100
+.cc_top cc_101,.Lxtalabel56
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	227
+	.long	228
+	.long	.Lxtalabel56
+.cc_bottom cc_101
+.cc_top cc_102,.Lxtalabel57
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	227
+	.long	228
+	.long	.Lxtalabel57
+.cc_bottom cc_102
+.cc_top cc_103,.Lxtalabel73
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	229
+	.long	230
+	.long	.Lxtalabel73
 .cc_bottom cc_103
-.cc_top cc_104,.Lxtalabel61
+.cc_top cc_104,.Lxtalabel80
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	227
-	.long	228
-	.long	.Lxtalabel61
+	.long	229
+	.long	230
+	.long	.Lxtalabel80
 .cc_bottom cc_104
-.cc_top cc_105,.Lxtalabel58
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	227
-	.long	228
-	.long	.Lxtalabel58
-.cc_bottom cc_105
-.cc_top cc_106,.Lxtalabel70
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	227
-	.long	228
-	.long	.Lxtalabel70
-.cc_bottom cc_106
-.cc_top cc_107,.Lxtalabel62
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	227
-	.long	228
-	.long	.Lxtalabel62
-.cc_bottom cc_107
-.cc_top cc_108,.Lxtalabel79
+.cc_top cc_105,.Lxtalabel79
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	229
 	.long	230
 	.long	.Lxtalabel79
-.cc_bottom cc_108
-.cc_top cc_109,.Lxtalabel78
+.cc_bottom cc_105
+.cc_top cc_106,.Lxtalabel77
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	229
 	.long	230
-	.long	.Lxtalabel78
-.cc_bottom cc_109
-.cc_top cc_110,.Lxtalabel76
+	.long	.Lxtalabel77
+.cc_bottom cc_106
+.cc_top cc_107,.Lxtalabel76
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	229
 	.long	230
 	.long	.Lxtalabel76
+.cc_bottom cc_107
+.cc_top cc_108,.Lxtalabel74
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	229
+	.long	230
+	.long	.Lxtalabel74
+.cc_bottom cc_108
+.cc_top cc_109,.Lxtalabel83
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	229
+	.long	230
+	.long	.Lxtalabel83
+.cc_bottom cc_109
+.cc_top cc_110,.Lxtalabel84
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	229
+	.long	230
+	.long	.Lxtalabel84
 .cc_bottom cc_110
 .cc_top cc_111,.Lxtalabel75
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	229
-	.long	230
+	.long	231
+	.long	231
 	.long	.Lxtalabel75
 .cc_bottom cc_111
-.cc_top cc_112,.Lxtalabel85
+.cc_top cc_112,.Lxtalabel82
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	229
-	.long	230
-	.long	.Lxtalabel85
-.cc_bottom cc_112
-.cc_top cc_113,.Lxtalabel82
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	229
-	.long	230
+	.long	232
+	.long	232
 	.long	.Lxtalabel82
+.cc_bottom cc_112
+.cc_top cc_113,.Lxtalabel78
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	235
+	.long	235
+	.long	.Lxtalabel78
 .cc_bottom cc_113
-.cc_top cc_114,.Lxtalabel81
+.cc_top cc_114,.Lxtalabel86
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	229
-	.long	230
-	.long	.Lxtalabel81
-.cc_bottom cc_114
-.cc_top cc_115,.Lxtalabel86
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	229
-	.long	230
+	.long	236
+	.long	236
 	.long	.Lxtalabel86
+.cc_bottom cc_114
+.cc_top cc_115,.Lxtalabel81
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	239
+	.long	239
+	.long	.Lxtalabel81
 .cc_bottom cc_115
-.cc_top cc_116,.Lxtalabel77
+.cc_top cc_116,.Lxtalabel87
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	231
-	.long	231
-	.long	.Lxtalabel77
+	.long	240
+	.long	240
+	.long	.Lxtalabel87
 .cc_bottom cc_116
-.cc_top cc_117,.Lxtalabel84
+.cc_top cc_117,.Lxtalabel85
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	232
-	.long	232
-	.long	.Lxtalabel84
+	.long	243
+	.long	243
+	.long	.Lxtalabel85
 .cc_bottom cc_117
-.cc_top cc_118,.Lxtalabel80
+.cc_top cc_118,.Lxtalabel91
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	235
-	.long	235
-	.long	.Lxtalabel80
+	.long	244
+	.long	244
+	.long	.Lxtalabel91
 .cc_bottom cc_118
 .cc_top cc_119,.Lxtalabel88
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	236
-	.long	236
+	.long	247
+	.long	247
 	.long	.Lxtalabel88
 .cc_bottom cc_119
-.cc_top cc_120,.Lxtalabel83
+.cc_top cc_120,.Lxtalabel92
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	239
-	.long	239
-	.long	.Lxtalabel83
+	.long	248
+	.long	248
+	.long	.Lxtalabel92
 .cc_bottom cc_120
 .cc_top cc_121,.Lxtalabel89
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	240
-	.long	240
+	.long	251
+	.long	251
 	.long	.Lxtalabel89
 .cc_bottom cc_121
-.cc_top cc_122,.Lxtalabel87
+.cc_top cc_122,.Lxtalabel93
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	243
-	.long	243
-	.long	.Lxtalabel87
-.cc_bottom cc_122
-.cc_top cc_123,.Lxtalabel93
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	244
-	.long	244
+	.long	252
+	.long	252
 	.long	.Lxtalabel93
-.cc_bottom cc_123
-.cc_top cc_124,.Lxtalabel90
+.cc_bottom cc_122
+.cc_top cc_123,.Lxtalabel90
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	247
-	.long	247
+	.long	255
+	.long	255
 	.long	.Lxtalabel90
-.cc_bottom cc_124
-.cc_top cc_125,.Lxtalabel94
+.cc_bottom cc_123
+.cc_top cc_124,.Lxtalabel94
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	248
-	.long	248
+	.long	256
+	.long	256
 	.long	.Lxtalabel94
-.cc_bottom cc_125
-.cc_top cc_126,.Lxtalabel91
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	251
-	.long	251
-	.long	.Lxtalabel91
-.cc_bottom cc_126
-.cc_top cc_127,.Lxtalabel95
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	252
-	.long	252
-	.long	.Lxtalabel95
-.cc_bottom cc_127
-.cc_top cc_128,.Lxtalabel92
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	255
-	.long	255
-	.long	.Lxtalabel92
-.cc_bottom cc_128
-.cc_top cc_129,.Lxtalabel96
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	256
-	.long	256
-	.long	.Lxtalabel96
-.cc_bottom cc_129
-.cc_top cc_130,.Lxtalabel60
+.cc_bottom cc_124
+.cc_top cc_125,.Lxtalabel58
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	261
 	.long	263
-	.long	.Lxtalabel60
-.cc_bottom cc_130
-.cc_top cc_131,.Lxtalabel63
+	.long	.Lxtalabel58
+.cc_bottom cc_125
+.cc_top cc_126,.Lxtalabel61
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	264
 	.long	266
-	.long	.Lxtalabel63
-.cc_bottom cc_131
-.cc_top cc_132,.Lxtalabel66
+	.long	.Lxtalabel61
+.cc_bottom cc_126
+.cc_top cc_127,.Lxtalabel64
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	267
 	.long	269
-	.long	.Lxtalabel66
-.cc_bottom cc_132
-.cc_top cc_133,.Lxtalabel71
+	.long	.Lxtalabel64
+.cc_bottom cc_127
+.cc_top cc_128,.Lxtalabel69
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	270
 	.long	272
-	.long	.Lxtalabel71
-.cc_bottom cc_133
-.cc_top cc_134,.Lxtalabel72
+	.long	.Lxtalabel69
+.cc_bottom cc_128
+.cc_top cc_129,.Lxtalabel70
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	273
 	.long	275
-	.long	.Lxtalabel72
-.cc_bottom cc_134
-.cc_top cc_135,.Lxtalabel73
+	.long	.Lxtalabel70
+.cc_bottom cc_129
+.cc_top cc_130,.Lxtalabel71
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	276
 	.long	278
-	.long	.Lxtalabel73
-.cc_bottom cc_135
-.cc_top cc_136,.Lxtalabel74
+	.long	.Lxtalabel71
+.cc_bottom cc_130
+.cc_top cc_131,.Lxtalabel72
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	279
 	.long	281
-	.long	.Lxtalabel74
+	.long	.Lxtalabel72
+.cc_bottom cc_131
+.cc_top cc_132,.Lxtalabel65
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	283
+	.long	283
+	.long	.Lxtalabel65
+.cc_bottom cc_132
+.cc_top cc_133,.Lxtalabel66
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	283
+	.long	283
+	.long	.Lxtalabel66
+.cc_bottom cc_133
+.cc_top cc_134,.Lxtalabel8
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	287
+	.long	287
+	.long	.Lxtalabel8
+.cc_bottom cc_134
+.cc_top cc_135,.Lxtalabel1
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	287
+	.long	287
+	.long	.Lxtalabel1
+.cc_bottom cc_135
+.cc_top cc_136,.Lxtalabel8
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	289
+	.long	289
+	.long	.Lxtalabel8
 .cc_bottom cc_136
-.cc_top cc_137,.Lxtalabel67
+.cc_top cc_137,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	283
-	.long	283
-	.long	.Lxtalabel67
+	.long	289
+	.long	289
+	.long	.Lxtalabel1
 .cc_bottom cc_137
-.cc_top cc_138,.Lxtalabel68
+.cc_top cc_138,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	283
-	.long	283
-	.long	.Lxtalabel68
+	.long	291
+	.long	293
+	.long	.Lxtalabel8
 .cc_bottom cc_138
 .cc_top cc_139,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	287
-	.long	287
+	.long	291
+	.long	293
 	.long	.Lxtalabel1
 .cc_bottom cc_139
 .cc_top cc_140,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	287
-	.long	287
+	.long	295
+	.long	295
 	.long	.Lxtalabel8
 .cc_bottom cc_140
-.cc_top cc_141,.Lxtalabel8
+.cc_top cc_141,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	289
-	.long	289
-	.long	.Lxtalabel8
-.cc_bottom cc_141
-.cc_top cc_142,.Lxtalabel1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	289
-	.long	289
+	.long	295
+	.long	295
 	.long	.Lxtalabel1
-.cc_bottom cc_142
-.cc_top cc_143,.Lxtalabel8
+.cc_bottom cc_141
+.cc_top cc_142,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	291
-	.long	293
+	.long	302
+	.long	302
 	.long	.Lxtalabel8
+.cc_bottom cc_142
+.cc_top cc_143,.Lxtalabel1
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	302
+	.long	302
+	.long	.Lxtalabel1
 .cc_bottom cc_143
 .cc_top cc_144,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	291
-	.long	293
+	.long	304
+	.long	304
 	.long	.Lxtalabel1
 .cc_bottom cc_144
 .cc_top cc_145,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	295
-	.long	295
+	.long	304
+	.long	304
 	.long	.Lxtalabel8
 .cc_bottom cc_145
-.cc_top cc_146,.Lxtalabel1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	295
-	.long	295
-	.long	.Lxtalabel1
-.cc_bottom cc_146
-.cc_top cc_147,.Lxtalabel8
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	300
-	.long	300
-	.long	.Lxtalabel8
-.cc_bottom cc_147
-.cc_top cc_148,.Lxtalabel1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	300
-	.long	300
-	.long	.Lxtalabel1
-.cc_bottom cc_148
-.cc_top cc_149,.Lxtalabel8
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	302
-	.long	302
-	.long	.Lxtalabel8
-.cc_bottom cc_149
-.cc_top cc_150,.Lxtalabel1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	302
-	.long	302
-	.long	.Lxtalabel1
-.cc_bottom cc_150
-.cc_top cc_151,.Lxtalabel8
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	304
-	.long	304
-	.long	.Lxtalabel8
-.cc_bottom cc_151
-.cc_top cc_152,.Lxtalabel1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	304
-	.long	304
-	.long	.Lxtalabel1
-.cc_bottom cc_152
-.cc_top cc_153,.Lxtalabel3
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	309
-	.long	309
-	.long	.Lxtalabel3
-.cc_bottom cc_153
-.cc_top cc_154,.Lxtalabel4
+.cc_top cc_146,.Lxtalabel4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	309
 	.long	309
 	.long	.Lxtalabel4
-.cc_bottom cc_154
-.cc_top cc_155,.Lxtalabel11
+.cc_bottom cc_146
+.cc_top cc_147,.Lxtalabel3
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	309
+	.long	309
+	.long	.Lxtalabel3
+.cc_bottom cc_147
+.cc_top cc_148,.Lxtalabel11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	309
 	.long	309
 	.long	.Lxtalabel11
-.cc_bottom cc_155
-.cc_top cc_156,.Lxtalabel10
+.cc_bottom cc_148
+.cc_top cc_149,.Lxtalabel10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	309
 	.long	309
 	.long	.Lxtalabel10
-.cc_bottom cc_156
-.cc_top cc_157,.Lxtalabel5
+.cc_bottom cc_149
+.cc_top cc_150,.Lxtalabel5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	310
 	.long	313
 	.long	.Lxtalabel5
-.cc_bottom cc_157
-.cc_top cc_158,.Lxtalabel12
+.cc_bottom cc_150
+.cc_top cc_151,.Lxtalabel12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	310
 	.long	313
 	.long	.Lxtalabel12
+.cc_bottom cc_151
+.cc_top cc_152,.Lxtalabel6
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	315
+	.long	316
+	.long	.Lxtalabel6
+.cc_bottom cc_152
+.cc_top cc_153,.Lxtalabel13
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	315
+	.long	316
+	.long	.Lxtalabel13
+.cc_bottom cc_153
+.cc_top cc_154,.Lxtalabel6
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	318
+	.long	318
+	.long	.Lxtalabel6
+.cc_bottom cc_154
+.cc_top cc_155,.Lxtalabel13
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	318
+	.long	318
+	.long	.Lxtalabel13
+.cc_bottom cc_155
+.cc_top cc_156,.Lxtalabel13
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	326
+	.long	326
+	.long	.Lxtalabel13
+.cc_bottom cc_156
+.cc_top cc_157,.Lxtalabel6
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	326
+	.long	326
+	.long	.Lxtalabel6
+.cc_bottom cc_157
+.cc_top cc_158,.Lxtalabel7
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+	.byte	0
+	.long	327
+	.long	328
+	.long	.Lxtalabel7
 .cc_bottom cc_158
-.cc_top cc_159,.Lxtalabel6
+.cc_top cc_159,.Lxtalabel14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	315
-	.long	316
-	.long	.Lxtalabel6
+	.long	327
+	.long	328
+	.long	.Lxtalabel14
 .cc_bottom cc_159
-.cc_top cc_160,.Lxtalabel13
+.cc_top cc_160,.Lxtalabel7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	315
-	.long	316
-	.long	.Lxtalabel13
+	.long	330
+	.long	330
+	.long	.Lxtalabel7
 .cc_bottom cc_160
-.cc_top cc_161,.Lxtalabel13
+.cc_top cc_161,.Lxtalabel14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
-	.long	318
-	.long	318
-	.long	.Lxtalabel13
+	.long	330
+	.long	330
+	.long	.Lxtalabel14
 .cc_bottom cc_161
-.cc_top cc_162,.Lxtalabel6
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	318
-	.long	318
-	.long	.Lxtalabel6
-.cc_bottom cc_162
-.cc_top cc_163,.Lxtalabel6
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	326
-	.long	326
-	.long	.Lxtalabel6
-.cc_bottom cc_163
-.cc_top cc_164,.Lxtalabel13
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	326
-	.long	326
-	.long	.Lxtalabel13
-.cc_bottom cc_164
-.cc_top cc_165,.Lxtalabel14
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	327
-	.long	328
-	.long	.Lxtalabel14
-.cc_bottom cc_165
-.cc_top cc_166,.Lxtalabel7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	327
-	.long	328
-	.long	.Lxtalabel7
-.cc_bottom cc_166
-.cc_top cc_167,.Lxtalabel14
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	330
-	.long	330
-	.long	.Lxtalabel14
-.cc_bottom cc_167
-.cc_top cc_168,.Lxtalabel7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
-	.byte	0
-	.long	330
-	.long	330
-	.long	.Lxtalabel7
-.cc_bottom cc_168
-.cc_top cc_169,.Lxtalabel2
+.cc_top cc_162,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	331
 	.long	334
 	.long	.Lxtalabel2
-.cc_bottom cc_169
-.cc_top cc_170,.Lxtalabel9
+.cc_bottom cc_162
+.cc_top cc_163,.Lxtalabel9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
 	.byte	0
 	.long	331
 	.long	334
 	.long	.Lxtalabel9
-.cc_bottom cc_170
+.cc_bottom cc_163
 .Lentries_end5:
 	.section	.trap_info,"",@progbits
 .Ltrap_info_entries_start0:

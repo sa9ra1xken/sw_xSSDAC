@@ -480,7 +480,7 @@ void button_listener(chanend ?c_play_control, chanend ?c_dac_control);
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h" 1
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
+# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
@@ -1377,8 +1377,8 @@ void KeyEvent(BUTTON_EVENT event){
 
 
 
-            printf("\nSwitching to USB Audio Menu");
-            SwitchConsoleMode(_USB_AUDIO);
+
+
 
             break;
         default:
@@ -1476,7 +1476,7 @@ void button_listener(chanend ?c_play_control, chanend ?c_dac_control){
 
 
 
-    set_console_mode(_USB_AUDIO);
+
 
     set_display_control_flag(0x00000010);
 

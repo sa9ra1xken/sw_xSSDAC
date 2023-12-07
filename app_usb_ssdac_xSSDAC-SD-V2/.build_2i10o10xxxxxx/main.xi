@@ -1,11 +1,11 @@
-# 1 "../src/core/main.xc"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 141 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "../src/core/main.xc" 2
-# 10 "../src/core/main.xc"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\syscall.h" 1 3
 # 48 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\syscall.h" 3
 typedef unsigned ___size_t;
@@ -52,7 +52,7 @@ int _get_cmdline(void *buf, unsigned size);
 }
 # 98 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\syscall.h" 3
 void _plugins(int type, unsigned arg1, unsigned arg2);
-# 11 "../src/core/main.xc" 2
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
 # 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_ssdac_xSSDAC-SD-V2\\\\.build_2i10o10xxxxxx\\\\xSSDAC-SD-V2.h" 1 3
@@ -460,7 +460,7 @@ extern tileref usb_tile;
 
 service xscope_host_data(chanend c);;
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 12 "../src/core/main.xc" 2
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 1 3
 # 35 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
@@ -469,7 +469,7 @@ unsigned bitrev(unsigned x);
 unsigned byterev(unsigned x);
 # 59 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 int clz(unsigned x);
-# 14 "../src/core/main.xc" 2
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 1 3
 # 34 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 3
 int printchar(char value);
@@ -576,7 +576,7 @@ int printbinln(unsigned value);
 int printstr(const char (& alias s)[]);
 # 145 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 3
 int printstrln(const char (& alias s)[]);
-# 15 "../src/core/main.xc" 2
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 
 
@@ -1206,7 +1206,7 @@ int _safe_fclose(FILE * movable fp);
 int _safe_remove(const char file[]);
 int _safe_rename(const char from[], const char to[]);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 2 3
-# 16 "../src/core/main.xc" 2
+# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xscope.h" 1 3
 # 38 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xscope.h" 3
 typedef enum {
@@ -1326,7 +1326,7 @@ void xscope_connect_data_from_host(chanend from_host);
 # 420 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xscope.h" 3
 # 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_ssdac_xSSDAC-SD-V2\\\\.build_2i10o10xxxxxx\\\\xscope_probes.h" 1 3
 # 420 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xscope.h" 2 3
-# 17 "../src/core/main.xc" 2
+# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 
 
 
@@ -1565,7 +1565,7 @@ void XUD_GetData_Select(chanend c, XUD_ep ep, unsigned &length, XUD_Result_t &re
 
 #pragma select handler
 void XUD_SetData_Select(chanend c, XUD_ep ep, XUD_Result_t &result);
-# 22 "../src/core/main.xc" 2
+# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h" 1
 
@@ -1576,7 +1576,7 @@ void XUD_SetData_Select(chanend c, XUD_ep ep, XUD_Result_t &result);
 
 
 
-# 1 "../src/core\\customdefines.h" 1
+# 1 ".././src/core\\customdefines.h" 1
 # 10 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h" 2
 # 1108 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h"
 enum USBEndpointNumber_In
@@ -1597,9 +1597,9 @@ enum USBEndpointNumber_Out
 # 1149 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h"
     ENDPOINT_COUNT_OUT
 };
-# 24 "../src/core/main.xc" 2
+# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\uac_hwresources.h" 1
-# 25 "../src/core/main.xc" 2
+# 25 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0\\endpoint0.h" 1
 
 
@@ -1695,7 +1695,7 @@ interface i_dfu
 # 23 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0\\endpoint0.h"
 void Endpoint0(chanend c_ep0_out, chanend c_ep0_in, chanend c_audioCtrl,
         chanend ?c_mix_ctl,chanend ?c_clk_ctl, chanend ?c_EANativeTransport_ctr, client interface i_dfu dfuInterface);
-# 26 "../src/core/main.xc" 2
+# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\usb_buffer.h" 1
 # 20 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\usb_buffer.h"
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h" 1
@@ -1710,7 +1710,7 @@ void buffer(chanend c_aud_out,
             chanend c_aud_ctl
 # 61 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\usb_buffer.h"
         );
-# 27 "../src/core/main.xc" 2
+# 27 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\decouple.h" 1
 # 10 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\decouple.h"
 void decouple(chanend c_audio_out
@@ -1718,7 +1718,7 @@ void decouple(chanend c_audio_out
 
 
 );
-# 28 "../src/core/main.xc" 2
+# 28 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 
 
 
@@ -1747,12 +1747,12 @@ void audio(chanend c_in,
 );
 
 void SpdifTxWrapper(chanend c_spdif_tx);
-# 32 "../src/core/main.xc" 2
-# 50 "../src/core/main.xc"
+# 32 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
+# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\clocking.h" 1
 # 16 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\clocking.h"
 void clockGen (streaming chanend ?c_spdif_rx, chanend ?c_adat_rx, out port p, chanend c_audio, chanend c_clk_ctl, chanend c_clk_int);
-# 51 "../src/core/main.xc" 2
+# 51 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 
 
 
@@ -1810,10 +1810,12 @@ unsigned start_fir(chanend c_in, unsigned sample_rate);
 unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
 
 void audio_xss(chanend c_in, chanend ?c_control);
-# 58 "../src/core/main.xc" 2
+# 58 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
+# 1 ".././src/core\\ssdac_conf.h" 1
+# 59 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h" 1
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
+# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
@@ -1829,7 +1831,7 @@ typedef enum {
 
 CONSOLE_MODE get_console_mode();
 void set_console_mode(CONSOLE_MODE value);
-# 60 "../src/core/main.xc" 2
+# 61 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 
 
 
@@ -1859,15 +1861,18 @@ typedef enum {
 unsigned QueryChannel(chanend ch, unsigned command);
 
 void button_listener(chanend ?c_play_control, chanend ?c_dac_control);
-# 66 "../src/core/main.xc" 2
+# 67 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
+
+
+
 
 
 [[distributable]]
 void DFUHandler(server interface i_dfu i, chanend ?c_user_cmd);
-# 235 "../src/core/main.xc"
+# 239 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
 XUD_EpType epTypeTableOut[ENDPOINT_COUNT_OUT] = { XUD_EPTYPE_CTL | 0x80000000,
                                             XUD_EPTYPE_ISO,
-# 246 "../src/core/main.xc"
+# 250 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
                                         };
 
 XUD_EpType epTypeTableIn[ENDPOINT_COUNT_IN] = { XUD_EPTYPE_CTL | 0x80000000,
@@ -1875,7 +1880,7 @@ XUD_EpType epTypeTableIn[ENDPOINT_COUNT_IN] = { XUD_EPTYPE_CTL | 0x80000000,
 
 
                                             XUD_EPTYPE_ISO,
-# 272 "../src/core/main.xc"
+# 276 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
                                         };
 
 
@@ -1899,8 +1904,9 @@ void xscope_user_init()
 
 
 
+
 void usb_audio_core(chanend c_mix_out
-# 308 "../src/core/main.xc"
+# 313 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
 , chanend ?c_clk_int
 , chanend ?c_clk_ctl
 , client interface i_dfu ?dfuInterface
@@ -1910,7 +1916,7 @@ void usb_audio_core(chanend c_mix_out
     chan c_xud_out[ENDPOINT_COUNT_OUT];
     chan c_xud_in[ENDPOINT_COUNT_IN];
     chan c_aud_ctl;
-# 332 "../src/core/main.xc"
+# 337 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
     printf("\nstarting usb_audio_core." );
     fflush((__getstdout()));
     par
@@ -1930,12 +1936,12 @@ void usb_audio_core(chanend c_mix_out
         {
             unsigned x;
             thread_speed();
-# 366 "../src/core/main.xc"
+# 371 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
             buffer(c_xud_out[ENDPOINT_NUMBER_OUT_AUDIO],
                 c_xud_in[ENDPOINT_NUMBER_IN_AUDIO],
 
                 c_xud_in[ENDPOINT_NUMBER_IN_FEEDBACK],
-# 398 "../src/core/main.xc"
+# 403 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
         c_sof, c_aud_ctl
 
 
@@ -1988,13 +1994,13 @@ void usb_audio_io(chanend c_aud_in, chanend ?c_adc,
     , chanend ?c_dac_control
 )
 {
-# 460 "../src/core/main.xc"
+# 465 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
     par
     {
-# 470 "../src/core/main.xc"
+# 475 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
         {
             thread_speed();
-# 495 "../src/core/main.xc"
+# 500 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
         audio_xss(
                 c_aud_in
 
@@ -2005,16 +2011,16 @@ void usb_audio_io(chanend c_aud_in, chanend ?c_adc,
          );
 
         }
-# 516 "../src/core/main.xc"
+# 521 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
     }
 }
-# 528 "../src/core/main.xc"
+# 533 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
 int main()
 {
     chan c_mix_out;
-# 582 "../src/core/main.xc"
+# 587 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
     interface i_dfu dfuInterface;
-# 591 "../src/core/main.xc"
+# 596 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
     chan c_dac_control;
 
 
@@ -2032,7 +2038,7 @@ int main()
 
 
             usb_audio_core(c_mix_out
-# 620 "../src/core/main.xc"
+# 625 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
                 , null, null, dfuInterface
 
             );
@@ -2055,7 +2061,7 @@ int main()
 
             , c_dac_control
         );
-# 707 "../src/core/main.xc"
+# 712 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
         on tile[1]: display_control();
 
 

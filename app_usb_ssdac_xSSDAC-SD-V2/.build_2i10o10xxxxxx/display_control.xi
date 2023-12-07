@@ -1444,7 +1444,7 @@ RC_SCROLL OLED_SSD1306_shift_left(int str_row);
 # 20 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\DISPLAY_CONTROL.h" 1
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\DISPLAY_CONTROL.h"
+# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\DISPLAY_CONTROL.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
@@ -1713,13 +1713,7 @@ void display_control(){
             clear_display_control_flag(0x00000010);
 
             switch (get_console_mode()){
-# 276 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
-            case _USB_AUDIO:
-                OLED_SSD1306_put_string(0, "XMOS USB Audio");
-                ShowUsbAudioStatus();
-                OLED_SSD1306_put_string(2, "");
-                OLED_SSD1306_put_string(3, "");
-                break;
+# 284 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
             case _DAC_MENU:
                 OLED_SSD1306_put_string(0, "Interpolation");
                 ShowInterpolationMode(FixedInterpolationMode());
@@ -1730,17 +1724,7 @@ void display_control(){
         }
 
         switch (get_console_mode()){
-# 317 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
-        case _USB_AUDIO:
-            if (test_display_control_flag(0x00000020)){
-                clear_display_control_flag(0x00000020);
-                ShowUsbAudioStatus();
-            }
-            if (test_display_control_flag(0x00000040)){
-                clear_display_control_flag(0x00000040);
-                ShowUsbAudioStatus();
-            }
-            break;
+# 331 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
         case _DAC_MENU:
             if (test_display_control_flag(0x00000100)){
                 clear_display_control_flag(0x00000100);
