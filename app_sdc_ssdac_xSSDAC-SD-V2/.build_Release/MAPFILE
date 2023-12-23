@@ -187,9 +187,9 @@ Symbols:
   000438dc 00000000 .text                $s.131
   000438f8 00000014 .text                p_gpio.dtor
   000438f8 00000000 .text                $s.132
-  0004390c 0000001c .text                __localPortInitializer7.ctor
+  0004390c 0000001c .text                __localPortInitializer5.ctor
   0004390c 00000000 .text                $s.133
-  00043928 00000014 .text                __localPortInitializer7.dtor
+  00043928 00000014 .text                __localPortInitializer5.dtor
   00043928 00000000 .text                $s.134
   0004393c 0000001c .text                tp5.ctor
   0004393c 00000000 .text                $s.135
@@ -545,7 +545,7 @@ Symbols:
   00048858 000002a0 .dp.data             deviceSpecs
   00048af8 00000020 .dp.data             __timers
   00048af8 00000000 .dp.data             p_key
-  00048af8 00000000 .dp.data             __localPortInitializer5
+  00048af8 00000000 .dp.data             __localPortInitializer7
   00048af8 00000000 .dp.data             __localPortInitializer8
   00048af8 00000000 .dp.data             __localPortInitializer9
   00048af8 00000000 .dp.data             __localPortInitializer10
@@ -577,7 +577,7 @@ Symbols:
   0004902c 00000004 .dp.rodata.4         __localPortInitializer2
   00049030 00000004 .dp.rodata.4         __localPortInitializer3
   00049034 00000004 .dp.rodata.4         p_gpio
-  00049038 00000004 .dp.rodata.4         __localPortInitializer7
+  00049038 00000004 .dp.rodata.4         __localPortInitializer5
   0004903c 00000004 .dp.rodata.4         tp5
   00049040 00000004 .dp.rodata.4         tp23_solver
   00049044 00000004 .dp.rodata.4         tp24_interpolator
@@ -906,52 +906,52 @@ Symbols:
   0004f220 00000000 .text                $d.718
   0004f248 00000028 .text                qspi_if_write
   0004f248 00000000 .text                $d.719
-  0004f270 0000002c .text                QueryChannel
-  0004f270 00000000 .text                $d.1061
-  0004f29c 0000011c .text                button_listener
-  0004f29c 00000000 .text                $d.1062
-  0004f3b8 00000070 .text                HandlePlayCommand
-  0004f3b8 00000000 .text                $d.1063
-  0004f428 00000050 .text                HandleDacCommand
-  0004f428 00000000 .text                $d.1064
-  0004f478 000001bc .text                KeyEvent
-  0004f478 00000000 .text                $d.1066
-  0004f634 00000324 .text                ExamineKeyInput
-  0004f634 00000000 .text                $d.1067
-  0004f958 00000014 .text                set_display_control_flag
-  0004f958 00000000 .text                $d.1112
-  0004f96c 000004f4 .text                display_control
-  0004f96c 00000000 .text                $d.1116
-  0004fe60 0000000c .text                _Sset_console_mode_0
-  0004fe60 00000000 .text                $d.1119
-  0004fe6c 00000070 .text                ShowInterpolationMode
-  0004fe6c 00000000 .text                $d.1129
-  0004fedc 00000010 .text                i2c_master_init
-  0004fedc 00000000 .text                $s.906
-  0004feec 00000098 .text                i2c_master_write_reg
-  0004feec 00000000 .text                $s.907
-  0004ff84 000000b4 .text                i2c_master_write_part
-  0004ff84 00000000 .text                $s.908
-  00050038 00000024 .text                waitHalf
-  00050038 00000000 .text                $s.911
-  0005005c 00000064 .text                highPulseDrive
-  0005005c 00000000 .text                $s.912
-  000500c0 00000050 .text                highPulseSample
-  000500c0 00000000 .text                $s.913
-  00050110 00000040 .text                startBit
-  00050110 00000000 .text                $s.914
-  00050150 00000044 .text                stopBit
-  00050150 00000000 .text                $s.915
-  00050194 00000036 .text                tx8
-  00050194 00000000 .text                $s.916
-  000501cc 00000050 .text                OLED_SSD1306_begin
-  000501cc 00000000 .text                $s.425
-  0005021c 00000144 .text                OLED_SSD1306_put_string
-  0005021c 00000000 .text                $s.426
-  00050360 00000108 .text                OLED_SSD1306_shift_left
-  00050360 00000000 .text                $s.427
-  00050468 00000070 .text                send_page
-  00050468 00000000 .text                $s.428
+  0004f270 00000010 .text                i2c_master_init
+  0004f270 00000000 .text                $s.906
+  0004f280 00000098 .text                i2c_master_write_reg
+  0004f280 00000000 .text                $s.907
+  0004f318 000000b4 .text                i2c_master_write_part
+  0004f318 00000000 .text                $s.908
+  0004f3cc 00000024 .text                waitHalf
+  0004f3cc 00000000 .text                $s.911
+  0004f3f0 00000064 .text                highPulseDrive
+  0004f3f0 00000000 .text                $s.912
+  0004f454 00000050 .text                highPulseSample
+  0004f454 00000000 .text                $s.913
+  0004f4a4 00000040 .text                startBit
+  0004f4a4 00000000 .text                $s.914
+  0004f4e4 00000044 .text                stopBit
+  0004f4e4 00000000 .text                $s.915
+  0004f528 00000036 .text                tx8
+  0004f528 00000000 .text                $s.916
+  0004f560 00000050 .text                OLED_SSD1306_begin
+  0004f560 00000000 .text                $s.425
+  0004f5b0 00000144 .text                OLED_SSD1306_put_string
+  0004f5b0 00000000 .text                $s.426
+  0004f6f4 00000108 .text                OLED_SSD1306_shift_left
+  0004f6f4 00000000 .text                $s.427
+  0004f7fc 00000070 .text                send_page
+  0004f7fc 00000000 .text                $s.428
+  0004f86c 0000002c .text                QueryChannel
+  0004f86c 00000000 .text                $d.1061
+  0004f898 0000011c .text                button_listener
+  0004f898 00000000 .text                $d.1062
+  0004f9b4 00000070 .text                HandlePlayCommand
+  0004f9b4 00000000 .text                $d.1063
+  0004fa24 00000050 .text                HandleDacCommand
+  0004fa24 00000000 .text                $d.1064
+  0004fa74 000001bc .text                KeyEvent
+  0004fa74 00000000 .text                $d.1066
+  0004fc30 00000324 .text                ExamineKeyInput
+  0004fc30 00000000 .text                $d.1067
+  0004ff54 00000014 .text                set_display_control_flag
+  0004ff54 00000000 .text                $d.1112
+  0004ff68 000004f4 .text                display_control
+  0004ff68 00000000 .text                $d.1116
+  0005045c 0000000c .text                _Sset_console_mode_0
+  0005045c 00000000 .text                $d.1119
+  00050468 00000070 .text                ShowInterpolationMode
+  00050468 00000000 .text                $d.1129
   000504d8 0000013c .text                send_sample
   000504d8 00000000 .text                $d.347
   00050614 000001ac .text                decoupler
@@ -986,9 +986,9 @@ Symbols:
   000518f0 00000000 .text                $s.43
   0005190c 00000014 .text                p_key.dtor
   0005190c 00000000 .text                $s.44
-  00051920 0000001c .text                __localPortInitializer5.ctor
+  00051920 0000001c .text                __localPortInitializer7.ctor
   00051920 00000000 .text                $s.45
-  0005193c 00000014 .text                __localPortInitializer5.dtor
+  0005193c 00000014 .text                __localPortInitializer7.dtor
   0005193c 00000000 .text                $s.46
   00051950 0000001c .text                __localPortInitializer8.ctor
   00051950 00000000 .text                $s.47
@@ -1451,7 +1451,7 @@ Symbols:
   00059c08 00000000 .dp.data             __localPortInitializer1
   00059c08 00000000 .dp.data             __localPortInitializer2
   00059c08 00000000 .dp.data             __localPortInitializer3
-  00059c08 00000000 .dp.data             __localPortInitializer7
+  00059c08 00000000 .dp.data             __localPortInitializer5
   00059c28 00000004 .dp.data             XSCOPE_REDIRECT_IO
   00059c2c 00000004 .dp.data             __sodChan
   00059c30 00000000 .dp.data             __sodFlag
@@ -1472,22 +1472,22 @@ Symbols:
   00059ca0 00000008 .dp.data.4           __sinit_lock
   00059ca8 00000004 .dp.rodata.4         r_i2c2
   00059cac 00000004 .dp.rodata.4         p_key
-  00059cb0 00000004 .dp.rodata.4         __localPortInitializer5
+  00059cb0 00000004 .dp.rodata.4         __localPortInitializer7
   00059cb4 00000004 .dp.rodata.4         __localPortInitializer8
   00059cb8 00000004 .dp.rodata.4         __localPortInitializer9
   00059cbc 00000004 .dp.rodata.4         __localPortInitializer10
   00059cc0 00000000 .dp.bss              _fdp.bss
   00059cc0 00000008 .dp.bss              total_samples
   00059cc8 00000008 .dp.bss              CurrentPosition
-  00059cd0 0000000c .dp.bss              key_buff
-  00059ce0 00000064 .dp.bss              information_string
-  00059d48 00000006 .dp.bss              TotalTimeString
-  00059d50 00000010 .dp.bss              string_ptr
-  00059d60 00000010 .dp.bss              terminator_found_before_eol
-  00059d70 00000400 .dp.bss              raster_buffer
-  0005a170 00000010 .dp.bss              display_offset
-  0005a180 00000010 .dp.bss              rendering_col
-  0005a190 00000010 .dp.bss              rendering_x
+  00059cd0 00000010 .dp.bss              string_ptr
+  00059ce0 00000010 .dp.bss              terminator_found_before_eol
+  00059cf0 00000400 .dp.bss              raster_buffer
+  0005a0f0 00000010 .dp.bss              display_offset
+  0005a100 00000010 .dp.bss              rendering_col
+  0005a110 00000010 .dp.bss              rendering_x
+  0005a120 0000000c .dp.bss              key_buff
+  0005a130 00000064 .dp.bss              information_string
+  0005a198 00000006 .dp.bss              TotalTimeString
   0005a1a0 00004000 .dp.bss              audio_buffer
   0005e1a0 00000020 .dp.bss              sm_sample_rate
   0005e1c0 00000020 .dp.bss              sm_ch_count
@@ -1519,20 +1519,20 @@ Symbols:
   0005e4f8 00000001 .dp.bss.4            InitialRun
   0005e4fc 00000100 .dp.bss.4            GetDirItemAt.lfn
   0005e5fc 00000100 .dp.bss.4            GetDirIndexOf.lfn
-  0005e6fc 00000004 .dp.bss.4            scan_time
-  0005e700 00000004 .dp.bss.4            p_console_mode
-  0005e704 00000004 .dp.bss.4            play_command
-  0005e708 00000004 .dp.bss.4            selected_function
-  0005e70c 00000004 .dp.bss.4            play_command_request
-  0005e710 00000004 .dp.bss.4            last_event_time
-  0005e714 00000004 .dp.bss.4            display_control_flag
-  0005e718 00000004 .dp.bss.4            console_mode
-  0005e71c 00000004 .dp.bss.4            SecElapsed
-  0005e720 00000001 .dp.bss.4            state
-  0005e724 00000004 .dp.bss.4            pause_counter
-  0005e728 00000004 .dp.bss.4            scrolling_row
-  0005e72c 00000001 .dp.bss.4            _x
-  0005e730 00000001 .dp.bss.4            _y
+  0005e6fc 00000001 .dp.bss.4            _x
+  0005e700 00000001 .dp.bss.4            _y
+  0005e704 00000004 .dp.bss.4            scan_time
+  0005e708 00000004 .dp.bss.4            p_console_mode
+  0005e70c 00000004 .dp.bss.4            play_command
+  0005e710 00000004 .dp.bss.4            selected_function
+  0005e714 00000004 .dp.bss.4            play_command_request
+  0005e718 00000004 .dp.bss.4            last_event_time
+  0005e71c 00000004 .dp.bss.4            display_control_flag
+  0005e720 00000004 .dp.bss.4            console_mode
+  0005e724 00000004 .dp.bss.4            SecElapsed
+  0005e728 00000001 .dp.bss.4            state
+  0005e72c 00000004 .dp.bss.4            pause_counter
+  0005e730 00000004 .dp.bss.4            scrolling_row
   0005e734 00000004 .dp.bss.4            buff_id
   0005e738 00000004 .dp.bss.4            rx_id
   0005e73c 00000004 .dp.bss.4            tx_id

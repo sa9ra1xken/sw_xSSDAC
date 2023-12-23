@@ -5,9 +5,9 @@
   C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src/integer.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src/ffconf.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/timing.h \
-  C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\button_listener.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\button_listener.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.h \
-  C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\display_control.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\display_control.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\qspi_access.h \
   ./././src\ssdac_conf.h
 

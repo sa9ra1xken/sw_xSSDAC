@@ -1814,8 +1814,8 @@ void audio_xss(chanend c_in, chanend ?c_control);
 # 1 ".././src\\ssdac_conf.h" 1
 # 59 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h" 1
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 1
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
@@ -1838,8 +1838,8 @@ void set_console_mode(CONSOLE_MODE value);
 
 
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 1
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 1
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
 typedef enum {
     _USB_DAC = 0,
     _SDC_PLAY = 1,

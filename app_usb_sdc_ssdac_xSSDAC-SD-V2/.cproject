@@ -253,6 +253,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_sdcard4bit}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_sd_audio/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_sd_audio}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_operation_console}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_operation_console/src}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.xc.compiler.input.723554502" name="XC" superClass="com.xmos.cdt.xc.compiler.input"/>
 							</tool>
@@ -634,6 +636,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_sdcard4bit}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_sd_audio/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_sd_audio}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_operation_console}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_operation_console/src}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.c.compiler.input.c.1056232035" name="C" superClass="com.xmos.cdt.c.compiler.input.c"/>
 							</tool>
@@ -1020,6 +1024,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_sdcard4bit}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_sd_audio/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_sd_audio}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_operation_console}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_operation_console/src}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.cxx.compiler.input.cpp.1073573755" name="C++" superClass="com.xmos.cdt.cxx.compiler.input.cpp"/>
 							</tool>

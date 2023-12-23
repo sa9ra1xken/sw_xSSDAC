@@ -56,166 +56,166 @@ Symbols:
   00040158 00000000 .text                $s.225
   00040310 00000070 .text                itoa
   00040310 00000000 .text                $s.226
-  00040380 0000001c .text                swlock_acquire
-  00040380 00000000 .text                $d.59
-  0004039c 0000000c .text                swlock_release
-  0004039c 00000000 .text                $d.60
-  000403a8 00000044 .text                set_gpio
-  000403a8 00000000 .text                $d.139
-  000403ec 00000000 .text                __handle_audio_request_handler
-  000403ec 00000000 .text                $s.6
-  000403f2 00000000 .text                __kent
-  00040416 00000000 .text                __kret
-  0004041c 00000030 .text                i2c_shared_master_init
-  0004041c 00000000 .text                $d.202
+  00040380 00000044 .text                set_gpio
+  00040380 00000000 .text                $d.139
+  000403c4 00000030 .text                i2c_shared_master_init
+  000403c4 00000000 .text                $d.202
+  000403f4 0000001c .text                swlock_acquire
+  000403f4 00000000 .text                $d.59
+  00040410 0000000c .text                swlock_release
+  00040410 00000000 .text                $d.60
+  0004041c 00000000 .text                __handle_audio_request_handler
+  0004041c 00000000 .text                $s.6
+  00040422 00000000 .text                __kent
+  00040446 00000000 .text                __kret
   0004044c 0000002c .text                xscope_user_init
   0004044c 00000000 .text                $d.802
   00040478 0000000c .text                __main__main_tile_0
   00040478 00000000 .text                $d.817
-  00040484 00000040 .text                init_ring_buff
-  00040484 00000000 .text                $d.102
-  000404c4 0000004c .text                add_sample
-  000404c4 00000000 .text                $d.103
-  00040510 00000030 .text                sample_at
-  00040510 00000000 .text                $d.104
-  00040540 000001e0 .text                fir_sinc4
-  00040540 00000000 .text                $d.1065
-  00040720 0000053c .text                fir_sinc4.task.0
-  00040720 00000000 .text                $d.1066
-  00040c5c 0000050c .text                fir_sinc4.task.1
-  00040c5c 00000000 .text                $d.1067
-  00041168 00000500 .text                fir_sinc4.task.2
-  00041168 00000000 .text                $d.1068
-  00041668 00000538 .text                fir_sinc4.task.3
-  00041668 00000000 .text                $d.1069
-  00041ba0 000001e0 .text                fir_sinc8
-  00041ba0 00000000 .text                $d.647
-  00041d80 00000278 .text                fir_sinc8.task.0
-  00041d80 00000000 .text                $d.648
-  00041ff8 00000254 .text                fir_sinc8.task.1
-  00041ff8 00000000 .text                $d.649
-  0004224c 00000244 .text                fir_sinc8.task.2
-  0004224c 00000000 .text                $d.650
-  00042490 00000270 .text                fir_sinc8.task.3
-  00042490 00000000 .text                $d.651
-  00042700 00000060 .text                ConfigureSerialDacPorts
-  00042700 00000000 .text                $d.2195
-  00042760 0000016c .text                audio_xss
-  00042760 00000000 .text                $d.2198
-  000428cc 000000b8 .text                oneshot_indicator
-  000428cc 00000000 .text                $d.2199
-  00042984 000000b0 .text                serial_dac_driver
-  00042984 00000000 .text                $d.2200
-  00042a34 0000015c .text                clipper
-  00042a34 00000000 .text                $d.2202
-  00042b90 00000178 .text                interpolator
-  00042b90 00000000 .text                $d.2203
-  00042d08 000002c8 .text                spline_solver
-  00042d08 00000000 .text                $d.2204
-  00042fd0 000000c8 .text                passthrough
-  00042fd0 00000000 .text                $d.2205
-  00043098 000002fc .text                config_audo_core
-  00043098 00000000 .text                $d.2214
-  00043394 00000024 .text                config_audo_core.task.0
-  00043394 00000000 .text                $d.2215
-  000433b8 00000018 .text                config_audo_core.task.clipper.1
-  000433b8 00000000 .text                $d.2216
-  000433d0 00000014 .text                config_audo_core.task.serial_dac_driver.2
-  000433d0 00000000 .text                $d.2217
-  000433e4 00000024 .text                config_audo_core.task.3
-  000433e4 00000000 .text                $d.2218
-  00043408 00000018 .text                config_audo_core.task.clipper.4
-  00043408 00000000 .text                $d.2219
-  00043420 00000014 .text                config_audo_core.task.serial_dac_driver.5
-  00043420 00000000 .text                $d.2220
-  00043434 00000020 .text                config_audo_core.task.6
-  00043434 00000000 .text                $d.2221
-  00043454 00000014 .text                config_audo_core.task.serial_dac_driver.7
-  00043454 00000000 .text                $d.2222
-  00043468 00000024 .text                config_audo_core.task.8
-  00043468 00000000 .text                $d.2223
-  0004348c 00000018 .text                config_audo_core.task.interpolator.9
-  0004348c 00000000 .text                $d.2224
-  000434a4 00000018 .text                config_audo_core.task.clipper.10
-  000434a4 00000000 .text                $d.2225
-  000434bc 00000010 .text                config_audo_core.task.serial_dac_driver.11
-  000434bc 00000000 .text                $d.2226
-  000434cc 00000010 .text                config_audo_core.task.oneshot_indicator.12
-  000434cc 00000000 .text                $d.2227
-  000434dc 000000a8 .text                ConfigSi5351A
-  000434dc 00000000 .text                $d.533
-  00043584 00000018 .text                AudioHwInit
-  00043584 00000000 .text                $d.537
-  0004359c 000000b8 .text                _SAudioHwConfig_0
-  0004359c 00000000 .text                $d.539
-  00043654 00000010 .text                ReleaseMute
-  00043654 00000000 .text                $d.540
-  00043664 00000010 .text                ClipIndicator
-  00043664 00000000 .text                $d.541
-  00043674 000005dc .text                handle_audio_request
-  00043674 00000000 .text                $d.1708
-  00043c50 00000010 .text                i2c_master_init
-  00043c50 00000000 .text                $s.906
-  00043c60 00000098 .text                i2c_master_write_reg
-  00043c60 00000000 .text                $s.907
-  00043cf8 00000024 .text                waitHalf
-  00043cf8 00000000 .text                $s.911
-  00043d1c 00000064 .text                highPulseDrive
-  00043d1c 00000000 .text                $s.912
-  00043d80 00000050 .text                highPulseSample
-  00043d80 00000000 .text                $s.913
-  00043dd0 00000040 .text                startBit
-  00043dd0 00000000 .text                $s.914
-  00043e10 00000044 .text                stopBit
-  00043e10 00000000 .text                $s.915
-  00043e54 00000036 .text                tx8
-  00043e54 00000000 .text                $s.916
+  00040484 000000a8 .text                ConfigSi5351A
+  00040484 00000000 .text                $d.533
+  0004052c 00000018 .text                AudioHwInit
+  0004052c 00000000 .text                $d.537
+  00040544 000000b8 .text                _SAudioHwConfig_0
+  00040544 00000000 .text                $d.539
+  000405fc 00000010 .text                ReleaseMute
+  000405fc 00000000 .text                $d.540
+  0004060c 00000010 .text                ClipIndicator
+  0004060c 00000000 .text                $d.541
+  0004061c 00000010 .text                i2c_master_init
+  0004061c 00000000 .text                $s.906
+  0004062c 00000098 .text                i2c_master_write_reg
+  0004062c 00000000 .text                $s.907
+  000406c4 00000024 .text                waitHalf
+  000406c4 00000000 .text                $s.911
+  000406e8 00000064 .text                highPulseDrive
+  000406e8 00000000 .text                $s.912
+  0004074c 00000050 .text                highPulseSample
+  0004074c 00000000 .text                $s.913
+  0004079c 00000040 .text                startBit
+  0004079c 00000000 .text                $s.914
+  000407dc 00000044 .text                stopBit
+  000407dc 00000000 .text                $s.915
+  00040820 00000036 .text                tx8
+  00040820 00000000 .text                $s.916
+  00040858 00000040 .text                init_ring_buff
+  00040858 00000000 .text                $d.102
+  00040898 0000004c .text                add_sample
+  00040898 00000000 .text                $d.103
+  000408e4 00000030 .text                sample_at
+  000408e4 00000000 .text                $d.104
+  00040914 000001e0 .text                fir_sinc4
+  00040914 00000000 .text                $d.1065
+  00040af4 0000053c .text                fir_sinc4.task.0
+  00040af4 00000000 .text                $d.1066
+  00041030 0000050c .text                fir_sinc4.task.1
+  00041030 00000000 .text                $d.1067
+  0004153c 00000500 .text                fir_sinc4.task.2
+  0004153c 00000000 .text                $d.1068
+  00041a3c 00000538 .text                fir_sinc4.task.3
+  00041a3c 00000000 .text                $d.1069
+  00041f74 000001e0 .text                fir_sinc8
+  00041f74 00000000 .text                $d.647
+  00042154 00000278 .text                fir_sinc8.task.0
+  00042154 00000000 .text                $d.648
+  000423cc 00000254 .text                fir_sinc8.task.1
+  000423cc 00000000 .text                $d.649
+  00042620 00000244 .text                fir_sinc8.task.2
+  00042620 00000000 .text                $d.650
+  00042864 00000270 .text                fir_sinc8.task.3
+  00042864 00000000 .text                $d.651
+  00042ad4 00000060 .text                ConfigureSerialDacPorts
+  00042ad4 00000000 .text                $d.2195
+  00042b34 0000016c .text                audio_xss
+  00042b34 00000000 .text                $d.2198
+  00042ca0 000000b8 .text                oneshot_indicator
+  00042ca0 00000000 .text                $d.2199
+  00042d58 000000b0 .text                serial_dac_driver
+  00042d58 00000000 .text                $d.2200
+  00042e08 0000015c .text                clipper
+  00042e08 00000000 .text                $d.2202
+  00042f64 00000178 .text                interpolator
+  00042f64 00000000 .text                $d.2203
+  000430dc 000002c8 .text                spline_solver
+  000430dc 00000000 .text                $d.2204
+  000433a4 000000c8 .text                passthrough
+  000433a4 00000000 .text                $d.2205
+  0004346c 000002fc .text                config_audo_core
+  0004346c 00000000 .text                $d.2214
+  00043768 00000024 .text                config_audo_core.task.0
+  00043768 00000000 .text                $d.2215
+  0004378c 00000018 .text                config_audo_core.task.clipper.1
+  0004378c 00000000 .text                $d.2216
+  000437a4 00000014 .text                config_audo_core.task.serial_dac_driver.2
+  000437a4 00000000 .text                $d.2217
+  000437b8 00000024 .text                config_audo_core.task.3
+  000437b8 00000000 .text                $d.2218
+  000437dc 00000018 .text                config_audo_core.task.clipper.4
+  000437dc 00000000 .text                $d.2219
+  000437f4 00000014 .text                config_audo_core.task.serial_dac_driver.5
+  000437f4 00000000 .text                $d.2220
+  00043808 00000020 .text                config_audo_core.task.6
+  00043808 00000000 .text                $d.2221
+  00043828 00000014 .text                config_audo_core.task.serial_dac_driver.7
+  00043828 00000000 .text                $d.2222
+  0004383c 00000024 .text                config_audo_core.task.8
+  0004383c 00000000 .text                $d.2223
+  00043860 00000018 .text                config_audo_core.task.interpolator.9
+  00043860 00000000 .text                $d.2224
+  00043878 00000018 .text                config_audo_core.task.clipper.10
+  00043878 00000000 .text                $d.2225
+  00043890 00000010 .text                config_audo_core.task.serial_dac_driver.11
+  00043890 00000000 .text                $d.2226
+  000438a0 00000010 .text                config_audo_core.task.oneshot_indicator.12
+  000438a0 00000000 .text                $d.2227
+  000438b0 000005dc .text                handle_audio_request
+  000438b0 00000000 .text                $d.1708
   00043e8c 0000001a .text                swlock_try_acquire
   00043e8c 00000000 .text                $s.19
   00043ea6 00000000 .text                $s.624
-  00043eb8 0000001c .text                tp5.ctor
+  00043eb8 0000001c .text                p_gpio.ctor
   00043eb8 00000000 .text                $s.91
-  00043ed4 00000014 .text                tp5.dtor
+  00043ed4 00000014 .text                p_gpio.dtor
   00043ed4 00000000 .text                $s.92
-  00043ee8 0000001c .text                tp23_solver.ctor
+  00043ee8 0000001c .text                __localPortInitializer1.ctor
   00043ee8 00000000 .text                $s.93
-  00043f04 00000014 .text                tp23_solver.dtor
+  00043f04 00000014 .text                __localPortInitializer1.dtor
   00043f04 00000000 .text                $s.94
-  00043f18 0000001c .text                tp24_interpolator.ctor
+  00043f18 0000001c .text                tp5.ctor
   00043f18 00000000 .text                $s.95
-  00043f34 00000014 .text                tp24_interpolator.dtor
+  00043f34 00000014 .text                tp5.dtor
   00043f34 00000000 .text                $s.96
-  00043f48 0000001c .text                p_spidac_mclk_in.ctor
+  00043f48 0000001c .text                tp23_solver.ctor
   00043f48 00000000 .text                $s.97
-  00043f64 00000014 .text                p_spidac_mclk_in.dtor
+  00043f64 00000014 .text                tp23_solver.dtor
   00043f64 00000000 .text                $s.98
-  00043f78 00000014 .text                clk_spi.ctor
+  00043f78 0000001c .text                tp24_interpolator.ctor
   00043f78 00000000 .text                $s.99
-  00043f8c 00000014 .text                clk_spi.dtor
-  00043f8c 00000000 .text                $s.100
-  00043fa0 00000024 .text                p_data_left.ctor
-  00043fa0 00000000 .text                $s.101
-  00043fc4 00000014 .text                p_data_left.dtor
+  00043f94 00000014 .text                tp24_interpolator.dtor
+  00043f94 00000000 .text                $s.100
+  00043fa8 0000001c .text                p_spidac_mclk_in.ctor
+  00043fa8 00000000 .text                $s.101
+  00043fc4 00000014 .text                p_spidac_mclk_in.dtor
   00043fc4 00000000 .text                $s.102
-  00043fd8 00000024 .text                p_data_right.ctor
+  00043fd8 00000014 .text                clk_spi.ctor
   00043fd8 00000000 .text                $s.103
-  00043ffc 00000014 .text                p_data_right.dtor
-  00043ffc 00000000 .text                $s.104
-  00044010 0000001c .text                p_cs_n_0.ctor
-  00044010 00000000 .text                $s.105
-  0004402c 00000014 .text                p_cs_n_0.dtor
-  0004402c 00000000 .text                $s.106
-  00044040 0000001c .text                p_cs_n_1.ctor
-  00044040 00000000 .text                $s.107
-  0004405c 00000014 .text                p_cs_n_1.dtor
+  00043fec 00000014 .text                clk_spi.dtor
+  00043fec 00000000 .text                $s.104
+  00044000 00000024 .text                p_data_left.ctor
+  00044000 00000000 .text                $s.105
+  00044024 00000014 .text                p_data_left.dtor
+  00044024 00000000 .text                $s.106
+  00044038 00000024 .text                p_data_right.ctor
+  00044038 00000000 .text                $s.107
+  0004405c 00000014 .text                p_data_right.dtor
   0004405c 00000000 .text                $s.108
-  00044070 0000001c .text                p_gpio.ctor
+  00044070 0000001c .text                p_cs_n_0.ctor
   00044070 00000000 .text                $s.109
-  0004408c 00000014 .text                p_gpio.dtor
+  0004408c 00000014 .text                p_cs_n_0.dtor
   0004408c 00000000 .text                $s.110
-  000440a0 0000001c .text                __localPortInitializer10.ctor
+  000440a0 0000001c .text                p_cs_n_1.ctor
   000440a0 00000000 .text                $s.111
-  000440bc 00000012 .text                __localPortInitializer10.dtor
+  000440bc 00000012 .text                p_cs_n_1.dtor
   000440bc 00000000 .text                $s.112
   000440ce 00000092 .text                main
   000440ce 00000000 .text                $s.13
@@ -272,32 +272,32 @@ Symbols:
   00044750 00000000 .text                $s.8
   00044774 00000000 .text                __start_other_cores
   00044774 00000000 .text                $s.2
-  000447c0 00000038 .text                configure_out_port_strobed_master
-  000447c0 00000000 .text                $s.186
-  000447f8 00000010 .text                configure_clock_src
-  000447f8 00000000 .text                $s.194
-  00044808 0000000e .text                write_pswitch_reg
-  00044808 00000000 .text                $s.44
-  00044818 00000054 .text                write_switch_reg
-  00044818 00000000 .text                $s.47
-  0004483c 00000000 .text                build_return_no_ack
-  00044844 00000000 .text                write_switch_reg_send
-  0004485e 00000000 .text                write_switch_reg_return_0
-  00044864 00000000 .text                write_switch_reg_free_and_return_1
-  0004486c 0000000a .text                get_local_tile_id
-  0004486c 00000000 .text                $s.49
-  00044878 0000000c .text                __alloc_libc_hwlock
-  00044878 00000000 .text                $s.54
-  00044884 00000020 .text                __lock_fair_acquire
-  00044884 00000000 .text                $s.63
-  000448a4 0000000c .text                __lock_fair_release
-  000448a4 00000000 .text                $s.65
-  000448b0 00000010 .text                __lock_recursive_init
-  000448b0 00000000 .text                $s.66
-  000448c0 0000003c .text                __lock_recursive_acquire
-  000448c0 00000000 .text                $s.68
-  000448fc 0000001e .text                __lock_recursive_release
-  000448fc 00000000 .text                $s.70
+  000447c0 0000000c .text                __alloc_libc_hwlock
+  000447c0 00000000 .text                $s.54
+  000447cc 00000020 .text                __lock_fair_acquire
+  000447cc 00000000 .text                $s.63
+  000447ec 0000000c .text                __lock_fair_release
+  000447ec 00000000 .text                $s.65
+  000447f8 00000010 .text                __lock_recursive_init
+  000447f8 00000000 .text                $s.66
+  00044808 0000003c .text                __lock_recursive_acquire
+  00044808 00000000 .text                $s.68
+  00044844 0000001e .text                __lock_recursive_release
+  00044844 00000000 .text                $s.70
+  00044864 00000038 .text                configure_out_port_strobed_master
+  00044864 00000000 .text                $s.186
+  0004489c 00000010 .text                configure_clock_src
+  0004489c 00000000 .text                $s.194
+  000448ac 0000000e .text                write_pswitch_reg
+  000448ac 00000000 .text                $s.44
+  000448bc 00000054 .text                write_switch_reg
+  000448bc 00000000 .text                $s.47
+  000448e0 00000000 .text                build_return_no_ack
+  000448e8 00000000 .text                write_switch_reg_send
+  00044902 00000000 .text                write_switch_reg_return_0
+  00044908 00000000 .text                write_switch_reg_free_and_return_1
+  00044910 0000000a .text                get_local_tile_id
+  00044910 00000000 .text                $s.49
   0004491c 00000008 .text                _DoSyscall
   0004491c 00000000 .text                $s.4
   00044924 00000008 .text                __call_exitprocs_impl
@@ -413,10 +413,10 @@ Symbols:
   000461a8 0000000e .text                _close
   000461a8 00000000 .text                $s.4
   000461e0 00000000 .cp.rodata           _cp
-  000461e0 00000ff0 .cp.rodata           fir_tap_sinc4_q30
-  000471d0 000007e0 .cp.rodata           fir_tap_sinc8_q30
-  000479b0 000001e8 .cp.rodata           si5351a_revb_441
-  00047b98 000001e8 .cp.rodata           si5351a_revb_48
+  000461e0 000001e8 .cp.rodata           si5351a_revb_441
+  000463c8 000001e8 .cp.rodata           si5351a_revb_48
+  000465b0 00000ff0 .cp.rodata           fir_tap_sinc4_q30
+  000475a0 000007e0 .cp.rodata           fir_tap_sinc8_q30
   00047d80 00000000 .cp.rodata           tiles_to_wake
   00047d84 00000000 .cp.rodata           chanends_to_setup
   00047d98 00000101 .cp.rodata           _ctype_
@@ -425,29 +425,29 @@ Symbols:
   00047eb0 00000002 .cp.rodata           usb_tile
   00047eb4 00000001 .cp.rodata.4         .str
   00047eb8 00000001 .cp.rodata.4         .str3
-  00047ebc 0000001b .cp.rodata.4         .str
-  00047ed8 0000001b .cp.rodata.4         .str
-  00047ef4 0000002f .cp.rodata.4         .str
-  00047f24 00000011 .cp.rodata.4         .str1
-  00047f38 0000001f .cp.rodata.4         .str2
-  00047f58 00000015 .cp.rodata.4         .str11
-  00047f70 0000001a .cp.rodata.4         .str14
-  00047f8c 00000036 .cp.rodata.4         .str15
-  00047fc4 0000004c .cp.rodata.4         .str16
-  00048010 0000004c .cp.rodata.4         .str17
-  0004805c 0000002c .cp.rodata.4         .str18
-  00048088 00000010 .cp.rodata.4         .str19
-  00048098 0000001c .cp.rodata.4         .str20
-  000480b4 00000010 .cp.rodata.4         .str21
-  000480c4 0000001c .cp.rodata.4         .str22
-  000480e0 00000016 .cp.rodata.4         .str23
-  000480f8 00000022 .cp.rodata.4         .str24
-  0004811c 00000019 .cp.rodata.4         .str25
-  00048138 0000001c .cp.rodata.4         .str26
-  00048154 00000014 .cp.rodata.4         .str27
-  00048168 00000028 .cp.rodata.4         .str28
-  00048190 0000002e .cp.rodata.4         .str29
-  000481c0 0000002a .cp.rodata.4         .str13
+  00047ebc 0000002a .cp.rodata.4         .str13
+  00047ee8 0000001b .cp.rodata.4         .str
+  00047f04 0000001b .cp.rodata.4         .str
+  00047f20 0000002f .cp.rodata.4         .str
+  00047f50 00000011 .cp.rodata.4         .str1
+  00047f64 0000001f .cp.rodata.4         .str2
+  00047f84 00000015 .cp.rodata.4         .str11
+  00047f9c 0000001a .cp.rodata.4         .str14
+  00047fb8 00000036 .cp.rodata.4         .str15
+  00047ff0 0000004c .cp.rodata.4         .str16
+  0004803c 0000004c .cp.rodata.4         .str17
+  00048088 0000002c .cp.rodata.4         .str18
+  000480b4 00000010 .cp.rodata.4         .str19
+  000480c4 0000001c .cp.rodata.4         .str20
+  000480e0 00000010 .cp.rodata.4         .str21
+  000480f0 0000001c .cp.rodata.4         .str22
+  0004810c 00000016 .cp.rodata.4         .str23
+  00048124 00000022 .cp.rodata.4         .str24
+  00048148 00000019 .cp.rodata.4         .str25
+  00048164 0000001c .cp.rodata.4         .str26
+  00048180 00000014 .cp.rodata.4         .str27
+  00048194 00000028 .cp.rodata.4         .str28
+  000481bc 0000002e .cp.rodata.4         .str29
   000481ec 00000010 .cp.rodata.4         vfiprintf.blanks
   000481fc 00000010 .cp.rodata.4         vfiprintf.zeroes
   0004820c 00000000 .cp.const4           initial_dp
@@ -470,7 +470,7 @@ Symbols:
   00048410 00000000 .bss                 _ebss
   000484d8 00000000 .dp.data             __handle_audio_request_kernel_stack_end
   000484dc 00000000 .dp.data             p_key
-  000484dc 00000000 .dp.data             __localPortInitializer12
+  000484dc 00000000 .dp.data             __localPortInitializer3
   000484dc 00000000 .dp.data             flag0_port
   000484dc 00000000 .dp.data             flag1_port
   000484dc 00000000 .dp.data             flag2_port
@@ -510,17 +510,17 @@ Symbols:
   000485f8 00000004 .dp.data.4           __malloc_limit
   000485fc 00000004 .dp.data.4           __malloc_end
   00048600 00000004 .dp.rodata.4         r_i2c
-  00048604 00000004 .dp.rodata.4         tp5
-  00048608 00000004 .dp.rodata.4         tp23_solver
-  0004860c 00000004 .dp.rodata.4         tp24_interpolator
-  00048610 00000004 .dp.rodata.4         p_spidac_mclk_in
-  00048614 00000004 .dp.rodata.4         clk_spi
-  00048618 00000004 .dp.rodata.4         p_data_left
-  0004861c 00000004 .dp.rodata.4         p_data_right
-  00048620 00000004 .dp.rodata.4         p_cs_n_0
-  00048624 00000004 .dp.rodata.4         p_cs_n_1
-  00048628 00000004 .dp.rodata.4         p_gpio
-  0004862c 00000004 .dp.rodata.4         __localPortInitializer10
+  00048604 00000004 .dp.rodata.4         p_gpio
+  00048608 00000004 .dp.rodata.4         __localPortInitializer1
+  0004860c 00000004 .dp.rodata.4         tp5
+  00048610 00000004 .dp.rodata.4         tp23_solver
+  00048614 00000004 .dp.rodata.4         tp24_interpolator
+  00048618 00000004 .dp.rodata.4         p_spidac_mclk_in
+  0004861c 00000004 .dp.rodata.4         clk_spi
+  00048620 00000004 .dp.rodata.4         p_data_left
+  00048624 00000004 .dp.rodata.4         p_data_right
+  00048628 00000004 .dp.rodata.4         p_cs_n_0
+  0004862c 00000004 .dp.rodata.4         p_cs_n_1
   00048630 00000000 .dp.bss              _fdp.bss
   00048630 00000400 .dp.bss              ring_buff_l
   00048a30 00000400 .dp.bss              ring_buff_r
@@ -622,40 +622,40 @@ Symbols:
   00040164 00000000 .text                $s.225
   0004031c 00000070 .text                itoa
   0004031c 00000000 .text                $s.226
-  0004038c 0000001c .text                swlock_acquire
-  0004038c 00000000 .text                $d.59
-  000403a8 0000000c .text                swlock_release
-  000403a8 00000000 .text                $d.60
-  000403b4 0000000c .text                flash_cmd_disable_ports
-  000403b4 00000000 .text                $d.50
-  000403c0 00000008 .text                UserAudioStreamStop
-  000403c0 00000000 .text                $d.27
-  000403c8 00000008 .text                UserAudioStreamStart
-  000403c8 00000000 .text                $d.28
-  000403d0 00000480 .text                Endpoint0
-  000403d0 00000000 .text                $d.562
-  00040850 00000008 .text                UserHostActive
-  00040850 00000000 .text                $d.19
-  00040858 00000000 .text                __handle_audio_request_handler
-  00040858 00000000 .text                $s.6
-  0004085e 00000000 .text                __kent
-  00040882 00000000 .text                __kret
-  00040888 00000054 .text                GetADCCounts
-  00040888 00000000 .text                $d.37
-  000408dc 00000014 .text                XUD_UserSuspend
-  000408dc 00000000 .text                $d.47
-  000408f0 0000001c .text                XUD_UserResume
-  000408f0 00000000 .text                $d.48
-  0004090c 00000008 .text                DFUCustomFlashDisable
-  0004090c 00000000 .text                $d.302
-  00040914 0000002c .text                flash_cmd_deinit
-  00040914 00000000 .text                $d.304
-  00040940 00000030 .text                i2c_shared_master_init
-  00040940 00000000 .text                $d.202
-  00040970 00000054 .text                i2c_shared_master_write_reg
-  00040970 00000000 .text                $d.205
-  000409c4 0000005c .text                i2c_shared_master_write_part
-  000409c4 00000000 .text                $d.206
+  0004038c 00000008 .text                DFUCustomFlashDisable
+  0004038c 00000000 .text                $d.302
+  00040394 0000002c .text                flash_cmd_deinit
+  00040394 00000000 .text                $d.304
+  000403c0 00000030 .text                i2c_shared_master_init
+  000403c0 00000000 .text                $d.202
+  000403f0 00000054 .text                i2c_shared_master_write_reg
+  000403f0 00000000 .text                $d.205
+  00040444 0000005c .text                i2c_shared_master_write_part
+  00040444 00000000 .text                $d.206
+  000404a0 0000001c .text                swlock_acquire
+  000404a0 00000000 .text                $d.59
+  000404bc 0000000c .text                swlock_release
+  000404bc 00000000 .text                $d.60
+  000404c8 0000000c .text                flash_cmd_disable_ports
+  000404c8 00000000 .text                $d.50
+  000404d4 00000008 .text                UserAudioStreamStop
+  000404d4 00000000 .text                $d.27
+  000404dc 00000008 .text                UserAudioStreamStart
+  000404dc 00000000 .text                $d.28
+  000404e4 00000480 .text                Endpoint0
+  000404e4 00000000 .text                $d.562
+  00040964 00000008 .text                UserHostActive
+  00040964 00000000 .text                $d.19
+  0004096c 00000000 .text                __handle_audio_request_handler
+  0004096c 00000000 .text                $s.6
+  00040972 00000000 .text                __kent
+  00040996 00000000 .text                __kret
+  0004099c 00000054 .text                GetADCCounts
+  0004099c 00000000 .text                $d.37
+  000409f0 00000014 .text                XUD_UserSuspend
+  000409f0 00000000 .text                $d.47
+  00040a04 0000001c .text                XUD_UserResume
+  00040a04 00000000 .text                $d.48
   00040a20 0000001c .text                _i.i_dfu._chan.finish
   00040a20 00000000 .text                $d.797
   00040a3c 0000005c .text                _i.i_dfu._chan.HandleDfuRequest
@@ -680,104 +680,104 @@ Symbols:
   00040cc0 00000000 .text                $d.815
   00040ccc 0000000c .text                __main__main_tile_1_task_button_listener_3
   00040ccc 00000000 .text                $d.816
-  00040cd8 00000050 .text                OLED_SSD1306_begin
-  00040cd8 00000000 .text                $s.425
-  00040d28 00000144 .text                OLED_SSD1306_put_string
-  00040d28 00000000 .text                $s.426
-  00040e6c 00000108 .text                OLED_SSD1306_shift_left
-  00040e6c 00000000 .text                $s.427
-  00040f74 00000070 .text                send_page
-  00040f74 00000000 .text                $s.428
-  00040fe4 000000ac .text                USB_ParseSetupPacket
-  00040fe4 00000000 .text                $d.192
-  00041090 000000b4 .text                device_reboot_aux
-  00041090 00000000 .text                $d.141
-  00041144 0000000c .text                device_reboot
-  00041144 00000000 .text                $d.142
-  00041150 0000005c .text                storeInt
-  00041150 00000000 .text                $d.1024
-  000411ac 00000048 .text                storeFreq
-  000411ac 00000000 .text                $d.1025
-  000411f4 0000026c .text                updateVol
-  000411f4 00000000 .text                $d.1027
-  00041460 00000650 .text                AudioClassRequests_2
-  00041460 00000000 .text                $d.1028
-  00041ab0 00000124 .text                _Sdb_to_mult_0
-  00041ab0 00000000 .text                $d.242
-  00041bd4 000005dc .text                handle_audio_request
-  00041bd4 00000000 .text                $d.1708
-  000421b0 000004e8 .text                decouple
-  000421b0 00000000 .text                $d.1709
-  00042698 000004b8 .text                buffer
-  00042698 00000000 .text                $d.802
-  00042b50 0000001c .text                DFUDelay
-  00042b50 00000000 .text                $d.3156
-  00042b6c 000000b8 .text                DFUReportResetState
-  00042b6c 00000000 .text                $d.3159
-  00042c24 000000f8 .text                DFUDeviceRequests
-  00042c24 00000000 .text                $d.3170
-  00042d1c 00000010 .text                i2c_master_init
-  00042d1c 00000000 .text                $s.906
-  00042d2c 00000098 .text                i2c_master_write_reg
-  00042d2c 00000000 .text                $s.907
-  00042dc4 000000b4 .text                i2c_master_write_part
-  00042dc4 00000000 .text                $s.908
-  00042e78 00000024 .text                waitHalf
-  00042e78 00000000 .text                $s.911
-  00042e9c 00000064 .text                highPulseDrive
-  00042e9c 00000000 .text                $s.912
-  00042f00 00000050 .text                highPulseSample
-  00042f00 00000000 .text                $s.913
-  00042f50 00000040 .text                startBit
-  00042f50 00000000 .text                $s.914
-  00042f90 00000044 .text                stopBit
-  00042f90 00000000 .text                $s.915
-  00042fd4 00000036 .text                tx8
-  00042fd4 00000000 .text                $s.916
-  0004300c 000000ec .text                _Sbutton_listener_0
-  0004300c 00000000 .text                $d.991
-  000430f8 0000005c .text                HandleDacCommand
-  000430f8 00000000 .text                $d.993
-  00043154 000001e8 .text                KeyEvent
-  00043154 00000000 .text                $d.995
-  0004333c 0000028c .text                ExamineKeyInput
-  0004333c 00000000 .text                $d.996
-  000435c8 00000014 .text                set_display_control_flag
-  000435c8 00000000 .text                $d.816
-  000435dc 0000001c .text                update_samp_freq
-  000435dc 00000000 .text                $d.817
-  000435f8 0000001c .text                update_samp_resolution
-  000435f8 00000000 .text                $d.818
-  00043614 00000348 .text                display_control
-  00043614 00000000 .text                $d.820
-  0004395c 0000000c .text                _Sset_console_mode_0
-  0004395c 00000000 .text                $d.823
-  00043968 00000070 .text                ShowInterpolationMode
-  00043968 00000000 .text                $d.829
-  000439d8 0000005c .text                ShowUsbAudioStatus
-  000439d8 00000000 .text                $d.831
-  00043a34 0000000c .text                XUD_GetBuffer
-  00043a34 00000000 .text                $d.634
-  00043a40 0000000c .text                XUD_GetSetupBuffer
-  00043a40 00000000 .text                $d.635
-  00043a4c 000000b8 .text                _SXUD_SetBuffer_EpMax_0
-  00043a4c 00000000 .text                $d.639
-  00043b04 00000088 .text                XUD_DoGetRequest
-  00043b04 00000000 .text                $d.640
-  00043b8c 00000018 .text                XUD_DoSetRequestStatus
-  00043b8c 00000000 .text                $d.641
-  00043ba4 00000060 .text                XUD_ResetEndpoint
-  00043ba4 00000000 .text                $d.642
-  00043c04 00000008 .text                XUD_InitEp
-  00043c04 00000000 .text                $d.643
-  00043c0c 00000010 .text                XUD_SetStall
-  00043c0c 00000000 .text                $d.644
-  00043c1c 00000938 .text                USB_StandardRequests
-  00043c1c 00000000 .text                $d.824
-  00044554 0000003c .text                USB_GetSetupPacket
-  00044554 00000000 .text                $d.825
-  00044590 0000005c .text                SetEndpointHalt
-  00044590 00000000 .text                $d.826
+  00040cd8 0000001c .text                DFUDelay
+  00040cd8 00000000 .text                $d.3156
+  00040cf4 000000b8 .text                DFUReportResetState
+  00040cf4 00000000 .text                $d.3159
+  00040dac 000000f8 .text                DFUDeviceRequests
+  00040dac 00000000 .text                $d.3170
+  00040ea4 00000010 .text                i2c_master_init
+  00040ea4 00000000 .text                $s.906
+  00040eb4 00000098 .text                i2c_master_write_reg
+  00040eb4 00000000 .text                $s.907
+  00040f4c 000000b4 .text                i2c_master_write_part
+  00040f4c 00000000 .text                $s.908
+  00041000 00000024 .text                waitHalf
+  00041000 00000000 .text                $s.911
+  00041024 00000064 .text                highPulseDrive
+  00041024 00000000 .text                $s.912
+  00041088 00000050 .text                highPulseSample
+  00041088 00000000 .text                $s.913
+  000410d8 00000040 .text                startBit
+  000410d8 00000000 .text                $s.914
+  00041118 00000044 .text                stopBit
+  00041118 00000000 .text                $s.915
+  0004115c 00000036 .text                tx8
+  0004115c 00000000 .text                $s.916
+  00041194 00000050 .text                OLED_SSD1306_begin
+  00041194 00000000 .text                $s.425
+  000411e4 00000144 .text                OLED_SSD1306_put_string
+  000411e4 00000000 .text                $s.426
+  00041328 00000108 .text                OLED_SSD1306_shift_left
+  00041328 00000000 .text                $s.427
+  00041430 00000070 .text                send_page
+  00041430 00000000 .text                $s.428
+  000414a0 000000ec .text                _Sbutton_listener_0
+  000414a0 00000000 .text                $d.991
+  0004158c 0000005c .text                HandleDacCommand
+  0004158c 00000000 .text                $d.993
+  000415e8 000001e8 .text                KeyEvent
+  000415e8 00000000 .text                $d.995
+  000417d0 0000028c .text                ExamineKeyInput
+  000417d0 00000000 .text                $d.996
+  00041a5c 00000014 .text                set_display_control_flag
+  00041a5c 00000000 .text                $d.816
+  00041a70 0000001c .text                update_samp_freq
+  00041a70 00000000 .text                $d.817
+  00041a8c 0000001c .text                update_samp_resolution
+  00041a8c 00000000 .text                $d.818
+  00041aa8 00000348 .text                display_control
+  00041aa8 00000000 .text                $d.820
+  00041df0 0000000c .text                _Sset_console_mode_0
+  00041df0 00000000 .text                $d.823
+  00041dfc 00000070 .text                ShowInterpolationMode
+  00041dfc 00000000 .text                $d.829
+  00041e6c 0000005c .text                ShowUsbAudioStatus
+  00041e6c 00000000 .text                $d.831
+  00041ec8 000000b4 .text                device_reboot_aux
+  00041ec8 00000000 .text                $d.141
+  00041f7c 0000000c .text                device_reboot
+  00041f7c 00000000 .text                $d.142
+  00041f88 0000005c .text                storeInt
+  00041f88 00000000 .text                $d.1024
+  00041fe4 00000048 .text                storeFreq
+  00041fe4 00000000 .text                $d.1025
+  0004202c 0000026c .text                updateVol
+  0004202c 00000000 .text                $d.1027
+  00042298 00000650 .text                AudioClassRequests_2
+  00042298 00000000 .text                $d.1028
+  000428e8 00000124 .text                _Sdb_to_mult_0
+  000428e8 00000000 .text                $d.242
+  00042a0c 000005dc .text                handle_audio_request
+  00042a0c 00000000 .text                $d.1708
+  00042fe8 000004e8 .text                decouple
+  00042fe8 00000000 .text                $d.1709
+  000434d0 000004b8 .text                buffer
+  000434d0 00000000 .text                $d.802
+  00043988 00000938 .text                USB_StandardRequests
+  00043988 00000000 .text                $d.824
+  000442c0 0000003c .text                USB_GetSetupPacket
+  000442c0 00000000 .text                $d.825
+  000442fc 0000005c .text                SetEndpointHalt
+  000442fc 00000000 .text                $d.826
+  00044358 000000ac .text                USB_ParseSetupPacket
+  00044358 00000000 .text                $d.192
+  00044404 0000000c .text                XUD_GetBuffer
+  00044404 00000000 .text                $d.634
+  00044410 0000000c .text                XUD_GetSetupBuffer
+  00044410 00000000 .text                $d.635
+  0004441c 000000b8 .text                _SXUD_SetBuffer_EpMax_0
+  0004441c 00000000 .text                $d.639
+  000444d4 00000088 .text                XUD_DoGetRequest
+  000444d4 00000000 .text                $d.640
+  0004455c 00000018 .text                XUD_DoSetRequestStatus
+  0004455c 00000000 .text                $d.641
+  00044574 00000060 .text                XUD_ResetEndpoint
+  00044574 00000000 .text                $d.642
+  000445d4 00000008 .text                XUD_InitEp
+  000445d4 00000000 .text                $d.643
+  000445dc 00000010 .text                XUD_SetStall
+  000445dc 00000000 .text                $d.644
   000445ec 0000001a .text                swlock_try_acquire
   000445ec 00000000 .text                $s.19
   00044606 00000000 .text                $s.624
@@ -853,9 +853,9 @@ Symbols:
   00044838 00000000 .text                $s.107
   00044854 00000014 .text                p_key.dtor
   00044854 00000000 .text                $s.108
-  00044868 0000001c .text                __localPortInitializer12.ctor
+  00044868 0000001c .text                __localPortInitializer3.ctor
   00044868 00000000 .text                $s.109
-  00044884 00000014 .text                __localPortInitializer12.dtor
+  00044884 00000014 .text                __localPortInitializer3.dtor
   00044884 00000000 .text                $s.110
   00044898 0000001c .text                flag0_port.ctor
   00044898 00000000 .text                $s.111
@@ -976,53 +976,53 @@ Symbols:
   0004592c 00000000 .text                $s.8
   00045944 00000006 .text                __noop
   00045944 00000000 .text                $s.4
-  0004594c 00000040 .text                configure_out_port_handshake
-  0004594c 00000000 .text                $s.184
-  0004598c 00000034 .text                configure_in_port_strobed_slave
-  0004598c 00000000 .text                $s.187
-  000459c0 00000010 .text                configure_clock_src
-  000459c0 00000000 .text                $s.194
-  000459d0 0000000c .text                read_sswitch_reg
-  000459d0 00000000 .text                $s.40
-  000459dc 0000003c .text                read_switch_reg
-  000459dc 00000000 .text                $s.42
-  00045a12 00000000 .text                skip_in
-  00045a18 0000000e .text                write_sswitch_reg
-  00045a18 00000000 .text                $s.43
-  00045a28 0000000e .text                write_pswitch_reg
-  00045a28 00000000 .text                $s.44
-  00045a38 0000000e .text                write_sswitch_reg_no_ack
-  00045a38 00000000 .text                $s.45
-  00045a48 00000054 .text                write_switch_reg
-  00045a48 00000000 .text                $s.47
-  00045a6c 00000000 .text                build_return_no_ack
-  00045a74 00000000 .text                write_switch_reg_send
-  00045a8e 00000000 .text                write_switch_reg_return_0
-  00045a94 00000000 .text                write_switch_reg_free_and_return_1
-  00045a9c 00000008 .text                return_zero
-  00045a9c 00000000 .text                $s.48
-  00045aa4 0000000a .text                get_local_tile_id
-  00045aa4 00000000 .text                $s.49
-  00045ab0 00000016 .text                get_tile_id
-  00045ab0 00000000 .text                $s.92
-  00045ac8 0000005e .text                __divdi3
-  00045ac8 00000000 .text                $s.8
-  00045b28 00000054 .text                __moddi3
-  00045b28 00000000 .text                $s.8
-  00045b7c 0000000c .text                __alloc_libc_hwlock
-  00045b7c 00000000 .text                $s.54
-  00045b88 00000020 .text                __lock_fair_acquire
-  00045b88 00000000 .text                $s.63
-  00045ba8 0000000c .text                __lock_fair_release
-  00045ba8 00000000 .text                $s.65
-  00045bb4 00000010 .text                __lock_recursive_init
-  00045bb4 00000000 .text                $s.66
-  00045bc4 0000003c .text                __lock_recursive_acquire
-  00045bc4 00000000 .text                $s.68
-  00045c00 0000001e .text                __lock_recursive_release
-  00045c00 00000000 .text                $s.70
-  00045c20 00000048 .text                siprintf
-  00045c20 00000000 .text                $s.10
+  0004594c 0000000c .text                __alloc_libc_hwlock
+  0004594c 00000000 .text                $s.54
+  00045958 00000020 .text                __lock_fair_acquire
+  00045958 00000000 .text                $s.63
+  00045978 0000000c .text                __lock_fair_release
+  00045978 00000000 .text                $s.65
+  00045984 00000010 .text                __lock_recursive_init
+  00045984 00000000 .text                $s.66
+  00045994 0000003c .text                __lock_recursive_acquire
+  00045994 00000000 .text                $s.68
+  000459d0 0000001e .text                __lock_recursive_release
+  000459d0 00000000 .text                $s.70
+  000459f0 00000048 .text                siprintf
+  000459f0 00000000 .text                $s.10
+  00045a38 00000040 .text                configure_out_port_handshake
+  00045a38 00000000 .text                $s.184
+  00045a78 00000034 .text                configure_in_port_strobed_slave
+  00045a78 00000000 .text                $s.187
+  00045aac 00000010 .text                configure_clock_src
+  00045aac 00000000 .text                $s.194
+  00045abc 0000000c .text                read_sswitch_reg
+  00045abc 00000000 .text                $s.40
+  00045ac8 0000003c .text                read_switch_reg
+  00045ac8 00000000 .text                $s.42
+  00045afe 00000000 .text                skip_in
+  00045b04 0000000e .text                write_sswitch_reg
+  00045b04 00000000 .text                $s.43
+  00045b14 0000000e .text                write_pswitch_reg
+  00045b14 00000000 .text                $s.44
+  00045b24 0000000e .text                write_sswitch_reg_no_ack
+  00045b24 00000000 .text                $s.45
+  00045b34 00000054 .text                write_switch_reg
+  00045b34 00000000 .text                $s.47
+  00045b58 00000000 .text                build_return_no_ack
+  00045b60 00000000 .text                write_switch_reg_send
+  00045b7a 00000000 .text                write_switch_reg_return_0
+  00045b80 00000000 .text                write_switch_reg_free_and_return_1
+  00045b88 00000008 .text                return_zero
+  00045b88 00000000 .text                $s.48
+  00045b90 0000000a .text                get_local_tile_id
+  00045b90 00000000 .text                $s.49
+  00045b9c 00000016 .text                get_tile_id
+  00045b9c 00000000 .text                $s.92
+  00045bb4 0000005e .text                __divdi3
+  00045bb4 00000000 .text                $s.8
+  00045c14 00000054 .text                __moddi3
+  00045c14 00000000 .text                $s.8
   00045c68 00000014 .text                _safe_strlen
   00045c68 00000000 .text                $s.186
   00045c7c 00000020 .text                XUD_SetDevAddr
@@ -1261,20 +1261,20 @@ Symbols:
   00047760 00000000 .text                $s.329
   00047788 00000016 .text                __start_core
   00047788 00000000 .text                $s.12
-  000477a0 0000001a .text                __set_port_in
-  000477a0 00000000 .text                $s.8
-  000477bc 0000002c .text                __set_port_out
-  000477bc 00000000 .text                $s.9
-  000477da 00000000 .text                loop
-  000477e2 00000000 .text                do_output
-  000477e8 00000012 .text                __umoddi3
-  000477e8 00000000 .text                $s.8
-  000477fc 00000202 .text                __udivmoddi4
-  000477fc 00000000 .text                $s.6
-  00047a00 00000ae4 .text                _svfiprintf
-  00047a00 00000000 .text                $s.340
-  000484e4 00000136 .text                __sprint
-  000484e4 00000000 .text                $s.341
+  000477a0 00000ae4 .text                _svfiprintf
+  000477a0 00000000 .text                $s.340
+  00048284 00000136 .text                __sprint
+  00048284 00000000 .text                $s.341
+  000483bc 0000001a .text                __set_port_in
+  000483bc 00000000 .text                $s.8
+  000483d8 0000002c .text                __set_port_out
+  000483d8 00000000 .text                $s.9
+  000483f6 00000000 .text                loop
+  000483fe 00000000 .text                do_output
+  00048404 00000012 .text                __umoddi3
+  00048404 00000000 .text                $s.8
+  00048418 00000202 .text                __udivmoddi4
+  00048418 00000000 .text                $s.6
   0004861c 0000001a .text                strnlen
   0004861c 00000000 .text                $s.4
   00048638 0000001e .text                memchr
@@ -1333,12 +1333,12 @@ Symbols:
   00048e94 00000000 .text                $s.4
   00048ea8 0000000e .text                _close
   00048ea8 00000000 .text                $s.4
-  00048eb8 00000000 .text                USB_StandardRequests.thunk.0
-  00048eb8 00000000 .text                $s.25
-  00048f00 00000000 .text                i2c_master_write_reg.thunk.6
-  00048f00 00000000 .text                $s.28
-  00048f18 00000000 .text                i2c_master_write_part.thunk.8
-  00048f18 00000000 .text                $s.29
+  00048eb8 00000000 .text                i2c_master_write_reg.thunk.4
+  00048eb8 00000000 .text                $s.27
+  00048ed0 00000000 .text                i2c_master_write_part.thunk.6
+  00048ed0 00000000 .text                $s.28
+  00048ef0 00000000 .text                USB_StandardRequests.thunk.8
+  00048ef0 00000000 .text                $s.29
   00048f60 00000000 .cp.rodata           _cp
   00048f60 00000008 .cp.rodata           g_subSlot_Out_HS
   00048f68 00000008 .cp.rodata           g_subSlot_Out_FS
@@ -1356,36 +1356,36 @@ Symbols:
   000496e0 00000001 .cp.rodata.4         .str3
   000496e4 0000001a .cp.rodata.4         .str11
   00049700 00000014 .cp.rodata.4         .vtable
-  00049714 00000038 .cp.rodata.4         coef
-  0004974c 0000002c .cp.rodata.4         .str
-  00049778 0000001d .cp.rodata.4         .str1
-  00049798 00000015 .cp.rodata.4         .str2
-  000497b0 00000011 .cp.rodata.4         .str6
-  000497c4 00000011 .cp.rodata.4         .str7
-  000497d8 00000011 .cp.rodata.4         .str8
-  000497ec 00000011 .cp.rodata.4         .str9
-  00049800 00000011 .cp.rodata.4         .str10
-  00049814 00000011 .cp.rodata.4         .str11
-  00049828 00000011 .cp.rodata.4         .str12
-  0004983c 00000008 .cp.rodata.4         .str13
-  00049844 00000009 .cp.rodata.4         .str14
-  00049850 00000008 .cp.rodata.4         .str15
-  00049858 0000000f .cp.rodata.4         .str16
-  00049868 00000004 .cp.rodata.4         .str17
-  0004986c 00000019 .cp.rodata.4         .str20
-  00049888 00000011 .cp.rodata.4         .str21
-  0004989c 00000006 .cp.rodata.4         .str22
-  000498a4 0000000f .cp.rodata.4         .str23
-  000498b4 00000001 .cp.rodata.4         .str24
-  000498b8 00000001 .cp.rodata.4         .str25
-  000498bc 0000001c .cp.rodata.4         .str26
-  000498d8 00000001 .cp.rodata.4         .str27
-  000498dc 00000001 .cp.rodata.4         .str28
-  000498e0 00000012 .cp.rodata.4         .str29
-  000498f4 0000002c .cp.rodata.4         .str30
-  00049920 00000032 .cp.rodata.4         .str31
-  00049954 00000001 .cp.rodata.4         .str32
-  00049958 00000001 .cp.rodata.4         .str35
+  00049714 0000002c .cp.rodata.4         .str
+  00049740 0000001d .cp.rodata.4         .str1
+  00049760 00000015 .cp.rodata.4         .str2
+  00049778 00000011 .cp.rodata.4         .str6
+  0004978c 00000011 .cp.rodata.4         .str7
+  000497a0 00000011 .cp.rodata.4         .str8
+  000497b4 00000011 .cp.rodata.4         .str9
+  000497c8 00000011 .cp.rodata.4         .str10
+  000497dc 00000011 .cp.rodata.4         .str11
+  000497f0 00000011 .cp.rodata.4         .str12
+  00049804 00000008 .cp.rodata.4         .str13
+  0004980c 00000009 .cp.rodata.4         .str14
+  00049818 00000008 .cp.rodata.4         .str15
+  00049820 0000000f .cp.rodata.4         .str16
+  00049830 00000004 .cp.rodata.4         .str17
+  00049834 00000019 .cp.rodata.4         .str20
+  00049850 00000011 .cp.rodata.4         .str21
+  00049864 00000006 .cp.rodata.4         .str22
+  0004986c 0000000f .cp.rodata.4         .str23
+  0004987c 00000001 .cp.rodata.4         .str24
+  00049880 00000001 .cp.rodata.4         .str25
+  00049884 0000001c .cp.rodata.4         .str26
+  000498a0 00000001 .cp.rodata.4         .str27
+  000498a4 00000001 .cp.rodata.4         .str28
+  000498a8 00000012 .cp.rodata.4         .str29
+  000498bc 0000002c .cp.rodata.4         .str30
+  000498e8 00000032 .cp.rodata.4         .str31
+  0004991c 00000001 .cp.rodata.4         .str32
+  00049920 00000001 .cp.rodata.4         .str35
+  00049924 00000038 .cp.rodata.4         coef
   0004995c 00000010 .cp.rodata.4         vfiprintf.blanks
   0004996c 00000010 .cp.rodata.4         vfiprintf.zeroes
   0004997c 00000010 .cp.rodata.4         _svfiprintf.blanks
@@ -1428,7 +1428,7 @@ Symbols:
   00049e24 00000000 .dp.data             p_cs_n_0
   00049e24 00000000 .dp.data             clk_spi
   00049e24 00000000 .dp.data             p_spidac_mclk_in
-  00049e24 00000000 .dp.data             __localPortInitializer10
+  00049e24 00000000 .dp.data             __localPortInitializer1
   00049e28 00000020 .dp.data             __timers
   00049e48 00000004 .dp.data             XSCOPE_REDIRECT_IO
   00049e4c 00000004 .dp.data             __sodChan
@@ -1438,19 +1438,19 @@ Symbols:
   0004a2ac 00000000 .dp.data             __sodEnd
   0004a2b0 00000020 .dp.data.4           par.desc.2
   0004a2d0 00000018 .dp.data.4           par.desc.3
-  0004a2e8 00000004 .dp.data.4           g_curSamFreq
-  0004a2ec 00000004 .dp.data.4           g_numUsbChan_Out
-  0004a2f0 00000004 .dp.data.4           sampsToWrite
-  0004a2f4 00000004 .dp.data.4           totalSampsToWrite
-  0004a2f8 00000004 .dp.data.4           outUnderflow
-  0004a2fc 00000004 .dp.data.4           inUnderflow
-  0004a300 00000004 .dp.data.4           g_curSubSlot_Out
-  0004a304 00000004 .dp.data.4           g_curSubSlot_In
-  0004a308 00000004 .dp.data.4           DFUResetTimeout
-  0004a30c 00000004 .dp.data.4           proposed_intpol_mode
-  0004a310 00000004 .dp.data.4           fixed_intpol_mode
-  0004a314 00000004 .dp.data.4           SampFreq
-  0004a318 00000004 .dp.data.4           SampRes
+  0004a2e8 00000004 .dp.data.4           DFUResetTimeout
+  0004a2ec 00000004 .dp.data.4           proposed_intpol_mode
+  0004a2f0 00000004 .dp.data.4           fixed_intpol_mode
+  0004a2f4 00000004 .dp.data.4           SampFreq
+  0004a2f8 00000004 .dp.data.4           SampRes
+  0004a2fc 00000004 .dp.data.4           g_curSamFreq
+  0004a300 00000004 .dp.data.4           g_numUsbChan_Out
+  0004a304 00000004 .dp.data.4           sampsToWrite
+  0004a308 00000004 .dp.data.4           totalSampsToWrite
+  0004a30c 00000004 .dp.data.4           outUnderflow
+  0004a310 00000004 .dp.data.4           inUnderflow
+  0004a314 00000004 .dp.data.4           g_curSubSlot_Out
+  0004a318 00000004 .dp.data.4           g_curSubSlot_In
   0004a31c 00000004 .dp.data.4           __ctype_ptr__
   0004a320 00000004 .dp.data.4           xscope_ref_clk
   0004a324 00000004 .dp.data.4           __stdin
@@ -1462,7 +1462,7 @@ Symbols:
   0004a344 00000004 .dp.data.4           __malloc_end
   0004a348 00000004 .dp.rodata.4         r_i2c2
   0004a34c 00000004 .dp.rodata.4         p_key
-  0004a350 00000004 .dp.rodata.4         __localPortInitializer12
+  0004a350 00000004 .dp.rodata.4         __localPortInitializer3
   0004a354 00000004 .dp.rodata.4         flag0_port
   0004a358 00000004 .dp.rodata.4         flag1_port
   0004a35c 00000004 .dp.rodata.4         flag2_port
@@ -1485,15 +1485,15 @@ Symbols:
   0004a7d0 00000010 .dp.bss              display_offset
   0004a7e0 00000010 .dp.bss              rendering_col
   0004a7f0 00000010 .dp.bss              rendering_x
-  0004a800 0000000c .dp.bss              multOut
-  0004a810 00000004 .dp.bss              multIn
-  0004a818 00001074 .dp.bss              outAudioBuff
-  0004b890 00000010 .dp.bss              audioBuffIn
-  0004b8a0 00000010 .dp.bss              inZeroBuff
-  0004b8b0 00000010 .dp.bss              fb_clocks
-  0004b8c0 0000000c .dp.bss              key_buff
-  0004b8d0 00000006 .dp.bss              TotalTimeString
-  0004b8d8 00000064 .dp.bss              UsbAudioStatus
+  0004a800 0000000c .dp.bss              key_buff
+  0004a810 00000006 .dp.bss              TotalTimeString
+  0004a818 00000064 .dp.bss              UsbAudioStatus
+  0004a880 0000000c .dp.bss              multOut
+  0004a890 00000004 .dp.bss              multIn
+  0004a898 00001074 .dp.bss              outAudioBuff
+  0004b910 00000010 .dp.bss              audioBuffIn
+  0004b920 00000010 .dp.bss              inZeroBuff
+  0004b930 00000010 .dp.bss              fb_clocks
   0004b940 00000010 .dp.bss              g_interfaceAlt
   0004b950 00000040 .dp.bss              g_epStatusOut
   0004b990 00000040 .dp.bss              g_epStatusIn
@@ -1506,63 +1506,63 @@ Symbols:
   0004c060 00000040 .dp.bss              handshakeTable_IN
   0004c0a0 00000040 .dp.bss              handshakeTable_OUT
   0004c0e0 0000000c .dp.bss              __sglue
-  0004c0ec 00000004 .dp.bss.4            DFU_mode_active
-  0004c0f0 00000004 .dp.bss.4            g_curStreamAlt_Out
-  0004c0f4 00000004 .dp.bss.4            g_curStreamAlt_In
-  0004c0f8 00000004 .dp.bss.4            g_curUsbSpeed
-  0004c0fc 00000001 .dp.bss.4            flash_device_open
-  0004c100 00000004 .dp.bss.4            i2c_swlock
-  0004c104 00000001 .dp.bss.4            _x
-  0004c108 00000001 .dp.bss.4            _y
-  0004c10c 00000004 .dp.bss.4            p_multOut
-  0004c110 00000004 .dp.bss.4            p_multIn
-  0004c114 00000004 .dp.bss.4            g_numUsbChan_In
-  0004c118 00000004 .dp.bss.4            aud_from_host_usb_ep
-  0004c11c 00000004 .dp.bss.4            aud_to_host_usb_ep
-  0004c120 00000004 .dp.bss.4            g_aud_from_host_buffer
-  0004c124 00000004 .dp.bss.4            g_aud_to_host_buffer
-  0004c128 00000004 .dp.bss.4            buffer_aud_ctl_chan
-  0004c12c 00000004 .dp.bss.4            g_aud_from_host_flag
-  0004c130 00000004 .dp.bss.4            g_freqChange_flag
-  0004c134 00000004 .dp.bss.4            g_freqChange_sampFreq
-  0004c138 00000004 .dp.bss.4            g_formatChange_SubSlot
-  0004c13c 00000004 .dp.bss.4            g_formatChange_DataFormat
-  0004c140 00000004 .dp.bss.4            g_formatChange_NumChans
-  0004c144 00000004 .dp.bss.4            g_formatChange_SampRes
-  0004c148 00000004 .dp.bss.4            speedRem
-  0004c14c 00000004 .dp.bss.4            aud_from_host_fifo_start
-  0004c150 00000004 .dp.bss.4            aud_from_host_fifo_end
-  0004c154 00000004 .dp.bss.4            g_aud_from_host_wrptr
-  0004c158 00000004 .dp.bss.4            g_aud_from_host_rdptr
-  0004c15c 00000004 .dp.bss.4            aud_to_host_fifo_start
-  0004c160 00000004 .dp.bss.4            aud_to_host_fifo_end
-  0004c164 00000004 .dp.bss.4            g_aud_to_host_wrptr
-  0004c168 00000004 .dp.bss.4            g_aud_to_host_dptr
-  0004c16c 00000004 .dp.bss.4            g_aud_to_host_rdptr
-  0004c170 00000004 .dp.bss.4            g_aud_to_host_zeros
-  0004c174 00000004 .dp.bss.4            aud_data_remaining_to_device
-  0004c178 00000004 .dp.bss.4            outOverflow
-  0004c17c 00000004 .dp.bss.4            unpackState
-  0004c180 00000004 .dp.bss.4            unpackData
-  0004c184 00000004 .dp.bss.4            packState
-  0004c188 00000004 .dp.bss.4            packData
-  0004c18c 00000004 .dp.bss.4            g_maxPacketSize
-  0004c190 00000004 .dp.bss.4            g_speed
-  0004c194 00000004 .dp.bss.4            g_freqChange
-  0004c198 00000004 .dp.bss.4            g_DFU_state
-  0004c19c 00000004 .dp.bss.4            DFUTimerStart
-  0004c1a0 00000001 .dp.bss.4            DFU_flash_connected
-  0004c1a4 00000004 .dp.bss.4            scan_time
-  0004c1a8 00000004 .dp.bss.4            p_console_mode
-  0004c1ac 00000004 .dp.bss.4            play_command
-  0004c1b0 00000004 .dp.bss.4            selected_function
-  0004c1b4 00000004 .dp.bss.4            play_command_request
-  0004c1b8 00000004 .dp.bss.4            last_event_time
-  0004c1bc 00000004 .dp.bss.4            display_control_flag
-  0004c1c0 00000004 .dp.bss.4            console_mode
-  0004c1c4 00000001 .dp.bss.4            state
-  0004c1c8 00000004 .dp.bss.4            pause_counter
-  0004c1cc 00000004 .dp.bss.4            scrolling_row
+  0004c0ec 00000001 .dp.bss.4            flash_device_open
+  0004c0f0 00000004 .dp.bss.4            i2c_swlock
+  0004c0f4 00000004 .dp.bss.4            DFU_mode_active
+  0004c0f8 00000004 .dp.bss.4            g_curStreamAlt_Out
+  0004c0fc 00000004 .dp.bss.4            g_curStreamAlt_In
+  0004c100 00000004 .dp.bss.4            g_curUsbSpeed
+  0004c104 00000004 .dp.bss.4            g_DFU_state
+  0004c108 00000004 .dp.bss.4            DFUTimerStart
+  0004c10c 00000001 .dp.bss.4            DFU_flash_connected
+  0004c110 00000001 .dp.bss.4            _x
+  0004c114 00000001 .dp.bss.4            _y
+  0004c118 00000004 .dp.bss.4            scan_time
+  0004c11c 00000004 .dp.bss.4            p_console_mode
+  0004c120 00000004 .dp.bss.4            play_command
+  0004c124 00000004 .dp.bss.4            selected_function
+  0004c128 00000004 .dp.bss.4            play_command_request
+  0004c12c 00000004 .dp.bss.4            last_event_time
+  0004c130 00000004 .dp.bss.4            display_control_flag
+  0004c134 00000004 .dp.bss.4            console_mode
+  0004c138 00000001 .dp.bss.4            state
+  0004c13c 00000004 .dp.bss.4            pause_counter
+  0004c140 00000004 .dp.bss.4            scrolling_row
+  0004c144 00000004 .dp.bss.4            p_multOut
+  0004c148 00000004 .dp.bss.4            p_multIn
+  0004c14c 00000004 .dp.bss.4            g_numUsbChan_In
+  0004c150 00000004 .dp.bss.4            aud_from_host_usb_ep
+  0004c154 00000004 .dp.bss.4            aud_to_host_usb_ep
+  0004c158 00000004 .dp.bss.4            g_aud_from_host_buffer
+  0004c15c 00000004 .dp.bss.4            g_aud_to_host_buffer
+  0004c160 00000004 .dp.bss.4            buffer_aud_ctl_chan
+  0004c164 00000004 .dp.bss.4            g_aud_from_host_flag
+  0004c168 00000004 .dp.bss.4            g_freqChange_flag
+  0004c16c 00000004 .dp.bss.4            g_freqChange_sampFreq
+  0004c170 00000004 .dp.bss.4            g_formatChange_SubSlot
+  0004c174 00000004 .dp.bss.4            g_formatChange_DataFormat
+  0004c178 00000004 .dp.bss.4            g_formatChange_NumChans
+  0004c17c 00000004 .dp.bss.4            g_formatChange_SampRes
+  0004c180 00000004 .dp.bss.4            speedRem
+  0004c184 00000004 .dp.bss.4            aud_from_host_fifo_start
+  0004c188 00000004 .dp.bss.4            aud_from_host_fifo_end
+  0004c18c 00000004 .dp.bss.4            g_aud_from_host_wrptr
+  0004c190 00000004 .dp.bss.4            g_aud_from_host_rdptr
+  0004c194 00000004 .dp.bss.4            aud_to_host_fifo_start
+  0004c198 00000004 .dp.bss.4            aud_to_host_fifo_end
+  0004c19c 00000004 .dp.bss.4            g_aud_to_host_wrptr
+  0004c1a0 00000004 .dp.bss.4            g_aud_to_host_dptr
+  0004c1a4 00000004 .dp.bss.4            g_aud_to_host_rdptr
+  0004c1a8 00000004 .dp.bss.4            g_aud_to_host_zeros
+  0004c1ac 00000004 .dp.bss.4            aud_data_remaining_to_device
+  0004c1b0 00000004 .dp.bss.4            outOverflow
+  0004c1b4 00000004 .dp.bss.4            unpackState
+  0004c1b8 00000004 .dp.bss.4            unpackData
+  0004c1bc 00000004 .dp.bss.4            packState
+  0004c1c0 00000004 .dp.bss.4            packData
+  0004c1c4 00000004 .dp.bss.4            g_maxPacketSize
+  0004c1c8 00000004 .dp.bss.4            g_speed
+  0004c1cc 00000004 .dp.bss.4            g_freqChange
   0004c1d0 00000001 .dp.bss.4            g_currentConfig
   0004c1d4 00000004 .dp.bss.4            xscope_lock
   0004c1d8 00000004 .dp.bss.4            g_curSpeed

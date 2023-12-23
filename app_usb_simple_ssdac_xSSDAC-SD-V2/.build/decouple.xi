@@ -812,8 +812,8 @@ void XUD_SetData_Select(chanend c, XUD_ep ep, XUD_Result_t &result);
 # 7 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc" 2
 
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h" 1
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 1
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);

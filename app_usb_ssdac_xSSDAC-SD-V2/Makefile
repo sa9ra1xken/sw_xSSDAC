@@ -52,7 +52,7 @@ USED_MODULES = \
 	module_i2c_single_port \
 	module_adat_tx \
 	module_adat_rx \
-	module_human_interface \
+	module_operation_console \
 	module_xud \
 	module_usb_device
 

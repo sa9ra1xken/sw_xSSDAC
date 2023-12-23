@@ -17,7 +17,7 @@ BUILD_FLAGS += -DDEBUG_PRINT_ENABLE_HUMAN_INTERFACE=1
 # The USED_MODULES variable lists other module used by the application. These
 # modules will extend the SOURCE_DIRS, INCLUDE_DIRS and LIB_DIRS variables.
 # Modules are expected to be in the directory above the BASE_DIR directory.
-USED_MODULES = lib_logging lib_trycatch lib_xassert lib_xcore_c module_FatFs module_dfu module_flash_memory_server module_human_interface module_hw_support_xSSDAC-SD-V1 module_i2c_shared module_i2c_single_port module_libFLAC module_locks module_memory_sharing module_oled_SSD1306 module_sd_audio module_sdcard4bit module_ssdac module_usb_audio module_usb_device module_usb_midi module_usb_shared module_xud
+USED_MODULES = lib_logging lib_trycatch lib_xassert lib_xcore_c module_FatFs module_dfu module_flash_memory_server module_hw_support_xSSDAC-SD-V1 module_i2c_shared module_i2c_single_port module_libFLAC module_locks module_memory_sharing module_oled_SSD1306 module_operation_console module_sd_audio module_sdcard4bit module_ssdac module_usb_audio module_usb_device module_usb_midi module_usb_shared module_xud
 
 
 # Audio Class 2, Input, Output, no MIDI, no SPDIF

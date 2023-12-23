@@ -2505,8 +2505,8 @@ char *strupr (char *);
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 2 3
 # 16 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 1
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 1
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
 typedef enum {
     _USB_DAC = 0,
     _SDC_PLAY = 1,
@@ -2749,8 +2749,8 @@ typedef enum {
 } PLAY_TRACK_RC;
 # 22 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h" 1
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 1
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);

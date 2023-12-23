@@ -652,8 +652,8 @@ unsigned byterev(unsigned x);
 int clz(unsigned x);
 # 13 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 1
-# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 1
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 1 3
 # 122 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 3
 typedef unsigned chanend;
@@ -731,7 +731,7 @@ typedef unsigned out_buffered_port_32_t;
 
 
 typedef unsigned clock;
-# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 2
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 2
 
 
 typedef enum {
@@ -976,8 +976,8 @@ typedef enum {
 } PLAY_TRACK_RC;
 # 19 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h" 1
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 1
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);

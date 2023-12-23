@@ -1,5 +1,5 @@
 	.text
-	.file	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.file	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
                                         # Start of file scope inline assembly
 	.inline_definition delay_seconds
 	.inline_definition delay_milliseconds
@@ -23,30 +23,30 @@ __xcc1_internal_1.info:
 	.set usage.anon.4,0
 	.set usage.anon.5,0
 	.set usage.anon.6,0
-	.globread display_control,TotalTimeString,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:277:13: note: object used here\n    sprintf(TotalTimeString,\"00:00\");\n            ^~~~~~~~~~~~~~~"
-	.globread ShowUsbAudioStatus,SampRes,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:251:57: note: object used here\n    sprintf(UsbAudioStatus,\"%d sps %d bit\\0\", SampFreq, SampRes);\n                                                        ^~~~~~~"
-	.globread ShowUsbAudioStatus,SampFreq,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:251:47: note: object used here\n    sprintf(UsbAudioStatus,\"%d sps %d bit\\0\", SampFreq, SampRes);\n                                              ^~~~~~~~"
-	.globread SelectedFunction,selected_function,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:206:19: note: object used here\n    unsafe {p = & selected_function; temp = * p; }\n                  ^~~~~~~~~~~~~~~~~"
-	.globread FixedInterpolationMode,fixed_intpol_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:197:19: note: object used here\n    unsafe {p = & fixed_intpol_mode; temp = * p; }\n                  ^~~~~~~~~~~~~~~~~"
-	.globread ProposedInterpolationMode,proposed_intpol_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:188:19: note: object used here\n    unsafe {p = & proposed_intpol_mode; temp = * p; }\n                  ^~~~~~~~~~~~~~~~~~~~"
-	.globread set_console_mode,console_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:105:16: note: object used here\n        ptr = &console_mode;\n               ^~~~~~~~~~~~"
-	.globread get_console_mode,console_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:97:16: note: object used here\n        ptr = &console_mode;\n               ^~~~~~~~~~~~"
-	.globread clear_display_control_flag,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:89:16: note: object used here\n        ptr = &display_control_flag;\n               ^~~~~~~~~~~~~~~~~~~~"
-	.globread test_display_control_flag,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:81:16: note: object used here\n        ptr = &display_control_flag;\n               ^~~~~~~~~~~~~~~~~~~~"
-	.globread set_display_control_flag,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:73:16: note: object used here\n        ptr = &display_control_flag;\n               ^~~~~~~~~~~~~~~~~~~~"
-	.globread update_chan_count,NumChan,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:63:16: note: object used here\n        ptr = &NumChan; *ptr = ch;\n               ^~~~~~~"
-	.globread update_chan_count,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:64:16: note: object used here\n        ptr = &display_control_flag;   *ptr |= BITMASK_UPDATE_AUDIO_FORMAT;\n               ^~~~~~~~~~~~~~~~~~~~"
-	.globread update_samp_resolution,SampRes,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:55:16: note: object used here\n        ptr = &SampRes; *ptr = res;\n               ^~~~~~~"
-	.globread update_samp_resolution,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:56:16: note: object used here\n        ptr = &display_control_flag;   *ptr |= BITMASK_UPDATE_RESOLUTION;\n               ^~~~~~~~~~~~~~~~~~~~"
-	.globread update_samp_freq,SampFreq,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:47:16: note: object used here\n        ptr = &SampFreq;    *ptr = freq;\n               ^~~~~~~~"
-	.globread update_samp_freq,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:48:16: note: object used here\n        ptr = &display_control_flag;   *ptr |= BITMASK_UPDATE_FREQUENCY;\n               ^~~~~~~~~~~~~~~~~~~~"
-	.globwrite display_control,scrolling_row,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:281:5: note: object used here\n    scrolling_row = 0;\n    ^~~~~~~~~~~~~"
-	.globwrite display_control,pause_counter,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:280:5: note: object used here\n    pause_counter = PAUSE_COUNT;\n    ^~~~~~~~~~~~~"
-	.globwrite display_control,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:279:5: note: object used here\n    state = _PAUSING;\n    ^~~~~"
-	.globwrite ShowUsbAudioStatus,UsbAudioStatus,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:252:20: note: object used here\n    printf(\"\\n%s\", UsbAudioStatus);\n                   ^~~~~~~~~~~~~~"
-	.globwrite ShowUsbAudioStatus,scrolling_row,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:257:5: note: object used here\n    scrolling_row = 0;\n    ^~~~~~~~~~~~~"
-	.globwrite ShowUsbAudioStatus,pause_counter,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:255:5: note: object used here\n    pause_counter = PAUSE_COUNT;\n    ^~~~~~~~~~~~~"
-	.globwrite ShowUsbAudioStatus,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:256:5: note: object used here\n    state = _PAUSING;\n    ^~~~~"
+	.globread display_control,TotalTimeString,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:277:13: note: object used here\n    sprintf(TotalTimeString,\"00:00\");\n            ^~~~~~~~~~~~~~~"
+	.globread ShowUsbAudioStatus,SampRes,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:251:57: note: object used here\n    sprintf(UsbAudioStatus,\"%d sps %d bit\\0\", SampFreq, SampRes);\n                                                        ^~~~~~~"
+	.globread ShowUsbAudioStatus,SampFreq,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:251:47: note: object used here\n    sprintf(UsbAudioStatus,\"%d sps %d bit\\0\", SampFreq, SampRes);\n                                              ^~~~~~~~"
+	.globread SelectedFunction,selected_function,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:206:19: note: object used here\n    unsafe {p = & selected_function; temp = * p; }\n                  ^~~~~~~~~~~~~~~~~"
+	.globread FixedInterpolationMode,fixed_intpol_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:197:19: note: object used here\n    unsafe {p = & fixed_intpol_mode; temp = * p; }\n                  ^~~~~~~~~~~~~~~~~"
+	.globread ProposedInterpolationMode,proposed_intpol_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:188:19: note: object used here\n    unsafe {p = & proposed_intpol_mode; temp = * p; }\n                  ^~~~~~~~~~~~~~~~~~~~"
+	.globread set_console_mode,console_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:105:16: note: object used here\n        ptr = &console_mode;\n               ^~~~~~~~~~~~"
+	.globread get_console_mode,console_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:97:16: note: object used here\n        ptr = &console_mode;\n               ^~~~~~~~~~~~"
+	.globread clear_display_control_flag,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:89:16: note: object used here\n        ptr = &display_control_flag;\n               ^~~~~~~~~~~~~~~~~~~~"
+	.globread test_display_control_flag,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:81:16: note: object used here\n        ptr = &display_control_flag;\n               ^~~~~~~~~~~~~~~~~~~~"
+	.globread set_display_control_flag,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:73:16: note: object used here\n        ptr = &display_control_flag;\n               ^~~~~~~~~~~~~~~~~~~~"
+	.globread update_chan_count,NumChan,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:63:16: note: object used here\n        ptr = &NumChan; *ptr = ch;\n               ^~~~~~~"
+	.globread update_chan_count,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:64:16: note: object used here\n        ptr = &display_control_flag;   *ptr |= BITMASK_UPDATE_AUDIO_FORMAT;\n               ^~~~~~~~~~~~~~~~~~~~"
+	.globread update_samp_resolution,SampRes,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:55:16: note: object used here\n        ptr = &SampRes; *ptr = res;\n               ^~~~~~~"
+	.globread update_samp_resolution,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:56:16: note: object used here\n        ptr = &display_control_flag;   *ptr |= BITMASK_UPDATE_RESOLUTION;\n               ^~~~~~~~~~~~~~~~~~~~"
+	.globread update_samp_freq,SampFreq,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:47:16: note: object used here\n        ptr = &SampFreq;    *ptr = freq;\n               ^~~~~~~~"
+	.globread update_samp_freq,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:48:16: note: object used here\n        ptr = &display_control_flag;   *ptr |= BITMASK_UPDATE_FREQUENCY;\n               ^~~~~~~~~~~~~~~~~~~~"
+	.globwrite display_control,scrolling_row,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:281:5: note: object used here\n    scrolling_row = 0;\n    ^~~~~~~~~~~~~"
+	.globwrite display_control,pause_counter,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:280:5: note: object used here\n    pause_counter = PAUSE_COUNT;\n    ^~~~~~~~~~~~~"
+	.globwrite display_control,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:279:5: note: object used here\n    state = _PAUSING;\n    ^~~~~"
+	.globwrite ShowUsbAudioStatus,UsbAudioStatus,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:252:20: note: object used here\n    printf(\"\\n%s\", UsbAudioStatus);\n                   ^~~~~~~~~~~~~~"
+	.globwrite ShowUsbAudioStatus,scrolling_row,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:257:5: note: object used here\n    scrolling_row = 0;\n    ^~~~~~~~~~~~~"
+	.globwrite ShowUsbAudioStatus,pause_counter,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:255:5: note: object used here\n    pause_counter = PAUSE_COUNT;\n    ^~~~~~~~~~~~~"
+	.globwrite ShowUsbAudioStatus,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:256:5: note: object used here\n    state = _PAUSING;\n    ^~~~~"
 	.call display_control,test_display_control_flag
 	.call display_control,sprintf
 	.call display_control,get_console_mode
@@ -86,9 +86,9 @@ __xcc1_internal_1.info:
 	.set SelectedFunction.locnoglobalaccess, 0
 	.set ShowUsbAudioStatus.locnoglobalaccess, 0
 	.set display_control.locnoglobalaccess, 0
-	.assert 1,memset.actnoglobalaccess,"In file included from C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:18:\nIn file included from C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:5:\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:21:3: error: passing non-local alias to function `memset\' which accesses a global variable\n  memset(s, c, n);\n  ^~~~~~~~~~~~~~~"
-	.assert 1,memmove.actnoglobalaccess,"In file included from C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:18:\nIn file included from C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:5:\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:15:3: error: passing non-local alias to function `memmove\' which accesses a global variable\n  memmove(s1, s2, n);\n  ^~~~~~~~~~~~~~~~~~"
-	.globpassesref OLED_SSD1306_put_string, UsbAudioStatus,"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:254:5: error: call to `OLED_SSD1306_put_string\' in `ShowUsbAudioStatus\' makes alias of global \'UsbAudioStatus\'\n    OLED_SSD1306_put_string(1, UsbAudioStatus);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.assert 1,memset.actnoglobalaccess,"In file included from C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:18:\nIn file included from C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:5:\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:21:3: error: passing non-local alias to function `memset\' which accesses a global variable\n  memset(s, c, n);\n  ^~~~~~~~~~~~~~~"
+	.assert 1,memmove.actnoglobalaccess,"In file included from C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:18:\nIn file included from C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:5:\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:15:3: error: passing non-local alias to function `memmove\' which accesses a global variable\n  memmove(s1, s2, n);\n  ^~~~~~~~~~~~~~~~~~"
+	.globpassesref OLED_SSD1306_put_string, UsbAudioStatus,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:254:5: error: call to `OLED_SSD1306_put_string\' in `ShowUsbAudioStatus\' makes alias of global \'UsbAudioStatus\'\n    OLED_SSD1306_put_string(1, UsbAudioStatus);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
                                         # End of file scope inline assembly
 	.section	.debug_info,"",@progbits
@@ -105,7 +105,7 @@ __xcc1_internal_1.info:
 .Lsection_debug_loc:
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
-	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.xc"
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.xc"
 	.text
 	.globl	set_display_control_flag
 	.align	4
@@ -113,7 +113,7 @@ __xcc1_internal_1.info:
 	.cc_top set_display_control_flag.function,set_display_control_flag
 set_display_control_flag:               # @set_display_control_flag
 .Lfunc_begin0:
-	.loc	1 70 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:70:0
+	.loc	1 70 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:70:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -123,16 +123,16 @@ set_display_control_flag:               # @set_display_control_flag
 		dualentsp 0
 	}
 	#DEBUG_VALUE: set_display_control_flag:bitmask <- R0
-	.loc	1 74 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:74:0
+	.loc	1 74 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:74:0
 .Ltmp0:
 	ldw r1, dp[display_control_flag]
-	.loc	1 74 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:74:0
+	.loc	1 74 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:74:0
 	{
 		or r0, r1, r0
 		nop
 	}
 .Ltmp1:
-	.loc	1 74 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:74:0
+	.loc	1 74 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:74:0
 	stw r0, dp[display_control_flag]
 	{
 		nop
@@ -160,7 +160,7 @@ set_display_control_flag:               # @set_display_control_flag
 	.cc_top update_samp_freq.function,update_samp_freq
 update_samp_freq:                       # @update_samp_freq
 .Lfunc_begin1:
-	.loc	1 44 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:44:0
+	.loc	1 44 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:44:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -170,22 +170,22 @@ update_samp_freq:                       # @update_samp_freq
 		dualentsp 0
 	}
 	#DEBUG_VALUE: update_samp_freq:freq <- R0
-	.loc	1 47 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:47:0
+	.loc	1 47 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:47:0
 .Ltmp4:
 	stw r0, dp[SampFreq]
-	.loc	1 48 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:48:0
+	.loc	1 48 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:48:0
 	ldw r0, dp[display_control_flag]
 .Ltmp5:
 	{
 		ldc r1, 32
 		nop
 	}
-	.loc	1 48 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:48:0
+	.loc	1 48 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:48:0
 	{
 		or r0, r0, r1
 		nop
 	}
-	.loc	1 48 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:48:0
+	.loc	1 48 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:48:0
 	stw r0, dp[display_control_flag]
 	{
 		nop
@@ -213,7 +213,7 @@ update_samp_freq:                       # @update_samp_freq
 	.cc_top update_samp_resolution.function,update_samp_resolution
 update_samp_resolution:                 # @update_samp_resolution
 .Lfunc_begin2:
-	.loc	1 52 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:52:0
+	.loc	1 52 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:52:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -223,19 +223,19 @@ update_samp_resolution:                 # @update_samp_resolution
 		dualentsp 0
 	}
 	#DEBUG_VALUE: update_samp_resolution:res <- R0
-	.loc	1 55 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:55:0
+	.loc	1 55 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:55:0
 .Ltmp8:
 	stw r0, dp[SampRes]
-	.loc	1 56 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:56:0
+	.loc	1 56 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:56:0
 	ldw r0, dp[display_control_flag]
 .Ltmp9:
 	ldc r1, 64
-	.loc	1 56 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:56:0
+	.loc	1 56 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:56:0
 	{
 		or r0, r0, r1
 		nop
 	}
-	.loc	1 56 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:56:0
+	.loc	1 56 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:56:0
 	stw r0, dp[display_control_flag]
 	{
 		nop
@@ -263,7 +263,7 @@ update_samp_resolution:                 # @update_samp_resolution
 	.cc_top update_chan_count.function,update_chan_count
 update_chan_count:                      # @update_chan_count
 .Lfunc_begin3:
-	.loc	1 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:60:0
+	.loc	1 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:60:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -273,19 +273,19 @@ update_chan_count:                      # @update_chan_count
 		dualentsp 0
 	}
 	#DEBUG_VALUE: update_chan_count:ch <- R0
-	.loc	1 63 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:63:0
+	.loc	1 63 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:63:0
 .Ltmp12:
 	stw r0, dp[NumChan]
-	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:64:0
+	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:64:0
 	ldw r0, dp[display_control_flag]
 .Ltmp13:
 	ldc r1, 128
-	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:64:0
+	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:64:0
 	{
 		or r0, r0, r1
 		nop
 	}
-	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:64:0
+	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:64:0
 	stw r0, dp[display_control_flag]
 	{
 		nop
@@ -364,7 +364,7 @@ update_chan_count:                      # @update_chan_count
 	.cc_top display_control.function,display_control
 display_control:                        # @display_control
 .Lfunc_begin4:
-	.loc	1 262 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:262:0
+	.loc	1 262 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:262:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -377,7 +377,7 @@ display_control:                        # @display_control
 	.cfi_def_cfa_offset 64
 .Ltmp17:
 	.cfi_offset 15, 0
-	.loc	1 267 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:267:0
+	.loc	1 267 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:267:0
 .Ltmp18:
 	std r5, r4, sp[4]               # 4-byte Folded Spill
 .Ltmp19:
@@ -407,10 +407,10 @@ display_control:                        # @display_control
 	}
 .Lxta.call_labels0:
 	bl debug_printf
-	.loc	1 269 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:269:0
+	.loc	1 269 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:269:0
 .Lxta.call_labels1:
 	bl OLED_SSD1306_begin
-	.loc	1 273 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:273:0
+	.loc	1 273 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:273:0
 .Ltmp26:
 	ldaw r11, cp[.str21]
 .Ltmp27:
@@ -435,7 +435,7 @@ display_control:                        # @display_control
 		ldc r2, 17
 		mov r0, r4
 	}
-	.loc	1 274 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:274:0
+	.loc	1 274 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:274:0
 	{
 		mov r1, r6
 		mov r8, r2
@@ -446,14 +446,14 @@ display_control:                        # @display_control
 		mkmsk r5, 1
 		mov r0, r6
 	}
-	.loc	1 273 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:273:0
+	.loc	1 273 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:273:0
 	{
 		mov r1, r9
 		mov r2, r5
 	}
 .Lxta.call_labels4:
 	bl siprintf
-	.loc	1 274 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:274:0
+	.loc	1 274 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:274:0
 	{
 		mov r0, r5
 		mov r1, r6
@@ -475,14 +475,14 @@ display_control:                        # @display_control
 		mov r1, r9
 	}
 .Ltmp30:
-	.loc	1 273 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:273:0
+	.loc	1 273 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:273:0
 	{
 		mov r2, r10
 		nop
 	}
 .Lxta.call_labels6:
 	bl siprintf
-	.loc	1 274 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:274:0
+	.loc	1 274 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:274:0
 	{
 		mov r0, r10
 		mov r1, r7
@@ -497,14 +497,14 @@ display_control:                        # @display_control
 		mkmsk r6, 2
 		mov r0, r7
 	}
-	.loc	1 273 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:273:0
+	.loc	1 273 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:273:0
 	{
 		mov r1, r9
 		mov r2, r6
 	}
 .Lxta.call_labels8:
 	bl siprintf
-	.loc	1 274 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:274:0
+	.loc	1 274 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:274:0
 	{
 		mov r0, r6
 		mov r1, r7
@@ -522,7 +522,7 @@ display_control:                        # @display_control
 	}
 	ldaw r1, dp[TotalTimeString+4]
 .Ltmp31:
-	.loc	1 277 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:277:0
+	.loc	1 277 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:277:0
 	st16 r0, r1[r4]
 	ldw r0, cp[.str22]
 	stw r0, dp[TotalTimeString]
@@ -532,17 +532,17 @@ display_control:                        # @display_control
 		ldc r0, 50
 		nop
 	}
-	.loc	1 280 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:280:0
+	.loc	1 280 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:280:0
 	stw r0, dp[pause_counter]
-	.loc	1 281 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:281:0
+	.loc	1 281 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:281:0
 	stw r4, dp[scrolling_row]
-	.loc	1 398 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:398:0
+	.loc	1 398 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:398:0
 .Ltmp32:
 	{
 		get r11, id
 		nop
 	}
-	.loc	1 398 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:398:0
+	.loc	1 398 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:398:0
 	ldaw r0, dp[__timers]
 	{
 		nop
@@ -554,17 +554,17 @@ display_control:                        # @display_control
 .Lxtalabel5:
 .Ltmp33:
 	#DEBUG_VALUE: time <- R7
-	.loc	1 398 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:398:0
+	.loc	1 398 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:398:0
 	{
 		setd res[r9], r7
 		nop
 	}
-	.loc	1 398 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:398:0
+	.loc	1 398 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:398:0
 	{
 		setc res[r9], 9
 		nop
 	}
-	.loc	1 398 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:398:0
+	.loc	1 398 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:398:0
 .Ltmp34:
 .Lxta.endpoint_labels0:
 	{
@@ -575,7 +575,7 @@ display_control:                        # @display_control
 .LBB4_1:                                # %LoopBody11
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel6:
-	.loc	1 285 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:285:0
+	.loc	1 285 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:285:0
 	{
 		gettime r7
 		nop
@@ -583,13 +583,13 @@ display_control:                        # @display_control
 .Ltmp36:
 	#DEBUG_VALUE: test_display_control_flag:bitmask <- 16
 	#DEBUG_VALUE: time <- R7
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:82:9
+	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
 	ldw r0, dp[display_control_flag]
 	{
 		ldc r1, 16
 		nop
 	}
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:82:9
+	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
 	{
 		and r0, r0, r1
 		nop
@@ -605,26 +605,26 @@ display_control:                        # @display_control
 .Lxtalabel7:
 	#DEBUG_VALUE: time <- R7
 	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 16
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	ldw r0, dp[display_control_flag]
 	ldw r1, cp[.LCPI4_1]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	{
 		and r0, r0, r1
 		nop
 	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	stw r0, dp[display_control_flag]
 .Ltmp38:
-	.loc	1 98 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:98:9
+	.loc	1 98 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:98:9
 	ldw r0, dp[console_mode]
-	.loc	1 98 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:98:9
+	.loc	1 98 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:98:9
 	{
 		eq r1, r0, 2
 		stw r0, sp[7]
 	}
 .Ltmp39:
-	.loc	1 291 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:291:0
+	.loc	1 291 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:291:0
 	bt r1, .LBB4_12
 .Ltmp40:
 # BB#3:                                 # %iftrue14
@@ -638,7 +638,7 @@ display_control:                        # @display_control
 # BB#14:                                # %switchcase17
                                         #   in Loop: Header=BB4_1 Depth=1
 .Lxtalabel9:
-	.loc	1 311 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:311:0
+	.loc	1 311 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:311:0
 	ldaw r11, cp[.str26]
 	{
 		mov r0, r4
@@ -650,16 +650,16 @@ display_control:                        # @display_control
 	}
 .Lxta.call_labels10:
 	bl OLED_SSD1306_put_string
-	.loc	1 197 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:197:0
+	.loc	1 197 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:197:0
 .Ltmp41:
 	ldw r0, dp[fixed_intpol_mode]
 .Ltmp42:
 	#DEBUG_VALUE: temp <- R0
-	.loc	1 312 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:312:0
+	.loc	1 312 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:312:0
 .Lxta.call_labels11:
 	bl ShowInterpolationMode
 .Ltmp43:
-	.loc	1 313 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:313:0
+	.loc	1 313 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:313:0
 	ldaw r11, cp[.str27]
 	{
 		mov r0, r10
@@ -671,7 +671,7 @@ display_control:                        # @display_control
 	}
 .Lxta.call_labels12:
 	bl OLED_SSD1306_put_string
-	.loc	1 314 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:314:0
+	.loc	1 314 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:314:0
 	ldaw r11, cp[.str28]
 	bu .LBB4_13
 .LBB4_12:                               # %switchcase
@@ -679,7 +679,7 @@ display_control:                        # @display_control
 .Lxtalabel10:
 .Ltmp44:
 	#DEBUG_VALUE: time <- R7
-	.loc	1 304 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:304:0
+	.loc	1 304 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:304:0
 	ldaw r11, cp[.str23]
 	{
 		mov r0, r4
@@ -691,10 +691,10 @@ display_control:                        # @display_control
 	}
 .Lxta.call_labels13:
 	bl OLED_SSD1306_put_string
-	.loc	1 305 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:305:0
+	.loc	1 305 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:305:0
 .Lxta.call_labels14:
 	bl ShowUsbAudioStatus
-	.loc	1 306 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:306:0
+	.loc	1 306 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:306:0
 	ldaw r11, cp[.str24]
 	{
 		mov r0, r10
@@ -706,7 +706,7 @@ display_control:                        # @display_control
 	}
 .Lxta.call_labels15:
 	bl OLED_SSD1306_put_string
-	.loc	1 307 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:307:0
+	.loc	1 307 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:307:0
 	ldaw r11, cp[.str25]
 	bu .LBB4_13
 .Ltmp45:
@@ -721,7 +721,7 @@ display_control:                        # @display_control
 # BB#15:                                # %switchcase18
                                         #   in Loop: Header=BB4_1 Depth=1
 .Lxtalabel12:
-	.loc	1 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:317:0
+	.loc	1 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:317:0
 	ldaw r11, cp[.str29]
 	{
 		mov r0, r4
@@ -733,7 +733,7 @@ display_control:                        # @display_control
 	}
 .Lxta.call_labels16:
 	bl OLED_SSD1306_put_string
-	.loc	1 318 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:318:0
+	.loc	1 318 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:318:0
 	ldaw r11, cp[.str30]
 	{
 		mov r0, r5
@@ -745,7 +745,7 @@ display_control:                        # @display_control
 	}
 .Lxta.call_labels17:
 	bl OLED_SSD1306_put_string
-	.loc	1 319 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:319:0
+	.loc	1 319 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:319:0
 	ldaw r11, cp[.str31]
 	{
 		mov r0, r10
@@ -757,12 +757,12 @@ display_control:                        # @display_control
 	}
 .Lxta.call_labels18:
 	bl OLED_SSD1306_put_string
-	.loc	1 320 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:320:0
+	.loc	1 320 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:320:0
 	ldaw r11, cp[.str32]
 .LBB4_13:                               # %ifdone15
                                         #   in Loop: Header=BB4_1 Depth=1
 .Lxtalabel13:
-	.loc	1 307 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:307:0
+	.loc	1 307 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:307:0
 	{
 		mov r0, r6
 		mov r1, r11
@@ -779,21 +779,21 @@ display_control:                        # @display_control
 .Ltmp46:
 	#DEBUG_VALUE: time <- R7
 	ldw r0, cp[.LCPI4_0]
-	.loc	1 286 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:286:0
+	.loc	1 286 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:286:0
 	{
 		add r7, r7, r0
 		nop
 	}
 .Ltmp47:
-	.loc	1 98 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:98:9
+	.loc	1 98 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:98:9
 	ldw r0, dp[console_mode]
-	.loc	1 98 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:98:9
+	.loc	1 98 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:98:9
 	{
 		eq r1, r0, 2
 		stw r0, sp[7]
 	}
 .Ltmp48:
-	.loc	1 325 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:325:0
+	.loc	1 325 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:325:0
 	bt r1, .LBB4_16
 # BB#6:                                 # %ifdone15
                                         #   in Loop: Header=BB4_1 Depth=1
@@ -808,10 +808,10 @@ display_control:                        # @display_control
 .Lxtalabel16:
 .Ltmp49:
 	#DEBUG_VALUE: test_display_control_flag:bitmask <- 256
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:82:9
+	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
 	ldw r0, dp[display_control_flag]
 	ldc r1, 256
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:82:9
+	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
 	{
 		and r0, r0, r1
 		nop
@@ -826,22 +826,22 @@ display_control:                        # @display_control
                                         #   in Loop: Header=BB4_1 Depth=1
 .Lxtalabel17:
 	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 256
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	ldw r0, dp[display_control_flag]
 	ldw r1, cp[.LCPI4_3]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	{
 		and r0, r0, r1
 		nop
 	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	stw r0, dp[display_control_flag]
 .Ltmp51:
-	.loc	1 188 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:188:0
+	.loc	1 188 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:188:0
 	ldw r0, dp[proposed_intpol_mode]
 .Ltmp52:
 	#DEBUG_VALUE: temp <- R0
-	.loc	1 366 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:366:0
+	.loc	1 366 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:366:0
 .Lxta.call_labels20:
 	bl ShowInterpolationMode
 .Ltmp53:
@@ -849,10 +849,10 @@ display_control:                        # @display_control
                                         #   in Loop: Header=BB4_1 Depth=1
 .Lxtalabel18:
 	#DEBUG_VALUE: test_display_control_flag:bitmask <- 512
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:82:9
+	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
 	ldw r0, dp[display_control_flag]
 	ldc r1, 512
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:82:9
+	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
 	{
 		and r0, r0, r1
 		nop
@@ -867,22 +867,22 @@ display_control:                        # @display_control
                                         #   in Loop: Header=BB4_1 Depth=1
 .Lxtalabel19:
 	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 512
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	ldw r0, dp[display_control_flag]
 	ldw r1, cp[.LCPI4_4]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	{
 		and r0, r0, r1
 		nop
 	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	stw r0, dp[display_control_flag]
 .Ltmp55:
-	.loc	1 197 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:197:0
+	.loc	1 197 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:197:0
 	ldw r0, dp[fixed_intpol_mode]
 .Ltmp56:
 	#DEBUG_VALUE: temp <- R0
-	.loc	1 370 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:370:0
+	.loc	1 370 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:370:0
 .Lxta.call_labels21:
 	bl ShowInterpolationMode
 .Ltmp57:
@@ -893,13 +893,13 @@ display_control:                        # @display_control
 .Ltmp58:
 	#DEBUG_VALUE: time <- R7
 	#DEBUG_VALUE: test_display_control_flag:bitmask <- 32
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:82:9
+	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
 	ldw r0, dp[display_control_flag]
 	{
 		ldc r1, 32
 		nop
 	}
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:82:9
+	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
 	{
 		and r0, r0, r1
 		nop
@@ -915,18 +915,18 @@ display_control:                        # @display_control
 .Lxtalabel21:
 	#DEBUG_VALUE: time <- R7
 	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 32
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	ldw r0, dp[display_control_flag]
 	ldw r1, cp[.LCPI4_5]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	{
 		and r0, r0, r1
 		nop
 	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	stw r0, dp[display_control_flag]
 .Ltmp60:
-	.loc	1 355 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:355:0
+	.loc	1 355 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:355:0
 .Lxta.call_labels22:
 	bl ShowUsbAudioStatus
 .Ltmp61:
@@ -935,10 +935,10 @@ display_control:                        # @display_control
 .Lxtalabel22:
 	#DEBUG_VALUE: time <- R7
 	#DEBUG_VALUE: test_display_control_flag:bitmask <- 64
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:82:9
+	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
 	ldw r0, dp[display_control_flag]
 	ldc r1, 64
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:82:9
+	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
 	{
 		and r0, r0, r1
 		nop
@@ -954,18 +954,18 @@ display_control:                        # @display_control
 .Lxtalabel23:
 	#DEBUG_VALUE: time <- R7
 	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 64
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	ldw r0, dp[display_control_flag]
 	ldw r1, cp[.LCPI4_6]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	{
 		and r0, r0, r1
 		nop
 	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	stw r0, dp[display_control_flag]
 .Ltmp63:
-	.loc	1 359 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:359:0
+	.loc	1 359 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:359:0
 .Lxta.call_labels23:
 	bl ShowUsbAudioStatus
 	bu .LBB4_9
@@ -983,10 +983,10 @@ display_control:                        # @display_control
 .Lxtalabel25:
 .Ltmp65:
 	#DEBUG_VALUE: test_display_control_flag:bitmask <- 1024
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:82:9
+	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
 	ldw r0, dp[display_control_flag]
 	ldc r1, 1024
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:82:9
+	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
 	{
 		and r0, r0, r1
 		nop
@@ -1001,25 +1001,25 @@ display_control:                        # @display_control
                                         #   in Loop: Header=BB4_1 Depth=1
 .Lxtalabel26:
 	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 1024
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	ldw r0, dp[display_control_flag]
 	ldw r1, cp[.LCPI4_2]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	{
 		and r0, r0, r1
 		nop
 	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	stw r0, dp[display_control_flag]
 .Ltmp67:
-	.loc	1 206 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:206:0
+	.loc	1 206 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:206:0
 	ldw r0, dp[selected_function]
 .Ltmp68:
 	#DEBUG_VALUE: GetFunctionString:func <- R0
 	#DEBUG_VALUE: temp <- R0
 	ldaw r11, cp[.str15]
 .Ltmp69:
-	.loc	1 237 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:237:0
+	.loc	1 237 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:237:0
 	{
 		eq r1, r0, 1
 		nop
@@ -1053,7 +1053,7 @@ display_control:                        # @display_control
 	}
 .LBB4_28:                               # %GetFunctionString.exit
                                         #   in Loop: Header=BB4_1 Depth=1
-	.loc	1 376 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:376:0
+	.loc	1 376 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:376:0
 	{
 		mov r0, r6
 		mov r1, r11
@@ -1075,14 +1075,14 @@ display_control:                        # @display_control
                                         #   in Loop: Header=BB4_1 Depth=1
 .Lxtalabel31:
 	#DEBUG_VALUE: time <- R7
-	.loc	1 383 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:383:0
+	.loc	1 383 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:383:0
 	ldw r0, dp[pause_counter]
-	.loc	1 383 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:383:0
+	.loc	1 383 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:383:0
 	{
 		sub r0, r0, 1
 		nop
 	}
-	.loc	1 383 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:383:0
+	.loc	1 383 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:383:0
 	stw r0, dp[pause_counter]
 	bt r0, .LBB4_11
 .Ltmp73:
@@ -1100,23 +1100,23 @@ display_control:                        # @display_control
 # BB#31:                                # %switchcase47
                                         #   in Loop: Header=BB4_1 Depth=1
 .Lxtalabel34:
-	.loc	1 389 17                # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:389:17
+	.loc	1 389 17                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:389:17
 	ldw r0, dp[scrolling_row]
-	.loc	1 389 17                # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:389:17
+	.loc	1 389 17                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:389:17
 .Lxta.call_labels25:
 	bl OLED_SSD1306_shift_left
 	bt r0, .LBB4_11
 # BB#32:                                # %iftrue55
                                         #   in Loop: Header=BB4_1 Depth=1
 .Lxtalabel35:
-	.loc	1 390 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:390:0
+	.loc	1 390 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:390:0
 	ldw r0, dp[scrolling_row]
-	.loc	1 390 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:390:0
+	.loc	1 390 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:390:0
 	{
 		add r1, r0, 1
 		nop
 	}
-	.loc	1 391 21                # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:391:21
+	.loc	1 391 21                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:391:21
 	{
 		lsu r2, r10, r1
 		mov r0, r4
@@ -1125,7 +1125,7 @@ display_control:                        # @display_control
 # BB#33:                                # %iftrue55
                                         #   in Loop: Header=BB4_1 Depth=1
 .Lxtalabel36:
-	.loc	1 391 21                # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:391:21
+	.loc	1 391 21                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:391:21
 	{
 		mov r0, r1
 		nop
@@ -1133,9 +1133,9 @@ display_control:                        # @display_control
 .LBB4_34:                               # %iftrue55
                                         #   in Loop: Header=BB4_1 Depth=1
 .Lxtalabel37:
-	.loc	1 391 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:391:0
+	.loc	1 391 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:391:0
 	stw r0, dp[scrolling_row]
-	.loc	1 392 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:392:0
+	.loc	1 392 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:392:0
 	ldaw r11, cp[.str35]
 	{
 		mov r1, r11
@@ -1147,7 +1147,7 @@ display_control:                        # @display_control
 		ldc r0, 50
 		nop
 	}
-	.loc	1 393 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:393:0
+	.loc	1 393 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:393:0
 	stw r0, dp[pause_counter]
 	st8 r4, r8[r4]
 	bu .LBB4_11
@@ -1172,7 +1172,7 @@ display_control:                        # @display_control
 	.cc_top get_console_mode.function,get_console_mode
 get_console_mode:                       # @get_console_mode
 .Lfunc_begin5:
-	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:94:0
+	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:94:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1185,7 +1185,7 @@ get_console_mode:                       # @get_console_mode
 	.cfi_def_cfa_offset 8
 .Ltmp78:
 	.cfi_offset 15, 0
-	.loc	1 98 9 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:98:9
+	.loc	1 98 9 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:98:9
 .Ltmp79:
 	ldw r0, dp[console_mode]
 	{
@@ -1218,7 +1218,7 @@ get_console_mode:                       # @get_console_mode
 	.cc_top set_console_mode.function,set_console_mode
 set_console_mode:                       # @set_console_mode
 .Lfunc_begin6:
-	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:102:0
+	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:102:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1228,7 +1228,7 @@ set_console_mode:                       # @set_console_mode
 		dualentsp 0
 	}
 	#DEBUG_VALUE: set_console_mode:value <- R0
-	.loc	1 106 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:106:0
+	.loc	1 106 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:106:0
 .Ltmp82:
 	stw r0, dp[console_mode]
 	{
@@ -1257,7 +1257,7 @@ set_console_mode:                       # @set_console_mode
 	.cc_top _Sset_console_mode_0.function,_Sset_console_mode_0
 _Sset_console_mode_0:                   # @_Sset_console_mode_0
 .Lfunc_begin7:
-	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:102:0
+	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:102:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1267,7 +1267,7 @@ _Sset_console_mode_0:                   # @_Sset_console_mode_0
 		ldc r0, 2
 		dualentsp 0
 	}
-	.loc	1 106 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:106:0
+	.loc	1 106 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:106:0
 .Ltmp85:
 	stw r0, dp[console_mode]
 	{
@@ -1296,7 +1296,7 @@ _Sset_console_mode_0:                   # @_Sset_console_mode_0
 	.cc_top test_display_control_flag.function,test_display_control_flag
 test_display_control_flag:              # @test_display_control_flag
 .Lfunc_begin8:
-	.loc	1 78 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:78:0
+	.loc	1 78 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:78:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1310,10 +1310,10 @@ test_display_control_flag:              # @test_display_control_flag
 .Ltmp89:
 	.cfi_offset 15, 0
 	#DEBUG_VALUE: test_display_control_flag:bitmask <- R0
-	.loc	1 82 9 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:82:9
+	.loc	1 82 9 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
 .Ltmp90:
 	ldw r1, dp[display_control_flag]
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:82:9
+	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
 	{
 		and r0, r1, r0
 		nop
@@ -1349,7 +1349,7 @@ test_display_control_flag:              # @test_display_control_flag
 	.cc_top clear_display_control_flag.function,clear_display_control_flag
 clear_display_control_flag:             # @clear_display_control_flag
 .Lfunc_begin9:
-	.loc	1 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:86:0
+	.loc	1 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:86:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1359,15 +1359,15 @@ clear_display_control_flag:             # @clear_display_control_flag
 		dualentsp 0
 	}
 	#DEBUG_VALUE: clear_display_control_flag:bitmask <- R0
-	.loc	1 90 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 .Ltmp94:
 	ldw r1, dp[display_control_flag]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	{
 		andnot r1, r0
 		nop
 	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:90:0
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	stw r1, dp[display_control_flag]
 	{
 		nop
@@ -1395,7 +1395,7 @@ clear_display_control_flag:             # @clear_display_control_flag
 	.cc_top ProposedInterpolationMode.function,ProposedInterpolationMode
 ProposedInterpolationMode:              # @ProposedInterpolationMode
 .Lfunc_begin10:
-	.loc	1 185 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:185:0
+	.loc	1 185 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:185:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1404,7 +1404,7 @@ ProposedInterpolationMode:              # @ProposedInterpolationMode
 		nop
 		dualentsp 0
 	}
-	.loc	1 188 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:188:0
+	.loc	1 188 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:188:0
 .Ltmp97:
 	ldw r0, dp[proposed_intpol_mode]
 .Ltmp98:
@@ -1435,7 +1435,7 @@ ProposedInterpolationMode:              # @ProposedInterpolationMode
 	.cc_top FixedInterpolationMode.function,FixedInterpolationMode
 FixedInterpolationMode:                 # @FixedInterpolationMode
 .Lfunc_begin11:
-	.loc	1 194 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:194:0
+	.loc	1 194 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:194:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1444,7 +1444,7 @@ FixedInterpolationMode:                 # @FixedInterpolationMode
 		nop
 		dualentsp 0
 	}
-	.loc	1 197 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:197:0
+	.loc	1 197 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:197:0
 .Ltmp101:
 	ldw r0, dp[fixed_intpol_mode]
 .Ltmp102:
@@ -1475,7 +1475,7 @@ FixedInterpolationMode:                 # @FixedInterpolationMode
 	.cc_top SelectedFunction.function,SelectedFunction
 SelectedFunction:                       # @SelectedFunction
 .Lfunc_begin12:
-	.loc	1 203 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:203:0
+	.loc	1 203 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:203:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1484,7 +1484,7 @@ SelectedFunction:                       # @SelectedFunction
 		nop
 		dualentsp 0
 	}
-	.loc	1 206 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:206:0
+	.loc	1 206 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:206:0
 .Ltmp105:
 	ldw r0, dp[selected_function]
 .Ltmp106:
@@ -1515,7 +1515,7 @@ SelectedFunction:                       # @SelectedFunction
 	.cc_top ShowInterpolationMode.function,ShowInterpolationMode
 ShowInterpolationMode:                  # @ShowInterpolationMode
 .Lfunc_begin13:
-	.loc	1 210 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:210:0
+	.loc	1 210 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:210:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1534,7 +1534,7 @@ ShowInterpolationMode:                  # @ShowInterpolationMode
 		ldc r1, 5
 		nop
 	}
-	.loc	1 211 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:211:0
+	.loc	1 211 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:211:0
 .Ltmp112:
 	{
 		lsu r1, r1, r0
@@ -1543,7 +1543,7 @@ ShowInterpolationMode:                  # @ShowInterpolationMode
 	bf r1, .LBB13_1
 # BB#2:                                 # %switchdefault
 .Lxtalabel47:
-	.loc	1 231 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:231:0
+	.loc	1 231 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:231:0
 	ldaw r11, cp[.str12]
 .LBB13_9:                               # %return
 .Lxtalabel48:
@@ -1551,7 +1551,7 @@ ShowInterpolationMode:                  # @ShowInterpolationMode
 		mkmsk r0, 1
 		ldc r2, 17
 	}
-	.loc	1 228 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:228:0
+	.loc	1 228 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:228:0
 	{
 		mov r1, r11
 		nop
@@ -1576,32 +1576,32 @@ ShowInterpolationMode:                  # @ShowInterpolationMode
 	.jmptable32 .LBB13_3,.LBB13_4,.LBB13_5,.LBB13_6,.LBB13_7,.LBB13_8
 .LBB13_3:                               # %switchcase
 .Lxtalabel50:
-	.loc	1 213 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:213:0
+	.loc	1 213 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:213:0
 	ldaw r11, cp[.str6]
 	bu .LBB13_9
 .LBB13_4:                               # %switchcase1
 .Lxtalabel51:
-	.loc	1 216 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:216:0
+	.loc	1 216 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:216:0
 	ldaw r11, cp[.str7]
 	bu .LBB13_9
 .LBB13_5:                               # %switchcase2
 .Lxtalabel52:
-	.loc	1 219 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:219:0
+	.loc	1 219 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:219:0
 	ldaw r11, cp[.str8]
 	bu .LBB13_9
 .LBB13_6:                               # %switchcase4
 .Lxtalabel53:
-	.loc	1 222 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:222:0
+	.loc	1 222 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:222:0
 	ldaw r11, cp[.str9]
 	bu .LBB13_9
 .LBB13_7:                               # %switchcase6
 .Lxtalabel54:
-	.loc	1 225 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:225:0
+	.loc	1 225 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:225:0
 	ldaw r11, cp[.str10]
 	bu .LBB13_9
 .LBB13_8:                               # %switchcase8
 .Lxtalabel55:
-	.loc	1 228 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:228:0
+	.loc	1 228 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:228:0
 	ldaw r11, cp[.str11]
 	bu .LBB13_9
 .Ltmp113:
@@ -1625,7 +1625,7 @@ ShowInterpolationMode:                  # @ShowInterpolationMode
 	.cc_top GetFunctionString.function,GetFunctionString
 GetFunctionString:                      # @GetFunctionString
 .Lfunc_begin14:
-	.loc	1 236 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:236:0
+	.loc	1 236 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:236:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1636,7 +1636,7 @@ GetFunctionString:                      # @GetFunctionString
 	}
 	#DEBUG_VALUE: GetFunctionString:func <- R0
 	ldaw r11, cp[.str15]
-	.loc	1 237 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:237:0
+	.loc	1 237 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:237:0
 .Ltmp115:
 	{
 		eq r1, r0, 1
@@ -1695,7 +1695,7 @@ GetFunctionString:                      # @GetFunctionString
 	.cc_top ShowUsbAudioStatus.function,ShowUsbAudioStatus
 ShowUsbAudioStatus:                     # @ShowUsbAudioStatus
 .Lfunc_begin15:
-	.loc	1 249 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:249:0
+	.loc	1 249 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:249:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1714,12 +1714,12 @@ ShowUsbAudioStatus:                     # @ShowUsbAudioStatus
 	}
 .Ltmp122:
 	.cfi_offset 4, -8
-	.loc	1 251 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:251:0
+	.loc	1 251 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:251:0
 .Ltmp123:
 	ldw r2, dp[SampFreq]
-	.loc	1 251 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:251:0
+	.loc	1 251 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:251:0
 	ldw r3, dp[SampRes]
-	.loc	1 251 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:251:0
+	.loc	1 251 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:251:0
 	ldaw r4, dp[UsbAudioStatus]
 	ldaw r11, cp[.str16]
 	{
@@ -1728,7 +1728,7 @@ ShowUsbAudioStatus:                     # @ShowUsbAudioStatus
 	}
 .Lxta.call_labels28:
 	bl siprintf
-	.loc	1 252 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:252:0
+	.loc	1 252 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:252:0
 	ldaw r11, cp[.str17]
 	{
 		mov r0, r11
@@ -1741,7 +1741,7 @@ ShowUsbAudioStatus:                     # @ShowUsbAudioStatus
 		nop
 	}
 	ldc r2, 100
-	.loc	1 254 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:254:0
+	.loc	1 254 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:254:0
 	{
 		mov r1, r4
 		nop
@@ -1752,7 +1752,7 @@ ShowUsbAudioStatus:                     # @ShowUsbAudioStatus
 		ldc r0, 50
 		nop
 	}
-	.loc	1 255 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:255:0
+	.loc	1 255 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:255:0
 	stw r0, dp[pause_counter]
 	ldaw r0, dp[state]
 	{
@@ -1760,7 +1760,7 @@ ShowUsbAudioStatus:                     # @ShowUsbAudioStatus
 		nop
 	}
 	st8 r1, r0[r1]
-	.loc	1 257 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc:257:0
+	.loc	1 257 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:257:0
 	stw r1, dp[scrolling_row]
 	{
 		nop
@@ -2107,7 +2107,7 @@ __xcc1_internal_1:
 .Linfo_string0:
 .asciiz"XMOS 32-bit XC Compiler Community_14.4.1 (build 235-acbb966, Dec-01-2019)"
 .Linfo_string1:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 .Linfo_string2:
 .asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_simple_ssdac_xSSDAC-SD-V2\\.build"
 .Linfo_string3:
@@ -4749,187 +4749,187 @@ __xcc1_internal_1:
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_simple_ssdac_xSSDAC-SD-V2\\.build"
 	.byte	0
 .cc_top cc_0,.Lxta.call_labels27
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	228
 	.long	.Lxta.call_labels27
 .cc_bottom cc_0
 .cc_top cc_1,.Lxta.call_labels28
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	251
 	.long	.Lxta.call_labels28
 .cc_bottom cc_1
 .cc_top cc_2,.Lxta.call_labels29
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	252
 	.long	.Lxta.call_labels29
 .cc_bottom cc_2
 .cc_top cc_3,.Lxta.call_labels30
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	254
 	.long	.Lxta.call_labels30
 .cc_bottom cc_3
 .cc_top cc_4,.Lxta.call_labels0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	267
 	.long	.Lxta.call_labels0
 .cc_bottom cc_4
 .cc_top cc_5,.Lxta.call_labels1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	269
 	.long	.Lxta.call_labels1
 .cc_bottom cc_5
 .cc_top cc_6,.Lxta.call_labels2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	273
 	.long	.Lxta.call_labels2
 .cc_bottom cc_6
 .cc_top cc_7,.Lxta.call_labels4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	273
 	.long	.Lxta.call_labels4
 .cc_bottom cc_7
 .cc_top cc_8,.Lxta.call_labels6
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	273
 	.long	.Lxta.call_labels6
 .cc_bottom cc_8
 .cc_top cc_9,.Lxta.call_labels8
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	273
 	.long	.Lxta.call_labels8
 .cc_bottom cc_9
 .cc_top cc_10,.Lxta.call_labels3
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	274
 	.long	.Lxta.call_labels3
 .cc_bottom cc_10
 .cc_top cc_11,.Lxta.call_labels5
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	274
 	.long	.Lxta.call_labels5
 .cc_bottom cc_11
 .cc_top cc_12,.Lxta.call_labels7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	274
 	.long	.Lxta.call_labels7
 .cc_bottom cc_12
 .cc_top cc_13,.Lxta.call_labels9
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	274
 	.long	.Lxta.call_labels9
 .cc_bottom cc_13
 .cc_top cc_14,.Lxta.call_labels13
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	304
 	.long	.Lxta.call_labels13
 .cc_bottom cc_14
 .cc_top cc_15,.Lxta.call_labels14
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	305
 	.long	.Lxta.call_labels14
 .cc_bottom cc_15
 .cc_top cc_16,.Lxta.call_labels15
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	306
 	.long	.Lxta.call_labels15
 .cc_bottom cc_16
 .cc_top cc_17,.Lxta.call_labels19
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	307
 	.long	.Lxta.call_labels19
 .cc_bottom cc_17
 .cc_top cc_18,.Lxta.call_labels10
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	311
 	.long	.Lxta.call_labels10
 .cc_bottom cc_18
 .cc_top cc_19,.Lxta.call_labels11
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	312
 	.long	.Lxta.call_labels11
 .cc_bottom cc_19
 .cc_top cc_20,.Lxta.call_labels12
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	313
 	.long	.Lxta.call_labels12
 .cc_bottom cc_20
 .cc_top cc_21,.Lxta.call_labels16
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	317
 	.long	.Lxta.call_labels16
 .cc_bottom cc_21
 .cc_top cc_22,.Lxta.call_labels17
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	318
 	.long	.Lxta.call_labels17
 .cc_bottom cc_22
 .cc_top cc_23,.Lxta.call_labels18
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	319
 	.long	.Lxta.call_labels18
 .cc_bottom cc_23
 .cc_top cc_24,.Lxta.call_labels22
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	355
 	.long	.Lxta.call_labels22
 .cc_bottom cc_24
 .cc_top cc_25,.Lxta.call_labels23
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	359
 	.long	.Lxta.call_labels23
 .cc_bottom cc_25
 .cc_top cc_26,.Lxta.call_labels20
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	366
 	.long	.Lxta.call_labels20
 .cc_bottom cc_26
 .cc_top cc_27,.Lxta.call_labels21
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	370
 	.long	.Lxta.call_labels21
 .cc_bottom cc_27
 .cc_top cc_28,.Lxta.call_labels24
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	376
 	.long	.Lxta.call_labels24
 .cc_bottom cc_28
 .cc_top cc_29,.Lxta.call_labels25
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	389
 	.long	.Lxta.call_labels25
 .cc_bottom cc_29
 .cc_top cc_30,.Lxta.call_labels26
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	392
 	.long	.Lxta.call_labels26
@@ -4942,7 +4942,7 @@ __xcc1_internal_1:
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_simple_ssdac_xSSDAC-SD-V2\\.build"
 	.byte	0
 .cc_top cc_31,.Lxta.endpoint_labels0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	398
 	.long	.Lxta.endpoint_labels0
@@ -4955,854 +4955,854 @@ __xcc1_internal_1:
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_simple_ssdac_xSSDAC-SD-V2\\.build"
 	.byte	0
 .cc_top cc_32,.Lxtalabel1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	45
 	.long	50
 	.long	.Lxtalabel1
 .cc_bottom cc_32
 .cc_top cc_33,.Lxtalabel2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	53
 	.long	58
 	.long	.Lxtalabel2
 .cc_bottom cc_33
 .cc_top cc_34,.Lxtalabel3
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	61
 	.long	66
 	.long	.Lxtalabel3
 .cc_bottom cc_34
 .cc_top cc_35,.Lxtalabel0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	71
 	.long	76
 	.long	.Lxtalabel0
 .cc_bottom cc_35
 .cc_top cc_36,.Lxtalabel25
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	79
 	.long	84
 	.long	.Lxtalabel25
 .cc_bottom cc_36
 .cc_top cc_37,.Lxtalabel16
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	79
 	.long	84
 	.long	.Lxtalabel16
 .cc_bottom cc_37
 .cc_top cc_38,.Lxtalabel41
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	79
 	.long	84
 	.long	.Lxtalabel41
 .cc_bottom cc_38
 .cc_top cc_39,.Lxtalabel22
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	79
 	.long	84
 	.long	.Lxtalabel22
 .cc_bottom cc_39
 .cc_top cc_40,.Lxtalabel20
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	79
 	.long	84
 	.long	.Lxtalabel20
 .cc_bottom cc_40
 .cc_top cc_41,.Lxtalabel6
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	79
 	.long	84
 	.long	.Lxtalabel6
 .cc_bottom cc_41
 .cc_top cc_42,.Lxtalabel18
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	79
 	.long	84
 	.long	.Lxtalabel18
 .cc_bottom cc_42
 .cc_top cc_43,.Lxtalabel17
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	87
 	.long	92
 	.long	.Lxtalabel17
 .cc_bottom cc_43
 .cc_top cc_44,.Lxtalabel26
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	87
 	.long	92
 	.long	.Lxtalabel26
 .cc_bottom cc_44
 .cc_top cc_45,.Lxtalabel28
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	87
 	.long	92
 	.long	.Lxtalabel28
 .cc_bottom cc_45
 .cc_top cc_46,.Lxtalabel8
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	87
 	.long	92
 	.long	.Lxtalabel8
 .cc_bottom cc_46
 .cc_top cc_47,.Lxtalabel7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	87
 	.long	92
 	.long	.Lxtalabel7
 .cc_bottom cc_47
 .cc_top cc_48,.Lxtalabel42
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	87
 	.long	92
 	.long	.Lxtalabel42
 .cc_bottom cc_48
 .cc_top cc_49,.Lxtalabel21
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	87
 	.long	92
 	.long	.Lxtalabel21
 .cc_bottom cc_49
 .cc_top cc_50,.Lxtalabel23
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	87
 	.long	92
 	.long	.Lxtalabel23
 .cc_bottom cc_50
 .cc_top cc_51,.Lxtalabel11
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	87
 	.long	92
 	.long	.Lxtalabel11
 .cc_bottom cc_51
 .cc_top cc_52,.Lxtalabel19
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	87
 	.long	92
 	.long	.Lxtalabel19
 .cc_bottom cc_52
 .cc_top cc_53,.Lxtalabel15
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	95
 	.long	100
 	.long	.Lxtalabel15
 .cc_bottom cc_53
 .cc_top cc_54,.Lxtalabel24
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	95
 	.long	100
 	.long	.Lxtalabel24
 .cc_bottom cc_54
 .cc_top cc_55,.Lxtalabel8
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	95
 	.long	100
 	.long	.Lxtalabel8
 .cc_bottom cc_55
 .cc_top cc_56,.Lxtalabel38
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	95
 	.long	100
 	.long	.Lxtalabel38
 .cc_bottom cc_56
 .cc_top cc_57,.Lxtalabel13
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	95
 	.long	100
 	.long	.Lxtalabel13
 .cc_bottom cc_57
 .cc_top cc_58,.Lxtalabel7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	95
 	.long	100
 	.long	.Lxtalabel7
 .cc_bottom cc_58
 .cc_top cc_59,.Lxtalabel14
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	95
 	.long	100
 	.long	.Lxtalabel14
 .cc_bottom cc_59
 .cc_top cc_60,.Lxtalabel11
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	95
 	.long	100
 	.long	.Lxtalabel11
 .cc_bottom cc_60
 .cc_top cc_61,.Lxtalabel40
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	103
 	.long	108
 	.long	.Lxtalabel40
 .cc_bottom cc_61
 .cc_top cc_62,.Lxtalabel39
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	103
 	.long	108
 	.long	.Lxtalabel39
 .cc_bottom cc_62
 .cc_top cc_63,.Lxtalabel17
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	186
 	.long	190
 	.long	.Lxtalabel17
 .cc_bottom cc_63
 .cc_top cc_64,.Lxtalabel43
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	186
 	.long	190
 	.long	.Lxtalabel43
 .cc_bottom cc_64
 .cc_top cc_65,.Lxtalabel44
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	195
 	.long	199
 	.long	.Lxtalabel44
 .cc_bottom cc_65
 .cc_top cc_66,.Lxtalabel19
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	195
 	.long	199
 	.long	.Lxtalabel19
 .cc_bottom cc_66
 .cc_top cc_67,.Lxtalabel9
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	195
 	.long	199
 	.long	.Lxtalabel9
 .cc_bottom cc_67
 .cc_top cc_68,.Lxtalabel26
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	204
 	.long	208
 	.long	.Lxtalabel26
 .cc_bottom cc_68
 .cc_top cc_69,.Lxtalabel28
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	204
 	.long	208
 	.long	.Lxtalabel28
 .cc_bottom cc_69
 .cc_top cc_70,.Lxtalabel45
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	204
 	.long	208
 	.long	.Lxtalabel45
 .cc_bottom cc_70
 .cc_top cc_71,.Lxtalabel46
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	211
 	.long	212
 	.long	.Lxtalabel46
 .cc_bottom cc_71
 .cc_top cc_72,.Lxtalabel49
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	211
 	.long	212
 	.long	.Lxtalabel49
 .cc_bottom cc_72
 .cc_top cc_73,.Lxtalabel50
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	213
 	.long	215
 	.long	.Lxtalabel50
 .cc_bottom cc_73
 .cc_top cc_74,.Lxtalabel51
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	216
 	.long	218
 	.long	.Lxtalabel51
 .cc_bottom cc_74
 .cc_top cc_75,.Lxtalabel52
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	219
 	.long	221
 	.long	.Lxtalabel52
 .cc_bottom cc_75
 .cc_top cc_76,.Lxtalabel53
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	222
 	.long	224
 	.long	.Lxtalabel53
 .cc_bottom cc_76
 .cc_top cc_77,.Lxtalabel54
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	225
 	.long	227
 	.long	.Lxtalabel54
 .cc_bottom cc_77
 .cc_top cc_78,.Lxtalabel55
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	228
 	.long	230
 	.long	.Lxtalabel55
 .cc_bottom cc_78
 .cc_top cc_79,.Lxtalabel47
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	231
 	.long	233
 	.long	.Lxtalabel47
 .cc_bottom cc_79
 .cc_top cc_80,.Lxtalabel48
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	234
 	.long	234
 	.long	.Lxtalabel48
 .cc_bottom cc_80
 .cc_top cc_81,.Lxtalabel26
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	237
 	.long	238
 	.long	.Lxtalabel26
 .cc_bottom cc_81
 .cc_top cc_82,.Lxtalabel58
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	237
 	.long	238
 	.long	.Lxtalabel58
 .cc_bottom cc_82
 .cc_top cc_83,.Lxtalabel56
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	237
 	.long	238
 	.long	.Lxtalabel56
 .cc_bottom cc_83
 .cc_top cc_84,.Lxtalabel28
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	237
 	.long	238
 	.long	.Lxtalabel28
 .cc_bottom cc_84
 .cc_top cc_85,.Lxtalabel59
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	239
 	.long	240
 	.long	.Lxtalabel59
 .cc_bottom cc_85
 .cc_top cc_86,.Lxtalabel29
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	239
 	.long	240
 	.long	.Lxtalabel29
 .cc_bottom cc_86
 .cc_top cc_87,.Lxtalabel27
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	241
 	.long	242
 	.long	.Lxtalabel27
 .cc_bottom cc_87
 .cc_top cc_88,.Lxtalabel57
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	241
 	.long	242
 	.long	.Lxtalabel57
 .cc_bottom cc_88
 .cc_top cc_89,.Lxtalabel28
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	243
 	.long	244
 	.long	.Lxtalabel28
 .cc_bottom cc_89
 .cc_top cc_90,.Lxtalabel26
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	243
 	.long	244
 	.long	.Lxtalabel26
 .cc_bottom cc_90
 .cc_top cc_91,.Lxtalabel58
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	243
 	.long	244
 	.long	.Lxtalabel58
 .cc_bottom cc_91
 .cc_top cc_92,.Lxtalabel56
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	243
 	.long	244
 	.long	.Lxtalabel56
 .cc_bottom cc_92
 .cc_top cc_93,.Lxtalabel60
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	251
 	.long	252
 	.long	.Lxtalabel60
 .cc_bottom cc_93
 .cc_top cc_94,.Lxtalabel60
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	254
 	.long	258
 	.long	.Lxtalabel60
 .cc_bottom cc_94
 .cc_top cc_95,.Lxtalabel4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	264
 	.long	265
 	.long	.Lxtalabel4
 .cc_bottom cc_95
 .cc_top cc_96,.Lxtalabel4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	267
 	.long	267
 	.long	.Lxtalabel4
 .cc_bottom cc_96
 .cc_top cc_97,.Lxtalabel4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	269
 	.long	269
 	.long	.Lxtalabel4
 .cc_bottom cc_97
 .cc_top cc_98,.Lxtalabel4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	271
 	.long	271
 	.long	.Lxtalabel4
 .cc_bottom cc_98
 .cc_top cc_99,.Lxtalabel4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	272
 	.long	275
 	.long	.Lxtalabel4
 .cc_bottom cc_99
 .cc_top cc_100,.Lxtalabel4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	272
 	.long	275
 	.long	.Lxtalabel4
 .cc_bottom cc_100
 .cc_top cc_101,.Lxtalabel4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	272
 	.long	275
 	.long	.Lxtalabel4
 .cc_bottom cc_101
 .cc_top cc_102,.Lxtalabel4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	272
 	.long	275
 	.long	.Lxtalabel4
 .cc_bottom cc_102
 .cc_top cc_103,.Lxtalabel4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	277
 	.long	277
 	.long	.Lxtalabel4
 .cc_bottom cc_103
 .cc_top cc_104,.Lxtalabel4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	279
 	.long	281
 	.long	.Lxtalabel4
 .cc_bottom cc_104
 .cc_top cc_105,.Lxtalabel4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	283
 	.long	283
 	.long	.Lxtalabel4
 .cc_bottom cc_105
 .cc_top cc_106,.Lxtalabel6
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	285
 	.long	286
 	.long	.Lxtalabel6
 .cc_bottom cc_106
 .cc_top cc_107,.Lxtalabel6
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	288
 	.long	288
 	.long	.Lxtalabel6
 .cc_bottom cc_107
 .cc_top cc_108,.Lxtalabel11
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	289
 	.long	289
 	.long	.Lxtalabel11
 .cc_bottom cc_108
 .cc_top cc_109,.Lxtalabel8
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	289
 	.long	289
 	.long	.Lxtalabel8
 .cc_bottom cc_109
 .cc_top cc_110,.Lxtalabel7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	289
 	.long	289
 	.long	.Lxtalabel7
 .cc_bottom cc_110
 .cc_top cc_111,.Lxtalabel11
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	291
 	.long	291
 	.long	.Lxtalabel11
 .cc_bottom cc_111
 .cc_top cc_112,.Lxtalabel7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	291
 	.long	291
 	.long	.Lxtalabel7
 .cc_bottom cc_112
 .cc_top cc_113,.Lxtalabel8
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	291
 	.long	291
 	.long	.Lxtalabel8
 .cc_bottom cc_113
 .cc_top cc_114,.Lxtalabel8
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	303
 	.long	303
 	.long	.Lxtalabel8
 .cc_bottom cc_114
 .cc_top cc_115,.Lxtalabel11
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	303
 	.long	303
 	.long	.Lxtalabel11
 .cc_bottom cc_115
 .cc_top cc_116,.Lxtalabel7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	303
 	.long	303
 	.long	.Lxtalabel7
 .cc_bottom cc_116
 .cc_top cc_117,.Lxtalabel10
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	304
 	.long	308
 	.long	.Lxtalabel10
 .cc_bottom cc_117
 .cc_top cc_118,.Lxtalabel10
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	310
 	.long	310
 	.long	.Lxtalabel10
 .cc_bottom cc_118
 .cc_top cc_119,.Lxtalabel9
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	311
 	.long	316
 	.long	.Lxtalabel9
 .cc_bottom cc_119
 .cc_top cc_120,.Lxtalabel12
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	317
 	.long	322
 	.long	.Lxtalabel12
 .cc_bottom cc_120
 .cc_top cc_121,.Lxtalabel13
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	325
 	.long	325
 	.long	.Lxtalabel13
 .cc_bottom cc_121
 .cc_top cc_122,.Lxtalabel14
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	325
 	.long	325
 	.long	.Lxtalabel14
 .cc_bottom cc_122
 .cc_top cc_123,.Lxtalabel15
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	325
 	.long	325
 	.long	.Lxtalabel15
 .cc_bottom cc_123
 .cc_top cc_124,.Lxtalabel24
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	325
 	.long	325
 	.long	.Lxtalabel24
 .cc_bottom cc_124
 .cc_top cc_125,.Lxtalabel14
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	352
 	.long	352
 	.long	.Lxtalabel14
 .cc_bottom cc_125
 .cc_top cc_126,.Lxtalabel13
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	352
 	.long	352
 	.long	.Lxtalabel13
 .cc_bottom cc_126
 .cc_top cc_127,.Lxtalabel24
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	352
 	.long	352
 	.long	.Lxtalabel24
 .cc_bottom cc_127
 .cc_top cc_128,.Lxtalabel15
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	352
 	.long	352
 	.long	.Lxtalabel15
 .cc_bottom cc_128
 .cc_top cc_129,.Lxtalabel20
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	353
 	.long	353
 	.long	.Lxtalabel20
 .cc_bottom cc_129
 .cc_top cc_130,.Lxtalabel21
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	354
 	.long	356
 	.long	.Lxtalabel21
 .cc_bottom cc_130
 .cc_top cc_131,.Lxtalabel22
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	357
 	.long	357
 	.long	.Lxtalabel22
 .cc_bottom cc_131
 .cc_top cc_132,.Lxtalabel23
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	358
 	.long	360
 	.long	.Lxtalabel23
 .cc_bottom cc_132
 .cc_top cc_133,.Lxtalabel16
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	364
 	.long	364
 	.long	.Lxtalabel16
 .cc_bottom cc_133
 .cc_top cc_134,.Lxtalabel17
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	365
 	.long	367
 	.long	.Lxtalabel17
 .cc_bottom cc_134
 .cc_top cc_135,.Lxtalabel18
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	368
 	.long	368
 	.long	.Lxtalabel18
 .cc_bottom cc_135
 .cc_top cc_136,.Lxtalabel19
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	369
 	.long	371
 	.long	.Lxtalabel19
 .cc_bottom cc_136
 .cc_top cc_137,.Lxtalabel25
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	374
 	.long	374
 	.long	.Lxtalabel25
 .cc_bottom cc_137
 .cc_top cc_138,.Lxtalabel26
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	375
 	.long	377
 	.long	.Lxtalabel26
 .cc_bottom cc_138
 .cc_top cc_139,.Lxtalabel28
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	375
 	.long	377
 	.long	.Lxtalabel28
 .cc_bottom cc_139
 .cc_top cc_140,.Lxtalabel30
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	380
 	.long	380
 	.long	.Lxtalabel30
 .cc_bottom cc_140
 .cc_top cc_141,.Lxtalabel33
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	380
 	.long	380
 	.long	.Lxtalabel33
 .cc_bottom cc_141
 .cc_top cc_142,.Lxtalabel30
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	382
 	.long	382
 	.long	.Lxtalabel30
 .cc_bottom cc_142
 .cc_top cc_143,.Lxtalabel33
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	382
 	.long	382
 	.long	.Lxtalabel33
 .cc_bottom cc_143
 .cc_top cc_144,.Lxtalabel31
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	383
 	.long	384
 	.long	.Lxtalabel31
 .cc_bottom cc_144
 .cc_top cc_145,.Lxtalabel32
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	385
 	.long	386
 	.long	.Lxtalabel32
 .cc_bottom cc_145
 .cc_top cc_146,.Lxtalabel34
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	389
 	.long	389
 	.long	.Lxtalabel34
 .cc_bottom cc_146
 .cc_top cc_147,.Lxtalabel37
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	390
 	.long	391
 	.long	.Lxtalabel37
 .cc_bottom cc_147
 .cc_top cc_148,.Lxtalabel36
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	390
 	.long	391
 	.long	.Lxtalabel36
 .cc_bottom cc_148
 .cc_top cc_149,.Lxtalabel35
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	390
 	.long	391
 	.long	.Lxtalabel35
 .cc_bottom cc_149
 .cc_top cc_150,.Lxtalabel37
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	392
 	.long	395
 	.long	.Lxtalabel37
 .cc_bottom cc_150
 .cc_top cc_151,.Lxtalabel36
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	392
 	.long	395
 	.long	.Lxtalabel36
 .cc_bottom cc_151
 .cc_top cc_152,.Lxtalabel35
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	392
 	.long	395
 	.long	.Lxtalabel35
 .cc_bottom cc_152
 .cc_top cc_153,.Lxtalabel5
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	398
 	.long	399

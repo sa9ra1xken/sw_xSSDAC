@@ -15,7 +15,7 @@
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
 	.file	1 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h"
-	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\led_port_access.c"
+	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\led_port_access.c"
 	.text
 	.globl	p_led_peek
 	.align	4
@@ -233,7 +233,7 @@ led_swlock:
 .Linfo_string0:
 .asciiz"XMOS-235-acbb966-Dec-01-2019 clang version 3.6.0  (based on LLVM 3.6.0svn)"
 .Linfo_string1:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\led_port_access.c"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\led_port_access.c"
 .Linfo_string2:
 .asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build"
 .Linfo_string3:
