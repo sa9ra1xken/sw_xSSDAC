@@ -1288,7 +1288,7 @@ si5351a_revb_register_t const si5351a_revb_48[61] =
     };
 # 13 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h" 1
-# 31 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
+# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
 typedef enum {
     _GET_INTERPOLATION_MODE =1,
     _SET_INTERPOLATION_MODE =2

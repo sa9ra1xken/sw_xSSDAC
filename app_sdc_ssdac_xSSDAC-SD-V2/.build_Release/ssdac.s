@@ -5214,20 +5214,20 @@ config_audo_core:                       # @config_audo_core
 		stw r1, sp[12]
 	}
 .Ltmp400:
-	#DEBUG_VALUE: proposed_mode <- 3
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 604 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:604:0
 .Lxta.call_labels28:
 	bl init_ring_buff
 	{
-		mkmsk r7, 2
-		ldc r8, 0
+		ldc r8, 4
+		ldc r9, 0
 	}
 	{
-		ldc r5, 4
-		ldc r9, 5
-	}
-	{
+		ldc r5, 5
 		ldaw r6, sp[2]
+	}
+	{
+		mov r7, r8
 		nop
 	}
 	bu .LBB19_1
@@ -5235,7 +5235,7 @@ config_audo_core:                       # @config_audo_core
                                         #   in Loop: Header=BB19_1 Depth=1
 .Ltmp401:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
-	#DEBUG_VALUE: proposed_mode <- 3
+	#DEBUG_VALUE: proposed_mode <- 4
 	{
 		nop
 		ldw r10, sp[3]
@@ -5245,9 +5245,9 @@ config_audo_core:                       # @config_audo_core
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel104:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
-	#DEBUG_VALUE: proposed_mode <- 3
+	#DEBUG_VALUE: proposed_mode <- 4
 	{
-		mov r0, r8
+		mov r0, r9
 		nop
 	}
 	bf r10, .LBB19_3
@@ -5256,7 +5256,7 @@ config_audo_core:                       # @config_audo_core
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel105:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
-	#DEBUG_VALUE: proposed_mode <- 3
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 610 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:610:49
 	{
 		outct res[r10], 1
@@ -5316,7 +5316,7 @@ config_audo_core:                       # @config_audo_core
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel106:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
-	#DEBUG_VALUE: proposed_mode <- 3
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 616 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:616:0
 	{
 		eq r1, r7, 5
@@ -5328,13 +5328,13 @@ config_audo_core:                       # @config_audo_core
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel107:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
-	#DEBUG_VALUE: proposed_mode <- 3
+	#DEBUG_VALUE: proposed_mode <- 4
 	{
 		nop
 		ldw r1, sp[4]
 	}
 	ldc r2, 48000
-	.loc	2 626 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:626:13
+	.loc	2 626 17                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:626:17
 	{
 		lsu r1, r2, r1
 		nop
@@ -5345,11 +5345,11 @@ config_audo_core:                       # @config_audo_core
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel108:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
-	#DEBUG_VALUE: proposed_mode <- 3
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 630 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:630:0
 	{
-		mov r1, r9
-		stw r9, r4[0]
+		mov r1, r5
+		stw r5, r4[0]
 	}
 	bt r0, .LBB19_11
 	bu .LBB19_12
@@ -5373,12 +5373,12 @@ config_audo_core:                       # @config_audo_core
 		ldw r1, sp[4]
 	}
 	ldc r2, 48000
-	.loc	2 619 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:619:13
+	.loc	2 619 17                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:619:17
 	{
 		lsu r1, r2, r1
 		nop
 	}
-	.loc	2 619 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:619:13
+	.loc	2 619 17                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:619:17
 	bf r1, .LBB19_8
 .Ltmp410:
 .LBB19_7:                               # %iftrue50
@@ -5387,8 +5387,8 @@ config_audo_core:                       # @config_audo_core
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
 	.loc	2 620 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:620:0
 	{
-		mov r1, r5
-		stw r5, r4[0]
+		mov r1, r8
+		stw r8, r4[0]
 	}
 	bt r0, .LBB19_11
 	bu .LBB19_12
@@ -5423,7 +5423,7 @@ config_audo_core:                       # @config_audo_core
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel114:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
-	#DEBUG_VALUE: proposed_mode <- 3
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 637 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:637:49
 	{
 		outct res[r0], 1
@@ -5481,7 +5481,7 @@ config_audo_core:                       # @config_audo_core
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel115:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
-	#DEBUG_VALUE: proposed_mode <- 3
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 641 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:641:0
 	{
 		eq r0, r1, 1
@@ -5515,7 +5515,7 @@ config_audo_core:                       # @config_audo_core
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel118:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
-	#DEBUG_VALUE: proposed_mode <- 3
+	#DEBUG_VALUE: proposed_mode <- 4
 	{
 		nop
 		ldw r0, sp[4]
@@ -5625,14 +5625,14 @@ config_audo_core:                       # @config_audo_core
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel129:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
-	#DEBUG_VALUE: proposed_mode <- 3
+	#DEBUG_VALUE: proposed_mode <- 4
 	ldc r0, 752
 .Ltmp430:
 .LBB19_25:                              # %switchdone92
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel130:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
-	#DEBUG_VALUE: proposed_mode <- 3
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:684:0
 	{
 		mov r0, r6
@@ -5648,7 +5648,7 @@ config_audo_core:                       # @config_audo_core
 	bl __start_other_cores
 .Ltmp432:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
-	#DEBUG_VALUE: proposed_mode <- 3
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 711 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:711:7
 	ldw r0, dp[rc]
 .Lxta.loop_labels2:
@@ -5662,7 +5662,7 @@ config_audo_core:                       # @config_audo_core
 .Ltmp433:
 # BB#30:                                # %LoopEnd
 .Lxtalabel132:
-	#DEBUG_VALUE: proposed_mode <- 3
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 712 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:712:5
 	ldw r0, dp[audio_cmd]
 	{
@@ -11342,7 +11342,7 @@ par.desc.6:
 	.short	.Lset204
 .Ltmp921:
 	.byte	16                      # DW_OP_constu
-	.byte	3                       # 
+	.byte	4                       # 
 .Ltmp922:
 	.long	.Ltmp404
 	.long	.Ltmp405
@@ -11357,7 +11357,7 @@ par.desc.6:
 	.short	.Lset206
 .Ltmp925:
 	.byte	16                      # DW_OP_constu
-	.byte	3                       # 
+	.byte	4                       # 
 .Ltmp926:
 	.long	0
 	.long	0

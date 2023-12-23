@@ -11,7 +11,7 @@
 #include <xclib.h>
 #include <xccompat.h>
 #include <print.h>
-#include "customdefines.h"
+//#include "customdefines.h"
 #include <stdio.h>
 #define DEBUG_UNIT HUMAN_INTERFACE
 #include <debug_print.h>
@@ -21,16 +21,18 @@
 #include "DISPLAY_CONTROL.h"
 #include "button_listener.h"
 #include "SSDAC.h"
+#include "SSDAC_CONF.h"
 //#include "ffconf.h"
 
 on tile [OLED_TILE] : struct r_i2c r_i2c2   = {PORT_OLED};
 //on tile [OLED_TILE] : out port p_oled_control  = PORT_OLED;
 
-
-#if _SDC_AUDIO_SUPPORT
-#include "ffconf.h"
-char track_string[_MAX_LFN + 1]="track";
-char folder_string[_MAX_LFN + 1]="folder";
+#ifdef _SDC_AUDIO_USE_DISPLAY
+//#include "ffconf.h"
+//char track_string[_MAX_LFN + 1]="track";
+extern char track_string[];
+//char folder_string[_MAX_LFN + 1]="folder";
+extern char folder_string[];
 char information_string[100];
 #endif
 
@@ -131,7 +133,7 @@ static SCROLLING_STATE state;
 unsigned pause_counter;
 unsigned scrolling_row;
 
-#if _SDC_AUDIO_SUPPORT
+#ifdef _SDC_AUDIO_USE_DISPLAY
 
 void UpdateTime(){
     char s[12];
@@ -196,6 +198,15 @@ INTERPOLATION_MODE FixedInterpolationMode(){
     return temp;
 }
 
+extern FUNCTION_SELECTOR selected_function;
+
+FUNCTION_SELECTOR SelectedFunction(){
+    volatile FUNCTION_SELECTOR * unsafe p;
+    FUNCTION_SELECTOR temp;
+    unsafe {p = & selected_function; temp = * p; }
+    return temp;
+}
+
 void ShowInterpolationMode(INTERPOLATION_MODE mode){
     switch(mode){
     case _STEP:
@@ -222,6 +233,17 @@ void ShowInterpolationMode(INTERPOLATION_MODE mode){
     }
 }
 
+char * alias GetFunctionString(FUNCTION_SELECTOR func){
+    switch(func){
+    case _USB_DAC:
+        return "USB_DAC";
+    case _SDC_PLAY:
+        return "SDC_PLAY";
+    default:
+        return "UNKNOWN";
+    }
+}
+
 char UsbAudioStatus[100];
 
 void ShowUsbAudioStatus(){
@@ -235,10 +257,14 @@ void ShowUsbAudioStatus(){
     scrolling_row = 0;
 }
 
+/**Function to handle display contents for SDC Player, USB Audio, SSDAC approcation
+ */
 void display_control(){
 
     timer t;
     unsigned time;
+
+    debug_printf("\ndisplay_control started");
 
     OLED_SSD1306_begin();
 
@@ -264,7 +290,7 @@ void display_control(){
 
             switch (get_console_mode()){
 
-#if _SDC_AUDIO_SUPPORT
+#ifdef _SDC_AUDIO_USE_DISPLAY
             case _SDC_AUDIO:
                 ShowFolder();
                 ShowTrack();
@@ -273,16 +299,24 @@ void display_control(){
                 break;
 #endif
 
+#ifdef _USB_AUDIO_USE_DISPLAY
             case _USB_AUDIO:
                 OLED_SSD1306_put_string(0, "XMOS USB Audio");
                 ShowUsbAudioStatus();
                 OLED_SSD1306_put_string(2, "");
                 OLED_SSD1306_put_string(3, "");
                 break;
-            case _DAC_MENU:
-                OLED_SSD1306_put_string(0, "Interpolation");
+#endif
+            case _DAC_MODE_SELECTION:
+                OLED_SSD1306_put_string(0, "Interpolation mode selector");
                 ShowInterpolationMode(FixedInterpolationMode());
                 OLED_SSD1306_put_string(2, "");
+                OLED_SSD1306_put_string(3, "");
+                break;
+            case _FUNCTION_SELECTION:
+                OLED_SSD1306_put_string(0, "Function selector");
+                OLED_SSD1306_put_string(1, "Selected function takes effect after reset.");
+                OLED_SSD1306_put_string(2, "Press SW1 for USB audio. Press SW2 for SD player.");
                 OLED_SSD1306_put_string(3, "");
                 break;
             }
@@ -290,30 +324,31 @@ void display_control(){
 
         switch (get_console_mode()){
 
-#if _SDC_AUDIO_SUPPORT
+#ifdef _SDC_AUDIO_USE_DISPLAY
         case _SDC_AUDIO:
-        if (test_display_control_flag(BITMASK_UPDATE_TIME)){
-            clear_display_control_flag(BITMASK_UPDATE_TIME);
-            UpdateTime();
-        }
+            if (test_display_control_flag(BITMASK_UPDATE_TIME)){
+                clear_display_control_flag(BITMASK_UPDATE_TIME);
+                UpdateTime();
+            }
 
-        if (test_display_control_flag(BITMASK_UPDATE_FOLDER)){
-            clear_display_control_flag(BITMASK_UPDATE_FOLDER);
-            ShowFolder();
-        }
+            if (test_display_control_flag(BITMASK_UPDATE_FOLDER)){
+                clear_display_control_flag(BITMASK_UPDATE_FOLDER);
+                ShowFolder();
+            }
 
-        if (test_display_control_flag(BITMASK_UPDATE_TRACK)){
-            clear_display_control_flag(BITMASK_UPDATE_TRACK);
-            ShowTrack();
-        }
+            if (test_display_control_flag(BITMASK_UPDATE_TRACK)){
+                clear_display_control_flag(BITMASK_UPDATE_TRACK);
+                ShowTrack();
+            }
 
-        if (test_display_control_flag(BITMASK_UPDATE_INFO)){
-            clear_display_control_flag(BITMASK_UPDATE_INFO);
-            ShowAudioAttribute();
-        }
+            if (test_display_control_flag(BITMASK_UPDATE_INFO)){
+                clear_display_control_flag(BITMASK_UPDATE_INFO);
+                ShowAudioAttribute();
+            }
             break;
 #endif
 
+#ifdef _USB_AUDIO_USE_DISPLAY
         case _USB_AUDIO:
             if (test_display_control_flag(BITMASK_UPDATE_FREQUENCY)){
                 clear_display_control_flag(BITMASK_UPDATE_FREQUENCY);
@@ -324,7 +359,8 @@ void display_control(){
                 ShowUsbAudioStatus();
             }
             break;
-        case _DAC_MENU:
+#endif
+        case _DAC_MODE_SELECTION:
             if (test_display_control_flag(BITMASK_SHOW_PROPOSED_INTPOL)){
                 clear_display_control_flag(BITMASK_SHOW_PROPOSED_INTPOL);
                 ShowInterpolationMode(ProposedInterpolationMode());
@@ -334,6 +370,11 @@ void display_control(){
                 ShowInterpolationMode(FixedInterpolationMode());
             }
             break;
+        case _FUNCTION_SELECTION:
+            if (test_display_control_flag(BITMASK_SHOW_SELECTED_FUNCTION)){
+                clear_display_control_flag(BITMASK_SHOW_SELECTED_FUNCTION);
+                OLED_SSD1306_put_string(3, GetFunctionString(SelectedFunction()));
+            }
         }
 
         switch (state){

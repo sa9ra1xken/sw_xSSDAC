@@ -1048,11 +1048,9 @@ int _safe_rename(const char from[], const char to[]);
 void debug_printf(char fmt[], ...);
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
 
-# 1 ".././src\\customdefines.h" 1
-# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\decoupler.h" 1
-# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\decoupler.h"
+# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\decoupler.h"
 typedef enum {
     _FALSE = 0,
     _TRUE = 1
@@ -1067,7 +1065,6 @@ unsigned byterev(unsigned x);
 # 59 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 int clz(unsigned x);
 # 14 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
-
 
 
 
@@ -1088,7 +1085,7 @@ unsigned byte_ptr =0;
 unsigned underflowWord = 0;
 unsigned cur_freq = 44100 ;
 
-static unsigned samplesOut[(2)];
+static unsigned samplesOut[2];
 static unsigned ch = 0;
 static unsigned digit = 0;
 
@@ -1111,10 +1108,10 @@ void send_sample(chanend c){
     }
 
     if (sm_new_track[tx_id]==_TRUE){
-        sm_new_track[tx_id] = _FALSE;
-# 67 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
+# 66 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
         ch = 0;
         digit = 0;
+        sm_new_track[tx_id] = _FALSE;
     }
 
     samplesOut[ch]= ( samplesOut[ch] << 8 ) + audio_buffer[tx_id][byte_ptr];
@@ -1156,7 +1153,7 @@ void decoupler(
     tx_id = 0;
     rx_id = 0;
 
-    for (int i = 0 ; i < (2) ; i++ ){
+    for (int i = 0 ; i < 2 ; i++ ){
         samplesOut[i] = 0;
     }
     ch = 0;

@@ -1,0 +1,24 @@
+<preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_helper.c">
+  <fCall global="true" name="simple_ogg_page__init"/>
+  <fCall global="true" name="simple_ogg_page__init.nstackwords"/>
+  <fCall global="true" name="simple_ogg_page__init.maxcores"/>
+  <fCall global="true" name="simple_ogg_page__init.maxtimers"/>
+  <fCall global="true" name="simple_ogg_page__init.maxchanends"/>
+  <fCall global="true" name="simple_ogg_page__clear"/>
+  <fCall global="true" name="simple_ogg_page__clear.nstackwords"/>
+  <fCall global="true" name="free.nstackwords"/>
+  <fCall global="true" name="simple_ogg_page__clear.maxcores"/>
+  <fCall global="true" name="free.maxcores"/>
+  <fCall global="true" name="simple_ogg_page__clear.maxtimers"/>
+  <fCall global="true" name="free.maxtimers"/>
+  <fCall global="true" name="simple_ogg_page__clear.maxchanends"/>
+  <fCall global="true" name="free.maxchanends"/>
+  <fCall global="true" name="simple_ogg_page__get_at"/>
+  <fCall global="true" name="simple_ogg_page__set_at"/>
+  <fCall global="true" name="free"/>
+  <fCall global="true" name="assert"/>
+  <fCall global="true" name="memcmp"/>
+  <fCall global="true" name="ogg_page_checksum_set"/>
+  <fCall global="true" name="malloc"/>
+  <fCall global="true" name="__misaligned_load"/>
+</preCompilationAnalysis>

@@ -2463,9 +2463,9 @@ par.desc.3:
 .Linfo_string61:
 .asciiz"client_state"
 .Linfo_string62:
-.asciiz"__TYPE_15"
+.asciiz"__TYPE_16"
 .Linfo_string63:
-.asciiz"__TYPE_14"
+.asciiz"__TYPE_15"
 .Linfo_string64:
 .asciiz"frame.0"
 .Linfo_string65:
@@ -4558,9 +4558,9 @@ par.desc.3:
 	.long	2357                    # DIE offset
 .asciiz"USB_BmRequestType"              # External Name
 	.long	2184                    # DIE offset
-.asciiz"__TYPE_14"                      # External Name
-	.long	2233                    # DIE offset
 .asciiz"__TYPE_15"                      # External Name
+	.long	2233                    # DIE offset
+.asciiz"__TYPE_16"                      # External Name
 	.long	66                      # DIE offset
 .asciiz"unsigned int"                   # External Name
 	.long	2135                    # DIE offset

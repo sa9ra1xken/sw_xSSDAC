@@ -23,11 +23,6 @@
 /**********************************************************
 * Controller command
 **********************************************************/
-//#define _GET_INTERPOLATION_MODE      0
-//#define CONTROL_SAVE_FS     1
-//#define CONTROL_RECALL_FS   2
-//#define CONTROL_FIXED_MODE  3
-
 typedef enum {
     _GET_INTERPOLATION_MODE =1,
     _SET_INTERPOLATION_MODE =2

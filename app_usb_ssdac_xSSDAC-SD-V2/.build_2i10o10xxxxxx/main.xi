@@ -1760,7 +1760,7 @@ void clockGen (streaming chanend ?c_spdif_rx, chanend ?c_adat_rx, out port p, ch
 
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h" 1
-# 31 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
+# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
 typedef enum {
     _GET_INTERPOLATION_MODE =1,
     _SET_INTERPOLATION_MODE =2
@@ -1815,7 +1815,7 @@ void audio_xss(chanend c_in, chanend ?c_control);
 # 59 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h" 1
-# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
@@ -1826,7 +1826,8 @@ void display_control();
 typedef enum {
     _SDC_AUDIO = 1,
     _USB_AUDIO = 2,
-    _DAC_MENU = 3
+    _DAC_MODE_SELECTION = 3,
+    _FUNCTION_SELECTION = 4
 } CONSOLE_MODE;
 
 CONSOLE_MODE get_console_mode();
@@ -1838,7 +1839,13 @@ void set_console_mode(CONSOLE_MODE value);
 
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 1
-# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
+typedef enum {
+    _USB_DAC = 0,
+    _SDC_PLAY = 1,
+} FUNCTION_SELECTOR;
+
+
 typedef enum {
     _PENDING_Q = 0,
     _INPUT_Q = 1,

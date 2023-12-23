@@ -79,6 +79,8 @@
 	.call decouple,usage.anon.5
 	.call decouple,usage.anon.3
 	.call decouple,usage.anon.10
+	.call decouple,update_samp_resolution
+	.call decouple,update_samp_freq
 	.call usage.anon.10,usage.anon.6
 	.call usage.anon.10,GetADCCounts
 	.call usage.anon.7,usage.anon.6
@@ -1896,7 +1898,6 @@ decouple:                               # @decouple
 	.cfi_offset 10, -8
 	#DEBUG_VALUE: decouple:c_mix_out <- R0
 .Ltmp159:
-	#DEBUG_VALUE: aud_from_host_flag <- 0
 	#DEBUG_VALUE: sampFreq <- 44100
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	{
@@ -1904,13 +1905,24 @@ decouple:                               # @decouple
 		stw r10, sp[10]
 	}
 .Ltmp160:
+	ldc r5, 44100
+	.loc	1 594 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:594:0
+.Ltmp161:
+	{
+		mov r0, r5
+		nop
+	}
+.Lxta.call_labels0:
+	bl update_samp_freq
+.Ltmp162:
+	#DEBUG_VALUE: aud_from_host_flag <- 0
 	.file	3 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
-	.loc	3 13 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
+	.loc	3 13 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
 	ldaw r0, dp[outAudioBuff]
 	#APP
 	mov r2, r0
 	#NO_APP
-.Ltmp161:
+.Ltmp163:
 	#DEBUG_VALUE: t <- R2
 	#DEBUG_VALUE: x <- R2
 	.loc	3 13 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
@@ -1918,17 +1930,17 @@ decouple:                               # @decouple
 	#APP
 	mov r1, r0
 	#NO_APP
-.Ltmp162:
+.Ltmp164:
 	#DEBUG_VALUE: x <- R1
 	.loc	1 608 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:608:0
 	stw r1, dp[p_multOut]
 	.loc	3 13 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
-.Ltmp163:
+.Ltmp165:
 	ldaw r0, dp[multIn]
 	#APP
 	mov r0, r0
 	#NO_APP
-.Ltmp164:
+.Ltmp166:
 	#DEBUG_VALUE: x <- R0
 	.loc	1 611 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:611:0
 	stw r0, dp[p_multIn]
@@ -1947,13 +1959,13 @@ decouple:                               # @decouple
 	.loc	1 617 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:617:0
 	stw r2, dp[g_aud_from_host_rdptr]
 	.loc	3 13 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
-.Ltmp165:
+.Ltmp167:
 	ldaw r2, dp[audioBuffIn]
-.Ltmp166:
+.Ltmp168:
 	#APP
 	mov r2, r2
 	#NO_APP
-.Ltmp167:
+.Ltmp169:
 	#DEBUG_VALUE: x <- R2
 	#DEBUG_VALUE: t <- R2
 	.loc	1 621 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:621:0
@@ -1969,41 +1981,41 @@ decouple:                               # @decouple
 		add r2, r2, 4
 		nop
 	}
-.Ltmp168:
+.Ltmp170:
 	.loc	1 625 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:625:0
 	stw r2, dp[g_aud_to_host_dptr]
 	.loc	3 13 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
-.Ltmp169:
+.Ltmp171:
 	ldaw r2, dp[inZeroBuff]
 	#APP
 	mov r2, r2
 	#NO_APP
-.Ltmp170:
+.Ltmp172:
 	#DEBUG_VALUE: x <- R2
 	#DEBUG_VALUE: t <- R2
 	.loc	1 632 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:632:0
 	stw r2, dp[g_aud_to_host_zeros]
 	ldw r2, cp[.LCPI1_0]
-.Ltmp171:
+.Ltmp173:
 	#DEBUG_VALUE: i <- 0
 	{
-		ldc r9, 0
+		ldc r6, 0
 		nop
 	}
 	.loc	1 638 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:638:0
-.Ltmp172:
+.Ltmp174:
 	#APP
-	stw r2, r1[r9]
+	stw r2, r1[r6]
 	#NO_APP
 	{
-		mkmsk r5, 1
+		mkmsk r7, 1
 		nop
 	}
-.Ltmp173:
+.Ltmp175:
 	#DEBUG_VALUE: i <- 1
 	.loc	1 638 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:638:0
 	#APP
-	stw r2, r1[r5]
+	stw r2, r1[r7]
 	#NO_APP
 	{
 		ldc r3, 2
@@ -2013,13 +2025,13 @@ decouple:                               # @decouple
 	#APP
 	stw r2, r1[r3]
 	#NO_APP
-.Ltmp174:
+.Ltmp176:
 	#DEBUG_VALUE: i <- 0
 	.loc	1 645 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:645:0
 	#APP
-	stw r2, r0[r9]
+	stw r2, r0[r6]
 	#NO_APP
-.Ltmp175:
+.Ltmp177:
 	#DEBUG_VALUE: i <- 1
 	.loc	1 649 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:649:0
 	#APP
@@ -2027,7 +2039,7 @@ decouple:                               # @decouple
 	#NO_APP
 	.loc	1 649 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:649:0
 	#APP
-	kentsp 20; stw r4, sp[1]; stw r9, sp[2]; krestsp 20
+	kentsp 20; stw r4, sp[1]; stw r6, sp[2]; krestsp 20
 	#NO_APP
 	.loc	1 649 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:649:0
 	#APP
@@ -2041,7 +2053,7 @@ decouple:                               # @decouple
 	#APP
 	setsr (((0) & ~(((1 << 0x1) - 1) << 0x1)) | (((1) << 0x1) & (((1 << 0x1) - 1) << 0x1)))
 	#NO_APP
-.Ltmp176:
+.Ltmp178:
 	#DEBUG_VALUE: array_to_xc_ptr:a <- R0
 	#DEBUG_VALUE: array_to_xc_ptr:a <- R0
 	#DEBUG_VALUE: array_to_xc_ptr:a <- R0
@@ -2057,13 +2069,13 @@ decouple:                               # @decouple
 	#APP
 	ldw r0, dp[g_aud_from_host_flag]
 	#NO_APP
-.Ltmp177:
+.Ltmp179:
 	#DEBUG_VALUE: aud_from_host_flag <- R0
 .Lxta.loop_labels8:
 	# LOOPMARKER 0
 	.loc	1 654 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:654:5
 	bf r0, .LBB1_1
-.Ltmp178:
+.Ltmp180:
 # BB#2:                                 # %ifdone42
 .Lxtalabel54:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -2071,7 +2083,7 @@ decouple:                               # @decouple
 	#DEBUG_VALUE: aud_from_host_flag <- 0
 	.loc	1 660 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:660:0
 	#APP
-	stw r9, dp[g_aud_from_host_flag]
+	stw r6, dp[g_aud_from_host_flag]
 	#NO_APP
 	.loc	1 663 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:663:0
 	ldw r0, dp[g_aud_from_host_wrptr]
@@ -2081,19 +2093,19 @@ decouple:                               # @decouple
 	#NO_APP
 	.loc	1 664 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:664:0
 	ldw r0, dp[aud_from_host_usb_ep]
-.Ltmp179:
+.Ltmp181:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:ep <- R0
 	.loc	1 664 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:664:0
 	ldw r1, dp[g_aud_from_host_wrptr]
 	.loc	2 432 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:432:0
-.Ltmp180:
+.Ltmp182:
 	#APP
 	ldw r2, r0[9]
 	#NO_APP
-.Ltmp181:
+.Ltmp183:
 	#DEBUG_VALUE: reset <- R2
 	bt r2, .LBB1_4
-.Ltmp182:
+.Ltmp184:
 # BB#3:                                 # %ifdone.i
 .Lxtalabel55:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -2105,13 +2117,13 @@ decouple:                               # @decouple
 		add r1, r1, 4
 		nop
 	}
-.Ltmp183:
+.Ltmp185:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:addr <- R1
 	.loc	2 437 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:437:0
 	#APP
 	ldw r2, r0[0]
 	#NO_APP
-.Ltmp184:
+.Ltmp186:
 	#DEBUG_VALUE: chan_array_ptr <- R2
 	.loc	2 438 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:438:0
 	#APP
@@ -2121,26 +2133,25 @@ decouple:                               # @decouple
 	#APP
 	stw r0, r2[0]
 	#NO_APP
-.Ltmp185:
+.Ltmp187:
 .LBB1_4:                                # %LoopBody59.preheader
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
 	#DEBUG_VALUE: aud_from_host_flag <- 0
-	ldc r8, 44100
 	{
-		ldaw r7, sp[1]
+		ldaw r8, sp[1]
 		nop
 	}
 	bu .LBB1_5
-.Ltmp186:
-.LBB1_38:                               # %iffalse199
+.Ltmp188:
+.LBB1_38:                               # %iffalse202
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel56:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
 	.loc	1 893 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:893:0
-	stw r5, dp[outOverflow]
-.Ltmp187:
+	stw r7, dp[outOverflow]
+.Ltmp189:
 .LBB1_5:                                # %LoopBody59
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel57:
@@ -2155,7 +2166,7 @@ decouple:                               # @decouple
 	#APP
 	ldw r0, dp[g_freqChange_flag]
 	#NO_APP
-.Ltmp188:
+.Ltmp190:
 	#DEBUG_VALUE: tmp <- R0
 	.loc	1 700 13                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:700:13
 	{
@@ -2163,7 +2174,7 @@ decouple:                               # @decouple
 		nop
 	}
 	bt r1, .LBB1_15
-.Ltmp189:
+.Ltmp191:
 # BB#6:                                 # %LoopBody59
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel58:
@@ -2173,8 +2184,8 @@ decouple:                               # @decouple
 		nop
 	}
 	bf r1, .LBB1_7
-.Ltmp190:
-# BB#21:                                # %iftrue108
+.Ltmp192:
+# BB#21:                                # %iftrue110
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel59:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -2185,7 +2196,7 @@ decouple:                               # @decouple
 	#NO_APP
 	.loc	1 796 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:796:0
 	#APP
-	stw r9, dp[g_freqChange_flag]
+	stw r6, dp[g_freqChange_flag]
 	#NO_APP
 	.loc	1 797 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:797:0
 	#APP
@@ -2203,102 +2214,110 @@ decouple:                               # @decouple
 	#APP
 	ldw r0, dp[g_formatChange_DataFormat]
 	#NO_APP
-.Ltmp191:
+.Ltmp193:
 	#DEBUG_VALUE: dataFormat <- R0
 	.loc	1 800 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:800:0
 	#APP
-	ldw r0, dp[g_formatChange_SampRes]
+	ldw r9, dp[g_formatChange_SampRes]
 	#NO_APP
-.Ltmp192:
-	#DEBUG_VALUE: sampRes <- R0
+.Ltmp194:
+	#DEBUG_VALUE: sampRes <- R9
+	.loc	1 803 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:803:0
+	{
+		mov r0, r9
+		nop
+	}
+.Ltmp195:
+.Lxta.call_labels1:
+	bl update_samp_resolution
 	.loc	1 807 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:807:0
-	ldw r1, dp[aud_from_host_fifo_start]
+	ldw r0, dp[aud_from_host_fifo_start]
 	.loc	1 807 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:807:0
 	#APP
-	stw r1, dp[g_aud_from_host_rdptr]
+	stw r0, dp[g_aud_from_host_rdptr]
 	#NO_APP
 	.loc	1 808 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:808:0
-	ldw r1, dp[aud_from_host_fifo_start]
+	ldw r0, dp[aud_from_host_fifo_start]
 	.loc	1 808 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:808:0
 	#APP
-	stw r1, dp[g_aud_from_host_wrptr]
+	stw r0, dp[g_aud_from_host_wrptr]
 	#NO_APP
 	.loc	1 810 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:810:0
-	stw r9, dp[unpackState]
+	stw r6, dp[unpackState]
 	.loc	1 812 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:812:0
-	stw r5, dp[outUnderflow]
+	stw r7, dp[outUnderflow]
 	.loc	1 813 17                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:813:17
-	ldw r1, dp[outOverflow]
-	bf r1, .LBB1_25
-.Ltmp193:
-# BB#22:                                # %iftrue117
+	ldw r0, dp[outOverflow]
+	bf r0, .LBB1_25
+.Ltmp196:
+# BB#22:                                # %iftrue119
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel60:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: dsdMode <- 0
-	#DEBUG_VALUE: sampRes <- R0
+	#DEBUG_VALUE: sampRes <- R9
 	.loc	1 816 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:816:0
-	ldw r1, dp[aud_from_host_usb_ep]
-.Ltmp194:
-	#DEBUG_VALUE: XUD_SetReady_OutPtr:ep <- R1
-	.loc	1 816 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:816:0
-	ldw r2, dp[aud_from_host_fifo_start]
-	.loc	2 432 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:432:0
-.Ltmp195:
-	#APP
-	ldw r3, r1[9]
-	#NO_APP
-.Ltmp196:
-	#DEBUG_VALUE: reset <- R3
-	bt r3, .LBB1_24
+	ldw r0, dp[aud_from_host_usb_ep]
 .Ltmp197:
-# BB#23:                                # %ifdone.i262
+	#DEBUG_VALUE: XUD_SetReady_OutPtr:ep <- R0
+	.loc	1 816 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:816:0
+	ldw r1, dp[aud_from_host_fifo_start]
+	.loc	2 432 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:432:0
+.Ltmp198:
+	#APP
+	ldw r2, r0[9]
+	#NO_APP
+.Ltmp199:
+	#DEBUG_VALUE: reset <- R2
+	bt r2, .LBB1_24
+.Ltmp200:
+# BB#23:                                # %ifdone.i265
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel61:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: dsdMode <- 0
-	#DEBUG_VALUE: sampRes <- R0
-	#DEBUG_VALUE: XUD_SetReady_OutPtr:ep <- R1
+	#DEBUG_VALUE: sampRes <- R9
+	#DEBUG_VALUE: XUD_SetReady_OutPtr:ep <- R0
 	.loc	1 816 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:816:0
 	{
-		add r2, r2, 4
+		add r1, r1, 4
 		nop
 	}
-.Ltmp198:
-	#DEBUG_VALUE: XUD_SetReady_OutPtr:addr <- R2
+.Ltmp201:
+	#DEBUG_VALUE: XUD_SetReady_OutPtr:addr <- R1
 	.loc	2 437 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:437:0
 	#APP
-	ldw r3, r1[0]
+	ldw r2, r0[0]
 	#NO_APP
-.Ltmp199:
-	#DEBUG_VALUE: chan_array_ptr <- R3
+.Ltmp202:
+	#DEBUG_VALUE: chan_array_ptr <- R2
 	.loc	2 438 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:438:0
 	#APP
-	stw r2, r1[3]
+	stw r1, r0[3]
 	#NO_APP
 	.loc	2 439 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:439:0
 	#APP
-	stw r1, r3[0]
+	stw r0, r2[0]
 	#NO_APP
-.Ltmp200:
-.LBB1_24:                               # %XUD_SetReady_OutPtr.exit264
+.Ltmp203:
+.LBB1_24:                               # %XUD_SetReady_OutPtr.exit267
                                         #   in Loop: Header=BB1_5 Depth=1
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: dsdMode <- 0
-	#DEBUG_VALUE: sampRes <- R0
+	#DEBUG_VALUE: sampRes <- R9
 	.loc	1 817 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:817:0
-	stw r9, dp[outOverflow]
-.Ltmp201:
-.LBB1_25:                               # %ifdone118
+	stw r6, dp[outOverflow]
+.Ltmp204:
+.LBB1_25:                               # %ifdone120
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel62:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: dsdMode <- 0
-	#DEBUG_VALUE: sampRes <- R0
+	#DEBUG_VALUE: sampRes <- R9
 	.loc	1 827 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:827:0
 .Lxta.endpoint_labels10:
 	{
-		in r1, res[r4]
+		in r0, res[r4]
 		nop
 	}
 	.loc	1 828 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:828:0
@@ -2310,13 +2329,13 @@ decouple:                               # @decouple
 	.loc	1 829 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:829:0
 .Lxta.endpoint_labels12:
 	{
-		out res[r4], r9
+		out res[r4], r6
 		nop
 	}
 	.loc	1 830 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:830:0
 .Lxta.endpoint_labels13:
 	{
-		out res[r4], r0
+		out res[r4], r9
 		nop
 	}
 	.loc	1 833 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:833:0
@@ -2326,22 +2345,21 @@ decouple:                               # @decouple
 	}
 	.loc	1 834 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:834:0
 	ldw r0, dp[buffer_aud_ctl_chan]
-.Ltmp202:
 	.loc	1 834 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:834:0
 	#APP
-	outct res[r0],r5
+	outct res[r0],r7
 	#NO_APP
 	.loc	1 836 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:836:0
 	#APP
-	stw r9, dp[g_freqChange]
+	stw r6, dp[g_freqChange]
 	#NO_APP
 	.loc	1 837 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:837:0
 	#APP
 	setsr (((0) & ~(((1 << 0x1) - 1) << 0x1)) | (((1) << 0x1) & (((1 << 0x1) - 1) << 0x1)))
 	#NO_APP
 	bu .LBB1_26
-.Ltmp203:
-.LBB1_15:                               # %iftrue83
+.Ltmp205:
+.LBB1_15:                               # %iftrue85
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel63:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -2353,7 +2371,7 @@ decouple:                               # @decouple
 	#NO_APP
 	.loc	1 756 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:756:0
 	#APP
-	stw r9, dp[g_freqChange_flag]
+	stw r6, dp[g_freqChange_flag]
 	#NO_APP
 	.loc	1 758 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:758:0
 	#APP
@@ -2371,13 +2389,13 @@ decouple:                               # @decouple
 	#APP
 	ldw r0, dp[g_formatChange_DataFormat]
 	#NO_APP
-.Ltmp204:
+.Ltmp206:
 	#DEBUG_VALUE: dataFormat <- R0
 	.loc	1 763 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:763:0
-	stw r5, dp[inUnderflow]
+	stw r7, dp[inUnderflow]
 	.loc	1 764 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:764:0
 	ldw r0, dp[aud_to_host_fifo_start]
-.Ltmp205:
+.Ltmp207:
 	.loc	1 764 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:764:0
 	#APP
 	stw r0, dp[g_aud_to_host_rdptr]
@@ -2406,48 +2424,48 @@ decouple:                               # @decouple
 	stw r0, dp[g_aud_to_host_buffer]
 	#NO_APP
 	.loc	1 772 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:772:0
-	ldw r10, dp[aud_to_host_usb_ep]
-.Ltmp206:
-	#DEBUG_VALUE: SetupZerosSendBuffer:aud_to_host_usb_ep <- R10
-	#DEBUG_VALUE: XUD_SetReady_InPtr:ep <- R10
+	ldw r9, dp[aud_to_host_usb_ep]
+.Ltmp208:
+	#DEBUG_VALUE: SetupZerosSendBuffer:aud_to_host_usb_ep <- R9
+	#DEBUG_VALUE: XUD_SetReady_InPtr:ep <- R9
 	.loc	1 772 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:772:0
-	ldw r6, dp[g_curSubSlot_In]
-.Ltmp207:
-	#DEBUG_VALUE: SetupZerosSendBuffer:slotSize <- R6
-	#DEBUG_VALUE: max <- [R7+0]
+	ldw r10, dp[g_curSubSlot_In]
+.Ltmp209:
+	#DEBUG_VALUE: SetupZerosSendBuffer:slotSize <- R10
+	#DEBUG_VALUE: max <- [R8+0]
 	#DEBUG_VALUE: mid <- undef
 	#DEBUG_VALUE: min <- undef
-	#DEBUG_VALUE: SetupZerosSendBuffer:sampFreq <- R8
+	#DEBUG_VALUE: SetupZerosSendBuffer:sampFreq <- R5
 	.loc	1 559 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:559:0
 	{
-		mov r0, r8
+		mov r0, r5
 		ldaw r1, sp[3]
 	}
 	{
 		ldaw r2, sp[2]
-		mov r3, r7
+		mov r3, r8
 	}
-.Lxta.call_labels0:
+.Lxta.call_labels2:
 	bl GetADCCounts
 	.loc	1 563 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:563:0
 	#APP
-	stw r9, dp[sampsToWrite]
+	stw r6, dp[sampsToWrite]
 	#NO_APP
 	.loc	1 564 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:564:0
 	#APP
-	stw r9, dp[totalSampsToWrite]
+	stw r6, dp[totalSampsToWrite]
 	#NO_APP
 	.loc	1 566 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:566:0
 	ldw r0, dp[g_numUsbChan_In]
 	.loc	1 566 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:566:0
-	mul r0, r0, r6
+	mul r0, r0, r10
 	{
 		nop
 		ldw r1, sp[2]
 	}
 	.loc	1 566 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:566:0
 	mul r0, r0, r1
-.Ltmp208:
+.Ltmp210:
 	#DEBUG_VALUE: mid <- R0
 	#DEBUG_VALUE: XUD_SetReady_InPtr:len <- R0
 	{
@@ -2464,28 +2482,28 @@ decouple:                               # @decouple
 	#APP
 	ldw r1, dp[g_aud_to_host_buffer]
 	#NO_APP
-.Ltmp209:
+.Ltmp211:
 	#DEBUG_VALUE: p <- R1
 	.loc	2 463 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:463:0
 	#APP
-	ldw r2, r10[9]
+	ldw r2, r9[9]
 	#NO_APP
-.Ltmp210:
+.Ltmp212:
 	#DEBUG_VALUE: reset <- R2
 	bt r2, .LBB1_17
-.Ltmp211:
-# BB#16:                                # %ifdone.i.i259
+.Ltmp213:
+# BB#16:                                # %ifdone.i.i262
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel64:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
 	#DEBUG_VALUE: aud_from_host_flag <- 0
-	#DEBUG_VALUE: XUD_SetReady_InPtr:ep <- R10
-	#DEBUG_VALUE: SetupZerosSendBuffer:aud_to_host_usb_ep <- R10
-	#DEBUG_VALUE: SetupZerosSendBuffer:sampFreq <- R8
+	#DEBUG_VALUE: XUD_SetReady_InPtr:ep <- R9
+	#DEBUG_VALUE: SetupZerosSendBuffer:aud_to_host_usb_ep <- R9
+	#DEBUG_VALUE: SetupZerosSendBuffer:sampFreq <- R5
 	#DEBUG_VALUE: min <- undef
 	#DEBUG_VALUE: mid <- undef
-	#DEBUG_VALUE: max <- [R7+0]
+	#DEBUG_VALUE: max <- [R8+0]
 	#DEBUG_VALUE: XUD_SetReady_InPtr:len <- R0
 	#DEBUG_VALUE: mid <- R0
 	#DEBUG_VALUE: p <- R1
@@ -2494,63 +2512,63 @@ decouple:                               # @decouple
 		add r1, r1, 4
 		nop
 	}
-.Ltmp212:
+.Ltmp214:
 	.loc	2 470 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:470:0
 	ashr r2, r0, 2
-.Ltmp213:
+.Ltmp215:
 	#DEBUG_VALUE: wordlength <- R2
 	ldw r3, cp[.LCPI1_1]
-.Ltmp214:
+.Ltmp216:
 	#DEBUG_VALUE: wordlength <- R3
 	.loc	2 471 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:471:0
 	{
 		and r3, r0, r3
 		shl r0, r0, 5
 	}
-.Ltmp215:
+.Ltmp217:
 	.loc	2 473 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:473:0
 	{
 		zext r0, 7
 		nop
 	}
-.Ltmp216:
+.Ltmp218:
 	#DEBUG_VALUE: taillength <- R0
 	.loc	2 475 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:475:0
 	#APP
-	ldw r11, r10[0]
+	ldw r11, r9[0]
 	#NO_APP
-.Ltmp217:
+.Ltmp219:
 	#DEBUG_VALUE: chan_array_ptr <- R11
 	.loc	2 478 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:478:0
 	#APP
 	add r1, r1, r3
 	#NO_APP
-.Ltmp218:
+.Ltmp220:
 	#DEBUG_VALUE: tmp <- R1
 	.loc	2 480 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:480:0
 	#APP
 	neg r2, r2
 	#NO_APP
-.Ltmp219:
+.Ltmp221:
 	#DEBUG_VALUE: tmp2 <- R2
 	.loc	2 483 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:483:0
 	#APP
-	stw r2, r10[6]
+	stw r2, r9[6]
 	#NO_APP
 	.loc	2 486 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:486:0
 	#APP
-	stw r1, r10[3]
+	stw r1, r9[3]
 	#NO_APP
 	.loc	2 489 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:489:0
 	#APP
-	stw r0, r10[7]
+	stw r0, r9[7]
 	#NO_APP
 	.loc	2 491 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:491:0
 	#APP
-	stw r10, r11[0]
+	stw r9, r11[0]
 	#NO_APP
-.Ltmp220:
-.LBB1_17:                               # %SetupZerosSendBuffer.exit260
+.Ltmp222:
+.LBB1_17:                               # %SetupZerosSendBuffer.exit263
                                         #   in Loop: Header=BB1_5 Depth=1
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
@@ -2559,7 +2577,7 @@ decouple:                               # @decouple
 	#APP
 	ldw r0, dp[g_curUsbSpeed]
 	#NO_APP
-.Ltmp221:
+.Ltmp223:
 	#DEBUG_VALUE: usbSpeed <- R0
 	.loc	1 775 17                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:775:17
 	{
@@ -2568,11 +2586,11 @@ decouple:                               # @decouple
 	}
 	.loc	1 777 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:777:0
 	ldw r0, dp[g_numUsbChan_In]
-.Ltmp222:
+.Ltmp224:
 	.loc	1 775 17                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:775:17
 	bf r1, .LBB1_20
-.Ltmp223:
-# BB#18:                                # %iftrue98
+.Ltmp225:
+# BB#18:                                # %iftrue100
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel65:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -2580,7 +2598,7 @@ decouple:                               # @decouple
 	#DEBUG_VALUE: aud_from_host_flag <- 0
 	ldc r1, 100
 	bu .LBB1_19
-.Ltmp224:
+.Ltmp226:
 .LBB1_7:                                # %LoopBody59
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel66:
@@ -2590,22 +2608,29 @@ decouple:                               # @decouple
 		nop
 	}
 	bf r0, .LBB1_26
-.Ltmp225:
+.Ltmp227:
 # BB#8:                                 # %iftrue61
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel67:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	.loc	1 702 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:702:0
 	#APP
-	stw r9, dp[g_freqChange_flag]
+	stw r6, dp[g_freqChange_flag]
 	#NO_APP
 	.loc	1 703 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:703:0
 	#APP
-	ldw r8, dp[g_freqChange_sampFreq]
+	ldw r5, dp[g_freqChange_sampFreq]
 	#NO_APP
-.Ltmp226:
-	#DEBUG_VALUE: SetupZerosSendBuffer:sampFreq <- R8
-	#DEBUG_VALUE: sampFreq <- R8
+.Ltmp228:
+	#DEBUG_VALUE: SetupZerosSendBuffer:sampFreq <- R5
+	#DEBUG_VALUE: sampFreq <- R5
+	.loc	1 706 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:706:0
+	{
+		mov r0, r5
+		nop
+	}
+.Lxta.call_labels3:
+	bl update_samp_freq
 	.loc	1 710 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:710:0
 	#APP
 	clrsr (((0) & ~(((1 << 0x1) - 1) << 0x1)) | (((1) << 0x1) & (((1 << 0x1) - 1) << 0x1)))
@@ -2625,11 +2650,11 @@ decouple:                               # @decouple
 	.loc	1 713 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:713:0
 .Lxta.endpoint_labels16:
 	{
-		out res[r4], r8
+		out res[r4], r5
 		nop
 	}
 	.loc	1 715 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:715:0
-	stw r5, dp[inUnderflow]
+	stw r7, dp[inUnderflow]
 	.loc	1 716 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:716:0
 	ldw r0, dp[aud_to_host_fifo_start]
 	.loc	1 716 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:716:0
@@ -2660,47 +2685,47 @@ decouple:                               # @decouple
 	stw r0, dp[g_aud_to_host_buffer]
 	#NO_APP
 	.loc	1 724 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:724:0
-	ldw r10, dp[aud_to_host_usb_ep]
-.Ltmp227:
-	#DEBUG_VALUE: SetupZerosSendBuffer:aud_to_host_usb_ep <- R10
-	#DEBUG_VALUE: XUD_SetReady_InPtr:ep <- R10
+	ldw r9, dp[aud_to_host_usb_ep]
+.Ltmp229:
+	#DEBUG_VALUE: SetupZerosSendBuffer:aud_to_host_usb_ep <- R9
+	#DEBUG_VALUE: XUD_SetReady_InPtr:ep <- R9
 	.loc	1 724 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:724:0
-	ldw r6, dp[g_curSubSlot_In]
-.Ltmp228:
-	#DEBUG_VALUE: SetupZerosSendBuffer:slotSize <- R6
-	#DEBUG_VALUE: max <- [R7+0]
+	ldw r10, dp[g_curSubSlot_In]
+.Ltmp230:
+	#DEBUG_VALUE: SetupZerosSendBuffer:slotSize <- R10
+	#DEBUG_VALUE: max <- [R8+0]
 	#DEBUG_VALUE: mid <- undef
 	#DEBUG_VALUE: min <- undef
 	.loc	1 559 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:559:0
 	{
-		mov r0, r8
+		mov r0, r5
 		ldaw r1, sp[3]
 	}
 	{
 		ldaw r2, sp[2]
-		mov r3, r7
+		mov r3, r8
 	}
-.Lxta.call_labels1:
+.Lxta.call_labels4:
 	bl GetADCCounts
 	.loc	1 563 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:563:0
 	#APP
-	stw r9, dp[sampsToWrite]
+	stw r6, dp[sampsToWrite]
 	#NO_APP
 	.loc	1 564 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:564:0
 	#APP
-	stw r9, dp[totalSampsToWrite]
+	stw r6, dp[totalSampsToWrite]
 	#NO_APP
 	.loc	1 566 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:566:0
 	ldw r0, dp[g_numUsbChan_In]
 	.loc	1 566 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:566:0
-	mul r0, r0, r6
+	mul r0, r0, r10
 	{
 		nop
 		ldw r1, sp[2]
 	}
 	.loc	1 566 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:566:0
 	mul r0, r0, r1
-.Ltmp229:
+.Ltmp231:
 	#DEBUG_VALUE: mid <- R0
 	#DEBUG_VALUE: XUD_SetReady_InPtr:len <- R0
 	{
@@ -2717,27 +2742,27 @@ decouple:                               # @decouple
 	#APP
 	ldw r1, dp[g_aud_to_host_buffer]
 	#NO_APP
-.Ltmp230:
+.Ltmp232:
 	#DEBUG_VALUE: p <- R1
 	.loc	2 463 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:463:0
 	#APP
-	ldw r2, r10[9]
+	ldw r2, r9[9]
 	#NO_APP
-.Ltmp231:
+.Ltmp233:
 	#DEBUG_VALUE: reset <- R2
 	bt r2, .LBB1_10
-.Ltmp232:
+.Ltmp234:
 # BB#9:                                 # %ifdone.i.i
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel68:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
-	#DEBUG_VALUE: sampFreq <- R8
-	#DEBUG_VALUE: SetupZerosSendBuffer:sampFreq <- R8
-	#DEBUG_VALUE: XUD_SetReady_InPtr:ep <- R10
-	#DEBUG_VALUE: SetupZerosSendBuffer:aud_to_host_usb_ep <- R10
+	#DEBUG_VALUE: sampFreq <- R5
+	#DEBUG_VALUE: SetupZerosSendBuffer:sampFreq <- R5
+	#DEBUG_VALUE: XUD_SetReady_InPtr:ep <- R9
+	#DEBUG_VALUE: SetupZerosSendBuffer:aud_to_host_usb_ep <- R9
 	#DEBUG_VALUE: min <- undef
 	#DEBUG_VALUE: mid <- undef
-	#DEBUG_VALUE: max <- [R7+0]
+	#DEBUG_VALUE: max <- [R8+0]
 	#DEBUG_VALUE: XUD_SetReady_InPtr:len <- R0
 	#DEBUG_VALUE: mid <- R0
 	#DEBUG_VALUE: p <- R1
@@ -2746,68 +2771,68 @@ decouple:                               # @decouple
 		add r1, r1, 4
 		nop
 	}
-.Ltmp233:
+.Ltmp235:
 	.loc	2 470 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:470:0
 	ashr r2, r0, 2
-.Ltmp234:
+.Ltmp236:
 	#DEBUG_VALUE: wordlength <- R2
 	ldw r3, cp[.LCPI1_1]
-.Ltmp235:
+.Ltmp237:
 	#DEBUG_VALUE: wordlength <- R3
 	.loc	2 471 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:471:0
 	{
 		and r3, r0, r3
 		shl r0, r0, 5
 	}
-.Ltmp236:
+.Ltmp238:
 	.loc	2 473 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:473:0
 	{
 		zext r0, 7
 		nop
 	}
-.Ltmp237:
+.Ltmp239:
 	#DEBUG_VALUE: taillength <- R0
 	.loc	2 475 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:475:0
 	#APP
-	ldw r11, r10[0]
+	ldw r11, r9[0]
 	#NO_APP
-.Ltmp238:
+.Ltmp240:
 	#DEBUG_VALUE: chan_array_ptr <- R11
 	.loc	2 478 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:478:0
 	#APP
 	add r1, r1, r3
 	#NO_APP
-.Ltmp239:
+.Ltmp241:
 	#DEBUG_VALUE: tmp <- R1
 	.loc	2 480 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:480:0
 	#APP
 	neg r2, r2
 	#NO_APP
-.Ltmp240:
+.Ltmp242:
 	#DEBUG_VALUE: tmp2 <- R2
 	.loc	2 483 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:483:0
 	#APP
-	stw r2, r10[6]
+	stw r2, r9[6]
 	#NO_APP
 	.loc	2 486 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:486:0
 	#APP
-	stw r1, r10[3]
+	stw r1, r9[3]
 	#NO_APP
 	.loc	2 489 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:489:0
 	#APP
-	stw r0, r10[7]
+	stw r0, r9[7]
 	#NO_APP
 	.loc	2 491 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:491:0
 	#APP
-	stw r10, r11[0]
+	stw r9, r11[0]
 	#NO_APP
-.Ltmp241:
+.Ltmp243:
 .LBB1_10:                               # %SetupZerosSendBuffer.exit
                                         #   in Loop: Header=BB1_5 Depth=1
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
-	#DEBUG_VALUE: sampFreq <- R8
+	#DEBUG_VALUE: sampFreq <- R5
 	.loc	1 727 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:727:0
-	stw r5, dp[outUnderflow]
+	stw r7, dp[outUnderflow]
 	.loc	1 728 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:728:0
 	ldw r0, dp[aud_from_host_fifo_start]
 	.loc	1 728 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:728:0
@@ -2822,50 +2847,50 @@ decouple:                               # @decouple
 	#NO_APP
 	.loc	1 730 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:730:0
 	#APP
-	stw r9, dp[aud_data_remaining_to_device]
+	stw r6, dp[aud_data_remaining_to_device]
 	#NO_APP
 	.loc	1 732 17                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:732:17
 	ldw r0, dp[outOverflow]
 	bf r0, .LBB1_14
-.Ltmp242:
-# BB#11:                                # %iftrue76
+.Ltmp244:
+# BB#11:                                # %iftrue78
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel69:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
-	#DEBUG_VALUE: sampFreq <- R8
+	#DEBUG_VALUE: sampFreq <- R5
 	.loc	1 735 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:735:0
 	ldw r0, dp[aud_from_host_usb_ep]
-.Ltmp243:
+.Ltmp245:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:ep <- R0
 	.loc	1 735 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:735:0
 	ldw r1, dp[aud_from_host_fifo_start]
 	.loc	2 432 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:432:0
-.Ltmp244:
+.Ltmp246:
 	#APP
 	ldw r2, r0[9]
 	#NO_APP
-.Ltmp245:
+.Ltmp247:
 	#DEBUG_VALUE: reset <- R2
 	bt r2, .LBB1_13
-.Ltmp246:
-# BB#12:                                # %ifdone.i243
+.Ltmp248:
+# BB#12:                                # %ifdone.i246
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel70:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
-	#DEBUG_VALUE: sampFreq <- R8
+	#DEBUG_VALUE: sampFreq <- R5
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:ep <- R0
 	.loc	1 735 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:735:0
 	{
 		add r1, r1, 4
 		nop
 	}
-.Ltmp247:
+.Ltmp249:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:addr <- R1
 	.loc	2 437 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:437:0
 	#APP
 	ldw r2, r0[0]
 	#NO_APP
-.Ltmp248:
+.Ltmp250:
 	#DEBUG_VALUE: chan_array_ptr <- R2
 	.loc	2 438 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:438:0
 	#APP
@@ -2875,19 +2900,19 @@ decouple:                               # @decouple
 	#APP
 	stw r0, r2[0]
 	#NO_APP
-.Ltmp249:
-.LBB1_13:                               # %XUD_SetReady_OutPtr.exit245
+.Ltmp251:
+.LBB1_13:                               # %XUD_SetReady_OutPtr.exit248
                                         #   in Loop: Header=BB1_5 Depth=1
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
-	#DEBUG_VALUE: sampFreq <- R8
+	#DEBUG_VALUE: sampFreq <- R5
 	.loc	1 736 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:736:0
-	stw r9, dp[outOverflow]
-.Ltmp250:
-.LBB1_14:                               # %ifdone77
+	stw r6, dp[outOverflow]
+.Ltmp252:
+.LBB1_14:                               # %ifdone79
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel71:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
-	#DEBUG_VALUE: sampFreq <- R8
+	#DEBUG_VALUE: sampFreq <- R5
 	.loc	1 740 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:740:0
 	{
 		chkct res[r4], 1
@@ -2895,36 +2920,36 @@ decouple:                               # @decouple
 	}
 	.loc	1 742 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:742:0
 	#APP
-	stw r9, dp[g_freqChange]
+	stw r6, dp[g_freqChange]
 	#NO_APP
 	.loc	1 743 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:743:0
 	ldw r0, dp[buffer_aud_ctl_chan]
 	.loc	1 743 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:743:0
 	#APP
-	outct res[r0],r5
+	outct res[r0],r7
 	#NO_APP
 	.loc	1 745 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:745:0
 	#APP
 	setsr (((0) & ~(((1 << 0x1) - 1) << 0x1)) | (((1) << 0x1) & (((1 << 0x1) - 1) << 0x1)))
 	#NO_APP
 	.loc	1 747 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:747:0
-	stw r9, dp[speedRem]
+	stw r6, dp[speedRem]
 	bu .LBB1_5
-.Ltmp251:
-.LBB1_20:                               # %iffalse103
+.Ltmp253:
+.LBB1_20:                               # %iffalse105
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel72:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
 	#DEBUG_VALUE: aud_from_host_flag <- 0
 	ldc r1, 388
-.Ltmp252:
-.LBB1_19:                               # %ifdone99
+.Ltmp254:
+.LBB1_19:                               # %ifdone101
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel73:
 	.loc	1 777 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:777:0
 	mul r0, r0, r1
-.Ltmp253:
+.Ltmp255:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
 	#DEBUG_VALUE: aud_from_host_flag <- 0
@@ -2932,20 +2957,20 @@ decouple:                               # @decouple
 	stw r0, dp[g_maxPacketSize]
 	.loc	1 784 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:784:0
 	#APP
-	stw r9, dp[g_freqChange]
+	stw r6, dp[g_freqChange]
 	#NO_APP
 	.loc	1 785 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:785:0
 	ldw r0, dp[buffer_aud_ctl_chan]
 	.loc	1 785 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:785:0
 	#APP
-	outct res[r0],r5
+	outct res[r0],r7
 	#NO_APP
 	.loc	1 787 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:787:0
 	#APP
 	setsr (((0) & ~(((1 << 0x1) - 1) << 0x1)) | (((1) << 0x1) & (((1 << 0x1) - 1) << 0x1)))
 	#NO_APP
-.Ltmp254:
-.LBB1_26:                               # %ifdone84
+.Ltmp256:
+.LBB1_26:                               # %ifdone86
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel74:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -2955,12 +2980,12 @@ decouple:                               # @decouple
 	#APP
 	ldw r0, dp[g_aud_from_host_flag]
 	#NO_APP
-.Ltmp255:
+.Ltmp257:
 	#DEBUG_VALUE: aud_from_host_flag <- R0
 	.loc	1 844 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:844:9
 	bf r0, .LBB1_39
-.Ltmp256:
-# BB#27:                                # %iftrue130
+.Ltmp258:
+# BB#27:                                # %iftrue133
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel75:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -2969,44 +2994,44 @@ decouple:                               # @decouple
 	#APP
 	ldw r0, dp[g_aud_from_host_wrptr]
 	#NO_APP
-.Ltmp257:
+.Ltmp259:
 	#DEBUG_VALUE: aud_from_host_wrptr <- R0
 	.loc	1 852 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:852:0
 	#APP
 	ldw r1, dp[g_aud_from_host_rdptr]
 	#NO_APP
-.Ltmp258:
+.Ltmp260:
 	#DEBUG_VALUE: aud_from_host_rdptr <- R1
 	.loc	1 854 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:854:0
 	#APP
-	stw r9, dp[g_aud_from_host_flag]
+	stw r6, dp[g_aud_from_host_flag]
 	#NO_APP
 	.loc	1 855 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:855:0
 	#APP
 	ldw r3, dp[g_aud_from_host_buffer]
 	#NO_APP
-.Ltmp259:
+.Ltmp261:
 	#DEBUG_VALUE: released_buffer <- R3
 	.loc	1 858 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:858:0
 	#APP
 	ldw r2, r3[0]
 	#NO_APP
-.Ltmp260:
+.Ltmp262:
 	#DEBUG_VALUE: datalength <- R2
 	.loc	1 861 13                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:861:13
 	ldw r11, dp[g_numUsbChan_Out]
 	.loc	1 861 13                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:861:13
-	ldw r6, dp[g_curSubSlot_Out]
+	ldw r9, dp[g_curSubSlot_Out]
 	.loc	1 861 13                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:861:13
-	mul r11, r6, r11
+	mul r11, r9, r11
 	.loc	1 861 13                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:861:13
 	{
 		lsu r11, r2, r11
 		nop
 	}
 	bt r11, .LBB1_32
-.Ltmp261:
-# BB#28:                                # %iftrue130
+.Ltmp263:
+# BB#28:                                # %iftrue133
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel76:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -3015,8 +3040,8 @@ decouple:                               # @decouple
 		nop
 	}
 	bf r3, .LBB1_32
-.Ltmp262:
-# BB#29:                                # %iftrue135
+.Ltmp264:
+# BB#29:                                # %iftrue138
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel77:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -3041,7 +3066,7 @@ decouple:                               # @decouple
 		add r0, r0, 4
 		nop
 	}
-.Ltmp263:
+.Ltmp265:
 	#DEBUG_VALUE: aud_from_host_wrptr <- R0
 	.loc	1 868 17                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:868:17
 	ldw r2, dp[aud_from_host_fifo_end]
@@ -3051,16 +3076,16 @@ decouple:                               # @decouple
 		nop
 	}
 	bt r2, .LBB1_31
-.Ltmp264:
-# BB#30:                                # %iftrue135
+.Ltmp266:
+# BB#30:                                # %iftrue138
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel78:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	.loc	1 870 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:870:0
 	ldw r0, dp[aud_from_host_fifo_start]
-.Ltmp265:
+.Ltmp267:
 	#DEBUG_VALUE: aud_from_host_wrptr <- R0
-.LBB1_31:                               # %iftrue135
+.LBB1_31:                               # %iftrue138
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel79:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -3068,8 +3093,8 @@ decouple:                               # @decouple
 	#APP
 	stw r0, dp[g_aud_from_host_wrptr]
 	#NO_APP
-.Ltmp266:
-.LBB1_32:                               # %ifdone136
+.Ltmp268:
+.LBB1_32:                               # %ifdone139
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel80:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -3080,16 +3105,16 @@ decouple:                               # @decouple
 		sub r1, r1, r0
 		nop
 	}
-.Ltmp267:
+.Ltmp269:
 	#DEBUG_VALUE: space_left <- R1
 	.loc	1 880 13                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:880:13
 	{
-		lss r2, r1, r5
+		lss r2, r1, r7
 		nop
 	}
 	bf r2, .LBB1_35
-.Ltmp268:
-# BB#33:                                # %lhsfalse172
+.Ltmp270:
+# BB#33:                                # %lhsfalse175
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel81:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -3104,8 +3129,8 @@ decouple:                               # @decouple
 		nop
 	}
 	bf r1, .LBB1_36
-.Ltmp269:
-# BB#34:                                # %iftrue165
+.Ltmp271:
+# BB#34:                                # %iftrue168
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel82:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -3119,9 +3144,9 @@ decouple:                               # @decouple
 		sub r1, r1, r2
 		nop
 	}
-.Ltmp270:
+.Ltmp272:
 	#DEBUG_VALUE: space_left <- R1
-.LBB1_35:                               # %ifdone166
+.LBB1_35:                               # %ifdone169
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel83:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -3138,8 +3163,8 @@ decouple:                               # @decouple
 		nop
 	}
 	bf r1, .LBB1_38
-.Ltmp271:
-.LBB1_36:                               # %exptrue192
+.Ltmp273:
+.LBB1_36:                               # %exptrue195
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel84:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -3150,17 +3175,17 @@ decouple:                               # @decouple
 	#NO_APP
 	.loc	1 888 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:888:0
 	ldw r1, dp[aud_from_host_usb_ep]
-.Ltmp272:
+.Ltmp274:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:ep <- R1
 	.loc	2 432 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:432:0
 	#APP
 	ldw r2, r1[9]
 	#NO_APP
-.Ltmp273:
+.Ltmp275:
 	#DEBUG_VALUE: reset <- R2
 	bt r2, .LBB1_5
-.Ltmp274:
-# BB#37:                                # %ifdone.i266
+.Ltmp276:
+# BB#37:                                # %ifdone.i269
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel85:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -3171,13 +3196,13 @@ decouple:                               # @decouple
 		add r0, r0, 4
 		nop
 	}
-.Ltmp275:
+.Ltmp277:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:addr <- R0
 	.loc	2 437 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:437:0
 	#APP
 	ldw r2, r1[0]
 	#NO_APP
-.Ltmp276:
+.Ltmp278:
 	#DEBUG_VALUE: chan_array_ptr <- R2
 	.loc	2 438 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:438:0
 	#APP
@@ -3188,8 +3213,8 @@ decouple:                               # @decouple
 	stw r1, r2[0]
 	#NO_APP
 	bu .LBB1_5
-.Ltmp277:
-.LBB1_39:                               # %iffalse134
+.Ltmp279:
+.LBB1_39:                               # %iffalse137
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel86:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -3197,8 +3222,8 @@ decouple:                               # @decouple
 	.loc	1 901 14                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:901:14
 	ldw r0, dp[outOverflow]
 	bf r0, .LBB1_5
-.Ltmp278:
-# BB#40:                                # %iftrue205
+.Ltmp280:
+# BB#40:                                # %iftrue208
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel87:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -3207,28 +3232,28 @@ decouple:                               # @decouple
 	#APP
 	ldw r0, dp[g_aud_from_host_wrptr]
 	#NO_APP
-.Ltmp279:
+.Ltmp281:
 	#DEBUG_VALUE: aud_from_host_wrptr <- R0
 	.loc	1 907 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:907:0
 	#APP
 	ldw r1, dp[g_aud_from_host_rdptr]
 	#NO_APP
-.Ltmp280:
+.Ltmp282:
 	#DEBUG_VALUE: aud_from_host_rdptr <- R1
 	.loc	1 908 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:908:0
 	{
 		sub r1, r1, r0
 		nop
 	}
-.Ltmp281:
+.Ltmp283:
 	#DEBUG_VALUE: space_left <- R1
 	.loc	1 909 13                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:909:13
 	{
-		lss r2, r1, r5
+		lss r2, r1, r7
 		nop
 	}
 	bf r2, .LBB1_42
-.Ltmp282:
+.Ltmp284:
 # BB#41:                                #   in Loop: Header=BB1_5 Depth=1
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
@@ -3240,8 +3265,8 @@ decouple:                               # @decouple
 		add r1, r1, r2
 		nop
 	}
-.Ltmp283:
-.LBB1_42:                               # %iftrue205
+.Ltmp285:
+.LBB1_42:                               # %iftrue208
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel88:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -3254,32 +3279,32 @@ decouple:                               # @decouple
 		nop
 	}
 	bt r1, .LBB1_5
-.Ltmp284:
-# BB#43:                                # %iftrue225
+.Ltmp286:
+# BB#43:                                # %iftrue228
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel89:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
 	#DEBUG_VALUE: aud_from_host_wrptr <- R0
 	.loc	1 914 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:914:0
-	stw r9, dp[outOverflow]
+	stw r6, dp[outOverflow]
 	.loc	1 915 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:915:0
 	#APP
 	stw r0, dp[g_aud_from_host_buffer]
 	#NO_APP
 	.loc	1 916 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:916:0
 	ldw r1, dp[aud_from_host_usb_ep]
-.Ltmp285:
+.Ltmp287:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:ep <- R1
 	.loc	2 432 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:432:0
 	#APP
 	ldw r2, r1[9]
 	#NO_APP
-.Ltmp286:
+.Ltmp288:
 	#DEBUG_VALUE: reset <- R2
 	bt r2, .LBB1_5
-.Ltmp287:
-# BB#44:                                # %ifdone.i270
+.Ltmp289:
+# BB#44:                                # %ifdone.i273
                                         #   in Loop: Header=BB1_5 Depth=1
 .Lxtalabel90:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -3291,13 +3316,13 @@ decouple:                               # @decouple
 		add r0, r0, 4
 		nop
 	}
-.Ltmp288:
+.Ltmp290:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:addr <- R0
 	.loc	2 437 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:437:0
 	#APP
 	ldw r2, r1[0]
 	#NO_APP
-.Ltmp289:
+.Ltmp291:
 	#DEBUG_VALUE: chan_array_ptr <- R2
 	.loc	2 438 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:438:0
 	#APP
@@ -3308,18 +3333,18 @@ decouple:                               # @decouple
 	stw r1, r2[0]
 	#NO_APP
 	bu .LBB1_5
-.Ltmp290:
+.Ltmp292:
 	.cc_bottom decouple.function
-	.set	decouple.nstackwords,(GetADCCounts.nstackwords + 12)
+	.set	decouple.nstackwords,((update_samp_resolution.nstackwords $M update_samp_freq.nstackwords $M GetADCCounts.nstackwords) + 12)
 	.globl	decouple.nstackwords
-	.set	decouple.maxcores,GetADCCounts.maxcores $M 1
+	.set	decouple.maxcores,GetADCCounts.maxcores $M update_samp_freq.maxcores $M update_samp_resolution.maxcores $M 1
 	.globl	decouple.maxcores
-	.set	decouple.maxtimers,GetADCCounts.maxtimers $M 0
+	.set	decouple.maxtimers,GetADCCounts.maxtimers $M update_samp_freq.maxtimers $M update_samp_resolution.maxtimers $M 0
 	.globl	decouple.maxtimers
-	.set	decouple.maxchanends,GetADCCounts.maxchanends $M 0
+	.set	decouple.maxchanends,GetADCCounts.maxchanends $M update_samp_freq.maxchanends $M update_samp_resolution.maxchanends $M 0
 	.globl	decouple.maxchanends
-.Ltmp291:
-	.size	decouple, .Ltmp291-decouple
+.Ltmp293:
+	.size	decouple, .Ltmp293-decouple
 .Lfunc_end1:
 	.cfi_endproc
 
@@ -5103,7 +5128,7 @@ tmpBuffer:
 	.byte	14                      # Abbrev [14] 0x99b:0x50b DW_TAG_lexical_block
 	.long	.Ldebug_ranges95        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x9a0:0x10 DW_TAG_variable
-	.long	.Ldebug_loc31           # DW_AT_location
+	.long	.Ldebug_loc30           # DW_AT_location
 	.long	.Linfo_string71         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	591                     # DW_AT_decl_line
@@ -5111,7 +5136,7 @@ tmpBuffer:
 	.byte	14                      # Abbrev [14] 0x9b0:0x4f5 DW_TAG_lexical_block
 	.long	.Ldebug_ranges94        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x9b5:0x10 DW_TAG_variable
-	.long	.Ldebug_loc30           # DW_AT_location
+	.long	.Ldebug_loc31           # DW_AT_location
 	.long	.Linfo_string104        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	598                     # DW_AT_decl_line
@@ -6489,1681 +6514,1681 @@ tmpBuffer:
 	.long	0
 	.long	0
 .Ldebug_ranges38:
-	.long	.Ltmp160
-	.long	.Ltmp161
+	.long	.Ltmp162
+	.long	.Ltmp163
 	.long	0
 	.long	0
 .Ldebug_ranges39:
-	.long	.Ltmp160
-	.long	.Ltmp161
+	.long	.Ltmp162
+	.long	.Ltmp163
 	.long	0
 	.long	0
 .Ldebug_ranges40:
-	.long	.Ltmp161
-	.long	.Ltmp162
+	.long	.Ltmp163
+	.long	.Ltmp164
 	.long	0
 	.long	0
 .Ldebug_ranges41:
-	.long	.Ltmp161
-	.long	.Ltmp162
+	.long	.Ltmp163
+	.long	.Ltmp164
 	.long	0
 	.long	0
 .Ldebug_ranges42:
-	.long	.Ltmp163
-	.long	.Ltmp164
+	.long	.Ltmp165
+	.long	.Ltmp166
 	.long	0
 	.long	0
 .Ldebug_ranges43:
-	.long	.Ltmp163
-	.long	.Ltmp164
+	.long	.Ltmp165
+	.long	.Ltmp166
 	.long	0
 	.long	0
 .Ldebug_ranges44:
-	.long	.Ltmp165
 	.long	.Ltmp167
+	.long	.Ltmp169
 	.long	0
 	.long	0
 .Ldebug_ranges45:
-	.long	.Ltmp165
 	.long	.Ltmp167
+	.long	.Ltmp169
 	.long	0
 	.long	0
 .Ldebug_ranges46:
-	.long	.Ltmp169
-	.long	.Ltmp170
+	.long	.Ltmp171
+	.long	.Ltmp172
 	.long	0
 	.long	0
 .Ldebug_ranges47:
-	.long	.Ltmp169
-	.long	.Ltmp170
+	.long	.Ltmp171
+	.long	.Ltmp172
 	.long	0
 	.long	0
 .Ldebug_ranges48:
-	.long	.Ltmp172
 	.long	.Ltmp174
+	.long	.Ltmp176
 	.long	0
 	.long	0
 .Ldebug_ranges49:
-	.long	.Ltmp174
-	.long	.Ltmp175
+	.long	.Ltmp176
+	.long	.Ltmp177
 	.long	0
 	.long	0
 .Ldebug_ranges50:
-	.long	.Ltmp180
 	.long	.Ltmp182
-	.long	.Ltmp183
+	.long	.Ltmp184
 	.long	.Ltmp185
+	.long	.Ltmp187
 	.long	0
 	.long	0
 .Ldebug_ranges51:
-	.long	.Ltmp180
 	.long	.Ltmp182
-	.long	.Ltmp183
+	.long	.Ltmp184
 	.long	.Ltmp185
+	.long	.Ltmp187
 	.long	0
 	.long	0
 .Ldebug_ranges52:
-	.long	.Ltmp180
 	.long	.Ltmp182
-	.long	.Ltmp183
+	.long	.Ltmp184
 	.long	.Ltmp185
+	.long	.Ltmp187
 	.long	0
 	.long	0
 .Ldebug_ranges53:
-	.long	.Ltmp272
 	.long	.Ltmp274
-	.long	.Ltmp275
+	.long	.Ltmp276
 	.long	.Ltmp277
+	.long	.Ltmp279
 	.long	0
 	.long	0
 .Ldebug_ranges54:
-	.long	.Ltmp272
 	.long	.Ltmp274
-	.long	.Ltmp275
+	.long	.Ltmp276
 	.long	.Ltmp277
+	.long	.Ltmp279
 	.long	0
 	.long	0
 .Ldebug_ranges55:
-	.long	.Ltmp272
 	.long	.Ltmp274
-	.long	.Ltmp275
+	.long	.Ltmp276
 	.long	.Ltmp277
+	.long	.Ltmp279
 	.long	0
 	.long	0
 .Ldebug_ranges56:
-	.long	.Ltmp186
-	.long	.Ltmp187
-	.long	.Ltmp256
-	.long	.Ltmp277
+	.long	.Ltmp188
+	.long	.Ltmp189
+	.long	.Ltmp258
+	.long	.Ltmp279
 	.long	0
 	.long	0
 .Ldebug_ranges57:
-	.long	.Ltmp186
-	.long	.Ltmp187
-	.long	.Ltmp256
-	.long	.Ltmp277
+	.long	.Ltmp188
+	.long	.Ltmp189
+	.long	.Ltmp258
+	.long	.Ltmp279
 	.long	0
 	.long	0
 .Ldebug_ranges58:
-	.long	.Ltmp186
-	.long	.Ltmp187
-	.long	.Ltmp256
-	.long	.Ltmp277
+	.long	.Ltmp188
+	.long	.Ltmp189
+	.long	.Ltmp258
+	.long	.Ltmp279
 	.long	0
 	.long	0
 .Ldebug_ranges59:
-	.long	.Ltmp186
-	.long	.Ltmp187
-	.long	.Ltmp256
-	.long	.Ltmp277
+	.long	.Ltmp188
+	.long	.Ltmp189
+	.long	.Ltmp258
+	.long	.Ltmp279
 	.long	0
 	.long	0
 .Ldebug_ranges60:
-	.long	.Ltmp195
-	.long	.Ltmp197
 	.long	.Ltmp198
 	.long	.Ltmp200
+	.long	.Ltmp201
+	.long	.Ltmp203
 	.long	0
 	.long	0
 .Ldebug_ranges61:
-	.long	.Ltmp195
-	.long	.Ltmp197
 	.long	.Ltmp198
 	.long	.Ltmp200
+	.long	.Ltmp201
+	.long	.Ltmp203
 	.long	0
 	.long	0
 .Ldebug_ranges62:
-	.long	.Ltmp195
-	.long	.Ltmp197
 	.long	.Ltmp198
 	.long	.Ltmp200
+	.long	.Ltmp201
+	.long	.Ltmp203
 	.long	0
 	.long	0
 .Ldebug_ranges63:
-	.long	.Ltmp190
-	.long	.Ltmp203
+	.long	.Ltmp192
+	.long	.Ltmp205
 	.long	0
 	.long	0
 .Ldebug_ranges64:
-	.long	.Ltmp190
-	.long	.Ltmp203
+	.long	.Ltmp192
+	.long	.Ltmp205
 	.long	0
 	.long	0
 .Ldebug_ranges65:
-	.long	.Ltmp207
-	.long	.Ltmp220
+	.long	.Ltmp209
+	.long	.Ltmp222
 	.long	0
 	.long	0
 .Ldebug_ranges66:
-	.long	.Ltmp209
 	.long	.Ltmp211
-	.long	.Ltmp212
-	.long	.Ltmp220
+	.long	.Ltmp213
+	.long	.Ltmp214
+	.long	.Ltmp222
 	.long	0
 	.long	0
 .Ldebug_ranges67:
-	.long	.Ltmp209
 	.long	.Ltmp211
-	.long	.Ltmp212
-	.long	.Ltmp220
+	.long	.Ltmp213
+	.long	.Ltmp214
+	.long	.Ltmp222
 	.long	0
 	.long	0
 .Ldebug_ranges68:
-	.long	.Ltmp209
 	.long	.Ltmp211
-	.long	.Ltmp212
-	.long	.Ltmp220
+	.long	.Ltmp213
+	.long	.Ltmp214
+	.long	.Ltmp222
 	.long	0
 	.long	0
 .Ldebug_ranges69:
-	.long	.Ltmp209
 	.long	.Ltmp211
-	.long	.Ltmp212
-	.long	.Ltmp220
+	.long	.Ltmp213
+	.long	.Ltmp214
+	.long	.Ltmp222
 	.long	0
 	.long	0
 .Ldebug_ranges70:
-	.long	.Ltmp209
 	.long	.Ltmp211
-	.long	.Ltmp212
-	.long	.Ltmp220
+	.long	.Ltmp213
+	.long	.Ltmp214
+	.long	.Ltmp222
 	.long	0
 	.long	0
 .Ldebug_ranges71:
-	.long	.Ltmp209
 	.long	.Ltmp211
-	.long	.Ltmp212
-	.long	.Ltmp220
+	.long	.Ltmp213
+	.long	.Ltmp214
+	.long	.Ltmp222
 	.long	0
 	.long	0
 .Ldebug_ranges72:
-	.long	.Ltmp207
-	.long	.Ltmp220
+	.long	.Ltmp209
+	.long	.Ltmp222
 	.long	0
 	.long	0
 .Ldebug_ranges73:
-	.long	.Ltmp203
-	.long	.Ltmp223
-	.long	.Ltmp252
+	.long	.Ltmp205
+	.long	.Ltmp225
 	.long	.Ltmp254
+	.long	.Ltmp256
 	.long	0
 	.long	0
 .Ldebug_ranges74:
-	.long	.Ltmp228
-	.long	.Ltmp241
+	.long	.Ltmp230
+	.long	.Ltmp243
 	.long	0
 	.long	0
 .Ldebug_ranges75:
-	.long	.Ltmp230
 	.long	.Ltmp232
-	.long	.Ltmp233
-	.long	.Ltmp241
+	.long	.Ltmp234
+	.long	.Ltmp235
+	.long	.Ltmp243
 	.long	0
 	.long	0
 .Ldebug_ranges76:
-	.long	.Ltmp230
 	.long	.Ltmp232
-	.long	.Ltmp233
-	.long	.Ltmp241
+	.long	.Ltmp234
+	.long	.Ltmp235
+	.long	.Ltmp243
 	.long	0
 	.long	0
 .Ldebug_ranges77:
-	.long	.Ltmp230
 	.long	.Ltmp232
-	.long	.Ltmp233
-	.long	.Ltmp241
+	.long	.Ltmp234
+	.long	.Ltmp235
+	.long	.Ltmp243
 	.long	0
 	.long	0
 .Ldebug_ranges78:
-	.long	.Ltmp230
 	.long	.Ltmp232
-	.long	.Ltmp233
-	.long	.Ltmp241
+	.long	.Ltmp234
+	.long	.Ltmp235
+	.long	.Ltmp243
 	.long	0
 	.long	0
 .Ldebug_ranges79:
-	.long	.Ltmp230
 	.long	.Ltmp232
-	.long	.Ltmp233
-	.long	.Ltmp241
+	.long	.Ltmp234
+	.long	.Ltmp235
+	.long	.Ltmp243
 	.long	0
 	.long	0
 .Ldebug_ranges80:
-	.long	.Ltmp230
 	.long	.Ltmp232
-	.long	.Ltmp233
-	.long	.Ltmp241
+	.long	.Ltmp234
+	.long	.Ltmp235
+	.long	.Ltmp243
 	.long	0
 	.long	0
 .Ldebug_ranges81:
-	.long	.Ltmp228
-	.long	.Ltmp241
+	.long	.Ltmp230
+	.long	.Ltmp243
 	.long	0
 	.long	0
 .Ldebug_ranges82:
-	.long	.Ltmp244
 	.long	.Ltmp246
-	.long	.Ltmp247
+	.long	.Ltmp248
 	.long	.Ltmp249
+	.long	.Ltmp251
 	.long	0
 	.long	0
 .Ldebug_ranges83:
-	.long	.Ltmp244
 	.long	.Ltmp246
-	.long	.Ltmp247
+	.long	.Ltmp248
 	.long	.Ltmp249
+	.long	.Ltmp251
 	.long	0
 	.long	0
 .Ldebug_ranges84:
-	.long	.Ltmp244
 	.long	.Ltmp246
-	.long	.Ltmp247
+	.long	.Ltmp248
 	.long	.Ltmp249
+	.long	.Ltmp251
 	.long	0
 	.long	0
 .Ldebug_ranges85:
-	.long	.Ltmp285
 	.long	.Ltmp287
-	.long	.Ltmp288
+	.long	.Ltmp289
 	.long	.Ltmp290
+	.long	.Ltmp292
 	.long	0
 	.long	0
 .Ldebug_ranges86:
-	.long	.Ltmp285
 	.long	.Ltmp287
-	.long	.Ltmp288
+	.long	.Ltmp289
 	.long	.Ltmp290
+	.long	.Ltmp292
 	.long	0
 	.long	0
 .Ldebug_ranges87:
-	.long	.Ltmp285
 	.long	.Ltmp287
-	.long	.Ltmp288
+	.long	.Ltmp289
 	.long	.Ltmp290
+	.long	.Ltmp292
 	.long	0
 	.long	0
 .Ldebug_ranges88:
-	.long	.Ltmp278
-	.long	.Ltmp290
+	.long	.Ltmp280
+	.long	.Ltmp292
 	.long	0
 	.long	0
 .Ldebug_ranges89:
-	.long	.Ltmp278
-	.long	.Ltmp290
+	.long	.Ltmp280
+	.long	.Ltmp292
 	.long	0
 	.long	0
 .Ldebug_ranges90:
-	.long	.Ltmp278
-	.long	.Ltmp290
+	.long	.Ltmp280
+	.long	.Ltmp292
 	.long	0
 	.long	0
 .Ldebug_ranges91:
-	.long	.Ltmp186
-	.long	.Ltmp290
+	.long	.Ltmp188
+	.long	.Ltmp292
 	.long	0
 	.long	0
 .Ldebug_ranges92:
-	.long	.Ltmp160
-	.long	.Ltmp290
+	.long	.Ltmp162
+	.long	.Ltmp292
 	.long	0
 	.long	0
 .Ldebug_ranges93:
-	.long	.Ltmp160
-	.long	.Ltmp290
+	.long	.Ltmp162
+	.long	.Ltmp292
 	.long	0
 	.long	0
 .Ldebug_ranges94:
-	.long	.Ltmp160
-	.long	.Ltmp290
+	.long	.Ltmp162
+	.long	.Ltmp292
 	.long	0
 	.long	0
 .Ldebug_ranges95:
-	.long	.Ltmp160
-	.long	.Ltmp290
+	.long	.Ltmp161
+	.long	.Ltmp292
 	.long	0
 	.long	0
 	.section	.debug_loc,"",@progbits
 .Ldebug_loc0:
 	.long	.Lfunc_begin0
 	.long	.Ltmp47
-.Lset0 = .Ltmp293-.Ltmp292              # Loc expr size
+.Lset0 = .Ltmp295-.Ltmp294              # Loc expr size
 	.short	.Lset0
-.Ltmp292:
-	.byte	80                      # DW_OP_reg0
-.Ltmp293:
-	.long	.Ltmp48
-	.long	.Ltmp60
-.Lset1 = .Ltmp295-.Ltmp294              # Loc expr size
-	.short	.Lset1
 .Ltmp294:
 	.byte	80                      # DW_OP_reg0
 .Ltmp295:
-	.long	.Ltmp62
-	.long	.Ltmp106
-.Lset2 = .Ltmp297-.Ltmp296              # Loc expr size
-	.short	.Lset2
+	.long	.Ltmp48
+	.long	.Ltmp60
+.Lset1 = .Ltmp297-.Ltmp296              # Loc expr size
+	.short	.Lset1
 .Ltmp296:
 	.byte	80                      # DW_OP_reg0
 .Ltmp297:
-	.long	.Ltmp107
-	.long	.Ltmp123
-.Lset3 = .Ltmp299-.Ltmp298              # Loc expr size
-	.short	.Lset3
+	.long	.Ltmp62
+	.long	.Ltmp106
+.Lset2 = .Ltmp299-.Ltmp298              # Loc expr size
+	.short	.Lset2
 .Ltmp298:
 	.byte	80                      # DW_OP_reg0
 .Ltmp299:
+	.long	.Ltmp107
+	.long	.Ltmp123
+.Lset3 = .Ltmp301-.Ltmp300              # Loc expr size
+	.short	.Lset3
+.Ltmp300:
+	.byte	80                      # DW_OP_reg0
+.Ltmp301:
 	.long	0
 	.long	0
 .Ldebug_loc1:
 	.long	.Ltmp9
 	.long	.Ltmp10
-.Lset4 = .Ltmp301-.Ltmp300              # Loc expr size
+.Lset4 = .Ltmp303-.Ltmp302              # Loc expr size
 	.short	.Lset4
-.Ltmp300:
-	.byte	81                      # DW_OP_reg1
-.Ltmp301:
-	.long	.Ltmp11
-	.long	.Ltmp13
-.Lset5 = .Ltmp303-.Ltmp302              # Loc expr size
-	.short	.Lset5
 .Ltmp302:
 	.byte	81                      # DW_OP_reg1
 .Ltmp303:
+	.long	.Ltmp11
+	.long	.Ltmp13
+.Lset5 = .Ltmp305-.Ltmp304              # Loc expr size
+	.short	.Lset5
+.Ltmp304:
+	.byte	81                      # DW_OP_reg1
+.Ltmp305:
 	.long	0
 	.long	0
 .Ldebug_loc2:
 	.long	.Ltmp14
 	.long	.Ltmp16
-.Lset6 = .Ltmp305-.Ltmp304              # Loc expr size
+.Lset6 = .Ltmp307-.Ltmp306              # Loc expr size
 	.short	.Lset6
-.Ltmp304:
+.Ltmp306:
 	.byte	82                      # DW_OP_reg2
-.Ltmp305:
+.Ltmp307:
 	.long	0
 	.long	0
 .Ldebug_loc3:
 	.long	.Ltmp19
 	.long	.Ltmp36
-.Lset7 = .Ltmp307-.Ltmp306              # Loc expr size
+.Lset7 = .Ltmp309-.Ltmp308              # Loc expr size
 	.short	.Lset7
-.Ltmp306:
+.Ltmp308:
 	.byte	17                      # DW_OP_consts
 	.byte	0                       # 
-.Ltmp307:
+.Ltmp309:
 	.long	.Ltmp36
 	.long	.Ltmp37
-.Lset8 = .Ltmp309-.Ltmp308              # Loc expr size
+.Lset8 = .Ltmp311-.Ltmp310              # Loc expr size
 	.short	.Lset8
-.Ltmp308:
+.Ltmp310:
 	.byte	89                      # DW_OP_reg9
-.Ltmp309:
+.Ltmp311:
 	.long	0
 	.long	0
 .Ldebug_loc4:
 	.long	.Ltmp27
 	.long	.Ltmp28
-.Lset9 = .Ltmp311-.Ltmp310              # Loc expr size
+.Lset9 = .Ltmp313-.Ltmp312              # Loc expr size
 	.short	.Lset9
-.Ltmp310:
-	.byte	90                      # DW_OP_reg10
-.Ltmp311:
-	.long	.Ltmp29
-	.long	.Ltmp30
-.Lset10 = .Ltmp313-.Ltmp312             # Loc expr size
-	.short	.Lset10
 .Ltmp312:
 	.byte	90                      # DW_OP_reg10
 .Ltmp313:
+	.long	.Ltmp29
+	.long	.Ltmp30
+.Lset10 = .Ltmp315-.Ltmp314             # Loc expr size
+	.short	.Lset10
+.Ltmp314:
+	.byte	90                      # DW_OP_reg10
+.Ltmp315:
 	.long	.Ltmp31
 	.long	.Ltmp32
-.Lset11 = .Ltmp315-.Ltmp314             # Loc expr size
+.Lset11 = .Ltmp317-.Ltmp316             # Loc expr size
 	.short	.Lset11
-.Ltmp314:
+.Ltmp316:
 	.byte	84                      # DW_OP_reg4
-.Ltmp315:
+.Ltmp317:
 	.long	.Ltmp32
 	.long	.Ltmp33
-.Lset12 = .Ltmp317-.Ltmp316             # Loc expr size
+.Lset12 = .Ltmp319-.Ltmp318             # Loc expr size
 	.short	.Lset12
-.Ltmp316:
-	.byte	90                      # DW_OP_reg10
-.Ltmp317:
-	.long	.Ltmp34
-	.long	.Ltmp34
-.Lset13 = .Ltmp319-.Ltmp318             # Loc expr size
-	.short	.Lset13
 .Ltmp318:
 	.byte	90                      # DW_OP_reg10
 .Ltmp319:
+	.long	.Ltmp34
+	.long	.Ltmp34
+.Lset13 = .Ltmp321-.Ltmp320             # Loc expr size
+	.short	.Lset13
+.Ltmp320:
+	.byte	90                      # DW_OP_reg10
+.Ltmp321:
 	.long	0
 	.long	0
 .Ldebug_loc5:
 	.long	.Ltmp35
 	.long	.Ltmp36
-.Lset14 = .Ltmp321-.Ltmp320             # Loc expr size
+.Lset14 = .Ltmp323-.Ltmp322             # Loc expr size
 	.short	.Lset14
-.Ltmp320:
-	.byte	84                      # DW_OP_reg4
-.Ltmp321:
-	.long	0
-	.long	0
-.Ldebug_loc6:
-	.long	.Ltmp36
-	.long	.Ltmp38
-.Lset15 = .Ltmp323-.Ltmp322             # Loc expr size
-	.short	.Lset15
 .Ltmp322:
 	.byte	84                      # DW_OP_reg4
 .Ltmp323:
 	.long	0
 	.long	0
+.Ldebug_loc6:
+	.long	.Ltmp36
+	.long	.Ltmp38
+.Lset15 = .Ltmp325-.Ltmp324             # Loc expr size
+	.short	.Lset15
+.Ltmp324:
+	.byte	84                      # DW_OP_reg4
+.Ltmp325:
+	.long	0
+	.long	0
 .Ldebug_loc7:
 	.long	.Ltmp42
 	.long	.Ltmp56
-.Lset16 = .Ltmp325-.Ltmp324             # Loc expr size
+.Lset16 = .Ltmp327-.Ltmp326             # Loc expr size
 	.short	.Lset16
-.Ltmp324:
+.Ltmp326:
 	.byte	17                      # DW_OP_consts
 	.byte	0                       # 
-.Ltmp325:
+.Ltmp327:
 	.long	.Ltmp56
 	.long	.Ltmp57
-.Lset17 = .Ltmp327-.Ltmp326             # Loc expr size
+.Lset17 = .Ltmp329-.Ltmp328             # Loc expr size
 	.short	.Lset17
-.Ltmp326:
+.Ltmp328:
 	.byte	88                      # DW_OP_reg8
-.Ltmp327:
+.Ltmp329:
 	.long	0
 	.long	0
 .Ldebug_loc8:
 	.long	.Ltmp45
 	.long	.Ltmp67
-.Lset18 = .Ltmp329-.Ltmp328             # Loc expr size
+.Lset18 = .Ltmp331-.Ltmp330             # Loc expr size
 	.short	.Lset18
-.Ltmp328:
+.Ltmp330:
 	.byte	17                      # DW_OP_consts
 	.byte	0                       # 
-.Ltmp329:
+.Ltmp331:
 	.long	.Ltmp67
 	.long	.Ltmp68
-.Lset19 = .Ltmp331-.Ltmp330             # Loc expr size
+.Lset19 = .Ltmp333-.Ltmp332             # Loc expr size
 	.short	.Lset19
-.Ltmp330:
+.Ltmp332:
 	.byte	87                      # DW_OP_reg7
-.Ltmp331:
+.Ltmp333:
 	.long	0
 	.long	0
 .Ldebug_loc9:
 	.long	.Ltmp52
 	.long	.Ltmp58
-.Lset20 = .Ltmp333-.Ltmp332             # Loc expr size
+.Lset20 = .Ltmp335-.Ltmp334             # Loc expr size
 	.short	.Lset20
-.Ltmp332:
+.Ltmp334:
 	.byte	89                      # DW_OP_reg9
-.Ltmp333:
+.Ltmp335:
 	.long	0
 	.long	0
 .Ldebug_loc10:
 	.long	.Ltmp53
 	.long	.Ltmp58
-.Lset21 = .Ltmp335-.Ltmp334             # Loc expr size
+.Lset21 = .Ltmp337-.Ltmp336             # Loc expr size
 	.short	.Lset21
-.Ltmp334:
+.Ltmp336:
 	.byte	90                      # DW_OP_reg10
-.Ltmp335:
+.Ltmp337:
 	.long	0
 	.long	0
 .Ldebug_loc11:
 	.long	.Ltmp54
 	.long	.Ltmp55
-.Lset22 = .Ltmp337-.Ltmp336             # Loc expr size
+.Lset22 = .Ltmp339-.Ltmp338             # Loc expr size
 	.short	.Lset22
-.Ltmp336:
+.Ltmp338:
 	.byte	84                      # DW_OP_reg4
-.Ltmp337:
+.Ltmp339:
 	.long	0
 	.long	0
 .Ldebug_loc12:
 	.long	.Ltmp64
 	.long	.Ltmp65
-.Lset23 = .Ltmp339-.Ltmp338             # Loc expr size
+.Lset23 = .Ltmp341-.Ltmp340             # Loc expr size
 	.short	.Lset23
-.Ltmp338:
+.Ltmp340:
 	.byte	88                      # DW_OP_reg8
-.Ltmp339:
+.Ltmp341:
 	.long	0
 	.long	0
 .Ldebug_loc13:
 	.long	.Ltmp66
 	.long	.Ltmp70
-.Lset24 = .Ltmp341-.Ltmp340             # Loc expr size
+.Lset24 = .Ltmp343-.Ltmp342             # Loc expr size
 	.short	.Lset24
-.Ltmp340:
+.Ltmp342:
 	.byte	89                      # DW_OP_reg9
-.Ltmp341:
+.Ltmp343:
 	.long	0
 	.long	0
 .Ldebug_loc14:
 	.long	.Ltmp67
 	.long	.Ltmp69
-.Lset25 = .Ltmp343-.Ltmp342             # Loc expr size
+.Lset25 = .Ltmp345-.Ltmp344             # Loc expr size
 	.short	.Lset25
-.Ltmp342:
+.Ltmp344:
 	.byte	85                      # DW_OP_reg5
-.Ltmp343:
+.Ltmp345:
 	.long	0
 	.long	0
 .Ldebug_loc15:
 	.long	.Ltmp72
 	.long	.Ltmp75
-.Lset26 = .Ltmp345-.Ltmp344             # Loc expr size
+.Lset26 = .Ltmp347-.Ltmp346             # Loc expr size
 	.short	.Lset26
-.Ltmp344:
+.Ltmp346:
 	.byte	17                      # DW_OP_consts
 	.byte	0                       # 
-.Ltmp345:
+.Ltmp347:
 	.long	.Ltmp75
 	.long	.Ltmp76
-.Lset27 = .Ltmp347-.Ltmp346             # Loc expr size
+.Lset27 = .Ltmp349-.Ltmp348             # Loc expr size
 	.short	.Lset27
-.Ltmp346:
+.Ltmp348:
 	.byte	84                      # DW_OP_reg4
-.Ltmp347:
+.Ltmp349:
 	.long	0
 	.long	0
 .Ldebug_loc16:
 	.long	.Ltmp80
 	.long	.Ltmp113
-.Lset28 = .Ltmp349-.Ltmp348             # Loc expr size
+.Lset28 = .Ltmp351-.Ltmp350             # Loc expr size
 	.short	.Lset28
-.Ltmp348:
+.Ltmp350:
 	.byte	17                      # DW_OP_consts
 	.byte	0                       # 
-.Ltmp349:
+.Ltmp351:
 	.long	.Ltmp113
 	.long	.Ltmp114
-.Lset29 = .Ltmp351-.Ltmp350             # Loc expr size
+.Lset29 = .Ltmp353-.Ltmp352             # Loc expr size
 	.short	.Lset29
-.Ltmp350:
+.Ltmp352:
 	.byte	87                      # DW_OP_reg7
-.Ltmp351:
+.Ltmp353:
 	.long	0
 	.long	0
 .Ldebug_loc17:
 	.long	.Ltmp80
 	.long	.Ltmp83
-.Lset30 = .Ltmp353-.Ltmp352             # Loc expr size
+.Lset30 = .Ltmp355-.Ltmp354             # Loc expr size
 	.short	.Lset30
-.Ltmp352:
-	.byte	91                      # DW_OP_reg11
-.Ltmp353:
-	.long	.Ltmp107
-	.long	.Ltmp117
-.Lset31 = .Ltmp355-.Ltmp354             # Loc expr size
-	.short	.Lset31
 .Ltmp354:
 	.byte	91                      # DW_OP_reg11
 .Ltmp355:
+	.long	.Ltmp107
+	.long	.Ltmp117
+.Lset31 = .Ltmp357-.Ltmp356             # Loc expr size
+	.short	.Lset31
+.Ltmp356:
+	.byte	91                      # DW_OP_reg11
+.Ltmp357:
 	.long	0
 	.long	0
 .Ldebug_loc18:
 	.long	.Ltmp84
 	.long	.Ltmp99
-.Lset32 = .Ltmp357-.Ltmp356             # Loc expr size
+.Lset32 = .Ltmp359-.Ltmp358             # Loc expr size
 	.short	.Lset32
-.Ltmp356:
+.Ltmp358:
 	.byte	17                      # DW_OP_consts
 	.byte	0                       # 
-.Ltmp357:
+.Ltmp359:
 	.long	.Ltmp99
 	.long	.Ltmp100
-.Lset33 = .Ltmp359-.Ltmp358             # Loc expr size
+.Lset33 = .Ltmp361-.Ltmp360             # Loc expr size
 	.short	.Lset33
-.Ltmp358:
+.Ltmp360:
 	.byte	86                      # DW_OP_reg6
-.Ltmp359:
+.Ltmp361:
 	.long	0
 	.long	0
 .Ldebug_loc19:
 	.long	.Ltmp90
 	.long	.Ltmp98
-.Lset34 = .Ltmp361-.Ltmp360             # Loc expr size
+.Lset34 = .Ltmp363-.Ltmp362             # Loc expr size
 	.short	.Lset34
-.Ltmp360:
+.Ltmp362:
 	.byte	88                      # DW_OP_reg8
-.Ltmp361:
+.Ltmp363:
 	.long	0
 	.long	0
 .Ldebug_loc20:
 	.long	.Ltmp91
 	.long	.Ltmp94
-.Lset35 = .Ltmp363-.Ltmp362             # Loc expr size
+.Lset35 = .Ltmp365-.Ltmp364             # Loc expr size
 	.short	.Lset35
-.Ltmp362:
-	.byte	81                      # DW_OP_reg1
-.Ltmp363:
-	.long	0
-	.long	0
-.Ldebug_loc21:
-	.long	.Ltmp110
-	.long	.Ltmp115
-.Lset36 = .Ltmp365-.Ltmp364             # Loc expr size
-	.short	.Lset36
 .Ltmp364:
 	.byte	81                      # DW_OP_reg1
 .Ltmp365:
 	.long	0
 	.long	0
+.Ldebug_loc21:
+	.long	.Ltmp110
+	.long	.Ltmp115
+.Lset36 = .Ltmp367-.Ltmp366             # Loc expr size
+	.short	.Lset36
+.Ltmp366:
+	.byte	81                      # DW_OP_reg1
+.Ltmp367:
+	.long	0
+	.long	0
 .Ldebug_loc22:
 	.long	.Ltmp111
 	.long	.Ltmp116
-.Lset37 = .Ltmp367-.Ltmp366             # Loc expr size
+.Lset37 = .Ltmp369-.Ltmp368             # Loc expr size
 	.short	.Lset37
-.Ltmp366:
+.Ltmp368:
 	.byte	82                      # DW_OP_reg2
-.Ltmp367:
+.Ltmp369:
 	.long	0
 	.long	0
 .Ldebug_loc23:
 	.long	.Ltmp119
 	.long	.Ltmp121
-.Lset38 = .Ltmp369-.Ltmp368             # Loc expr size
+.Lset38 = .Ltmp371-.Ltmp370             # Loc expr size
 	.short	.Lset38
-.Ltmp368:
+.Ltmp370:
 	.byte	17                      # DW_OP_consts
 	.byte	0                       # 
-.Ltmp369:
+.Ltmp371:
 	.long	.Ltmp121
 	.long	.Ltmp122
-.Lset39 = .Ltmp371-.Ltmp370             # Loc expr size
+.Lset39 = .Ltmp373-.Ltmp372             # Loc expr size
 	.short	.Lset39
-.Ltmp370:
+.Ltmp372:
 	.byte	82                      # DW_OP_reg2
-.Ltmp371:
+.Ltmp373:
 	.long	0
 	.long	0
 .Ldebug_loc24:
 	.long	.Ltmp126
 	.long	.Ltmp127
-.Lset40 = .Ltmp373-.Ltmp372             # Loc expr size
+.Lset40 = .Ltmp375-.Ltmp374             # Loc expr size
 	.short	.Lset40
-.Ltmp372:
+.Ltmp374:
 	.byte	80                      # DW_OP_reg0
-.Ltmp373:
+.Ltmp375:
 	.long	0
 	.long	0
 .Ldebug_loc25:
 	.long	.Ltmp128
 	.long	.Ltmp129
-.Lset41 = .Ltmp375-.Ltmp374             # Loc expr size
+.Lset41 = .Ltmp377-.Ltmp376             # Loc expr size
 	.short	.Lset41
-.Ltmp374:
+.Ltmp376:
 	.byte	81                      # DW_OP_reg1
-.Ltmp375:
+.Ltmp377:
 	.long	0
 	.long	0
 .Ldebug_loc26:
 	.long	.Ltmp130
 	.long	.Ltmp131
-.Lset42 = .Ltmp377-.Ltmp376             # Loc expr size
+.Lset42 = .Ltmp379-.Ltmp378             # Loc expr size
 	.short	.Lset42
-.Ltmp376:
-	.byte	91                      # DW_OP_reg11
-.Ltmp377:
-	.long	.Ltmp132
-	.long	.Ltmp132
-.Lset43 = .Ltmp379-.Ltmp378             # Loc expr size
-	.short	.Lset43
 .Ltmp378:
 	.byte	91                      # DW_OP_reg11
 .Ltmp379:
-	.long	.Ltmp141
-	.long	.Ltmp144
-.Lset44 = .Ltmp381-.Ltmp380             # Loc expr size
-	.short	.Lset44
+	.long	.Ltmp132
+	.long	.Ltmp132
+.Lset43 = .Ltmp381-.Ltmp380             # Loc expr size
+	.short	.Lset43
 .Ltmp380:
 	.byte	91                      # DW_OP_reg11
 .Ltmp381:
+	.long	.Ltmp141
+	.long	.Ltmp144
+.Lset44 = .Ltmp383-.Ltmp382             # Loc expr size
+	.short	.Lset44
+.Ltmp382:
+	.byte	91                      # DW_OP_reg11
+.Ltmp383:
 	.long	0
 	.long	0
 .Ldebug_loc27:
 	.long	.Ltmp134
 	.long	.Ltmp138
-.Lset45 = .Ltmp383-.Ltmp382             # Loc expr size
+.Lset45 = .Ltmp385-.Ltmp384             # Loc expr size
 	.short	.Lset45
-.Ltmp382:
-	.byte	82                      # DW_OP_reg2
-.Ltmp383:
-	.long	.Ltmp140
-	.long	.Ltmp140
-.Lset46 = .Ltmp385-.Ltmp384             # Loc expr size
-	.short	.Lset46
 .Ltmp384:
 	.byte	82                      # DW_OP_reg2
 .Ltmp385:
+	.long	.Ltmp140
+	.long	.Ltmp140
+.Lset46 = .Ltmp387-.Ltmp386             # Loc expr size
+	.short	.Lset46
+.Ltmp386:
+	.byte	82                      # DW_OP_reg2
+.Ltmp387:
 	.long	0
 	.long	0
 .Ldebug_loc28:
 	.long	.Ltmp135
 	.long	.Ltmp136
-.Lset47 = .Ltmp387-.Ltmp386             # Loc expr size
+.Lset47 = .Ltmp389-.Ltmp388             # Loc expr size
 	.short	.Lset47
-.Ltmp386:
-	.byte	81                      # DW_OP_reg1
-.Ltmp387:
-	.long	.Ltmp137
-	.long	.Ltmp143
-.Lset48 = .Ltmp389-.Ltmp388             # Loc expr size
-	.short	.Lset48
 .Ltmp388:
 	.byte	81                      # DW_OP_reg1
 .Ltmp389:
+	.long	.Ltmp137
+	.long	.Ltmp143
+.Lset48 = .Ltmp391-.Ltmp390             # Loc expr size
+	.short	.Lset48
+.Ltmp390:
+	.byte	81                      # DW_OP_reg1
+.Ltmp391:
 	.long	0
 	.long	0
 .Ldebug_loc29:
 	.long	.Lfunc_begin1
 	.long	.Ltmp159
-.Lset49 = .Ltmp391-.Ltmp390             # Loc expr size
+.Lset49 = .Ltmp393-.Ltmp392             # Loc expr size
 	.short	.Lset49
-.Ltmp390:
+.Ltmp392:
 	.byte	80                      # DW_OP_reg0
-.Ltmp391:
+.Ltmp393:
 	.long	.Ltmp159
 	.long	.Ltmp160
-.Lset50 = .Ltmp393-.Ltmp392             # Loc expr size
+.Lset50 = .Ltmp395-.Ltmp394             # Loc expr size
 	.short	.Lset50
-.Ltmp392:
-	.byte	84                      # DW_OP_reg4
-.Ltmp393:
-	.long	.Ltmp176
-	.long	.Ltmp252
-.Lset51 = .Ltmp395-.Ltmp394             # Loc expr size
-	.short	.Lset51
 .Ltmp394:
 	.byte	84                      # DW_OP_reg4
 .Ltmp395:
-	.long	.Ltmp253
-	.long	.Lfunc_end1
-.Lset52 = .Ltmp397-.Ltmp396             # Loc expr size
-	.short	.Lset52
+	.long	.Ltmp178
+	.long	.Ltmp254
+.Lset51 = .Ltmp397-.Ltmp396             # Loc expr size
+	.short	.Lset51
 .Ltmp396:
 	.byte	84                      # DW_OP_reg4
 .Ltmp397:
+	.long	.Ltmp255
+	.long	.Lfunc_end1
+.Lset52 = .Ltmp399-.Ltmp398             # Loc expr size
+	.short	.Lset52
+.Ltmp398:
+	.byte	84                      # DW_OP_reg4
+.Ltmp399:
 	.long	0
 	.long	0
 .Ldebug_loc30:
 	.long	.Ltmp159
-	.long	.Ltmp177
-.Lset53 = .Ltmp399-.Ltmp398             # Loc expr size
+	.long	.Ltmp228
+.Lset53 = .Ltmp401-.Ltmp400             # Loc expr size
 	.short	.Lset53
-.Ltmp398:
-	.byte	17                      # DW_OP_consts
-	.byte	0                       # 
-.Ltmp399:
-	.long	.Ltmp177
-	.long	.Ltmp178
-.Lset54 = .Ltmp401-.Ltmp400             # Loc expr size
-	.short	.Lset54
 .Ltmp400:
-	.byte	80                      # DW_OP_reg0
+	.byte	16                      # DW_OP_constu
+	.ascii	"\304\330\002"          # 
 .Ltmp401:
-	.long	.Ltmp178
-	.long	.Ltmp255
-.Lset55 = .Ltmp403-.Ltmp402             # Loc expr size
-	.short	.Lset55
+	.long	.Ltmp228
+	.long	.Ltmp253
+.Lset54 = .Ltmp403-.Ltmp402             # Loc expr size
+	.short	.Lset54
 .Ltmp402:
-	.byte	17                      # DW_OP_consts
-	.byte	0                       # 
+	.byte	85                      # DW_OP_reg5
 .Ltmp403:
-	.long	.Ltmp255
-	.long	.Ltmp256
-.Lset56 = .Ltmp405-.Ltmp404             # Loc expr size
-	.short	.Lset56
+	.long	.Ltmp253
+	.long	.Lfunc_end1
+.Lset55 = .Ltmp405-.Ltmp404             # Loc expr size
+	.short	.Lset55
 .Ltmp404:
-	.byte	80                      # DW_OP_reg0
+	.byte	16                      # DW_OP_constu
+	.ascii	"\304\330\002"          # 
 .Ltmp405:
 	.long	0
 	.long	0
 .Ldebug_loc31:
-	.long	.Ltmp159
-	.long	.Ltmp226
-.Lset57 = .Ltmp407-.Ltmp406             # Loc expr size
-	.short	.Lset57
+	.long	.Ltmp162
+	.long	.Ltmp179
+.Lset56 = .Ltmp407-.Ltmp406             # Loc expr size
+	.short	.Lset56
 .Ltmp406:
-	.byte	16                      # DW_OP_constu
-	.ascii	"\304\330\002"          # 
+	.byte	17                      # DW_OP_consts
+	.byte	0                       # 
 .Ltmp407:
-	.long	.Ltmp226
-	.long	.Ltmp251
-.Lset58 = .Ltmp409-.Ltmp408             # Loc expr size
-	.short	.Lset58
+	.long	.Ltmp179
+	.long	.Ltmp180
+.Lset57 = .Ltmp409-.Ltmp408             # Loc expr size
+	.short	.Lset57
 .Ltmp408:
-	.byte	88                      # DW_OP_reg8
+	.byte	80                      # DW_OP_reg0
 .Ltmp409:
-	.long	.Ltmp251
-	.long	.Lfunc_end1
-.Lset59 = .Ltmp411-.Ltmp410             # Loc expr size
-	.short	.Lset59
+	.long	.Ltmp180
+	.long	.Ltmp257
+.Lset58 = .Ltmp411-.Ltmp410             # Loc expr size
+	.short	.Lset58
 .Ltmp410:
-	.byte	16                      # DW_OP_constu
-	.ascii	"\304\330\002"          # 
+	.byte	17                      # DW_OP_consts
+	.byte	0                       # 
 .Ltmp411:
+	.long	.Ltmp257
+	.long	.Ltmp258
+.Lset59 = .Ltmp413-.Ltmp412             # Loc expr size
+	.short	.Lset59
+.Ltmp412:
+	.byte	80                      # DW_OP_reg0
+.Ltmp413:
 	.long	0
 	.long	0
 .Ldebug_loc32:
-	.long	.Ltmp161
-	.long	.Ltmp166
-.Lset60 = .Ltmp413-.Ltmp412             # Loc expr size
-	.short	.Lset60
-.Ltmp412:
-	.byte	82                      # DW_OP_reg2
-.Ltmp413:
-	.long	.Ltmp167
+	.long	.Ltmp163
 	.long	.Ltmp168
-.Lset61 = .Ltmp415-.Ltmp414             # Loc expr size
-	.short	.Lset61
+.Lset60 = .Ltmp415-.Ltmp414             # Loc expr size
+	.short	.Lset60
 .Ltmp414:
 	.byte	82                      # DW_OP_reg2
 .Ltmp415:
+	.long	.Ltmp169
 	.long	.Ltmp170
-	.long	.Ltmp171
-.Lset62 = .Ltmp417-.Ltmp416             # Loc expr size
-	.short	.Lset62
+.Lset61 = .Ltmp417-.Ltmp416             # Loc expr size
+	.short	.Lset61
 .Ltmp416:
 	.byte	82                      # DW_OP_reg2
 .Ltmp417:
-	.long	0
-	.long	0
-.Ldebug_loc33:
-	.long	.Ltmp161
-	.long	.Ltmp166
-.Lset63 = .Ltmp419-.Ltmp418             # Loc expr size
-	.short	.Lset63
+	.long	.Ltmp172
+	.long	.Ltmp173
+.Lset62 = .Ltmp419-.Ltmp418             # Loc expr size
+	.short	.Lset62
 .Ltmp418:
 	.byte	82                      # DW_OP_reg2
 .Ltmp419:
 	.long	0
 	.long	0
-.Ldebug_loc34:
-	.long	.Ltmp162
-	.long	.Ltmp176
-.Lset64 = .Ltmp421-.Ltmp420             # Loc expr size
-	.short	.Lset64
+.Ldebug_loc33:
+	.long	.Ltmp163
+	.long	.Ltmp168
+.Lset63 = .Ltmp421-.Ltmp420             # Loc expr size
+	.short	.Lset63
 .Ltmp420:
-	.byte	81                      # DW_OP_reg1
+	.byte	82                      # DW_OP_reg2
 .Ltmp421:
 	.long	0
 	.long	0
-.Ldebug_loc35:
+.Ldebug_loc34:
 	.long	.Ltmp164
-	.long	.Ltmp176
-.Lset65 = .Ltmp423-.Ltmp422             # Loc expr size
-	.short	.Lset65
+	.long	.Ltmp178
+.Lset64 = .Ltmp423-.Ltmp422             # Loc expr size
+	.short	.Lset64
 .Ltmp422:
-	.byte	80                      # DW_OP_reg0
+	.byte	81                      # DW_OP_reg1
 .Ltmp423:
 	.long	0
 	.long	0
-.Ldebug_loc36:
-	.long	.Ltmp167
-	.long	.Ltmp168
-.Lset66 = .Ltmp425-.Ltmp424             # Loc expr size
-	.short	.Lset66
+.Ldebug_loc35:
+	.long	.Ltmp166
+	.long	.Ltmp178
+.Lset65 = .Ltmp425-.Ltmp424             # Loc expr size
+	.short	.Lset65
 .Ltmp424:
-	.byte	82                      # DW_OP_reg2
+	.byte	80                      # DW_OP_reg0
 .Ltmp425:
 	.long	0
 	.long	0
-.Ldebug_loc37:
+.Ldebug_loc36:
+	.long	.Ltmp169
 	.long	.Ltmp170
-	.long	.Ltmp171
-.Lset67 = .Ltmp427-.Ltmp426             # Loc expr size
-	.short	.Lset67
+.Lset66 = .Ltmp427-.Ltmp426             # Loc expr size
+	.short	.Lset66
 .Ltmp426:
 	.byte	82                      # DW_OP_reg2
 .Ltmp427:
 	.long	0
 	.long	0
-.Ldebug_loc38:
-	.long	.Ltmp171
+.Ldebug_loc37:
+	.long	.Ltmp172
 	.long	.Ltmp173
-.Lset68 = .Ltmp429-.Ltmp428             # Loc expr size
-	.short	.Lset68
+.Lset67 = .Ltmp429-.Ltmp428             # Loc expr size
+	.short	.Lset67
 .Ltmp428:
-	.byte	17                      # DW_OP_consts
-	.byte	0                       # 
+	.byte	82                      # DW_OP_reg2
 .Ltmp429:
+	.long	0
+	.long	0
+.Ldebug_loc38:
 	.long	.Ltmp173
-	.long	.Lfunc_end1
-.Lset69 = .Ltmp431-.Ltmp430             # Loc expr size
-	.short	.Lset69
+	.long	.Ltmp175
+.Lset68 = .Ltmp431-.Ltmp430             # Loc expr size
+	.short	.Lset68
 .Ltmp430:
 	.byte	17                      # DW_OP_consts
-	.byte	1                       # 
+	.byte	0                       # 
 .Ltmp431:
+	.long	.Ltmp175
+	.long	.Lfunc_end1
+.Lset69 = .Ltmp433-.Ltmp432             # Loc expr size
+	.short	.Lset69
+.Ltmp432:
+	.byte	17                      # DW_OP_consts
+	.byte	1                       # 
+.Ltmp433:
 	.long	0
 	.long	0
 .Ldebug_loc39:
-	.long	.Ltmp174
-	.long	.Ltmp175
-.Lset70 = .Ltmp433-.Ltmp432             # Loc expr size
+	.long	.Ltmp176
+	.long	.Ltmp177
+.Lset70 = .Ltmp435-.Ltmp434             # Loc expr size
 	.short	.Lset70
-.Ltmp432:
-	.byte	17                      # DW_OP_consts
-	.byte	0                       # 
-.Ltmp433:
-	.long	.Ltmp175
-	.long	.Lfunc_end1
-.Lset71 = .Ltmp435-.Ltmp434             # Loc expr size
-	.short	.Lset71
 .Ltmp434:
 	.byte	17                      # DW_OP_consts
-	.byte	1                       # 
+	.byte	0                       # 
 .Ltmp435:
-	.long	0
-	.long	0
-.Ldebug_loc40:
-	.long	.Ltmp176
-	.long	.Ltmp176
-.Lset72 = .Ltmp437-.Ltmp436             # Loc expr size
-	.short	.Lset72
+	.long	.Ltmp177
+	.long	.Lfunc_end1
+.Lset71 = .Ltmp437-.Ltmp436             # Loc expr size
+	.short	.Lset71
 .Ltmp436:
-	.byte	80                      # DW_OP_reg0
+	.byte	17                      # DW_OP_consts
+	.byte	1                       # 
 .Ltmp437:
 	.long	0
 	.long	0
-.Ldebug_loc41:
-	.long	.Ltmp176
-	.long	.Ltmp176
-.Lset73 = .Ltmp439-.Ltmp438             # Loc expr size
-	.short	.Lset73
+.Ldebug_loc40:
+	.long	.Ltmp178
+	.long	.Ltmp178
+.Lset72 = .Ltmp439-.Ltmp438             # Loc expr size
+	.short	.Lset72
 .Ltmp438:
 	.byte	80                      # DW_OP_reg0
 .Ltmp439:
 	.long	0
 	.long	0
-.Ldebug_loc42:
-	.long	.Ltmp176
-	.long	.Ltmp176
-.Lset74 = .Ltmp441-.Ltmp440             # Loc expr size
-	.short	.Lset74
+.Ldebug_loc41:
+	.long	.Ltmp178
+	.long	.Ltmp178
+.Lset73 = .Ltmp441-.Ltmp440             # Loc expr size
+	.short	.Lset73
 .Ltmp440:
 	.byte	80                      # DW_OP_reg0
 .Ltmp441:
 	.long	0
 	.long	0
-.Ldebug_loc43:
-	.long	.Ltmp176
-	.long	.Ltmp176
-.Lset75 = .Ltmp443-.Ltmp442             # Loc expr size
-	.short	.Lset75
+.Ldebug_loc42:
+	.long	.Ltmp178
+	.long	.Ltmp178
+.Lset74 = .Ltmp443-.Ltmp442             # Loc expr size
+	.short	.Lset74
 .Ltmp442:
-	.byte	82                      # DW_OP_reg2
+	.byte	80                      # DW_OP_reg0
 .Ltmp443:
 	.long	0
 	.long	0
-.Ldebug_loc44:
-	.long	.Ltmp176
-	.long	.Ltmp176
-.Lset76 = .Ltmp445-.Ltmp444             # Loc expr size
-	.short	.Lset76
+.Ldebug_loc43:
+	.long	.Ltmp178
+	.long	.Ltmp178
+.Lset75 = .Ltmp445-.Ltmp444             # Loc expr size
+	.short	.Lset75
 .Ltmp444:
 	.byte	82                      # DW_OP_reg2
 .Ltmp445:
 	.long	0
 	.long	0
-.Ldebug_loc45:
-	.long	.Ltmp179
-	.long	.Ltmp185
-.Lset77 = .Ltmp447-.Ltmp446             # Loc expr size
-	.short	.Lset77
+.Ldebug_loc44:
+	.long	.Ltmp178
+	.long	.Ltmp178
+.Lset76 = .Ltmp447-.Ltmp446             # Loc expr size
+	.short	.Lset76
 .Ltmp446:
-	.byte	80                      # DW_OP_reg0
+	.byte	82                      # DW_OP_reg2
 .Ltmp447:
 	.long	0
 	.long	0
-.Ldebug_loc46:
+.Ldebug_loc45:
 	.long	.Ltmp181
-	.long	.Ltmp182
-.Lset78 = .Ltmp449-.Ltmp448             # Loc expr size
-	.short	.Lset78
+	.long	.Ltmp187
+.Lset77 = .Ltmp449-.Ltmp448             # Loc expr size
+	.short	.Lset77
 .Ltmp448:
-	.byte	82                      # DW_OP_reg2
+	.byte	80                      # DW_OP_reg0
 .Ltmp449:
 	.long	0
 	.long	0
-.Ldebug_loc47:
+.Ldebug_loc46:
 	.long	.Ltmp183
-	.long	.Ltmp185
-.Lset79 = .Ltmp451-.Ltmp450             # Loc expr size
-	.short	.Lset79
+	.long	.Ltmp184
+.Lset78 = .Ltmp451-.Ltmp450             # Loc expr size
+	.short	.Lset78
 .Ltmp450:
-	.byte	81                      # DW_OP_reg1
+	.byte	82                      # DW_OP_reg2
 .Ltmp451:
 	.long	0
 	.long	0
-.Ldebug_loc48:
-	.long	.Ltmp184
+.Ldebug_loc47:
 	.long	.Ltmp185
-.Lset80 = .Ltmp453-.Ltmp452             # Loc expr size
-	.short	.Lset80
+	.long	.Ltmp187
+.Lset79 = .Ltmp453-.Ltmp452             # Loc expr size
+	.short	.Lset79
 .Ltmp452:
-	.byte	82                      # DW_OP_reg2
+	.byte	81                      # DW_OP_reg1
 .Ltmp453:
 	.long	0
 	.long	0
-.Ldebug_loc49:
-	.long	.Ltmp188
-	.long	.Ltmp189
-.Lset81 = .Ltmp455-.Ltmp454             # Loc expr size
-	.short	.Lset81
+.Ldebug_loc48:
+	.long	.Ltmp186
+	.long	.Ltmp187
+.Lset80 = .Ltmp455-.Ltmp454             # Loc expr size
+	.short	.Lset80
 .Ltmp454:
-	.byte	80                      # DW_OP_reg0
+	.byte	82                      # DW_OP_reg2
 .Ltmp455:
 	.long	0
 	.long	0
-.Ldebug_loc50:
+.Ldebug_loc49:
+	.long	.Ltmp190
 	.long	.Ltmp191
-	.long	.Ltmp192
-.Lset82 = .Ltmp457-.Ltmp456             # Loc expr size
-	.short	.Lset82
+.Lset81 = .Ltmp457-.Ltmp456             # Loc expr size
+	.short	.Lset81
 .Ltmp456:
 	.byte	80                      # DW_OP_reg0
 .Ltmp457:
 	.long	0
 	.long	0
-.Ldebug_loc51:
-	.long	.Ltmp192
-	.long	.Ltmp202
-.Lset83 = .Ltmp459-.Ltmp458             # Loc expr size
-	.short	.Lset83
+.Ldebug_loc50:
+	.long	.Ltmp193
+	.long	.Ltmp195
+.Lset82 = .Ltmp459-.Ltmp458             # Loc expr size
+	.short	.Lset82
 .Ltmp458:
 	.byte	80                      # DW_OP_reg0
 .Ltmp459:
 	.long	0
 	.long	0
-.Ldebug_loc52:
+.Ldebug_loc51:
 	.long	.Ltmp194
-	.long	.Ltmp200
-.Lset84 = .Ltmp461-.Ltmp460             # Loc expr size
-	.short	.Lset84
+	.long	.Ltmp205
+.Lset83 = .Ltmp461-.Ltmp460             # Loc expr size
+	.short	.Lset83
 .Ltmp460:
-	.byte	81                      # DW_OP_reg1
+	.byte	89                      # DW_OP_reg9
 .Ltmp461:
 	.long	0
 	.long	0
-.Ldebug_loc53:
-	.long	.Ltmp196
+.Ldebug_loc52:
 	.long	.Ltmp197
-.Lset85 = .Ltmp463-.Ltmp462             # Loc expr size
-	.short	.Lset85
+	.long	.Ltmp203
+.Lset84 = .Ltmp463-.Ltmp462             # Loc expr size
+	.short	.Lset84
 .Ltmp462:
-	.byte	83                      # DW_OP_reg3
+	.byte	80                      # DW_OP_reg0
 .Ltmp463:
 	.long	0
 	.long	0
-.Ldebug_loc54:
-	.long	.Ltmp198
+.Ldebug_loc53:
+	.long	.Ltmp199
 	.long	.Ltmp200
-.Lset86 = .Ltmp465-.Ltmp464             # Loc expr size
-	.short	.Lset86
+.Lset85 = .Ltmp465-.Ltmp464             # Loc expr size
+	.short	.Lset85
 .Ltmp464:
 	.byte	82                      # DW_OP_reg2
 .Ltmp465:
 	.long	0
 	.long	0
-.Ldebug_loc55:
-	.long	.Ltmp199
-	.long	.Ltmp200
-.Lset87 = .Ltmp467-.Ltmp466             # Loc expr size
-	.short	.Lset87
+.Ldebug_loc54:
+	.long	.Ltmp201
+	.long	.Ltmp203
+.Lset86 = .Ltmp467-.Ltmp466             # Loc expr size
+	.short	.Lset86
 .Ltmp466:
-	.byte	83                      # DW_OP_reg3
+	.byte	81                      # DW_OP_reg1
 .Ltmp467:
 	.long	0
 	.long	0
-.Ldebug_loc56:
-	.long	.Ltmp204
-	.long	.Ltmp205
-.Lset88 = .Ltmp469-.Ltmp468             # Loc expr size
-	.short	.Lset88
+.Ldebug_loc55:
+	.long	.Ltmp202
+	.long	.Ltmp203
+.Lset87 = .Ltmp469-.Ltmp468             # Loc expr size
+	.short	.Lset87
 .Ltmp468:
-	.byte	80                      # DW_OP_reg0
+	.byte	82                      # DW_OP_reg2
 .Ltmp469:
 	.long	0
 	.long	0
-.Ldebug_loc57:
+.Ldebug_loc56:
 	.long	.Ltmp206
-	.long	.Ltmp220
-.Lset89 = .Ltmp471-.Ltmp470             # Loc expr size
-	.short	.Lset89
+	.long	.Ltmp207
+.Lset88 = .Ltmp471-.Ltmp470             # Loc expr size
+	.short	.Lset88
 .Ltmp470:
-	.byte	90                      # DW_OP_reg10
+	.byte	80                      # DW_OP_reg0
 .Ltmp471:
 	.long	0
 	.long	0
-.Ldebug_loc58:
-	.long	.Ltmp206
-	.long	.Ltmp220
-.Lset90 = .Ltmp473-.Ltmp472             # Loc expr size
-	.short	.Lset90
+.Ldebug_loc57:
+	.long	.Ltmp208
+	.long	.Ltmp222
+.Lset89 = .Ltmp473-.Ltmp472             # Loc expr size
+	.short	.Lset89
 .Ltmp472:
-	.byte	90                      # DW_OP_reg10
+	.byte	89                      # DW_OP_reg9
 .Ltmp473:
 	.long	0
 	.long	0
-.Ldebug_loc59:
-	.long	.Ltmp207
-	.long	.Ltmp211
-.Lset91 = .Ltmp475-.Ltmp474             # Loc expr size
-	.short	.Lset91
+.Ldebug_loc58:
+	.long	.Ltmp208
+	.long	.Ltmp222
+.Lset90 = .Ltmp475-.Ltmp474             # Loc expr size
+	.short	.Lset90
 .Ltmp474:
-	.byte	86                      # DW_OP_reg6
+	.byte	89                      # DW_OP_reg9
 .Ltmp475:
 	.long	0
 	.long	0
-.Ldebug_loc60:
-	.long	.Ltmp207
-	.long	.Ltmp220
-.Lset92 = .Ltmp477-.Ltmp476             # Loc expr size
-	.short	.Lset92
+.Ldebug_loc59:
+	.long	.Ltmp209
+	.long	.Ltmp213
+.Lset91 = .Ltmp477-.Ltmp476             # Loc expr size
+	.short	.Lset91
 .Ltmp476:
-	.byte	119                     # DW_OP_breg7
-	.byte	0                       # 
+	.byte	90                      # DW_OP_reg10
 .Ltmp477:
 	.long	0
 	.long	0
-.Ldebug_loc61:
-	.long	.Ltmp208
-	.long	.Ltmp215
-.Lset93 = .Ltmp479-.Ltmp478             # Loc expr size
-	.short	.Lset93
+.Ldebug_loc60:
+	.long	.Ltmp209
+	.long	.Ltmp222
+.Lset92 = .Ltmp479-.Ltmp478             # Loc expr size
+	.short	.Lset92
 .Ltmp478:
-	.byte	80                      # DW_OP_reg0
+	.byte	120                     # DW_OP_breg8
+	.byte	0                       # 
 .Ltmp479:
 	.long	0
 	.long	0
-.Ldebug_loc62:
-	.long	.Ltmp207
-	.long	.Ltmp220
-.Lset94 = .Ltmp481-.Ltmp480             # Loc expr size
-	.short	.Lset94
+.Ldebug_loc61:
+	.long	.Ltmp210
+	.long	.Ltmp217
+.Lset93 = .Ltmp481-.Ltmp480             # Loc expr size
+	.short	.Lset93
 .Ltmp480:
-	.byte	88                      # DW_OP_reg8
+	.byte	80                      # DW_OP_reg0
 .Ltmp481:
 	.long	0
 	.long	0
-.Ldebug_loc63:
-	.long	.Ltmp208
-	.long	.Ltmp215
-.Lset95 = .Ltmp483-.Ltmp482             # Loc expr size
-	.short	.Lset95
+.Ldebug_loc62:
+	.long	.Ltmp209
+	.long	.Ltmp222
+.Lset94 = .Ltmp483-.Ltmp482             # Loc expr size
+	.short	.Lset94
 .Ltmp482:
-	.byte	80                      # DW_OP_reg0
+	.byte	85                      # DW_OP_reg5
 .Ltmp483:
 	.long	0
 	.long	0
-.Ldebug_loc64:
-	.long	.Ltmp209
-	.long	.Ltmp212
-.Lset96 = .Ltmp485-.Ltmp484             # Loc expr size
-	.short	.Lset96
+.Ldebug_loc63:
+	.long	.Ltmp210
+	.long	.Ltmp217
+.Lset95 = .Ltmp485-.Ltmp484             # Loc expr size
+	.short	.Lset95
 .Ltmp484:
-	.byte	81                      # DW_OP_reg1
+	.byte	80                      # DW_OP_reg0
 .Ltmp485:
 	.long	0
 	.long	0
-.Ldebug_loc65:
-	.long	.Ltmp210
+.Ldebug_loc64:
 	.long	.Ltmp211
-.Lset97 = .Ltmp487-.Ltmp486             # Loc expr size
-	.short	.Lset97
+	.long	.Ltmp214
+.Lset96 = .Ltmp487-.Ltmp486             # Loc expr size
+	.short	.Lset96
 .Ltmp486:
-	.byte	82                      # DW_OP_reg2
+	.byte	81                      # DW_OP_reg1
 .Ltmp487:
 	.long	0
 	.long	0
-.Ldebug_loc66:
+.Ldebug_loc65:
+	.long	.Ltmp212
 	.long	.Ltmp213
-	.long	.Ltmp214
-.Lset98 = .Ltmp489-.Ltmp488             # Loc expr size
-	.short	.Lset98
+.Lset97 = .Ltmp489-.Ltmp488             # Loc expr size
+	.short	.Lset97
 .Ltmp488:
 	.byte	82                      # DW_OP_reg2
 .Ltmp489:
-	.long	.Ltmp214
+	.long	0
+	.long	0
+.Ldebug_loc66:
 	.long	.Ltmp215
-.Lset99 = .Ltmp491-.Ltmp490             # Loc expr size
-	.short	.Lset99
-.Ltmp490:
-	.byte	83                      # DW_OP_reg3
-.Ltmp491:
-	.long	0
-	.long	0
-.Ldebug_loc67:
 	.long	.Ltmp216
-	.long	.Ltmp220
-.Lset100 = .Ltmp493-.Ltmp492            # Loc expr size
-	.short	.Lset100
+.Lset98 = .Ltmp491-.Ltmp490             # Loc expr size
+	.short	.Lset98
+.Ltmp490:
+	.byte	82                      # DW_OP_reg2
+.Ltmp491:
+	.long	.Ltmp216
+	.long	.Ltmp217
+.Lset99 = .Ltmp493-.Ltmp492             # Loc expr size
+	.short	.Lset99
 .Ltmp492:
-	.byte	80                      # DW_OP_reg0
+	.byte	83                      # DW_OP_reg3
 .Ltmp493:
 	.long	0
 	.long	0
-.Ldebug_loc68:
-	.long	.Ltmp217
-	.long	.Ltmp220
-.Lset101 = .Ltmp495-.Ltmp494            # Loc expr size
-	.short	.Lset101
+.Ldebug_loc67:
+	.long	.Ltmp218
+	.long	.Ltmp222
+.Lset100 = .Ltmp495-.Ltmp494            # Loc expr size
+	.short	.Lset100
 .Ltmp494:
-	.byte	91                      # DW_OP_reg11
+	.byte	80                      # DW_OP_reg0
 .Ltmp495:
 	.long	0
 	.long	0
-.Ldebug_loc69:
-	.long	.Ltmp218
-	.long	.Ltmp220
-.Lset102 = .Ltmp497-.Ltmp496            # Loc expr size
-	.short	.Lset102
+.Ldebug_loc68:
+	.long	.Ltmp219
+	.long	.Ltmp222
+.Lset101 = .Ltmp497-.Ltmp496            # Loc expr size
+	.short	.Lset101
 .Ltmp496:
-	.byte	81                      # DW_OP_reg1
+	.byte	91                      # DW_OP_reg11
 .Ltmp497:
 	.long	0
 	.long	0
-.Ldebug_loc70:
-	.long	.Ltmp219
+.Ldebug_loc69:
 	.long	.Ltmp220
-.Lset103 = .Ltmp499-.Ltmp498            # Loc expr size
-	.short	.Lset103
+	.long	.Ltmp222
+.Lset102 = .Ltmp499-.Ltmp498            # Loc expr size
+	.short	.Lset102
 .Ltmp498:
-	.byte	82                      # DW_OP_reg2
+	.byte	81                      # DW_OP_reg1
 .Ltmp499:
 	.long	0
 	.long	0
-.Ldebug_loc71:
+.Ldebug_loc70:
 	.long	.Ltmp221
 	.long	.Ltmp222
-.Lset104 = .Ltmp501-.Ltmp500            # Loc expr size
-	.short	.Lset104
+.Lset103 = .Ltmp501-.Ltmp500            # Loc expr size
+	.short	.Lset103
 .Ltmp500:
-	.byte	80                      # DW_OP_reg0
+	.byte	82                      # DW_OP_reg2
 .Ltmp501:
 	.long	0
 	.long	0
-.Ldebug_loc72:
-	.long	.Ltmp226
-	.long	.Ltmp241
-.Lset105 = .Ltmp503-.Ltmp502            # Loc expr size
-	.short	.Lset105
+.Ldebug_loc71:
+	.long	.Ltmp223
+	.long	.Ltmp224
+.Lset104 = .Ltmp503-.Ltmp502            # Loc expr size
+	.short	.Lset104
 .Ltmp502:
-	.byte	88                      # DW_OP_reg8
+	.byte	80                      # DW_OP_reg0
 .Ltmp503:
 	.long	0
 	.long	0
-.Ldebug_loc73:
-	.long	.Ltmp227
-	.long	.Ltmp241
-.Lset106 = .Ltmp505-.Ltmp504            # Loc expr size
-	.short	.Lset106
+.Ldebug_loc72:
+	.long	.Ltmp228
+	.long	.Ltmp243
+.Lset105 = .Ltmp505-.Ltmp504            # Loc expr size
+	.short	.Lset105
 .Ltmp504:
-	.byte	90                      # DW_OP_reg10
+	.byte	85                      # DW_OP_reg5
 .Ltmp505:
 	.long	0
 	.long	0
-.Ldebug_loc74:
-	.long	.Ltmp227
-	.long	.Ltmp241
-.Lset107 = .Ltmp507-.Ltmp506            # Loc expr size
-	.short	.Lset107
+.Ldebug_loc73:
+	.long	.Ltmp229
+	.long	.Ltmp243
+.Lset106 = .Ltmp507-.Ltmp506            # Loc expr size
+	.short	.Lset106
 .Ltmp506:
-	.byte	90                      # DW_OP_reg10
+	.byte	89                      # DW_OP_reg9
 .Ltmp507:
 	.long	0
 	.long	0
-.Ldebug_loc75:
-	.long	.Ltmp228
-	.long	.Ltmp232
-.Lset108 = .Ltmp509-.Ltmp508            # Loc expr size
-	.short	.Lset108
+.Ldebug_loc74:
+	.long	.Ltmp229
+	.long	.Ltmp243
+.Lset107 = .Ltmp509-.Ltmp508            # Loc expr size
+	.short	.Lset107
 .Ltmp508:
-	.byte	86                      # DW_OP_reg6
+	.byte	89                      # DW_OP_reg9
 .Ltmp509:
 	.long	0
 	.long	0
-.Ldebug_loc76:
-	.long	.Ltmp228
-	.long	.Ltmp241
-.Lset109 = .Ltmp511-.Ltmp510            # Loc expr size
-	.short	.Lset109
+.Ldebug_loc75:
+	.long	.Ltmp230
+	.long	.Ltmp234
+.Lset108 = .Ltmp511-.Ltmp510            # Loc expr size
+	.short	.Lset108
 .Ltmp510:
-	.byte	119                     # DW_OP_breg7
-	.byte	0                       # 
+	.byte	90                      # DW_OP_reg10
 .Ltmp511:
 	.long	0
 	.long	0
-.Ldebug_loc77:
-	.long	.Ltmp229
-	.long	.Ltmp236
-.Lset110 = .Ltmp513-.Ltmp512            # Loc expr size
-	.short	.Lset110
+.Ldebug_loc76:
+	.long	.Ltmp230
+	.long	.Ltmp243
+.Lset109 = .Ltmp513-.Ltmp512            # Loc expr size
+	.short	.Lset109
 .Ltmp512:
-	.byte	80                      # DW_OP_reg0
+	.byte	120                     # DW_OP_breg8
+	.byte	0                       # 
 .Ltmp513:
 	.long	0
 	.long	0
-.Ldebug_loc78:
-	.long	.Ltmp229
-	.long	.Ltmp236
-.Lset111 = .Ltmp515-.Ltmp514            # Loc expr size
-	.short	.Lset111
+.Ldebug_loc77:
+	.long	.Ltmp231
+	.long	.Ltmp238
+.Lset110 = .Ltmp515-.Ltmp514            # Loc expr size
+	.short	.Lset110
 .Ltmp514:
 	.byte	80                      # DW_OP_reg0
 .Ltmp515:
 	.long	0
 	.long	0
-.Ldebug_loc79:
-	.long	.Ltmp230
-	.long	.Ltmp233
-.Lset112 = .Ltmp517-.Ltmp516            # Loc expr size
-	.short	.Lset112
+.Ldebug_loc78:
+	.long	.Ltmp231
+	.long	.Ltmp238
+.Lset111 = .Ltmp517-.Ltmp516            # Loc expr size
+	.short	.Lset111
 .Ltmp516:
-	.byte	81                      # DW_OP_reg1
+	.byte	80                      # DW_OP_reg0
 .Ltmp517:
 	.long	0
 	.long	0
-.Ldebug_loc80:
-	.long	.Ltmp231
+.Ldebug_loc79:
 	.long	.Ltmp232
-.Lset113 = .Ltmp519-.Ltmp518            # Loc expr size
-	.short	.Lset113
+	.long	.Ltmp235
+.Lset112 = .Ltmp519-.Ltmp518            # Loc expr size
+	.short	.Lset112
 .Ltmp518:
-	.byte	82                      # DW_OP_reg2
+	.byte	81                      # DW_OP_reg1
 .Ltmp519:
 	.long	0
 	.long	0
-.Ldebug_loc81:
+.Ldebug_loc80:
+	.long	.Ltmp233
 	.long	.Ltmp234
-	.long	.Ltmp235
-.Lset114 = .Ltmp521-.Ltmp520            # Loc expr size
-	.short	.Lset114
+.Lset113 = .Ltmp521-.Ltmp520            # Loc expr size
+	.short	.Lset113
 .Ltmp520:
 	.byte	82                      # DW_OP_reg2
 .Ltmp521:
-	.long	.Ltmp235
+	.long	0
+	.long	0
+.Ldebug_loc81:
 	.long	.Ltmp236
-.Lset115 = .Ltmp523-.Ltmp522            # Loc expr size
-	.short	.Lset115
-.Ltmp522:
-	.byte	83                      # DW_OP_reg3
-.Ltmp523:
-	.long	0
-	.long	0
-.Ldebug_loc82:
 	.long	.Ltmp237
-	.long	.Ltmp241
-.Lset116 = .Ltmp525-.Ltmp524            # Loc expr size
-	.short	.Lset116
+.Lset114 = .Ltmp523-.Ltmp522            # Loc expr size
+	.short	.Lset114
+.Ltmp522:
+	.byte	82                      # DW_OP_reg2
+.Ltmp523:
+	.long	.Ltmp237
+	.long	.Ltmp238
+.Lset115 = .Ltmp525-.Ltmp524            # Loc expr size
+	.short	.Lset115
 .Ltmp524:
-	.byte	80                      # DW_OP_reg0
+	.byte	83                      # DW_OP_reg3
 .Ltmp525:
 	.long	0
 	.long	0
-.Ldebug_loc83:
-	.long	.Ltmp238
-	.long	.Ltmp241
-.Lset117 = .Ltmp527-.Ltmp526            # Loc expr size
-	.short	.Lset117
+.Ldebug_loc82:
+	.long	.Ltmp239
+	.long	.Ltmp243
+.Lset116 = .Ltmp527-.Ltmp526            # Loc expr size
+	.short	.Lset116
 .Ltmp526:
-	.byte	91                      # DW_OP_reg11
+	.byte	80                      # DW_OP_reg0
 .Ltmp527:
 	.long	0
 	.long	0
-.Ldebug_loc84:
-	.long	.Ltmp239
-	.long	.Ltmp241
-.Lset118 = .Ltmp529-.Ltmp528            # Loc expr size
-	.short	.Lset118
+.Ldebug_loc83:
+	.long	.Ltmp240
+	.long	.Ltmp243
+.Lset117 = .Ltmp529-.Ltmp528            # Loc expr size
+	.short	.Lset117
 .Ltmp528:
-	.byte	81                      # DW_OP_reg1
+	.byte	91                      # DW_OP_reg11
 .Ltmp529:
 	.long	0
 	.long	0
-.Ldebug_loc85:
-	.long	.Ltmp240
+.Ldebug_loc84:
 	.long	.Ltmp241
-.Lset119 = .Ltmp531-.Ltmp530            # Loc expr size
-	.short	.Lset119
+	.long	.Ltmp243
+.Lset118 = .Ltmp531-.Ltmp530            # Loc expr size
+	.short	.Lset118
 .Ltmp530:
-	.byte	82                      # DW_OP_reg2
+	.byte	81                      # DW_OP_reg1
 .Ltmp531:
 	.long	0
 	.long	0
-.Ldebug_loc86:
+.Ldebug_loc85:
+	.long	.Ltmp242
 	.long	.Ltmp243
-	.long	.Ltmp249
-.Lset120 = .Ltmp533-.Ltmp532            # Loc expr size
-	.short	.Lset120
+.Lset119 = .Ltmp533-.Ltmp532            # Loc expr size
+	.short	.Lset119
 .Ltmp532:
-	.byte	80                      # DW_OP_reg0
+	.byte	82                      # DW_OP_reg2
 .Ltmp533:
 	.long	0
 	.long	0
-.Ldebug_loc87:
+.Ldebug_loc86:
 	.long	.Ltmp245
-	.long	.Ltmp246
-.Lset121 = .Ltmp535-.Ltmp534            # Loc expr size
-	.short	.Lset121
+	.long	.Ltmp251
+.Lset120 = .Ltmp535-.Ltmp534            # Loc expr size
+	.short	.Lset120
 .Ltmp534:
-	.byte	82                      # DW_OP_reg2
+	.byte	80                      # DW_OP_reg0
 .Ltmp535:
 	.long	0
 	.long	0
-.Ldebug_loc88:
+.Ldebug_loc87:
 	.long	.Ltmp247
-	.long	.Ltmp249
-.Lset122 = .Ltmp537-.Ltmp536            # Loc expr size
-	.short	.Lset122
+	.long	.Ltmp248
+.Lset121 = .Ltmp537-.Ltmp536            # Loc expr size
+	.short	.Lset121
 .Ltmp536:
-	.byte	81                      # DW_OP_reg1
+	.byte	82                      # DW_OP_reg2
 .Ltmp537:
 	.long	0
 	.long	0
-.Ldebug_loc89:
-	.long	.Ltmp248
+.Ldebug_loc88:
 	.long	.Ltmp249
-.Lset123 = .Ltmp539-.Ltmp538            # Loc expr size
-	.short	.Lset123
+	.long	.Ltmp251
+.Lset122 = .Ltmp539-.Ltmp538            # Loc expr size
+	.short	.Lset122
 .Ltmp538:
-	.byte	82                      # DW_OP_reg2
+	.byte	81                      # DW_OP_reg1
 .Ltmp539:
 	.long	0
 	.long	0
-.Ldebug_loc90:
-	.long	.Ltmp257
-	.long	.Ltmp261
-.Lset124 = .Ltmp541-.Ltmp540            # Loc expr size
-	.short	.Lset124
+.Ldebug_loc89:
+	.long	.Ltmp250
+	.long	.Ltmp251
+.Lset123 = .Ltmp541-.Ltmp540            # Loc expr size
+	.short	.Lset123
 .Ltmp540:
-	.byte	80                      # DW_OP_reg0
+	.byte	82                      # DW_OP_reg2
 .Ltmp541:
+	.long	0
+	.long	0
+.Ldebug_loc90:
+	.long	.Ltmp259
 	.long	.Ltmp263
-	.long	.Ltmp264
-.Lset125 = .Ltmp543-.Ltmp542            # Loc expr size
-	.short	.Lset125
+.Lset124 = .Ltmp543-.Ltmp542            # Loc expr size
+	.short	.Lset124
 .Ltmp542:
 	.byte	80                      # DW_OP_reg0
 .Ltmp543:
 	.long	.Ltmp265
-	.long	.Ltmp265
-.Lset126 = .Ltmp545-.Ltmp544            # Loc expr size
-	.short	.Lset126
+	.long	.Ltmp266
+.Lset125 = .Ltmp545-.Ltmp544            # Loc expr size
+	.short	.Lset125
 .Ltmp544:
 	.byte	80                      # DW_OP_reg0
 .Ltmp545:
+	.long	.Ltmp267
+	.long	.Ltmp267
+.Lset126 = .Ltmp547-.Ltmp546            # Loc expr size
+	.short	.Lset126
+.Ltmp546:
+	.byte	80                      # DW_OP_reg0
+.Ltmp547:
 	.long	0
 	.long	0
 .Ldebug_loc91:
-	.long	.Ltmp258
-	.long	.Ltmp261
-.Lset127 = .Ltmp547-.Ltmp546            # Loc expr size
+	.long	.Ltmp260
+	.long	.Ltmp263
+.Lset127 = .Ltmp549-.Ltmp548            # Loc expr size
 	.short	.Lset127
-.Ltmp546:
-	.byte	81                      # DW_OP_reg1
-.Ltmp547:
-	.long	.Ltmp266
-	.long	.Ltmp267
-.Lset128 = .Ltmp549-.Ltmp548            # Loc expr size
-	.short	.Lset128
 .Ltmp548:
 	.byte	81                      # DW_OP_reg1
 .Ltmp549:
-	.long	0
-	.long	0
-.Ldebug_loc92:
-	.long	.Ltmp259
-	.long	.Ltmp261
-.Lset129 = .Ltmp551-.Ltmp550            # Loc expr size
-	.short	.Lset129
+	.long	.Ltmp268
+	.long	.Ltmp269
+.Lset128 = .Ltmp551-.Ltmp550            # Loc expr size
+	.short	.Lset128
 .Ltmp550:
-	.byte	83                      # DW_OP_reg3
+	.byte	81                      # DW_OP_reg1
 .Ltmp551:
 	.long	0
 	.long	0
-.Ldebug_loc93:
-	.long	.Ltmp260
+.Ldebug_loc92:
 	.long	.Ltmp261
-.Lset130 = .Ltmp553-.Ltmp552            # Loc expr size
-	.short	.Lset130
+	.long	.Ltmp263
+.Lset129 = .Ltmp553-.Ltmp552            # Loc expr size
+	.short	.Lset129
 .Ltmp552:
-	.byte	82                      # DW_OP_reg2
+	.byte	83                      # DW_OP_reg3
 .Ltmp553:
 	.long	0
 	.long	0
-.Ldebug_loc94:
-	.long	.Ltmp267
-	.long	.Ltmp268
-.Lset131 = .Ltmp555-.Ltmp554            # Loc expr size
-	.short	.Lset131
+.Ldebug_loc93:
+	.long	.Ltmp262
+	.long	.Ltmp263
+.Lset130 = .Ltmp555-.Ltmp554            # Loc expr size
+	.short	.Lset130
 .Ltmp554:
-	.byte	81                      # DW_OP_reg1
+	.byte	82                      # DW_OP_reg2
 .Ltmp555:
+	.long	0
+	.long	0
+.Ldebug_loc94:
+	.long	.Ltmp269
 	.long	.Ltmp270
-	.long	.Ltmp270
-.Lset132 = .Ltmp557-.Ltmp556            # Loc expr size
-	.short	.Lset132
+.Lset131 = .Ltmp557-.Ltmp556            # Loc expr size
+	.short	.Lset131
 .Ltmp556:
 	.byte	81                      # DW_OP_reg1
 .Ltmp557:
-	.long	0
-	.long	0
-.Ldebug_loc95:
 	.long	.Ltmp272
-	.long	.Ltmp277
-.Lset133 = .Ltmp559-.Ltmp558            # Loc expr size
-	.short	.Lset133
+	.long	.Ltmp272
+.Lset132 = .Ltmp559-.Ltmp558            # Loc expr size
+	.short	.Lset132
 .Ltmp558:
 	.byte	81                      # DW_OP_reg1
 .Ltmp559:
 	.long	0
 	.long	0
-.Ldebug_loc96:
-	.long	.Ltmp273
+.Ldebug_loc95:
 	.long	.Ltmp274
-.Lset134 = .Ltmp561-.Ltmp560            # Loc expr size
-	.short	.Lset134
+	.long	.Ltmp279
+.Lset133 = .Ltmp561-.Ltmp560            # Loc expr size
+	.short	.Lset133
 .Ltmp560:
-	.byte	82                      # DW_OP_reg2
+	.byte	81                      # DW_OP_reg1
 .Ltmp561:
 	.long	0
 	.long	0
-.Ldebug_loc97:
+.Ldebug_loc96:
 	.long	.Ltmp275
-	.long	.Ltmp277
-.Lset135 = .Ltmp563-.Ltmp562            # Loc expr size
-	.short	.Lset135
+	.long	.Ltmp276
+.Lset134 = .Ltmp563-.Ltmp562            # Loc expr size
+	.short	.Lset134
 .Ltmp562:
-	.byte	80                      # DW_OP_reg0
+	.byte	82                      # DW_OP_reg2
 .Ltmp563:
 	.long	0
 	.long	0
-.Ldebug_loc98:
-	.long	.Ltmp276
+.Ldebug_loc97:
 	.long	.Ltmp277
-.Lset136 = .Ltmp565-.Ltmp564            # Loc expr size
-	.short	.Lset136
+	.long	.Ltmp279
+.Lset135 = .Ltmp565-.Ltmp564            # Loc expr size
+	.short	.Lset135
 .Ltmp564:
-	.byte	82                      # DW_OP_reg2
+	.byte	80                      # DW_OP_reg0
 .Ltmp565:
 	.long	0
 	.long	0
-.Ldebug_loc99:
+.Ldebug_loc98:
+	.long	.Ltmp278
 	.long	.Ltmp279
-	.long	.Ltmp288
-.Lset137 = .Ltmp567-.Ltmp566            # Loc expr size
-	.short	.Lset137
+.Lset136 = .Ltmp567-.Ltmp566            # Loc expr size
+	.short	.Lset136
 .Ltmp566:
-	.byte	80                      # DW_OP_reg0
+	.byte	82                      # DW_OP_reg2
 .Ltmp567:
 	.long	0
 	.long	0
-.Ldebug_loc100:
-	.long	.Ltmp280
+.Ldebug_loc99:
 	.long	.Ltmp281
-.Lset138 = .Ltmp569-.Ltmp568            # Loc expr size
-	.short	.Lset138
+	.long	.Ltmp290
+.Lset137 = .Ltmp569-.Ltmp568            # Loc expr size
+	.short	.Lset137
 .Ltmp568:
-	.byte	81                      # DW_OP_reg1
+	.byte	80                      # DW_OP_reg0
 .Ltmp569:
 	.long	0
 	.long	0
-.Ldebug_loc101:
-	.long	.Ltmp281
+.Ldebug_loc100:
+	.long	.Ltmp282
 	.long	.Ltmp283
-.Lset139 = .Ltmp571-.Ltmp570            # Loc expr size
-	.short	.Lset139
+.Lset138 = .Ltmp571-.Ltmp570            # Loc expr size
+	.short	.Lset138
 .Ltmp570:
 	.byte	81                      # DW_OP_reg1
 .Ltmp571:
 	.long	0
 	.long	0
-.Ldebug_loc102:
+.Ldebug_loc101:
+	.long	.Ltmp283
 	.long	.Ltmp285
-	.long	.Lfunc_end1
-.Lset140 = .Ltmp573-.Ltmp572            # Loc expr size
-	.short	.Lset140
+.Lset139 = .Ltmp573-.Ltmp572            # Loc expr size
+	.short	.Lset139
 .Ltmp572:
 	.byte	81                      # DW_OP_reg1
 .Ltmp573:
 	.long	0
 	.long	0
-.Ldebug_loc103:
-	.long	.Ltmp286
+.Ldebug_loc102:
 	.long	.Ltmp287
-.Lset141 = .Ltmp575-.Ltmp574            # Loc expr size
-	.short	.Lset141
+	.long	.Lfunc_end1
+.Lset140 = .Ltmp575-.Ltmp574            # Loc expr size
+	.short	.Lset140
 .Ltmp574:
-	.byte	82                      # DW_OP_reg2
+	.byte	81                      # DW_OP_reg1
 .Ltmp575:
+	.long	0
+	.long	0
+.Ldebug_loc103:
+	.long	.Ltmp288
+	.long	.Ltmp289
+.Lset141 = .Ltmp577-.Ltmp576            # Loc expr size
+	.short	.Lset141
+.Ltmp576:
+	.byte	82                      # DW_OP_reg2
+.Ltmp577:
 	.long	0
 	.long	0
 	.section	.debug_pubnames,"",@progbits
@@ -8320,6 +8345,8 @@ tmpBuffer:
 .LpubTypes_end0:
 	.cfi_sections .debug_frame
 
+	.typestring update_samp_freq, "f{0}(ui)"
+	.typestring update_samp_resolution, "f{0}(ui)"
 	.typestring GetADCCounts, "f{0}(ui,&(si),&(si),&(si))"
 	.typestring handle_audio_request, "f{0}(chd)"
 	.typestring decouple, "f{0}(chd)"
@@ -8377,18 +8404,36 @@ tmpBuffer:
 	.long	0
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
-.cc_top cc_0,.Lxta.call_labels0
+.cc_top cc_0,.Lxta.call_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	559
-	.long	.Lxta.call_labels0
+	.long	.Lxta.call_labels2
 .cc_bottom cc_0
-.cc_top cc_1,.Lxta.call_labels1
+.cc_top cc_1,.Lxta.call_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	559
-	.long	.Lxta.call_labels1
+	.long	.Lxta.call_labels4
 .cc_bottom cc_1
+.cc_top cc_2,.Lxta.call_labels0
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	594
+	.long	.Lxta.call_labels0
+.cc_bottom cc_2
+.cc_top cc_3,.Lxta.call_labels3
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	706
+	.long	.Lxta.call_labels3
+.cc_bottom cc_3
+.cc_top cc_4,.Lxta.call_labels1
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	803
+	.long	.Lxta.call_labels1
+.cc_bottom cc_4
 .Lentries_end1:
 	.section	.xtaendpoint,"",@progbits
 .Lentries_start2:
@@ -8403,10 +8448,10 @@ tmpBuffer:
 	.long	176
 	.long	.Laddr_end1-.Laddr_start0
 .Laddr_start0:
-.cc_top cc_2,.Lxta.endpoint_labels5
+.cc_top cc_5,.Lxta.endpoint_labels5
 	.long	.Lxta.endpoint_labels5
 	.byte	0
-.cc_bottom cc_2
+.cc_bottom cc_5
 .Laddr_end1:
 	.ascii	"mixer_request"
 	.byte	0
@@ -8415,10 +8460,10 @@ tmpBuffer:
 	.long	205
 	.long	.Laddr_end3-.Laddr_start2
 .Laddr_start2:
-.cc_top cc_3,.Lxta.endpoint_labels4
+.cc_top cc_6,.Lxta.endpoint_labels4
 	.long	.Lxta.endpoint_labels4
 	.byte	0
-.cc_bottom cc_3
+.cc_bottom cc_6
 .Laddr_end3:
 	.ascii	"mixer_request"
 	.byte	0
@@ -8427,10 +8472,10 @@ tmpBuffer:
 	.long	237
 	.long	.Laddr_end5-.Laddr_start4
 .Laddr_start4:
-.cc_top cc_4,.Lxta.endpoint_labels3
+.cc_top cc_7,.Lxta.endpoint_labels3
 	.long	.Lxta.endpoint_labels3
 	.byte	0
-.cc_bottom cc_4
+.cc_bottom cc_7
 .Laddr_end5:
 	.ascii	"out_underflow"
 	.byte	0
@@ -8439,14 +8484,14 @@ tmpBuffer:
 	.long	143
 	.long	.Laddr_end7-.Laddr_start6
 .Laddr_start6:
-.cc_top cc_5,.Lxta.endpoint_labels1
+.cc_top cc_8,.Lxta.endpoint_labels1
 	.long	.Lxta.endpoint_labels1
 	.byte	0
-.cc_bottom cc_5
-.cc_top cc_6,.Lxta.endpoint_labels2
+.cc_bottom cc_8
+.cc_top cc_9,.Lxta.endpoint_labels2
 	.long	.Lxta.endpoint_labels2
 	.byte	0
-.cc_bottom cc_6
+.cc_bottom cc_9
 .Laddr_end7:
 .Lentries_end3:
 	.section	.xtaendpointtable,"",@progbits
@@ -8455,108 +8500,108 @@ tmpBuffer:
 	.long	0
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
-.cc_top cc_7,.Lxta.endpoint_labels0
+.cc_top cc_10,.Lxta.endpoint_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	136
 	.long	.Lxta.endpoint_labels0
-.cc_bottom cc_7
-.cc_top cc_8,.Lxta.endpoint_labels1
+.cc_bottom cc_10
+.cc_top cc_11,.Lxta.endpoint_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	147
 	.long	.Lxta.endpoint_labels1
-.cc_bottom cc_8
-.cc_top cc_9,.Lxta.endpoint_labels2
+.cc_bottom cc_11
+.cc_top cc_12,.Lxta.endpoint_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	147
 	.long	.Lxta.endpoint_labels2
-.cc_bottom cc_9
-.cc_top cc_10,.Lxta.endpoint_labels5
+.cc_bottom cc_12
+.cc_top cc_13,.Lxta.endpoint_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	191
 	.long	.Lxta.endpoint_labels5
-.cc_bottom cc_10
-.cc_top cc_11,.Lxta.endpoint_labels4
+.cc_bottom cc_13
+.cc_top cc_14,.Lxta.endpoint_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	222
 	.long	.Lxta.endpoint_labels4
-.cc_bottom cc_11
-.cc_top cc_12,.Lxta.endpoint_labels3
+.cc_bottom cc_14
+.cc_top cc_15,.Lxta.endpoint_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	273
 	.long	.Lxta.endpoint_labels3
-.cc_bottom cc_12
-.cc_top cc_13,.Lxta.endpoint_labels6
+.cc_bottom cc_15
+.cc_top cc_16,.Lxta.endpoint_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	290
 	.long	.Lxta.endpoint_labels6
-.cc_bottom cc_13
-.cc_top cc_14,.Lxta.endpoint_labels8
+.cc_bottom cc_16
+.cc_top cc_17,.Lxta.endpoint_labels8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	341
 	.long	.Lxta.endpoint_labels8
-.cc_bottom cc_14
-.cc_top cc_15,.Lxta.endpoint_labels7
+.cc_bottom cc_17
+.cc_top cc_18,.Lxta.endpoint_labels7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	376
 	.long	.Lxta.endpoint_labels7
-.cc_bottom cc_15
-.cc_top cc_16,.Lxta.endpoint_labels9
+.cc_bottom cc_18
+.cc_top cc_19,.Lxta.endpoint_labels9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	423
 	.long	.Lxta.endpoint_labels9
-.cc_bottom cc_16
-.cc_top cc_17,.Lxta.endpoint_labels14
+.cc_bottom cc_19
+.cc_top cc_20,.Lxta.endpoint_labels14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	711
 	.long	.Lxta.endpoint_labels14
-.cc_bottom cc_17
-.cc_top cc_18,.Lxta.endpoint_labels15
+.cc_bottom cc_20
+.cc_top cc_21,.Lxta.endpoint_labels15
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	712
 	.long	.Lxta.endpoint_labels15
-.cc_bottom cc_18
-.cc_top cc_19,.Lxta.endpoint_labels16
+.cc_bottom cc_21
+.cc_top cc_22,.Lxta.endpoint_labels16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	713
 	.long	.Lxta.endpoint_labels16
-.cc_bottom cc_19
-.cc_top cc_20,.Lxta.endpoint_labels10
+.cc_bottom cc_22
+.cc_top cc_23,.Lxta.endpoint_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	827
 	.long	.Lxta.endpoint_labels10
-.cc_bottom cc_20
-.cc_top cc_21,.Lxta.endpoint_labels11
+.cc_bottom cc_23
+.cc_top cc_24,.Lxta.endpoint_labels11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	828
 	.long	.Lxta.endpoint_labels11
-.cc_bottom cc_21
-.cc_top cc_22,.Lxta.endpoint_labels12
+.cc_bottom cc_24
+.cc_top cc_25,.Lxta.endpoint_labels12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	829
 	.long	.Lxta.endpoint_labels12
-.cc_bottom cc_22
-.cc_top cc_23,.Lxta.endpoint_labels13
+.cc_bottom cc_25
+.cc_top cc_26,.Lxta.endpoint_labels13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	830
 	.long	.Lxta.endpoint_labels13
-.cc_bottom cc_23
+.cc_bottom cc_26
 .Lentries_end5:
 	.section	.xtalabeltable,"",@progbits
 .Lentries_start6:
@@ -8564,866 +8609,845 @@ tmpBuffer:
 	.long	0
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
-.cc_top cc_24,.Lxtalabel0
+.cc_top cc_27,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	131
 	.long	133
 	.long	.Lxtalabel0
-.cc_bottom cc_24
-.cc_top cc_25,.Lxtalabel0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	136
-	.long	136
-	.long	.Lxtalabel0
-.cc_bottom cc_25
-.cc_top cc_26,.Lxtalabel0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	141
-	.long	141
-	.long	.Lxtalabel0
-.cc_bottom cc_26
-.cc_top cc_27,.Lxtalabel0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	142
-	.long	142
-	.long	.Lxtalabel0
 .cc_bottom cc_27
 .cc_top cc_28,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	136
+	.long	136
+	.long	.Lxtalabel0
+.cc_bottom cc_28
+.cc_top cc_29,.Lxtalabel0
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	141
+	.long	141
+	.long	.Lxtalabel0
+.cc_bottom cc_29
+.cc_top cc_30,.Lxtalabel0
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	142
+	.long	142
+	.long	.Lxtalabel0
+.cc_bottom cc_30
+.cc_top cc_31,.Lxtalabel0
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	145
 	.long	145
 	.long	.Lxtalabel0
-.cc_bottom cc_28
-.cc_top cc_29,.Lxtalabel1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	146
-	.long	146
-	.long	.Lxtalabel1
-.cc_bottom cc_29
-.cc_top cc_30,.Lxtalabel1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	146
-	.long	146
-	.long	.Lxtalabel1
-.cc_bottom cc_30
-.cc_top cc_31,.Lxtalabel2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	146
-	.long	146
-	.long	.Lxtalabel2
 .cc_bottom cc_31
-.cc_top cc_32,.Lxtalabel2
+.cc_top cc_32,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	146
 	.long	146
-	.long	.Lxtalabel2
+	.long	.Lxtalabel1
 .cc_bottom cc_32
 .cc_top cc_33,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	147
-	.long	147
+	.long	146
+	.long	146
 	.long	.Lxtalabel1
 .cc_bottom cc_33
-.cc_top cc_34,.Lxtalabel1
+.cc_top cc_34,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	147
-	.long	147
-	.long	.Lxtalabel1
+	.long	146
+	.long	146
+	.long	.Lxtalabel2
 .cc_bottom cc_34
 .cc_top cc_35,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	147
-	.long	147
+	.long	146
+	.long	146
 	.long	.Lxtalabel2
 .cc_bottom cc_35
-.cc_top cc_36,.Lxtalabel2
+.cc_top cc_36,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	147
 	.long	147
-	.long	.Lxtalabel2
+	.long	.Lxtalabel1
 .cc_bottom cc_36
 .cc_top cc_37,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	148
-	.long	148
+	.long	147
+	.long	147
 	.long	.Lxtalabel1
 .cc_bottom cc_37
-.cc_top cc_38,.Lxtalabel1
+.cc_top cc_38,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	148
-	.long	148
-	.long	.Lxtalabel1
+	.long	147
+	.long	147
+	.long	.Lxtalabel2
 .cc_bottom cc_38
 .cc_top cc_39,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	148
-	.long	148
+	.long	147
+	.long	147
 	.long	.Lxtalabel2
 .cc_bottom cc_39
-.cc_top cc_40,.Lxtalabel2
+.cc_top cc_40,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	148
 	.long	148
-	.long	.Lxtalabel2
+	.long	.Lxtalabel1
 .cc_bottom cc_40
-.cc_top cc_41,.Lxtalabel2
+.cc_top cc_41,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	151
-	.long	152
-	.long	.Lxtalabel2
+	.long	148
+	.long	148
+	.long	.Lxtalabel1
 .cc_bottom cc_41
-.cc_top cc_42,.Lxtalabel1
+.cc_top cc_42,.Lxtalabel2
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	148
+	.long	148
+	.long	.Lxtalabel2
+.cc_bottom cc_42
+.cc_top cc_43,.Lxtalabel2
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	148
+	.long	148
+	.long	.Lxtalabel2
+.cc_bottom cc_43
+.cc_top cc_44,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	151
 	.long	152
 	.long	.Lxtalabel1
-.cc_bottom cc_42
-.cc_top cc_43,.Lxtalabel1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	153
-	.long	155
-	.long	.Lxtalabel1
-.cc_bottom cc_43
-.cc_top cc_44,.Lxtalabel2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	153
-	.long	155
-	.long	.Lxtalabel2
 .cc_bottom cc_44
-.cc_top cc_45,.Lxtalabel1
+.cc_top cc_45,.Lxtalabel2
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	151
+	.long	152
+	.long	.Lxtalabel2
+.cc_bottom cc_45
+.cc_top cc_46,.Lxtalabel1
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	153
+	.long	155
+	.long	.Lxtalabel1
+.cc_bottom cc_46
+.cc_top cc_47,.Lxtalabel2
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	153
+	.long	155
+	.long	.Lxtalabel2
+.cc_bottom cc_47
+.cc_top cc_48,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	158
 	.long	158
 	.long	.Lxtalabel1
-.cc_bottom cc_45
-.cc_top cc_46,.Lxtalabel2
+.cc_bottom cc_48
+.cc_top cc_49,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	158
 	.long	158
 	.long	.Lxtalabel2
-.cc_bottom cc_46
-.cc_top cc_47,.Lxtalabel3
+.cc_bottom cc_49
+.cc_top cc_50,.Lxtalabel3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	159
 	.long	162
 	.long	.Lxtalabel3
-.cc_bottom cc_47
-.cc_top cc_48,.Lxtalabel4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	164
-	.long	167
-	.long	.Lxtalabel4
-.cc_bottom cc_48
-.cc_top cc_49,.Lxtalabel13
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	164
-	.long	167
-	.long	.Lxtalabel13
-.cc_bottom cc_49
-.cc_top cc_50,.Lxtalabel4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	169
-	.long	169
-	.long	.Lxtalabel4
 .cc_bottom cc_50
-.cc_top cc_51,.Lxtalabel13
+.cc_top cc_51,.Lxtalabel4
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	164
+	.long	167
+	.long	.Lxtalabel4
+.cc_bottom cc_51
+.cc_top cc_52,.Lxtalabel13
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	164
+	.long	167
+	.long	.Lxtalabel13
+.cc_bottom cc_52
+.cc_top cc_53,.Lxtalabel4
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	169
+	.long	169
+	.long	.Lxtalabel4
+.cc_bottom cc_53
+.cc_top cc_54,.Lxtalabel13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	169
 	.long	169
 	.long	.Lxtalabel13
-.cc_bottom cc_51
-.cc_top cc_52,.Lxtalabel15
+.cc_bottom cc_54
+.cc_top cc_55,.Lxtalabel15
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	174
 	.long	174
 	.long	.Lxtalabel15
-.cc_bottom cc_52
-.cc_top cc_53,.Lxtalabel18
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	175
-	.long	175
-	.long	.Lxtalabel18
-.cc_bottom cc_53
-.cc_top cc_54,.Lxtalabel18
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	177
-	.long	180
-	.long	.Lxtalabel18
-.cc_bottom cc_54
-.cc_top cc_55,.Lxtalabel18
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	182
-	.long	182
-	.long	.Lxtalabel18
 .cc_bottom cc_55
 .cc_top cc_56,.Lxtalabel18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	183
-	.long	184
+	.long	175
+	.long	175
 	.long	.Lxtalabel18
 .cc_bottom cc_56
 .cc_top cc_57,.Lxtalabel18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	187
-	.long	188
+	.long	177
+	.long	180
 	.long	.Lxtalabel18
 .cc_bottom cc_57
 .cc_top cc_58,.Lxtalabel18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	190
-	.long	190
+	.long	182
+	.long	182
 	.long	.Lxtalabel18
 .cc_bottom cc_58
 .cc_top cc_59,.Lxtalabel18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	191
-	.long	191
+	.long	183
+	.long	184
 	.long	.Lxtalabel18
 .cc_bottom cc_59
 .cc_top cc_60,.Lxtalabel18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	187
+	.long	188
+	.long	.Lxtalabel18
+.cc_bottom cc_60
+.cc_top cc_61,.Lxtalabel18
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	190
+	.long	190
+	.long	.Lxtalabel18
+.cc_bottom cc_61
+.cc_top cc_62,.Lxtalabel18
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	191
+	.long	191
+	.long	.Lxtalabel18
+.cc_bottom cc_62
+.cc_top cc_63,.Lxtalabel18
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	195
 	.long	195
 	.long	.Lxtalabel18
-.cc_bottom cc_60
-.cc_top cc_61,.Lxtalabel14
+.cc_bottom cc_63
+.cc_top cc_64,.Lxtalabel14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	203
 	.long	203
 	.long	.Lxtalabel14
-.cc_bottom cc_61
-.cc_top cc_62,.Lxtalabel16
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	204
-	.long	204
-	.long	.Lxtalabel16
-.cc_bottom cc_62
-.cc_top cc_63,.Lxtalabel16
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	206
-	.long	209
-	.long	.Lxtalabel16
-.cc_bottom cc_63
-.cc_top cc_64,.Lxtalabel16
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	211
-	.long	211
-	.long	.Lxtalabel16
 .cc_bottom cc_64
 .cc_top cc_65,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	212
-	.long	212
+	.long	204
+	.long	204
 	.long	.Lxtalabel16
 .cc_bottom cc_65
 .cc_top cc_66,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	215
-	.long	217
+	.long	206
+	.long	209
 	.long	.Lxtalabel16
 .cc_bottom cc_66
 .cc_top cc_67,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	219
-	.long	219
+	.long	211
+	.long	211
 	.long	.Lxtalabel16
 .cc_bottom cc_67
 .cc_top cc_68,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	222
-	.long	222
+	.long	212
+	.long	212
 	.long	.Lxtalabel16
 .cc_bottom cc_68
 .cc_top cc_69,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	215
+	.long	217
+	.long	.Lxtalabel16
+.cc_bottom cc_69
+.cc_top cc_70,.Lxtalabel16
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	219
+	.long	219
+	.long	.Lxtalabel16
+.cc_bottom cc_70
+.cc_top cc_71,.Lxtalabel16
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	222
+	.long	222
+	.long	.Lxtalabel16
+.cc_bottom cc_71
+.cc_top cc_72,.Lxtalabel16
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	226
 	.long	226
 	.long	.Lxtalabel16
-.cc_bottom cc_69
-.cc_top cc_70,.Lxtalabel5
+.cc_bottom cc_72
+.cc_top cc_73,.Lxtalabel5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	235
 	.long	235
 	.long	.Lxtalabel5
-.cc_bottom cc_70
-.cc_top cc_71,.Lxtalabel6
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	236
-	.long	236
-	.long	.Lxtalabel6
-.cc_bottom cc_71
-.cc_top cc_72,.Lxtalabel7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	236
-	.long	236
-	.long	.Lxtalabel7
-.cc_bottom cc_72
-.cc_top cc_73,.Lxtalabel7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	238
-	.long	241
-	.long	.Lxtalabel7
 .cc_bottom cc_73
 .cc_top cc_74,.Lxtalabel6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	238
-	.long	241
+	.long	236
+	.long	236
 	.long	.Lxtalabel6
 .cc_bottom cc_74
 .cc_top cc_75,.Lxtalabel7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	244
-	.long	246
+	.long	236
+	.long	236
 	.long	.Lxtalabel7
 .cc_bottom cc_75
 .cc_top cc_76,.Lxtalabel6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	238
+	.long	241
+	.long	.Lxtalabel6
+.cc_bottom cc_76
+.cc_top cc_77,.Lxtalabel7
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	238
+	.long	241
+	.long	.Lxtalabel7
+.cc_bottom cc_77
+.cc_top cc_78,.Lxtalabel6
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	244
 	.long	246
 	.long	.Lxtalabel6
-.cc_bottom cc_76
-.cc_top cc_77,.Lxtalabel8
+.cc_bottom cc_78
+.cc_top cc_79,.Lxtalabel7
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	244
+	.long	246
+	.long	.Lxtalabel7
+.cc_bottom cc_79
+.cc_top cc_80,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	247
 	.long	247
 	.long	.Lxtalabel8
-.cc_bottom cc_77
-.cc_top cc_78,.Lxtalabel8
+.cc_bottom cc_80
+.cc_top cc_81,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	248
 	.long	251
 	.long	.Lxtalabel8
-.cc_bottom cc_78
-.cc_top cc_79,.Lxtalabel9
+.cc_bottom cc_81
+.cc_top cc_82,.Lxtalabel9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	252
 	.long	252
 	.long	.Lxtalabel9
-.cc_bottom cc_79
-.cc_top cc_80,.Lxtalabel9
+.cc_bottom cc_82
+.cc_top cc_83,.Lxtalabel9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	253
 	.long	253
 	.long	.Lxtalabel9
-.cc_bottom cc_80
-.cc_top cc_81,.Lxtalabel9
+.cc_bottom cc_83
+.cc_top cc_84,.Lxtalabel9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	254
 	.long	257
 	.long	.Lxtalabel9
-.cc_bottom cc_81
-.cc_top cc_82,.Lxtalabel10
+.cc_bottom cc_84
+.cc_top cc_85,.Lxtalabel10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	258
 	.long	258
 	.long	.Lxtalabel10
-.cc_bottom cc_82
-.cc_top cc_83,.Lxtalabel10
+.cc_bottom cc_85
+.cc_top cc_86,.Lxtalabel10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	259
 	.long	259
 	.long	.Lxtalabel10
-.cc_bottom cc_83
-.cc_top cc_84,.Lxtalabel10
+.cc_bottom cc_86
+.cc_top cc_87,.Lxtalabel10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	260
 	.long	263
 	.long	.Lxtalabel10
-.cc_bottom cc_84
-.cc_top cc_85,.Lxtalabel11
+.cc_bottom cc_87
+.cc_top cc_88,.Lxtalabel11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	264
 	.long	266
 	.long	.Lxtalabel11
-.cc_bottom cc_85
-.cc_top cc_86,.Lxtalabel12
+.cc_bottom cc_88
+.cc_top cc_89,.Lxtalabel12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	267
 	.long	267
 	.long	.Lxtalabel12
-.cc_bottom cc_86
-.cc_top cc_87,.Lxtalabel12
+.cc_bottom cc_89
+.cc_top cc_90,.Lxtalabel12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	270
 	.long	272
 	.long	.Lxtalabel12
-.cc_bottom cc_87
-.cc_top cc_88,.Lxtalabel12
+.cc_bottom cc_90
+.cc_top cc_91,.Lxtalabel12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	273
 	.long	273
 	.long	.Lxtalabel12
-.cc_bottom cc_88
-.cc_top cc_89,.Lxtalabel12
+.cc_bottom cc_91
+.cc_top cc_92,.Lxtalabel12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	278
 	.long	278
 	.long	.Lxtalabel12
-.cc_bottom cc_89
-.cc_top cc_90,.Lxtalabel17
+.cc_bottom cc_92
+.cc_top cc_93,.Lxtalabel17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	288
 	.long	288
 	.long	.Lxtalabel17
-.cc_bottom cc_90
-.cc_top cc_91,.Lxtalabel19
+.cc_bottom cc_93
+.cc_top cc_94,.Lxtalabel19
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	288
 	.long	288
 	.long	.Lxtalabel19
-.cc_bottom cc_91
-.cc_top cc_92,.Lxtalabel20
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	289
-	.long	289
-	.long	.Lxtalabel20
-.cc_bottom cc_92
-.cc_top cc_93,.Lxtalabel20
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	290
-	.long	290
-	.long	.Lxtalabel20
-.cc_bottom cc_93
-.cc_top cc_94,.Lxtalabel20
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	291
-	.long	291
-	.long	.Lxtalabel20
 .cc_bottom cc_94
-.cc_top cc_95,.Lxtalabel21
+.cc_top cc_95,.Lxtalabel20
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	289
+	.long	289
+	.long	.Lxtalabel20
+.cc_bottom cc_95
+.cc_top cc_96,.Lxtalabel20
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	290
+	.long	290
+	.long	.Lxtalabel20
+.cc_bottom cc_96
+.cc_top cc_97,.Lxtalabel20
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	291
+	.long	291
+	.long	.Lxtalabel20
+.cc_bottom cc_97
+.cc_top cc_98,.Lxtalabel21
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	294
 	.long	295
 	.long	.Lxtalabel21
-.cc_bottom cc_95
-.cc_top cc_96,.Lxtalabel22
+.cc_bottom cc_98
+.cc_top cc_99,.Lxtalabel22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	299
 	.long	299
 	.long	.Lxtalabel22
-.cc_bottom cc_96
-.cc_top cc_97,.Lxtalabel22
+.cc_bottom cc_99
+.cc_top cc_100,.Lxtalabel22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	301
 	.long	303
 	.long	.Lxtalabel22
-.cc_bottom cc_97
-.cc_top cc_98,.Lxtalabel23
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	332
-	.long	332
-	.long	.Lxtalabel23
-.cc_bottom cc_98
-.cc_top cc_99,.Lxtalabel23
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	336
-	.long	336
-	.long	.Lxtalabel23
-.cc_bottom cc_99
-.cc_top cc_100,.Lxtalabel23
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	338
-	.long	338
-	.long	.Lxtalabel23
 .cc_bottom cc_100
-.cc_top cc_101,.Lxtalabel32
+.cc_top cc_101,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	339
-	.long	339
-	.long	.Lxtalabel32
+	.long	332
+	.long	332
+	.long	.Lxtalabel23
 .cc_bottom cc_101
-.cc_top cc_102,.Lxtalabel32
+.cc_top cc_102,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	341
-	.long	341
-	.long	.Lxtalabel32
+	.long	336
+	.long	336
+	.long	.Lxtalabel23
 .cc_bottom cc_102
-.cc_top cc_103,.Lxtalabel32
+.cc_top cc_103,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	345
-	.long	350
-	.long	.Lxtalabel32
+	.long	338
+	.long	338
+	.long	.Lxtalabel23
 .cc_bottom cc_103
 .cc_top cc_104,.Lxtalabel32
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	359
-	.long	359
+	.long	339
+	.long	339
 	.long	.Lxtalabel32
 .cc_bottom cc_104
 .cc_top cc_105,.Lxtalabel32
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	341
+	.long	341
+	.long	.Lxtalabel32
+.cc_bottom cc_105
+.cc_top cc_106,.Lxtalabel32
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	345
+	.long	350
+	.long	.Lxtalabel32
+.cc_bottom cc_106
+.cc_top cc_107,.Lxtalabel32
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	359
+	.long	359
+	.long	.Lxtalabel32
+.cc_bottom cc_107
+.cc_top cc_108,.Lxtalabel32
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	360
 	.long	361
 	.long	.Lxtalabel32
-.cc_bottom cc_105
-.cc_top cc_106,.Lxtalabel24
+.cc_bottom cc_108
+.cc_top cc_109,.Lxtalabel24
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	373
 	.long	373
 	.long	.Lxtalabel24
-.cc_bottom cc_106
-.cc_top cc_107,.Lxtalabel25
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	374
-	.long	374
-	.long	.Lxtalabel25
-.cc_bottom cc_107
-.cc_top cc_108,.Lxtalabel26
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	374
-	.long	374
-	.long	.Lxtalabel26
-.cc_bottom cc_108
-.cc_top cc_109,.Lxtalabel25
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	376
-	.long	376
-	.long	.Lxtalabel25
 .cc_bottom cc_109
-.cc_top cc_110,.Lxtalabel26
+.cc_top cc_110,.Lxtalabel25
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	376
-	.long	376
-	.long	.Lxtalabel26
+	.long	374
+	.long	374
+	.long	.Lxtalabel25
 .cc_bottom cc_110
-.cc_top cc_111,.Lxtalabel25
+.cc_top cc_111,.Lxtalabel26
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	379
-	.long	384
-	.long	.Lxtalabel25
+	.long	374
+	.long	374
+	.long	.Lxtalabel26
 .cc_bottom cc_111
-.cc_top cc_112,.Lxtalabel26
+.cc_top cc_112,.Lxtalabel25
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	376
+	.long	376
+	.long	.Lxtalabel25
+.cc_bottom cc_112
+.cc_top cc_113,.Lxtalabel26
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	376
+	.long	376
+	.long	.Lxtalabel26
+.cc_bottom cc_113
+.cc_top cc_114,.Lxtalabel25
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	379
+	.long	384
+	.long	.Lxtalabel25
+.cc_bottom cc_114
+.cc_top cc_115,.Lxtalabel26
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	379
 	.long	384
 	.long	.Lxtalabel26
-.cc_bottom cc_112
-.cc_top cc_113,.Lxtalabel25
+.cc_bottom cc_115
+.cc_top cc_116,.Lxtalabel25
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	387
 	.long	389
 	.long	.Lxtalabel25
-.cc_bottom cc_113
-.cc_top cc_114,.Lxtalabel26
+.cc_bottom cc_116
+.cc_top cc_117,.Lxtalabel26
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	387
 	.long	389
 	.long	.Lxtalabel26
-.cc_bottom cc_114
-.cc_top cc_115,.Lxtalabel27
+.cc_bottom cc_117
+.cc_top cc_118,.Lxtalabel27
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	390
 	.long	392
 	.long	.Lxtalabel27
-.cc_bottom cc_115
-.cc_top cc_116,.Lxtalabel28
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	393
-	.long	393
-	.long	.Lxtalabel28
-.cc_bottom cc_116
-.cc_top cc_117,.Lxtalabel28
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	394
-	.long	394
-	.long	.Lxtalabel28
-.cc_bottom cc_117
-.cc_top cc_118,.Lxtalabel28
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	395
-	.long	395
-	.long	.Lxtalabel28
 .cc_bottom cc_118
 .cc_top cc_119,.Lxtalabel28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	396
-	.long	396
+	.long	393
+	.long	393
 	.long	.Lxtalabel28
 .cc_bottom cc_119
 .cc_top cc_120,.Lxtalabel28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	394
+	.long	394
+	.long	.Lxtalabel28
+.cc_bottom cc_120
+.cc_top cc_121,.Lxtalabel28
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	395
+	.long	395
+	.long	.Lxtalabel28
+.cc_bottom cc_121
+.cc_top cc_122,.Lxtalabel28
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	396
+	.long	396
+	.long	.Lxtalabel28
+.cc_bottom cc_122
+.cc_top cc_123,.Lxtalabel28
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	397
 	.long	399
 	.long	.Lxtalabel28
-.cc_bottom cc_120
-.cc_top cc_121,.Lxtalabel29
+.cc_bottom cc_123
+.cc_top cc_124,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	400
 	.long	400
 	.long	.Lxtalabel29
-.cc_bottom cc_121
-.cc_top cc_122,.Lxtalabel29
+.cc_bottom cc_124
+.cc_top cc_125,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	401
 	.long	401
 	.long	.Lxtalabel29
-.cc_bottom cc_122
-.cc_top cc_123,.Lxtalabel29
+.cc_bottom cc_125
+.cc_top cc_126,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	402
 	.long	405
 	.long	.Lxtalabel29
-.cc_bottom cc_123
-.cc_top cc_124,.Lxtalabel30
+.cc_bottom cc_126
+.cc_top cc_127,.Lxtalabel30
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	406
 	.long	406
 	.long	.Lxtalabel30
-.cc_bottom cc_124
-.cc_top cc_125,.Lxtalabel30
+.cc_bottom cc_127
+.cc_top cc_128,.Lxtalabel30
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	407
 	.long	407
 	.long	.Lxtalabel30
-.cc_bottom cc_125
-.cc_top cc_126,.Lxtalabel30
+.cc_bottom cc_128
+.cc_top cc_129,.Lxtalabel30
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	408
 	.long	410
 	.long	.Lxtalabel30
-.cc_bottom cc_126
-.cc_top cc_127,.Lxtalabel31
+.cc_bottom cc_129
+.cc_top cc_130,.Lxtalabel31
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	411
 	.long	412
 	.long	.Lxtalabel31
-.cc_bottom cc_127
-.cc_top cc_128,.Lxtalabel24
+.cc_bottom cc_130
+.cc_top cc_131,.Lxtalabel24
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	421
 	.long	421
 	.long	.Lxtalabel24
-.cc_bottom cc_128
-.cc_top cc_129,.Lxtalabel33
+.cc_bottom cc_131
+.cc_top cc_132,.Lxtalabel33
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	421
 	.long	421
 	.long	.Lxtalabel33
-.cc_bottom cc_129
-.cc_top cc_130,.Lxtalabel34
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	422
-	.long	422
-	.long	.Lxtalabel34
-.cc_bottom cc_130
-.cc_top cc_131,.Lxtalabel34
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	423
-	.long	423
-	.long	.Lxtalabel34
-.cc_bottom cc_131
-.cc_top cc_132,.Lxtalabel34
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	424
-	.long	424
-	.long	.Lxtalabel34
 .cc_bottom cc_132
-.cc_top cc_133,.Lxtalabel35
+.cc_top cc_133,.Lxtalabel34
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	422
+	.long	422
+	.long	.Lxtalabel34
+.cc_bottom cc_133
+.cc_top cc_134,.Lxtalabel34
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	423
+	.long	423
+	.long	.Lxtalabel34
+.cc_bottom cc_134
+.cc_top cc_135,.Lxtalabel34
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	424
+	.long	424
+	.long	.Lxtalabel34
+.cc_bottom cc_135
+.cc_top cc_136,.Lxtalabel35
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	426
 	.long	427
 	.long	.Lxtalabel35
-.cc_bottom cc_133
-.cc_top cc_134,.Lxtalabel35
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	429
-	.long	429
-	.long	.Lxtalabel35
-.cc_bottom cc_134
-.cc_top cc_135,.Lxtalabel35
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	432
-	.long	432
-	.long	.Lxtalabel35
-.cc_bottom cc_135
-.cc_top cc_136,.Lxtalabel36
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	433
-	.long	435
-	.long	.Lxtalabel36
 .cc_bottom cc_136
-.cc_top cc_137,.Lxtalabel37
+.cc_top cc_137,.Lxtalabel35
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	433
-	.long	435
-	.long	.Lxtalabel37
+	.long	429
+	.long	429
+	.long	.Lxtalabel35
 .cc_bottom cc_137
-.cc_top cc_138,.Lxtalabel39
+.cc_top cc_138,.Lxtalabel35
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	433
-	.long	435
-	.long	.Lxtalabel39
+	.long	432
+	.long	432
+	.long	.Lxtalabel35
 .cc_bottom cc_138
-.cc_top cc_139,.Lxtalabel38
+.cc_top cc_139,.Lxtalabel36
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	433
+	.long	435
+	.long	.Lxtalabel36
+.cc_bottom cc_139
+.cc_top cc_140,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	433
 	.long	435
 	.long	.Lxtalabel38
-.cc_bottom cc_139
-.cc_top cc_140,.Lxtalabel39
+.cc_bottom cc_140
+.cc_top cc_141,.Lxtalabel37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	438
-	.long	438
+	.long	433
+	.long	435
+	.long	.Lxtalabel37
+.cc_bottom cc_141
+.cc_top cc_142,.Lxtalabel39
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	433
+	.long	435
 	.long	.Lxtalabel39
-.cc_bottom cc_140
-.cc_top cc_141,.Lxtalabel36
+.cc_bottom cc_142
+.cc_top cc_143,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	438
 	.long	438
 	.long	.Lxtalabel36
-.cc_bottom cc_141
-.cc_top cc_142,.Lxtalabel37
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	438
-	.long	438
-	.long	.Lxtalabel37
-.cc_bottom cc_142
-.cc_top cc_143,.Lxtalabel38
+.cc_bottom cc_143
+.cc_top cc_144,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	438
 	.long	438
 	.long	.Lxtalabel38
-.cc_bottom cc_143
-.cc_top cc_144,.Lxtalabel36
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	440
-	.long	440
-	.long	.Lxtalabel36
 .cc_bottom cc_144
-.cc_top cc_145,.Lxtalabel39
+.cc_top cc_145,.Lxtalabel37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	440
-	.long	440
-	.long	.Lxtalabel39
-.cc_bottom cc_145
-.cc_top cc_146,.Lxtalabel37
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	440
-	.long	440
+	.long	438
+	.long	438
 	.long	.Lxtalabel37
+.cc_bottom cc_145
+.cc_top cc_146,.Lxtalabel39
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	438
+	.long	438
+	.long	.Lxtalabel39
 .cc_bottom cc_146
 .cc_top cc_147,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
@@ -9432,250 +9456,250 @@ tmpBuffer:
 	.long	440
 	.long	.Lxtalabel38
 .cc_bottom cc_147
-.cc_top cc_148,.Lxtalabel36
+.cc_top cc_148,.Lxtalabel39
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	443
-	.long	443
-	.long	.Lxtalabel36
+	.long	440
+	.long	440
+	.long	.Lxtalabel39
 .cc_bottom cc_148
-.cc_top cc_149,.Lxtalabel38
+.cc_top cc_149,.Lxtalabel36
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	440
+	.long	440
+	.long	.Lxtalabel36
+.cc_bottom cc_149
+.cc_top cc_150,.Lxtalabel37
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	440
+	.long	440
+	.long	.Lxtalabel37
+.cc_bottom cc_150
+.cc_top cc_151,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	443
 	.long	443
 	.long	.Lxtalabel38
-.cc_bottom cc_149
-.cc_top cc_150,.Lxtalabel37
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	443
-	.long	443
-	.long	.Lxtalabel37
-.cc_bottom cc_150
-.cc_top cc_151,.Lxtalabel39
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	443
-	.long	443
-	.long	.Lxtalabel39
 .cc_bottom cc_151
 .cc_top cc_152,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	446
-	.long	446
+	.long	443
+	.long	443
 	.long	.Lxtalabel36
 .cc_bottom cc_152
 .cc_top cc_153,.Lxtalabel37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	446
-	.long	446
+	.long	443
+	.long	443
 	.long	.Lxtalabel37
 .cc_bottom cc_153
-.cc_top cc_154,.Lxtalabel38
+.cc_top cc_154,.Lxtalabel39
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	443
+	.long	443
+	.long	.Lxtalabel39
+.cc_bottom cc_154
+.cc_top cc_155,.Lxtalabel36
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	446
+	.long	446
+	.long	.Lxtalabel36
+.cc_bottom cc_155
+.cc_top cc_156,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	446
 	.long	446
 	.long	.Lxtalabel38
-.cc_bottom cc_154
-.cc_top cc_155,.Lxtalabel39
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	446
-	.long	446
-	.long	.Lxtalabel39
-.cc_bottom cc_155
-.cc_top cc_156,.Lxtalabel36
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	449
-	.long	449
-	.long	.Lxtalabel36
 .cc_bottom cc_156
 .cc_top cc_157,.Lxtalabel37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	446
+	.long	446
+	.long	.Lxtalabel37
+.cc_bottom cc_157
+.cc_top cc_158,.Lxtalabel39
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	446
+	.long	446
+	.long	.Lxtalabel39
+.cc_bottom cc_158
+.cc_top cc_159,.Lxtalabel37
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	449
 	.long	449
 	.long	.Lxtalabel37
-.cc_bottom cc_157
-.cc_top cc_158,.Lxtalabel38
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	449
-	.long	449
-	.long	.Lxtalabel38
-.cc_bottom cc_158
-.cc_top cc_159,.Lxtalabel39
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	449
-	.long	449
-	.long	.Lxtalabel39
 .cc_bottom cc_159
 .cc_top cc_160,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	450
-	.long	452
+	.long	449
+	.long	449
 	.long	.Lxtalabel36
 .cc_bottom cc_160
-.cc_top cc_161,.Lxtalabel37
+.cc_top cc_161,.Lxtalabel39
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	450
-	.long	452
-	.long	.Lxtalabel37
+	.long	449
+	.long	449
+	.long	.Lxtalabel39
 .cc_bottom cc_161
-.cc_top cc_162,.Lxtalabel39
+.cc_top cc_162,.Lxtalabel38
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	449
+	.long	449
+	.long	.Lxtalabel38
+.cc_bottom cc_162
+.cc_top cc_163,.Lxtalabel36
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	450
+	.long	452
+	.long	.Lxtalabel36
+.cc_bottom cc_163
+.cc_top cc_164,.Lxtalabel39
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	450
 	.long	452
 	.long	.Lxtalabel39
-.cc_bottom cc_162
-.cc_top cc_163,.Lxtalabel38
+.cc_bottom cc_164
+.cc_top cc_165,.Lxtalabel37
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	450
+	.long	452
+	.long	.Lxtalabel37
+.cc_bottom cc_165
+.cc_top cc_166,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	450
 	.long	452
 	.long	.Lxtalabel38
-.cc_bottom cc_163
-.cc_top cc_164,.Lxtalabel37
+.cc_bottom cc_166
+.cc_top cc_167,.Lxtalabel37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	454
 	.long	454
 	.long	.Lxtalabel37
-.cc_bottom cc_164
-.cc_top cc_165,.Lxtalabel38
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	454
-	.long	454
-	.long	.Lxtalabel38
-.cc_bottom cc_165
-.cc_top cc_166,.Lxtalabel36
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	454
-	.long	454
-	.long	.Lxtalabel36
-.cc_bottom cc_166
-.cc_top cc_167,.Lxtalabel39
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	454
-	.long	454
-	.long	.Lxtalabel39
 .cc_bottom cc_167
 .cc_top cc_168,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	460
-	.long	460
+	.long	454
+	.long	454
 	.long	.Lxtalabel38
 .cc_bottom cc_168
 .cc_top cc_169,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	460
-	.long	460
+	.long	454
+	.long	454
 	.long	.Lxtalabel36
 .cc_bottom cc_169
-.cc_top cc_170,.Lxtalabel37
+.cc_top cc_170,.Lxtalabel39
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	460
-	.long	460
-	.long	.Lxtalabel37
+	.long	454
+	.long	454
+	.long	.Lxtalabel39
 .cc_bottom cc_170
-.cc_top cc_171,.Lxtalabel39
+.cc_top cc_171,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	460
 	.long	460
-	.long	.Lxtalabel39
+	.long	.Lxtalabel36
 .cc_bottom cc_171
-.cc_top cc_172,.Lxtalabel39
+.cc_top cc_172,.Lxtalabel37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	463
-	.long	465
-	.long	.Lxtalabel39
+	.long	460
+	.long	460
+	.long	.Lxtalabel37
 .cc_bottom cc_172
-.cc_top cc_173,.Lxtalabel36
+.cc_top cc_173,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	463
-	.long	465
-	.long	.Lxtalabel36
+	.long	460
+	.long	460
+	.long	.Lxtalabel38
 .cc_bottom cc_173
-.cc_top cc_174,.Lxtalabel37
+.cc_top cc_174,.Lxtalabel39
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	460
+	.long	460
+	.long	.Lxtalabel39
+.cc_bottom cc_174
+.cc_top cc_175,.Lxtalabel37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	463
 	.long	465
 	.long	.Lxtalabel37
-.cc_bottom cc_174
-.cc_top cc_175,.Lxtalabel38
+.cc_bottom cc_175
+.cc_top cc_176,.Lxtalabel36
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	463
+	.long	465
+	.long	.Lxtalabel36
+.cc_bottom cc_176
+.cc_top cc_177,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	463
 	.long	465
 	.long	.Lxtalabel38
-.cc_bottom cc_175
-.cc_top cc_176,.Lxtalabel39
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	475
-	.long	475
-	.long	.Lxtalabel39
-.cc_bottom cc_176
-.cc_top cc_177,.Lxtalabel37
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	475
-	.long	475
-	.long	.Lxtalabel37
 .cc_bottom cc_177
-.cc_top cc_178,.Lxtalabel36
+.cc_top cc_178,.Lxtalabel39
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	463
+	.long	465
+	.long	.Lxtalabel39
+.cc_bottom cc_178
+.cc_top cc_179,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	475
 	.long	475
 	.long	.Lxtalabel36
-.cc_bottom cc_178
-.cc_top cc_179,.Lxtalabel38
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	475
-	.long	475
-	.long	.Lxtalabel38
 .cc_bottom cc_179
 .cc_top cc_180,.Lxtalabel37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	478
-	.long	478
+	.long	475
+	.long	475
 	.long	.Lxtalabel37
 .cc_bottom cc_180
-.cc_top cc_181,.Lxtalabel39
+.cc_top cc_181,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	478
-	.long	478
-	.long	.Lxtalabel39
+	.long	475
+	.long	475
+	.long	.Lxtalabel38
 .cc_bottom cc_181
-.cc_top cc_182,.Lxtalabel36
+.cc_top cc_182,.Lxtalabel39
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	478
-	.long	478
-	.long	.Lxtalabel36
+	.long	475
+	.long	475
+	.long	.Lxtalabel39
 .cc_bottom cc_182
 .cc_top cc_183,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
@@ -9684,2169 +9708,2211 @@ tmpBuffer:
 	.long	478
 	.long	.Lxtalabel38
 .cc_bottom cc_183
-.cc_top cc_184,.Lxtalabel37
+.cc_top cc_184,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	479
-	.long	481
-	.long	.Lxtalabel37
+	.long	478
+	.long	478
+	.long	.Lxtalabel36
 .cc_bottom cc_184
-.cc_top cc_185,.Lxtalabel36
+.cc_top cc_185,.Lxtalabel37
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	478
+	.long	478
+	.long	.Lxtalabel37
+.cc_bottom cc_185
+.cc_top cc_186,.Lxtalabel39
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	478
+	.long	478
+	.long	.Lxtalabel39
+.cc_bottom cc_186
+.cc_top cc_187,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	479
 	.long	481
 	.long	.Lxtalabel36
-.cc_bottom cc_185
-.cc_top cc_186,.Lxtalabel38
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	479
-	.long	481
-	.long	.Lxtalabel38
-.cc_bottom cc_186
-.cc_top cc_187,.Lxtalabel39
+.cc_bottom cc_187
+.cc_top cc_188,.Lxtalabel39
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	479
 	.long	481
 	.long	.Lxtalabel39
-.cc_bottom cc_187
-.cc_top cc_188,.Lxtalabel36
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	484
-	.long	484
-	.long	.Lxtalabel36
 .cc_bottom cc_188
 .cc_top cc_189,.Lxtalabel37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	484
-	.long	484
+	.long	479
+	.long	481
 	.long	.Lxtalabel37
 .cc_bottom cc_189
 .cc_top cc_190,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	484
-	.long	484
+	.long	479
+	.long	481
 	.long	.Lxtalabel38
 .cc_bottom cc_190
-.cc_top cc_191,.Lxtalabel39
+.cc_top cc_191,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	484
 	.long	484
-	.long	.Lxtalabel39
+	.long	.Lxtalabel36
 .cc_bottom cc_191
 .cc_top cc_192,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	485
-	.long	485
+	.long	484
+	.long	484
 	.long	.Lxtalabel38
 .cc_bottom cc_192
 .cc_top cc_193,.Lxtalabel37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	485
-	.long	485
+	.long	484
+	.long	484
 	.long	.Lxtalabel37
 .cc_bottom cc_193
-.cc_top cc_194,.Lxtalabel36
+.cc_top cc_194,.Lxtalabel39
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	484
+	.long	484
+	.long	.Lxtalabel39
+.cc_bottom cc_194
+.cc_top cc_195,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	485
 	.long	485
 	.long	.Lxtalabel36
-.cc_bottom cc_194
-.cc_top cc_195,.Lxtalabel39
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	485
-	.long	485
-	.long	.Lxtalabel39
 .cc_bottom cc_195
 .cc_top cc_196,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	490
-	.long	490
+	.long	485
+	.long	485
 	.long	.Lxtalabel38
 .cc_bottom cc_196
 .cc_top cc_197,.Lxtalabel37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	490
-	.long	490
+	.long	485
+	.long	485
 	.long	.Lxtalabel37
 .cc_bottom cc_197
-.cc_top cc_198,.Lxtalabel36
+.cc_top cc_198,.Lxtalabel39
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	485
+	.long	485
+	.long	.Lxtalabel39
+.cc_bottom cc_198
+.cc_top cc_199,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	490
 	.long	490
 	.long	.Lxtalabel36
-.cc_bottom cc_198
-.cc_top cc_199,.Lxtalabel39
+.cc_bottom cc_199
+.cc_top cc_200,.Lxtalabel38
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	490
+	.long	490
+	.long	.Lxtalabel38
+.cc_bottom cc_200
+.cc_top cc_201,.Lxtalabel37
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	490
+	.long	490
+	.long	.Lxtalabel37
+.cc_bottom cc_201
+.cc_top cc_202,.Lxtalabel39
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	490
 	.long	490
 	.long	.Lxtalabel39
-.cc_bottom cc_199
-.cc_top cc_200,.Lxtalabel42
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	491
-	.long	492
-	.long	.Lxtalabel42
-.cc_bottom cc_200
-.cc_top cc_201,.Lxtalabel40
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	491
-	.long	492
-	.long	.Lxtalabel40
-.cc_bottom cc_201
-.cc_top cc_202,.Lxtalabel41
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	491
-	.long	492
-	.long	.Lxtalabel41
 .cc_bottom cc_202
-.cc_top cc_203,.Lxtalabel42
+.cc_top cc_203,.Lxtalabel40
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	495
-	.long	495
-	.long	.Lxtalabel42
-.cc_bottom cc_203
-.cc_top cc_204,.Lxtalabel40
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	495
-	.long	495
+	.long	491
+	.long	492
 	.long	.Lxtalabel40
+.cc_bottom cc_203
+.cc_top cc_204,.Lxtalabel42
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	491
+	.long	492
+	.long	.Lxtalabel42
 .cc_bottom cc_204
 .cc_top cc_205,.Lxtalabel41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	495
-	.long	495
+	.long	491
+	.long	492
 	.long	.Lxtalabel41
 .cc_bottom cc_205
 .cc_top cc_206,.Lxtalabel40
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	497
-	.long	497
+	.long	495
+	.long	495
 	.long	.Lxtalabel40
 .cc_bottom cc_206
 .cc_top cc_207,.Lxtalabel42
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	497
-	.long	497
+	.long	495
+	.long	495
 	.long	.Lxtalabel42
 .cc_bottom cc_207
 .cc_top cc_208,.Lxtalabel41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	497
-	.long	497
+	.long	495
+	.long	495
 	.long	.Lxtalabel41
 .cc_bottom cc_208
-.cc_top cc_209,.Lxtalabel42
+.cc_top cc_209,.Lxtalabel40
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	498
-	.long	498
-	.long	.Lxtalabel42
-.cc_bottom cc_209
-.cc_top cc_210,.Lxtalabel40
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	498
-	.long	498
+	.long	497
+	.long	497
 	.long	.Lxtalabel40
-.cc_bottom cc_210
-.cc_top cc_211,.Lxtalabel41
+.cc_bottom cc_209
+.cc_top cc_210,.Lxtalabel41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	498
-	.long	498
+	.long	497
+	.long	497
 	.long	.Lxtalabel41
+.cc_bottom cc_210
+.cc_top cc_211,.Lxtalabel42
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	497
+	.long	497
+	.long	.Lxtalabel42
 .cc_bottom cc_211
 .cc_top cc_212,.Lxtalabel40
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	501
-	.long	501
+	.long	498
+	.long	498
 	.long	.Lxtalabel40
 .cc_bottom cc_212
 .cc_top cc_213,.Lxtalabel41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	501
-	.long	501
+	.long	498
+	.long	498
 	.long	.Lxtalabel41
 .cc_bottom cc_213
 .cc_top cc_214,.Lxtalabel42
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	501
-	.long	501
+	.long	498
+	.long	498
 	.long	.Lxtalabel42
 .cc_bottom cc_214
-.cc_top cc_215,.Lxtalabel40
+.cc_top cc_215,.Lxtalabel41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	504
-	.long	505
-	.long	.Lxtalabel40
-.cc_bottom cc_215
-.cc_top cc_216,.Lxtalabel41
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	504
-	.long	505
+	.long	501
+	.long	501
 	.long	.Lxtalabel41
-.cc_bottom cc_216
-.cc_top cc_217,.Lxtalabel42
+.cc_bottom cc_215
+.cc_top cc_216,.Lxtalabel42
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	504
-	.long	505
+	.long	501
+	.long	501
 	.long	.Lxtalabel42
+.cc_bottom cc_216
+.cc_top cc_217,.Lxtalabel40
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	501
+	.long	501
+	.long	.Lxtalabel40
 .cc_bottom cc_217
 .cc_top cc_218,.Lxtalabel40
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	506
-	.long	508
+	.long	504
+	.long	505
 	.long	.Lxtalabel40
 .cc_bottom cc_218
 .cc_top cc_219,.Lxtalabel41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	506
-	.long	508
+	.long	504
+	.long	505
 	.long	.Lxtalabel41
 .cc_bottom cc_219
 .cc_top cc_220,.Lxtalabel42
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	504
+	.long	505
+	.long	.Lxtalabel42
+.cc_bottom cc_220
+.cc_top cc_221,.Lxtalabel40
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	506
+	.long	508
+	.long	.Lxtalabel40
+.cc_bottom cc_221
+.cc_top cc_222,.Lxtalabel42
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	506
 	.long	508
 	.long	.Lxtalabel42
-.cc_bottom cc_220
-.cc_top cc_221,.Lxtalabel41
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	510
-	.long	510
-	.long	.Lxtalabel41
-.cc_bottom cc_221
-.cc_top cc_222,.Lxtalabel40
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	510
-	.long	510
-	.long	.Lxtalabel40
 .cc_bottom cc_222
-.cc_top cc_223,.Lxtalabel42
+.cc_top cc_223,.Lxtalabel41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	510
-	.long	510
-	.long	.Lxtalabel42
+	.long	506
+	.long	508
+	.long	.Lxtalabel41
 .cc_bottom cc_223
-.cc_top cc_224,.Lxtalabel41
+.cc_top cc_224,.Lxtalabel42
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	511
-	.long	511
-	.long	.Lxtalabel41
-.cc_bottom cc_224
-.cc_top cc_225,.Lxtalabel40
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	511
-	.long	511
-	.long	.Lxtalabel40
-.cc_bottom cc_225
-.cc_top cc_226,.Lxtalabel42
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	511
-	.long	511
+	.long	510
+	.long	510
 	.long	.Lxtalabel42
-.cc_bottom cc_226
-.cc_top cc_227,.Lxtalabel40
+.cc_bottom cc_224
+.cc_top cc_225,.Lxtalabel41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	513
-	.long	513
-	.long	.Lxtalabel40
-.cc_bottom cc_227
-.cc_top cc_228,.Lxtalabel41
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	513
-	.long	513
+	.long	510
+	.long	510
 	.long	.Lxtalabel41
+.cc_bottom cc_225
+.cc_top cc_226,.Lxtalabel40
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	510
+	.long	510
+	.long	.Lxtalabel40
+.cc_bottom cc_226
+.cc_top cc_227,.Lxtalabel41
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	511
+	.long	511
+	.long	.Lxtalabel41
+.cc_bottom cc_227
+.cc_top cc_228,.Lxtalabel40
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	511
+	.long	511
+	.long	.Lxtalabel40
 .cc_bottom cc_228
 .cc_top cc_229,.Lxtalabel42
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	511
+	.long	511
+	.long	.Lxtalabel42
+.cc_bottom cc_229
+.cc_top cc_230,.Lxtalabel41
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	513
+	.long	513
+	.long	.Lxtalabel41
+.cc_bottom cc_230
+.cc_top cc_231,.Lxtalabel40
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	513
+	.long	513
+	.long	.Lxtalabel40
+.cc_bottom cc_231
+.cc_top cc_232,.Lxtalabel42
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	513
 	.long	513
 	.long	.Lxtalabel42
-.cc_bottom cc_229
-.cc_top cc_230,.Lxtalabel40
+.cc_bottom cc_232
+.cc_top cc_233,.Lxtalabel40
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	514
 	.long	514
 	.long	.Lxtalabel40
-.cc_bottom cc_230
-.cc_top cc_231,.Lxtalabel41
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	514
-	.long	514
-	.long	.Lxtalabel41
-.cc_bottom cc_231
-.cc_top cc_232,.Lxtalabel42
+.cc_bottom cc_233
+.cc_top cc_234,.Lxtalabel42
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	514
 	.long	514
 	.long	.Lxtalabel42
-.cc_bottom cc_232
-.cc_top cc_233,.Lxtalabel43
+.cc_bottom cc_234
+.cc_top cc_235,.Lxtalabel41
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	514
+	.long	514
+	.long	.Lxtalabel41
+.cc_bottom cc_235
+.cc_top cc_236,.Lxtalabel43
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	516
 	.long	517
 	.long	.Lxtalabel43
-.cc_bottom cc_233
-.cc_top cc_234,.Lxtalabel44
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	518
-	.long	518
-	.long	.Lxtalabel44
-.cc_bottom cc_234
-.cc_top cc_235,.Lxtalabel44
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	520
-	.long	520
-	.long	.Lxtalabel44
-.cc_bottom cc_235
-.cc_top cc_236,.Lxtalabel45
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	521
-	.long	521
-	.long	.Lxtalabel45
 .cc_bottom cc_236
-.cc_top cc_237,.Lxtalabel45
+.cc_top cc_237,.Lxtalabel44
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	518
+	.long	518
+	.long	.Lxtalabel44
+.cc_bottom cc_237
+.cc_top cc_238,.Lxtalabel44
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	520
+	.long	520
+	.long	.Lxtalabel44
+.cc_bottom cc_238
+.cc_top cc_239,.Lxtalabel45
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	521
+	.long	521
+	.long	.Lxtalabel45
+.cc_bottom cc_239
+.cc_top cc_240,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	523
 	.long	523
 	.long	.Lxtalabel45
-.cc_bottom cc_237
-.cc_top cc_238,.Lxtalabel46
+.cc_bottom cc_240
+.cc_top cc_241,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	524
 	.long	524
 	.long	.Lxtalabel46
-.cc_bottom cc_238
-.cc_top cc_239,.Lxtalabel46
+.cc_bottom cc_241
+.cc_top cc_242,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	526
 	.long	527
 	.long	.Lxtalabel46
-.cc_bottom cc_239
-.cc_top cc_240,.Lxtalabel46
+.cc_bottom cc_242
+.cc_top cc_243,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	530
 	.long	530
 	.long	.Lxtalabel46
-.cc_bottom cc_240
-.cc_top cc_241,.Lxtalabel46
+.cc_bottom cc_243
+.cc_top cc_244,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	532
 	.long	533
 	.long	.Lxtalabel46
-.cc_bottom cc_241
-.cc_top cc_242,.Lxtalabel47
+.cc_bottom cc_244
+.cc_top cc_245,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	536
 	.long	536
 	.long	.Lxtalabel47
-.cc_bottom cc_242
-.cc_top cc_243,.Lxtalabel48
+.cc_bottom cc_245
+.cc_top cc_246,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	537
 	.long	539
 	.long	.Lxtalabel48
-.cc_bottom cc_243
-.cc_top cc_244,.Lxtalabel49
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	541
-	.long	541
-	.long	.Lxtalabel49
-.cc_bottom cc_244
-.cc_top cc_245,.Lxtalabel49
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	544
-	.long	544
-	.long	.Lxtalabel49
-.cc_bottom cc_245
-.cc_top cc_246,.Lxtalabel50
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	545
-	.long	545
-	.long	.Lxtalabel50
 .cc_bottom cc_246
-.cc_top cc_247,.Lxtalabel50
+.cc_top cc_247,.Lxtalabel49
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	546
-	.long	546
-	.long	.Lxtalabel50
+	.long	541
+	.long	541
+	.long	.Lxtalabel49
 .cc_bottom cc_247
-.cc_top cc_248,.Lxtalabel50
+.cc_top cc_248,.Lxtalabel49
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	548
-	.long	548
-	.long	.Lxtalabel50
+	.long	544
+	.long	544
+	.long	.Lxtalabel49
 .cc_bottom cc_248
 .cc_top cc_249,.Lxtalabel50
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	545
+	.long	545
+	.long	.Lxtalabel50
+.cc_bottom cc_249
+.cc_top cc_250,.Lxtalabel50
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	546
+	.long	546
+	.long	.Lxtalabel50
+.cc_bottom cc_250
+.cc_top cc_251,.Lxtalabel50
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	548
+	.long	548
+	.long	.Lxtalabel50
+.cc_bottom cc_251
+.cc_top cc_252,.Lxtalabel50
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	550
 	.long	551
 	.long	.Lxtalabel50
-.cc_bottom cc_249
-.cc_top cc_250,.Lxtalabel51
+.cc_bottom cc_252
+.cc_top cc_253,.Lxtalabel51
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	553
 	.long	553
 	.long	.Lxtalabel51
-.cc_bottom cc_250
-.cc_top cc_251,.Lxtalabel63
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	557
-	.long	559
-	.long	.Lxtalabel63
-.cc_bottom cc_251
-.cc_top cc_252,.Lxtalabel67
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	557
-	.long	559
-	.long	.Lxtalabel67
-.cc_bottom cc_252
-.cc_top cc_253,.Lxtalabel63
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	563
-	.long	563
-	.long	.Lxtalabel63
 .cc_bottom cc_253
-.cc_top cc_254,.Lxtalabel67
+.cc_top cc_254,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	563
-	.long	563
-	.long	.Lxtalabel67
+	.long	557
+	.long	559
+	.long	.Lxtalabel63
 .cc_bottom cc_254
-.cc_top cc_255,.Lxtalabel63
+.cc_top cc_255,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	564
-	.long	564
-	.long	.Lxtalabel63
+	.long	557
+	.long	559
+	.long	.Lxtalabel67
 .cc_bottom cc_255
-.cc_top cc_256,.Lxtalabel67
+.cc_top cc_256,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	564
-	.long	564
-	.long	.Lxtalabel67
+	.long	563
+	.long	563
+	.long	.Lxtalabel63
 .cc_bottom cc_256
-.cc_top cc_257,.Lxtalabel63
+.cc_top cc_257,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	566
-	.long	566
-	.long	.Lxtalabel63
+	.long	563
+	.long	563
+	.long	.Lxtalabel67
 .cc_bottom cc_257
-.cc_top cc_258,.Lxtalabel67
+.cc_top cc_258,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	566
-	.long	566
-	.long	.Lxtalabel67
+	.long	564
+	.long	564
+	.long	.Lxtalabel63
 .cc_bottom cc_258
-.cc_top cc_259,.Lxtalabel63
+.cc_top cc_259,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	568
-	.long	568
-	.long	.Lxtalabel63
+	.long	564
+	.long	564
+	.long	.Lxtalabel67
 .cc_bottom cc_259
-.cc_top cc_260,.Lxtalabel67
+.cc_top cc_260,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	568
-	.long	568
-	.long	.Lxtalabel67
+	.long	566
+	.long	566
+	.long	.Lxtalabel63
 .cc_bottom cc_260
-.cc_top cc_261,.Lxtalabel63
+.cc_top cc_261,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	575
-	.long	575
-	.long	.Lxtalabel63
-.cc_bottom cc_261
-.cc_top cc_262,.Lxtalabel67
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	575
-	.long	575
+	.long	566
+	.long	566
 	.long	.Lxtalabel67
-.cc_bottom cc_262
-.cc_top cc_263,.Lxtalabel63
+.cc_bottom cc_261
+.cc_top cc_262,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	577
-	.long	578
+	.long	568
+	.long	568
 	.long	.Lxtalabel63
+.cc_bottom cc_262
+.cc_top cc_263,.Lxtalabel67
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	568
+	.long	568
+	.long	.Lxtalabel67
 .cc_bottom cc_263
 .cc_top cc_264,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	575
+	.long	575
+	.long	.Lxtalabel67
+.cc_bottom cc_264
+.cc_top cc_265,.Lxtalabel63
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	575
+	.long	575
+	.long	.Lxtalabel63
+.cc_bottom cc_265
+.cc_top cc_266,.Lxtalabel63
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	577
+	.long	578
+	.long	.Lxtalabel63
+.cc_bottom cc_266
+.cc_top cc_267,.Lxtalabel67
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	577
 	.long	578
 	.long	.Lxtalabel67
-.cc_bottom cc_264
-.cc_top cc_265,.Lxtalabel52
+.cc_bottom cc_267
+.cc_top cc_268,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	590
 	.long	591
 	.long	.Lxtalabel52
-.cc_bottom cc_265
-.cc_top cc_266,.Lxtalabel52
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	598
-	.long	599
-	.long	.Lxtalabel52
-.cc_bottom cc_266
-.cc_top cc_267,.Lxtalabel52
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	605
-	.long	605
-	.long	.Lxtalabel52
-.cc_bottom cc_267
-.cc_top cc_268,.Lxtalabel52
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	608
-	.long	608
-	.long	.Lxtalabel52
 .cc_bottom cc_268
 .cc_top cc_269,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	611
-	.long	611
+	.long	594
+	.long	594
 	.long	.Lxtalabel52
 .cc_bottom cc_269
 .cc_top cc_270,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	614
-	.long	617
+	.long	598
+	.long	599
 	.long	.Lxtalabel52
 .cc_bottom cc_270
 .cc_top cc_271,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	619
-	.long	619
+	.long	605
+	.long	605
 	.long	.Lxtalabel52
 .cc_bottom cc_271
 .cc_top cc_272,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	621
-	.long	625
+	.long	608
+	.long	608
 	.long	.Lxtalabel52
 .cc_bottom cc_272
 .cc_top cc_273,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	631
-	.long	632
+	.long	611
+	.long	611
 	.long	.Lxtalabel52
 .cc_bottom cc_273
 .cc_top cc_274,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	636
-	.long	636
+	.long	614
+	.long	617
 	.long	.Lxtalabel52
 .cc_bottom cc_274
 .cc_top cc_275,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	637
-	.long	639
+	.long	619
+	.long	619
 	.long	.Lxtalabel52
 .cc_bottom cc_275
 .cc_top cc_276,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	637
-	.long	639
+	.long	621
+	.long	625
 	.long	.Lxtalabel52
 .cc_bottom cc_276
 .cc_top cc_277,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	637
-	.long	639
+	.long	631
+	.long	632
 	.long	.Lxtalabel52
 .cc_bottom cc_277
 .cc_top cc_278,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	643
-	.long	643
+	.long	636
+	.long	636
 	.long	.Lxtalabel52
 .cc_bottom cc_278
 .cc_top cc_279,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	644
-	.long	646
+	.long	637
+	.long	639
 	.long	.Lxtalabel52
 .cc_bottom cc_279
 .cc_top cc_280,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	649
-	.long	649
+	.long	637
+	.long	639
 	.long	.Lxtalabel52
 .cc_bottom cc_280
 .cc_top cc_281,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	637
+	.long	639
+	.long	.Lxtalabel52
+.cc_bottom cc_281
+.cc_top cc_282,.Lxtalabel52
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	643
+	.long	643
+	.long	.Lxtalabel52
+.cc_bottom cc_282
+.cc_top cc_283,.Lxtalabel52
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	644
+	.long	646
+	.long	.Lxtalabel52
+.cc_bottom cc_283
+.cc_top cc_284,.Lxtalabel52
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	649
+	.long	649
+	.long	.Lxtalabel52
+.cc_bottom cc_284
+.cc_top cc_285,.Lxtalabel52
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	654
 	.long	654
 	.long	.Lxtalabel52
-.cc_bottom cc_281
-.cc_top cc_282,.Lxtalabel53
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	655
-	.long	655
-	.long	.Lxtalabel53
-.cc_bottom cc_282
-.cc_top cc_283,.Lxtalabel53
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	656
-	.long	656
-	.long	.Lxtalabel53
-.cc_bottom cc_283
-.cc_top cc_284,.Lxtalabel53
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	657
-	.long	657
-	.long	.Lxtalabel53
-.cc_bottom cc_284
-.cc_top cc_285,.Lxtalabel54
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	659
-	.long	659
-	.long	.Lxtalabel54
 .cc_bottom cc_285
-.cc_top cc_286,.Lxtalabel54
+.cc_top cc_286,.Lxtalabel53
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	660
-	.long	660
-	.long	.Lxtalabel54
+	.long	655
+	.long	655
+	.long	.Lxtalabel53
 .cc_bottom cc_286
-.cc_top cc_287,.Lxtalabel54
+.cc_top cc_287,.Lxtalabel53
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	663
-	.long	663
-	.long	.Lxtalabel54
+	.long	656
+	.long	656
+	.long	.Lxtalabel53
 .cc_bottom cc_287
-.cc_top cc_288,.Lxtalabel54
+.cc_top cc_288,.Lxtalabel53
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	664
-	.long	664
-	.long	.Lxtalabel54
+	.long	657
+	.long	657
+	.long	.Lxtalabel53
 .cc_bottom cc_288
 .cc_top cc_289,.Lxtalabel54
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	659
+	.long	659
+	.long	.Lxtalabel54
+.cc_bottom cc_289
+.cc_top cc_290,.Lxtalabel54
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	660
+	.long	660
+	.long	.Lxtalabel54
+.cc_bottom cc_290
+.cc_top cc_291,.Lxtalabel54
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	663
+	.long	663
+	.long	.Lxtalabel54
+.cc_bottom cc_291
+.cc_top cc_292,.Lxtalabel54
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	664
+	.long	664
+	.long	.Lxtalabel54
+.cc_bottom cc_292
+.cc_top cc_293,.Lxtalabel54
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	683
 	.long	683
 	.long	.Lxtalabel54
-.cc_bottom cc_289
-.cc_top cc_290,.Lxtalabel57
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	684
-	.long	685
-	.long	.Lxtalabel57
-.cc_bottom cc_290
-.cc_top cc_291,.Lxtalabel58
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	684
-	.long	685
-	.long	.Lxtalabel58
-.cc_bottom cc_291
-.cc_top cc_292,.Lxtalabel66
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	684
-	.long	685
-	.long	.Lxtalabel66
-.cc_bottom cc_292
-.cc_top cc_293,.Lxtalabel58
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	694
-	.long	695
-	.long	.Lxtalabel58
 .cc_bottom cc_293
-.cc_top cc_294,.Lxtalabel66
+.cc_top cc_294,.Lxtalabel57
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	694
-	.long	695
-	.long	.Lxtalabel66
-.cc_bottom cc_294
-.cc_top cc_295,.Lxtalabel57
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	694
-	.long	695
+	.long	684
+	.long	685
 	.long	.Lxtalabel57
-.cc_bottom cc_295
-.cc_top cc_296,.Lxtalabel58
+.cc_bottom cc_294
+.cc_top cc_295,.Lxtalabel58
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	699
-	.long	699
+	.long	684
+	.long	685
 	.long	.Lxtalabel58
+.cc_bottom cc_295
+.cc_top cc_296,.Lxtalabel66
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	684
+	.long	685
+	.long	.Lxtalabel66
 .cc_bottom cc_296
 .cc_top cc_297,.Lxtalabel57
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	699
-	.long	699
+	.long	694
+	.long	695
 	.long	.Lxtalabel57
 .cc_bottom cc_297
-.cc_top cc_298,.Lxtalabel66
+.cc_top cc_298,.Lxtalabel58
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	694
+	.long	695
+	.long	.Lxtalabel58
+.cc_bottom cc_298
+.cc_top cc_299,.Lxtalabel66
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	694
+	.long	695
+	.long	.Lxtalabel66
+.cc_bottom cc_299
+.cc_top cc_300,.Lxtalabel57
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	699
+	.long	699
+	.long	.Lxtalabel57
+.cc_bottom cc_300
+.cc_top cc_301,.Lxtalabel58
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	699
+	.long	699
+	.long	.Lxtalabel58
+.cc_bottom cc_301
+.cc_top cc_302,.Lxtalabel66
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	699
 	.long	699
 	.long	.Lxtalabel66
-.cc_bottom cc_298
-.cc_top cc_299,.Lxtalabel57
+.cc_bottom cc_302
+.cc_top cc_303,.Lxtalabel57
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	700
 	.long	700
 	.long	.Lxtalabel57
-.cc_bottom cc_299
-.cc_top cc_300,.Lxtalabel66
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	700
-	.long	700
-	.long	.Lxtalabel66
-.cc_bottom cc_300
-.cc_top cc_301,.Lxtalabel58
+.cc_bottom cc_303
+.cc_top cc_304,.Lxtalabel58
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	700
 	.long	700
 	.long	.Lxtalabel58
-.cc_bottom cc_301
-.cc_top cc_302,.Lxtalabel67
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	701
-	.long	701
-	.long	.Lxtalabel67
-.cc_bottom cc_302
-.cc_top cc_303,.Lxtalabel67
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	702
-	.long	702
-	.long	.Lxtalabel67
-.cc_bottom cc_303
-.cc_top cc_304,.Lxtalabel67
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	703
-	.long	703
-	.long	.Lxtalabel67
 .cc_bottom cc_304
-.cc_top cc_305,.Lxtalabel67
+.cc_top cc_305,.Lxtalabel66
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	710
-	.long	710
-	.long	.Lxtalabel67
+	.long	700
+	.long	700
+	.long	.Lxtalabel66
 .cc_bottom cc_305
 .cc_top cc_306,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	711
-	.long	711
+	.long	701
+	.long	701
 	.long	.Lxtalabel67
 .cc_bottom cc_306
 .cc_top cc_307,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	712
-	.long	712
+	.long	702
+	.long	702
 	.long	.Lxtalabel67
 .cc_bottom cc_307
 .cc_top cc_308,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	713
-	.long	713
+	.long	703
+	.long	703
 	.long	.Lxtalabel67
 .cc_bottom cc_308
 .cc_top cc_309,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	715
-	.long	715
+	.long	706
+	.long	706
 	.long	.Lxtalabel67
 .cc_bottom cc_309
 .cc_top cc_310,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	716
-	.long	716
+	.long	710
+	.long	710
 	.long	.Lxtalabel67
 .cc_bottom cc_310
 .cc_top cc_311,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	717
-	.long	717
+	.long	711
+	.long	711
 	.long	.Lxtalabel67
 .cc_bottom cc_311
 .cc_top cc_312,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	718
-	.long	718
+	.long	712
+	.long	712
 	.long	.Lxtalabel67
 .cc_bottom cc_312
 .cc_top cc_313,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	721
-	.long	721
+	.long	713
+	.long	713
 	.long	.Lxtalabel67
 .cc_bottom cc_313
 .cc_top cc_314,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	724
-	.long	724
+	.long	715
+	.long	715
 	.long	.Lxtalabel67
 .cc_bottom cc_314
 .cc_top cc_315,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	727
-	.long	727
+	.long	716
+	.long	716
 	.long	.Lxtalabel67
 .cc_bottom cc_315
 .cc_top cc_316,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	728
-	.long	728
+	.long	717
+	.long	717
 	.long	.Lxtalabel67
 .cc_bottom cc_316
 .cc_top cc_317,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	729
-	.long	729
+	.long	718
+	.long	718
 	.long	.Lxtalabel67
 .cc_bottom cc_317
 .cc_top cc_318,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	730
-	.long	730
+	.long	721
+	.long	721
 	.long	.Lxtalabel67
 .cc_bottom cc_318
 .cc_top cc_319,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	724
+	.long	724
+	.long	.Lxtalabel67
+.cc_bottom cc_319
+.cc_top cc_320,.Lxtalabel67
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	727
+	.long	727
+	.long	.Lxtalabel67
+.cc_bottom cc_320
+.cc_top cc_321,.Lxtalabel67
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	728
+	.long	728
+	.long	.Lxtalabel67
+.cc_bottom cc_321
+.cc_top cc_322,.Lxtalabel67
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	729
+	.long	729
+	.long	.Lxtalabel67
+.cc_bottom cc_322
+.cc_top cc_323,.Lxtalabel67
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	730
+	.long	730
+	.long	.Lxtalabel67
+.cc_bottom cc_323
+.cc_top cc_324,.Lxtalabel67
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	732
 	.long	732
 	.long	.Lxtalabel67
-.cc_bottom cc_319
-.cc_top cc_320,.Lxtalabel69
+.cc_bottom cc_324
+.cc_top cc_325,.Lxtalabel69
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	733
 	.long	733
 	.long	.Lxtalabel69
-.cc_bottom cc_320
-.cc_top cc_321,.Lxtalabel69
+.cc_bottom cc_325
+.cc_top cc_326,.Lxtalabel69
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	735
 	.long	737
 	.long	.Lxtalabel69
-.cc_bottom cc_321
-.cc_top cc_322,.Lxtalabel71
+.cc_bottom cc_326
+.cc_top cc_327,.Lxtalabel71
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	740
 	.long	740
 	.long	.Lxtalabel71
-.cc_bottom cc_322
-.cc_top cc_323,.Lxtalabel71
+.cc_bottom cc_327
+.cc_top cc_328,.Lxtalabel71
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	742
 	.long	742
 	.long	.Lxtalabel71
-.cc_bottom cc_323
-.cc_top cc_324,.Lxtalabel71
+.cc_bottom cc_328
+.cc_top cc_329,.Lxtalabel71
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	743
 	.long	743
 	.long	.Lxtalabel71
-.cc_bottom cc_324
-.cc_top cc_325,.Lxtalabel71
+.cc_bottom cc_329
+.cc_top cc_330,.Lxtalabel71
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	745
 	.long	745
 	.long	.Lxtalabel71
-.cc_bottom cc_325
-.cc_top cc_326,.Lxtalabel71
+.cc_bottom cc_330
+.cc_top cc_331,.Lxtalabel71
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	747
 	.long	749
 	.long	.Lxtalabel71
-.cc_bottom cc_326
-.cc_top cc_327,.Lxtalabel63
+.cc_bottom cc_331
+.cc_top cc_332,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	751
 	.long	752
 	.long	.Lxtalabel63
-.cc_bottom cc_327
-.cc_top cc_328,.Lxtalabel63
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	755
-	.long	755
-	.long	.Lxtalabel63
-.cc_bottom cc_328
-.cc_top cc_329,.Lxtalabel63
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	756
-	.long	756
-	.long	.Lxtalabel63
-.cc_bottom cc_329
-.cc_top cc_330,.Lxtalabel63
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	758
-	.long	758
-	.long	.Lxtalabel63
-.cc_bottom cc_330
-.cc_top cc_331,.Lxtalabel63
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	759
-	.long	759
-	.long	.Lxtalabel63
-.cc_bottom cc_331
-.cc_top cc_332,.Lxtalabel63
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	760
-	.long	760
-	.long	.Lxtalabel63
 .cc_bottom cc_332
 .cc_top cc_333,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	763
-	.long	763
+	.long	755
+	.long	755
 	.long	.Lxtalabel63
 .cc_bottom cc_333
 .cc_top cc_334,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	764
-	.long	764
+	.long	756
+	.long	756
 	.long	.Lxtalabel63
 .cc_bottom cc_334
 .cc_top cc_335,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	765
-	.long	765
+	.long	758
+	.long	758
 	.long	.Lxtalabel63
 .cc_bottom cc_335
 .cc_top cc_336,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	766
-	.long	766
+	.long	759
+	.long	759
 	.long	.Lxtalabel63
 .cc_bottom cc_336
 .cc_top cc_337,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	769
-	.long	769
+	.long	760
+	.long	760
 	.long	.Lxtalabel63
 .cc_bottom cc_337
 .cc_top cc_338,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	772
-	.long	772
+	.long	763
+	.long	763
 	.long	.Lxtalabel63
 .cc_bottom cc_338
 .cc_top cc_339,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	774
-	.long	774
+	.long	764
+	.long	764
 	.long	.Lxtalabel63
 .cc_bottom cc_339
 .cc_top cc_340,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	765
+	.long	765
+	.long	.Lxtalabel63
+.cc_bottom cc_340
+.cc_top cc_341,.Lxtalabel63
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	766
+	.long	766
+	.long	.Lxtalabel63
+.cc_bottom cc_341
+.cc_top cc_342,.Lxtalabel63
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	769
+	.long	769
+	.long	.Lxtalabel63
+.cc_bottom cc_342
+.cc_top cc_343,.Lxtalabel63
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	772
+	.long	772
+	.long	.Lxtalabel63
+.cc_bottom cc_343
+.cc_top cc_344,.Lxtalabel63
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	774
+	.long	774
+	.long	.Lxtalabel63
+.cc_bottom cc_344
+.cc_top cc_345,.Lxtalabel63
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	775
 	.long	775
 	.long	.Lxtalabel63
-.cc_bottom cc_340
-.cc_top cc_341,.Lxtalabel65
+.cc_bottom cc_345
+.cc_top cc_346,.Lxtalabel65
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	776
 	.long	778
 	.long	.Lxtalabel65
-.cc_bottom cc_341
-.cc_top cc_342,.Lxtalabel72
+.cc_bottom cc_346
+.cc_top cc_347,.Lxtalabel72
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	779
 	.long	782
 	.long	.Lxtalabel72
-.cc_bottom cc_342
-.cc_top cc_343,.Lxtalabel73
+.cc_bottom cc_347
+.cc_top cc_348,.Lxtalabel73
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	784
 	.long	784
 	.long	.Lxtalabel73
-.cc_bottom cc_343
-.cc_top cc_344,.Lxtalabel73
+.cc_bottom cc_348
+.cc_top cc_349,.Lxtalabel73
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	785
 	.long	785
 	.long	.Lxtalabel73
-.cc_bottom cc_344
-.cc_top cc_345,.Lxtalabel73
+.cc_bottom cc_349
+.cc_top cc_350,.Lxtalabel73
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	787
 	.long	787
 	.long	.Lxtalabel73
-.cc_bottom cc_345
-.cc_top cc_346,.Lxtalabel73
+.cc_bottom cc_350
+.cc_top cc_351,.Lxtalabel73
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	788
 	.long	788
 	.long	.Lxtalabel73
-.cc_bottom cc_346
-.cc_top cc_347,.Lxtalabel59
+.cc_bottom cc_351
+.cc_top cc_352,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	790
 	.long	792
 	.long	.Lxtalabel59
-.cc_bottom cc_347
-.cc_top cc_348,.Lxtalabel59
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	795
-	.long	795
-	.long	.Lxtalabel59
-.cc_bottom cc_348
-.cc_top cc_349,.Lxtalabel59
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	796
-	.long	796
-	.long	.Lxtalabel59
-.cc_bottom cc_349
-.cc_top cc_350,.Lxtalabel59
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	797
-	.long	797
-	.long	.Lxtalabel59
-.cc_bottom cc_350
-.cc_top cc_351,.Lxtalabel59
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	798
-	.long	798
-	.long	.Lxtalabel59
-.cc_bottom cc_351
-.cc_top cc_352,.Lxtalabel59
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	799
-	.long	799
-	.long	.Lxtalabel59
 .cc_bottom cc_352
 .cc_top cc_353,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	800
-	.long	800
+	.long	795
+	.long	795
 	.long	.Lxtalabel59
 .cc_bottom cc_353
 .cc_top cc_354,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	807
-	.long	807
+	.long	796
+	.long	796
 	.long	.Lxtalabel59
 .cc_bottom cc_354
 .cc_top cc_355,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	808
-	.long	808
+	.long	797
+	.long	797
 	.long	.Lxtalabel59
 .cc_bottom cc_355
 .cc_top cc_356,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	810
-	.long	810
+	.long	798
+	.long	798
 	.long	.Lxtalabel59
 .cc_bottom cc_356
 .cc_top cc_357,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	799
+	.long	799
+	.long	.Lxtalabel59
+.cc_bottom cc_357
+.cc_top cc_358,.Lxtalabel59
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	800
+	.long	800
+	.long	.Lxtalabel59
+.cc_bottom cc_358
+.cc_top cc_359,.Lxtalabel59
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	803
+	.long	803
+	.long	.Lxtalabel59
+.cc_bottom cc_359
+.cc_top cc_360,.Lxtalabel59
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	807
+	.long	807
+	.long	.Lxtalabel59
+.cc_bottom cc_360
+.cc_top cc_361,.Lxtalabel59
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	808
+	.long	808
+	.long	.Lxtalabel59
+.cc_bottom cc_361
+.cc_top cc_362,.Lxtalabel59
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	810
+	.long	810
+	.long	.Lxtalabel59
+.cc_bottom cc_362
+.cc_top cc_363,.Lxtalabel59
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	812
 	.long	813
 	.long	.Lxtalabel59
-.cc_bottom cc_357
-.cc_top cc_358,.Lxtalabel60
+.cc_bottom cc_363
+.cc_top cc_364,.Lxtalabel60
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	814
 	.long	814
 	.long	.Lxtalabel60
-.cc_bottom cc_358
-.cc_top cc_359,.Lxtalabel60
+.cc_bottom cc_364
+.cc_top cc_365,.Lxtalabel60
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	816
 	.long	818
 	.long	.Lxtalabel60
-.cc_bottom cc_359
-.cc_top cc_360,.Lxtalabel62
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	827
-	.long	827
-	.long	.Lxtalabel62
-.cc_bottom cc_360
-.cc_top cc_361,.Lxtalabel62
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	828
-	.long	828
-	.long	.Lxtalabel62
-.cc_bottom cc_361
-.cc_top cc_362,.Lxtalabel62
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	829
-	.long	829
-	.long	.Lxtalabel62
-.cc_bottom cc_362
-.cc_top cc_363,.Lxtalabel62
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	830
-	.long	830
-	.long	.Lxtalabel62
-.cc_bottom cc_363
-.cc_top cc_364,.Lxtalabel62
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	833
-	.long	833
-	.long	.Lxtalabel62
-.cc_bottom cc_364
-.cc_top cc_365,.Lxtalabel62
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	834
-	.long	834
-	.long	.Lxtalabel62
 .cc_bottom cc_365
 .cc_top cc_366,.Lxtalabel62
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	836
-	.long	836
+	.long	827
+	.long	827
 	.long	.Lxtalabel62
 .cc_bottom cc_366
 .cc_top cc_367,.Lxtalabel62
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	837
-	.long	837
+	.long	828
+	.long	828
 	.long	.Lxtalabel62
 .cc_bottom cc_367
 .cc_top cc_368,.Lxtalabel62
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	829
+	.long	829
+	.long	.Lxtalabel62
+.cc_bottom cc_368
+.cc_top cc_369,.Lxtalabel62
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	830
+	.long	830
+	.long	.Lxtalabel62
+.cc_bottom cc_369
+.cc_top cc_370,.Lxtalabel62
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	833
+	.long	833
+	.long	.Lxtalabel62
+.cc_bottom cc_370
+.cc_top cc_371,.Lxtalabel62
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	834
+	.long	834
+	.long	.Lxtalabel62
+.cc_bottom cc_371
+.cc_top cc_372,.Lxtalabel62
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	836
+	.long	836
+	.long	.Lxtalabel62
+.cc_bottom cc_372
+.cc_top cc_373,.Lxtalabel62
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	837
+	.long	837
+	.long	.Lxtalabel62
+.cc_bottom cc_373
+.cc_top cc_374,.Lxtalabel62
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	838
 	.long	838
 	.long	.Lxtalabel62
-.cc_bottom cc_368
-.cc_top cc_369,.Lxtalabel74
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	839
-	.long	839
-	.long	.Lxtalabel74
-.cc_bottom cc_369
-.cc_top cc_370,.Lxtalabel74
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	843
-	.long	843
-	.long	.Lxtalabel74
-.cc_bottom cc_370
-.cc_top cc_371,.Lxtalabel74
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	844
-	.long	844
-	.long	.Lxtalabel74
-.cc_bottom cc_371
-.cc_top cc_372,.Lxtalabel76
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	845
-	.long	845
-	.long	.Lxtalabel76
-.cc_bottom cc_372
-.cc_top cc_373,.Lxtalabel75
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	845
-	.long	845
-	.long	.Lxtalabel75
-.cc_bottom cc_373
-.cc_top cc_374,.Lxtalabel75
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	847
-	.long	850
-	.long	.Lxtalabel75
 .cc_bottom cc_374
-.cc_top cc_375,.Lxtalabel76
+.cc_top cc_375,.Lxtalabel74
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	839
+	.long	839
+	.long	.Lxtalabel74
+.cc_bottom cc_375
+.cc_top cc_376,.Lxtalabel74
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	843
+	.long	843
+	.long	.Lxtalabel74
+.cc_bottom cc_376
+.cc_top cc_377,.Lxtalabel74
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	844
+	.long	844
+	.long	.Lxtalabel74
+.cc_bottom cc_377
+.cc_top cc_378,.Lxtalabel76
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	845
+	.long	845
+	.long	.Lxtalabel76
+.cc_bottom cc_378
+.cc_top cc_379,.Lxtalabel75
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	845
+	.long	845
+	.long	.Lxtalabel75
+.cc_bottom cc_379
+.cc_top cc_380,.Lxtalabel76
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	847
 	.long	850
 	.long	.Lxtalabel76
-.cc_bottom cc_375
-.cc_top cc_376,.Lxtalabel75
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	851
-	.long	851
-	.long	.Lxtalabel75
-.cc_bottom cc_376
-.cc_top cc_377,.Lxtalabel76
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	851
-	.long	851
-	.long	.Lxtalabel76
-.cc_bottom cc_377
-.cc_top cc_378,.Lxtalabel75
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	852
-	.long	852
-	.long	.Lxtalabel75
-.cc_bottom cc_378
-.cc_top cc_379,.Lxtalabel76
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	852
-	.long	852
-	.long	.Lxtalabel76
-.cc_bottom cc_379
-.cc_top cc_380,.Lxtalabel75
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	854
-	.long	854
-	.long	.Lxtalabel75
 .cc_bottom cc_380
-.cc_top cc_381,.Lxtalabel76
+.cc_top cc_381,.Lxtalabel75
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	854
-	.long	854
-	.long	.Lxtalabel76
+	.long	847
+	.long	850
+	.long	.Lxtalabel75
 .cc_bottom cc_381
 .cc_top cc_382,.Lxtalabel75
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	855
-	.long	855
+	.long	851
+	.long	851
 	.long	.Lxtalabel75
 .cc_bottom cc_382
 .cc_top cc_383,.Lxtalabel76
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	855
-	.long	855
+	.long	851
+	.long	851
 	.long	.Lxtalabel76
 .cc_bottom cc_383
 .cc_top cc_384,.Lxtalabel75
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	858
-	.long	858
+	.long	852
+	.long	852
 	.long	.Lxtalabel75
 .cc_bottom cc_384
 .cc_top cc_385,.Lxtalabel76
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	858
-	.long	858
+	.long	852
+	.long	852
 	.long	.Lxtalabel76
 .cc_bottom cc_385
 .cc_top cc_386,.Lxtalabel75
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	861
-	.long	861
+	.long	854
+	.long	854
 	.long	.Lxtalabel75
 .cc_bottom cc_386
 .cc_top cc_387,.Lxtalabel76
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	854
+	.long	854
+	.long	.Lxtalabel76
+.cc_bottom cc_387
+.cc_top cc_388,.Lxtalabel75
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	855
+	.long	855
+	.long	.Lxtalabel75
+.cc_bottom cc_388
+.cc_top cc_389,.Lxtalabel76
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	855
+	.long	855
+	.long	.Lxtalabel76
+.cc_bottom cc_389
+.cc_top cc_390,.Lxtalabel75
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	858
+	.long	858
+	.long	.Lxtalabel75
+.cc_bottom cc_390
+.cc_top cc_391,.Lxtalabel76
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	858
+	.long	858
+	.long	.Lxtalabel76
+.cc_bottom cc_391
+.cc_top cc_392,.Lxtalabel76
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	861
 	.long	861
 	.long	.Lxtalabel76
-.cc_bottom cc_387
-.cc_top cc_388,.Lxtalabel78
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	862
-	.long	862
-	.long	.Lxtalabel78
-.cc_bottom cc_388
-.cc_top cc_389,.Lxtalabel77
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	862
-	.long	862
-	.long	.Lxtalabel77
-.cc_bottom cc_389
-.cc_top cc_390,.Lxtalabel79
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	862
-	.long	862
-	.long	.Lxtalabel79
-.cc_bottom cc_390
-.cc_top cc_391,.Lxtalabel77
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	865
-	.long	865
-	.long	.Lxtalabel77
-.cc_bottom cc_391
-.cc_top cc_392,.Lxtalabel78
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	865
-	.long	865
-	.long	.Lxtalabel78
 .cc_bottom cc_392
-.cc_top cc_393,.Lxtalabel79
+.cc_top cc_393,.Lxtalabel75
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	865
-	.long	865
-	.long	.Lxtalabel79
+	.long	861
+	.long	861
+	.long	.Lxtalabel75
 .cc_bottom cc_393
 .cc_top cc_394,.Lxtalabel77
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	868
-	.long	868
+	.long	862
+	.long	862
 	.long	.Lxtalabel77
 .cc_bottom cc_394
 .cc_top cc_395,.Lxtalabel78
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	868
-	.long	868
+	.long	862
+	.long	862
 	.long	.Lxtalabel78
 .cc_bottom cc_395
 .cc_top cc_396,.Lxtalabel79
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	868
-	.long	868
+	.long	862
+	.long	862
 	.long	.Lxtalabel79
 .cc_bottom cc_396
 .cc_top cc_397,.Lxtalabel78
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	869
-	.long	871
+	.long	865
+	.long	865
 	.long	.Lxtalabel78
 .cc_bottom cc_397
-.cc_top cc_398,.Lxtalabel77
+.cc_top cc_398,.Lxtalabel79
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	869
-	.long	871
-	.long	.Lxtalabel77
+	.long	865
+	.long	865
+	.long	.Lxtalabel79
 .cc_bottom cc_398
-.cc_top cc_399,.Lxtalabel79
+.cc_top cc_399,.Lxtalabel77
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	869
-	.long	871
-	.long	.Lxtalabel79
-.cc_bottom cc_399
-.cc_top cc_400,.Lxtalabel79
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	872
-	.long	872
-	.long	.Lxtalabel79
-.cc_bottom cc_400
-.cc_top cc_401,.Lxtalabel77
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	872
-	.long	872
+	.long	865
+	.long	865
 	.long	.Lxtalabel77
-.cc_bottom cc_401
-.cc_top cc_402,.Lxtalabel78
+.cc_bottom cc_399
+.cc_top cc_400,.Lxtalabel78
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	872
-	.long	872
+	.long	868
+	.long	868
 	.long	.Lxtalabel78
+.cc_bottom cc_400
+.cc_top cc_401,.Lxtalabel79
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	868
+	.long	868
+	.long	.Lxtalabel79
+.cc_bottom cc_401
+.cc_top cc_402,.Lxtalabel77
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	868
+	.long	868
+	.long	.Lxtalabel77
 .cc_bottom cc_402
 .cc_top cc_403,.Lxtalabel79
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	873
-	.long	873
+	.long	869
+	.long	871
 	.long	.Lxtalabel79
 .cc_bottom cc_403
-.cc_top cc_404,.Lxtalabel77
+.cc_top cc_404,.Lxtalabel78
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	869
+	.long	871
+	.long	.Lxtalabel78
+.cc_bottom cc_404
+.cc_top cc_405,.Lxtalabel77
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	869
+	.long	871
+	.long	.Lxtalabel77
+.cc_bottom cc_405
+.cc_top cc_406,.Lxtalabel77
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	872
+	.long	872
+	.long	.Lxtalabel77
+.cc_bottom cc_406
+.cc_top cc_407,.Lxtalabel78
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	872
+	.long	872
+	.long	.Lxtalabel78
+.cc_bottom cc_407
+.cc_top cc_408,.Lxtalabel79
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	872
+	.long	872
+	.long	.Lxtalabel79
+.cc_bottom cc_408
+.cc_top cc_409,.Lxtalabel77
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	873
 	.long	873
 	.long	.Lxtalabel77
-.cc_bottom cc_404
-.cc_top cc_405,.Lxtalabel78
+.cc_bottom cc_409
+.cc_top cc_410,.Lxtalabel79
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	873
+	.long	873
+	.long	.Lxtalabel79
+.cc_bottom cc_410
+.cc_top cc_411,.Lxtalabel78
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	873
 	.long	873
 	.long	.Lxtalabel78
-.cc_bottom cc_405
-.cc_top cc_406,.Lxtalabel80
+.cc_bottom cc_411
+.cc_top cc_412,.Lxtalabel80
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	877
 	.long	877
 	.long	.Lxtalabel80
-.cc_bottom cc_406
-.cc_top cc_407,.Lxtalabel80
+.cc_bottom cc_412
+.cc_top cc_413,.Lxtalabel80
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	880
 	.long	880
 	.long	.Lxtalabel80
-.cc_bottom cc_407
-.cc_top cc_408,.Lxtalabel82
+.cc_bottom cc_413
+.cc_top cc_414,.Lxtalabel82
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	881
 	.long	883
 	.long	.Lxtalabel82
-.cc_bottom cc_408
-.cc_top cc_409,.Lxtalabel81
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	885
-	.long	885
-	.long	.Lxtalabel81
-.cc_bottom cc_409
-.cc_top cc_410,.Lxtalabel83
+.cc_bottom cc_414
+.cc_top cc_415,.Lxtalabel83
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	885
 	.long	885
 	.long	.Lxtalabel83
-.cc_bottom cc_410
-.cc_top cc_411,.Lxtalabel84
+.cc_bottom cc_415
+.cc_top cc_416,.Lxtalabel81
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	885
+	.long	885
+	.long	.Lxtalabel81
+.cc_bottom cc_416
+.cc_top cc_417,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	886
 	.long	886
 	.long	.Lxtalabel84
-.cc_bottom cc_411
-.cc_top cc_412,.Lxtalabel84
+.cc_bottom cc_417
+.cc_top cc_418,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	887
 	.long	887
 	.long	.Lxtalabel84
-.cc_bottom cc_412
-.cc_top cc_413,.Lxtalabel84
+.cc_bottom cc_418
+.cc_top cc_419,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	888
 	.long	889
 	.long	.Lxtalabel84
-.cc_bottom cc_413
-.cc_top cc_414,.Lxtalabel56
+.cc_bottom cc_419
+.cc_top cc_420,.Lxtalabel56
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	890
 	.long	891
 	.long	.Lxtalabel56
-.cc_bottom cc_414
-.cc_top cc_415,.Lxtalabel56
+.cc_bottom cc_420
+.cc_top cc_421,.Lxtalabel56
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	893
 	.long	893
 	.long	.Lxtalabel56
-.cc_bottom cc_415
-.cc_top cc_416,.Lxtalabel56
+.cc_bottom cc_421
+.cc_top cc_422,.Lxtalabel56
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	898
 	.long	898
 	.long	.Lxtalabel56
-.cc_bottom cc_416
-.cc_top cc_417,.Lxtalabel86
+.cc_bottom cc_422
+.cc_top cc_423,.Lxtalabel86
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	901
 	.long	901
 	.long	.Lxtalabel86
-.cc_bottom cc_417
-.cc_top cc_418,.Lxtalabel87
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	902
-	.long	905
-	.long	.Lxtalabel87
-.cc_bottom cc_418
-.cc_top cc_419,.Lxtalabel88
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	902
-	.long	905
-	.long	.Lxtalabel88
-.cc_bottom cc_419
-.cc_top cc_420,.Lxtalabel87
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	906
-	.long	906
-	.long	.Lxtalabel87
-.cc_bottom cc_420
-.cc_top cc_421,.Lxtalabel88
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	906
-	.long	906
-	.long	.Lxtalabel88
-.cc_bottom cc_421
-.cc_top cc_422,.Lxtalabel87
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	907
-	.long	907
-	.long	.Lxtalabel87
-.cc_bottom cc_422
-.cc_top cc_423,.Lxtalabel88
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	907
-	.long	907
-	.long	.Lxtalabel88
 .cc_bottom cc_423
 .cc_top cc_424,.Lxtalabel87
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	908
-	.long	909
+	.long	902
+	.long	905
 	.long	.Lxtalabel87
 .cc_bottom cc_424
 .cc_top cc_425,.Lxtalabel88
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	908
-	.long	909
+	.long	902
+	.long	905
 	.long	.Lxtalabel88
 .cc_bottom cc_425
-.cc_top cc_426,.Lxtalabel88
+.cc_top cc_426,.Lxtalabel87
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	910
-	.long	910
-	.long	.Lxtalabel88
-.cc_bottom cc_426
-.cc_top cc_427,.Lxtalabel87
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	910
-	.long	910
+	.long	906
+	.long	906
 	.long	.Lxtalabel87
+.cc_bottom cc_426
+.cc_top cc_427,.Lxtalabel88
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	906
+	.long	906
+	.long	.Lxtalabel88
 .cc_bottom cc_427
 .cc_top cc_428,.Lxtalabel87
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	911
-	.long	911
+	.long	907
+	.long	907
 	.long	.Lxtalabel87
 .cc_bottom cc_428
 .cc_top cc_429,.Lxtalabel88
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	907
+	.long	907
+	.long	.Lxtalabel88
+.cc_bottom cc_429
+.cc_top cc_430,.Lxtalabel87
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	908
+	.long	909
+	.long	.Lxtalabel87
+.cc_bottom cc_430
+.cc_top cc_431,.Lxtalabel88
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	908
+	.long	909
+	.long	.Lxtalabel88
+.cc_bottom cc_431
+.cc_top cc_432,.Lxtalabel87
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	910
+	.long	910
+	.long	.Lxtalabel87
+.cc_bottom cc_432
+.cc_top cc_433,.Lxtalabel88
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	910
+	.long	910
+	.long	.Lxtalabel88
+.cc_bottom cc_433
+.cc_top cc_434,.Lxtalabel87
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	911
+	.long	911
+	.long	.Lxtalabel87
+.cc_bottom cc_434
+.cc_top cc_435,.Lxtalabel88
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	911
 	.long	911
 	.long	.Lxtalabel88
-.cc_bottom cc_429
-.cc_top cc_430,.Lxtalabel89
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	912
-	.long	912
-	.long	.Lxtalabel89
-.cc_bottom cc_430
-.cc_top cc_431,.Lxtalabel89
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	914
-	.long	914
-	.long	.Lxtalabel89
-.cc_bottom cc_431
-.cc_top cc_432,.Lxtalabel89
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	915
-	.long	915
-	.long	.Lxtalabel89
-.cc_bottom cc_432
-.cc_top cc_433,.Lxtalabel89
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	916
-	.long	916
-	.long	.Lxtalabel89
-.cc_bottom cc_433
-.cc_top cc_434,.Lxtalabel89
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	920
-	.long	920
-	.long	.Lxtalabel89
-.cc_bottom cc_434
-.cc_top cc_435,.Lxtalabel52
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
-	.byte	0
-	.long	11
-	.long	15
-	.long	.Lxtalabel52
 .cc_bottom cc_435
-.cc_top cc_436,.Lxtalabel52
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
+.cc_top cc_436,.Lxtalabel89
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	11
-	.long	15
-	.long	.Lxtalabel52
-.cc_bottom cc_436
-.cc_top cc_437,.Lxtalabel52
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
-	.byte	0
-	.long	11
-	.long	15
-	.long	.Lxtalabel52
-.cc_bottom cc_437
-.cc_top cc_438,.Lxtalabel52
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
-	.byte	0
-	.long	11
-	.long	15
-	.long	.Lxtalabel52
-.cc_bottom cc_438
-.cc_top cc_439,.Lxtalabel52
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
-	.byte	0
-	.long	11
-	.long	15
-	.long	.Lxtalabel52
-.cc_bottom cc_439
-.cc_top cc_440,.Lxtalabel60
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	427
-	.long	429
-	.long	.Lxtalabel60
-.cc_bottom cc_440
-.cc_top cc_441,.Lxtalabel69
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	427
-	.long	429
-	.long	.Lxtalabel69
-.cc_bottom cc_441
-.cc_top cc_442,.Lxtalabel89
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	427
-	.long	429
+	.long	912
+	.long	912
 	.long	.Lxtalabel89
+.cc_bottom cc_436
+.cc_top cc_437,.Lxtalabel89
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	914
+	.long	914
+	.long	.Lxtalabel89
+.cc_bottom cc_437
+.cc_top cc_438,.Lxtalabel89
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	915
+	.long	915
+	.long	.Lxtalabel89
+.cc_bottom cc_438
+.cc_top cc_439,.Lxtalabel89
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	916
+	.long	916
+	.long	.Lxtalabel89
+.cc_bottom cc_439
+.cc_top cc_440,.Lxtalabel89
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	920
+	.long	920
+	.long	.Lxtalabel89
+.cc_bottom cc_440
+.cc_top cc_441,.Lxtalabel52
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
+	.byte	0
+	.long	11
+	.long	15
+	.long	.Lxtalabel52
+.cc_bottom cc_441
+.cc_top cc_442,.Lxtalabel52
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
+	.byte	0
+	.long	11
+	.long	15
+	.long	.Lxtalabel52
 .cc_bottom cc_442
-.cc_top cc_443,.Lxtalabel54
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+.cc_top cc_443,.Lxtalabel52
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
 	.byte	0
-	.long	427
-	.long	429
-	.long	.Lxtalabel54
+	.long	11
+	.long	15
+	.long	.Lxtalabel52
 .cc_bottom cc_443
-.cc_top cc_444,.Lxtalabel84
+.cc_top cc_444,.Lxtalabel52
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
+	.byte	0
+	.long	11
+	.long	15
+	.long	.Lxtalabel52
+.cc_bottom cc_444
+.cc_top cc_445,.Lxtalabel52
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
+	.byte	0
+	.long	11
+	.long	15
+	.long	.Lxtalabel52
+.cc_bottom cc_445
+.cc_top cc_446,.Lxtalabel54
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
 	.long	427
 	.long	429
-	.long	.Lxtalabel84
-.cc_bottom cc_444
-.cc_top cc_445,.Lxtalabel84
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	432
-	.long	433
-	.long	.Lxtalabel84
-.cc_bottom cc_445
-.cc_top cc_446,.Lxtalabel69
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	432
-	.long	433
-	.long	.Lxtalabel69
-.cc_bottom cc_446
-.cc_top cc_447,.Lxtalabel54
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	432
-	.long	433
 	.long	.Lxtalabel54
-.cc_bottom cc_447
-.cc_top cc_448,.Lxtalabel60
+.cc_bottom cc_446
+.cc_top cc_447,.Lxtalabel60
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
-	.long	432
-	.long	433
+	.long	427
+	.long	429
 	.long	.Lxtalabel60
+.cc_bottom cc_447
+.cc_top cc_448,.Lxtalabel69
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	427
+	.long	429
+	.long	.Lxtalabel69
 .cc_bottom cc_448
 .cc_top cc_449,.Lxtalabel89
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
+	.long	427
+	.long	429
+	.long	.Lxtalabel89
+.cc_bottom cc_449
+.cc_top cc_450,.Lxtalabel84
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	427
+	.long	429
+	.long	.Lxtalabel84
+.cc_bottom cc_450
+.cc_top cc_451,.Lxtalabel84
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	432
+	.long	433
+	.long	.Lxtalabel84
+.cc_bottom cc_451
+.cc_top cc_452,.Lxtalabel69
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	432
+	.long	433
+	.long	.Lxtalabel69
+.cc_bottom cc_452
+.cc_top cc_453,.Lxtalabel54
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	432
+	.long	433
+	.long	.Lxtalabel54
+.cc_bottom cc_453
+.cc_top cc_454,.Lxtalabel60
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	432
+	.long	433
+	.long	.Lxtalabel60
+.cc_bottom cc_454
+.cc_top cc_455,.Lxtalabel89
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
 	.long	432
 	.long	433
 	.long	.Lxtalabel89
-.cc_bottom cc_449
-.cc_top cc_450,.Lxtalabel60
+.cc_bottom cc_455
+.cc_top cc_456,.Lxtalabel60
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
 	.long	434
 	.long	436
 	.long	.Lxtalabel60
-.cc_bottom cc_450
-.cc_top cc_451,.Lxtalabel54
+.cc_bottom cc_456
+.cc_top cc_457,.Lxtalabel54
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
 	.long	434
 	.long	436
 	.long	.Lxtalabel54
-.cc_bottom cc_451
-.cc_top cc_452,.Lxtalabel89
+.cc_bottom cc_457
+.cc_top cc_458,.Lxtalabel89
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
 	.long	434
 	.long	436
 	.long	.Lxtalabel89
-.cc_bottom cc_452
-.cc_top cc_453,.Lxtalabel69
+.cc_bottom cc_458
+.cc_top cc_459,.Lxtalabel69
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
 	.long	434
 	.long	436
 	.long	.Lxtalabel69
-.cc_bottom cc_453
-.cc_top cc_454,.Lxtalabel84
+.cc_bottom cc_459
+.cc_top cc_460,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
 	.long	434
 	.long	436
 	.long	.Lxtalabel84
-.cc_bottom cc_454
-.cc_top cc_455,.Lxtalabel55
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	437
-	.long	439
-	.long	.Lxtalabel55
-.cc_bottom cc_455
-.cc_top cc_456,.Lxtalabel85
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	437
-	.long	439
-	.long	.Lxtalabel85
-.cc_bottom cc_456
-.cc_top cc_457,.Lxtalabel90
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	437
-	.long	439
-	.long	.Lxtalabel90
-.cc_bottom cc_457
-.cc_top cc_458,.Lxtalabel61
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	437
-	.long	439
-	.long	.Lxtalabel61
-.cc_bottom cc_458
-.cc_top cc_459,.Lxtalabel70
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	437
-	.long	439
-	.long	.Lxtalabel70
-.cc_bottom cc_459
-.cc_top cc_460,.Lxtalabel55
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	441
-	.long	442
-	.long	.Lxtalabel55
 .cc_bottom cc_460
-.cc_top cc_461,.Lxtalabel70
+.cc_top cc_461,.Lxtalabel55
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
-	.long	441
-	.long	442
-	.long	.Lxtalabel70
+	.long	437
+	.long	439
+	.long	.Lxtalabel55
 .cc_bottom cc_461
-.cc_top cc_462,.Lxtalabel90
+.cc_top cc_462,.Lxtalabel85
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
-	.long	441
-	.long	442
-	.long	.Lxtalabel90
-.cc_bottom cc_462
-.cc_top cc_463,.Lxtalabel85
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	441
-	.long	442
+	.long	437
+	.long	439
 	.long	.Lxtalabel85
+.cc_bottom cc_462
+.cc_top cc_463,.Lxtalabel90
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	437
+	.long	439
+	.long	.Lxtalabel90
 .cc_bottom cc_463
 .cc_top cc_464,.Lxtalabel61
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
+	.long	437
+	.long	439
+	.long	.Lxtalabel61
+.cc_bottom cc_464
+.cc_top cc_465,.Lxtalabel70
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	437
+	.long	439
+	.long	.Lxtalabel70
+.cc_bottom cc_465
+.cc_top cc_466,.Lxtalabel55
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	441
+	.long	442
+	.long	.Lxtalabel55
+.cc_bottom cc_466
+.cc_top cc_467,.Lxtalabel70
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	441
+	.long	442
+	.long	.Lxtalabel70
+.cc_bottom cc_467
+.cc_top cc_468,.Lxtalabel90
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	441
+	.long	442
+	.long	.Lxtalabel90
+.cc_bottom cc_468
+.cc_top cc_469,.Lxtalabel85
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	441
+	.long	442
+	.long	.Lxtalabel85
+.cc_bottom cc_469
+.cc_top cc_470,.Lxtalabel61
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
 	.long	441
 	.long	442
 	.long	.Lxtalabel61
-.cc_bottom cc_464
-.cc_top cc_465,.Lxtalabel63
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	454
-	.long	458
-	.long	.Lxtalabel63
-.cc_bottom cc_465
-.cc_top cc_466,.Lxtalabel67
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	454
-	.long	458
-	.long	.Lxtalabel67
-.cc_bottom cc_466
-.cc_top cc_467,.Lxtalabel67
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	460
-	.long	460
-	.long	.Lxtalabel67
-.cc_bottom cc_467
-.cc_top cc_468,.Lxtalabel63
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	460
-	.long	460
-	.long	.Lxtalabel63
-.cc_bottom cc_468
-.cc_top cc_469,.Lxtalabel67
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	463
-	.long	464
-	.long	.Lxtalabel67
-.cc_bottom cc_469
-.cc_top cc_470,.Lxtalabel63
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	463
-	.long	464
-	.long	.Lxtalabel63
 .cc_bottom cc_470
-.cc_top cc_471,.Lxtalabel67
+.cc_top cc_471,.Lxtalabel63
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	454
+	.long	458
+	.long	.Lxtalabel63
+.cc_bottom cc_471
+.cc_top cc_472,.Lxtalabel67
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	454
+	.long	458
+	.long	.Lxtalabel67
+.cc_bottom cc_472
+.cc_top cc_473,.Lxtalabel67
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	460
+	.long	460
+	.long	.Lxtalabel67
+.cc_bottom cc_473
+.cc_top cc_474,.Lxtalabel63
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	460
+	.long	460
+	.long	.Lxtalabel63
+.cc_bottom cc_474
+.cc_top cc_475,.Lxtalabel67
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	463
+	.long	464
+	.long	.Lxtalabel67
+.cc_bottom cc_475
+.cc_top cc_476,.Lxtalabel63
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	463
+	.long	464
+	.long	.Lxtalabel63
+.cc_bottom cc_476
+.cc_top cc_477,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
 	.long	465
 	.long	467
 	.long	.Lxtalabel67
-.cc_bottom cc_471
-.cc_top cc_472,.Lxtalabel63
+.cc_bottom cc_477
+.cc_top cc_478,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
 	.long	465
 	.long	467
 	.long	.Lxtalabel63
-.cc_bottom cc_472
-.cc_top cc_473,.Lxtalabel64
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	470
-	.long	471
-	.long	.Lxtalabel64
-.cc_bottom cc_473
-.cc_top cc_474,.Lxtalabel68
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	470
-	.long	471
-	.long	.Lxtalabel68
-.cc_bottom cc_474
-.cc_top cc_475,.Lxtalabel68
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	473
-	.long	473
-	.long	.Lxtalabel68
-.cc_bottom cc_475
-.cc_top cc_476,.Lxtalabel64
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	473
-	.long	473
-	.long	.Lxtalabel64
-.cc_bottom cc_476
-.cc_top cc_477,.Lxtalabel64
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	475
-	.long	475
-	.long	.Lxtalabel64
-.cc_bottom cc_477
-.cc_top cc_478,.Lxtalabel68
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	475
-	.long	475
-	.long	.Lxtalabel68
 .cc_bottom cc_478
-.cc_top cc_479,.Lxtalabel68
+.cc_top cc_479,.Lxtalabel64
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
-	.long	478
-	.long	478
-	.long	.Lxtalabel68
-.cc_bottom cc_479
-.cc_top cc_480,.Lxtalabel64
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	478
-	.long	478
+	.long	470
+	.long	471
 	.long	.Lxtalabel64
+.cc_bottom cc_479
+.cc_top cc_480,.Lxtalabel68
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	470
+	.long	471
+	.long	.Lxtalabel68
 .cc_bottom cc_480
 .cc_top cc_481,.Lxtalabel68
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
-	.long	480
-	.long	480
+	.long	473
+	.long	473
 	.long	.Lxtalabel68
 .cc_bottom cc_481
 .cc_top cc_482,.Lxtalabel64
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
-	.long	480
-	.long	480
+	.long	473
+	.long	473
 	.long	.Lxtalabel64
 .cc_bottom cc_482
-.cc_top cc_483,.Lxtalabel68
+.cc_top cc_483,.Lxtalabel64
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
-	.long	483
-	.long	483
-	.long	.Lxtalabel68
-.cc_bottom cc_483
-.cc_top cc_484,.Lxtalabel64
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-	.byte	0
-	.long	483
-	.long	483
+	.long	475
+	.long	475
 	.long	.Lxtalabel64
+.cc_bottom cc_483
+.cc_top cc_484,.Lxtalabel68
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	475
+	.long	475
+	.long	.Lxtalabel68
 .cc_bottom cc_484
 .cc_top cc_485,.Lxtalabel68
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
-	.long	486
-	.long	486
+	.long	478
+	.long	478
 	.long	.Lxtalabel68
 .cc_bottom cc_485
 .cc_top cc_486,.Lxtalabel64
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
-	.long	486
-	.long	486
+	.long	478
+	.long	478
 	.long	.Lxtalabel64
 .cc_bottom cc_486
-.cc_top cc_487,.Lxtalabel64
+.cc_top cc_487,.Lxtalabel68
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
-	.long	489
-	.long	489
-	.long	.Lxtalabel64
+	.long	480
+	.long	480
+	.long	.Lxtalabel68
 .cc_bottom cc_487
-.cc_top cc_488,.Lxtalabel68
+.cc_top cc_488,.Lxtalabel64
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
-	.long	489
-	.long	489
-	.long	.Lxtalabel68
+	.long	480
+	.long	480
+	.long	.Lxtalabel64
 .cc_bottom cc_488
-.cc_top cc_489,.Lxtalabel64
+.cc_top cc_489,.Lxtalabel68
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
-	.long	491
-	.long	491
-	.long	.Lxtalabel64
+	.long	483
+	.long	483
+	.long	.Lxtalabel68
 .cc_bottom cc_489
-.cc_top cc_490,.Lxtalabel68
+.cc_top cc_490,.Lxtalabel64
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	483
+	.long	483
+	.long	.Lxtalabel64
+.cc_bottom cc_490
+.cc_top cc_491,.Lxtalabel68
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	486
+	.long	486
+	.long	.Lxtalabel68
+.cc_bottom cc_491
+.cc_top cc_492,.Lxtalabel64
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	486
+	.long	486
+	.long	.Lxtalabel64
+.cc_bottom cc_492
+.cc_top cc_493,.Lxtalabel64
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	489
+	.long	489
+	.long	.Lxtalabel64
+.cc_bottom cc_493
+.cc_top cc_494,.Lxtalabel68
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	489
+	.long	489
+	.long	.Lxtalabel68
+.cc_bottom cc_494
+.cc_top cc_495,.Lxtalabel64
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.byte	0
+	.long	491
+	.long	491
+	.long	.Lxtalabel64
+.cc_bottom cc_495
+.cc_top cc_496,.Lxtalabel68
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
 	.long	491
 	.long	491
 	.long	.Lxtalabel68
-.cc_bottom cc_490
-.cc_top cc_491,.Lxtalabel64
+.cc_bottom cc_496
+.cc_top cc_497,.Lxtalabel64
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
 	.long	493
 	.long	494
 	.long	.Lxtalabel64
-.cc_bottom cc_491
-.cc_top cc_492,.Lxtalabel68
+.cc_bottom cc_497
+.cc_top cc_498,.Lxtalabel68
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
 	.byte	0
 	.long	493
 	.long	494
 	.long	.Lxtalabel68
-.cc_bottom cc_492
+.cc_bottom cc_498
 .Lentries_end7:
 	.section	.xtalooplabeltable,"",@progbits
 .Lentries_start8:
@@ -11854,447 +11920,447 @@ tmpBuffer:
 	.long	0
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
-.cc_top cc_493,.Lxta.loop_labels2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	175
-	.long	175
-	.long	.Lxta.loop_labels2
-.cc_bottom cc_493
-.cc_top cc_494,.Lxta.loop_labels2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	177
-	.long	180
-	.long	.Lxta.loop_labels2
-.cc_bottom cc_494
-.cc_top cc_495,.Lxta.loop_labels2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	182
-	.long	182
-	.long	.Lxta.loop_labels2
-.cc_bottom cc_495
-.cc_top cc_496,.Lxta.loop_labels2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	183
-	.long	184
-	.long	.Lxta.loop_labels2
-.cc_bottom cc_496
-.cc_top cc_497,.Lxta.loop_labels2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	187
-	.long	188
-	.long	.Lxta.loop_labels2
-.cc_bottom cc_497
-.cc_top cc_498,.Lxta.loop_labels2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	190
-	.long	190
-	.long	.Lxta.loop_labels2
-.cc_bottom cc_498
 .cc_top cc_499,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	191
-	.long	191
+	.long	175
+	.long	175
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_499
 .cc_top cc_500,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	177
+	.long	180
+	.long	.Lxta.loop_labels2
+.cc_bottom cc_500
+.cc_top cc_501,.Lxta.loop_labels2
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	182
+	.long	182
+	.long	.Lxta.loop_labels2
+.cc_bottom cc_501
+.cc_top cc_502,.Lxta.loop_labels2
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	183
+	.long	184
+	.long	.Lxta.loop_labels2
+.cc_bottom cc_502
+.cc_top cc_503,.Lxta.loop_labels2
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	187
+	.long	188
+	.long	.Lxta.loop_labels2
+.cc_bottom cc_503
+.cc_top cc_504,.Lxta.loop_labels2
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	190
+	.long	190
+	.long	.Lxta.loop_labels2
+.cc_bottom cc_504
+.cc_top cc_505,.Lxta.loop_labels2
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	191
+	.long	191
+	.long	.Lxta.loop_labels2
+.cc_bottom cc_505
+.cc_top cc_506,.Lxta.loop_labels2
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	195
 	.long	195
 	.long	.Lxta.loop_labels2
-.cc_bottom cc_500
-.cc_top cc_501,.Lxta.loop_labels1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	204
-	.long	204
-	.long	.Lxta.loop_labels1
-.cc_bottom cc_501
-.cc_top cc_502,.Lxta.loop_labels1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	206
-	.long	209
-	.long	.Lxta.loop_labels1
-.cc_bottom cc_502
-.cc_top cc_503,.Lxta.loop_labels1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	211
-	.long	211
-	.long	.Lxta.loop_labels1
-.cc_bottom cc_503
-.cc_top cc_504,.Lxta.loop_labels1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	212
-	.long	212
-	.long	.Lxta.loop_labels1
-.cc_bottom cc_504
-.cc_top cc_505,.Lxta.loop_labels1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	215
-	.long	217
-	.long	.Lxta.loop_labels1
-.cc_bottom cc_505
-.cc_top cc_506,.Lxta.loop_labels1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	219
-	.long	219
-	.long	.Lxta.loop_labels1
 .cc_bottom cc_506
 .cc_top cc_507,.Lxta.loop_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	222
-	.long	222
+	.long	204
+	.long	204
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_507
 .cc_top cc_508,.Lxta.loop_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	206
+	.long	209
+	.long	.Lxta.loop_labels1
+.cc_bottom cc_508
+.cc_top cc_509,.Lxta.loop_labels1
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	211
+	.long	211
+	.long	.Lxta.loop_labels1
+.cc_bottom cc_509
+.cc_top cc_510,.Lxta.loop_labels1
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	212
+	.long	212
+	.long	.Lxta.loop_labels1
+.cc_bottom cc_510
+.cc_top cc_511,.Lxta.loop_labels1
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	215
+	.long	217
+	.long	.Lxta.loop_labels1
+.cc_bottom cc_511
+.cc_top cc_512,.Lxta.loop_labels1
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	219
+	.long	219
+	.long	.Lxta.loop_labels1
+.cc_bottom cc_512
+.cc_top cc_513,.Lxta.loop_labels1
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	222
+	.long	222
+	.long	.Lxta.loop_labels1
+.cc_bottom cc_513
+.cc_top cc_514,.Lxta.loop_labels1
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	226
 	.long	226
 	.long	.Lxta.loop_labels1
-.cc_bottom cc_508
-.cc_top cc_509,.Lxta.loop_labels0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	236
-	.long	236
-	.long	.Lxta.loop_labels0
-.cc_bottom cc_509
-.cc_top cc_510,.Lxta.loop_labels0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	238
-	.long	241
-	.long	.Lxta.loop_labels0
-.cc_bottom cc_510
-.cc_top cc_511,.Lxta.loop_labels0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	244
-	.long	246
-	.long	.Lxta.loop_labels0
-.cc_bottom cc_511
-.cc_top cc_512,.Lxta.loop_labels0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	247
-	.long	247
-	.long	.Lxta.loop_labels0
-.cc_bottom cc_512
-.cc_top cc_513,.Lxta.loop_labels0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	248
-	.long	252
-	.long	.Lxta.loop_labels0
-.cc_bottom cc_513
-.cc_top cc_514,.Lxta.loop_labels0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	253
-	.long	253
-	.long	.Lxta.loop_labels0
 .cc_bottom cc_514
 .cc_top cc_515,.Lxta.loop_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	254
-	.long	258
+	.long	236
+	.long	236
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_515
 .cc_top cc_516,.Lxta.loop_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	259
-	.long	259
+	.long	238
+	.long	241
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_516
 .cc_top cc_517,.Lxta.loop_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	260
-	.long	267
+	.long	244
+	.long	246
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_517
 .cc_top cc_518,.Lxta.loop_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	270
-	.long	272
+	.long	247
+	.long	247
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_518
 .cc_top cc_519,.Lxta.loop_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	273
-	.long	273
+	.long	248
+	.long	252
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_519
 .cc_top cc_520,.Lxta.loop_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	253
+	.long	253
+	.long	.Lxta.loop_labels0
+.cc_bottom cc_520
+.cc_top cc_521,.Lxta.loop_labels0
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	254
+	.long	258
+	.long	.Lxta.loop_labels0
+.cc_bottom cc_521
+.cc_top cc_522,.Lxta.loop_labels0
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	259
+	.long	259
+	.long	.Lxta.loop_labels0
+.cc_bottom cc_522
+.cc_top cc_523,.Lxta.loop_labels0
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	260
+	.long	267
+	.long	.Lxta.loop_labels0
+.cc_bottom cc_523
+.cc_top cc_524,.Lxta.loop_labels0
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	270
+	.long	272
+	.long	.Lxta.loop_labels0
+.cc_bottom cc_524
+.cc_top cc_525,.Lxta.loop_labels0
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	273
+	.long	273
+	.long	.Lxta.loop_labels0
+.cc_bottom cc_525
+.cc_top cc_526,.Lxta.loop_labels0
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	278
 	.long	278
 	.long	.Lxta.loop_labels0
-.cc_bottom cc_520
-.cc_top cc_521,.Lxta.loop_labels3
+.cc_bottom cc_526
+.cc_top cc_527,.Lxta.loop_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	289
 	.long	289
 	.long	.Lxta.loop_labels3
-.cc_bottom cc_521
-.cc_top cc_522,.Lxta.loop_labels3
+.cc_bottom cc_527
+.cc_top cc_528,.Lxta.loop_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	290
 	.long	290
 	.long	.Lxta.loop_labels3
-.cc_bottom cc_522
-.cc_top cc_523,.Lxta.loop_labels3
+.cc_bottom cc_528
+.cc_top cc_529,.Lxta.loop_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	291
 	.long	291
 	.long	.Lxta.loop_labels3
-.cc_bottom cc_523
-.cc_top cc_524,.Lxta.loop_labels5
+.cc_bottom cc_529
+.cc_top cc_530,.Lxta.loop_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	339
 	.long	339
 	.long	.Lxta.loop_labels5
-.cc_bottom cc_524
-.cc_top cc_525,.Lxta.loop_labels5
+.cc_bottom cc_530
+.cc_top cc_531,.Lxta.loop_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	341
 	.long	341
 	.long	.Lxta.loop_labels5
-.cc_bottom cc_525
-.cc_top cc_526,.Lxta.loop_labels5
+.cc_bottom cc_531
+.cc_top cc_532,.Lxta.loop_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	345
 	.long	350
 	.long	.Lxta.loop_labels5
-.cc_bottom cc_526
-.cc_top cc_527,.Lxta.loop_labels5
+.cc_bottom cc_532
+.cc_top cc_533,.Lxta.loop_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	359
 	.long	359
 	.long	.Lxta.loop_labels5
-.cc_bottom cc_527
-.cc_top cc_528,.Lxta.loop_labels5
+.cc_bottom cc_533
+.cc_top cc_534,.Lxta.loop_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	360
 	.long	361
 	.long	.Lxta.loop_labels5
-.cc_bottom cc_528
-.cc_top cc_529,.Lxta.loop_labels4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	374
-	.long	374
-	.long	.Lxta.loop_labels4
-.cc_bottom cc_529
-.cc_top cc_530,.Lxta.loop_labels4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	376
-	.long	376
-	.long	.Lxta.loop_labels4
-.cc_bottom cc_530
-.cc_top cc_531,.Lxta.loop_labels4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	379
-	.long	384
-	.long	.Lxta.loop_labels4
-.cc_bottom cc_531
-.cc_top cc_532,.Lxta.loop_labels4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	387
-	.long	393
-	.long	.Lxta.loop_labels4
-.cc_bottom cc_532
-.cc_top cc_533,.Lxta.loop_labels4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	394
-	.long	394
-	.long	.Lxta.loop_labels4
-.cc_bottom cc_533
-.cc_top cc_534,.Lxta.loop_labels4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	395
-	.long	395
-	.long	.Lxta.loop_labels4
 .cc_bottom cc_534
 .cc_top cc_535,.Lxta.loop_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	396
-	.long	396
+	.long	374
+	.long	374
 	.long	.Lxta.loop_labels4
 .cc_bottom cc_535
 .cc_top cc_536,.Lxta.loop_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	397
-	.long	400
+	.long	376
+	.long	376
 	.long	.Lxta.loop_labels4
 .cc_bottom cc_536
 .cc_top cc_537,.Lxta.loop_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	401
-	.long	401
+	.long	379
+	.long	384
 	.long	.Lxta.loop_labels4
 .cc_bottom cc_537
 .cc_top cc_538,.Lxta.loop_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	402
-	.long	406
+	.long	387
+	.long	393
 	.long	.Lxta.loop_labels4
 .cc_bottom cc_538
 .cc_top cc_539,.Lxta.loop_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	407
-	.long	407
+	.long	394
+	.long	394
 	.long	.Lxta.loop_labels4
 .cc_bottom cc_539
 .cc_top cc_540,.Lxta.loop_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	395
+	.long	395
+	.long	.Lxta.loop_labels4
+.cc_bottom cc_540
+.cc_top cc_541,.Lxta.loop_labels4
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	396
+	.long	396
+	.long	.Lxta.loop_labels4
+.cc_bottom cc_541
+.cc_top cc_542,.Lxta.loop_labels4
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	397
+	.long	400
+	.long	.Lxta.loop_labels4
+.cc_bottom cc_542
+.cc_top cc_543,.Lxta.loop_labels4
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	401
+	.long	401
+	.long	.Lxta.loop_labels4
+.cc_bottom cc_543
+.cc_top cc_544,.Lxta.loop_labels4
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	402
+	.long	406
+	.long	.Lxta.loop_labels4
+.cc_bottom cc_544
+.cc_top cc_545,.Lxta.loop_labels4
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	407
+	.long	407
+	.long	.Lxta.loop_labels4
+.cc_bottom cc_545
+.cc_top cc_546,.Lxta.loop_labels4
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	408
 	.long	412
 	.long	.Lxta.loop_labels4
-.cc_bottom cc_540
-.cc_top cc_541,.Lxta.loop_labels6
+.cc_bottom cc_546
+.cc_top cc_547,.Lxta.loop_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	422
 	.long	422
 	.long	.Lxta.loop_labels6
-.cc_bottom cc_541
-.cc_top cc_542,.Lxta.loop_labels6
+.cc_bottom cc_547
+.cc_top cc_548,.Lxta.loop_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	423
 	.long	423
 	.long	.Lxta.loop_labels6
-.cc_bottom cc_542
-.cc_top cc_543,.Lxta.loop_labels6
+.cc_bottom cc_548
+.cc_top cc_549,.Lxta.loop_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	424
 	.long	424
 	.long	.Lxta.loop_labels6
-.cc_bottom cc_543
-.cc_top cc_544,.Lxta.loop_labels7
+.cc_bottom cc_549
+.cc_top cc_550,.Lxta.loop_labels7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	491
 	.long	492
 	.long	.Lxta.loop_labels7
-.cc_bottom cc_544
-.cc_top cc_545,.Lxta.loop_labels7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	495
-	.long	495
-	.long	.Lxta.loop_labels7
-.cc_bottom cc_545
-.cc_top cc_546,.Lxta.loop_labels7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	497
-	.long	497
-	.long	.Lxta.loop_labels7
-.cc_bottom cc_546
-.cc_top cc_547,.Lxta.loop_labels7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	498
-	.long	498
-	.long	.Lxta.loop_labels7
-.cc_bottom cc_547
-.cc_top cc_548,.Lxta.loop_labels7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	501
-	.long	501
-	.long	.Lxta.loop_labels7
-.cc_bottom cc_548
-.cc_top cc_549,.Lxta.loop_labels7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	504
-	.long	508
-	.long	.Lxta.loop_labels7
-.cc_bottom cc_549
-.cc_top cc_550,.Lxta.loop_labels7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
-	.byte	0
-	.long	510
-	.long	510
-	.long	.Lxta.loop_labels7
 .cc_bottom cc_550
 .cc_top cc_551,.Lxta.loop_labels7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
-	.long	511
-	.long	511
+	.long	495
+	.long	495
 	.long	.Lxta.loop_labels7
 .cc_bottom cc_551
 .cc_top cc_552,.Lxta.loop_labels7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
+	.long	497
+	.long	497
+	.long	.Lxta.loop_labels7
+.cc_bottom cc_552
+.cc_top cc_553,.Lxta.loop_labels7
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	498
+	.long	498
+	.long	.Lxta.loop_labels7
+.cc_bottom cc_553
+.cc_top cc_554,.Lxta.loop_labels7
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	501
+	.long	501
+	.long	.Lxta.loop_labels7
+.cc_bottom cc_554
+.cc_top cc_555,.Lxta.loop_labels7
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	504
+	.long	508
+	.long	.Lxta.loop_labels7
+.cc_bottom cc_555
+.cc_top cc_556,.Lxta.loop_labels7
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	510
+	.long	510
+	.long	.Lxta.loop_labels7
+.cc_bottom cc_556
+.cc_top cc_557,.Lxta.loop_labels7
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
+	.long	511
+	.long	511
+	.long	.Lxta.loop_labels7
+.cc_bottom cc_557
+.cc_top cc_558,.Lxta.loop_labels7
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
+	.byte	0
 	.long	513
 	.long	513
 	.long	.Lxta.loop_labels7
-.cc_bottom cc_552
-.cc_top cc_553,.Lxta.loop_labels8
+.cc_bottom cc_558
+.cc_top cc_559,.Lxta.loop_labels8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	655
 	.long	655
 	.long	.Lxta.loop_labels8
-.cc_bottom cc_553
-.cc_top cc_554,.Lxta.loop_labels8
+.cc_bottom cc_559
+.cc_top cc_560,.Lxta.loop_labels8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	656
 	.long	656
 	.long	.Lxta.loop_labels8
-.cc_bottom cc_554
-.cc_top cc_555,.Lxta.loop_labels8
+.cc_bottom cc_560
+.cc_top cc_561,.Lxta.loop_labels8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 	.byte	0
 	.long	657
 	.long	657
 	.long	.Lxta.loop_labels8
-.cc_bottom cc_555
+.cc_bottom cc_561
 .Lentries_end9:
 	.section	.trap_info,"",@progbits
 .Ltrap_info_entries_start0:

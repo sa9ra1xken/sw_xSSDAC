@@ -5243,8 +5243,9 @@ config_audo_core:                       # @config_audo_core
 		nop
 		stw r1, sp[12]
 	}
-	.loc	2 602 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:602:0
 .Ltmp407:
+	#DEBUG_VALUE: proposed_mode <- 4
+	.loc	2 602 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:602:0
 	ldaw r11, cp[.str14]
 	{
 		mov r0, r11
@@ -5255,16 +5256,20 @@ config_audo_core:                       # @config_audo_core
 	.loc	2 604 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:604:0
 .Lxta.call_labels42:
 	bl init_ring_buff
-                                        # implicit-def: R10
 	{
-		ldc r7, 4
+		ldc r0, 4
 		ldc r6, 5
+	}
+	{
+		mov r10, r0
+		mov r5, r0
 	}
 	bu .LBB19_1
 .LBB19_30:                              # %LoopTest.LoopBody_crit_edge
                                         #   in Loop: Header=BB19_1 Depth=1
 .Ltmp408:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
+	#DEBUG_VALUE: proposed_mode <- 4
 	{
 		nop
 		ldw r8, sp[3]
@@ -5274,8 +5279,9 @@ config_audo_core:                       # @config_audo_core
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel102:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
+	#DEBUG_VALUE: proposed_mode <- 4
 	{
-		ldc r5, 0
+		ldc r7, 0
 		nop
 	}
 	bf r8, .LBB19_3
@@ -5284,6 +5290,7 @@ config_audo_core:                       # @config_audo_core
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel103:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 610 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:610:49
 	{
 		outct res[r8], 1
@@ -5336,13 +5343,14 @@ config_audo_core:                       # @config_audo_core
 	.loc	2 611 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:611:0
 	{
 		outct res[r8], 1
-		mov r5, r8
+		mov r7, r8
 	}
 .Ltmp412:
 .LBB19_3:                               # %ifdone
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel104:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
+	#DEBUG_VALUE: proposed_mode <- 4
 	{
 		nop
 		ldw r8, sp[4]
@@ -5370,22 +5378,24 @@ config_audo_core:                       # @config_audo_core
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel105:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
+	#DEBUG_VALUE: proposed_mode <- 4
 	ldc r0, 48000
-	.loc	2 626 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:626:13
+	.loc	2 626 17                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:626:17
 	{
 		lsu r0, r0, r8
 		nop
 	}
-	.loc	2 626 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:626:13
+	.loc	2 626 17                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:626:17
 	bf r0, .LBB19_12
 .Ltmp414:
 # BB#11:                                # %iftrue59
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel106:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
+	#DEBUG_VALUE: proposed_mode <- 4
 	{
 		nop
-		stw r7, r4[0]
+		stw r5, r4[0]
 	}
 	.loc	2 628 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:628:0
 	ldaw r11, cp[.str17]
@@ -5406,12 +5416,12 @@ config_audo_core:                       # @config_audo_core
 .Lxtalabel108:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
 	ldc r0, 48000
-	.loc	2 619 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:619:13
+	.loc	2 619 17                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:619:17
 	{
 		lsu r0, r0, r8
 		nop
 	}
-	.loc	2 619 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:619:13
+	.loc	2 619 17                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:619:17
 	bf r0, .LBB19_9
 .Ltmp417:
 # BB#7:                                 # %iftrue52
@@ -5420,7 +5430,7 @@ config_audo_core:                       # @config_audo_core
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
 	{
 		nop
-		stw r7, r4[0]
+		stw r5, r4[0]
 	}
 	.loc	2 621 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:621:0
 	ldaw r11, cp[.str16]
@@ -5435,22 +5445,23 @@ config_audo_core:                       # @config_audo_core
 .Lxta.call_labels44:
 	bl debug_printf
 	{
-		mov r9, r7
+		mov r9, r5
 		nop
 	}
-	bt r5, .LBB19_13
+	bt r7, .LBB19_13
 	bu .LBB19_14
 .LBB19_12:                              # %iffalse65
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel111:
 .Ltmp419:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 630 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:630:0
 	{
 		mov r9, r6
 		stw r6, r4[0]
 	}
-	bt r5, .LBB19_13
+	bt r7, .LBB19_13
 	bu .LBB19_14
 .Ltmp420:
 .LBB19_5:                               # %switchdefault
@@ -5462,7 +5473,7 @@ config_audo_core:                       # @config_audo_core
 		mov r9, r10
 		stw r10, r4[0]
 	}
-	bt r5, .LBB19_13
+	bt r7, .LBB19_13
 	bu .LBB19_14
 .Ltmp421:
 .LBB19_9:                               # %iffalse
@@ -5478,62 +5489,63 @@ config_audo_core:                       # @config_audo_core
 		mov r9, r0
 		stw r0, r4[0]
 	}
-	bf r5, .LBB19_14
+	bf r7, .LBB19_14
 .Ltmp422:
 .LBB19_13:                              # %iftrue73
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel114:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 637 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:637:49
 	{
-		outct res[r5], 1
+		outct res[r7], 1
 		nop
 	}
 	.loc	2 637 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:637:49
 	{
-		chkct res[r5], 1
+		chkct res[r7], 1
 		ldc r0, 2
 	}
 	.loc	2 637 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:637:49
 .Lxta.endpoint_labels92:
 	{
-		out res[r5], r0
+		out res[r7], r0
 		nop
 	}
 	.loc	2 637 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:637:49
 	{
-		outct res[r5], 1
+		outct res[r7], 1
 		nop
 	}
 	.loc	2 637 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:637:49
 	{
-		chkct res[r5], 1
+		chkct res[r7], 1
 		nop
 	}
 	.loc	2 638 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:638:34
 	{
-		outct res[r5], 1
+		outct res[r7], 1
 		nop
 	}
 	.loc	2 638 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:638:34
 	{
-		chkct res[r5], 1
+		chkct res[r7], 1
 		nop
 	}
 	.loc	2 638 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:638:34
 .Lxta.endpoint_labels93:
 	{
-		out res[r5], r9
+		out res[r7], r9
 		nop
 	}
 	.loc	2 638 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:638:34
 	{
-		outct res[r5], 1
+		outct res[r7], 1
 		nop
 	}
 	.loc	2 638 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:638:34
 	{
-		chkct res[r5], 1
+		chkct res[r7], 1
 		nop
 	}
 .Ltmp423:
@@ -5541,6 +5553,7 @@ config_audo_core:                       # @config_audo_core
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel115:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 640 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:640:0
 	ldaw r11, cp[.str18]
 	{
@@ -5601,6 +5614,7 @@ config_audo_core:                       # @config_audo_core
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel118:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 668 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:668:0
 	ldaw r11, cp[.str23]
 	{
@@ -5744,12 +5758,14 @@ config_audo_core:                       # @config_audo_core
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel129:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
+	#DEBUG_VALUE: proposed_mode <- 4
 	ldc r0, 752
 .Ltmp439:
 .LBB19_28:                              # %switchdone98
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel130:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 684 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:684:0
 	{
 		ldaw r0, sp[2]
@@ -5776,6 +5792,7 @@ config_audo_core:                       # @config_audo_core
 	bl debug_printf
 .Ltmp441:
 	#DEBUG_VALUE: config_audo_core:cur_mode <- R4
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 711 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:711:7
 	ldw r0, dp[rc]
 .Lxta.loop_labels2:
@@ -5789,6 +5806,7 @@ config_audo_core:                       # @config_audo_core
 .Ltmp442:
 # BB#31:                                # %LoopEnd
 .Lxtalabel132:
+	#DEBUG_VALUE: proposed_mode <- 4
 	.loc	2 712 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:712:5
 	ldw r0, dp[audio_cmd]
 	{
@@ -11726,38 +11744,34 @@ par.desc.6:
 	.long	0
 	.long	0
 .Ldebug_loc75:
+	.long	.Ltmp407
 	.long	.Ltmp411
-	.long	.Ltmp412
 .Lset218 = .Ltmp959-.Ltmp958            # Loc expr size
 	.short	.Lset218
 .Ltmp958:
-	.byte	90                      # DW_OP_reg10
+	.byte	16                      # DW_OP_constu
+	.byte	4                       # 
 .Ltmp959:
+	.long	.Ltmp411
+	.long	.Ltmp412
+.Lset219 = .Ltmp961-.Ltmp960            # Loc expr size
+	.short	.Lset219
+.Ltmp960:
+	.byte	90                      # DW_OP_reg10
+.Ltmp961:
+	.long	.Ltmp412
+	.long	.Lfunc_end19
+.Lset220 = .Ltmp963-.Ltmp962            # Loc expr size
+	.short	.Lset220
+.Ltmp962:
+	.byte	16                      # DW_OP_constu
+	.byte	4                       # 
+.Ltmp963:
 	.long	0
 	.long	0
 .Ldebug_loc76:
 	.long	.Lfunc_begin20
 	.long	.Ltmp448
-.Lset219 = .Ltmp961-.Ltmp960            # Loc expr size
-	.short	.Lset219
-.Ltmp960:
-	.byte	80                      # DW_OP_reg0
-.Ltmp961:
-	.long	0
-	.long	0
-.Ldebug_loc77:
-	.long	.Lfunc_begin21
-	.long	.Ltmp454
-.Lset220 = .Ltmp963-.Ltmp962            # Loc expr size
-	.short	.Lset220
-.Ltmp962:
-	.byte	80                      # DW_OP_reg0
-.Ltmp963:
-	.long	0
-	.long	0
-.Ldebug_loc78:
-	.long	.Lfunc_begin22
-	.long	.Ltmp459
 .Lset221 = .Ltmp965-.Ltmp964            # Loc expr size
 	.short	.Lset221
 .Ltmp964:
@@ -11765,9 +11779,9 @@ par.desc.6:
 .Ltmp965:
 	.long	0
 	.long	0
-.Ldebug_loc79:
-	.long	.Lfunc_begin23
-	.long	.Ltmp466
+.Ldebug_loc77:
+	.long	.Lfunc_begin21
+	.long	.Ltmp454
 .Lset222 = .Ltmp967-.Ltmp966            # Loc expr size
 	.short	.Lset222
 .Ltmp966:
@@ -11775,9 +11789,9 @@ par.desc.6:
 .Ltmp967:
 	.long	0
 	.long	0
-.Ldebug_loc80:
-	.long	.Lfunc_begin24
-	.long	.Ltmp472
+.Ldebug_loc78:
+	.long	.Lfunc_begin22
+	.long	.Ltmp459
 .Lset223 = .Ltmp969-.Ltmp968            # Loc expr size
 	.short	.Lset223
 .Ltmp968:
@@ -11785,9 +11799,9 @@ par.desc.6:
 .Ltmp969:
 	.long	0
 	.long	0
-.Ldebug_loc81:
-	.long	.Lfunc_begin25
-	.long	.Ltmp477
+.Ldebug_loc79:
+	.long	.Lfunc_begin23
+	.long	.Ltmp466
 .Lset224 = .Ltmp971-.Ltmp970            # Loc expr size
 	.short	.Lset224
 .Ltmp970:
@@ -11795,9 +11809,9 @@ par.desc.6:
 .Ltmp971:
 	.long	0
 	.long	0
-.Ldebug_loc82:
-	.long	.Lfunc_begin26
-	.long	.Ltmp484
+.Ldebug_loc80:
+	.long	.Lfunc_begin24
+	.long	.Ltmp472
 .Lset225 = .Ltmp973-.Ltmp972            # Loc expr size
 	.short	.Lset225
 .Ltmp972:
@@ -11805,9 +11819,9 @@ par.desc.6:
 .Ltmp973:
 	.long	0
 	.long	0
-.Ldebug_loc83:
-	.long	.Lfunc_begin27
-	.long	.Ltmp490
+.Ldebug_loc81:
+	.long	.Lfunc_begin25
+	.long	.Ltmp477
 .Lset226 = .Ltmp975-.Ltmp974            # Loc expr size
 	.short	.Lset226
 .Ltmp974:
@@ -11815,9 +11829,9 @@ par.desc.6:
 .Ltmp975:
 	.long	0
 	.long	0
-.Ldebug_loc84:
-	.long	.Lfunc_begin28
-	.long	.Ltmp496
+.Ldebug_loc82:
+	.long	.Lfunc_begin26
+	.long	.Ltmp484
 .Lset227 = .Ltmp977-.Ltmp976            # Loc expr size
 	.short	.Lset227
 .Ltmp976:
@@ -11825,9 +11839,9 @@ par.desc.6:
 .Ltmp977:
 	.long	0
 	.long	0
-.Ldebug_loc85:
-	.long	.Lfunc_begin29
-	.long	.Ltmp502
+.Ldebug_loc83:
+	.long	.Lfunc_begin27
+	.long	.Ltmp490
 .Lset228 = .Ltmp979-.Ltmp978            # Loc expr size
 	.short	.Lset228
 .Ltmp978:
@@ -11835,9 +11849,9 @@ par.desc.6:
 .Ltmp979:
 	.long	0
 	.long	0
-.Ldebug_loc86:
-	.long	.Lfunc_begin30
-	.long	.Ltmp508
+.Ldebug_loc84:
+	.long	.Lfunc_begin28
+	.long	.Ltmp496
 .Lset229 = .Ltmp981-.Ltmp980            # Loc expr size
 	.short	.Lset229
 .Ltmp980:
@@ -11845,9 +11859,9 @@ par.desc.6:
 .Ltmp981:
 	.long	0
 	.long	0
-.Ldebug_loc87:
-	.long	.Lfunc_begin31
-	.long	.Ltmp514
+.Ldebug_loc85:
+	.long	.Lfunc_begin29
+	.long	.Ltmp502
 .Lset230 = .Ltmp983-.Ltmp982            # Loc expr size
 	.short	.Lset230
 .Ltmp982:
@@ -11855,9 +11869,9 @@ par.desc.6:
 .Ltmp983:
 	.long	0
 	.long	0
-.Ldebug_loc88:
-	.long	.Lfunc_begin32
-	.long	.Ltmp519
+.Ldebug_loc86:
+	.long	.Lfunc_begin30
+	.long	.Ltmp508
 .Lset231 = .Ltmp985-.Ltmp984            # Loc expr size
 	.short	.Lset231
 .Ltmp984:
@@ -11865,14 +11879,34 @@ par.desc.6:
 .Ltmp985:
 	.long	0
 	.long	0
+.Ldebug_loc87:
+	.long	.Lfunc_begin31
+	.long	.Ltmp514
+.Lset232 = .Ltmp987-.Ltmp986            # Loc expr size
+	.short	.Lset232
+.Ltmp986:
+	.byte	80                      # DW_OP_reg0
+.Ltmp987:
+	.long	0
+	.long	0
+.Ldebug_loc88:
+	.long	.Lfunc_begin32
+	.long	.Ltmp519
+.Lset233 = .Ltmp989-.Ltmp988            # Loc expr size
+	.short	.Lset233
+.Ltmp988:
+	.byte	80                      # DW_OP_reg0
+.Ltmp989:
+	.long	0
+	.long	0
 	.section	.debug_pubnames,"",@progbits
-.Lset232 = .LpubNames_end0-.LpubNames_begin0 # Length of Public Names Info
-	.long	.Lset232
+.Lset234 = .LpubNames_end0-.LpubNames_begin0 # Length of Public Names Info
+	.long	.Lset234
 .LpubNames_begin0:
 	.short	2                       # DWARF Version
 	.long	.L.debug_info_begin0    # Offset of Compilation Unit Info
-.Lset233 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
-	.long	.Lset233
+.Lset235 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
+	.long	.Lset235
 	.long	174                     # DIE offset
 .asciiz"clk_spi"                        # External Name
 	.long	2946                    # DIE offset
@@ -11974,13 +12008,13 @@ par.desc.6:
 	.long	0                       # End Mark
 .LpubNames_end0:
 	.section	.debug_pubtypes,"",@progbits
-.Lset234 = .LpubTypes_end0-.LpubTypes_begin0 # Length of Public Types Info
-	.long	.Lset234
+.Lset236 = .LpubTypes_end0-.LpubTypes_begin0 # Length of Public Types Info
+	.long	.Lset236
 .LpubTypes_begin0:
 	.short	2                       # DWARF Version
 	.long	.L.debug_info_begin0    # Offset of Compilation Unit Info
-.Lset235 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
-	.long	.Lset235
+.Lset237 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
+	.long	.Lset237
 	.long	1961                    # DIE offset
 .asciiz"chanend"                        # External Name
 	.long	3567                    # DIE offset

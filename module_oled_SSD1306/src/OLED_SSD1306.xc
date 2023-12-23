@@ -75,7 +75,7 @@ unsigned time;
 
 char * unsafe string_ptr[ROW_COUNT];
 
-int found_eol[ROW_COUNT];
+int terminator_found_before_eol[ROW_COUNT];
 char raster_buffer[PAGE_COUNT * PAGE_LENGTH];
 
 int display_offset[ROW_COUNT];
@@ -150,15 +150,15 @@ void OLED_SSD1306_put_string(int row, char string[]){
     display_offset[row] = 0;
     rendering_x[row] = 0;
 
-    found_eol[row] = 0;
+    terminator_found_before_eol[row] = 0;
     for (rendering_col[row] = 0 ; rendering_col[row] < CHAR_COUNT_PAR_LINE ; rendering_col[row]++){
         unsigned char code;
         unsafe {code = string_ptr[row][rendering_col[row]];}
 
         if ( code == '\0') {
-            found_eol[row] = 1;
+            terminator_found_before_eol[row] = 1;
         }
-        if (found_eol[row] == 1) code = ' ';
+        if (terminator_found_before_eol[row] == 1) code = ' ';
 
         unsigned int char_index = 0;
         if (code > 0x20 && code < 0x80) char_index = (code - 0x20) << 4;
@@ -180,7 +180,7 @@ void OLED_SSD1306_put_string(int row, char string[]){
 
 RC_SCROLL OLED_SSD1306_shift_left(const int row){
 
-    //if (found_eol[row]) return _END_OF_LINE;
+    if (terminator_found_before_eol[row]) return _END_OF_LINE;
 
     unsigned char code;
     unsafe {code = string_ptr[row][rendering_col[row]];}

@@ -3,6 +3,9 @@
 <fDef name="HandleDacCommand" global="true" noreturn="false" doNotSpecialize="false" numParams="2"/>
 <fDef name="HandlePlayCommand" global="true" noreturn="false" doNotSpecialize="false" numParams="2"/>
 <fDef name="KeyEvent" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
+<fDef name="KeyEventInDacModeSelection" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
+<fDef name="KeyEventInFunctionSelection" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
+<fDef name="KeyEventInSDCMode" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="QueryChannel" global="true" noreturn="false" doNotSpecialize="false" numParams="2"/>
 <fDef name="SwitchConsoleMode" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
 <fDef name="button_listener" global="true" noreturn="true" doNotSpecialize="false" numParams="2"/>
@@ -56,7 +59,77 @@
     </values>
   </arg>
 </fCall>
-<fCall name="printf" global="true" numArgs="3">
+<fCall name="SwitchConsoleMode" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="3"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="set_display_control_flag" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="256"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="set_display_control_flag" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="256"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="set_display_control_flag" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="256"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="set_display_control_flag" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="256"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="set_display_control_flag" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="256"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="SwitchConsoleMode" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="4"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="set_display_control_flag" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="1024"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="set_display_control_flag" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="1024"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="SwitchConsoleMode" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="1"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="debug_printf" global="true" numArgs="3">
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -73,19 +146,10 @@
     </values>
   </arg>
 </fCall>
-<fCall name="fflush" global="true" numArgs="1">
+<fCall name="KeyEventInSDCMode" global="true" numArgs="1">
   <arg num="0">
+    <passThroughArg param="0" caller="KeyEvent" global="true"/>
     <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="__getstdout" global="true" numArgs="0">
-</fCall>
-<fCall name="SwitchConsoleMode" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="intval"><intval isSigned="true" val="3"/></value>
     </values>
   </arg>
 </fCall>
@@ -96,45 +160,17 @@
     </values>
   </arg>
 </fCall>
-<fCall name="set_display_control_flag" global="true" numArgs="1">
+<fCall name="KeyEventInDacModeSelection" global="true" numArgs="1">
   <arg num="0">
+    <passThroughArg param="0" caller="KeyEvent" global="true"/>
     <values>
-      <value type="intval"><intval isSigned="true" val="256"/></value>
     </values>
   </arg>
 </fCall>
-<fCall name="set_display_control_flag" global="true" numArgs="1">
+<fCall name="KeyEventInFunctionSelection" global="true" numArgs="1">
   <arg num="0">
+    <passThroughArg param="0" caller="KeyEvent" global="true"/>
     <values>
-      <value type="intval"><intval isSigned="true" val="256"/></value>
-    </values>
-  </arg>
-</fCall>
-<fCall name="set_display_control_flag" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="intval"><intval isSigned="true" val="256"/></value>
-    </values>
-  </arg>
-</fCall>
-<fCall name="set_display_control_flag" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="intval"><intval isSigned="true" val="256"/></value>
-    </values>
-  </arg>
-</fCall>
-<fCall name="set_display_control_flag" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="intval"><intval isSigned="true" val="256"/></value>
-    </values>
-  </arg>
-</fCall>
-<fCall name="SwitchConsoleMode" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="intval"><intval isSigned="true" val="1"/></value>
     </values>
   </arg>
 </fCall>

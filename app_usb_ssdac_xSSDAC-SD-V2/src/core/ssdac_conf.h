@@ -24,7 +24,7 @@
 
 #define BUS_MODE_4BIT
 
-#define NUM_USB_CHAN_OUT (2)
+//#define NUM_USB_CHAN_OUT (2)
 
 // Interparation mode selector option
 #define _DAC_MODE_SELECTOR_NONE     1

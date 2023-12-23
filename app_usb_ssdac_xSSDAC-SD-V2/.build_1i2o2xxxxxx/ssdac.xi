@@ -1187,7 +1187,7 @@ void xscope_connect_data_from_host(chanend from_host);
 # 19 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h" 1
-# 31 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
+# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
 typedef enum {
     _GET_INTERPOLATION_MODE =1,
     _SET_INTERPOLATION_MODE =2
@@ -1838,7 +1838,7 @@ unsigned config_audo_core(chanend c_in, chanend ?c_control, unsigned sample_rate
     streaming chan c_clipped;
     streaming chan c_over;
 
-    INTERPOLATION_MODE proposed_mode;
+    INTERPOLATION_MODE proposed_mode = _CUBIC;
 
     debug_printf("\ninitializing ring buffer");
 
@@ -1856,23 +1856,23 @@ unsigned config_audo_core(chanend c_in, chanend ?c_control, unsigned sample_rate
 
         switch (proposed_mode)
         {
-        case _SINC8:
-            if (sample_rate > 48000){
-                cur_mode = _CUBIC;
-                debug_printf("\nsample rate is too high to perform sinc8, fall back to cubic interporation");
-            }
-            else cur_mode = proposed_mode;
-            break;
-        case _SINC4:
-            if (sample_rate > 48000){
-                cur_mode = _CUBIC;
-                debug_printf("\nsample rate is too high to perform sinc4, fall back to cubic interporation");
-            }
-            else cur_mode = proposed_mode;
-            break;
-        default:
-            cur_mode = proposed_mode;
-            break;
+            case _SINC8:
+                if (sample_rate > 48000){
+                    cur_mode = _CUBIC;
+                    debug_printf("\nsample rate is too high to perform sinc8, fall back to cubic interporation");
+                }
+                else cur_mode = proposed_mode;
+                break;
+            case _SINC4:
+                if (sample_rate > 48000){
+                    cur_mode = _CUBIC;
+                    debug_printf("\nsample rate is too high to perform sinc4, fall back to cubic interporation");
+                }
+                else cur_mode = proposed_mode;
+                break;
+            default:
+                cur_mode = proposed_mode;
+                break;
         }
         if (!isnull(c_control)){
             c_control <: _SET_INTERPOLATION_MODE;

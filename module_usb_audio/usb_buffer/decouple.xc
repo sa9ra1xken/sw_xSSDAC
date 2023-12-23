@@ -5,9 +5,9 @@
 #include "commands.h"
 #include "xud.h"
 
-#if _USB_AUDIO_USE_OLED == 1
-#include "display_control.h"
-#endif
+#ifdef _USB_AUDIO_USE_DISPLAY   //added by sakurai for SSDAC
+#include "display_control.h"    //added by sakurai for SSDAC
+#endif                          //added by sakurai for SSDAC
 
 
 #ifdef NATIVE_DSD
@@ -590,7 +590,7 @@ void decouple(chanend c_mix_out
 {
     unsigned sampFreq = DEFAULT_FREQ;
 
-#if _USB_AUDIO_USE_OLED == 1    //added by sakurai
+#ifdef _USB_AUDIO_USE_DISPLAY   //added by sakurai
     update_samp_freq(sampFreq); //added by sakurai
 #endif                          //added by sakurai
 
@@ -702,7 +702,7 @@ void decouple(chanend c_mix_out
                 SET_SHARED_GLOBAL(g_freqChange_flag, 0);
                 GET_SHARED_GLOBAL(sampFreq, g_freqChange_sampFreq);
 
-#if _USB_AUDIO_USE_OLED == 1                        //added by sakurai
+#ifdef _USB_AUDIO_USE_DISPLAY                       //added by sakurai
                 update_samp_freq(sampFreq);         //added by sakurai
 #endif                                              //added by sakurai
 
@@ -799,7 +799,7 @@ void decouple(chanend c_mix_out
                 GET_SHARED_GLOBAL(dataFormat, g_formatChange_DataFormat);
                 GET_SHARED_GLOBAL(sampRes, g_formatChange_SampRes);
 
-#if _USB_AUDIO_USE_OLED == 1                        //added by sakurai
+#ifdef _USB_AUDIO_USE_DISPLAY                       //added by sakurai
                 update_samp_resolution(sampRes);    //added by sakurai
 #endif                                              //added by sakurai
 

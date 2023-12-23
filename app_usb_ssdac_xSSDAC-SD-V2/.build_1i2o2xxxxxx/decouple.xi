@@ -810,6 +810,27 @@ void XUD_GetData_Select(chanend c, XUD_ep ep, unsigned &length, XUD_Result_t &re
 #pragma select handler
 void XUD_SetData_Select(chanend c, XUD_ep ep, XUD_Result_t &result);
 # 7 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc" 2
+
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h" 1
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
+void set_display_control_flag(unsigned bitmask);
+void update_samp_freq(unsigned freq);
+void update_samp_resolution(unsigned res);
+void update_chan_count(unsigned ch);
+
+void display_control();
+
+typedef enum {
+    _SDC_AUDIO = 1,
+    _USB_AUDIO = 2,
+    _DAC_MODE_SELECTION = 3,
+    _FUNCTION_SELECTION = 4
+} CONSOLE_MODE;
+
+CONSOLE_MODE get_console_mode();
+void set_console_mode(CONSOLE_MODE value);
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc" 2
 # 37 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc"
 unsigned int multOut[(2) + 1];
 static xc_ptr p_multOut;
@@ -1343,7 +1364,7 @@ void decouple(chanend c_mix_out
     unsigned sampFreq = ((44100));
 
 
-
+    update_samp_freq(sampFreq);
 
 
 
@@ -1431,7 +1452,7 @@ void decouple(chanend c_mix_out
                 asm volatile("ldw %0, dp[" "g_freqChange_sampFreq" "]":"=r"(sampFreq)::"memory");
 
 
-
+                update_samp_freq(sampFreq);
 
 
 
@@ -1528,7 +1549,7 @@ void decouple(chanend c_mix_out
                 asm volatile("ldw %0, dp[" "g_formatChange_SampRes" "]":"=r"(sampRes)::"memory");
 
 
-
+                update_samp_resolution(sampRes);
 
 
 

@@ -588,8 +588,11 @@ int printstr(const char (& alias s)[]);
 int printstrln(const char (& alias s)[]);
 # 13 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
 
+# 1 ".././src\\ssdac_conf.h" 1
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h" 1
-# 31 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
+# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
 typedef enum {
     _GET_INTERPOLATION_MODE =1,
     _SET_INTERPOLATION_MODE =2
@@ -639,18 +642,16 @@ unsigned start_fir(chanend c_in, unsigned sample_rate);
 unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
 
 void audio_xss(chanend c_in, chanend ?c_control);
-# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
-
-# 1 ".././src\\customdefines.h" 1
 # 15 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
 
+
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\decoupler.h" 1
-# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\decoupler.h"
+# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\decoupler.h"
 typedef enum {
     _FALSE = 0,
     _TRUE = 1
 } BOOL;
-# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 
@@ -1281,7 +1282,7 @@ int _safe_fclose(FILE * movable fp);
 int _safe_remove(const char file[]);
 int _safe_rename(const char from[], const char to[]);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 2 3
-# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 1
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
@@ -1303,8 +1304,10 @@ typedef out buffered port:32 out_buffered_port_32_t;
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 2
 
 
-
-
+typedef enum {
+    _USB_DAC = 0,
+    _SDC_PLAY = 1,
+} FUNCTION_SELECTOR;
 
 
 typedef enum {
@@ -1329,10 +1332,10 @@ typedef enum {
 unsigned QueryChannel(chanend ch, unsigned command);
 
 void button_listener(chanend ?c_play_control, chanend ?c_dac_control);
-# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+# 19 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h" 1
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
@@ -1343,18 +1346,21 @@ void display_control();
 typedef enum {
     _SDC_AUDIO = 1,
     _USB_AUDIO = 2,
-    _DAC_MENU = 3
+    _DAC_MODE_SELECTION = 3,
+    _FUNCTION_SELECTION = 4
 } CONSOLE_MODE;
 
 CONSOLE_MODE get_console_mode();
 void set_console_mode(CONSOLE_MODE value);
-# 19 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h" 1
 # 12 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h"
 int qspi_write(int offset, int size, char * buffer, char * scratch);
 
 int qspi_read(int offset, int size, char * buffer);
+
+
 
 
 
@@ -1375,7 +1381,7 @@ interface qspi_access{
 void qspi_if_write(client interface qspi_access i, int offset, int size, char buffer[]);
 
 void qspi_if_read(client interface qspi_access i, int offset, int size, char buffer[]);
-# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
 
 
 
@@ -1502,7 +1508,7 @@ void xscope_connect_data_from_host(chanend from_host);
 # 420 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xscope.h" 3
 # 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xscope_probes.h" 1 3
 # 420 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xscope.h" 2 3
-# 27 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+# 28 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
 
 
 
@@ -1524,6 +1530,7 @@ void FuncGen(unsigned int fsample, unsigned int freq, streaming chanend c_out);
 void decoupler(chanend c_buf_control, chanend c_out);
 void qspi_server(server interface qspi_access i);
 
+
 void thread_speed()
 {
 
@@ -1535,7 +1542,6 @@ void thread_speed()
 }
 
 int main(){
-
     chan c_handshake;
     chan c_play_control;
     chan c_audio;
@@ -1551,7 +1557,6 @@ int main(){
                 c_play_control
 
                 , c_dac_control
-
 
 
 

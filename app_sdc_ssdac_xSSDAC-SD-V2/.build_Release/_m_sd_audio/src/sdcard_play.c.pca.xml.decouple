@@ -115,6 +115,10 @@
   <fCall global="true" name="qspi_if_read.maxchanends"/>
   <fCall global="true" name="strncpy.maxchanends"/>
   <fCall global="true" name="setting_file_name"/>
+  <fCall global="true" name="track_string.globound"/>
+  <fCall global="true" name="track_string"/>
+  <fCall global="true" name="folder_string.globound"/>
+  <fCall global="true" name="folder_string"/>
   <fCall global="true" name="state"/>
   <fCall global="true" name="scratch.globound"/>
   <fCall global="true" name="scratch"/>
@@ -138,6 +142,4 @@
   <fCall global="true" name="QueryChannel"/>
   <fCall global="true" name="qspi_if_read"/>
   <fCall global="true" name="strncpy"/>
-  <fCall global="true" name="folder_string"/>
-  <fCall global="true" name="track_string"/>
 </preCompilationAnalysis>

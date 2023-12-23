@@ -10,6 +10,7 @@
 
 #define BUF_SIZE /*1024*/2048
 #define NUM_BUF 8 //eight buffers are required for gapless playback with Flac 44.1K sps.
+#define NUM_USB_CHAN_OUT 2 //TODO shallbe variable
 
 /* c_audioControl */
 #define SET_SAMPLE_FREQ         4

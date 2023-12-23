@@ -10,9 +10,11 @@
 
 #include <xccompat.h>
 
-//#define _PENDING_Q  0
-//#define _INPUT_Q    1
-//#define _CURRENT_Q  2
+typedef enum {
+    _USB_DAC = 0,
+    _SDC_PLAY = 1,
+} FUNCTION_SELECTOR;
+
 
 typedef enum {
     _PENDING_Q  = 0,

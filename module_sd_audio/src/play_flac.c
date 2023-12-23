@@ -5,7 +5,7 @@
  *      Author: Takaaki Sakurai
  */
 
-#include <xcore_c.h>
+//#include <xcore_c.h>
 #include <stdio.h> /* for the printf function */
 #define DEBUG_UNIT SD_AUDIO
 #include <debug_print.h>
@@ -14,7 +14,7 @@
 #include "button_listener.h"
 #include "ff.h"    /* file system routines */
 #include "timing.h"
-#include "customdefines.h"
+//#include "customdefines.h"
 #include "decoupler.h"
 #include "sdcard_play.h"
 #include "display_control.h"

@@ -1872,7 +1872,7 @@ InitialRun:
 	.byte	14
 	.byte	4
 	.byte	7
-	.byte	21
+	.byte	22
 	.byte	15
 	.long	.Linfo_string114
 	.byte	0

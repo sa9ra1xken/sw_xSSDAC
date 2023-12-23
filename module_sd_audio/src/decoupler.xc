@@ -9,7 +9,7 @@
 #include <stdio.h>
 #define DEBUG_UNIT SD_AUDIO
 #include <debug_print.h>
-#include "customdefines.h"
+//#include "customdefines.h"
 #include "decoupler.h"
 #include <xclib.h>
 //#include <stdbool.h>

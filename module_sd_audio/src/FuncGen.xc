@@ -6,7 +6,7 @@
  */
 #include <xs1.h>
 #include <platform.h>
-#include "customdefines.h"
+//#include "customdefines.h"
 #include <stdio.h>
 /*
 extern out port tp0; // debug purpose

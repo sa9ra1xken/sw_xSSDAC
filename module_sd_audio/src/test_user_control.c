@@ -8,7 +8,7 @@
 #include "sdcard_play.h"
 #include "test_user_control.h"
 #include <stdbool.h>
-//#include <xclib.h>
+#include <xclib.h>
 #include <xcore_c.h>
 #include "button_listener.h"
 

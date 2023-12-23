@@ -13,6 +13,8 @@ int qspi_write(int offset, int size, char * buffer, char * scratch);
 
 int qspi_read(int offset, int size, char * buffer);
 
+//void qspi_server(server interface qspi_access i);
+
 #ifdef __XC__
 
 //void qspi_server(server interface qspi_access i);

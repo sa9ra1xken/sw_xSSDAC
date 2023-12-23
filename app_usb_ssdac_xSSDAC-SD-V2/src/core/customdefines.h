@@ -23,10 +23,13 @@
 #define XCORE_200_MC_AUDIO_HW_VERSION 2
 #endif
 
+#define _USB_AUDIO_USE_DISPLAY
+
+
 /* Tile defines */
 #define AUDIO_IO_TILE   0
 #define XUD_TILE        1
-#define OLED_TILE       1
+//#define OLED_TILE       1
 
 /* SPDIF Tx i/o moved tile between board versions 1.0 -> 2.0 */
 #if XCORE_200_MC_AUDIO_HW_VERSION < 2

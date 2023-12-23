@@ -2550,11 +2550,11 @@ md5sum:
 	.long	60
 	.long	.Linfo_string6
 	.byte	1
-	.byte	24
+	.byte	25
 	.byte	4
 	.byte	4
 	.byte	1
-	.byte	21
+	.byte	22
 	.byte	5
 	.long	.Linfo_string4
 	.byte	0

@@ -411,8 +411,6 @@ service xscope_host_data(chanend c);;
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
 # 8 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc" 2
 
-# 1 ".././src\\customdefines.h" 1
-# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 

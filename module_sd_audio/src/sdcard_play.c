@@ -4,9 +4,7 @@
  * @author Takaaki sakurai
  **/
 
-#define _QUIET  0
-
-#include <xcore_c.h>
+//#include <xcore_c.h>
 #include <stdio.h> /* for the printf function */
 #include <xccompat.h>
 #include <string.h>
@@ -14,23 +12,35 @@
 #include <debug_print.h>
 #include "ff.h"    /* file system routines */
 #include "timing.h"
-#include "customdefines.h"
+//#include "customdefines.h"
 #include "button_listener.h"
 //#include "play_track.h"
 #include "sdcard_play.h"
 //#include "sdcard_test.h"
 #include "display_control.h"
 #include "qspi_access.h"
+#include "ssdac_conf.h"
+
 
 PLAY_TRACK_RC PlayRIFF(FIL* file, chanend c_handshake, chanend c_control);
 PLAY_TRACK_RC PlayFLAC(FIL* file, chanend c_handshake, chanend c_control);
 
 const char * setting_file_name = "0:/CONTEXTSAVE.TXT";
 
-//extern char track_string[_MAX_LFN + 1]="track";
-extern char track_string[_MAX_LFN + 1];
-//extern char folder_string[_MAX_LFN + 1]="folder";
-extern char folder_string[_MAX_LFN + 1];
+#ifdef CONFIG_DATA_SIZE_IN_FLASH
+#define TRACK_STRING_OFFSET     (CONFIG_DATA_SIZE_IN_FLASH)
+#else
+#define TRACK_STRING_OFFSET     (0)
+#endif
+#define TRACK_STRING_SIZE       (_MAX_LFN + 1)
+
+char track_string[TRACK_STRING_SIZE]="track";
+
+#define FOLDER_STRING_OFFSET    (TRACK_STRING_OFFSET + _MAX_LFN + 1)
+#define FOLDER_STRING_SIZE      (_MAX_LFN + 1)
+
+char folder_string[FOLDER_STRING_SIZE]="folder";
+
 char scratch[_MAX_LFN + 1];
 
 typedef enum {
@@ -98,7 +108,7 @@ int GoFolder(char * folder, unsigned i){
     f_chdir(folder);
     f_getcwd (&folder_string, sizeof(folder_string));
     set_display_control_flag(BITMASK_UPDATE_FOLDER);
-    qspi_if_write(i, 0, sizeof(folder_string), folder_string);
+    qspi_if_write(i, FOLDER_STRING_OFFSET, FOLDER_STRING_SIZE, folder_string);
 
     return 0;
 }
@@ -116,7 +126,7 @@ int ClimbUp(unsigned i){
 
     f_getcwd (&folder_string, sizeof(folder_string));
     set_display_control_flag(BITMASK_UPDATE_FOLDER);
-    qspi_if_write(i, 0, sizeof(folder_string), folder_string);
+    qspi_if_write(i, FOLDER_STRING_OFFSET, FOLDER_STRING_SIZE, folder_string);
 
     return index;
 }
@@ -130,8 +140,7 @@ int GoPreviousFolder(unsigned i){
     } while ((strcmp(folder_string,"0:/")!=0)&&(index<=2));
 
     set_display_control_flag(BITMASK_UPDATE_FOLDER);
-    qspi_if_write(i, 0, sizeof(folder_string), folder_string);
-
+    qspi_if_write(i, FOLDER_STRING_OFFSET, FOLDER_STRING_SIZE, folder_string);
     return index;
 }
 
@@ -202,7 +211,7 @@ void sdcard_play(
         /*CLIENT_INTERFACE(qspi_access, i)*/ unsigned i
 )
 {
-
+    debug_printf("\nsdcard_play started");
     set_display_control_flag(BITMASK_UPDATE_FOLDER);
     set_display_control_flag(BITMASK_UPDATE_TRACK);
 
@@ -211,21 +220,23 @@ void sdcard_play(
 
     FATFS Fatfs;            // File system object
     f_mount(0, &Fatfs);     // Register volume work area (never fails) for SD host interface #0
+    debug_printf("\nf_mount done");
 
     if ( ( QueryChannel(c_play_control, _CURRENT_Q) & 0x1 ) == 0x1 ) {
 
         debug_printf("\nreading qspi");
 
-        qspi_if_read(i, 0, sizeof(folder_string), folder_string);
+        qspi_if_read(i, FOLDER_STRING_OFFSET, FOLDER_STRING_SIZE, folder_string);
         folder_string[sizeof(folder_string)-1]='\0';
 
-        qspi_if_read(i, sizeof(folder_string), sizeof(track_string), track_string);
+        qspi_if_read(i, TRACK_STRING_OFFSET, TRACK_STRING_SIZE, track_string);
 
         track_string[sizeof(track_string)-1]='\0';
 
         debug_printf("\qspi read done.");
 
     }
+    else debug_printf("\nreading context skipped");
 
     GoFolder(folder_string, i);
 
@@ -240,9 +251,8 @@ void sdcard_play(
 
         while (state == IDLE){
             debug_printf("\nIDLE");
-            //BUTTON_EVENT reply;
-            //PLAY_COMMAND reply;
 
+            //PLAY_COMMAND reply;
             /*
             chan_out_word(c_play_control, _INPUT_Q);
             chan_in_word(c_play_control, &reply);
@@ -310,7 +320,7 @@ void sdcard_play(
 
             debug_printf("\nplaying %s", track_string);
 
-            qspi_if_write(i, sizeof(folder_string), sizeof(track_string), track_string);
+            qspi_if_write(i, TRACK_STRING_OFFSET, TRACK_STRING_SIZE, track_string);
 
             set_display_control_flag(BITMASK_UPDATE_TRACK);
 

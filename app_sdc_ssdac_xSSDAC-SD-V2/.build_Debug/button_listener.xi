@@ -451,8 +451,10 @@ typedef out buffered port:32 out_buffered_port_32_t;
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 2
 
 
-
-
+typedef enum {
+    _USB_DAC = 0,
+    _SDC_PLAY = 1,
+} FUNCTION_SELECTOR;
 
 
 typedef enum {
@@ -480,7 +482,7 @@ void button_listener(chanend ?c_play_control, chanend ?c_dac_control);
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h" 1
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
@@ -491,7 +493,8 @@ void display_control();
 typedef enum {
     _SDC_AUDIO = 1,
     _USB_AUDIO = 2,
-    _DAC_MENU = 3
+    _DAC_MODE_SELECTION = 3,
+    _FUNCTION_SELECTION = 4
 } CONSOLE_MODE;
 
 CONSOLE_MODE get_console_mode();
@@ -499,7 +502,7 @@ void set_console_mode(CONSOLE_MODE value);
 # 12 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h" 1
-# 31 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
+# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
 typedef enum {
     _GET_INTERPOLATION_MODE =1,
     _SET_INTERPOLATION_MODE =2
@@ -550,6 +553,9 @@ unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
 
 void audio_xss(chanend c_in, chanend ?c_control);
 # 13 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
+
+# 1 ".././src\\ssdac_conf.h" 1
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 
@@ -1180,16 +1186,14 @@ int _safe_fclose(FILE * movable fp);
 int _safe_remove(const char file[]);
 int _safe_rename(const char from[], const char to[]);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 2 3
-# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
-
-# 1 ".././src\\customdefines.h" 1
 # 15 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
+
 
 
 # 1 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h" 1
 # 77 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h"
 void debug_printf(char fmt[], ...);
-# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
+# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
 
 
 
@@ -1230,9 +1234,9 @@ volatile CONSOLE_MODE * unsafe p_console_mode;
 
 PLAY_COMMAND play_command = _PLAY_CMD_EMPTY;
 
-
 INTERPOLATION_MODE proposed_intpol_mode = _CUBIC;
 INTERPOLATION_MODE fixed_intpol_mode = _CUBIC;
+FUNCTION_SELECTOR selected_function = _USB_DAC;
 
 int play_command_request = 0;
 
@@ -1272,10 +1276,10 @@ void HandleDacCommand(chanend c_control, DAC_COMMAND command){
         c_control <: fixed_intpol_mode;
         break;
     case _SET_INTERPOLATION_MODE :
-        volatile INTERPOLATION_MODE * unsafe p;
         INTERPOLATION_MODE temp;
         c_control :> temp;
-        unsafe {p = & fixed_intpol_mode; * p = temp; }
+        volatile INTERPOLATION_MODE * unsafe p;
+        unsafe {p = & fixed_intpol_mode; *p = temp; }
         set_display_control_flag(0x00000200);
         break;
     default:
@@ -1289,100 +1293,138 @@ void SwitchConsoleMode(CONSOLE_MODE mode){
     set_display_control_flag(0x00000010);
 }
 
-void KeyEvent(BUTTON_EVENT event){
+inline void KeyEventInSDCMode(BUTTON_EVENT event){
+    switch (event){
+       case _BTN_1_LONG:
+           play_command = _PLAY_CMD_PREV_FOLDER;
+           break;
+       case _BTN_1_SHORT:
+           play_command = _PLAY_CMD_PREV_TRACK;
+           break;
+       case _BTN_2_SHORT:
+           play_command = _PLAY_CMD_REVERSE_SKIP;
+           break;
+       case _BTN_2_LONG:
+           play_command = _PLAY_CMD_REWIND;
+           break;
+       case _BTN_3_SHORT:
+           play_command = _PLAY_CMD_PAUSE;
+           break;
+       case _BTN_3_LONG:
+           play_command = _PLAY_CMD_STOP;
+           break;
+       case _BTN_4_DOWN:
+           play_command = _PLAY_CMD_FORWARD_SKIP;
+           break;
+       case _BTN_5_SHORT:
+           play_command = _PLAY_CMD_NEXT_TRACK;
+           break;
+       case _BTN_5_LONG:
+           play_command = _PLAY_CMD_NEXT_FOLDER;
+           break;
+       case _BTN_7_DOWN:
+           SwitchConsoleMode(_DAC_MODE_SELECTION);
+           break;
+    }
+}
 
-    CONSOLE_MODE mode;
-    unsafe {mode = * p_console_mode; }
+inline void KeyEventInDacModeSelection(BUTTON_EVENT event){
 
-    printf("\nMode:%d KeyEvent:%d", mode, event );
-    fflush((__getstdout()));
+    volatile INTERPOLATION_MODE * unsafe p_proposed_intpol_mode;
+    volatile INTERPOLATION_MODE * unsafe p_fixed_intpol_mode;
+    unsafe {
+        p_proposed_intpol_mode = &proposed_intpol_mode;
+        p_fixed_intpol_mode = &fixed_intpol_mode;
+    }
 
-    switch (mode){
-    case _SDC_AUDIO:
-        switch (event){
-        case _BTN_1_LONG:
-            play_command = _PLAY_CMD_PREV_FOLDER;
-            break;
-        case _BTN_1_SHORT:
-            play_command = _PLAY_CMD_PREV_TRACK;
-            break;
-        case _BTN_2_SHORT:
-            play_command = _PLAY_CMD_REVERSE_SKIP;
-            break;
-        case _BTN_2_LONG:
-            play_command = _PLAY_CMD_REWIND;
-            break;
-        case _BTN_3_SHORT:
-            play_command = _PLAY_CMD_PAUSE;
-            break;
-        case _BTN_3_LONG:
-            play_command = _PLAY_CMD_STOP;
-            break;
-        case _BTN_4_DOWN:
-            play_command = _PLAY_CMD_FORWARD_SKIP;
-            break;
-        case _BTN_5_SHORT:
-            play_command = _PLAY_CMD_NEXT_TRACK;
-            break;
-        case _BTN_5_LONG:
-            play_command = _PLAY_CMD_NEXT_FOLDER;
-            break;
-        case _BTN_7_DOWN:
-            SwitchConsoleMode(_DAC_MENU);
-            break;
-        }
+    switch (event){
+    case _BTN_1_DOWN:
+        unsafe { *p_proposed_intpol_mode = _STEP; }
+        set_display_control_flag(0x00000100);
         break;
-    case _USB_AUDIO:
-        switch (event){
-        case _BTN_7_DOWN:
-            SwitchConsoleMode(_DAC_MENU);
-            break;
-        }
+    case _BTN_2_DOWN:
+        unsafe { *p_proposed_intpol_mode = _LINEAR; }
+        set_display_control_flag(0x00000100);
+        break;
+    case _BTN_3_DOWN:
+        unsafe { *p_proposed_intpol_mode = _CUBIC; }
+        set_display_control_flag(0x00000100);
+        break;
+    case _BTN_4_DOWN:
+        unsafe { *p_proposed_intpol_mode = _SINC4; }
+        set_display_control_flag(0x00000100);
+        break;
+    case _BTN_5_DOWN:
+        unsafe { *p_proposed_intpol_mode = _SINC8; }
+        set_display_control_flag(0x00000100);
+        break;
+    case _BTN_7_DOWN:
+        SwitchConsoleMode(_FUNCTION_SELECTION);
+        break;
+    default:
+
+        unsafe { *p_fixed_intpol_mode = *p_proposed_intpol_mode; }
+        break;
+    }
+}
+
+inline void KeyEventInFunctionSelection(BUTTON_EVENT event){
+    volatile FUNCTION_SELECTOR * unsafe p_selected_function;
+    unsafe {
+        p_selected_function = &selected_function;
+    }
+
+    switch (event){
+    case _BTN_1_DOWN:
+        unsafe { *p_selected_function = _USB_DAC; }
+        set_display_control_flag(0x00000400);
+        break;
+    case _BTN_2_DOWN:
+        unsafe { *p_selected_function = _SDC_PLAY; }
+        set_display_control_flag(0x00000400);
         break;
 
-    case _DAC_MENU:
-
-        volatile INTERPOLATION_MODE * unsafe p_proposed_intpol_mode;
-        volatile INTERPOLATION_MODE * unsafe p_fixed_intpol_mode;
-        unsafe {
-            p_proposed_intpol_mode = &proposed_intpol_mode;
-            p_fixed_intpol_mode = &fixed_intpol_mode;
-        }
-
-        switch (event){
-        case _BTN_1_DOWN:
-            unsafe { *p_proposed_intpol_mode = _STEP; }
-            set_display_control_flag(0x00000100);
-            break;
-        case _BTN_2_DOWN:
-            unsafe { *p_proposed_intpol_mode = _LINEAR; }
-            set_display_control_flag(0x00000100);
-            break;
-        case _BTN_3_DOWN:
-            unsafe { *p_proposed_intpol_mode = _CUBIC; }
-            set_display_control_flag(0x00000100);
-            break;
-        case _BTN_4_DOWN:
-            unsafe { *p_proposed_intpol_mode = _SINC4; }
-            set_display_control_flag(0x00000100);
-            break;
-        case _BTN_5_DOWN:
-            unsafe { *p_proposed_intpol_mode = _SINC8; }
-            set_display_control_flag(0x00000100);
-            break;
-        case _BTN_7_DOWN:
+    case _BTN_7_DOWN:
 
             SwitchConsoleMode(_SDC_AUDIO);
 
 
 
 
-            break;
-        default:
 
-            unsafe { *p_fixed_intpol_mode = *p_proposed_intpol_mode; }
+
+            break;
+    }
+}
+
+void KeyEvent(BUTTON_EVENT event){
+
+    CONSOLE_MODE mode;
+    unsafe {mode = * p_console_mode; }
+
+    debug_printf("\nMode:%d KeyEvent:%d", mode, event);
+
+    switch (mode){
+    case _SDC_AUDIO:
+
+        KeyEventInSDCMode(event);
+        break;
+
+    case _USB_AUDIO:
+
+        switch (event){
+        case _BTN_7_DOWN:
+            SwitchConsoleMode(_DAC_MODE_SELECTION);
             break;
         }
+        break;
+
+    case _DAC_MODE_SELECTION:
+        KeyEventInDacModeSelection(event);
+        break;
+
+    case _FUNCTION_SELECTION:
+        KeyEventInFunctionSelection(event);
         break;
     }
 }
@@ -1475,6 +1517,8 @@ void button_listener(chanend ?c_play_control, chanend ?c_dac_control){
 
 
 
+
+
     set_display_control_flag(0x00000010);
 
     while (1){
@@ -1492,6 +1536,7 @@ void button_listener(chanend ?c_play_control, chanend ?c_dac_control){
         QUERY_TYPE query_type;
 
         select {
+
 
         case c_play_control :> query_type:
                 HandlePlayCommand(c_play_control, query_type);

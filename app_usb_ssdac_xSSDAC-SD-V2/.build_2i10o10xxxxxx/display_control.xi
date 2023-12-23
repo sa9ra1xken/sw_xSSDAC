@@ -604,8 +604,6 @@ int printstr(const char (& alias s)[]);
 int printstrln(const char (& alias s)[]);
 # 13 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
 
-# 1 ".././src/core\\customdefines.h" 1
-# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 
@@ -1444,7 +1442,7 @@ RC_SCROLL OLED_SSD1306_shift_left(int str_row);
 # 20 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\DISPLAY_CONTROL.h" 1
-# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\DISPLAY_CONTROL.h"
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\DISPLAY_CONTROL.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
@@ -1455,7 +1453,8 @@ void display_control();
 typedef enum {
     _SDC_AUDIO = 1,
     _USB_AUDIO = 2,
-    _DAC_MENU = 3
+    _DAC_MODE_SELECTION = 3,
+    _FUNCTION_SELECTION = 4
 } CONSOLE_MODE;
 
 CONSOLE_MODE get_console_mode();
@@ -1463,7 +1462,13 @@ void set_console_mode(CONSOLE_MODE value);
 # 21 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 1
-# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
+typedef enum {
+    _USB_DAC = 0,
+    _SDC_PLAY = 1,
+} FUNCTION_SELECTOR;
+
+
 typedef enum {
     _PENDING_Q = 0,
     _INPUT_Q = 1,
@@ -1489,7 +1494,7 @@ void button_listener(chanend ?c_play_control, chanend ?c_dac_control);
 # 22 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC.h" 1
-# 31 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC.h"
+# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC.h"
 typedef enum {
     _GET_INTERPOLATION_MODE =1,
     _SET_INTERPOLATION_MODE =2
@@ -1541,10 +1546,13 @@ unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
 void audio_xss(chanend c_in, chanend ?c_control);
 # 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
 
+# 1 ".././src/core\\SSDAC_CONF.h" 1
+# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+
 
 
 on tile [1] : struct r_i2c r_i2c2 = {on tile[1]: 0x40500};
-# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+# 39 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
 unsigned display_control_flag = 0;
 unsigned NumChan = 2;
 unsigned SampFreq = 44100;
@@ -1618,7 +1626,7 @@ void set_console_mode(CONSOLE_MODE value){
 
 char TotalTimeString[6];
 unsigned SecElapsed;
-# 125 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+# 127 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
 typedef enum {
     _PAUSING,
     _SCROLLING
@@ -1627,7 +1635,7 @@ typedef enum {
 static SCROLLING_STATE state;
 unsigned pause_counter;
 unsigned scrolling_row;
-# 181 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+# 183 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
 extern INTERPOLATION_MODE proposed_intpol_mode;
 
 INTERPOLATION_MODE ProposedInterpolationMode(){
@@ -1643,6 +1651,15 @@ INTERPOLATION_MODE FixedInterpolationMode(){
     volatile INTERPOLATION_MODE * unsafe p;
     INTERPOLATION_MODE temp;
     unsafe {p = & fixed_intpol_mode; temp = * p; }
+    return temp;
+}
+
+extern FUNCTION_SELECTOR selected_function;
+
+FUNCTION_SELECTOR SelectedFunction(){
+    volatile FUNCTION_SELECTOR * unsafe p;
+    FUNCTION_SELECTOR temp;
+    unsafe {p = & selected_function; temp = * p; }
     return temp;
 }
 
@@ -1672,6 +1689,17 @@ void ShowInterpolationMode(INTERPOLATION_MODE mode){
     }
 }
 
+char * alias GetFunctionString(FUNCTION_SELECTOR func){
+    switch(func){
+    case _USB_DAC:
+        return "USB_DAC";
+    case _SDC_PLAY:
+        return "SDC_PLAY";
+    default:
+        return "UNKNOWN";
+    }
+}
+
 char UsbAudioStatus[100];
 
 void ShowUsbAudioStatus(){
@@ -1685,10 +1713,14 @@ void ShowUsbAudioStatus(){
     scrolling_row = 0;
 }
 
+
+
 void display_control(){
 
     timer t;
     unsigned time;
+
+    debug_printf("\ndisplay_control started");
 
     OLED_SSD1306_begin();
 
@@ -1713,19 +1745,43 @@ void display_control(){
             clear_display_control_flag(0x00000010);
 
             switch (get_console_mode()){
-# 284 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
-            case _DAC_MENU:
-                OLED_SSD1306_put_string(0, "Interpolation");
+# 303 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+            case _USB_AUDIO:
+                OLED_SSD1306_put_string(0, "XMOS USB Audio");
+                ShowUsbAudioStatus();
+                OLED_SSD1306_put_string(2, "");
+                OLED_SSD1306_put_string(3, "");
+                break;
+
+            case _DAC_MODE_SELECTION:
+                OLED_SSD1306_put_string(0, "Interpolation mode selector");
                 ShowInterpolationMode(FixedInterpolationMode());
                 OLED_SSD1306_put_string(2, "");
+                OLED_SSD1306_put_string(3, "");
+                break;
+            case _FUNCTION_SELECTION:
+                OLED_SSD1306_put_string(0, "Function selector");
+                OLED_SSD1306_put_string(1, "Selected function takes effect after reset.");
+                OLED_SSD1306_put_string(2, "Press SW1 for USB audio. Press SW2 for SD player.");
                 OLED_SSD1306_put_string(3, "");
                 break;
             }
         }
 
         switch (get_console_mode()){
-# 331 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
-        case _DAC_MENU:
+# 352 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+        case _USB_AUDIO:
+            if (test_display_control_flag(0x00000020)){
+                clear_display_control_flag(0x00000020);
+                ShowUsbAudioStatus();
+            }
+            if (test_display_control_flag(0x00000040)){
+                clear_display_control_flag(0x00000040);
+                ShowUsbAudioStatus();
+            }
+            break;
+
+        case _DAC_MODE_SELECTION:
             if (test_display_control_flag(0x00000100)){
                 clear_display_control_flag(0x00000100);
                 ShowInterpolationMode(ProposedInterpolationMode());
@@ -1735,6 +1791,11 @@ void display_control(){
                 ShowInterpolationMode(FixedInterpolationMode());
             }
             break;
+        case _FUNCTION_SELECTION:
+            if (test_display_control_flag(0x00000400)){
+                clear_display_control_flag(0x00000400);
+                OLED_SSD1306_put_string(3, GetFunctionString(SelectedFunction()));
+            }
         }
 
         switch (state){

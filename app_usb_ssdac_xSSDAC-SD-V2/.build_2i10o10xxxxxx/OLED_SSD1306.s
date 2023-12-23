@@ -13,6 +13,7 @@
 	.set usage.anon.3,0
 	.set usage.anon.4,0
 	.set usage.anon.5,0
+	.globread OLED_SSD1306_shift_left,terminator_found_before_eol,"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:183:9: note: object used here\n    if (terminator_found_before_eol[row]) return _END_OF_LINE;\n        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 	.globread OLED_SSD1306_shift_left,string_ptr,"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:186:20: note: object used here\n    unsafe {code = string_ptr[row][rendering_col[row]];}\n                   ^~~~~~~~~~~~~~~"
 	.globread OLED_SSD1306_shift_left,string_ptr,"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:186:20: note: object used here\n    unsafe {code = string_ptr[row][rendering_col[row]];}\n                   ^~~~~~~~~~~~~~~"
 	.globread OLED_SSD1306_shift_left,FONT8X16MIN_CHARBITMAP,"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:197:28: note: object used here\n        raster_buffer[p] = FONT8X16MIN_CHARBITMAP[char_index + part * 8 + rendering_x[row]];\n                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
@@ -28,7 +29,7 @@
 	.globwrite OLED_SSD1306_put_string,rendering_col,"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:154:10: note: object used here\n    for (rendering_col[row] = 0 ; rendering_col[row] < CHAR_COUNT_PAR_LINE ; rendering_col[row]++){\n         ^~~~~~~~~~~~~~~~~~"
 	.globwrite OLED_SSD1306_put_string,display_offset,"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:150:5: note: object used here\n    display_offset[row] = 0;\n    ^~~~~~~~~~~~~~~~~~~"
 	.globwrite OLED_SSD1306_put_string,raster_buffer,"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:170:17: note: object used here\n                raster_buffer[p] = FONT8X16MIN_CHARBITMAP[char_index + part * 8 + cx];\n                ^~~~~~~~~~~~~~~~"
-	.globwrite OLED_SSD1306_put_string,found_eol,"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:153:5: note: object used here\n    found_eol[row] = 0;\n    ^~~~~~~~~~~~~~"
+	.globwrite OLED_SSD1306_put_string,terminator_found_before_eol,"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:153:5: note: object used here\n    terminator_found_before_eol[row] = 0;\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 	.globwrite OLED_SSD1306_put_string,string_ptr,"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:148:17: note: object used here\n        unsafe {string_ptr[row] = string;}\n                ^~~~~~~~~~~~~~~"
 	.globwrite send_page,r_i2c2,"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:122:13: note: object used here\n            r_i2c2,\n            ^~~~~~"
 	.globwrite OLED_SSD1306_begin,display_offset,"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:99:9: note: object used here\n        display_offset[i] = 0;\n        ^~~~~~~~~~~~~~~~~"
@@ -260,7 +261,7 @@ OLED_SSD1306_put_string:                # @OLED_SSD1306_put_string
 	.loc	2 151 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:151:0
 	stw r11, r0[r4]
 	.loc	2 153 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:153:0
-	ldaw r0, dp[found_eol]
+	ldaw r0, dp[terminator_found_before_eol]
 	.loc	2 153 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:153:0
 	stw r11, r0[r4]
 	.loc	2 154 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:154:0
@@ -356,7 +357,7 @@ OLED_SSD1306_put_string:                # @OLED_SSD1306_put_string
 	#DEBUG_VALUE: OLED_SSD1306_put_string:row <- R4
 	stw r3, sp[7]                   # 4-byte Folded Spill
 	.loc	2 153 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:153:0
-	ldaw r0, dp[found_eol]
+	ldaw r0, dp[terminator_found_before_eol]
 	mkmsk r1, 1
 	.loc	2 159 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:159:0
 .Ltmp35:
@@ -584,12 +585,26 @@ OLED_SSD1306_shift_left:                # @OLED_SSD1306_shift_left
 	mov r4, r0
 .Ltmp64:
 	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
-	ldc r0, 4
-	.loc	2 186 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:186:0
+	mkmsk r0, 2
+	.loc	2 183 5 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:183:5
 .Ltmp65:
-	lsu r0, r4, r0
+	lsu r0, r0, r4
 .Ltrap_info5:
-	ecallf r0
+	ecallt r0
+	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
+	.loc	2 183 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:183:5
+	ldaw r0, dp[terminator_found_before_eol]
+	.loc	2 183 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:183:5
+	ldw r0, r0[r4]
+	.loc	2 183 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:183:5
+	bf r0, .LBB2_2
+.Ltmp66:
+# BB#1:
+	ldc r6, 0
+	bu .LBB2_15
+.LBB2_2:                                # %afterboundcheck7
+.Lxtalabel17:
+.Ltmp67:
 	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
 	.loc	2 186 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:186:0
 	ldaw r0, dp[string_ptr]
@@ -602,69 +617,69 @@ OLED_SSD1306_shift_left:                # @OLED_SSD1306_shift_left
 	.loc	2 186 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:186:0
 	ld8u r0, r0[r2]
 	.loc	2 188 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:188:5
-	bf r0, .LBB2_14
-.Ltmp66:
-# BB#1:                                 # %ifdone
-.Lxtalabel17:
+	bf r0, .LBB2_16
+.Ltmp68:
+# BB#3:                                 # %ifdone13
+.Lxtalabel18:
 	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
 	#DEBUG_VALUE: char_index <- 0
 	stw r2, sp[1]                   # 4-byte Folded Spill
 	ldc r1, 33
 	.loc	2 193 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:193:5
-.Ltmp67:
+.Ltmp69:
 	lsu r2, r0, r1
 	ldc r1, 0
 	mov r6, r1
-	bt r2, .LBB2_4
-.Ltmp68:
-# BB#2:                                 # %ifdone
-.Lxtalabel18:
+	bt r2, .LBB2_6
+.Ltmp70:
+# BB#4:                                 # %ifdone13
+.Lxtalabel19:
 	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
 	mov r2, r0
 	sext r2, 8
 	ashr r2, r2, 32
 	mov r6, r1
-	bt r2, .LBB2_4
-.Ltmp69:
-# BB#3:                                 # %iftrue13
+	bt r2, .LBB2_6
+.Ltmp71:
+# BB#5:                                 # %iftrue22
 	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
 	.loc	2 193 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:193:0
 	shl r0, r0, 4
 	ldw r2, cp[.LCPI2_0]
 	.loc	2 193 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:193:0
 	add r6, r0, r2
-.Ltmp70:
+.Ltmp72:
 	#DEBUG_VALUE: char_index <- R6
-.LBB2_4:                                # %ifdone14
-.Lxtalabel19:
+.LBB2_6:                                # %ifdone23
+.Lxtalabel20:
 	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
 	#DEBUG_VALUE: char_index <- 0
 	#DEBUG_VALUE: part <- 0
 	.loc	2 196 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:196:0
 	shl r0, r4, 1
 	.loc	2 196 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:196:0
-	stw r0, sp[2]                   # 4-byte Folded Spill
+	stw r0, sp[3]                   # 4-byte Folded Spill
 	ldaw r0, dp[display_offset]
 	.loc	2 196 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:196:0
 	ldw r2, r0[r4]
-.Ltmp71:
+.Ltmp73:
 	.loc	2 195 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:195:0
-	stw r2, sp[3]                   # 4-byte Folded Spill
+	stw r2, sp[2]                   # 4-byte Folded Spill
 	shl r0, r4, 8
 	.loc	2 195 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:195:0
 	add r9, r2, r0
 	ldc r10, 10
 	.loc	2 197 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:197:0
-.Ltmp72:
+.Ltmp74:
 	ldaw r3, dp[rendering_x]
 	ldc r0, 9
 	ldc r5, 2
 	ldaw r2, dp[raster_buffer]
 	ldc r8, 128
-.Ltmp73:
-.LBB2_5:                                # %afterboundcheck40
+.Ltmp75:
+.LBB2_7:                                # %afterboundcheck49
                                         # =>This Inner Loop Header: Depth=1
-.Lxtalabel20:
+.Lxtalabel21:
 	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
 	#DEBUG_VALUE: char_index <- 0
 	#DEBUG_VALUE: part <- 0
@@ -693,10 +708,10 @@ OLED_SSD1306_shift_left:                # @OLED_SSD1306_shift_left
 	ld8u r11, r11[r6]
 	.loc	2 197 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:197:0
 	st8 r11, r2[r9]
-.Ltmp74:
+.Ltmp76:
 	.loc	2 195 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:195:0
 	add r1, r1, 1
-.Ltmp75:
+.Ltmp77:
 	#DEBUG_VALUE: part <- R1
 	.loc	2 195 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:195:0
 	add r6, r6, 8
@@ -706,34 +721,32 @@ OLED_SSD1306_shift_left:                # @OLED_SSD1306_shift_left
 	lss r11, r1, r5
 .Lxta.loop_labels3:
 	# LOOPMARKER 0
-	bt r11, .LBB2_5
-.Ltmp76:
-# BB#6:                                 # %afterboundcheck68
-.Lxtalabel21:
+	bt r11, .LBB2_7
+.Ltmp78:
+# BB#8:                                 # %afterboundcheck77
+.Lxtalabel22:
 	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
 	#DEBUG_VALUE: char_index <- 0
 	.loc	2 200 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:200:0
-	ldw r0, sp[3]                   # 4-byte Folded Reload
+	ldw r0, sp[2]                   # 4-byte Folded Reload
 	add r1, r0, 1
 	mkmsk r0, 7
 	.loc	2 201 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:201:5
 	lss r0, r0, r1
-	bf r0, .LBB2_8
-.Ltmp77:
-# BB#7:
+	bf r0, .LBB2_10
+.Ltmp79:
+# BB#9:
 	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
 	ldc r1, 0
-.Ltmp78:
-.LBB2_8:                                # %afterboundcheck68
-.Lxtalabel22:
+.Ltmp80:
+.LBB2_10:                               # %afterboundcheck77
+.Lxtalabel23:
 	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
-	ldw r5, sp[2]                   # 4-byte Folded Reload
 	.loc	2 196 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:196:0
-.Ltmp79:
 	ldaw r8, dp[display_offset]
 	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
 	#DEBUG_VALUE: char_index <- 0
-.Ltmp80:
+.Ltmp81:
 	.loc	2 201 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:201:0
 	stw r1, r8[r4]
 	.loc	2 203 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:203:0
@@ -743,10 +756,10 @@ OLED_SSD1306_shift_left:                # @OLED_SSD1306_shift_left
 	ldc r2, 8
 	.loc	2 204 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:204:5
 	lss r0, r0, r2
-	bt r0, .LBB2_12
-.Ltmp81:
-# BB#9:                                 # %afterboundcheck105
-.Lxtalabel23:
+	bt r0, .LBB2_14
+.Ltmp82:
+# BB#11:                                # %afterboundcheck114
+.Lxtalabel24:
 	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
 	#DEBUG_VALUE: char_index <- 0
 	ldc r0, 0
@@ -758,35 +771,37 @@ OLED_SSD1306_shift_left:                # @OLED_SSD1306_shift_left
 	ldc r3, 254
 	.loc	2 207 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:207:9
 	lss r3, r3, r2
-	bt r3, .LBB2_11
-.Ltmp82:
-# BB#10:                                # %afterboundcheck105
-.Lxtalabel24:
+	bt r3, .LBB2_13
+.Ltmp83:
+# BB#12:                                # %afterboundcheck114
+.Lxtalabel25:
 	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
 	#DEBUG_VALUE: char_index <- 0
 	.loc	2 207 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:207:9
 	mov r0, r2
-.Ltmp83:
-.LBB2_11:                               # %afterboundcheck105
-.Lxtalabel25:
+.Ltmp84:
+.LBB2_13:                               # %afterboundcheck114
+.Lxtalabel26:
 	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
 	#DEBUG_VALUE: char_index <- 0
 	.loc	2 186 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:186:0
 	ldaw r2, dp[rendering_col]
 	.loc	2 207 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:207:0
-.Ltmp84:
-	stw r0, r2[r4]
 .Ltmp85:
-.LBB2_12:                               # %afterboundcheck145.preheader
-.Lxtalabel26:
+	stw r0, r2[r4]
+.Ltmp86:
+.LBB2_14:                               # %afterboundcheck154.preheader
+.Lxtalabel27:
 	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
 	#DEBUG_VALUE: char_index <- 0
+	ldw r5, sp[3]                   # 4-byte Folded Reload
 	.loc	2 211 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:211:0
+.Ltmp87:
 	mov r0, r5
 .Lxta.call_labels4:
 	bl send_page
 	mkmsk r6, 1
-.Ltmp86:
+.Ltmp88:
 	#DEBUG_VALUE: part <- 1
 	.loc	2 211 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:211:0
 	or r0, r5, r6
@@ -795,16 +810,16 @@ OLED_SSD1306_shift_left:                # @OLED_SSD1306_shift_left
 	.loc	2 211 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:211:0
 .Lxta.call_labels5:
 	bl send_page
-	bu .LBB2_13
-.Ltmp87:
-.LBB2_14:                               # %afterboundcheck9
-.Lxtalabel27:
+	bu .LBB2_15
+.Ltmp89:
+.LBB2_16:                               # %afterboundcheck17
+.Lxtalabel28:
 	#DEBUG_VALUE: OLED_SSD1306_shift_left:row <- R4
 	ldc r6, 0
 	.loc	2 189 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:189:0
 	stw r6, r1[r4]
-.Ltmp88:
-.LBB2_13:                               # %return
+.Ltmp90:
+.LBB2_15:                               # %return
 	mov r0, r6
 	ldw r10, sp[10]                 # 4-byte Folded Reload
 	ldd r9, r8, sp[4]               # 4-byte Folded Reload
@@ -821,8 +836,8 @@ OLED_SSD1306_shift_left:                # @OLED_SSD1306_shift_left
 	.globl	OLED_SSD1306_shift_left.maxtimers
 	.set	OLED_SSD1306_shift_left.maxchanends,send_page.maxchanends $M 0
 	.globl	OLED_SSD1306_shift_left.maxchanends
-.Ltmp89:
-	.size	OLED_SSD1306_shift_left, .Ltmp89-OLED_SSD1306_shift_left
+.Ltmp91:
+	.size	OLED_SSD1306_shift_left, .Ltmp91-OLED_SSD1306_shift_left
 .Lfunc_end2:
 	.cfi_endproc
 
@@ -836,33 +851,33 @@ send_page:                              # @send_page
 	.cfi_startproc
 	.issue_mode single
 # BB#0:                                 # %allocas
-.Lxtalabel28:
+.Lxtalabel29:
 	ENTSP_lu6 10
-.Ltmp90:
+.Ltmp92:
 	.cfi_def_cfa_offset 40
-.Ltmp91:
+.Ltmp93:
 	.cfi_offset 15, 0
 	std r5, r4, sp[3]               # 4-byte Folded Spill
-.Ltmp92:
+.Ltmp94:
 	.cfi_offset 4, -16
-.Ltmp93:
+.Ltmp95:
 	.cfi_offset 5, -12
 	std r7, r6, sp[4]               # 4-byte Folded Spill
-.Ltmp94:
+.Ltmp96:
 	.cfi_offset 6, -8
-.Ltmp95:
+.Ltmp97:
 	.cfi_offset 7, -4
 	#DEBUG_VALUE: send_page:page <- R0
 	#DEBUG_VALUE: send_page:offset <- R1
 	mov r4, r1
-.Ltmp96:
+.Ltmp98:
 	#DEBUG_VALUE: send_page:offset <- R4
 	mov r5, r0
-.Ltmp97:
+.Ltmp99:
 	#DEBUG_VALUE: send_page:page <- R5
 	ldc r0, 176
 	.loc	2 107 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:107:0
-.Ltmp98:
+.Ltmp100:
 	or r0, r5, r0
 	.loc	2 109 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:109:0
 	ldc r2, 0
@@ -891,35 +906,35 @@ send_page:                              # @send_page
 .Lxta.call_labels6:
 	bl i2c_shared_master_write_reg
 	.loc	2 129 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:129:0
-.Ltmp99:
+.Ltmp101:
 	shl r0, r5, 7
-.Ltmp100:
+.Ltmp102:
 	#DEBUG_VALUE: start <- R0
 	mkmsk r1, 7
 	.loc	2 130 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:130:0
-.Ltmp101:
+.Ltmp103:
 	or r1, r0, r1
-.Ltmp102:
+.Ltmp104:
 	#DEBUG_VALUE: end <- R1
 	.loc	2 132 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:132:0
 	std r4, r1, sp[1]
 	ldc r1, 1024
-.Ltmp103:
+.Ltmp105:
 	stw r1, sp[4]
 	stw r0, sp[1]
 	ldaw r3, dp[raster_buffer]
 	ldc r2, 64
 	mov r0, r6
-.Ltmp104:
+.Ltmp106:
 	mov r1, r7
 .Lxta.call_labels7:
 	bl i2c_shared_master_write_part
 	ldd r7, r6, sp[4]               # 4-byte Folded Reload
 	ldd r5, r4, sp[3]               # 4-byte Folded Reload
-.Ltmp105:
+.Ltmp107:
 	retsp 10
 	# RETURN_REG_HOLDER
-.Ltmp106:
+.Ltmp108:
 	.cc_bottom send_page.function
 	.set	send_page.nstackwords,((i2c_shared_master_write_reg.nstackwords $M i2c_shared_master_write_part.nstackwords) + 10)
 	.globl	send_page.nstackwords
@@ -929,8 +944,8 @@ send_page:                              # @send_page
 	.globl	send_page.maxtimers
 	.set	send_page.maxchanends,i2c_shared_master_write_part.maxchanends $M i2c_shared_master_write_reg.maxchanends $M 0
 	.globl	send_page.maxchanends
-.Ltmp107:
-	.size	send_page, .Ltmp107-send_page
+.Ltmp109:
+	.size	send_page, .Ltmp109-send_page
 .Lfunc_end3:
 	.cfi_endproc
 
@@ -1003,16 +1018,16 @@ string_ptr.globound = 4
 string_ptr:
 	.space	16
 	.cc_bottom string_ptr.data
-	.cc_top found_eol.data,found_eol
-	.globl	found_eol.globound
-found_eol.globound = 4
-	.globl	found_eol
+	.cc_top terminator_found_before_eol.data,terminator_found_before_eol
+	.globl	terminator_found_before_eol.globound
+terminator_found_before_eol.globound = 4
+	.globl	terminator_found_before_eol
 	.align	8
-	.type	found_eol,@object
-	.size	found_eol, 16
-found_eol:
+	.type	terminator_found_before_eol,@object
+	.size	terminator_found_before_eol, 16
+terminator_found_before_eol:
 	.space	16
-	.cc_bottom found_eol.data
+	.cc_bottom terminator_found_before_eol.data
 	.cc_top raster_buffer.data,raster_buffer
 	.globl	raster_buffer.globound
 raster_buffer.globound = 1024
@@ -1091,7 +1106,7 @@ rendering_x:
 .Linfo_string12:
 .asciiz"string_ptr"
 .Linfo_string13:
-.asciiz"found_eol"
+.asciiz"terminator_found_before_eol"
 .Linfo_string14:
 .asciiz"int"
 .Linfo_string15:
@@ -1301,7 +1316,7 @@ rendering_x:
 	.byte	78                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
-	.long	found_eol
+	.long	terminator_found_before_eol
 	.long	.Linfo_string13         # DW_AT_MIPS_linkage_name
 	.byte	3                       # Abbrev [3] 0x123:0xd DW_TAG_array_type
 	.long	304                     # DW_AT_type
@@ -2101,36 +2116,36 @@ rendering_x:
 	.long	0
 	.long	0
 .Ldebug_ranges10:
-	.long	.Ltmp70
-	.long	.Ltmp71
 	.long	.Ltmp72
+	.long	.Ltmp73
 	.long	.Ltmp74
-	.long	.Ltmp79
+	.long	.Ltmp76
 	.long	.Ltmp80
+	.long	.Ltmp81
 	.long	0
 	.long	0
 .Ldebug_ranges11:
-	.long	.Ltmp70
-	.long	.Ltmp76
-	.long	.Ltmp79
+	.long	.Ltmp72
+	.long	.Ltmp78
 	.long	.Ltmp80
+	.long	.Ltmp81
 	.long	0
 	.long	0
 .Ldebug_ranges12:
-	.long	.Ltmp85
 	.long	.Ltmp87
+	.long	.Ltmp89
 	.long	0
 	.long	0
 .Ldebug_ranges13:
-	.long	.Ltmp67
-	.long	.Ltmp83
+	.long	.Ltmp69
 	.long	.Ltmp84
-	.long	.Ltmp87
+	.long	.Ltmp85
+	.long	.Ltmp89
 	.long	0
 	.long	0
 .Ldebug_ranges14:
-	.long	.Ltmp65
-	.long	.Ltmp88
+	.long	.Ltmp67
+	.long	.Ltmp90
 	.long	0
 	.long	0
 .Ldebug_ranges15:
@@ -2139,288 +2154,293 @@ rendering_x:
 	.long	0
 	.long	0
 .Ldebug_ranges16:
-	.long	.Ltmp101
-	.long	.Ltmp106
+	.long	.Ltmp103
+	.long	.Ltmp108
 	.long	0
 	.long	0
 .Ldebug_ranges17:
-	.long	.Ltmp99
-	.long	.Ltmp106
+	.long	.Ltmp101
+	.long	.Ltmp108
 	.long	0
 	.long	0
 .Ldebug_ranges18:
-	.long	.Ltmp98
-	.long	.Ltmp106
+	.long	.Ltmp100
+	.long	.Ltmp108
 	.long	0
 	.long	0
 	.section	.debug_loc,"",@progbits
 .Ldebug_loc0:
 	.long	.Ltmp5
 	.long	.Ltmp6
-.Lset0 = .Ltmp109-.Ltmp108              # Loc expr size
+.Lset0 = .Ltmp111-.Ltmp110              # Loc expr size
 	.short	.Lset0
-.Ltmp108:
-	.byte	17                      # DW_OP_consts
-	.byte	0                       # 
-.Ltmp109:
-	.long	.Ltmp6
-	.long	.Lfunc_end0
-.Lset1 = .Ltmp111-.Ltmp110              # Loc expr size
-	.short	.Lset1
 .Ltmp110:
 	.byte	17                      # DW_OP_consts
-	.byte	1                       # 
+	.byte	0                       # 
 .Ltmp111:
+	.long	.Ltmp6
+	.long	.Lfunc_end0
+.Lset1 = .Ltmp113-.Ltmp112              # Loc expr size
+	.short	.Lset1
+.Ltmp112:
+	.byte	17                      # DW_OP_consts
+	.byte	1                       # 
+.Ltmp113:
 	.long	0
 	.long	0
 .Ldebug_loc1:
 	.long	.Lfunc_begin1
 	.long	.Ltmp18
-.Lset2 = .Ltmp113-.Ltmp112              # Loc expr size
+.Lset2 = .Ltmp115-.Ltmp114              # Loc expr size
 	.short	.Lset2
-.Ltmp112:
+.Ltmp114:
 	.byte	80                      # DW_OP_reg0
-.Ltmp113:
+.Ltmp115:
 	.long	.Ltmp18
 	.long	.Ltmp27
-.Lset3 = .Ltmp115-.Ltmp114              # Loc expr size
+.Lset3 = .Ltmp117-.Ltmp116              # Loc expr size
 	.short	.Lset3
-.Ltmp114:
+.Ltmp116:
 	.byte	84                      # DW_OP_reg4
-.Ltmp115:
+.Ltmp117:
 	.long	.Ltmp27
 	.long	.Ltmp34
-.Lset4 = .Ltmp117-.Ltmp116              # Loc expr size
+.Lset4 = .Ltmp119-.Ltmp118              # Loc expr size
 	.short	.Lset4
-.Ltmp116:
+.Ltmp118:
 	.byte	126                     # DW_OP_breg14
 	.byte	20                      # 
-.Ltmp117:
+.Ltmp119:
 	.long	.Ltmp34
 	.long	.Ltmp36
-.Lset5 = .Ltmp119-.Ltmp118              # Loc expr size
+.Lset5 = .Ltmp121-.Ltmp120              # Loc expr size
 	.short	.Lset5
-.Ltmp118:
+.Ltmp120:
 	.byte	84                      # DW_OP_reg4
-.Ltmp119:
+.Ltmp121:
 	.long	.Ltmp36
 	.long	.Ltmp46
-.Lset6 = .Ltmp121-.Ltmp120              # Loc expr size
+.Lset6 = .Ltmp123-.Ltmp122              # Loc expr size
 	.short	.Lset6
-.Ltmp120:
+.Ltmp122:
 	.byte	126                     # DW_OP_breg14
 	.byte	20                      # 
-.Ltmp121:
+.Ltmp123:
 	.long	.Ltmp46
 	.long	.Ltmp52
-.Lset7 = .Ltmp123-.Ltmp122              # Loc expr size
+.Lset7 = .Ltmp125-.Ltmp124              # Loc expr size
 	.short	.Lset7
-.Ltmp122:
+.Ltmp124:
 	.byte	84                      # DW_OP_reg4
-.Ltmp123:
+.Ltmp125:
 	.long	0
 	.long	0
 .Ldebug_loc2:
 	.long	.Lfunc_begin1
 	.long	.Ltmp20
-.Lset8 = .Ltmp125-.Ltmp124              # Loc expr size
+.Lset8 = .Ltmp127-.Ltmp126              # Loc expr size
 	.short	.Lset8
-.Ltmp124:
+.Ltmp126:
 	.byte	81                      # DW_OP_reg1
-.Ltmp125:
+.Ltmp127:
 	.long	0
 	.long	0
 .Ldebug_loc3:
 	.long	.Ltmp29
 	.long	.Ltmp33
-.Lset9 = .Ltmp127-.Ltmp126              # Loc expr size
+.Lset9 = .Ltmp129-.Ltmp128              # Loc expr size
 	.short	.Lset9
-.Ltmp126:
+.Ltmp128:
 	.byte	16                      # DW_OP_constu
 	.byte	0                       # 
-.Ltmp127:
+.Ltmp129:
 	.long	.Ltmp33
 	.long	.Ltmp34
-.Lset10 = .Ltmp129-.Ltmp128             # Loc expr size
+.Lset10 = .Ltmp131-.Ltmp130             # Loc expr size
 	.short	.Lset10
-.Ltmp128:
+.Ltmp130:
 	.byte	84                      # DW_OP_reg4
-.Ltmp129:
+.Ltmp131:
 	.long	.Ltmp36
 	.long	.Lfunc_end1
-.Lset11 = .Ltmp131-.Ltmp130             # Loc expr size
+.Lset11 = .Ltmp133-.Ltmp132             # Loc expr size
 	.short	.Lset11
-.Ltmp130:
+.Ltmp132:
 	.byte	16                      # DW_OP_constu
 	.byte	0                       # 
-.Ltmp131:
+.Ltmp133:
 	.long	0
 	.long	0
 .Ldebug_loc4:
 	.long	.Ltmp38
 	.long	.Ltmp44
-.Lset12 = .Ltmp133-.Ltmp132             # Loc expr size
+.Lset12 = .Ltmp135-.Ltmp134             # Loc expr size
 	.short	.Lset12
-.Ltmp132:
+.Ltmp134:
 	.byte	17                      # DW_OP_consts
 	.byte	0                       # 
-.Ltmp133:
+.Ltmp135:
 	.long	.Ltmp44
 	.long	.Ltmp45
-.Lset13 = .Ltmp135-.Ltmp134             # Loc expr size
+.Lset13 = .Ltmp137-.Ltmp136             # Loc expr size
 	.short	.Lset13
-.Ltmp134:
+.Ltmp136:
 	.byte	80                      # DW_OP_reg0
-.Ltmp135:
+.Ltmp137:
 	.long	0
 	.long	0
 .Ldebug_loc5:
 	.long	.Ltmp39
 	.long	.Ltmp42
-.Lset14 = .Ltmp137-.Ltmp136             # Loc expr size
+.Lset14 = .Ltmp139-.Ltmp138             # Loc expr size
 	.short	.Lset14
-.Ltmp136:
+.Ltmp138:
 	.byte	17                      # DW_OP_consts
 	.byte	0                       # 
-.Ltmp137:
+.Ltmp139:
 	.long	.Ltmp42
 	.long	.Ltmp43
-.Lset15 = .Ltmp139-.Ltmp138             # Loc expr size
+.Lset15 = .Ltmp141-.Ltmp140             # Loc expr size
 	.short	.Lset15
-.Ltmp138:
+.Ltmp140:
 	.byte	84                      # DW_OP_reg4
-.Ltmp139:
+.Ltmp141:
 	.long	0
 	.long	0
 .Ldebug_loc6:
 	.long	.Lfunc_begin2
 	.long	.Ltmp64
-.Lset16 = .Ltmp141-.Ltmp140             # Loc expr size
+.Lset16 = .Ltmp143-.Ltmp142             # Loc expr size
 	.short	.Lset16
-.Ltmp140:
-	.byte	80                      # DW_OP_reg0
-.Ltmp141:
-	.long	.Ltmp64
-	.long	.Ltmp88
-.Lset17 = .Ltmp143-.Ltmp142             # Loc expr size
-	.short	.Lset17
 .Ltmp142:
-	.byte	84                      # DW_OP_reg4
+	.byte	80                      # DW_OP_reg0
 .Ltmp143:
+	.long	.Ltmp64
+	.long	.Ltmp66
+.Lset17 = .Ltmp145-.Ltmp144             # Loc expr size
+	.short	.Lset17
+.Ltmp144:
+	.byte	84                      # DW_OP_reg4
+.Ltmp145:
+	.long	.Ltmp67
+	.long	.Ltmp90
+.Lset18 = .Ltmp147-.Ltmp146             # Loc expr size
+	.short	.Lset18
+.Ltmp146:
+	.byte	84                      # DW_OP_reg4
+.Ltmp147:
 	.long	0
 	.long	0
 .Ldebug_loc7:
-	.long	.Ltmp66
-	.long	.Ltmp70
-.Lset18 = .Ltmp145-.Ltmp144             # Loc expr size
-	.short	.Lset18
-.Ltmp144:
-	.byte	16                      # DW_OP_constu
-	.byte	0                       # 
-.Ltmp145:
-	.long	.Ltmp70
-	.long	.Ltmp70
-.Lset19 = .Ltmp147-.Ltmp146             # Loc expr size
+	.long	.Ltmp68
+	.long	.Ltmp72
+.Lset19 = .Ltmp149-.Ltmp148             # Loc expr size
 	.short	.Lset19
-.Ltmp146:
-	.byte	86                      # DW_OP_reg6
-.Ltmp147:
-	.long	.Ltmp70
-	.long	.Lfunc_end2
-.Lset20 = .Ltmp149-.Ltmp148             # Loc expr size
-	.short	.Lset20
 .Ltmp148:
 	.byte	16                      # DW_OP_constu
 	.byte	0                       # 
 .Ltmp149:
+	.long	.Ltmp72
+	.long	.Ltmp72
+.Lset20 = .Ltmp151-.Ltmp150             # Loc expr size
+	.short	.Lset20
+.Ltmp150:
+	.byte	86                      # DW_OP_reg6
+.Ltmp151:
+	.long	.Ltmp72
+	.long	.Lfunc_end2
+.Lset21 = .Ltmp153-.Ltmp152             # Loc expr size
+	.short	.Lset21
+.Ltmp152:
+	.byte	16                      # DW_OP_constu
+	.byte	0                       # 
+.Ltmp153:
 	.long	0
 	.long	0
 .Ldebug_loc8:
-	.long	.Ltmp70
-	.long	.Ltmp75
-.Lset21 = .Ltmp151-.Ltmp150             # Loc expr size
-	.short	.Lset21
-.Ltmp150:
+	.long	.Ltmp72
+	.long	.Ltmp77
+.Lset22 = .Ltmp155-.Ltmp154             # Loc expr size
+	.short	.Lset22
+.Ltmp154:
 	.byte	17                      # DW_OP_consts
 	.byte	0                       # 
-.Ltmp151:
-	.long	.Ltmp75
-	.long	.Ltmp76
-.Lset22 = .Ltmp153-.Ltmp152             # Loc expr size
-	.short	.Lset22
-.Ltmp152:
+.Ltmp155:
+	.long	.Ltmp77
+	.long	.Ltmp78
+.Lset23 = .Ltmp157-.Ltmp156             # Loc expr size
+	.short	.Lset23
+.Ltmp156:
 	.byte	81                      # DW_OP_reg1
-.Ltmp153:
+.Ltmp157:
 	.long	0
 	.long	0
 .Ldebug_loc9:
 	.long	.Lfunc_begin3
-	.long	.Ltmp97
-.Lset23 = .Ltmp155-.Ltmp154             # Loc expr size
-	.short	.Lset23
-.Ltmp154:
-	.byte	80                      # DW_OP_reg0
-.Ltmp155:
-	.long	.Ltmp97
-	.long	.Ltmp105
-.Lset24 = .Ltmp157-.Ltmp156             # Loc expr size
+	.long	.Ltmp99
+.Lset24 = .Ltmp159-.Ltmp158             # Loc expr size
 	.short	.Lset24
-.Ltmp156:
+.Ltmp158:
+	.byte	80                      # DW_OP_reg0
+.Ltmp159:
+	.long	.Ltmp99
+	.long	.Ltmp107
+.Lset25 = .Ltmp161-.Ltmp160             # Loc expr size
+	.short	.Lset25
+.Ltmp160:
 	.byte	85                      # DW_OP_reg5
-.Ltmp157:
+.Ltmp161:
 	.long	0
 	.long	0
 .Ldebug_loc10:
 	.long	.Lfunc_begin3
-	.long	.Ltmp96
-.Lset25 = .Ltmp159-.Ltmp158             # Loc expr size
-	.short	.Lset25
-.Ltmp158:
-	.byte	81                      # DW_OP_reg1
-.Ltmp159:
-	.long	.Ltmp96
-	.long	.Ltmp105
-.Lset26 = .Ltmp161-.Ltmp160             # Loc expr size
+	.long	.Ltmp98
+.Lset26 = .Ltmp163-.Ltmp162             # Loc expr size
 	.short	.Lset26
-.Ltmp160:
-	.byte	84                      # DW_OP_reg4
-.Ltmp161:
-	.long	0
-	.long	0
-.Ldebug_loc11:
-	.long	.Ltmp100
-	.long	.Ltmp104
-.Lset27 = .Ltmp163-.Ltmp162             # Loc expr size
-	.short	.Lset27
 .Ltmp162:
-	.byte	80                      # DW_OP_reg0
-.Ltmp163:
-	.long	0
-	.long	0
-.Ldebug_loc12:
-	.long	.Ltmp102
-	.long	.Ltmp103
-.Lset28 = .Ltmp165-.Ltmp164             # Loc expr size
-	.short	.Lset28
-.Ltmp164:
 	.byte	81                      # DW_OP_reg1
+.Ltmp163:
+	.long	.Ltmp98
+	.long	.Ltmp107
+.Lset27 = .Ltmp165-.Ltmp164             # Loc expr size
+	.short	.Lset27
+.Ltmp164:
+	.byte	84                      # DW_OP_reg4
 .Ltmp165:
 	.long	0
 	.long	0
+.Ldebug_loc11:
+	.long	.Ltmp102
+	.long	.Ltmp106
+.Lset28 = .Ltmp167-.Ltmp166             # Loc expr size
+	.short	.Lset28
+.Ltmp166:
+	.byte	80                      # DW_OP_reg0
+.Ltmp167:
+	.long	0
+	.long	0
+.Ldebug_loc12:
+	.long	.Ltmp104
+	.long	.Ltmp105
+.Lset29 = .Ltmp169-.Ltmp168             # Loc expr size
+	.short	.Lset29
+.Ltmp168:
+	.byte	81                      # DW_OP_reg1
+.Ltmp169:
+	.long	0
+	.long	0
 	.section	.debug_pubnames,"",@progbits
-.Lset29 = .LpubNames_end0-.LpubNames_begin0 # Length of Public Names Info
-	.long	.Lset29
+.Lset30 = .LpubNames_end0-.LpubNames_begin0 # Length of Public Names Info
+	.long	.Lset30
 .LpubNames_begin0:
 	.short	2                       # DWARF Version
 	.long	.L.debug_info_begin0    # Offset of Compilation Unit Info
-.Lset30 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
-	.long	.Lset30
-	.long	434                     # DIE offset
-.asciiz"OLED_SSD1306_begin"             # External Name
-	.long	958                     # DIE offset
-.asciiz"_safe_memcmp"                   # External Name
+.Lset31 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
+	.long	.Lset31
 	.long	641                     # DIE offset
 .asciiz"OLED_SSD1306_shift_left"        # External Name
+	.long	958                     # DIE offset
+.asciiz"_safe_memcmp"                   # External Name
 	.long	475                     # DIE offset
 .asciiz"OLED_SSD1306_put_string"        # External Name
 	.long	774                     # DIE offset
@@ -2437,6 +2457,8 @@ rendering_x:
 .asciiz"time"                           # External Name
 	.long	31                      # DIE offset
 .asciiz"FONT8X16MIN_TOFU"               # External Name
+	.long	269                     # DIE offset
+.asciiz"terminator_found_before_eol"    # External Name
 	.long	1008                    # DIE offset
 .asciiz"_safe_memmove"                  # External Name
 	.long	910                     # DIE offset
@@ -2449,26 +2471,26 @@ rendering_x:
 .asciiz"_y"                             # External Name
 	.long	934                     # DIE offset
 .asciiz"delay_microseconds"             # External Name
-	.long	269                     # DIE offset
-.asciiz"found_eol"                      # External Name
+	.long	369                     # DIE offset
+.asciiz"rendering_col"                  # External Name
 	.long	347                     # DIE offset
 .asciiz"display_offset"                 # External Name
 	.long	886                     # DIE offset
 .asciiz"delay_seconds"                  # External Name
-	.long	369                     # DIE offset
-.asciiz"rendering_col"                  # External Name
+	.long	434                     # DIE offset
+.asciiz"OLED_SSD1306_begin"             # External Name
 	.long	121                     # DIE offset
 .asciiz"OLED_SSD1306_DISPLAY_INIT"      # External Name
 	.long	0                       # End Mark
 .LpubNames_end0:
 	.section	.debug_pubtypes,"",@progbits
-.Lset31 = .LpubTypes_end0-.LpubTypes_begin0 # Length of Public Types Info
-	.long	.Lset31
+.Lset32 = .LpubTypes_end0-.LpubTypes_begin0 # Length of Public Types Info
+	.long	.Lset32
 .LpubTypes_begin0:
 	.short	2                       # DWARF Version
 	.long	.L.debug_info_begin0    # Offset of Compilation Unit Info
-.Lset32 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
-	.long	.Lset32
+.Lset33 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
+	.long	.Lset33
 	.long	222                     # DIE offset
 .asciiz"unsigned int"                   # External Name
 	.long	71                      # DIE offset
@@ -2496,7 +2518,7 @@ rendering_x:
 	.typestring _y, "uc"
 	.typestring time, "ui"
 	.typestring string_ptr, "a(4:u:q(uc))"
-	.typestring found_eol, "a(4:si)"
+	.typestring terminator_found_before_eol, "a(4:si)"
 	.typestring raster_buffer, "a(1024:uc)"
 	.typestring display_offset, "a(4:si)"
 	.typestring rendering_col, "a(4:si)"
@@ -2597,75 +2619,75 @@ rendering_x:
 	.long	98
 	.long	.Lxtalabel0
 .cc_bottom cc_12
-.cc_top cc_13,.Lxtalabel28
+.cc_top cc_13,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	106
 	.long	109
-	.long	.Lxtalabel28
+	.long	.Lxtalabel29
 .cc_bottom cc_13
-.cc_top cc_14,.Lxtalabel28
+.cc_top cc_14,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	121
 	.long	122
-	.long	.Lxtalabel28
+	.long	.Lxtalabel29
 .cc_bottom cc_14
-.cc_top cc_15,.Lxtalabel28
+.cc_top cc_15,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	123
 	.long	123
-	.long	.Lxtalabel28
+	.long	.Lxtalabel29
 .cc_bottom cc_15
-.cc_top cc_16,.Lxtalabel28
+.cc_top cc_16,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	124
 	.long	124
-	.long	.Lxtalabel28
+	.long	.Lxtalabel29
 .cc_bottom cc_16
-.cc_top cc_17,.Lxtalabel28
+.cc_top cc_17,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	125
 	.long	127
-	.long	.Lxtalabel28
+	.long	.Lxtalabel29
 .cc_bottom cc_17
-.cc_top cc_18,.Lxtalabel28
+.cc_top cc_18,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	129
 	.long	130
-	.long	.Lxtalabel28
+	.long	.Lxtalabel29
 .cc_bottom cc_18
-.cc_top cc_19,.Lxtalabel28
+.cc_top cc_19,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	132
 	.long	133
-	.long	.Lxtalabel28
+	.long	.Lxtalabel29
 .cc_bottom cc_19
-.cc_top cc_20,.Lxtalabel28
+.cc_top cc_20,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	134
 	.long	134
-	.long	.Lxtalabel28
+	.long	.Lxtalabel29
 .cc_bottom cc_20
-.cc_top cc_21,.Lxtalabel28
+.cc_top cc_21,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	135
 	.long	135
-	.long	.Lxtalabel28
+	.long	.Lxtalabel29
 .cc_bottom cc_21
-.cc_top cc_22,.Lxtalabel28
+.cc_top cc_22,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	136
 	.long	141
-	.long	.Lxtalabel28
+	.long	.Lxtalabel29
 .cc_bottom cc_22
 .cc_top cc_23,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
@@ -2831,30 +2853,30 @@ rendering_x:
 .cc_top cc_46,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
-	.long	185
-	.long	186
+	.long	183
+	.long	183
 	.long	.Lxtalabel16
 .cc_bottom cc_46
-.cc_top cc_47,.Lxtalabel16
+.cc_top cc_47,.Lxtalabel17
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
+	.byte	0
+	.long	185
+	.long	186
+	.long	.Lxtalabel17
+.cc_bottom cc_47
+.cc_top cc_48,.Lxtalabel17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	188
 	.long	188
-	.long	.Lxtalabel16
-.cc_bottom cc_47
-.cc_top cc_48,.Lxtalabel27
+	.long	.Lxtalabel17
+.cc_bottom cc_48
+.cc_top cc_49,.Lxtalabel28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	189
 	.long	191
-	.long	.Lxtalabel27
-.cc_bottom cc_48
-.cc_top cc_49,.Lxtalabel17
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
-	.byte	0
-	.long	192
-	.long	193
-	.long	.Lxtalabel17
+	.long	.Lxtalabel28
 .cc_bottom cc_49
 .cc_top cc_50,.Lxtalabel18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
@@ -2866,22 +2888,22 @@ rendering_x:
 .cc_top cc_51,.Lxtalabel19
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
-	.long	195
-	.long	195
+	.long	192
+	.long	193
 	.long	.Lxtalabel19
 .cc_bottom cc_51
 .cc_top cc_52,.Lxtalabel20
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
-	.long	196
-	.long	198
+	.long	195
+	.long	195
 	.long	.Lxtalabel20
 .cc_bottom cc_52
 .cc_top cc_53,.Lxtalabel21
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
-	.long	200
-	.long	201
+	.long	196
+	.long	198
 	.long	.Lxtalabel21
 .cc_bottom cc_53
 .cc_top cc_54,.Lxtalabel22
@@ -2891,26 +2913,26 @@ rendering_x:
 	.long	201
 	.long	.Lxtalabel22
 .cc_bottom cc_54
-.cc_top cc_55,.Lxtalabel22
+.cc_top cc_55,.Lxtalabel23
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
+	.byte	0
+	.long	200
+	.long	201
+	.long	.Lxtalabel23
+.cc_bottom cc_55
+.cc_top cc_56,.Lxtalabel22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	203
 	.long	204
 	.long	.Lxtalabel22
-.cc_bottom cc_55
-.cc_top cc_56,.Lxtalabel21
+.cc_bottom cc_56
+.cc_top cc_57,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	203
 	.long	204
-	.long	.Lxtalabel21
-.cc_bottom cc_56
-.cc_top cc_57,.Lxtalabel24
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
-	.byte	0
-	.long	205
-	.long	207
-	.long	.Lxtalabel24
+	.long	.Lxtalabel23
 .cc_bottom cc_57
 .cc_top cc_58,.Lxtalabel25
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
@@ -2919,41 +2941,48 @@ rendering_x:
 	.long	207
 	.long	.Lxtalabel25
 .cc_bottom cc_58
-.cc_top cc_59,.Lxtalabel23
+.cc_top cc_59,.Lxtalabel26
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	205
 	.long	207
-	.long	.Lxtalabel23
+	.long	.Lxtalabel26
 .cc_bottom cc_59
-.cc_top cc_60,.Lxtalabel26
+.cc_top cc_60,.Lxtalabel24
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
-	.long	211
-	.long	212
-	.long	.Lxtalabel26
+	.long	205
+	.long	207
+	.long	.Lxtalabel24
 .cc_bottom cc_60
-.cc_top cc_61,.Lxtalabel26
+.cc_top cc_61,.Lxtalabel27
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	211
 	.long	212
-	.long	.Lxtalabel26
+	.long	.Lxtalabel27
 .cc_bottom cc_61
-.cc_top cc_62,.Lxtalabel26
+.cc_top cc_62,.Lxtalabel27
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
-	.long	213
-	.long	214
-	.long	.Lxtalabel26
+	.long	211
+	.long	212
+	.long	.Lxtalabel27
 .cc_bottom cc_62
-.cc_top cc_63,.Lxtalabel26
+.cc_top cc_63,.Lxtalabel27
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	213
 	.long	214
-	.long	.Lxtalabel26
+	.long	.Lxtalabel27
 .cc_bottom cc_63
+.cc_top cc_64,.Lxtalabel27
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
+	.byte	0
+	.long	213
+	.long	214
+	.long	.Lxtalabel27
+.cc_bottom cc_64
 .Lentries_end3:
 	.section	.xtalooplabeltable,"",@progbits
 .Lentries_start4:
@@ -2961,69 +2990,69 @@ rendering_x:
 	.long	0
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_ssdac_xSSDAC-SD-V2\\.build_2i10o10xxxxxx"
 	.byte	0
-.cc_top cc_64,.Lxta.loop_labels2
+.cc_top cc_65,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	155
 	.long	156
 	.long	.Lxta.loop_labels2
-.cc_bottom cc_64
-.cc_top cc_65,.Lxta.loop_labels2
+.cc_bottom cc_65
+.cc_top cc_66,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	158
 	.long	161
 	.long	.Lxta.loop_labels2
-.cc_bottom cc_65
-.cc_top cc_66,.Lxta.loop_labels2
+.cc_bottom cc_66
+.cc_top cc_67,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	163
 	.long	164
 	.long	.Lxta.loop_labels2
-.cc_bottom cc_66
-.cc_top cc_67,.Lxta.loop_labels2
+.cc_bottom cc_67
+.cc_top cc_68,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	166
 	.long	166
 	.long	.Lxta.loop_labels2
-.cc_bottom cc_67
-.cc_top cc_68,.Lxta.loop_labels1
+.cc_bottom cc_68
+.cc_top cc_69,.Lxta.loop_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	168
 	.long	168
 	.long	.Lxta.loop_labels1
-.cc_bottom cc_68
-.cc_top cc_69,.Lxta.loop_labels0
+.cc_bottom cc_69
+.cc_top cc_70,.Lxta.loop_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	169
 	.long	171
 	.long	.Lxta.loop_labels0
-.cc_bottom cc_69
-.cc_top cc_70,.Lxta.loop_labels1
+.cc_bottom cc_70
+.cc_top cc_71,.Lxta.loop_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	172
 	.long	172
 	.long	.Lxta.loop_labels1
-.cc_bottom cc_70
-.cc_top cc_71,.Lxta.loop_labels2
+.cc_bottom cc_71
+.cc_top cc_72,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	173
 	.long	173
 	.long	.Lxta.loop_labels2
-.cc_bottom cc_71
-.cc_top cc_72,.Lxta.loop_labels3
+.cc_bottom cc_72
+.cc_top cc_73,.Lxta.loop_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 	.byte	0
 	.long	196
 	.long	198
 	.long	.Lxta.loop_labels3
-.cc_bottom cc_72
+.cc_bottom cc_73
 .Lentries_end5:
 	.section	.trap_info,"",@progbits
 .Ltrap_info_entries_start0:
@@ -3071,7 +3100,7 @@ rendering_x:
 .cc_bottom cc_trapinfo_4
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str5:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:186:20: error: out of bounds array access\n    unsafe {code = string_ptr[row][rendering_col[row]];}\n                   ^~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc:183:9: error: out of bounds array access\n    if (terminator_found_before_eol[row]) return _END_OF_LINE;\n        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_5,.Ltrap_info5
 	.long	.Ltrap_info5

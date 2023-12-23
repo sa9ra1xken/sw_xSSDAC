@@ -1,4 +1,5 @@
-#include "customdefines.h"  //added by sakurai
+#include "ssdac_conf.h"  //added by sakurai
+#include "diskio.h"
 #include "diskio.h"
 //#ifdef BUS_MODE_4BIT
 #include <xs1.h>

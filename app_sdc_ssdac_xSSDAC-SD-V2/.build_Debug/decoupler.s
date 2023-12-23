@@ -11,26 +11,26 @@
 	.set usage.anon.4,0
 	.set usage.anon.5,0
 	.globread decoupler,sm_byte_count,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:135:33: note: object used here\n                if (byte_ptr == sm_byte_count[tx_id]){\n                                ^~~~~~~~~~~~~~~~~~~~"
-	.globread send_sample,cur_freq,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:53:33: note: object used here\n    if (sm_sample_rate[tx_id]!= cur_freq){\n                                ^~~~~~~~"
-	.globread send_sample,tx_id,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:53:24: note: object used here\n    if (sm_sample_rate[tx_id]!= cur_freq){\n                       ^~~~~"
+	.globread send_sample,cur_freq,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:52:33: note: object used here\n    if (sm_sample_rate[tx_id]!= cur_freq){\n                                ^~~~~~~~"
+	.globread send_sample,tx_id,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:52:24: note: object used here\n    if (sm_sample_rate[tx_id]!= cur_freq){\n                       ^~~~~"
 	.globread send_sample,sm_byte_per_sample,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:74:18: note: object used here\n    if (digit == sm_byte_per_sample[tx_id] ){\n                 ^~~~~~~~~~~~~~~~~~~~~~~~~"
 	.globread send_sample,sm_ch_count,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:77:19: note: object used here\n        if (ch == sm_ch_count[tx_id]){\n                  ^~~~~~~~~~~~~~~~~~"
-	.globread send_sample,sm_sample_rate,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:53:9: note: object used here\n    if (sm_sample_rate[tx_id]!= cur_freq){\n        ^~~~~~~~~~~~~~~~~~~~~"
+	.globread send_sample,sm_sample_rate,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:52:9: note: object used here\n    if (sm_sample_rate[tx_id]!= cur_freq){\n        ^~~~~~~~~~~~~~~~~~~~~"
 	.globread send_sample,audio_buffer,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:71:47: note: object used here\n    samplesOut[ch]= ( samplesOut[ch] << 8 ) + audio_buffer[tx_id][byte_ptr];\n                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globread set_frequency,tx_id,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:42:31: note: object used here\n    cur_freq = sm_sample_rate[tx_id];\n                              ^~~~~"
-	.globread set_frequency,sm_sample_rate,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:42:16: note: object used here\n    cur_freq = sm_sample_rate[tx_id];\n               ^~~~~~~~~~~~~~~~~~~~~"
+	.globread set_frequency,tx_id,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:41:31: note: object used here\n    cur_freq = sm_sample_rate[tx_id];\n                              ^~~~~"
+	.globread set_frequency,sm_sample_rate,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:41:16: note: object used here\n    cur_freq = sm_sample_rate[tx_id];\n               ^~~~~~~~~~~~~~~~~~~~~"
 	.globwrite decoupler,usage.anon.5,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:114:5: note: object used here\n    digit = 0;\n    ^~~~~"
 	.globwrite decoupler,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:113:5: note: object used here\n    ch = 0;\n    ^~"
 	.globwrite decoupler,usage.anon.3,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:111:9: note: object used here\n        samplesOut[i] = 0;\n        ^~~~~~~~~~~~~"
 	.globwrite decoupler,byte_ptr,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:122:13: note: object used here\n            byte_ptr = 0;\n            ^~~~~~~~"
 	.globwrite decoupler,tx_id,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:107:5: note: object used here\n    tx_id = 0;\n    ^~~~~"
 	.globwrite decoupler,rx_id,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:108:5: note: object used here\n    rx_id = 0;\n    ^~~~~"
-	.globwrite send_sample,usage.anon.5,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:68:9: note: object used here\n        digit = 0;\n        ^~~~~"
-	.globwrite send_sample,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:67:9: note: object used here\n        ch = 0;\n        ^~"
+	.globwrite send_sample,usage.anon.5,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:67:9: note: object used here\n        digit = 0;\n        ^~~~~"
+	.globwrite send_sample,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:66:9: note: object used here\n        ch = 0;\n        ^~"
 	.globwrite send_sample,usage.anon.3,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:71:5: note: object used here\n    samplesOut[ch]= ( samplesOut[ch] << 8 ) + audio_buffer[tx_id][byte_ptr];\n    ^~~~~~~~~~~~~~"
 	.globwrite send_sample,byte_ptr,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:72:5: note: object used here\n    byte_ptr++;\n    ^~~~~~~~"
-	.globwrite send_sample,sm_new_track,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:58:9: note: object used here\n        sm_new_track[tx_id] = _FALSE;\n        ^~~~~~~~~~~~~~~~~~~"
-	.globwrite set_frequency,cur_freq,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:42:5: note: object used here\n    cur_freq = sm_sample_rate[tx_id];\n    ^~~~~~~~"
+	.globwrite send_sample,sm_new_track,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:68:9: note: object used here\n        sm_new_track[tx_id] = _FALSE;\n        ^~~~~~~~~~~~~~~~~~~"
+	.globwrite set_frequency,cur_freq,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:41:5: note: object used here\n    cur_freq = sm_sample_rate[tx_id];\n    ^~~~~~~~"
 	.call decoupler,send_sample
 	.call send_sample,set_frequency
 	.call set_frequency,debug_printf
@@ -67,7 +67,7 @@
 	.cc_top set_frequency.function,set_frequency
 set_frequency:                          # @set_frequency
 .Lfunc_begin0:
-	.loc	1 39 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:39:0
+	.loc	1 38 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:38:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -90,7 +90,7 @@ set_frequency:                          # @set_frequency
 		stw r4, sp[2]
 	}
 .Ltmp4:
-	.loc	1 41 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:41:0
+	.loc	1 40 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:40:0
 .Lxta.endpoint_labels0:
 	{
 		in r0, res[r4]
@@ -98,14 +98,14 @@ set_frequency:                          # @set_frequency
 	}
 .Ltmp5:
 	#DEBUG_VALUE: temp <- R0
-	.loc	1 42 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:42:0
+	.loc	1 41 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:41:0
 	ldw r0, dp[tx_id]
 .Ltmp6:
 	{
 		mkmsk r1, 3
 		nop
 	}
-	.loc	1 42 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:42:0
+	.loc	1 41 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:41:0
 	{
 		lsu r1, r1, r0
 		nop
@@ -117,15 +117,15 @@ set_frequency:                          # @set_frequency
 	}
 .Ltmp7:
 	#DEBUG_VALUE: set_frequency:c <- R4
-	.loc	1 42 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:42:0
+	.loc	1 41 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:41:0
 	ldaw r1, dp[sm_sample_rate]
 	{
 		nop
 		ldw r1, r1[r0]
 	}
-	.loc	1 42 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:42:0
+	.loc	1 41 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:41:0
 	stw r1, dp[cur_freq]
-	.loc	1 43 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:43:0
+	.loc	1 42 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:42:0
 	ldaw r11, cp[.str2]
 	{
 		mov r0, r11
@@ -133,21 +133,21 @@ set_frequency:                          # @set_frequency
 	}
 .Lxta.call_labels0:
 	bl debug_printf
-	.loc	1 44 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:44:0
+	.loc	1 43 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:43:0
 .Lxta.endpoint_labels1:
 	{
 		outct res[r4], 4
 		nop
 	}
-	.loc	1 45 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:45:0
+	.loc	1 44 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:44:0
 	ldw r0, dp[cur_freq]
-	.loc	1 45 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:45:0
+	.loc	1 44 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:44:0
 .Lxta.endpoint_labels2:
 	{
 		out res[r4], r0
 		nop
 	}
-	.loc	1 46 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:46:0
+	.loc	1 45 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:45:0
 .Lxta.endpoint_labels3:
 	{
 		inct r0, res[r4]
@@ -180,7 +180,7 @@ set_frequency:                          # @set_frequency
 	.cc_top send_sample.function,send_sample
 send_sample:                            # @send_sample
 .Lfunc_begin1:
-	.loc	1 49 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:49:0
+	.loc	1 48 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:48:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -208,13 +208,13 @@ send_sample:                            # @send_sample
 		stw r6, sp[4]
 	}
 .Ltmp17:
-	.loc	1 53 5 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:53:5
+	.loc	1 52 5 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:52:5
 	ldw r0, dp[tx_id]
 	{
 		ldc r5, 8
 		nop
 	}
-	.loc	1 53 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:53:5
+	.loc	1 52 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:52:5
 	{
 		lsu r1, r0, r5
 		nop
@@ -226,15 +226,15 @@ send_sample:                            # @send_sample
 	}
 .Ltmp18:
 	#DEBUG_VALUE: send_sample:c <- R4
-	.loc	1 53 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:53:5
+	.loc	1 52 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:52:5
 	ldaw r1, dp[sm_sample_rate]
 	{
 		nop
 		ldw r1, r1[r0]
 	}
-	.loc	1 53 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:53:5
+	.loc	1 52 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:52:5
 	ldw r2, dp[cur_freq]
-	.loc	1 53 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:53:5
+	.loc	1 52 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:52:5
 	{
 		eq r1, r1, r2
 		nop
@@ -244,16 +244,16 @@ send_sample:                            # @send_sample
 # BB#1:                                 # %ifdone
 .Lxtalabel2:
 	#DEBUG_VALUE: send_sample:c <- R4
-	.loc	1 54 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:54:0
+	.loc	1 53 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:53:0
 	{
 		mov r0, r4
 		nop
 	}
 .Lxta.call_labels1:
 	bl set_frequency
-	.loc	1 57 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:57:5
+	.loc	1 56 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:56:5
 	ldw r0, dp[tx_id]
-	.loc	1 57 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:57:5
+	.loc	1 56 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:56:5
 	{
 		lsu r1, r0, r5
 		nop
@@ -266,18 +266,18 @@ send_sample:                            # @send_sample
 .Ltmp20:
 .LBB1_2:                                # %afterboundcheck4
 	#DEBUG_VALUE: send_sample:c <- R4
-	.loc	1 57 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:57:5
+	.loc	1 56 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:56:5
 	ldaw r1, dp[sm_new_track]
 	{
 		nop
 		ldw r2, r1[r0]
 	}
-	.loc	1 57 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:57:5
+	.loc	1 56 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:56:5
 	{
 		eq r2, r2, 1
 		nop
 	}
-	.loc	1 57 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:57:5
+	.loc	1 56 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:56:5
 	bf r2, .LBB1_3
 .Ltmp21:
 # BB#4:                                 # %ifdone2.thread
@@ -287,12 +287,12 @@ send_sample:                            # @send_sample
 		ldc r2, 0
 		nop
 	}
-	.loc	1 58 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:58:0
-	stw r2, r1[r0]
-	.loc	1 67 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:67:0
+	.loc	1 66 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:66:0
 	stw r2, dp[ch]
-	.loc	1 68 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:68:0
+	.loc	1 67 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:67:0
 	stw r2, dp[digit]
+	.loc	1 68 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:68:0
+	stw r2, r1[r0]
 	bu .LBB1_5
 .Ltmp22:
 .LBB1_3:                                # %ifdone2
@@ -1337,7 +1337,7 @@ digit:
 	.long	53                      # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	19                      # DW_AT_decl_line
+	.byte	18                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	buff_id
@@ -1351,7 +1351,7 @@ digit:
 	.long	82                      # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	21                      # DW_AT_decl_line
+	.byte	20                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	audio_buffer
@@ -1380,7 +1380,7 @@ digit:
 	.long	139                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	22                      # DW_AT_decl_line
+	.byte	21                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	sm_sample_rate
@@ -1397,7 +1397,7 @@ digit:
 	.long	139                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	23                      # DW_AT_decl_line
+	.byte	22                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	sm_ch_count
@@ -1407,7 +1407,7 @@ digit:
 	.long	139                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	24                      # DW_AT_decl_line
+	.byte	23                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	sm_byte_per_sample
@@ -1417,7 +1417,7 @@ digit:
 	.long	139                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	25                      # DW_AT_decl_line
+	.byte	24                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	sm_byte_count
@@ -1427,7 +1427,7 @@ digit:
 	.long	240                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	26                      # DW_AT_decl_line
+	.byte	25                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	sm_new_track
@@ -1443,7 +1443,7 @@ digit:
 	.long	.Linfo_string15         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	26                      # DW_AT_decl_line
+	.byte	25                      # DW_AT_decl_line
 	.byte	9                       # Abbrev [9] 0x105:0x6 DW_TAG_enumerator
 	.long	.Linfo_string13         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
@@ -1456,7 +1456,7 @@ digit:
 	.long	53                      # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	28                      # DW_AT_decl_line
+	.byte	27                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	rx_id
@@ -1466,7 +1466,7 @@ digit:
 	.long	53                      # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	29                      # DW_AT_decl_line
+	.byte	28                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	tx_id
@@ -1476,7 +1476,7 @@ digit:
 	.long	53                      # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	31                      # DW_AT_decl_line
+	.byte	30                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	byte_ptr
@@ -1486,7 +1486,7 @@ digit:
 	.long	53                      # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	32                      # DW_AT_decl_line
+	.byte	31                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	underflowWord
@@ -1496,7 +1496,7 @@ digit:
 	.long	53                      # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	33                      # DW_AT_decl_line
+	.byte	32                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	cur_freq
@@ -1505,7 +1505,7 @@ digit:
 	.long	.Linfo_string21         # DW_AT_name
 	.long	405                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	35                      # DW_AT_decl_line
+	.byte	34                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	samplesOut
@@ -1521,7 +1521,7 @@ digit:
 	.long	.Linfo_string22         # DW_AT_name
 	.long	53                      # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	36                      # DW_AT_decl_line
+	.byte	35                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	ch
@@ -1530,7 +1530,7 @@ digit:
 	.long	.Linfo_string23         # DW_AT_name
 	.long	53                      # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	37                      # DW_AT_decl_line
+	.byte	36                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	digit
@@ -1558,13 +1558,13 @@ digit:
 	.long	.Linfo_string31         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string31         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	39                      # DW_AT_decl_line
+	.byte	38                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	12                      # Abbrev [12] 0x1fa:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc0            # DW_AT_location
 	.long	.Linfo_string34         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	39                      # DW_AT_decl_line
+	.byte	38                      # DW_AT_decl_line
 	.long	805                     # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x209:0x15 DW_TAG_lexical_block
 	.long	.Ldebug_ranges1         # DW_AT_ranges
@@ -1572,7 +1572,7 @@ digit:
 	.long	.Ldebug_loc1            # DW_AT_location
 	.long	.Linfo_string36         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	40                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.long	53                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -1584,13 +1584,13 @@ digit:
 	.long	.Linfo_string32         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string32         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	49                      # DW_AT_decl_line
+	.byte	48                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	12                      # Abbrev [12] 0x232:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc2            # DW_AT_location
 	.long	.Linfo_string34         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	49                      # DW_AT_decl_line
+	.byte	48                      # DW_AT_decl_line
 	.long	805                     # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x241:0x15 DW_TAG_lexical_block
 	.long	.Ldebug_ranges3         # DW_AT_ranges
@@ -1598,7 +1598,7 @@ digit:
 	.long	.Ldebug_loc3            # DW_AT_location
 	.long	.Linfo_string36         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	51                      # DW_AT_decl_line
+	.byte	50                      # DW_AT_decl_line
 	.long	53                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -2259,13 +2259,13 @@ digit:
 .cc_top cc_0,.Lxta.call_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	43
+	.long	42
 	.long	.Lxta.call_labels0
 .cc_bottom cc_0
 .cc_top cc_1,.Lxta.call_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	54
+	.long	53
 	.long	.Lxta.call_labels1
 .cc_bottom cc_1
 .cc_top cc_2,.Lxta.call_labels2
@@ -2290,25 +2290,25 @@ digit:
 .cc_top cc_4,.Lxta.endpoint_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	41
+	.long	40
 	.long	.Lxta.endpoint_labels0
 .cc_bottom cc_4
 .cc_top cc_5,.Lxta.endpoint_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	44
+	.long	43
 	.long	.Lxta.endpoint_labels1
 .cc_bottom cc_5
 .cc_top cc_6,.Lxta.endpoint_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	45
+	.long	44
 	.long	.Lxta.endpoint_labels2
 .cc_bottom cc_6
 .cc_top cc_7,.Lxta.endpoint_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	46
+	.long	45
 	.long	.Lxta.endpoint_labels3
 .cc_bottom cc_7
 .cc_top cc_8,.Lxta.endpoint_labels4
@@ -2345,155 +2345,155 @@ digit:
 .cc_top cc_12,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	40
-	.long	42
+	.long	39
+	.long	41
 	.long	.Lxtalabel0
 .cc_bottom cc_12
 .cc_top cc_13,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	43
-	.long	43
+	.long	42
+	.long	42
 	.long	.Lxtalabel0
 .cc_bottom cc_13
 .cc_top cc_14,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	44
-	.long	44
+	.long	43
+	.long	43
 	.long	.Lxtalabel0
 .cc_bottom cc_14
 .cc_top cc_15,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	45
-	.long	45
+	.long	44
+	.long	44
 	.long	.Lxtalabel0
 .cc_bottom cc_15
 .cc_top cc_16,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
+	.long	45
 	.long	46
-	.long	47
 	.long	.Lxtalabel0
 .cc_bottom cc_16
 .cc_top cc_17,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	51
-	.long	51
+	.long	50
+	.long	50
 	.long	.Lxtalabel1
 .cc_bottom cc_17
 .cc_top cc_18,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	53
-	.long	53
+	.long	52
+	.long	52
 	.long	.Lxtalabel1
 .cc_bottom cc_18
 .cc_top cc_19,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
+	.long	53
 	.long	54
-	.long	55
 	.long	.Lxtalabel2
 .cc_bottom cc_19
 .cc_top cc_20,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	57
-	.long	57
+	.long	56
+	.long	56
 	.long	.Lxtalabel2
 .cc_bottom cc_20
 .cc_top cc_21,.Lxtalabel3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	58
-	.long	58
+	.long	66
+	.long	69
 	.long	.Lxtalabel3
 .cc_bottom cc_21
 .cc_top cc_22,.Lxtalabel3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	67
-	.long	69
-	.long	.Lxtalabel3
-.cc_bottom cc_22
-.cc_top cc_23,.Lxtalabel3
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
-	.byte	0
 	.long	71
 	.long	74
 	.long	.Lxtalabel3
-.cc_bottom cc_23
-.cc_top cc_24,.Lxtalabel4
+.cc_bottom cc_22
+.cc_top cc_23,.Lxtalabel4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	71
 	.long	74
 	.long	.Lxtalabel4
-.cc_bottom cc_24
-.cc_top cc_25,.Lxtalabel5
+.cc_bottom cc_23
+.cc_top cc_24,.Lxtalabel5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	75
 	.long	77
 	.long	.Lxtalabel5
+.cc_bottom cc_24
+.cc_top cc_25,.Lxtalabel6
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
+	.byte	0
+	.long	79
+	.long	79
+	.long	.Lxtalabel6
 .cc_bottom cc_25
 .cc_top cc_26,.Lxtalabel6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	79
-	.long	79
+	.long	81
+	.long	81
 	.long	.Lxtalabel6
 .cc_bottom cc_26
-.cc_top cc_27,.Lxtalabel6
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
-	.byte	0
-	.long	81
-	.long	81
-	.long	.Lxtalabel6
-.cc_bottom cc_27
-.cc_top cc_28,.Lxtalabel7
+.cc_top cc_27,.Lxtalabel7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	82
 	.long	82
 	.long	.Lxtalabel7
-.cc_bottom cc_28
-.cc_top cc_29,.Lxtalabel7
+.cc_bottom cc_27
+.cc_top cc_28,.Lxtalabel7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	83
 	.long	84
 	.long	.Lxtalabel7
-.cc_bottom cc_29
-.cc_top cc_30,.Lxtalabel8
+.cc_bottom cc_28
+.cc_top cc_29,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	85
 	.long	86
 	.long	.Lxtalabel8
-.cc_bottom cc_30
-.cc_top cc_31,.Lxtalabel9
+.cc_bottom cc_29
+.cc_top cc_30,.Lxtalabel9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	88
 	.long	88
 	.long	.Lxtalabel9
-.cc_bottom cc_31
-.cc_top cc_32,.Lxtalabel10
+.cc_bottom cc_30
+.cc_top cc_31,.Lxtalabel10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	105
 	.long	108
 	.long	.Lxtalabel10
-.cc_bottom cc_32
-.cc_top cc_33,.Lxtalabel10
+.cc_bottom cc_31
+.cc_top cc_32,.Lxtalabel10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	110
 	.long	110
+	.long	.Lxtalabel10
+.cc_bottom cc_32
+.cc_top cc_33,.Lxtalabel10
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
+	.byte	0
+	.long	111
+	.long	112
 	.long	.Lxtalabel10
 .cc_bottom cc_33
 .cc_top cc_34,.Lxtalabel10
@@ -2506,199 +2506,192 @@ digit:
 .cc_top cc_35,.Lxtalabel10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	111
-	.long	112
+	.long	113
+	.long	114
 	.long	.Lxtalabel10
 .cc_bottom cc_35
 .cc_top cc_36,.Lxtalabel10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	113
-	.long	114
+	.long	116
+	.long	116
 	.long	.Lxtalabel10
 .cc_bottom cc_36
-.cc_top cc_37,.Lxtalabel10
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
-	.byte	0
-	.long	116
-	.long	116
-	.long	.Lxtalabel10
-.cc_bottom cc_37
-.cc_top cc_38,.Lxtalabel24
+.cc_top cc_37,.Lxtalabel24
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	117
 	.long	117
 	.long	.Lxtalabel24
+.cc_bottom cc_37
+.cc_top cc_38,.Lxtalabel12
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
+	.byte	0
+	.long	129
+	.long	130
+	.long	.Lxtalabel12
 .cc_bottom cc_38
-.cc_top cc_39,.Lxtalabel11
+.cc_top cc_39,.Lxtalabel13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	129
 	.long	130
-	.long	.Lxtalabel11
+	.long	.Lxtalabel13
 .cc_bottom cc_39
-.cc_top cc_40,.Lxtalabel12
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
-	.byte	0
-	.long	129
-	.long	130
-	.long	.Lxtalabel12
-.cc_bottom cc_40
-.cc_top cc_41,.Lxtalabel13
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
-	.byte	0
-	.long	129
-	.long	130
-	.long	.Lxtalabel13
-.cc_bottom cc_41
-.cc_top cc_42,.Lxtalabel14
+.cc_top cc_40,.Lxtalabel14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	129
 	.long	130
 	.long	.Lxtalabel14
-.cc_bottom cc_42
-.cc_top cc_43,.Lxtalabel15
+.cc_bottom cc_40
+.cc_top cc_41,.Lxtalabel15
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	129
 	.long	130
 	.long	.Lxtalabel15
+.cc_bottom cc_41
+.cc_top cc_42,.Lxtalabel11
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
+	.byte	0
+	.long	129
+	.long	130
+	.long	.Lxtalabel11
+.cc_bottom cc_42
+.cc_top cc_43,.Lxtalabel12
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
+	.byte	0
+	.long	131
+	.long	131
+	.long	.Lxtalabel12
 .cc_bottom cc_43
-.cc_top cc_44,.Lxtalabel11
+.cc_top cc_44,.Lxtalabel14
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
+	.byte	0
+	.long	131
+	.long	131
+	.long	.Lxtalabel14
+.cc_bottom cc_44
+.cc_top cc_45,.Lxtalabel11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	131
 	.long	131
 	.long	.Lxtalabel11
-.cc_bottom cc_44
-.cc_top cc_45,.Lxtalabel12
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
-	.byte	0
-	.long	131
-	.long	131
-	.long	.Lxtalabel12
 .cc_bottom cc_45
-.cc_top cc_46,.Lxtalabel13
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
-	.byte	0
-	.long	131
-	.long	131
-	.long	.Lxtalabel13
-.cc_bottom cc_46
-.cc_top cc_47,.Lxtalabel14
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
-	.byte	0
-	.long	131
-	.long	131
-	.long	.Lxtalabel14
-.cc_bottom cc_47
-.cc_top cc_48,.Lxtalabel15
+.cc_top cc_46,.Lxtalabel15
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	131
 	.long	131
 	.long	.Lxtalabel15
-.cc_bottom cc_48
-.cc_top cc_49,.Lxtalabel16
+.cc_bottom cc_46
+.cc_top cc_47,.Lxtalabel13
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
+	.byte	0
+	.long	131
+	.long	131
+	.long	.Lxtalabel13
+.cc_bottom cc_47
+.cc_top cc_48,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	135
 	.long	135
 	.long	.Lxtalabel16
+.cc_bottom cc_48
+.cc_top cc_49,.Lxtalabel17
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
+	.byte	0
+	.long	136
+	.long	138
+	.long	.Lxtalabel17
 .cc_bottom cc_49
-.cc_top cc_50,.Lxtalabel17
+.cc_top cc_50,.Lxtalabel18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	136
 	.long	138
-	.long	.Lxtalabel17
+	.long	.Lxtalabel18
 .cc_bottom cc_50
-.cc_top cc_51,.Lxtalabel18
+.cc_top cc_51,.Lxtalabel19
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	136
 	.long	138
-	.long	.Lxtalabel18
+	.long	.Lxtalabel19
 .cc_bottom cc_51
-.cc_top cc_52,.Lxtalabel19
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
-	.byte	0
-	.long	136
-	.long	138
-	.long	.Lxtalabel19
-.cc_bottom cc_52
-.cc_top cc_53,.Lxtalabel18
+.cc_top cc_52,.Lxtalabel18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	139
 	.long	139
 	.long	.Lxtalabel18
-.cc_bottom cc_53
-.cc_top cc_54,.Lxtalabel19
+.cc_bottom cc_52
+.cc_top cc_53,.Lxtalabel19
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	139
 	.long	139
 	.long	.Lxtalabel19
-.cc_bottom cc_54
-.cc_top cc_55,.Lxtalabel17
+.cc_bottom cc_53
+.cc_top cc_54,.Lxtalabel17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	139
 	.long	139
 	.long	.Lxtalabel17
-.cc_bottom cc_55
-.cc_top cc_56,.Lxtalabel20
+.cc_bottom cc_54
+.cc_top cc_55,.Lxtalabel20
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	146
 	.long	148
 	.long	.Lxtalabel20
-.cc_bottom cc_56
-.cc_top cc_57,.Lxtalabel22
+.cc_bottom cc_55
+.cc_top cc_56,.Lxtalabel22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	149
 	.long	151
 	.long	.Lxtalabel22
-.cc_bottom cc_57
-.cc_top cc_58,.Lxtalabel23
+.cc_bottom cc_56
+.cc_top cc_57,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	149
 	.long	151
 	.long	.Lxtalabel23
+.cc_bottom cc_57
+.cc_top cc_58,.Lxtalabel21
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
+	.byte	0
+	.long	149
+	.long	151
+	.long	.Lxtalabel21
 .cc_bottom cc_58
 .cc_top cc_59,.Lxtalabel21
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
-	.long	149
-	.long	151
-	.long	.Lxtalabel21
-.cc_bottom cc_59
-.cc_top cc_60,.Lxtalabel21
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
-	.byte	0
 	.long	152
 	.long	153
 	.long	.Lxtalabel21
-.cc_bottom cc_60
-.cc_top cc_61,.Lxtalabel22
+.cc_bottom cc_59
+.cc_top cc_60,.Lxtalabel22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	152
 	.long	153
 	.long	.Lxtalabel22
-.cc_bottom cc_61
-.cc_top cc_62,.Lxtalabel23
+.cc_bottom cc_60
+.cc_top cc_61,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	152
 	.long	153
 	.long	.Lxtalabel23
-.cc_bottom cc_62
+.cc_bottom cc_61
 .Lentries_end5:
 	.section	.xtalooplabeltable,"",@progbits
 .Lentries_start6:
@@ -2706,27 +2699,27 @@ digit:
 	.long	0
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Debug"
 	.byte	0
-.cc_top cc_63,.Lxta.loop_labels0
+.cc_top cc_62,.Lxta.loop_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	82
 	.long	82
 	.long	.Lxta.loop_labels0
-.cc_bottom cc_63
-.cc_top cc_64,.Lxta.loop_labels0
+.cc_bottom cc_62
+.cc_top cc_63,.Lxta.loop_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	83
 	.long	84
 	.long	.Lxta.loop_labels0
-.cc_bottom cc_64
-.cc_top cc_65,.Lxta.loop_labels1
+.cc_bottom cc_63
+.cc_top cc_64,.Lxta.loop_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 	.byte	0
 	.long	146
 	.long	148
 	.long	.Lxta.loop_labels1
-.cc_bottom cc_65
+.cc_bottom cc_64
 .Lentries_end7:
 	.section	.trap_info,"",@progbits
 .Ltrap_info_entries_start0:
@@ -2734,7 +2727,7 @@ digit:
 	.long	1
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str0:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:42:16: error: out of bounds array access\n    cur_freq = sm_sample_rate[tx_id];\n               ^~~~~~~~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:41:16: error: out of bounds array access\n    cur_freq = sm_sample_rate[tx_id];\n               ^~~~~~~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_0,.Ltrap_info0
 	.long	.Ltrap_info0
@@ -2742,7 +2735,7 @@ digit:
 .cc_bottom cc_trapinfo_0
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str1:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:53:9: error: out of bounds array access\n    if (sm_sample_rate[tx_id]!= cur_freq){\n        ^~~~~~~~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:52:9: error: out of bounds array access\n    if (sm_sample_rate[tx_id]!= cur_freq){\n        ^~~~~~~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_1,.Ltrap_info1
 	.long	.Ltrap_info1
@@ -2750,7 +2743,7 @@ digit:
 .cc_bottom cc_trapinfo_1
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str2:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:57:9: error: out of bounds array access\n    if (sm_new_track[tx_id]==_TRUE){\n        ^~~~~~~~~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc:56:9: error: out of bounds array access\n    if (sm_new_track[tx_id]==_TRUE){\n        ^~~~~~~~~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_2,.Ltrap_info2
 	.long	.Ltrap_info2

@@ -11,8 +11,9 @@
 #include <xs1.h>
 #include <xclib.h>
 #include <print.h>
+#include "ssdac_conf.h"
 #include "ssdac.h"
-#include "customdefines.h"
+//#include "customdefines.h"
 #include "decoupler.h"
 #include <stdio.h>
 #include "button_listener.h"
@@ -45,6 +46,7 @@ void FuncGen(unsigned int fsample, unsigned int freq, streaming chanend c_out);
 void decoupler(chanend c_buf_control, chanend c_out);
 void qspi_server(server interface qspi_access i);
 
+#ifndef _EXCLUDE_MODULE_SDC_AUDIO_MAIN  //added by sakurai for SSDAC
 void thread_speed()
 {
 #ifdef FAST_MODE
@@ -56,7 +58,6 @@ void thread_speed()
 }
 
 int main(){
-
     chan c_handshake;
     chan c_play_control;
     chan c_audio;
@@ -72,7 +73,6 @@ int main(){
                 c_play_control
 #if _DAC_MODE_SELECTOR == _DAC_MODE_SELECTOR_BTN_LSTN
                 , c_dac_control
-
 #else
                 , null
 #endif
@@ -95,3 +95,4 @@ int main(){
     return 0;
 }
 
+#endif

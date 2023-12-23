@@ -597,7 +597,7 @@ unsigned config_audo_core(chanend c_in, chanend ?c_control, unsigned sample_rate
     streaming chan c_clipped;
     streaming chan c_over;
 
-    INTERPOLATION_MODE proposed_mode = _QUAD;
+    INTERPOLATION_MODE proposed_mode = _CUBIC;
 
     debug_printf("\ninitializing ring buffer");
 
@@ -615,23 +615,23 @@ unsigned config_audo_core(chanend c_in, chanend ?c_control, unsigned sample_rate
 
         switch (proposed_mode)
         {
-        case _SINC8:
-            if (sample_rate > 48000){
-                cur_mode = _CUBIC;
-                debug_printf("\nsample rate is too high to perform sinc8, fall back to cubic interporation");
-            }
-            else cur_mode = proposed_mode;
-            break;
-        case _SINC4:
-            if (sample_rate > 48000){
-                cur_mode = _CUBIC;
-                debug_printf("\nsample rate is too high to perform sinc4, fall back to cubic interporation");
-            }
-            else cur_mode = proposed_mode;
-            break;
-        default:
-            cur_mode = proposed_mode;
-            break;
+            case _SINC8:
+                if (sample_rate > 48000){
+                    cur_mode = _CUBIC;
+                    debug_printf("\nsample rate is too high to perform sinc8, fall back to cubic interporation");
+                }
+                else cur_mode = proposed_mode;
+                break;
+            case _SINC4:
+                if (sample_rate > 48000){
+                    cur_mode = _CUBIC;
+                    debug_printf("\nsample rate is too high to perform sinc4, fall back to cubic interporation");
+                }
+                else cur_mode = proposed_mode;
+                break;
+            default:
+                cur_mode = proposed_mode;
+                break;
         }
         if (!isnull(c_control)){
             c_control <: _SET_INTERPOLATION_MODE;    //inform mode controller of actualy applied mode

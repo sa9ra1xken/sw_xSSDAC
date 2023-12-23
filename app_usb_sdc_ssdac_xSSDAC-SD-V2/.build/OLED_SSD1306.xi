@@ -1,13 +1,13 @@
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src/OLED_SSD1306.xc"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 141 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
-# 10 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src/OLED_SSD1306.xc"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src\\OLED_SSD1306.h" 1
-# 15 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src\\OLED_SSD1306.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src\\OLED_SSD1306.h" 1
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src\\OLED_SSD1306.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 1 3
 # 201 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 3
 typedef streaming chanend streaming_chanend_t;
@@ -23,8 +23,8 @@ typedef out buffered port:4 out_buffered_port_4_t;
 typedef out buffered port:8 out_buffered_port_8_t;
 typedef out buffered port:16 out_buffered_port_16_t;
 typedef out buffered port:32 out_buffered_port_32_t;
-# 16 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src\\OLED_SSD1306.h" 2
-# 80 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src\\OLED_SSD1306.h"
+# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src\\OLED_SSD1306.h" 2
+# 80 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src\\OLED_SSD1306.h"
 void OLED_SSD1306_begin ();
 void OLED_SSD1306_write (unsigned char c);
 void OLED_SSD1306_put_string(int str_row, char string[]);
@@ -35,7 +35,7 @@ typedef enum {
 } RC_SCROLL;
 
 RC_SCROLL OLED_SSD1306_shift_left(int str_row);
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 1 3
 # 23 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/timer.h" 1 3
@@ -420,18 +420,33 @@ unsigned get_local_tile_id(void);
 unsigned get_tile_id(tileref t);
 # 2136 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 3
 unsigned get_logical_core_id(void);
-# 12 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
 
-# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\assert.h" 1 3
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 1
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 1
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 2
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
+
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
+# 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
+# 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\\\.build\\\\xSSDAC-SD-V2.h" 1 3
+# 13 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\\\.build\\\\xSSDAC-SD-V2.h" 3
+extern tileref tile[2];
+extern tileref usb_tile;
 
 
 
 
+service xscope_host_data(chanend c);;
+# 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
+# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 
-extern "C" {
 
 
-
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 1 3
+# 29 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/_ansi.h" 1 3
 # 15 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/_ansi.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\newlib.h" 1 3
@@ -444,36 +459,12 @@ extern "C" {
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\machine/ieeefp.h" 1 3
 # 5 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys/config.h" 2 3
 # 16 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/_ansi.h" 2 3
-# 9 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\assert.h" 2 3
-# 44 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\assert.h" 3
-void __assert (const char *__file, int, const char *__message);
-
-void __assert_func (const char *__file, int, const char *__function, const char *__message);
-
-
-
-}
-# 14 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
-
-# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
-# 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
-# 1 "C:\\\\MEGA\\\\HobbyElec\\\\SSDAC\\\\xSSDAC\\\\xTIME\\\\WORKSPACE\\\\app_usb_ssdac_xSSDAC-SD\\\\.build\\\\xSSDAC-SD-V2.h" 1 3
-# 13 "C:\\\\MEGA\\\\HobbyElec\\\\SSDAC\\\\xSSDAC\\\\xTIME\\\\WORKSPACE\\\\app_usb_ssdac_xSSDAC-SD\\\\.build\\\\xSSDAC-SD-V2.h" 3
-extern tileref tile[2];
-extern tileref usb_tile;
+# 29 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 2 3
 
 
 
 
-service xscope_host_data(chanend c);;
-# 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 16 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
-# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 
-
-
-# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 1 3
-# 34 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
 # 66 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 3
 typedef unsigned int size_t;
@@ -1079,7 +1070,7 @@ int _safe_fclose(FILE * movable fp);
 int _safe_remove(const char file[]);
 int _safe_rename(const char from[], const char to[]);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 2 3
-# 17 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
+# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h" 1 3
 
 
@@ -1194,14 +1185,14 @@ char * alias _safe_strstr(const char * alias s1, const char s2[]);
 
 size_t _safe_strnlen(const char s[], size_t n);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h" 2 3
-# 18 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE039/module_i2c_shared/src\\i2c_shared.h" 1
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE039/module_i2c_shared/src\\i2c_shared.h"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE039/module_i2c_shared/src/i2c.h" 1
-# 11 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE039/module_i2c_shared/src/i2c.h"
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE039/module_hw_support_xSSDAC-SD-V1/src\\i2c_conf.h" 1
-# 12 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE039/module_i2c_shared/src/i2c.h" 2
-# 95 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE039/module_i2c_shared/src/i2c.h"
+# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
+# 1 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h" 1
+# 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h"
+# 1 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 1
+# 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\i2c_conf.h" 1
+# 12 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 2
+# 92 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
 struct r_i2c {
     port p_i2c;
 };
@@ -1211,20 +1202,12 @@ struct r_i2c {
 
 
 void i2c_master_init(struct r_i2c &i2cPorts);
-# 123 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE039/module_i2c_shared/src/i2c.h"
-int i2c_master_write_reg(int device,
-        int reg_addr,
-        const unsigned char data[],
-        int nbytes,
-        struct r_i2c &i2cPorts);
-
-int i2c_master_write(int device,
-        int addr,
-        const unsigned char data[],
-        int offset,
-        int nbytes,
-        struct r_i2c &i2cPorts);
-
+# 120 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
+int i2c_master_write_reg(int device, int reg_addr,
+                         const unsigned char data[],
+                         int nbytes,
+                         struct r_i2c &i2cPorts);
+# 150 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
 int i2c_master_write_part(
         int device,
         int addr,
@@ -1233,7 +1216,7 @@ int i2c_master_write_part(
         int end,
         int offset,
         struct r_i2c &i2cPorts);
-# 160 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE039/module_i2c_shared/src/i2c.h"
+# 175 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
 int i2c_master_read_reg(int device, int addr,
                         unsigned char data[],
                         int nbytes,
@@ -1242,22 +1225,22 @@ int i2c_master_read_reg(int device, int addr,
 
 int i2c_master_rx(int device, unsigned char data[], int nbytes,
         struct r_i2c &i2cPorts);
-# 12 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE039/module_i2c_shared/src\\i2c_shared.h" 2
+# 12 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h" 2
 
 
 
 
 void i2c_shared_master_init(struct r_i2c &i2cPorts);
-# 26 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE039/module_i2c_shared/src\\i2c_shared.h"
+# 28 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h"
 int i2c_shared_master_rx(struct r_i2c &i2cPorts, int device, unsigned char data[],
     int nbytes);
-# 39 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE039/module_i2c_shared/src\\i2c_shared.h"
+# 41 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h"
 int i2c_shared_master_read_reg(struct r_i2c &i2cPorts, int device, int reg_addr,
     unsigned char data[], int nbytes);
-# 55 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE039/module_i2c_shared/src\\i2c_shared.h"
+# 58 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h"
 int i2c_shared_master_write_reg(struct r_i2c &i2cPorts, int device, int reg_addr,
     const unsigned char data[], int nbytes);
-# 75 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE039/module_i2c_shared/src\\i2c_shared.h"
+# 78 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h"
 int i2c_shared_master_write_part(
         struct r_i2c &i2cPorts,
         int device,
@@ -1267,9 +1250,9 @@ int i2c_shared_master_write_part(
         int end,
         int offset
         );
-# 19 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
-# 1 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src\\FONT8X16MIN.h" 1
-# 21 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src\\FONT8X16MIN.h"
+# 19 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src\\FONT8X16MIN.h" 1
+# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src\\FONT8X16MIN.h"
 const unsigned char FONT8X16MIN_TOFU[] = {
     0xcc,0xcc,0x33,0x33,0xcc,0xcc,0x33,0x33, 0xf0,0x0f,0xf0,0x0f,0xf0,0x0f,0xf0,0x0f,
     0xff,0x00,0xff,0x00,0xff,0x00,0xff,0x00, 0xff,0x00,0xff,0x00,0xff,0x00,0xff,0x00,
@@ -1381,7 +1364,7 @@ const unsigned char FONT8X16MIN_CHARBITMAP[] = {
     0x08,0x0c,0x04,0x0c,0x08,0x0c,0x04,0x00, 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
     0x70,0xf8,0xf8,0xe0,0xf8,0xf8,0x70,0x00, 0x00,0x01,0x07,0x1f,0x07,0x01,0x00,0x00
 };
-# 20 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
+# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
 
 
 
@@ -1440,7 +1423,7 @@ unsigned time;
 
 char * unsafe string_ptr[4];
 
-int found_eol[4];
+int terminator_found_before_eol[4];
 char raster_buffer[8 * 128];
 
 int display_offset[4];
@@ -1472,7 +1455,7 @@ void send_page(int page, int offset){
     cmd[0] = 0xB0 | page ;
     cmd[1] = 0x10 | 0;
     cmd[2] = 0x00 | 2;
-# 121 "C:/MEGA/HobbyElec/SSDAC/xSSDAC/xTIME/WORKSPACE/module_oled_SSD1306/src/OLED_SSD1306.xc"
+# 121 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc"
     i2c_shared_master_write_reg(
             r_i2c2,
             0x3C,
@@ -1505,15 +1488,15 @@ void OLED_SSD1306_put_string(int row, char string[]){
     display_offset[row] = 0;
     rendering_x[row] = 0;
 
-    found_eol[row] = 0;
+    terminator_found_before_eol[row] = 0;
     for (rendering_col[row] = 0 ; rendering_col[row] < 16 ; rendering_col[row]++){
         unsigned char code;
         unsafe {code = string_ptr[row][rendering_col[row]];}
 
         if ( code == '\0') {
-            found_eol[row] = 1;
+            terminator_found_before_eol[row] = 1;
         }
-        if (found_eol[row] == 1) code = ' ';
+        if (terminator_found_before_eol[row] == 1) code = ' ';
 
         unsigned int char_index = 0;
         if (code > 0x20 && code < 0x80) char_index = (code - 0x20) << 4;
@@ -1535,7 +1518,7 @@ void OLED_SSD1306_put_string(int row, char string[]){
 
 RC_SCROLL OLED_SSD1306_shift_left(const int row){
 
-
+    if (terminator_found_before_eol[row]) return _END_OF_LINE;
 
     unsigned char code;
     unsafe {code = string_ptr[row][rendering_col[row]];}

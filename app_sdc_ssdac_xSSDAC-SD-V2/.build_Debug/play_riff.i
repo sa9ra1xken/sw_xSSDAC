@@ -1816,6 +1816,7 @@ uint32_t select_no_wait_ordered(uint32_t no_wait_id, const resource_t ids[]);
 # 18 "C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api\\xcore_c.h" 2
 # 9 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
 
+
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 1 3
 # 34 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
@@ -2413,13 +2414,13 @@ typedef struct
   cookie_close_function_t *close;
 } cookie_io_functions_t;
 FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __functions);
-# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
 
 
 # 1 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h" 1
 # 77 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h"
 void debug_printf(char fmt[], ...);
-# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
 
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 1 3
@@ -2429,7 +2430,7 @@ unsigned bitrev(unsigned x);
 unsigned byterev(unsigned x);
 # 59 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 int clz(unsigned x);
-# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 1 3
 # 15 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 3
@@ -2502,10 +2503,16 @@ char *strupr (char *);
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys/string.h" 1 3
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 2 3
-# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
+# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 1
-# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
+typedef enum {
+    _USB_DAC = 0,
+    _SDC_PLAY = 1,
+} FUNCTION_SELECTOR;
+
+
 typedef enum {
     _PENDING_Q = 0,
     _INPUT_Q = 1,
@@ -2528,7 +2535,7 @@ typedef enum {
 unsigned QueryChannel(chanend ch, unsigned command);
 
 void button_listener(chanend c_play_control, chanend c_dac_control);
-# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
+# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h" 1
 # 24 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h"
@@ -2713,23 +2720,21 @@ DWORD get_fattime (void);
 
 WCHAR ff_convert (WCHAR, UINT);
 WCHAR ff_wtoupper (WCHAR);
-# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
+# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/timing.h" 1
 # 10 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/timing.h"
 unsigned int get_time(void);
-# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
-
-# 1 ".././src\\customdefines.h" 1
 # 19 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
 
+
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.h" 1
-# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.h"
+# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.h"
 typedef enum {
     _FALSE = 0,
     _TRUE = 1
 } BOOL;
-# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
+# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.h" 1
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.h"
@@ -2742,10 +2747,10 @@ typedef enum {
     _RC_PREVIOUS_FOLDER,
     _RC_ERROR
 } PLAY_TRACK_RC;
-# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
+# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h" 1
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
@@ -2756,12 +2761,13 @@ void display_control();
 typedef enum {
     _SDC_AUDIO = 1,
     _USB_AUDIO = 2,
-    _DAC_MENU = 3
+    _DAC_MODE_SELECTION = 3,
+    _FUNCTION_SELECTION = 4
 } CONSOLE_MODE;
 
 CONSOLE_MODE get_console_mode();
 void set_console_mode(CONSOLE_MODE value);
-# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play_utils.h" 1
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play_utils.h"
@@ -2771,7 +2777,7 @@ void set_console_mode(CONSOLE_MODE value);
 
 _Bool ReadUnsigned(FIL *fp, uint *dp, uint size);
 void WriteHexString(TCHAR* data, int byte_count);
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
+# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.h" 1
 # 13 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.h"
@@ -2790,7 +2796,7 @@ USER_CONTROL_TYPE TestUserControl(
         PLAY_TRACK_RC *rc,
         SKIP_RESULT (*skip_callback)(int)
 );
-# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
+# 25 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c" 2
 
 
 
@@ -2852,7 +2858,7 @@ static void PlaySingleBuffer(){
     buff_id ++;
     if (buff_id >= 8) buff_id = 0;
 }
-# 93 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c"
+# 94 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c"
 static SKIP_RESULT Skip(int sec_skip){
     debug_printf("\nSkip %d sec", sec_skip);
     int byte_to_skip = SampleRate * BytePerWord * ChannelCount * sec_skip;

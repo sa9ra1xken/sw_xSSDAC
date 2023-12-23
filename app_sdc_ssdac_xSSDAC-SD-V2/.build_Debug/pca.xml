@@ -240,6 +240,13 @@
     </values>
   </arg>
 </fInfo>
+<fInfo name="GetFunctionString" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
+  <arg num="0" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fInfo>
 <fInfo name="HandleDacCommand" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="2">
   <arg num="0" specialize="false">
     <values>
@@ -265,6 +272,87 @@
   </arg>
 </fInfo>
 <fInfo name="KeyEvent" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
+  <arg num="0" specialize="false">
+    <values>
+      <value type="intval"><intval isSigned="true" val="1"/></value>
+      <value type="intval"><intval isSigned="true" val="2"/></value>
+      <value type="intval"><intval isSigned="true" val="3"/></value>
+      <value type="intval"><intval isSigned="true" val="4"/></value>
+      <value type="intval"><intval isSigned="true" val="5"/></value>
+      <value type="intval"><intval isSigned="true" val="6"/></value>
+      <value type="intval"><intval isSigned="true" val="7"/></value>
+      <value type="intval"><intval isSigned="true" val="11"/></value>
+      <value type="intval"><intval isSigned="true" val="12"/></value>
+      <value type="intval"><intval isSigned="true" val="13"/></value>
+      <value type="intval"><intval isSigned="true" val="14"/></value>
+      <value type="intval"><intval isSigned="true" val="15"/></value>
+      <value type="intval"><intval isSigned="true" val="16"/></value>
+      <value type="intval"><intval isSigned="true" val="17"/></value>
+      <value type="intval"><intval isSigned="true" val="21"/></value>
+      <value type="intval"><intval isSigned="true" val="22"/></value>
+      <value type="intval"><intval isSigned="true" val="23"/></value>
+      <value type="intval"><intval isSigned="true" val="24"/></value>
+      <value type="intval"><intval isSigned="true" val="25"/></value>
+      <value type="intval"><intval isSigned="true" val="26"/></value>
+      <value type="intval"><intval isSigned="true" val="27"/></value>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="KeyEventInDacModeSelection" global="true" specialize="false" noreturn="false" doNotSpecialize="true" numParams="1">
+  <arg num="0" specialize="false">
+    <values>
+      <value type="intval"><intval isSigned="true" val="1"/></value>
+      <value type="intval"><intval isSigned="true" val="2"/></value>
+      <value type="intval"><intval isSigned="true" val="3"/></value>
+      <value type="intval"><intval isSigned="true" val="4"/></value>
+      <value type="intval"><intval isSigned="true" val="5"/></value>
+      <value type="intval"><intval isSigned="true" val="6"/></value>
+      <value type="intval"><intval isSigned="true" val="7"/></value>
+      <value type="intval"><intval isSigned="true" val="11"/></value>
+      <value type="intval"><intval isSigned="true" val="12"/></value>
+      <value type="intval"><intval isSigned="true" val="13"/></value>
+      <value type="intval"><intval isSigned="true" val="14"/></value>
+      <value type="intval"><intval isSigned="true" val="15"/></value>
+      <value type="intval"><intval isSigned="true" val="16"/></value>
+      <value type="intval"><intval isSigned="true" val="17"/></value>
+      <value type="intval"><intval isSigned="true" val="21"/></value>
+      <value type="intval"><intval isSigned="true" val="22"/></value>
+      <value type="intval"><intval isSigned="true" val="23"/></value>
+      <value type="intval"><intval isSigned="true" val="24"/></value>
+      <value type="intval"><intval isSigned="true" val="25"/></value>
+      <value type="intval"><intval isSigned="true" val="26"/></value>
+      <value type="intval"><intval isSigned="true" val="27"/></value>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="KeyEventInFunctionSelection" global="true" specialize="false" noreturn="false" doNotSpecialize="true" numParams="1">
+  <arg num="0" specialize="false">
+    <values>
+      <value type="intval"><intval isSigned="true" val="1"/></value>
+      <value type="intval"><intval isSigned="true" val="2"/></value>
+      <value type="intval"><intval isSigned="true" val="3"/></value>
+      <value type="intval"><intval isSigned="true" val="4"/></value>
+      <value type="intval"><intval isSigned="true" val="5"/></value>
+      <value type="intval"><intval isSigned="true" val="6"/></value>
+      <value type="intval"><intval isSigned="true" val="7"/></value>
+      <value type="intval"><intval isSigned="true" val="11"/></value>
+      <value type="intval"><intval isSigned="true" val="12"/></value>
+      <value type="intval"><intval isSigned="true" val="13"/></value>
+      <value type="intval"><intval isSigned="true" val="14"/></value>
+      <value type="intval"><intval isSigned="true" val="15"/></value>
+      <value type="intval"><intval isSigned="true" val="16"/></value>
+      <value type="intval"><intval isSigned="true" val="17"/></value>
+      <value type="intval"><intval isSigned="true" val="21"/></value>
+      <value type="intval"><intval isSigned="true" val="22"/></value>
+      <value type="intval"><intval isSigned="true" val="23"/></value>
+      <value type="intval"><intval isSigned="true" val="24"/></value>
+      <value type="intval"><intval isSigned="true" val="25"/></value>
+      <value type="intval"><intval isSigned="true" val="26"/></value>
+      <value type="intval"><intval isSigned="true" val="27"/></value>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="KeyEventInSDCMode" global="true" specialize="false" noreturn="false" doNotSpecialize="true" numParams="1">
   <arg num="0" specialize="false">
     <values>
       <value type="intval"><intval isSigned="true" val="1"/></value>
@@ -332,6 +420,8 @@
 </fInfo>
 <fInfo name="ReleaseMute" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
+<fInfo name="SelectedFunction" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
+</fInfo>
 <fInfo name="ShowAudioAttribute" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
 <fInfo name="ShowFolder" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
@@ -352,6 +442,7 @@
     <values>
       <value type="intval"><intval isSigned="true" val="1"/></value>
       <value type="intval"><intval isSigned="true" val="3"/></value>
+      <value type="intval"><intval isSigned="true" val="4"/></value>
     </values>
   </arg>
 </fInfo>
@@ -411,12 +502,6 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="array_to_xc_ptr" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
-  <arg num="0" specialize="false">
-    <values>
-    </values>
-  </arg>
-</fInfo>
 <fInfo name="audio_xss" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="2">
   <arg num="0" specialize="false">
     <values>
@@ -449,10 +534,9 @@
       <value type="intval"><intval isSigned="true" val="4"/></value>
       <value type="intval"><intval isSigned="true" val="8"/></value>
       <value type="intval"><intval isSigned="true" val="16"/></value>
-      <value type="intval"><intval isSigned="true" val="32"/></value>
-      <value type="intval"><intval isSigned="true" val="64"/></value>
       <value type="intval"><intval isSigned="true" val="256"/></value>
       <value type="intval"><intval isSigned="true" val="512"/></value>
+      <value type="intval"><intval isSigned="true" val="1024"/></value>
     </values>
   </arg>
 </fInfo>
@@ -972,6 +1056,7 @@
       <value type="intval"><intval isSigned="true" val="16"/></value>
       <value type="intval"><intval isSigned="true" val="256"/></value>
       <value type="intval"><intval isSigned="true" val="512"/></value>
+      <value type="intval"><intval isSigned="true" val="1024"/></value>
     </values>
   </arg>
 </fInfo>
@@ -1033,10 +1118,9 @@
       <value type="intval"><intval isSigned="true" val="4"/></value>
       <value type="intval"><intval isSigned="true" val="8"/></value>
       <value type="intval"><intval isSigned="true" val="16"/></value>
-      <value type="intval"><intval isSigned="true" val="32"/></value>
-      <value type="intval"><intval isSigned="true" val="64"/></value>
       <value type="intval"><intval isSigned="true" val="256"/></value>
       <value type="intval"><intval isSigned="true" val="512"/></value>
+      <value type="intval"><intval isSigned="true" val="1024"/></value>
     </values>
   </arg>
 </fInfo>
