@@ -984,13 +984,43 @@ unsigned int get_time(void);
 # 14 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 1
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 1
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h" 1
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h"
+typedef enum {
+    _GET_INTERPOLATION_MODE =1,
+    _SET_INTERPOLATION_MODE =2
+} DAC_COMMAND;
+
+
+
+
+typedef enum {
+    _TBD =0,
+    _STEP =1,
+    _LINEAR =2,
+    _QUAD =3,
+    _CUBIC =4,
+    _SINC4 =5,
+    _SINC8 =6
+} INTERPOLATION_MODE;
+
+
+
+
+typedef enum {
+    _AUDIO_FORMAT_CHANGE = 0,
+    _INTERPOLATION_MODE_CHANGE = 1
+} DAC_RETURN_CODE;
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 2
+
+
+
 typedef enum {
     _USB_DAC = 0,
     _SDC_PLAY = 1,
 } FUNCTION_SELECTOR;
-
 
 typedef enum {
     _PENDING_Q = 0,
@@ -1012,8 +1042,11 @@ typedef enum {
 } PLAY_COMMAND;
 
 unsigned QueryChannel(chanend ch, unsigned command);
-
-void button_listener(chanend c_play_control, chanend c_dac_control);
+void button_listener_core(chanend c_play_control, chanend c_dac_control);
+void KeyScan();
+void SendBackTrackControl(chanend c_track_control);
+void HandleDacCommand(chanend c_control, DAC_COMMAND command);
+void HandlePlayCommand(chanend c_control, QUERY_TYPE type);
 # 16 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 
@@ -1031,14 +1064,16 @@ typedef enum {
 # 18 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h" 1
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 1
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
 void update_chan_count(unsigned ch);
 
-void display_control();
+void display_control_core();
+void init_display_frame();
+void handle_display_frame();
 
 typedef enum {
     _SDC_AUDIO = 1,
@@ -1250,6 +1285,9 @@ void sdcard_play(
 )
 {
     debug_printf("\nsdcard_play started");
+
+    set_console_mode(_SDC_AUDIO);
+    set_display_control_flag(0x00000010);
     set_display_control_flag(0x00000002);
     set_display_control_flag(0x00000001);
 
@@ -1289,7 +1327,7 @@ void sdcard_play(
 
         while (state == IDLE){
             debug_printf("\nIDLE");
-# 263 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
+# 266 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
             PLAY_COMMAND reply = QueryChannel(c_play_control, _INPUT_Q);
             switch (reply){
             case _PLAY_CMD_PREV_TRACK:

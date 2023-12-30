@@ -9,6 +9,6 @@
 #define P_GPIO_3        (1 << 3)
 
 
-void out_led_port(unsigned bit, unsigned value);
+void write_led_port(unsigned bit, unsigned value);
 
 #endif

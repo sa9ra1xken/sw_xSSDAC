@@ -8,7 +8,7 @@
 <fDef name="KeyEventInSDCMode" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="QueryChannel" global="true" noreturn="false" doNotSpecialize="false" numParams="2"/>
 <fDef name="SwitchConsoleMode" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
-<fDef name="button_listener" global="true" noreturn="true" doNotSpecialize="false" numParams="2"/>
+<fDef name="button_listener_core" global="true" noreturn="true" doNotSpecialize="false" numParams="2"/>
 <fDef name="delay_microseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="delay_milliseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="delay_seconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>

@@ -10,8 +10,8 @@
 #include <XS1.h>
 #include "button_listener.h"
 #include "display_control.h"
-#include "ssdac.h"
 #include "ssdac_conf.h"
+#include "SSDAC_MODE.h"
 #include <stdio.h>
 //#include <customdefines.h>
 #define DEBUG_UNIT HUMAN_INTERFACE
@@ -88,6 +88,14 @@ void HandlePlayCommand(chanend c_control, QUERY_TYPE type){
         p_key :> temp;
         c_control <: temp;
         break;
+    }
+}
+
+void SendBackTrackControl(chanend c_track_control){
+    if ( (play_command_request == 1) && ( play_command != _PLAY_CMD_EMPTY ) ){
+        c_track_control <: play_command;
+        play_command = _PLAY_CMD_EMPTY;
+        play_command_request = 0;
     }
 }
 
@@ -196,10 +204,12 @@ inline void KeyEventInFunctionSelection(BUTTON_EVENT event){
     }
 
     switch (event){
+
     case _BTN_1_DOWN:
         unsafe { *p_selected_function = _USB_DAC; }
         set_display_control_flag(BITMASK_SHOW_SELECTED_FUNCTION);
         break;
+
     case _BTN_2_DOWN:
         unsafe { *p_selected_function = _SDC_PLAY; }
         set_display_control_flag(BITMASK_SHOW_SELECTED_FUNCTION);
@@ -208,11 +218,9 @@ inline void KeyEventInFunctionSelection(BUTTON_EVENT event){
     case _BTN_7_DOWN:
 #ifdef _SDC_AUDIO_USE_DISPLAY
             SwitchConsoleMode(_SDC_AUDIO);
-#else
-#ifdef _USB_AUDIO_USE_DISPLAY
-            printf("\nSwitching to USB Audio Menu");
-            SwitchConsoleMode(_USB_AUDIO);
 #endif
+#ifdef _USB_AUDIO_USE_DISPLAY
+            SwitchConsoleMode(_USB_AUDIO);
 #endif
             break;
     }
@@ -250,7 +258,7 @@ void KeyEvent(BUTTON_EVENT event){
     }
 }
 
-void ExamineKeyInput(){
+void KeyScan(){
     timer t;
     unsigned now;
     key_buff[2] = key_buff[1];
@@ -321,10 +329,9 @@ void ExamineKeyInput(){
     }
 }
 
-void button_listener(chanend ?c_play_control, chanend ?c_dac_control){
+void button_listener_core(chanend ?c_track_control, chanend ?c_dac_control){
 
     unsafe {p_console_mode = &console_mode;}
-
     timer t;
 
     p_key :> key_buff[0];
@@ -333,36 +340,25 @@ void button_listener(chanend ?c_play_control, chanend ?c_dac_control){
 
     t :> scan_time;
 
-#ifdef _SDC_AUDIO_USE_DISPLAY
-    set_console_mode(_SDC_AUDIO);
-#else
-#ifdef _USB_AUDIO_USE_DISPLAY
-    set_console_mode(_USB_AUDIO);
-#endif
-#endif
-    set_display_control_flag(BITMASK_SWITCH_CONSOLE);
+    //set_console_mode(_SDC_AUDIO);
+    //set_display_control_flag(BITMASK_SWITCH_CONSOLE);
 
     while (1){
 
 #ifdef TOGGLE_TP
         Toggle();
 #endif
-        if ( (play_command_request == 1) && ( play_command != _PLAY_CMD_EMPTY ) ){
-            c_play_control <: play_command;
-            play_command = _PLAY_CMD_EMPTY;
-            play_command_request = 0;
-        }
+
+        SendBackTrackControl(c_track_control);
 
         DAC_COMMAND dac_command;
         QUERY_TYPE query_type;
 
         select {
-#ifdef _SDC_AUDIO_USE_DISPLAY
 
-        case c_play_control :> query_type:
-                HandlePlayCommand(c_play_control, query_type);
+        case c_track_control :> query_type:
+                HandlePlayCommand(c_track_control, query_type);
                 break;
-#endif
 
 #if _DAC_MODE_SELECTOR == _DAC_MODE_SELECTOR_BTN_LSTN
         case c_dac_control :> dac_command:
@@ -370,7 +366,7 @@ void button_listener(chanend ?c_play_control, chanend ?c_dac_control){
                 break;
 #endif
         case t when timerafter(scan_time) :> void:
-                ExamineKeyInput();
+                KeyScan();
                 scan_time += TIME_10MS;
                 break;
         }

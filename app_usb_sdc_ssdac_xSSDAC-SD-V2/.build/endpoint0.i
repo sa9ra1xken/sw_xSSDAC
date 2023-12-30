@@ -1615,7 +1615,7 @@ USB_Config_Descriptor_Audio2_t cfgDesc_Audio2=
         .bDescriptorType = USB_DESCTYPE_ENDPOINT,
         .bEndpointAddress = (ENDPOINT_NUMBER_OUT_AUDIO),
         .bmAttributes = 0x05,
-        .wMaxPacketSize = ((((((192000)+7999)/8000)+1) * (2)) * 4),
+        .wMaxPacketSize = ((((((384000)+7999)/8000)+1) * (2)) * 4),
         .bInterval = 1,
     },
 
@@ -1693,7 +1693,7 @@ USB_Config_Descriptor_Audio2_t cfgDesc_Audio2=
         .bDescriptorType = USB_DESCTYPE_ENDPOINT,
         .bEndpointAddress = (ENDPOINT_NUMBER_OUT_AUDIO),
         .bmAttributes = 0x05,
-        .wMaxPacketSize = ((((((192000)+7999)/8000)+1) * (2)) * (16/8)),
+        .wMaxPacketSize = ((((((384000)+7999)/8000)+1) * (2)) * (16/8)),
         .bInterval = 1,
     },
 
@@ -2272,13 +2272,13 @@ void Endpoint0(chanend c_ep0_out, chanend c_ep0_in, chanend c_audioControl,
 
                     cfgDesc_Audio2.Audio_Out_Format.bSubslotSize = 4;
                     cfgDesc_Audio2.Audio_Out_Format.bBitResolution = 24;
-                    cfgDesc_Audio2.Audio_Out_Endpoint.wMaxPacketSize = ((((((192000)+7999)/8000)+1) * (2)) * 4);
+                    cfgDesc_Audio2.Audio_Out_Endpoint.wMaxPacketSize = ((((((384000)+7999)/8000)+1) * (2)) * 4);
                     cfgDesc_Audio2.Audio_Out_ClassStreamInterface.bNrChannels = (2);
 
 
                     cfgDesc_Audio2.Audio_Out_Format_2.bSubslotSize = (16/8);
                     cfgDesc_Audio2.Audio_Out_Format_2.bBitResolution = 16;
-                    cfgDesc_Audio2.Audio_Out_Endpoint_2.wMaxPacketSize = ((((((192000)+7999)/8000)+1) * (2)) * (16/8));
+                    cfgDesc_Audio2.Audio_Out_Endpoint_2.wMaxPacketSize = ((((((384000)+7999)/8000)+1) * (2)) * (16/8));
                     cfgDesc_Audio2.Audio_Out_ClassStreamInterface_2.bNrChannels = (2);
 # 682 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/endpoint0.c"
                 }

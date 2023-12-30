@@ -29,7 +29,7 @@
 #define _TOGGLE_TP  1
 
 extern char TotalTimeString[];
-extern char information_string[];
+extern char audio_property_string[];
 
 extern unsigned int buff_id;
 extern unsigned char audio_buffer[NUM_BUF][BUF_SIZE];
@@ -213,10 +213,10 @@ PLAY_TRACK_RC PlayRIFF(FIL* file, chanend handshake, chanend c_control)
     unsigned TotalSec = TotalTime % 60;
     sprintf(TotalTimeString,"%02d:%02d", TotalMin, TotalSec);
 
-    sprintf(information_string,"LINEAR PCM %1dch %4.1fksps %2dbit %s", ChannelCount, ((float)SampleRate/1000),bit_depth, TotalTimeString);
+    sprintf(audio_property_string,"LINEAR PCM %1dch %4.1fksps %2dbit %s", ChannelCount, ((float)SampleRate/1000),bit_depth, TotalTimeString);
     set_display_control_flag(BITMASK_UPDATE_INFO);
 
-    debug_printf("\n%s", information_string);
+    debug_printf("\n%s", audio_property_string);
     fflush(stdout);
 
     extern unsigned int SecElapsed;

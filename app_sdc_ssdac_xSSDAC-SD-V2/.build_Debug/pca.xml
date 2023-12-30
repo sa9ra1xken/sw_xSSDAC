@@ -222,8 +222,6 @@
 </fInfo>
 <fInfo name="ConfigureSerialDacPorts" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
-<fInfo name="ExamineKeyInput" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
-</fInfo>
 <fInfo name="FixedInterpolationMode" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
 <fInfo name="FuncGen" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="3">
@@ -379,6 +377,8 @@
     </values>
   </arg>
 </fInfo>
+<fInfo name="KeyScan" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
+</fInfo>
 <fInfo name="OLED_SSD1306_begin" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
 <fInfo name="OLED_SSD1306_put_string" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="2">
@@ -421,6 +421,13 @@
 <fInfo name="ReleaseMute" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
 <fInfo name="SelectedFunction" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
+</fInfo>
+<fInfo name="SendBackTrackControl" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
+  <arg num="0" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
 </fInfo>
 <fInfo name="ShowAudioAttribute" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
@@ -502,19 +509,7 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="audio_xss" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="2">
-  <arg num="0" specialize="false">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="1" specialize="false">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fInfo>
-<fInfo name="button_listener" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="2">
+<fInfo name="button_listener_core" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="2">
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
@@ -558,7 +553,7 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="config_audo_core" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="4">
+<fInfo name="configure_audio_process" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="4">
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
@@ -577,6 +572,16 @@
   <arg num="3" specialize="false">
     <values>
       <value type="unknown"/>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="console_core" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="2">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
     </values>
   </arg>
 </fInfo>
@@ -685,7 +690,7 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="display_control" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="0">
+<fInfo name="display_control_core" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="0">
 </fInfo>
 <fInfo name="fir_sinc4" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="4">
   <arg num="0" specialize="false">
@@ -737,6 +742,8 @@
 <fInfo name="get_fattime" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
 <fInfo name="get_time" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
+</fInfo>
+<fInfo name="handle_display_frame" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
 <fInfo name="i2c_master_init" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
@@ -864,6 +871,8 @@
       <value type="unknown"/>
     </values>
   </arg>
+</fInfo>
+<fInfo name="init_display_frame" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
 <fInfo name="init_ring_buff" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
@@ -1037,17 +1046,13 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="set_console_mode" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="1">
-  <arg num="0" specialize="true">
+<fInfo name="set_console_mode" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
+  <arg num="0" specialize="false">
     <values>
+      <value type="unknown"/>
       <value type="intval"><intval isSigned="true" val="1"/></value>
     </values>
   </arg>
- <specializations>
-   <specialization id="0">
-    <arg num="0"><values><value type="intval"><intval isSigned="true" val="1"/></value></values></arg>
-   </specialization>
- </specializations>
 </fInfo>
 <fInfo name="set_display_control_flag" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
@@ -1085,6 +1090,18 @@
     </values>
   </arg>
   <arg num="3" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="ssdac_core" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="2">
+  <arg num="0" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
     <values>
       <value type="unknown"/>
     </values>

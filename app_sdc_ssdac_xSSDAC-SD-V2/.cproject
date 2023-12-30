@@ -218,6 +218,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_libFLAC/source/private}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_human_interface/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_xc_ptr/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_operation_console/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_operation_console}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.xc.compiler.input.1906012823" name="XC" superClass="com.xmos.cdt.xc.compiler.input"/>
 							</tool>
@@ -564,6 +566,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_libFLAC/source/private}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_human_interface/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_xc_ptr/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_operation_console/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_operation_console}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.c.compiler.input.c.432373254" name="C" superClass="com.xmos.cdt.c.compiler.input.c"/>
 							</tool>
@@ -915,6 +919,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_libFLAC/source/private}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_human_interface/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_xc_ptr/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_operation_console/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_operation_console}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.cxx.compiler.input.cpp.934344017" name="C++" superClass="com.xmos.cdt.cxx.compiler.input.cpp"/>
 							</tool>
@@ -1108,7 +1114,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_logging/api}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_sdcard4bit/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_hw_support_xSSDAC-SD-V1/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_human_interface}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_sd_audio}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_i2c_single_port/doc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_locks}&quot;"/>
@@ -1456,7 +1461,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_logging/api}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_sdcard4bit/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_hw_support_xSSDAC-SD-V1/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_human_interface}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_sd_audio}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_i2c_single_port/doc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_locks}&quot;"/>

@@ -106,7 +106,8 @@
 
 /* Maximum frequency device runs at */
 #ifndef MAX_FREQ
-#define MAX_FREQ           (192000)
+//#define MAX_FREQ           (192000)
+#define MAX_FREQ           (384000)
 #endif
 
 //:

@@ -17,7 +17,8 @@
 	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\sdcard_play.c"
 	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h"
 	.file	3 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\sdcard_play.h"
-	.file	4 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
+	.file	4 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
+	.file	5 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
 	.text
 	.globl	GetDirItemAt
 	.align	4
@@ -648,7 +649,7 @@ ClimbUp:
 .Ltmp94:
 	.size	ClimbUp, .Ltmp94-ClimbUp
 .Lfunc_end3:
-	.file	5 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\integer.h"
+	.file	6 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\integer.h"
 	.cfi_endproc
 
 	.globl	GoPreviousFolder
@@ -1023,50 +1024,66 @@ sdcard_play:
 	}
 .Ltmp156:
 	{
-		ldc r4, 2
+		mkmsk r7, 1
 		stw r0, sp[9]
 	}
-	.loc	1 215 5 prologue_end
+	.loc	1 216 5 prologue_end
 .Ltmp157:
+	{
+		mov r0, r7
+		nop
+	}
+	bl set_console_mode
+	{
+		ldc r0, 16
+		nop
+	}
+	.loc	1 217 5
+	bl set_display_control_flag
+	{
+		ldc r4, 2
+		nop
+	}
+	.loc	1 218 5
 	{
 		mov r0, r4
 		nop
 	}
 	bl set_display_control_flag
+	.loc	1 219 5
 	{
-		mkmsk r0, 1
+		mov r0, r7
 		nop
 	}
-	.loc	1 216 5
 	bl set_display_control_flag
 .Ltmp158:
 	{
-		ldc r9, 0
+		ldc r7, 0
 		nop
 	}
 	ldaw r1, sp[77]
 .Ltmp159:
-	.loc	1 222 5
+	.loc	1 225 5
 	{
-		mov r0, r9
+		mov r0, r7
 		nop
 	}
 	bl f_mount
 .Ltmp160:
-	.loc	1 225 12
+	.loc	1 228 12
 	{
 		mov r0, r6
 		mov r1, r4
 	}
 	bl QueryChannel
-	.loc	1 225 12
+	.loc	1 228 12
 	{
 		zext r0, 1
 		nop
 	}
 	bf r0, .LBB6_2
 .Ltmp161:
-	.loc	1 229 9
+	.loc	1 232 9
 	ldaw r3, dp[folder_string]
 	ldc r1, 266
 	ldc r4, 256
@@ -1082,9 +1099,9 @@ sdcard_play:
 	}
 .Ltmp163:
 	ldaw r0, dp[folder_string+252]
-	.loc	1 230 9
-	st8 r9, r0[r5]
-	.loc	1 232 9
+	.loc	1 233 9
+	st8 r7, r0[r5]
+	.loc	1 235 9
 	ldaw r3, dp[track_string]
 	{
 		ldc r1, 10
@@ -1096,8 +1113,8 @@ sdcard_play:
 	}
 	bl qspi_if_read
 	ldaw r0, dp[track_string+252]
-	.loc	1 234 9
-	st8 r9, r0[r5]
+	.loc	1 237 9
+	st8 r7, r0[r5]
 	{
 		mov r5, r6
 		nop
@@ -1138,7 +1155,7 @@ sdcard_play:
 		mov r2, r6
 	}
 	{
-		mov r7, r6
+		mov r10, r6
 		mov r3, r4
 	}
 	bl qspi_if_write
@@ -1154,8 +1171,8 @@ sdcard_play:
 	bl f_opendir
 .Ltmp171:
 	{
-		mov r8, r9
-		stw r9, sp[8]
+		mov r9, r7
+		stw r7, sp[8]
 	}
 	bt r0, .LBB6_9
 .Ltmp172:
@@ -1163,12 +1180,12 @@ sdcard_play:
 	ldaw r0, dp[GetDirIndexOf.lfn]
 	stw r0, sp[224]
 	.loc	1 86 5
-	stw r7, sp[225]
-	ldaw r6, sp[218]
+	stw r10, sp[225]
+	ldaw r8, sp[218]
 .Ltmp173:
 	.loc	1 94 9
 	{
-		add r9, r6, 9
+		add r7, r8, 9
 		ldc r4, 0
 	}
 	{
@@ -1179,21 +1196,21 @@ sdcard_play:
 .LBB6_4:
 	{
 		ldaw r0, sp[13]
-		mov r1, r6
+		mov r1, r8
 	}
 	.loc	1 91 9
 	bl f_readdir
 	.loc	1 94 9
-	ldw r10, sp[224]
+	ldw r6, sp[224]
 	{
 		nop
-		ld8u r0, r10[r4]
+		ld8u r0, r6[r4]
 	}
 	bt r0, .LBB6_6
 .Ltmp175:
 	.loc	1 94 9
 	{
-		mov r10, r9
+		mov r6, r7
 		nop
 	}
 .Ltmp176:
@@ -1201,7 +1218,7 @@ sdcard_play:
 	.loc	1 99 13
 	ldaw r0, dp[track_string]
 	{
-		mov r1, r10
+		mov r1, r6
 		nop
 	}
 	bl strcmp
@@ -1223,7 +1240,7 @@ sdcard_play:
 	}
 	{
 		nop
-		ld8u r0, r10[r4]
+		ld8u r0, r6[r4]
 	}
 	bt r0, .LBB6_4
 .Ltmp179:
@@ -1241,7 +1258,7 @@ sdcard_play:
 		nop
 	}
 	{
-		mkmsk r9, 2
+		mkmsk r7, 2
 		stw r0, sp[5]
 	}
 	{
@@ -1252,10 +1269,10 @@ sdcard_play:
 .Ltmp182:
 .LBB6_55:
 	{
-		mov r4, r9
+		mov r4, r7
 		ldw r0, sp[8]
 	}
-	.loc	1 337 17
+	.loc	1 340 17
 .Ltmp183:
 	{
 		sub r0, r0, 1
@@ -1263,14 +1280,14 @@ sdcard_play:
 	}
 .Ltmp184:
 	{
-		ldc r9, 2
+		ldc r7, 2
 		stw r0, sp[8]
 	}
 .Ltmp185:
 .LBB6_10:
 	{
 		nop
-		stw r9, sp[11]
+		stw r7, sp[11]
 	}
 	bu .LBB6_11
 .LBB6_52:
@@ -1281,7 +1298,7 @@ sdcard_play:
 	}
 .Ltmp187:
 .LBB6_11:
-	.loc	1 252 9
+	.loc	1 255 9
 	ldw r0, dp[state]
 .Ltmp188:
 	{
@@ -1292,27 +1309,27 @@ sdcard_play:
 	ashr r1, r2, 32
 	bt r1, .LBB6_12
 .Ltmp190:
-	.loc	1 252 9
+	.loc	1 255 9
 	{
 		add r1, r2, 1
 		nop
 	}
 	{
-		mov r9, r4
+		mov r7, r4
 		stw r1, sp[7]
 	}
 	bu .LBB6_28
 .Ltmp191:
 .LBB6_56:
-	.loc	1 343 17
-	stw r8, dp[state]
+	.loc	1 346 17
+	stw r9, dp[state]
 	{
 		mkmsk r0, 1
 		stw r1, sp[11]
 	}
 .Ltmp192:
 .LBB6_28:
-	.loc	1 252 9
+	.loc	1 255 9
 	{
 		zext r0, 1
 		nop
@@ -1320,18 +1337,18 @@ sdcard_play:
 	bf r0, .LBB6_38
 .Ltmp193:
 	{
-		mov r4, r9
+		mov r4, r7
 		ldw r0, sp[12]
 	}
 	{
 		mkmsk r1, 1
 		nop
 	}
-	.loc	1 263 34
+	.loc	1 266 34
 .Ltmp194:
 	bl QueryChannel
 .Ltmp195:
-	.loc	1 264 13
+	.loc	1 267 13
 	{
 		sub r0, r0, 1
 		mkmsk r1, 3
@@ -1358,11 +1375,11 @@ sdcard_play:
 		mkmsk r0, 1
 		nop
 	}
-	.loc	1 274 17
+	.loc	1 277 17
 .Ltmp199:
 	stw r0, dp[state]
 	{
-		mov r9, r4
+		mov r7, r4
 		nop
 	}
 .Ltmp200:
@@ -1377,7 +1394,7 @@ sdcard_play:
 	bl f_opendir
 .Ltmp202:
 	{
-		mov r3, r10
+		mov r3, r8
 		nop
 	}
 	bt r0, .LBB6_43
@@ -1387,7 +1404,7 @@ sdcard_play:
 	.loc	1 61 5
 	stw r0, sp[224]
 	.loc	1 62 5
-	stw r7, sp[225]
+	stw r10, sp[225]
 .Ltmp204:
 	{
 		nop
@@ -1398,7 +1415,7 @@ sdcard_play:
 	.loc	1 66 9
 	{
 		mov r0, r6
-		mov r1, r9
+		mov r1, r7
 	}
 	bl f_readdir
 .Ltmp206:
@@ -1418,7 +1435,7 @@ sdcard_play:
 	}
 	{
 		nop
-		ld8u r0, r9[r0]
+		ld8u r0, r7[r0]
 	}
 	{
 		nop
@@ -1426,7 +1443,7 @@ sdcard_play:
 	}
 	{
 		nop
-		ld8u r0, r3[r8]
+		ld8u r0, r3[r9]
 	}
 	bt r0, .LBB6_43
 .Ltmp208:
@@ -1438,9 +1455,9 @@ sdcard_play:
 .LBB6_43:
 	{
 		nop
-		ld8u r0, r3[r8]
+		ld8u r0, r3[r9]
 	}
-	.loc	1 295 12
+	.loc	1 298 12
 .Ltmp210:
 	bf r0, .LBB6_44
 .Ltmp211:
@@ -1448,51 +1465,51 @@ sdcard_play:
 		ldc r1, 16
 		ldw r2, sp[10]
 	}
-	.loc	1 306 18
+	.loc	1 309 18
 .Ltmp212:
 	{
 		and r1, r2, r1
 		nop
 	}
-	.loc	1 306 18
+	.loc	1 309 18
 	bt r1, .LBB6_48
 .Ltmp213:
 	{
-		mov r4, r9
+		mov r4, r7
 		nop
 	}
-	.loc	1 319 13
+	.loc	1 322 13
 .Ltmp214:
-	ldaw r9, dp[track_string]
-	.loc	1 319 13
+	ldaw r7, dp[track_string]
+	.loc	1 322 13
 	{
-		mov r0, r9
+		mov r0, r7
 		mov r1, r3
 	}
 	{
-		mov r10, r3
-		mov r2, r7
+		mov r8, r3
+		mov r2, r10
 	}
 	bl strncpy
-	.loc	1 323 13
+	.loc	1 326 13
 	{
 		mov r0, r5
 		ldc r1, 10
 	}
 	{
-		mov r2, r7
-		mov r3, r9
+		mov r2, r10
+		mov r3, r7
 	}
 	bl qspi_if_write
 	{
 		mkmsk r0, 1
 		nop
 	}
-	.loc	1 325 13
+	.loc	1 328 13
 	bl set_display_control_flag
-	.loc	1 328 18
+	.loc	1 331 18
 	{
-		mov r0, r9
+		mov r0, r7
 		ldw r1, sp[9]
 	}
 	{
@@ -1501,7 +1518,7 @@ sdcard_play:
 	}
 	bl PlayTrack
 .Ltmp215:
-	.loc	1 329 13
+	.loc	1 332 13
 	{
 		sub r2, r0, 1
 		ldc r1, 5
@@ -1514,7 +1531,7 @@ sdcard_play:
 .Ltmp216:
 	{
 		mkmsk r1, 2
-		mov r9, r4
+		mov r7, r4
 	}
 
 	.xtabranch .Ljumptable1+4,.Ljumptable1+8,.Ljumptable1+12,.Ljumptable1+16,.Ljumptable1+20,.Ljumptable1+24
@@ -1531,7 +1548,7 @@ sdcard_play:
 		nop
 		ldw r0, sp[11]
 	}
-	.loc	1 358 21
+	.loc	1 361 21
 .Ltmp218:
 	{
 		eq r0, r0, 2
@@ -1542,21 +1559,21 @@ sdcard_play:
 .Ltmp219:
 .LBB6_12:
 	{
-		mov r9, r4
+		mov r7, r4
 		nop
 	}
 	bu .LBB6_13
 .Ltmp220:
 .LBB6_23:
-	.loc	1 343 17
-	stw r8, dp[state]
+	.loc	1 346 17
+	stw r9, dp[state]
 	{
 		mkmsk r0, 1
 		stw r1, sp[11]
 	}
 .Ltmp221:
 .LBB6_13:
-	.loc	1 252 9
+	.loc	1 255 9
 	{
 		zext r0, 1
 		nop
@@ -1564,18 +1581,18 @@ sdcard_play:
 	bf r0, .LBB6_14
 .Ltmp222:
 	{
-		mov r4, r9
+		mov r4, r7
 		ldw r0, sp[12]
 	}
 	{
 		mkmsk r1, 1
 		nop
 	}
-	.loc	1 263 34
+	.loc	1 266 34
 .Ltmp223:
 	bl QueryChannel
 .Ltmp224:
-	.loc	1 264 13
+	.loc	1 267 13
 	{
 		sub r0, r0, 1
 		mkmsk r1, 3
@@ -1602,11 +1619,11 @@ sdcard_play:
 		mkmsk r0, 1
 		nop
 	}
-	.loc	1 274 17
+	.loc	1 277 17
 .Ltmp228:
 	stw r0, dp[state]
 	{
-		mov r9, r4
+		mov r7, r4
 		nop
 	}
 .Ltmp229:
@@ -1621,7 +1638,7 @@ sdcard_play:
 	bl f_opendir
 .Ltmp231:
 	{
-		mov r3, r10
+		mov r3, r8
 		nop
 	}
 	bt r0, .LBB6_17
@@ -1634,11 +1651,11 @@ sdcard_play:
 	}
 	stw r1, sp[224]
 	.loc	1 62 5
-	stw r7, sp[225]
+	stw r10, sp[225]
 	.loc	1 70 5
 	{
 		mov r3, r1
-		ld8u r0, r1[r8]
+		ld8u r0, r1[r9]
 	}
 	bt r0, .LBB6_17
 .Ltmp233:
@@ -1650,7 +1667,7 @@ sdcard_play:
 .LBB6_17:
 	{
 		nop
-		ld8u r0, r3[r8]
+		ld8u r0, r3[r9]
 	}
 	bf r0, .LBB6_44
 .Ltmp235:
@@ -1658,7 +1675,7 @@ sdcard_play:
 		ldc r1, 16
 		ldw r2, sp[10]
 	}
-	.loc	1 306 18
+	.loc	1 309 18
 .Ltmp236:
 	{
 		and r1, r2, r1
@@ -1667,40 +1684,40 @@ sdcard_play:
 	bt r1, .LBB6_48
 .Ltmp237:
 	{
-		mov r4, r9
+		mov r4, r7
 		nop
 	}
-	.loc	1 319 13
+	.loc	1 322 13
 .Ltmp238:
-	ldaw r9, dp[track_string]
+	ldaw r7, dp[track_string]
 	{
-		mov r0, r9
+		mov r0, r7
 		mov r1, r3
 	}
 	{
-		mov r10, r3
-		mov r2, r7
+		mov r8, r3
+		mov r2, r10
 	}
 	bl strncpy
-	.loc	1 323 13
+	.loc	1 326 13
 	{
 		mov r0, r5
 		ldc r1, 10
 	}
 	{
-		mov r2, r7
-		mov r3, r9
+		mov r2, r10
+		mov r3, r7
 	}
 	bl qspi_if_write
 	{
 		mkmsk r0, 1
 		nop
 	}
-	.loc	1 325 13
+	.loc	1 328 13
 	bl set_display_control_flag
-	.loc	1 328 18
+	.loc	1 331 18
 	{
-		mov r0, r9
+		mov r0, r7
 		ldw r1, sp[9]
 	}
 	{
@@ -1709,7 +1726,7 @@ sdcard_play:
 	}
 	bl PlayTrack
 .Ltmp239:
-	.loc	1 329 13
+	.loc	1 332 13
 	{
 		sub r2, r0, 1
 		ldc r1, 5
@@ -1722,7 +1739,7 @@ sdcard_play:
 .Ltmp240:
 	{
 		mkmsk r1, 2
-		mov r9, r4
+		mov r7, r4
 	}
 
 	.xtabranch .Ljumptable3+4,.Ljumptable3+8,.Ljumptable3+12,.Ljumptable3+16,.Ljumptable3+20,.Ljumptable3+24
@@ -1739,7 +1756,7 @@ sdcard_play:
 		nop
 		ldw r0, sp[11]
 	}
-	.loc	1 358 21
+	.loc	1 361 21
 .Ltmp242:
 	{
 		eq r0, r0, 2
@@ -1749,10 +1766,10 @@ sdcard_play:
 .Ltmp243:
 .LBB6_63:
 	{
-		mov r4, r9
+		mov r4, r7
 		ldw r0, sp[8]
 	}
-	.loc	1 364 21
+	.loc	1 367 21
 .Ltmp244:
 	{
 		add r0, r0, 1
@@ -1771,17 +1788,17 @@ sdcard_play:
 .Ltmp246:
 .LBB6_44:
 	{
-		mov r10, r3
-		mov r4, r9
+		mov r8, r3
+		mov r4, r7
 	}
-	.loc	1 297 13
+	.loc	1 300 13
 .Ltmp247:
 	{
 		mov r0, r6
-		mov r1, r7
+		mov r1, r10
 	}
 	bl f_getcwd
-	.loc	1 298 17
+	.loc	1 301 17
 .Ltmp248:
 	ldaw r11, cp[.L.str3]
 	{
@@ -1790,18 +1807,18 @@ sdcard_play:
 	}
 	bl strcmp
 	{
-		mov r1, r8
+		mov r1, r9
 		nop
 	}
 	bf r0, .LBB6_46
 .Ltmp249:
-	.loc	1 303 25
+	.loc	1 306 25
 	{
 		mov r0, r5
 		nop
 	}
 	bl ClimbUp
-	.loc	1 303 25
+	.loc	1 306 25
 	{
 		add r1, r0, 1
 		nop
@@ -1819,7 +1836,7 @@ sdcard_play:
 		ldc r1, 46
 		nop
 	}
-	.loc	1 308 16
+	.loc	1 311 16
 .Ltmp252:
 	{
 		eq r0, r0, r1
@@ -1828,8 +1845,8 @@ sdcard_play:
 	bf r0, .LBB6_50
 .Ltmp253:
 	{
-		mov r10, r3
-		mov r4, r9
+		mov r8, r3
+		mov r4, r7
 	}
 .Ltmp254:
 .LBB6_34:
@@ -1848,11 +1865,11 @@ sdcard_play:
 .Ltmp256:
 .LBB6_50:
 	{
-		mov r4, r9
+		mov r4, r7
 		mov r0, r3
 	}
 	{
-		mov r10, r3
+		mov r8, r3
 		nop
 	}
 .Ltmp257:
@@ -1860,12 +1877,12 @@ sdcard_play:
 	bl f_chdir
 .Ltmp258:
 	.loc	1 139 9
-	ldaw r9, dp[folder_string]
+	ldaw r7, dp[folder_string]
 .Ltmp259:
 	.loc	1 109 5
 	{
-		mov r0, r9
-		mov r1, r7
+		mov r0, r7
+		mov r1, r10
 	}
 	bl f_getcwd
 	{
@@ -1882,26 +1899,26 @@ sdcard_play:
 	}
 	ldc r1, 266
 	{
-		mov r2, r7
-		mov r3, r9
+		mov r2, r10
+		mov r3, r7
 	}
 	bl qspi_if_write
 .Ltmp261:
 	{
 		nop
-		stw r8, sp[8]
+		stw r9, sp[8]
 	}
 	bu .LBB6_11
 .Ltmp262:
 .LBB6_57:
 	{
-		mov r4, r9
+		mov r4, r7
 		mov r0, r5
 	}
-	.loc	1 348 25
+	.loc	1 351 25
 .Ltmp263:
 	bl ClimbUp
-	.loc	1 348 25
+	.loc	1 351 25
 	{
 		add r0, r0, 1
 		nop
@@ -1919,7 +1936,7 @@ sdcard_play:
 .Ltmp265:
 .LBB6_58:
 	{
-		mov r4, r9
+		mov r4, r7
 		nop
 	}
 .Ltmp266:
@@ -1932,14 +1949,14 @@ sdcard_play:
 .Ltmp267:
 	bl ClimbUp
 	{
-		mov r9, r0
+		mov r7, r0
 		nop
 	}
 	.loc	1 139 9
 	ldaw r5, dp[folder_string]
 	{
 		mov r0, r5
-		mov r1, r7
+		mov r1, r10
 	}
 	bl f_getcwd
 .Ltmp268:
@@ -1957,7 +1974,7 @@ sdcard_play:
 		nop
 	}
 	{
-		lss r0, r9, r0
+		lss r0, r7, r0
 		nop
 	}
 	bt r0, .LBB6_59
@@ -1965,7 +1982,7 @@ sdcard_play:
 .LBB6_61:
 	.loc	1 138 17
 	{
-		sub r0, r9, 1
+		sub r0, r7, 1
 		nop
 	}
 .Ltmp271:
@@ -1988,7 +2005,7 @@ sdcard_play:
 	ldc r1, 266
 	.loc	1 143 5
 	{
-		mov r2, r7
+		mov r2, r10
 		nop
 	}
 	.loc	1 139 9
@@ -2008,7 +2025,7 @@ sdcard_play:
 	bu .LBB6_11
 .Ltmp276:
 .LBB6_33:
-	.loc	1 270 25
+	.loc	1 273 25
 	{
 		mov r0, r5
 		nop
@@ -2017,7 +2034,7 @@ sdcard_play:
 	bu .LBB6_32
 .Ltmp277:
 .LBB6_36:
-	.loc	1 282 25
+	.loc	1 285 25
 	{
 		mov r0, r5
 		nop
@@ -2025,7 +2042,7 @@ sdcard_play:
 	bl ClimbUp
 .Ltmp278:
 .LBB6_35:
-	.loc	1 278 17
+	.loc	1 281 17
 	{
 		add r0, r0, 1
 		nop
@@ -2044,7 +2061,7 @@ sdcard_play:
 	}
 .Ltmp281:
 .LBB6_32:
-	.loc	1 266 17
+	.loc	1 269 17
 	{
 		sub r0, r0, 1
 		nop
@@ -2058,10 +2075,10 @@ sdcard_play:
 .Ltmp283:
 .LBB6_54:
 	{
-		mov r4, r9
+		mov r4, r7
 		ldw r0, sp[8]
 	}
-	.loc	1 332 17
+	.loc	1 335 17
 .Ltmp284:
 	{
 		add r0, r0, 1
@@ -2069,19 +2086,19 @@ sdcard_play:
 	}
 .Ltmp285:
 	{
-		mkmsk r9, 1
+		mkmsk r7, 1
 		stw r0, sp[8]
 	}
 	bu .LBB6_10
 .Ltmp286:
 	.cc_bottom sdcard_play.function
-	.set	sdcard_play.nstackwords,((f_mount.nstackwords $M ClimbUp.nstackwords $M strcmp.nstackwords $M f_chdir.nstackwords $M f_getcwd.nstackwords $M QueryChannel.nstackwords $M f_opendir.nstackwords $M f_readdir.nstackwords $M strncpy.nstackwords $M qspi_if_write.nstackwords $M set_display_control_flag.nstackwords $M PlayTrack.nstackwords $M qspi_if_read.nstackwords) + 234)
+	.set	sdcard_play.nstackwords,((set_console_mode.nstackwords $M f_mount.nstackwords $M ClimbUp.nstackwords $M strcmp.nstackwords $M f_chdir.nstackwords $M f_getcwd.nstackwords $M QueryChannel.nstackwords $M f_opendir.nstackwords $M f_readdir.nstackwords $M strncpy.nstackwords $M qspi_if_write.nstackwords $M set_display_control_flag.nstackwords $M PlayTrack.nstackwords $M qspi_if_read.nstackwords) + 234)
 	.globl	sdcard_play.nstackwords
-	.set	sdcard_play.maxcores,ClimbUp.maxcores $M PlayTrack.maxcores $M QueryChannel.maxcores $M f_chdir.maxcores $M f_getcwd.maxcores $M f_mount.maxcores $M f_opendir.maxcores $M f_readdir.maxcores $M qspi_if_read.maxcores $M qspi_if_write.maxcores $M set_display_control_flag.maxcores $M strcmp.maxcores $M strncpy.maxcores $M 1
+	.set	sdcard_play.maxcores,ClimbUp.maxcores $M PlayTrack.maxcores $M QueryChannel.maxcores $M f_chdir.maxcores $M f_getcwd.maxcores $M f_mount.maxcores $M f_opendir.maxcores $M f_readdir.maxcores $M qspi_if_read.maxcores $M qspi_if_write.maxcores $M set_console_mode.maxcores $M set_display_control_flag.maxcores $M strcmp.maxcores $M strncpy.maxcores $M 1
 	.globl	sdcard_play.maxcores
-	.set	sdcard_play.maxtimers,ClimbUp.maxtimers $M PlayTrack.maxtimers $M QueryChannel.maxtimers $M f_chdir.maxtimers $M f_getcwd.maxtimers $M f_mount.maxtimers $M f_opendir.maxtimers $M f_readdir.maxtimers $M qspi_if_read.maxtimers $M qspi_if_write.maxtimers $M set_display_control_flag.maxtimers $M strcmp.maxtimers $M strncpy.maxtimers $M 0
+	.set	sdcard_play.maxtimers,ClimbUp.maxtimers $M PlayTrack.maxtimers $M QueryChannel.maxtimers $M f_chdir.maxtimers $M f_getcwd.maxtimers $M f_mount.maxtimers $M f_opendir.maxtimers $M f_readdir.maxtimers $M qspi_if_read.maxtimers $M qspi_if_write.maxtimers $M set_console_mode.maxtimers $M set_display_control_flag.maxtimers $M strcmp.maxtimers $M strncpy.maxtimers $M 0
 	.globl	sdcard_play.maxtimers
-	.set	sdcard_play.maxchanends,ClimbUp.maxchanends $M PlayTrack.maxchanends $M QueryChannel.maxchanends $M f_chdir.maxchanends $M f_getcwd.maxchanends $M f_mount.maxchanends $M f_opendir.maxchanends $M f_readdir.maxchanends $M qspi_if_read.maxchanends $M qspi_if_write.maxchanends $M set_display_control_flag.maxchanends $M strcmp.maxchanends $M strncpy.maxchanends $M 0
+	.set	sdcard_play.maxchanends,ClimbUp.maxchanends $M PlayTrack.maxchanends $M QueryChannel.maxchanends $M f_chdir.maxchanends $M f_getcwd.maxchanends $M f_mount.maxchanends $M f_opendir.maxchanends $M f_readdir.maxchanends $M qspi_if_read.maxchanends $M qspi_if_write.maxchanends $M set_console_mode.maxchanends $M set_display_control_flag.maxchanends $M strcmp.maxchanends $M strncpy.maxchanends $M 0
 	.globl	sdcard_play.maxchanends
 .Ltmp287:
 	.size	sdcard_play, .Ltmp287-sdcard_play
@@ -2210,8 +2227,8 @@ scratch:
 .Ldebug_end3:
 	.text
 .Ldebug_end4:
-	.file	6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h"
-	.file	7 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys\\types.h"
+	.file	7 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h"
+	.file	8 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys\\types.h"
 	.section	.debug_str,"MS",@progbits,1
 .Linfo_string0:
 .asciiz"XMOS-235-acbb966-Dec-01-2019 clang version 3.6.0  (based on LLVM 3.6.0svn)"
@@ -2296,212 +2313,220 @@ scratch:
 .Linfo_string40:
 .asciiz"_RC_ERROR"
 .Linfo_string41:
-.asciiz"_PENDING_Q"
+.asciiz"_SDC_AUDIO"
 .Linfo_string42:
-.asciiz"_INPUT_Q"
+.asciiz"_USB_AUDIO"
 .Linfo_string43:
-.asciiz"_CURRENT_Q"
+.asciiz"_DAC_MODE_SELECTION"
 .Linfo_string44:
-.asciiz"_PLAY_CMD_EMPTY"
+.asciiz"_FUNCTION_SELECTION"
 .Linfo_string45:
-.asciiz"_PLAY_CMD_PREV_FOLDER"
+.asciiz"_PENDING_Q"
 .Linfo_string46:
-.asciiz"_PLAY_CMD_NEXT_FOLDER"
+.asciiz"_INPUT_Q"
 .Linfo_string47:
-.asciiz"_PLAY_CMD_PREV_TRACK"
+.asciiz"_CURRENT_Q"
 .Linfo_string48:
-.asciiz"_PLAY_CMD_NEXT_TRACK"
+.asciiz"_PLAY_CMD_EMPTY"
 .Linfo_string49:
-.asciiz"_PLAY_CMD_REWIND"
+.asciiz"_PLAY_CMD_PREV_FOLDER"
 .Linfo_string50:
-.asciiz"_PLAY_CMD_REVERSE_SKIP"
+.asciiz"_PLAY_CMD_NEXT_FOLDER"
 .Linfo_string51:
-.asciiz"_PLAY_CMD_FORWARD_SKIP"
+.asciiz"_PLAY_CMD_PREV_TRACK"
 .Linfo_string52:
-.asciiz"_PLAY_CMD_PAUSE"
+.asciiz"_PLAY_CMD_NEXT_TRACK"
 .Linfo_string53:
-.asciiz"_PLAY_CMD_STOP"
+.asciiz"_PLAY_CMD_REWIND"
 .Linfo_string54:
-.asciiz"GetDirIndexOf"
+.asciiz"_PLAY_CMD_REVERSE_SKIP"
 .Linfo_string55:
-.asciiz"FRESULT"
+.asciiz"_PLAY_CMD_FORWARD_SKIP"
 .Linfo_string56:
-.asciiz"index"
+.asciiz"_PLAY_CMD_PAUSE"
 .Linfo_string57:
-.asciiz"int"
+.asciiz"_PLAY_CMD_STOP"
 .Linfo_string58:
-.asciiz"s1"
+.asciiz"GetDirIndexOf"
 .Linfo_string59:
-.asciiz"dir"
+.asciiz"FRESULT"
 .Linfo_string60:
-.asciiz"fs"
+.asciiz"index"
 .Linfo_string61:
-.asciiz"fs_type"
+.asciiz"int"
 .Linfo_string62:
-.asciiz"unsigned char"
+.asciiz"s1"
 .Linfo_string63:
-.asciiz"BYTE"
+.asciiz"dir"
 .Linfo_string64:
-.asciiz"drv"
+.asciiz"fs"
 .Linfo_string65:
-.asciiz"csize"
+.asciiz"fs_type"
 .Linfo_string66:
-.asciiz"n_fats"
+.asciiz"unsigned char"
 .Linfo_string67:
-.asciiz"wflag"
+.asciiz"BYTE"
 .Linfo_string68:
-.asciiz"fsi_flag"
+.asciiz"drv"
 .Linfo_string69:
-.asciiz"id"
+.asciiz"csize"
 .Linfo_string70:
-.asciiz"unsigned short"
+.asciiz"n_fats"
 .Linfo_string71:
-.asciiz"WORD"
+.asciiz"wflag"
 .Linfo_string72:
-.asciiz"n_rootdir"
+.asciiz"fsi_flag"
 .Linfo_string73:
-.asciiz"last_clust"
+.asciiz"id"
 .Linfo_string74:
-.asciiz"long unsigned int"
+.asciiz"unsigned short"
 .Linfo_string75:
-.asciiz"DWORD"
+.asciiz"WORD"
 .Linfo_string76:
-.asciiz"free_clust"
+.asciiz"n_rootdir"
 .Linfo_string77:
-.asciiz"fsi_sector"
+.asciiz"last_clust"
 .Linfo_string78:
-.asciiz"cdir"
+.asciiz"long unsigned int"
 .Linfo_string79:
-.asciiz"n_fatent"
+.asciiz"DWORD"
 .Linfo_string80:
-.asciiz"fsize"
+.asciiz"free_clust"
 .Linfo_string81:
-.asciiz"fatbase"
+.asciiz"fsi_sector"
 .Linfo_string82:
-.asciiz"dirbase"
+.asciiz"cdir"
 .Linfo_string83:
-.asciiz"database"
+.asciiz"n_fatent"
 .Linfo_string84:
-.asciiz"winsect"
+.asciiz"fsize"
 .Linfo_string85:
-.asciiz"win"
+.asciiz"fatbase"
 .Linfo_string86:
-.asciiz"FATFS"
+.asciiz"dirbase"
 .Linfo_string87:
-.asciiz"sclust"
+.asciiz"database"
 .Linfo_string88:
-.asciiz"clust"
+.asciiz"winsect"
 .Linfo_string89:
-.asciiz"sect"
+.asciiz"win"
 .Linfo_string90:
-.asciiz"fn"
+.asciiz"FATFS"
 .Linfo_string91:
-.asciiz"WCHAR"
+.asciiz"sclust"
 .Linfo_string92:
-.asciiz"lfn_idx"
+.asciiz"clust"
 .Linfo_string93:
-.asciiz"DIR"
+.asciiz"sect"
 .Linfo_string94:
-.asciiz"rc"
+.asciiz"fn"
 .Linfo_string95:
-.asciiz"i"
+.asciiz"WCHAR"
 .Linfo_string96:
-.asciiz"fno"
+.asciiz"lfn_idx"
 .Linfo_string97:
-.asciiz"fdate"
+.asciiz"DIR"
 .Linfo_string98:
-.asciiz"ftime"
+.asciiz"rc"
 .Linfo_string99:
-.asciiz"fattrib"
+.asciiz"i"
 .Linfo_string100:
-.asciiz"fname"
+.asciiz"fno"
 .Linfo_string101:
-.asciiz"TCHAR"
+.asciiz"fdate"
 .Linfo_string102:
-.asciiz"lfname"
+.asciiz"ftime"
 .Linfo_string103:
-.asciiz"lfsize"
+.asciiz"fattrib"
 .Linfo_string104:
-.asciiz"unsigned int"
+.asciiz"fname"
 .Linfo_string105:
-.asciiz"UINT"
+.asciiz"TCHAR"
 .Linfo_string106:
-.asciiz"FILINFO"
+.asciiz"lfname"
 .Linfo_string107:
-.asciiz"s2"
+.asciiz"lfsize"
 .Linfo_string108:
-.asciiz"GoFolder"
+.asciiz"unsigned int"
 .Linfo_string109:
-.asciiz"folder"
+.asciiz"UINT"
 .Linfo_string110:
-.asciiz"GetDirItemAt"
+.asciiz"FILINFO"
 .Linfo_string111:
-.asciiz"order"
+.asciiz"s2"
 .Linfo_string112:
-.asciiz"attribute"
+.asciiz"GoFolder"
 .Linfo_string113:
-.asciiz"filename"
+.asciiz"folder"
 .Linfo_string114:
-.asciiz"GoPreviousFolder"
+.asciiz"GetDirItemAt"
 .Linfo_string115:
-.asciiz"ClimbUp"
+.asciiz"order"
 .Linfo_string116:
-.asciiz"PlayTrack"
+.asciiz"attribute"
 .Linfo_string117:
-.asciiz"PLAY_TRACK_RC"
+.asciiz"filename"
 .Linfo_string118:
-.asciiz"sdcard_play"
+.asciiz"GoPreviousFolder"
 .Linfo_string119:
-.asciiz"str"
+.asciiz"ClimbUp"
 .Linfo_string120:
-.asciiz"cur_item"
+.asciiz"PlayTrack"
 .Linfo_string121:
-.asciiz"file_format_id"
+.asciiz"PLAY_TRACK_RC"
 .Linfo_string122:
-.asciiz"c_handshake"
+.asciiz"sdcard_play"
 .Linfo_string123:
-.asciiz"chanend"
+.asciiz"str"
 .Linfo_string124:
-.asciiz"c_control"
+.asciiz"cur_item"
 .Linfo_string125:
-.asciiz"file"
+.asciiz"file_format_id"
 .Linfo_string126:
-.asciiz"flag"
+.asciiz"c_handshake"
 .Linfo_string127:
-.asciiz"pad1"
+.asciiz"chanend"
 .Linfo_string128:
-.asciiz"fptr"
+.asciiz"c_control"
 .Linfo_string129:
-.asciiz"dsect"
+.asciiz"file"
 .Linfo_string130:
-.asciiz"dir_sect"
+.asciiz"flag"
 .Linfo_string131:
-.asciiz"dir_ptr"
+.asciiz"pad1"
 .Linfo_string132:
-.asciiz"FIL"
+.asciiz"fptr"
 .Linfo_string133:
-.asciiz"res"
+.asciiz"dsect"
 .Linfo_string134:
-.asciiz"ByteRead"
+.asciiz"dir_sect"
 .Linfo_string135:
-.asciiz"uint"
+.asciiz"dir_ptr"
 .Linfo_string136:
-.asciiz"c_play_control"
+.asciiz"FIL"
 .Linfo_string137:
-.asciiz"Fatfs"
+.asciiz"res"
 .Linfo_string138:
-.asciiz"track"
+.asciiz"ByteRead"
 .Linfo_string139:
-.asciiz"reply"
+.asciiz"uint"
 .Linfo_string140:
-.asciiz"PLAY_COMMAND"
+.asciiz"c_play_control"
 .Linfo_string141:
-.asciiz"previous_rc"
+.asciiz"Fatfs"
 .Linfo_string142:
+.asciiz"track"
+.Linfo_string143:
+.asciiz"reply"
+.Linfo_string144:
+.asciiz"PLAY_COMMAND"
+.Linfo_string145:
+.asciiz"previous_rc"
+.Linfo_string146:
 .asciiz"attrib"
 	.section	.debug_info,"",@progbits
 .L.debug_info_begin0:
-	.long	2521
+	.long	2550
 	.short	3
 	.long	.Lsection_abbrev
 	.byte	4
@@ -2562,7 +2587,7 @@ scratch:
 	.byte	1
 	.byte	94
 	.byte	1
-	.long	1766
+	.long	1795
 	.byte	10
 	.long	.Linfo_string8
 	.long	84
@@ -2573,27 +2598,27 @@ scratch:
 	.long	GetDirItemAt.lfn
 	.byte	11
 	.long	.Ldebug_loc0
-	.long	1780
+	.long	1809
 	.byte	11
 	.long	.Ldebug_loc1
-	.long	1791
+	.long	1820
 	.byte	11
 	.long	.Ldebug_loc2
-	.long	1802
+	.long	1831
 	.byte	12
 	.long	.Ldebug_loc3
-	.long	1813
+	.long	1842
 	.byte	12
 	.long	.Ldebug_loc4
-	.long	1824
+	.long	1853
 	.byte	12
 	.long	.Ldebug_loc5
-	.long	1835
+	.long	1864
 	.byte	13
 	.long	.Ldebug_ranges1
 	.byte	14
 	.byte	0
-	.long	1847
+	.long	1876
 	.byte	0
 	.byte	0
 	.byte	9
@@ -2601,7 +2626,7 @@ scratch:
 	.byte	1
 	.byte	94
 	.byte	1
-	.long	665
+	.long	694
 	.byte	10
 	.long	.Linfo_string8
 	.long	84
@@ -2612,25 +2637,25 @@ scratch:
 	.long	GetDirIndexOf.lfn
 	.byte	11
 	.long	.Ldebug_loc6
-	.long	679
+	.long	708
 	.byte	11
 	.long	.Ldebug_loc7
-	.long	690
+	.long	719
 	.byte	12
 	.long	.Ldebug_loc8
-	.long	701
+	.long	730
 	.byte	12
 	.long	.Ldebug_loc9
-	.long	712
+	.long	741
 	.byte	12
 	.long	.Ldebug_loc10
-	.long	723
+	.long	752
 	.byte	12
 	.long	.Ldebug_loc11
-	.long	734
+	.long	763
 	.byte	12
 	.long	.Ldebug_loc12
-	.long	745
+	.long	774
 	.byte	0
 	.byte	2
 	.long	.Linfo_string9
@@ -2760,50 +2785,67 @@ scratch:
 	.byte	16
 	.byte	4
 	.byte	4
-	.byte	19
+	.byte	32
 	.byte	17
 	.long	.Linfo_string41
-	.byte	0
-	.byte	17
-	.long	.Linfo_string42
 	.byte	1
 	.byte	17
+	.long	.Linfo_string42
+	.byte	2
+	.byte	17
 	.long	.Linfo_string43
+	.byte	3
+	.byte	17
+	.long	.Linfo_string44
+	.byte	4
+	.byte	0
+	.byte	16
+	.byte	4
+	.byte	5
+	.byte	20
+	.byte	17
+	.long	.Linfo_string45
+	.byte	0
+	.byte	17
+	.long	.Linfo_string46
+	.byte	1
+	.byte	17
+	.long	.Linfo_string47
 	.byte	2
 	.byte	0
 	.byte	16
 	.byte	4
-	.byte	4
-	.byte	25
-	.byte	17
-	.long	.Linfo_string44
-	.byte	0
-	.byte	17
-	.long	.Linfo_string45
-	.byte	1
-	.byte	17
-	.long	.Linfo_string46
-	.byte	2
-	.byte	17
-	.long	.Linfo_string47
-	.byte	3
+	.byte	5
+	.byte	26
 	.byte	17
 	.long	.Linfo_string48
-	.byte	4
+	.byte	0
 	.byte	17
 	.long	.Linfo_string49
-	.byte	5
+	.byte	1
 	.byte	17
 	.long	.Linfo_string50
-	.byte	6
+	.byte	2
 	.byte	17
 	.long	.Linfo_string51
-	.byte	7
+	.byte	3
 	.byte	17
 	.long	.Linfo_string52
-	.byte	8
+	.byte	4
 	.byte	17
 	.long	.Linfo_string53
+	.byte	5
+	.byte	17
+	.long	.Linfo_string54
+	.byte	6
+	.byte	17
+	.long	.Linfo_string55
+	.byte	7
+	.byte	17
+	.long	.Linfo_string56
+	.byte	8
+	.byte	17
+	.long	.Linfo_string57
 	.byte	9
 	.byte	0
 	.byte	9
@@ -2811,74 +2853,74 @@ scratch:
 	.byte	1
 	.byte	94
 	.byte	1
-	.long	1729
+	.long	1758
 	.byte	11
 	.long	.Ldebug_loc13
-	.long	1743
+	.long	1772
 	.byte	11
 	.long	.Ldebug_loc14
-	.long	1754
+	.long	1783
 	.byte	0
 	.byte	18
-	.long	.Linfo_string54
-	.byte	1
-	.byte	78
-	.byte	1
-	.long	757
-	.byte	1
-	.byte	1
-	.byte	19
-	.long	.Linfo_string56
-	.byte	1
-	.byte	78
-	.long	768
-	.byte	19
 	.long	.Linfo_string58
 	.byte	1
 	.byte	78
-	.long	780
+	.byte	1
+	.long	786
+	.byte	1
+	.byte	1
+	.byte	19
+	.long	.Linfo_string60
+	.byte	1
+	.byte	78
+	.long	797
+	.byte	19
+	.long	.Linfo_string62
+	.byte	1
+	.byte	78
+	.long	809
 	.byte	20
-	.long	.Linfo_string59
+	.long	.Linfo_string63
 	.byte	1
 	.byte	79
-	.long	785
+	.long	814
 	.byte	20
-	.long	.Linfo_string94
+	.long	.Linfo_string98
 	.byte	1
 	.byte	80
-	.long	757
+	.long	786
 	.byte	20
-	.long	.Linfo_string95
+	.long	.Linfo_string99
 	.byte	1
 	.byte	89
-	.long	773
+	.long	802
 	.byte	20
-	.long	.Linfo_string96
+	.long	.Linfo_string100
 	.byte	1
 	.byte	82
-	.long	1259
+	.long	1288
 	.byte	20
-	.long	.Linfo_string107
+	.long	.Linfo_string111
 	.byte	1
 	.byte	88
-	.long	780
+	.long	809
 	.byte	0
 	.byte	15
 	.long	374
-	.long	.Linfo_string55
+	.long	.Linfo_string59
 	.byte	2
 	.byte	198
 	.byte	3
-	.long	773
+	.long	802
 	.byte	5
-	.long	.Linfo_string57
+	.long	.Linfo_string61
 	.byte	5
 	.byte	4
 	.byte	3
 	.long	59
 	.byte	15
-	.long	796
-	.long	.Linfo_string93
+	.long	825
+	.long	.Linfo_string97
 	.byte	2
 	.byte	155
 	.byte	21
@@ -2886,71 +2928,71 @@ scratch:
 	.byte	2
 	.byte	142
 	.byte	22
-	.long	.Linfo_string60
-	.long	921
+	.long	.Linfo_string64
+	.long	950
 	.byte	2
 	.byte	143
 	.byte	0
 	.byte	22
-	.long	.Linfo_string69
-	.long	1189
+	.long	.Linfo_string73
+	.long	1218
 	.byte	2
 	.byte	144
 	.byte	4
 	.byte	22
-	.long	.Linfo_string56
-	.long	1189
+	.long	.Linfo_string60
+	.long	1218
 	.byte	2
 	.byte	145
 	.byte	6
 	.byte	22
-	.long	.Linfo_string87
-	.long	1207
+	.long	.Linfo_string91
+	.long	1236
 	.byte	2
 	.byte	146
 	.byte	8
 	.byte	22
-	.long	.Linfo_string88
-	.long	1207
+	.long	.Linfo_string92
+	.long	1236
 	.byte	2
 	.byte	147
 	.byte	12
 	.byte	22
-	.long	.Linfo_string89
-	.long	1207
+	.long	.Linfo_string93
+	.long	1236
 	.byte	2
 	.byte	148
 	.byte	16
 	.byte	22
-	.long	.Linfo_string59
-	.long	1238
+	.long	.Linfo_string63
+	.long	1267
 	.byte	2
 	.byte	149
 	.byte	20
 	.byte	22
-	.long	.Linfo_string90
-	.long	1238
+	.long	.Linfo_string94
+	.long	1267
 	.byte	2
 	.byte	150
 	.byte	24
 	.byte	22
 	.long	.Linfo_string8
-	.long	1243
+	.long	1272
 	.byte	2
 	.byte	152
 	.byte	28
 	.byte	22
-	.long	.Linfo_string92
-	.long	1189
+	.long	.Linfo_string96
+	.long	1218
 	.byte	2
 	.byte	153
 	.byte	32
 	.byte	0
 	.byte	3
-	.long	926
+	.long	955
 	.byte	15
-	.long	937
-	.long	.Linfo_string86
+	.long	966
+	.long	.Linfo_string90
 	.byte	2
 	.byte	107
 	.byte	23
@@ -2958,165 +3000,165 @@ scratch:
 	.byte	2
 	.byte	77
 	.byte	22
-	.long	.Linfo_string61
-	.long	1171
+	.long	.Linfo_string65
+	.long	1200
 	.byte	2
 	.byte	78
 	.byte	0
 	.byte	22
-	.long	.Linfo_string64
-	.long	1171
+	.long	.Linfo_string68
+	.long	1200
 	.byte	2
 	.byte	79
 	.byte	1
 	.byte	22
-	.long	.Linfo_string65
-	.long	1171
+	.long	.Linfo_string69
+	.long	1200
 	.byte	2
 	.byte	80
 	.byte	2
 	.byte	22
-	.long	.Linfo_string66
-	.long	1171
+	.long	.Linfo_string70
+	.long	1200
 	.byte	2
 	.byte	81
 	.byte	3
 	.byte	22
-	.long	.Linfo_string67
-	.long	1171
+	.long	.Linfo_string71
+	.long	1200
 	.byte	2
 	.byte	82
 	.byte	4
 	.byte	22
-	.long	.Linfo_string68
-	.long	1171
+	.long	.Linfo_string72
+	.long	1200
 	.byte	2
 	.byte	83
 	.byte	5
 	.byte	22
-	.long	.Linfo_string69
-	.long	1189
+	.long	.Linfo_string73
+	.long	1218
 	.byte	2
 	.byte	84
 	.byte	6
 	.byte	22
-	.long	.Linfo_string72
-	.long	1189
+	.long	.Linfo_string76
+	.long	1218
 	.byte	2
 	.byte	85
 	.byte	8
 	.byte	22
-	.long	.Linfo_string73
-	.long	1207
+	.long	.Linfo_string77
+	.long	1236
 	.byte	2
 	.byte	93
 	.byte	12
 	.byte	22
-	.long	.Linfo_string76
-	.long	1207
+	.long	.Linfo_string80
+	.long	1236
 	.byte	2
 	.byte	94
 	.byte	16
 	.byte	22
-	.long	.Linfo_string77
-	.long	1207
+	.long	.Linfo_string81
+	.long	1236
 	.byte	2
 	.byte	95
 	.byte	20
 	.byte	22
-	.long	.Linfo_string78
-	.long	1207
+	.long	.Linfo_string82
+	.long	1236
 	.byte	2
 	.byte	98
 	.byte	24
 	.byte	22
-	.long	.Linfo_string79
-	.long	1207
+	.long	.Linfo_string83
+	.long	1236
 	.byte	2
 	.byte	100
 	.byte	28
 	.byte	22
-	.long	.Linfo_string80
-	.long	1207
+	.long	.Linfo_string84
+	.long	1236
 	.byte	2
 	.byte	101
 	.byte	32
 	.byte	22
-	.long	.Linfo_string81
-	.long	1207
+	.long	.Linfo_string85
+	.long	1236
 	.byte	2
 	.byte	102
 	.byte	36
 	.byte	22
-	.long	.Linfo_string82
-	.long	1207
+	.long	.Linfo_string86
+	.long	1236
 	.byte	2
 	.byte	103
 	.byte	40
 	.byte	22
-	.long	.Linfo_string83
-	.long	1207
+	.long	.Linfo_string87
+	.long	1236
 	.byte	2
 	.byte	104
 	.byte	44
 	.byte	22
-	.long	.Linfo_string84
-	.long	1207
+	.long	.Linfo_string88
+	.long	1236
 	.byte	2
 	.byte	105
 	.byte	48
 	.byte	22
-	.long	.Linfo_string85
-	.long	1225
+	.long	.Linfo_string89
+	.long	1254
 	.byte	2
 	.byte	106
 	.byte	52
 	.byte	0
 	.byte	15
-	.long	1182
-	.long	.Linfo_string63
-	.byte	5
+	.long	1211
+	.long	.Linfo_string67
+	.byte	6
 	.byte	22
 	.byte	5
-	.long	.Linfo_string62
+	.long	.Linfo_string66
 	.byte	8
 	.byte	1
 	.byte	15
-	.long	1200
-	.long	.Linfo_string71
-	.byte	5
-	.byte	27
-	.byte	5
-	.long	.Linfo_string70
-	.byte	7
-	.byte	2
-	.byte	15
-	.long	1218
+	.long	1229
 	.long	.Linfo_string75
-	.byte	5
-	.byte	33
+	.byte	6
+	.byte	27
 	.byte	5
 	.long	.Linfo_string74
 	.byte	7
+	.byte	2
+	.byte	15
+	.long	1247
+	.long	.Linfo_string79
+	.byte	6
+	.byte	33
+	.byte	5
+	.long	.Linfo_string78
+	.byte	7
 	.byte	4
 	.byte	6
-	.long	1171
+	.long	1200
 	.byte	24
 	.long	96
 	.short	511
 	.byte	0
 	.byte	3
-	.long	1171
-	.byte	3
-	.long	1248
-	.byte	15
 	.long	1200
-	.long	.Linfo_string91
-	.byte	5
+	.byte	3
+	.long	1277
+	.byte	15
+	.long	1229
+	.long	.Linfo_string95
+	.byte	6
 	.byte	28
 	.byte	15
-	.long	1270
-	.long	.Linfo_string106
+	.long	1299
+	.long	.Linfo_string110
 	.byte	2
 	.byte	171
 	.byte	21
@@ -3124,68 +3166,68 @@ scratch:
 	.byte	2
 	.byte	161
 	.byte	22
-	.long	.Linfo_string80
-	.long	1207
+	.long	.Linfo_string84
+	.long	1236
 	.byte	2
 	.byte	162
 	.byte	0
 	.byte	22
-	.long	.Linfo_string97
-	.long	1189
+	.long	.Linfo_string101
+	.long	1218
 	.byte	2
 	.byte	163
 	.byte	4
 	.byte	22
-	.long	.Linfo_string98
-	.long	1189
+	.long	.Linfo_string102
+	.long	1218
 	.byte	2
 	.byte	164
 	.byte	6
 	.byte	22
-	.long	.Linfo_string99
-	.long	1171
+	.long	.Linfo_string103
+	.long	1200
 	.byte	2
 	.byte	165
 	.byte	8
 	.byte	22
-	.long	.Linfo_string100
-	.long	1359
+	.long	.Linfo_string104
+	.long	1388
 	.byte	2
 	.byte	166
 	.byte	9
 	.byte	22
-	.long	.Linfo_string102
-	.long	1382
+	.long	.Linfo_string106
+	.long	1411
 	.byte	2
 	.byte	168
 	.byte	24
 	.byte	22
-	.long	.Linfo_string103
-	.long	1387
+	.long	.Linfo_string107
+	.long	1416
 	.byte	2
 	.byte	169
 	.byte	28
 	.byte	0
 	.byte	6
-	.long	1371
+	.long	1400
 	.byte	7
 	.long	96
 	.byte	12
 	.byte	0
 	.byte	15
 	.long	59
-	.long	.Linfo_string101
+	.long	.Linfo_string105
 	.byte	2
 	.byte	66
 	.byte	3
-	.long	1371
+	.long	1400
 	.byte	15
-	.long	1398
-	.long	.Linfo_string105
-	.byte	5
+	.long	1427
+	.long	.Linfo_string109
+	.byte	6
 	.byte	17
 	.byte	5
-	.long	.Linfo_string104
+	.long	.Linfo_string108
 	.byte	7
 	.byte	4
 	.byte	25
@@ -3193,65 +3235,65 @@ scratch:
 	.byte	1
 	.byte	94
 	.byte	1
-	.long	.Linfo_string115
+	.long	.Linfo_string119
 	.byte	1
 	.byte	116
 	.byte	1
-	.long	773
+	.long	802
 	.byte	1
 	.byte	26
 	.long	.Ldebug_loc15
-	.long	.Linfo_string95
+	.long	.Linfo_string99
 	.byte	1
 	.byte	116
-	.long	1398
+	.long	1427
 	.byte	27
 	.byte	2
 	.byte	145
 	.byte	12
-	.long	.Linfo_string119
+	.long	.Linfo_string123
 	.byte	1
 	.byte	117
-	.long	2309
+	.long	2338
 	.byte	28
 	.long	.Ldebug_loc18
-	.long	.Linfo_string120
+	.long	.Linfo_string124
 	.byte	1
 	.byte	120
-	.long	780
+	.long	809
 	.byte	20
-	.long	.Linfo_string94
+	.long	.Linfo_string98
 	.byte	1
 	.byte	118
-	.long	757
+	.long	786
 	.byte	20
-	.long	.Linfo_string56
+	.long	.Linfo_string60
 	.byte	1
 	.byte	123
-	.long	773
+	.long	802
 	.byte	29
-	.long	665
+	.long	694
 	.long	.Ldebug_ranges5
 	.byte	1
 	.byte	124
 	.byte	11
 	.long	.Ldebug_loc19
-	.long	690
+	.long	719
 	.byte	12
 	.long	.Ldebug_loc16
-	.long	701
+	.long	730
 	.byte	12
 	.long	.Ldebug_loc17
-	.long	712
+	.long	741
 	.byte	12
 	.long	.Ldebug_loc20
-	.long	723
+	.long	752
 	.byte	12
 	.long	.Ldebug_loc21
-	.long	734
+	.long	763
 	.byte	12
 	.long	.Ldebug_loc22
-	.long	745
+	.long	774
 	.byte	0
 	.byte	0
 	.byte	9
@@ -3259,303 +3301,303 @@ scratch:
 	.byte	1
 	.byte	94
 	.byte	1
-	.long	1865
+	.long	1894
 	.byte	11
 	.long	.Ldebug_loc23
-	.long	1879
+	.long	1908
 	.byte	12
 	.long	.Ldebug_loc24
-	.long	1890
+	.long	1919
 	.byte	0
 	.byte	25
 	.long	.Ldebug_ranges7
 	.byte	1
 	.byte	94
 	.byte	1
-	.long	.Linfo_string116
+	.long	.Linfo_string120
 	.byte	1
 	.byte	147
 	.byte	1
-	.long	2298
+	.long	2327
 	.byte	1
 	.byte	26
 	.long	.Ldebug_loc25
-	.long	.Linfo_string90
+	.long	.Linfo_string94
 	.byte	1
 	.byte	147
-	.long	2333
+	.long	2362
 	.byte	26
 	.long	.Ldebug_loc26
-	.long	.Linfo_string122
+	.long	.Linfo_string126
 	.byte	1
 	.byte	147
-	.long	2343
+	.long	2372
 	.byte	26
 	.long	.Ldebug_loc27
-	.long	.Linfo_string124
+	.long	.Linfo_string128
 	.byte	1
 	.byte	147
-	.long	2343
+	.long	2372
 	.byte	27
 	.byte	2
 	.byte	145
 	.byte	8
-	.long	.Linfo_string121
-	.byte	1
-	.byte	165
-	.long	2321
-	.byte	28
-	.long	.Ldebug_loc28
 	.long	.Linfo_string125
 	.byte	1
+	.byte	165
+	.long	2350
+	.byte	28
+	.long	.Ldebug_loc28
+	.long	.Linfo_string129
+	.byte	1
 	.byte	152
-	.long	2354
+	.long	2383
 	.byte	28
 	.long	.Ldebug_loc29
-	.long	.Linfo_string133
+	.long	.Linfo_string137
 	.byte	1
 	.byte	153
-	.long	757
+	.long	786
 	.byte	28
 	.long	.Ldebug_loc30
-	.long	.Linfo_string134
+	.long	.Linfo_string138
 	.byte	1
 	.byte	163
-	.long	2502
+	.long	2531
 	.byte	28
 	.long	.Ldebug_loc31
-	.long	.Linfo_string94
+	.long	.Linfo_string98
 	.byte	1
 	.byte	148
-	.long	2298
+	.long	2327
 	.byte	0
 	.byte	18
-	.long	.Linfo_string108
-	.byte	1
-	.byte	107
-	.byte	1
-	.long	773
-	.byte	1
-	.byte	1
-	.byte	19
-	.long	.Linfo_string109
-	.byte	1
-	.byte	107
-	.long	780
-	.byte	19
-	.long	.Linfo_string95
-	.byte	1
-	.byte	107
-	.long	1398
-	.byte	0
-	.byte	18
-	.long	.Linfo_string110
-	.byte	1
-	.byte	51
-	.byte	1
-	.long	757
-	.byte	1
-	.byte	1
-	.byte	19
-	.long	.Linfo_string111
-	.byte	1
-	.byte	51
-	.long	773
-	.byte	19
 	.long	.Linfo_string112
 	.byte	1
-	.byte	51
-	.long	1238
+	.byte	107
+	.byte	1
+	.long	802
+	.byte	1
+	.byte	1
 	.byte	19
 	.long	.Linfo_string113
 	.byte	1
-	.byte	51
-	.long	1860
-	.byte	20
-	.long	.Linfo_string59
+	.byte	107
+	.long	809
+	.byte	19
+	.long	.Linfo_string99
 	.byte	1
-	.byte	53
-	.long	785
-	.byte	20
-	.long	.Linfo_string94
-	.byte	1
-	.byte	54
-	.long	757
-	.byte	20
-	.long	.Linfo_string96
-	.byte	1
-	.byte	57
-	.long	1259
-	.byte	30
-	.byte	20
-	.long	.Linfo_string95
-	.byte	1
-	.byte	65
-	.long	773
+	.byte	107
+	.long	1427
 	.byte	0
-	.byte	0
-	.byte	3
-	.long	780
 	.byte	18
 	.long	.Linfo_string114
 	.byte	1
-	.byte	134
+	.byte	51
 	.byte	1
-	.long	773
+	.long	786
 	.byte	1
 	.byte	1
 	.byte	19
-	.long	.Linfo_string95
+	.long	.Linfo_string115
+	.byte	1
+	.byte	51
+	.long	802
+	.byte	19
+	.long	.Linfo_string116
+	.byte	1
+	.byte	51
+	.long	1267
+	.byte	19
+	.long	.Linfo_string117
+	.byte	1
+	.byte	51
+	.long	1889
+	.byte	20
+	.long	.Linfo_string63
+	.byte	1
+	.byte	53
+	.long	814
+	.byte	20
+	.long	.Linfo_string98
+	.byte	1
+	.byte	54
+	.long	786
+	.byte	20
+	.long	.Linfo_string100
+	.byte	1
+	.byte	57
+	.long	1288
+	.byte	30
+	.byte	20
+	.long	.Linfo_string99
+	.byte	1
+	.byte	65
+	.long	802
+	.byte	0
+	.byte	0
+	.byte	3
+	.long	809
+	.byte	18
+	.long	.Linfo_string118
 	.byte	1
 	.byte	134
-	.long	1398
+	.byte	1
+	.long	802
+	.byte	1
+	.byte	1
+	.byte	19
+	.long	.Linfo_string99
+	.byte	1
+	.byte	134
+	.long	1427
 	.byte	20
-	.long	.Linfo_string56
+	.long	.Linfo_string60
 	.byte	1
 	.byte	135
-	.long	773
+	.long	802
 	.byte	0
 	.byte	31
 	.long	.Ldebug_ranges8
 	.byte	1
 	.byte	94
 	.byte	1
-	.long	.Linfo_string118
+	.long	.Linfo_string122
 	.byte	1
 	.byte	208
 	.byte	1
 	.byte	1
 	.byte	26
 	.long	.Ldebug_loc32
-	.long	.Linfo_string122
+	.long	.Linfo_string126
 	.byte	1
 	.byte	209
-	.long	2343
+	.long	2372
 	.byte	26
 	.long	.Ldebug_loc33
-	.long	.Linfo_string136
+	.long	.Linfo_string140
 	.byte	1
 	.byte	210
-	.long	2343
+	.long	2372
 	.byte	26
 	.long	.Ldebug_loc34
-	.long	.Linfo_string95
+	.long	.Linfo_string99
 	.byte	1
 	.byte	211
-	.long	1398
+	.long	1427
 	.byte	28
 	.long	.Ldebug_loc35
-	.long	.Linfo_string94
+	.long	.Linfo_string98
 	.byte	1
-	.byte	219
-	.long	2298
+	.byte	222
+	.long	2327
 	.byte	28
 	.long	.Ldebug_loc36
-	.long	.Linfo_string137
-	.byte	1
-	.byte	221
-	.long	926
-	.byte	28
-	.long	.Ldebug_loc40
-	.long	.Linfo_string138
-	.byte	1
-	.byte	246
-	.long	773
-	.byte	20
 	.long	.Linfo_string141
 	.byte	1
-	.byte	218
-	.long	2298
+	.byte	224
+	.long	955
+	.byte	28
+	.long	.Ldebug_loc40
+	.long	.Linfo_string142
+	.byte	1
+	.byte	249
+	.long	802
+	.byte	20
+	.long	.Linfo_string145
+	.byte	1
+	.byte	221
+	.long	2327
 	.byte	29
-	.long	1729
+	.long	1758
 	.long	.Ldebug_ranges9
 	.byte	1
-	.byte	241
+	.byte	244
 	.byte	11
 	.long	.Ldebug_loc37
-	.long	1743
+	.long	1772
 	.byte	11
 	.long	.Ldebug_loc38
-	.long	1754
+	.long	1783
 	.byte	0
 	.byte	29
-	.long	665
+	.long	694
 	.long	.Ldebug_ranges10
 	.byte	1
-	.byte	247
+	.byte	250
 	.byte	11
 	.long	.Ldebug_loc39
-	.long	679
+	.long	708
 	.byte	32
-	.long	690
+	.long	719
 	.byte	12
 	.long	.Ldebug_loc41
-	.long	701
+	.long	730
 	.byte	12
 	.long	.Ldebug_loc42
-	.long	712
+	.long	741
 	.byte	12
 	.long	.Ldebug_loc43
-	.long	723
+	.long	752
 	.byte	12
 	.long	.Ldebug_loc44
-	.long	734
+	.long	763
 	.byte	12
 	.long	.Ldebug_loc45
-	.long	745
+	.long	774
 	.byte	0
 	.byte	13
 	.long	.Ldebug_ranges17
 	.byte	33
-	.long	.Linfo_string90
+	.long	.Linfo_string94
 	.byte	1
-	.short	288
-	.long	780
+	.short	291
+	.long	809
 	.byte	33
-	.long	.Linfo_string142
+	.long	.Linfo_string146
 	.byte	1
-	.short	289
-	.long	1171
+	.short	292
+	.long	1200
 	.byte	34
-	.long	1766
+	.long	1795
 	.long	.Ldebug_ranges11
 	.byte	1
-	.short	293
+	.short	296
 	.byte	11
 	.long	.Ldebug_loc46
-	.long	1780
+	.long	1809
 	.byte	12
 	.long	.Ldebug_loc48
-	.long	1813
+	.long	1842
 	.byte	12
 	.long	.Ldebug_loc49
-	.long	1824
+	.long	1853
 	.byte	12
 	.long	.Ldebug_loc50
-	.long	1835
+	.long	1864
 	.byte	13
 	.long	.Ldebug_ranges12
 	.byte	14
 	.byte	0
-	.long	1847
+	.long	1876
 	.byte	0
 	.byte	0
 	.byte	35
-	.long	1865
+	.long	1894
 	.long	.Ldebug_ranges13
 	.byte	1
-	.short	353
+	.short	356
 	.byte	34
-	.long	1729
+	.long	1758
 	.long	.Ldebug_ranges14
 	.byte	1
-	.short	314
+	.short	317
 	.byte	11
 	.long	.Ldebug_loc51
-	.long	1743
+	.long	1772
 	.byte	11
 	.long	.Ldebug_loc52
-	.long	1754
+	.long	1783
 	.byte	0
 	.byte	13
 	.long	.Ldebug_ranges15
@@ -3563,29 +3605,29 @@ scratch:
 	.byte	2
 	.byte	145
 	.byte	52
-	.long	.Linfo_string119
+	.long	.Linfo_string123
 	.byte	1
-	.short	296
-	.long	2309
+	.short	299
+	.long	2338
 	.byte	0
 	.byte	13
 	.long	.Ldebug_ranges16
 	.byte	37
 	.long	.Ldebug_loc47
-	.long	.Linfo_string139
+	.long	.Linfo_string143
 	.byte	1
-	.short	263
-	.long	2513
+	.short	266
+	.long	2542
 	.byte	0
 	.byte	0
 	.byte	0
 	.byte	15
 	.long	499
-	.long	.Linfo_string117
+	.long	.Linfo_string121
 	.byte	3
 	.byte	19
 	.byte	6
-	.long	1371
+	.long	1400
 	.byte	7
 	.long	96
 	.byte	255
@@ -3597,17 +3639,17 @@ scratch:
 	.byte	4
 	.byte	0
 	.byte	3
-	.long	2338
+	.long	2367
 	.byte	4
-	.long	1371
+	.long	1400
 	.byte	15
-	.long	1398
-	.long	.Linfo_string123
-	.byte	6
+	.long	1427
+	.long	.Linfo_string127
+	.byte	7
 	.byte	122
 	.byte	15
-	.long	2365
-	.long	.Linfo_string132
+	.long	2394
+	.long	.Linfo_string136
 	.byte	2
 	.byte	136
 	.byte	21
@@ -3615,82 +3657,82 @@ scratch:
 	.byte	2
 	.byte	113
 	.byte	22
-	.long	.Linfo_string60
-	.long	921
+	.long	.Linfo_string64
+	.long	950
 	.byte	2
 	.byte	114
 	.byte	0
 	.byte	22
-	.long	.Linfo_string69
-	.long	1189
+	.long	.Linfo_string73
+	.long	1218
 	.byte	2
 	.byte	115
 	.byte	4
 	.byte	22
-	.long	.Linfo_string126
-	.long	1171
+	.long	.Linfo_string130
+	.long	1200
 	.byte	2
 	.byte	116
 	.byte	6
 	.byte	22
-	.long	.Linfo_string127
-	.long	1171
+	.long	.Linfo_string131
+	.long	1200
 	.byte	2
 	.byte	117
 	.byte	7
 	.byte	22
-	.long	.Linfo_string128
-	.long	1207
+	.long	.Linfo_string132
+	.long	1236
 	.byte	2
 	.byte	118
 	.byte	8
 	.byte	22
-	.long	.Linfo_string80
-	.long	1207
+	.long	.Linfo_string84
+	.long	1236
 	.byte	2
 	.byte	119
 	.byte	12
 	.byte	22
-	.long	.Linfo_string87
-	.long	1207
+	.long	.Linfo_string91
+	.long	1236
 	.byte	2
 	.byte	120
 	.byte	16
 	.byte	22
-	.long	.Linfo_string88
-	.long	1207
+	.long	.Linfo_string92
+	.long	1236
 	.byte	2
 	.byte	121
 	.byte	20
 	.byte	22
-	.long	.Linfo_string129
-	.long	1207
+	.long	.Linfo_string133
+	.long	1236
 	.byte	2
 	.byte	122
 	.byte	24
 	.byte	22
-	.long	.Linfo_string130
-	.long	1207
+	.long	.Linfo_string134
+	.long	1236
 	.byte	2
 	.byte	124
 	.byte	28
 	.byte	22
-	.long	.Linfo_string131
-	.long	1238
+	.long	.Linfo_string135
+	.long	1267
 	.byte	2
 	.byte	125
 	.byte	32
 	.byte	0
 	.byte	15
-	.long	1398
-	.long	.Linfo_string135
-	.byte	7
+	.long	1427
+	.long	.Linfo_string139
+	.byte	8
 	.byte	104
 	.byte	15
-	.long	569
-	.long	.Linfo_string140
-	.byte	4
-	.byte	36
+	.long	598
+	.long	.Linfo_string144
+	.byte	5
+	.byte	37
 	.byte	0
 .L.debug_info_end0:
 	.section	.debug_abbrev,"",@progbits
@@ -5422,7 +5464,7 @@ scratch:
 .Lset136 = .Ltmp561-.Ltmp560
 	.short	.Lset136
 .Ltmp560:
-	.byte	118
+	.byte	120
 	.byte	0
 .Ltmp561:
 	.long	0
@@ -5433,7 +5475,7 @@ scratch:
 .Lset137 = .Ltmp563-.Ltmp562
 	.short	.Lset137
 .Ltmp562:
-	.byte	90
+	.byte	86
 .Ltmp563:
 	.long	0
 	.long	0
@@ -5514,7 +5556,7 @@ scratch:
 .Lset146 = .Ltmp581-.Ltmp580
 	.short	.Lset146
 .Ltmp580:
-	.byte	121
+	.byte	119
 	.byte	0
 .Ltmp581:
 	.long	0
@@ -5532,7 +5574,7 @@ scratch:
 .Lset148 = .Ltmp585-.Ltmp584
 	.short	.Lset148
 .Ltmp584:
-	.byte	90
+	.byte	88
 .Ltmp585:
 	.long	0
 	.long	0
@@ -5558,25 +5600,25 @@ scratch:
 .asciiz"lfn"
 	.long	310
 .asciiz"state"
-	.long	1766
+	.long	1795
 .asciiz"GetDirItemAt"
-	.long	1902
+	.long	1931
 .asciiz"sdcard_play"
 	.long	356
 .asciiz"scratch"
 	.long	66
 .asciiz"track_string"
-	.long	1405
+	.long	1434
 .asciiz"ClimbUp"
-	.long	665
+	.long	694
 .asciiz"GetDirIndexOf"
-	.long	1589
+	.long	1618
 .asciiz"PlayTrack"
-	.long	1865
+	.long	1894
 .asciiz"GoPreviousFolder"
 	.long	103
 .asciiz"folder_string"
-	.long	1729
+	.long	1758
 .asciiz"GoFolder"
 	.long	31
 .asciiz"setting_file_name"
@@ -5590,49 +5632,49 @@ scratch:
 	.long	.L.debug_info_begin0
 .Lset153 = .L.debug_info_end0-.L.debug_info_begin0
 	.long	.Lset153
-	.long	1207
+	.long	1236
 .asciiz"DWORD"
 	.long	328
 .asciiz"CONTROL_STATE"
-	.long	1387
+	.long	1416
 .asciiz"UINT"
-	.long	2298
+	.long	2327
 .asciiz"PLAY_TRACK_RC"
-	.long	757
+	.long	786
 .asciiz"FRESULT"
-	.long	2502
+	.long	2531
 .asciiz"uint"
-	.long	1259
+	.long	1288
 .asciiz"FILINFO"
-	.long	1398
+	.long	1427
 .asciiz"unsigned int"
-	.long	2354
+	.long	2383
 .asciiz"FIL"
-	.long	773
+	.long	802
 .asciiz"int"
-	.long	1200
+	.long	1229
 .asciiz"unsigned short"
-	.long	2343
+	.long	2372
 .asciiz"chanend"
-	.long	1371
+	.long	1400
 .asciiz"TCHAR"
-	.long	926
+	.long	955
 .asciiz"FATFS"
-	.long	1248
+	.long	1277
 .asciiz"WCHAR"
-	.long	1171
+	.long	1200
 .asciiz"BYTE"
-	.long	1218
+	.long	1247
 .asciiz"long unsigned int"
-	.long	2513
+	.long	2542
 .asciiz"PLAY_COMMAND"
-	.long	1182
+	.long	1211
 .asciiz"unsigned char"
-	.long	1189
+	.long	1218
 .asciiz"WORD"
 	.long	59
 .asciiz"char"
-	.long	785
+	.long	814
 .asciiz"DIR"
 	.long	0
 .LpubTypes_end0:
@@ -5662,6 +5704,7 @@ scratch:
 	.typestring fflush, "f{si}(p(s(__sFILE){m(_p){p(uc)},m(_r){si},m(_w){si},m(_flags){ss},m(_file){ss},m(_bf){s(__sbuf){m(_base){p(uc)},m(_size){si}}},m(_lbfsize){si},m(_cookie){p(0)},m(_read){p(f{si}(p(s(_reent){}),p(0),p(uc),si))},m(_write){p(f{si}(p(s(_reent){}),p(0),p(c:uc),si))},m(_seek){p(f{sl}(p(s(_reent){}),p(0),sl,si))},m(_close){p(f{si}(p(s(_reent){}),p(0)))},m(_ub){s(__sbuf){m(_base){p(uc)},m(_size){si}}},m(_up){p(uc)},m(_ur){si},m(_ubuf){a(3:uc)},m(_nbuf){a(1:uc)},m(_lb){s(__sbuf){m(_base){p(uc)},m(_size){si}}},m(_blksize){si},m(_offset){si},m(_lock){s(){m(_owner){si},m(_count){si}}}}))"
 	.typestring __getstdout, "f{p(s(__sFILE){m(_p){p(uc)},m(_r){si},m(_w){si},m(_flags){ss},m(_file){ss},m(_bf){s(__sbuf){m(_base){p(uc)},m(_size){si}}},m(_lbfsize){si},m(_cookie){p(0)},m(_read){p(f{si}(p(s(_reent){}),p(0),p(uc),si))},m(_write){p(f{si}(p(s(_reent){}),p(0),p(c:uc),si))},m(_seek){p(f{sl}(p(s(_reent){}),p(0),sl,si))},m(_close){p(f{si}(p(s(_reent){}),p(0)))},m(_ub){s(__sbuf){m(_base){p(uc)},m(_size){si}}},m(_up){p(uc)},m(_ur){si},m(_ubuf){a(3:uc)},m(_nbuf){a(1:uc)},m(_lb){s(__sbuf){m(_base){p(uc)},m(_size){si}}},m(_blksize){si},m(_offset){si},m(_lock){s(){m(_owner){si},m(_count){si}}}})}(0)"
 	.typestring sdcard_play, "f{0}(ui,ui,ui)"
+	.typestring set_console_mode, "f{0}(e(){m(_DAC_MODE_SELECTION){3},m(_FUNCTION_SELECTION){4},m(_SDC_AUDIO){1},m(_USB_AUDIO){2}})"
 	.typestring f_mount, "f{e(){m(FR_DENIED){7},m(FR_DISK_ERR){1},m(FR_EXIST){8},m(FR_INT_ERR){2},m(FR_INVALID_DRIVE){11},m(FR_INVALID_NAME){6},m(FR_INVALID_OBJECT){9},m(FR_INVALID_PARAMETER){19},m(FR_LOCKED){16},m(FR_MKFS_ABORTED){14},m(FR_NOT_ENABLED){12},m(FR_NOT_ENOUGH_CORE){17},m(FR_NOT_READY){3},m(FR_NO_FILE){4},m(FR_NO_FILESYSTEM){13},m(FR_NO_PATH){5},m(FR_OK){0},m(FR_TIMEOUT){15},m(FR_TOO_MANY_OPEN_FILES){18},m(FR_WRITE_PROTECTED){10}}}(uc,p(s(){m(fs_type){uc},m(drv){uc},m(csize){uc},m(n_fats){uc},m(wflag){uc},m(fsi_flag){uc},m(id){us},m(n_rootdir){us},m(last_clust){ul},m(free_clust){ul},m(fsi_sector){ul},m(cdir){ul},m(n_fatent){ul},m(fsize){ul},m(fatbase){ul},m(dirbase){ul},m(database){ul},m(winsect){ul},m(win){a(512:uc)}}))"
 	.typestring QueryChannel, "f{ui}(ui,ui)"
 	.typestring qspi_if_read, "f{0}(ui,si,si,p(uc))"

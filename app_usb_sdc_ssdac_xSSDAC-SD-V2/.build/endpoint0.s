@@ -856,13 +856,13 @@ Endpoint0:
 		nop
 	}
 .Ltmp96:
-	ldc r3, 200
+	ldc r3, 392
 	bt r2, .LBB0_44
 .Ltmp97:
 	ldc r3, 582
 .Ltmp98:
 .LBB0_44:
-	ldc r11, 100
+	ldc r11, 196
 	bt r2, .LBB0_46
 .Ltmp99:
 	ldc r11, 388
@@ -1318,7 +1318,7 @@ cfgDesc_Audio2:
 	.byte	5
 	.byte	1
 	.byte	5
-	.short	200
+	.short	392
 	.byte	1
 	.byte	8
 	.byte	37
@@ -1362,7 +1362,7 @@ cfgDesc_Audio2:
 	.byte	5
 	.byte	1
 	.byte	5
-	.short	100
+	.short	196
 	.byte	1
 	.byte	8
 	.byte	37

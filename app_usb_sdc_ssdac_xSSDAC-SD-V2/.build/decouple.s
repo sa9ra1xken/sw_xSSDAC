@@ -2596,7 +2596,7 @@ decouple:                               # @decouple
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
 	#DEBUG_VALUE: aud_from_host_flag <- 0
-	ldc r1, 100
+	ldc r1, 196
 	bu .LBB1_19
 .Ltmp226:
 .LBB1_7:                                # %LoopBody59

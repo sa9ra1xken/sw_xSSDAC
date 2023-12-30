@@ -21,18 +21,18 @@ p_key.info:
 	.set usage.anon.3,0
 	.set usage.anon.4,0
 	.set usage.anon.5,0
-	.globread button_listener,console_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:326:31: note: object used here\n    unsafe {p_console_mode = &console_mode;}\n                              ^~~~~~~~~~~~"
+	.globread button_listener_core,console_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:326:31: note: object used here\n    unsafe {p_console_mode = &console_mode;}\n                              ^~~~~~~~~~~~"
 	.globread usage.anon.5,selected_function,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:195:32: note: object used here\n        p_selected_function = &selected_function;\n                               ^~~~~~~~~~~~~~~~~"
 	.globread usage.anon.4,fixed_intpol_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:158:32: note: object used here\n        p_fixed_intpol_mode = &fixed_intpol_mode;\n                               ^~~~~~~~~~~~~~~~~"
 	.globread usage.anon.4,proposed_intpol_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:157:35: note: object used here\n        p_proposed_intpol_mode = &proposed_intpol_mode;\n                                  ^~~~~~~~~~~~~~~~~~~~"
 	.globread HandleDacCommand,fixed_intpol_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:97:22: note: object used here\n        c_control <: fixed_intpol_mode;\n                     ^~~~~~~~~~~~~~~~~"
-	.globwrite button_listener,play_command_request,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:353:13: note: object used here\n            play_command_request = 0;\n            ^~~~~~~~~~~~~~~~~~~~"
-	.globwrite button_listener,play_command,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:352:13: note: object used here\n            play_command = _PLAY_CMD_EMPTY;\n            ^~~~~~~~~~~~"
-	.globwrite button_listener,scan_time,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:334:10: note: object used here\n    t :> scan_time;\n         ^~~~~~~~~"
-	.globwrite button_listener,key_buff,8,4,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:332:5: note: object used here (bytes 8..12)\n    key_buff[2] = key_buff[1];\n    ^~~~~~~~~~~"
-	.globwrite button_listener,key_buff,4,4,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:331:5: note: object used here (bytes 4..8)\n    key_buff[1] = key_buff[0];\n    ^~~~~~~~~~~"
-	.globwrite button_listener,key_buff,0,4,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:330:14: note: object used here (bytes 0..4)\n    p_key :> key_buff[0];\n             ^~~~~~~~~~~"
-	.globwrite button_listener,p_key,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:330:5: note: object used here\n    p_key :> key_buff[0];\n    ^~~~~"
+	.globwrite button_listener_core,play_command_request,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:353:13: note: object used here\n            play_command_request = 0;\n            ^~~~~~~~~~~~~~~~~~~~"
+	.globwrite button_listener_core,play_command,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:352:13: note: object used here\n            play_command = _PLAY_CMD_EMPTY;\n            ^~~~~~~~~~~~"
+	.globwrite button_listener_core,scan_time,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:334:10: note: object used here\n    t :> scan_time;\n         ^~~~~~~~~"
+	.globwrite button_listener_core,key_buff,8,4,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:332:5: note: object used here (bytes 8..12)\n    key_buff[2] = key_buff[1];\n    ^~~~~~~~~~~"
+	.globwrite button_listener_core,key_buff,4,4,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:331:5: note: object used here (bytes 4..8)\n    key_buff[1] = key_buff[0];\n    ^~~~~~~~~~~"
+	.globwrite button_listener_core,key_buff,0,4,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:330:14: note: object used here (bytes 0..4)\n    p_key :> key_buff[0];\n             ^~~~~~~~~~~"
+	.globwrite button_listener_core,p_key,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:330:5: note: object used here\n    p_key :> key_buff[0];\n    ^~~~~"
 	.globwrite ExamineKeyInput,last_event_time,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:264:9: note: object used here\n        last_event_time = now;\n        ^~~~~~~~~~~~~~~"
 	.globwrite ExamineKeyInput,key_buff,8,4,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:256:5: note: object used here (bytes 8..12)\n    key_buff[2] = key_buff[1];\n    ^~~~~~~~~~~"
 	.globwrite ExamineKeyInput,key_buff,4,4,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:257:5: note: object used here (bytes 4..8)\n    key_buff[1] = key_buff[0];\n    ^~~~~~~~~~~"
@@ -42,10 +42,10 @@ p_key.info:
 	.globwrite HandlePlayCommand,play_command_request,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:83:9: note: object used here\n        play_command_request = 1;\n        ^~~~~~~~~~~~~~~~~~~~"
 	.globwrite HandlePlayCommand,play_command,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:78:9: note: object used here\n        play_command = _PLAY_CMD_EMPTY;\n        ^~~~~~~~~~~~"
 	.globwrite HandlePlayCommand,p_key,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:88:9: note: object used here\n        p_key :> temp;\n        ^~~~~"
-	.call button_listener,set_display_control_flag
-	.call button_listener,set_console_mode
-	.call button_listener,HandleDacCommand
-	.call button_listener,ExamineKeyInput
+	.call button_listener_core,set_display_control_flag
+	.call button_listener_core,set_console_mode
+	.call button_listener_core,HandleDacCommand
+	.call button_listener_core,ExamineKeyInput
 	.call ExamineKeyInput,KeyEvent
 	.call KeyEvent,usage.anon.5
 	.call KeyEvent,usage.anon.4
@@ -69,7 +69,7 @@ p_key.info:
 	.set HandleDacCommand.locnoside, 0
 	.set usage.anon.3.locnoside, 0
 	.set ExamineKeyInput.locnoside, 0
-	.set button_listener.locnoside, 0
+	.set button_listener_core.locnoside, 0
 	.set HandlePlayCommand.locnoglobalaccess, 0
 	.set HandleDacCommand.locnoglobalaccess, 0
 	.set SwitchConsoleMode.locnoglobalaccess, 0
@@ -78,7 +78,7 @@ p_key.info:
 	.set usage.anon.5.locnoglobalaccess, 0
 	.set KeyEvent.locnoglobalaccess, 0
 	.set ExamineKeyInput.locnoglobalaccess, 0
-	.set button_listener.locnoglobalaccess, 0
+	.set button_listener_core.locnoglobalaccess, 0
 
                                         # End of file scope inline assembly
 	.section	.debug_info,"",@progbits
@@ -194,11 +194,11 @@ QueryChannel:                           # @QueryChannel
 	.long	1000000                 # 0xf4240
 	.cc_bottom .LCPI1_0.data
 	.text
-	.globl	button_listener
+	.globl	button_listener_core
 	.align	4
-	.type	button_listener,@function
-	.cc_top button_listener.function,button_listener
-button_listener:                        # @button_listener
+	.type	button_listener_core,@function
+	.cc_top button_listener_core.function,button_listener_core
+button_listener_core:                   # @button_listener_core
 .Lfunc_begin1:
 	.loc	1 324 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:324:0
 	.cfi_startproc
@@ -225,10 +225,10 @@ button_listener:                        # @button_listener
 	.cfi_offset 7, -12
 .Ltmp11:
 	.cfi_offset 8, -8
-	#DEBUG_VALUE: button_listener:c_play_control <- R0
-	#DEBUG_VALUE: button_listener:c_dac_control <- R1
+	#DEBUG_VALUE: button_listener_core:c_play_control <- R0
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R1
 .Ltmp12:
-	#DEBUG_VALUE: button_listener:c_dac_control <- R4
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R4
 	{
 		mov r4, r1
 		stw r8, sp[6]
@@ -239,7 +239,7 @@ button_listener:                        # @button_listener
 		nop
 	}
 .Ltmp14:
-	#DEBUG_VALUE: button_listener:c_play_control <- R5
+	#DEBUG_VALUE: button_listener_core:c_play_control <- R5
 	.loc	1 326 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:326:0
 	ldaw r0, dp[console_mode]
 	stw r0, dp[p_console_mode]
@@ -304,8 +304,8 @@ button_listener:                        # @button_listener
 .LBB1_5:                                # %selectcase10
                                         #   in Loop: Header=BB1_1 Depth=1
 .Lxtalabel2:
-	#DEBUG_VALUE: button_listener:c_play_control <- R5
-	#DEBUG_VALUE: button_listener:c_dac_control <- R4
+	#DEBUG_VALUE: button_listener_core:c_play_control <- R5
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R4
 	.loc	1 372 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:372:0
 .Lxta.endpoint_labels3:
 	{
@@ -329,8 +329,8 @@ button_listener:                        # @button_listener
 .LBB1_1:                                # %LoopBody
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel3:
-	#DEBUG_VALUE: button_listener:c_play_control <- R5
-	#DEBUG_VALUE: button_listener:c_dac_control <- R4
+	#DEBUG_VALUE: button_listener_core:c_play_control <- R5
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R4
 	.loc	1 350 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:350:9
 	ldw r0, dp[play_command_request]
 	.loc	1 350 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:350:9
@@ -343,16 +343,16 @@ button_listener:                        # @button_listener
 # BB#2:                                 # %LoopBody
                                         #   in Loop: Header=BB1_1 Depth=1
 .Lxtalabel4:
-	#DEBUG_VALUE: button_listener:c_play_control <- R5
-	#DEBUG_VALUE: button_listener:c_dac_control <- R4
+	#DEBUG_VALUE: button_listener_core:c_play_control <- R5
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R4
 	ldw r0, dp[play_command]
 	bf r0, .LBB1_4
 .Ltmp23:
 # BB#3:                                 # %iftrue3
                                         #   in Loop: Header=BB1_1 Depth=1
 .Lxtalabel5:
-	#DEBUG_VALUE: button_listener:c_play_control <- R5
-	#DEBUG_VALUE: button_listener:c_dac_control <- R4
+	#DEBUG_VALUE: button_listener_core:c_play_control <- R5
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R4
 	.loc	1 351 43                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:351:43
 	{
 		outct res[r5], 1
@@ -387,8 +387,8 @@ button_listener:                        # @button_listener
 .LBB1_4:                                # %ifdone4
                                         #   in Loop: Header=BB1_1 Depth=1
 .Lxtalabel6:
-	#DEBUG_VALUE: button_listener:c_play_control <- R5
-	#DEBUG_VALUE: button_listener:c_dac_control <- R4
+	#DEBUG_VALUE: button_listener_core:c_play_control <- R5
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R4
 	.loc	1 359 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:359:9
 	{
 		clre
@@ -440,8 +440,8 @@ button_listener:                        # @button_listener
 .LBB1_6:                                # %selectcase
                                         #   in Loop: Header=BB1_1 Depth=1
 .Lxtalabel7:
-	#DEBUG_VALUE: button_listener:c_play_control <- R5
-	#DEBUG_VALUE: button_listener:c_dac_control <- R4
+	#DEBUG_VALUE: button_listener_core:c_play_control <- R5
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R4
 	.loc	1 368 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:368:0
 	{
 		chkct res[r4], 1
@@ -465,8 +465,8 @@ button_listener:                        # @button_listener
 		chkct res[r4], 1
 		nop
 	}
-	#DEBUG_VALUE: button_listener:c_play_control <- R5
-	#DEBUG_VALUE: button_listener:c_dac_control <- R4
+	#DEBUG_VALUE: button_listener_core:c_play_control <- R5
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R4
 	#DEBUG_VALUE: dac_command <- R1
 	.loc	1 368 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:368:0
 .Ltrap_info0:
@@ -484,17 +484,17 @@ button_listener:                        # @button_listener
 .Ltmp28:
 	bu .LBB1_1
 .Ltmp29:
-	.cc_bottom button_listener.function
-	.set	button_listener.nstackwords,((_Sset_console_mode_0.nstackwords $M set_display_control_flag.nstackwords $M HandleDacCommand.nstackwords $M ExamineKeyInput.nstackwords) + 8)
-	.globl	button_listener.nstackwords
-	.set	button_listener.maxcores,ExamineKeyInput.maxcores $M HandleDacCommand.maxcores $M _Sset_console_mode_0.maxcores $M set_display_control_flag.maxcores $M 1
-	.globl	button_listener.maxcores
-	.set	button_listener.maxtimers,ExamineKeyInput.maxtimers $M HandleDacCommand.maxtimers $M _Sset_console_mode_0.maxtimers $M set_display_control_flag.maxtimers $M 0
-	.globl	button_listener.maxtimers
-	.set	button_listener.maxchanends,ExamineKeyInput.maxchanends $M HandleDacCommand.maxchanends $M _Sset_console_mode_0.maxchanends $M set_display_control_flag.maxchanends $M 0
-	.globl	button_listener.maxchanends
+	.cc_bottom button_listener_core.function
+	.set	button_listener_core.nstackwords,((_Sset_console_mode_0.nstackwords $M set_display_control_flag.nstackwords $M HandleDacCommand.nstackwords $M ExamineKeyInput.nstackwords) + 8)
+	.globl	button_listener_core.nstackwords
+	.set	button_listener_core.maxcores,ExamineKeyInput.maxcores $M HandleDacCommand.maxcores $M _Sset_console_mode_0.maxcores $M set_display_control_flag.maxcores $M 1
+	.globl	button_listener_core.maxcores
+	.set	button_listener_core.maxtimers,ExamineKeyInput.maxtimers $M HandleDacCommand.maxtimers $M _Sset_console_mode_0.maxtimers $M set_display_control_flag.maxtimers $M 0
+	.globl	button_listener_core.maxtimers
+	.set	button_listener_core.maxchanends,ExamineKeyInput.maxchanends $M HandleDacCommand.maxchanends $M _Sset_console_mode_0.maxchanends $M set_display_control_flag.maxchanends $M 0
+	.globl	button_listener_core.maxchanends
 .Ltmp30:
-	.size	button_listener, .Ltmp30-button_listener
+	.size	button_listener_core, .Ltmp30-button_listener_core
 .Lfunc_end1:
 	.cfi_endproc
 
@@ -507,11 +507,11 @@ button_listener:                        # @button_listener
 	.long	1000000                 # 0xf4240
 	.cc_bottom .LCPI2_0.data
 	.text
-	.globl	_Sbutton_listener_0
+	.globl	_Sbutton_listener_core_0
 	.align	4
-	.type	_Sbutton_listener_0,@function
-	.cc_top _Sbutton_listener_0.function,_Sbutton_listener_0
-_Sbutton_listener_0:                    # @_Sbutton_listener_0
+	.type	_Sbutton_listener_core_0,@function
+	.cc_top _Sbutton_listener_core_0.function,_Sbutton_listener_core_0
+_Sbutton_listener_core_0:               # @_Sbutton_listener_core_0
 .Lfunc_begin2:
 	.loc	1 324 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:324:0
 	.cfi_startproc
@@ -536,13 +536,13 @@ _Sbutton_listener_0:                    # @_Sbutton_listener_0
 	.cfi_offset 6, -8
 .Ltmp36:
 	.cfi_offset 7, -4
-	#DEBUG_VALUE: button_listener:c_dac_control <- R0
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R0
 	{
 		mov r4, r0
 		nop
 	}
 .Ltmp37:
-	#DEBUG_VALUE: button_listener:c_dac_control <- R4
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R4
 	.loc	1 326 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:326:0
 	ldaw r0, dp[console_mode]
 	stw r0, dp[p_console_mode]
@@ -607,7 +607,7 @@ _Sbutton_listener_0:                    # @_Sbutton_listener_0
 .LBB2_5:                                # %selectcase10
                                         #   in Loop: Header=BB2_1 Depth=1
 .Lxtalabel9:
-	#DEBUG_VALUE: button_listener:c_dac_control <- R4
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R4
 	.loc	1 372 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:372:0
 .Lxta.endpoint_labels7:
 	{
@@ -631,7 +631,7 @@ _Sbutton_listener_0:                    # @_Sbutton_listener_0
 .LBB2_1:                                # %LoopBody
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel10:
-	#DEBUG_VALUE: button_listener:c_dac_control <- R4
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R4
 	.loc	1 350 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:350:9
 	ldw r0, dp[play_command_request]
 	.loc	1 350 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:350:9
@@ -644,14 +644,14 @@ _Sbutton_listener_0:                    # @_Sbutton_listener_0
 # BB#2:                                 # %LoopBody
                                         #   in Loop: Header=BB2_1 Depth=1
 .Lxtalabel11:
-	#DEBUG_VALUE: button_listener:c_dac_control <- R4
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R4
 	ldw r0, dp[play_command]
 	bf r0, .LBB2_4
 .Ltmp46:
 # BB#3:                                 # %iftrue3
                                         #   in Loop: Header=BB2_1 Depth=1
 .Lxtalabel12:
-	#DEBUG_VALUE: button_listener:c_dac_control <- R4
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R4
 	#DEBUG_VALUE: c_play_control <- R7
 	.loc	1 351 43                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:351:43
 	{
@@ -687,7 +687,7 @@ _Sbutton_listener_0:                    # @_Sbutton_listener_0
 .LBB2_4:                                # %ifdone4
                                         #   in Loop: Header=BB2_1 Depth=1
 .Lxtalabel13:
-	#DEBUG_VALUE: button_listener:c_dac_control <- R4
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R4
 	.loc	1 359 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:359:9
 	{
 		clre
@@ -739,7 +739,7 @@ _Sbutton_listener_0:                    # @_Sbutton_listener_0
 .LBB2_6:                                # %selectcase
                                         #   in Loop: Header=BB2_1 Depth=1
 .Lxtalabel14:
-	#DEBUG_VALUE: button_listener:c_dac_control <- R4
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R4
 	.loc	1 368 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:368:0
 	{
 		chkct res[r4], 1
@@ -763,7 +763,7 @@ _Sbutton_listener_0:                    # @_Sbutton_listener_0
 		chkct res[r4], 1
 		nop
 	}
-	#DEBUG_VALUE: button_listener:c_dac_control <- R4
+	#DEBUG_VALUE: button_listener_core:c_dac_control <- R4
 	#DEBUG_VALUE: dac_command <- R1
 	.loc	1 368 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc:368:0
 .Ltrap_info1:
@@ -781,17 +781,17 @@ _Sbutton_listener_0:                    # @_Sbutton_listener_0
 .Ltmp51:
 	bu .LBB2_1
 .Ltmp52:
-	.cc_bottom _Sbutton_listener_0.function
-	.set	_Sbutton_listener_0.nstackwords,((_Sset_console_mode_0.nstackwords $M set_display_control_flag.nstackwords $M HandleDacCommand.nstackwords $M ExamineKeyInput.nstackwords) + 6)
-	.globl	_Sbutton_listener_0.nstackwords
-	.set	_Sbutton_listener_0.maxcores,ExamineKeyInput.maxcores $M HandleDacCommand.maxcores $M _Sset_console_mode_0.maxcores $M set_display_control_flag.maxcores $M 1
-	.globl	_Sbutton_listener_0.maxcores
-	.set	_Sbutton_listener_0.maxtimers,ExamineKeyInput.maxtimers $M HandleDacCommand.maxtimers $M _Sset_console_mode_0.maxtimers $M set_display_control_flag.maxtimers $M 0
-	.globl	_Sbutton_listener_0.maxtimers
-	.set	_Sbutton_listener_0.maxchanends,ExamineKeyInput.maxchanends $M HandleDacCommand.maxchanends $M _Sset_console_mode_0.maxchanends $M set_display_control_flag.maxchanends $M 0
-	.globl	_Sbutton_listener_0.maxchanends
+	.cc_bottom _Sbutton_listener_core_0.function
+	.set	_Sbutton_listener_core_0.nstackwords,((_Sset_console_mode_0.nstackwords $M set_display_control_flag.nstackwords $M HandleDacCommand.nstackwords $M ExamineKeyInput.nstackwords) + 6)
+	.globl	_Sbutton_listener_core_0.nstackwords
+	.set	_Sbutton_listener_core_0.maxcores,ExamineKeyInput.maxcores $M HandleDacCommand.maxcores $M _Sset_console_mode_0.maxcores $M set_display_control_flag.maxcores $M 1
+	.globl	_Sbutton_listener_core_0.maxcores
+	.set	_Sbutton_listener_core_0.maxtimers,ExamineKeyInput.maxtimers $M HandleDacCommand.maxtimers $M _Sset_console_mode_0.maxtimers $M set_display_control_flag.maxtimers $M 0
+	.globl	_Sbutton_listener_core_0.maxtimers
+	.set	_Sbutton_listener_core_0.maxchanends,ExamineKeyInput.maxchanends $M HandleDacCommand.maxchanends $M _Sset_console_mode_0.maxchanends $M set_display_control_flag.maxchanends $M 0
+	.globl	_Sbutton_listener_core_0.maxchanends
 .Ltmp53:
-	.size	_Sbutton_listener_0, .Ltmp53-_Sbutton_listener_0
+	.size	_Sbutton_listener_core_0, .Ltmp53-_Sbutton_listener_core_0
 .Lfunc_end2:
 	.cfi_endproc
 
@@ -2425,7 +2425,7 @@ last_event_time:
 .Linfo_string89:
 .asciiz"ExamineKeyInput"
 .Linfo_string90:
-.asciiz"button_listener"
+.asciiz"button_listener_core"
 .Linfo_string91:
 .asciiz"ch"
 .Linfo_string92:
@@ -4842,8 +4842,6 @@ last_event_time:
 .asciiz"HandlePlayCommand"              # External Name
 	.long	500                     # DIE offset
 .asciiz"last_event_time"                # External Name
-	.long	1635                    # DIE offset
-.asciiz"button_listener"                # External Name
 	.long	282                     # DIE offset
 .asciiz"proposed_intpol_mode"           # External Name
 	.long	131                     # DIE offset
@@ -4880,6 +4878,8 @@ last_event_time:
 .asciiz"play_command_request"           # External Name
 	.long	2603                    # DIE offset
 .asciiz"delay_seconds"                  # External Name
+	.long	1635                    # DIE offset
+.asciiz"button_listener_core"           # External Name
 	.long	0                       # End Mark
 .LpubNames_end0:
 	.section	.debug_pubtypes,"",@progbits
@@ -4919,8 +4919,8 @@ last_event_time:
 	.cfi_sections .debug_frame
 
 	.typestring QueryChannel, "f{ui}(chd,ui)"
-	.typestring button_listener, "f{0}(n:chd,n:chd)"
-	.typestring _Sbutton_listener_0, "f{0}(n:chd)"
+	.typestring button_listener_core, "f{0}(n:chd,n:chd)"
+	.typestring _Sbutton_listener_core_0, "f{0}(n:chd)"
 	.typestring set_display_control_flag, "f{0}(ui)"
 	.typestring _Sset_console_mode_0, "f{0}(0)"
 	.typestring iprintf, "f{si}(u:q(c:uc),va)"

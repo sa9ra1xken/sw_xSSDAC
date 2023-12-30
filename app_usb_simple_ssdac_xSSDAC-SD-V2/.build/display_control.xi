@@ -1448,7 +1448,7 @@ void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
 void update_chan_count(unsigned ch);
 
-void display_control();
+void display_control_core();
 
 typedef enum {
     _SDC_AUDIO = 1,
@@ -1490,7 +1490,7 @@ typedef enum {
 
 unsigned QueryChannel(chanend ch, unsigned command);
 
-void button_listener(chanend ?c_play_control, chanend ?c_dac_control);
+void button_listener_core(chanend ?c_play_control, chanend ?c_dac_control);
 # 22 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC.h" 1
@@ -1715,7 +1715,7 @@ void ShowUsbAudioStatus(){
 
 
 
-void display_control(){
+void display_control_core(){
 
     timer t;
     unsigned time;
@@ -1741,11 +1741,13 @@ void display_control(){
         t :> time;
         time += 2000000;
 
+
+
         if (test_display_control_flag(0x00000010)){
             clear_display_control_flag(0x00000010);
 
             switch (get_console_mode()){
-# 303 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+# 305 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
             case _USB_AUDIO:
                 OLED_SSD1306_put_string(0, "XMOS USB Audio");
                 ShowUsbAudioStatus();
@@ -1769,7 +1771,7 @@ void display_control(){
         }
 
         switch (get_console_mode()){
-# 352 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+# 354 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
         case _USB_AUDIO:
             if (test_display_control_flag(0x00000020)){
                 clear_display_control_flag(0x00000020);
@@ -1816,6 +1818,8 @@ void display_control(){
                 }
                 break;
         }
+
+
         t when __builtin_timer_after(time) :> void;
     }
 }

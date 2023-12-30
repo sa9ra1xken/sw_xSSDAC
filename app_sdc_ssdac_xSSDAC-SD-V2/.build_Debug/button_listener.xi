@@ -1,10 +1,10 @@
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 141 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
 
 
 
@@ -419,7 +419,7 @@ extern tileref usb_tile;
 
 service xscope_host_data(chanend c);;
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 8 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
+# 8 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 1 3
 # 35 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
@@ -428,11 +428,11 @@ unsigned bitrev(unsigned x);
 unsigned byterev(unsigned x);
 # 59 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 int clz(unsigned x);
-# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
+# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
 
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 1
-# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 1
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 1 3
 # 201 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 3
 typedef streaming chanend streaming_chanend_t;
@@ -448,61 +448,10 @@ typedef out buffered port:4 out_buffered_port_4_t;
 typedef out buffered port:8 out_buffered_port_8_t;
 typedef out buffered port:16 out_buffered_port_16_t;
 typedef out buffered port:32 out_buffered_port_32_t;
-# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 2
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 2
 
-
-typedef enum {
-    _USB_DAC = 0,
-    _SDC_PLAY = 1,
-} FUNCTION_SELECTOR;
-
-
-typedef enum {
-    _PENDING_Q = 0,
-    _INPUT_Q = 1,
-    _CURRENT_Q = 2
-} QUERY_TYPE;
-
-typedef enum {
-    _PLAY_CMD_EMPTY,
-    _PLAY_CMD_PREV_FOLDER,
-    _PLAY_CMD_NEXT_FOLDER,
-    _PLAY_CMD_PREV_TRACK,
-    _PLAY_CMD_NEXT_TRACK,
-    _PLAY_CMD_REWIND,
-    _PLAY_CMD_REVERSE_SKIP,
-    _PLAY_CMD_FORWARD_SKIP,
-    _PLAY_CMD_PAUSE,
-    _PLAY_CMD_STOP
-} PLAY_COMMAND;
-
-unsigned QueryChannel(chanend ch, unsigned command);
-
-void button_listener(chanend ?c_play_control, chanend ?c_dac_control);
-# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h" 1
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
-void set_display_control_flag(unsigned bitmask);
-void update_samp_freq(unsigned freq);
-void update_samp_resolution(unsigned res);
-void update_chan_count(unsigned ch);
-
-void display_control();
-
-typedef enum {
-    _SDC_AUDIO = 1,
-    _USB_AUDIO = 2,
-    _DAC_MODE_SELECTION = 3,
-    _FUNCTION_SELECTION = 4
-} CONSOLE_MODE;
-
-CONSOLE_MODE get_console_mode();
-void set_console_mode(CONSOLE_MODE value);
-# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h" 1
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h" 1
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h"
 typedef enum {
     _GET_INTERPOLATION_MODE =1,
     _SET_INTERPOLATION_MODE =2
@@ -524,38 +473,71 @@ typedef enum {
 
 
 
-
-
 typedef enum {
     _AUDIO_FORMAT_CHANGE = 0,
     _INTERPOLATION_MODE_CHANGE = 1
 } DAC_RETURN_CODE;
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 2
 
 
 
+typedef enum {
+    _USB_DAC = 0,
+    _SDC_PLAY = 1,
+} FUNCTION_SELECTOR;
 
+typedef enum {
+    _PENDING_Q = 0,
+    _INPUT_Q = 1,
+    _CURRENT_Q = 2
+} QUERY_TYPE;
 
+typedef enum {
+    _PLAY_CMD_EMPTY,
+    _PLAY_CMD_PREV_FOLDER,
+    _PLAY_CMD_NEXT_FOLDER,
+    _PLAY_CMD_PREV_TRACK,
+    _PLAY_CMD_NEXT_TRACK,
+    _PLAY_CMD_REWIND,
+    _PLAY_CMD_REVERSE_SKIP,
+    _PLAY_CMD_FORWARD_SKIP,
+    _PLAY_CMD_PAUSE,
+    _PLAY_CMD_STOP
+} PLAY_COMMAND;
 
-void ConfigureSerialDacPorts();
+unsigned QueryChannel(chanend ch, unsigned command);
+void button_listener_core(chanend ?c_play_control, chanend ?c_dac_control);
+void KeyScan();
+void SendBackTrackControl(chanend c_track_control);
+void HandleDacCommand(chanend c_control, DAC_COMMAND command);
+void HandlePlayCommand(chanend c_control, QUERY_TYPE type);
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
 
-void InitDebugOut(out port txd);
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 1
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
+void set_display_control_flag(unsigned bitmask);
+void update_samp_freq(unsigned freq);
+void update_samp_resolution(unsigned res);
+void update_chan_count(unsigned ch);
 
-void DebugOut(unsigned data, unsigned count, out port txd);
+void display_control_core();
+void init_display_frame();
+void handle_display_frame();
 
+typedef enum {
+    _SDC_AUDIO = 1,
+    _USB_AUDIO = 2,
+    _DAC_MODE_SELECTION = 3,
+    _FUNCTION_SELECTION = 4
+} CONSOLE_MODE;
 
-unsigned start_ssdac(chanend c_in, unsigned sample_rate);
-
-
-unsigned start_fir(chanend c_in, unsigned sample_rate);
-
-
-unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
-
-void audio_xss(chanend c_in, chanend ?c_control);
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
+CONSOLE_MODE get_console_mode();
+void set_console_mode(CONSOLE_MODE value);
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
 
 # 1 ".././src\\ssdac_conf.h" 1
-# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
+
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 
@@ -1186,14 +1168,14 @@ int _safe_fclose(FILE * movable fp);
 int _safe_remove(const char file[]);
 int _safe_rename(const char from[], const char to[]);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 2 3
-# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
 
 
 
 # 1 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h" 1
 # 77 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h"
 void debug_printf(char fmt[], ...);
-# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/button_listener.xc" 2
+# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
 
 
 
@@ -1267,6 +1249,14 @@ void HandlePlayCommand(chanend c_control, QUERY_TYPE type){
         p_key :> temp;
         c_control <: temp;
         break;
+    }
+}
+
+void SendBackTrackControl(chanend c_track_control){
+    if ( (play_command_request == 1) && ( play_command != _PLAY_CMD_EMPTY ) ){
+        c_track_control <: play_command;
+        play_command = _PLAY_CMD_EMPTY;
+        play_command_request = 0;
     }
 }
 
@@ -1375,10 +1365,12 @@ inline void KeyEventInFunctionSelection(BUTTON_EVENT event){
     }
 
     switch (event){
+
     case _BTN_1_DOWN:
         unsafe { *p_selected_function = _USB_DAC; }
         set_display_control_flag(0x00000400);
         break;
+
     case _BTN_2_DOWN:
         unsafe { *p_selected_function = _SDC_PLAY; }
         set_display_control_flag(0x00000400);
@@ -1387,8 +1379,6 @@ inline void KeyEventInFunctionSelection(BUTTON_EVENT event){
     case _BTN_7_DOWN:
 
             SwitchConsoleMode(_SDC_AUDIO);
-
-
 
 
 
@@ -1429,7 +1419,7 @@ void KeyEvent(BUTTON_EVENT event){
     }
 }
 
-void ExamineKeyInput(){
+void KeyScan(){
     timer t;
     unsigned now;
     key_buff[2] = key_buff[1];
@@ -1500,10 +1490,9 @@ void ExamineKeyInput(){
     }
 }
 
-void button_listener(chanend ?c_play_control, chanend ?c_dac_control){
+void button_listener_core(chanend ?c_track_control, chanend ?c_dac_control){
 
     unsafe {p_console_mode = &console_mode;}
-
     timer t;
 
     p_key :> key_buff[0];
@@ -1513,35 +1502,24 @@ void button_listener(chanend ?c_play_control, chanend ?c_dac_control){
     t :> scan_time;
 
 
-    set_console_mode(_SDC_AUDIO);
 
-
-
-
-
-    set_display_control_flag(0x00000010);
 
     while (1){
 
 
 
 
-        if ( (play_command_request == 1) && ( play_command != _PLAY_CMD_EMPTY ) ){
-            c_play_control <: play_command;
-            play_command = _PLAY_CMD_EMPTY;
-            play_command_request = 0;
-        }
+
+        SendBackTrackControl(c_track_control);
 
         DAC_COMMAND dac_command;
         QUERY_TYPE query_type;
 
         select {
 
-
-        case c_play_control :> query_type:
-                HandlePlayCommand(c_play_control, query_type);
+        case c_track_control :> query_type:
+                HandlePlayCommand(c_track_control, query_type);
                 break;
-
 
 
         case c_dac_control :> dac_command:
@@ -1549,7 +1527,7 @@ void button_listener(chanend ?c_play_control, chanend ?c_dac_control){
                 break;
 
         case t when __builtin_timer_after(scan_time) :> void:
-                ExamineKeyInput();
+                KeyScan();
                 scan_time += 1000000;
                 break;
         }

@@ -42,6 +42,7 @@
 #endif
 #if _DAC_MODE_SELECTOR == _DAC_MODE_SELECTOR_BTN_LSTN
 #include "button_listener.h"
+#include "display_control.h"
 #endif
 
 void qspi_server(server interface qspi_access i);
@@ -93,10 +94,10 @@ void xscope_user_init()
 
 /* Core USB Audio functions - must be called on the Tile connected to the USB Phy */
 void usb_audio_core(
-    chanend c_mix_out,
-    chanend ?c_clk_int,
-    chanend ?c_clk_ctl/*,
-    client interface i_dfu ?dfuInterface*/
+    chanend c_mix_out
+    /*,chanend ?c_clk_int
+    ,chanend ?c_clk_ctl
+    ,client interface i_dfu ?dfuInterface*/
 )
 {
     interface i_dfu dfuInterface;   //added by sakurai
@@ -111,8 +112,11 @@ void usb_audio_core(
 
 #define c_EANativeTransport_ctrl null
 
-    printf("\nstarting usb_audio_core." );  //sakurai
-    fflush(stdout);                         //sakurai
+    debug_printf("\nstarting usb_audio_core." );  //sakurai
+
+    set_console_mode(_USB_AUDIO);
+    set_display_control_flag(BITMASK_SWITCH_CONSOLE);
+
     par
     {
         /* USB Interface Core */
@@ -146,7 +150,7 @@ void usb_audio_core(
                     c_xud_in[0],
                     c_aud_ctl,
                     c_mix_ctl,
-                    c_clk_ctl,
+                    null, /*c_clk_ctl,*/
                     c_EANativeTransport_ctrl,
                     dfuInterface);
         }
@@ -165,14 +169,21 @@ void usb_audio_core(
 }
 
 
-void config_audio_source(client interface qspi_access i, chanend c_audio)
+void config_audio_source(client interface qspi_access ? i, chanend c_audio)
 {
     char data[1];
-    i.read(0, 1, data);
-    debug_printf("\nconig data:%d", data[0]);
+
+    if (!isnull(i)){
+        i.read(0, 1, data);
+        debug_printf("\ncofig data:%d", data[0]);
+    }
+    else{
+
+    }
+
 
     par{
-        usb_audio_core(c_audio, null, null/*, dfuInterface*/ );
+        usb_audio_core(c_audio /*, null, null, dfuInterface*/ );
     }
 }
 
@@ -181,15 +192,15 @@ int main()
     chan c_audio;
     chan c_dac_control;
     chan c_play_control;
-    interface qspi_access i;
+    //interface qspi_access i;
 
     par
     {
-        on tile[AUDIO_IO_TILE]: qspi_server(i);
-        on tile[SDC_TILE]: config_audio_source(i, c_audio );
-        on tile[AUDIO_IO_TILE]: audio_xss(c_audio, c_dac_control );
-        on tile[OLED_TILE]: display_control();
-        on tile[OLED_TILE]: button_listener(c_play_control, c_dac_control );
+        //on tile[AUDIO_IO_TILE]: qspi_server(i);
+        on tile[SDC_TILE]: config_audio_source(/*i*/null, c_audio );
+        on tile[AUDIO_IO_TILE]: ssdac_core(c_audio, c_dac_control );
+        on tile[OLED_TILE]: display_control_core();
+        on tile[OLED_TILE]: button_listener_core(c_play_control, c_dac_control );
     }
     return 0;
 }

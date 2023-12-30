@@ -1,4 +1,4 @@
-<preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc">
+<preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc">
 <fDef name="FixedInterpolationMode" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
 <fDef name="GetFunctionString" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
 <fDef name="ProposedInterpolationMode" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
@@ -16,8 +16,10 @@
 <fDef name="delay_microseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="delay_milliseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="delay_seconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
-<fDef name="display_control" global="true" noreturn="true" doNotSpecialize="false" numParams="0"/>
+<fDef name="display_control_core" global="true" noreturn="true" doNotSpecialize="false" numParams="0"/>
 <fDef name="get_console_mode" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
+<fDef name="handle_display_frame" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
+<fDef name="init_display_frame" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
 <fDef name="set_console_mode" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
 <fDef name="set_display_control_flag" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
 <fDef name="test_display_control_flag" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
@@ -148,13 +150,6 @@
     </values>
   </arg>
 </fCall>
-<fCall name="clear_display_control_flag" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="intval"><intval isSigned="true" val="4"/></value>
-    </values>
-  </arg>
-</fCall>
 <fCall name="OLED_SSD1306_put_string" global="true" numArgs="2">
   <arg num="0">
     <values>
@@ -167,13 +162,6 @@
     </values>
   </arg>
 </fCall>
-<fCall name="clear_display_control_flag" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="intval"><intval isSigned="true" val="2"/></value>
-    </values>
-  </arg>
-</fCall>
 <fCall name="OLED_SSD1306_put_string" global="true" numArgs="2">
   <arg num="0">
     <values>
@@ -186,13 +174,6 @@
     </values>
   </arg>
 </fCall>
-<fCall name="clear_display_control_flag" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="intval"><intval isSigned="true" val="1"/></value>
-    </values>
-  </arg>
-</fCall>
 <fCall name="OLED_SSD1306_put_string" global="true" numArgs="2">
   <arg num="0">
     <values>
@@ -202,13 +183,6 @@
   <arg num="1">
     <values>
       <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="clear_display_control_flag" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="intval"><intval isSigned="true" val="8"/></value>
     </values>
   </arg>
 </fCall>
@@ -337,13 +311,6 @@
     </values>
   </arg>
   <arg num="1">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="debug_printf" global="true" numArgs="1">
-  <arg num="0">
     <values>
       <value type="unknown"/>
     </values>
@@ -674,6 +641,17 @@
       <value type="unknown"/>
     </values>
   </arg>
+</fCall>
+<fCall name="debug_printf" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="init_display_frame" global="true" numArgs="0">
+</fCall>
+<fCall name="handle_display_frame" global="true" numArgs="0">
 </fCall>
 <fCall name="__builtin_timer_after" global="true" numArgs="2">
   <arg num="0">

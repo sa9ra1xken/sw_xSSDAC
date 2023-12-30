@@ -177,8 +177,8 @@
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include/clang&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_oled_SSD1306/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_ssdac/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.xc.compiler.input.1190653628" name="XC" superClass="com.xmos.cdt.xc.compiler.input"/>
 							</tool>
@@ -484,8 +484,8 @@
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include/clang&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_oled_SSD1306/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_ssdac/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.c.compiler.input.c.744329545" name="C" superClass="com.xmos.cdt.c.compiler.input.c"/>
 							</tool>
@@ -796,8 +796,8 @@
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include/c++/v1&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_oled_SSD1306/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_ssdac/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.cxx.compiler.input.cpp.1345948536" name="C++" superClass="com.xmos.cdt.cxx.compiler.input.cpp"/>
 							</tool>

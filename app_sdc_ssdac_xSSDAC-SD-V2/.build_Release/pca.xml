@@ -514,7 +514,7 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="button_listener" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="2">
+<fInfo name="button_listener_core" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="2">
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
@@ -685,7 +685,7 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="display_control" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="0">
+<fInfo name="display_control_core" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="0">
 </fInfo>
 <fInfo name="fir_sinc4" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="4">
   <arg num="0" specialize="false">
@@ -737,6 +737,8 @@
 <fInfo name="get_fattime" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
 <fInfo name="get_time" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
+</fInfo>
+<fInfo name="handle_display_frame" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
 <fInfo name="i2c_master_init" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
@@ -864,6 +866,8 @@
       <value type="unknown"/>
     </values>
   </arg>
+</fInfo>
+<fInfo name="init_display_frame" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
 <fInfo name="init_ring_buff" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>

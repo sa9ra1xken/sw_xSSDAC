@@ -1445,7 +1445,7 @@ void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
 void update_chan_count(unsigned ch);
 
-void display_control();
+void display_control_core();
 
 typedef enum {
     _SDC_AUDIO = 1,
@@ -1487,7 +1487,7 @@ typedef enum {
 
 unsigned QueryChannel(chanend ch, unsigned command);
 
-void button_listener(chanend ?c_play_control, chanend ?c_dac_control);
+void button_listener_core(chanend ?c_play_control, chanend ?c_dac_control);
 # 22 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC.h" 1
@@ -1756,14 +1756,7 @@ void ShowUsbAudioStatus(){
     scrolling_row = 0;
 }
 
-
-
-void display_control(){
-
-    timer t;
-    unsigned time;
-
-                                             ;
+void init_display_frame(){
 
     OLED_SSD1306_begin();
 
@@ -1779,99 +1772,116 @@ void display_control(){
     pause_counter = 100000000 / 2000000;
     scrolling_row = 0;
 
-    while(1){
+}
+void handle_display_frame(){
 
-        t :> time;
-        time += 2000000;
-
-        if (test_display_control_flag(0x00000010)){
-            clear_display_control_flag(0x00000010);
-
-            switch (get_console_mode()){
-
-
-            case _SDC_AUDIO:
-                ShowFolder();
-                ShowTrack();
-                ShowAudioAttribute();
-                UpdateTime();
-                break;
-# 310 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-            case _DAC_MODE_SELECTION:
-                OLED_SSD1306_put_string(0, "Interpolation mode selector");
-                ShowInterpolationMode(FixedInterpolationMode());
-                OLED_SSD1306_put_string(2, "");
-                OLED_SSD1306_put_string(3, "");
-                break;
-            case _FUNCTION_SELECTION:
-                OLED_SSD1306_put_string(0, "Function selector");
-                OLED_SSD1306_put_string(1, "Selected function takes effect after reset.");
-                OLED_SSD1306_put_string(2, "Press SW1 for USB audio. Press SW2 for SD player.");
-                OLED_SSD1306_put_string(3, "");
-                break;
-            }
-        }
+    if (test_display_control_flag(0x00000010)){
+        clear_display_control_flag(0x00000010);
 
         switch (get_console_mode()){
 
 
         case _SDC_AUDIO:
-            if (test_display_control_flag(0x00000004)){
-                clear_display_control_flag(0x00000004);
-                UpdateTime();
-            }
-
-            if (test_display_control_flag(0x00000002)){
-                clear_display_control_flag(0x00000002);
-                ShowFolder();
-            }
-
-            if (test_display_control_flag(0x00000001)){
-                clear_display_control_flag(0x00000001);
-                ShowTrack();
-            }
-
-            if (test_display_control_flag(0x00000008)){
-                clear_display_control_flag(0x00000008);
-                ShowAudioAttribute();
-            }
+            ShowFolder();
+            ShowTrack();
+            ShowAudioAttribute();
+            UpdateTime();
             break;
-# 363 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+# 301 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
         case _DAC_MODE_SELECTION:
-            if (test_display_control_flag(0x00000100)){
-                clear_display_control_flag(0x00000100);
-                ShowInterpolationMode(ProposedInterpolationMode());
-            }
-            if (test_display_control_flag(0x00000200)){
-                clear_display_control_flag(0x00000200);
-                ShowInterpolationMode(FixedInterpolationMode());
-            }
+            OLED_SSD1306_put_string(0, "Interpolation mode selector");
+            ShowInterpolationMode(FixedInterpolationMode());
+            OLED_SSD1306_put_string(2, "");
+            OLED_SSD1306_put_string(3, "");
             break;
         case _FUNCTION_SELECTION:
-            if (test_display_control_flag(0x00000400)){
-                clear_display_control_flag(0x00000400);
-                OLED_SSD1306_put_string(3, GetFunctionString(SelectedFunction()));
+            OLED_SSD1306_put_string(0, "Function selector");
+            OLED_SSD1306_put_string(1, "Selected function takes effect after reset.");
+            OLED_SSD1306_put_string(2, "Press SW1 for USB audio. Press SW2 for SD player.");
+            OLED_SSD1306_put_string(3, "");
+            break;
+        }
+    }
+
+    switch (get_console_mode()){
+
+
+    case _SDC_AUDIO:
+        if (test_display_control_flag(0x00000004)){
+            clear_display_control_flag(0x00000004);
+            UpdateTime();
+        }
+
+        if (test_display_control_flag(0x00000002)){
+            clear_display_control_flag(0x00000002);
+            ShowFolder();
+        }
+
+        if (test_display_control_flag(0x00000001)){
+            clear_display_control_flag(0x00000001);
+            ShowTrack();
+        }
+
+        if (test_display_control_flag(0x00000008)){
+            clear_display_control_flag(0x00000008);
+            ShowAudioAttribute();
+        }
+        break;
+# 354 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+    case _DAC_MODE_SELECTION:
+        if (test_display_control_flag(0x00000100)){
+            clear_display_control_flag(0x00000100);
+            ShowInterpolationMode(ProposedInterpolationMode());
+        }
+        if (test_display_control_flag(0x00000200)){
+            clear_display_control_flag(0x00000200);
+            ShowInterpolationMode(FixedInterpolationMode());
+        }
+        break;
+    case _FUNCTION_SELECTION:
+        if (test_display_control_flag(0x00000400)){
+            clear_display_control_flag(0x00000400);
+            OLED_SSD1306_put_string(3, GetFunctionString(SelectedFunction()));
+        }
+    }
+
+    switch (state){
+
+        case _PAUSING:
+            pause_counter--;
+            if (pause_counter <= 0){
+                state = _SCROLLING;
             }
-        }
+            break;
+        case _SCROLLING:
+            if (OLED_SSD1306_shift_left(scrolling_row) == _END_OF_LINE){
+                scrolling_row++;
+                if (scrolling_row > 2) scrolling_row = 0;
+                OLED_SSD1306_put_string(scrolling_row, "");
+                pause_counter = 100000000 / 2000000;
+                state = _PAUSING;
+            }
+            break;
+    }
+}
 
-        switch (state){
 
-            case _PAUSING:
-                pause_counter--;
-                if (pause_counter <= 0){
-                    state = _SCROLLING;
-                }
-                break;
-            case _SCROLLING:
-                if (OLED_SSD1306_shift_left(scrolling_row) == _END_OF_LINE){
-                    scrolling_row++;
-                    if (scrolling_row > 2) scrolling_row = 0;
-                    OLED_SSD1306_put_string(scrolling_row, "");
-                    pause_counter = 100000000 / 2000000;
-                    state = _PAUSING;
-                }
-                break;
-        }
+
+void display_control_core(){
+
+    timer t;
+    unsigned time;
+                                             ;
+
+    init_display_frame();
+
+    while(1){
+
+        t :> time;
+        time += 2000000;
+
+        handle_display_frame();
+
         t when __builtin_timer_after(time) :> void;
     }
 }

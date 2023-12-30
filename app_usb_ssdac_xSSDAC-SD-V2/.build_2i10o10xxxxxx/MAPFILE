@@ -686,9 +686,9 @@ Symbols:
   00041038 00000000 .text                $d.924
   00041064 00000014 .text                __main__main_tile_1_task_usb_audio_core_1
   00041064 00000000 .text                $d.925
-  00041078 0000000c .text                __main__main_tile_1_task_display_control_3
+  00041078 0000000c .text                __main__main_tile_1_task_display_control_core_3
   00041078 00000000 .text                $d.926
-  00041084 0000000c .text                __main__main_tile_1_task_button_listener_4
+  00041084 0000000c .text                __main__main_tile_1_task_button_listener_core_4
   00041084 00000000 .text                $d.927
   00041090 000000b4 .text                device_reboot_aux
   00041090 00000000 .text                $d.141
@@ -734,7 +734,7 @@ Symbols:
   00042f90 00000000 .text                $s.915
   00042fd4 00000036 .text                tx8
   00042fd4 00000000 .text                $s.916
-  0004300c 000000ec .text                _Sbutton_listener_0
+  0004300c 000000ec .text                _Sbutton_listener_core_0
   0004300c 00000000 .text                $d.991
   000430f8 0000005c .text                HandleDacCommand
   000430f8 00000000 .text                $d.993
@@ -748,7 +748,7 @@ Symbols:
   000435dc 00000000 .text                $d.817
   000435f8 0000001c .text                update_samp_resolution
   000435f8 00000000 .text                $d.818
-  00043614 00000348 .text                display_control
+  00043614 00000348 .text                display_control_core
   00043614 00000000 .text                $d.820
   0004395c 0000000c .text                _Sset_console_mode_0
   0004395c 00000000 .text                $d.823

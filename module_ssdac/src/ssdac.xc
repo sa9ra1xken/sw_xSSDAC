@@ -18,6 +18,7 @@
 #include <debug_print.h>
 #include <xscope.h>
 #include "ssdac.h"//#include "decoupler.h"
+#include "SSDAC_MODE.h"
 #include "fir_interpolator.h"
 #include "ring_buffer.h"
 #include "audiohw.h"
@@ -313,6 +314,12 @@ void interpolator(
 
     /* select super sampling factor according to audio sample rate */
     switch (sample_rate){                                               /*(1)*/
+        case 384000:
+            ss_factor_bits = 2;
+            break;
+        case 352800:
+            ss_factor_bits = 2;
+            break;
         case 192000:
             ss_factor_bits = 3;
             break;
@@ -590,7 +597,7 @@ unsigned start_fir(chanend c_in, unsigned sample_rate){
 /**********************************************************
 * Configure audo_core
 **********************************************************/
-unsigned config_audo_core(chanend c_in, chanend ?c_control, unsigned sample_rate, INTERPOLATION_MODE &cur_mode){
+unsigned configure_audio_process(chanend c_in, chanend ?c_control, unsigned sample_rate, INTERPOLATION_MODE &cur_mode){
 
     streaming chan c_coefficients;
     streaming chan c_super_sample;
@@ -629,6 +636,15 @@ unsigned config_audo_core(chanend c_in, chanend ?c_control, unsigned sample_rate
                 }
                 else cur_mode = proposed_mode;
                 break;
+            case _CUBIC:
+                if (sample_rate > 192000){
+                    cur_mode = _STEP;
+                    debug_printf("\nsample rate is too high to perform spline solver, fall back to step interporation");
+                }
+                else cur_mode = proposed_mode;
+                break;
+
+
             default:
                 cur_mode = proposed_mode;
                 break;
@@ -668,6 +684,12 @@ unsigned config_audo_core(chanend c_in, chanend ?c_control, unsigned sample_rate
                 debug_printf("\nstarting passthrough");
                 unsigned space_count;
                 switch (sample_rate){
+                    case 384000:
+                        space_count = 768 / 8 - 16;
+                        break;
+                    case 352800:
+                        space_count = 768 / 8 - 16;
+                        break;
                     case 192000:
                         space_count = 768 / 4 - 16;
                         break;
@@ -712,7 +734,7 @@ unsigned config_audo_core(chanend c_in, chanend ?c_control, unsigned sample_rate
     return audio_cmd;
 }
 
-void audio_xss(chanend c_in, chanend ?c_control)
+void ssdac_core(chanend c_in, chanend ?c_control)
 {
     unsigned curSamFreq = DEFAULT_FREQ;
     unsigned dsdMode = 0; //TODO
@@ -740,7 +762,7 @@ void audio_xss(chanend c_in, chanend ?c_control)
         firstRun = 0;
 
         //command = deliver(c_in,...);
-        command = config_audo_core(c_in, c_control, curSamFreq, cur_interpolation_mode);
+        command = configure_audio_process(c_in, c_control, curSamFreq, cur_interpolation_mode);
 
         if (command == SET_SAMPLE_FREQ)
         {

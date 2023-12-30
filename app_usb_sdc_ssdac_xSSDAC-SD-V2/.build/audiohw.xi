@@ -1279,40 +1279,7 @@ si5351a_revb_register_t const si5351a_revb_48[61] =
     };
 # 13 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h" 1
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
-typedef enum {
-    _GET_INTERPOLATION_MODE =1,
-    _SET_INTERPOLATION_MODE =2
-} DAC_COMMAND;
-
-
-
-
-typedef enum {
-    _TBD =0,
-    _STEP =1,
-    _LINEAR =2,
-    _QUAD =3,
-    _CUBIC =4,
-    _SINC4 =5,
-    _SINC8 =6
-} INTERPOLATION_MODE;
-
-
-
-
-
-
-typedef enum {
-    _AUDIO_FORMAT_CHANGE = 0,
-    _INTERPOLATION_MODE_CHANGE = 1
-} DAC_RETURN_CODE;
-
-
-
-
-
-
+# 29 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
 void ConfigureSerialDacPorts();
 
 void InitDebugOut(out port txd);
@@ -1328,7 +1295,7 @@ unsigned start_fir(chanend c_in, unsigned sample_rate);
 
 unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
 
-void audio_xss(chanend c_in, chanend ?c_control);
+void ssdac_core(chanend c_in, chanend ?c_control);
 # 14 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc" 2
 # 26 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
 on tile[0] : out port p_gpio = on tile[0]: 0x80100;

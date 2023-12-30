@@ -28,6 +28,7 @@
   C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src\xcore_c_select_impl.h \
   C:/Users/takaaki/git/lib_logging/lib_logging/api\debug_print.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\button_listener.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\SSDAC_MODE.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\ff.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src/integer.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src/ffconf.h \

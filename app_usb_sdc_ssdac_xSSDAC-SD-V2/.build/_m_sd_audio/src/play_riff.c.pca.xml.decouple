@@ -64,7 +64,7 @@
   <fCall global="true" name="TestUserControl"/>
   <fCall global="true" name="f_lseek"/>
   <fCall global="true" name="TotalTimeString"/>
-  <fCall global="true" name="information_string"/>
+  <fCall global="true" name="audio_property_string"/>
   <fCall global="true" name="SecElapsed"/>
   <fCall global="true" name="buff_id"/>
   <fCall global="true" name="audio_buffer"/>

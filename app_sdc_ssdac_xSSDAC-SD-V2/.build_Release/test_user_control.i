@@ -1890,7 +1890,7 @@ typedef enum {
 
 unsigned QueryChannel(chanend ch, unsigned command);
 
-void button_listener(chanend c_play_control, chanend c_dac_control);
+void button_listener_core(chanend c_play_control, chanend c_dac_control);
 # 13 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c" 2
 
 

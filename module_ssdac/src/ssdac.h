@@ -20,36 +20,6 @@
 #define BETA3_q24   -12281775   /* ((-3*(SQRT(3)-1)     = -2.1961524227) * 2^24 */
 #define GAMMA3_q24  7786333     /* ((+3*(2*SQRT(3)-3))  =  1.3923048454) * 2^24 */
 
-/**********************************************************
-* Controller command
-**********************************************************/
-typedef enum {
-    _GET_INTERPOLATION_MODE =1,
-    _SET_INTERPOLATION_MODE =2
-} DAC_COMMAND;
-
-/**********************************************************
-* Mode
-**********************************************************/
-typedef enum {
-    _TBD    =0,   //black
-    _STEP   =1,   //blue
-    _LINEAR =2,   //green
-    _QUAD   =3,   //cyan
-    _CUBIC  =4,   //red
-    _SINC4  =5,   //magenta
-    _SINC8  =6    //yellow
-} INTERPOLATION_MODE;
-
-/**********************************************************
-* return reason code
-**********************************************************/
-//#define RC_HOST_SW  0
-//#define RC_USER_SW  1
-typedef enum {
-    _AUDIO_FORMAT_CHANGE        = 0,
-    _INTERPOLATION_MODE_CHANGE  = 1
-} DAC_RETURN_CODE;
 
 /**********************************************************
 * prototype
@@ -71,7 +41,7 @@ unsigned start_fir(chanend c_in, unsigned sample_rate);
 //void start_dac(streaming chanend c_audio_sample, chanend ?c_control);
 unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
 
-void audio_xss(chanend c_in, chanend ?c_control);
+void ssdac_core(chanend c_in, chanend ?c_control);
 
 /*static inline*/ //unsigned DoSampleTransferSSDAC(chanend c_out, const unsigned underflowWord);
 

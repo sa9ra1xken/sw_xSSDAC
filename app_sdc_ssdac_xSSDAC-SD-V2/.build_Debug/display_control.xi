@@ -1,10 +1,10 @@
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 141 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 
 
@@ -58,7 +58,7 @@ int _get_cmdline(void *buf, unsigned size);
 }
 # 98 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\syscall.h" 3
 void _plugins(int type, unsigned arg1, unsigned arg2);
-# 8 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 8 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
@@ -467,7 +467,7 @@ extern tileref usb_tile;
 
 service xscope_host_data(chanend c);;
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 1 3
@@ -477,7 +477,7 @@ unsigned bitrev(unsigned x);
 unsigned byterev(unsigned x);
 # 59 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 int clz(unsigned x);
-# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 1 3
 # 201 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 3
@@ -494,7 +494,7 @@ typedef out buffered port:4 out_buffered_port_4_t;
 typedef out buffered port:8 out_buffered_port_8_t;
 typedef out buffered port:16 out_buffered_port_16_t;
 typedef out buffered port:32 out_buffered_port_32_t;
-# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 1 3
 # 34 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 3
@@ -602,7 +602,7 @@ int printbinln(unsigned value);
 int printstr(const char (& alias s)[]);
 # 145 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 3
 int printstrln(const char (& alias s)[]);
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
@@ -1234,13 +1234,13 @@ int _safe_fclose(FILE * movable fp);
 int _safe_remove(const char file[]);
 int _safe_rename(const char from[], const char to[]);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 2 3
-# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 
 # 1 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h" 1
 # 77 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h"
 void debug_printf(char fmt[], ...);
-# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h" 1 3
 
@@ -1356,7 +1356,7 @@ char * alias _safe_strstr(const char * alias s1, const char s2[]);
 
 size_t _safe_strnlen(const char s[], size_t n);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h" 2 3
-# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 # 1 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h" 1
 # 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h"
@@ -1422,7 +1422,7 @@ int i2c_shared_master_write_part(
         int end,
         int offset
         );
-# 19 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 19 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src\\OLED_SSD1306.h" 1
 # 80 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src\\OLED_SSD1306.h"
@@ -1436,16 +1436,18 @@ typedef enum {
 } RC_SCROLL;
 
 RC_SCROLL OLED_SSD1306_shift_left(int str_row);
-# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\DISPLAY_CONTROL.h" 1
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\DISPLAY_CONTROL.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\DISPLAY_CONTROL.h" 1
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\DISPLAY_CONTROL.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
 void update_chan_count(unsigned ch);
 
-void display_control();
+void display_control_core();
+void init_display_frame();
+void handle_display_frame();
 
 typedef enum {
     _SDC_AUDIO = 1,
@@ -1456,42 +1458,12 @@ typedef enum {
 
 CONSOLE_MODE get_console_mode();
 void set_console_mode(CONSOLE_MODE value);
-# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 1
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
-typedef enum {
-    _USB_DAC = 0,
-    _SDC_PLAY = 1,
-} FUNCTION_SELECTOR;
-
-
-typedef enum {
-    _PENDING_Q = 0,
-    _INPUT_Q = 1,
-    _CURRENT_Q = 2
-} QUERY_TYPE;
-
-typedef enum {
-    _PLAY_CMD_EMPTY,
-    _PLAY_CMD_PREV_FOLDER,
-    _PLAY_CMD_NEXT_FOLDER,
-    _PLAY_CMD_PREV_TRACK,
-    _PLAY_CMD_NEXT_TRACK,
-    _PLAY_CMD_REWIND,
-    _PLAY_CMD_REVERSE_SKIP,
-    _PLAY_CMD_FORWARD_SKIP,
-    _PLAY_CMD_PAUSE,
-    _PLAY_CMD_STOP
-} PLAY_COMMAND;
-
-unsigned QueryChannel(chanend ch, unsigned command);
-
-void button_listener(chanend ?c_play_control, chanend ?c_dac_control);
-# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC.h" 1
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 1
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h" 1
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h"
 typedef enum {
     _GET_INTERPOLATION_MODE =1,
     _SET_INTERPOLATION_MODE =2
@@ -1513,18 +1485,48 @@ typedef enum {
 
 
 
-
-
 typedef enum {
     _AUDIO_FORMAT_CHANGE = 0,
     _INTERPOLATION_MODE_CHANGE = 1
 } DAC_RETURN_CODE;
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 2
 
 
 
+typedef enum {
+    _USB_DAC = 0,
+    _SDC_PLAY = 1,
+} FUNCTION_SELECTOR;
 
+typedef enum {
+    _PENDING_Q = 0,
+    _INPUT_Q = 1,
+    _CURRENT_Q = 2
+} QUERY_TYPE;
 
+typedef enum {
+    _PLAY_CMD_EMPTY,
+    _PLAY_CMD_PREV_FOLDER,
+    _PLAY_CMD_NEXT_FOLDER,
+    _PLAY_CMD_PREV_TRACK,
+    _PLAY_CMD_NEXT_TRACK,
+    _PLAY_CMD_REWIND,
+    _PLAY_CMD_REVERSE_SKIP,
+    _PLAY_CMD_FORWARD_SKIP,
+    _PLAY_CMD_PAUSE,
+    _PLAY_CMD_STOP
+} PLAY_COMMAND;
 
+unsigned QueryChannel(chanend ch, unsigned command);
+void button_listener_core(chanend ?c_play_control, chanend ?c_dac_control);
+void KeyScan();
+void SendBackTrackControl(chanend c_track_control);
+void HandleDacCommand(chanend c_control, DAC_COMMAND command);
+void HandlePlayCommand(chanend c_control, QUERY_TYPE type);
+# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC.h" 1
+# 29 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC.h"
 void ConfigureSerialDacPorts();
 
 void InitDebugOut(out port txd);
@@ -1540,11 +1542,11 @@ unsigned start_fir(chanend c_in, unsigned sample_rate);
 
 unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
 
-void audio_xss(chanend c_in, chanend ?c_control);
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+void ssdac_core(chanend c_in, chanend ?c_control);
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 # 1 ".././src\\SSDAC_CONF.h" 1
-# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 
 
@@ -1557,7 +1559,7 @@ on tile [1] : struct r_i2c r_i2c2 = {on tile[1]: 0x40500};
 extern char track_string[];
 
 extern char folder_string[];
-char information_string[100];
+char audio_property_string[100];
 
 
 unsigned display_control_flag = 0;
@@ -1633,7 +1635,7 @@ void set_console_mode(CONSOLE_MODE value){
 
 char TotalTimeString[6];
 unsigned SecElapsed;
-# 127 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+# 127 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 typedef enum {
     _PAUSING,
     _SCROLLING
@@ -1643,16 +1645,13 @@ static SCROLLING_STATE state;
 unsigned pause_counter;
 unsigned scrolling_row;
 
-
-
 void UpdateTime(){
     char s[12];
     unsigned min = SecElapsed / 60;
     unsigned sec = SecElapsed % 60;
-
     sprintf(s, "%02d:%02d", min, sec);
     OLED_SSD1306_put_string(3, s);
-    clear_display_control_flag(0x00000004);
+
 }
 
 void ShowFolder(){
@@ -1660,7 +1659,7 @@ void ShowFolder(){
     pause_counter = 100000000 / 2000000;
     state = _PAUSING;
     scrolling_row = 0;
-    clear_display_control_flag(0x00000002);
+
 }
 
 void ShowTrack(){
@@ -1668,17 +1667,17 @@ void ShowTrack(){
     pause_counter = 100000000 / 2000000;
     state = _PAUSING;
     scrolling_row = 1;
-    clear_display_control_flag(0x00000001);
+
 }
 
 void ShowAudioAttribute(){
-    OLED_SSD1306_put_string(2, information_string);
+    OLED_SSD1306_put_string(2, audio_property_string);
     pause_counter = 100000000 / 2000000;
     state = _PAUSING;
     scrolling_row = 2;
-    clear_display_control_flag(0x00000008);
+
 }
-# 183 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+
 extern INTERPOLATION_MODE proposed_intpol_mode;
 
 INTERPOLATION_MODE ProposedInterpolationMode(){
@@ -1756,14 +1755,7 @@ void ShowUsbAudioStatus(){
     scrolling_row = 0;
 }
 
-
-
-void display_control(){
-
-    timer t;
-    unsigned time;
-
-    debug_printf("\ndisplay_control started");
+void init_display_frame(){
 
     OLED_SSD1306_begin();
 
@@ -1779,99 +1771,116 @@ void display_control(){
     pause_counter = 100000000 / 2000000;
     scrolling_row = 0;
 
-    while(1){
+}
+void handle_display_frame(){
 
-        t :> time;
-        time += 2000000;
-
-        if (test_display_control_flag(0x00000010)){
-            clear_display_control_flag(0x00000010);
-
-            switch (get_console_mode()){
-
-
-            case _SDC_AUDIO:
-                ShowFolder();
-                ShowTrack();
-                ShowAudioAttribute();
-                UpdateTime();
-                break;
-# 310 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
-            case _DAC_MODE_SELECTION:
-                OLED_SSD1306_put_string(0, "Interpolation mode selector");
-                ShowInterpolationMode(FixedInterpolationMode());
-                OLED_SSD1306_put_string(2, "");
-                OLED_SSD1306_put_string(3, "");
-                break;
-            case _FUNCTION_SELECTION:
-                OLED_SSD1306_put_string(0, "Function selector");
-                OLED_SSD1306_put_string(1, "Selected function takes effect after reset.");
-                OLED_SSD1306_put_string(2, "Press SW1 for USB audio. Press SW2 for SD player.");
-                OLED_SSD1306_put_string(3, "");
-                break;
-            }
-        }
+    if (test_display_control_flag(0x00000010)){
+        clear_display_control_flag(0x00000010);
 
         switch (get_console_mode()){
 
 
         case _SDC_AUDIO:
-            if (test_display_control_flag(0x00000004)){
-                clear_display_control_flag(0x00000004);
-                UpdateTime();
-            }
-
-            if (test_display_control_flag(0x00000002)){
-                clear_display_control_flag(0x00000002);
-                ShowFolder();
-            }
-
-            if (test_display_control_flag(0x00000001)){
-                clear_display_control_flag(0x00000001);
-                ShowTrack();
-            }
-
-            if (test_display_control_flag(0x00000008)){
-                clear_display_control_flag(0x00000008);
-                ShowAudioAttribute();
-            }
+            ShowFolder();
+            ShowTrack();
+            ShowAudioAttribute();
+            UpdateTime();
             break;
-# 363 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+# 287 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
         case _DAC_MODE_SELECTION:
-            if (test_display_control_flag(0x00000100)){
-                clear_display_control_flag(0x00000100);
-                ShowInterpolationMode(ProposedInterpolationMode());
-            }
-            if (test_display_control_flag(0x00000200)){
-                clear_display_control_flag(0x00000200);
-                ShowInterpolationMode(FixedInterpolationMode());
-            }
+            OLED_SSD1306_put_string(0, "Interpolation mode selector");
+            ShowInterpolationMode(FixedInterpolationMode());
+            OLED_SSD1306_put_string(2, "");
+            OLED_SSD1306_put_string(3, "");
             break;
         case _FUNCTION_SELECTION:
-            if (test_display_control_flag(0x00000400)){
-                clear_display_control_flag(0x00000400);
-                OLED_SSD1306_put_string(3, GetFunctionString(SelectedFunction()));
+            OLED_SSD1306_put_string(0, "Function selector");
+            OLED_SSD1306_put_string(1, "Selected function takes effect after reset.");
+            OLED_SSD1306_put_string(2, "Press SW1 for USB audio. Press SW2 for SD player.");
+            OLED_SSD1306_put_string(3, "");
+            break;
+        }
+    }
+
+    switch (get_console_mode()){
+
+
+    case _SDC_AUDIO:
+        if (test_display_control_flag(0x00000004)){
+            clear_display_control_flag(0x00000004);
+            UpdateTime();
+        }
+
+        if (test_display_control_flag(0x00000002)){
+            clear_display_control_flag(0x00000002);
+            ShowFolder();
+        }
+
+        if (test_display_control_flag(0x00000001)){
+            clear_display_control_flag(0x00000001);
+            ShowTrack();
+        }
+
+        if (test_display_control_flag(0x00000008)){
+            clear_display_control_flag(0x00000008);
+            ShowAudioAttribute();
+        }
+        break;
+# 340 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+    case _DAC_MODE_SELECTION:
+        if (test_display_control_flag(0x00000100)){
+            clear_display_control_flag(0x00000100);
+            ShowInterpolationMode(ProposedInterpolationMode());
+        }
+        if (test_display_control_flag(0x00000200)){
+            clear_display_control_flag(0x00000200);
+            ShowInterpolationMode(FixedInterpolationMode());
+        }
+        break;
+    case _FUNCTION_SELECTION:
+        if (test_display_control_flag(0x00000400)){
+            clear_display_control_flag(0x00000400);
+            OLED_SSD1306_put_string(3, GetFunctionString(SelectedFunction()));
+        }
+    }
+
+    switch (state){
+
+        case _PAUSING:
+            pause_counter--;
+            if (pause_counter <= 0){
+                state = _SCROLLING;
             }
-        }
+            break;
+        case _SCROLLING:
+            if (OLED_SSD1306_shift_left(scrolling_row) == _END_OF_LINE){
+                scrolling_row++;
+                if (scrolling_row > 2) scrolling_row = 0;
+                OLED_SSD1306_put_string(scrolling_row, "");
+                pause_counter = 100000000 / 2000000;
+                state = _PAUSING;
+            }
+            break;
+    }
+}
 
-        switch (state){
 
-            case _PAUSING:
-                pause_counter--;
-                if (pause_counter <= 0){
-                    state = _SCROLLING;
-                }
-                break;
-            case _SCROLLING:
-                if (OLED_SSD1306_shift_left(scrolling_row) == _END_OF_LINE){
-                    scrolling_row++;
-                    if (scrolling_row > 2) scrolling_row = 0;
-                    OLED_SSD1306_put_string(scrolling_row, "");
-                    pause_counter = 100000000 / 2000000;
-                    state = _PAUSING;
-                }
-                break;
-        }
+
+void display_control_core(){
+
+    timer t;
+    unsigned time;
+    debug_printf("\ndisplay_control started");
+
+    init_display_frame();
+
+    while(1){
+
+        t :> time;
+        time += 2000000;
+
+        handle_display_frame();
+
         t when __builtin_timer_after(time) :> void;
     }
 }

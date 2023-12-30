@@ -1229,7 +1229,7 @@ updateVol:                              # @updateVol
 	.type	.LCPI4_1,@object
 	.size	.LCPI4_1, 4
 .LCPI4_1:
-	.long	192000                  # 0x2ee00
+	.long	384000                  # 0x5dc00
 	.cc_bottom .LCPI4_1.data
 	.cc_top .LCPI4_2.data,.LCPI4_2
 	.align	4
@@ -1418,7 +1418,7 @@ AudioClassRequests_2:                   # @AudioClassRequests_2
 		stw r0, sp[6]
 	}
 .Ltmp110:
-	#DEBUG_VALUE: maxFreq <- 192000
+	#DEBUG_VALUE: maxFreq <- 384000
 	#DEBUG_VALUE: currentFreq48 <- 8000
 	#DEBUG_VALUE: currentFreq44 <- 11025
 	.loc	1 869 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:869:0
@@ -6574,7 +6574,7 @@ g_curSamFreq:
 	.short	.Lset140
 .Ltmp522:
 	.byte	16                      # DW_OP_constu
-	.ascii	"\200\334\013"          # 
+	.ascii	"\200\270\027"          # 
 .Ltmp523:
 	.long	.Ltmp112
 	.long	.Lfunc_end4

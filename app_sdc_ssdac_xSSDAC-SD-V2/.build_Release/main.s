@@ -131,37 +131,37 @@
 	.set usage.anon.4,0
 	.call usage.anon.4,qspi_server
 	.call usage.anon.4,audio_xss
-	.call usage.anon.3,display_control
-	.call usage.anon.3,button_listener
+	.call usage.anon.3,display_control_core
+	.call usage.anon.3,button_listener_core
 	.call usage.anon.3,decoupler
 	.call usage.anon.3,sdcard_play
 	.call main,sdcard_play
 	.call main,qspi_server
-	.call main,display_control
+	.call main,display_control_core
 	.call main,decoupler
-	.call main,button_listener
+	.call main,button_listener_core
 	.call main,audio_xss
 	.call usage.anon.2,delay_ticks_longlong
 	.call usage.anon.1,delay_ticks_longlong
 	.call usage.anon.0,delay_ticks_longlong
 	.par sdcard_play,decoupler,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par sdcard_play,button_listener,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par sdcard_play,display_control,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par sdcard_play,button_listener_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par sdcard_play,display_control_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
 	.par sdcard_play,audio_xss,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
 	.par sdcard_play,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par decoupler,button_listener,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par decoupler,display_control,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par decoupler,button_listener_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par decoupler,display_control_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
 	.par decoupler,audio_xss,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
 	.par decoupler,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par button_listener,display_control,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par button_listener,audio_xss,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par button_listener,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par display_control,audio_xss,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par display_control,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par button_listener_core,display_control_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par button_listener_core,audio_xss,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par button_listener_core,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par display_control_core,audio_xss,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par display_control_core,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
 	.par audio_xss,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:69:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
 	.set main.locnoside, 0
 	.set main.locnochandec, 0
-	.overlay_subgraph_conflict __main__main_tile_1_task_sdcard_play_0, __main__main_tile_1_task_decoupler_1, __main__main_tile_1_task_button_listener_2, __main__main_tile_1_task_display_control_3
+	.overlay_subgraph_conflict __main__main_tile_1_task_sdcard_play_0, __main__main_tile_1_task_decoupler_1, __main__main_tile_1_task_button_listener_core_2, __main__main_tile_1_task_display_control_core_3
 	.overlay_subgraph_conflict __main__main_tile_0_task_audio_xss_4, __main__main_tile_0_task_qspi_server_5
 
                                         # End of file scope inline assembly
@@ -742,13 +742,13 @@ __main__main_tile_1:                    # @__main__main_tile_1
 	}
 	# RETURN_REG_HOLDER
 	.cc_bottom __main__main_tile_1.function
-	.set	__main__main_tile_1.nstackwords,((par.extra_stackwords + __main__main_tile_1_task_sdcard_play_0.nstackwords + ((1 + __main__main_tile_1_task_decoupler_1.nstackwords) $A 2) + ((1 + __main__main_tile_1_task_button_listener_2.nstackwords) $A 2) + ((1 + __main__main_tile_1_task_display_control_3.nstackwords) $A 2)) + 20)
+	.set	__main__main_tile_1.nstackwords,((par.extra_stackwords + __main__main_tile_1_task_sdcard_play_0.nstackwords + ((1 + __main__main_tile_1_task_decoupler_1.nstackwords) $A 2) + ((1 + __main__main_tile_1_task_button_listener_core_2.nstackwords) $A 2) + ((1 + __main__main_tile_1_task_display_control_core_3.nstackwords) $A 2)) + 20)
 	.globl	__main__main_tile_1.nstackwords
-	.set	__main__main_tile_1.maxcores,(0 + __main__main_tile_1_task_sdcard_play_0.maxcores + __main__main_tile_1_task_decoupler_1.maxcores + __main__main_tile_1_task_button_listener_2.maxcores + __main__main_tile_1_task_display_control_3.maxcores) $M 1
+	.set	__main__main_tile_1.maxcores,(0 + __main__main_tile_1_task_sdcard_play_0.maxcores + __main__main_tile_1_task_decoupler_1.maxcores + __main__main_tile_1_task_button_listener_core_2.maxcores + __main__main_tile_1_task_display_control_core_3.maxcores) $M 1
 	.globl	__main__main_tile_1.maxcores
-	.set	__main__main_tile_1.maxtimers,(3 + __main__main_tile_1_task_sdcard_play_0.maxtimers + __main__main_tile_1_task_decoupler_1.maxtimers + __main__main_tile_1_task_button_listener_2.maxtimers + __main__main_tile_1_task_display_control_3.maxtimers) $M 0
+	.set	__main__main_tile_1.maxtimers,(3 + __main__main_tile_1_task_sdcard_play_0.maxtimers + __main__main_tile_1_task_decoupler_1.maxtimers + __main__main_tile_1_task_button_listener_core_2.maxtimers + __main__main_tile_1_task_display_control_core_3.maxtimers) $M 0
 	.globl	__main__main_tile_1.maxtimers
-	.set	__main__main_tile_1.maxchanends,(4 + (0 + __main__main_tile_1_task_sdcard_play_0.maxchanends + __main__main_tile_1_task_decoupler_1.maxchanends + __main__main_tile_1_task_button_listener_2.maxchanends + __main__main_tile_1_task_display_control_3.maxchanends)) $M 4
+	.set	__main__main_tile_1.maxchanends,(4 + (0 + __main__main_tile_1_task_sdcard_play_0.maxchanends + __main__main_tile_1_task_decoupler_1.maxchanends + __main__main_tile_1_task_button_listener_core_2.maxchanends + __main__main_tile_1_task_display_control_core_3.maxchanends)) $M 4
 	.globl	__main__main_tile_1.maxchanends
 .Ltmp27:
 	.size	__main__main_tile_1, .Ltmp27-__main__main_tile_1
@@ -865,9 +865,9 @@ __main__main_tile_1_task_decoupler_1:   # @__main__main_tile_1_task_decoupler_1
 	.cfi_endproc
 
 	.align	4
-	.type	__main__main_tile_1_task_button_listener_2,@function
-	.cc_top __main__main_tile_1_task_button_listener_2.function,__main__main_tile_1_task_button_listener_2
-__main__main_tile_1_task_button_listener_2: # @__main__main_tile_1_task_button_listener_2
+	.type	__main__main_tile_1_task_button_listener_core_2,@function
+	.cc_top __main__main_tile_1_task_button_listener_core_2.function,__main__main_tile_1_task_button_listener_core_2
+__main__main_tile_1_task_button_listener_core_2: # @__main__main_tile_1_task_button_listener_core_2
 .Lfunc_begin8:
 	.loc	1 72 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:0
 	.cfi_startproc
@@ -877,7 +877,7 @@ __main__main_tile_1_task_button_listener_2: # @__main__main_tile_1_task_button_l
 	.cfi_def_cfa_offset 8
 .Ltmp41:
 	.cfi_offset 15, 0
-	#DEBUG_VALUE: __main__main_tile_1_task_button_listener_2:frame <- R0
+	#DEBUG_VALUE: __main__main_tile_1_task_button_listener_core_2:frame <- R0
 	{
 		ldc r1, 48
 		dualentsp 2
@@ -900,27 +900,27 @@ __main__main_tile_1_task_button_listener_2: # @__main__main_tile_1_task_button_l
 .Ltmp43:
 	.loc	1 72 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:0
 .Lxta.call_labels2:
-	bl button_listener
+	bl button_listener_core
 	{
 		nop
 		retsp 2
 	}
 	# RETURN_REG_HOLDER
 .Ltmp44:
-	.cc_bottom __main__main_tile_1_task_button_listener_2.function
-	.set	__main__main_tile_1_task_button_listener_2.nstackwords,(button_listener.nstackwords + 2)
-	.set	__main__main_tile_1_task_button_listener_2.maxcores,button_listener.maxcores $M 1
-	.set	__main__main_tile_1_task_button_listener_2.maxtimers,button_listener.maxtimers $M 0
-	.set	__main__main_tile_1_task_button_listener_2.maxchanends,button_listener.maxchanends $M 0
+	.cc_bottom __main__main_tile_1_task_button_listener_core_2.function
+	.set	__main__main_tile_1_task_button_listener_core_2.nstackwords,(button_listener_core.nstackwords + 2)
+	.set	__main__main_tile_1_task_button_listener_core_2.maxcores,button_listener_core.maxcores $M 1
+	.set	__main__main_tile_1_task_button_listener_core_2.maxtimers,button_listener_core.maxtimers $M 0
+	.set	__main__main_tile_1_task_button_listener_core_2.maxchanends,button_listener_core.maxchanends $M 0
 .Ltmp45:
-	.size	__main__main_tile_1_task_button_listener_2, .Ltmp45-__main__main_tile_1_task_button_listener_2
+	.size	__main__main_tile_1_task_button_listener_core_2, .Ltmp45-__main__main_tile_1_task_button_listener_core_2
 .Lfunc_end8:
 	.cfi_endproc
 
 	.align	4
-	.type	__main__main_tile_1_task_display_control_3,@function
-	.cc_top __main__main_tile_1_task_display_control_3.function,__main__main_tile_1_task_display_control_3
-__main__main_tile_1_task_display_control_3: # @__main__main_tile_1_task_display_control_3
+	.type	__main__main_tile_1_task_display_control_core_3,@function
+	.cc_top __main__main_tile_1_task_display_control_core_3.function,__main__main_tile_1_task_display_control_core_3
+__main__main_tile_1_task_display_control_core_3: # @__main__main_tile_1_task_display_control_core_3
 .Lfunc_begin9:
 	.loc	1 80 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:80:0
 	.cfi_startproc
@@ -934,11 +934,11 @@ __main__main_tile_1_task_display_control_3: # @__main__main_tile_1_task_display_
 	.cfi_def_cfa_offset 8
 .Ltmp47:
 	.cfi_offset 15, 0
-	#DEBUG_VALUE: __main__main_tile_1_task_display_control_3:frame <- R0
+	#DEBUG_VALUE: __main__main_tile_1_task_display_control_core_3:frame <- R0
 	.loc	1 80 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:80:0
 .Ltmp48:
 .Lxta.call_labels3:
-	bl display_control
+	bl display_control_core
 .Ltmp49:
 	{
 		nop
@@ -946,13 +946,13 @@ __main__main_tile_1_task_display_control_3: # @__main__main_tile_1_task_display_
 	}
 	# RETURN_REG_HOLDER
 .Ltmp50:
-	.cc_bottom __main__main_tile_1_task_display_control_3.function
-	.set	__main__main_tile_1_task_display_control_3.nstackwords,(display_control.nstackwords + 2)
-	.set	__main__main_tile_1_task_display_control_3.maxcores,display_control.maxcores $M 1
-	.set	__main__main_tile_1_task_display_control_3.maxtimers,display_control.maxtimers $M 0
-	.set	__main__main_tile_1_task_display_control_3.maxchanends,display_control.maxchanends $M 0
+	.cc_bottom __main__main_tile_1_task_display_control_core_3.function
+	.set	__main__main_tile_1_task_display_control_core_3.nstackwords,(display_control_core.nstackwords + 2)
+	.set	__main__main_tile_1_task_display_control_core_3.maxcores,display_control_core.maxcores $M 1
+	.set	__main__main_tile_1_task_display_control_core_3.maxtimers,display_control_core.maxtimers $M 0
+	.set	__main__main_tile_1_task_display_control_core_3.maxchanends,display_control_core.maxchanends $M 0
 .Ltmp51:
-	.size	__main__main_tile_1_task_display_control_3, .Ltmp51-__main__main_tile_1_task_display_control_3
+	.size	__main__main_tile_1_task_display_control_core_3, .Ltmp51-__main__main_tile_1_task_display_control_core_3
 .Lfunc_end9:
 	.cfi_endproc
 
@@ -1114,13 +1114,13 @@ __main__main_tile_0_task_qspi_server_5: # @__main__main_tile_0_task_qspi_server_
 	.size	par.desc.1, 32
 par.desc.1:
 	.long	__main__main_tile_1_task_decoupler_1
-	.long	__main__main_tile_1_task_display_control_3.nstackwords
-	.long	__main__main_tile_1_task_button_listener_2
+	.long	__main__main_tile_1_task_display_control_core_3.nstackwords
+	.long	__main__main_tile_1_task_button_listener_core_2
 	.long	__main__main_tile_1_task_decoupler_1.nstackwords
 	.long	__main__main_tile_1_task_sdcard_play_0
-	.long	__main__main_tile_1_task_button_listener_2.nstackwords
+	.long	__main__main_tile_1_task_button_listener_core_2.nstackwords
 	.long	0
-	.long	__main__main_tile_1_task_display_control_3
+	.long	__main__main_tile_1_task_display_control_core_3
 	.cc_bottom par.desc.1.data
 	.cc_top par.desc.2.data,par.desc.2
 	.align	4
@@ -1163,9 +1163,9 @@ par.desc.2:
 .Linfo_string12:
 .asciiz"__main__main_tile_1_task_decoupler_1"
 .Linfo_string13:
-.asciiz"__main__main_tile_1_task_button_listener_2"
+.asciiz"__main__main_tile_1_task_button_listener_core_2"
 .Linfo_string14:
-.asciiz"__main__main_tile_1_task_display_control_3"
+.asciiz"__main__main_tile_1_task_display_control_core_3"
 .Linfo_string15:
 .asciiz"__main__main_tile_1"
 .Linfo_string16:
@@ -2029,10 +2029,10 @@ par.desc.2:
 .asciiz"__main__main_tile_0"            # External Name
 	.long	502                     # DIE offset
 .asciiz"__main__main_tile_1"            # External Name
+	.long	146                     # DIE offset
+.asciiz"__main__main_tile_1_task_display_control_core_3" # External Name
 	.long	289                     # DIE offset
 .asciiz"_i.qspi_access._chan.write"     # External Name
-	.long	114                     # DIE offset
-.asciiz"__main__main_tile_1_task_button_listener_2" # External Name
 	.long	82                      # DIE offset
 .asciiz"__main__main_tile_1_task_decoupler_1" # External Name
 	.long	31                      # DIE offset
@@ -2041,6 +2041,8 @@ par.desc.2:
 .asciiz"__main__main_tile_1_task_sdcard_play_0" # External Name
 	.long	336                     # DIE offset
 .asciiz"_i.qspi_access._chan_yield.read" # External Name
+	.long	114                     # DIE offset
+.asciiz"__main__main_tile_1_task_button_listener_core_2" # External Name
 	.long	454                     # DIE offset
 .asciiz"delay_milliseconds"             # External Name
 	.long	242                     # DIE offset
@@ -2053,8 +2055,6 @@ par.desc.2:
 .asciiz"_i.qspi_access._chan_yield.write" # External Name
 	.long	210                     # DIE offset
 .asciiz"__main__main_tile_0_task_qspi_server_5" # External Name
-	.long	146                     # DIE offset
-.asciiz"__main__main_tile_1_task_display_control_3" # External Name
 	.long	430                     # DIE offset
 .asciiz"delay_seconds"                  # External Name
 	.long	0                       # End Mark
@@ -2102,8 +2102,8 @@ par.desc.2:
 	.typestring _i.qspi_access._chan_yield.write, "f{0}(&(s(yieldArg){m(dest){chd},m(yield){ui}}),si,si,&(a(:uc)))"
 	.overlay_reference _i.qspi_access._chan_yield.write,_i.qspi_access._client_call_y.fns
 	.typestring audio_xss, "f{0}(chd,n:chd)"
-	.typestring button_listener, "f{0}(n:chd,n:chd)"
-	.typestring display_control, "f{0}(0)"
+	.typestring button_listener_core, "f{0}(n:chd,n:chd)"
+	.typestring display_control_core, "f{0}(0)"
 	.typestring sdcard_play, "f{0}(chd,chd,ic(qspi_access){m(write){f{0}(si,si,&(a(:uc)))},m(read){f{0}(si,si,&(a(:uc)))}})"
 	.typestring decoupler, "f{0}(chd,chd)"
 	.typestring _Sqspi_server_0, "f{0}(is(qspi_access){m(write){f{0}(si,si,&(a(:uc)))},m(read){f{0}(si,si,&(a(:uc)))}})"

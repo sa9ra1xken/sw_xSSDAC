@@ -676,9 +676,9 @@ Symbols:
   00040c80 00000000 .text                $d.813
   00040cac 00000014 .text                __main__main_tile_1_task_usb_audio_core_0
   00040cac 00000000 .text                $d.814
-  00040cc0 0000000c .text                __main__main_tile_1_task_display_control_2
+  00040cc0 0000000c .text                __main__main_tile_1_task_display_control_core_2
   00040cc0 00000000 .text                $d.815
-  00040ccc 0000000c .text                __main__main_tile_1_task_button_listener_3
+  00040ccc 0000000c .text                __main__main_tile_1_task_button_listener_core_3
   00040ccc 00000000 .text                $d.816
   00040cd8 0000001c .text                DFUDelay
   00040cd8 00000000 .text                $d.3156
@@ -712,7 +712,7 @@ Symbols:
   00041328 00000000 .text                $s.427
   00041430 00000070 .text                send_page
   00041430 00000000 .text                $s.428
-  000414a0 000000ec .text                _Sbutton_listener_0
+  000414a0 000000ec .text                _Sbutton_listener_core_0
   000414a0 00000000 .text                $d.991
   0004158c 0000005c .text                HandleDacCommand
   0004158c 00000000 .text                $d.993
@@ -726,7 +726,7 @@ Symbols:
   00041a70 00000000 .text                $d.817
   00041a8c 0000001c .text                update_samp_resolution
   00041a8c 00000000 .text                $d.818
-  00041aa8 00000348 .text                display_control
+  00041aa8 00000348 .text                display_control_core
   00041aa8 00000000 .text                $d.820
   00041df0 0000000c .text                _Sset_console_mode_0
   00041df0 00000000 .text                $d.823

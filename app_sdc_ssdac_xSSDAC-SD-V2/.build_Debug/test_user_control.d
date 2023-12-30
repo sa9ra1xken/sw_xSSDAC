@@ -28,5 +28,6 @@ test_user_control.o: \
   C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_port_protocol.h \
   C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/api/xcore_c_select.h \
   C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src\xcore_c_select_impl.h \
-  C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\button_listener.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\button_listener.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\SSDAC_MODE.h \
   C:/Users/takaaki/git/lib_logging/lib_logging/api\debug_print.h

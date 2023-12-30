@@ -147,8 +147,8 @@
 	.globwrite usage.anon.7,epTypeTableOut,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:344:20: note: object used here\n            c_sof, epTypeTableOut, epTypeTableIn, p_usb_rst,\n                   ^~~~~~~~~~~~~~"
 	.call main,usb_audio_io
 	.call main,usb_audio_core
-	.call main,display_control
-	.call main,button_listener
+	.call main,display_control_core
+	.call main,button_listener_core
 	.call usb_audio_io,thread_speed
 	.call usb_audio_io,audio_xss
 	.call usb_audio_core,usage.anon.9
@@ -172,11 +172,11 @@
 	.call usage.anon.1,delay_ticks_longlong
 	.call usage.anon.0,delay_ticks_longlong
 	.par usb_audio_core,usb_audio_io,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:600:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usb_audio_core,display_control,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:600:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usb_audio_core,button_listener,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:600:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usb_audio_io,display_control,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:600:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usb_audio_io,button_listener,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:600:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par display_control,button_listener,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:600:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usb_audio_core,display_control_core,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:600:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usb_audio_core,button_listener_core,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:600:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usb_audio_io,display_control_core,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:600:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usb_audio_io,button_listener_core,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:600:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par display_control_core,button_listener_core,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:600:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
 	.par usage.anon.7,usage.anon.8,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:339:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
 	.par usage.anon.7,usage.anon.9,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:339:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
 	.par usage.anon.7,usage.anon.10,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:339:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
@@ -195,7 +195,7 @@
 	.globpassesref XUD_Manager, epTypeTableOut,"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:343:9: error: call to `XUD_Manager\' in `usb_audio_core\' makes alias of global \'epTypeTableOut\'\n        XUD_Manager(c_xud_out, ENDPOINT_COUNT_OUT, c_xud_in, ENDPOINT_COUNT_IN,\n        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 	.overlay_subgraph_conflict usb_audio_core.task.XUD_Manager.0, usb_audio_core.task.buffer.1, usb_audio_core.task.Endpoint0.2, usb_audio_core.task.decouple.3
 	.overlay_subgraph_conflict _Susb_audio_core_0.task.XUD_Manager.0, _Susb_audio_core_0.task.buffer.1, _Susb_audio_core_0.task.Endpoint0.2, _Susb_audio_core_0.task.decouple.3
-	.overlay_subgraph_conflict __main__main_tile_1_task_usb_audio_core_1, __main__main_tile_1_task_display_control_3, __main__main_tile_1_task_button_listener_4
+	.overlay_subgraph_conflict __main__main_tile_1_task_usb_audio_core_1, __main__main_tile_1_task_display_control_core_3, __main__main_tile_1_task_button_listener_core_4
 
                                         # End of file scope inline assembly
 	.section	.debug_info,"",@progbits
@@ -2028,13 +2028,13 @@ __main__main_tile_1:                    # @__main__main_tile_1
 	}
 	bl __start_other_cores
 	.cc_bottom __main__main_tile_1.function
-	.set	__main__main_tile_1.nstackwords,((par.extra_stackwords + __main__main_tile_1_task_usb_audio_core_1.nstackwords + ((1 + __main__main_tile_1_task_display_control_3.nstackwords) $A 2) + ((1 + __main__main_tile_1_task_button_listener_4.nstackwords) $A 2)) + 12)
+	.set	__main__main_tile_1.nstackwords,((par.extra_stackwords + __main__main_tile_1_task_usb_audio_core_1.nstackwords + ((1 + __main__main_tile_1_task_display_control_core_3.nstackwords) $A 2) + ((1 + __main__main_tile_1_task_button_listener_core_4.nstackwords) $A 2)) + 12)
 	.globl	__main__main_tile_1.nstackwords
-	.set	__main__main_tile_1.maxcores,(0 + __main__main_tile_1_task_usb_audio_core_1.maxcores + __main__main_tile_1_task_display_control_3.maxcores + __main__main_tile_1_task_button_listener_4.maxcores) $M 1
+	.set	__main__main_tile_1.maxcores,(0 + __main__main_tile_1_task_usb_audio_core_1.maxcores + __main__main_tile_1_task_display_control_core_3.maxcores + __main__main_tile_1_task_button_listener_core_4.maxcores) $M 1
 	.globl	__main__main_tile_1.maxcores
-	.set	__main__main_tile_1.maxtimers,(2 + __main__main_tile_1_task_usb_audio_core_1.maxtimers + __main__main_tile_1_task_display_control_3.maxtimers + __main__main_tile_1_task_button_listener_4.maxtimers) $M 0
+	.set	__main__main_tile_1.maxtimers,(2 + __main__main_tile_1_task_usb_audio_core_1.maxtimers + __main__main_tile_1_task_display_control_core_3.maxtimers + __main__main_tile_1_task_button_listener_core_4.maxtimers) $M 0
 	.globl	__main__main_tile_1.maxtimers
-	.set	__main__main_tile_1.maxchanends,(0 + __main__main_tile_1_task_usb_audio_core_1.maxchanends + __main__main_tile_1_task_display_control_3.maxchanends + __main__main_tile_1_task_button_listener_4.maxchanends) $M 0
+	.set	__main__main_tile_1.maxchanends,(0 + __main__main_tile_1_task_usb_audio_core_1.maxchanends + __main__main_tile_1_task_display_control_core_3.maxchanends + __main__main_tile_1_task_button_listener_core_4.maxchanends) $M 0
 	.globl	__main__main_tile_1.maxchanends
 .Ltmp113:
 	.size	__main__main_tile_1, .Ltmp113-__main__main_tile_1
@@ -2089,9 +2089,9 @@ __main__main_tile_1_task_usb_audio_core_1: # @__main__main_tile_1_task_usb_audio
 	.cfi_endproc
 
 	.align	4
-	.type	__main__main_tile_1_task_display_control_3,@function
-	.cc_top __main__main_tile_1_task_display_control_3.function,__main__main_tile_1_task_display_control_3
-__main__main_tile_1_task_display_control_3: # @__main__main_tile_1_task_display_control_3
+	.type	__main__main_tile_1_task_display_control_core_3,@function
+	.cc_top __main__main_tile_1_task_display_control_core_3.function,__main__main_tile_1_task_display_control_core_3
+__main__main_tile_1_task_display_control_core_3: # @__main__main_tile_1_task_display_control_core_3
 .Lfunc_begin20:
 	.loc	1 712 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:712:0
 	.cfi_startproc
@@ -2105,11 +2105,11 @@ __main__main_tile_1_task_display_control_3: # @__main__main_tile_1_task_display_
 	.cfi_def_cfa_offset 8
 .Ltmp121:
 	.cfi_offset 15, 0
-	#DEBUG_VALUE: __main__main_tile_1_task_display_control_3:frame <- R0
+	#DEBUG_VALUE: __main__main_tile_1_task_display_control_core_3:frame <- R0
 	.loc	1 712 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:712:0
 .Ltmp122:
 .Lxta.call_labels17:
-	bl display_control
+	bl display_control_core
 .Ltmp123:
 	{
 		nop
@@ -2117,20 +2117,20 @@ __main__main_tile_1_task_display_control_3: # @__main__main_tile_1_task_display_
 	}
 	# RETURN_REG_HOLDER
 .Ltmp124:
-	.cc_bottom __main__main_tile_1_task_display_control_3.function
-	.set	__main__main_tile_1_task_display_control_3.nstackwords,(display_control.nstackwords + 2)
-	.set	__main__main_tile_1_task_display_control_3.maxcores,display_control.maxcores $M 1
-	.set	__main__main_tile_1_task_display_control_3.maxtimers,display_control.maxtimers $M 0
-	.set	__main__main_tile_1_task_display_control_3.maxchanends,display_control.maxchanends $M 0
+	.cc_bottom __main__main_tile_1_task_display_control_core_3.function
+	.set	__main__main_tile_1_task_display_control_core_3.nstackwords,(display_control_core.nstackwords + 2)
+	.set	__main__main_tile_1_task_display_control_core_3.maxcores,display_control_core.maxcores $M 1
+	.set	__main__main_tile_1_task_display_control_core_3.maxtimers,display_control_core.maxtimers $M 0
+	.set	__main__main_tile_1_task_display_control_core_3.maxchanends,display_control_core.maxchanends $M 0
 .Ltmp125:
-	.size	__main__main_tile_1_task_display_control_3, .Ltmp125-__main__main_tile_1_task_display_control_3
+	.size	__main__main_tile_1_task_display_control_core_3, .Ltmp125-__main__main_tile_1_task_display_control_core_3
 .Lfunc_end20:
 	.cfi_endproc
 
 	.align	4
-	.type	__main__main_tile_1_task_button_listener_4,@function
-	.cc_top __main__main_tile_1_task_button_listener_4.function,__main__main_tile_1_task_button_listener_4
-__main__main_tile_1_task_button_listener_4: # @__main__main_tile_1_task_button_listener_4
+	.type	__main__main_tile_1_task_button_listener_core_4,@function
+	.cc_top __main__main_tile_1_task_button_listener_core_4.function,__main__main_tile_1_task_button_listener_core_4
+__main__main_tile_1_task_button_listener_core_4: # @__main__main_tile_1_task_button_listener_core_4
 .Lfunc_begin21:
 	.loc	1 715 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:715:0
 	.cfi_startproc
@@ -2144,7 +2144,7 @@ __main__main_tile_1_task_button_listener_4: # @__main__main_tile_1_task_button_l
 	.cfi_def_cfa_offset 8
 .Ltmp127:
 	.cfi_offset 15, 0
-	#DEBUG_VALUE: __main__main_tile_1_task_button_listener_4:frame <- R0
+	#DEBUG_VALUE: __main__main_tile_1_task_button_listener_core_4:frame <- R0
 	{
 		nop
 		ldw r0, r0[1]
@@ -2152,15 +2152,15 @@ __main__main_tile_1_task_button_listener_4: # @__main__main_tile_1_task_button_l
 .Ltmp128:
 	.loc	1 715 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:715:0
 .Lxta.call_labels18:
-	bl _Sbutton_listener_0
+	bl _Sbutton_listener_core_0
 .Ltmp129:
-	.cc_bottom __main__main_tile_1_task_button_listener_4.function
-	.set	__main__main_tile_1_task_button_listener_4.nstackwords,(_Sbutton_listener_0.nstackwords + 2)
-	.set	__main__main_tile_1_task_button_listener_4.maxcores,_Sbutton_listener_0.maxcores $M 1
-	.set	__main__main_tile_1_task_button_listener_4.maxtimers,_Sbutton_listener_0.maxtimers $M 0
-	.set	__main__main_tile_1_task_button_listener_4.maxchanends,_Sbutton_listener_0.maxchanends $M 0
+	.cc_bottom __main__main_tile_1_task_button_listener_core_4.function
+	.set	__main__main_tile_1_task_button_listener_core_4.nstackwords,(_Sbutton_listener_core_0.nstackwords + 2)
+	.set	__main__main_tile_1_task_button_listener_core_4.maxcores,_Sbutton_listener_core_0.maxcores $M 1
+	.set	__main__main_tile_1_task_button_listener_core_4.maxtimers,_Sbutton_listener_core_0.maxtimers $M 0
+	.set	__main__main_tile_1_task_button_listener_core_4.maxchanends,_Sbutton_listener_core_0.maxchanends $M 0
 .Ltmp130:
-	.size	__main__main_tile_1_task_button_listener_4, .Ltmp130-__main__main_tile_1_task_button_listener_4
+	.size	__main__main_tile_1_task_button_listener_core_4, .Ltmp130-__main__main_tile_1_task_button_listener_core_4
 .Lfunc_end21:
 	.cfi_endproc
 
@@ -2325,12 +2325,12 @@ par.desc.2:
 	.type	par.desc.3,@object
 	.size	par.desc.3, 24
 par.desc.3:
-	.long	__main__main_tile_1_task_display_control_3
-	.long	__main__main_tile_1_task_button_listener_4.nstackwords
+	.long	__main__main_tile_1_task_display_control_core_3
+	.long	__main__main_tile_1_task_button_listener_core_4.nstackwords
 	.long	__main__main_tile_1_task_usb_audio_core_1
-	.long	__main__main_tile_1_task_display_control_3.nstackwords
+	.long	__main__main_tile_1_task_display_control_core_3.nstackwords
 	.long	0
-	.long	__main__main_tile_1_task_button_listener_4
+	.long	__main__main_tile_1_task_button_listener_core_4
 	.cc_bottom par.desc.3.data
 	.section	.dp.data,"awd",@progbits
 .Ldebug_end0:
@@ -2425,9 +2425,9 @@ par.desc.3:
 .Linfo_string42:
 .asciiz"__main__main_tile_1_task_usb_audio_core_1"
 .Linfo_string43:
-.asciiz"__main__main_tile_1_task_display_control_3"
+.asciiz"__main__main_tile_1_task_display_control_core_3"
 .Linfo_string44:
-.asciiz"__main__main_tile_1_task_button_listener_4"
+.asciiz"__main__main_tile_1_task_button_listener_core_4"
 .Linfo_string45:
 .asciiz"__main__main_tile_1"
 .Linfo_string46:
@@ -4521,14 +4521,16 @@ par.desc.3:
 .asciiz"xscope_user_init"               # External Name
 	.long	657                     # DIE offset
 .asciiz"_Susb_audio_core_0.task.Endpoint0.2" # External Name
+	.long	780                     # DIE offset
+.asciiz"__main__main_tile_1_task_display_control_core_3" # External Name
 	.long	1019                    # DIE offset
 .asciiz"_i.i_dfu._chan.HandleDfuRequest" # External Name
-	.long	813                     # DIE offset
-.asciiz"__main__main_tile_1_task_button_listener_4" # External Name
 	.long	1075                    # DIE offset
 .asciiz"_i.i_dfu._chan_yield.finish"    # External Name
 	.long	846                     # DIE offset
 .asciiz"_Susb_audio_io_0.task.audio_xss.0" # External Name
+	.long	813                     # DIE offset
+.asciiz"__main__main_tile_1_task_button_listener_core_4" # External Name
 	.long	1698                    # DIE offset
 .asciiz"usb_audio_io"                   # External Name
 	.long	999                     # DIE offset
@@ -4543,8 +4545,6 @@ par.desc.3:
 .asciiz"delay_seconds"                  # External Name
 	.long	1296                    # DIE offset
 .asciiz"XUD_SetReady_OutPtr"            # External Name
-	.long	780                     # DIE offset
-.asciiz"__main__main_tile_1_task_display_control_3" # External Name
 	.long	0                       # End Mark
 .LpubNames_end0:
 	.section	.debug_pubtypes,"",@progbits
@@ -4609,8 +4609,8 @@ par.desc.3:
 	.typestring buffer, "f{0}(chd,chd,chd,chd,chd)"
 	.typestring decouple, "f{0}(chd)"
 	.typestring audio_xss, "f{0}(chd,n:chd)"
-	.typestring display_control, "f{0}(0)"
-	.typestring _Sbutton_listener_0, "f{0}(n:chd)"
+	.typestring display_control_core, "f{0}(0)"
+	.typestring _Sbutton_listener_core_0, "f{0}(n:chd)"
 	.typestring thread_speed, "f{0}(0)"
 	.typestring xscope_user_init, "f{0}(0)"
 	.typestring usb_audio_core, "f{0}(chd,n:chd,n:chd,n:ic(i_dfu){m(HandleDfuRequest){f{ui,si,si,si,ui}(&(s(USB_SetupPacket){m(bmRequestType){s(USB_BmRequestType){m(Recipient){uc},m(Type){uc},m(Direction){uc}}},m(bRequest){uc},m(wValue){us},m(wIndex){us},m(wLength){us}}),&(a(:ui)),ui,ui)},m(finish){f{0}(0)}})"

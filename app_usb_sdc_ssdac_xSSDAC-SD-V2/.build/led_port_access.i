@@ -7,7 +7,7 @@
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/led_port_access.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/led_port_access.h" 1
 # 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/led_port_access.h"
-void out_led_port(unsigned bit, unsigned value);
+void write_led_port(unsigned bit, unsigned value);
 # 2 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/led_port_access.c" 2
 # 1 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h" 1
 

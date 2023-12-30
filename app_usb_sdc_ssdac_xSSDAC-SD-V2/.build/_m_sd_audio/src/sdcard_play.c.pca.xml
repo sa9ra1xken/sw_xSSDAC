@@ -95,6 +95,7 @@
   <fCall global="true" name="strncmp.maxchanends"/>
   <fCall global="true" name="sdcard_play"/>
   <fCall global="true" name="sdcard_play.nstackwords"/>
+  <fCall global="true" name="set_console_mode.nstackwords"/>
   <fCall global="true" name="f_mount.nstackwords"/>
   <fCall global="true" name="QueryChannel.nstackwords"/>
   <fCall global="true" name="strncpy.nstackwords"/>
@@ -103,16 +104,19 @@
   <fCall global="true" name="QueryChannel.maxcores"/>
   <fCall global="true" name="f_mount.maxcores"/>
   <fCall global="true" name="qspi_if_read.maxcores"/>
+  <fCall global="true" name="set_console_mode.maxcores"/>
   <fCall global="true" name="strncpy.maxcores"/>
   <fCall global="true" name="sdcard_play.maxtimers"/>
   <fCall global="true" name="QueryChannel.maxtimers"/>
   <fCall global="true" name="f_mount.maxtimers"/>
   <fCall global="true" name="qspi_if_read.maxtimers"/>
+  <fCall global="true" name="set_console_mode.maxtimers"/>
   <fCall global="true" name="strncpy.maxtimers"/>
   <fCall global="true" name="sdcard_play.maxchanends"/>
   <fCall global="true" name="QueryChannel.maxchanends"/>
   <fCall global="true" name="f_mount.maxchanends"/>
   <fCall global="true" name="qspi_if_read.maxchanends"/>
+  <fCall global="true" name="set_console_mode.maxchanends"/>
   <fCall global="true" name="strncpy.maxchanends"/>
   <fCall global="true" name="setting_file_name"/>
   <fCall global="true" name="track_string.globound"/>
@@ -138,6 +142,7 @@
   <fCall global="true" name="PlayFLAC"/>
   <fCall global="true" name="fflush"/>
   <fCall global="true" name="__getstdout"/>
+  <fCall global="true" name="set_console_mode"/>
   <fCall global="true" name="f_mount"/>
   <fCall global="true" name="QueryChannel"/>
   <fCall global="true" name="qspi_if_read"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>module_hw_support_xSSDAC-SD-V1</name>
+	<name>module_hw_support_xSSDAC-SD</name>
 	<comment></comment>
 	<projects>
 		<project>module_i2c_shared</project>

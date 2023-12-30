@@ -10,10 +10,8 @@
 <fDef name="delay_seconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="finish" global="true" interface="i_dfu" noreturn="false" doNotSpecialize="false" numParams="0"/>
 <fDef name="main" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
-<fDef name="read" global="true" interface="qspi_access" noreturn="false" doNotSpecialize="false" numParams="3"/>
 <fDef name="thread_speed" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
-<fDef name="usb_audio_core" global="true" noreturn="false" doNotSpecialize="false" numParams="3"/>
-<fDef name="write" global="true" interface="qspi_access" noreturn="false" doNotSpecialize="false" numParams="3"/>
+<fDef name="usb_audio_core" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
 <fDef name="xscope_user_init" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
 <fCall name="delay_ticks_longlong" global="true" numArgs="1">
   <arg num="0">
@@ -101,21 +99,26 @@
     </values>
   </arg>
 </fCall>
-<fCall name="printf" global="true" numArgs="1">
+<fCall name="debug_printf" global="true" numArgs="1">
   <arg num="0">
     <values>
       <value type="unknown"/>
     </values>
   </arg>
 </fCall>
-<fCall name="fflush" global="true" numArgs="1">
+<fCall name="set_console_mode" global="true" numArgs="1">
   <arg num="0">
     <values>
-      <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="2"/></value>
     </values>
   </arg>
 </fCall>
-<fCall name="__getstdout" global="true" numArgs="0">
+<fCall name="set_display_control_flag" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="16"/></value>
+    </values>
+  </arg>
 </fCall>
 <fCall name="XUD_Manager" global="true" numArgs="12" impId="0">
   <arg num="0">
@@ -232,8 +235,8 @@
     </values>
   </arg>
   <arg num="4">
-    <passThroughArg param="2" caller="usb_audio_core" global="true"/>
     <values>
+      <value type="null"/>
     </values>
   </arg>
   <arg num="5">
@@ -285,43 +288,26 @@
     </values>
   </arg>
 </fCall>
-<fCall name="usb_audio_core" global="true" numArgs="3" impId="1">
+<fCall name="usb_audio_core" global="true" numArgs="1" impId="1">
   <arg num="0">
     <passThroughArg param="1" caller="config_audio_source" global="true"/>
     <values>
     </values>
   </arg>
-  <arg num="1">
+</fCall>
+<fCall name="config_audio_source" global="true" numArgs="2" impId="2">
+  <arg num="0">
     <values>
       <value type="null"/>
     </values>
   </arg>
-  <arg num="2">
-    <values>
-      <value type="null"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="qspi_server" global="true" numArgs="1" impId="2">
-  <arg num="0">
-    <values>
-      <value type="interface"><interfaceInfo index="0" type="chan" isYielding="false"/></value>
-    </values>
-  </arg>
-</fCall>
-<fCall name="config_audio_source" global="true" numArgs="2" impId="3">
-  <arg num="0">
-    <values>
-      <value type="interface"><interfaceInfo index="0" type="chan" isYielding="false"/></value>
-    </values>
-  </arg>
   <arg num="1">
     <values>
       <value type="unknown"/>
     </values>
   </arg>
 </fCall>
-<fCall name="audio_xss" global="true" numArgs="2" impId="4">
+<fCall name="ssdac_core" global="true" numArgs="2" impId="3">
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -333,9 +319,9 @@
     </values>
   </arg>
 </fCall>
-<fCall name="display_control" global="true" numArgs="0" impId="5">
+<fCall name="display_control_core" global="true" numArgs="0" impId="4">
 </fCall>
-<fCall name="button_listener" global="true" numArgs="2" impId="6">
+<fCall name="button_listener_core" global="true" numArgs="2" impId="5">
   <arg num="0">
     <values>
       <value type="unknown"/>

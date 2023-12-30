@@ -163,8 +163,8 @@ int main()
     {
         on tile[XUD_TILE]: usb_audio_core(c_audio, null, null, dfuInterface );
         on tile[AUDIO_IO_TILE]: audio_xss(c_audio, c_dac_control );
-        on tile[OLED_TILE]: display_control();
-        on tile[OLED_TILE]: button_listener(null, c_dac_control );
+        on tile[OLED_TILE]: display_control_core();
+        on tile[OLED_TILE]: button_listener_core(null, c_dac_control );
     }
     return 0;
 }

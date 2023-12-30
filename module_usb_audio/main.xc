@@ -709,10 +709,10 @@ int main()
 #endif
         USER_MAIN_CORES
 #ifdef _USB_AUDIO_USE_DISPLAY										//added by sakurai for SSDAC
-        on tile[OLED_TILE]: display_control();						//added by sakurai for SSDAC
+        on tile[OLED_TILE]: display_control_core();						//added by sakurai for SSDAC
 #endif																//added by sakurai for SSDAC
 #if _DAC_MODE_SELECTOR == _DAC_MODE_SELECTOR_BTN_LSTN				//added by sakurai for SSDAC
-        on tile[OLED_TILE]: button_listener(						//added by sakurai for SSDAC
+        on tile[OLED_TILE]: button_listener_core(						//added by sakurai for SSDAC
                 null												//added by sakurai for SSDAC
                 , c_dac_control										//added by sakurai for SSDAC
         );															//added by sakurai for SSDAC

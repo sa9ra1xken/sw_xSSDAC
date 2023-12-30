@@ -1,11 +1,18 @@
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 141 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
-# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+
+
+
+
+
+
+
+
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\syscall.h" 1 3
 # 48 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\syscall.h" 3
 typedef unsigned ___size_t;
@@ -52,7 +59,8 @@ int _get_cmdline(void *buf, unsigned size);
 }
 # 98 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\syscall.h" 3
 void _plugins(int type, unsigned arg1, unsigned arg2);
-# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
+# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
 # 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\\\.build\\\\xSSDAC-SD-V2.h" 1 3
@@ -460,7 +468,8 @@ extern tileref usb_tile;
 
 service xscope_host_data(chanend c);;
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 1 3
 # 35 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
@@ -469,7 +478,8 @@ unsigned bitrev(unsigned x);
 unsigned byterev(unsigned x);
 # 59 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 int clz(unsigned x);
-# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 1 3
 # 34 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 3
 int printchar(char value);
@@ -576,7 +586,40 @@ int printbinln(unsigned value);
 int printstr(const char (& alias s)[]);
 # 145 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 3
 int printstrln(const char (& alias s)[]);
-# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+
+# 1 ".././src\\ssdac_conf.h" 1
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h" 1
+# 29 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
+void ConfigureSerialDacPorts();
+
+void InitDebugOut(out port txd);
+
+void DebugOut(unsigned data, unsigned count, out port txd);
+
+
+unsigned start_ssdac(chanend c_in, unsigned sample_rate);
+
+
+unsigned start_fir(chanend c_in, unsigned sample_rate);
+
+
+unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
+
+void ssdac_core(chanend c_in, chanend ?c_control);
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\decoupler.h" 1
+# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\decoupler.h"
+typedef enum {
+    _FALSE = 0,
+    _TRUE = 1
+} BOOL;
+# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 
 
@@ -1206,7 +1249,151 @@ int _safe_fclose(FILE * movable fp);
 int _safe_remove(const char file[]);
 int _safe_rename(const char from[], const char to[]);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 2 3
-# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
+# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 1
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 1 3
+# 201 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 3
+typedef streaming chanend streaming_chanend_t;
+
+typedef in buffered port:1 in_buffered_port_1_t;
+typedef in buffered port:4 in_buffered_port_4_t;
+typedef in buffered port:8 in_buffered_port_8_t;
+typedef in buffered port:16 in_buffered_port_16_t;
+typedef in buffered port:32 in_buffered_port_32_t;
+
+typedef out buffered port:1 out_buffered_port_1_t;
+typedef out buffered port:4 out_buffered_port_4_t;
+typedef out buffered port:8 out_buffered_port_8_t;
+typedef out buffered port:16 out_buffered_port_16_t;
+typedef out buffered port:32 out_buffered_port_32_t;
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 2
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h" 1
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h"
+typedef enum {
+    _GET_INTERPOLATION_MODE =1,
+    _SET_INTERPOLATION_MODE =2
+} DAC_COMMAND;
+
+
+
+
+typedef enum {
+    _TBD =0,
+    _STEP =1,
+    _LINEAR =2,
+    _QUAD =3,
+    _CUBIC =4,
+    _SINC4 =5,
+    _SINC8 =6
+} INTERPOLATION_MODE;
+
+
+
+
+typedef enum {
+    _AUDIO_FORMAT_CHANGE = 0,
+    _INTERPOLATION_MODE_CHANGE = 1
+} DAC_RETURN_CODE;
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 2
+
+
+
+typedef enum {
+    _USB_DAC = 0,
+    _SDC_PLAY = 1,
+} FUNCTION_SELECTOR;
+
+typedef enum {
+    _PENDING_Q = 0,
+    _INPUT_Q = 1,
+    _CURRENT_Q = 2
+} QUERY_TYPE;
+
+typedef enum {
+    _PLAY_CMD_EMPTY,
+    _PLAY_CMD_PREV_FOLDER,
+    _PLAY_CMD_NEXT_FOLDER,
+    _PLAY_CMD_PREV_TRACK,
+    _PLAY_CMD_NEXT_TRACK,
+    _PLAY_CMD_REWIND,
+    _PLAY_CMD_REVERSE_SKIP,
+    _PLAY_CMD_FORWARD_SKIP,
+    _PLAY_CMD_PAUSE,
+    _PLAY_CMD_STOP
+} PLAY_COMMAND;
+
+unsigned QueryChannel(chanend ch, unsigned command);
+void button_listener_core(chanend ?c_play_control, chanend ?c_dac_control);
+void KeyScan();
+void SendBackTrackControl(chanend c_track_control);
+void HandleDacCommand(chanend c_control, DAC_COMMAND command);
+void HandlePlayCommand(chanend c_control, QUERY_TYPE type);
+# 19 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 1
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
+void set_display_control_flag(unsigned bitmask);
+void update_samp_freq(unsigned freq);
+void update_samp_resolution(unsigned res);
+void update_chan_count(unsigned ch);
+
+void display_control_core();
+void init_display_frame();
+void handle_display_frame();
+
+typedef enum {
+    _SDC_AUDIO = 1,
+    _USB_AUDIO = 2,
+    _DAC_MODE_SELECTION = 3,
+    _FUNCTION_SELECTION = 4
+} CONSOLE_MODE;
+
+CONSOLE_MODE get_console_mode();
+void set_console_mode(CONSOLE_MODE value);
+# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\console.h" 1
+# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h" 1
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h"
+int qspi_write(int offset, int size, char * buffer, char * scratch);
+
+int qspi_read(int offset, int size, char * buffer);
+
+
+
+
+
+
+
+interface qspi_access{
+
+    void write(int offset, int size, char buffer[]);
+
+    void read(int offset, int size, char buffer[]);
+};
+
+
+
+
+
+
+void qspi_if_write(client interface qspi_access i, int offset, int size, char buffer[]);
+
+void qspi_if_read(client interface qspi_access i, int offset, int size, char buffer[]);
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
+
+
+
+
+
+
+
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xscope.h" 1 3
 # 38 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xscope.h" 3
 typedef enum {
@@ -1326,547 +1513,25 @@ void xscope_connect_data_from_host(chanend from_host);
 # 420 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xscope.h" 3
 # 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\\\.build\\\\xscope_probes.h" 1 3
 # 420 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xscope.h" 2 3
-# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
+# 30 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc" 2
 
 
 
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h" 1
-# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 1 3
-# 201 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 3
-typedef streaming chanend streaming_chanend_t;
 
-typedef in buffered port:1 in_buffered_port_1_t;
-typedef in buffered port:4 in_buffered_port_4_t;
-typedef in buffered port:8 in_buffered_port_8_t;
-typedef in buffered port:16 in_buffered_port_16_t;
-typedef in buffered port:32 in_buffered_port_32_t;
 
-typedef out buffered port:1 out_buffered_port_1_t;
-typedef out buffered port:4 out_buffered_port_4_t;
-typedef out buffered port:8 out_buffered_port_8_t;
-typedef out buffered port:16 out_buffered_port_16_t;
-typedef out buffered port:32 out_buffered_port_32_t;
-# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h" 2
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include/xud_defines.h" 1
-# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h" 2
-# 91 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-typedef enum XUD_EpTransferType
-{
-    XUD_EPTYPE_ISO = 0,
-    XUD_EPTYPE_INT,
-    XUD_EPTYPE_BUL,
-    XUD_EPTYPE_CTL,
-    XUD_EPTYPE_DIS,
-} XUD_EpTransferType;
+void sdcard_test();
 
+           void sdcard_play(
+        chanend c_handshake
+        , chanend c_play_control
 
+        , client interface qspi_access i
 
-
-
-typedef unsigned int XUD_EpType;
-
-
-
-
-
-typedef unsigned int XUD_ep;
-
-
-
-
-typedef enum XUD_BusSpeed
-{
-    XUD_SPEED_FS = 1,
-    XUD_SPEED_HS = 2
-} XUD_BusSpeed_t;
-
-typedef enum XUD_PwrConfig
-{
-    XUD_PWR_BUS,
-    XUD_PWR_SELF
-} XUD_PwrConfig;
-
-typedef enum XUD_Result
-{
-    XUD_RES_RST = -1,
-    XUD_RES_OKAY = 0,
-    XUD_RES_ERR,
-} XUD_Result_t;
-# 181 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-int XUD_Manager(chanend c_epOut[], int noEpOut,
-                chanend c_epIn[], int noEpIn,
-                chanend ?c_sof,
-                XUD_EpType epTypeTableOut[], XUD_EpType epTypeTableIn[],
-                out port ?p_usb_rst,
-                __clock_t ?clk,
-                unsigned rstMask,
-                XUD_BusSpeed_t desiredSpeed,
-                XUD_PwrConfig pwrConfig);
-# 202 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-XUD_Result_t XUD_GetBuffer(XUD_ep ep_out, unsigned char buffer[], unsigned &length);
-# 212 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-XUD_Result_t XUD_GetSetupBuffer(XUD_ep ep_out, unsigned char buffer[], unsigned &length);
-# 224 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-XUD_Result_t XUD_SetBuffer(XUD_ep ep_in, unsigned char buffer[], unsigned datalength);
-# 238 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-XUD_Result_t XUD_SetBuffer_EpMax(XUD_ep ep_in, unsigned char buffer[], unsigned datalength, unsigned epMax);
-# 255 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-XUD_Result_t XUD_DoGetRequest(XUD_ep ep_out, XUD_ep ep_in, unsigned char buffer[], unsigned length, unsigned requested);
-# 264 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-XUD_Result_t XUD_DoSetRequestStatus(XUD_ep ep_in);
-# 273 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-XUD_Result_t XUD_SetDevAddr(unsigned addr);
-# 287 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-XUD_BusSpeed_t XUD_ResetEndpoint(XUD_ep one, XUD_ep &?two);
-
-
-
-
-
-
-
-XUD_ep XUD_InitEp(chanend c_ep);
-# 304 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-void XUD_SetStallByAddr(int epNum);
-# 313 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-void XUD_ClearStallByAddr(int epNum);
-
-
-
-
-
-
-void XUD_SetStall(XUD_ep ep);
-
-
-
-
-
-
-
-void XUD_ClearStall(XUD_ep ep);
-# 340 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-void XUD_ResetEpStateByAddr(unsigned epNum);
-
-
-
-
-
-
-
-void XUD_SetTestMode(XUD_ep ep, unsigned testMode);
-# 364 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-XUD_Result_t XUD_GetData(XUD_ep ep_out, unsigned char buffer[], unsigned &length);
-# 374 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-XUD_Result_t XUD_GetSetupData(XUD_ep ep_out, unsigned char buffer[], unsigned &length);
-# 385 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-XUD_Result_t XUD_SetData(XUD_ep ep_in, unsigned char buffer[], unsigned datalength, unsigned startIndex, unsigned pidToggle);
-# 400 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-inline int XUD_SetReady_Out(XUD_ep ep, unsigned char buffer[])
-{
-    int chan_array_ptr;
-    int reset;
-
-
-    asm ("ldw %0, %1[9]":"=r"(reset):"r"(ep));
-    if(reset)
-    {
-        return -1;
-    }
-
-    asm ("ldw %0, %1[0]":"=r"(chan_array_ptr):"r"(ep));
-    asm ("stw %0, %1[3]"::"r"(buffer),"r"(ep));
-    asm ("stw %0, %1[0]"::"r"(ep),"r"(chan_array_ptr));
-
-    return 0;
-}
-# 426 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-inline int XUD_SetReady_OutPtr(XUD_ep ep, unsigned addr)
-{
-    int chan_array_ptr;
-    int reset;
-
-
-    asm ("ldw %0, %1[9]":"=r"(reset):"r"(ep));
-    if(reset)
-    {
-        return XUD_RES_RST;
-    }
-    asm ("ldw %0, %1[0]":"=r"(chan_array_ptr):"r"(ep));
-    asm ("stw %0, %1[3]"::"r"(addr),"r"(ep));
-    asm ("stw %0, %1[0]"::"r"(ep),"r"(chan_array_ptr));
-
-    return XUD_RES_OKAY;
-}
-# 453 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-inline XUD_Result_t XUD_SetReady_InPtr(XUD_ep ep, unsigned addr, int len)
-{
-    int chan_array_ptr;
-    int tmp, tmp2;
-    int wordlength;
-    int taillength;
-
-    int reset;
-
-
-    asm ("ldw %0, %1[9]":"=r"(reset):"r"(ep));
-    if(reset)
-    {
-        return XUD_RES_RST;
-    }
-
-
-    wordlength = len >>2;
-    wordlength <<=2;
-
-    taillength = __builtin_zext((len << 5),7);
-
-    asm ("ldw %0, %1[0]":"=r"(chan_array_ptr):"r"(ep));
-
-
-    asm ("add %0, %1, %2":"=r"(tmp):"r"(addr),"r"(wordlength));
-
-    asm ("neg %0, %1":"=r"(tmp2):"r"(len>>2));
-
-
-    asm ("stw %0, %1[6]"::"r"(tmp2),"r"(ep));
-
-
-    asm ("stw %0, %1[3]"::"r"(tmp),"r"(ep));
-
-
-    asm ("stw %0, %1[7]"::"r"(taillength),"r"(ep));
-
-    asm ("stw %0, %1[0]"::"r"(ep),"r"(chan_array_ptr));
-
-    return XUD_RES_OKAY;
-}
-# 504 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-inline XUD_Result_t XUD_SetReady_In(XUD_ep ep, unsigned char buffer[], int len)
-{
-    unsigned addr;
-
-    asm("mov %0, %1":"=r"(addr):"r"(buffer));
-
-    return XUD_SetReady_InPtr(ep, addr, len);
-}
-# 521 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-#pragma select handler
-void XUD_GetData_Select(chanend c, XUD_ep ep, unsigned &length, XUD_Result_t &result);
-
-
-
-
-
-
-
-#pragma select handler
-void XUD_SetData_Select(chanend c, XUD_ep ep, XUD_Result_t &result);
-# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h" 1
-
-
-
-
-
-
-
-
-# 1 ".././src\\customdefines.h" 1
-# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h" 2
-# 1108 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h"
-enum USBEndpointNumber_In
-{
-    ENDPOINT_NUMBER_IN_CONTROL,
-
-    ENDPOINT_NUMBER_IN_FEEDBACK,
-
-    ENDPOINT_NUMBER_IN_AUDIO,
-# 1133 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h"
-    ENDPOINT_COUNT_IN
-};
-
-enum USBEndpointNumber_Out
-{
-    ENDPOINT_NUMBER_OUT_CONTROL,
-    ENDPOINT_NUMBER_OUT_AUDIO,
-# 1149 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h"
-    ENDPOINT_COUNT_OUT
-};
-# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\uac_hwresources.h" 1
-# 25 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0\\endpoint0.h" 1
-
-
-
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_dfu/src\\dfu_interface.h" 1
-
-
-
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src\\usb_std_requests.h" 1
-
-
-
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src/usb_defs.h" 1
-# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src/usb_defs.h"
-typedef enum
-{
-    USB_CLASS_USE_CLASS = 0x00,
-    USB_CLASS_AUDIO = 0x01,
-    USB_CLASS_COMMUNICATIONS = 0x02,
-    USB_CLASS_HID = 0x03,
-    USB_CLASS_PHYSICAL = 0x05,
-    USB_CLASS_IMAGE = 0x06,
-    USB_CLASS_PRINTER = 0x07,
-    USB_CLASS_MASS_STORAGE = 0x08,
-    USB_CLASS_HUB = 0x09,
-    USB_CLASS_CDC_DATA = 0x0A,
-    USB_CLASS_SMART_CARD = 0x0B,
-    USB_CLASS_RESERVED = 0x0C,
-    USB_CLASS_CONTENT_SECURITY = 0x0D,
-    USB_CLASS_VIDEO = 0x0E,
-    USB_CLASS_PERSONAL_HEALTHCARE = 0x0F,
-    USB_CLASS_AUDIO_VIDEO = 0x10,
-
-    USB_CLASS_MAPPED_INDEX_END = 17,
-    USB_CLASS_VENDOR_SPECIFIC = 0xFF
-} USB_ClassCode_t;
-# 6 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_shared/src\\usb_std_requests.h" 2
-
-
-
-
-
-typedef struct USB_BmRequestType
-{
-    unsigned char Recipient;
-
-
-
-
-    unsigned char Type;
-
-
-    unsigned char Direction;
-
-} USB_BmRequestType_t;
-
-
-
-
-typedef struct USB_SetupPacket
-{
-    USB_BmRequestType_t bmRequestType;
-
-    unsigned char bRequest;
-    unsigned short wValue;
-
-    unsigned short wIndex;
-
-    unsigned short wLength;
-
-
-} USB_SetupPacket_t;
-
-
-
-
-void USB_PrintSetupPacket(USB_SetupPacket_t sp);
-
-void USB_ComposeSetupBuffer(USB_SetupPacket_t sp, unsigned char buffer[]);
-
-void USB_ParseSetupPacket(unsigned char b[], USB_SetupPacket_t &p);
-# 6 "C:/Users/takaaki/git/sw_xSSDAC/module_dfu/src\\dfu_interface.h" 2
-
-interface i_dfu
-{
-    {unsigned, int, int, int, unsigned} HandleDfuRequest(USB_SetupPacket_t &sp, unsigned data_buffer[], unsigned data_buffer_length, unsigned dfuState);
-    void finish();
-};
-# 6 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0\\endpoint0.h" 2
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0\\endpoint0.h"
-void Endpoint0(chanend c_ep0_out, chanend c_ep0_in, chanend c_audioCtrl,
-        chanend ?c_mix_ctl,chanend ?c_clk_ctl, chanend ?c_EANativeTransport_ctr, client interface i_dfu dfuInterface);
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\usb_buffer.h" 1
-# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\usb_buffer.h"
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\devicedefines.h" 1
-# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\usb_buffer.h" 2
-
-void buffer(chanend c_aud_out,
-            chanend c_aud_in,
-
-            chanend c_aud_fb,
-# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\usb_buffer.h"
-            chanend c_sof,
-            chanend c_aud_ctl
-# 61 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\usb_buffer.h"
         );
-# 27 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\decouple.h" 1
-# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\decouple.h"
-void decouple(chanend c_audio_out
 
-
-
-);
-# 28 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
-
-
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\audio.h" 1
-
-
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h" 1
-# 5 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\audio.h" 2
-# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\audio.h"
-void audio(chanend c_in,
-
-
-
-
-
-
-    chanend ?c_config, chanend ?c_adc
-
-   , server interface i_dfu dfuInterface
-
-
-
-
-    , chanend ?c_control
-);
-
-void SpdifTxWrapper(chanend c_spdif_tx);
-# 32 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
-# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\clocking.h" 1
-# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio\\clocking.h"
-void clockGen (streaming chanend ?c_spdif_rx, chanend ?c_adat_rx, out port p, chanend c_audio, chanend c_clk_ctl, chanend c_clk_int);
-# 51 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
-
-
-
-
-
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h" 1
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
-typedef enum {
-    _GET_INTERPOLATION_MODE =1,
-    _SET_INTERPOLATION_MODE =2
-} DAC_COMMAND;
-
-
-
-
-typedef enum {
-    _TBD =0,
-    _STEP =1,
-    _LINEAR =2,
-    _QUAD =3,
-    _CUBIC =4,
-    _SINC4 =5,
-    _SINC8 =6
-} INTERPOLATION_MODE;
-
-
-
-
-
-
-typedef enum {
-    _AUDIO_FORMAT_CHANGE = 0,
-    _INTERPOLATION_MODE_CHANGE = 1
-} DAC_RETURN_CODE;
-
-
-
-
-
-
-void ConfigureSerialDacPorts();
-
-void InitDebugOut(out port txd);
-
-void DebugOut(unsigned data, unsigned count, out port txd);
-
-
-unsigned start_ssdac(chanend c_in, unsigned sample_rate);
-
-
-unsigned start_fir(chanend c_in, unsigned sample_rate);
-
-
-unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
-
-void audio_xss(chanend c_in, chanend ?c_control);
-# 58 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
-# 1 ".././src\\ssdac_conf.h" 1
-# 59 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 1
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
-void set_display_control_flag(unsigned bitmask);
-void update_samp_freq(unsigned freq);
-void update_samp_resolution(unsigned res);
-void update_chan_count(unsigned ch);
-
-void display_control();
-
-typedef enum {
-    _SDC_AUDIO = 1,
-    _USB_AUDIO = 2,
-    _DAC_MODE_SELECTION = 3,
-    _FUNCTION_SELECTION = 4
-} CONSOLE_MODE;
-
-CONSOLE_MODE get_console_mode();
-void set_console_mode(CONSOLE_MODE value);
-# 61 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
-
-
-
-
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 1
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
-typedef enum {
-    _USB_DAC = 0,
-    _SDC_PLAY = 1,
-} FUNCTION_SELECTOR;
-
-
-typedef enum {
-    _PENDING_Q = 0,
-    _INPUT_Q = 1,
-    _CURRENT_Q = 2
-} QUERY_TYPE;
-
-typedef enum {
-    _PLAY_CMD_EMPTY,
-    _PLAY_CMD_PREV_FOLDER,
-    _PLAY_CMD_NEXT_FOLDER,
-    _PLAY_CMD_PREV_TRACK,
-    _PLAY_CMD_NEXT_TRACK,
-    _PLAY_CMD_REWIND,
-    _PLAY_CMD_REVERSE_SKIP,
-    _PLAY_CMD_FORWARD_SKIP,
-    _PLAY_CMD_PAUSE,
-    _PLAY_CMD_STOP
-} PLAY_COMMAND;
-
-unsigned QueryChannel(chanend ch, unsigned command);
-
-void button_listener(chanend ?c_play_control, chanend ?c_dac_control);
-# 67 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
-
+void AudioHwInit(chanend ?c_codec);
+void FuncGen(unsigned int fsample, unsigned int freq, streaming chanend c_out);
+void decoupler(chanend c_buf_control, chanend c_out);
+void qspi_server(server interface qspi_access i);
+void console_core(chanend ?c_play_control, chanend ?c_dac_control);

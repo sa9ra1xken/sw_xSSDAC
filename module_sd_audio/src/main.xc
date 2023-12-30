@@ -18,6 +18,8 @@
 #include <stdio.h>
 #include "button_listener.h"
 #include "display_control.h"
+#include "console.h"
+
 #include "qspi_access.h"
 
 #if _DAC_MODE_SELECTOR == _DAC_MODE_SELECTOR_EXPLORER
@@ -45,6 +47,8 @@ void AudioHwInit(chanend ?c_codec);
 void FuncGen(unsigned int fsample, unsigned int freq, streaming chanend c_out);
 void decoupler(chanend c_buf_control, chanend c_out);
 void qspi_server(server interface qspi_access i);
+void console_core(NULLABLE_RESOURCE(chanend, c_play_control), NULLABLE_RESOURCE(chanend, c_dac_control));
+
 
 #ifndef _EXCLUDE_MODULE_SDC_AUDIO_MAIN  //added by sakurai for SSDAC
 void thread_speed()
@@ -69,7 +73,8 @@ int main(){
     par{
         on tile[SDC_TILE]: sdcard_play(c_handshake, c_play_control, i);
         on tile[SDC_TILE]: decoupler(c_handshake, c_audio);
-        on tile[SDC_TILE]: button_listener(
+        on tile[SDC_TILE]: button_listener_core(
+        //on tile[SDC_TILE]: console_core(
                 c_play_control
 #if _DAC_MODE_SELECTOR == _DAC_MODE_SELECTOR_BTN_LSTN
                 , c_dac_control
@@ -77,8 +82,8 @@ int main(){
                 , null
 #endif
         );
-        on tile[OLED_TILE]: display_control();
-        on tile[AUDIO_IO_TILE]: audio_xss(
+        on tile[OLED_TILE]: display_control_core();
+        on tile[AUDIO_IO_TILE]: ssdac_core(
                 c_audio
 #if _DAC_MODE_SELECTOR == _DAC_MODE_SELECTOR_NONE
                 , null

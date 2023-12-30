@@ -102,7 +102,7 @@
   <fCall global="true" name="FLAC__stream_decoder_seek_absolute"/>
   <fCall global="true" name="f_read"/>
   <fCall global="true" name="TotalTimeString"/>
-  <fCall global="true" name="information_string"/>
+  <fCall global="true" name="audio_property_string"/>
   <fCall global="true" name="SecElapsed"/>
   <fCall global="true" name="buff_id"/>
   <fCall global="true" name="audio_buffer"/>

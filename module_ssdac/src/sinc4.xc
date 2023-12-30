@@ -8,6 +8,7 @@
 #include <XS1.h>
 #include <stdio.h>
 #include "ssdac.h"
+#include "SSDAC_MODE.h"
 #include "audiohw.h"
 #include "ring_buffer.h"
 //#include "customdefines.h"

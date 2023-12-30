@@ -212,6 +212,9 @@ void sdcard_play(
 )
 {
     debug_printf("\nsdcard_play started");
+
+    set_console_mode(_SDC_AUDIO);
+    set_display_control_flag(BITMASK_SWITCH_CONSOLE);
     set_display_control_flag(BITMASK_UPDATE_FOLDER);
     set_display_control_flag(BITMASK_UPDATE_TRACK);
 

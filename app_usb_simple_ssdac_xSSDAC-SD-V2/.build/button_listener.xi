@@ -478,7 +478,7 @@ typedef enum {
 
 unsigned QueryChannel(chanend ch, unsigned command);
 
-void button_listener(chanend ?c_play_control, chanend ?c_dac_control);
+void button_listener_core(chanend ?c_play_control, chanend ?c_dac_control);
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 1
@@ -488,7 +488,7 @@ void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
 void update_chan_count(unsigned ch);
 
-void display_control();
+void display_control_core();
 
 typedef enum {
     _SDC_AUDIO = 1,
@@ -1503,7 +1503,7 @@ void ExamineKeyInput(){
     }
 }
 
-void button_listener(chanend ?c_play_control, chanend ?c_dac_control){
+void button_listener_core(chanend ?c_play_control, chanend ?c_dac_control){
 
     unsafe {p_console_mode = &console_mode;}
 

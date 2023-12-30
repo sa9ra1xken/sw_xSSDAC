@@ -1862,12 +1862,42 @@ int clz(unsigned x);
 
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 1
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h" 1
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h"
+typedef enum {
+    _GET_INTERPOLATION_MODE =1,
+    _SET_INTERPOLATION_MODE =2
+} DAC_COMMAND;
+
+
+
+
+typedef enum {
+    _TBD =0,
+    _STEP =1,
+    _LINEAR =2,
+    _QUAD =3,
+    _CUBIC =4,
+    _SINC4 =5,
+    _SINC8 =6
+} INTERPOLATION_MODE;
+
+
+
+
+typedef enum {
+    _AUDIO_FORMAT_CHANGE = 0,
+    _INTERPOLATION_MODE_CHANGE = 1
+} DAC_RETURN_CODE;
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 2
+
+
+
 typedef enum {
     _USB_DAC = 0,
     _SDC_PLAY = 1,
 } FUNCTION_SELECTOR;
-
 
 typedef enum {
     _PENDING_Q = 0,
@@ -1889,8 +1919,11 @@ typedef enum {
 } PLAY_COMMAND;
 
 unsigned QueryChannel(chanend ch, unsigned command);
-
-void button_listener(chanend c_play_control, chanend c_dac_control);
+void button_listener_core(chanend c_play_control, chanend c_dac_control);
+void KeyScan();
+void SendBackTrackControl(chanend c_track_control);
+void HandleDacCommand(chanend c_control, DAC_COMMAND command);
+void HandlePlayCommand(chanend c_control, QUERY_TYPE type);
 # 13 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c" 2
 
 

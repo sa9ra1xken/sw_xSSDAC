@@ -1584,7 +1584,7 @@ int AudioClassRequests_2(XUD_ep ep0_out, XUD_ep ep0_in, USB_SetupPacket_t &sp, c
 
                                 int currentFreq44 = 11025;
                                 int currentFreq48 = 8000;
-                                unsigned maxFreq = (192000);
+                                unsigned maxFreq = (384000);
 
 
                                 unsigned usbSpeed;
@@ -1600,7 +1600,7 @@ int AudioClassRequests_2(XUD_ep ep0_out, XUD_ep ep0_in, USB_SetupPacket_t &sp, c
 
                                 for (int k = 0; k < sizeof(lowSampleRateList)/sizeof(unsigned); k++)
                                 {
-                                    if((lowSampleRateList[k] >= (44100)) && (lowSampleRateList[k] <= (192000)))
+                                    if((lowSampleRateList[k] >= (44100)) && (lowSampleRateList[k] <= (384000)))
                                     {
                                         storeFreq(buffer, i, lowSampleRateList[k]);
                                         num_freqs++;

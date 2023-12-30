@@ -1821,7 +1821,7 @@ void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
 void update_chan_count(unsigned ch);
 
-void display_control();
+void display_control_core();
 
 typedef enum {
     _SDC_AUDIO = 1,
@@ -1867,7 +1867,7 @@ typedef enum {
 
 unsigned QueryChannel(chanend ch, unsigned command);
 
-void button_listener(chanend ?c_play_control, chanend ?c_dac_control);
+void button_listener_core(chanend ?c_play_control, chanend ?c_dac_control);
 # 67 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc" 2
 
 
@@ -2069,10 +2069,10 @@ int main()
             , c_dac_control
         );
 # 712 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc"
-        on tile[1]: display_control();
+        on tile[1]: display_control_core();
 
 
-        on tile[1]: button_listener(
+        on tile[1]: button_listener_core(
                 null
                 , c_dac_control
         );

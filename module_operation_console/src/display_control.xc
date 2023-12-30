@@ -33,7 +33,7 @@ on tile [OLED_TILE] : struct r_i2c r_i2c2   = {PORT_OLED};
 extern char track_string[];
 //char folder_string[_MAX_LFN + 1]="folder";
 extern char folder_string[];
-char information_string[100];
+char audio_property_string[100];
 #endif
 
 unsigned display_control_flag = 0;
@@ -133,16 +133,13 @@ static SCROLLING_STATE state;
 unsigned pause_counter;
 unsigned scrolling_row;
 
-#ifdef _SDC_AUDIO_USE_DISPLAY
-
 void UpdateTime(){
     char s[12];
     unsigned min = SecElapsed / 60;
     unsigned sec = SecElapsed % 60;
-    //sprintf(s, "%02d:%02d/%s", min, sec, TotalTimeString);
     sprintf(s, "%02d:%02d", min, sec);
     OLED_SSD1306_put_string(3, s);
-    clear_display_control_flag(BITMASK_UPDATE_TIME);
+    //clear_display_control_flag(BITMASK_UPDATE_TIME);
 }
 
 void ShowFolder(){
@@ -150,7 +147,7 @@ void ShowFolder(){
     pause_counter = PAUSE_COUNT;
     state = _PAUSING;
     scrolling_row = 0;
-    clear_display_control_flag(BITMASK_UPDATE_FOLDER);
+    //clear_display_control_flag(BITMASK_UPDATE_FOLDER);
 }
 
 void ShowTrack(){
@@ -158,27 +155,16 @@ void ShowTrack(){
     pause_counter = PAUSE_COUNT;
     state = _PAUSING;
     scrolling_row = 1;
-    clear_display_control_flag(BITMASK_UPDATE_TRACK);
+    //clear_display_control_flag(BITMASK_UPDATE_TRACK);
 }
 
 void ShowAudioAttribute(){
-    OLED_SSD1306_put_string(2, information_string);
+    OLED_SSD1306_put_string(2, audio_property_string);
     pause_counter = PAUSE_COUNT;
     state = _PAUSING;
     scrolling_row = 2;
-    clear_display_control_flag(BITMASK_UPDATE_INFO);
+    //clear_display_control_flag(BITMASK_UPDATE_INFO);
 }
-
-/*void RedrawTrackDisplay(){
-    OLED_SSD1306_render_string(0, folder_string);
-    OLED_SSD1306_render_string(1, track_string);
-    OLED_SSD1306_render_string(2, information_string);
-    pause_counter = PAUSE_COUNT;
-    state = _PAUSING;
-    scrolling_row = 0;
-    clear_display_control_flag(BITMASK_SWITCH_CONSOLE);
-}*/
-#endif
 
 extern INTERPOLATION_MODE proposed_intpol_mode;
 
@@ -257,14 +243,7 @@ void ShowUsbAudioStatus(){
     scrolling_row = 0;
 }
 
-/**Function to handle display contents for SDC Player, USB Audio, SSDAC approcation
- */
-void display_control(){
-
-    timer t;
-    unsigned time;
-
-    debug_printf("\ndisplay_control started");
+void init_display_frame(){
 
     OLED_SSD1306_begin();
 
@@ -280,121 +259,138 @@ void display_control(){
     pause_counter = PAUSE_COUNT;
     scrolling_row = 0;
 
-    while(1){
-
-        t :> time;
-        time += SCROLL_INTERVAL;
-
-        if (test_display_control_flag(BITMASK_SWITCH_CONSOLE)){
-            clear_display_control_flag(BITMASK_SWITCH_CONSOLE);
-
-            switch (get_console_mode()){
-
-#ifdef _SDC_AUDIO_USE_DISPLAY
-            case _SDC_AUDIO:
-                ShowFolder();
-                ShowTrack();
-                ShowAudioAttribute();
-                UpdateTime();
-                break;
-#endif
-
-#ifdef _USB_AUDIO_USE_DISPLAY
-            case _USB_AUDIO:
-                OLED_SSD1306_put_string(0, "XMOS USB Audio");
-                ShowUsbAudioStatus();
-                OLED_SSD1306_put_string(2, "");
-                OLED_SSD1306_put_string(3, "");
-                break;
-#endif
-            case _DAC_MODE_SELECTION:
-                OLED_SSD1306_put_string(0, "Interpolation mode selector");
-                ShowInterpolationMode(FixedInterpolationMode());
-                OLED_SSD1306_put_string(2, "");
-                OLED_SSD1306_put_string(3, "");
-                break;
-            case _FUNCTION_SELECTION:
-                OLED_SSD1306_put_string(0, "Function selector");
-                OLED_SSD1306_put_string(1, "Selected function takes effect after reset.");
-                OLED_SSD1306_put_string(2, "Press SW1 for USB audio. Press SW2 for SD player.");
-                OLED_SSD1306_put_string(3, "");
-                break;
-            }
-        }
+}
+void handle_display_frame(){
+    //********************************************************
+    if (test_display_control_flag(BITMASK_SWITCH_CONSOLE)){
+        clear_display_control_flag(BITMASK_SWITCH_CONSOLE);
 
         switch (get_console_mode()){
 
 #ifdef _SDC_AUDIO_USE_DISPLAY
         case _SDC_AUDIO:
-            if (test_display_control_flag(BITMASK_UPDATE_TIME)){
-                clear_display_control_flag(BITMASK_UPDATE_TIME);
-                UpdateTime();
-            }
-
-            if (test_display_control_flag(BITMASK_UPDATE_FOLDER)){
-                clear_display_control_flag(BITMASK_UPDATE_FOLDER);
-                ShowFolder();
-            }
-
-            if (test_display_control_flag(BITMASK_UPDATE_TRACK)){
-                clear_display_control_flag(BITMASK_UPDATE_TRACK);
-                ShowTrack();
-            }
-
-            if (test_display_control_flag(BITMASK_UPDATE_INFO)){
-                clear_display_control_flag(BITMASK_UPDATE_INFO);
-                ShowAudioAttribute();
-            }
+            ShowFolder();
+            ShowTrack();
+            ShowAudioAttribute();
+            UpdateTime();
             break;
 #endif
 
 #ifdef _USB_AUDIO_USE_DISPLAY
         case _USB_AUDIO:
-            if (test_display_control_flag(BITMASK_UPDATE_FREQUENCY)){
-                clear_display_control_flag(BITMASK_UPDATE_FREQUENCY);
-                ShowUsbAudioStatus();
-            }
-            if (test_display_control_flag(BITMASK_UPDATE_RESOLUTION)){
-                clear_display_control_flag(BITMASK_UPDATE_RESOLUTION);
-                ShowUsbAudioStatus();
-            }
+            OLED_SSD1306_put_string(0, "XMOS USB Audio");
+            ShowUsbAudioStatus();
+            OLED_SSD1306_put_string(2, "");
+            OLED_SSD1306_put_string(3, "");
             break;
 #endif
         case _DAC_MODE_SELECTION:
-            if (test_display_control_flag(BITMASK_SHOW_PROPOSED_INTPOL)){
-                clear_display_control_flag(BITMASK_SHOW_PROPOSED_INTPOL);
-                ShowInterpolationMode(ProposedInterpolationMode());
-            }
-            if (test_display_control_flag(BITMASK_SHOW_FIXED_INTPOL)){
-                clear_display_control_flag(BITMASK_SHOW_FIXED_INTPOL);
-                ShowInterpolationMode(FixedInterpolationMode());
-            }
+            OLED_SSD1306_put_string(0, "Interpolation mode selector");
+            ShowInterpolationMode(FixedInterpolationMode());
+            OLED_SSD1306_put_string(2, "");
+            OLED_SSD1306_put_string(3, "");
             break;
         case _FUNCTION_SELECTION:
-            if (test_display_control_flag(BITMASK_SHOW_SELECTED_FUNCTION)){
-                clear_display_control_flag(BITMASK_SHOW_SELECTED_FUNCTION);
-                OLED_SSD1306_put_string(3, GetFunctionString(SelectedFunction()));
+            OLED_SSD1306_put_string(0, "Function selector");
+            OLED_SSD1306_put_string(1, "Selected function takes effect after reset.");
+            OLED_SSD1306_put_string(2, "Press SW1 for USB audio. Press SW2 for SD player.");
+            OLED_SSD1306_put_string(3, "");
+            break;
+        }
+    }
+
+    switch (get_console_mode()){
+
+#ifdef _SDC_AUDIO_USE_DISPLAY
+    case _SDC_AUDIO:
+        if (test_display_control_flag(BITMASK_UPDATE_TIME)){
+            clear_display_control_flag(BITMASK_UPDATE_TIME);
+            UpdateTime();
+        }
+
+        if (test_display_control_flag(BITMASK_UPDATE_FOLDER)){
+            clear_display_control_flag(BITMASK_UPDATE_FOLDER);
+            ShowFolder();
+        }
+
+        if (test_display_control_flag(BITMASK_UPDATE_TRACK)){
+            clear_display_control_flag(BITMASK_UPDATE_TRACK);
+            ShowTrack();
+        }
+
+        if (test_display_control_flag(BITMASK_UPDATE_INFO)){
+            clear_display_control_flag(BITMASK_UPDATE_INFO);
+            ShowAudioAttribute();
+        }
+        break;
+#endif
+
+#ifdef _USB_AUDIO_USE_DISPLAY
+    case _USB_AUDIO:
+        if (test_display_control_flag(BITMASK_UPDATE_FREQUENCY)){
+            clear_display_control_flag(BITMASK_UPDATE_FREQUENCY);
+            ShowUsbAudioStatus();
+        }
+        if (test_display_control_flag(BITMASK_UPDATE_RESOLUTION)){
+            clear_display_control_flag(BITMASK_UPDATE_RESOLUTION);
+            ShowUsbAudioStatus();
+        }
+        break;
+#endif
+    case _DAC_MODE_SELECTION:
+        if (test_display_control_flag(BITMASK_SHOW_PROPOSED_INTPOL)){
+            clear_display_control_flag(BITMASK_SHOW_PROPOSED_INTPOL);
+            ShowInterpolationMode(ProposedInterpolationMode());
+        }
+        if (test_display_control_flag(BITMASK_SHOW_FIXED_INTPOL)){
+            clear_display_control_flag(BITMASK_SHOW_FIXED_INTPOL);
+            ShowInterpolationMode(FixedInterpolationMode());
+        }
+        break;
+    case _FUNCTION_SELECTION:
+        if (test_display_control_flag(BITMASK_SHOW_SELECTED_FUNCTION)){
+            clear_display_control_flag(BITMASK_SHOW_SELECTED_FUNCTION);
+            OLED_SSD1306_put_string(3, GetFunctionString(SelectedFunction()));
+        }
+    }
+
+    switch (state){
+
+        case _PAUSING:
+            pause_counter--;
+            if (pause_counter <= 0){
+                state = _SCROLLING;
             }
-        }
+            break;
+        case _SCROLLING:
+            if (OLED_SSD1306_shift_left(scrolling_row) == _END_OF_LINE){
+                scrolling_row++;
+                if (scrolling_row > LAST_ROW_TO_SCROLL) scrolling_row = 0;
+                OLED_SSD1306_put_string(scrolling_row, "");
+                pause_counter = PAUSE_COUNT;
+                state = _PAUSING;
+            }
+            break;
+    }
+}
 
-        switch (state){
+/**Function to handle display contents for SDC Player, USB Audio, SSDAC approcation
+ */
+void display_control_core(){
 
-            case _PAUSING:
-                pause_counter--;
-                if (pause_counter <= 0){
-                    state = _SCROLLING;
-                }
-                break;
-            case _SCROLLING:
-                if (OLED_SSD1306_shift_left(scrolling_row) == _END_OF_LINE){
-                    scrolling_row++;
-                    if (scrolling_row > LAST_ROW_TO_SCROLL) scrolling_row = 0;
-                    OLED_SSD1306_put_string(scrolling_row, "");
-                    pause_counter = PAUSE_COUNT;
-                    state = _PAUSING;
-                }
-                break;
-        }
+    timer t;
+    unsigned time;
+    debug_printf("\ndisplay_control started");
+
+    init_display_frame();
+
+    while(1){
+
+        t :> time;
+        time += SCROLL_INTERVAL;
+
+        handle_display_frame();
+
         t when timerafter(time) :> void;
     }
 }

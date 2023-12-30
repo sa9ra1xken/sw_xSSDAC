@@ -819,7 +819,7 @@ void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
 void update_chan_count(unsigned ch);
 
-void display_control();
+void display_control_core();
 
 typedef enum {
     _SDC_AUDIO = 1,

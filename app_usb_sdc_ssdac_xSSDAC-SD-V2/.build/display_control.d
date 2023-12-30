@@ -7,6 +7,7 @@ display_control.o: \
   C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/DISPLAY_CONTROL.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/SSDAC_MODE.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/SSDAC.h \
   C:/Users/takaaki/git/sw_xSSDAC/app_usb_sdc_ssdac_xSSDAC-SD-V2/src/SSDAC_CONF.h
 

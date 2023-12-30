@@ -16,8 +16,10 @@
 <fDef name="delay_microseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="delay_milliseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="delay_seconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
-<fDef name="display_control" global="true" noreturn="true" doNotSpecialize="false" numParams="0"/>
+<fDef name="display_control_core" global="true" noreturn="true" doNotSpecialize="false" numParams="0"/>
 <fDef name="get_console_mode" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
+<fDef name="handle_display_frame" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
+<fDef name="init_display_frame" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
 <fDef name="set_console_mode" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
 <fDef name="set_display_control_flag" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
 <fDef name="test_display_control_flag" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
@@ -667,6 +669,10 @@
       <value type="unknown"/>
     </values>
   </arg>
+</fCall>
+<fCall name="init_display_frame" global="true" numArgs="0">
+</fCall>
+<fCall name="handle_display_frame" global="true" numArgs="0">
 </fCall>
 <fCall name="__builtin_timer_after" global="true" numArgs="2">
   <arg num="0">

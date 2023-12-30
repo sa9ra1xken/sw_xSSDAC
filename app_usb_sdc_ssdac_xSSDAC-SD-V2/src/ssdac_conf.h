@@ -12,7 +12,6 @@
 #define _USB_AUDIO_USE_DISPLAY          //added by sakurai for SSDAC
 #define _SDC_AUDIO_USE_DISPLAY          //added by sakurai for SSDAC
 
-
 #define NUM_SSDAC_CHAN    2     /* Number of channels from host to device */
 
 /* Tile defines */

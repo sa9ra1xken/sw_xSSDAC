@@ -30,7 +30,7 @@
  * display interface
  *******************************/
 extern char TotalTimeString[];
-extern char information_string[];
+extern char audio_property_string[];
 extern unsigned int SecElapsed;
 
 /********************************
@@ -234,14 +234,14 @@ void metadata_callback(
         unsigned TotalSec = TotalTime % 60;
         sprintf(TotalTimeString,"%02d:%02d", TotalMin, TotalSec);
 
-        sprintf(information_string,"FLAC %1dch %4.1fksps %2dbit %s",
+        sprintf(audio_property_string,"FLAC %1dch %4.1fksps %2dbit %s",
                 channels,
                 ((float)sample_rate/1000),
                 bits_per_sample,
                 TotalTimeString);
 
         set_display_control_flag(BITMASK_UPDATE_INFO);
-        debug_printf("\n%s", information_string);
+        debug_printf("\n%s", audio_property_string);
 
         /*
         fprintf(stderr, "sample rate    : %u Hz\n", sample_rate);

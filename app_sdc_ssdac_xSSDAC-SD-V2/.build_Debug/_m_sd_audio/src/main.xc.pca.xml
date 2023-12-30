@@ -58,7 +58,7 @@
     </values>
   </arg>
 </fCall>
-<fCall name="button_listener" global="true" numArgs="2" impId="2">
+<fCall name="button_listener_core" global="true" numArgs="2" impId="2">
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -70,9 +70,9 @@
     </values>
   </arg>
 </fCall>
-<fCall name="display_control" global="true" numArgs="0" impId="3">
+<fCall name="display_control_core" global="true" numArgs="0" impId="3">
 </fCall>
-<fCall name="audio_xss" global="true" numArgs="2" impId="4">
+<fCall name="ssdac_core" global="true" numArgs="2" impId="4">
   <arg num="0">
     <values>
       <value type="unknown"/>

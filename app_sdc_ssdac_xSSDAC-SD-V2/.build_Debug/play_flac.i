@@ -652,8 +652,8 @@ unsigned byterev(unsigned x);
 int clz(unsigned x);
 # 13 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 1
-# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 1
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 1 3
 # 122 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 3
 typedef unsigned chanend;
@@ -731,14 +731,43 @@ typedef unsigned out_buffered_port_32_t;
 
 
 typedef unsigned clock;
-# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 2
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 2
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h" 1
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h"
+typedef enum {
+    _GET_INTERPOLATION_MODE =1,
+    _SET_INTERPOLATION_MODE =2
+} DAC_COMMAND;
+
+
+
+
+typedef enum {
+    _TBD =0,
+    _STEP =1,
+    _LINEAR =2,
+    _QUAD =3,
+    _CUBIC =4,
+    _SINC4 =5,
+    _SINC8 =6
+} INTERPOLATION_MODE;
+
+
+
+
+typedef enum {
+    _AUDIO_FORMAT_CHANGE = 0,
+    _INTERPOLATION_MODE_CHANGE = 1
+} DAC_RETURN_CODE;
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 2
+
 
 
 typedef enum {
     _USB_DAC = 0,
     _SDC_PLAY = 1,
 } FUNCTION_SELECTOR;
-
 
 typedef enum {
     _PENDING_Q = 0,
@@ -760,8 +789,11 @@ typedef enum {
 } PLAY_COMMAND;
 
 unsigned QueryChannel(chanend ch, unsigned command);
-
-void button_listener(chanend c_play_control, chanend c_dac_control);
+void button_listener_core(chanend c_play_control, chanend c_dac_control);
+void KeyScan();
+void SendBackTrackControl(chanend c_track_control);
+void HandleDacCommand(chanend c_control, DAC_COMMAND command);
+void HandlePlayCommand(chanend c_control, QUERY_TYPE type);
 # 14 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h" 1
@@ -976,14 +1008,16 @@ typedef enum {
 } PLAY_TRACK_RC;
 # 19 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h" 1
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\display_control.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 1
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
 void update_samp_resolution(unsigned res);
 void update_chan_count(unsigned ch);
 
-void display_control();
+void display_control_core();
+void init_display_frame();
+void handle_display_frame();
 
 typedef enum {
     _SDC_AUDIO = 1,
@@ -3820,7 +3854,7 @@ USER_CONTROL_TYPE TestUserControl(
 
 
 extern char TotalTimeString[];
-extern char information_string[];
+extern char audio_property_string[];
 extern unsigned int SecElapsed;
 
 
@@ -4024,14 +4058,14 @@ void metadata_callback(
         unsigned TotalSec = TotalTime % 60;
         sprintf(TotalTimeString,"%02d:%02d", TotalMin, TotalSec);
 
-        sprintf(information_string,"FLAC %1dch %4.1fksps %2dbit %s",
+        sprintf(audio_property_string,"FLAC %1dch %4.1fksps %2dbit %s",
                 channels,
                 ((float)sample_rate/1000),
                 bits_per_sample,
                 TotalTimeString);
 
         set_display_control_flag(0x00000008);
-        debug_printf("\n%s", information_string);
+        debug_printf("\n%s", audio_property_string);
 
 
 
