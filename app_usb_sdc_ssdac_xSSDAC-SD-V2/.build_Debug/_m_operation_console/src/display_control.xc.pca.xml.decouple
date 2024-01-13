@@ -253,7 +253,7 @@
 <fCall name="write" global="true" interface="qspi_access" numArgs="3">
   <arg num="0">
     <values>
-      <value type="intval"><intval isSigned="true" val="1"/></value>
+      <value type="intval"><intval isSigned="true" val="4"/></value>
     </values>
   </arg>
   <arg num="1">
@@ -282,7 +282,7 @@
 <fCall name="write" global="true" interface="qspi_access" numArgs="3">
   <arg num="0">
     <values>
-      <value type="intval"><intval isSigned="true" val="257"/></value>
+      <value type="intval"><intval isSigned="true" val="260"/></value>
     </values>
   </arg>
   <arg num="1">

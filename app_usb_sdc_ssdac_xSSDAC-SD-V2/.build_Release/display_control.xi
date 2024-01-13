@@ -1945,13 +1945,19 @@ void ssdac_core(chanend c_in, chanend ?c_control);
 # 25 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 
-# 1 ".././src\\flash_map.h" 1
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\persistent_storage_map.h" 1
 # 27 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 # 38 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 typedef enum {
     _PAUSING,
     _SCROLLING
 } SCROLLING_STATE;
+
+char track_string[(256)]="track";
+char folder_string[(256)]="folder";
+
+
+char audio_property_string[100];
 
 static SCROLLING_STATE state;
 
@@ -2051,9 +2057,6 @@ void GetStreamFormatString(char str[]){
     return;
 }
 
-extern char track_string[];
-extern char folder_string[];
-char audio_property_string[100];
 unsigned SecElapsed;
 char TotalTimeString[6];
 

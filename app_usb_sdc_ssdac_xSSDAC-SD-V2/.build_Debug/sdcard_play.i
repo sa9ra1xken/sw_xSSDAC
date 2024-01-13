@@ -1507,9 +1507,10 @@ const char * setting_file_name = "0:/CONTEXTSAVE.TXT";
 # 30 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 
-char track_string[(256)]="track";
 
-char folder_string[(256)]="folder";
+
+extern char track_string[];
+extern char folder_string[];
 
 char scratch[255 + 1];
 
@@ -1579,7 +1580,7 @@ int GoFolder(
         char * folder
 ){
     f_chdir(folder);
-    f_getcwd (folder_string, sizeof(folder_string));
+    f_getcwd (folder_string, (256));
     set_display_control_flag(0x00000002);
     return 0;
 }
@@ -1596,7 +1597,7 @@ int ClimbUp(
     GetDirIndexOf(&index, cur_item );
     debug_printf("\ncurrent index %d", index);
 
-    f_getcwd (&folder_string, sizeof(folder_string));
+    f_getcwd (&folder_string, (256));
     set_display_control_flag(0x00000002);
     return index;
 }
@@ -1608,7 +1609,7 @@ int GoPreviousFolder(
     do{
         index = ClimbUp(
         ) -1;
-        f_getcwd (&folder_string, sizeof(folder_string));
+        f_getcwd (&folder_string, (256));
     } while ((strcmp(folder_string,"0:/")!=0)&&(index<=2));
 
     set_display_control_flag(0x00000002);
@@ -1644,7 +1645,7 @@ PLAY_TRACK_RC PlayTrack(const TCHAR* fn, chanend c_handshake, chanend c_control)
     file_format_id[4]='\0';
 
     debug_printf("\nFile Format ID = %s (0x%02x%02x%02x%02x)", file_format_id, file_format_id[0], file_format_id[1], file_format_id[2], file_format_id[3]);
-# 177 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
+# 178 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
     if (strncmp(file_format_id, "RIFF", 4)==0){
         rc = PlayRIFF(&file, c_handshake, c_control);
         res = f_close (&file);
@@ -1688,7 +1689,7 @@ void sdcard_play(
     debug_printf("\nf_mount done");
 
     int track = 0;
-# 236 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
+# 237 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
     GoFolder(folder_string);
 
     debug_printf("\ncurrent dir >%s<", folder_string);
@@ -1706,7 +1707,7 @@ void sdcard_play(
 
         while (state == IDLE){
             debug_printf("\nIDLE");
-# 262 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
+# 263 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
             PLAY_COMMAND reply = QueryChannel(c_play_control, _INPUT_Q);
             switch (reply){
             case _PLAY_CMD_PREV_TRACK:
@@ -1768,7 +1769,7 @@ void sdcard_play(
         }
         else
         {
-            strncpy(track_string, fn, sizeof(track_string));
+            strncpy(track_string, fn, (256));
 
             debug_printf("\nplaying %s", track_string);
 

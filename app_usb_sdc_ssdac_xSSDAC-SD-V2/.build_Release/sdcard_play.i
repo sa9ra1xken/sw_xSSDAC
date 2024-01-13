@@ -1507,9 +1507,10 @@ const char * setting_file_name = "0:/CONTEXTSAVE.TXT";
 # 30 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 
-char track_string[(256)]="track";
 
-char folder_string[(256)]="folder";
+
+extern char track_string[];
+extern char folder_string[];
 
 char scratch[255 + 1];
 
@@ -1579,7 +1580,7 @@ int GoFolder(
         char * folder
 ){
     f_chdir(folder);
-    f_getcwd (folder_string, sizeof(folder_string));
+    f_getcwd (folder_string, (256));
     set_display_control_flag(0x00000002);
     return 0;
 }
@@ -1596,7 +1597,7 @@ int ClimbUp(
     GetDirIndexOf(&index, cur_item );
                                              ;
 
-    f_getcwd (&folder_string, sizeof(folder_string));
+    f_getcwd (&folder_string, (256));
     set_display_control_flag(0x00000002);
     return index;
 }
@@ -1608,7 +1609,7 @@ int GoPreviousFolder(
     do{
         index = ClimbUp(
         ) -1;
-        f_getcwd (&folder_string, sizeof(folder_string));
+        f_getcwd (&folder_string, (256));
     } while ((strcmp(folder_string,"0:/")!=0)&&(index<=2));
 
     set_display_control_flag(0x00000002);
@@ -1695,7 +1696,7 @@ void sdcard_play(
                                   ;
 
     int track = 0;
-# 236 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
+# 237 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
     GoFolder(folder_string);
 
                                                      ;
@@ -1713,7 +1714,7 @@ void sdcard_play(
 
         while (state == IDLE){
                                   ;
-# 262 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
+# 263 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
             PLAY_COMMAND reply = QueryChannel(c_play_control, _INPUT_Q);
             switch (reply){
             case _PLAY_CMD_PREV_TRACK:
@@ -1775,7 +1776,7 @@ void sdcard_play(
         }
         else
         {
-            strncpy(track_string, fn, sizeof(track_string));
+            strncpy(track_string, fn, (256));
 
                                                       ;
 
