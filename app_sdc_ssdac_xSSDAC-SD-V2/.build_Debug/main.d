@@ -6,6 +6,5 @@ main.o: \
   C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/SSDAC_MODE.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.h \
-  C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/console.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.h
 

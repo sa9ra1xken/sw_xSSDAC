@@ -18,11 +18,12 @@
 #include <stdio.h>
 #include <string.h>
 #include <xccompat.h>
+#include "qspi_access.h"
+#define DEBUG_UNIT QSPI_ACCESS
+#include <debug_print.h>
 
 #define FALSE 0
 #define TRUE 1
-
-//#define _QUIET
 
 // Ports for QuadSPI access on explorerKIT.
 fl_QSPIPorts ports = {
@@ -30,11 +31,6 @@ fl_QSPIPorts ports = {
     PORT_SQI_SCLK,
     PORT_SQI_SIO,
     on tile[0]: XS1_CLKBLK_1
-};
-
-interface qspi_access{
-    void write(int offset, int size, char buffer[]);
-    void read(int offset, int size, char buffer[]);
 };
 
 // List of QuadSPI devices that are supported by default.
@@ -53,20 +49,16 @@ void qspi_server(server interface qspi_access i){
     // Connect to the QuadSPI device using the quadflash library function fl_connectToDevice.
     if(fl_connectToDevice(ports, deviceSpecs, sizeof(deviceSpecs)/sizeof(fl_QuadDeviceSpec)) != 0)
     {
-        printf("\nUnable to connect to a SPI flash device");
-        fflush(stdout);
+        debug_printf("\nUnable to connect to a SPI flash device");
         while(1){}
     }
 
-#ifndef _QUIET
-    printf("\n\nFlash Type: %d\n", fl_getFlashType());
-    printf("Flash Size: %x\n", fl_getFlashSize());
-    printf("Flash fl_getDataPartitionSize: %d\n", fl_getDataPartitionSize());
-    printf("Flash fl_getNumDataSectors: %d\n", fl_getNumDataSectors());
-    printf("Flash fl_getDataSectorSize(0): %d\n", fl_getDataSectorSize(0));
-    printf("Flash fl_getWriteScratchSize(0, 64): %d\n", fl_getWriteScratchSize(0, 64));
-    fflush(stdout);
-#endif
+    debug_printf("\n\nFlash Type: %d\n", fl_getFlashType());
+    debug_printf("Flash Size: %x\n", fl_getFlashSize());
+    debug_printf("Flash fl_getDataPartitionSize: %d\n", fl_getDataPartitionSize());
+    debug_printf("Flash fl_getNumDataSectors: %d\n", fl_getNumDataSectors());
+    debug_printf("Flash fl_getDataSectorSize(0): %d\n", fl_getDataSectorSize(0));
+    debug_printf("Flash fl_getWriteScratchSize(0, 64): %d\n", fl_getWriteScratchSize(0, 64));
 
     char * write_buffer;
     unsigned write_pending = FALSE;
@@ -76,20 +68,22 @@ void qspi_server(server interface qspi_access i){
     while(1)
     {
         if (write_pending){
+            debug_printf("\nquadflash write sync offset, %d %d %s", write_offset, write_count, write_buffer);
             unsigned scratch_size = fl_getWriteScratchSize(write_offset, write_count);
 
             /* scratchÇÃÇΩÇﬂÇÃÉÅÉÇÉäÇämï€ */
             char *scratch;
             scratch = (char *)malloc(scratch_size);
             if(scratch == NULL) {
-                printf("\ncouldn't allocate scratch memory");
+                debug_printf("- couldn't allocate scratch memory");
             }
             else
             {
                 if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)
                 {
-                    printf("\nfl_writeData failed");
+                    debug_printf("- fl_writeData failed");
                 }
+                debug_printf("- fl_writeData success");
                 free(scratch);
             }
             free(write_buffer);
@@ -98,6 +92,7 @@ void qspi_server(server interface qspi_access i){
 
         select {
             case i.write(int offset, int size, char buffer[]):
+                //debug_printf("\nquadflash write sync, %d, %d, %s", offset, size, buffer);
                 write_buffer = (char *)malloc(size);
                 memcpy(write_buffer, buffer, size );
                 write_count = size;

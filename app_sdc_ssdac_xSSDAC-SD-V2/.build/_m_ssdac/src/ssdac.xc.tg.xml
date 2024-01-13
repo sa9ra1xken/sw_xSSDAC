@@ -1,0 +1,302 @@
+<taskgraph>
+<task>
+  <name>delay_seconds</name>
+  <inFunction>delay_seconds</inFunction>
+  <calledFunction>delay_ticks_longlong</calledFunction>
+</task>
+<task>
+  <name>delay_milliseconds</name>
+  <inFunction>delay_milliseconds</inFunction>
+  <calledFunction>delay_ticks_longlong</calledFunction>
+</task>
+<task>
+  <name>delay_microseconds</name>
+  <inFunction>delay_microseconds</inFunction>
+  <calledFunction>delay_ticks_longlong</calledFunction>
+</task>
+<task>
+  <name>DoSampleTransfer</name>
+  <inFunction>DoSampleTransfer</inFunction>
+</task>
+<task>
+  <name>ConfigureSerialDacPorts</name>
+  <inFunction>ConfigureSerialDacPorts</inFunction>
+  <endOfSeqCalledFunction>__builtin_start_clock</endOfSeqCalledFunction>
+</task>
+<task>
+  <name>oneshot_indicator</name>
+  <inFunction>oneshot_indicator</inFunction>
+</task>
+<task>
+  <name>serial_dac_driver</name>
+  <inFunction>serial_dac_driver</inFunction>
+</task>
+<task>
+  <name>serial_dac_driver_preserve</name>
+  <inFunction>serial_dac_driver_preserve</inFunction>
+</task>
+<task>
+  <name>clipper</name>
+  <inFunction>clipper</inFunction>
+</task>
+<task>
+  <name>interpolator</name>
+  <inFunction>interpolator</inFunction>
+</task>
+<task>
+  <name>spline_solver</name>
+  <inFunction>spline_solver</inFunction>
+</task>
+<task>
+  <name>passthrough</name>
+  <inFunction>passthrough</inFunction>
+</task>
+<task>
+  <name>start_ssdac</name>
+  <inFunction>start_ssdac</inFunction>
+</task>
+<task>
+  <name>.task.0</name>
+  <inFunction>start_ssdac</inFunction>
+  <parent>start_ssdac</parent>
+  <core>1</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.interpolator.1</name>
+  <inFunction>start_ssdac</inFunction>
+  <parent>start_ssdac</parent>
+  <calledFunction>interpolator</calledFunction>
+  <core>2</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.clipper.2</name>
+  <inFunction>start_ssdac</inFunction>
+  <parent>start_ssdac</parent>
+  <calledFunction>clipper</calledFunction>
+  <core>3</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.serial_dac_driver.3</name>
+  <inFunction>start_ssdac</inFunction>
+  <parent>start_ssdac</parent>
+  <calledFunction>serial_dac_driver</calledFunction>
+  <core>4</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.oneshot_indicator.4</name>
+  <inFunction>start_ssdac</inFunction>
+  <parent>start_ssdac</parent>
+  <calledFunction>oneshot_indicator</calledFunction>
+  <core>5</core>
+  <inPar/>
+</task>
+<task>
+  <name>start_fir</name>
+  <inFunction>start_fir</inFunction>
+</task>
+<task>
+  <name>.task.0</name>
+  <inFunction>start_fir</inFunction>
+  <parent>start_fir</parent>
+  <core>7</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.clipper.1</name>
+  <inFunction>start_fir</inFunction>
+  <parent>start_fir</parent>
+  <calledFunction>clipper</calledFunction>
+  <core>8</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.serial_dac_driver.2</name>
+  <inFunction>start_fir</inFunction>
+  <parent>start_fir</parent>
+  <calledFunction>serial_dac_driver</calledFunction>
+  <core>9</core>
+  <inPar/>
+</task>
+<task>
+  <name>configure_audio_process</name>
+  <inFunction>configure_audio_process</inFunction>
+</task>
+<task>
+  <name>.task.0</name>
+  <inFunction>configure_audio_process</inFunction>
+  <parent>configure_audio_process</parent>
+  <core>11</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.clipper.1</name>
+  <inFunction>configure_audio_process</inFunction>
+  <parent>configure_audio_process</parent>
+  <calledFunction>clipper</calledFunction>
+  <core>12</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.serial_dac_driver.2</name>
+  <inFunction>configure_audio_process</inFunction>
+  <parent>configure_audio_process</parent>
+  <calledFunction>serial_dac_driver</calledFunction>
+  <core>13</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.3</name>
+  <inFunction>configure_audio_process</inFunction>
+  <parent>configure_audio_process</parent>
+  <core>15</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.clipper.4</name>
+  <inFunction>configure_audio_process</inFunction>
+  <parent>configure_audio_process</parent>
+  <calledFunction>clipper</calledFunction>
+  <core>16</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.serial_dac_driver.5</name>
+  <inFunction>configure_audio_process</inFunction>
+  <parent>configure_audio_process</parent>
+  <calledFunction>serial_dac_driver</calledFunction>
+  <core>17</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.6</name>
+  <inFunction>configure_audio_process</inFunction>
+  <parent>configure_audio_process</parent>
+  <core>19</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.serial_dac_driver.7</name>
+  <inFunction>configure_audio_process</inFunction>
+  <parent>configure_audio_process</parent>
+  <calledFunction>serial_dac_driver</calledFunction>
+  <core>20</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.8</name>
+  <inFunction>configure_audio_process</inFunction>
+  <parent>configure_audio_process</parent>
+  <core>22</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.interpolator.9</name>
+  <inFunction>configure_audio_process</inFunction>
+  <parent>configure_audio_process</parent>
+  <calledFunction>interpolator</calledFunction>
+  <core>23</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.clipper.10</name>
+  <inFunction>configure_audio_process</inFunction>
+  <parent>configure_audio_process</parent>
+  <calledFunction>clipper</calledFunction>
+  <core>24</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.serial_dac_driver.11</name>
+  <inFunction>configure_audio_process</inFunction>
+  <parent>configure_audio_process</parent>
+  <calledFunction>serial_dac_driver</calledFunction>
+  <core>25</core>
+  <inPar/>
+</task>
+<task>
+  <name>.task.oneshot_indicator.12</name>
+  <inFunction>configure_audio_process</inFunction>
+  <parent>configure_audio_process</parent>
+  <calledFunction>oneshot_indicator</calledFunction>
+  <core>26</core>
+  <inPar/>
+</task>
+<task>
+  <name>ssdac_core</name>
+  <inFunction>ssdac_core</inFunction>
+</task>
+<connection>
+  <ends>
+    <end task=".task.0" type="schan"/>
+    <end task=".task.interpolator.1" type="schan"/>
+  </ends>
+  <name>c_coefficients</name>
+</connection>
+<connection>
+  <ends>
+    <end task=".task.interpolator.1" type="schan"/>
+    <end task=".task.clipper.2" type="schan"/>
+  </ends>
+  <name>c_super_sample</name>
+</connection>
+<connection>
+  <ends>
+    <end task=".task.clipper.2" type="schan"/>
+    <end task=".task.serial_dac_driver.3" type="schan"/>
+  </ends>
+  <name>c_clipped</name>
+</connection>
+<connection>
+  <ends>
+    <end task=".task.clipper.2" type="schan"/>
+    <end task=".task.oneshot_indicator.4" type="schan"/>
+  </ends>
+  <name>c_over</name>
+</connection>
+<connection>
+  <ends>
+    <end task=".task.0" type="schan"/>
+    <end task=".task.clipper.1" type="schan"/>
+  </ends>
+  <name>c_super_sample</name>
+</connection>
+<connection>
+  <ends>
+    <end task=".task.clipper.1" type="schan"/>
+    <end task=".task.serial_dac_driver.2" type="schan"/>
+  </ends>
+  <name>c_clipped</name>
+</connection>
+<connection>
+  <ends>
+    <end task=".task.interpolator.9" type="schan"/>
+    <end task=".task.clipper.10" type="schan"/>
+  </ends>
+  <name>c_super_sample</name>
+</connection>
+<connection>
+  <ends>
+    <end task=".task.clipper.10" type="schan"/>
+    <end task=".task.serial_dac_driver.11" type="schan"/>
+  </ends>
+  <name>c_clipped</name>
+</connection>
+<connection>
+  <ends>
+    <end task=".task.8" type="schan"/>
+    <end task=".task.interpolator.9" type="schan"/>
+  </ends>
+  <name>c_coefficients</name>
+</connection>
+<connection>
+  <ends>
+    <end task=".task.clipper.10" type="schan"/>
+    <end task=".task.oneshot_indicator.12" type="schan"/>
+  </ends>
+  <name>c_over</name>
+</connection>
+</taskgraph>

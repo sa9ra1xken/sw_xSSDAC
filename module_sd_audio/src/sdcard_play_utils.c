@@ -11,7 +11,8 @@
 #include <stdbool.h>
 
 bool ReadUnsigned(FIL *fp, UINT *dp, UINT size){
-    char buff[size];
+    //char buff[size];
+    char buff[8];
     UINT ByteRead;
 
     /*FRESULT res = */f_read (fp, buff, size, &ByteRead);

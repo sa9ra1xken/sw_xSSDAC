@@ -215,7 +215,7 @@ write_callback(
     //  return FLAC__STREAM_DECODER_WRITE_STATUS_ABORT
 }
 
-void metadata_callback(
+static void metadata_callback(
         const FLAC__StreamDecoder *decoder,
         const FLAC__StreamMetadata *metadata,
         void *client_data)
@@ -240,7 +240,7 @@ void metadata_callback(
                 bits_per_sample,
                 TotalTimeString);
 
-        set_display_control_flag(BITMASK_UPDATE_INFO);
+        set_display_control_flag(BITMASK_SHOW_AUDIO_PROPERTY);
         debug_printf("\n%s", audio_property_string);
 
         /*
@@ -252,7 +252,7 @@ void metadata_callback(
     }
 }
 
-void error_callback(
+static void error_callback(
         const FLAC__StreamDecoder *decoder,
         FLAC__StreamDecoderErrorStatus status,
         void *client_data)
@@ -291,11 +291,8 @@ PLAY_TRACK_RC PlayFLAC(FIL* p_file, chanend handshake, chanend c_control)
 {
     ptr_file = p_file;
     f_lseek(ptr_file, 0);
-    debug_printf("\nEntered PlayFLAC function");
+    debug_printf("\nPlayFLAC function");
     chan_handshake = handshake;
-    debug_printf("\nhasdshake copied");
-
-    //============================================
     decoder = FLAC__stream_decoder_new();
     if(decoder == NULL){
         debug_printf("\nFailed to create decoder");
@@ -336,7 +333,9 @@ PLAY_TRACK_RC PlayFLAC(FIL* p_file, chanend handshake, chanend c_control)
     while(1){
 
         if (TestUserControl(c_control, &rc, Skip ) == _USER_CONTROL_RETURN){
+            debug_printf("\n_USER_CONTROL_RETURN detected");
             FLAC__stream_decoder_delete(decoder);
+            debug_printf("\ndecoder_deleted");
             return rc;
         }
 
@@ -352,6 +351,7 @@ PLAY_TRACK_RC PlayFLAC(FIL* p_file, chanend handshake, chanend c_control)
             case FLAC__STREAM_DECODER_END_OF_STREAM:
                 debug_printf("\nEnd of Stream\n");
                 FLAC__stream_decoder_delete(decoder);
+                debug_printf("\ndecoder_deleted");
                 return _RC_NEXT_TRACK;
             default:
                 /* proceed to next frame */

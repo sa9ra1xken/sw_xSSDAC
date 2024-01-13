@@ -33,7 +33,7 @@
 	.cc_top FLAC__format_sample_rate_is_valid.function,FLAC__format_sample_rate_is_valid
 FLAC__format_sample_rate_is_valid:
 .Lfunc_begin0:
-	.loc	1 211 0
+	.loc	1 213 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -42,14 +42,14 @@ FLAC__format_sample_rate_is_valid:
 	}
 .Ltmp0:
 	ldw r1, cp[.LCPI0_0]
-	.loc	1 213 3 prologue_end
+	.loc	1 215 3 prologue_end
 .Ltmp1:
 	{
 		lsu r0, r0, r1
 		retsp 0
 	}
 .Ltmp2:
-	.loc	1 217 1
+	.loc	1 219 1
 	# RETURN_REG_HOLDER
 .Ltmp3:
 	.cc_bottom FLAC__format_sample_rate_is_valid.function
@@ -72,7 +72,7 @@ FLAC__format_sample_rate_is_valid:
 	.cc_top FLAC__format_blocksize_is_subset.function,FLAC__format_blocksize_is_subset
 FLAC__format_blocksize_is_subset:
 .Lfunc_begin1:
-	.loc	1 220 0
+	.loc	1 222 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -80,25 +80,25 @@ FLAC__format_blocksize_is_subset:
 		dualentsp 0
 	}
 	ldc r2, 16384
-	.loc	1 221 5 prologue_end
+	.loc	1 223 5 prologue_end
 .Ltmp5:
 	{
 		lsu r2, r2, r0
 		nop
 	}
-	.loc	1 221 5
+	.loc	1 223 5
 	bf r2, .LBB1_2
 .Ltmp6:
 	{
 		ldc r0, 0
 		retsp 0
 	}
-	.loc	1 227 1
+	.loc	1 229 1
 	# RETURN_REG_HOLDER
 .LBB1_2:
 .Ltmp7:
 	ldc r2, 48001
-	.loc	1 223 10
+	.loc	1 225 10
 .Ltmp8:
 	{
 		lsu r1, r1, r2
@@ -106,25 +106,25 @@ FLAC__format_blocksize_is_subset:
 	}
 .Ltmp9:
 	ldc r2, 4608
-	.loc	1 223 10
+	.loc	1 225 10
 	{
 		lsu r0, r2, r0
 		nop
 	}
 .Ltmp10:
-	.loc	1 223 10
+	.loc	1 225 10
 	{
 		and r0, r1, r0
 		mkmsk r1, 1
 	}
-	.loc	1 224 3
+	.loc	1 226 3
 	xor r0, r0, r1
 	{
 		nop
 		retsp 0
 	}
 .Ltmp11:
-	.loc	1 227 1
+	.loc	1 229 1
 	# RETURN_REG_HOLDER
 .Ltmp12:
 	.cc_bottom FLAC__format_blocksize_is_subset.function
@@ -163,14 +163,14 @@ FLAC__format_blocksize_is_subset:
 	.cc_top FLAC__format_sample_rate_is_subset.function,FLAC__format_sample_rate_is_subset
 FLAC__format_sample_rate_is_subset:
 .Lfunc_begin2:
-	.loc	1 230 0
+	.loc	1 232 0
 	.cfi_startproc
 	.issue_mode dual
 	{
 		ldc r1, 17
 		dualentsp 0
 	}
-	.loc	1 232 4 prologue_end
+	.loc	1 234 4 prologue_end
 .Ltmp14:
 	{
 		shr r1, r0, r1
@@ -182,7 +182,7 @@ FLAC__format_sample_rate_is_subset:
 	}
 	bt r1, .LBB2_3
 .Ltmp15:
-	.loc	1 212 5
+	.loc	1 214 5
 	{
 		sub r1, r0, 1
 		nop
@@ -194,7 +194,7 @@ FLAC__format_sample_rate_is_subset:
 	}
 	bt r1, .LBB2_3
 .Ltmp16:
-	.loc	1 232 4
+	.loc	1 234 4
 	{
 		shr r1, r0, 16
 		nop
@@ -215,17 +215,17 @@ FLAC__format_sample_rate_is_subset:
 		nop
 	}
 .Ltmp17:
-	.loc	1 232 4
+	.loc	1 234 4
 	{
 		eq r0, r0, 0
 		nop
 	}
-	.loc	1 232 4
+	.loc	1 234 4
 	{
 		or r0, r1, r0
 		retsp 0
 	}
-	.loc	1 232 4
+	.loc	1 234 4
 	# RETURN_REG_HOLDER
 .Ltmp18:
 .LBB2_3:
@@ -233,7 +233,7 @@ FLAC__format_sample_rate_is_subset:
 		ldc r0, 0
 		retsp 0
 	}
-	.loc	1 240 1
+	.loc	1 242 1
 	# RETURN_REG_HOLDER
 .Ltmp19:
 	.cc_bottom FLAC__format_sample_rate_is_subset.function
@@ -256,7 +256,7 @@ FLAC__format_sample_rate_is_subset:
 	.cc_top FLAC__format_seektable_is_legal.function,FLAC__format_seektable_is_legal
 FLAC__format_seektable_is_legal:
 .Lfunc_begin3:
-	.loc	1 244 0
+	.loc	1 246 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -296,7 +296,7 @@ FLAC__format_seektable_is_legal:
 		nop
 		ldw r2, r1[0]
 	}
-	.loc	1 251 2 prologue_end
+	.loc	1 253 2 prologue_end
 .Ltmp31:
 	bf r2, .LBB3_1
 .Ltmp32:
@@ -330,10 +330,10 @@ FLAC__format_seektable_is_legal:
 		add r6, r6, r4
 		nop
 	}
-	.loc	1 259 3
+	.loc	1 261 3
 .Ltmp34:
 	ldd r7, r6, r6[0]
-	.loc	1 252 6
+	.loc	1 254 6
 .Ltmp35:
 	{
 		zext r9, 1
@@ -341,7 +341,7 @@ FLAC__format_seektable_is_legal:
 	}
 	bt r9, .LBB3_9
 .Ltmp36:
-	.loc	1 254 5
+	.loc	1 256 5
 	{
 		and r9, r6, r7
 		nop
@@ -379,15 +379,15 @@ FLAC__format_seektable_is_legal:
 	bt r8, .LBB3_11
 .Ltmp42:
 .LBB3_9:
-	.loc	1 251 41
+	.loc	1 253 41
 	{
 		add r5, r5, 1
 		nop
 	}
 .Ltmp43:
-	.loc	1 251 2
+	.loc	1 253 2
 	ldaw r4, r4[6]
-	.loc	1 251 2
+	.loc	1 253 2
 	{
 		lsu r8, r5, r2
 		mov r9, r0
@@ -410,7 +410,7 @@ FLAC__format_seektable_is_legal:
 		nop
 		ldw r10, sp[6]
 	}
-	.loc	1 264 1
+	.loc	1 266 1
 	ldd r9, r8, sp[2]
 	ldd r7, r6, sp[1]
 	ldd r5, r4, sp[0]
@@ -444,7 +444,7 @@ FLAC__format_seektable_is_legal:
 	.cc_top FLAC__format_seektable_sort.function,FLAC__format_seektable_sort
 FLAC__format_seektable_sort:
 .Lfunc_begin4:
-	.loc	1 280 0
+	.loc	1 282 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -482,7 +482,7 @@ FLAC__format_seektable_sort:
 		nop
 		ldw r1, r7[0]
 	}
-	.loc	1 286 6 prologue_end
+	.loc	1 288 6 prologue_end
 .Ltmp59:
 	bf r1, .LBB4_1
 .Ltmp60:
@@ -490,7 +490,7 @@ FLAC__format_seektable_sort:
 		nop
 		ldw r0, r7[1]
 	}
-	.loc	1 290 2
+	.loc	1 292 2
 	ldap r11, seekpoint_compare_
 	{
 		ldc r2, 24
@@ -498,7 +498,7 @@ FLAC__format_seektable_sort:
 	}
 	bl qsort
 .Ltmp61:
-	.loc	1 294 2
+	.loc	1 296 2
 	{
 		ldc r6, 0
 		ldw r0, r7[0]
@@ -515,7 +515,7 @@ FLAC__format_seektable_sort:
 	}
 .Ltmp63:
 .LBB4_5:
-	.loc	1 295 6
+	.loc	1 297 6
 	{
 		mov r4, r7
 		ldw r11, r7[1]
@@ -525,9 +525,9 @@ FLAC__format_seektable_sort:
 		add r1, r11, r6
 		nop
 	}
-	.loc	1 295 6
+	.loc	1 297 6
 	ldd r8, r2, r1[0]
-	.loc	1 295 6
+	.loc	1 297 6
 	{
 		and r7, r2, r8
 		mkmsk r5, 32
@@ -548,18 +548,18 @@ FLAC__format_seektable_sort:
 		ldc r3, 24
 		nop
 	}
-	.loc	1 297 8
+	.loc	1 299 8
 .Ltmp67:
 	mul r3, r10, r3
-	.loc	1 297 8
+	.loc	1 299 8
 	{
 		add r3, r3, r11
 		nop
 	}
 	ldaw r3, r3[-6]
-	.loc	1 297 8
+	.loc	1 299 8
 	ldd r7, r3, r3[0]
-	.loc	1 297 8
+	.loc	1 299 8
 	xor r7, r8, r7
 	xor r3, r2, r3
 	{
@@ -576,19 +576,19 @@ FLAC__format_seektable_sort:
 	bu .LBB4_14
 .LBB4_13:
 .Ltmp70:
-	.loc	1 302 3
+	.loc	1 304 3
 	{
 		add r5, r10, 1
 		ldc r2, 24
 	}
 .Ltmp71:
-	.loc	1 302 3
+	.loc	1 304 3
 	mul r0, r10, r2
 	{
 		add r0, r11, r0
 		nop
 	}
-	.loc	1 302 3
+	.loc	1 304 3
 	bl __memcpy_4
 	{
 		mov r7, r4
@@ -601,15 +601,15 @@ FLAC__format_seektable_sort:
 	}
 .Ltmp73:
 .LBB4_14:
-	.loc	1 294 45
+	.loc	1 296 45
 	{
 		add r9, r9, 1
 		nop
 	}
 .Ltmp74:
-	.loc	1 294 2
+	.loc	1 296 2
 	ldaw r6, r6[6]
-	.loc	1 294 2
+	.loc	1 296 2
 	{
 		lsu r1, r9, r0
 		ldc r3, 0
@@ -620,14 +620,14 @@ FLAC__format_seektable_sort:
 	}
 	bt r1, .LBB4_5
 .Ltmp75:
-	.loc	1 305 2
+	.loc	1 307 2
 	{
 		lsu r1, r5, r0
 		nop
 	}
 	bf r1, .LBB4_12
 .Ltmp76:
-	.loc	1 306 3
+	.loc	1 308 3
 	{
 		ldc r2, 24
 		ldw r1, r7[1]
@@ -643,24 +643,24 @@ FLAC__format_seektable_sort:
 	}
 .Ltmp77:
 .LBB4_11:
-	.loc	1 306 3
+	.loc	1 308 3
 	std r4, r4, r1[0]
 	{
 		add r11, r1, 8
 		nop
 	}
-	.loc	1 307 3
+	.loc	1 309 3
 	std r2, r2, r11[0]
 .Ltmp78:
-	.loc	1 308 3
+	.loc	1 310 3
 	{
 		add r3, r3, 1
 		stw r2, r1[4]
 	}
 .Ltmp79:
-	.loc	1 305 2
+	.loc	1 307 2
 	ldaw r1, r1[6]
-	.loc	1 305 2
+	.loc	1 307 2
 	{
 		lsu r11, r3, r0
 		nop
@@ -679,7 +679,7 @@ FLAC__format_seektable_sort:
 		nop
 	}
 .LBB4_2:
-	.loc	1 312 1
+	.loc	1 314 1
 	{
 		mov r0, r6
 		ldw r10, sp[8]
@@ -712,7 +712,7 @@ FLAC__format_seektable_sort:
 	.cc_top seekpoint_compare_.function,seekpoint_compare_
 seekpoint_compare_:
 .Lfunc_begin5:
-	.loc	1 268 0
+	.loc	1 270 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -731,21 +731,21 @@ seekpoint_compare_:
 	}
 .Ltmp84:
 	.cfi_offset 4, -8
-	.loc	1 270 5 prologue_end
+	.loc	1 272 5 prologue_end
 .Ltmp85:
 	ldd r2, r0, r0[0]
 .Ltmp86:
-	.loc	1 270 5
+	.loc	1 272 5
 	ldd r3, r1, r1[0]
 .Ltmp87:
-	.loc	1 270 5
+	.loc	1 272 5
 	xor r11, r2, r3
 	xor r4, r0, r1
 	{
 		or r11, r4, r11
 		nop
 	}
-	.loc	1 270 5
+	.loc	1 272 5
 	bt r11, .LBB5_2
 	{
 		ldc r0, 0
@@ -753,7 +753,7 @@ seekpoint_compare_:
 	}
 	bu .LBB5_8
 .LBB5_2:
-	.loc	1 272 10
+	.loc	1 274 10
 .Ltmp88:
 	{
 		eq r11, r2, r3
@@ -771,7 +771,7 @@ seekpoint_compare_:
 		nop
 	}
 .LBB5_5:
-	.loc	1 273 3
+	.loc	1 275 3
 	bt r0, .LBB5_6
 .Ltmp89:
 	{
@@ -785,7 +785,7 @@ seekpoint_compare_:
 		nop
 	}
 .LBB5_8:
-	.loc	1 276 1
+	.loc	1 278 1
 	{
 		ldaw sp, sp[2]
 		ldw r4, sp[0]
@@ -812,7 +812,7 @@ seekpoint_compare_:
 	.cc_top FLAC__format_vorbiscomment_entry_name_is_legal.function,FLAC__format_vorbiscomment_entry_name_is_legal
 FLAC__format_vorbiscomment_entry_name_is_legal:
 .Lfunc_begin6:
-	.loc	1 362 0
+	.loc	1 364 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -838,7 +838,7 @@ FLAC__format_vorbiscomment_entry_name_is_legal:
 		stw r6, sp[2]
 	}
 .Ltmp97:
-	.loc	1 364 6 prologue_end
+	.loc	1 366 6 prologue_end
 	{
 		ldc r2, 0
 		nop
@@ -861,7 +861,7 @@ FLAC__format_vorbiscomment_entry_name_is_legal:
 	}
 	ldc r5, 126
 .LBB6_3:
-	.loc	1 365 6
+	.loc	1 367 6
 .Ltmp100:
 	{
 		and r6, r3, r11
@@ -887,7 +887,7 @@ FLAC__format_vorbiscomment_entry_name_is_legal:
 		nop
 	}
 	bf r3, .LBB6_6
-	.loc	1 364 6
+	.loc	1 366 6
 	{
 		add r1, r1, 1
 		ld8u r3, r1[r2]
@@ -905,7 +905,7 @@ FLAC__format_vorbiscomment_entry_name_is_legal:
 		nop
 		ldw r6, sp[2]
 	}
-	.loc	1 368 1
+	.loc	1 370 1
 	ldd r5, r4, sp[0]
 	{
 		ldaw sp, sp[4]
@@ -937,7 +937,7 @@ FLAC__format_vorbiscomment_entry_name_is_legal:
 	.cc_top FLAC__format_vorbiscomment_entry_value_is_legal.function,FLAC__format_vorbiscomment_entry_value_is_legal
 FLAC__format_vorbiscomment_entry_value_is_legal:
 .Lfunc_begin7:
-	.loc	1 371 0
+	.loc	1 373 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -965,7 +965,7 @@ FLAC__format_vorbiscomment_entry_value_is_legal:
 		mkmsk r0, 32
 		nop
 	}
-	.loc	1 372 5 prologue_end
+	.loc	1 374 5 prologue_end
 .Ltmp112:
 	{
 		eq r0, r1, r0
@@ -973,13 +973,13 @@ FLAC__format_vorbiscomment_entry_value_is_legal:
 	}
 	bt r0, .LBB7_1
 .Ltmp113:
-	.loc	1 381 3
+	.loc	1 383 3
 	{
 		add r6, r4, r1
 		mkmsk r0, 1
 	}
 .Ltmp114:
-	.loc	1 382 3
+	.loc	1 384 3
 	{
 		lss r0, r1, r0
 		nop
@@ -992,7 +992,7 @@ FLAC__format_vorbiscomment_entry_value_is_legal:
 	}
 .Ltmp116:
 .LBB7_7:
-	.loc	1 383 17
+	.loc	1 385 17
 	{
 		mov r0, r4
 		nop
@@ -1001,13 +1001,13 @@ FLAC__format_vorbiscomment_entry_value_is_legal:
 .Ltmp117:
 	bf r0, .LBB7_11
 .Ltmp118:
-	.loc	1 386 4
+	.loc	1 388 4
 	{
 		add r4, r4, r0
 		nop
 	}
 .Ltmp119:
-	.loc	1 382 3
+	.loc	1 384 3
 	{
 		lsu r0, r4, r6
 		nop
@@ -1016,7 +1016,7 @@ FLAC__format_vorbiscomment_entry_value_is_legal:
 	bt r0, .LBB7_7
 .LBB7_9:
 .Ltmp121:
-	.loc	1 388 6
+	.loc	1 390 6
 	{
 		eq r0, r4, r6
 		nop
@@ -1030,7 +1030,7 @@ FLAC__format_vorbiscomment_entry_value_is_legal:
 	bu .LBB7_11
 .LBB7_1:
 .Ltmp123:
-	.loc	1 373 3
+	.loc	1 375 3
 	{
 		ldc r5, 0
 		nop
@@ -1042,7 +1042,7 @@ FLAC__format_vorbiscomment_entry_value_is_legal:
 	bf r0, .LBB7_4
 .Ltmp124:
 .LBB7_2:
-	.loc	1 374 17
+	.loc	1 376 17
 	{
 		mov r0, r4
 		nop
@@ -1051,7 +1051,7 @@ FLAC__format_vorbiscomment_entry_value_is_legal:
 .Ltmp125:
 	bf r0, .LBB7_11
 .Ltmp126:
-	.loc	1 377 4
+	.loc	1 379 4
 	{
 		add r1, r4, r0
 		ld8u r0, r4[r0]
@@ -1070,7 +1070,7 @@ FLAC__format_vorbiscomment_entry_value_is_legal:
 		nop
 	}
 .LBB7_11:
-	.loc	1 392 1
+	.loc	1 394 1
 	{
 		mov r0, r5
 		ldw r6, sp[4]
@@ -1101,7 +1101,7 @@ FLAC__format_vorbiscomment_entry_value_is_legal:
 	.cc_top utf8len_.function,utf8len_
 utf8len_:
 .Lfunc_begin8:
-	.loc	1 321 0
+	.loc	1 323 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -1135,24 +1135,24 @@ utf8len_:
 		ld8u r2, r1[r0]
 	}
 	ldc r3, 128
-	.loc	1 323 6 prologue_end
+	.loc	1 325 6 prologue_end
 .Ltmp139:
 	{
 		and r11, r2, r3
 		nop
 	}
-	.loc	1 323 6
+	.loc	1 325 6
 	bf r11, .LBB8_1
 .Ltmp140:
 	ldc r5, 224
-	.loc	1 326 11
+	.loc	1 328 11
 .Ltmp141:
 	{
 		and r4, r2, r5
 		nop
 	}
 	ldc r11, 192
-	.loc	1 326 11
+	.loc	1 328 11
 	{
 		eq r4, r4, r11
 		nop
@@ -1167,7 +1167,7 @@ utf8len_:
 		nop
 		ld8u r4, r1[r4]
 	}
-	.loc	1 326 11
+	.loc	1 328 11
 	{
 		shr r4, r4, 6
 		nop
@@ -1179,18 +1179,18 @@ utf8len_:
 	bf r4, .LBB8_7
 .Ltmp143:
 	ldc r0, 254
-	.loc	1 327 7
+	.loc	1 329 7
 .Ltmp144:
 	{
 		and r0, r2, r0
 		nop
 	}
-	.loc	1 327 7
+	.loc	1 329 7
 	{
 		eq r0, r0, r11
 		nop
 	}
-	.loc	1 328 4
+	.loc	1 330 4
 	bt r0, .LBB8_5
 .Ltmp145:
 	{
@@ -1200,7 +1200,7 @@ utf8len_:
 	bu .LBB8_17
 .LBB8_7:
 .Ltmp146:
-	.loc	1 331 11
+	.loc	1 333 11
 	{
 		shr r4, r2, 4
 		ldc r6, 14
@@ -1219,12 +1219,12 @@ utf8len_:
 		nop
 		ld8u r4, r1[r4]
 	}
-	.loc	1 331 11
+	.loc	1 333 11
 	{
 		and r6, r4, r11
 		nop
 	}
-	.loc	1 331 11
+	.loc	1 333 11
 	{
 		eq r6, r6, r3
 		nop
@@ -1239,7 +1239,7 @@ utf8len_:
 		nop
 		ld8u r6, r1[r6]
 	}
-	.loc	1 331 11
+	.loc	1 333 11
 	{
 		shr r7, r6, 6
 		nop
@@ -1262,7 +1262,7 @@ utf8len_:
 	bt r3, .LBB8_17
 .LBB8_12:
 	ldc r3, 237
-	.loc	1 335 7
+	.loc	1 337 7
 .Ltmp150:
 	{
 		eq r3, r2, r3
@@ -1278,35 +1278,35 @@ utf8len_:
 	bt r1, .LBB8_17
 .LBB8_14:
 	ldc r0, 239
-	.loc	1 337 7
+	.loc	1 339 7
 .Ltmp152:
 	{
 		eq r0, r2, r0
 		nop
 	}
 	ldc r1, 191
-	.loc	1 337 7
+	.loc	1 339 7
 	{
 		eq r1, r4, r1
 		nop
 	}
-	.loc	1 337 7
+	.loc	1 339 7
 	{
 		and r0, r0, r1
 		shr r1, r6, 1
 	}
 	ldc r2, 95
-	.loc	1 337 7
+	.loc	1 339 7
 	{
 		eq r1, r1, r2
 		nop
 	}
-	.loc	1 337 7
+	.loc	1 339 7
 	{
 		and r0, r0, r1
 		nop
 	}
-	.loc	1 337 7
+	.loc	1 339 7
 	bt r0, .LBB8_15
 .Ltmp153:
 	{
@@ -1316,7 +1316,7 @@ utf8len_:
 	bu .LBB8_17
 .LBB8_18:
 .Ltmp154:
-	.loc	1 341 11
+	.loc	1 343 11
 	{
 		shr r4, r2, 3
 		ldc r5, 30
@@ -1335,12 +1335,12 @@ utf8len_:
 		nop
 		ld8u r4, r1[r4]
 	}
-	.loc	1 341 11
+	.loc	1 343 11
 	{
 		and r5, r4, r11
 		nop
 	}
-	.loc	1 341 11
+	.loc	1 343 11
 	{
 		eq r5, r5, r3
 		nop
@@ -1355,7 +1355,7 @@ utf8len_:
 		nop
 		ld8u r5, r1[r5]
 	}
-	.loc	1 341 11
+	.loc	1 343 11
 	{
 		shr r5, r5, 6
 		nop
@@ -1374,7 +1374,7 @@ utf8len_:
 		nop
 		ld8u r5, r1[r5]
 	}
-	.loc	1 341 11
+	.loc	1 343 11
 	{
 		shr r5, r5, 6
 		nop
@@ -1386,23 +1386,23 @@ utf8len_:
 	bf r5, .LBB8_25
 .Ltmp158:
 	ldc r0, 240
-	.loc	1 342 7
+	.loc	1 344 7
 .Ltmp159:
 	{
 		eq r1, r2, r0
 		and r0, r4, r0
 	}
-	.loc	1 342 7
+	.loc	1 344 7
 	{
 		eq r0, r0, r3
 		nop
 	}
-	.loc	1 342 7
+	.loc	1 344 7
 	{
 		and r0, r1, r0
 		nop
 	}
-	.loc	1 342 7
+	.loc	1 344 7
 	bt r0, .LBB8_23
 .Ltmp160:
 	{
@@ -1412,7 +1412,7 @@ utf8len_:
 	bu .LBB8_17
 .LBB8_25:
 .Ltmp161:
-	.loc	1 346 11
+	.loc	1 348 11
 	{
 		shr r4, r2, 2
 		ldc r5, 62
@@ -1431,12 +1431,12 @@ utf8len_:
 		nop
 		ld8u r4, r1[r4]
 	}
-	.loc	1 346 11
+	.loc	1 348 11
 	{
 		and r5, r4, r11
 		nop
 	}
-	.loc	1 346 11
+	.loc	1 348 11
 	{
 		eq r5, r5, r3
 		nop
@@ -1451,7 +1451,7 @@ utf8len_:
 		nop
 		ld8u r5, r1[r5]
 	}
-	.loc	1 346 11
+	.loc	1 348 11
 	{
 		shr r5, r5, 6
 		nop
@@ -1470,7 +1470,7 @@ utf8len_:
 		nop
 		ld8u r5, r1[r5]
 	}
-	.loc	1 346 11
+	.loc	1 348 11
 	{
 		shr r5, r5, 6
 		nop
@@ -1489,7 +1489,7 @@ utf8len_:
 		nop
 		ld8u r5, r1[r5]
 	}
-	.loc	1 346 11
+	.loc	1 348 11
 	{
 		shr r5, r5, 6
 		nop
@@ -1501,23 +1501,23 @@ utf8len_:
 	bf r5, .LBB8_33
 .Ltmp166:
 	ldc r0, 248
-	.loc	1 347 7
+	.loc	1 349 7
 .Ltmp167:
 	{
 		eq r1, r2, r0
 		and r0, r4, r0
 	}
-	.loc	1 347 7
+	.loc	1 349 7
 	{
 		eq r0, r0, r3
 		nop
 	}
-	.loc	1 347 7
+	.loc	1 349 7
 	{
 		and r0, r1, r0
 		nop
 	}
-	.loc	1 347 7
+	.loc	1 349 7
 	bt r0, .LBB8_31
 .Ltmp168:
 	{
@@ -1533,7 +1533,7 @@ utf8len_:
 	bu .LBB8_17
 .LBB8_33:
 .Ltmp169:
-	.loc	1 351 11
+	.loc	1 353 11
 	{
 		shr r4, r2, 1
 		nop
@@ -1553,12 +1553,12 @@ utf8len_:
 		nop
 		ld8u r4, r1[r4]
 	}
-	.loc	1 351 11
+	.loc	1 353 11
 	{
 		and r11, r4, r11
 		nop
 	}
-	.loc	1 351 11
+	.loc	1 353 11
 	{
 		eq r11, r11, r3
 		nop
@@ -1573,7 +1573,7 @@ utf8len_:
 		nop
 		ld8u r11, r1[r11]
 	}
-	.loc	1 351 11
+	.loc	1 353 11
 	{
 		shr r11, r11, 6
 		nop
@@ -1592,7 +1592,7 @@ utf8len_:
 		nop
 		ld8u r11, r1[r11]
 	}
-	.loc	1 351 11
+	.loc	1 353 11
 	{
 		shr r11, r11, 6
 		nop
@@ -1611,7 +1611,7 @@ utf8len_:
 		nop
 		ld8u r11, r1[r11]
 	}
-	.loc	1 351 11
+	.loc	1 353 11
 	{
 		shr r11, r11, 6
 		nop
@@ -1631,7 +1631,7 @@ utf8len_:
 		ld8u r1, r1[r11]
 	}
 .Ltmp175:
-	.loc	1 351 11
+	.loc	1 353 11
 	{
 		shr r1, r1, 6
 		nop
@@ -1642,23 +1642,23 @@ utf8len_:
 	}
 	bf r1, .LBB8_17
 	ldc r0, 252
-	.loc	1 352 7
+	.loc	1 354 7
 .Ltmp176:
 	{
 		eq r1, r2, r0
 		and r0, r4, r0
 	}
-	.loc	1 352 7
+	.loc	1 354 7
 	{
 		eq r0, r0, r3
 		nop
 	}
-	.loc	1 352 7
+	.loc	1 354 7
 	{
 		and r0, r1, r0
 		nop
 	}
-	.loc	1 352 7
+	.loc	1 354 7
 	bt r0, .LBB8_40
 .Ltmp177:
 	{
@@ -1672,7 +1672,7 @@ utf8len_:
 		nop
 	}
 .LBB8_17:
-	.loc	1 337 7
+	.loc	1 339 7
 .Ltmp178:
 	ldd r7, r6, sp[1]
 	ldd r5, r4, sp[0]
@@ -1726,7 +1726,7 @@ utf8len_:
 	.cc_top FLAC__format_vorbiscomment_entry_is_legal.function,FLAC__format_vorbiscomment_entry_is_legal
 FLAC__format_vorbiscomment_entry_is_legal:
 .Lfunc_begin9:
-	.loc	1 395 0
+	.loc	1 397 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -1754,7 +1754,7 @@ FLAC__format_vorbiscomment_entry_is_legal:
 		ldc r4, 0
 		nop
 	}
-	.loc	1 398 2 prologue_end
+	.loc	1 400 2 prologue_end
 .Ltmp188:
 	{
 		lss r1, r4, r1
@@ -1774,33 +1774,33 @@ FLAC__format_vorbiscomment_entry_is_legal:
 		nop
 		ld8u r3, r0[r4]
 	}
-	.loc	1 398 2
+	.loc	1 400 2
 	{
 		eq r11, r3, r1
 		nop
 	}
 	bt r11, .LBB9_5
 .Ltmp192:
-	.loc	1 399 6
+	.loc	1 401 6
 	ldaw r3, r3[-8]
 	{
 		zext r3, 8
 		nop
 	}
-	.loc	1 399 6
+	.loc	1 401 6
 	{
 		lsu r3, r2, r3
 		nop
 	}
 	bt r3, .LBB9_11
 .Ltmp193:
-	.loc	1 398 57
+	.loc	1 400 57
 	{
 		add r0, r0, 1
 		nop
 	}
 .Ltmp194:
-	.loc	1 398 2
+	.loc	1 400 2
 	{
 		lsu r3, r0, r6
 		nop
@@ -1808,14 +1808,14 @@ FLAC__format_vorbiscomment_entry_is_legal:
 	bt r3, .LBB9_3
 .Ltmp195:
 .LBB9_5:
-	.loc	1 402 5
+	.loc	1 404 5
 	{
 		eq r1, r0, r6
 		nop
 	}
 	bt r1, .LBB9_11
 .Ltmp196:
-	.loc	1 405 2
+	.loc	1 407 2
 	{
 		add r5, r0, 1
 		nop
@@ -1823,21 +1823,21 @@ FLAC__format_vorbiscomment_entry_is_legal:
 	bu .LBB9_7
 .Ltmp197:
 .LBB9_9:
-	.loc	1 411 3
+	.loc	1 413 3
 	{
 		add r5, r5, r0
 		nop
 	}
 .Ltmp198:
 .LBB9_7:
-	.loc	1 407 2
+	.loc	1 409 2
 	{
 		lsu r0, r5, r6
 		nop
 	}
 	bf r0, .LBB9_10
 .Ltmp199:
-	.loc	1 408 16
+	.loc	1 410 16
 	{
 		mov r0, r5
 		nop
@@ -1848,14 +1848,14 @@ FLAC__format_vorbiscomment_entry_is_legal:
 	bu .LBB9_11
 .Ltmp201:
 .LBB9_10:
-	.loc	1 413 5
+	.loc	1 415 5
 	{
 		eq r4, r5, r6
 		nop
 	}
 .Ltmp202:
 .LBB9_11:
-	.loc	1 417 1
+	.loc	1 419 1
 	{
 		mov r0, r4
 		ldw r6, sp[4]
@@ -1917,7 +1917,7 @@ FLAC__format_vorbiscomment_entry_is_legal:
 	.cc_top FLAC__format_cuesheet_is_legal.function,FLAC__format_cuesheet_is_legal
 FLAC__format_cuesheet_is_legal:
 .Lfunc_begin10:
-	.loc	1 421 0
+	.loc	1 423 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -1959,15 +1959,15 @@ FLAC__format_cuesheet_is_legal:
 	bf r10, .LBB10_10
 .Ltmp217:
 	ldc r0, 136
-	.loc	1 425 6 prologue_end
+	.loc	1 427 6 prologue_end
 .Ltmp218:
 	{
 		add r0, r7, r0
 		nop
 	}
-	.loc	1 425 6
+	.loc	1 427 6
 	ldd r1, r0, r0[0]
-	.loc	1 425 6
+	.loc	1 427 6
 	bt r1, .LBB10_2
 .Ltmp219:
 	ldw r2, cp[.LCPI10_0]
@@ -1996,7 +1996,7 @@ FLAC__format_cuesheet_is_legal:
 	}
 	bf r5, .LBB10_53
 .Ltmp223:
-	.loc	1 426 18
+	.loc	1 428 18
 	ldaw r11, cp[.L.str42]
 	{
 		nop
@@ -2010,14 +2010,14 @@ FLAC__format_cuesheet_is_legal:
 		ldc r4, 0
 		nop
 	}
-	.loc	1 429 6
+	.loc	1 431 6
 .Ltmp225:
 	{
 		mov r3, r4
 		nop
 	}
 	bl __umoddi3
-	.loc	1 429 6
+	.loc	1 431 6
 	{
 		or r0, r0, r1
 		nop
@@ -2026,7 +2026,7 @@ FLAC__format_cuesheet_is_legal:
 .Ltmp226:
 	bf r5, .LBB10_53
 .Ltmp227:
-	.loc	1 430 18
+	.loc	1 432 18
 	ldaw r11, cp[.L.str43]
 	{
 		nop
@@ -2036,7 +2036,7 @@ FLAC__format_cuesheet_is_legal:
 .Ltmp228:
 .LBB10_10:
 	ldc r0, 148
-	.loc	1 435 5
+	.loc	1 437 5
 .Ltmp229:
 	{
 		add r0, r7, r0
@@ -2050,18 +2050,18 @@ FLAC__format_cuesheet_is_legal:
 		nop
 		stw r8, sp[4]
 	}
-	.loc	1 435 5
+	.loc	1 437 5
 	bf r8, .LBB10_11
 .Ltmp230:
 	bf r10, .LBB10_14
 .Ltmp231:
-	.loc	1 440 5
+	.loc	1 442 5
 	{
 		shl r0, r8, 5
 		nop
 	}
 	ldc r1, 152
-	.loc	1 440 5
+	.loc	1 442 5
 	{
 		add r1, r7, r1
 		nop
@@ -2070,7 +2070,7 @@ FLAC__format_cuesheet_is_legal:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 440 5
+	.loc	1 442 5
 	{
 		add r0, r0, r1
 		nop
@@ -2081,7 +2081,7 @@ FLAC__format_cuesheet_is_legal:
 		ld8u r0, r0[r1]
 	}
 	ldc r1, 170
-	.loc	1 440 5
+	.loc	1 442 5
 	{
 		eq r0, r0, r1
 		nop
@@ -2095,7 +2095,7 @@ FLAC__format_cuesheet_is_legal:
 	}
 .Ltmp233:
 	ldc r0, 152
-	.loc	1 446 6
+	.loc	1 448 6
 .Ltmp234:
 	{
 		add r0, r7, r0
@@ -2120,7 +2120,7 @@ FLAC__format_cuesheet_is_legal:
 	}
 .Ltmp236:
 .LBB10_15:
-	.loc	1 446 6
+	.loc	1 448 6
 	{
 		shl r0, r7, 5
 		nop
@@ -2138,7 +2138,7 @@ FLAC__format_cuesheet_is_legal:
 	bf r10, .LBB10_31
 .Ltmp238:
 	ldc r1, 100
-	.loc	1 452 7
+	.loc	1 454 7
 .Ltmp239:
 	{
 		lsu r1, r0, r1
@@ -2154,16 +2154,16 @@ FLAC__format_cuesheet_is_legal:
 	bf r0, .LBB10_24
 .Ltmp241:
 .LBB10_26:
-	.loc	1 458 6
+	.loc	1 460 6
 	ldd r1, r0, r4[0]
 	ldc r2, 588
-	.loc	1 458 6
+	.loc	1 460 6
 	{
 		mov r3, r6
 		nop
 	}
 	bl __umoddi3
-	.loc	1 458 6
+	.loc	1 460 6
 	{
 		or r0, r0, r1
 		nop
@@ -2171,12 +2171,12 @@ FLAC__format_cuesheet_is_legal:
 	bt r0, .LBB10_27
 .Ltmp242:
 .LBB10_31:
-	.loc	1 468 6
+	.loc	1 470 6
 	{
 		sub r0, r8, 1
 		nop
 	}
-	.loc	1 468 6
+	.loc	1 470 6
 	{
 		lsu r0, r7, r0
 		ldc r1, 23
@@ -2185,10 +2185,10 @@ FLAC__format_cuesheet_is_legal:
 		nop
 		ld8u r8, r4[r1]
 	}
-	.loc	1 468 6
+	.loc	1 470 6
 	bf r0, .LBB10_32
 .Ltmp243:
-	.loc	1 469 7
+	.loc	1 471 7
 	bf r8, .LBB10_39
 .Ltmp244:
 	{
@@ -2200,13 +2200,13 @@ FLAC__format_cuesheet_is_legal:
 		nop
 		ldw r0, r4[6]
 	}
-	.loc	1 474 7
+	.loc	1 476 7
 .Ltmp246:
 	{
 		ldc r1, 2
 		ld8u r0, r0[r9]
 	}
-	.loc	1 474 7
+	.loc	1 476 7
 	{
 		lsu r0, r0, r1
 		nop
@@ -2246,17 +2246,17 @@ FLAC__format_cuesheet_is_legal:
 		add r0, r0, r10
 		nop
 	}
-	.loc	1 481 7
+	.loc	1 483 7
 .Ltmp251:
 	ldd r1, r0, r0[0]
 	ldc r2, 588
-	.loc	1 481 7
+	.loc	1 483 7
 	{
 		mov r3, r6
 		nop
 	}
 	bl __umoddi3
-	.loc	1 481 7
+	.loc	1 483 7
 	{
 		or r0, r0, r1
 		nop
@@ -2282,13 +2282,13 @@ FLAC__format_cuesheet_is_legal:
 		nop
 		ld8u r0, r0[r2]
 	}
-	.loc	1 487 8
+	.loc	1 489 8
 .Ltmp254:
 	{
 		add r0, r0, 1
 		nop
 	}
-	.loc	1 487 8
+	.loc	1 489 8
 	{
 		eq r0, r1, r0
 		nop
@@ -2296,15 +2296,15 @@ FLAC__format_cuesheet_is_legal:
 	bf r0, .LBB10_48
 .Ltmp255:
 .LBB10_37:
-	.loc	1 480 52
+	.loc	1 482 52
 	{
 		add r5, r5, 1
 		nop
 	}
 .Ltmp256:
-	.loc	1 480 3
+	.loc	1 482 3
 	ldaw r10, r10[4]
-	.loc	1 480 3
+	.loc	1 482 3
 	{
 		lsu r0, r5, r8
 		nop
@@ -2328,13 +2328,13 @@ FLAC__format_cuesheet_is_legal:
 		nop
 		ld8u r3, r3[r11]
 	}
-	.loc	1 487 8
+	.loc	1 489 8
 .Ltmp259:
 	{
 		add r3, r3, 1
 		nop
 	}
-	.loc	1 487 8
+	.loc	1 489 8
 	{
 		eq r2, r2, r3
 		nop
@@ -2342,7 +2342,7 @@ FLAC__format_cuesheet_is_legal:
 	bf r2, .LBB10_48
 .Ltmp260:
 .LBB10_50:
-	.loc	1 480 52
+	.loc	1 482 52
 	{
 		add r1, r1, 1
 		ldc r2, 23
@@ -2352,9 +2352,9 @@ FLAC__format_cuesheet_is_legal:
 		nop
 		ld8u r2, r4[r2]
 	}
-	.loc	1 480 3
+	.loc	1 482 3
 	ldaw r0, r0[4]
-	.loc	1 480 3
+	.loc	1 482 3
 	{
 		lsu r2, r1, r2
 		nop
@@ -2362,13 +2362,13 @@ FLAC__format_cuesheet_is_legal:
 	bt r2, .LBB10_46
 .Ltmp262:
 .LBB10_51:
-	.loc	1 445 40
+	.loc	1 447 40
 	{
 		add r7, r7, 1
 		ldw r8, sp[4]
 	}
 .Ltmp263:
-	.loc	1 445 2
+	.loc	1 447 2
 	{
 		lsu r0, r7, r8
 		ldw r1, sp[3]
@@ -2393,7 +2393,7 @@ FLAC__format_cuesheet_is_legal:
 	}
 	bf r5, .LBB10_53
 .Ltmp267:
-	.loc	1 436 17
+	.loc	1 438 17
 	ldaw r11, cp[.L.str44]
 	{
 		nop
@@ -2408,7 +2408,7 @@ FLAC__format_cuesheet_is_legal:
 	}
 	bf r5, .LBB10_53
 .Ltmp269:
-	.loc	1 441 17
+	.loc	1 443 17
 	ldaw r11, cp[.L.str45]
 	{
 		nop
@@ -2424,7 +2424,7 @@ FLAC__format_cuesheet_is_legal:
 .Ltmp271:
 	bf r0, .LBB10_53
 .Ltmp272:
-	.loc	1 488 20
+	.loc	1 490 20
 	ldaw r11, cp[.L.str53]
 	{
 		nop
@@ -2440,7 +2440,7 @@ FLAC__format_cuesheet_is_legal:
 .Ltmp274:
 	bf r0, .LBB10_53
 .Ltmp275:
-	.loc	1 482 19
+	.loc	1 484 19
 	ldaw r11, cp[.L.str52]
 	{
 		nop
@@ -2448,7 +2448,7 @@ FLAC__format_cuesheet_is_legal:
 	}
 .Ltmp276:
 .LBB10_53:
-	.loc	1 496 1
+	.loc	1 498 1
 	{
 		mov r0, r4
 		ldw r10, sp[12]
@@ -2470,7 +2470,7 @@ FLAC__format_cuesheet_is_legal:
 .Ltmp278:
 	bf r0, .LBB10_53
 .Ltmp279:
-	.loc	1 447 18
+	.loc	1 449 18
 	ldaw r11, cp[.L.str46]
 	{
 		nop
@@ -2486,7 +2486,7 @@ FLAC__format_cuesheet_is_legal:
 .Ltmp281:
 	bf r0, .LBB10_53
 .Ltmp282:
-	.loc	1 453 19
+	.loc	1 455 19
 	ldaw r11, cp[.L.str47]
 	{
 		nop
@@ -2502,19 +2502,19 @@ FLAC__format_cuesheet_is_legal:
 .Ltmp284:
 	bf r1, .LBB10_53
 .Ltmp285:
-	.loc	1 460 8
+	.loc	1 462 8
 	{
 		sub r0, r8, 1
 		nop
 	}
-	.loc	1 460 8
+	.loc	1 462 8
 	{
 		eq r0, r7, r0
 		nop
 	}
 	bf r0, .LBB10_30
 .Ltmp286:
-	.loc	1 461 6
+	.loc	1 463 6
 	ldaw r11, cp[.L.str48]
 	{
 		nop
@@ -2530,7 +2530,7 @@ FLAC__format_cuesheet_is_legal:
 .Ltmp288:
 	bf r0, .LBB10_53
 .Ltmp289:
-	.loc	1 470 19
+	.loc	1 472 19
 	ldaw r11, cp[.L.str50]
 	{
 		nop
@@ -2546,7 +2546,7 @@ FLAC__format_cuesheet_is_legal:
 .Ltmp291:
 	bf r0, .LBB10_53
 .Ltmp292:
-	.loc	1 475 19
+	.loc	1 477 19
 	ldaw r11, cp[.L.str51]
 	{
 		nop
@@ -2555,7 +2555,7 @@ FLAC__format_cuesheet_is_legal:
 	bu .LBB10_53
 .Ltmp293:
 .LBB10_30:
-	.loc	1 463 6
+	.loc	1 465 6
 	ldaw r11, cp[.L.str49]
 	{
 		nop
@@ -2583,7 +2583,7 @@ FLAC__format_cuesheet_is_legal:
 	.cc_top FLAC__format_picture_is_legal.function,FLAC__format_picture_is_legal
 FLAC__format_picture_is_legal:
 .Lfunc_begin11:
-	.loc	1 500 0
+	.loc	1 502 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2610,7 +2610,7 @@ FLAC__format_picture_is_legal:
 		ldw r1, r0[1]
 	}
 .Ltmp303:
-	.loc	1 504 2 prologue_end
+	.loc	1 506 2 prologue_end
 	{
 		ldc r4, 0
 		nop
@@ -2629,20 +2629,20 @@ FLAC__format_picture_is_legal:
 	ldc r2, 95
 .Ltmp306:
 .LBB11_3:
-	.loc	1 505 6
+	.loc	1 507 6
 	ldaw r3, r3[-8]
 	{
 		zext r3, 8
 		nop
 	}
-	.loc	1 505 6
+	.loc	1 507 6
 	{
 		lsu r3, r3, r2
 		nop
 	}
 	bf r3, .LBB11_4
 .Ltmp307:
-	.loc	1 504 2
+	.loc	1 506 2
 	{
 		add r1, r1, 1
 		ld8u r3, r1[r4]
@@ -2650,13 +2650,13 @@ FLAC__format_picture_is_legal:
 	bt r3, .LBB11_3
 .Ltmp308:
 .LBB11_6:
-	.loc	1 511 6
+	.loc	1 513 6
 	{
 		ldc r4, 0
 		ldw r6, r0[2]
 	}
 .Ltmp309:
-	.loc	1 511 2
+	.loc	1 513 2
 	{
 		mkmsk r7, 1
 		ld8u r0, r6[r4]
@@ -2665,17 +2665,17 @@ FLAC__format_picture_is_legal:
 	bf r0, .LBB11_11
 .Ltmp311:
 .LBB11_7:
-	.loc	1 512 16
+	.loc	1 514 16
 	{
 		mov r0, r6
 		nop
 	}
 	bl utf8len_
 .Ltmp312:
-	.loc	1 513 6
+	.loc	1 515 6
 	bf r0, .LBB11_8
 .Ltmp313:
-	.loc	1 517 3
+	.loc	1 519 3
 	{
 		add r1, r6, r0
 		ld8u r0, r6[r0]
@@ -2698,7 +2698,7 @@ FLAC__format_picture_is_legal:
 .Ltmp317:
 	bf r5, .LBB11_12
 .Ltmp318:
-	.loc	1 506 18
+	.loc	1 508 18
 	ldaw r11, cp[.L.str54]
 	{
 		nop
@@ -2709,7 +2709,7 @@ FLAC__format_picture_is_legal:
 .LBB11_8:
 	bf r5, .LBB11_12
 .Ltmp320:
-	.loc	1 514 18
+	.loc	1 516 18
 	ldaw r11, cp[.L.str55]
 	{
 		nop
@@ -2717,7 +2717,7 @@ FLAC__format_picture_is_legal:
 	}
 .Ltmp321:
 .LBB11_12:
-	.loc	1 521 1
+	.loc	1 523 1
 	{
 		mov r0, r4
 		nop
@@ -2750,7 +2750,7 @@ FLAC__format_picture_is_legal:
 	.cc_top FLAC__format_get_max_rice_partition_order_from_blocksize.function,FLAC__format_get_max_rice_partition_order_from_blocksize
 FLAC__format_get_max_rice_partition_order_from_blocksize:
 .Lfunc_begin12:
-	.loc	1 539 0
+	.loc	1 541 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2758,7 +2758,7 @@ FLAC__format_get_max_rice_partition_order_from_blocksize:
 		dualentsp 0
 	}
 .Ltmp324:
-	.loc	1 541 2 prologue_end
+	.loc	1 543 2 prologue_end
 	{
 		mov r2, r1
 		nop
@@ -2770,13 +2770,13 @@ FLAC__format_get_max_rice_partition_order_from_blocksize:
 	bt r2, .LBB12_2
 .LBB12_1:
 .Ltmp325:
-	.loc	1 542 3
+	.loc	1 544 3
 	{
 		add r0, r0, 1
 		shr r1, r1, 1
 	}
 .Ltmp326:
-	.loc	1 541 2
+	.loc	1 543 2
 	{
 		mov r2, r1
 		nop
@@ -2791,13 +2791,13 @@ FLAC__format_get_max_rice_partition_order_from_blocksize:
 		mkmsk r1, 4
 		nop
 	}
-	.loc	1 545 2
+	.loc	1 547 2
 	{
 		lsu r2, r0, r1
 		nop
 	}
 	bt r2, .LBB12_4
-	.loc	1 545 2
+	.loc	1 547 2
 	{
 		mov r0, r1
 		nop
@@ -2807,7 +2807,7 @@ FLAC__format_get_max_rice_partition_order_from_blocksize:
 		nop
 		retsp 0
 	}
-	.loc	1 545 2
+	.loc	1 547 2
 	# RETURN_REG_HOLDER
 .Ltmp327:
 	.cc_bottom FLAC__format_get_max_rice_partition_order_from_blocksize.function
@@ -2830,7 +2830,7 @@ FLAC__format_get_max_rice_partition_order_from_blocksize:
 	.cc_top FLAC__format_get_max_rice_partition_order_from_blocksize_limited_max_and_predictor_order.function,FLAC__format_get_max_rice_partition_order_from_blocksize_limited_max_and_predictor_order
 FLAC__format_get_max_rice_partition_order_from_blocksize_limited_max_and_predictor_order:
 .Lfunc_begin13:
-	.loc	1 549 0
+	.loc	1 551 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2839,7 +2839,7 @@ FLAC__format_get_max_rice_partition_order_from_blocksize_limited_max_and_predict
 	}
 .Ltmp329:
 .LBB13_1:
-	.loc	1 552 2 prologue_end
+	.loc	1 554 2 prologue_end
 	{
 		mov r3, r0
 		nop
@@ -2857,7 +2857,7 @@ FLAC__format_get_max_rice_partition_order_from_blocksize_limited_max_and_predict
 	}
 	bf r11, .LBB13_1
 .LBB13_3:
-	.loc	1 560 2
+	.loc	1 562 2
 	{
 		mov r0, r3
 		retsp 0
@@ -2884,7 +2884,7 @@ FLAC__format_get_max_rice_partition_order_from_blocksize_limited_max_and_predict
 	.cc_top FLAC__format_entropy_coding_method_partitioned_rice_contents_init.function,FLAC__format_entropy_coding_method_partitioned_rice_contents_init
 FLAC__format_entropy_coding_method_partitioned_rice_contents_init:
 .Lfunc_begin14:
-	.loc	1 564 0
+	.loc	1 566 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2907,7 +2907,7 @@ FLAC__format_entropy_coding_method_partitioned_rice_contents_init:
 		nop
 		retsp 0
 	}
-	.loc	1 570 1 prologue_end
+	.loc	1 572 1 prologue_end
 .Ltmp334:
 	# RETURN_REG_HOLDER
 .Ltmp335:
@@ -2931,7 +2931,7 @@ FLAC__format_entropy_coding_method_partitioned_rice_contents_init:
 	.cc_top FLAC__format_entropy_coding_method_partitioned_rice_contents_clear.function,FLAC__format_entropy_coding_method_partitioned_rice_contents_clear
 FLAC__format_entropy_coding_method_partitioned_rice_contents_clear:
 .Lfunc_begin15:
-	.loc	1 573 0
+	.loc	1 575 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2956,7 +2956,7 @@ FLAC__format_entropy_coding_method_partitioned_rice_contents_clear:
 	}
 	bf r0, .LBB15_2
 .Ltmp342:
-	.loc	1 577 3 prologue_end
+	.loc	1 579 3 prologue_end
 	bl free
 .Ltmp343:
 .LBB15_2:
@@ -2966,7 +2966,7 @@ FLAC__format_entropy_coding_method_partitioned_rice_contents_clear:
 	}
 	bf r0, .LBB15_4
 .Ltmp344:
-	.loc	1 579 3
+	.loc	1 581 3
 	bl free
 .Ltmp345:
 .LBB15_4:
@@ -2995,7 +2995,7 @@ FLAC__format_entropy_coding_method_partitioned_rice_contents_clear:
 		nop
 		retsp 4
 	}
-	.loc	1 581 1
+	.loc	1 583 1
 	# RETURN_REG_HOLDER
 .Ltmp347:
 	.cc_bottom FLAC__format_entropy_coding_method_partitioned_rice_contents_clear.function
@@ -3018,7 +3018,7 @@ FLAC__format_entropy_coding_method_partitioned_rice_contents_clear:
 	.cc_top FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_size.function,FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_size
 FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_size:
 .Lfunc_begin16:
-	.loc	1 589 0
+	.loc	1 591 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -3054,7 +3054,7 @@ FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_size:
 		nop
 		ldw r0, r5[2]
 	}
-	.loc	1 592 5 prologue_end
+	.loc	1 594 5 prologue_end
 .Ltmp359:
 	{
 		lsu r0, r0, r4
@@ -3062,7 +3062,7 @@ FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_size:
 	}
 	bt r0, .LBB16_4
 .Ltmp360:
-	.loc	1 592 5
+	.loc	1 594 5
 	bf r7, .LBB16_2
 .Ltmp361:
 	{
@@ -3084,7 +3084,7 @@ FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_size:
 		nop
 	}
 .Ltmp364:
-	.loc	1 593 33
+	.loc	1 595 33
 	{
 		shl r6, r0, r4
 		mov r0, r7
@@ -3114,7 +3114,7 @@ FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_size:
 	bl free
 .Ltmp369:
 .LBB16_7:
-	.loc	1 593 33
+	.loc	1 595 33
 	{
 		ldc r7, 0
 		stw r8, r5[0]
@@ -3159,7 +3159,7 @@ FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_size:
 		ldc r1, 0
 		mov r0, r8
 	}
-	.loc	1 597 3
+	.loc	1 599 3
 	{
 		mov r2, r6
 		nop
@@ -3176,7 +3176,7 @@ FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_size:
 		nop
 	}
 .LBB16_14:
-	.loc	1 602 1
+	.loc	1 604 1
 	{
 		mov r0, r7
 		nop
@@ -4753,7 +4753,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	49
 	.byte	1
 	.byte	1
-	.byte	58
+	.byte	60
 	.byte	5
 	.byte	3
 	.long	FLAC__VERSION_STRING
@@ -4770,7 +4770,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	49
 	.byte	1
 	.byte	1
-	.byte	59
+	.byte	61
 	.byte	5
 	.byte	3
 	.long	FLAC__VENDOR_STRING
@@ -4779,7 +4779,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	102
 	.byte	1
 	.byte	1
-	.byte	62
+	.byte	64
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_SYNC_STRING
@@ -4819,7 +4819,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	63
+	.byte	65
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_SYNC
@@ -4839,7 +4839,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	64
+	.byte	66
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_SYNC_LEN
@@ -4848,7 +4848,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	66
+	.byte	68
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_STREAMINFO_MIN_BLOCK_SIZE_LEN
@@ -4857,7 +4857,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	67
+	.byte	69
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_STREAMINFO_MAX_BLOCK_SIZE_LEN
@@ -4866,7 +4866,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	68
+	.byte	70
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_STREAMINFO_MIN_FRAME_SIZE_LEN
@@ -4875,7 +4875,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	69
+	.byte	71
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_STREAMINFO_MAX_FRAME_SIZE_LEN
@@ -4884,7 +4884,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	70
+	.byte	72
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_STREAMINFO_SAMPLE_RATE_LEN
@@ -4893,7 +4893,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	71
+	.byte	73
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_STREAMINFO_CHANNELS_LEN
@@ -4902,7 +4902,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	72
+	.byte	74
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_STREAMINFO_BITS_PER_SAMPLE_LEN
@@ -4911,7 +4911,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	73
+	.byte	75
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_STREAMINFO_TOTAL_SAMPLES_LEN
@@ -4920,7 +4920,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	74
+	.byte	76
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_STREAMINFO_MD5SUM_LEN
@@ -4929,7 +4929,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	76
+	.byte	78
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_APPLICATION_ID_LEN
@@ -4938,7 +4938,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	78
+	.byte	80
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_SEEKPOINT_SAMPLE_NUMBER_LEN
@@ -4947,7 +4947,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	79
+	.byte	81
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_SEEKPOINT_STREAM_OFFSET_LEN
@@ -4956,7 +4956,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	80
+	.byte	82
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_SEEKPOINT_FRAME_SAMPLES_LEN
@@ -4965,7 +4965,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	477
 	.byte	1
 	.byte	1
-	.byte	82
+	.byte	84
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_SEEKPOINT_PLACEHOLDER
@@ -4990,7 +4990,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	84
+	.byte	86
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_VORBIS_COMMENT_ENTRY_LENGTH_LEN
@@ -4999,7 +4999,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	85
+	.byte	87
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_VORBIS_COMMENT_NUM_COMMENTS_LEN
@@ -5008,7 +5008,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	87
+	.byte	89
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_CUESHEET_INDEX_OFFSET_LEN
@@ -5017,7 +5017,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	88
+	.byte	90
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_CUESHEET_INDEX_NUMBER_LEN
@@ -5026,7 +5026,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	89
+	.byte	91
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_CUESHEET_INDEX_RESERVED_LEN
@@ -5035,7 +5035,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	91
+	.byte	93
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_CUESHEET_TRACK_OFFSET_LEN
@@ -5044,7 +5044,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	92
+	.byte	94
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_CUESHEET_TRACK_NUMBER_LEN
@@ -5053,7 +5053,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	93
+	.byte	95
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_CUESHEET_TRACK_ISRC_LEN
@@ -5062,7 +5062,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	94
+	.byte	96
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_CUESHEET_TRACK_TYPE_LEN
@@ -5071,7 +5071,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	95
+	.byte	97
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_CUESHEET_TRACK_PRE_EMPHASIS_LEN
@@ -5080,7 +5080,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	96
+	.byte	98
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_CUESHEET_TRACK_RESERVED_LEN
@@ -5089,7 +5089,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	97
+	.byte	99
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_CUESHEET_TRACK_NUM_INDICES_LEN
@@ -5098,7 +5098,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	99
+	.byte	101
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_CUESHEET_MEDIA_CATALOG_NUMBER_LEN
@@ -5107,7 +5107,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	100
+	.byte	102
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_CUESHEET_LEAD_IN_LEN
@@ -5116,7 +5116,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	101
+	.byte	103
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_CUESHEET_IS_CD_LEN
@@ -5125,7 +5125,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	102
+	.byte	104
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_CUESHEET_RESERVED_LEN
@@ -5134,7 +5134,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	103
+	.byte	105
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_CUESHEET_NUM_TRACKS_LEN
@@ -5143,7 +5143,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	105
+	.byte	107
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_PICTURE_TYPE_LEN
@@ -5152,7 +5152,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	106
+	.byte	108
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_PICTURE_MIME_TYPE_LENGTH_LEN
@@ -5161,7 +5161,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	107
+	.byte	109
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_PICTURE_DESCRIPTION_LENGTH_LEN
@@ -5170,7 +5170,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	108
+	.byte	110
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_PICTURE_WIDTH_LEN
@@ -5179,7 +5179,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	109
+	.byte	111
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_PICTURE_HEIGHT_LEN
@@ -5188,7 +5188,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	110
+	.byte	112
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_PICTURE_DEPTH_LEN
@@ -5197,7 +5197,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	111
+	.byte	113
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_PICTURE_COLORS_LEN
@@ -5206,7 +5206,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	112
+	.byte	114
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_PICTURE_DATA_LENGTH_LEN
@@ -5215,7 +5215,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	114
+	.byte	116
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_IS_LAST_LEN
@@ -5224,7 +5224,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	115
+	.byte	117
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_TYPE_LEN
@@ -5233,7 +5233,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	116
+	.byte	118
 	.byte	5
 	.byte	3
 	.long	FLAC__STREAM_METADATA_LENGTH_LEN
@@ -5242,7 +5242,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	118
+	.byte	120
 	.byte	5
 	.byte	3
 	.long	FLAC__FRAME_HEADER_SYNC
@@ -5251,7 +5251,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	119
+	.byte	121
 	.byte	5
 	.byte	3
 	.long	FLAC__FRAME_HEADER_SYNC_LEN
@@ -5260,7 +5260,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	120
+	.byte	122
 	.byte	5
 	.byte	3
 	.long	FLAC__FRAME_HEADER_RESERVED_LEN
@@ -5269,7 +5269,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	121
+	.byte	123
 	.byte	5
 	.byte	3
 	.long	FLAC__FRAME_HEADER_BLOCKING_STRATEGY_LEN
@@ -5278,7 +5278,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	122
+	.byte	124
 	.byte	5
 	.byte	3
 	.long	FLAC__FRAME_HEADER_BLOCK_SIZE_LEN
@@ -5287,7 +5287,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	123
+	.byte	125
 	.byte	5
 	.byte	3
 	.long	FLAC__FRAME_HEADER_SAMPLE_RATE_LEN
@@ -5296,7 +5296,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	124
+	.byte	126
 	.byte	5
 	.byte	3
 	.long	FLAC__FRAME_HEADER_CHANNEL_ASSIGNMENT_LEN
@@ -5305,7 +5305,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	125
+	.byte	127
 	.byte	5
 	.byte	3
 	.long	FLAC__FRAME_HEADER_BITS_PER_SAMPLE_LEN
@@ -5314,7 +5314,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	126
+	.byte	128
 	.byte	5
 	.byte	3
 	.long	FLAC__FRAME_HEADER_ZERO_PAD_LEN
@@ -5323,7 +5323,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	127
+	.byte	129
 	.byte	5
 	.byte	3
 	.long	FLAC__FRAME_HEADER_CRC_LEN
@@ -5332,7 +5332,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	129
+	.byte	131
 	.byte	5
 	.byte	3
 	.long	FLAC__FRAME_FOOTER_CRC_LEN
@@ -5341,7 +5341,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	131
+	.byte	133
 	.byte	5
 	.byte	3
 	.long	FLAC__ENTROPY_CODING_METHOD_TYPE_LEN
@@ -5350,7 +5350,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	132
+	.byte	134
 	.byte	5
 	.byte	3
 	.long	FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE_ORDER_LEN
@@ -5359,7 +5359,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	133
+	.byte	135
 	.byte	5
 	.byte	3
 	.long	FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE_PARAMETER_LEN
@@ -5368,7 +5368,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	134
+	.byte	136
 	.byte	5
 	.byte	3
 	.long	FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE2_PARAMETER_LEN
@@ -5377,7 +5377,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	135
+	.byte	137
 	.byte	5
 	.byte	3
 	.long	FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE_RAW_LEN
@@ -5386,7 +5386,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	137
+	.byte	139
 	.byte	5
 	.byte	3
 	.long	FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE_ESCAPE_PARAMETER
@@ -5395,7 +5395,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	138
+	.byte	140
 	.byte	5
 	.byte	3
 	.long	FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE2_ESCAPE_PARAMETER
@@ -5404,7 +5404,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	1357
 	.byte	1
 	.byte	1
-	.byte	140
+	.byte	142
 	.byte	5
 	.byte	3
 	.long	FLAC__EntropyCodingMethodTypeString
@@ -5421,7 +5421,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	145
+	.byte	147
 	.byte	5
 	.byte	3
 	.long	FLAC__SUBFRAME_LPC_QLP_COEFF_PRECISION_LEN
@@ -5430,7 +5430,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	146
+	.byte	148
 	.byte	5
 	.byte	3
 	.long	FLAC__SUBFRAME_LPC_QLP_SHIFT_LEN
@@ -5439,7 +5439,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	148
+	.byte	150
 	.byte	5
 	.byte	3
 	.long	FLAC__SUBFRAME_ZERO_PAD_LEN
@@ -5448,7 +5448,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	149
+	.byte	151
 	.byte	5
 	.byte	3
 	.long	FLAC__SUBFRAME_TYPE_LEN
@@ -5457,7 +5457,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	150
+	.byte	152
 	.byte	5
 	.byte	3
 	.long	FLAC__SUBFRAME_WASTED_BITS_FLAG_LEN
@@ -5466,7 +5466,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	152
+	.byte	154
 	.byte	5
 	.byte	3
 	.long	FLAC__SUBFRAME_TYPE_CONSTANT_BYTE_ALIGNED_MASK
@@ -5475,7 +5475,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	153
+	.byte	155
 	.byte	5
 	.byte	3
 	.long	FLAC__SUBFRAME_TYPE_VERBATIM_BYTE_ALIGNED_MASK
@@ -5484,7 +5484,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	154
+	.byte	156
 	.byte	5
 	.byte	3
 	.long	FLAC__SUBFRAME_TYPE_FIXED_BYTE_ALIGNED_MASK
@@ -5493,7 +5493,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	184
 	.byte	1
 	.byte	1
-	.byte	155
+	.byte	157
 	.byte	5
 	.byte	3
 	.long	FLAC__SUBFRAME_TYPE_LPC_BYTE_ALIGNED_MASK
@@ -5502,7 +5502,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	1554
 	.byte	1
 	.byte	1
-	.byte	157
+	.byte	159
 	.byte	5
 	.byte	3
 	.long	FLAC__SubframeTypeString
@@ -5517,7 +5517,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	1554
 	.byte	1
 	.byte	1
-	.byte	164
+	.byte	166
 	.byte	5
 	.byte	3
 	.long	FLAC__ChannelAssignmentString
@@ -5526,7 +5526,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	1357
 	.byte	1
 	.byte	1
-	.byte	171
+	.byte	173
 	.byte	5
 	.byte	3
 	.long	FLAC__FrameNumberTypeString
@@ -5535,7 +5535,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	1620
 	.byte	1
 	.byte	1
-	.byte	176
+	.byte	178
 	.byte	5
 	.byte	3
 	.long	FLAC__MetadataTypeString
@@ -5550,7 +5550,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	1650
 	.byte	1
 	.byte	1
-	.byte	186
+	.byte	188
 	.byte	5
 	.byte	3
 	.long	FLAC__StreamMetadata_Picture_TypeString
@@ -5666,7 +5666,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	1
 	.long	.Linfo_string127
 	.byte	1
-	.byte	219
+	.byte	221
 	.byte	1
 	.long	1935
 	.byte	1
@@ -5674,19 +5674,19 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc1
 	.long	.Linfo_string143
 	.byte	1
-	.byte	219
+	.byte	221
 	.long	189
 	.byte	19
 	.long	.Ldebug_loc2
 	.long	.Linfo_string119
 	.byte	1
-	.byte	219
+	.byte	221
 	.long	189
 	.byte	0
 	.byte	20
 	.long	.Linfo_string117
 	.byte	1
-	.byte	210
+	.byte	212
 	.byte	1
 	.long	1935
 	.byte	1
@@ -5694,7 +5694,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	21
 	.long	.Linfo_string119
 	.byte	1
-	.byte	210
+	.byte	212
 	.long	189
 	.byte	0
 	.byte	8
@@ -5709,7 +5709,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	1
 	.long	.Linfo_string128
 	.byte	1
-	.byte	229
+	.byte	231
 	.byte	1
 	.long	1935
 	.byte	1
@@ -5717,13 +5717,13 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc3
 	.long	.Linfo_string119
 	.byte	1
-	.byte	229
+	.byte	231
 	.long	189
 	.byte	22
 	.long	1909
 	.long	.Ldebug_ranges3
 	.byte	1
-	.byte	232
+	.byte	234
 	.byte	17
 	.long	.Ldebug_loc4
 	.long	1923
@@ -5736,7 +5736,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	1
 	.long	.Linfo_string129
 	.byte	1
-	.byte	243
+	.byte	245
 	.byte	1
 	.long	1935
 	.byte	1
@@ -5744,25 +5744,25 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc5
 	.long	.Linfo_string144
 	.byte	1
-	.byte	243
+	.byte	245
 	.long	3172
 	.byte	23
 	.long	.Ldebug_loc6
 	.long	.Linfo_string152
 	.byte	1
-	.byte	245
+	.byte	247
 	.long	189
 	.byte	23
 	.long	.Ldebug_loc7
 	.long	.Linfo_string153
 	.byte	1
-	.byte	247
+	.byte	249
 	.long	1935
 	.byte	24
 	.byte	0
 	.long	.Linfo_string154
 	.byte	1
-	.byte	246
+	.byte	248
 	.long	482
 	.byte	0
 	.byte	25
@@ -5772,7 +5772,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	1
 	.long	.Linfo_string130
 	.byte	1
-	.short	279
+	.short	281
 	.byte	1
 	.long	189
 	.byte	1
@@ -5780,25 +5780,25 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc8
 	.long	.Linfo_string144
 	.byte	1
-	.short	279
+	.short	281
 	.long	3288
 	.byte	27
 	.long	.Ldebug_loc9
 	.long	.Linfo_string152
 	.byte	1
-	.short	281
+	.short	283
 	.long	189
 	.byte	27
 	.long	.Ldebug_loc10
 	.long	.Linfo_string155
 	.byte	1
-	.short	281
+	.short	283
 	.long	189
 	.byte	27
 	.long	.Ldebug_loc11
 	.long	.Linfo_string156
 	.byte	1
-	.short	282
+	.short	284
 	.long	1935
 	.byte	0
 	.byte	28
@@ -5808,20 +5808,20 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	1
 	.long	.Linfo_string142
 	.byte	1
-	.short	267
+	.short	269
 	.byte	1
 	.long	1822
 	.byte	26
 	.long	.Ldebug_loc12
 	.long	.Linfo_string157
 	.byte	1
-	.short	267
+	.short	269
 	.long	3293
 	.byte	26
 	.long	.Ldebug_loc13
 	.long	.Linfo_string158
 	.byte	1
-	.short	267
+	.short	269
 	.long	3293
 	.byte	0
 	.byte	25
@@ -5831,7 +5831,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	1
 	.long	.Linfo_string131
 	.byte	1
-	.short	361
+	.short	363
 	.byte	1
 	.long	1935
 	.byte	1
@@ -5839,12 +5839,12 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc14
 	.long	.Linfo_string159
 	.byte	1
-	.short	361
+	.short	363
 	.long	49
 	.byte	29
 	.long	.Linfo_string160
 	.byte	1
-	.short	363
+	.short	365
 	.long	59
 	.byte	0
 	.byte	25
@@ -5854,7 +5854,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	1
 	.long	.Linfo_string132
 	.byte	1
-	.short	370
+	.short	372
 	.byte	1
 	.long	1935
 	.byte	1
@@ -5862,13 +5862,13 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc15
 	.long	.Linfo_string161
 	.byte	1
-	.short	370
+	.short	372
 	.long	3303
 	.byte	26
 	.long	.Ldebug_loc16
 	.long	.Linfo_string162
 	.byte	1
-	.short	370
+	.short	372
 	.long	189
 	.byte	30
 	.long	.Ldebug_ranges10
@@ -5876,7 +5876,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc17
 	.long	.Linfo_string163
 	.byte	1
-	.short	381
+	.short	383
 	.long	3303
 	.byte	30
 	.long	.Ldebug_ranges9
@@ -5884,7 +5884,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc18
 	.long	.Linfo_string164
 	.byte	1
-	.short	383
+	.short	385
 	.long	189
 	.byte	0
 	.byte	0
@@ -5894,7 +5894,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc19
 	.long	.Linfo_string164
 	.byte	1
-	.short	374
+	.short	376
 	.long	189
 	.byte	0
 	.byte	0
@@ -5905,14 +5905,14 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	1
 	.long	.Linfo_string141
 	.byte	1
-	.short	320
+	.short	322
 	.byte	1
 	.long	189
 	.byte	26
 	.long	.Ldebug_loc20
 	.long	.Linfo_string165
 	.byte	1
-	.short	320
+	.short	322
 	.long	3303
 	.byte	0
 	.byte	25
@@ -5922,7 +5922,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	1
 	.long	.Linfo_string133
 	.byte	1
-	.short	394
+	.short	396
 	.byte	1
 	.long	1935
 	.byte	1
@@ -5930,25 +5930,25 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc21
 	.long	.Linfo_string166
 	.byte	1
-	.short	394
+	.short	396
 	.long	3303
 	.byte	26
 	.long	.Ldebug_loc22
 	.long	.Linfo_string162
 	.byte	1
-	.short	394
+	.short	396
 	.long	189
 	.byte	27
 	.long	.Ldebug_loc23
 	.long	.Linfo_string167
 	.byte	1
-	.short	396
+	.short	398
 	.long	3303
 	.byte	27
 	.long	.Ldebug_loc24
 	.long	.Linfo_string163
 	.byte	1
-	.short	396
+	.short	398
 	.long	3303
 	.byte	30
 	.long	.Ldebug_ranges14
@@ -5956,7 +5956,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc25
 	.long	.Linfo_string164
 	.byte	1
-	.short	408
+	.short	410
 	.long	189
 	.byte	0
 	.byte	0
@@ -5967,7 +5967,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	1
 	.long	.Linfo_string134
 	.byte	1
-	.short	420
+	.short	422
 	.byte	1
 	.long	1935
 	.byte	1
@@ -5975,31 +5975,31 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc26
 	.long	.Linfo_string168
 	.byte	1
-	.short	420
+	.short	422
 	.long	3308
 	.byte	26
 	.long	.Ldebug_loc27
 	.long	.Linfo_string184
 	.byte	1
-	.short	420
+	.short	422
 	.long	1935
 	.byte	26
 	.long	.Ldebug_loc28
 	.long	.Linfo_string185
 	.byte	1
-	.short	420
+	.short	422
 	.long	3594
 	.byte	27
 	.long	.Ldebug_loc29
 	.long	.Linfo_string155
 	.byte	1
-	.short	422
+	.short	424
 	.long	189
 	.byte	27
 	.long	.Ldebug_loc30
 	.long	.Linfo_string152
 	.byte	1
-	.short	422
+	.short	424
 	.long	189
 	.byte	0
 	.byte	25
@@ -6009,7 +6009,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	1
 	.long	.Linfo_string135
 	.byte	1
-	.short	499
+	.short	501
 	.byte	1
 	.long	1935
 	.byte	1
@@ -6017,25 +6017,25 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc31
 	.long	.Linfo_string186
 	.byte	1
-	.short	499
+	.short	501
 	.long	3599
 	.byte	26
 	.long	.Ldebug_loc32
 	.long	.Linfo_string185
 	.byte	1
-	.short	499
+	.short	501
 	.long	3594
 	.byte	27
 	.long	.Ldebug_loc33
 	.long	.Linfo_string198
 	.byte	1
-	.short	501
+	.short	503
 	.long	3756
 	.byte	27
 	.long	.Ldebug_loc34
 	.long	.Linfo_string199
 	.byte	1
-	.short	502
+	.short	504
 	.long	3761
 	.byte	30
 	.long	.Ldebug_ranges17
@@ -6043,7 +6043,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc35
 	.long	.Linfo_string164
 	.byte	1
-	.short	512
+	.short	514
 	.long	189
 	.byte	0
 	.byte	0
@@ -6054,7 +6054,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	1
 	.long	.Linfo_string136
 	.byte	1
-	.short	538
+	.short	540
 	.byte	1
 	.long	189
 	.byte	1
@@ -6062,13 +6062,13 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc36
 	.long	.Linfo_string143
 	.byte	1
-	.short	538
+	.short	540
 	.long	189
 	.byte	31
 	.byte	0
 	.long	.Linfo_string200
 	.byte	1
-	.short	540
+	.short	542
 	.long	189
 	.byte	0
 	.byte	25
@@ -6078,7 +6078,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	1
 	.long	.Linfo_string137
 	.byte	1
-	.short	548
+	.short	550
 	.byte	1
 	.long	189
 	.byte	1
@@ -6086,27 +6086,27 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc37
 	.long	.Linfo_string201
 	.byte	1
-	.short	548
+	.short	550
 	.long	189
 	.byte	32
 	.byte	1
 	.byte	81
 	.long	.Linfo_string143
 	.byte	1
-	.short	548
+	.short	550
 	.long	189
 	.byte	32
 	.byte	1
 	.byte	82
 	.long	.Linfo_string202
 	.byte	1
-	.short	548
+	.short	550
 	.long	189
 	.byte	27
 	.long	.Ldebug_loc38
 	.long	.Linfo_string200
 	.byte	1
-	.short	550
+	.short	552
 	.long	189
 	.byte	0
 	.byte	33
@@ -6116,7 +6116,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	1
 	.long	.Linfo_string138
 	.byte	1
-	.short	563
+	.short	565
 	.byte	1
 	.byte	1
 	.byte	32
@@ -6124,7 +6124,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	80
 	.long	.Linfo_string203
 	.byte	1
-	.short	563
+	.short	565
 	.long	3777
 	.byte	0
 	.byte	33
@@ -6134,14 +6134,14 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	1
 	.long	.Linfo_string139
 	.byte	1
-	.short	572
+	.short	574
 	.byte	1
 	.byte	1
 	.byte	26
 	.long	.Ldebug_loc39
 	.long	.Linfo_string203
 	.byte	1
-	.short	572
+	.short	574
 	.long	3777
 	.byte	0
 	.byte	34
@@ -6188,7 +6188,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.byte	1
 	.long	.Linfo_string140
 	.byte	1
-	.short	588
+	.short	590
 	.byte	1
 	.long	1935
 	.byte	1
@@ -6196,19 +6196,19 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	.Ldebug_loc40
 	.long	.Linfo_string203
 	.byte	1
-	.short	588
+	.short	590
 	.long	3777
 	.byte	26
 	.long	.Ldebug_loc41
 	.long	.Linfo_string208
 	.byte	1
-	.short	588
+	.short	590
 	.long	189
 	.byte	36
 	.long	2944
 	.long	.Ldebug_ranges23
 	.byte	1
-	.short	593
+	.short	595
 	.byte	17
 	.long	.Ldebug_loc43
 	.long	2957
@@ -6226,7 +6226,7 @@ FLAC__StreamMetadata_Picture_TypeString:
 	.long	2944
 	.long	.Ldebug_ranges24
 	.byte	1
-	.short	595
+	.short	597
 	.byte	17
 	.long	.Ldebug_loc48
 	.long	2957

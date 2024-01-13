@@ -485,7 +485,7 @@ PlayRIFF:
 		nop
 		stw r1, sp[1]
 	}
-	ldaw r6, dp[information_string]
+	ldaw r6, dp[audio_property_string]
 	ldaw r11, cp[.L.str9]
 	{
 		mov r0, r6
@@ -3650,7 +3650,7 @@ InitialRun:
 	.typestring p_file, "p(s(){m(fs){p(s(){m(fs_type){uc},m(drv){uc},m(csize){uc},m(n_fats){uc},m(wflag){uc},m(fsi_flag){uc},m(id){us},m(n_rootdir){us},m(last_clust){ul},m(free_clust){ul},m(fsi_sector){ul},m(cdir){ul},m(n_fatent){ul},m(fsize){ul},m(fatbase){ul},m(dirbase){ul},m(database){ul},m(winsect){ul},m(win){a(512:uc)}})},m(id){us},m(flag){uc},m(pad1){uc},m(fptr){ul},m(fsize){ul},m(sclust){ul},m(clust){ul},m(dsect){ul},m(dir_sect){ul},m(dir_ptr){p(uc)}})"
 	.typestring c_handshake, "ui"
 	.typestring TotalTimeString, "a(*:uc)"
-	.typestring information_string, "a(*:uc)"
+	.typestring audio_property_string, "a(*:uc)"
 	.typestring SecElapsed, "ui"
 	.typestring buff_id, "ui"
 	.typestring audio_buffer, "a(8:a(2048:uc))"

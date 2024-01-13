@@ -22,7 +22,7 @@
 .Linfo_string1:
 .asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\lpc_intrin_fma.c"
 .Linfo_string2:
-.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 	.section	.debug_info,"",@progbits
 .L.debug_info_begin0:
 	.long	27

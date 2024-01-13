@@ -790,6 +790,9 @@ void __eprintf (const char *, const char *, unsigned int, const char *);
 # 39 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/lpc.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h" 1
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 1
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 2
 # 41 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/lpc.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h" 1
 # 36 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
@@ -1876,7 +1879,12 @@ int flac_snprintf(char *str, size_t size, const char *fmt, ...);
 int flac_vsnprintf(char *str, size_t size, const char *fmt, va_list va);
 # 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/lpc.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 1
-# 48 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 33 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 1 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h" 1
+# 100 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h"
+inline int xassert_msg(const char msg[]) { return 1; }
+# 34 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
+# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 static inline uint32_t FLAC__clz_soft_uint32(FLAC__uint32 word)
 {
  static const uint8_t byte_to_unary_table[] = {
@@ -1907,14 +1915,14 @@ static inline uint32_t FLAC__clz_soft_uint32(FLAC__uint32 word)
 static inline uint32_t FLAC__clz_uint32(FLAC__uint32 v)
 {
 
-                    ;
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
 
 
 
 
  return __builtin_clz(v);
-# 94 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 96 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -1927,10 +1935,10 @@ static inline uint32_t FLAC__clz_soft_uint64(FLAC__uint64 word)
 static inline uint32_t FLAC__clz_uint64(FLAC__uint64 v)
 {
 
-                    ;
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
  return __builtin_clzll(v);
-# 118 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 120 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -1947,21 +1955,21 @@ static inline uint32_t FLAC__clz2_uint64(FLAC__uint64 v)
   return 64;
  return FLAC__clz_uint64(v);
 }
-# 158 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 160 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 static inline uint32_t FLAC__bitmath_ilog2(FLAC__uint32 v)
 {
-                    ;
-# 170 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+ do { if (!(v > 0)) __builtin_trap();} while(0);
+# 172 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
  return FLAC__clz_uint32(v) ^ 31U;
 
 }
 
 static inline uint32_t FLAC__bitmath_ilog2_wide(FLAC__uint64 v)
 {
-                    ;
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
  return __builtin_clzll(v) ^ 63U;
-# 208 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 210 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 uint32_t FLAC__bitmath_silog2(FLAC__int64 v);
@@ -2048,6 +2056,270 @@ uint32_t FLAC__lpc_compute_best_order(const double lpc_error[], uint32_t max_ord
 # 45 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/lpc.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/macros.h" 1
 # 46 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/lpc.c" 2
+
+
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 1 3
+# 34 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 3
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
+# 34 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 2 3
+
+
+
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stdarg.h" 1 3
+# 37 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 2 3
+# 51 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 3
+typedef __FILE FILE;
+# 60 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 3
+typedef _fpos_t fpos_t;
+
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys/stdio.h" 1 3
+# 66 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 2 3
+# 161 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 3
+FILE * tmpfile (void);
+char * tmpnam (char *);
+int fclose (FILE *);
+int fflush (FILE *);
+FILE * freopen (const char *, const char *, FILE *);
+
+void setbuf (FILE *, char *);
+int setvbuf (FILE *, char *, int, size_t);
+
+int fprintf (FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)));
+
+int fscanf (FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)));
+
+int printf (const char *, ...) __attribute__ ((__format__ (__printf__, 1, 2)));
+
+int scanf (const char *, ...) __attribute__ ((__format__ (__scanf__, 1, 2)));
+
+int sscanf (const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)));
+
+int vfprintf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)));
+
+int vprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)));
+
+int vsprintf (char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)));
+
+int fgetc (FILE *);
+char * fgets (char *, int, FILE *);
+int fputc (int, FILE *);
+int fputs (const char *, FILE *);
+int getc (FILE *);
+int getchar (void);
+char * gets (char *);
+int putc (int, FILE *);
+int putchar (int);
+int puts (const char *);
+int ungetc (int, FILE *);
+size_t fread (void *, size_t _size, size_t _n, FILE *);
+size_t fwrite (const void * , size_t _size, size_t _n, FILE *);
+
+
+
+int fgetpos (FILE *, fpos_t *);
+
+int fseek (FILE *, long, int);
+
+
+
+int fsetpos (FILE *, const fpos_t *);
+
+long ftell ( FILE *);
+void rewind (FILE *);
+void clearerr (FILE *);
+int feof (FILE *);
+int ferror (FILE *);
+void perror (const char *);
+FILE * fopen (const char *_name, const char *_type);
+int sprintf (char *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)));
+
+int remove (const char *);
+int rename (const char *, const char *);
+
+int snprintf (char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)));
+
+int vfscanf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)));
+
+int vscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)));
+
+int vsnprintf (char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)));
+
+int vsscanf (const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)));
+
+
+
+
+
+
+
+int fseeko (FILE *, off_t, int);
+off_t ftello ( FILE *);
+
+int asiprintf (char **, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)));
+
+char * asniprintf (char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)));
+
+char * asnprintf (char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)));
+
+int asprintf (char **, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)));
+
+
+int diprintf (int, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)));
+
+
+int fcloseall (void);
+int fiprintf (FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)));
+
+int fiscanf (FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)));
+
+int iprintf (const char *, ...) __attribute__ ((__format__ (__printf__, 1, 2)));
+
+int iscanf (const char *, ...) __attribute__ ((__format__ (__scanf__, 1, 2)));
+
+int siprintf (char *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)));
+
+int siscanf (const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)));
+
+int sniprintf (char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)));
+
+char * tempnam (const char *, const char *);
+int vasiprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)));
+
+char * vasniprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)));
+
+char * vasnprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)));
+
+int vasprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)));
+
+int vdiprintf (int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)));
+
+int vfiprintf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)));
+
+int vfiscanf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)));
+
+int viprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)));
+
+int viscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)));
+
+int vsiprintf (char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)));
+
+int vsiscanf (const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)));
+
+int vsniprintf (char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)));
+# 300 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 3
+FILE * fdopen (int, const char *);
+int fileno (FILE *);
+int getw (FILE *);
+int pclose (FILE *);
+FILE * popen (const char *, const char *);
+int putw (int, FILE *);
+void setbuffer (FILE *, char *, int);
+int setlinebuf (FILE *);
+int getc_unlocked (FILE *);
+int getchar_unlocked (void);
+void flockfile (FILE *);
+int ftrylockfile (FILE *);
+void funlockfile (FILE *);
+int putc_unlocked (int, FILE *);
+int putchar_unlocked (int);
+# 323 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 3
+int dprintf (int, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)));
+
+
+FILE * fmemopen (void *, size_t, const char *);
+
+
+FILE * open_memstream (char **, size_t *);
+
+
+
+
+int vdprintf (int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)));
+
+
+
+
+
+
+
+int _fflush (FILE *);
+char * _fgets_r (struct _reent *, char *, int, FILE *);
+int _fiscanf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)));
+
+int _fputc_r (struct _reent *, int, FILE *);
+int _fputs_r (struct _reent *, const char *, FILE *);
+int _fscanf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)));
+
+long _ftell_r (struct _reent *, FILE *);
+size_t _fwrite_r (struct _reent *, const void * , size_t _size, size_t _n, FILE *);
+int _getc_r (struct _reent *, FILE *);
+int _getchar_r (struct _reent *);
+char * _gets_r (struct _reent *, char *);
+int _iscanf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)));
+
+int _mkstemp_r (struct _reent *, char *);
+char * _mktemp_r (struct _reent *, char *);
+void _perror_r (struct _reent *, const char *);
+int _putc_r (struct _reent *, int, FILE *);
+int _putchar_unlocked_r (struct _reent *, int);
+int _putchar_r (struct _reent *, int);
+int _remove_r (struct _reent *, const char *);
+int _rename_r (struct _reent *, const char *_old, const char *_new);
+
+int _scanf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)));
+
+int _siscanf_r (struct _reent *, const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)));
+
+int _sscanf_r (struct _reent *, const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)));
+
+int _ungetc_r (struct _reent *, int, FILE *);
+int _vfiscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)));
+
+int _vfscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)));
+
+int _viscanf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)));
+
+int _vscanf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)));
+
+int _vsiscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)));
+
+int _vsscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)));
+
+
+ssize_t __getdelim (char **, size_t *, int, FILE *);
+ssize_t __getline (char **, size_t *, FILE *);
+# 413 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 3
+int __srget (FILE *);
+int __swbuf (int, FILE *);
+# 429 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 3
+FILE *funopen (const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie));
+# 441 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 3
+typedef ssize_t cookie_read_function_t(void *__cookie, char *__buf, size_t __n);
+typedef ssize_t cookie_write_function_t(void *__cookie, const char *__buf,
+     size_t __n);
+
+
+
+
+typedef int cookie_seek_function_t(void *__cookie, off_t *__off, int __whence);
+
+typedef int cookie_close_function_t(void *__cookie);
+typedef struct
+{
+
+
+  cookie_read_function_t *read;
+  cookie_write_function_t *write;
+  cookie_seek_function_t *seek;
+  cookie_close_function_t *close;
+} cookie_io_functions_t;
+FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __functions);
+# 49 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/lpc.c" 2
 # 63 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/lpc.c"
 inline long int lround(double x) {
  return (long)(x + __builtin_copysign(0.5, x));
@@ -2109,8 +2381,8 @@ void FLAC__lpc_compute_autocorrelation(const FLAC__real data[], uint32_t data_le
   uint32_t sample, coeff;
   const uint32_t limit = data_len - lag;
 
-                       ;
-                               ;
+  do { if (!(lag > 0)) __builtin_trap();} while(0);
+  do { if (!(lag <= data_len)) __builtin_trap();} while(0);
 
   for(coeff = 0; coeff < lag; coeff++)
    autoc[coeff] = 0.0;
@@ -2132,7 +2404,7 @@ void FLAC__lpc_compute_autocorrelation(const FLAC__real data[], uint32_t data_le
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/deduplication/lpc_compute_autocorrelation_intrin.inc" 1
  int i, j;
  (void) lag;
-                             ;
+ do { if (!(lag <= 8)) __builtin_trap();} while(0);
 
         for(i = 0; i < 8; i++)
                 autoc[i] = 0.0;
@@ -2153,7 +2425,7 @@ void FLAC__lpc_compute_autocorrelation(const FLAC__real data[], uint32_t data_le
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/deduplication/lpc_compute_autocorrelation_intrin.inc" 1
  int i, j;
  (void) lag;
-                             ;
+ do { if (!(lag <= 12)) __builtin_trap();} while(0);
 
         for(i = 0; i < 12; i++)
                 autoc[i] = 0.0;
@@ -2174,7 +2446,7 @@ void FLAC__lpc_compute_autocorrelation(const FLAC__real data[], uint32_t data_le
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/deduplication/lpc_compute_autocorrelation_intrin.inc" 1
  int i, j;
  (void) lag;
-                             ;
+ do { if (!(lag <= 16)) __builtin_trap();} while(0);
 
         for(i = 0; i < 16; i++)
                 autoc[i] = 0.0;
@@ -2196,10 +2468,10 @@ void FLAC__lpc_compute_lp_coefficients(const double autoc[], uint32_t *max_order
  uint32_t i, j;
  double r, err, lpc[(32u)];
 
-                             ;
-                             ;
-                                                ;
-                              ;
+ do { if (!(0 != max_order)) __builtin_trap();} while(0);
+ do { if (!(0 < *max_order)) __builtin_trap();} while(0);
+ do { if (!(*max_order <= (32u))) __builtin_trap();} while(0);
+ do { if (!(autoc[0] != 0.0)) __builtin_trap();} while(0);
 
  err = autoc[0];
 
@@ -2241,8 +2513,8 @@ int FLAC__lpc_quantize_coefficients(const FLAC__real lp_coeff[], uint32_t order,
  double cmax;
  FLAC__int32 qmax, qmin;
 
-                            ;
-                                                         ;
+ do { if (!(precision > 0)) __builtin_trap();} while(0);
+ do { if (!(precision >= (5u))) __builtin_trap();} while(0);
 
 
  precision--;
@@ -2307,7 +2579,7 @@ int FLAC__lpc_quantize_coefficients(const FLAC__real lp_coeff[], uint32_t order,
   double error = 0.0;
   FLAC__int32 q;
 
-
+  fprintf((__getstderr()),"FLAC__lpc_quantize_coefficients: negative shift=%d order=%u cmax=%f\n", *shift, order, cmax);
 
   for(i = 0; i < order; i++) {
    error += lp_coeff[i] / (1 << nshift);
@@ -2342,8 +2614,8 @@ void FLAC__lpc_compute_residual_from_qlp_coefficients(const FLAC__int32 * __rest
  int i;
  FLAC__int32 sum;
 
-                        ;
-                          ;
+ do { if (!(order > 0)) __builtin_trap();} while(0);
+ do { if (!(order <= 32)) __builtin_trap();} while(0);
 
 
 
@@ -2566,8 +2838,8 @@ void FLAC__lpc_compute_residual_from_qlp_coefficients_wide(const FLAC__int32 * _
  int i;
  FLAC__int64 sum;
 
-                        ;
-                          ;
+ do { if (!(order > 0)) __builtin_trap();} while(0);
+ do { if (!(order <= 32)) __builtin_trap();} while(0);
 
 
 
@@ -2789,8 +3061,8 @@ FLAC__bool FLAC__lpc_compute_residual_from_qlp_coefficients_limit_residual(const
  int i;
  FLAC__int64 sum, residual_to_check;
 
-                        ;
-                          ;
+ do { if (!(order > 0)) __builtin_trap();} while(0);
+ do { if (!(order <= 32)) __builtin_trap();} while(0);
 
  for(i = 0; i < (int)data_len; i++) {
   sum = 0;
@@ -2843,8 +3115,8 @@ FLAC__bool FLAC__lpc_compute_residual_from_qlp_coefficients_limit_residual_33bit
  int i;
  FLAC__int64 sum, residual_to_check;
 
-                        ;
-                          ;
+ do { if (!(order > 0)) __builtin_trap();} while(0);
+ do { if (!(order <= 32)) __builtin_trap();} while(0);
 
  for(i = 0; i < (int)data_len; i++) {
   sum = 0;
@@ -2925,8 +3197,8 @@ void FLAC__lpc_restore_signal(const FLAC__int32 * __restrict__ residual, uint32_
  int i;
  FLAC__int32 sum;
 
-                        ;
-                          ;
+ do { if (!(order > 0)) __builtin_trap();} while(0);
+ do { if (!(order <= 32)) __builtin_trap();} while(0);
 
 
 
@@ -3149,8 +3421,8 @@ void FLAC__lpc_restore_signal_wide(const FLAC__int32 * __restrict__ residual, ui
  int i;
  FLAC__int64 sum;
 
-                        ;
-                          ;
+ do { if (!(order > 0)) __builtin_trap();} while(0);
+ do { if (!(order <= 32)) __builtin_trap();} while(0);
 
 
 
@@ -3372,8 +3644,8 @@ void FLAC__lpc_restore_signal_wide_33bit(const FLAC__int32 * __restrict__ residu
  int i;
  FLAC__int64 sum;
 
-                        ;
-                          ;
+ do { if (!(order > 0)) __builtin_trap();} while(0);
+ do { if (!(order <= 32)) __builtin_trap();} while(0);
 
  for(i = 0; i < (int)data_len; i++) {
   sum = 0;
@@ -3419,7 +3691,7 @@ double FLAC__lpc_compute_expected_bits_per_residual_sample(double lpc_error, uin
 {
  double error_scale;
 
-                                ;
+ do { if (!(total_samples > 0)) __builtin_trap();} while(0);
 
  error_scale = 0.5 / (double)total_samples;
 
@@ -3448,8 +3720,8 @@ uint32_t FLAC__lpc_compute_best_order(const double lpc_error[], uint32_t max_ord
  uint32_t order, indx, best_index;
  double bits, best_bits, error_scale;
 
-                            ;
-                                ;
+ do { if (!(max_order > 0)) __builtin_trap();} while(0);
+ do { if (!(total_samples > 0)) __builtin_trap();} while(0);
 
  error_scale = 0.5 / (double)total_samples;
 

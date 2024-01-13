@@ -93,8 +93,8 @@ __xcc1_internal_4.info:
 	.set usage.anon.3,0
 	.set usage.anon.4,0
 	.set usage.anon.5,0
-	.globread qspi_server,deviceSpecs,"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:54:34: note: object used here\n    if(fl_connectToDevice(ports, deviceSpecs, sizeof(deviceSpecs)/sizeof(fl_QuadDeviceSpec)) != 0)\n                                 ^~~~~~~~~~~"
-	.globwrite qspi_server,ports,"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:54:27: note: object used here\n    if(fl_connectToDevice(ports, deviceSpecs, sizeof(deviceSpecs)/sizeof(fl_QuadDeviceSpec)) != 0)\n                          ^~~~~"
+	.globread qspi_server,deviceSpecs,"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:52:34: note: object used here\n    if(fl_connectToDevice(ports, deviceSpecs, sizeof(deviceSpecs)/sizeof(fl_QuadDeviceSpec)) != 0)\n                                 ^~~~~~~~~~~"
+	.globwrite qspi_server,ports,"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:52:27: note: object used here\n    if(fl_connectToDevice(ports, deviceSpecs, sizeof(deviceSpecs)/sizeof(fl_QuadDeviceSpec)) != 0)\n                          ^~~~~"
 	.call qspi_server,printf
 	.call qspi_server,free
 	.call qspi_server,fl_writeData
@@ -124,11 +124,11 @@ __xcc1_internal_4.info:
 	.set qspi_if_write.locnointerfaceaccess, 0
 	.assert 1,memset.actnoglobalaccess,"In file included from C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:19:\nIn file included from C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:5:\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:21:3: error: passing non-local alias to function `memset\' which accesses a global variable\n  memset(s, c, n);\n  ^~~~~~~~~~~~~~~"
 	.assert 1,memmove.actnoglobalaccess,"In file included from C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:19:\nIn file included from C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:5:\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:15:3: error: passing non-local alias to function `memmove\' which accesses a global variable\n  memmove(s1, s2, n);\n  ^~~~~~~~~~~~~~~~~~"
-	.assert 1,free.actnoglobalaccess,"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:95:13: error: passing non-local alias to function `free\' which accesses a global variable\n            free(write_buffer);\n            ^~~~~~~~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdlib.h:12:17: note: expanded from macro \'free\'\n#define free(s) free(s)\n                ^~~~~~~"
-	.assert 1,fl_writeData.actnoglobalaccess,"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:20: error: passing non-local alias to function `fl_writeData\' which accesses a global variable\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.assert 1,fl_readData.actnoglobalaccess,"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:109:27: error: passing non-local alias to function `fl_readData\' which accesses a global variable\n                int rc2 = fl_readData(offset, size, read_buffer);\n                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref fl_connectToDevice, deviceSpecs,"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:54:8: error: call to `fl_connectToDevice\' in `qspi_server\' makes alias of global \'deviceSpecs\'\n    if(fl_connectToDevice(ports, deviceSpecs, sizeof(deviceSpecs)/sizeof(fl_QuadDeviceSpec)) != 0)\n       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref fl_connectToDevice, ports,"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:54:8: error: call to `fl_connectToDevice\' in `qspi_server\' makes alias of global \'ports\'\n    if(fl_connectToDevice(ports, deviceSpecs, sizeof(deviceSpecs)/sizeof(fl_QuadDeviceSpec)) != 0)\n       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.assert 1,free.actnoglobalaccess,"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:93:13: error: passing non-local alias to function `free\' which accesses a global variable\n            free(write_buffer);\n            ^~~~~~~~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdlib.h:12:17: note: expanded from macro \'free\'\n#define free(s) free(s)\n                ^~~~~~~"
+	.assert 1,fl_writeData.actnoglobalaccess,"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:20: error: passing non-local alias to function `fl_writeData\' which accesses a global variable\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.assert 1,fl_readData.actnoglobalaccess,"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:107:27: error: passing non-local alias to function `fl_readData\' which accesses a global variable\n                int rc2 = fl_readData(offset, size, read_buffer);\n                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref fl_connectToDevice, deviceSpecs,"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:52:8: error: call to `fl_connectToDevice\' in `qspi_server\' makes alias of global \'deviceSpecs\'\n    if(fl_connectToDevice(ports, deviceSpecs, sizeof(deviceSpecs)/sizeof(fl_QuadDeviceSpec)) != 0)\n       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref fl_connectToDevice, ports,"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:52:8: error: call to `fl_connectToDevice\' in `qspi_server\' makes alias of global \'ports\'\n    if(fl_connectToDevice(ports, deviceSpecs, sizeof(deviceSpecs)/sizeof(fl_QuadDeviceSpec)) != 0)\n       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
                                         # End of file scope inline assembly
 	.section	.debug_info,"",@progbits
@@ -549,7 +549,7 @@ _i.qspi_access._chan_yield.write:       # @_i.qspi_access._chan_yield.write
 	.cc_top qspi_server.function,qspi_server
 qspi_server:                            # @qspi_server
 .Lfunc_begin4:
-	.loc	1 51 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:51:0
+	.loc	1 49 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:49:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -591,7 +591,7 @@ qspi_server:                            # @qspi_server
 		nop
 		stw r10, sp[5]
 	}
-	.loc	1 54 5 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:54:5
+	.loc	1 52 5 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:52:5
 .Ltmp29:
 	ldaw r0, dp[ports]
 	ldaw r1, dp[deviceSpecs]
@@ -605,11 +605,11 @@ qspi_server:                            # @qspi_server
 	}
 .Lxta.call_labels0:
 	bl fl_connectToDevice
-	.loc	1 54 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:54:5
+	.loc	1 52 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:52:5
 	bf r0, .LBB4_3
 # BB#1:                                 # %iftrue
 .Lxtalabel1:
-	.loc	1 56 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:56:0
+	.loc	1 54 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:54:0
 	ldaw r11, cp[.str6]
 	{
 		mov r0, r11
@@ -617,26 +617,26 @@ qspi_server:                            # @qspi_server
 	}
 .Lxta.call_labels1:
 	bl iprintf
-	.loc	1 57 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:57:0
+	.loc	1 55 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:55:0
 	bl __getstdout
-	.loc	1 57 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:57:0
+	.loc	1 55 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:55:0
 .Lxta.call_labels2:
 	bl fflush
 .LBB4_2:                                # %LoopTest
                                         # =>This Inner Loop Header: Depth=1
-	.loc	1 58 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:58:9
+	.loc	1 56 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:56:9
 	bu .LBB4_2
 .LBB4_3:                                # %ifdone
 .Lxtalabel2:
 .Ltmp30:
 	#DEBUG_VALUE: qspi_server:i <- R10
-	.loc	1 62 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:62:0
+	.loc	1 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:60:0
 	bl fl_getFlashType
 	{
 		mov r1, r0
 		nop
 	}
-	.loc	1 62 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:62:0
+	.loc	1 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:60:0
 	ldaw r11, cp[.str7]
 	{
 		mov r0, r11
@@ -644,13 +644,13 @@ qspi_server:                            # @qspi_server
 	}
 .Lxta.call_labels3:
 	bl iprintf
-	.loc	1 63 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:63:0
+	.loc	1 61 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:61:0
 	bl fl_getFlashSize
 	{
 		mov r1, r0
 		nop
 	}
-	.loc	1 63 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:63:0
+	.loc	1 61 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:61:0
 	ldaw r11, cp[.str8]
 	{
 		mov r0, r11
@@ -658,13 +658,13 @@ qspi_server:                            # @qspi_server
 	}
 .Lxta.call_labels4:
 	bl iprintf
-	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:64:0
+	.loc	1 62 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:62:0
 	bl fl_getDataPartitionSize
 	{
 		mov r1, r0
 		nop
 	}
-	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:64:0
+	.loc	1 62 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:62:0
 	ldaw r11, cp[.str9]
 	{
 		mov r0, r11
@@ -672,13 +672,13 @@ qspi_server:                            # @qspi_server
 	}
 .Lxta.call_labels5:
 	bl iprintf
-	.loc	1 65 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:65:0
+	.loc	1 63 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:63:0
 	bl fl_getNumDataSectors
 	{
 		mov r1, r0
 		nop
 	}
-	.loc	1 65 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:65:0
+	.loc	1 63 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:63:0
 	ldaw r11, cp[.str10]
 	{
 		mov r0, r11
@@ -690,7 +690,7 @@ qspi_server:                            # @qspi_server
 		ldc r8, 0
 		nop
 	}
-	.loc	1 66 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:66:0
+	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:64:0
 	{
 		mov r0, r8
 		nop
@@ -700,7 +700,7 @@ qspi_server:                            # @qspi_server
 		mov r1, r0
 		nop
 	}
-	.loc	1 66 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:66:0
+	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:64:0
 	ldaw r11, cp[.str11]
 	{
 		mov r0, r11
@@ -709,7 +709,7 @@ qspi_server:                            # @qspi_server
 .Lxta.call_labels7:
 	bl iprintf
 	ldc r1, 64
-	.loc	1 67 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:67:0
+	.loc	1 65 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:65:0
 	{
 		mov r0, r8
 		nop
@@ -719,7 +719,7 @@ qspi_server:                            # @qspi_server
 		mov r1, r0
 		nop
 	}
-	.loc	1 67 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:67:0
+	.loc	1 65 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:65:0
 	ldaw r11, cp[.str12]
 	{
 		mov r0, r11
@@ -727,9 +727,9 @@ qspi_server:                            # @qspi_server
 	}
 .Lxta.call_labels8:
 	bl iprintf
-	.loc	1 68 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:68:0
+	.loc	1 66 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:66:0
 	bl __getstdout
-	.loc	1 68 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:68:0
+	.loc	1 66 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:66:0
 .Lxta.call_labels9:
 	bl fflush
 .Ltmp31:
@@ -757,7 +757,7 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
 	#DEBUG_VALUE: size <- R7
-	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:102:0
+	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:100:0
 	{
 		lsu r0, r9, r7
 		nop
@@ -772,7 +772,7 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
 	#DEBUG_VALUE: size <- R7
-	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:102:0
+	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:100:0
 	{
 		lsu r0, r4, r7
 		nop
@@ -787,7 +787,7 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
 	#DEBUG_VALUE: size <- R7
-	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:102:0
+	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:100:0
 	{
 		mov r0, r10
 		stw r7, sp[1]
@@ -834,7 +834,7 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 78 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:78:9
+	.loc	1 76 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:76:9
 	{
 		zext r0, 1
 		nop
@@ -849,18 +849,18 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
 	#DEBUG_VALUE: qspi_server:i <- [SP+20]
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		clre
 		ldw r10, r10[0]
 	}
 	ldap r11, .Ltmp37
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		setv res[r10], r11
 		nop
 	}
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		eeu res[r10]
 		nop
@@ -885,7 +885,7 @@ qspi_server:                            # @qspi_server
 		mov r0, r6
 	}
 .Ltmp39:
-	.loc	1 79 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:79:0
+	.loc	1 77 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:77:0
 	{
 		mov r1, r7
 		nop
@@ -894,7 +894,7 @@ qspi_server:                            # @qspi_server
 	bl fl_getWriteScratchSize
 .Ltmp40:
 	#DEBUG_VALUE: scratch_size <- R0
-	.loc	1 83 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:83:0
+	.loc	1 81 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:81:0
 .Lxta.call_labels11:
 	bl _safe_malloc
 .Ltmp41:
@@ -902,7 +902,7 @@ qspi_server:                            # @qspi_server
 		mov r10, r0
 		nop
 	}
-	.loc	1 84 13                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:84:13
+	.loc	1 82 13                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:82:13
 	bf r10, .LBB4_6
 # BB#8:                                 # %iffalse
                                         #   in Loop: Header=BB4_4 Depth=1
@@ -929,7 +929,7 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		sub r0, r11, r5
 		nop
@@ -947,7 +947,7 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		lsu r3, r10, r1
 		nop
@@ -961,12 +961,12 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		sub r1, r10, r1
 		nop
 	}
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		lsu r3, r2, r1
 		nop
@@ -980,17 +980,17 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		sub r0, r9, r0
 		nop
 	}
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		add r3, r11, r0
 		sub r1, r2, r1
 	}
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		lsu r2, r10, r3
 		nop
@@ -1003,7 +1003,7 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		add r2, r10, r1
 		nop
@@ -1028,7 +1028,7 @@ qspi_server:                            # @qspi_server
 		nop
 		stw r1, sp[2]
 	}
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		mov r0, r6
 		stw r0, sp[1]
@@ -1052,7 +1052,7 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 91 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:91:0
+	.loc	1 89 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:0
 	ldaw r11, cp[.str24]
 	{
 		mov r0, r11
@@ -1068,7 +1068,7 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 93 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:93:0
+	.loc	1 91 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:91:0
 	{
 		mov r0, r10
 		nop
@@ -1084,7 +1084,7 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 85 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:85:0
+	.loc	1 83 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:83:0
 	ldaw r11, cp[.str13]
 	{
 		mov r0, r11
@@ -1100,7 +1100,7 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 95 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:95:0
+	.loc	1 93 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:93:0
 	{
 		mov r0, r4
 		nop
@@ -1109,18 +1109,18 @@ qspi_server:                            # @qspi_server
 	bl free
 .Ltmp49:
 	#DEBUG_VALUE: qspi_server:i <- [SP+20]
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		clre
 		ldw r10, r8[0]
 	}
 	ldap r11, .Ltmp37
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		setv res[r10], r11
 		nop
 	}
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		eeu res[r10]
 		nop
@@ -1138,7 +1138,7 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 109 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:109:0
+	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:107:0
 	{
 		lsu r0, r11, r5
 		nop
@@ -1152,12 +1152,12 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 109 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:109:0
+	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:107:0
 	{
 		sub r0, r11, r5
 		nop
 	}
-	.loc	1 109 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:109:0
+	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:107:0
 	{
 		lsu r1, r9, r0
 		nop
@@ -1171,12 +1171,12 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 109 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:109:0
+	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:107:0
 	{
 		sub r3, r9, r0
 		mov r0, r6
 	}
-	.loc	1 109 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:109:0
+	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:107:0
 	{
 		mov r1, r7
 		mov r2, r11
@@ -1187,7 +1187,7 @@ qspi_server:                            # @qspi_server
 	}
 .Lxta.call_labels17:
 	bl fl_readData
-	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:110:0
+	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:108:0
 	{
 		lsu r0, r9, r7
 		nop
@@ -1201,7 +1201,7 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:110:0
+	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:108:0
 	{
 		lsu r0, r4, r7
 		nop
@@ -1215,7 +1215,7 @@ qspi_server:                            # @qspi_server
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:110:0
+	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:108:0
 	{
 		mov r0, r10
 		stw r7, sp[1]
@@ -1253,18 +1253,18 @@ qspi_server:                            # @qspi_server
 	}
 .Ltmp52:
 	#DEBUG_VALUE: qspi_server:i <- [SP+20]
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		clre
 		ldw r10, r1[0]
 	}
 	ldap r11, .Ltmp37
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		setv res[r10], r11
 		nop
 	}
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		eeu res[r10]
 		nop
@@ -1322,7 +1322,7 @@ qspi_server:                            # @qspi_server
 		in r4, res[r10]
 		mov r0, r7
 	}
-	.loc	1 101 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:101:0
+	.loc	1 99 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:0
 	bl _safe_malloc
 	{
 		mov r11, r0
@@ -1355,7 +1355,7 @@ qspi_server:                            # @qspi_server
 	.cc_top _Sqspi_server_0.function,_Sqspi_server_0
 _Sqspi_server_0:                        # @_Sqspi_server_0
 .Lfunc_begin5:
-	.loc	1 51 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:51:0
+	.loc	1 49 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:49:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1397,7 +1397,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 		nop
 		stw r10, sp[5]
 	}
-	.loc	1 54 5 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:54:5
+	.loc	1 52 5 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:52:5
 .Ltmp67:
 	ldaw r0, dp[ports]
 	ldaw r1, dp[deviceSpecs]
@@ -1411,11 +1411,11 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	}
 .Lxta.call_labels18:
 	bl fl_connectToDevice
-	.loc	1 54 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:54:5
+	.loc	1 52 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:52:5
 	bf r0, .LBB5_3
 # BB#1:                                 # %iftrue
 .Lxtalabel13:
-	.loc	1 56 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:56:0
+	.loc	1 54 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:54:0
 	ldaw r11, cp[.str35]
 	{
 		mov r0, r11
@@ -1423,26 +1423,26 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	}
 .Lxta.call_labels19:
 	bl iprintf
-	.loc	1 57 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:57:0
+	.loc	1 55 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:55:0
 	bl __getstdout
-	.loc	1 57 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:57:0
+	.loc	1 55 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:55:0
 .Lxta.call_labels20:
 	bl fflush
 .LBB5_2:                                # %LoopTest
                                         # =>This Inner Loop Header: Depth=1
-	.loc	1 58 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:58:9
+	.loc	1 56 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:56:9
 	bu .LBB5_2
 .LBB5_3:                                # %ifdone
 .Lxtalabel14:
 .Ltmp68:
 	#DEBUG_VALUE: qspi_server:i <- R10
-	.loc	1 62 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:62:0
+	.loc	1 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:60:0
 	bl fl_getFlashType
 	{
 		mov r1, r0
 		nop
 	}
-	.loc	1 62 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:62:0
+	.loc	1 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:60:0
 	ldaw r11, cp[.str36]
 	{
 		mov r0, r11
@@ -1450,13 +1450,13 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	}
 .Lxta.call_labels21:
 	bl iprintf
-	.loc	1 63 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:63:0
+	.loc	1 61 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:61:0
 	bl fl_getFlashSize
 	{
 		mov r1, r0
 		nop
 	}
-	.loc	1 63 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:63:0
+	.loc	1 61 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:61:0
 	ldaw r11, cp[.str37]
 	{
 		mov r0, r11
@@ -1464,13 +1464,13 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	}
 .Lxta.call_labels22:
 	bl iprintf
-	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:64:0
+	.loc	1 62 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:62:0
 	bl fl_getDataPartitionSize
 	{
 		mov r1, r0
 		nop
 	}
-	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:64:0
+	.loc	1 62 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:62:0
 	ldaw r11, cp[.str38]
 	{
 		mov r0, r11
@@ -1478,13 +1478,13 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	}
 .Lxta.call_labels23:
 	bl iprintf
-	.loc	1 65 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:65:0
+	.loc	1 63 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:63:0
 	bl fl_getNumDataSectors
 	{
 		mov r1, r0
 		nop
 	}
-	.loc	1 65 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:65:0
+	.loc	1 63 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:63:0
 	ldaw r11, cp[.str39]
 	{
 		mov r0, r11
@@ -1496,7 +1496,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 		ldc r8, 0
 		nop
 	}
-	.loc	1 66 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:66:0
+	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:64:0
 	{
 		mov r0, r8
 		nop
@@ -1506,7 +1506,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 		mov r1, r0
 		nop
 	}
-	.loc	1 66 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:66:0
+	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:64:0
 	ldaw r11, cp[.str40]
 	{
 		mov r0, r11
@@ -1515,7 +1515,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 .Lxta.call_labels25:
 	bl iprintf
 	ldc r1, 64
-	.loc	1 67 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:67:0
+	.loc	1 65 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:65:0
 	{
 		mov r0, r8
 		nop
@@ -1525,7 +1525,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 		mov r1, r0
 		nop
 	}
-	.loc	1 67 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:67:0
+	.loc	1 65 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:65:0
 	ldaw r11, cp[.str41]
 	{
 		mov r0, r11
@@ -1533,9 +1533,9 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	}
 .Lxta.call_labels26:
 	bl iprintf
-	.loc	1 68 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:68:0
+	.loc	1 66 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:66:0
 	bl __getstdout
-	.loc	1 68 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:68:0
+	.loc	1 66 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:66:0
 .Lxta.call_labels27:
 	bl fflush
 .Ltmp69:
@@ -1563,7 +1563,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
 	#DEBUG_VALUE: size <- R7
-	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:102:0
+	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:100:0
 	{
 		lsu r0, r9, r7
 		nop
@@ -1578,7 +1578,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
 	#DEBUG_VALUE: size <- R7
-	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:102:0
+	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:100:0
 	{
 		lsu r0, r4, r7
 		nop
@@ -1593,7 +1593,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
 	#DEBUG_VALUE: size <- R7
-	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:102:0
+	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:100:0
 	{
 		mov r0, r10
 		stw r7, sp[1]
@@ -1640,7 +1640,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 78 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:78:9
+	.loc	1 76 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:76:9
 	{
 		zext r0, 1
 		nop
@@ -1655,18 +1655,18 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
 	#DEBUG_VALUE: qspi_server:i <- [SP+20]
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		clre
 		ldw r10, r10[0]
 	}
 	ldap r11, .Ltmp75
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		setv res[r10], r11
 		nop
 	}
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		eeu res[r10]
 		nop
@@ -1691,7 +1691,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 		mov r0, r6
 	}
 .Ltmp77:
-	.loc	1 79 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:79:0
+	.loc	1 77 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:77:0
 	{
 		mov r1, r7
 		nop
@@ -1700,7 +1700,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	bl fl_getWriteScratchSize
 .Ltmp78:
 	#DEBUG_VALUE: scratch_size <- R0
-	.loc	1 83 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:83:0
+	.loc	1 81 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:81:0
 .Lxta.call_labels29:
 	bl _safe_malloc
 .Ltmp79:
@@ -1708,7 +1708,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 		mov r10, r0
 		nop
 	}
-	.loc	1 84 13                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:84:13
+	.loc	1 82 13                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:82:13
 	bf r10, .LBB5_6
 # BB#8:                                 # %iffalse
                                         #   in Loop: Header=BB5_4 Depth=1
@@ -1735,7 +1735,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		sub r0, r11, r5
 		nop
@@ -1753,7 +1753,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		lsu r3, r10, r1
 		nop
@@ -1767,12 +1767,12 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		sub r1, r10, r1
 		nop
 	}
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		lsu r3, r2, r1
 		nop
@@ -1786,17 +1786,17 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		sub r0, r9, r0
 		nop
 	}
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		add r3, r11, r0
 		sub r1, r2, r1
 	}
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		lsu r2, r10, r3
 		nop
@@ -1809,7 +1809,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		add r2, r10, r1
 		nop
@@ -1834,7 +1834,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 		nop
 		stw r1, sp[2]
 	}
-	.loc	1 89 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:17
+	.loc	1 87 17                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:17
 	{
 		mov r0, r6
 		stw r0, sp[1]
@@ -1858,7 +1858,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 91 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:91:0
+	.loc	1 89 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:0
 	ldaw r11, cp[.str53]
 	{
 		mov r0, r11
@@ -1874,7 +1874,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 93 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:93:0
+	.loc	1 91 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:91:0
 	{
 		mov r0, r10
 		nop
@@ -1890,7 +1890,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 85 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:85:0
+	.loc	1 83 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:83:0
 	ldaw r11, cp[.str42]
 	{
 		mov r0, r11
@@ -1906,7 +1906,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 95 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:95:0
+	.loc	1 93 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:93:0
 	{
 		mov r0, r4
 		nop
@@ -1915,18 +1915,18 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	bl free
 .Ltmp87:
 	#DEBUG_VALUE: qspi_server:i <- [SP+20]
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		clre
 		ldw r10, r8[0]
 	}
 	ldap r11, .Ltmp75
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		setv res[r10], r11
 		nop
 	}
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		eeu res[r10]
 		nop
@@ -1944,7 +1944,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 109 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:109:0
+	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:107:0
 	{
 		lsu r0, r11, r5
 		nop
@@ -1958,12 +1958,12 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 109 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:109:0
+	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:107:0
 	{
 		sub r0, r11, r5
 		nop
 	}
-	.loc	1 109 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:109:0
+	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:107:0
 	{
 		lsu r1, r9, r0
 		nop
@@ -1977,12 +1977,12 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 109 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:109:0
+	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:107:0
 	{
 		sub r3, r9, r0
 		mov r0, r6
 	}
-	.loc	1 109 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:109:0
+	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:107:0
 	{
 		mov r1, r7
 		mov r2, r11
@@ -1993,7 +1993,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	}
 .Lxta.call_labels35:
 	bl fl_readData
-	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:110:0
+	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:108:0
 	{
 		lsu r0, r9, r7
 		nop
@@ -2007,7 +2007,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:110:0
+	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:108:0
 	{
 		lsu r0, r4, r7
 		nop
@@ -2021,7 +2021,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	#DEBUG_VALUE: write_pending <- 0
 	#DEBUG_VALUE: write_count <- 0
 	#DEBUG_VALUE: write_offset <- 0
-	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:110:0
+	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:108:0
 	{
 		mov r0, r10
 		stw r7, sp[1]
@@ -2059,18 +2059,18 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 	}
 .Ltmp90:
 	#DEBUG_VALUE: qspi_server:i <- [SP+20]
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		clre
 		ldw r10, r1[0]
 	}
 	ldap r11, .Ltmp75
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		setv res[r10], r11
 		nop
 	}
-	.loc	1 99 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:9
+	.loc	1 97 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:97:9
 	{
 		eeu res[r10]
 		nop
@@ -2128,7 +2128,7 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 		in r4, res[r10]
 		mov r0, r7
 	}
-	.loc	1 101 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:101:0
+	.loc	1 99 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:99:0
 	bl _safe_malloc
 	{
 		mov r11, r0
@@ -2155,13 +2155,13 @@ _Sqspi_server_0:                        # @_Sqspi_server_0
 .Lfunc_end5:
 	.cfi_endproc
 
-	.globl	qspi_if_read
+	.globl	qspi_if_write
 	.align	4
-	.type	qspi_if_read,@function
-	.cc_top qspi_if_read.function,qspi_if_read
-qspi_if_read:                           # @qspi_if_read
+	.type	qspi_if_write,@function
+	.cc_top qspi_if_write.function,qspi_if_write
+qspi_if_write:                          # @qspi_if_write
 .Lfunc_begin6:
-	.loc	1 117 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:117:0
+	.loc	1 120 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:120:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -2179,10 +2179,10 @@ qspi_if_read:                           # @qspi_if_read
 	.cfi_offset 4, -8
 .Ltmp97:
 	.cfi_offset 5, -4
-	#DEBUG_VALUE: qspi_if_read:i <- R0
-	#DEBUG_VALUE: qspi_if_read:offset <- R1
-	#DEBUG_VALUE: qspi_if_read:size <- R2
-	#DEBUG_VALUE: qspi_if_read:buffer <- R3
+	#DEBUG_VALUE: qspi_if_write:i <- R0
+	#DEBUG_VALUE: qspi_if_write:offset <- R1
+	#DEBUG_VALUE: qspi_if_write:size <- R2
+	#DEBUG_VALUE: qspi_if_write:buffer <- R3
 	{
 		nop
 		ldw r4, sp[5]
@@ -2198,9 +2198,9 @@ qspi_if_read:                           # @qspi_if_read
 .Ltmp98:
 	{
 		nop
-		ldw r5, r0[1]
+		ldw r5, r0[0]
 	}
-	.loc	1 118 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:118:0
+	.loc	1 121 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:121:0
 .Ltmp99:
 	{
 		mov r0, r11
@@ -2219,27 +2219,27 @@ qspi_if_read:                           # @qspi_if_read
 	}
 	# RETURN_REG_HOLDER
 .Ltmp101:
-	.cc_bottom qspi_if_read.function
-	.set	qspi_if_read.nstackwords,(_i.qspi_access.read.max.nstackwords + 4)
-	.globl	qspi_if_read.nstackwords
-	.set	qspi_if_read.maxcores,_i.qspi_access.read.max.maxcores $M 1
-	.globl	qspi_if_read.maxcores
-	.set	qspi_if_read.maxtimers,_i.qspi_access.read.max.maxtimers $M 0
-	.globl	qspi_if_read.maxtimers
-	.set	qspi_if_read.maxchanends,_i.qspi_access.read.max.maxchanends $M 0
-	.globl	qspi_if_read.maxchanends
+	.cc_bottom qspi_if_write.function
+	.set	qspi_if_write.nstackwords,(_i.qspi_access.write.max.nstackwords + 4)
+	.globl	qspi_if_write.nstackwords
+	.set	qspi_if_write.maxcores,_i.qspi_access.write.max.maxcores $M 1
+	.globl	qspi_if_write.maxcores
+	.set	qspi_if_write.maxtimers,_i.qspi_access.write.max.maxtimers $M 0
+	.globl	qspi_if_write.maxtimers
+	.set	qspi_if_write.maxchanends,_i.qspi_access.write.max.maxchanends $M 0
+	.globl	qspi_if_write.maxchanends
 .Ltmp102:
-	.size	qspi_if_read, .Ltmp102-qspi_if_read
+	.size	qspi_if_write, .Ltmp102-qspi_if_write
 .Lfunc_end6:
 	.cfi_endproc
 
-	.globl	qspi_if_write
+	.globl	qspi_if_read
 	.align	4
-	.type	qspi_if_write,@function
-	.cc_top qspi_if_write.function,qspi_if_write
-qspi_if_write:                          # @qspi_if_write
+	.type	qspi_if_read,@function
+	.cc_top qspi_if_read.function,qspi_if_read
+qspi_if_read:                           # @qspi_if_read
 .Lfunc_begin7:
-	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:122:0
+	.loc	1 115 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:115:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -2257,10 +2257,10 @@ qspi_if_write:                          # @qspi_if_write
 	.cfi_offset 4, -8
 .Ltmp106:
 	.cfi_offset 5, -4
-	#DEBUG_VALUE: qspi_if_write:i <- R0
-	#DEBUG_VALUE: qspi_if_write:offset <- R1
-	#DEBUG_VALUE: qspi_if_write:size <- R2
-	#DEBUG_VALUE: qspi_if_write:buffer <- R3
+	#DEBUG_VALUE: qspi_if_read:i <- R0
+	#DEBUG_VALUE: qspi_if_read:offset <- R1
+	#DEBUG_VALUE: qspi_if_read:size <- R2
+	#DEBUG_VALUE: qspi_if_read:buffer <- R3
 	{
 		nop
 		ldw r4, sp[5]
@@ -2276,9 +2276,9 @@ qspi_if_write:                          # @qspi_if_write
 .Ltmp107:
 	{
 		nop
-		ldw r5, r0[0]
+		ldw r5, r0[1]
 	}
-	.loc	1 123 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:123:0
+	.loc	1 116 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:116:0
 .Ltmp108:
 	{
 		mov r0, r11
@@ -2297,17 +2297,17 @@ qspi_if_write:                          # @qspi_if_write
 	}
 	# RETURN_REG_HOLDER
 .Ltmp110:
-	.cc_bottom qspi_if_write.function
-	.set	qspi_if_write.nstackwords,(_i.qspi_access.write.max.nstackwords + 4)
-	.globl	qspi_if_write.nstackwords
-	.set	qspi_if_write.maxcores,_i.qspi_access.write.max.maxcores $M 1
-	.globl	qspi_if_write.maxcores
-	.set	qspi_if_write.maxtimers,_i.qspi_access.write.max.maxtimers $M 0
-	.globl	qspi_if_write.maxtimers
-	.set	qspi_if_write.maxchanends,_i.qspi_access.write.max.maxchanends $M 0
-	.globl	qspi_if_write.maxchanends
+	.cc_bottom qspi_if_read.function
+	.set	qspi_if_read.nstackwords,(_i.qspi_access.read.max.nstackwords + 4)
+	.globl	qspi_if_read.nstackwords
+	.set	qspi_if_read.maxcores,_i.qspi_access.read.max.maxcores $M 1
+	.globl	qspi_if_read.maxcores
+	.set	qspi_if_read.maxtimers,_i.qspi_access.read.max.maxtimers $M 0
+	.globl	qspi_if_read.maxtimers
+	.set	qspi_if_read.maxchanends,_i.qspi_access.read.max.maxchanends $M 0
+	.globl	qspi_if_read.maxchanends
 .Ltmp111:
-	.size	qspi_if_write, .Ltmp111-qspi_if_write
+	.size	qspi_if_read, .Ltmp111-qspi_if_read
 .Lfunc_end7:
 	.cfi_endproc
 
@@ -2912,7 +2912,7 @@ __xcc1_internal_4:
 	.long	53                      # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	28                      # DW_AT_decl_line
+	.byte	29                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	ports
@@ -2921,30 +2921,30 @@ __xcc1_internal_4:
 	.long	.Linfo_string10         # DW_AT_name
 	.byte	16                      # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	28                      # DW_AT_decl_line
+	.byte	29                      # DW_AT_decl_line
 	.byte	4                       # Abbrev [4] 0x3d:0xc DW_TAG_member
 	.long	.Linfo_string4          # DW_AT_name
 	.long	110                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	28                      # DW_AT_decl_line
+	.byte	29                      # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x49:0xc DW_TAG_member
 	.long	.Linfo_string6          # DW_AT_name
 	.long	110                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	28                      # DW_AT_decl_line
+	.byte	29                      # DW_AT_decl_line
 	.byte	4                       # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x55:0xc DW_TAG_member
 	.long	.Linfo_string7          # DW_AT_name
 	.long	110                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	28                      # DW_AT_decl_line
+	.byte	29                      # DW_AT_decl_line
 	.byte	8                       # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x61:0xc DW_TAG_member
 	.long	.Linfo_string8          # DW_AT_name
 	.long	117                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	28                      # DW_AT_decl_line
+	.byte	29                      # DW_AT_decl_line
 	.byte	12                      # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	5                       # Abbrev [5] 0x6e:0x7 DW_TAG_base_type
@@ -2960,7 +2960,7 @@ __xcc1_internal_4:
 	.long	146                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	deviceSpecs
@@ -2976,144 +2976,144 @@ __xcc1_internal_4:
 	.long	.Linfo_string61         # DW_AT_name
 	.byte	112                     # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	4                       # Abbrev [4] 0xa7:0xc DW_TAG_member
 	.long	.Linfo_string12         # DW_AT_name
 	.long	444                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0xb3:0xc DW_TAG_member
 	.long	.Linfo_string14         # DW_AT_name
 	.long	444                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	4                       # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0xbf:0xc DW_TAG_member
 	.long	.Linfo_string15         # DW_AT_name
 	.long	444                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	8                       # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0xcb:0xc DW_TAG_member
 	.long	.Linfo_string16         # DW_AT_name
 	.long	451                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	12                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0xd7:0xc DW_TAG_member
 	.long	.Linfo_string18         # DW_AT_name
 	.long	444                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	16                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0xe3:0xc DW_TAG_member
 	.long	.Linfo_string19         # DW_AT_name
 	.long	451                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	20                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0xef:0xc DW_TAG_member
 	.long	.Linfo_string20         # DW_AT_name
 	.long	451                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	21                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0xfb:0xc DW_TAG_member
 	.long	.Linfo_string21         # DW_AT_name
 	.long	451                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	22                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x107:0xc DW_TAG_member
 	.long	.Linfo_string22         # DW_AT_name
 	.long	444                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	24                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x113:0xc DW_TAG_member
 	.long	.Linfo_string23         # DW_AT_name
 	.long	451                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	28                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x11f:0xc DW_TAG_member
 	.long	.Linfo_string24         # DW_AT_name
 	.long	444                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	32                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x12b:0xc DW_TAG_member
 	.long	.Linfo_string25         # DW_AT_name
 	.long	451                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	36                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x137:0xc DW_TAG_member
 	.long	.Linfo_string26         # DW_AT_name
 	.long	451                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	37                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x143:0xc DW_TAG_member
 	.long	.Linfo_string27         # DW_AT_name
 	.long	458                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	40                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x14f:0xc DW_TAG_member
 	.long	.Linfo_string33         # DW_AT_name
 	.long	491                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	44                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x15b:0xc DW_TAG_member
 	.long	.Linfo_string43         # DW_AT_name
 	.long	444                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	48                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x167:0xc DW_TAG_member
 	.long	.Linfo_string44         # DW_AT_name
 	.long	451                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	52                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x173:0xc DW_TAG_member
 	.long	.Linfo_string45         # DW_AT_name
 	.long	451                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	53                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x17f:0xc DW_TAG_member
 	.long	.Linfo_string46         # DW_AT_name
 	.long	590                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	56                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x18b:0xc DW_TAG_member
 	.long	.Linfo_string50         # DW_AT_name
 	.long	611                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	60                      # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x197:0xc DW_TAG_member
 	.long	.Linfo_string58         # DW_AT_name
 	.long	451                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	100                     # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x1a3:0xc DW_TAG_member
 	.long	.Linfo_string59         # DW_AT_name
 	.long	444                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	104                     # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x1af:0xc DW_TAG_member
 	.long	.Linfo_string60         # DW_AT_name
 	.long	451                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	108                     # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	5                       # Abbrev [5] 0x1bc:0x7 DW_TAG_base_type
@@ -3128,7 +3128,7 @@ __xcc1_internal_4:
 	.long	.Linfo_string32         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	9                       # Abbrev [9] 0x1d2:0x6 DW_TAG_enumerator
 	.long	.Linfo_string28         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
@@ -3146,61 +3146,61 @@ __xcc1_internal_4:
 	.long	.Linfo_string42         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	4                       # Abbrev [4] 0x1f3:0xc DW_TAG_member
 	.long	.Linfo_string34         # DW_AT_name
 	.long	524                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x1ff:0xc DW_TAG_member
 	.long	.Linfo_string38         # DW_AT_name
 	.long	557                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	2                       # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	3                       # Abbrev [3] 0x20c:0x21 DW_TAG_structure_type
 	.long	.Linfo_string37         # DW_AT_name
 	.byte	2                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	4                       # Abbrev [4] 0x214:0xc DW_TAG_member
 	.long	.Linfo_string35         # DW_AT_name
 	.long	451                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x220:0xc DW_TAG_member
 	.long	.Linfo_string36         # DW_AT_name
 	.long	451                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	3                       # Abbrev [3] 0x22d:0x21 DW_TAG_structure_type
 	.long	.Linfo_string41         # DW_AT_name
 	.byte	2                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	4                       # Abbrev [4] 0x235:0xc DW_TAG_member
 	.long	.Linfo_string39         # DW_AT_name
 	.long	451                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x241:0xc DW_TAG_member
 	.long	.Linfo_string40         # DW_AT_name
 	.long	451                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	8                       # Abbrev [8] 0x24e:0x15 DW_TAG_enumeration_type
 	.long	.Linfo_string49         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	9                       # Abbrev [9] 0x256:0x6 DW_TAG_enumerator
 	.long	.Linfo_string47         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
@@ -3212,36 +3212,36 @@ __xcc1_internal_4:
 	.long	.Linfo_string57         # DW_AT_name
 	.byte	40                      # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	4                       # Abbrev [4] 0x26b:0xc DW_TAG_member
 	.long	.Linfo_string51         # DW_AT_name
 	.long	444                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x277:0xc DW_TAG_member
 	.long	.Linfo_string52         # DW_AT_name
 	.long	644                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	4                       # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	3                       # Abbrev [3] 0x284:0x21 DW_TAG_structure_type
 	.long	.Linfo_string56         # DW_AT_name
 	.byte	33                      # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	4                       # Abbrev [4] 0x28c:0xc DW_TAG_member
 	.long	.Linfo_string53         # DW_AT_name
 	.long	451                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	4                       # Abbrev [4] 0x298:0xc DW_TAG_member
 	.long	.Linfo_string54         # DW_AT_name
 	.long	677                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	39                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	6                       # Abbrev [6] 0x2a5:0xd DW_TAG_array_type
@@ -3263,20 +3263,20 @@ __xcc1_internal_4:
 	.long	.Linfo_string73         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string73         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	51                      # DW_AT_decl_line
+	.byte	49                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	12                      # Abbrev [12] 0x2cc:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc0            # DW_AT_location
 	.long	.Linfo_string76         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	51                      # DW_AT_decl_line
+	.byte	49                      # DW_AT_decl_line
 	.long	1781                    # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x2db:0xd8 DW_TAG_lexical_block
 	.long	.Ldebug_ranges8         # DW_AT_ranges
 	.byte	14                      # Abbrev [14] 0x2e0:0xb DW_TAG_variable
 	.long	.Linfo_string83         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	71                      # DW_AT_decl_line
+	.byte	69                      # DW_AT_decl_line
 	.long	1726                    # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x2eb:0xc7 DW_TAG_lexical_block
 	.long	.Ldebug_ranges7         # DW_AT_ranges
@@ -3284,7 +3284,7 @@ __xcc1_internal_4:
 	.long	.Ldebug_loc1            # DW_AT_location
 	.long	.Linfo_string79         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	72                      # DW_AT_decl_line
+	.byte	70                      # DW_AT_decl_line
 	.long	444                     # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x2ff:0xb2 DW_TAG_lexical_block
 	.long	.Ldebug_ranges6         # DW_AT_ranges
@@ -3292,7 +3292,7 @@ __xcc1_internal_4:
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string78         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	73                      # DW_AT_decl_line
+	.byte	71                      # DW_AT_decl_line
 	.long	444                     # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x310:0xa0 DW_TAG_lexical_block
 	.long	.Ldebug_ranges5         # DW_AT_ranges
@@ -3300,38 +3300,38 @@ __xcc1_internal_4:
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string80         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	74                      # DW_AT_decl_line
+	.byte	72                      # DW_AT_decl_line
 	.long	444                     # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x321:0xf DW_TAG_variable
 	.long	.Ldebug_loc2            # DW_AT_location
 	.long	.Linfo_string81         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	107                     # DW_AT_decl_line
+	.byte	105                     # DW_AT_decl_line
 	.long	1669                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x330:0xb DW_TAG_variable
 	.long	.Linfo_string85         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	107                     # DW_AT_decl_line
+	.byte	105                     # DW_AT_decl_line
 	.long	1669                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x33b:0xb DW_TAG_variable
 	.long	.Linfo_string86         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	107                     # DW_AT_decl_line
+	.byte	105                     # DW_AT_decl_line
 	.long	1788                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x346:0xb DW_TAG_variable
 	.long	.Linfo_string85         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	100                     # DW_AT_decl_line
+	.byte	98                      # DW_AT_decl_line
 	.long	1669                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x351:0xb DW_TAG_variable
 	.long	.Linfo_string81         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	100                     # DW_AT_decl_line
+	.byte	98                      # DW_AT_decl_line
 	.long	1669                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x35c:0xb DW_TAG_variable
 	.long	.Linfo_string86         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	100                     # DW_AT_decl_line
+	.byte	98                      # DW_AT_decl_line
 	.long	1788                    # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x367:0x26 DW_TAG_lexical_block
 	.long	.Ldebug_ranges2         # DW_AT_ranges
@@ -3339,14 +3339,14 @@ __xcc1_internal_4:
 	.long	.Ldebug_loc3            # DW_AT_location
 	.long	.Linfo_string82         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	79                      # DW_AT_decl_line
+	.byte	77                      # DW_AT_decl_line
 	.long	444                     # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x37b:0x11 DW_TAG_lexical_block
 	.long	.Ldebug_ranges1         # DW_AT_ranges
 	.byte	14                      # Abbrev [14] 0x380:0xb DW_TAG_variable
 	.long	.Linfo_string84         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	82                      # DW_AT_decl_line
+	.byte	80                      # DW_AT_decl_line
 	.long	1726                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -3355,14 +3355,14 @@ __xcc1_internal_4:
 	.byte	14                      # Abbrev [14] 0x392:0xb DW_TAG_variable
 	.long	.Linfo_string87         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	108                     # DW_AT_decl_line
+	.byte	106                     # DW_AT_decl_line
 	.long	1726                    # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x39d:0x11 DW_TAG_lexical_block
 	.long	.Ldebug_ranges3         # DW_AT_ranges
 	.byte	14                      # Abbrev [14] 0x3a2:0xb DW_TAG_variable
 	.long	.Linfo_string88         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	109                     # DW_AT_decl_line
+	.byte	107                     # DW_AT_decl_line
 	.long	1669                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -3379,20 +3379,20 @@ __xcc1_internal_4:
 	.long	.Linfo_string73         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string73         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	51                      # DW_AT_decl_line
+	.byte	49                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	12                      # Abbrev [12] 0x3c7:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc4            # DW_AT_location
 	.long	.Linfo_string76         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	51                      # DW_AT_decl_line
+	.byte	49                      # DW_AT_decl_line
 	.long	1781                    # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x3d6:0xd8 DW_TAG_lexical_block
 	.long	.Ldebug_ranges17        # DW_AT_ranges
 	.byte	14                      # Abbrev [14] 0x3db:0xb DW_TAG_variable
 	.long	.Linfo_string83         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	71                      # DW_AT_decl_line
+	.byte	69                      # DW_AT_decl_line
 	.long	1726                    # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x3e6:0xc7 DW_TAG_lexical_block
 	.long	.Ldebug_ranges16        # DW_AT_ranges
@@ -3400,7 +3400,7 @@ __xcc1_internal_4:
 	.long	.Ldebug_loc5            # DW_AT_location
 	.long	.Linfo_string79         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	72                      # DW_AT_decl_line
+	.byte	70                      # DW_AT_decl_line
 	.long	444                     # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x3fa:0xb2 DW_TAG_lexical_block
 	.long	.Ldebug_ranges15        # DW_AT_ranges
@@ -3408,7 +3408,7 @@ __xcc1_internal_4:
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string78         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	73                      # DW_AT_decl_line
+	.byte	71                      # DW_AT_decl_line
 	.long	444                     # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x40b:0xa0 DW_TAG_lexical_block
 	.long	.Ldebug_ranges14        # DW_AT_ranges
@@ -3416,38 +3416,38 @@ __xcc1_internal_4:
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string80         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	74                      # DW_AT_decl_line
+	.byte	72                      # DW_AT_decl_line
 	.long	444                     # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x41c:0xf DW_TAG_variable
 	.long	.Ldebug_loc6            # DW_AT_location
 	.long	.Linfo_string81         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	107                     # DW_AT_decl_line
+	.byte	105                     # DW_AT_decl_line
 	.long	1669                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x42b:0xb DW_TAG_variable
 	.long	.Linfo_string85         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	107                     # DW_AT_decl_line
+	.byte	105                     # DW_AT_decl_line
 	.long	1669                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x436:0xb DW_TAG_variable
 	.long	.Linfo_string86         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	107                     # DW_AT_decl_line
+	.byte	105                     # DW_AT_decl_line
 	.long	1788                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x441:0xb DW_TAG_variable
 	.long	.Linfo_string85         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	100                     # DW_AT_decl_line
+	.byte	98                      # DW_AT_decl_line
 	.long	1669                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x44c:0xb DW_TAG_variable
 	.long	.Linfo_string81         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	100                     # DW_AT_decl_line
+	.byte	98                      # DW_AT_decl_line
 	.long	1669                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x457:0xb DW_TAG_variable
 	.long	.Linfo_string86         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	100                     # DW_AT_decl_line
+	.byte	98                      # DW_AT_decl_line
 	.long	1788                    # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x462:0x26 DW_TAG_lexical_block
 	.long	.Ldebug_ranges11        # DW_AT_ranges
@@ -3455,14 +3455,14 @@ __xcc1_internal_4:
 	.long	.Ldebug_loc7            # DW_AT_location
 	.long	.Linfo_string82         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	79                      # DW_AT_decl_line
+	.byte	77                      # DW_AT_decl_line
 	.long	444                     # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x476:0x11 DW_TAG_lexical_block
 	.long	.Ldebug_ranges10        # DW_AT_ranges
 	.byte	14                      # Abbrev [14] 0x47b:0xb DW_TAG_variable
 	.long	.Linfo_string84         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	82                      # DW_AT_decl_line
+	.byte	80                      # DW_AT_decl_line
 	.long	1726                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -3471,14 +3471,14 @@ __xcc1_internal_4:
 	.byte	14                      # Abbrev [14] 0x48d:0xb DW_TAG_variable
 	.long	.Linfo_string87         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	108                     # DW_AT_decl_line
+	.byte	106                     # DW_AT_decl_line
 	.long	1726                    # DW_AT_type
 	.byte	13                      # Abbrev [13] 0x498:0x11 DW_TAG_lexical_block
 	.long	.Ldebug_ranges12        # DW_AT_ranges
 	.byte	14                      # Abbrev [14] 0x49d:0xb DW_TAG_variable
 	.long	.Linfo_string88         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	109                     # DW_AT_decl_line
+	.byte	107                     # DW_AT_decl_line
 	.long	1669                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -3492,34 +3492,34 @@ __xcc1_internal_4:
 	.byte	1                       # DW_AT_frame_base
 	.byte	94
 	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	.Linfo_string74         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string74         # DW_AT_name
+	.long	.Linfo_string75         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string75         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	117                     # DW_AT_decl_line
+	.byte	120                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	12                      # Abbrev [12] 0x4c2:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc8            # DW_AT_location
 	.long	.Linfo_string76         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	116                     # DW_AT_decl_line
+	.byte	119                     # DW_AT_decl_line
 	.long	1781                    # DW_AT_type
 	.byte	12                      # Abbrev [12] 0x4d1:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc9            # DW_AT_location
 	.long	.Linfo_string85         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	116                     # DW_AT_decl_line
+	.byte	119                     # DW_AT_decl_line
 	.long	1669                    # DW_AT_type
 	.byte	12                      # Abbrev [12] 0x4e0:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc10           # DW_AT_location
 	.long	.Linfo_string81         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	116                     # DW_AT_decl_line
+	.byte	119                     # DW_AT_decl_line
 	.long	1669                    # DW_AT_type
 	.byte	12                      # Abbrev [12] 0x4ef:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc11           # DW_AT_location
 	.long	.Linfo_string86         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	116                     # DW_AT_decl_line
+	.byte	119                     # DW_AT_decl_line
 	.long	1788                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	11                      # Abbrev [11] 0x4ff:0x50 DW_TAG_subprogram
@@ -3527,34 +3527,34 @@ __xcc1_internal_4:
 	.byte	1                       # DW_AT_frame_base
 	.byte	94
 	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	.Linfo_string75         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string75         # DW_AT_name
+	.long	.Linfo_string74         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string74         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	122                     # DW_AT_decl_line
+	.byte	115                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	12                      # Abbrev [12] 0x512:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc12           # DW_AT_location
 	.long	.Linfo_string76         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	121                     # DW_AT_decl_line
+	.byte	114                     # DW_AT_decl_line
 	.long	1781                    # DW_AT_type
 	.byte	12                      # Abbrev [12] 0x521:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc13           # DW_AT_location
 	.long	.Linfo_string85         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	121                     # DW_AT_decl_line
+	.byte	114                     # DW_AT_decl_line
 	.long	1669                    # DW_AT_type
 	.byte	12                      # Abbrev [12] 0x530:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc14           # DW_AT_location
 	.long	.Linfo_string81         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	121                     # DW_AT_decl_line
+	.byte	114                     # DW_AT_decl_line
 	.long	1669                    # DW_AT_type
 	.byte	12                      # Abbrev [12] 0x53f:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc15           # DW_AT_location
 	.long	.Linfo_string86         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	121                     # DW_AT_decl_line
+	.byte	114                     # DW_AT_decl_line
 	.long	1788                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	17                      # Abbrev [17] 0x54f:0x2f DW_TAG_subprogram
@@ -4565,7 +4565,7 @@ __xcc1_internal_4:
 	.long	.Lset43
 	.long	1406                    # DIE offset
 .asciiz"_i.qspi_access._chan.write"     # External Name
-	.long	1199                    # DIE offset
+	.long	1279                    # DIE offset
 .asciiz"qspi_if_read"                   # External Name
 	.long	1731                    # DIE offset
 .asciiz"_safe_memset"                   # External Name
@@ -4579,7 +4579,7 @@ __xcc1_internal_4:
 .asciiz"qspi_server"                    # External Name
 	.long	1359                    # DIE offset
 .asciiz"_i.qspi_access._chan.read"      # External Name
-	.long	1279                    # DIE offset
+	.long	1199                    # DIE offset
 .asciiz"qspi_if_write"                  # External Name
 	.long	1595                    # DIE offset
 .asciiz"delay_microseconds"             # External Name
@@ -4663,10 +4663,10 @@ __xcc1_internal_4:
 	.typestring iprintf, "f{si}(u:q(c:uc),va)"
 	.typestring qspi_server, "f{0}(is(qspi_access){m(write){f{0}(si,si,&(a(:uc)))},m(read){f{0}(si,si,&(a(:uc)))}})"
 	.typestring _Sqspi_server_0, "f{0}(is(qspi_access){m(write){f{0}(si,si,&(a(:uc)))},m(read){f{0}(si,si,&(a(:uc)))}})"
-	.typestring qspi_if_read, "f{0}(ic(qspi_access){m(write){f{0}(si,si,&(a(:uc)))},m(read){f{0}(si,si,&(a(:uc)))}},si,si,&(a(:uc)))"
-	.overlay_reference qspi_if_read,_i.qspi_access.read.fns
 	.typestring qspi_if_write, "f{0}(ic(qspi_access){m(write){f{0}(si,si,&(a(:uc)))},m(read){f{0}(si,si,&(a(:uc)))}},si,si,&(a(:uc)))"
 	.overlay_reference qspi_if_write,_i.qspi_access.write.fns
+	.typestring qspi_if_read, "f{0}(ic(qspi_access){m(write){f{0}(si,si,&(a(:uc)))},m(read){f{0}(si,si,&(a(:uc)))}},si,si,&(a(:uc)))"
+	.overlay_reference qspi_if_read,_i.qspi_access.read.fns
 	.typestring ports, "s(){m(qspiCS){o:p},m(qspiSCLK){o:p},m(qspiSIO){b:p:32},m(qspiClkblk){ck}}"
 	.typestring deviceSpecs, "a(6:s(){m(flashId){ui},m(pageSize){ui},m(numPages){ui},m(addrSize){uc},m(clockDiv){ui},m(idCommand){uc},m(idDummyBytes){uc},m(idBytes){uc},m(idValue){ui},m(sectorEraseCommand){uc},m(sectorEraseSize){ui},m(writeEnableCommand){uc},m(writeDisableCommand){uc},m(protectionType){e(){m(PROT_TYPE_NONE){0},m(PROT_TYPE_SECS){2},m(PROT_TYPE_SR){1},m(PROT_TYPE_SR_2X){3}}},m(protection){s(){m(statusBits){s(){m(setProtectedValue){uc},m(setUnprotectedValue){uc}}},m(commandValues){s(){m(sectorProtectCommand){uc},m(sectorUnprotectCommand){uc}}}}},m(programPageCommand){ui},m(readCommand){uc},m(readDummyBytes){uc},m(sectorLayout){e(){m(SECTOR_LAYOUT_IRREGULAR){1},m(SECTOR_LAYOUT_REGULAR){0}}},m(sectorSizes){s(){m(regularSectorSize){ui},m(irregularSectorSizes){s(){m(sectorCount){uc},m(sectorSizesLog2){a(32:uc)}}}}},m(readSRCommand){uc},m(writeSRCommand){ui},m(wipBitMask){uc}})"
 	.section	.xtacalltable,"",@progbits
@@ -4678,230 +4678,230 @@ __xcc1_internal_4:
 .cc_top cc_0,.Lxta.call_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	54
+	.long	52
 	.long	.Lxta.call_labels0
 .cc_bottom cc_0
 .cc_top cc_1,.Lxta.call_labels18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	54
+	.long	52
 	.long	.Lxta.call_labels18
 .cc_bottom cc_1
 .cc_top cc_2,.Lxta.call_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	56
+	.long	54
 	.long	.Lxta.call_labels1
 .cc_bottom cc_2
 .cc_top cc_3,.Lxta.call_labels19
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	56
+	.long	54
 	.long	.Lxta.call_labels19
 .cc_bottom cc_3
 .cc_top cc_4,.Lxta.call_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	57
+	.long	55
 	.long	.Lxta.call_labels2
 .cc_bottom cc_4
 .cc_top cc_5,.Lxta.call_labels20
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	57
+	.long	55
 	.long	.Lxta.call_labels20
 .cc_bottom cc_5
 .cc_top cc_6,.Lxta.call_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	62
+	.long	60
 	.long	.Lxta.call_labels3
 .cc_bottom cc_6
 .cc_top cc_7,.Lxta.call_labels21
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	62
+	.long	60
 	.long	.Lxta.call_labels21
 .cc_bottom cc_7
 .cc_top cc_8,.Lxta.call_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	63
+	.long	61
 	.long	.Lxta.call_labels4
 .cc_bottom cc_8
 .cc_top cc_9,.Lxta.call_labels22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	63
+	.long	61
 	.long	.Lxta.call_labels22
 .cc_bottom cc_9
 .cc_top cc_10,.Lxta.call_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	64
+	.long	62
 	.long	.Lxta.call_labels5
 .cc_bottom cc_10
 .cc_top cc_11,.Lxta.call_labels23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	64
+	.long	62
 	.long	.Lxta.call_labels23
 .cc_bottom cc_11
 .cc_top cc_12,.Lxta.call_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	65
+	.long	63
 	.long	.Lxta.call_labels6
 .cc_bottom cc_12
 .cc_top cc_13,.Lxta.call_labels24
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	65
+	.long	63
 	.long	.Lxta.call_labels24
 .cc_bottom cc_13
 .cc_top cc_14,.Lxta.call_labels7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	66
+	.long	64
 	.long	.Lxta.call_labels7
 .cc_bottom cc_14
 .cc_top cc_15,.Lxta.call_labels25
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	66
+	.long	64
 	.long	.Lxta.call_labels25
 .cc_bottom cc_15
 .cc_top cc_16,.Lxta.call_labels8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	67
+	.long	65
 	.long	.Lxta.call_labels8
 .cc_bottom cc_16
 .cc_top cc_17,.Lxta.call_labels26
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	67
+	.long	65
 	.long	.Lxta.call_labels26
 .cc_bottom cc_17
 .cc_top cc_18,.Lxta.call_labels9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	68
+	.long	66
 	.long	.Lxta.call_labels9
 .cc_bottom cc_18
 .cc_top cc_19,.Lxta.call_labels27
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	68
+	.long	66
 	.long	.Lxta.call_labels27
 .cc_bottom cc_19
 .cc_top cc_20,.Lxta.call_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	79
+	.long	77
 	.long	.Lxta.call_labels10
 .cc_bottom cc_20
 .cc_top cc_21,.Lxta.call_labels28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	79
+	.long	77
 	.long	.Lxta.call_labels28
 .cc_bottom cc_21
 .cc_top cc_22,.Lxta.call_labels11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	83
+	.long	81
 	.long	.Lxta.call_labels11
 .cc_bottom cc_22
 .cc_top cc_23,.Lxta.call_labels29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	83
+	.long	81
 	.long	.Lxta.call_labels29
 .cc_bottom cc_23
 .cc_top cc_24,.Lxta.call_labels15
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	85
+	.long	83
 	.long	.Lxta.call_labels15
 .cc_bottom cc_24
 .cc_top cc_25,.Lxta.call_labels33
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	85
+	.long	83
 	.long	.Lxta.call_labels33
 .cc_bottom cc_25
 .cc_top cc_26,.Lxta.call_labels12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	89
+	.long	87
 	.long	.Lxta.call_labels12
 .cc_bottom cc_26
 .cc_top cc_27,.Lxta.call_labels30
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	89
+	.long	87
 	.long	.Lxta.call_labels30
 .cc_bottom cc_27
 .cc_top cc_28,.Lxta.call_labels13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	91
+	.long	89
 	.long	.Lxta.call_labels13
 .cc_bottom cc_28
 .cc_top cc_29,.Lxta.call_labels31
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	91
+	.long	89
 	.long	.Lxta.call_labels31
 .cc_bottom cc_29
 .cc_top cc_30,.Lxta.call_labels14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	93
+	.long	91
 	.long	.Lxta.call_labels14
 .cc_bottom cc_30
 .cc_top cc_31,.Lxta.call_labels32
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	93
+	.long	91
 	.long	.Lxta.call_labels32
 .cc_bottom cc_31
 .cc_top cc_32,.Lxta.call_labels16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	95
+	.long	93
 	.long	.Lxta.call_labels16
 .cc_bottom cc_32
 .cc_top cc_33,.Lxta.call_labels34
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	95
+	.long	93
 	.long	.Lxta.call_labels34
 .cc_bottom cc_33
 .cc_top cc_34,.Lxta.call_labels17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	109
+	.long	107
 	.long	.Lxta.call_labels17
 .cc_bottom cc_34
 .cc_top cc_35,.Lxta.call_labels35
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	109
+	.long	107
 	.long	.Lxta.call_labels35
 .cc_bottom cc_35
-.cc_top cc_36,.Lxta.call_labels36
+.cc_top cc_36,.Lxta.call_labels37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	118
-	.long	.Lxta.call_labels36
-.cc_bottom cc_36
-.cc_top cc_37,.Lxta.call_labels37
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
-	.byte	0
-	.long	123
+	.long	116
 	.long	.Lxta.call_labels37
+.cc_bottom cc_36
+.cc_top cc_37,.Lxta.call_labels36
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
+	.byte	0
+	.long	121
+	.long	.Lxta.call_labels36
 .cc_bottom cc_37
 .Lentries_end1:
 	.section	.xtalabeltable,"",@progbits
@@ -4913,282 +4913,282 @@ __xcc1_internal_4:
 .cc_top cc_38,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	54
-	.long	54
+	.long	52
+	.long	52
 	.long	.Lxtalabel0
 .cc_bottom cc_38
 .cc_top cc_39,.Lxtalabel12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	54
-	.long	54
+	.long	52
+	.long	52
 	.long	.Lxtalabel12
 .cc_bottom cc_39
 .cc_top cc_40,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	55
-	.long	58
+	.long	53
+	.long	56
 	.long	.Lxtalabel1
 .cc_bottom cc_40
 .cc_top cc_41,.Lxtalabel13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	55
-	.long	58
+	.long	53
+	.long	56
 	.long	.Lxtalabel13
 .cc_bottom cc_41
 .cc_top cc_42,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	62
-	.long	68
+	.long	60
+	.long	66
 	.long	.Lxtalabel2
 .cc_bottom cc_42
 .cc_top cc_43,.Lxtalabel14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	62
-	.long	68
+	.long	60
+	.long	66
 	.long	.Lxtalabel14
 .cc_bottom cc_43
 .cc_top cc_44,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	71
-	.long	74
+	.long	69
+	.long	72
 	.long	.Lxtalabel2
 .cc_bottom cc_44
 .cc_top cc_45,.Lxtalabel14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	71
-	.long	74
+	.long	69
+	.long	72
 	.long	.Lxtalabel14
 .cc_bottom cc_45
 .cc_top cc_46,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	76
-	.long	76
+	.long	74
+	.long	74
 	.long	.Lxtalabel2
 .cc_bottom cc_46
 .cc_top cc_47,.Lxtalabel14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	76
-	.long	76
+	.long	74
+	.long	74
 	.long	.Lxtalabel14
 .cc_bottom cc_47
 .cc_top cc_48,.Lxtalabel3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	77
-	.long	78
+	.long	75
+	.long	76
 	.long	.Lxtalabel3
 .cc_bottom cc_48
 .cc_top cc_49,.Lxtalabel15
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	77
-	.long	78
+	.long	75
+	.long	76
 	.long	.Lxtalabel15
 .cc_bottom cc_49
 .cc_top cc_50,.Lxtalabel5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	79
-	.long	79
+	.long	77
+	.long	77
 	.long	.Lxtalabel5
 .cc_bottom cc_50
 .cc_top cc_51,.Lxtalabel17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	79
-	.long	79
+	.long	77
+	.long	77
 	.long	.Lxtalabel17
 .cc_bottom cc_51
 .cc_top cc_52,.Lxtalabel5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
+	.long	80
 	.long	82
-	.long	84
 	.long	.Lxtalabel5
 .cc_bottom cc_52
 .cc_top cc_53,.Lxtalabel17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
+	.long	80
 	.long	82
-	.long	84
 	.long	.Lxtalabel17
 .cc_bottom cc_53
 .cc_top cc_54,.Lxtalabel9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	85
-	.long	86
+	.long	83
+	.long	84
 	.long	.Lxtalabel9
 .cc_bottom cc_54
 .cc_top cc_55,.Lxtalabel21
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	85
-	.long	86
+	.long	83
+	.long	84
 	.long	.Lxtalabel21
 .cc_bottom cc_55
 .cc_top cc_56,.Lxtalabel6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
+	.long	85
 	.long	87
-	.long	89
 	.long	.Lxtalabel6
 .cc_bottom cc_56
 .cc_top cc_57,.Lxtalabel18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
+	.long	85
 	.long	87
-	.long	89
 	.long	.Lxtalabel18
 .cc_bottom cc_57
 .cc_top cc_58,.Lxtalabel7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
+	.long	88
 	.long	90
-	.long	92
 	.long	.Lxtalabel7
 .cc_bottom cc_58
 .cc_top cc_59,.Lxtalabel19
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
+	.long	88
 	.long	90
-	.long	92
 	.long	.Lxtalabel19
 .cc_bottom cc_59
 .cc_top cc_60,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	93
-	.long	93
+	.long	91
+	.long	91
 	.long	.Lxtalabel8
 .cc_bottom cc_60
 .cc_top cc_61,.Lxtalabel20
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	93
-	.long	93
+	.long	91
+	.long	91
 	.long	.Lxtalabel20
 .cc_bottom cc_61
 .cc_top cc_62,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	94
-	.long	94
+	.long	92
+	.long	92
 	.long	.Lxtalabel8
 .cc_bottom cc_62
 .cc_top cc_63,.Lxtalabel20
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	94
-	.long	94
+	.long	92
+	.long	92
 	.long	.Lxtalabel20
 .cc_bottom cc_63
 .cc_top cc_64,.Lxtalabel10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	95
-	.long	95
+	.long	93
+	.long	93
 	.long	.Lxtalabel10
 .cc_bottom cc_64
 .cc_top cc_65,.Lxtalabel22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	95
-	.long	95
+	.long	93
+	.long	93
 	.long	.Lxtalabel22
 .cc_bottom cc_65
 .cc_top cc_66,.Lxtalabel10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	96
-	.long	97
+	.long	94
+	.long	95
 	.long	.Lxtalabel10
 .cc_bottom cc_66
 .cc_top cc_67,.Lxtalabel22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	96
-	.long	97
+	.long	94
+	.long	95
 	.long	.Lxtalabel22
 .cc_bottom cc_67
 .cc_top cc_68,.Lxtalabel4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	99
-	.long	100
+	.long	97
+	.long	98
 	.long	.Lxtalabel4
 .cc_bottom cc_68
 .cc_top cc_69,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	99
-	.long	100
+	.long	97
+	.long	98
 	.long	.Lxtalabel16
 .cc_bottom cc_69
 .cc_top cc_70,.Lxtalabel11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	101
-	.long	101
+	.long	99
+	.long	99
 	.long	.Lxtalabel11
 .cc_bottom cc_70
 .cc_top cc_71,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	101
-	.long	101
+	.long	99
+	.long	99
 	.long	.Lxtalabel23
 .cc_bottom cc_71
 .cc_top cc_72,.Lxtalabel11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	102
-	.long	102
+	.long	100
+	.long	100
 	.long	.Lxtalabel11
 .cc_bottom cc_72
 .cc_top cc_73,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	102
-	.long	102
+	.long	100
+	.long	100
 	.long	.Lxtalabel23
 .cc_bottom cc_73
 .cc_top cc_74,.Lxtalabel11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	103
-	.long	107
+	.long	101
+	.long	105
 	.long	.Lxtalabel11
 .cc_bottom cc_74
 .cc_top cc_75,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
-	.long	103
-	.long	107
+	.long	101
+	.long	105
 	.long	.Lxtalabel23
 .cc_bottom cc_75
-.cc_top cc_76,.Lxtalabel24
+.cc_top cc_76,.Lxtalabel25
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
+	.long	115
 	.long	117
-	.long	119
-	.long	.Lxtalabel24
+	.long	.Lxtalabel25
 .cc_bottom cc_76
-.cc_top cc_77,.Lxtalabel25
+.cc_top cc_77,.Lxtalabel24
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 	.byte	0
+	.long	120
 	.long	122
-	.long	124
-	.long	.Lxtalabel25
+	.long	.Lxtalabel24
 .cc_bottom cc_77
 .Lentries_end3:
 	.section	.trap_info,"",@progbits
@@ -5197,7 +5197,7 @@ __xcc1_internal_4:
 	.long	1
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str0:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:102:24: error: out of bounds write to memcpy destination parameter\n                memcpy(write_buffer, buffer, size );\n                       ^~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:14:40: note: expanded from macro 'memcpy'\n#define memcpy(s1, s2, n) _safe_memcpy(s1, s2, n)\n                                       ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:11:53: note: expanded from macro '_safe_memcpy'\n#define _safe_memcpy(s1, s2, n) __builtin_memcpy_xc(s1, s2, n)\n                                                    ^\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:100:24: error: out of bounds write to memcpy destination parameter\n                memcpy(write_buffer, buffer, size );\n                       ^~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:14:40: note: expanded from macro 'memcpy'\n#define memcpy(s1, s2, n) _safe_memcpy(s1, s2, n)\n                                       ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:11:53: note: expanded from macro '_safe_memcpy'\n#define _safe_memcpy(s1, s2, n) __builtin_memcpy_xc(s1, s2, n)\n                                                    ^\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_0,.Ltrap_info0
 	.long	.Ltrap_info0
@@ -5205,7 +5205,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_0
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str1:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:102:38: error: out of bounds write to memcpy destination parameter\n                memcpy(write_buffer, buffer, size );\n                                     ^~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:14:44: note: expanded from macro 'memcpy'\n#define memcpy(s1, s2, n) _safe_memcpy(s1, s2, n)\n                                           ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:11:57: note: expanded from macro '_safe_memcpy'\n#define _safe_memcpy(s1, s2, n) __builtin_memcpy_xc(s1, s2, n)\n                                                        ^\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:100:38: error: out of bounds write to memcpy destination parameter\n                memcpy(write_buffer, buffer, size );\n                                     ^~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:14:44: note: expanded from macro 'memcpy'\n#define memcpy(s1, s2, n) _safe_memcpy(s1, s2, n)\n                                           ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:11:57: note: expanded from macro '_safe_memcpy'\n#define _safe_memcpy(s1, s2, n) __builtin_memcpy_xc(s1, s2, n)\n                                                        ^\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_1,.Ltrap_info1
 	.long	.Ltrap_info1
@@ -5213,7 +5213,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_1
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str2:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:60: error: conversion of out-of-bounds pointer to array reference\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                           ^~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:60: error: conversion of out-of-bounds pointer to array reference\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                           ^~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_2,.Ltrap_info2
 	.long	.Ltrap_info2
@@ -5221,7 +5221,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_2
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str3:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:60: error: conversion of out-of-bounds pointer to array reference\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                           ^~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:60: error: conversion of out-of-bounds pointer to array reference\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                           ^~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_3,.Ltrap_info3
 	.long	.Ltrap_info3
@@ -5229,7 +5229,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_3
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str4:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:74: error: conversion of out-of-bounds pointer to array reference\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                                         ^~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:74: error: conversion of out-of-bounds pointer to array reference\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                                         ^~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_4,.Ltrap_info4
 	.long	.Ltrap_info4
@@ -5237,7 +5237,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_4
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str5:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:74: error: conversion of out-of-bounds pointer to array reference\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                                         ^~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:74: error: conversion of out-of-bounds pointer to array reference\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                                         ^~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_5,.Ltrap_info5
 	.long	.Ltrap_info5
@@ -5245,7 +5245,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_5
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str6:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:20: error: function arguments alias same memory region\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:74: note: aliased object is here\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                                         ^~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:60: note: aliased object is here\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                           ^~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:20: error: function arguments alias same memory region\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:74: note: aliased object is here\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                                         ^~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:60: note: aliased object is here\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                           ^~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_6,.Ltrap_info6
 	.long	.Ltrap_info6
@@ -5253,7 +5253,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_6
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str7:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:109:53: error: conversion of out-of-bounds pointer to array reference\n                int rc2 = fl_readData(offset, size, read_buffer);\n                                                    ^~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:107:53: error: conversion of out-of-bounds pointer to array reference\n                int rc2 = fl_readData(offset, size, read_buffer);\n                                                    ^~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_7,.Ltrap_info7
 	.long	.Ltrap_info7
@@ -5261,7 +5261,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_7
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str8:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:109:53: error: conversion of out-of-bounds pointer to array reference\n                int rc2 = fl_readData(offset, size, read_buffer);\n                                                    ^~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:107:53: error: conversion of out-of-bounds pointer to array reference\n                int rc2 = fl_readData(offset, size, read_buffer);\n                                                    ^~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_8,.Ltrap_info8
 	.long	.Ltrap_info8
@@ -5269,7 +5269,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_8
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str9:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:110:32: error: out of bounds read from memcpy source parameter\n                memcpy(buffer, read_buffer, size );\n                               ^~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:14:44: note: expanded from macro 'memcpy'\n#define memcpy(s1, s2, n) _safe_memcpy(s1, s2, n)\n                                           ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:11:57: note: expanded from macro '_safe_memcpy'\n#define _safe_memcpy(s1, s2, n) __builtin_memcpy_xc(s1, s2, n)\n                                                        ^\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:108:32: error: out of bounds read from memcpy source parameter\n                memcpy(buffer, read_buffer, size );\n                               ^~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:14:44: note: expanded from macro 'memcpy'\n#define memcpy(s1, s2, n) _safe_memcpy(s1, s2, n)\n                                           ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:11:57: note: expanded from macro '_safe_memcpy'\n#define _safe_memcpy(s1, s2, n) __builtin_memcpy_xc(s1, s2, n)\n                                                        ^\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_9,.Ltrap_info9
 	.long	.Ltrap_info9
@@ -5277,7 +5277,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_9
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str10:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:110:24: error: out of bounds write to memcpy destination parameter\n                memcpy(buffer, read_buffer, size );\n                       ^~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:14:40: note: expanded from macro 'memcpy'\n#define memcpy(s1, s2, n) _safe_memcpy(s1, s2, n)\n                                       ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:11:53: note: expanded from macro '_safe_memcpy'\n#define _safe_memcpy(s1, s2, n) __builtin_memcpy_xc(s1, s2, n)\n                                                    ^\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:108:24: error: out of bounds write to memcpy destination parameter\n                memcpy(buffer, read_buffer, size );\n                       ^~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:14:40: note: expanded from macro 'memcpy'\n#define memcpy(s1, s2, n) _safe_memcpy(s1, s2, n)\n                                       ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:11:53: note: expanded from macro '_safe_memcpy'\n#define _safe_memcpy(s1, s2, n) __builtin_memcpy_xc(s1, s2, n)\n                                                    ^\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_10,.Ltrap_info10
 	.long	.Ltrap_info10
@@ -5285,7 +5285,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_10
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str11:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:102:24: error: out of bounds write to memcpy destination parameter\n                memcpy(write_buffer, buffer, size );\n                       ^~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:14:40: note: expanded from macro 'memcpy'\n#define memcpy(s1, s2, n) _safe_memcpy(s1, s2, n)\n                                       ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:11:53: note: expanded from macro '_safe_memcpy'\n#define _safe_memcpy(s1, s2, n) __builtin_memcpy_xc(s1, s2, n)\n                                                    ^\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:100:24: error: out of bounds write to memcpy destination parameter\n                memcpy(write_buffer, buffer, size );\n                       ^~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:14:40: note: expanded from macro 'memcpy'\n#define memcpy(s1, s2, n) _safe_memcpy(s1, s2, n)\n                                       ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:11:53: note: expanded from macro '_safe_memcpy'\n#define _safe_memcpy(s1, s2, n) __builtin_memcpy_xc(s1, s2, n)\n                                                    ^\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_11,.Ltrap_info11
 	.long	.Ltrap_info11
@@ -5293,7 +5293,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_11
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str12:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:102:38: error: out of bounds write to memcpy destination parameter\n                memcpy(write_buffer, buffer, size );\n                                     ^~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:14:44: note: expanded from macro 'memcpy'\n#define memcpy(s1, s2, n) _safe_memcpy(s1, s2, n)\n                                           ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:11:57: note: expanded from macro '_safe_memcpy'\n#define _safe_memcpy(s1, s2, n) __builtin_memcpy_xc(s1, s2, n)\n                                                        ^\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:100:38: error: out of bounds write to memcpy destination parameter\n                memcpy(write_buffer, buffer, size );\n                                     ^~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:14:44: note: expanded from macro 'memcpy'\n#define memcpy(s1, s2, n) _safe_memcpy(s1, s2, n)\n                                           ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:11:57: note: expanded from macro '_safe_memcpy'\n#define _safe_memcpy(s1, s2, n) __builtin_memcpy_xc(s1, s2, n)\n                                                        ^\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_12,.Ltrap_info12
 	.long	.Ltrap_info12
@@ -5301,7 +5301,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_12
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str13:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:60: error: conversion of out-of-bounds pointer to array reference\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                           ^~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:60: error: conversion of out-of-bounds pointer to array reference\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                           ^~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_13,.Ltrap_info13
 	.long	.Ltrap_info13
@@ -5309,7 +5309,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_13
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str14:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:60: error: conversion of out-of-bounds pointer to array reference\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                           ^~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:60: error: conversion of out-of-bounds pointer to array reference\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                           ^~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_14,.Ltrap_info14
 	.long	.Ltrap_info14
@@ -5317,7 +5317,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_14
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str15:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:74: error: conversion of out-of-bounds pointer to array reference\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                                         ^~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:74: error: conversion of out-of-bounds pointer to array reference\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                                         ^~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_15,.Ltrap_info15
 	.long	.Ltrap_info15
@@ -5325,7 +5325,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_15
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str16:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:74: error: conversion of out-of-bounds pointer to array reference\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                                         ^~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:74: error: conversion of out-of-bounds pointer to array reference\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                                         ^~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_16,.Ltrap_info16
 	.long	.Ltrap_info16
@@ -5333,7 +5333,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_16
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str17:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:20: error: function arguments alias same memory region\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:74: note: aliased object is here\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                                         ^~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:89:60: note: aliased object is here\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                           ^~~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:20: error: function arguments alias same memory region\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:74: note: aliased object is here\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                                         ^~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:87:60: note: aliased object is here\n                if(fl_writeData(write_offset, write_count, write_buffer, scratch ) != 0)\n                                                           ^~~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_17,.Ltrap_info17
 	.long	.Ltrap_info17
@@ -5341,7 +5341,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_17
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str18:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:109:53: error: conversion of out-of-bounds pointer to array reference\n                int rc2 = fl_readData(offset, size, read_buffer);\n                                                    ^~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:107:53: error: conversion of out-of-bounds pointer to array reference\n                int rc2 = fl_readData(offset, size, read_buffer);\n                                                    ^~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_18,.Ltrap_info18
 	.long	.Ltrap_info18
@@ -5349,7 +5349,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_18
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str19:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:109:53: error: conversion of out-of-bounds pointer to array reference\n                int rc2 = fl_readData(offset, size, read_buffer);\n                                                    ^~~~~~~~~~~\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:107:53: error: conversion of out-of-bounds pointer to array reference\n                int rc2 = fl_readData(offset, size, read_buffer);\n                                                    ^~~~~~~~~~~\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_19,.Ltrap_info19
 	.long	.Ltrap_info19
@@ -5357,7 +5357,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_19
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str20:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:110:32: error: out of bounds read from memcpy source parameter\n                memcpy(buffer, read_buffer, size );\n                               ^~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:14:44: note: expanded from macro 'memcpy'\n#define memcpy(s1, s2, n) _safe_memcpy(s1, s2, n)\n                                           ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:11:57: note: expanded from macro '_safe_memcpy'\n#define _safe_memcpy(s1, s2, n) __builtin_memcpy_xc(s1, s2, n)\n                                                        ^\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:108:32: error: out of bounds read from memcpy source parameter\n                memcpy(buffer, read_buffer, size );\n                               ^~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:14:44: note: expanded from macro 'memcpy'\n#define memcpy(s1, s2, n) _safe_memcpy(s1, s2, n)\n                                           ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:11:57: note: expanded from macro '_safe_memcpy'\n#define _safe_memcpy(s1, s2, n) __builtin_memcpy_xc(s1, s2, n)\n                                                        ^\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_20,.Ltrap_info20
 	.long	.Ltrap_info20
@@ -5365,7 +5365,7 @@ __xcc1_internal_4:
 .cc_bottom cc_trapinfo_20
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str21:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:110:24: error: out of bounds write to memcpy destination parameter\n                memcpy(buffer, read_buffer, size );\n                       ^~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:14:40: note: expanded from macro 'memcpy'\n#define memcpy(s1, s2, n) _safe_memcpy(s1, s2, n)\n                                       ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:11:53: note: expanded from macro '_safe_memcpy'\n#define _safe_memcpy(s1, s2, n) __builtin_memcpy_xc(s1, s2, n)\n                                                    ^\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:108:24: error: out of bounds write to memcpy destination parameter\n                memcpy(buffer, read_buffer, size );\n                       ^~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:14:40: note: expanded from macro 'memcpy'\n#define memcpy(s1, s2, n) _safe_memcpy(s1, s2, n)\n                                       ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:11:53: note: expanded from macro '_safe_memcpy'\n#define _safe_memcpy(s1, s2, n) __builtin_memcpy_xc(s1, s2, n)\n                                                    ^\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_21,.Ltrap_info21
 	.long	.Ltrap_info21

@@ -1876,7 +1876,12 @@ int flac_snprintf(char *str, size_t size, const char *fmt, ...);
 int flac_vsnprintf(char *str, size_t size, const char *fmt, va_list va);
 # 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/lpc.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 1
-# 48 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 33 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 1 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h" 1
+# 100 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h"
+inline int xassert_msg(const char msg[]) { return 1; }
+# 34 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
+# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 static inline uint32_t FLAC__clz_soft_uint32(FLAC__uint32 word)
 {
  static const uint8_t byte_to_unary_table[] = {
@@ -1914,7 +1919,7 @@ static inline uint32_t FLAC__clz_uint32(FLAC__uint32 v)
 
 
  return __builtin_clz(v);
-# 94 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 96 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -1930,7 +1935,7 @@ static inline uint32_t FLAC__clz_uint64(FLAC__uint64 v)
                     ;
 
  return __builtin_clzll(v);
-# 118 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 120 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -1947,11 +1952,11 @@ static inline uint32_t FLAC__clz2_uint64(FLAC__uint64 v)
   return 64;
  return FLAC__clz_uint64(v);
 }
-# 158 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 160 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 static inline uint32_t FLAC__bitmath_ilog2(FLAC__uint32 v)
 {
                     ;
-# 170 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 172 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
  return FLAC__clz_uint32(v) ^ 31U;
 
 }
@@ -1961,7 +1966,7 @@ static inline uint32_t FLAC__bitmath_ilog2_wide(FLAC__uint64 v)
                     ;
 
  return __builtin_clzll(v) ^ 63U;
-# 208 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 210 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 uint32_t FLAC__bitmath_silog2(FLAC__int64 v);

@@ -41,7 +41,7 @@ typedef unsigned long ULONG;
 typedef unsigned long DWORD;
 # 24 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h" 2
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src/ffconf.h" 1
+# 1 ".././src\\ffconf.h" 1
 # 25 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h" 2
 # 66 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h"
 typedef char TCHAR;
@@ -208,7 +208,8 @@ WCHAR ff_wtoupper (WCHAR);
 
 
 _Bool ReadUnsigned(FIL *fp, UINT *dp, UINT size){
-    char buff[size];
+
+    char buff[8];
     UINT ByteRead;
 
                       f_read (fp, buff, size, &ByteRead);

@@ -25,115 +25,97 @@ GetADCCounts:
 	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\get_adc_counts.c"
 	.loc	2 30 0
 	.cfi_startproc
-	.issue_mode single
-	ENTSP_lu6 14
+	.issue_mode dual
+	{
+		nop
+		dualentsp 0
+	}
+	{
+		extsp 2
+		nop
+	}
 .Ltmp0:
-	.cfi_def_cfa_offset 56
+	.cfi_def_cfa_offset 8
+	{
+		nop
+		stw r4, sp[0]
+	}
 .Ltmp1:
-	.cfi_offset 15, 0
-	std r5, r4, sp[5]
-.Ltmp2:
-	.cfi_offset 4, -16
-.Ltmp3:
-	.cfi_offset 5, -12
-	stw r6, sp[12]
-.Ltmp4:
-	.cfi_offset 6, -8
-	mov r11, r3
-	mov r4, r2
-	mov r5, r1
-	mov r6, r0
-	stw r0, sp[9]
-	stw r1, sp[8]
-	stw r2, sp[7]
-	stw r3, sp[6]
+	.cfi_offset 4, -8
 	.loc	2 33 5 prologue_end
-.Ltmp5:
-	ldw r0, dp[g_curUsbSpeed]
-	.loc	2 33 5
-	stw r0, sp[4]
+.Ltmp2:
+	ldw r11, dp[g_curUsbSpeed]
+.Ltmp3:
 	.loc	2 34 9
+	{
+		eq r11, r11, 2
+		nop
+	}
+.Ltmp4:
+	.loc	2 35 7
+	bt r11, .LBB0_1
+.Ltmp5:
+	ldc r11, 1000
+	bu .LBB0_3
 .Ltmp6:
-	eq r0, r0, 2
-	stw r11, sp[3]
-	stw r4, sp[2]
-	stw r5, sp[1]
-	stw r6, sp[0]
-	bf r0, .LBB0_2
-	bu .LBB0_1
 .LBB0_1:
-	ldc r0, 8000
-	.loc	2 35 7
-	stw r0, sp[5]
-	.loc	2 35 7
-	bu .LBB0_3
-.LBB0_2:
-	ldc r0, 1000
-	.loc	2 37 7
-	stw r0, sp[5]
-	bu .LBB0_3
+	ldc r11, 8000
 .Ltmp7:
 .LBB0_3:
 	.loc	2 39 5
-	ldw r0, sp[9]
+	divu r4, r0, r11
 	.loc	2 39 5
-	ldw r1, sp[5]
-	.loc	2 39 5
-	divu r0, r0, r1
-	.loc	2 39 5
-	ldw r1, sp[8]
-	.loc	2 39 5
-	stw r0, r1[0]
-	.loc	2 40 5
-	ldw r0, sp[8]
-	.loc	2 40 5
-	ldw r0, r0[0]
-	.loc	2 40 5
-	add r0, r0, 1
-	.loc	2 40 5
-	ldw r1, sp[6]
-	.loc	2 40 5
-	stw r0, r1[0]
-	.loc	2 42 5
-	ldw r0, sp[8]
-	.loc	2 42 5
-	ldw r0, r0[0]
-	.loc	2 42 5
-	ldw r1, sp[7]
-	.loc	2 42 5
-	stw r0, r1[0]
-	.loc	2 45 8
+	{
+		add r4, r4, 1
+		stw r4, r1[0]
+	}
+	{
+		nop
+		stw r4, r3[0]
+	}
+	{
+		nop
+		ldw r3, r1[0]
+	}
 .Ltmp8:
-	ldw r0, sp[9]
+	{
+		nop
+		stw r3, r2[0]
+	}
 	.loc	2 45 8
-	ldw r1, sp[5]
-	.loc	2 45 8
-	remu r0, r0, r1
-	.loc	2 45 8
-	bt r0, .LBB0_5
-	bu .LBB0_4
-.LBB0_4:
-	.loc	2 47 9
 .Ltmp9:
-	ldw r0, sp[8]
-	.loc	2 47 9
-	ldw r1, r0[0]
-	.loc	2 47 9
-	sub r1, r1, 1
-	.loc	2 47 9
-	stw r1, r0[0]
-	.loc	2 48 5
-	bu .LBB0_5
+	remu r0, r0, r11
 .Ltmp10:
+	bt r0, .LBB0_5
+	{
+		nop
+		ldw r0, r1[0]
+	}
+	.loc	2 47 9
+.Ltmp11:
+	{
+		sub r0, r0, 1
+		nop
+	}
+	{
+		nop
+		stw r0, r1[0]
+	}
+.Ltmp12:
 .LBB0_5:
 	.loc	2 50 1
-	ldw r6, sp[12]
-	ldd r5, r4, sp[5]
-	retsp 14
+	{
+		ldaw sp, sp[2]
+		ldw r4, sp[0]
+	}
+	{
+		nop
+		retsp 0
+	}
 	# RETURN_REG_HOLDER
-.Ltmp11:
+.Ltmp13:
 	.cc_bottom GetADCCounts.function
-	.set	GetADCCounts.nstackwords,14
+	.set	GetADCCounts.nstackwords,2
 	.globl	GetADCCounts.nstackwords
 	.set	GetADCCounts.maxcores,1
 	.globl	GetADCCounts.maxcores
@@ -141,8 +123,8 @@ GetADCCounts:
 	.globl	GetADCCounts.maxtimers
 	.set	GetADCCounts.maxchanends,0
 	.globl	GetADCCounts.maxchanends
-.Ltmp12:
-	.size	GetADCCounts, .Ltmp12-GetADCCounts
+.Ltmp14:
+	.size	GetADCCounts, .Ltmp14-GetADCCounts
 .Lfunc_end0:
 	.cfi_endproc
 
@@ -175,14 +157,14 @@ GetADCCounts:
 .Linfo_string12:
 .asciiz"max"
 .Linfo_string13:
-.asciiz"frameTime"
-.Linfo_string14:
 .asciiz"usb_speed"
-.Linfo_string15:
+.Linfo_string14:
 .asciiz"XUD_BusSpeed_t"
+.Linfo_string15:
+.asciiz"frameTime"
 	.section	.debug_info,"",@progbits
 .L.debug_info_begin0:
-	.long	179
+	.long	178
 	.short	3
 	.long	.Lsection_abbrev
 	.byte	4
@@ -192,6 +174,7 @@ GetADCCounts:
 	.long	.Linfo_string1
 	.long	.Lline_table_start0
 	.long	.Linfo_string2
+	.byte	1
 	.byte	2
 	.long	.Linfo_string5
 	.byte	4
@@ -215,67 +198,56 @@ GetADCCounts:
 	.byte	1
 	.byte	1
 	.byte	5
-	.byte	2
-	.byte	145
-	.byte	36
+	.long	.Ldebug_loc0
 	.long	.Linfo_string7
 	.byte	2
 	.byte	29
-	.long	152
-	.byte	5
-	.byte	2
-	.byte	145
-	.byte	32
+	.long	151
+	.byte	6
+	.byte	1
+	.byte	81
 	.long	.Linfo_string9
 	.byte	2
 	.byte	29
-	.long	159
-	.byte	5
-	.byte	2
-	.byte	145
-	.byte	28
+	.long	158
+	.byte	6
+	.byte	1
+	.byte	82
 	.long	.Linfo_string11
 	.byte	2
 	.byte	29
-	.long	159
+	.long	158
 	.byte	5
-	.byte	2
-	.byte	145
-	.byte	24
+	.long	.Ldebug_loc1
 	.long	.Linfo_string12
 	.byte	2
 	.byte	29
-	.long	159
-	.byte	6
-	.byte	2
-	.byte	145
-	.byte	20
+	.long	158
+	.byte	7
+	.long	.Ldebug_loc2
 	.long	.Linfo_string13
 	.byte	2
-	.byte	31
-	.long	152
-	.byte	6
-	.byte	2
-	.byte	145
-	.byte	16
-	.long	.Linfo_string14
-	.byte	2
 	.byte	32
-	.long	171
+	.long	170
+	.byte	8
+	.long	.Linfo_string15
+	.byte	2
+	.byte	31
+	.long	151
 	.byte	0
-	.byte	7
+	.byte	9
 	.long	.Linfo_string8
 	.byte	7
 	.byte	4
-	.byte	8
-	.long	164
-	.byte	7
+	.byte	10
+	.long	163
+	.byte	9
 	.long	.Linfo_string10
 	.byte	5
 	.byte	4
-	.byte	9
-	.long	30
-	.long	.Linfo_string15
+	.byte	11
+	.long	31
+	.long	.Linfo_string14
 	.byte	1
 	.byte	119
 	.byte	0
@@ -294,6 +266,8 @@ GetADCCounts:
 	.byte	6
 	.byte	27
 	.byte	14
+	.ascii	"\341\177"
+	.byte	12
 	.byte	0
 	.byte	0
 	.byte	2
@@ -343,7 +317,7 @@ GetADCCounts:
 	.byte	5
 	.byte	0
 	.byte	2
-	.byte	10
+	.byte	6
 	.byte	3
 	.byte	14
 	.byte	58
@@ -355,7 +329,7 @@ GetADCCounts:
 	.byte	0
 	.byte	0
 	.byte	6
-	.byte	52
+	.byte	5
 	.byte	0
 	.byte	2
 	.byte	10
@@ -370,6 +344,34 @@ GetADCCounts:
 	.byte	0
 	.byte	0
 	.byte	7
+	.byte	52
+	.byte	0
+	.byte	2
+	.byte	6
+	.byte	3
+	.byte	14
+	.byte	58
+	.byte	11
+	.byte	59
+	.byte	11
+	.byte	73
+	.byte	19
+	.byte	0
+	.byte	0
+	.byte	8
+	.byte	52
+	.byte	0
+	.byte	3
+	.byte	14
+	.byte	58
+	.byte	11
+	.byte	59
+	.byte	11
+	.byte	73
+	.byte	19
+	.byte	0
+	.byte	0
+	.byte	9
 	.byte	36
 	.byte	0
 	.byte	3
@@ -380,14 +382,14 @@ GetADCCounts:
 	.byte	11
 	.byte	0
 	.byte	0
-	.byte	8
+	.byte	10
 	.byte	15
 	.byte	0
 	.byte	73
 	.byte	19
 	.byte	0
 	.byte	0
-	.byte	9
+	.byte	11
 	.byte	22
 	.byte	0
 	.byte	73
@@ -408,33 +410,63 @@ GetADCCounts:
 	.long	0
 	.long	0
 	.section	.debug_loc,"",@progbits
+.Ldebug_loc0:
+	.long	.Lfunc_begin0
+	.long	.Ltmp10
+.Lset0 = .Ltmp16-.Ltmp15
+	.short	.Lset0
+.Ltmp15:
+	.byte	80
+.Ltmp16:
+	.long	0
+	.long	0
+.Ldebug_loc1:
+	.long	.Lfunc_begin0
+	.long	.Ltmp8
+.Lset1 = .Ltmp18-.Ltmp17
+	.short	.Lset1
+.Ltmp17:
+	.byte	83
+.Ltmp18:
+	.long	0
+	.long	0
+.Ldebug_loc2:
+	.long	.Ltmp3
+	.long	.Ltmp4
+.Lset2 = .Ltmp20-.Ltmp19
+	.short	.Lset2
+.Ltmp19:
+	.byte	91
+.Ltmp20:
+	.long	0
+	.long	0
 	.section	.debug_pubnames,"",@progbits
-.Lset0 = .LpubNames_end0-.LpubNames_begin0
-	.long	.Lset0
+.Lset3 = .LpubNames_end0-.LpubNames_begin0
+	.long	.Lset3
 .LpubNames_begin0:
 	.short	2
 	.long	.L.debug_info_begin0
-.Lset1 = .L.debug_info_end0-.L.debug_info_begin0
-	.long	.Lset1
-	.long	51
+.Lset4 = .L.debug_info_end0-.L.debug_info_begin0
+	.long	.Lset4
+	.long	52
 .asciiz"GetADCCounts"
 	.long	0
 .LpubNames_end0:
 	.section	.debug_pubtypes,"",@progbits
-.Lset2 = .LpubTypes_end0-.LpubTypes_begin0
-	.long	.Lset2
+.Lset5 = .LpubTypes_end0-.LpubTypes_begin0
+	.long	.Lset5
 .LpubTypes_begin0:
 	.short	2
 	.long	.L.debug_info_begin0
-.Lset3 = .L.debug_info_end0-.L.debug_info_begin0
-	.long	.Lset3
-	.long	152
+.Lset6 = .L.debug_info_end0-.L.debug_info_begin0
+	.long	.Lset6
+	.long	151
 .asciiz"unsigned int"
-	.long	30
+	.long	31
 .asciiz"XUD_BusSpeed"
-	.long	164
+	.long	163
 .asciiz"int"
-	.long	171
+	.long	170
 .asciiz"XUD_BusSpeed_t"
 	.long	0
 .LpubTypes_end0:

@@ -1879,7 +1879,12 @@ int flac_snprintf(char *str, size_t size, const char *fmt, ...);
 int flac_vsnprintf(char *str, size_t size, const char *fmt, va_list va);
 # 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/lpc.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 1
-# 48 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 33 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 1 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h" 1
+# 100 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h"
+inline int xassert_msg(const char msg[]) { return 1; }
+# 34 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
+# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 static inline uint32_t FLAC__clz_soft_uint32(FLAC__uint32 word)
 {
  static const uint8_t byte_to_unary_table[] = {
@@ -1910,14 +1915,14 @@ static inline uint32_t FLAC__clz_soft_uint32(FLAC__uint32 word)
 static inline uint32_t FLAC__clz_uint32(FLAC__uint32 v)
 {
 
- assert(v > 0);
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
 
 
 
 
  return __builtin_clz(v);
-# 94 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 96 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -1930,10 +1935,10 @@ static inline uint32_t FLAC__clz_soft_uint64(FLAC__uint64 word)
 static inline uint32_t FLAC__clz_uint64(FLAC__uint64 v)
 {
 
- assert(v > 0);
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
  return __builtin_clzll(v);
-# 118 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 120 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -1950,21 +1955,21 @@ static inline uint32_t FLAC__clz2_uint64(FLAC__uint64 v)
   return 64;
  return FLAC__clz_uint64(v);
 }
-# 158 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 160 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 static inline uint32_t FLAC__bitmath_ilog2(FLAC__uint32 v)
 {
- assert(v > 0);
-# 170 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+ do { if (!(v > 0)) __builtin_trap();} while(0);
+# 172 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
  return FLAC__clz_uint32(v) ^ 31U;
 
 }
 
 static inline uint32_t FLAC__bitmath_ilog2_wide(FLAC__uint64 v)
 {
- assert(v > 0);
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
  return __builtin_clzll(v) ^ 63U;
-# 208 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 210 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 uint32_t FLAC__bitmath_silog2(FLAC__int64 v);
@@ -2376,8 +2381,8 @@ void FLAC__lpc_compute_autocorrelation(const FLAC__real data[], uint32_t data_le
   uint32_t sample, coeff;
   const uint32_t limit = data_len - lag;
 
-  assert(lag > 0);
-  assert(lag <= data_len);
+  do { if (!(lag > 0)) __builtin_trap();} while(0);
+  do { if (!(lag <= data_len)) __builtin_trap();} while(0);
 
   for(coeff = 0; coeff < lag; coeff++)
    autoc[coeff] = 0.0;
@@ -2399,7 +2404,7 @@ void FLAC__lpc_compute_autocorrelation(const FLAC__real data[], uint32_t data_le
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/deduplication/lpc_compute_autocorrelation_intrin.inc" 1
  int i, j;
  (void) lag;
- assert(lag <= 8);
+ do { if (!(lag <= 8)) __builtin_trap();} while(0);
 
         for(i = 0; i < 8; i++)
                 autoc[i] = 0.0;
@@ -2420,7 +2425,7 @@ void FLAC__lpc_compute_autocorrelation(const FLAC__real data[], uint32_t data_le
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/deduplication/lpc_compute_autocorrelation_intrin.inc" 1
  int i, j;
  (void) lag;
- assert(lag <= 12);
+ do { if (!(lag <= 12)) __builtin_trap();} while(0);
 
         for(i = 0; i < 12; i++)
                 autoc[i] = 0.0;
@@ -2441,7 +2446,7 @@ void FLAC__lpc_compute_autocorrelation(const FLAC__real data[], uint32_t data_le
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/deduplication/lpc_compute_autocorrelation_intrin.inc" 1
  int i, j;
  (void) lag;
- assert(lag <= 16);
+ do { if (!(lag <= 16)) __builtin_trap();} while(0);
 
         for(i = 0; i < 16; i++)
                 autoc[i] = 0.0;
@@ -2463,10 +2468,10 @@ void FLAC__lpc_compute_lp_coefficients(const double autoc[], uint32_t *max_order
  uint32_t i, j;
  double r, err, lpc[(32u)];
 
- assert(0 != max_order);
- assert(0 < *max_order);
- assert(*max_order <= (32u));
- assert(autoc[0] != 0.0);
+ do { if (!(0 != max_order)) __builtin_trap();} while(0);
+ do { if (!(0 < *max_order)) __builtin_trap();} while(0);
+ do { if (!(*max_order <= (32u))) __builtin_trap();} while(0);
+ do { if (!(autoc[0] != 0.0)) __builtin_trap();} while(0);
 
  err = autoc[0];
 
@@ -2508,8 +2513,8 @@ int FLAC__lpc_quantize_coefficients(const FLAC__real lp_coeff[], uint32_t order,
  double cmax;
  FLAC__int32 qmax, qmin;
 
- assert(precision > 0);
- assert(precision >= (5u));
+ do { if (!(precision > 0)) __builtin_trap();} while(0);
+ do { if (!(precision >= (5u))) __builtin_trap();} while(0);
 
 
  precision--;
@@ -2609,8 +2614,8 @@ void FLAC__lpc_compute_residual_from_qlp_coefficients(const FLAC__int32 * __rest
  int i;
  FLAC__int32 sum;
 
- assert(order > 0);
- assert(order <= 32);
+ do { if (!(order > 0)) __builtin_trap();} while(0);
+ do { if (!(order <= 32)) __builtin_trap();} while(0);
 
 
 
@@ -2833,8 +2838,8 @@ void FLAC__lpc_compute_residual_from_qlp_coefficients_wide(const FLAC__int32 * _
  int i;
  FLAC__int64 sum;
 
- assert(order > 0);
- assert(order <= 32);
+ do { if (!(order > 0)) __builtin_trap();} while(0);
+ do { if (!(order <= 32)) __builtin_trap();} while(0);
 
 
 
@@ -3056,8 +3061,8 @@ FLAC__bool FLAC__lpc_compute_residual_from_qlp_coefficients_limit_residual(const
  int i;
  FLAC__int64 sum, residual_to_check;
 
- assert(order > 0);
- assert(order <= 32);
+ do { if (!(order > 0)) __builtin_trap();} while(0);
+ do { if (!(order <= 32)) __builtin_trap();} while(0);
 
  for(i = 0; i < (int)data_len; i++) {
   sum = 0;
@@ -3110,8 +3115,8 @@ FLAC__bool FLAC__lpc_compute_residual_from_qlp_coefficients_limit_residual_33bit
  int i;
  FLAC__int64 sum, residual_to_check;
 
- assert(order > 0);
- assert(order <= 32);
+ do { if (!(order > 0)) __builtin_trap();} while(0);
+ do { if (!(order <= 32)) __builtin_trap();} while(0);
 
  for(i = 0; i < (int)data_len; i++) {
   sum = 0;
@@ -3192,8 +3197,8 @@ void FLAC__lpc_restore_signal(const FLAC__int32 * __restrict__ residual, uint32_
  int i;
  FLAC__int32 sum;
 
- assert(order > 0);
- assert(order <= 32);
+ do { if (!(order > 0)) __builtin_trap();} while(0);
+ do { if (!(order <= 32)) __builtin_trap();} while(0);
 
 
 
@@ -3416,8 +3421,8 @@ void FLAC__lpc_restore_signal_wide(const FLAC__int32 * __restrict__ residual, ui
  int i;
  FLAC__int64 sum;
 
- assert(order > 0);
- assert(order <= 32);
+ do { if (!(order > 0)) __builtin_trap();} while(0);
+ do { if (!(order <= 32)) __builtin_trap();} while(0);
 
 
 
@@ -3639,8 +3644,8 @@ void FLAC__lpc_restore_signal_wide_33bit(const FLAC__int32 * __restrict__ residu
  int i;
  FLAC__int64 sum;
 
- assert(order > 0);
- assert(order <= 32);
+ do { if (!(order > 0)) __builtin_trap();} while(0);
+ do { if (!(order <= 32)) __builtin_trap();} while(0);
 
  for(i = 0; i < (int)data_len; i++) {
   sum = 0;
@@ -3686,7 +3691,7 @@ double FLAC__lpc_compute_expected_bits_per_residual_sample(double lpc_error, uin
 {
  double error_scale;
 
- assert(total_samples > 0);
+ do { if (!(total_samples > 0)) __builtin_trap();} while(0);
 
  error_scale = 0.5 / (double)total_samples;
 
@@ -3715,8 +3720,8 @@ uint32_t FLAC__lpc_compute_best_order(const double lpc_error[], uint32_t max_ord
  uint32_t order, indx, best_index;
  double bits, best_bits, error_scale;
 
- assert(max_order > 0);
- assert(total_samples > 0);
+ do { if (!(max_order > 0)) __builtin_trap();} while(0);
+ do { if (!(total_samples > 0)) __builtin_trap();} while(0);
 
  error_scale = 0.5 / (double)total_samples;
 

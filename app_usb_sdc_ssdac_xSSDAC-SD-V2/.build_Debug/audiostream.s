@@ -24,11 +24,17 @@ UserAudioStreamStop:
 	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/audiostream\\audiostream.c"
 	.loc	1 5 0
 	.cfi_startproc
-	.issue_mode single
-	ENTSP_lu6 0
+	.issue_mode dual
+	{
+		nop
+		dualentsp 0
+	}
+	{
+		nop
+		retsp 0
+	}
 	.loc	1 6 5 prologue_end
 .Ltmp0:
-	retsp 0
 	# RETURN_REG_HOLDER
 .Ltmp1:
 	.cc_bottom UserAudioStreamStop.function
@@ -57,11 +63,17 @@ UserAudioStreamStart:
 .Lfunc_begin1:
 	.loc	1 11 0
 	.cfi_startproc
-	.issue_mode single
-	ENTSP_lu6 0
+	.issue_mode dual
+	{
+		nop
+		dualentsp 0
+	}
+	{
+		nop
+		retsp 0
+	}
 	.loc	1 12 5 prologue_end
 .Ltmp3:
-	retsp 0
 	# RETURN_REG_HOLDER
 .Ltmp4:
 	.cc_bottom UserAudioStreamStart.function
@@ -96,7 +108,7 @@ UserAudioStreamStart:
 .asciiz"UserAudioStreamStart"
 	.section	.debug_info,"",@progbits
 .L.debug_info_begin0:
-	.long	57
+	.long	58
 	.short	3
 	.long	.Lsection_abbrev
 	.byte	4
@@ -106,6 +118,7 @@ UserAudioStreamStart:
 	.long	.Linfo_string1
 	.long	.Lline_table_start0
 	.long	.Linfo_string2
+	.byte	1
 	.byte	2
 	.long	.Ldebug_ranges0
 	.byte	1
@@ -140,6 +153,8 @@ UserAudioStreamStart:
 	.byte	6
 	.byte	27
 	.byte	14
+	.ascii	"\341\177"
+	.byte	12
 	.byte	0
 	.byte	0
 	.byte	2
@@ -182,9 +197,9 @@ UserAudioStreamStart:
 	.long	.L.debug_info_begin0
 .Lset1 = .L.debug_info_end0-.L.debug_info_begin0
 	.long	.Lset1
-	.long	30
+	.long	31
 .asciiz"UserAudioStreamStop"
-	.long	45
+	.long	46
 .asciiz"UserAudioStreamStart"
 	.long	0
 .LpubNames_end0:

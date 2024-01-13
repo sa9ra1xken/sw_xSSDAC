@@ -1,7 +1,6 @@
 <preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/memory.c">
   <fCall global="true" name="FLAC__memory_alloc_aligned"/>
   <fCall global="true" name="FLAC__memory_alloc_aligned.nstackwords"/>
-  <fCall global="true" name="assert.nstackwords"/>
   <fCall global="true" name="malloc.nstackwords"/>
   <fCall global="true" name="FLAC__memory_alloc_aligned.maxcores"/>
   <fCall global="true" name="malloc.maxcores"/>
@@ -43,7 +42,6 @@
   <fCall global="true" name="safe_malloc_mul_2op_p.maxcores"/>
   <fCall global="true" name="safe_malloc_mul_2op_p.maxtimers"/>
   <fCall global="true" name="safe_malloc_mul_2op_p.maxchanends"/>
-  <fCall global="true" name="assert"/>
   <fCall global="true" name="free"/>
   <fCall global="true" name="malloc"/>
 </preCompilationAnalysis>

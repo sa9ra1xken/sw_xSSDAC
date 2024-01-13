@@ -16,7 +16,7 @@
 .Ldebug_range:
 	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\test_user_control.h"
 	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\sdcard_play.h"
-	.file	3 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
+	.file	3 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
 	.section	.cp.rodata.cst4,"aMc",@progbits,4
 	.cc_top .LCPI0_0.data,.LCPI0_0
 	.align	4
@@ -210,6 +210,10 @@ TestUserControl:
 	# RETURN_REG_HOLDER
 .Ltmp26:
 	.cc_bottom TestUserControl.function
+	.set	TestUserControl.nstackwords.pragma,400
+	.globl	TestUserControl.nstackwords.pragma
+	.set	TestUserControl.nstackwords,TestUserControl.nstackwords
+	.globl	TestUserControl.nstackwords
 
 	.globl	TestUserControl.maxcores
 
@@ -229,7 +233,7 @@ TestUserControl:
 .Linfo_string1:
 .asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\test_user_control.c"
 .Linfo_string2:
-.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 .Linfo_string3:
 .asciiz"_USER_CONTROL_CONTINUE"
 .Linfo_string4:
@@ -370,7 +374,7 @@ TestUserControl:
 	.byte	2
 	.byte	4
 	.byte	3
-	.byte	23
+	.byte	26
 	.byte	3
 	.long	.Linfo_string14
 	.byte	0
@@ -405,7 +409,7 @@ TestUserControl:
 	.byte	2
 	.byte	4
 	.byte	3
-	.byte	17
+	.byte	20
 	.byte	3
 	.long	.Linfo_string24
 	.byte	0
@@ -499,7 +503,7 @@ TestUserControl:
 	.long	112
 	.long	.Linfo_string38
 	.byte	3
-	.byte	34
+	.byte	37
 	.byte	9
 	.long	.Linfo_string40
 	.byte	2

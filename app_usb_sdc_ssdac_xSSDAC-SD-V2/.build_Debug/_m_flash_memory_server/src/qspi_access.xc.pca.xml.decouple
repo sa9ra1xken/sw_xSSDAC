@@ -115,23 +115,14 @@
     </values>
   </arg>
 </fCall>
-<fCall name="printf" global="true" numArgs="1">
+<fCall name="debug_printf" global="true" numArgs="1">
   <arg num="0">
     <values>
       <value type="unknown"/>
     </values>
   </arg>
 </fCall>
-<fCall name="fflush" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="__getstdout" global="true" numArgs="0">
-</fCall>
-<fCall name="printf" global="true" numArgs="2">
+<fCall name="debug_printf" global="true" numArgs="2">
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -145,7 +136,7 @@
 </fCall>
 <fCall name="fl_getFlashType" global="true" numArgs="0">
 </fCall>
-<fCall name="printf" global="true" numArgs="2">
+<fCall name="debug_printf" global="true" numArgs="2">
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -159,7 +150,7 @@
 </fCall>
 <fCall name="fl_getFlashSize" global="true" numArgs="0">
 </fCall>
-<fCall name="printf" global="true" numArgs="2">
+<fCall name="debug_printf" global="true" numArgs="2">
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -173,7 +164,7 @@
 </fCall>
 <fCall name="fl_getDataPartitionSize" global="true" numArgs="0">
 </fCall>
-<fCall name="printf" global="true" numArgs="2">
+<fCall name="debug_printf" global="true" numArgs="2">
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -187,7 +178,7 @@
 </fCall>
 <fCall name="fl_getNumDataSectors" global="true" numArgs="0">
 </fCall>
-<fCall name="printf" global="true" numArgs="2">
+<fCall name="debug_printf" global="true" numArgs="2">
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -206,7 +197,7 @@
     </values>
   </arg>
 </fCall>
-<fCall name="printf" global="true" numArgs="2">
+<fCall name="debug_printf" global="true" numArgs="2">
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -230,14 +221,27 @@
     </values>
   </arg>
 </fCall>
-<fCall name="fflush" global="true" numArgs="1">
+<fCall name="debug_printf" global="true" numArgs="4">
   <arg num="0">
     <values>
       <value type="unknown"/>
     </values>
   </arg>
-</fCall>
-<fCall name="__getstdout" global="true" numArgs="0">
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="3">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
 </fCall>
 <fCall name="fl_getWriteScratchSize" global="true" numArgs="2">
   <arg num="0">
@@ -258,7 +262,7 @@
     </values>
   </arg>
 </fCall>
-<fCall name="printf" global="true" numArgs="1">
+<fCall name="debug_printf" global="true" numArgs="1">
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -287,7 +291,14 @@
     </values>
   </arg>
 </fCall>
-<fCall name="printf" global="true" numArgs="1">
+<fCall name="debug_printf" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="debug_printf" global="true" numArgs="1">
   <arg num="0">
     <values>
       <value type="unknown"/>

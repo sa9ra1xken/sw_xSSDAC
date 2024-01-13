@@ -5,7 +5,10 @@
  *      Author: Takaaki Sakurai
  */
 
+#include <quadflash.h>
+
 #ifndef QSPI_ACCESS_H_
+#define QSPI_ACCESS_H_
 
 #include <xccompat.h>
 
@@ -13,11 +16,7 @@ int qspi_write(int offset, int size, char * buffer, char * scratch);
 
 int qspi_read(int offset, int size, char * buffer);
 
-//void qspi_server(server interface qspi_access i);
-
 #ifdef __XC__
-
-//void qspi_server(server interface qspi_access i);
 
 interface qspi_access{
     //void write(int offset, int size, char * buffer);
@@ -26,7 +25,15 @@ interface qspi_access{
     void read(int offset, int size, char buffer[]);
 };
 
+void qspi_server(server interface qspi_access i);
+
 #endif
+
+//interface qspi_access{
+//    void write(int offset, int size, char buffer[]);
+//    void read(int offset, int size, char buffer[]);
+//};
+
 
 /* These wrappers are for calling client interface functions from C */
 

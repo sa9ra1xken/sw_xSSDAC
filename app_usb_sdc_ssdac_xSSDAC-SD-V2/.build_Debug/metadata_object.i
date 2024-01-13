@@ -1739,6 +1739,9 @@ void *safe_malloc_mul_2op_p(size_t size1, size_t size2);
 # 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/metadata_object.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h" 1
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 1
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 2
 # 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/metadata_object.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h" 1
 # 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h"
@@ -2186,7 +2189,7 @@ static inline void *safe_realloc_nofree_muladd2_(void *ptr, size_t size1, size_t
 # 65 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/metadata_object.c"
 static FLAC__bool copy_bytes_(FLAC__byte **to, const FLAC__byte *from, uint32_t bytes)
 {
-                         ;
+ assert(to != ((void*)0));
  if (bytes > 0 && from != ((void*)0)) {
   FLAC__byte *x;
   if ((x = safe_malloc_(bytes)) == ((void*)0))
@@ -2219,7 +2222,7 @@ static FLAC__bool ensure_null_terminated_(FLAC__byte **entry, uint32_t length)
 static FLAC__bool copy_cstring_(char **to, const char *from)
 {
  char *copy = strdup(from);
-                         ;
+ assert(to != ((void*)0));
  if (copy) {
   free(*to);
   *to = copy;
@@ -2233,7 +2236,7 @@ static FLAC__bool copy_vcentry_(FLAC__StreamMetadata_VorbisComment_Entry *to, co
 {
  to->length = from->length;
  if (from->entry == 0) {
-                                 ;
+  assert(from->length == 0);
   if ((to->entry = safe_malloc_(1)) == ((void*)0))
    return 0;
   to->entry[0] = '\0';
@@ -2253,11 +2256,11 @@ static FLAC__bool copy_track_(FLAC__StreamMetadata_CueSheet_Track *to, const FLA
 {
  memcpy(to, from, sizeof(FLAC__StreamMetadata_CueSheet_Track));
  if (from->indices == 0) {
-                                      ;
+  assert(from->num_indices == 0);
  }
  else {
   FLAC__StreamMetadata_CueSheet_Index *x;
-                                     ;
+  assert(from->num_indices > 0);
   if ((x = safe_malloc_mul_2op_p(from->num_indices, sizeof(FLAC__StreamMetadata_CueSheet_Index))) == ((void*)0))
    return 0;
   memcpy(x, from->indices, from->num_indices * sizeof(FLAC__StreamMetadata_CueSheet_Index));
@@ -2268,8 +2271,8 @@ static FLAC__bool copy_track_(FLAC__StreamMetadata_CueSheet_Track *to, const FLA
 
 static void seektable_calculate_length_(FLAC__StreamMetadata *object)
 {
-                             ;
-                                                            ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_SEEKTABLE);
 
  object->length = object->data.seek_table.num_points * (18u);
 }
@@ -2278,7 +2281,7 @@ static FLAC__StreamMetadata_SeekPoint *seekpoint_array_new_(uint32_t num_points)
 {
  FLAC__StreamMetadata_SeekPoint *object_array;
 
-                             ;
+ assert(num_points > 0);
 
  object_array = safe_malloc_mul_2op_p(num_points, sizeof(FLAC__StreamMetadata_SeekPoint));
 
@@ -2298,7 +2301,7 @@ static void vorbiscomment_calculate_length_(FLAC__StreamMetadata *object)
 {
  uint32_t i;
 
-                                                                 ;
+ assert(object->type == FLAC__METADATA_TYPE_VORBIS_COMMENT);
 
  object->length = (FLAC__STREAM_METADATA_VORBIS_COMMENT_ENTRY_LENGTH_LEN) / 8;
  object->length += object->data.vorbis_comment.vendor_string.length;
@@ -2311,7 +2314,7 @@ static void vorbiscomment_calculate_length_(FLAC__StreamMetadata *object)
 
 static FLAC__StreamMetadata_VorbisComment_Entry *vorbiscomment_entry_array_new_(uint32_t num_comments)
 {
-                               ;
+ assert(num_comments > 0);
 
  return safe_calloc_(num_comments, sizeof(FLAC__StreamMetadata_VorbisComment_Entry));
 }
@@ -2320,7 +2323,7 @@ static void vorbiscomment_entry_array_delete_(FLAC__StreamMetadata_VorbisComment
 {
  uint32_t i;
 
-                                   ;
+ assert(object_array != ((void*)0));
 
  for (i = 0; i < num_comments; i++)
   free(object_array[i].entry);
@@ -2332,8 +2335,8 @@ static FLAC__StreamMetadata_VorbisComment_Entry *vorbiscomment_entry_array_copy_
 {
  FLAC__StreamMetadata_VorbisComment_Entry *return_array;
 
-                                   ;
-                               ;
+ assert(object_array != ((void*)0));
+ assert(num_comments > 0);
 
  return_array = vorbiscomment_entry_array_new_(num_comments);
 
@@ -2355,11 +2358,11 @@ static FLAC__bool vorbiscomment_set_entry_(FLAC__StreamMetadata *object, FLAC__S
 {
  FLAC__byte *save;
 
-                             ;
-                           ;
-                          ;
-                                                                 ;
-                                                                                                  ;
+ assert(object != ((void*)0));
+ assert(dest != ((void*)0));
+ assert(src != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_VORBIS_COMMENT);
+ assert((src->entry != ((void*)0) && src->length > 0) || (src->entry == ((void*)0) && src->length == 0));
 
  save = dest->entry;
 
@@ -2391,9 +2394,9 @@ static int vorbiscomment_find_entry_from_(const FLAC__StreamMetadata *object, ui
 {
  uint32_t i;
 
-                             ;
-                                                                 ;
-                                 ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_VORBIS_COMMENT);
+ assert(field_name != ((void*)0));
 
  for (i = offset; i < object->data.vorbis_comment.num_comments; i++) {
   if (FLAC__metadata_object_vorbiscomment_entry_matches(object->data.vorbis_comment.comments[i], field_name, field_name_length))
@@ -2407,7 +2410,7 @@ static void cuesheet_calculate_length_(FLAC__StreamMetadata *object)
 {
  uint32_t i;
 
-                                                           ;
+ assert(object->type == FLAC__METADATA_TYPE_CUESHEET);
 
  object->length = (
   FLAC__STREAM_METADATA_CUESHEET_MEDIA_CATALOG_NUMBER_LEN +
@@ -2438,14 +2441,14 @@ static void cuesheet_calculate_length_(FLAC__StreamMetadata *object)
 
 static FLAC__StreamMetadata_CueSheet_Index *cuesheet_track_index_array_new_(uint32_t num_indices)
 {
-                              ;
+ assert(num_indices > 0);
 
  return safe_calloc_(num_indices, sizeof(FLAC__StreamMetadata_CueSheet_Index));
 }
 
 static FLAC__StreamMetadata_CueSheet_Track *cuesheet_track_array_new_(uint32_t num_tracks)
 {
-                             ;
+ assert(num_tracks > 0);
 
  return safe_calloc_(num_tracks, sizeof(FLAC__StreamMetadata_CueSheet_Track));
 }
@@ -2454,11 +2457,11 @@ static void cuesheet_track_array_delete_(FLAC__StreamMetadata_CueSheet_Track *ob
 {
  uint32_t i;
 
-                                                     ;
+ assert(object_array != ((void*)0) && num_tracks > 0);
 
  for (i = 0; i < num_tracks; i++) {
   if (object_array[i].indices != 0) {
-                                                ;
+   assert(object_array[i].num_indices > 0);
    free(object_array[i].indices);
   }
  }
@@ -2470,8 +2473,8 @@ static FLAC__StreamMetadata_CueSheet_Track *cuesheet_track_array_copy_(const FLA
 {
  FLAC__StreamMetadata_CueSheet_Track *return_array;
 
-                                   ;
-                             ;
+ assert(object_array != ((void*)0));
+ assert(num_tracks > 0);
 
  return_array = cuesheet_track_array_new_(num_tracks);
 
@@ -2493,11 +2496,11 @@ static FLAC__bool cuesheet_set_track_(FLAC__StreamMetadata *object, FLAC__Stream
 {
  FLAC__StreamMetadata_CueSheet_Index *save;
 
-                             ;
-                           ;
-                          ;
-                                                           ;
-                                                                                                                ;
+ assert(object != ((void*)0));
+ assert(dest != ((void*)0));
+ assert(src != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_CUESHEET);
+ assert((src->indices != ((void*)0) && src->num_indices > 0) || (src->indices == ((void*)0) && src->num_indices == 0));
 
  save = dest->indices;
 
@@ -2602,7 +2605,7 @@ static FLAC__bool cuesheet_set_track_(FLAC__StreamMetadata *object, FLAC__Stream
 {
  FLAC__StreamMetadata *to;
 
-                             ;
+ assert(object != ((void*)0));
 
  if ((to = FLAC__metadata_object_new(object->type)) != ((void*)0)) {
   to->is_last = object->is_last;
@@ -2661,10 +2664,10 @@ static FLAC__bool cuesheet_set_track_(FLAC__StreamMetadata *object, FLAC__Stream
    case FLAC__METADATA_TYPE_CUESHEET:
     memcpy(&to->data.cue_sheet, &object->data.cue_sheet, sizeof(FLAC__StreamMetadata_CueSheet));
     if (object->data.cue_sheet.num_tracks == 0) {
-                                                        ;
+     assert(object->data.cue_sheet.tracks == ((void*)0));
     }
     else {
-                                                     ;
+     assert(object->data.cue_sheet.tracks != 0);
      to->data.cue_sheet.tracks = cuesheet_track_array_copy_(object->data.cue_sheet.tracks, object->data.cue_sheet.num_tracks);
      if (to->data.cue_sheet.tracks == ((void*)0)) {
       FLAC__metadata_object_delete(to);
@@ -2706,7 +2709,7 @@ static FLAC__bool cuesheet_set_track_(FLAC__StreamMetadata *object, FLAC__Stream
 
 void FLAC__metadata_object_delete_data(FLAC__StreamMetadata *object)
 {
-                             ;
+ assert(object != ((void*)0));
 
  switch(object->type) {
   case FLAC__METADATA_TYPE_STREAMINFO:
@@ -2737,7 +2740,7 @@ void FLAC__metadata_object_delete_data(FLAC__StreamMetadata *object)
    break;
   case FLAC__METADATA_TYPE_CUESHEET:
    if (object->data.cue_sheet.tracks != ((void*)0)) {
-                                                       ;
+    assert(object->data.cue_sheet.num_tracks > 0);
     cuesheet_track_array_delete_(object->data.cue_sheet.tracks, object->data.cue_sheet.num_tracks);
     object->data.cue_sheet.tracks = ((void*)0);
     object->data.cue_sheet.num_tracks = 0;
@@ -2797,9 +2800,9 @@ static FLAC__bool compare_block_data_streaminfo_(const FLAC__StreamMetadata_Stre
 
 static FLAC__bool compare_block_data_application_(const FLAC__StreamMetadata_Application *block1, const FLAC__StreamMetadata_Application *block2, uint32_t block_length)
 {
-                             ;
-                             ;
-                                                 ;
+ assert(block1 != ((void*)0));
+ assert(block2 != ((void*)0));
+ assert(block_length >= sizeof(block1->id));
 
  if (memcmp(block1->id, block2->id, sizeof(block1->id)) != 0)
   return 0;
@@ -2813,8 +2816,8 @@ static FLAC__bool compare_block_data_seektable_(const FLAC__StreamMetadata_SeekT
 {
  uint32_t i;
 
-                             ;
-                             ;
+ assert(block1 != ((void*)0));
+ assert(block2 != ((void*)0));
 
  if (block1->num_points != block2->num_points)
   return 0;
@@ -2879,7 +2882,7 @@ static FLAC__bool compare_block_data_cuesheet_(const FLAC__StreamMetadata_CueShe
   return 0;
 
  if (block1->tracks != ((void*)0) && block2->tracks != ((void*)0)) {
-                                      ;
+  assert(block1->num_tracks > 0);
   for (i = 0; i < block1->num_tracks; i++) {
    if (block1->tracks[i].offset != block2->tracks[i].offset)
     return 0;
@@ -2894,7 +2897,7 @@ static FLAC__bool compare_block_data_cuesheet_(const FLAC__StreamMetadata_CueShe
    if (block1->tracks[i].num_indices != block2->tracks[i].num_indices)
     return 0;
    if (block1->tracks[i].indices != ((void*)0) && block2->tracks[i].indices != ((void*)0)) {
-                                                   ;
+    assert(block1->tracks[i].num_indices > 0);
     for (j = 0; j < block1->tracks[i].num_indices; j++) {
      if (block1->tracks[i].indices[j].offset != block2->tracks[i].indices[j].offset)
       return 0;
@@ -2936,8 +2939,8 @@ static FLAC__bool compare_block_data_picture_(const FLAC__StreamMetadata_Picture
 
 static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown *block1, const FLAC__StreamMetadata_Unknown *block2, uint32_t block_length)
 {
-                             ;
-                             ;
+ assert(block1 != ((void*)0));
+ assert(block2 != ((void*)0));
 
  if (block1->data != ((void*)0) && block2->data != ((void*)0))
   return memcmp(block1->data, block2->data, block_length) == 0;
@@ -2947,8 +2950,8 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 
          FLAC__bool FLAC__metadata_object_is_equal(const FLAC__StreamMetadata *block1, const FLAC__StreamMetadata *block2)
 {
-                             ;
-                             ;
+ assert(block1 != ((void*)0));
+ assert(block2 != ((void*)0));
 
  if (block1->type != block2->type) {
   return 0;
@@ -2983,9 +2986,9 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 {
  FLAC__byte *save;
 
-                             ;
-                                                              ;
-                                                                                             ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_APPLICATION);
+ assert((data != ((void*)0) && length > 0) || (data == ((void*)0) && length == 0 && copy == 0));
 
  save = object->data.application.data;
 
@@ -3006,11 +3009,11 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 
          FLAC__bool FLAC__metadata_object_seektable_resize_points(FLAC__StreamMetadata *object, uint32_t new_num_points)
 {
-                             ;
-                                                            ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_SEEKTABLE);
 
  if (object->data.seek_table.points == 0) {
-                                                       ;
+  assert(object->data.seek_table.num_points == 0);
   if (new_num_points == 0)
    return 1;
   else if ((object->data.seek_table.points = seekpoint_array_new_(new_num_points)) == 0)
@@ -3024,7 +3027,7 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
   if (new_num_points > 4294967295U / sizeof(FLAC__StreamMetadata_SeekPoint))
    return 0;
 
-                                                      ;
+  assert(object->data.seek_table.num_points > 0);
 
   if (new_size == 0) {
    free(object->data.seek_table.points);
@@ -3057,9 +3060,9 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 
          void FLAC__metadata_object_seektable_set_point(FLAC__StreamMetadata *object, uint32_t point_num, FLAC__StreamMetadata_SeekPoint point)
 {
-                             ;
-                                                            ;
-                                                             ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_SEEKTABLE);
+ assert(point_num < object->data.seek_table.num_points);
 
  object->data.seek_table.points[point_num] = point;
 }
@@ -3068,9 +3071,9 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 {
  int i;
 
-                             ;
-                                                            ;
-                                                              ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_SEEKTABLE);
+ assert(point_num <= object->data.seek_table.num_points);
 
  if (!FLAC__metadata_object_seektable_resize_points(object, object->data.seek_table.num_points+1))
   return 0;
@@ -3088,9 +3091,9 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 {
  uint32_t i;
 
-                             ;
-                                                            ;
-                                                             ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_SEEKTABLE);
+ assert(point_num < object->data.seek_table.num_points);
 
 
  for (i = point_num; i < object->data.seek_table.num_points-1; i++)
@@ -3101,16 +3104,16 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 
          FLAC__bool FLAC__metadata_object_seektable_is_legal(const FLAC__StreamMetadata *object)
 {
-                             ;
-                                                            ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_SEEKTABLE);
 
  return FLAC__format_seektable_is_legal(&object->data.seek_table);
 }
 
          FLAC__bool FLAC__metadata_object_seektable_template_append_placeholders(FLAC__StreamMetadata *object, uint32_t num)
 {
-                             ;
-                                                            ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_SEEKTABLE);
 
  if (num > 0)
 
@@ -3123,8 +3126,8 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 {
  FLAC__StreamMetadata_SeekTable *seek_table;
 
-                             ;
-                                                            ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_SEEKTABLE);
 
  seek_table = &object->data.seek_table;
 
@@ -3140,9 +3143,9 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 
          FLAC__bool FLAC__metadata_object_seektable_template_append_points(FLAC__StreamMetadata *object, FLAC__uint64 sample_numbers[], uint32_t num)
 {
-                             ;
-                                                            ;
-                                              ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_SEEKTABLE);
+ assert(sample_numbers != 0 || num == 0);
 
  if (num > 0) {
   FLAC__StreamMetadata_SeekTable *seek_table = &object->data.seek_table;
@@ -3165,8 +3168,8 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 
          FLAC__bool FLAC__metadata_object_seektable_template_append_spaced_points(FLAC__StreamMetadata *object, uint32_t num, FLAC__uint64 total_samples)
 {
-                             ;
-                                                            ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_SEEKTABLE);
 
  if (num > 0 && total_samples > 0) {
   FLAC__StreamMetadata_SeekTable *seek_table = &object->data.seek_table;
@@ -3189,8 +3192,8 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 
          FLAC__bool FLAC__metadata_object_seektable_template_append_spaced_points_by_samples(FLAC__StreamMetadata *object, uint32_t samples, FLAC__uint64 total_samples)
 {
-                             ;
-                                                            ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_SEEKTABLE);
 
  if (samples > 0 && total_samples > 0) {
   FLAC__StreamMetadata_SeekTable *seek_table = &object->data.seek_table;
@@ -3229,8 +3232,8 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 {
  uint32_t unique;
 
-                             ;
-                                                            ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_SEEKTABLE);
 
  unique = FLAC__format_seektable_sort(&object->data.seek_table);
 
@@ -3246,11 +3249,11 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 
          FLAC__bool FLAC__metadata_object_vorbiscomment_resize_comments(FLAC__StreamMetadata *object, uint32_t new_num_comments)
 {
-                             ;
-                                                                 ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_VORBIS_COMMENT);
 
  if (object->data.vorbis_comment.comments == ((void*)0)) {
-                                                             ;
+  assert(object->data.vorbis_comment.num_comments == 0);
   if (new_num_comments == 0)
    return 1;
   else {
@@ -3275,7 +3278,7 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
   if (new_num_comments > 4294967295U / sizeof(FLAC__StreamMetadata_VorbisComment_Entry))
    return 0;
 
-                                                            ;
+  assert(object->data.vorbis_comment.num_comments > 0);
 
 
   if (new_num_comments < object->data.vorbis_comment.num_comments) {
@@ -3319,8 +3322,8 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 
          FLAC__bool FLAC__metadata_object_vorbiscomment_set_comment(FLAC__StreamMetadata *object, uint32_t comment_num, FLAC__StreamMetadata_VorbisComment_Entry entry, FLAC__bool copy)
 {
-                             ;
-                                                                     ;
+ assert(object != ((void*)0));
+ assert(comment_num < object->data.vorbis_comment.num_comments);
 
  if (!FLAC__format_vorbiscomment_entry_is_legal(entry.entry, entry.length))
   return 0;
@@ -3332,9 +3335,9 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
  FLAC__StreamMetadata_VorbisComment *vc;
  FLAC__StreamMetadata_VorbisComment_Entry temp;
 
-                             ;
-                                                                 ;
-                                                                      ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_VORBIS_COMMENT);
+ assert(comment_num <= object->data.vorbis_comment.num_comments);
 
  if (!FLAC__format_vorbiscomment_entry_is_legal(entry.entry, entry.length))
   return 0;
@@ -3355,14 +3358,14 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 
          FLAC__bool FLAC__metadata_object_vorbiscomment_append_comment(FLAC__StreamMetadata *object, FLAC__StreamMetadata_VorbisComment_Entry entry, FLAC__bool copy)
 {
-                             ;
-                                                                 ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_VORBIS_COMMENT);
  return FLAC__metadata_object_vorbiscomment_insert_comment(object, object->data.vorbis_comment.num_comments, entry, copy);
 }
 
          FLAC__bool FLAC__metadata_object_vorbiscomment_replace_comment(FLAC__StreamMetadata *object, FLAC__StreamMetadata_VorbisComment_Entry entry, FLAC__bool all, FLAC__bool copy)
 {
-                                  ;
+ assert(entry.entry != ((void*)0));
 
  if (!FLAC__format_vorbiscomment_entry_is_legal(entry.entry, entry.length))
   return 0;
@@ -3407,9 +3410,9 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 {
  FLAC__StreamMetadata_VorbisComment *vc;
 
-                             ;
-                                                                 ;
-                                                                     ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_VORBIS_COMMENT);
+ assert(comment_num < object->data.vorbis_comment.num_comments);
 
  vc = &object->data.vorbis_comment;
 
@@ -3426,9 +3429,9 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 
          FLAC__bool FLAC__metadata_object_vorbiscomment_entry_from_name_value_pair(FLAC__StreamMetadata_VorbisComment_Entry *entry, const char *field_name, const char *field_value)
 {
-                            ;
-                                 ;
-                                  ;
+ assert(entry != ((void*)0));
+ assert(field_name != ((void*)0));
+ assert(field_value != ((void*)0));
 
  if (!FLAC__format_vorbiscomment_entry_name_is_legal(field_name))
   return 0;
@@ -3452,9 +3455,9 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 
          FLAC__bool FLAC__metadata_object_vorbiscomment_entry_to_name_value_pair(const FLAC__StreamMetadata_VorbisComment_Entry entry, char **field_name, char **field_value)
 {
-                                  ;
-                                 ;
-                                  ;
+ assert(entry.entry != ((void*)0));
+ assert(field_name != ((void*)0));
+ assert(field_value != ((void*)0));
 
  if (!FLAC__format_vorbiscomment_entry_is_legal(entry.entry, entry.length))
   return 0;
@@ -3483,7 +3486,7 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 
          FLAC__bool FLAC__metadata_object_vorbiscomment_entry_matches(const FLAC__StreamMetadata_VorbisComment_Entry entry, const char *field_name, uint32_t field_name_length)
 {
-                                  ;
+ assert(entry.entry != ((void*)0));
  {
   const FLAC__byte *eq = (FLAC__byte*)memchr(entry.entry, '=', entry.length);
   return (eq != ((void*)0) && (uint32_t)(eq-entry.entry) == field_name_length && strncasecmp(field_name, (const char *)entry.entry, field_name_length) == 0);
@@ -3492,7 +3495,7 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 
          int FLAC__metadata_object_vorbiscomment_find_entry_from(const FLAC__StreamMetadata *object, uint32_t offset, const char *field_name)
 {
-                                 ;
+ assert(field_name != ((void*)0));
 
  return vorbiscomment_find_entry_from_(object, offset, field_name, strlen(field_name));
 }
@@ -3502,8 +3505,8 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
  const uint32_t field_name_length = strlen(field_name);
  uint32_t i;
 
-                             ;
-                                                                 ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_VORBIS_COMMENT);
 
  for (i = 0; i < object->data.vorbis_comment.num_comments; i++) {
   if (FLAC__metadata_object_vorbiscomment_entry_matches(object->data.vorbis_comment.comments[i], field_name, field_name_length)) {
@@ -3524,8 +3527,8 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
  const uint32_t field_name_length = strlen(field_name);
  int i;
 
-                             ;
-                                                                 ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_VORBIS_COMMENT);
 
 
  for (i = (int)object->data.vorbis_comment.num_comments - 1; ok && i >= 0; i--) {
@@ -3547,7 +3550,7 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 {
  FLAC__StreamMetadata_CueSheet_Track *to;
 
-                             ;
+ assert(object != ((void*)0));
 
  if ((to = FLAC__metadata_object_cuesheet_track_new()) != ((void*)0)) {
   if (!copy_track_(to, object)) {
@@ -3561,10 +3564,10 @@ static FLAC__bool compare_block_data_unknown_(const FLAC__StreamMetadata_Unknown
 
 void FLAC__metadata_object_cuesheet_track_delete_data(FLAC__StreamMetadata_CueSheet_Track *object)
 {
-                             ;
+ assert(object != ((void*)0));
 
  if (object->indices != ((void*)0)) {
-                                       ;
+  assert(object->num_indices > 0);
   free(object->indices);
  }
 }
@@ -3578,14 +3581,14 @@ void FLAC__metadata_object_cuesheet_track_delete_data(FLAC__StreamMetadata_CueSh
          FLAC__bool FLAC__metadata_object_cuesheet_track_resize_indices(FLAC__StreamMetadata *object, uint32_t track_num, uint32_t new_num_indices)
 {
  FLAC__StreamMetadata_CueSheet_Track *track;
-                             ;
-                                                           ;
-                                                            ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_CUESHEET);
+ assert(track_num < object->data.cue_sheet.num_tracks);
 
  track = &object->data.cue_sheet.tracks[track_num];
 
  if (track->indices == ((void*)0)) {
-                                       ;
+  assert(track->num_indices == 0);
   if (new_num_indices == 0)
    return 1;
   else if ((track->indices = cuesheet_track_index_array_new_(new_num_indices)) == ((void*)0))
@@ -3599,7 +3602,7 @@ void FLAC__metadata_object_cuesheet_track_delete_data(FLAC__StreamMetadata_CueSh
   if (new_num_indices > 4294967295U / sizeof(FLAC__StreamMetadata_CueSheet_Index))
    return 0;
 
-                                      ;
+  assert(track->num_indices > 0);
 
   if (new_size == 0) {
    free(track->indices);
@@ -3628,10 +3631,10 @@ void FLAC__metadata_object_cuesheet_track_delete_data(FLAC__StreamMetadata_CueSh
 {
  FLAC__StreamMetadata_CueSheet_Track *track;
 
-                             ;
-                                                           ;
-                                                            ;
-                                                                                ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_CUESHEET);
+ assert(track_num < object->data.cue_sheet.num_tracks);
+ assert(index_num <= object->data.cue_sheet.tracks[track_num].num_indices);
 
  track = &object->data.cue_sheet.tracks[track_num];
 
@@ -3657,10 +3660,10 @@ void FLAC__metadata_object_cuesheet_track_delete_data(FLAC__StreamMetadata_CueSh
 {
  FLAC__StreamMetadata_CueSheet_Track *track;
 
-                             ;
-                                                           ;
-                                                            ;
-                                                                               ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_CUESHEET);
+ assert(track_num < object->data.cue_sheet.num_tracks);
+ assert(index_num < object->data.cue_sheet.tracks[track_num].num_indices);
 
  track = &object->data.cue_sheet.tracks[track_num];
 
@@ -3674,11 +3677,11 @@ void FLAC__metadata_object_cuesheet_track_delete_data(FLAC__StreamMetadata_CueSh
 
          FLAC__bool FLAC__metadata_object_cuesheet_resize_tracks(FLAC__StreamMetadata *object, uint32_t new_num_tracks)
 {
-                             ;
-                                                           ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_CUESHEET);
 
  if (object->data.cue_sheet.tracks == ((void*)0)) {
-                                                      ;
+  assert(object->data.cue_sheet.num_tracks == 0);
   if (new_num_tracks == 0)
    return 1;
   else if ((object->data.cue_sheet.tracks = cuesheet_track_array_new_(new_num_tracks)) == ((void*)0))
@@ -3692,7 +3695,7 @@ void FLAC__metadata_object_cuesheet_track_delete_data(FLAC__StreamMetadata_CueSh
   if (new_num_tracks > 4294967295U / sizeof(FLAC__StreamMetadata_CueSheet_Track))
    return 0;
 
-                                                     ;
+  assert(object->data.cue_sheet.num_tracks > 0);
 
 
   if (new_num_tracks < object->data.cue_sheet.num_tracks) {
@@ -3726,8 +3729,8 @@ void FLAC__metadata_object_cuesheet_track_delete_data(FLAC__StreamMetadata_CueSh
 
          FLAC__bool FLAC__metadata_object_cuesheet_set_track(FLAC__StreamMetadata *object, uint32_t track_num, FLAC__StreamMetadata_CueSheet_Track *track, FLAC__bool copy)
 {
-                             ;
-                                                            ;
+ assert(object != ((void*)0));
+ assert(track_num < object->data.cue_sheet.num_tracks);
 
  return cuesheet_set_track_(object, object->data.cue_sheet.tracks + track_num, track, copy);
 }
@@ -3736,9 +3739,9 @@ void FLAC__metadata_object_cuesheet_track_delete_data(FLAC__StreamMetadata_CueSh
 {
  FLAC__StreamMetadata_CueSheet *cs;
 
-                             ;
-                                                           ;
-                                                             ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_CUESHEET);
+ assert(track_num <= object->data.cue_sheet.num_tracks);
 
  cs = &object->data.cue_sheet;
 
@@ -3764,9 +3767,9 @@ void FLAC__metadata_object_cuesheet_track_delete_data(FLAC__StreamMetadata_CueSh
 {
  FLAC__StreamMetadata_CueSheet *cs;
 
-                             ;
-                                                           ;
-                                                            ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_CUESHEET);
+ assert(track_num < object->data.cue_sheet.num_tracks);
 
  cs = &object->data.cue_sheet;
 
@@ -3783,8 +3786,8 @@ void FLAC__metadata_object_cuesheet_track_delete_data(FLAC__StreamMetadata_CueSh
 
          FLAC__bool FLAC__metadata_object_cuesheet_is_legal(const FLAC__StreamMetadata *object, FLAC__bool check_cd_da_subset, const char **violation)
 {
-                             ;
-                                                           ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_CUESHEET);
 
  return FLAC__format_cuesheet_is_legal(&object->data.cue_sheet, check_cd_da_subset, violation);
 }
@@ -3818,8 +3821,8 @@ static FLAC__uint32 cddb_add_digits_(FLAC__uint32 x)
 {
  const FLAC__StreamMetadata_CueSheet *cs;
 
-                             ;
-                                                           ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_CUESHEET);
 
  cs = &object->data.cue_sheet;
 
@@ -3841,9 +3844,9 @@ static FLAC__uint32 cddb_add_digits_(FLAC__uint32 x)
  char *old;
  size_t old_length, new_length;
 
-                             ;
-                                                          ;
-                                ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_PICTURE);
+ assert(mime_type != ((void*)0));
 
  old = object->data.picture.mime_type;
  old_length = old? strlen(old) : 0;
@@ -3872,9 +3875,9 @@ static FLAC__uint32 cddb_add_digits_(FLAC__uint32 x)
  FLAC__byte *old;
  size_t old_length, new_length;
 
-                             ;
-                                                          ;
-                                  ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_PICTURE);
+ assert(description != ((void*)0));
 
  old = object->data.picture.description;
  old_length = old? strlen((const char *)old) : 0;
@@ -3902,9 +3905,9 @@ static FLAC__uint32 cddb_add_digits_(FLAC__uint32 x)
 {
  FLAC__byte *old;
 
-                             ;
-                                                          ;
-                                                                                             ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_PICTURE);
+ assert((data != ((void*)0) && length > 0) || (data == ((void*)0) && length == 0 && copy == 0));
 
  old = object->data.picture.data;
 
@@ -3927,8 +3930,8 @@ static FLAC__uint32 cddb_add_digits_(FLAC__uint32 x)
 
          FLAC__bool FLAC__metadata_object_picture_is_legal(const FLAC__StreamMetadata *object, const char **violation)
 {
-                             ;
-                                                          ;
+ assert(object != ((void*)0));
+ assert(object->type == FLAC__METADATA_TYPE_PICTURE);
 
  return FLAC__format_picture_is_legal(&object->data.picture, violation);
 }

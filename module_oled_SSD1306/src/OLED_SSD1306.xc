@@ -144,9 +144,11 @@ void send_page(int page, int offset){
 
 void OLED_SSD1306_put_string(int row, char string[]){
 
-    if (string[0]!='\0'){
-        unsafe {string_ptr[row] = string;}
+    if (string[0]!='\0') {
+        unsafe {string_ptr[row] = string;
     }
+}
+
     display_offset[row] = 0;
     rendering_x[row] = 0;
 

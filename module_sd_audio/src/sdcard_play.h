@@ -29,4 +29,11 @@ typedef enum {
 //PLAY_TRACK_RC PlayRIFF(FIL* file, chanend c_handshake, chanend c_control);
 //PLAY_TRACK_RC PlayRIFF(FIL* file, chanend c_handshake, chanend c_control);
 
+//void sdcard_play(
+//        chanend c_handshake,
+//        chanend c_play_control,
+//        /*CLIENT_INTERFACE(qspi_access, i)*/ unsigned i
+//);
+
+
 #endif /* SDCARD_PLAY_H_ */

@@ -1,6 +1,7 @@
 ogg_helper.o: \
   C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_helper.c \
   C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h \
+  C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\assert.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/ogg_helper.h \

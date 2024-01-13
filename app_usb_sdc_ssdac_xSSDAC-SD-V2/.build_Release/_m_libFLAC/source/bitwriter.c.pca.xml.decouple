@@ -38,22 +38,18 @@
   <fCall global="true" name="FLAC__bitwriter_clear.maxchanends"/>
   <fCall global="true" name="FLAC__bitwriter_get_write_crc16"/>
   <fCall global="true" name="FLAC__bitwriter_get_write_crc16.nstackwords"/>
-  <fCall global="true" name="FLAC__bitwriter_get_buffer.nstackwords"/>
   <fCall global="true" name="FLAC__crc16.nstackwords"/>
   <fCall global="true" name="FLAC__bitwriter_get_write_crc16.maxcores"/>
-  <fCall global="true" name="FLAC__bitwriter_get_buffer.maxcores"/>
   <fCall global="true" name="FLAC__crc16.maxcores"/>
   <fCall global="true" name="FLAC__bitwriter_get_write_crc16.maxtimers"/>
-  <fCall global="true" name="FLAC__bitwriter_get_buffer.maxtimers"/>
   <fCall global="true" name="FLAC__crc16.maxtimers"/>
   <fCall global="true" name="FLAC__bitwriter_get_write_crc16.maxchanends"/>
-  <fCall global="true" name="FLAC__bitwriter_get_buffer.maxchanends"/>
   <fCall global="true" name="FLAC__crc16.maxchanends"/>
   <fCall global="true" name="FLAC__bitwriter_get_buffer"/>
-  <fCall global="true" name="realloc.nstackwords"/>
-  <fCall global="true" name="realloc.maxcores"/>
-  <fCall global="true" name="realloc.maxtimers"/>
-  <fCall global="true" name="realloc.maxchanends"/>
+  <fCall global="true" name="FLAC__bitwriter_get_buffer.nstackwords"/>
+  <fCall global="true" name="FLAC__bitwriter_get_buffer.maxcores"/>
+  <fCall global="true" name="FLAC__bitwriter_get_buffer.maxtimers"/>
+  <fCall global="true" name="FLAC__bitwriter_get_buffer.maxchanends"/>
   <fCall global="true" name="FLAC__bitwriter_release_buffer"/>
   <fCall global="true" name="FLAC__bitwriter_release_buffer.nstackwords"/>
   <fCall global="true" name="FLAC__bitwriter_release_buffer.maxcores"/>
@@ -78,6 +74,10 @@
   <fCall global="true" name="FLAC__bitwriter_get_input_bits_unconsumed.maxcores"/>
   <fCall global="true" name="FLAC__bitwriter_get_input_bits_unconsumed.maxtimers"/>
   <fCall global="true" name="FLAC__bitwriter_get_input_bits_unconsumed.maxchanends"/>
+  <fCall global="true" name="realloc.nstackwords"/>
+  <fCall global="true" name="realloc.maxcores"/>
+  <fCall global="true" name="realloc.maxtimers"/>
+  <fCall global="true" name="realloc.maxchanends"/>
   <fCall global="true" name="FLAC__bitwriter_write_zeroes"/>
   <fCall global="true" name="FLAC__bitwriter_write_zeroes.nstackwords"/>
   <fCall global="true" name="FLAC__bitwriter_write_zeroes.maxcores"/>

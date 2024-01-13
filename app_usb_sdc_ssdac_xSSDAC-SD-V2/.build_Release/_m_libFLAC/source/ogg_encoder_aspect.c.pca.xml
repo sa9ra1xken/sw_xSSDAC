@@ -35,6 +35,7 @@
   <fCall global="true" name="FLAC__ogg_encoder_aspect_write_callback_wrapper"/>
   <fCall global="true" name="ogg_stream_init"/>
   <fCall global="true" name="ogg_stream_clear"/>
+  <fCall global="true" name="assert"/>
   <fCall global="true" name="ogg_stream_packetin"/>
   <fCall global="true" name="ogg_stream_flush"/>
   <fCall global="true" name="ogg_stream_pageout"/>

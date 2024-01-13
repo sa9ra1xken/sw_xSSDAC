@@ -16,6 +16,59 @@ __xcc1_internal_1.info:
 	.long tile + 4
 .sameresource __xcc1_internal_1, r_i2c2, 0
 	.popsection
+	.weak _i.qspi_access.write.maxchanends.group
+	.max_reduce _i.qspi_access.write.max.maxchanends, _i.qspi_access.write.maxchanends.group, 0
+	.weak _i.qspi_access.write.maxcores.group
+	.max_reduce _i.qspi_access.write.max.maxcores, _i.qspi_access.write.maxcores.group, 0
+	.weak _i.qspi_access.write.maxtimers.group
+	.max_reduce _i.qspi_access.write.max.maxtimers, _i.qspi_access.write.maxtimers.group, 0
+	.weak _i.qspi_access.write.nstackwords.group
+	.globl _i.qspi_access.write.nstackwords.group
+	.weak _i.qspi_access.write.fns.group
+	.globl _i.qspi_access.write.fns.group
+	.max_reduce _i.qspi_access.write.max.nstackwords, _i.qspi_access.write.nstackwords.group, 0
+	.max_reduce _i.qspi_access.write.fns, _i.qspi_access.write.fns.group, 0
+	.weak _i.qspi_access.read.maxchanends.group
+	.max_reduce _i.qspi_access.read.max.maxchanends, _i.qspi_access.read.maxchanends.group, 0
+	.weak _i.qspi_access.read.maxcores.group
+	.max_reduce _i.qspi_access.read.max.maxcores, _i.qspi_access.read.maxcores.group, 0
+	.weak _i.qspi_access.read.maxtimers.group
+	.max_reduce _i.qspi_access.read.max.maxtimers, _i.qspi_access.read.maxtimers.group, 0
+	.weak _i.qspi_access.read.nstackwords.group
+	.globl _i.qspi_access.read.nstackwords.group
+	.weak _i.qspi_access.read.fns.group
+	.globl _i.qspi_access.read.fns.group
+	.max_reduce _i.qspi_access.read.max.nstackwords, _i.qspi_access.read.nstackwords.group, 0
+	.max_reduce _i.qspi_access.read.fns, _i.qspi_access.read.fns.group, 0
+	.weak _i.qspi_access.__interface_init.maxchanends.group
+	.max_reduce _i.qspi_access.__interface_init.max.maxchanends, _i.qspi_access.__interface_init.maxchanends.group, 0
+	.weak _i.qspi_access.__interface_init.maxcores.group
+	.max_reduce _i.qspi_access.__interface_init.max.maxcores, _i.qspi_access.__interface_init.maxcores.group, 0
+	.weak _i.qspi_access.__interface_init.maxtimers.group
+	.max_reduce _i.qspi_access.__interface_init.max.maxtimers, _i.qspi_access.__interface_init.maxtimers.group, 0
+	.weak _i.qspi_access.__interface_init.nstackwords.group
+	.globl _i.qspi_access.__interface_init.nstackwords.group
+	.weak _i.qspi_access.__interface_init.fns.group
+	.globl _i.qspi_access.__interface_init.fns.group
+	.max_reduce _i.qspi_access.__interface_init.max.nstackwords, _i.qspi_access.__interface_init.nstackwords.group, 0
+	.max_reduce _i.qspi_access.__interface_init.fns, _i.qspi_access.__interface_init.fns.group, 0
+	.weak _i.qspi_access._client_call_y.maxchanends.group
+	.add_to_set _i.qspi_access._client_call_y.maxchanends.group, (__interface_client_call_y_other.maxchanends + __interface_client_call_y_extra.maxchanends), __interface_client_call_y_other
+	.max_reduce _i.qspi_access._client_call_y.max.maxchanends, _i.qspi_access._client_call_y.maxchanends.group, 0
+	.weak _i.qspi_access._client_call_y.maxcores.group
+	.add_to_set _i.qspi_access._client_call_y.maxcores.group, (__interface_client_call_y_other.maxcores + __interface_client_call_y_extra.maxcores), __interface_client_call_y_other
+	.max_reduce _i.qspi_access._client_call_y.max.maxcores, _i.qspi_access._client_call_y.maxcores.group, 0
+	.weak _i.qspi_access._client_call_y.maxtimers.group
+	.add_to_set _i.qspi_access._client_call_y.maxtimers.group, (__interface_client_call_y_other.maxtimers + __interface_client_call_y_extra.maxtimers), __interface_client_call_y_other
+	.max_reduce _i.qspi_access._client_call_y.max.maxtimers, _i.qspi_access._client_call_y.maxtimers.group, 0
+	.weak _i.qspi_access._client_call_y.nstackwords.group
+	.globl _i.qspi_access._client_call_y.nstackwords.group
+	.weak _i.qspi_access._client_call_y.fns.group
+	.globl _i.qspi_access._client_call_y.fns.group
+	.add_to_set _i.qspi_access._client_call_y.nstackwords.group, (__interface_client_call_y_other.nstackwords + __interface_client_call_y_extra.nstackwords), __interface_client_call_y_other
+	.add_to_set _i.qspi_access._client_call_y.fns.group, __interface_client_call_y_other, __interface_client_call_y_other
+	.max_reduce _i.qspi_access._client_call_y.max.nstackwords, _i.qspi_access._client_call_y.nstackwords.group, 0
+	.max_reduce _i.qspi_access._client_call_y.fns, _i.qspi_access._client_call_y.fns.group, 0
 	.set usage.anon.0,0
 	.set usage.anon.1,0
 	.set usage.anon.2,0
@@ -23,46 +76,48 @@ __xcc1_internal_1.info:
 	.set usage.anon.4,0
 	.set usage.anon.5,0
 	.set usage.anon.6,0
-	.globread init_display_frame,TotalTimeString,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:270:13: note: object used here\n    sprintf(TotalTimeString,\"00:00\");\n            ^~~~~~~~~~~~~~~"
-	.globread ShowUsbAudioStatus,SampRes,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:251:57: note: object used here\n    sprintf(UsbAudioStatus,\"%d sps %d bit\\0\", SampFreq, SampRes);\n                                                        ^~~~~~~"
-	.globread ShowUsbAudioStatus,SampFreq,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:251:47: note: object used here\n    sprintf(UsbAudioStatus,\"%d sps %d bit\\0\", SampFreq, SampRes);\n                                              ^~~~~~~~"
-	.globread SelectedFunction,selected_function,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:206:19: note: object used here\n    unsafe {p = & selected_function; temp = * p; }\n                  ^~~~~~~~~~~~~~~~~"
-	.globread FixedInterpolationMode,fixed_intpol_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:197:19: note: object used here\n    unsafe {p = & fixed_intpol_mode; temp = * p; }\n                  ^~~~~~~~~~~~~~~~~"
-	.globread ProposedInterpolationMode,proposed_intpol_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:188:19: note: object used here\n    unsafe {p = & proposed_intpol_mode; temp = * p; }\n                  ^~~~~~~~~~~~~~~~~~~~"
-	.globread UpdateTime,SecElapsed,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:140:20: note: object used here\n    unsigned min = SecElapsed / 60;\n                   ^~~~~~~~~~"
-	.globread set_console_mode,console_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:105:16: note: object used here\n        ptr = &console_mode;\n               ^~~~~~~~~~~~"
-	.globread get_console_mode,console_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:97:16: note: object used here\n        ptr = &console_mode;\n               ^~~~~~~~~~~~"
-	.globread clear_display_control_flag,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:89:16: note: object used here\n        ptr = &display_control_flag;\n               ^~~~~~~~~~~~~~~~~~~~"
-	.globread test_display_control_flag,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:81:16: note: object used here\n        ptr = &display_control_flag;\n               ^~~~~~~~~~~~~~~~~~~~"
-	.globread set_display_control_flag,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:73:16: note: object used here\n        ptr = &display_control_flag;\n               ^~~~~~~~~~~~~~~~~~~~"
-	.globread update_chan_count,NumChan,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:63:16: note: object used here\n        ptr = &NumChan; *ptr = ch;\n               ^~~~~~~"
-	.globread update_chan_count,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:64:16: note: object used here\n        ptr = &display_control_flag;   *ptr |= BITMASK_UPDATE_AUDIO_FORMAT;\n               ^~~~~~~~~~~~~~~~~~~~"
-	.globread update_samp_resolution,SampRes,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:55:16: note: object used here\n        ptr = &SampRes; *ptr = res;\n               ^~~~~~~"
-	.globread update_samp_resolution,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:56:16: note: object used here\n        ptr = &display_control_flag;   *ptr |= BITMASK_UPDATE_RESOLUTION;\n               ^~~~~~~~~~~~~~~~~~~~"
-	.globread update_samp_freq,SampFreq,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:47:16: note: object used here\n        ptr = &SampFreq;    *ptr = freq;\n               ^~~~~~~~"
-	.globread update_samp_freq,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:48:16: note: object used here\n        ptr = &display_control_flag;   *ptr |= BITMASK_UPDATE_FREQUENCY;\n               ^~~~~~~~~~~~~~~~~~~~"
-	.globwrite handle_display_frame,scrolling_row,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:381:17: note: object used here\n                scrolling_row++;\n                ^~~~~~~~~~~~~"
-	.globwrite handle_display_frame,pause_counter,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:374:13: note: object used here\n            pause_counter--;\n            ^~~~~~~~~~~~~"
-	.globwrite handle_display_frame,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:376:17: note: object used here\n                state = _SCROLLING;\n                ^~~~~"
-	.globwrite init_display_frame,scrolling_row,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:274:5: note: object used here\n    scrolling_row = 0;\n    ^~~~~~~~~~~~~"
-	.globwrite init_display_frame,pause_counter,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:273:5: note: object used here\n    pause_counter = PAUSE_COUNT;\n    ^~~~~~~~~~~~~"
-	.globwrite init_display_frame,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:272:5: note: object used here\n    state = _PAUSING;\n    ^~~~~"
-	.globwrite ShowUsbAudioStatus,UsbAudioStatus,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:252:20: note: object used here\n    printf(\"\\n%s\", UsbAudioStatus);\n                   ^~~~~~~~~~~~~~"
-	.globwrite ShowUsbAudioStatus,scrolling_row,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:257:5: note: object used here\n    scrolling_row = 0;\n    ^~~~~~~~~~~~~"
-	.globwrite ShowUsbAudioStatus,pause_counter,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:255:5: note: object used here\n    pause_counter = PAUSE_COUNT;\n    ^~~~~~~~~~~~~"
-	.globwrite ShowUsbAudioStatus,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:256:5: note: object used here\n    state = _PAUSING;\n    ^~~~~"
-	.globwrite ShowAudioAttribute,scrolling_row,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:168:5: note: object used here\n    scrolling_row = 2;\n    ^~~~~~~~~~~~~"
-	.globwrite ShowAudioAttribute,pause_counter,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:166:5: note: object used here\n    pause_counter = PAUSE_COUNT;\n    ^~~~~~~~~~~~~"
-	.globwrite ShowAudioAttribute,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:167:5: note: object used here\n    state = _PAUSING;\n    ^~~~~"
-	.globwrite ShowAudioAttribute,information_string,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:32: note: object used here\n    OLED_SSD1306_put_string(2, information_string);\n                               ^~~~~~~~~~~~~~~~~~"
-	.globwrite ShowTrack,scrolling_row,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:160:5: note: object used here\n    scrolling_row = 1;\n    ^~~~~~~~~~~~~"
-	.globwrite ShowTrack,pause_counter,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:5: note: object used here\n    pause_counter = PAUSE_COUNT;\n    ^~~~~~~~~~~~~"
-	.globwrite ShowTrack,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:159:5: note: object used here\n    state = _PAUSING;\n    ^~~~~"
-	.globwrite ShowTrack,track_string,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:157:32: note: object used here\n    OLED_SSD1306_put_string(1, track_string);\n                               ^~~~~~~~~~~~"
-	.globwrite ShowFolder,scrolling_row,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:152:5: note: object used here\n    scrolling_row = 0;\n    ^~~~~~~~~~~~~"
-	.globwrite ShowFolder,pause_counter,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:150:5: note: object used here\n    pause_counter = PAUSE_COUNT;\n    ^~~~~~~~~~~~~"
-	.globwrite ShowFolder,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:151:5: note: object used here\n    state = _PAUSING;\n    ^~~~~"
-	.globwrite ShowFolder,folder_string,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:149:32: note: object used here\n    OLED_SSD1306_put_string(0, folder_string);\n                               ^~~~~~~~~~~~~"
+	.globread SelectedFunction,selected_function,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:236:19: note: object used here\n    unsafe {p = & selected_function; temp = * p; }\n                  ^~~~~~~~~~~~~~~~~"
+	.globread FixedInterpolationMode,fixed_intpol_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:200:19: note: object used here\n    unsafe {p = & fixed_intpol_mode; temp = * p; }\n                  ^~~~~~~~~~~~~~~~~"
+	.globread ProposedInterpolationMode,proposed_intpol_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:191:19: note: object used here\n    unsafe {p = & proposed_intpol_mode; temp = * p; }\n                  ^~~~~~~~~~~~~~~~~~~~"
+	.globread UpdateTime,SecElapsed,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:20: note: object used here\n    unsigned min = SecElapsed / 60;\n                   ^~~~~~~~~~"
+	.globread GetStreamFormatString,SampRes,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:137:66: note: object used here\n    sprintf(str,\"%dch %d.%dksps %dbit\\0\", NumChan, freq, freq_p, SampRes);\n                                                                 ^~~~~~~"
+	.globread GetStreamFormatString,SampFreq,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:135:16: note: object used here\n    int freq = SampFreq / 1000;\n               ^~~~~~~~"
+	.globread GetStreamFormatString,NumChan,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:137:43: note: object used here\n    sprintf(str,\"%dch %d.%dksps %dbit\\0\", NumChan, freq, freq_p, SampRes);\n                                          ^~~~~~~"
+	.globread ShowStreamFormat,SampRes,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:126:83: note: object used here\n    sprintf(stream_format_string,\"%dch %d.%dksps %dbit\\0\", NumChan, freq, freq_p, SampRes);\n                                                                                  ^~~~~~~"
+	.globread ShowStreamFormat,SampFreq,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:124:16: note: object used here\n    int freq = SampFreq / 1000;\n               ^~~~~~~~"
+	.globread ShowStreamFormat,NumChan,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:126:60: note: object used here\n    sprintf(stream_format_string,\"%dch %d.%dksps %dbit\\0\", NumChan, freq, freq_p, SampRes);\n                                                           ^~~~~~~"
+	.globread update_stream_format,SampRes,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:118:16: note: object used here\n        ptr = &SampRes; *ptr = samp_res;\n               ^~~~~~~"
+	.globread update_stream_format,NumChan,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:117:16: note: object used here\n        ptr = &NumChan; *ptr = num_chan;\n               ^~~~~~~"
+	.globread update_stream_format,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:119:16: note: object used here\n        ptr = &display_control_flag; *ptr |= BITMASK_SHOW_STREAM_FORMAT;\n               ^~~~~~~~~~~~~~~~~~~~"
+	.globread update_samp_freq,SampFreq,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:108:16: note: object used here\n        ptr = &SampFreq; *ptr = freq;\n               ^~~~~~~~"
+	.globread update_samp_freq,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:109:16: note: object used here\n        ptr = &display_control_flag; *ptr |= BITMASK_SHOW_STREAM_FORMAT;\n               ^~~~~~~~~~~~~~~~~~~~"
+	.globread set_console_mode,console_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:93:16: note: object used here\n        ptr = &console_mode;\n               ^~~~~~~~~~~~"
+	.globread get_console_mode,console_mode,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:85:16: note: object used here\n        ptr = &console_mode;\n               ^~~~~~~~~~~~"
+	.globread clear_display_control_flag,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:75:16: note: object used here\n        ptr = &display_control_flag;\n               ^~~~~~~~~~~~~~~~~~~~"
+	.globread test_display_control_flag,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:67:16: note: object used here\n        ptr = &display_control_flag;\n               ^~~~~~~~~~~~~~~~~~~~"
+	.globread set_display_control_flag,display_control_flag,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:59:16: note: object used here\n        ptr = &display_control_flag;\n               ^~~~~~~~~~~~~~~~~~~~"
+	.globwrite handle_display_frame,scrolling_row,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:370:17: note: object used here\n                scrolling_row++;\n                ^~~~~~~~~~~~~"
+	.globwrite handle_display_frame,pause_counter,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:363:13: note: object used here\n            pause_counter--;\n            ^~~~~~~~~~~~~"
+	.globwrite handle_display_frame,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:365:17: note: object used here\n                state = _SCROLLING;\n                ^~~~~"
+	.globwrite init_display_frame,scrolling_row,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:262:5: note: object used here\n    scrolling_row = 0;\n    ^~~~~~~~~~~~~"
+	.globwrite init_display_frame,pause_counter,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:261:5: note: object used here\n    pause_counter = PAUSE_COUNT;\n    ^~~~~~~~~~~~~"
+	.globwrite init_display_frame,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:260:5: note: object used here\n    state = _PAUSING;\n    ^~~~~"
+	.globwrite ShowAudioProperty,audio_property_string,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:179:34: note: object used here\n    OLED_SSD1306_put_string(row, audio_property_string);\n                                 ^~~~~~~~~~~~~~~~~~~~~"
+	.globwrite ShowAudioProperty,scrolling_row,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:182:5: note: object used here\n    scrolling_row = row;\n    ^~~~~~~~~~~~~"
+	.globwrite ShowAudioProperty,pause_counter,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:180:5: note: object used here\n    pause_counter = PAUSE_COUNT;\n    ^~~~~~~~~~~~~"
+	.globwrite ShowAudioProperty,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:181:5: note: object used here\n    state = _PAUSING;\n    ^~~~~"
+	.globwrite ShowTrack,track_string,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:172:34: note: object used here\n    OLED_SSD1306_put_string(row, track_string);\n                                 ^~~~~~~~~~~~"
+	.globwrite ShowTrack,scrolling_row,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:175:5: note: object used here\n    scrolling_row = row;\n    ^~~~~~~~~~~~~"
+	.globwrite ShowTrack,pause_counter,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:173:5: note: object used here\n    pause_counter = PAUSE_COUNT;\n    ^~~~~~~~~~~~~"
+	.globwrite ShowTrack,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:174:5: note: object used here\n    state = _PAUSING;\n    ^~~~~"
+	.globwrite ShowFolder,folder_string,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:34: note: object used here\n    OLED_SSD1306_put_string(row, folder_string);\n                                 ^~~~~~~~~~~~~"
+	.globwrite ShowFolder,scrolling_row,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:168:5: note: object used here\n    scrolling_row = row;\n    ^~~~~~~~~~~~~"
+	.globwrite ShowFolder,pause_counter,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:166:5: note: object used here\n    pause_counter = PAUSE_COUNT;\n    ^~~~~~~~~~~~~"
+	.globwrite ShowFolder,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:167:5: note: object used here\n    state = _PAUSING;\n    ^~~~~"
+	.globwrite ShowStreamFormat,stream_format_string,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:127:20: note: object used here\n    printf(\"\\n%s\", stream_format_string);\n                   ^~~~~~~~~~~~~~~~~~~~"
+	.globwrite ShowStreamFormat,scrolling_row,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:131:5: note: object used here\n    scrolling_row = row;\n    ^~~~~~~~~~~~~"
+	.globwrite ShowStreamFormat,pause_counter,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:129:5: note: object used here\n    pause_counter = PAUSE_COUNT;\n    ^~~~~~~~~~~~~"
+	.globwrite ShowStreamFormat,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:130:5: note: object used here\n    state = _PAUSING;\n    ^~~~~"
 	.call display_control_core,init_display_frame
 	.call display_control_core,handle_display_frame
 	.call handle_display_frame,test_display_control_flag
@@ -70,68 +125,67 @@ __xcc1_internal_1.info:
 	.call handle_display_frame,clear_display_control_flag
 	.call handle_display_frame,UpdateTime
 	.call handle_display_frame,ShowTrack
+	.call handle_display_frame,ShowStreamFormat
 	.call handle_display_frame,ShowInterpolationMode
 	.call handle_display_frame,ShowFolder
-	.call handle_display_frame,ShowAudioAttribute
+	.call handle_display_frame,ShowAudioProperty
 	.call handle_display_frame,SelectedFunction
 	.call handle_display_frame,ProposedInterpolationMode
 	.call handle_display_frame,OLED_SSD1306_shift_left
 	.call handle_display_frame,OLED_SSD1306_put_string
 	.call handle_display_frame,GetFunctionString
 	.call handle_display_frame,FixedInterpolationMode
-	.call init_display_frame,sprintf
 	.call init_display_frame,OLED_SSD1306_put_string
 	.call init_display_frame,OLED_SSD1306_begin
-	.call ShowUsbAudioStatus,sprintf
-	.call ShowUsbAudioStatus,printf
-	.call ShowUsbAudioStatus,OLED_SSD1306_put_string
 	.call ShowInterpolationMode,OLED_SSD1306_put_string
-	.call ShowAudioAttribute,clear_display_control_flag
-	.call ShowAudioAttribute,OLED_SSD1306_put_string
-	.call ShowTrack,clear_display_control_flag
+	.call ShowAudioProperty,OLED_SSD1306_put_string
 	.call ShowTrack,OLED_SSD1306_put_string
-	.call ShowFolder,clear_display_control_flag
 	.call ShowFolder,OLED_SSD1306_put_string
 	.call UpdateTime,sprintf
-	.call UpdateTime,clear_display_control_flag
 	.call UpdateTime,OLED_SSD1306_put_string
+	.call GetStreamFormatString,sprintf
+	.call ShowStreamFormat,sprintf
+	.call ShowStreamFormat,printf
+	.call ShowStreamFormat,OLED_SSD1306_put_string
 	.call usage.anon.5,memset
 	.call usage.anon.4,memmove
 	.call usage.anon.3,memcmp
 	.call usage.anon.2,delay_ticks_longlong
 	.call usage.anon.1,delay_ticks_longlong
 	.call usage.anon.0,delay_ticks_longlong
+	.set ShowStreamFormat.locnoside, 0
 	.set ShowFolder.locnoside, 0
 	.set ShowTrack.locnoside, 0
-	.set ShowAudioAttribute.locnoside, 0
-	.set ShowUsbAudioStatus.locnoside, 0
+	.set ShowAudioProperty.locnoside, 0
 	.set init_display_frame.locnoside, 0
 	.set handle_display_frame.locnoside, 0
 	.set display_control_core.locnoside, 0
-	.set update_samp_freq.locnoglobalaccess, 0
-	.set update_samp_resolution.locnoglobalaccess, 0
-	.set update_chan_count.locnoglobalaccess, 0
 	.set set_display_control_flag.locnoglobalaccess, 0
 	.set test_display_control_flag.locnoglobalaccess, 0
 	.set clear_display_control_flag.locnoglobalaccess, 0
 	.set get_console_mode.locnoglobalaccess, 0
 	.set set_console_mode.locnoglobalaccess, 0
+	.set update_samp_freq.locnoglobalaccess, 0
+	.set update_stream_format.locnoglobalaccess, 0
+	.set ShowStreamFormat.locnoglobalaccess, 0
+	.set GetStreamFormatString.locnoglobalaccess, 0
 	.set UpdateTime.locnoglobalaccess, 0
 	.set ShowFolder.locnoglobalaccess, 0
 	.set ShowTrack.locnoglobalaccess, 0
-	.set ShowAudioAttribute.locnoglobalaccess, 0
+	.set ShowAudioProperty.locnoglobalaccess, 0
 	.set ProposedInterpolationMode.locnoglobalaccess, 0
 	.set FixedInterpolationMode.locnoglobalaccess, 0
 	.set SelectedFunction.locnoglobalaccess, 0
-	.set ShowUsbAudioStatus.locnoglobalaccess, 0
 	.set init_display_frame.locnoglobalaccess, 0
 	.set handle_display_frame.locnoglobalaccess, 0
+	.set handle_display_frame.locnointerfaceaccess, 0
+	.set display_control_core.locnointerfaceaccess, 0
 	.assert 1,memset.actnoglobalaccess,"In file included from C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:18:\nIn file included from C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:5:\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:21:3: error: passing non-local alias to function `memset\' which accesses a global variable\n  memset(s, c, n);\n  ^~~~~~~~~~~~~~~"
 	.assert 1,memmove.actnoglobalaccess,"In file included from C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:18:\nIn file included from C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h:5:\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\safe/string.h:15:3: error: passing non-local alias to function `memmove\' which accesses a global variable\n  memmove(s1, s2, n);\n  ^~~~~~~~~~~~~~~~~~"
-	.globpassesref OLED_SSD1306_put_string, UsbAudioStatus,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:254:5: error: call to `OLED_SSD1306_put_string\' in `ShowUsbAudioStatus\' makes alias of global \'UsbAudioStatus\'\n    OLED_SSD1306_put_string(1, UsbAudioStatus);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref OLED_SSD1306_put_string, information_string,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:5: error: call to `OLED_SSD1306_put_string\' in `ShowAudioAttribute\' makes alias of global \'information_string\'\n    OLED_SSD1306_put_string(2, information_string);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref OLED_SSD1306_put_string, track_string,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:157:5: error: call to `OLED_SSD1306_put_string\' in `ShowTrack\' makes alias of global \'track_string\'\n    OLED_SSD1306_put_string(1, track_string);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref OLED_SSD1306_put_string, folder_string,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:149:5: error: call to `OLED_SSD1306_put_string\' in `ShowFolder\' makes alias of global \'folder_string\'\n    OLED_SSD1306_put_string(0, folder_string);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref OLED_SSD1306_put_string, audio_property_string,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:179:5: error: call to `OLED_SSD1306_put_string\' in `ShowAudioProperty\' makes alias of global \'audio_property_string\'\n    OLED_SSD1306_put_string(row, audio_property_string);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref OLED_SSD1306_put_string, track_string,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:172:5: error: call to `OLED_SSD1306_put_string\' in `ShowTrack\' makes alias of global \'track_string\'\n    OLED_SSD1306_put_string(row, track_string);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref OLED_SSD1306_put_string, folder_string,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:5: error: call to `OLED_SSD1306_put_string\' in `ShowFolder\' makes alias of global \'folder_string\'\n    OLED_SSD1306_put_string(row, folder_string);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref OLED_SSD1306_put_string, stream_format_string,"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:128:5: error: call to `OLED_SSD1306_put_string\' in `ShowStreamFormat\' makes alias of global \'stream_format_string\'\n    OLED_SSD1306_put_string(row, stream_format_string);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
                                         # End of file scope inline assembly
 	.section	.debug_info,"",@progbits
@@ -150,13 +204,409 @@ __xcc1_internal_1.info:
 .Ldebug_range:
 	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.xc"
 	.text
+	.weak	_i.qspi_access._chan.read
+	.align	4
+	.type	_i.qspi_access._chan.read,@function
+	.cc_top _i.qspi_access._chan.read.function,_i.qspi_access._chan.read
+_i.qspi_access._chan.read:              # @_i.qspi_access._chan.read
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp0:
+	.cfi_def_cfa_offset 16
+.Ltmp1:
+	.cfi_offset 15, 0
+	{
+		nop
+		stw r4, sp[2]
+	}
+.Ltmp2:
+	.cfi_offset 4, -8
+	#DEBUG_VALUE: _i.qspi_access._chan.read:dest <- R0
+	#DEBUG_VALUE: _i.qspi_access._chan.read:param1 <- R1
+	#DEBUG_VALUE: _i.qspi_access._chan.read:param2 <- R2
+	#DEBUG_VALUE: _i.qspi_access._chan.read:param3 <- R3
+	{
+		getr r4, 2
+		ldw r11, sp[5]
+	}
+	{
+		setd res[r4], r0
+		add r0, r4, 1
+	}
+	{
+		out res[r4], r0
+		nop
+	}
+	{
+		outct res[r4], 2
+		nop
+	}
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		out res[r4], r1
+		nop
+	}
+	{
+		out res[r4], r2
+		nop
+	}
+	{
+		out res[r4], r11
+		stw r3, sp[1]
+	}
+	{
+		outct res[r4], 2
+		ldaw r1, sp[1]
+	}
+	{
+		mov r0, r4
+		nop
+	}
+	bl __interface_client_call
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		freer res[r4]
+		ldw r4, sp[2]
+	}
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+	.cc_bottom _i.qspi_access._chan.read.function
+	.set	_i.qspi_access._chan.read.nstackwords,(__interface_client_call.nstackwords + 4)
+	.globl	_i.qspi_access._chan.read.nstackwords
+	.weak	_i.qspi_access._chan.read.nstackwords
+	.set	_i.qspi_access._chan.read.maxcores,__interface_client_call.maxcores $M 1
+	.globl	_i.qspi_access._chan.read.maxcores
+	.weak	_i.qspi_access._chan.read.maxcores
+	.set	_i.qspi_access._chan.read.maxtimers,__interface_client_call.maxtimers $M 0
+	.globl	_i.qspi_access._chan.read.maxtimers
+	.weak	_i.qspi_access._chan.read.maxtimers
+	.set	_i.qspi_access._chan.read.maxchanends,(1 + __interface_client_call.maxchanends) $M 1
+	.globl	_i.qspi_access._chan.read.maxchanends
+	.weak	_i.qspi_access._chan.read.maxchanends
+.Ltmp3:
+	.size	_i.qspi_access._chan.read, .Ltmp3-_i.qspi_access._chan.read
+	.cfi_endproc
+
+	.weak	_i.qspi_access._chan.write
+	.align	4
+	.type	_i.qspi_access._chan.write,@function
+	.cc_top _i.qspi_access._chan.write.function,_i.qspi_access._chan.write
+_i.qspi_access._chan.write:             # @_i.qspi_access._chan.write
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp4:
+	.cfi_def_cfa_offset 16
+.Ltmp5:
+	.cfi_offset 15, 0
+	{
+		nop
+		stw r4, sp[2]
+	}
+.Ltmp6:
+	.cfi_offset 4, -8
+	#DEBUG_VALUE: _i.qspi_access._chan.write:dest <- R0
+	#DEBUG_VALUE: _i.qspi_access._chan.write:param1 <- R1
+	#DEBUG_VALUE: _i.qspi_access._chan.write:param2 <- R2
+	#DEBUG_VALUE: _i.qspi_access._chan.write:param3 <- R3
+	{
+		getr r4, 2
+		ldw r11, sp[5]
+	}
+	{
+		setd res[r4], r0
+		nop
+	}
+	{
+		out res[r4], r4
+		nop
+	}
+	{
+		outct res[r4], 2
+		nop
+	}
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		out res[r4], r1
+		nop
+	}
+	{
+		out res[r4], r2
+		nop
+	}
+	{
+		out res[r4], r11
+		stw r3, sp[1]
+	}
+	{
+		outct res[r4], 2
+		ldaw r1, sp[1]
+	}
+	{
+		mov r0, r4
+		nop
+	}
+	bl __interface_client_call
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		freer res[r4]
+		ldw r4, sp[2]
+	}
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+	.cc_bottom _i.qspi_access._chan.write.function
+	.set	_i.qspi_access._chan.write.nstackwords,(__interface_client_call.nstackwords + 4)
+	.globl	_i.qspi_access._chan.write.nstackwords
+	.weak	_i.qspi_access._chan.write.nstackwords
+	.set	_i.qspi_access._chan.write.maxcores,__interface_client_call.maxcores $M 1
+	.globl	_i.qspi_access._chan.write.maxcores
+	.weak	_i.qspi_access._chan.write.maxcores
+	.set	_i.qspi_access._chan.write.maxtimers,__interface_client_call.maxtimers $M 0
+	.globl	_i.qspi_access._chan.write.maxtimers
+	.weak	_i.qspi_access._chan.write.maxtimers
+	.set	_i.qspi_access._chan.write.maxchanends,(1 + __interface_client_call.maxchanends) $M 1
+	.globl	_i.qspi_access._chan.write.maxchanends
+	.weak	_i.qspi_access._chan.write.maxchanends
+.Ltmp7:
+	.size	_i.qspi_access._chan.write, .Ltmp7-_i.qspi_access._chan.write
+	.cfi_endproc
+
+	.weak	_i.qspi_access._chan_yield.read
+	.align	4
+	.type	_i.qspi_access._chan_yield.read,@function
+	.cc_top _i.qspi_access._chan_yield.read.function,_i.qspi_access._chan_yield.read
+_i.qspi_access._chan_yield.read:        # @_i.qspi_access._chan_yield.read
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp8:
+	.cfi_def_cfa_offset 16
+.Ltmp9:
+	.cfi_offset 15, 0
+	std r5, r4, sp[1]               # 4-byte Folded Spill
+.Ltmp10:
+	.cfi_offset 4, -8
+.Ltmp11:
+	.cfi_offset 5, -4
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.read:s <- R0
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.read:param1 <- R1
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.read:param2 <- R2
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.read:param3 <- R3
+	{
+		nop
+		ldw r11, sp[5]
+	}
+	{
+		getr r4, 2
+		ldw r5, r0[0]
+	}
+	{
+		setd res[r4], r5
+		add r5, r4, 1
+	}
+	{
+		out res[r4], r5
+		nop
+	}
+	{
+		outct res[r4], 2
+		nop
+	}
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		out res[r4], r1
+		nop
+	}
+	{
+		out res[r4], r2
+		nop
+	}
+	{
+		out res[r4], r11
+		stw r3, sp[1]
+	}
+	{
+		outct res[r4], 2
+		ldw r2, r0[1]
+	}
+	{
+		ldaw r1, sp[1]
+		mov r0, r4
+	}
+	bl __interface_client_call_y
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		freer res[r4]
+		nop
+	}
+	ldd r5, r4, sp[1]               # 4-byte Folded Reload
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+	.cc_bottom _i.qspi_access._chan_yield.read.function
+	.set	_i.qspi_access._chan_yield.read.nstackwords,((_i.qspi_access._client_call_y.max.nstackwords $M ($D __interface_client_call_y.nstackwords ? __interface_client_call_y.nstackwords $: _i.qspi_access._client_call_y.max.nstackwords)) + 4)
+	.globl	_i.qspi_access._chan_yield.read.nstackwords
+	.weak	_i.qspi_access._chan_yield.read.nstackwords
+	.set	_i.qspi_access._chan_yield.read.maxcores,($D __interface_client_call_y.maxcores ? __interface_client_call_y.maxcores $: _i.qspi_access._client_call_y.max.maxcores) $M 1
+	.globl	_i.qspi_access._chan_yield.read.maxcores
+	.weak	_i.qspi_access._chan_yield.read.maxcores
+	.set	_i.qspi_access._chan_yield.read.maxtimers,($D __interface_client_call_y.maxtimers ? __interface_client_call_y.maxtimers $: _i.qspi_access._client_call_y.max.maxtimers) $M 0
+	.globl	_i.qspi_access._chan_yield.read.maxtimers
+	.weak	_i.qspi_access._chan_yield.read.maxtimers
+	.set	_i.qspi_access._chan_yield.read.maxchanends,(1 + ($D __interface_client_call_y.maxchanends ? __interface_client_call_y.maxchanends $: _i.qspi_access._client_call_y.max.maxchanends)) $M 1
+	.globl	_i.qspi_access._chan_yield.read.maxchanends
+	.weak	_i.qspi_access._chan_yield.read.maxchanends
+.Ltmp12:
+	.size	_i.qspi_access._chan_yield.read, .Ltmp12-_i.qspi_access._chan_yield.read
+	.cfi_endproc
+
+	.weak	_i.qspi_access._chan_yield.write
+	.align	4
+	.type	_i.qspi_access._chan_yield.write,@function
+	.cc_top _i.qspi_access._chan_yield.write.function,_i.qspi_access._chan_yield.write
+_i.qspi_access._chan_yield.write:       # @_i.qspi_access._chan_yield.write
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp13:
+	.cfi_def_cfa_offset 16
+.Ltmp14:
+	.cfi_offset 15, 0
+	std r5, r4, sp[1]               # 4-byte Folded Spill
+.Ltmp15:
+	.cfi_offset 4, -8
+.Ltmp16:
+	.cfi_offset 5, -4
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.write:s <- R0
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.write:param1 <- R1
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.write:param2 <- R2
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.write:param3 <- R3
+	{
+		nop
+		ldw r11, sp[5]
+	}
+	{
+		getr r4, 2
+		ldw r5, r0[0]
+	}
+	{
+		setd res[r4], r5
+		nop
+	}
+	{
+		out res[r4], r4
+		nop
+	}
+	{
+		outct res[r4], 2
+		nop
+	}
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		out res[r4], r1
+		nop
+	}
+	{
+		out res[r4], r2
+		nop
+	}
+	{
+		out res[r4], r11
+		stw r3, sp[1]
+	}
+	{
+		outct res[r4], 2
+		ldw r2, r0[1]
+	}
+	{
+		ldaw r1, sp[1]
+		mov r0, r4
+	}
+	bl __interface_client_call_y
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		freer res[r4]
+		nop
+	}
+	ldd r5, r4, sp[1]               # 4-byte Folded Reload
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+	.cc_bottom _i.qspi_access._chan_yield.write.function
+	.set	_i.qspi_access._chan_yield.write.nstackwords,((_i.qspi_access._client_call_y.max.nstackwords $M ($D __interface_client_call_y.nstackwords ? __interface_client_call_y.nstackwords $: _i.qspi_access._client_call_y.max.nstackwords)) + 4)
+	.globl	_i.qspi_access._chan_yield.write.nstackwords
+	.weak	_i.qspi_access._chan_yield.write.nstackwords
+	.set	_i.qspi_access._chan_yield.write.maxcores,($D __interface_client_call_y.maxcores ? __interface_client_call_y.maxcores $: _i.qspi_access._client_call_y.max.maxcores) $M 1
+	.globl	_i.qspi_access._chan_yield.write.maxcores
+	.weak	_i.qspi_access._chan_yield.write.maxcores
+	.set	_i.qspi_access._chan_yield.write.maxtimers,($D __interface_client_call_y.maxtimers ? __interface_client_call_y.maxtimers $: _i.qspi_access._client_call_y.max.maxtimers) $M 0
+	.globl	_i.qspi_access._chan_yield.write.maxtimers
+	.weak	_i.qspi_access._chan_yield.write.maxtimers
+	.set	_i.qspi_access._chan_yield.write.maxchanends,(1 + ($D __interface_client_call_y.maxchanends ? __interface_client_call_y.maxchanends $: _i.qspi_access._client_call_y.max.maxchanends)) $M 1
+	.globl	_i.qspi_access._chan_yield.write.maxchanends
+	.weak	_i.qspi_access._chan_yield.write.maxchanends
+.Ltmp17:
+	.size	_i.qspi_access._chan_yield.write, .Ltmp17-_i.qspi_access._chan_yield.write
+	.cfi_endproc
+
 	.globl	set_display_control_flag
 	.align	4
 	.type	set_display_control_flag,@function
 	.cc_top set_display_control_flag.function,set_display_control_flag
 set_display_control_flag:               # @set_display_control_flag
-.Lfunc_begin0:
-	.loc	1 70 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:70:0
+.Lfunc_begin4:
+	.loc	1 56 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:56:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -166,23 +616,23 @@ set_display_control_flag:               # @set_display_control_flag
 		dualentsp 0
 	}
 	#DEBUG_VALUE: set_display_control_flag:bitmask <- R0
-	.loc	1 74 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:74:0
-.Ltmp0:
+	.loc	1 60 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:60:0
+.Ltmp18:
 	ldw r1, dp[display_control_flag]
-	.loc	1 74 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:74:0
+	.loc	1 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:60:0
 	{
 		or r0, r1, r0
 		nop
 	}
-.Ltmp1:
-	.loc	1 74 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:74:0
+.Ltmp19:
+	.loc	1 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:60:0
 	stw r0, dp[display_control_flag]
 	{
 		nop
 		retsp 0
 	}
 	# RETURN_REG_HOLDER
-.Ltmp2:
+.Ltmp20:
 	.cc_bottom set_display_control_flag.function
 	.set	set_display_control_flag.nstackwords,0
 	.globl	set_display_control_flag.nstackwords
@@ -192,9 +642,9 @@ set_display_control_flag:               # @set_display_control_flag
 	.globl	set_display_control_flag.maxtimers
 	.set	set_display_control_flag.maxchanends,0
 	.globl	set_display_control_flag.maxchanends
-.Ltmp3:
-	.size	set_display_control_flag, .Ltmp3-set_display_control_flag
-.Lfunc_end0:
+.Ltmp21:
+	.size	set_display_control_flag, .Ltmp21-set_display_control_flag
+.Lfunc_end4:
 	.cfi_endproc
 
 	.globl	update_samp_freq
@@ -202,8 +652,8 @@ set_display_control_flag:               # @set_display_control_flag
 	.type	update_samp_freq,@function
 	.cc_top update_samp_freq.function,update_samp_freq
 update_samp_freq:                       # @update_samp_freq
-.Lfunc_begin1:
-	.loc	1 44 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:44:0
+.Lfunc_begin5:
+	.loc	1 105 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:105:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -213,29 +663,26 @@ update_samp_freq:                       # @update_samp_freq
 		dualentsp 0
 	}
 	#DEBUG_VALUE: update_samp_freq:freq <- R0
-	.loc	1 47 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:47:0
-.Ltmp4:
+	.loc	1 108 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:108:0
+.Ltmp22:
 	stw r0, dp[SampFreq]
-	.loc	1 48 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:48:0
+	.loc	1 109 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:109:0
 	ldw r0, dp[display_control_flag]
-.Ltmp5:
-	{
-		ldc r1, 32
-		nop
-	}
-	.loc	1 48 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:48:0
+.Ltmp23:
+	ldc r1, 128
+	.loc	1 109 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:109:0
 	{
 		or r0, r0, r1
 		nop
 	}
-	.loc	1 48 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:48:0
+	.loc	1 109 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:109:0
 	stw r0, dp[display_control_flag]
 	{
 		nop
 		retsp 0
 	}
 	# RETURN_REG_HOLDER
-.Ltmp6:
+.Ltmp24:
 	.cc_bottom update_samp_freq.function
 	.set	update_samp_freq.nstackwords,0
 	.globl	update_samp_freq.nstackwords
@@ -245,18 +692,18 @@ update_samp_freq:                       # @update_samp_freq
 	.globl	update_samp_freq.maxtimers
 	.set	update_samp_freq.maxchanends,0
 	.globl	update_samp_freq.maxchanends
-.Ltmp7:
-	.size	update_samp_freq, .Ltmp7-update_samp_freq
-.Lfunc_end1:
+.Ltmp25:
+	.size	update_samp_freq, .Ltmp25-update_samp_freq
+.Lfunc_end5:
 	.cfi_endproc
 
-	.globl	update_samp_resolution
+	.globl	update_stream_format
 	.align	4
-	.type	update_samp_resolution,@function
-	.cc_top update_samp_resolution.function,update_samp_resolution
-update_samp_resolution:                 # @update_samp_resolution
-.Lfunc_begin2:
-	.loc	1 52 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:52:0
+	.type	update_stream_format,@function
+	.cc_top update_stream_format.function,update_stream_format
+update_stream_format:                   # @update_stream_format
+.Lfunc_begin6:
+	.loc	1 113 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:113:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -265,200 +712,167 @@ update_samp_resolution:                 # @update_samp_resolution
 		nop
 		dualentsp 0
 	}
-	#DEBUG_VALUE: update_samp_resolution:res <- R0
-	.loc	1 55 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:55:0
-.Ltmp8:
-	stw r0, dp[SampRes]
-	.loc	1 56 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:56:0
+	#DEBUG_VALUE: update_stream_format:num_chan <- R0
+	#DEBUG_VALUE: update_stream_format:samp_res <- R1
+	.loc	1 117 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:117:0
+.Ltmp26:
+	stw r0, dp[NumChan]
+	.loc	1 118 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:118:0
+	stw r1, dp[SampRes]
+	.loc	1 119 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:119:0
 	ldw r0, dp[display_control_flag]
-.Ltmp9:
-	ldc r1, 64
-	.loc	1 56 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:56:0
+.Ltmp27:
+	ldc r1, 128
+.Ltmp28:
+	.loc	1 119 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:119:0
 	{
 		or r0, r0, r1
 		nop
 	}
-	.loc	1 56 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:56:0
+	.loc	1 119 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:119:0
 	stw r0, dp[display_control_flag]
 	{
 		nop
 		retsp 0
 	}
 	# RETURN_REG_HOLDER
-.Ltmp10:
-	.cc_bottom update_samp_resolution.function
-	.set	update_samp_resolution.nstackwords,0
-	.globl	update_samp_resolution.nstackwords
-	.set	update_samp_resolution.maxcores,1
-	.globl	update_samp_resolution.maxcores
-	.set	update_samp_resolution.maxtimers,0
-	.globl	update_samp_resolution.maxtimers
-	.set	update_samp_resolution.maxchanends,0
-	.globl	update_samp_resolution.maxchanends
-.Ltmp11:
-	.size	update_samp_resolution, .Ltmp11-update_samp_resolution
-.Lfunc_end2:
+.Ltmp29:
+	.cc_bottom update_stream_format.function
+	.set	update_stream_format.nstackwords,0
+	.globl	update_stream_format.nstackwords
+	.set	update_stream_format.maxcores,1
+	.globl	update_stream_format.maxcores
+	.set	update_stream_format.maxtimers,0
+	.globl	update_stream_format.maxtimers
+	.set	update_stream_format.maxchanends,0
+	.globl	update_stream_format.maxchanends
+.Ltmp30:
+	.size	update_stream_format, .Ltmp30-update_stream_format
+.Lfunc_end6:
 	.cfi_endproc
 
-	.globl	update_chan_count
+	.globl	init_display_frame
 	.align	4
-	.type	update_chan_count,@function
-	.cc_top update_chan_count.function,update_chan_count
-update_chan_count:                      # @update_chan_count
-.Lfunc_begin3:
-	.loc	1 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:60:0
+	.type	init_display_frame,@function
+	.cc_top init_display_frame.function,init_display_frame
+init_display_frame:                     # @init_display_frame
+.Lfunc_begin7:
+	.loc	1 253 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:253:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
 .Lxtalabel3:
 	{
 		nop
-		dualentsp 0
-	}
-	#DEBUG_VALUE: update_chan_count:ch <- R0
-	.loc	1 63 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:63:0
-.Ltmp12:
-	stw r0, dp[NumChan]
-	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:64:0
-	ldw r0, dp[display_control_flag]
-.Ltmp13:
-	ldc r1, 128
-	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:64:0
-	{
-		or r0, r0, r1
-		nop
-	}
-	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:64:0
-	stw r0, dp[display_control_flag]
-	{
-		nop
-		retsp 0
-	}
-	# RETURN_REG_HOLDER
-.Ltmp14:
-	.cc_bottom update_chan_count.function
-	.set	update_chan_count.nstackwords,0
-	.globl	update_chan_count.nstackwords
-	.set	update_chan_count.maxcores,1
-	.globl	update_chan_count.maxcores
-	.set	update_chan_count.maxtimers,0
-	.globl	update_chan_count.maxtimers
-	.set	update_chan_count.maxchanends,0
-	.globl	update_chan_count.maxchanends
-.Ltmp15:
-	.size	update_chan_count, .Ltmp15-update_chan_count
-.Lfunc_end3:
-	.cfi_endproc
-
-	.section	.cp.rodata.cst4,"aMc",@progbits,4
-	.cc_top .LCPI4_0.data,.LCPI4_0
-	.align	4
-	.type	.LCPI4_0,@object
-	.size	.LCPI4_0, 4
-.LCPI4_0:
-	.long	2000000                 # 0x1e8480
-	.cc_bottom .LCPI4_0.data
-	.text
-	.globl	display_control_core
-	.align	4
-	.type	display_control_core,@function
-	.cc_top display_control_core.function,display_control_core
-display_control_core:                   # @display_control_core
-.Lfunc_begin4:
-	.loc	1 393 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:393:0
-	.cfi_startproc
-	.issue_mode dual
-# BB#0:                                 # %allocas
-.Lxtalabel4:
-	{
-		nop
 		dualentsp 6
 	}
-.Ltmp16:
+.Ltmp31:
 	.cfi_def_cfa_offset 24
-.Ltmp17:
+.Ltmp32:
 	.cfi_offset 15, 0
-	.loc	1 399 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:399:0
-.Ltmp18:
+	.loc	1 255 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:255:0
+.Ltmp33:
 	std r5, r4, sp[1]               # 4-byte Folded Spill
-.Ltmp19:
+.Ltmp34:
 	.cfi_offset 4, -16
-.Ltmp20:
+.Ltmp35:
 	.cfi_offset 5, -12
 	{
 		nop
 		stw r6, sp[4]
 	}
-.Ltmp21:
+.Ltmp36:
 	.cfi_offset 6, -8
 .Lxta.call_labels0:
-	bl init_display_frame
-	.loc	1 408 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:408:0
-.Ltmp22:
+	bl OLED_SSD1306_begin
+	.loc	1 256 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:256:0
+	ldaw r11, cp[.str34]
 	{
-		get r11, id
-		nop
+		ldc r4, 0
+		ldc r2, 13
 	}
-	.loc	1 408 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:408:0
-	ldaw r0, dp[__timers]
 	{
-		nop
-		ldw r4, r0[r11]
+		mov r0, r4
+		mov r1, r11
 	}
-	ldw r5, cp[.LCPI4_0]
-.Ltmp23:
-.LBB4_1:                                # %LoopBody
-                                        # =>This Inner Loop Header: Depth=1
-.Lxtalabel5:
-	.loc	1 403 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:403:0
-	{
-		gettime r0
-		nop
-	}
-.Ltmp24:
-	#DEBUG_VALUE: time <- R0
-	.loc	1 404 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:404:0
-	{
-		add r6, r0, r5
-		nop
-	}
-.Ltmp25:
-	#DEBUG_VALUE: time <- R6
-	.loc	1 406 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:406:0
 .Lxta.call_labels1:
-	bl handle_display_frame
-	.loc	1 408 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:408:0
+	bl OLED_SSD1306_put_string
+.Ltmp37:
+	#DEBUG_VALUE: row <- 1
+	.loc	1 258 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:258:0
+	ldaw r11, cp[.str35]
 	{
-		setd res[r4], r6
+		mov r5, r11
+		mkmsk r0, 1
+	}
+	{
+		ldc r6, 2
+		mov r1, r5
+	}
+	{
+		mov r2, r6
 		nop
 	}
-	.loc	1 408 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:408:0
+.Lxta.call_labels2:
+	bl OLED_SSD1306_put_string
+.Ltmp38:
+	#DEBUG_VALUE: row <- 2
+	.loc	1 258 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:258:0
 	{
-		setc res[r4], 9
+		mov r0, r6
+		mov r1, r5
+	}
+	{
+		mov r2, r6
 		nop
 	}
-	.loc	1 408 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:408:0
-.Ltmp26:
-.Lxta.endpoint_labels0:
+.Lxta.call_labels3:
+	bl OLED_SSD1306_put_string
 	{
-		in r0, res[r4]
+		mkmsk r0, 2
+		mov r1, r5
+	}
+	.loc	1 258 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:258:0
+	{
+		mov r2, r6
 		nop
 	}
-	.loc	1 401 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:401:5
-	bu .LBB4_1
-.Ltmp27:
-	.cc_bottom display_control_core.function
-	.set	display_control_core.nstackwords,((init_display_frame.nstackwords $M handle_display_frame.nstackwords) + 6)
-	.globl	display_control_core.nstackwords
-	.set	display_control_core.maxcores,handle_display_frame.maxcores $M init_display_frame.maxcores $M 1
-	.globl	display_control_core.maxcores
-	.set	display_control_core.maxtimers,handle_display_frame.maxtimers $M init_display_frame.maxtimers $M 0
-	.globl	display_control_core.maxtimers
-	.set	display_control_core.maxchanends,handle_display_frame.maxchanends $M init_display_frame.maxchanends $M 0
-	.globl	display_control_core.maxchanends
-.Ltmp28:
-	.size	display_control_core, .Ltmp28-display_control_core
-.Lfunc_end4:
+.Lxta.call_labels4:
+	bl OLED_SSD1306_put_string
+	ldaw r0, dp[state]
+	st8 r4, r0[r4]
+	{
+		ldc r0, 50
+		nop
+	}
+.Ltmp39:
+	.loc	1 261 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:261:0
+	stw r0, dp[pause_counter]
+	.loc	1 262 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:262:0
+	stw r4, dp[scrolling_row]
+	{
+		nop
+		ldw r6, sp[4]
+	}
+	ldd r5, r4, sp[1]               # 4-byte Folded Reload
+	{
+		nop
+		retsp 6
+	}
+	# RETURN_REG_HOLDER
+.Ltmp40:
+	.cc_bottom init_display_frame.function
+	.set	init_display_frame.nstackwords,((OLED_SSD1306_begin.nstackwords $M OLED_SSD1306_put_string.nstackwords) + 6)
+	.globl	init_display_frame.nstackwords
+	.set	init_display_frame.maxcores,OLED_SSD1306_begin.maxcores $M OLED_SSD1306_put_string.maxcores $M 1
+	.globl	init_display_frame.maxcores
+	.set	init_display_frame.maxtimers,OLED_SSD1306_begin.maxtimers $M OLED_SSD1306_put_string.maxtimers $M 0
+	.globl	init_display_frame.maxtimers
+	.set	init_display_frame.maxchanends,OLED_SSD1306_begin.maxchanends $M OLED_SSD1306_put_string.maxchanends $M 0
+	.globl	init_display_frame.maxchanends
+.Ltmp41:
+	.size	init_display_frame, .Ltmp41-init_display_frame
+.Lfunc_end7:
 	.cfi_endproc
 
 	.globl	get_console_mode
@@ -466,22 +880,22 @@ display_control_core:                   # @display_control_core
 	.type	get_console_mode,@function
 	.cc_top get_console_mode.function,get_console_mode
 get_console_mode:                       # @get_console_mode
-.Lfunc_begin5:
-	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:94:0
+.Lfunc_begin8:
+	.loc	1 82 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
-.Lxtalabel6:
+.Lxtalabel4:
 	{
 		nop
 		dualentsp 2
 	}
-.Ltmp29:
+.Ltmp42:
 	.cfi_def_cfa_offset 8
-.Ltmp30:
+.Ltmp43:
 	.cfi_offset 15, 0
-	.loc	1 98 9 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:98:9
-.Ltmp31:
+	.loc	1 86 9 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:86:9
+.Ltmp44:
 	ldw r0, dp[console_mode]
 	{
 		nop
@@ -492,7 +906,7 @@ get_console_mode:                       # @get_console_mode
 		retsp 2
 	}
 	# RETURN_REG_HOLDER
-.Ltmp32:
+.Ltmp45:
 	.cc_bottom get_console_mode.function
 	.set	get_console_mode.nstackwords,2
 	.globl	get_console_mode.nstackwords
@@ -502,9 +916,9 @@ get_console_mode:                       # @get_console_mode
 	.globl	get_console_mode.maxtimers
 	.set	get_console_mode.maxchanends,0
 	.globl	get_console_mode.maxchanends
-.Ltmp33:
-	.size	get_console_mode, .Ltmp33-get_console_mode
-.Lfunc_end5:
+.Ltmp46:
+	.size	get_console_mode, .Ltmp46-get_console_mode
+.Lfunc_end8:
 	.cfi_endproc
 
 	.globl	set_console_mode
@@ -512,26 +926,26 @@ get_console_mode:                       # @get_console_mode
 	.type	set_console_mode,@function
 	.cc_top set_console_mode.function,set_console_mode
 set_console_mode:                       # @set_console_mode
-.Lfunc_begin6:
-	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:102:0
+.Lfunc_begin9:
+	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
-.Lxtalabel7:
+.Lxtalabel5:
 	{
 		nop
 		dualentsp 0
 	}
 	#DEBUG_VALUE: set_console_mode:value <- R0
-	.loc	1 106 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:106:0
-.Ltmp34:
+	.loc	1 94 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:94:0
+.Ltmp47:
 	stw r0, dp[console_mode]
 	{
 		nop
 		retsp 0
 	}
 	# RETURN_REG_HOLDER
-.Ltmp35:
+.Ltmp48:
 	.cc_bottom set_console_mode.function
 	.set	set_console_mode.nstackwords,0
 	.globl	set_console_mode.nstackwords
@@ -541,48 +955,9 @@ set_console_mode:                       # @set_console_mode
 	.globl	set_console_mode.maxtimers
 	.set	set_console_mode.maxchanends,0
 	.globl	set_console_mode.maxchanends
-.Ltmp36:
-	.size	set_console_mode, .Ltmp36-set_console_mode
-.Lfunc_end6:
-	.cfi_endproc
-
-	.globl	_Sset_console_mode_0
-	.align	4
-	.type	_Sset_console_mode_0,@function
-	.cc_top _Sset_console_mode_0.function,_Sset_console_mode_0
-_Sset_console_mode_0:                   # @_Sset_console_mode_0
-.Lfunc_begin7:
-	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:102:0
-	.cfi_startproc
-	.issue_mode dual
-# BB#0:                                 # %allocas
-.Lxtalabel8:
-	#DEBUG_VALUE: value <- 1
-	{
-		mkmsk r0, 1
-		dualentsp 0
-	}
-	.loc	1 106 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:106:0
-.Ltmp37:
-	stw r0, dp[console_mode]
-	{
-		nop
-		retsp 0
-	}
-	# RETURN_REG_HOLDER
-.Ltmp38:
-	.cc_bottom _Sset_console_mode_0.function
-	.set	_Sset_console_mode_0.nstackwords,0
-	.globl	_Sset_console_mode_0.nstackwords
-	.set	_Sset_console_mode_0.maxcores,1
-	.globl	_Sset_console_mode_0.maxcores
-	.set	_Sset_console_mode_0.maxtimers,0
-	.globl	_Sset_console_mode_0.maxtimers
-	.set	_Sset_console_mode_0.maxchanends,0
-	.globl	_Sset_console_mode_0.maxchanends
-.Ltmp39:
-	.size	_Sset_console_mode_0, .Ltmp39-_Sset_console_mode_0
-.Lfunc_end7:
+.Ltmp49:
+	.size	set_console_mode, .Ltmp49-set_console_mode
+.Lfunc_end9:
 	.cfi_endproc
 
 	.globl	test_display_control_flag
@@ -590,30 +965,30 @@ _Sset_console_mode_0:                   # @_Sset_console_mode_0
 	.type	test_display_control_flag,@function
 	.cc_top test_display_control_flag.function,test_display_control_flag
 test_display_control_flag:              # @test_display_control_flag
-.Lfunc_begin8:
-	.loc	1 78 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:78:0
+.Lfunc_begin10:
+	.loc	1 64 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:64:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
-.Lxtalabel9:
+.Lxtalabel6:
 	{
 		nop
 		dualentsp 2
 	}
-.Ltmp40:
+.Ltmp50:
 	.cfi_def_cfa_offset 8
-.Ltmp41:
+.Ltmp51:
 	.cfi_offset 15, 0
 	#DEBUG_VALUE: test_display_control_flag:bitmask <- R0
-	.loc	1 82 9 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
-.Ltmp42:
+	.loc	1 68 9 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+.Ltmp52:
 	ldw r1, dp[display_control_flag]
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
 	{
 		and r0, r1, r0
 		nop
 	}
-.Ltmp43:
+.Ltmp53:
 	{
 		nop
 		stw r0, sp[1]
@@ -623,7 +998,7 @@ test_display_control_flag:              # @test_display_control_flag
 		retsp 2
 	}
 	# RETURN_REG_HOLDER
-.Ltmp44:
+.Ltmp54:
 	.cc_bottom test_display_control_flag.function
 	.set	test_display_control_flag.nstackwords,2
 	.globl	test_display_control_flag.nstackwords
@@ -633,9 +1008,9 @@ test_display_control_flag:              # @test_display_control_flag
 	.globl	test_display_control_flag.maxtimers
 	.set	test_display_control_flag.maxchanends,0
 	.globl	test_display_control_flag.maxchanends
-.Ltmp45:
-	.size	test_display_control_flag, .Ltmp45-test_display_control_flag
-.Lfunc_end8:
+.Ltmp55:
+	.size	test_display_control_flag, .Ltmp55-test_display_control_flag
+.Lfunc_end10:
 	.cfi_endproc
 
 	.globl	clear_display_control_flag
@@ -643,33 +1018,33 @@ test_display_control_flag:              # @test_display_control_flag
 	.type	clear_display_control_flag,@function
 	.cc_top clear_display_control_flag.function,clear_display_control_flag
 clear_display_control_flag:             # @clear_display_control_flag
-.Lfunc_begin9:
-	.loc	1 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:86:0
+.Lfunc_begin11:
+	.loc	1 72 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:72:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
-.Lxtalabel10:
+.Lxtalabel7:
 	{
 		nop
 		dualentsp 0
 	}
 	#DEBUG_VALUE: clear_display_control_flag:bitmask <- R0
-	.loc	1 90 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-.Ltmp46:
+	.loc	1 76 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+.Ltmp56:
 	ldw r1, dp[display_control_flag]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
 	{
 		andnot r1, r0
 		nop
 	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
 	stw r1, dp[display_control_flag]
 	{
 		nop
 		retsp 0
 	}
 	# RETURN_REG_HOLDER
-.Ltmp47:
+.Ltmp57:
 	.cc_bottom clear_display_control_flag.function
 	.set	clear_display_control_flag.nstackwords,0
 	.globl	clear_display_control_flag.nstackwords
@@ -679,227 +1054,8 @@ clear_display_control_flag:             # @clear_display_control_flag
 	.globl	clear_display_control_flag.maxtimers
 	.set	clear_display_control_flag.maxchanends,0
 	.globl	clear_display_control_flag.maxchanends
-.Ltmp48:
-	.size	clear_display_control_flag, .Ltmp48-clear_display_control_flag
-.Lfunc_end9:
-	.cfi_endproc
-
-	.section	.cp.rodata.cst4,"aMc",@progbits,4
-	.cc_top .LCPI10_0.data,.LCPI10_0
-	.align	4
-	.type	.LCPI10_0,@object
-	.size	.LCPI10_0, 4
-.LCPI10_0:
-	.long	2290649225              # 0x88888889
-	.cc_bottom .LCPI10_0.data
-	.cc_top .LCPI10_1.data,.LCPI10_1
-	.align	4
-	.type	.LCPI10_1,@object
-	.size	.LCPI10_1, 4
-.LCPI10_1:
-	.long	4294967291              # 0xfffffffb
-	.cc_bottom .LCPI10_1.data
-	.text
-	.globl	UpdateTime
-	.align	4
-	.type	UpdateTime,@function
-	.cc_top UpdateTime.function,UpdateTime
-UpdateTime:                             # @UpdateTime
-.Lfunc_begin10:
-	.loc	1 138 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:138:0
-	.cfi_startproc
-	.issue_mode dual
-# BB#0:                                 # %allocas
-.Lxtalabel11:
-	{
-		nop
-		dualentsp 6
-	}
-.Ltmp49:
-	.cfi_def_cfa_offset 24
-.Ltmp50:
-	.cfi_offset 15, 0
-	{
-		nop
-		stw r4, sp[4]
-	}
-.Ltmp51:
-	.cfi_offset 4, -8
-	.loc	1 140 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:140:0
-.Ltmp52:
-	ldw r0, dp[SecElapsed]
-	{
-		ldc r1, 0
-		nop
-	}
-	ldw r2, cp[.LCPI10_0]
-	.loc	1 140 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:140:0
-	lmul r1, r2, r0, r2, r1, r1
-	{
-		shr r2, r1, 5
-		ldc r1, 60
-	}
-	.loc	1 141 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:141:0
-.Ltmp53:
-	mul r1, r2, r1
-	{
-		sub r3, r0, r1
-		nop
-	}
-.Ltmp54:
-	#DEBUG_VALUE: sec <- R3
-	.loc	1 143 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:143:0
-	ldaw r11, cp[.str6]
-	{
-		ldaw r4, sp[1]
-		nop
-	}
-	{
-		mov r0, r4
-		mov r1, r11
-	}
-.Lxta.call_labels2:
-	bl siprintf
-.Ltmp55:
-	{
-		mkmsk r0, 2
-		ldc r2, 12
-	}
-	.loc	1 144 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:144:0
-	{
-		mov r1, r4
-		nop
-	}
-.Lxta.call_labels3:
-	bl OLED_SSD1306_put_string
-.Ltmp56:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 4
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	ldw r0, dp[display_control_flag]
-	ldw r1, cp[.LCPI10_1]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	{
-		and r0, r0, r1
-		nop
-	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	stw r0, dp[display_control_flag]
-	{
-		nop
-		ldw r4, sp[4]
-	}
-	{
-		nop
-		retsp 6
-	}
-	# RETURN_REG_HOLDER
-.Ltmp57:
-	.cc_bottom UpdateTime.function
-	.set	UpdateTime.nstackwords,((siprintf.nstackwords $M OLED_SSD1306_put_string.nstackwords) + 6)
-	.globl	UpdateTime.nstackwords
-	.set	UpdateTime.maxcores,OLED_SSD1306_put_string.maxcores $M siprintf.maxcores $M 1
-	.globl	UpdateTime.maxcores
-	.set	UpdateTime.maxtimers,OLED_SSD1306_put_string.maxtimers $M siprintf.maxtimers $M 0
-	.globl	UpdateTime.maxtimers
-	.set	UpdateTime.maxchanends,OLED_SSD1306_put_string.maxchanends $M siprintf.maxchanends $M 0
-	.globl	UpdateTime.maxchanends
 .Ltmp58:
-	.size	UpdateTime, .Ltmp58-UpdateTime
-.Lfunc_end10:
-	.cfi_endproc
-
-	.section	.cp.rodata.cst4,"aMc",@progbits,4
-	.cc_top .LCPI11_0.data,.LCPI11_0
-	.align	4
-	.type	.LCPI11_0,@object
-	.size	.LCPI11_0, 4
-.LCPI11_0:
-	.long	4294967293              # 0xfffffffd
-	.cc_bottom .LCPI11_0.data
-	.text
-	.globl	ShowFolder
-	.align	4
-	.type	ShowFolder,@function
-	.cc_top ShowFolder.function,ShowFolder
-ShowFolder:                             # @ShowFolder
-.Lfunc_begin11:
-	.loc	1 148 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:148:0
-	.cfi_startproc
-	.issue_mode dual
-# BB#0:                                 # %allocas
-.Lxtalabel12:
-	{
-		nop
-		dualentsp 4
-	}
-.Ltmp59:
-	.cfi_def_cfa_offset 16
-.Ltmp60:
-	.cfi_offset 15, 0
-	{
-		nop
-		stw r4, sp[2]
-	}
-.Ltmp61:
-	.cfi_offset 4, -8
-	.loc	1 149 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:149:0
-.Ltmp62:
-	ldaw r1, dp[folder_string]
-	ldc r2, folder_string.globound
-	{
-		ldc r4, 0
-		nop
-	}
-	.loc	1 149 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:149:0
-	{
-		mov r0, r4
-		nop
-	}
-.Lxta.call_labels4:
-	bl OLED_SSD1306_put_string
-	{
-		ldc r0, 50
-		nop
-	}
-	.loc	1 150 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:150:0
-	stw r0, dp[pause_counter]
-	ldaw r0, dp[state]
-	st8 r4, r0[r4]
-	.loc	1 152 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:152:0
-	stw r4, dp[scrolling_row]
-.Ltmp63:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 2
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	ldw r0, dp[display_control_flag]
-	ldw r1, cp[.LCPI11_0]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	{
-		and r0, r0, r1
-		nop
-	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	stw r0, dp[display_control_flag]
-	{
-		nop
-		ldw r4, sp[2]
-	}
-	{
-		nop
-		retsp 4
-	}
-	# RETURN_REG_HOLDER
-.Ltmp64:
-	.cc_bottom ShowFolder.function
-	.set	ShowFolder.nstackwords,(OLED_SSD1306_put_string.nstackwords + 4)
-	.globl	ShowFolder.nstackwords
-	.set	ShowFolder.maxcores,OLED_SSD1306_put_string.maxcores $M 1
-	.globl	ShowFolder.maxcores
-	.set	ShowFolder.maxtimers,OLED_SSD1306_put_string.maxtimers $M 0
-	.globl	ShowFolder.maxtimers
-	.set	ShowFolder.maxchanends,OLED_SSD1306_put_string.maxchanends $M 0
-	.globl	ShowFolder.maxchanends
-.Ltmp65:
-	.size	ShowFolder, .Ltmp65-ShowFolder
+	.size	clear_display_control_flag, .Ltmp58-clear_display_control_flag
 .Lfunc_end11:
 	.cfi_endproc
 
@@ -909,96 +1065,150 @@ ShowFolder:                             # @ShowFolder
 	.type	.LCPI12_0,@object
 	.size	.LCPI12_0, 4
 .LCPI12_0:
-	.long	4294967294              # 0xfffffffe
+	.long	274877907               # 0x10624dd3
 	.cc_bottom .LCPI12_0.data
-	.text
-	.globl	ShowTrack
+	.cc_top .LCPI12_1.data,.LCPI12_1
 	.align	4
-	.type	ShowTrack,@function
-	.cc_top ShowTrack.function,ShowTrack
-ShowTrack:                              # @ShowTrack
+	.type	.LCPI12_1,@object
+	.size	.LCPI12_1, 4
+.LCPI12_1:
+	.long	1374389535              # 0x51eb851f
+	.cc_bottom .LCPI12_1.data
+	.text
+	.globl	ShowStreamFormat
+	.align	4
+	.type	ShowStreamFormat,@function
+	.cc_top ShowStreamFormat.function,ShowStreamFormat
+ShowStreamFormat:                       # @ShowStreamFormat
 .Lfunc_begin12:
-	.loc	1 156 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:156:0
+	.loc	1 123 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:123:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
-.Lxtalabel13:
+.Lxtalabel8:
 	{
 		nop
-		dualentsp 4
+		dualentsp 8
 	}
-.Ltmp66:
-	.cfi_def_cfa_offset 16
-.Ltmp67:
+.Ltmp59:
+	.cfi_def_cfa_offset 32
+.Ltmp60:
 	.cfi_offset 15, 0
+	std r5, r4, sp[2]               # 4-byte Folded Spill
+.Ltmp61:
+	.cfi_offset 4, -16
+.Ltmp62:
+	.cfi_offset 5, -12
+.Ltmp63:
+	.cfi_offset 6, -8
+	#DEBUG_VALUE: ShowStreamFormat:row <- R0
+.Ltmp64:
+	#DEBUG_VALUE: ShowStreamFormat:row <- R4
+	{
+		mov r4, r0
+		stw r6, sp[6]
+	}
+.Ltmp65:
+	.loc	1 124 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:124:0
+	ldw r0, dp[SampFreq]
+	{
+		ldc r6, 0
+		nop
+	}
+	ldw r1, cp[.LCPI12_0]
+	.loc	1 124 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:124:0
+	lmul r1, r2, r0, r1, r6, r6
+	{
+		shr r3, r1, 6
+		nop
+	}
+	ldc r1, 1000
+	.loc	1 125 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:125:0
+.Ltmp66:
+	mul r1, r3, r1
+	{
+		sub r0, r0, r1
+		nop
+	}
+	ldw r1, cp[.LCPI12_1]
+	.loc	1 125 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:125:0
+	lmul r0, r1, r0, r1, r6, r6
+	{
+		shr r0, r0, 5
+		nop
+	}
+.Ltmp67:
+	#DEBUG_VALUE: freq_p <- R0
+	.loc	1 126 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:126:0
+	ldw r2, dp[NumChan]
+	.loc	1 126 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:126:0
+	ldw r1, dp[SampRes]
 	{
 		nop
-		stw r4, sp[2]
+		stw r0, sp[1]
+	}
+	{
+		nop
+		stw r1, sp[2]
+	}
+	.loc	1 126 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:126:0
+	ldaw r5, dp[stream_format_string]
+	ldaw r11, cp[.str6]
+	{
+		mov r0, r5
+		mov r1, r11
 	}
 .Ltmp68:
-	.cfi_offset 4, -8
-	.loc	1 157 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:157:0
-.Ltmp69:
-	ldaw r1, dp[track_string]
-	ldc r2, track_string.globound
+.Lxta.call_labels5:
+	bl siprintf
+	.loc	1 127 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:127:0
+	ldaw r11, cp[.str7]
 	{
-		mkmsk r4, 1
-		nop
+		mov r0, r11
+		mov r1, r5
 	}
-	.loc	1 157 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:157:0
+.Lxta.call_labels6:
+	bl iprintf
+	ldc r2, 100
+	.loc	1 128 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:128:0
 	{
 		mov r0, r4
-		nop
+		mov r1, r5
 	}
-.Lxta.call_labels5:
+.Lxta.call_labels7:
 	bl OLED_SSD1306_put_string
 	{
 		ldc r0, 50
 		nop
 	}
-	.loc	1 158 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:0
+	.loc	1 129 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:129:0
 	stw r0, dp[pause_counter]
 	ldaw r0, dp[state]
-	{
-		ldc r1, 0
-		nop
-	}
-	st8 r1, r0[r1]
-	.loc	1 160 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:160:0
+	st8 r6, r0[r6]
+	.loc	1 131 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:131:0
 	stw r4, dp[scrolling_row]
-.Ltmp70:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 1
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	ldw r0, dp[display_control_flag]
-	ldw r1, cp[.LCPI12_0]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	{
-		and r0, r0, r1
 		nop
+		ldw r6, sp[6]
 	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	stw r0, dp[display_control_flag]
+	ldd r5, r4, sp[2]               # 4-byte Folded Reload
 	{
 		nop
-		ldw r4, sp[2]
-	}
-	{
-		nop
-		retsp 4
+		retsp 8
 	}
 	# RETURN_REG_HOLDER
-.Ltmp71:
-	.cc_bottom ShowTrack.function
-	.set	ShowTrack.nstackwords,(OLED_SSD1306_put_string.nstackwords + 4)
-	.globl	ShowTrack.nstackwords
-	.set	ShowTrack.maxcores,OLED_SSD1306_put_string.maxcores $M 1
-	.globl	ShowTrack.maxcores
-	.set	ShowTrack.maxtimers,OLED_SSD1306_put_string.maxtimers $M 0
-	.globl	ShowTrack.maxtimers
-	.set	ShowTrack.maxchanends,OLED_SSD1306_put_string.maxchanends $M 0
-	.globl	ShowTrack.maxchanends
-.Ltmp72:
-	.size	ShowTrack, .Ltmp72-ShowTrack
+.Ltmp69:
+	.cc_bottom ShowStreamFormat.function
+	.set	ShowStreamFormat.nstackwords,((siprintf.nstackwords $M iprintf.nstackwords $M OLED_SSD1306_put_string.nstackwords) + 8)
+	.globl	ShowStreamFormat.nstackwords
+	.set	ShowStreamFormat.maxcores,OLED_SSD1306_put_string.maxcores $M iprintf.maxcores $M siprintf.maxcores $M 1
+	.globl	ShowStreamFormat.maxcores
+	.set	ShowStreamFormat.maxtimers,OLED_SSD1306_put_string.maxtimers $M iprintf.maxtimers $M siprintf.maxtimers $M 0
+	.globl	ShowStreamFormat.maxtimers
+	.set	ShowStreamFormat.maxchanends,OLED_SSD1306_put_string.maxchanends $M iprintf.maxchanends $M siprintf.maxchanends $M 0
+	.globl	ShowStreamFormat.maxchanends
+.Ltmp70:
+	.size	ShowStreamFormat, .Ltmp70-ShowStreamFormat
 .Lfunc_end12:
 	.cfi_endproc
 
@@ -1008,47 +1218,513 @@ ShowTrack:                              # @ShowTrack
 	.type	.LCPI13_0,@object
 	.size	.LCPI13_0, 4
 .LCPI13_0:
-	.long	4294967287              # 0xfffffff7
+	.long	274877907               # 0x10624dd3
 	.cc_bottom .LCPI13_0.data
-	.text
-	.globl	ShowAudioAttribute
+	.cc_top .LCPI13_1.data,.LCPI13_1
 	.align	4
-	.type	ShowAudioAttribute,@function
-	.cc_top ShowAudioAttribute.function,ShowAudioAttribute
-ShowAudioAttribute:                     # @ShowAudioAttribute
+	.type	.LCPI13_1,@object
+	.size	.LCPI13_1, 4
+.LCPI13_1:
+	.long	1374389535              # 0x51eb851f
+	.cc_bottom .LCPI13_1.data
+	.text
+	.globl	_SShowStreamFormat_0
+	.align	4
+	.type	_SShowStreamFormat_0,@function
+	.cc_top _SShowStreamFormat_0.function,_SShowStreamFormat_0
+_SShowStreamFormat_0:                   # @_SShowStreamFormat_0
 .Lfunc_begin13:
-	.loc	1 164 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:164:0
+	.loc	1 123 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:123:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
-.Lxtalabel14:
+.Lxtalabel9:
+	{
+		nop
+		dualentsp 8
+	}
+.Ltmp71:
+	.cfi_def_cfa_offset 32
+.Ltmp72:
+	.cfi_offset 15, 0
+	std r5, r4, sp[2]               # 4-byte Folded Spill
+.Ltmp73:
+	.cfi_offset 4, -16
+.Ltmp74:
+	.cfi_offset 5, -12
+	{
+		nop
+		stw r6, sp[6]
+	}
+.Ltmp75:
+	.cfi_offset 6, -8
+.Ltmp76:
+	#DEBUG_VALUE: row <- 2
+	.loc	1 124 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:124:0
+	ldw r0, dp[SampFreq]
+	{
+		ldc r6, 0
+		nop
+	}
+	ldw r1, cp[.LCPI13_0]
+	.loc	1 124 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:124:0
+	lmul r1, r2, r0, r1, r6, r6
+	{
+		shr r3, r1, 6
+		nop
+	}
+	ldc r1, 1000
+	.loc	1 125 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:125:0
+.Ltmp77:
+	mul r1, r3, r1
+	{
+		sub r0, r0, r1
+		nop
+	}
+	ldw r1, cp[.LCPI13_1]
+	.loc	1 125 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:125:0
+	lmul r0, r1, r0, r1, r6, r6
+	{
+		shr r0, r0, 5
+		nop
+	}
+.Ltmp78:
+	#DEBUG_VALUE: freq_p <- R0
+	.loc	1 126 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:126:0
+	ldw r2, dp[NumChan]
+	.loc	1 126 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:126:0
+	ldw r1, dp[SampRes]
+	{
+		nop
+		stw r0, sp[1]
+	}
+	{
+		nop
+		stw r1, sp[2]
+	}
+	.loc	1 126 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:126:0
+	ldaw r4, dp[stream_format_string]
+	ldaw r11, cp[.str10]
+	{
+		mov r0, r4
+		mov r1, r11
+	}
+.Ltmp79:
+.Lxta.call_labels8:
+	bl siprintf
+	.loc	1 127 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:127:0
+	ldaw r11, cp[.str11]
+	{
+		mov r0, r11
+		mov r1, r4
+	}
+.Lxta.call_labels9:
+	bl iprintf
+	{
+		ldc r5, 2
+		nop
+	}
+	ldc r2, 100
+	.loc	1 128 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:128:0
+	{
+		mov r0, r5
+		mov r1, r4
+	}
+.Lxta.call_labels10:
+	bl OLED_SSD1306_put_string
+	{
+		ldc r0, 50
+		nop
+	}
+	.loc	1 129 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:129:0
+	stw r0, dp[pause_counter]
+	ldaw r0, dp[state]
+	st8 r6, r0[r6]
+	.loc	1 131 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:131:0
+	stw r5, dp[scrolling_row]
+	{
+		nop
+		ldw r6, sp[6]
+	}
+	ldd r5, r4, sp[2]               # 4-byte Folded Reload
+	{
+		nop
+		retsp 8
+	}
+	# RETURN_REG_HOLDER
+.Ltmp80:
+	.cc_bottom _SShowStreamFormat_0.function
+	.set	_SShowStreamFormat_0.nstackwords,((siprintf.nstackwords $M iprintf.nstackwords $M OLED_SSD1306_put_string.nstackwords) + 8)
+	.globl	_SShowStreamFormat_0.nstackwords
+	.set	_SShowStreamFormat_0.maxcores,OLED_SSD1306_put_string.maxcores $M iprintf.maxcores $M siprintf.maxcores $M 1
+	.globl	_SShowStreamFormat_0.maxcores
+	.set	_SShowStreamFormat_0.maxtimers,OLED_SSD1306_put_string.maxtimers $M iprintf.maxtimers $M siprintf.maxtimers $M 0
+	.globl	_SShowStreamFormat_0.maxtimers
+	.set	_SShowStreamFormat_0.maxchanends,OLED_SSD1306_put_string.maxchanends $M iprintf.maxchanends $M siprintf.maxchanends $M 0
+	.globl	_SShowStreamFormat_0.maxchanends
+.Ltmp81:
+	.size	_SShowStreamFormat_0, .Ltmp81-_SShowStreamFormat_0
+.Lfunc_end13:
+	.cfi_endproc
+
+	.section	.cp.rodata.cst4,"aMc",@progbits,4
+	.cc_top .LCPI14_0.data,.LCPI14_0
+	.align	4
+	.type	.LCPI14_0,@object
+	.size	.LCPI14_0, 4
+.LCPI14_0:
+	.long	274877907               # 0x10624dd3
+	.cc_bottom .LCPI14_0.data
+	.cc_top .LCPI14_1.data,.LCPI14_1
+	.align	4
+	.type	.LCPI14_1,@object
+	.size	.LCPI14_1, 4
+.LCPI14_1:
+	.long	1374389535              # 0x51eb851f
+	.cc_bottom .LCPI14_1.data
+	.text
+	.globl	GetStreamFormatString
+	.align	4
+	.type	GetStreamFormatString,@function
+	.cc_top GetStreamFormatString.function,GetStreamFormatString
+GetStreamFormatString:                  # @GetStreamFormatString
+.Lfunc_begin14:
+	.loc	1 134 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:134:0
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+.Lxtalabel10:
 	{
 		nop
 		dualentsp 4
 	}
-.Ltmp73:
+.Ltmp82:
 	.cfi_def_cfa_offset 16
-.Ltmp74:
+.Ltmp83:
+	.cfi_offset 15, 0
+	#DEBUG_VALUE: GetStreamFormatString:str <- R0
+	.loc	1 135 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:135:0
+.Ltmp84:
+	ldw r1, dp[SampFreq]
+	{
+		ldc r2, 0
+		nop
+	}
+	ldw r3, cp[.LCPI14_0]
+	.loc	1 135 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:135:0
+	lmul r3, r11, r1, r3, r2, r2
+	{
+		shr r3, r3, 6
+		nop
+	}
+	ldc r11, 1000
+	.loc	1 136 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:136:0
+.Ltmp85:
+	mul r11, r3, r11
+	{
+		sub r1, r1, r11
+		nop
+	}
+	ldw r11, cp[.LCPI14_1]
+	.loc	1 136 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:136:0
+	lmul r1, r2, r1, r11, r2, r2
+	{
+		shr r1, r1, 5
+		nop
+	}
+.Ltmp86:
+	#DEBUG_VALUE: freq_p <- R1
+	.loc	1 137 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:137:0
+	ldw r2, dp[NumChan]
+	.loc	1 137 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:137:0
+	ldw r11, dp[SampRes]
+	{
+		nop
+		stw r1, sp[1]
+	}
+	{
+		nop
+		stw r11, sp[2]
+	}
+	.loc	1 137 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:137:0
+	ldaw r11, cp[.str14]
+	{
+		mov r1, r11
+		nop
+	}
+.Ltmp87:
+.Lxta.call_labels11:
+	bl siprintf
+.Ltmp88:
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+.Ltmp89:
+	.cc_bottom GetStreamFormatString.function
+	.set	GetStreamFormatString.nstackwords,(siprintf.nstackwords + 4)
+	.globl	GetStreamFormatString.nstackwords
+	.set	GetStreamFormatString.maxcores,siprintf.maxcores $M 1
+	.globl	GetStreamFormatString.maxcores
+	.set	GetStreamFormatString.maxtimers,siprintf.maxtimers $M 0
+	.globl	GetStreamFormatString.maxtimers
+	.set	GetStreamFormatString.maxchanends,siprintf.maxchanends $M 0
+	.globl	GetStreamFormatString.maxchanends
+.Ltmp90:
+	.size	GetStreamFormatString, .Ltmp90-GetStreamFormatString
+.Lfunc_end14:
+	.cfi_endproc
+
+	.section	.cp.rodata.cst4,"aMc",@progbits,4
+	.cc_top .LCPI15_0.data,.LCPI15_0
+	.align	4
+	.type	.LCPI15_0,@object
+	.size	.LCPI15_0, 4
+.LCPI15_0:
+	.long	2290649225              # 0x88888889
+	.cc_bottom .LCPI15_0.data
+	.text
+	.globl	UpdateTime
+	.align	4
+	.type	UpdateTime,@function
+	.cc_top UpdateTime.function,UpdateTime
+UpdateTime:                             # @UpdateTime
+.Lfunc_begin15:
+	.loc	1 156 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:156:0
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+.Lxtalabel11:
+	{
+		nop
+		dualentsp 6
+	}
+.Ltmp91:
+	.cfi_def_cfa_offset 24
+.Ltmp92:
+	.cfi_offset 15, 0
+	std r5, r4, sp[2]               # 4-byte Folded Spill
+.Ltmp93:
+	.cfi_offset 4, -8
+.Ltmp94:
+	.cfi_offset 5, -4
+	#DEBUG_VALUE: UpdateTime:row <- R0
+	{
+		mov r4, r0
+		nop
+	}
+.Ltmp95:
+	#DEBUG_VALUE: UpdateTime:row <- R4
+	.loc	1 158 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:0
+	ldw r0, dp[SecElapsed]
+	{
+		ldc r1, 0
+		nop
+	}
+	ldw r2, cp[.LCPI15_0]
+	.loc	1 158 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:0
+	lmul r1, r2, r0, r2, r1, r1
+	{
+		shr r2, r1, 5
+		ldc r1, 60
+	}
+	.loc	1 159 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:159:0
+.Ltmp96:
+	mul r1, r2, r1
+	{
+		sub r3, r0, r1
+		nop
+	}
+.Ltmp97:
+	#DEBUG_VALUE: sec <- R3
+	.loc	1 160 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:160:0
+	ldaw r11, cp[.str15]
+	{
+		ldaw r5, sp[1]
+		nop
+	}
+	{
+		mov r0, r5
+		mov r1, r11
+	}
+.Lxta.call_labels12:
+	bl siprintf
+.Ltmp98:
+	#DEBUG_VALUE: UpdateTime:row <- R0
+	{
+		ldc r2, 12
+		mov r0, r4
+	}
+.Ltmp99:
+	.loc	1 161 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:161:0
+	{
+		mov r1, r5
+		nop
+	}
+.Lxta.call_labels13:
+	bl OLED_SSD1306_put_string
+	ldd r5, r4, sp[2]               # 4-byte Folded Reload
+	{
+		nop
+		retsp 6
+	}
+	# RETURN_REG_HOLDER
+.Ltmp100:
+	.cc_bottom UpdateTime.function
+	.set	UpdateTime.nstackwords,((siprintf.nstackwords $M OLED_SSD1306_put_string.nstackwords) + 6)
+	.globl	UpdateTime.nstackwords
+	.set	UpdateTime.maxcores,OLED_SSD1306_put_string.maxcores $M siprintf.maxcores $M 1
+	.globl	UpdateTime.maxcores
+	.set	UpdateTime.maxtimers,OLED_SSD1306_put_string.maxtimers $M siprintf.maxtimers $M 0
+	.globl	UpdateTime.maxtimers
+	.set	UpdateTime.maxchanends,OLED_SSD1306_put_string.maxchanends $M siprintf.maxchanends $M 0
+	.globl	UpdateTime.maxchanends
+.Ltmp101:
+	.size	UpdateTime, .Ltmp101-UpdateTime
+.Lfunc_end15:
+	.cfi_endproc
+
+	.section	.cp.rodata.cst4,"aMc",@progbits,4
+	.cc_top .LCPI16_0.data,.LCPI16_0
+	.align	4
+	.type	.LCPI16_0,@object
+	.size	.LCPI16_0, 4
+.LCPI16_0:
+	.long	2290649225              # 0x88888889
+	.cc_bottom .LCPI16_0.data
+	.text
+	.globl	_SUpdateTime_0
+	.align	4
+	.type	_SUpdateTime_0,@function
+	.cc_top _SUpdateTime_0.function,_SUpdateTime_0
+_SUpdateTime_0:                         # @_SUpdateTime_0
+.Lfunc_begin16:
+	.loc	1 156 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:156:0
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+.Lxtalabel12:
+	{
+		nop
+		dualentsp 6
+	}
+.Ltmp102:
+	.cfi_def_cfa_offset 24
+.Ltmp103:
 	.cfi_offset 15, 0
 	{
 		nop
-		stw r4, sp[2]
+		stw r4, sp[4]
 	}
-.Ltmp75:
+.Ltmp104:
 	.cfi_offset 4, -8
-	.loc	1 165 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:0
-.Ltmp76:
-	ldaw r1, dp[information_string]
+.Ltmp105:
+	#DEBUG_VALUE: row <- 3
+	.loc	1 158 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:0
+	ldw r0, dp[SecElapsed]
 	{
-		ldc r4, 2
+		ldc r1, 0
 		nop
 	}
-	ldc r2, 100
+	ldw r2, cp[.LCPI16_0]
+	.loc	1 158 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:0
+	lmul r1, r2, r0, r2, r1, r1
+	{
+		shr r2, r1, 5
+		ldc r1, 60
+	}
+	.loc	1 159 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:159:0
+.Ltmp106:
+	mul r1, r2, r1
+	{
+		sub r3, r0, r1
+		nop
+	}
+.Ltmp107:
+	#DEBUG_VALUE: sec <- R3
+	.loc	1 160 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:160:0
+	ldaw r11, cp[.str16]
+	{
+		ldaw r4, sp[1]
+		nop
+	}
 	{
 		mov r0, r4
+		mov r1, r11
+	}
+.Lxta.call_labels14:
+	bl siprintf
+.Ltmp108:
+	{
+		mkmsk r0, 2
+		ldc r2, 12
+	}
+	.loc	1 161 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:161:0
+	{
+		mov r1, r4
 		nop
 	}
-.Lxta.call_labels6:
+.Lxta.call_labels15:
+	bl OLED_SSD1306_put_string
+	{
+		nop
+		ldw r4, sp[4]
+	}
+	{
+		nop
+		retsp 6
+	}
+	# RETURN_REG_HOLDER
+.Ltmp109:
+	.cc_bottom _SUpdateTime_0.function
+	.set	_SUpdateTime_0.nstackwords,((siprintf.nstackwords $M OLED_SSD1306_put_string.nstackwords) + 6)
+	.globl	_SUpdateTime_0.nstackwords
+	.set	_SUpdateTime_0.maxcores,OLED_SSD1306_put_string.maxcores $M siprintf.maxcores $M 1
+	.globl	_SUpdateTime_0.maxcores
+	.set	_SUpdateTime_0.maxtimers,OLED_SSD1306_put_string.maxtimers $M siprintf.maxtimers $M 0
+	.globl	_SUpdateTime_0.maxtimers
+	.set	_SUpdateTime_0.maxchanends,OLED_SSD1306_put_string.maxchanends $M siprintf.maxchanends $M 0
+	.globl	_SUpdateTime_0.maxchanends
+.Ltmp110:
+	.size	_SUpdateTime_0, .Ltmp110-_SUpdateTime_0
+.Lfunc_end16:
+	.cfi_endproc
+
+	.globl	ShowFolder
+	.align	4
+	.type	ShowFolder,@function
+	.cc_top ShowFolder.function,ShowFolder
+ShowFolder:                             # @ShowFolder
+.Lfunc_begin17:
+	.loc	1 164 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:164:0
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+.Lxtalabel13:
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp111:
+	.cfi_def_cfa_offset 16
+.Ltmp112:
+	.cfi_offset 15, 0
+.Ltmp113:
+	.cfi_offset 4, -8
+	#DEBUG_VALUE: ShowFolder:row <- R0
+.Ltmp114:
+	#DEBUG_VALUE: ShowFolder:row <- R4
+	{
+		mov r4, r0
+		stw r4, sp[2]
+	}
+.Ltmp115:
+	.loc	1 165 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:0
+	ldaw r1, dp[folder_string]
+	ldc r2, folder_string.globound
+	.loc	1 165 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:0
+.Lxta.call_labels16:
 	bl OLED_SSD1306_put_string
 	{
 		ldc r0, 50
@@ -1064,18 +1740,6 @@ ShowAudioAttribute:                     # @ShowAudioAttribute
 	st8 r1, r0[r1]
 	.loc	1 168 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:168:0
 	stw r4, dp[scrolling_row]
-.Ltmp77:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 8
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	ldw r0, dp[display_control_flag]
-	ldw r1, cp[.LCPI13_0]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	{
-		and r0, r0, r1
-		nop
-	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	stw r0, dp[display_control_flag]
 	{
 		nop
 		ldw r4, sp[2]
@@ -1085,19 +1749,396 @@ ShowAudioAttribute:                     # @ShowAudioAttribute
 		retsp 4
 	}
 	# RETURN_REG_HOLDER
-.Ltmp78:
-	.cc_bottom ShowAudioAttribute.function
-	.set	ShowAudioAttribute.nstackwords,(OLED_SSD1306_put_string.nstackwords + 4)
-	.globl	ShowAudioAttribute.nstackwords
-	.set	ShowAudioAttribute.maxcores,OLED_SSD1306_put_string.maxcores $M 1
-	.globl	ShowAudioAttribute.maxcores
-	.set	ShowAudioAttribute.maxtimers,OLED_SSD1306_put_string.maxtimers $M 0
-	.globl	ShowAudioAttribute.maxtimers
-	.set	ShowAudioAttribute.maxchanends,OLED_SSD1306_put_string.maxchanends $M 0
-	.globl	ShowAudioAttribute.maxchanends
-.Ltmp79:
-	.size	ShowAudioAttribute, .Ltmp79-ShowAudioAttribute
-.Lfunc_end13:
+.Ltmp116:
+	.cc_bottom ShowFolder.function
+	.set	ShowFolder.nstackwords,(OLED_SSD1306_put_string.nstackwords + 4)
+	.globl	ShowFolder.nstackwords
+	.set	ShowFolder.maxcores,OLED_SSD1306_put_string.maxcores $M 1
+	.globl	ShowFolder.maxcores
+	.set	ShowFolder.maxtimers,OLED_SSD1306_put_string.maxtimers $M 0
+	.globl	ShowFolder.maxtimers
+	.set	ShowFolder.maxchanends,OLED_SSD1306_put_string.maxchanends $M 0
+	.globl	ShowFolder.maxchanends
+.Ltmp117:
+	.size	ShowFolder, .Ltmp117-ShowFolder
+.Lfunc_end17:
+	.cfi_endproc
+
+	.globl	_SShowFolder_0
+	.align	4
+	.type	_SShowFolder_0,@function
+	.cc_top _SShowFolder_0.function,_SShowFolder_0
+_SShowFolder_0:                         # @_SShowFolder_0
+.Lfunc_begin18:
+	.loc	1 164 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:164:0
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+.Lxtalabel14:
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp118:
+	.cfi_def_cfa_offset 16
+.Ltmp119:
+	.cfi_offset 15, 0
+	{
+		nop
+		stw r4, sp[2]
+	}
+.Ltmp120:
+	.cfi_offset 4, -8
+.Ltmp121:
+	#DEBUG_VALUE: row <- 0
+	.loc	1 165 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:0
+	ldaw r1, dp[folder_string]
+	ldc r2, folder_string.globound
+	{
+		ldc r4, 0
+		nop
+	}
+	.loc	1 165 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:0
+	{
+		mov r0, r4
+		nop
+	}
+.Lxta.call_labels17:
+	bl OLED_SSD1306_put_string
+	{
+		ldc r0, 50
+		nop
+	}
+	.loc	1 166 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:166:0
+	stw r0, dp[pause_counter]
+	ldaw r0, dp[state]
+	st8 r4, r0[r4]
+	.loc	1 168 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:168:0
+	stw r4, dp[scrolling_row]
+	{
+		nop
+		ldw r4, sp[2]
+	}
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+.Ltmp122:
+	.cc_bottom _SShowFolder_0.function
+	.set	_SShowFolder_0.nstackwords,(OLED_SSD1306_put_string.nstackwords + 4)
+	.globl	_SShowFolder_0.nstackwords
+	.set	_SShowFolder_0.maxcores,OLED_SSD1306_put_string.maxcores $M 1
+	.globl	_SShowFolder_0.maxcores
+	.set	_SShowFolder_0.maxtimers,OLED_SSD1306_put_string.maxtimers $M 0
+	.globl	_SShowFolder_0.maxtimers
+	.set	_SShowFolder_0.maxchanends,OLED_SSD1306_put_string.maxchanends $M 0
+	.globl	_SShowFolder_0.maxchanends
+.Ltmp123:
+	.size	_SShowFolder_0, .Ltmp123-_SShowFolder_0
+.Lfunc_end18:
+	.cfi_endproc
+
+	.globl	ShowTrack
+	.align	4
+	.type	ShowTrack,@function
+	.cc_top ShowTrack.function,ShowTrack
+ShowTrack:                              # @ShowTrack
+.Lfunc_begin19:
+	.loc	1 171 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:171:0
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+.Lxtalabel15:
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp124:
+	.cfi_def_cfa_offset 16
+.Ltmp125:
+	.cfi_offset 15, 0
+.Ltmp126:
+	.cfi_offset 4, -8
+	#DEBUG_VALUE: ShowTrack:row <- R0
+.Ltmp127:
+	#DEBUG_VALUE: ShowTrack:row <- R4
+	{
+		mov r4, r0
+		stw r4, sp[2]
+	}
+.Ltmp128:
+	.loc	1 172 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:172:0
+	ldaw r1, dp[track_string]
+	ldc r2, track_string.globound
+	.loc	1 172 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:172:0
+.Lxta.call_labels18:
+	bl OLED_SSD1306_put_string
+	{
+		ldc r0, 50
+		nop
+	}
+	.loc	1 173 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:173:0
+	stw r0, dp[pause_counter]
+	ldaw r0, dp[state]
+	{
+		ldc r1, 0
+		nop
+	}
+	st8 r1, r0[r1]
+	.loc	1 175 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:175:0
+	stw r4, dp[scrolling_row]
+	{
+		nop
+		ldw r4, sp[2]
+	}
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+.Ltmp129:
+	.cc_bottom ShowTrack.function
+	.set	ShowTrack.nstackwords,(OLED_SSD1306_put_string.nstackwords + 4)
+	.globl	ShowTrack.nstackwords
+	.set	ShowTrack.maxcores,OLED_SSD1306_put_string.maxcores $M 1
+	.globl	ShowTrack.maxcores
+	.set	ShowTrack.maxtimers,OLED_SSD1306_put_string.maxtimers $M 0
+	.globl	ShowTrack.maxtimers
+	.set	ShowTrack.maxchanends,OLED_SSD1306_put_string.maxchanends $M 0
+	.globl	ShowTrack.maxchanends
+.Ltmp130:
+	.size	ShowTrack, .Ltmp130-ShowTrack
+.Lfunc_end19:
+	.cfi_endproc
+
+	.globl	_SShowTrack_0
+	.align	4
+	.type	_SShowTrack_0,@function
+	.cc_top _SShowTrack_0.function,_SShowTrack_0
+_SShowTrack_0:                          # @_SShowTrack_0
+.Lfunc_begin20:
+	.loc	1 171 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:171:0
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+.Lxtalabel16:
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp131:
+	.cfi_def_cfa_offset 16
+.Ltmp132:
+	.cfi_offset 15, 0
+	{
+		nop
+		stw r4, sp[2]
+	}
+.Ltmp133:
+	.cfi_offset 4, -8
+.Ltmp134:
+	#DEBUG_VALUE: row <- 1
+	.loc	1 172 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:172:0
+	ldaw r1, dp[track_string]
+	ldc r2, track_string.globound
+	{
+		mkmsk r4, 1
+		nop
+	}
+	.loc	1 172 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:172:0
+	{
+		mov r0, r4
+		nop
+	}
+.Lxta.call_labels19:
+	bl OLED_SSD1306_put_string
+	{
+		ldc r0, 50
+		nop
+	}
+	.loc	1 173 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:173:0
+	stw r0, dp[pause_counter]
+	ldaw r0, dp[state]
+	{
+		ldc r1, 0
+		nop
+	}
+	st8 r1, r0[r1]
+	.loc	1 175 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:175:0
+	stw r4, dp[scrolling_row]
+	{
+		nop
+		ldw r4, sp[2]
+	}
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+.Ltmp135:
+	.cc_bottom _SShowTrack_0.function
+	.set	_SShowTrack_0.nstackwords,(OLED_SSD1306_put_string.nstackwords + 4)
+	.globl	_SShowTrack_0.nstackwords
+	.set	_SShowTrack_0.maxcores,OLED_SSD1306_put_string.maxcores $M 1
+	.globl	_SShowTrack_0.maxcores
+	.set	_SShowTrack_0.maxtimers,OLED_SSD1306_put_string.maxtimers $M 0
+	.globl	_SShowTrack_0.maxtimers
+	.set	_SShowTrack_0.maxchanends,OLED_SSD1306_put_string.maxchanends $M 0
+	.globl	_SShowTrack_0.maxchanends
+.Ltmp136:
+	.size	_SShowTrack_0, .Ltmp136-_SShowTrack_0
+.Lfunc_end20:
+	.cfi_endproc
+
+	.globl	ShowAudioProperty
+	.align	4
+	.type	ShowAudioProperty,@function
+	.cc_top ShowAudioProperty.function,ShowAudioProperty
+ShowAudioProperty:                      # @ShowAudioProperty
+.Lfunc_begin21:
+	.loc	1 178 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:178:0
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+.Lxtalabel17:
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp137:
+	.cfi_def_cfa_offset 16
+.Ltmp138:
+	.cfi_offset 15, 0
+.Ltmp139:
+	.cfi_offset 4, -8
+	#DEBUG_VALUE: ShowAudioProperty:row <- R0
+.Ltmp140:
+	#DEBUG_VALUE: ShowAudioProperty:row <- R4
+	{
+		mov r4, r0
+		stw r4, sp[2]
+	}
+.Ltmp141:
+	.loc	1 179 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:179:0
+	ldaw r1, dp[audio_property_string]
+	ldc r2, 100
+.Lxta.call_labels20:
+	bl OLED_SSD1306_put_string
+	{
+		ldc r0, 50
+		nop
+	}
+	.loc	1 180 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:180:0
+	stw r0, dp[pause_counter]
+	ldaw r0, dp[state]
+	{
+		ldc r1, 0
+		nop
+	}
+	st8 r1, r0[r1]
+	.loc	1 182 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:182:0
+	stw r4, dp[scrolling_row]
+	{
+		nop
+		ldw r4, sp[2]
+	}
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+.Ltmp142:
+	.cc_bottom ShowAudioProperty.function
+	.set	ShowAudioProperty.nstackwords,(OLED_SSD1306_put_string.nstackwords + 4)
+	.globl	ShowAudioProperty.nstackwords
+	.set	ShowAudioProperty.maxcores,OLED_SSD1306_put_string.maxcores $M 1
+	.globl	ShowAudioProperty.maxcores
+	.set	ShowAudioProperty.maxtimers,OLED_SSD1306_put_string.maxtimers $M 0
+	.globl	ShowAudioProperty.maxtimers
+	.set	ShowAudioProperty.maxchanends,OLED_SSD1306_put_string.maxchanends $M 0
+	.globl	ShowAudioProperty.maxchanends
+.Ltmp143:
+	.size	ShowAudioProperty, .Ltmp143-ShowAudioProperty
+.Lfunc_end21:
+	.cfi_endproc
+
+	.globl	_SShowAudioProperty_0
+	.align	4
+	.type	_SShowAudioProperty_0,@function
+	.cc_top _SShowAudioProperty_0.function,_SShowAudioProperty_0
+_SShowAudioProperty_0:                  # @_SShowAudioProperty_0
+.Lfunc_begin22:
+	.loc	1 178 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:178:0
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+.Lxtalabel18:
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp144:
+	.cfi_def_cfa_offset 16
+.Ltmp145:
+	.cfi_offset 15, 0
+	{
+		nop
+		stw r4, sp[2]
+	}
+.Ltmp146:
+	.cfi_offset 4, -8
+.Ltmp147:
+	#DEBUG_VALUE: row <- 2
+	.loc	1 179 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:179:0
+	ldaw r1, dp[audio_property_string]
+	{
+		ldc r4, 2
+		nop
+	}
+	ldc r2, 100
+	{
+		mov r0, r4
+		nop
+	}
+.Lxta.call_labels21:
+	bl OLED_SSD1306_put_string
+	{
+		ldc r0, 50
+		nop
+	}
+	.loc	1 180 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:180:0
+	stw r0, dp[pause_counter]
+	ldaw r0, dp[state]
+	{
+		ldc r1, 0
+		nop
+	}
+	st8 r1, r0[r1]
+	.loc	1 182 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:182:0
+	stw r4, dp[scrolling_row]
+	{
+		nop
+		ldw r4, sp[2]
+	}
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+.Ltmp148:
+	.cc_bottom _SShowAudioProperty_0.function
+	.set	_SShowAudioProperty_0.nstackwords,(OLED_SSD1306_put_string.nstackwords + 4)
+	.globl	_SShowAudioProperty_0.nstackwords
+	.set	_SShowAudioProperty_0.maxcores,OLED_SSD1306_put_string.maxcores $M 1
+	.globl	_SShowAudioProperty_0.maxcores
+	.set	_SShowAudioProperty_0.maxtimers,OLED_SSD1306_put_string.maxtimers $M 0
+	.globl	_SShowAudioProperty_0.maxtimers
+	.set	_SShowAudioProperty_0.maxchanends,OLED_SSD1306_put_string.maxchanends $M 0
+	.globl	_SShowAudioProperty_0.maxchanends
+.Ltmp149:
+	.size	_SShowAudioProperty_0, .Ltmp149-_SShowAudioProperty_0
+.Lfunc_end22:
 	.cfi_endproc
 
 	.globl	ProposedInterpolationMode
@@ -1105,27 +2146,27 @@ ShowAudioAttribute:                     # @ShowAudioAttribute
 	.type	ProposedInterpolationMode,@function
 	.cc_top ProposedInterpolationMode.function,ProposedInterpolationMode
 ProposedInterpolationMode:              # @ProposedInterpolationMode
-.Lfunc_begin14:
-	.loc	1 185 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:185:0
+.Lfunc_begin23:
+	.loc	1 188 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:188:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
-.Lxtalabel15:
+.Lxtalabel19:
 	{
 		nop
 		dualentsp 0
 	}
-	.loc	1 188 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:188:0
-.Ltmp80:
+	.loc	1 191 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:191:0
+.Ltmp150:
 	ldw r0, dp[proposed_intpol_mode]
-.Ltmp81:
+.Ltmp151:
 	#DEBUG_VALUE: temp <- R0
 	{
 		nop
 		retsp 0
 	}
 	# RETURN_REG_HOLDER
-.Ltmp82:
+.Ltmp152:
 	.cc_bottom ProposedInterpolationMode.function
 	.set	ProposedInterpolationMode.nstackwords,0
 	.globl	ProposedInterpolationMode.nstackwords
@@ -1135,9 +2176,9 @@ ProposedInterpolationMode:              # @ProposedInterpolationMode
 	.globl	ProposedInterpolationMode.maxtimers
 	.set	ProposedInterpolationMode.maxchanends,0
 	.globl	ProposedInterpolationMode.maxchanends
-.Ltmp83:
-	.size	ProposedInterpolationMode, .Ltmp83-ProposedInterpolationMode
-.Lfunc_end14:
+.Ltmp153:
+	.size	ProposedInterpolationMode, .Ltmp153-ProposedInterpolationMode
+.Lfunc_end23:
 	.cfi_endproc
 
 	.globl	FixedInterpolationMode
@@ -1145,27 +2186,27 @@ ProposedInterpolationMode:              # @ProposedInterpolationMode
 	.type	FixedInterpolationMode,@function
 	.cc_top FixedInterpolationMode.function,FixedInterpolationMode
 FixedInterpolationMode:                 # @FixedInterpolationMode
-.Lfunc_begin15:
-	.loc	1 194 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:194:0
+.Lfunc_begin24:
+	.loc	1 197 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:197:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
-.Lxtalabel16:
+.Lxtalabel20:
 	{
 		nop
 		dualentsp 0
 	}
-	.loc	1 197 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:197:0
-.Ltmp84:
+	.loc	1 200 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:200:0
+.Ltmp154:
 	ldw r0, dp[fixed_intpol_mode]
-.Ltmp85:
+.Ltmp155:
 	#DEBUG_VALUE: temp <- R0
 	{
 		nop
 		retsp 0
 	}
 	# RETURN_REG_HOLDER
-.Ltmp86:
+.Ltmp156:
 	.cc_bottom FixedInterpolationMode.function
 	.set	FixedInterpolationMode.nstackwords,0
 	.globl	FixedInterpolationMode.nstackwords
@@ -1175,49 +2216,9 @@ FixedInterpolationMode:                 # @FixedInterpolationMode
 	.globl	FixedInterpolationMode.maxtimers
 	.set	FixedInterpolationMode.maxchanends,0
 	.globl	FixedInterpolationMode.maxchanends
-.Ltmp87:
-	.size	FixedInterpolationMode, .Ltmp87-FixedInterpolationMode
-.Lfunc_end15:
-	.cfi_endproc
-
-	.globl	SelectedFunction
-	.align	4
-	.type	SelectedFunction,@function
-	.cc_top SelectedFunction.function,SelectedFunction
-SelectedFunction:                       # @SelectedFunction
-.Lfunc_begin16:
-	.loc	1 203 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:203:0
-	.cfi_startproc
-	.issue_mode dual
-# BB#0:                                 # %allocas
-.Lxtalabel17:
-	{
-		nop
-		dualentsp 0
-	}
-	.loc	1 206 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:206:0
-.Ltmp88:
-	ldw r0, dp[selected_function]
-.Ltmp89:
-	#DEBUG_VALUE: temp <- R0
-	{
-		nop
-		retsp 0
-	}
-	# RETURN_REG_HOLDER
-.Ltmp90:
-	.cc_bottom SelectedFunction.function
-	.set	SelectedFunction.nstackwords,0
-	.globl	SelectedFunction.nstackwords
-	.set	SelectedFunction.maxcores,1
-	.globl	SelectedFunction.maxcores
-	.set	SelectedFunction.maxtimers,0
-	.globl	SelectedFunction.maxtimers
-	.set	SelectedFunction.maxchanends,0
-	.globl	SelectedFunction.maxchanends
-.Ltmp91:
-	.size	SelectedFunction, .Ltmp91-SelectedFunction
-.Lfunc_end16:
+.Ltmp157:
+	.size	FixedInterpolationMode, .Ltmp157-FixedInterpolationMode
+.Lfunc_end24:
 	.cfi_endproc
 
 	.globl	ShowInterpolationMode
@@ -1225,97 +2226,111 @@ SelectedFunction:                       # @SelectedFunction
 	.type	ShowInterpolationMode,@function
 	.cc_top ShowInterpolationMode.function,ShowInterpolationMode
 ShowInterpolationMode:                  # @ShowInterpolationMode
-.Lfunc_begin17:
-	.loc	1 210 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:210:0
+.Lfunc_begin25:
+	.loc	1 205 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:205:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
-.Lxtalabel18:
-.Ltmp92:
+.Lxtalabel21:
+.Ltmp158:
 	.cfi_def_cfa_offset 8
-.Ltmp93:
+.Ltmp159:
 	.cfi_offset 15, 0
-	#DEBUG_VALUE: ShowInterpolationMode:mode <- R0
+	#DEBUG_VALUE: ShowInterpolationMode:row <- R0
+	#DEBUG_VALUE: ShowInterpolationMode:mode <- R1
 	{
-		sub r0, r0, 1
+		sub r1, r1, 1
 		dualentsp 2
 	}
-.Ltmp94:
+.Ltmp160:
 	{
-		ldc r1, 5
+		ldc r2, 5
 		nop
 	}
-	.loc	1 211 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:211:0
-.Ltmp95:
+	.loc	1 206 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:206:0
+.Ltmp161:
 	{
-		lsu r1, r1, r0
+		lsu r2, r2, r1
 		nop
 	}
-	bf r1, .LBB17_1
+	bf r2, .LBB25_1
+.Ltmp162:
 # BB#2:                                 # %switchdefault
-.Lxtalabel19:
-	.loc	1 231 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:231:0
-	ldaw r11, cp[.str13]
-.LBB17_9:                               # %return
-.Lxtalabel20:
+.Lxtalabel22:
+	#DEBUG_VALUE: ShowInterpolationMode:row <- R0
+	.loc	1 226 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:226:0
+	ldaw r11, cp[.str23]
+.Ltmp163:
+.LBB25_9:                               # %return
+.Lxtalabel23:
 	{
-		mkmsk r0, 1
 		ldc r2, 17
-	}
-	.loc	1 228 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:228:0
-	{
 		mov r1, r11
-		nop
 	}
-.Lxta.call_labels7:
+	.loc	1 223 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:223:0
+.Lxta.call_labels22:
 	bl OLED_SSD1306_put_string
 	{
 		nop
 		retsp 2
 	}
 	# RETURN_REG_HOLDER
-.LBB17_1:                               # %allocas
-.Lxtalabel21:
+.LBB25_1:                               # %allocas
+.Lxtalabel24:
+.Ltmp164:
+	#DEBUG_VALUE: ShowInterpolationMode:row <- R0
 
 	.xtabranch .Ljumptable0+4,.Ljumptable0+8,.Ljumptable0+12,.Ljumptable0+16,.Ljumptable0+20,.Ljumptable0+24
 .Ljumptable0:
 		
 	{
 		nop
-		bru r0
+		bru r1
 	}
-	.jmptable32 .LBB17_3,.LBB17_4,.LBB17_5,.LBB17_6,.LBB17_7,.LBB17_8
-.LBB17_3:                               # %switchcase
-.Lxtalabel22:
-	.loc	1 213 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:213:0
-	ldaw r11, cp[.str7]
-	bu .LBB17_9
-.LBB17_4:                               # %switchcase1
-.Lxtalabel23:
-	.loc	1 216 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:216:0
-	ldaw r11, cp[.str8]
-	bu .LBB17_9
-.LBB17_5:                               # %switchcase2
-.Lxtalabel24:
-	.loc	1 219 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:219:0
-	ldaw r11, cp[.str9]
-	bu .LBB17_9
-.LBB17_6:                               # %switchcase4
+	.jmptable32 .LBB25_3,.LBB25_4,.LBB25_5,.LBB25_6,.LBB25_7,.LBB25_8
+.Ltmp165:
+.LBB25_3:                               # %switchcase
 .Lxtalabel25:
-	.loc	1 222 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:222:0
-	ldaw r11, cp[.str10]
-	bu .LBB17_9
-.LBB17_7:                               # %switchcase6
+	#DEBUG_VALUE: ShowInterpolationMode:row <- R0
+	.loc	1 208 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:208:0
+	ldaw r11, cp[.str17]
+	bu .LBB25_9
+.Ltmp166:
+.LBB25_4:                               # %switchcase1
 .Lxtalabel26:
-	.loc	1 225 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:225:0
-	ldaw r11, cp[.str11]
-	bu .LBB17_9
-.LBB17_8:                               # %switchcase8
+	#DEBUG_VALUE: ShowInterpolationMode:row <- R0
+	.loc	1 211 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:211:0
+	ldaw r11, cp[.str18]
+	bu .LBB25_9
+.Ltmp167:
+.LBB25_5:                               # %switchcase2
 .Lxtalabel27:
-	.loc	1 228 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:228:0
-	ldaw r11, cp[.str12]
-	bu .LBB17_9
-.Ltmp96:
+	#DEBUG_VALUE: ShowInterpolationMode:row <- R0
+	.loc	1 214 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:214:0
+	ldaw r11, cp[.str19]
+	bu .LBB25_9
+.Ltmp168:
+.LBB25_6:                               # %switchcase5
+.Lxtalabel28:
+	#DEBUG_VALUE: ShowInterpolationMode:row <- R0
+	.loc	1 217 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:217:0
+	ldaw r11, cp[.str20]
+	bu .LBB25_9
+.Ltmp169:
+.LBB25_7:                               # %switchcase8
+.Lxtalabel29:
+	#DEBUG_VALUE: ShowInterpolationMode:row <- R0
+	.loc	1 220 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:220:0
+	ldaw r11, cp[.str21]
+	bu .LBB25_9
+.Ltmp170:
+.LBB25_8:                               # %switchcase11
+.Lxtalabel30:
+	#DEBUG_VALUE: ShowInterpolationMode:row <- R0
+	.loc	1 223 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:223:0
+	ldaw r11, cp[.str22]
+	bu .LBB25_9
+.Ltmp171:
 	.cc_bottom ShowInterpolationMode.function
 	.set	ShowInterpolationMode.nstackwords,(OLED_SSD1306_put_string.nstackwords + 2)
 	.globl	ShowInterpolationMode.nstackwords
@@ -1325,9 +2340,162 @@ ShowInterpolationMode:                  # @ShowInterpolationMode
 	.globl	ShowInterpolationMode.maxtimers
 	.set	ShowInterpolationMode.maxchanends,OLED_SSD1306_put_string.maxchanends $M 0
 	.globl	ShowInterpolationMode.maxchanends
-.Ltmp97:
-	.size	ShowInterpolationMode, .Ltmp97-ShowInterpolationMode
-.Lfunc_end17:
+.Ltmp172:
+	.size	ShowInterpolationMode, .Ltmp172-ShowInterpolationMode
+.Lfunc_end25:
+	.cfi_endproc
+
+	.globl	_SShowInterpolationMode_0
+	.align	4
+	.type	_SShowInterpolationMode_0,@function
+	.cc_top _SShowInterpolationMode_0.function,_SShowInterpolationMode_0
+_SShowInterpolationMode_0:              # @_SShowInterpolationMode_0
+.Lfunc_begin26:
+	.loc	1 205 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:205:0
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+.Lxtalabel31:
+.Ltmp173:
+	.cfi_def_cfa_offset 8
+.Ltmp174:
+	.cfi_offset 15, 0
+	#DEBUG_VALUE: ShowInterpolationMode:mode <- R0
+.Ltmp175:
+	#DEBUG_VALUE: row <- 3
+	{
+		sub r0, r0, 1
+		dualentsp 2
+	}
+.Ltmp176:
+	{
+		ldc r1, 5
+		nop
+	}
+	.loc	1 206 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:206:0
+.Ltmp177:
+	{
+		lsu r1, r1, r0
+		nop
+	}
+	bf r1, .LBB26_1
+# BB#2:                                 # %switchdefault
+.Lxtalabel32:
+	#DEBUG_VALUE: row <- 3
+	.loc	1 226 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:226:0
+	ldaw r11, cp[.str30]
+.LBB26_9:                               # %return
+.Lxtalabel33:
+	{
+		mkmsk r0, 2
+		ldc r2, 17
+	}
+	.loc	1 223 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:223:0
+	{
+		mov r1, r11
+		nop
+	}
+.Lxta.call_labels23:
+	bl OLED_SSD1306_put_string
+	{
+		nop
+		retsp 2
+	}
+	# RETURN_REG_HOLDER
+.LBB26_1:                               # %allocas
+.Lxtalabel34:
+
+	.xtabranch .Ljumptable1+4,.Ljumptable1+8,.Ljumptable1+12,.Ljumptable1+16,.Ljumptable1+20,.Ljumptable1+24
+.Ljumptable1:
+		
+	{
+		nop
+		bru r0
+	}
+	.jmptable32 .LBB26_3,.LBB26_4,.LBB26_5,.LBB26_6,.LBB26_7,.LBB26_8
+.LBB26_3:                               # %switchcase
+.Lxtalabel35:
+	.loc	1 208 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:208:0
+	ldaw r11, cp[.str24]
+	bu .LBB26_9
+.LBB26_4:                               # %switchcase1
+.Lxtalabel36:
+	.loc	1 211 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:211:0
+	ldaw r11, cp[.str25]
+	bu .LBB26_9
+.LBB26_5:                               # %switchcase2
+.Lxtalabel37:
+	.loc	1 214 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:214:0
+	ldaw r11, cp[.str26]
+	bu .LBB26_9
+.LBB26_6:                               # %switchcase5
+.Lxtalabel38:
+	.loc	1 217 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:217:0
+	ldaw r11, cp[.str27]
+	bu .LBB26_9
+.LBB26_7:                               # %switchcase8
+.Lxtalabel39:
+	.loc	1 220 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:220:0
+	ldaw r11, cp[.str28]
+	bu .LBB26_9
+.LBB26_8:                               # %switchcase11
+.Lxtalabel40:
+	.loc	1 223 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:223:0
+	ldaw r11, cp[.str29]
+	bu .LBB26_9
+.Ltmp178:
+	.cc_bottom _SShowInterpolationMode_0.function
+	.set	_SShowInterpolationMode_0.nstackwords,(OLED_SSD1306_put_string.nstackwords + 2)
+	.globl	_SShowInterpolationMode_0.nstackwords
+	.set	_SShowInterpolationMode_0.maxcores,OLED_SSD1306_put_string.maxcores $M 1
+	.globl	_SShowInterpolationMode_0.maxcores
+	.set	_SShowInterpolationMode_0.maxtimers,OLED_SSD1306_put_string.maxtimers $M 0
+	.globl	_SShowInterpolationMode_0.maxtimers
+	.set	_SShowInterpolationMode_0.maxchanends,OLED_SSD1306_put_string.maxchanends $M 0
+	.globl	_SShowInterpolationMode_0.maxchanends
+.Ltmp179:
+	.size	_SShowInterpolationMode_0, .Ltmp179-_SShowInterpolationMode_0
+.Lfunc_end26:
+	.cfi_endproc
+
+	.globl	SelectedFunction
+	.align	4
+	.type	SelectedFunction,@function
+	.cc_top SelectedFunction.function,SelectedFunction
+SelectedFunction:                       # @SelectedFunction
+.Lfunc_begin27:
+	.loc	1 233 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:233:0
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+.Lxtalabel41:
+	{
+		nop
+		dualentsp 0
+	}
+	.loc	1 236 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:236:0
+.Ltmp180:
+	ldw r0, dp[selected_function]
+.Ltmp181:
+	#DEBUG_VALUE: temp <- R0
+	{
+		nop
+		retsp 0
+	}
+	# RETURN_REG_HOLDER
+.Ltmp182:
+	.cc_bottom SelectedFunction.function
+	.set	SelectedFunction.nstackwords,0
+	.globl	SelectedFunction.nstackwords
+	.set	SelectedFunction.maxcores,1
+	.globl	SelectedFunction.maxcores
+	.set	SelectedFunction.maxtimers,0
+	.globl	SelectedFunction.maxtimers
+	.set	SelectedFunction.maxchanends,0
+	.globl	SelectedFunction.maxchanends
+.Ltmp183:
+	.size	SelectedFunction, .Ltmp183-SelectedFunction
+.Lfunc_end27:
 	.cfi_endproc
 
 	.globl	GetFunctionString
@@ -1335,48 +2503,48 @@ ShowInterpolationMode:                  # @ShowInterpolationMode
 	.type	GetFunctionString,@function
 	.cc_top GetFunctionString.function,GetFunctionString
 GetFunctionString:                      # @GetFunctionString
-.Lfunc_begin18:
-	.loc	1 236 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:236:0
+.Lfunc_begin28:
+	.loc	1 240 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:240:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
-.Lxtalabel28:
+.Lxtalabel42:
 	{
 		nop
 		dualentsp 0
 	}
 	#DEBUG_VALUE: GetFunctionString:func <- R0
-	ldaw r11, cp[.str16]
-	.loc	1 237 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:237:0
-.Ltmp98:
+	ldaw r11, cp[.str33]
+	.loc	1 241 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:241:0
+.Ltmp184:
 	{
 		eq r1, r0, 1
 		nop
 	}
-	bf r1, .LBB18_1
-.Ltmp99:
+	bf r1, .LBB28_1
+.Ltmp185:
 # BB#3:                                 # %switchcase1
-.Lxtalabel29:
-	ldaw r11, cp[.str15]
+.Lxtalabel43:
+	ldaw r11, cp[.str32]
 	{
 		ldc r2, 9
 		nop
 	}
-	bu .LBB18_4
-.LBB18_1:                               # %allocas
-.Lxtalabel30:
-.Ltmp100:
+	bu .LBB28_4
+.LBB28_1:                               # %allocas
+.Lxtalabel44:
+.Ltmp186:
 	#DEBUG_VALUE: GetFunctionString:func <- R0
 	{
 		ldc r2, 8
 		nop
 	}
-	bt r0, .LBB18_4
-.Ltmp101:
+	bt r0, .LBB28_4
+.Ltmp187:
 # BB#2:                                 # %switchcase
-.Lxtalabel31:
-	ldaw r11, cp[.str14]
-.LBB18_4:                               # %return
+.Lxtalabel45:
+	ldaw r11, cp[.str31]
+.LBB28_4:                               # %return
 	{
 		mov r0, r11
 		mov r1, r11
@@ -1395,266 +2563,1094 @@ GetFunctionString:                      # @GetFunctionString
 	.globl	GetFunctionString.maxtimers
 	.set	GetFunctionString.maxchanends,0
 	.globl	GetFunctionString.maxchanends
-.Ltmp102:
-	.size	GetFunctionString, .Ltmp102-GetFunctionString
-.Lfunc_end18:
+.Ltmp188:
+	.size	GetFunctionString, .Ltmp188-GetFunctionString
+.Lfunc_end28:
 	.cfi_endproc
 
-	.globl	ShowUsbAudioStatus
+	.section	.cp.rodata.cst4,"aMc",@progbits,4
+	.cc_top .LCPI29_0.data,.LCPI29_0
 	.align	4
-	.type	ShowUsbAudioStatus,@function
-	.cc_top ShowUsbAudioStatus.function,ShowUsbAudioStatus
-ShowUsbAudioStatus:                     # @ShowUsbAudioStatus
-.Lfunc_begin19:
-	.loc	1 249 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:249:0
+	.type	.LCPI29_0,@object
+	.size	.LCPI29_0, 4
+.LCPI29_0:
+	.long	4294967279              # 0xffffffef
+	.cc_bottom .LCPI29_0.data
+	.cc_top .LCPI29_1.data,.LCPI29_1
+	.align	4
+	.type	.LCPI29_1,@object
+	.size	.LCPI29_1, 4
+.LCPI29_1:
+	.long	2290649225              # 0x88888889
+	.cc_bottom .LCPI29_1.data
+	.cc_top .LCPI29_2.data,.LCPI29_2
+	.align	4
+	.type	.LCPI29_2,@object
+	.size	.LCPI29_2, 4
+.LCPI29_2:
+	.long	4294966271              # 0xfffffbff
+	.cc_bottom .LCPI29_2.data
+	.cc_top .LCPI29_3.data,.LCPI29_3
+	.align	4
+	.type	.LCPI29_3,@object
+	.size	.LCPI29_3, 4
+.LCPI29_3:
+	.long	4294967039              # 0xfffffeff
+	.cc_bottom .LCPI29_3.data
+	.cc_top .LCPI29_4.data,.LCPI29_4
+	.align	4
+	.type	.LCPI29_4,@object
+	.size	.LCPI29_4, 4
+.LCPI29_4:
+	.long	4294966783              # 0xfffffdff
+	.cc_bottom .LCPI29_4.data
+	.cc_top .LCPI29_5.data,.LCPI29_5
+	.align	4
+	.type	.LCPI29_5,@object
+	.size	.LCPI29_5, 4
+.LCPI29_5:
+	.long	4294967167              # 0xffffff7f
+	.cc_bottom .LCPI29_5.data
+	.cc_top .LCPI29_6.data,.LCPI29_6
+	.align	4
+	.type	.LCPI29_6,@object
+	.size	.LCPI29_6, 4
+.LCPI29_6:
+	.long	4294967293              # 0xfffffffd
+	.cc_bottom .LCPI29_6.data
+	.cc_top .LCPI29_7.data,.LCPI29_7
+	.align	4
+	.type	.LCPI29_7,@object
+	.size	.LCPI29_7, 4
+.LCPI29_7:
+	.long	4294967294              # 0xfffffffe
+	.cc_bottom .LCPI29_7.data
+	.cc_top .LCPI29_8.data,.LCPI29_8
+	.align	4
+	.type	.LCPI29_8,@object
+	.size	.LCPI29_8, 4
+.LCPI29_8:
+	.long	4294967287              # 0xfffffff7
+	.cc_bottom .LCPI29_8.data
+	.cc_top .LCPI29_9.data,.LCPI29_9
+	.align	4
+	.type	.LCPI29_9,@object
+	.size	.LCPI29_9, 4
+.LCPI29_9:
+	.long	4294967291              # 0xfffffffb
+	.cc_bottom .LCPI29_9.data
+	.text
+	.globl	handle_display_frame
+	.align	4
+	.type	handle_display_frame,@function
+	.cc_top handle_display_frame.function,handle_display_frame
+handle_display_frame:                   # @handle_display_frame
+.Lfunc_begin29:
+	.loc	1 271 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:271:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
-.Lxtalabel32:
+.Lxtalabel46:
 	{
 		nop
-		dualentsp 4
+		dualentsp 12
 	}
-.Ltmp103:
-	.cfi_def_cfa_offset 16
-.Ltmp104:
+.Ltmp189:
+	.cfi_def_cfa_offset 48
+.Ltmp190:
 	.cfi_offset 15, 0
+	std r5, r4, sp[3]               # 4-byte Folded Spill
+.Ltmp191:
+	.cfi_offset 4, -24
+.Ltmp192:
+	.cfi_offset 5, -20
+	std r7, r6, sp[4]               # 4-byte Folded Spill
+.Ltmp193:
+	.cfi_offset 6, -16
+.Ltmp194:
+	.cfi_offset 7, -12
+.Ltmp195:
+	.cfi_offset 8, -8
+	#DEBUG_VALUE: handle_display_frame:i <- R0
+.Ltmp196:
+	#DEBUG_VALUE: test_display_control_flag:bitmask <- 16
+	#DEBUG_VALUE: handle_display_frame:i <- R4
+	{
+		mov r4, r0
+		stw r8, sp[10]
+	}
+.Ltmp197:
+	.loc	1 68 9 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	ldw r0, dp[display_control_flag]
+	{
+		ldc r1, 16
+		nop
+	}
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	{
+		and r0, r0, r1
+		nop
+	}
 	{
 		nop
-		stw r4, sp[2]
+		stw r0, sp[3]
 	}
-.Ltmp105:
-	.cfi_offset 4, -8
-	.loc	1 251 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:251:0
-.Ltmp106:
-	ldw r2, dp[SampFreq]
-	.loc	1 251 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:251:0
-	ldw r3, dp[SampRes]
-	.loc	1 251 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:251:0
-	ldaw r4, dp[UsbAudioStatus]
-	ldaw r11, cp[.str17]
+	bf r0, .LBB29_5
+.Ltmp198:
+# BB#1:                                 # %iftrue
+.Lxtalabel47:
+	#DEBUG_VALUE: handle_display_frame:i <- R4
+	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 16
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	ldw r0, dp[display_control_flag]
+	ldw r1, cp[.LCPI29_0]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
 	{
-		mov r0, r4
-		mov r1, r11
+		and r0, r0, r1
+		nop
 	}
-.Lxta.call_labels8:
-	bl siprintf
-	.loc	1 252 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:252:0
-	ldaw r11, cp[.str18]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	stw r0, dp[display_control_flag]
+.Ltmp199:
+	.loc	1 86 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:86:9
+	ldw r0, dp[console_mode]
+	.loc	1 86 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:86:9
 	{
-		mov r0, r11
-		mov r1, r4
+		sub r0, r0, 1
+		stw r0, sp[3]
 	}
-.Lxta.call_labels9:
-	bl iprintf
 	{
-		mkmsk r0, 1
+		mkmsk r1, 2
+		nop
+	}
+.Ltmp200:
+	.loc	1 276 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:276:0
+	{
+		lsu r1, r1, r0
+		nop
+	}
+	bt r1, .LBB29_5
+.Ltmp201:
+# BB#2:                                 # %iftrue
+.Lxtalabel48:
+	#DEBUG_VALUE: handle_display_frame:i <- R4
+
+	.xtabranch .Ljumptable2+4,.Ljumptable2+8,.Ljumptable2+12,.Ljumptable2+16
+.Ljumptable2:
+		
+	{
+		nop
+		bru r0
+	}
+	.jmptable32 .LBB29_3,.LBB29_7,.LBB29_9,.LBB29_10
+.Ltmp202:
+.LBB29_3:                               # %switchcase
+.Lxtalabel49:
+	#DEBUG_VALUE: handle_display_frame:i <- R4
+	#DEBUG_VALUE: row <- 0
+	.loc	1 165 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:0
+	ldaw r1, dp[folder_string]
+	ldc r2, folder_string.globound
+.Ltmp203:
+	.loc	1 281 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:281:0
+	{
+		ldc r5, 0
+		nop
+	}
+	.loc	1 165 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:0
+.Ltmp204:
+	{
+		mov r0, r5
+		nop
+	}
+.Lxta.call_labels24:
+	bl OLED_SSD1306_put_string
+	{
+		ldc r7, 50
+		nop
+	}
+	.loc	1 166 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:166:0
+	stw r7, dp[pause_counter]
+.Ltmp205:
+	.loc	1 279 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:279:0
+	ldaw r8, dp[state]
+	st8 r5, r8[r5]
+	.loc	1 168 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:168:0
+.Ltmp206:
+	stw r5, dp[scrolling_row]
+.Ltmp207:
+	#DEBUG_VALUE: row <- 1
+	.loc	1 172 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:172:0
+	ldaw r1, dp[track_string]
+	ldc r2, track_string.globound
+	{
+		mkmsk r6, 1
+		nop
+	}
+	.loc	1 172 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:172:0
+	{
+		mov r0, r6
+		nop
+	}
+.Lxta.call_labels25:
+	bl OLED_SSD1306_put_string
+	.loc	1 173 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:173:0
+	stw r7, dp[pause_counter]
+.Ltmp208:
+	.loc	1 280 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:280:0
+	st8 r5, r8[r5]
+	.loc	1 175 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:175:0
+.Ltmp209:
+	stw r6, dp[scrolling_row]
+.Ltmp210:
+	#DEBUG_VALUE: row <- 2
+	.loc	1 179 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:179:0
+	ldaw r1, dp[audio_property_string]
+	{
+		ldc r6, 2
 		nop
 	}
 	ldc r2, 100
-	.loc	1 254 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:254:0
 	{
-		mov r1, r4
+		mov r0, r6
 		nop
 	}
-.Lxta.call_labels10:
+.Lxta.call_labels26:
+	bl OLED_SSD1306_put_string
+	.loc	1 180 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:180:0
+	stw r7, dp[pause_counter]
+.Ltmp211:
+	.loc	1 281 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:281:0
+	st8 r5, r8[r5]
+	.loc	1 182 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:182:0
+.Ltmp212:
+	stw r6, dp[scrolling_row]
+.Ltmp213:
+	.loc	1 158 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:0
+	ldw r0, dp[SecElapsed]
+	ldw r1, cp[.LCPI29_1]
+	.loc	1 158 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:0
+	lmul r1, r2, r0, r1, r5, r5
+	{
+		shr r2, r1, 5
+		ldc r1, 60
+	}
+	.loc	1 159 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:159:0
+.Ltmp214:
+	mul r1, r2, r1
+	{
+		sub r3, r0, r1
+		nop
+	}
+.Ltmp215:
+	#DEBUG_VALUE: sec <- R3
+	.loc	1 160 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:160:0
+	ldaw r11, cp[.str16]
+	{
+		ldaw r5, sp[3]
+		nop
+	}
+.Ltmp216:
+	#DEBUG_VALUE: s <- [R5+0]
+	#DEBUG_VALUE: row <- 3
+	{
+		mov r0, r5
+		mov r1, r11
+	}
+.Lxta.call_labels27:
+	bl siprintf
+.Ltmp217:
+	{
+		mkmsk r0, 2
+		ldc r2, 12
+	}
+	.loc	1 161 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:161:0
+	{
+		mov r1, r5
+		nop
+	}
+	bu .LBB29_4
+.Ltmp218:
+.LBB29_7:                               # %switchcase1
+.Lxtalabel50:
+	#DEBUG_VALUE: handle_display_frame:i <- R4
+	.loc	1 286 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:286:0
+	ldaw r11, cp[.str36]
+	{
+		ldc r0, 0
+		ldc r2, 10
+	}
+	{
+		mov r1, r11
+		nop
+	}
+.Lxta.call_labels28:
+	bl OLED_SSD1306_put_string
+	.loc	1 287 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:287:0
+	ldaw r11, cp[.str37]
+	{
+		mkmsk r0, 1
+		ldc r5, 2
+	}
+	{
+		mov r1, r11
+		mov r2, r5
+	}
+.Lxta.call_labels29:
+	bl OLED_SSD1306_put_string
+	.loc	1 288 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:288:0
+.Lxta.call_labels30:
+	bl _SShowStreamFormat_0
+	.loc	1 289 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:289:0
+	ldaw r11, cp[.str38]
+	bu .LBB29_8
+.Ltmp219:
+.LBB29_9:                               # %switchcase2
+.Lxtalabel51:
+	#DEBUG_VALUE: handle_display_frame:i <- R4
+	.loc	1 293 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:293:0
+	ldaw r11, cp[.str39]
+	{
+		ldc r0, 0
+		ldc r2, 14
+	}
+	{
+		mov r1, r11
+		nop
+	}
+.Lxta.call_labels31:
+	bl OLED_SSD1306_put_string
+	.loc	1 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:294:0
+	ldaw r11, cp[.str40]
+	{
+		mkmsk r0, 1
+		ldc r2, 37
+	}
+	{
+		mov r1, r11
+		nop
+	}
+.Lxta.call_labels32:
+	bl OLED_SSD1306_put_string
+	.loc	1 295 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:295:0
+	ldaw r11, cp[.str41]
+	{
+		ldc r0, 2
+		nop
+	}
+	ldc r2, 80
+	{
+		mov r1, r11
+		nop
+	}
+.Lxta.call_labels33:
+	bl OLED_SSD1306_put_string
+	.loc	1 200 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:200:0
+.Ltmp220:
+	ldw r0, dp[fixed_intpol_mode]
+.Ltmp221:
+	#DEBUG_VALUE: temp <- R0
+	.loc	1 296 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:296:0
+.Lxta.call_labels34:
+	bl _SShowInterpolationMode_0
+.Ltmp222:
+	bu .LBB29_5
+.Ltmp223:
+.LBB29_10:                              # %switchcase4
+.Lxtalabel52:
+	#DEBUG_VALUE: handle_display_frame:i <- R4
+	.loc	1 300 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:300:0
+	ldaw r11, cp[.str42]
+	{
+		ldc r0, 0
+		ldc r2, 18
+	}
+	{
+		mov r1, r11
+		nop
+	}
+.Lxta.call_labels35:
+	bl OLED_SSD1306_put_string
+	.loc	1 301 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:301:0
+	ldaw r11, cp[.str43]
+	{
+		mkmsk r0, 1
+		ldc r2, 44
+	}
+	{
+		mov r1, r11
+		nop
+	}
+.Lxta.call_labels36:
+	bl OLED_SSD1306_put_string
+	.loc	1 302 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:302:0
+	ldaw r11, cp[.str44]
+	{
+		ldc r5, 2
+		ldc r2, 50
+	}
+	{
+		mov r0, r5
+		mov r1, r11
+	}
+.Lxta.call_labels37:
+	bl OLED_SSD1306_put_string
+	.loc	1 303 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:303:0
+	ldaw r11, cp[.str45]
+.Ltmp224:
+.LBB29_8:                               # %ifdone
+.Lxtalabel53:
+	{
+		mkmsk r0, 2
+		mov r1, r11
+	}
+	.loc	1 289 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:289:0
+	{
+		mov r2, r5
+		nop
+	}
+.LBB29_4:                               # %ifdone
+.Lxtalabel54:
+	.loc	1 161 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:161:0
+.Ltmp225:
+.Lxta.call_labels38:
+	bl OLED_SSD1306_put_string
+.Ltmp226:
+.LBB29_5:                               # %ifdone
+.Lxtalabel55:
+	#DEBUG_VALUE: handle_display_frame:i <- R4
+	.loc	1 86 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:86:9
+	ldw r0, dp[console_mode]
+	.loc	1 86 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:86:9
+	{
+		sub r0, r0, 1
+		stw r0, sp[3]
+	}
+	{
+		mkmsk r1, 2
+		nop
+	}
+.Ltmp227:
+	.loc	1 308 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:308:0
+	{
+		lsu r1, r1, r0
+		nop
+	}
+	bt r1, .LBB29_12
+.Ltmp228:
+# BB#6:                                 # %ifdone
+.Lxtalabel56:
+	#DEBUG_VALUE: handle_display_frame:i <- R4
+
+	.xtabranch .Ljumptable3+4,.Ljumptable3+8,.Ljumptable3+12,.Ljumptable3+16
+.Ljumptable3:
+		
+	{
+		nop
+		bru r0
+	}
+	.jmptable32 .LBB29_18,.LBB29_11,.LBB29_27,.LBB29_31
+.Ltmp229:
+.LBB29_18:                              # %switchcase9
+.Lxtalabel57:
+	#DEBUG_VALUE: test_display_control_flag:bitmask <- 2
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	ldw r0, dp[display_control_flag]
+	{
+		ldc r4, 2
+		nop
+	}
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	{
+		and r0, r0, r4
+		nop
+	}
+	{
+		nop
+		stw r0, sp[3]
+	}
+	bf r0, .LBB29_20
+.Ltmp230:
+# BB#19:                                # %iftrue11
+.Lxtalabel58:
+	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 2
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	ldw r0, dp[display_control_flag]
+	ldw r1, cp[.LCPI29_6]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	{
+		and r0, r0, r1
+		nop
+	}
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	stw r0, dp[display_control_flag]
+.Ltmp231:
+	#DEBUG_VALUE: row <- 0
+	.loc	1 165 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:0
+	ldaw r1, dp[folder_string]
+	ldc r2, folder_string.globound
+.Ltmp232:
+	.loc	1 314 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:314:0
+	{
+		ldc r5, 0
+		nop
+	}
+	.loc	1 165 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:0
+.Ltmp233:
+	{
+		mov r0, r5
+		nop
+	}
+.Lxta.call_labels39:
 	bl OLED_SSD1306_put_string
 	{
 		ldc r0, 50
 		nop
 	}
-	.loc	1 255 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:255:0
+	.loc	1 166 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:166:0
 	stw r0, dp[pause_counter]
+.Ltmp234:
+	.loc	1 314 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:314:0
+	ldaw r0, dp[state]
+	st8 r5, r0[r5]
+	.loc	1 168 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:168:0
+.Ltmp235:
+	stw r5, dp[scrolling_row]
+.Ltmp236:
+.LBB29_20:                              # %ifdone12
+.Lxtalabel59:
+	#DEBUG_VALUE: test_display_control_flag:bitmask <- 1
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	ldw r0, dp[display_control_flag]
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	{
+		zext r0, 1
+		nop
+	}
+	{
+		nop
+		stw r0, sp[3]
+	}
+	bf r0, .LBB29_22
+.Ltmp237:
+# BB#21:                                # %iftrue14
+.Lxtalabel60:
+	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 1
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	ldw r0, dp[display_control_flag]
+	ldw r1, cp[.LCPI29_7]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	{
+		and r0, r0, r1
+		nop
+	}
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	stw r0, dp[display_control_flag]
+.Ltmp238:
+	#DEBUG_VALUE: row <- 1
+	.loc	1 172 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:172:0
+	ldaw r1, dp[track_string]
+	ldc r2, track_string.globound
+	{
+		mkmsk r5, 1
+		nop
+	}
+	.loc	1 172 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:172:0
+	{
+		mov r0, r5
+		nop
+	}
+.Lxta.call_labels40:
+	bl OLED_SSD1306_put_string
+	{
+		ldc r0, 50
+		nop
+	}
+	.loc	1 173 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:173:0
+	stw r0, dp[pause_counter]
+.Ltmp239:
+	.loc	1 318 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:318:0
 	ldaw r0, dp[state]
 	{
 		ldc r1, 0
 		nop
 	}
 	st8 r1, r0[r1]
-	.loc	1 257 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:257:0
-	stw r1, dp[scrolling_row]
+	.loc	1 175 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:175:0
+.Ltmp240:
+	stw r5, dp[scrolling_row]
+.Ltmp241:
+.LBB29_22:                              # %ifdone15
+.Lxtalabel61:
+	#DEBUG_VALUE: test_display_control_flag:bitmask <- 8
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	ldw r0, dp[display_control_flag]
+	{
+		ldc r1, 8
+		nop
+	}
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	{
+		and r0, r0, r1
+		nop
+	}
 	{
 		nop
-		ldw r4, sp[2]
+		stw r0, sp[3]
 	}
+	bf r0, .LBB29_24
+.Ltmp242:
+# BB#23:                                # %iftrue17
+.Lxtalabel62:
+	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 8
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	ldw r0, dp[display_control_flag]
+	ldw r1, cp[.LCPI29_8]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
 	{
+		and r0, r0, r1
 		nop
-		retsp 4
 	}
-	# RETURN_REG_HOLDER
-.Ltmp107:
-	.cc_bottom ShowUsbAudioStatus.function
-	.set	ShowUsbAudioStatus.nstackwords,((siprintf.nstackwords $M iprintf.nstackwords $M OLED_SSD1306_put_string.nstackwords) + 4)
-	.globl	ShowUsbAudioStatus.nstackwords
-	.set	ShowUsbAudioStatus.maxcores,OLED_SSD1306_put_string.maxcores $M iprintf.maxcores $M siprintf.maxcores $M 1
-	.globl	ShowUsbAudioStatus.maxcores
-	.set	ShowUsbAudioStatus.maxtimers,OLED_SSD1306_put_string.maxtimers $M iprintf.maxtimers $M siprintf.maxtimers $M 0
-	.globl	ShowUsbAudioStatus.maxtimers
-	.set	ShowUsbAudioStatus.maxchanends,OLED_SSD1306_put_string.maxchanends $M iprintf.maxchanends $M siprintf.maxchanends $M 0
-	.globl	ShowUsbAudioStatus.maxchanends
-.Ltmp108:
-	.size	ShowUsbAudioStatus, .Ltmp108-ShowUsbAudioStatus
-.Lfunc_end19:
-	.cfi_endproc
-
-	.globl	init_display_frame
-	.align	4
-	.type	init_display_frame,@function
-	.cc_top init_display_frame.function,init_display_frame
-init_display_frame:                     # @init_display_frame
-.Lfunc_begin20:
-	.loc	1 260 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:260:0
-	.cfi_startproc
-	.issue_mode dual
-# BB#0:                                 # %allocas
-.Lxtalabel33:
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	stw r0, dp[display_control_flag]
+.Ltmp243:
+	#DEBUG_VALUE: row <- 2
+	.loc	1 179 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:179:0
+	ldaw r1, dp[audio_property_string]
+	ldc r2, 100
 	{
-		nop
-		dualentsp 12
-	}
-.Ltmp109:
-	.cfi_def_cfa_offset 48
-.Ltmp110:
-	.cfi_offset 15, 0
-	.loc	1 262 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:262:0
-.Ltmp111:
-	std r5, r4, sp[3]               # 4-byte Folded Spill
-.Ltmp112:
-	.cfi_offset 4, -24
-.Ltmp113:
-	.cfi_offset 5, -20
-	std r7, r6, sp[4]               # 4-byte Folded Spill
-.Ltmp114:
-	.cfi_offset 6, -16
-.Ltmp115:
-	.cfi_offset 7, -12
-	{
-		nop
-		stw r8, sp[10]
-	}
-.Ltmp116:
-	.cfi_offset 8, -8
-.Lxta.call_labels11:
-	bl OLED_SSD1306_begin
-	.loc	1 266 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:266:0
-.Ltmp117:
-	ldaw r11, cp[.str21]
-.Ltmp118:
-	#DEBUG_VALUE: s <- [R5+0]
-	#DEBUG_VALUE: row <- 1
-	{
-		mov r6, r11
-		ldaw r5, sp[1]
-	}
-.Ltmp119:
-	{
-		ldc r4, 0
-		mov r0, r5
-	}
-	{
-		mov r1, r6
-		mov r2, r4
-	}
-.Lxta.call_labels12:
-	bl siprintf
-	{
-		ldc r7, 17
 		mov r0, r4
-	}
-	.loc	1 267 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:267:0
-	{
-		mov r1, r5
-		mov r2, r7
-	}
-.Lxta.call_labels13:
-	bl OLED_SSD1306_put_string
-	{
-		mkmsk r8, 1
-		mov r0, r5
-	}
-	.loc	1 266 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:266:0
-	{
-		mov r1, r6
-		mov r2, r8
-	}
-.Lxta.call_labels14:
-	bl siprintf
-	.loc	1 267 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:267:0
-	{
-		mov r0, r8
-		mov r1, r5
-	}
-	{
-		mov r2, r7
 		nop
 	}
-.Lxta.call_labels15:
+.Lxta.call_labels41:
 	bl OLED_SSD1306_put_string
-	{
-		ldc r8, 2
-		mov r0, r5
-	}
-	.loc	1 266 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:266:0
-	{
-		mov r1, r6
-		mov r2, r8
-	}
-.Lxta.call_labels16:
-	bl siprintf
-	.loc	1 267 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:267:0
-	{
-		mov r0, r8
-		mov r1, r5
-	}
-	{
-		mov r2, r7
-		nop
-	}
-.Lxta.call_labels17:
-	bl OLED_SSD1306_put_string
-	{
-		mkmsk r8, 2
-		mov r0, r5
-	}
-	.loc	1 266 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:266:0
-	{
-		mov r1, r6
-		mov r2, r8
-	}
-.Lxta.call_labels18:
-	bl siprintf
-	.loc	1 267 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:267:0
-	{
-		mov r0, r8
-		mov r1, r5
-	}
-	{
-		mov r2, r7
-		nop
-	}
-.Lxta.call_labels19:
-	bl OLED_SSD1306_put_string
-	ldaw r11, cp[.str22+4]
-	{
-		nop
-		ld16s r0, r11[r4]
-	}
-	ldaw r1, dp[TotalTimeString+4]
-.Ltmp120:
-	.loc	1 270 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:270:0
-	st16 r0, r1[r4]
-	ldw r0, cp[.str22]
-	stw r0, dp[TotalTimeString]
-	ldaw r0, dp[state]
-	st8 r4, r0[r4]
 	{
 		ldc r0, 50
 		nop
 	}
-	.loc	1 273 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:273:0
+	.loc	1 180 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:180:0
 	stw r0, dp[pause_counter]
-	.loc	1 274 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:274:0
+.Ltmp244:
+	.loc	1 322 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:322:0
+	ldaw r0, dp[state]
+	{
+		ldc r1, 0
+		nop
+	}
+	st8 r1, r0[r1]
+	.loc	1 182 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:182:0
+.Ltmp245:
 	stw r4, dp[scrolling_row]
+.Ltmp246:
+.LBB29_24:                              # %ifdone18
+.Lxtalabel63:
+	#DEBUG_VALUE: test_display_control_flag:bitmask <- 4
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	ldw r0, dp[display_control_flag]
+	{
+		ldc r1, 4
+		nop
+	}
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	{
+		and r0, r0, r1
+		nop
+	}
+	{
+		nop
+		stw r0, sp[3]
+	}
+	bf r0, .LBB29_12
+.Ltmp247:
+# BB#25:                                # %iftrue20
+.Lxtalabel64:
+	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 4
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	ldw r0, dp[display_control_flag]
+	ldw r1, cp[.LCPI29_9]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	{
+		and r0, r0, r1
+		nop
+	}
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	stw r0, dp[display_control_flag]
+.Ltmp248:
+	.loc	1 158 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:0
+	ldw r0, dp[SecElapsed]
+	{
+		ldc r1, 0
+		nop
+	}
+	ldw r2, cp[.LCPI29_1]
+	.loc	1 158 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:0
+	lmul r1, r2, r0, r2, r1, r1
+	{
+		shr r2, r1, 5
+		ldc r1, 60
+	}
+	.loc	1 159 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:159:0
+.Ltmp249:
+	mul r1, r2, r1
+	{
+		sub r3, r0, r1
+		nop
+	}
+.Ltmp250:
+	#DEBUG_VALUE: sec <- R3
+	.loc	1 160 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:160:0
+	ldaw r11, cp[.str16]
+	{
+		ldaw r4, sp[3]
+		nop
+	}
+.Ltmp251:
+	#DEBUG_VALUE: row <- 3
+	#DEBUG_VALUE: s <- [R4+0]
+	{
+		mov r0, r4
+		mov r1, r11
+	}
+.Lxta.call_labels42:
+	bl siprintf
+.Ltmp252:
+	{
+		mkmsk r0, 2
+		ldc r2, 12
+	}
+	.loc	1 161 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:161:0
+	{
+		mov r1, r4
+		nop
+	}
+.Lxta.call_labels43:
+	bl OLED_SSD1306_put_string
+	bu .LBB29_12
+.Ltmp253:
+.LBB29_11:                              # %switchcase10
+.Lxtalabel65:
+	#DEBUG_VALUE: test_display_control_flag:bitmask <- 128
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	ldw r0, dp[display_control_flag]
+	ldc r1, 128
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	{
+		and r0, r0, r1
+		nop
+	}
+	{
+		nop
+		stw r0, sp[3]
+	}
+	bf r0, .LBB29_12
+.Ltmp254:
+# BB#26:                                # %iftrue25
+.Lxtalabel66:
+	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 128
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	ldw r0, dp[display_control_flag]
+	ldw r1, cp[.LCPI29_5]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	{
+		and r0, r0, r1
+		nop
+	}
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	stw r0, dp[display_control_flag]
+.Ltmp255:
+	.loc	1 335 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:335:0
+.Lxta.call_labels44:
+	bl _SShowStreamFormat_0
+	bu .LBB29_12
+.LBB29_27:                              # %switchcase24
+.Lxtalabel67:
+.Ltmp256:
+	#DEBUG_VALUE: test_display_control_flag:bitmask <- 256
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	ldw r0, dp[display_control_flag]
+	ldc r1, 256
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	{
+		and r0, r0, r1
+		nop
+	}
+	{
+		nop
+		stw r0, sp[3]
+	}
+	bf r0, .LBB29_29
+.Ltmp257:
+# BB#28:                                # %iftrue30
+.Lxtalabel68:
+	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 256
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	ldw r0, dp[display_control_flag]
+	ldw r1, cp[.LCPI29_3]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	{
+		and r0, r0, r1
+		nop
+	}
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	stw r0, dp[display_control_flag]
+.Ltmp258:
+	.loc	1 191 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:191:0
+	ldw r0, dp[proposed_intpol_mode]
+.Ltmp259:
+	#DEBUG_VALUE: temp <- R0
+	.loc	1 342 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:342:0
+.Lxta.call_labels45:
+	bl _SShowInterpolationMode_0
+.Ltmp260:
+.LBB29_29:                              # %ifdone31
+.Lxtalabel69:
+	#DEBUG_VALUE: test_display_control_flag:bitmask <- 512
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	ldw r0, dp[display_control_flag]
+	ldc r1, 512
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	{
+		and r0, r0, r1
+		nop
+	}
+	{
+		nop
+		stw r0, sp[3]
+	}
+	bf r0, .LBB29_12
+.Ltmp261:
+# BB#30:                                # %iftrue33
+.Lxtalabel70:
+	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 512
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	ldw r0, dp[display_control_flag]
+	ldw r1, cp[.LCPI29_4]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	{
+		and r0, r0, r1
+		nop
+	}
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	stw r0, dp[display_control_flag]
+.Ltmp262:
+	.loc	1 200 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:200:0
+	ldw r0, dp[fixed_intpol_mode]
+.Ltmp263:
+	#DEBUG_VALUE: temp <- R0
+	.loc	1 346 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:346:0
+.Lxta.call_labels46:
+	bl _SShowInterpolationMode_0
+.Ltmp264:
+	bu .LBB29_12
+.LBB29_31:                              # %switchcase29
+.Lxtalabel71:
+.Ltmp265:
+	#DEBUG_VALUE: handle_display_frame:i <- R4
+	#DEBUG_VALUE: test_display_control_flag:bitmask <- 1024
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	ldw r0, dp[display_control_flag]
+	ldc r1, 1024
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	{
+		and r0, r0, r1
+		nop
+	}
+	{
+		nop
+		stw r0, sp[3]
+	}
+	bf r0, .LBB29_12
+.Ltmp266:
+# BB#32:                                # %iftrue37
+.Lxtalabel72:
+	#DEBUG_VALUE: handle_display_frame:i <- R4
+	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 1024
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	ldw r0, dp[display_control_flag]
+	ldw r1, cp[.LCPI29_2]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	{
+		and r0, r0, r1
+		nop
+	}
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	stw r0, dp[display_control_flag]
+.Ltmp267:
+	.loc	1 236 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:236:0
+	ldw r0, dp[selected_function]
+.Ltmp268:
+	#DEBUG_VALUE: GetFunctionString:func <- R0
+	#DEBUG_VALUE: temp <- R0
+	ldaw r11, cp[.str33]
+.Ltmp269:
+	.loc	1 241 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:241:0
+	{
+		eq r1, r0, 1
+		nop
+	}
+	bf r1, .LBB29_33
+.Ltmp270:
+# BB#35:                                # %switchcase1.i
+.Lxtalabel73:
+	#DEBUG_VALUE: handle_display_frame:i <- R4
+	ldaw r11, cp[.str32]
+	{
+		ldc r2, 9
+		nop
+	}
+	bu .LBB29_36
+.Ltmp271:
+.LBB29_33:                              # %iftrue37
+.Lxtalabel74:
+	#DEBUG_VALUE: handle_display_frame:i <- R4
+	{
+		ldc r2, 8
+		nop
+	}
+	bt r0, .LBB29_36
+.Ltmp272:
+# BB#34:                                # %switchcase.i
+.Lxtalabel75:
+	#DEBUG_VALUE: handle_display_frame:i <- R4
+	ldaw r11, cp[.str31]
+.Ltmp273:
+.LBB29_36:                              # %GetFunctionString.exit
+.Lxtalabel76:
+	#DEBUG_VALUE: handle_display_frame:i <- R4
+	{
+		mkmsk r0, 2
+		mov r1, r11
+	}
+	.loc	1 352 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:352:0
+.Lxta.call_labels47:
+	bl OLED_SSD1306_put_string
+	.loc	1 236 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:236:0
+.Ltmp274:
+	ldw r0, dp[selected_function]
+.Ltmp275:
+	#DEBUG_VALUE: temp <- R0
+	{
+		nop
+		stw r0, sp[2]
+	}
+	{
+		nop
+		ldw r0, r4[0]
+	}
+.Ltmp276:
+	{
+		nop
+		ldw r1, r4[1]
+	}
+.Ltmp277:
+	.loc	1 356 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:356:0
+	{
+		ldc r2, 4
+		ldw r11, r1[0]
+	}
+	.loc	1 356 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:356:0
+	{
+		ldc r1, 0
+		stw r2, sp[1]
+	}
+	{
+		ldaw r3, sp[2]
+		nop
+	}
+.Lxta.call_labels48:
+	{
+		nop
+		bla r11
+	}
+.Ltmp278:
+.LBB29_12:                              # %switchdone8
+.Lxtalabel77:
+	ldaw r4, dp[state]
+	{
+		ldc r5, 0
+		nop
+	}
+	{
+		nop
+		ld8u r0, r4[r5]
+	}
+	.loc	1 360 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:360:0
+	bt r0, .LBB29_13
+# BB#37:                                # %switchcase44
+.Lxtalabel78:
+	.loc	1 363 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:363:0
+	ldw r0, dp[pause_counter]
+	.loc	1 363 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:363:0
+	{
+		sub r0, r0, 1
+		nop
+	}
+	.loc	1 363 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:363:0
+	stw r0, dp[pause_counter]
+	bt r0, .LBB29_39
+# BB#38:                                # %iftrue46
+.Lxtalabel79:
+	{
+		ldc r0, 0
+		mkmsk r1, 1
+	}
+	st8 r1, r4[r0]
+	bu .LBB29_39
+.LBB29_13:                              # %switchdone8
+.Lxtalabel80:
+	bf r0, .LBB29_39
+# BB#14:                                # %switchcase45
+.Lxtalabel81:
+	.loc	1 369 13                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:369:13
+	ldw r0, dp[scrolling_row]
+	.loc	1 369 13                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:369:13
+.Lxta.call_labels49:
+	bl OLED_SSD1306_shift_left
+	bt r0, .LBB29_39
+# BB#15:                                # %iftrue51
+.Lxtalabel82:
+	.loc	1 370 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:370:0
+	ldw r0, dp[scrolling_row]
+	.loc	1 370 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:370:0
+	{
+		add r1, r0, 1
+		ldc r0, 2
+	}
+	.loc	1 371 17                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:371:17
+	{
+		lsu r2, r0, r1
+		mov r0, r5
+	}
+	bt r2, .LBB29_17
+# BB#16:                                # %iftrue51
+.Lxtalabel83:
+	.loc	1 371 17                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:371:17
+	{
+		mov r0, r1
+		nop
+	}
+.LBB29_17:                              # %iftrue51
+.Lxtalabel84:
+	.loc	1 371 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:371:0
+	stw r0, dp[scrolling_row]
+	.loc	1 372 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:372:0
+	ldaw r11, cp[.str48]
+	{
+		mkmsk r2, 1
+		mov r1, r11
+	}
+.Lxta.call_labels50:
+	bl OLED_SSD1306_put_string
+	{
+		ldc r0, 50
+		nop
+	}
+	.loc	1 373 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:373:0
+	stw r0, dp[pause_counter]
+	st8 r5, r4[r5]
+.Ltmp279:
+.LBB29_39:                              # %return
+.Lxtalabel85:
 	{
 		nop
 		ldw r8, sp[10]
@@ -1666,286 +3662,245 @@ init_display_frame:                     # @init_display_frame
 		retsp 12
 	}
 	# RETURN_REG_HOLDER
-.Ltmp121:
-	.cc_bottom init_display_frame.function
-	.set	init_display_frame.nstackwords,((OLED_SSD1306_begin.nstackwords $M siprintf.nstackwords $M OLED_SSD1306_put_string.nstackwords) + 12)
-	.globl	init_display_frame.nstackwords
-	.set	init_display_frame.maxcores,OLED_SSD1306_begin.maxcores $M OLED_SSD1306_put_string.maxcores $M siprintf.maxcores $M 1
-	.globl	init_display_frame.maxcores
-	.set	init_display_frame.maxtimers,OLED_SSD1306_begin.maxtimers $M OLED_SSD1306_put_string.maxtimers $M siprintf.maxtimers $M 0
-	.globl	init_display_frame.maxtimers
-	.set	init_display_frame.maxchanends,OLED_SSD1306_begin.maxchanends $M OLED_SSD1306_put_string.maxchanends $M siprintf.maxchanends $M 0
-	.globl	init_display_frame.maxchanends
-.Ltmp122:
-	.size	init_display_frame, .Ltmp122-init_display_frame
-.Lfunc_end20:
+	.cc_bottom handle_display_frame.function
+	.set	handle_display_frame.nstackwords,((OLED_SSD1306_shift_left.nstackwords $M _i.qspi_access.write.max.nstackwords $M siprintf.nstackwords $M _SShowStreamFormat_0.nstackwords $M _SShowInterpolationMode_0.nstackwords $M OLED_SSD1306_put_string.nstackwords) + 12)
+	.globl	handle_display_frame.nstackwords
+	.set	handle_display_frame.maxcores,OLED_SSD1306_put_string.maxcores $M OLED_SSD1306_shift_left.maxcores $M _SShowInterpolationMode_0.maxcores $M _SShowStreamFormat_0.maxcores $M _i.qspi_access.write.max.maxcores $M siprintf.maxcores $M 1
+	.globl	handle_display_frame.maxcores
+	.set	handle_display_frame.maxtimers,OLED_SSD1306_put_string.maxtimers $M OLED_SSD1306_shift_left.maxtimers $M _SShowInterpolationMode_0.maxtimers $M _SShowStreamFormat_0.maxtimers $M _i.qspi_access.write.max.maxtimers $M siprintf.maxtimers $M 0
+	.globl	handle_display_frame.maxtimers
+	.set	handle_display_frame.maxchanends,OLED_SSD1306_put_string.maxchanends $M OLED_SSD1306_shift_left.maxchanends $M _SShowInterpolationMode_0.maxchanends $M _SShowStreamFormat_0.maxchanends $M _i.qspi_access.write.max.maxchanends $M siprintf.maxchanends $M 0
+	.globl	handle_display_frame.maxchanends
+.Ltmp280:
+	.size	handle_display_frame, .Ltmp280-handle_display_frame
+.Lfunc_end29:
 	.cfi_endproc
 
 	.section	.cp.rodata.cst4,"aMc",@progbits,4
-	.cc_top .LCPI21_0.data,.LCPI21_0
+	.cc_top .LCPI30_0.data,.LCPI30_0
 	.align	4
-	.type	.LCPI21_0,@object
-	.size	.LCPI21_0, 4
-.LCPI21_0:
+	.type	.LCPI30_0,@object
+	.size	.LCPI30_0, 4
+.LCPI30_0:
 	.long	4294967279              # 0xffffffef
-	.cc_bottom .LCPI21_0.data
-	.cc_top .LCPI21_1.data,.LCPI21_1
+	.cc_bottom .LCPI30_0.data
+	.cc_top .LCPI30_1.data,.LCPI30_1
 	.align	4
-	.type	.LCPI21_1,@object
-	.size	.LCPI21_1, 4
-.LCPI21_1:
-	.long	4294967293              # 0xfffffffd
-	.cc_bottom .LCPI21_1.data
-	.cc_top .LCPI21_2.data,.LCPI21_2
-	.align	4
-	.type	.LCPI21_2,@object
-	.size	.LCPI21_2, 4
-.LCPI21_2:
-	.long	4294967294              # 0xfffffffe
-	.cc_bottom .LCPI21_2.data
-	.cc_top .LCPI21_3.data,.LCPI21_3
-	.align	4
-	.type	.LCPI21_3,@object
-	.size	.LCPI21_3, 4
-.LCPI21_3:
-	.long	4294967287              # 0xfffffff7
-	.cc_bottom .LCPI21_3.data
-	.cc_top .LCPI21_4.data,.LCPI21_4
-	.align	4
-	.type	.LCPI21_4,@object
-	.size	.LCPI21_4, 4
-.LCPI21_4:
+	.type	.LCPI30_1,@object
+	.size	.LCPI30_1, 4
+.LCPI30_1:
 	.long	2290649225              # 0x88888889
-	.cc_bottom .LCPI21_4.data
-	.cc_top .LCPI21_5.data,.LCPI21_5
+	.cc_bottom .LCPI30_1.data
+	.cc_top .LCPI30_2.data,.LCPI30_2
 	.align	4
-	.type	.LCPI21_5,@object
-	.size	.LCPI21_5, 4
-.LCPI21_5:
-	.long	4294967291              # 0xfffffffb
-	.cc_bottom .LCPI21_5.data
-	.cc_top .LCPI21_6.data,.LCPI21_6
-	.align	4
-	.type	.LCPI21_6,@object
-	.size	.LCPI21_6, 4
-.LCPI21_6:
+	.type	.LCPI30_2,@object
+	.size	.LCPI30_2, 4
+.LCPI30_2:
 	.long	4294966271              # 0xfffffbff
-	.cc_bottom .LCPI21_6.data
-	.cc_top .LCPI21_7.data,.LCPI21_7
+	.cc_bottom .LCPI30_2.data
+	.cc_top .LCPI30_3.data,.LCPI30_3
 	.align	4
-	.type	.LCPI21_7,@object
-	.size	.LCPI21_7, 4
-.LCPI21_7:
+	.type	.LCPI30_3,@object
+	.size	.LCPI30_3, 4
+.LCPI30_3:
 	.long	4294967039              # 0xfffffeff
-	.cc_bottom .LCPI21_7.data
-	.cc_top .LCPI21_8.data,.LCPI21_8
+	.cc_bottom .LCPI30_3.data
+	.cc_top .LCPI30_4.data,.LCPI30_4
 	.align	4
-	.type	.LCPI21_8,@object
-	.size	.LCPI21_8, 4
-.LCPI21_8:
+	.type	.LCPI30_4,@object
+	.size	.LCPI30_4, 4
+.LCPI30_4:
 	.long	4294966783              # 0xfffffdff
-	.cc_bottom .LCPI21_8.data
-	.text
-	.globl	handle_display_frame
+	.cc_bottom .LCPI30_4.data
+	.cc_top .LCPI30_5.data,.LCPI30_5
 	.align	4
-	.type	handle_display_frame,@function
-	.cc_top handle_display_frame.function,handle_display_frame
-handle_display_frame:                   # @handle_display_frame
-.Lfunc_begin21:
-	.loc	1 277 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:277:0
+	.type	.LCPI30_5,@object
+	.size	.LCPI30_5, 4
+.LCPI30_5:
+	.long	4294967167              # 0xffffff7f
+	.cc_bottom .LCPI30_5.data
+	.cc_top .LCPI30_6.data,.LCPI30_6
+	.align	4
+	.type	.LCPI30_6,@object
+	.size	.LCPI30_6, 4
+.LCPI30_6:
+	.long	4294967293              # 0xfffffffd
+	.cc_bottom .LCPI30_6.data
+	.cc_top .LCPI30_7.data,.LCPI30_7
+	.align	4
+	.type	.LCPI30_7,@object
+	.size	.LCPI30_7, 4
+.LCPI30_7:
+	.long	4294967294              # 0xfffffffe
+	.cc_bottom .LCPI30_7.data
+	.cc_top .LCPI30_8.data,.LCPI30_8
+	.align	4
+	.type	.LCPI30_8,@object
+	.size	.LCPI30_8, 4
+.LCPI30_8:
+	.long	4294967287              # 0xfffffff7
+	.cc_bottom .LCPI30_8.data
+	.cc_top .LCPI30_9.data,.LCPI30_9
+	.align	4
+	.type	.LCPI30_9,@object
+	.size	.LCPI30_9, 4
+.LCPI30_9:
+	.long	4294967291              # 0xfffffffb
+	.cc_bottom .LCPI30_9.data
+	.text
+	.globl	_Shandle_display_frame_0
+	.align	4
+	.type	_Shandle_display_frame_0,@function
+	.cc_top _Shandle_display_frame_0.function,_Shandle_display_frame_0
+_Shandle_display_frame_0:               # @_Shandle_display_frame_0
+.Lfunc_begin30:
+	.loc	1 271 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:271:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
-.Lxtalabel34:
+.Lxtalabel86:
 	{
 		nop
-		dualentsp 8
+		dualentsp 10
 	}
-.Ltmp123:
-	.cfi_def_cfa_offset 32
-.Ltmp124:
+.Ltmp281:
+	.cfi_def_cfa_offset 40
+.Ltmp282:
 	.cfi_offset 15, 0
-	std r5, r4, sp[2]               # 4-byte Folded Spill
-.Ltmp125:
+	std r5, r4, sp[3]               # 4-byte Folded Spill
+.Ltmp283:
 	.cfi_offset 4, -16
-.Ltmp126:
+.Ltmp284:
 	.cfi_offset 5, -12
-	std r7, r6, sp[3]               # 4-byte Folded Spill
-.Ltmp127:
+	std r7, r6, sp[4]               # 4-byte Folded Spill
+.Ltmp285:
 	.cfi_offset 6, -8
-.Ltmp128:
+.Ltmp286:
 	.cfi_offset 7, -4
-.Ltmp129:
+.Ltmp287:
 	#DEBUG_VALUE: test_display_control_flag:bitmask <- 16
-	.loc	1 82 9 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
+	.loc	1 68 9 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
 	ldw r0, dp[display_control_flag]
 	{
 		ldc r1, 16
 		nop
 	}
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
 	{
 		and r0, r0, r1
 		nop
 	}
 	{
 		nop
-		stw r0, sp[1]
+		stw r0, sp[3]
 	}
-	bf r0, .LBB21_4
-.Ltmp130:
+	bf r0, .LBB30_5
+.Ltmp288:
 # BB#1:                                 # %iftrue
-.Lxtalabel35:
+.Lxtalabel87:
 	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 16
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
 	ldw r0, dp[display_control_flag]
-	ldw r1, cp[.LCPI21_0]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
+	ldw r1, cp[.LCPI30_0]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
 	{
 		and r0, r0, r1
 		nop
 	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
 	stw r0, dp[display_control_flag]
-.Ltmp131:
-	.loc	1 98 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:98:9
+.Ltmp289:
+	.loc	1 86 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:86:9
 	ldw r0, dp[console_mode]
-	.loc	1 98 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:98:9
+	.loc	1 86 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:86:9
 	{
-		eq r1, r0, 1
-		stw r0, sp[1]
+		sub r0, r0, 1
+		stw r0, sp[3]
 	}
-.Ltmp132:
-	.loc	1 282 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:282:0
-	bt r1, .LBB21_14
+	{
+		mkmsk r1, 2
+		nop
+	}
+.Ltmp290:
+	.loc	1 276 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:276:0
+	{
+		lsu r1, r1, r0
+		nop
+	}
+	bt r1, .LBB30_5
 # BB#2:                                 # %iftrue
-.Lxtalabel36:
+.Lxtalabel88:
+
+	.xtabranch .Ljumptable4+4,.Ljumptable4+8,.Ljumptable4+12,.Ljumptable4+16
+.Ljumptable4:
+		
 	{
-		eq r1, r0, 3
 		nop
+		bru r0
 	}
-	bf r1, .LBB21_3
-# BB#15:                                # %switchcase1
-.Lxtalabel37:
-	.loc	1 302 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:302:0
-	ldaw r11, cp[.str23]
-	{
-		ldc r0, 0
-		ldc r2, 28
-	}
-	{
-		mov r1, r11
-		nop
-	}
-.Lxta.call_labels20:
-	bl OLED_SSD1306_put_string
-	.loc	1 197 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:197:0
-.Ltmp133:
-	ldw r0, dp[fixed_intpol_mode]
-.Ltmp134:
-	#DEBUG_VALUE: temp <- R0
-	.loc	1 303 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:303:0
-.Lxta.call_labels21:
-	bl ShowInterpolationMode
-.Ltmp135:
-	.loc	1 304 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:304:0
-	ldaw r11, cp[.str24]
-	{
-		ldc r0, 2
-		mkmsk r4, 1
-	}
-	{
-		mov r1, r11
-		mov r2, r4
-	}
-.Lxta.call_labels22:
-	bl OLED_SSD1306_put_string
-	.loc	1 305 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:305:0
-	ldaw r11, cp[.str25]
-	bu .LBB21_16
-.LBB21_14:                              # %switchcase
-.Lxtalabel38:
-	.loc	1 149 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:149:0
-.Ltmp136:
+	.jmptable32 .LBB30_3,.LBB30_7,.LBB30_9,.LBB30_10
+.LBB30_3:                               # %switchcase
+.Lxtalabel89:
+.Ltmp291:
+	#DEBUG_VALUE: row <- 0
+	.loc	1 165 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:0
 	ldaw r1, dp[folder_string]
 	ldc r2, folder_string.globound
-.Ltmp137:
-	.loc	1 288 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:288:0
+.Ltmp292:
+	.loc	1 281 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:281:0
 	{
 		ldc r4, 0
 		nop
 	}
-	.loc	1 149 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:149:0
-.Ltmp138:
+	.loc	1 165 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:0
+.Ltmp293:
 	{
 		mov r0, r4
 		nop
 	}
-.Lxta.call_labels23:
+.Lxta.call_labels51:
 	bl OLED_SSD1306_put_string
 	{
 		ldc r6, 50
 		nop
 	}
-	.loc	1 150 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:150:0
+	.loc	1 166 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:166:0
 	stw r6, dp[pause_counter]
-.Ltmp139:
-	.loc	1 286 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:286:0
+.Ltmp294:
+	.loc	1 279 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:279:0
 	ldaw r7, dp[state]
 	st8 r4, r7[r4]
-	.loc	1 152 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:152:0
-.Ltmp140:
+	.loc	1 168 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:168:0
+.Ltmp295:
 	stw r4, dp[scrolling_row]
-.Ltmp141:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 2
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	ldw r0, dp[display_control_flag]
-	ldw r1, cp[.LCPI21_1]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	{
-		and r0, r0, r1
-		nop
-	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	stw r0, dp[display_control_flag]
-.Ltmp142:
-	.loc	1 157 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:157:0
+.Ltmp296:
+	#DEBUG_VALUE: row <- 1
+	.loc	1 172 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:172:0
 	ldaw r1, dp[track_string]
 	ldc r2, track_string.globound
 	{
 		mkmsk r5, 1
 		nop
 	}
-	.loc	1 157 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:157:0
+	.loc	1 172 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:172:0
 	{
 		mov r0, r5
 		nop
 	}
-.Lxta.call_labels24:
+.Lxta.call_labels52:
 	bl OLED_SSD1306_put_string
-	.loc	1 158 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:0
+	.loc	1 173 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:173:0
 	stw r6, dp[pause_counter]
-.Ltmp143:
-	.loc	1 287 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:287:0
+.Ltmp297:
+	.loc	1 280 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:280:0
 	st8 r4, r7[r4]
-	.loc	1 160 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:160:0
-.Ltmp144:
+	.loc	1 175 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:175:0
+.Ltmp298:
 	stw r5, dp[scrolling_row]
-.Ltmp145:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 1
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	ldw r0, dp[display_control_flag]
-	ldw r1, cp[.LCPI21_2]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	{
-		and r0, r0, r1
-		nop
-	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	stw r0, dp[display_control_flag]
-.Ltmp146:
-	.loc	1 165 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:0
-	ldaw r1, dp[information_string]
+.Ltmp299:
+	#DEBUG_VALUE: row <- 2
+	.loc	1 179 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:179:0
+	ldaw r1, dp[audio_property_string]
 	{
 		ldc r5, 2
 		nop
@@ -1955,98 +3910,147 @@ handle_display_frame:                   # @handle_display_frame
 		mov r0, r5
 		nop
 	}
-.Lxta.call_labels25:
+.Lxta.call_labels53:
 	bl OLED_SSD1306_put_string
-	.loc	1 166 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:166:0
+	.loc	1 180 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:180:0
 	stw r6, dp[pause_counter]
-.Ltmp147:
-	.loc	1 288 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:288:0
+.Ltmp300:
+	.loc	1 281 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:281:0
 	st8 r4, r7[r4]
-	.loc	1 168 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:168:0
-.Ltmp148:
+	.loc	1 182 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:182:0
+.Ltmp301:
 	stw r5, dp[scrolling_row]
-.Ltmp149:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 8
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	ldw r0, dp[display_control_flag]
-	ldw r1, cp[.LCPI21_3]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	{
-		and r0, r0, r1
-		nop
-	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	stw r0, dp[display_control_flag]
-.Ltmp150:
-	.loc	1 140 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:140:0
+.Ltmp302:
+	.loc	1 158 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:0
 	ldw r0, dp[SecElapsed]
-	ldw r1, cp[.LCPI21_4]
-	.loc	1 140 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:140:0
+	ldw r1, cp[.LCPI30_1]
+	.loc	1 158 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:0
 	lmul r1, r2, r0, r1, r4, r4
 	{
 		shr r2, r1, 5
 		ldc r1, 60
 	}
-	.loc	1 141 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:141:0
-.Ltmp151:
+	.loc	1 159 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:159:0
+.Ltmp303:
 	mul r1, r2, r1
 	{
 		sub r3, r0, r1
 		nop
 	}
-.Ltmp152:
+.Ltmp304:
 	#DEBUG_VALUE: sec <- R3
-	.loc	1 143 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:143:0
-	ldaw r11, cp[.str6]
+	.loc	1 160 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:160:0
+	ldaw r11, cp[.str16]
 	{
-		ldaw r4, sp[1]
+		ldaw r4, sp[3]
 		nop
 	}
-.Ltmp153:
+.Ltmp305:
 	#DEBUG_VALUE: s <- [R4+0]
+	#DEBUG_VALUE: row <- 3
 	{
 		mov r0, r4
 		mov r1, r11
 	}
-.Lxta.call_labels26:
+.Lxta.call_labels54:
 	bl siprintf
-.Ltmp154:
+.Ltmp306:
 	{
 		mkmsk r0, 2
 		ldc r2, 12
 	}
-	.loc	1 144 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:144:0
+	.loc	1 161 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:161:0
 	{
 		mov r1, r4
 		nop
 	}
-.Lxta.call_labels27:
+	bu .LBB30_4
+.Ltmp307:
+.LBB30_7:                               # %switchcase1
+.Lxtalabel90:
+	.loc	1 286 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:286:0
+	ldaw r11, cp[.str49]
+	{
+		ldc r0, 0
+		ldc r2, 10
+	}
+	{
+		mov r1, r11
+		nop
+	}
+.Lxta.call_labels55:
 	bl OLED_SSD1306_put_string
-.Ltmp155:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 4
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	ldw r0, dp[display_control_flag]
-	ldw r1, cp[.LCPI21_5]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
+	.loc	1 287 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:287:0
+	ldaw r11, cp[.str50]
 	{
-		and r0, r0, r1
+		mkmsk r0, 1
+		ldc r4, 2
+	}
+	{
+		mov r1, r11
+		mov r2, r4
+	}
+.Lxta.call_labels56:
+	bl OLED_SSD1306_put_string
+	.loc	1 288 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:288:0
+.Lxta.call_labels57:
+	bl _SShowStreamFormat_0
+	.loc	1 289 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:289:0
+	ldaw r11, cp[.str51]
+	bu .LBB30_8
+.LBB30_9:                               # %switchcase2
+.Lxtalabel91:
+	.loc	1 293 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:293:0
+	ldaw r11, cp[.str52]
+	{
+		ldc r0, 0
+		ldc r2, 14
+	}
+	{
+		mov r1, r11
 		nop
 	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	stw r0, dp[display_control_flag]
-	bu .LBB21_4
-.Ltmp156:
-.LBB21_3:                               # %iftrue
-.Lxtalabel39:
+.Lxta.call_labels58:
+	bl OLED_SSD1306_put_string
+	.loc	1 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:294:0
+	ldaw r11, cp[.str53]
 	{
-		eq r0, r0, 4
+		mkmsk r0, 1
+		ldc r2, 37
+	}
+	{
+		mov r1, r11
 		nop
 	}
-	bf r0, .LBB21_4
-# BB#17:                                # %switchcase2
-.Lxtalabel40:
-	.loc	1 308 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:308:0
-	ldaw r11, cp[.str26]
+.Lxta.call_labels59:
+	bl OLED_SSD1306_put_string
+	.loc	1 295 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:295:0
+	ldaw r11, cp[.str54]
+	{
+		ldc r0, 2
+		nop
+	}
+	ldc r2, 80
+	{
+		mov r1, r11
+		nop
+	}
+.Lxta.call_labels60:
+	bl OLED_SSD1306_put_string
+	.loc	1 200 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:200:0
+.Ltmp308:
+	ldw r0, dp[fixed_intpol_mode]
+.Ltmp309:
+	#DEBUG_VALUE: temp <- R0
+	.loc	1 296 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:296:0
+.Lxta.call_labels61:
+	bl _SShowInterpolationMode_0
+.Ltmp310:
+	bu .LBB30_5
+.LBB30_10:                              # %switchcase4
+.Lxtalabel92:
+	.loc	1 300 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:300:0
+	ldaw r11, cp[.str55]
 	{
 		ldc r0, 0
 		ldc r2, 18
@@ -2055,433 +4059,135 @@ handle_display_frame:                   # @handle_display_frame
 		mov r1, r11
 		nop
 	}
-.Lxta.call_labels28:
+.Lxta.call_labels62:
 	bl OLED_SSD1306_put_string
-	.loc	1 309 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:309:0
-	ldaw r11, cp[.str27]
+	.loc	1 301 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:301:0
+	ldaw r11, cp[.str56]
 	{
-		mkmsk r4, 1
+		mkmsk r0, 1
 		ldc r2, 44
-	}
-	{
-		mov r0, r4
-		mov r1, r11
-	}
-.Lxta.call_labels29:
-	bl OLED_SSD1306_put_string
-	.loc	1 310 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:310:0
-	ldaw r11, cp[.str28]
-	{
-		ldc r0, 2
-		ldc r2, 50
 	}
 	{
 		mov r1, r11
 		nop
 	}
-.Lxta.call_labels30:
+.Lxta.call_labels63:
 	bl OLED_SSD1306_put_string
-	.loc	1 311 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:311:0
-	ldaw r11, cp[.str29]
-.LBB21_16:                              # %ifdone
-.Lxtalabel41:
+	.loc	1 302 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:302:0
+	ldaw r11, cp[.str57]
+	{
+		ldc r4, 2
+		ldc r2, 50
+	}
+	{
+		mov r0, r4
+		mov r1, r11
+	}
+.Lxta.call_labels64:
+	bl OLED_SSD1306_put_string
+	.loc	1 303 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:303:0
+	ldaw r11, cp[.str58]
+.LBB30_8:                               # %ifdone
+.Lxtalabel93:
 	{
 		mkmsk r0, 2
 		mov r1, r11
 	}
-	.loc	1 305 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:305:0
+	.loc	1 289 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:289:0
 	{
 		mov r2, r4
 		nop
 	}
-.Lxta.call_labels31:
+.LBB30_4:                               # %ifdone
+.Lxtalabel94:
+	.loc	1 161 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:161:0
+.Ltmp311:
+.Lxta.call_labels65:
 	bl OLED_SSD1306_put_string
-.LBB21_4:                               # %ifdone
-.Lxtalabel42:
-	.loc	1 98 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:98:9
-.Ltmp157:
+.Ltmp312:
+.LBB30_5:                               # %ifdone
+.Lxtalabel95:
+	.loc	1 86 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:86:9
 	ldw r0, dp[console_mode]
-	.loc	1 98 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:98:9
+	.loc	1 86 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:86:9
 	{
-		eq r1, r0, 1
-		stw r0, sp[1]
+		sub r0, r0, 1
+		stw r0, sp[3]
 	}
-.Ltmp158:
-	.loc	1 316 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:316:0
-	bt r1, .LBB21_18
-# BB#5:                                 # %ifdone
-.Lxtalabel43:
 	{
-		eq r1, r0, 3
+		mkmsk r1, 2
 		nop
 	}
-	bf r1, .LBB21_6
-# BB#26:                                # %switchcase8
-.Lxtalabel44:
-.Ltmp159:
-	#DEBUG_VALUE: test_display_control_flag:bitmask <- 256
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
-	ldw r0, dp[display_control_flag]
-	ldc r1, 256
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
+.Ltmp313:
+	.loc	1 308 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:308:0
 	{
-		and r0, r0, r1
+		lsu r1, r1, r0
 		nop
 	}
+	bt r1, .LBB30_12
+# BB#6:                                 # %ifdone
+.Lxtalabel96:
+
+	.xtabranch .Ljumptable5+4,.Ljumptable5+8,.Ljumptable5+12,.Ljumptable5+16
+.Ljumptable5:
+		
 	{
 		nop
-		stw r0, sp[1]
+		bru r0
 	}
-	bf r0, .LBB21_28
-.Ltmp160:
-# BB#27:                                # %iftrue23
-.Lxtalabel45:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 256
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	ldw r0, dp[display_control_flag]
-	ldw r1, cp[.LCPI21_7]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	{
-		and r0, r0, r1
-		nop
-	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	stw r0, dp[display_control_flag]
-.Ltmp161:
-	.loc	1 188 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:188:0
-	ldw r0, dp[proposed_intpol_mode]
-.Ltmp162:
-	#DEBUG_VALUE: temp <- R0
-	.loc	1 357 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:357:0
-.Lxta.call_labels32:
-	bl ShowInterpolationMode
-.Ltmp163:
-.LBB21_28:                              # %ifdone24
-.Lxtalabel46:
-	#DEBUG_VALUE: test_display_control_flag:bitmask <- 512
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
-	ldw r0, dp[display_control_flag]
-	ldc r1, 512
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
-	{
-		and r0, r0, r1
-		nop
-	}
-	{
-		nop
-		stw r0, sp[1]
-	}
-	bf r0, .LBB21_8
-.Ltmp164:
-# BB#29:                                # %iftrue26
-.Lxtalabel47:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 512
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	ldw r0, dp[display_control_flag]
-	ldw r1, cp[.LCPI21_8]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	{
-		and r0, r0, r1
-		nop
-	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	stw r0, dp[display_control_flag]
-.Ltmp165:
-	.loc	1 197 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:197:0
-	ldw r0, dp[fixed_intpol_mode]
-.Ltmp166:
-	#DEBUG_VALUE: temp <- R0
-	.loc	1 361 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:361:0
-.Lxta.call_labels33:
-	bl ShowInterpolationMode
-.Ltmp167:
-	bu .LBB21_8
-.LBB21_18:                              # %switchcase7
-.Lxtalabel48:
-.Ltmp168:
-	#DEBUG_VALUE: test_display_control_flag:bitmask <- 4
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
-	ldw r0, dp[display_control_flag]
-	{
-		ldc r1, 4
-		nop
-	}
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
-	{
-		and r0, r0, r1
-		nop
-	}
-	{
-		nop
-		stw r0, sp[1]
-	}
-	bf r0, .LBB21_20
-.Ltmp169:
-# BB#19:                                # %iftrue9
-.Lxtalabel49:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 4
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	ldw r0, dp[display_control_flag]
-	ldw r5, cp[.LCPI21_5]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	{
-		and r0, r0, r5
-		nop
-	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	stw r0, dp[display_control_flag]
-.Ltmp170:
-	.loc	1 140 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:140:0
-	ldw r0, dp[SecElapsed]
-	{
-		ldc r1, 0
-		nop
-	}
-	ldw r2, cp[.LCPI21_4]
-	.loc	1 140 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:140:0
-	lmul r1, r2, r0, r2, r1, r1
-	{
-		shr r2, r1, 5
-		ldc r1, 60
-	}
-	.loc	1 141 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:141:0
-.Ltmp171:
-	mul r1, r2, r1
-	{
-		sub r3, r0, r1
-		nop
-	}
-.Ltmp172:
-	#DEBUG_VALUE: sec <- R3
-	.loc	1 143 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:143:0
-	ldaw r11, cp[.str6]
-	{
-		ldaw r4, sp[1]
-		nop
-	}
-.Ltmp173:
-	#DEBUG_VALUE: s <- [R4+0]
-	{
-		mov r0, r4
-		mov r1, r11
-	}
-.Lxta.call_labels34:
-	bl siprintf
-.Ltmp174:
-	{
-		mkmsk r0, 2
-		ldc r2, 12
-	}
-	.loc	1 144 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:144:0
-	{
-		mov r1, r4
-		nop
-	}
-.Lxta.call_labels35:
-	bl OLED_SSD1306_put_string
-.Ltmp175:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 4
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	ldw r0, dp[display_control_flag]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	{
-		and r0, r0, r5
-		nop
-	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	stw r0, dp[display_control_flag]
-.Ltmp176:
-.LBB21_20:                              # %ifdone10
-.Lxtalabel50:
+	.jmptable32 .LBB30_18,.LBB30_11,.LBB30_27,.LBB30_31
+.LBB30_18:                              # %switchcase9
+.Lxtalabel97:
+.Ltmp314:
 	#DEBUG_VALUE: test_display_control_flag:bitmask <- 2
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
 	ldw r0, dp[display_control_flag]
 	{
 		ldc r4, 2
 		nop
 	}
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
 	{
 		and r0, r0, r4
 		nop
 	}
 	{
 		nop
-		stw r0, sp[1]
+		stw r0, sp[3]
 	}
-	bf r0, .LBB21_22
-.Ltmp177:
-# BB#21:                                # %iftrue12
-.Lxtalabel51:
+	bf r0, .LBB30_20
+.Ltmp315:
+# BB#19:                                # %iftrue11
+.Lxtalabel98:
 	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 2
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
 	ldw r0, dp[display_control_flag]
-	ldw r6, cp[.LCPI21_1]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	{
-		and r0, r0, r6
-		nop
-	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	stw r0, dp[display_control_flag]
-.Ltmp178:
-	.loc	1 149 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:149:0
-	ldaw r1, dp[folder_string]
-	ldc r2, folder_string.globound
-.Ltmp179:
-	.loc	1 327 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:327:0
-	{
-		ldc r5, 0
-		nop
-	}
-	.loc	1 149 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:149:0
-.Ltmp180:
-	{
-		mov r0, r5
-		nop
-	}
-.Lxta.call_labels36:
-	bl OLED_SSD1306_put_string
-	{
-		ldc r0, 50
-		nop
-	}
-	.loc	1 150 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:150:0
-	stw r0, dp[pause_counter]
-.Ltmp181:
-	.loc	1 327 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:327:0
-	ldaw r0, dp[state]
-	st8 r5, r0[r5]
-	.loc	1 152 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:152:0
-.Ltmp182:
-	stw r5, dp[scrolling_row]
-.Ltmp183:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 2
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	ldw r0, dp[display_control_flag]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	{
-		and r0, r0, r6
-		nop
-	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	stw r0, dp[display_control_flag]
-.Ltmp184:
-.LBB21_22:                              # %ifdone13
-.Lxtalabel52:
-	#DEBUG_VALUE: test_display_control_flag:bitmask <- 1
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
-	ldw r0, dp[display_control_flag]
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
-	{
-		zext r0, 1
-		nop
-	}
-	{
-		nop
-		stw r0, sp[1]
-	}
-	bf r0, .LBB21_24
-.Ltmp185:
-# BB#23:                                # %iftrue15
-.Lxtalabel53:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 1
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	ldw r0, dp[display_control_flag]
-	ldw r6, cp[.LCPI21_2]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	{
-		and r0, r0, r6
-		nop
-	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	stw r0, dp[display_control_flag]
-.Ltmp186:
-	.loc	1 157 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:157:0
-	ldaw r1, dp[track_string]
-	ldc r2, track_string.globound
-	{
-		mkmsk r5, 1
-		nop
-	}
-	.loc	1 157 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:157:0
-	{
-		mov r0, r5
-		nop
-	}
-.Lxta.call_labels37:
-	bl OLED_SSD1306_put_string
-	{
-		ldc r0, 50
-		nop
-	}
-	.loc	1 158 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:0
-	stw r0, dp[pause_counter]
-.Ltmp187:
-	.loc	1 332 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:332:0
-	ldaw r0, dp[state]
-	{
-		ldc r1, 0
-		nop
-	}
-	st8 r1, r0[r1]
-	.loc	1 160 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:160:0
-.Ltmp188:
-	stw r5, dp[scrolling_row]
-.Ltmp189:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 1
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	ldw r0, dp[display_control_flag]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	{
-		and r0, r0, r6
-		nop
-	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	stw r0, dp[display_control_flag]
-.Ltmp190:
-.LBB21_24:                              # %ifdone16
-.Lxtalabel54:
-	#DEBUG_VALUE: test_display_control_flag:bitmask <- 8
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
-	ldw r0, dp[display_control_flag]
-	{
-		ldc r1, 8
-		nop
-	}
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
+	ldw r1, cp[.LCPI30_6]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
 	{
 		and r0, r0, r1
 		nop
 	}
-	{
-		nop
-		stw r0, sp[1]
-	}
-	bf r0, .LBB21_8
-.Ltmp191:
-# BB#25:                                # %iftrue18
-.Lxtalabel55:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 8
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	ldw r0, dp[display_control_flag]
-	ldw r5, cp[.LCPI21_3]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
-	{
-		and r0, r0, r5
-		nop
-	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
 	stw r0, dp[display_control_flag]
-.Ltmp192:
+.Ltmp316:
+	#DEBUG_VALUE: row <- 0
 	.loc	1 165 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:0
-	ldaw r1, dp[information_string]
-	ldc r2, 100
+	ldaw r1, dp[folder_string]
+	ldc r2, folder_string.globound
+.Ltmp317:
+	.loc	1 314 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:314:0
 	{
-		mov r0, r4
+		ldc r5, 0
 		nop
 	}
-.Lxta.call_labels38:
+	.loc	1 165 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:165:0
+.Ltmp318:
+	{
+		mov r0, r5
+		nop
+	}
+.Lxta.call_labels66:
 	bl OLED_SSD1306_put_string
 	{
 		ldc r0, 50
@@ -2489,111 +4195,448 @@ handle_display_frame:                   # @handle_display_frame
 	}
 	.loc	1 166 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:166:0
 	stw r0, dp[pause_counter]
-.Ltmp193:
-	.loc	1 337 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:337:0
+.Ltmp319:
+	.loc	1 314 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:314:0
+	ldaw r0, dp[state]
+	st8 r5, r0[r5]
+	.loc	1 168 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:168:0
+.Ltmp320:
+	stw r5, dp[scrolling_row]
+.Ltmp321:
+.LBB30_20:                              # %ifdone12
+.Lxtalabel99:
+	#DEBUG_VALUE: test_display_control_flag:bitmask <- 1
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	ldw r0, dp[display_control_flag]
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	{
+		zext r0, 1
+		nop
+	}
+	{
+		nop
+		stw r0, sp[3]
+	}
+	bf r0, .LBB30_22
+.Ltmp322:
+# BB#21:                                # %iftrue14
+.Lxtalabel100:
+	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 1
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	ldw r0, dp[display_control_flag]
+	ldw r1, cp[.LCPI30_7]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	{
+		and r0, r0, r1
+		nop
+	}
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	stw r0, dp[display_control_flag]
+.Ltmp323:
+	#DEBUG_VALUE: row <- 1
+	.loc	1 172 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:172:0
+	ldaw r1, dp[track_string]
+	ldc r2, track_string.globound
+	{
+		mkmsk r5, 1
+		nop
+	}
+	.loc	1 172 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:172:0
+	{
+		mov r0, r5
+		nop
+	}
+.Lxta.call_labels67:
+	bl OLED_SSD1306_put_string
+	{
+		ldc r0, 50
+		nop
+	}
+	.loc	1 173 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:173:0
+	stw r0, dp[pause_counter]
+.Ltmp324:
+	.loc	1 318 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:318:0
 	ldaw r0, dp[state]
 	{
 		ldc r1, 0
 		nop
 	}
 	st8 r1, r0[r1]
-	.loc	1 168 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:168:0
-.Ltmp194:
-	stw r4, dp[scrolling_row]
-.Ltmp195:
-	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 8
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
+	.loc	1 175 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:175:0
+.Ltmp325:
+	stw r5, dp[scrolling_row]
+.Ltmp326:
+.LBB30_22:                              # %ifdone15
+.Lxtalabel101:
+	#DEBUG_VALUE: test_display_control_flag:bitmask <- 8
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
 	ldw r0, dp[display_control_flag]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
 	{
-		and r0, r0, r5
+		ldc r1, 8
 		nop
 	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	{
+		and r0, r0, r1
+		nop
+	}
+	{
+		nop
+		stw r0, sp[3]
+	}
+	bf r0, .LBB30_24
+.Ltmp327:
+# BB#23:                                # %iftrue17
+.Lxtalabel102:
+	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 8
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	ldw r0, dp[display_control_flag]
+	ldw r1, cp[.LCPI30_8]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	{
+		and r0, r0, r1
+		nop
+	}
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
 	stw r0, dp[display_control_flag]
-	bu .LBB21_8
-.Ltmp196:
-.LBB21_6:                               # %ifdone
-.Lxtalabel56:
+.Ltmp328:
+	#DEBUG_VALUE: row <- 2
+	.loc	1 179 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:179:0
+	ldaw r1, dp[audio_property_string]
+	ldc r2, 100
 	{
-		eq r0, r0, 4
+		mov r0, r4
 		nop
 	}
-	bf r0, .LBB21_8
-# BB#7:                                 # %switchcase22
-.Lxtalabel57:
-.Ltmp197:
+.Lxta.call_labels68:
+	bl OLED_SSD1306_put_string
+	{
+		ldc r0, 50
+		nop
+	}
+	.loc	1 180 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:180:0
+	stw r0, dp[pause_counter]
+.Ltmp329:
+	.loc	1 322 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:322:0
+	ldaw r0, dp[state]
+	{
+		ldc r1, 0
+		nop
+	}
+	st8 r1, r0[r1]
+	.loc	1 182 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:182:0
+.Ltmp330:
+	stw r4, dp[scrolling_row]
+.Ltmp331:
+.LBB30_24:                              # %ifdone18
+.Lxtalabel103:
+	#DEBUG_VALUE: test_display_control_flag:bitmask <- 4
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	ldw r0, dp[display_control_flag]
+	{
+		ldc r1, 4
+		nop
+	}
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	{
+		and r0, r0, r1
+		nop
+	}
+	{
+		nop
+		stw r0, sp[3]
+	}
+	bf r0, .LBB30_12
+.Ltmp332:
+# BB#25:                                # %iftrue20
+.Lxtalabel104:
+	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 4
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	ldw r0, dp[display_control_flag]
+	ldw r1, cp[.LCPI30_9]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	{
+		and r0, r0, r1
+		nop
+	}
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	stw r0, dp[display_control_flag]
+.Ltmp333:
+	.loc	1 158 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:0
+	ldw r0, dp[SecElapsed]
+	{
+		ldc r1, 0
+		nop
+	}
+	ldw r2, cp[.LCPI30_1]
+	.loc	1 158 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:158:0
+	lmul r1, r2, r0, r2, r1, r1
+	{
+		shr r2, r1, 5
+		ldc r1, 60
+	}
+	.loc	1 159 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:159:0
+.Ltmp334:
+	mul r1, r2, r1
+	{
+		sub r3, r0, r1
+		nop
+	}
+.Ltmp335:
+	#DEBUG_VALUE: sec <- R3
+	.loc	1 160 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:160:0
+	ldaw r11, cp[.str16]
+	{
+		ldaw r4, sp[3]
+		nop
+	}
+.Ltmp336:
+	#DEBUG_VALUE: row <- 3
+	#DEBUG_VALUE: s <- [R4+0]
+	{
+		mov r0, r4
+		mov r1, r11
+	}
+.Lxta.call_labels69:
+	bl siprintf
+.Ltmp337:
+	{
+		mkmsk r0, 2
+		ldc r2, 12
+	}
+	.loc	1 161 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:161:0
+	{
+		mov r1, r4
+		nop
+	}
+.Lxta.call_labels70:
+	bl OLED_SSD1306_put_string
+	bu .LBB30_12
+.Ltmp338:
+.LBB30_11:                              # %switchcase10
+.Lxtalabel105:
+	#DEBUG_VALUE: test_display_control_flag:bitmask <- 128
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	ldw r0, dp[display_control_flag]
+	ldc r1, 128
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	{
+		and r0, r0, r1
+		nop
+	}
+	{
+		nop
+		stw r0, sp[3]
+	}
+	bf r0, .LBB30_12
+.Ltmp339:
+# BB#26:                                # %iftrue25
+.Lxtalabel106:
+	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 128
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	ldw r0, dp[display_control_flag]
+	ldw r1, cp[.LCPI30_5]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	{
+		and r0, r0, r1
+		nop
+	}
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	stw r0, dp[display_control_flag]
+.Ltmp340:
+	.loc	1 335 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:335:0
+.Lxta.call_labels71:
+	bl _SShowStreamFormat_0
+	bu .LBB30_12
+.LBB30_27:                              # %switchcase24
+.Lxtalabel107:
+.Ltmp341:
+	#DEBUG_VALUE: test_display_control_flag:bitmask <- 256
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	ldw r0, dp[display_control_flag]
+	ldc r1, 256
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	{
+		and r0, r0, r1
+		nop
+	}
+	{
+		nop
+		stw r0, sp[3]
+	}
+	bf r0, .LBB30_29
+.Ltmp342:
+# BB#28:                                # %iftrue30
+.Lxtalabel108:
+	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 256
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	ldw r0, dp[display_control_flag]
+	ldw r1, cp[.LCPI30_3]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	{
+		and r0, r0, r1
+		nop
+	}
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	stw r0, dp[display_control_flag]
+.Ltmp343:
+	.loc	1 191 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:191:0
+	ldw r0, dp[proposed_intpol_mode]
+.Ltmp344:
+	#DEBUG_VALUE: temp <- R0
+	.loc	1 342 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:342:0
+.Lxta.call_labels72:
+	bl _SShowInterpolationMode_0
+.Ltmp345:
+.LBB30_29:                              # %ifdone31
+.Lxtalabel109:
+	#DEBUG_VALUE: test_display_control_flag:bitmask <- 512
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	ldw r0, dp[display_control_flag]
+	ldc r1, 512
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
+	{
+		and r0, r0, r1
+		nop
+	}
+	{
+		nop
+		stw r0, sp[3]
+	}
+	bf r0, .LBB30_12
+.Ltmp346:
+# BB#30:                                # %iftrue33
+.Lxtalabel110:
+	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 512
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	ldw r0, dp[display_control_flag]
+	ldw r1, cp[.LCPI30_4]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	{
+		and r0, r0, r1
+		nop
+	}
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
+	stw r0, dp[display_control_flag]
+.Ltmp347:
+	.loc	1 200 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:200:0
+	ldw r0, dp[fixed_intpol_mode]
+.Ltmp348:
+	#DEBUG_VALUE: temp <- R0
+	.loc	1 346 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:346:0
+.Lxta.call_labels73:
+	bl _SShowInterpolationMode_0
+.Ltmp349:
+	bu .LBB30_12
+.LBB30_31:                              # %switchcase29
+.Lxtalabel111:
+.Ltmp350:
 	#DEBUG_VALUE: test_display_control_flag:bitmask <- 1024
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
 	ldw r0, dp[display_control_flag]
 	ldc r1, 1024
-	.loc	1 82 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:82:9
+	.loc	1 68 9                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:68:9
 	{
 		and r0, r0, r1
 		nop
 	}
 	{
 		nop
-		stw r0, sp[1]
+		stw r0, sp[3]
 	}
-	bf r0, .LBB21_8
-.Ltmp198:
-# BB#30:                                # %iftrue30
-.Lxtalabel58:
+	bf r0, .LBB30_12
+.Ltmp351:
+# BB#32:                                # %iftrue37
+.Lxtalabel112:
 	#DEBUG_VALUE: clear_display_control_flag:bitmask <- 1024
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
 	ldw r0, dp[display_control_flag]
-	ldw r1, cp[.LCPI21_6]
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
+	ldw r1, cp[.LCPI30_2]
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
 	{
 		and r0, r0, r1
 		nop
 	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:90:0
+	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:76:0
 	stw r0, dp[display_control_flag]
-.Ltmp199:
-	.loc	1 206 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:206:0
+.Ltmp352:
+	.loc	1 236 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:236:0
 	ldw r0, dp[selected_function]
-.Ltmp200:
+.Ltmp353:
 	#DEBUG_VALUE: GetFunctionString:func <- R0
 	#DEBUG_VALUE: temp <- R0
-	ldaw r11, cp[.str16]
-.Ltmp201:
-	.loc	1 237 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:237:0
+	ldaw r11, cp[.str33]
+.Ltmp354:
+	.loc	1 241 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:241:0
 	{
 		eq r1, r0, 1
 		nop
 	}
-	bf r1, .LBB21_31
-.Ltmp202:
-# BB#33:                                # %switchcase1.i
-.Lxtalabel59:
-	ldaw r11, cp[.str15]
+	bf r1, .LBB30_33
+.Ltmp355:
+# BB#35:                                # %switchcase1.i
+.Lxtalabel113:
+	ldaw r11, cp[.str32]
 	{
 		ldc r2, 9
 		nop
 	}
-	bu .LBB21_34
-.LBB21_31:                              # %iftrue30
-.Lxtalabel60:
+	bu .LBB30_36
+.LBB30_33:                              # %iftrue37
+.Lxtalabel114:
 	{
 		ldc r2, 8
 		nop
 	}
-	bt r0, .LBB21_34
-# BB#32:                                # %switchcase.i
-.Lxtalabel61:
-	ldaw r11, cp[.str14]
-.LBB21_34:                              # %GetFunctionString.exit
+	bt r0, .LBB30_36
+# BB#34:                                # %switchcase.i
+.Lxtalabel115:
+	ldaw r11, cp[.str31]
+.LBB30_36:                              # %GetFunctionString.exit
+.Lxtalabel116:
 	{
 		mkmsk r0, 2
 		mov r1, r11
 	}
-	.loc	1 367 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:367:0
-.Lxta.call_labels39:
+	.loc	1 352 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:352:0
+.Lxta.call_labels74:
 	bl OLED_SSD1306_put_string
-.LBB21_8:                               # %switchdone6
-.Lxtalabel62:
+	.loc	1 236 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:236:0
+.Ltmp356:
+	ldw r0, dp[selected_function]
+.Ltmp357:
+	#DEBUG_VALUE: temp <- R0
+	.loc	1 354 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:354:0
+	{
+		ldc r2, 4
+		stw r0, sp[2]
+	}
+	{
+		nop
+		ldw r0, r2[0]
+	}
+.Ltmp358:
+	{
+		nop
+		ldw r11, r0[0]
+	}
+	.loc	1 356 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:356:0
+	{
+		ldc r0, 0
+		stw r2, sp[1]
+	}
+	{
+		ldaw r3, sp[2]
+		mov r1, r0
+	}
+.Lxta.call_labels75:
+	{
+		nop
+		bla r11
+	}
+.Ltmp359:
+.LBB30_12:                              # %switchdone8
+.Lxtalabel117:
 	ldaw r4, dp[state]
 	{
 		ldc r5, 0
@@ -2603,103 +4646,398 @@ handle_display_frame:                   # @handle_display_frame
 		nop
 		ld8u r0, r4[r5]
 	}
-	bt r0, .LBB21_9
-# BB#35:                                # %switchcase36
-.Lxtalabel63:
-	.loc	1 374 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:374:0
+	.loc	1 360 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:360:0
+	bt r0, .LBB30_13
+# BB#37:                                # %switchcase44
+.Lxtalabel118:
+	.loc	1 363 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:363:0
 	ldw r0, dp[pause_counter]
-	.loc	1 374 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:374:0
+	.loc	1 363 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:363:0
 	{
 		sub r0, r0, 1
 		nop
 	}
-	.loc	1 374 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:374:0
+	.loc	1 363 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:363:0
 	stw r0, dp[pause_counter]
-	bt r0, .LBB21_37
-# BB#36:                                # %iftrue38
-.Lxtalabel64:
+	bt r0, .LBB30_39
+# BB#38:                                # %iftrue46
+.Lxtalabel119:
 	{
 		ldc r0, 0
 		mkmsk r1, 1
 	}
 	st8 r1, r4[r0]
-	bu .LBB21_37
-.LBB21_9:                               # %switchdone6
-.Lxtalabel65:
-	bf r0, .LBB21_37
-# BB#10:                                # %switchcase37
-.Lxtalabel66:
-	.loc	1 380 13                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:380:13
+	bu .LBB30_39
+.LBB30_13:                              # %switchdone8
+.Lxtalabel120:
+	bf r0, .LBB30_39
+# BB#14:                                # %switchcase45
+.Lxtalabel121:
+	.loc	1 369 13                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:369:13
 	ldw r0, dp[scrolling_row]
-	.loc	1 380 13                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:380:13
-.Lxta.call_labels40:
+	.loc	1 369 13                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:369:13
+.Lxta.call_labels76:
 	bl OLED_SSD1306_shift_left
-	bt r0, .LBB21_37
-# BB#11:                                # %iftrue43
-.Lxtalabel67:
-	.loc	1 381 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:381:0
+	bt r0, .LBB30_39
+# BB#15:                                # %iftrue51
+.Lxtalabel122:
+	.loc	1 370 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:370:0
 	ldw r0, dp[scrolling_row]
-	.loc	1 381 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:381:0
+	.loc	1 370 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:370:0
 	{
 		add r1, r0, 1
 		ldc r0, 2
 	}
-	.loc	1 382 17                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:382:17
+	.loc	1 371 17                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:371:17
 	{
 		lsu r2, r0, r1
 		mov r0, r5
 	}
-	bt r2, .LBB21_13
-# BB#12:                                # %iftrue43
-.Lxtalabel68:
-	.loc	1 382 17                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:382:17
+	bt r2, .LBB30_17
+# BB#16:                                # %iftrue51
+.Lxtalabel123:
+	.loc	1 371 17                # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:371:17
 	{
 		mov r0, r1
 		nop
 	}
-.LBB21_13:                              # %iftrue43
-.Lxtalabel69:
-	.loc	1 382 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:382:0
+.LBB30_17:                              # %iftrue51
+.Lxtalabel124:
+	.loc	1 371 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:371:0
 	stw r0, dp[scrolling_row]
-	.loc	1 383 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:383:0
-	ldaw r11, cp[.str32]
+	.loc	1 372 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:372:0
+	ldaw r11, cp[.str61]
 	{
 		mkmsk r2, 1
 		mov r1, r11
 	}
-.Lxta.call_labels41:
+.Lxta.call_labels77:
 	bl OLED_SSD1306_put_string
 	{
 		ldc r0, 50
 		nop
 	}
-	.loc	1 384 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:384:0
+	.loc	1 373 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:373:0
 	stw r0, dp[pause_counter]
 	st8 r5, r4[r5]
-.Ltmp203:
-.LBB21_37:                              # %return
-.Lxtalabel70:
-	ldd r7, r6, sp[3]               # 4-byte Folded Reload
-	ldd r5, r4, sp[2]               # 4-byte Folded Reload
+.Ltmp360:
+.LBB30_39:                              # %return
+.Lxtalabel125:
+	ldd r7, r6, sp[4]               # 4-byte Folded Reload
+	ldd r5, r4, sp[3]               # 4-byte Folded Reload
 	{
 		nop
-		retsp 8
+		retsp 10
 	}
 	# RETURN_REG_HOLDER
-	.cc_bottom handle_display_frame.function
-	.set	handle_display_frame.nstackwords,((OLED_SSD1306_shift_left.nstackwords $M siprintf.nstackwords $M ShowInterpolationMode.nstackwords $M OLED_SSD1306_put_string.nstackwords) + 8)
-	.globl	handle_display_frame.nstackwords
-	.set	handle_display_frame.maxcores,OLED_SSD1306_put_string.maxcores $M OLED_SSD1306_shift_left.maxcores $M ShowInterpolationMode.maxcores $M siprintf.maxcores $M 1
-	.globl	handle_display_frame.maxcores
-	.set	handle_display_frame.maxtimers,OLED_SSD1306_put_string.maxtimers $M OLED_SSD1306_shift_left.maxtimers $M ShowInterpolationMode.maxtimers $M siprintf.maxtimers $M 0
-	.globl	handle_display_frame.maxtimers
-	.set	handle_display_frame.maxchanends,OLED_SSD1306_put_string.maxchanends $M OLED_SSD1306_shift_left.maxchanends $M ShowInterpolationMode.maxchanends $M siprintf.maxchanends $M 0
-	.globl	handle_display_frame.maxchanends
-.Ltmp204:
-	.size	handle_display_frame, .Ltmp204-handle_display_frame
-.Lfunc_end21:
+	.cc_bottom _Shandle_display_frame_0.function
+	.set	_Shandle_display_frame_0.nstackwords,((OLED_SSD1306_shift_left.nstackwords $M _i.qspi_access.write.max.nstackwords $M siprintf.nstackwords $M _SShowStreamFormat_0.nstackwords $M _SShowInterpolationMode_0.nstackwords $M OLED_SSD1306_put_string.nstackwords) + 10)
+	.globl	_Shandle_display_frame_0.nstackwords
+	.set	_Shandle_display_frame_0.maxcores,OLED_SSD1306_put_string.maxcores $M OLED_SSD1306_shift_left.maxcores $M _SShowInterpolationMode_0.maxcores $M _SShowStreamFormat_0.maxcores $M _i.qspi_access.write.max.maxcores $M siprintf.maxcores $M 1
+	.globl	_Shandle_display_frame_0.maxcores
+	.set	_Shandle_display_frame_0.maxtimers,OLED_SSD1306_put_string.maxtimers $M OLED_SSD1306_shift_left.maxtimers $M _SShowInterpolationMode_0.maxtimers $M _SShowStreamFormat_0.maxtimers $M _i.qspi_access.write.max.maxtimers $M siprintf.maxtimers $M 0
+	.globl	_Shandle_display_frame_0.maxtimers
+	.set	_Shandle_display_frame_0.maxchanends,OLED_SSD1306_put_string.maxchanends $M OLED_SSD1306_shift_left.maxchanends $M _SShowInterpolationMode_0.maxchanends $M _SShowStreamFormat_0.maxchanends $M _i.qspi_access.write.max.maxchanends $M siprintf.maxchanends $M 0
+	.globl	_Shandle_display_frame_0.maxchanends
+.Ltmp361:
+	.size	_Shandle_display_frame_0, .Ltmp361-_Shandle_display_frame_0
+.Lfunc_end30:
 	.cfi_endproc
 
+	.section	.cp.rodata.cst4,"aMc",@progbits,4
+	.cc_top .LCPI31_0.data,.LCPI31_0
+	.align	4
+	.type	.LCPI31_0,@object
+	.size	.LCPI31_0, 4
+.LCPI31_0:
+	.long	2000000                 # 0x1e8480
+	.cc_bottom .LCPI31_0.data
+	.text
+	.globl	display_control_core
+	.align	4
+	.type	display_control_core,@function
+	.cc_top display_control_core.function,display_control_core
+display_control_core:                   # @display_control_core
+.Lfunc_begin31:
+	.loc	1 382 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:382:0
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+.Lxtalabel126:
+	{
+		nop
+		dualentsp 8
+	}
+.Ltmp362:
+	.cfi_def_cfa_offset 32
+.Ltmp363:
+	.cfi_offset 15, 0
+	std r5, r4, sp[2]               # 4-byte Folded Spill
+.Ltmp364:
+	.cfi_offset 4, -16
+.Ltmp365:
+	.cfi_offset 5, -12
+	std r7, r6, sp[3]               # 4-byte Folded Spill
+.Ltmp366:
+	.cfi_offset 6, -8
+.Ltmp367:
+	.cfi_offset 7, -4
+	#DEBUG_VALUE: display_control_core:i <- R0
+	{
+		mov r4, r0
+		nop
+	}
+.Ltmp368:
+	#DEBUG_VALUE: display_control_core:i <- R4
+	bf r4, .LBB31_2
+.Ltmp369:
+# BB#1:                                 # %iftrue
+.Lxtalabel127:
+	#DEBUG_VALUE: display_control_core:i <- R4
+	{
+		nop
+		ldw r0, r4[0]
+	}
+	{
+		nop
+		ldw r1, r4[1]
+	}
+	.loc	1 386 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:386:0
+.Ltmp370:
+	{
+		mkmsk r2, 1
+		ldw r11, r1[1]
+	}
+	.loc	1 386 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:386:0
+	{
+		ldc r1, 0
+		stw r2, sp[1]
+	}
+	{
+		ldaw r3, sp[3]
+		nop
+	}
+.Lxta.call_labels78:
+	{
+		nop
+		bla r11
+	}
+.Ltmp371:
+.LBB31_2:                               # %ifdone
+.Lxtalabel128:
+	#DEBUG_VALUE: display_control_core:i <- R4
+	.loc	1 394 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:394:0
+.Lxta.call_labels79:
+	bl init_display_frame
+	.loc	1 403 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:403:0
+.Ltmp372:
+	{
+		get r11, id
+		nop
+	}
+	.loc	1 403 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:403:0
+	ldaw r0, dp[__timers]
+	{
+		nop
+		ldw r5, r0[r11]
+	}
+	ldw r6, cp[.LCPI31_0]
+.Ltmp373:
+.LBB31_3:                               # %LoopBody
+                                        # =>This Inner Loop Header: Depth=1
+.Lxtalabel129:
+	#DEBUG_VALUE: display_control_core:i <- R4
+	.loc	1 398 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:398:0
+	{
+		gettime r0
+		nop
+	}
+.Ltmp374:
+	#DEBUG_VALUE: time <- R0
+	#DEBUG_VALUE: time <- R7
+	.loc	1 399 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:399:0
+	{
+		add r7, r0, r6
+		mov r0, r4
+	}
+.Ltmp375:
+	.loc	1 401 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:401:0
+.Lxta.call_labels80:
+	bl handle_display_frame
+	.loc	1 403 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:403:0
+	{
+		setd res[r5], r7
+		nop
+	}
+	.loc	1 403 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:403:0
+	{
+		setc res[r5], 9
+		nop
+	}
+	.loc	1 403 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:403:0
+.Ltmp376:
+.Lxta.endpoint_labels0:
+	{
+		in r0, res[r5]
+		nop
+	}
+	.loc	1 396 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:396:5
+	bu .LBB31_3
+.Ltmp377:
+	.cc_bottom display_control_core.function
+	.set	display_control_core.nstackwords,((init_display_frame.nstackwords $M handle_display_frame.nstackwords $M _i.qspi_access.read.max.nstackwords) + 8)
+	.globl	display_control_core.nstackwords
+	.set	display_control_core.maxcores,_i.qspi_access.read.max.maxcores $M handle_display_frame.maxcores $M init_display_frame.maxcores $M 1
+	.globl	display_control_core.maxcores
+	.set	display_control_core.maxtimers,_i.qspi_access.read.max.maxtimers $M handle_display_frame.maxtimers $M init_display_frame.maxtimers $M 0
+	.globl	display_control_core.maxtimers
+	.set	display_control_core.maxchanends,_i.qspi_access.read.max.maxchanends $M handle_display_frame.maxchanends $M init_display_frame.maxchanends $M 0
+	.globl	display_control_core.maxchanends
+.Ltmp378:
+	.size	display_control_core, .Ltmp378-display_control_core
+.Lfunc_end31:
+	.cfi_endproc
+
+	.section	.cp.rodata.cst4,"aMc",@progbits,4
+	.cc_top .LCPI32_0.data,.LCPI32_0
+	.align	4
+	.type	.LCPI32_0,@object
+	.size	.LCPI32_0, 4
+.LCPI32_0:
+	.long	2000000                 # 0x1e8480
+	.cc_bottom .LCPI32_0.data
+	.text
+	.globl	_Sdisplay_control_core_0
+	.align	4
+	.type	_Sdisplay_control_core_0,@function
+	.cc_top _Sdisplay_control_core_0.function,_Sdisplay_control_core_0
+_Sdisplay_control_core_0:               # @_Sdisplay_control_core_0
+.Lfunc_begin32:
+	.loc	1 382 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:382:0
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+.Lxtalabel130:
+	{
+		nop
+		dualentsp 6
+	}
+.Ltmp379:
+	.cfi_def_cfa_offset 24
+.Ltmp380:
+	.cfi_offset 15, 0
+	.loc	1 394 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:394:0
+.Ltmp381:
+	std r5, r4, sp[1]               # 4-byte Folded Spill
+.Ltmp382:
+	.cfi_offset 4, -16
+.Ltmp383:
+	.cfi_offset 5, -12
+	std r7, r6, sp[2]               # 4-byte Folded Spill
+.Ltmp384:
+	.cfi_offset 6, -8
+.Ltmp385:
+	.cfi_offset 7, -4
+.Lxta.call_labels81:
+	bl init_display_frame
+	.loc	1 403 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:403:0
+.Ltmp386:
+	{
+		get r11, id
+		nop
+	}
+	.loc	1 403 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:403:0
+	ldaw r0, dp[__timers]
+	{
+		nop
+		ldw r5, r0[r11]
+	}
+	ldw r6, cp[.LCPI32_0]
+	{
+		ldc r4, 0
+		nop
+	}
+.Ltmp387:
+.LBB32_1:                               # %LoopBody
+                                        # =>This Inner Loop Header: Depth=1
+.Lxtalabel131:
+	.loc	1 398 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:398:0
+	{
+		gettime r0
+		nop
+	}
+.Ltmp388:
+	#DEBUG_VALUE: time <- R0
+	#DEBUG_VALUE: time <- R7
+	#DEBUG_VALUE: i <- R4
+	.loc	1 399 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:399:0
+	{
+		add r7, r0, r6
+		mov r0, r4
+	}
+.Ltmp389:
+	.loc	1 401 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:401:0
+.Lxta.call_labels82:
+	bl handle_display_frame
+	.loc	1 403 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:403:0
+	{
+		setd res[r5], r7
+		nop
+	}
+	.loc	1 403 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:403:0
+	{
+		setc res[r5], 9
+		nop
+	}
+	.loc	1 403 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:403:0
+.Ltmp390:
+.Lxta.endpoint_labels1:
+	{
+		in r0, res[r5]
+		nop
+	}
+	.loc	1 396 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc:396:5
+	bu .LBB32_1
+.Ltmp391:
+	.cc_bottom _Sdisplay_control_core_0.function
+	.set	_Sdisplay_control_core_0.nstackwords,((init_display_frame.nstackwords $M handle_display_frame.nstackwords) + 6)
+	.globl	_Sdisplay_control_core_0.nstackwords
+	.set	_Sdisplay_control_core_0.maxcores,handle_display_frame.maxcores $M init_display_frame.maxcores $M 1
+	.globl	_Sdisplay_control_core_0.maxcores
+	.set	_Sdisplay_control_core_0.maxtimers,handle_display_frame.maxtimers $M init_display_frame.maxtimers $M 0
+	.globl	_Sdisplay_control_core_0.maxtimers
+	.set	_Sdisplay_control_core_0.maxchanends,handle_display_frame.maxchanends $M init_display_frame.maxchanends $M 0
+	.globl	_Sdisplay_control_core_0.maxchanends
+.Ltmp392:
+	.size	_Sdisplay_control_core_0, .Ltmp392-_Sdisplay_control_core_0
+.Lfunc_end32:
+	.cfi_endproc
+
+	.section	.dp.bss.4,"awd",@nobits
+	.cc_top state.data,state
+	.align	4
+	.type	state,@object
+	.size	state, 1
+state:
+	.byte	0                       # 0x0
+	.space	3
+	.cc_bottom state.data
+	.cc_top pause_counter.data,pause_counter
+	.globl	pause_counter
+	.align	4
+	.type	pause_counter,@object
+	.size	pause_counter, 4
+pause_counter:
+	.long	0                       # 0x0
+	.cc_bottom pause_counter.data
+	.cc_top scrolling_row.data,scrolling_row
+	.globl	scrolling_row
+	.align	4
+	.type	scrolling_row,@object
+	.size	scrolling_row, 4
+scrolling_row:
+	.long	0                       # 0x0
+	.cc_bottom scrolling_row.data
 	.section	.dp.rodata.4,"awd",@progbits
 	.cc_top r_i2c2.data,r_i2c2
 	.globl	r_i2c2
@@ -2709,17 +5047,6 @@ handle_display_frame:                   # @handle_display_frame
 r_i2c2:
 	.long	263424
 	.cc_bottom r_i2c2.data
-	.section	.dp.bss,"awd",@nobits
-	.cc_top information_string.data,information_string
-	.globl	information_string.globound
-information_string.globound = 100
-	.globl	information_string
-	.align	8
-	.type	information_string,@object
-	.size	information_string, 100
-information_string:
-	.space	100
-	.cc_bottom information_string.data
 	.section	.dp.bss.4,"awd",@nobits
 	.cc_top display_control_flag.data,display_control_flag
 	.globl	display_control_flag
@@ -2729,6 +5056,14 @@ information_string:
 display_control_flag:
 	.long	0                       # 0x0
 	.cc_bottom display_control_flag.data
+	.cc_top console_mode.data,console_mode
+	.globl	console_mode
+	.align	4
+	.type	console_mode,@object
+	.size	console_mode, 4
+console_mode:
+	.long	0                       # 0x0
+	.cc_bottom console_mode.data
 	.section	.dp.data.4,"awd",@progbits
 	.cc_top NumChan.data,NumChan
 	.globl	NumChan
@@ -2754,15 +5089,73 @@ SampFreq:
 SampRes:
 	.long	16                      # 0x10
 	.cc_bottom SampRes.data
-	.section	.dp.bss.4,"awd",@nobits
-	.cc_top console_mode.data,console_mode
-	.globl	console_mode
+	.section	.dp.bss,"awd",@nobits
+	.cc_top stream_format_string.data,stream_format_string
+	.globl	stream_format_string.globound
+stream_format_string.globound = 100
+	.globl	stream_format_string
+	.align	8
+	.type	stream_format_string,@object
+	.size	stream_format_string, 100
+stream_format_string:
+	.space	100
+	.cc_bottom stream_format_string.data
+	.section	.cp.rodata.4,"ac",@progbits
+	.cc_top .str6.data,.str6
 	.align	4
-	.type	console_mode,@object
-	.size	console_mode, 4
-console_mode:
+	.type	.str6,@object
+	.size	.str6, 22
+.str6:
+.asciiz"%dch %d.%dksps %dbit\000"
+	.cc_bottom .str6.data
+	.cc_top .str7.data,.str7
+	.align	4
+	.type	.str7,@object
+	.size	.str7, 4
+.str7:
+.asciiz"\n%s"
+	.cc_bottom .str7.data
+	.cc_top .str10.data,.str10
+	.align	4
+	.type	.str10,@object
+	.size	.str10, 22
+.str10:
+.asciiz"%dch %d.%dksps %dbit\000"
+	.cc_bottom .str10.data
+	.cc_top .str11.data,.str11
+	.align	4
+	.type	.str11,@object
+	.size	.str11, 4
+.str11:
+.asciiz"\n%s"
+	.cc_bottom .str11.data
+	.cc_top .str14.data,.str14
+	.align	4
+	.type	.str14,@object
+	.size	.str14, 22
+.str14:
+.asciiz"%dch %d.%dksps %dbit\000"
+	.cc_bottom .str14.data
+	.section	.dp.bss,"awd",@nobits
+	.cc_top audio_property_string.data,audio_property_string
+	.globl	audio_property_string.globound
+audio_property_string.globound = 100
+	.globl	audio_property_string
+	.align	8
+	.type	audio_property_string,@object
+	.size	audio_property_string, 100
+audio_property_string:
+	.space	100
+	.cc_bottom audio_property_string.data
+	.section	.dp.bss.4,"awd",@nobits
+	.cc_top SecElapsed.data,SecElapsed
+	.globl	SecElapsed
+	.align	4
+	.type	SecElapsed,@object
+	.size	SecElapsed, 4
+SecElapsed:
 	.long	0                       # 0x0
-	.cc_bottom console_mode.data
+	.cc_bottom SecElapsed.data
 	.section	.dp.bss,"awd",@nobits
 	.cc_top TotalTimeString.data,TotalTimeString
 	.globl	TotalTimeString.globound
@@ -2774,217 +5167,317 @@ TotalTimeString.globound = 6
 TotalTimeString:
 	.space	6
 	.cc_bottom TotalTimeString.data
-	.section	.dp.bss.4,"awd",@nobits
-	.cc_top SecElapsed.data,SecElapsed
-	.globl	SecElapsed
-	.align	4
-	.type	SecElapsed,@object
-	.size	SecElapsed, 4
-SecElapsed:
-	.long	0                       # 0x0
-	.cc_bottom SecElapsed.data
-	.cc_top state.data,state
-	.align	4
-	.type	state,@object
-	.size	state, 1
-state:
-	.byte	0                       # 0x0
-	.space	3
-	.cc_bottom state.data
-	.cc_top pause_counter.data,pause_counter
-	.globl	pause_counter
-	.align	4
-	.type	pause_counter,@object
-	.size	pause_counter, 4
-pause_counter:
-	.long	0                       # 0x0
-	.cc_bottom pause_counter.data
-	.cc_top scrolling_row.data,scrolling_row
-	.globl	scrolling_row
-	.align	4
-	.type	scrolling_row,@object
-	.size	scrolling_row, 4
-scrolling_row:
-	.long	0                       # 0x0
-	.cc_bottom scrolling_row.data
 	.section	.cp.rodata.4,"ac",@progbits
-	.cc_top .str6.data,.str6
-	.align	4
-	.type	.str6,@object
-	.size	.str6, 10
-.str6:
-.asciiz"%02d:%02d"
-	.cc_bottom .str6.data
-	.cc_top .str7.data,.str7
-	.align	4
-	.type	.str7,@object
-	.size	.str7, 17
-.str7:
-.asciiz"Step            "
-	.cc_bottom .str7.data
-	.cc_top .str8.data,.str8
-	.align	4
-	.type	.str8,@object
-	.size	.str8, 17
-.str8:
-.asciiz"Linear          "
-	.cc_bottom .str8.data
-	.cc_top .str9.data,.str9
-	.align	4
-	.type	.str9,@object
-	.size	.str9, 17
-.str9:
-.asciiz"Quad            "
-	.cc_bottom .str9.data
-	.cc_top .str10.data,.str10
-	.align	4
-	.type	.str10,@object
-	.size	.str10, 17
-.str10:
-.asciiz"Cubic           "
-	.cc_bottom .str10.data
-	.cc_top .str11.data,.str11
-	.align	4
-	.type	.str11,@object
-	.size	.str11, 17
-.str11:
-.asciiz"Sinc4           "
-	.cc_bottom .str11.data
-	.cc_top .str12.data,.str12
-	.align	4
-	.type	.str12,@object
-	.size	.str12, 17
-.str12:
-.asciiz"Sinc8           "
-	.cc_bottom .str12.data
-	.cc_top .str13.data,.str13
-	.align	4
-	.type	.str13,@object
-	.size	.str13, 17
-.str13:
-.asciiz"Unknown         "
-	.cc_bottom .str13.data
-	.cc_top .str14.data,.str14
-	.align	4
-	.type	.str14,@object
-	.size	.str14, 8
-.str14:
-.asciiz"USB_DAC"
-	.cc_bottom .str14.data
 	.cc_top .str15.data,.str15
 	.align	4
 	.type	.str15,@object
-	.size	.str15, 9
+	.size	.str15, 10
 .str15:
-.asciiz"SDC_PLAY"
+.asciiz"%02d:%02d"
 	.cc_bottom .str15.data
 	.cc_top .str16.data,.str16
 	.align	4
 	.type	.str16,@object
-	.size	.str16, 8
+	.size	.str16, 10
 .str16:
-.asciiz"UNKNOWN"
+.asciiz"%02d:%02d"
 	.cc_bottom .str16.data
-	.section	.dp.bss,"awd",@nobits
-	.cc_top UsbAudioStatus.data,UsbAudioStatus
-	.globl	UsbAudioStatus.globound
-UsbAudioStatus.globound = 100
-	.globl	UsbAudioStatus
-	.align	8
-	.type	UsbAudioStatus,@object
-	.size	UsbAudioStatus, 100
-UsbAudioStatus:
-	.space	100
-	.cc_bottom UsbAudioStatus.data
-	.section	.cp.rodata.4,"ac",@progbits
 	.cc_top .str17.data,.str17
 	.align	4
 	.type	.str17,@object
-	.size	.str17, 15
+	.size	.str17, 17
 .str17:
-.asciiz"%d sps %d bit\000"
+.asciiz"Step            "
 	.cc_bottom .str17.data
 	.cc_top .str18.data,.str18
 	.align	4
 	.type	.str18,@object
-	.size	.str18, 4
+	.size	.str18, 17
 .str18:
-.asciiz"\n%s"
+.asciiz"Linear          "
 	.cc_bottom .str18.data
+	.cc_top .str19.data,.str19
+	.align	4
+	.type	.str19,@object
+	.size	.str19, 17
+.str19:
+.asciiz"Quad            "
+	.cc_bottom .str19.data
+	.cc_top .str20.data,.str20
+	.align	4
+	.type	.str20,@object
+	.size	.str20, 17
+.str20:
+.asciiz"Cubic           "
+	.cc_bottom .str20.data
 	.cc_top .str21.data,.str21
 	.align	4
 	.type	.str21,@object
 	.size	.str21, 17
 .str21:
-.asciiz"                "
+.asciiz"Sinc4           "
 	.cc_bottom .str21.data
 	.cc_top .str22.data,.str22
 	.align	4
 	.type	.str22,@object
-	.size	.str22, 6
+	.size	.str22, 17
 .str22:
-.asciiz"00:00"
+.asciiz"Sinc8           "
 	.cc_bottom .str22.data
 	.cc_top .str23.data,.str23
 	.align	4
 	.type	.str23,@object
-	.size	.str23, 28
+	.size	.str23, 17
 .str23:
-.asciiz"Interpolation mode selector"
+.asciiz"Unknown         "
 	.cc_bottom .str23.data
 	.cc_top .str24.data,.str24
 	.align	4
 	.type	.str24,@object
-	.size	.str24, 1
+	.size	.str24, 17
 .str24:
-	.space	1
-	.space	3
+.asciiz"Step            "
 	.cc_bottom .str24.data
 	.cc_top .str25.data,.str25
 	.align	4
 	.type	.str25,@object
-	.size	.str25, 1
+	.size	.str25, 17
 .str25:
-	.space	1
-	.space	3
+.asciiz"Linear          "
 	.cc_bottom .str25.data
 	.cc_top .str26.data,.str26
 	.align	4
 	.type	.str26,@object
-	.size	.str26, 18
+	.size	.str26, 17
 .str26:
-.asciiz"Function selector"
+.asciiz"Quad            "
 	.cc_bottom .str26.data
 	.cc_top .str27.data,.str27
 	.align	4
 	.type	.str27,@object
-	.size	.str27, 44
+	.size	.str27, 17
 .str27:
-.asciiz"Selected function takes effect after reset."
+.asciiz"Cubic           "
 	.cc_bottom .str27.data
 	.cc_top .str28.data,.str28
 	.align	4
 	.type	.str28,@object
-	.size	.str28, 50
+	.size	.str28, 17
 .str28:
-.asciiz"Press SW1 for USB audio. Press SW2 for SD player."
+.asciiz"Sinc4           "
 	.cc_bottom .str28.data
 	.cc_top .str29.data,.str29
 	.align	4
 	.type	.str29,@object
-	.size	.str29, 1
+	.size	.str29, 17
 .str29:
-	.space	1
-	.space	3
+.asciiz"Sinc8           "
 	.cc_bottom .str29.data
+	.cc_top .str30.data,.str30
+	.align	4
+	.type	.str30,@object
+	.size	.str30, 17
+.str30:
+.asciiz"Unknown         "
+	.cc_bottom .str30.data
+	.cc_top .str31.data,.str31
+	.align	4
+	.type	.str31,@object
+	.size	.str31, 8
+.str31:
+.asciiz"USB_DAC"
+	.cc_bottom .str31.data
 	.cc_top .str32.data,.str32
 	.align	4
 	.type	.str32,@object
-	.size	.str32, 1
+	.size	.str32, 9
 .str32:
+.asciiz"SDC_PLAY"
+	.cc_bottom .str32.data
+	.cc_top .str33.data,.str33
+	.align	4
+	.type	.str33,@object
+	.size	.str33, 8
+.str33:
+.asciiz"UNKNOWN"
+	.cc_bottom .str33.data
+	.cc_top .str34.data,.str34
+	.align	4
+	.type	.str34,@object
+	.size	.str34, 13
+.str34:
+.asciiz"OLED_SSD1306"
+	.cc_bottom .str34.data
+	.cc_top .str35.data,.str35
+	.align	4
+	.type	.str35,@object
+	.size	.str35, 2
+.str35:
+.asciiz" "
+	.space	2
+	.cc_bottom .str35.data
+	.cc_top .str36.data,.str36
+	.align	4
+	.type	.str36,@object
+	.size	.str36, 10
+.str36:
+.asciiz"USB Audio"
+	.cc_bottom .str36.data
+	.cc_top .str37.data,.str37
+	.align	4
+	.type	.str37,@object
+	.size	.str37, 2
+.str37:
+.asciiz" "
+	.space	2
+	.cc_bottom .str37.data
+	.cc_top .str38.data,.str38
+	.align	4
+	.type	.str38,@object
+	.size	.str38, 2
+.str38:
+.asciiz" "
+	.space	2
+	.cc_bottom .str38.data
+	.cc_top .str39.data,.str39
+	.align	4
+	.type	.str39,@object
+	.size	.str39, 14
+.str39:
+.asciiz"Interpolation"
+	.cc_bottom .str39.data
+	.cc_top .str40.data,.str40
+	.align	4
+	.type	.str40,@object
+	.size	.str40, 37
+.str40:
+.asciiz"Selected desired interpolation mode."
+	.cc_bottom .str40.data
+	.cc_top .str41.data,.str41
+	.align	4
+	.type	.str41,@object
+	.size	.str41, 80
+.str41:
+.asciiz"Press SW1 for STEP, SW2 for LINER, SW3 for CUBIC, SW4 for SINC4, SW5 for SINC8."
+	.cc_bottom .str41.data
+	.cc_top .str42.data,.str42
+	.align	4
+	.type	.str42,@object
+	.size	.str42, 18
+.str42:
+.asciiz"Function selector"
+	.cc_bottom .str42.data
+	.cc_top .str43.data,.str43
+	.align	4
+	.type	.str43,@object
+	.size	.str43, 44
+.str43:
+.asciiz"Selected function takes effect after reset."
+	.cc_bottom .str43.data
+	.cc_top .str44.data,.str44
+	.align	4
+	.type	.str44,@object
+	.size	.str44, 50
+.str44:
+.asciiz"Press SW1 for USB audio. Press SW2 for SD player."
+	.cc_bottom .str44.data
+	.cc_top .str45.data,.str45
+	.align	4
+	.type	.str45,@object
+	.size	.str45, 2
+.str45:
+.asciiz" "
+	.space	2
+	.cc_bottom .str45.data
+	.cc_top .str48.data,.str48
+	.align	4
+	.type	.str48,@object
+	.size	.str48, 1
+.str48:
 	.space	1
 	.space	3
-	.cc_bottom .str32.data
+	.cc_bottom .str48.data
+	.cc_top .str49.data,.str49
+	.align	4
+	.type	.str49,@object
+	.size	.str49, 10
+.str49:
+.asciiz"USB Audio"
+	.cc_bottom .str49.data
+	.cc_top .str50.data,.str50
+	.align	4
+	.type	.str50,@object
+	.size	.str50, 2
+.str50:
+.asciiz" "
+	.space	2
+	.cc_bottom .str50.data
+	.cc_top .str51.data,.str51
+	.align	4
+	.type	.str51,@object
+	.size	.str51, 2
+.str51:
+.asciiz" "
+	.space	2
+	.cc_bottom .str51.data
+	.cc_top .str52.data,.str52
+	.align	4
+	.type	.str52,@object
+	.size	.str52, 14
+.str52:
+.asciiz"Interpolation"
+	.cc_bottom .str52.data
+	.cc_top .str53.data,.str53
+	.align	4
+	.type	.str53,@object
+	.size	.str53, 37
+.str53:
+.asciiz"Selected desired interpolation mode."
+	.cc_bottom .str53.data
+	.cc_top .str54.data,.str54
+	.align	4
+	.type	.str54,@object
+	.size	.str54, 80
+.str54:
+.asciiz"Press SW1 for STEP, SW2 for LINER, SW3 for CUBIC, SW4 for SINC4, SW5 for SINC8."
+	.cc_bottom .str54.data
+	.cc_top .str55.data,.str55
+	.align	4
+	.type	.str55,@object
+	.size	.str55, 18
+.str55:
+.asciiz"Function selector"
+	.cc_bottom .str55.data
+	.cc_top .str56.data,.str56
+	.align	4
+	.type	.str56,@object
+	.size	.str56, 44
+.str56:
+.asciiz"Selected function takes effect after reset."
+	.cc_bottom .str56.data
+	.cc_top .str57.data,.str57
+	.align	4
+	.type	.str57,@object
+	.size	.str57, 50
+.str57:
+.asciiz"Press SW1 for USB audio. Press SW2 for SD player."
+	.cc_bottom .str57.data
+	.cc_top .str58.data,.str58
+	.align	4
+	.type	.str58,@object
+	.size	.str58, 2
+.str58:
+.asciiz" "
+	.space	2
+	.cc_bottom .str58.data
+	.cc_top .str61.data,.str61
+	.align	4
+	.type	.str61,@object
+	.size	.str61, 1
+.str61:
+	.space	1
+	.space	3
+	.cc_bottom .str61.data
 	.section	.dp.data.4,"awd",@progbits
 	.cc_top __xcc1_internal_1.data,__xcc1_internal_1
 	.align	4
@@ -3013,29 +5506,29 @@ __xcc1_internal_1:
 .Linfo_string2:
 .asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 .Linfo_string3:
-.asciiz"r_i2c2"
+.asciiz"state"
 .Linfo_string4:
-.asciiz"p_i2c"
+.asciiz"_PAUSING"
 .Linfo_string5:
-.asciiz"port"
+.asciiz"_SCROLLING"
 .Linfo_string6:
-.asciiz"r_i2c"
+.asciiz"__TYPE_23"
 .Linfo_string7:
-.asciiz"information_string"
+.asciiz"pause_counter"
 .Linfo_string8:
-.asciiz"unsigned char"
-.Linfo_string9:
-.asciiz"sizetype"
-.Linfo_string10:
-.asciiz"display_control_flag"
-.Linfo_string11:
 .asciiz"unsigned int"
+.Linfo_string9:
+.asciiz"scrolling_row"
+.Linfo_string10:
+.asciiz"r_i2c2"
+.Linfo_string11:
+.asciiz"p_i2c"
 .Linfo_string12:
-.asciiz"NumChan"
+.asciiz"port"
 .Linfo_string13:
-.asciiz"SampFreq"
+.asciiz"r_i2c"
 .Linfo_string14:
-.asciiz"SampRes"
+.asciiz"display_control_flag"
 .Linfo_string15:
 .asciiz"console_mode"
 .Linfo_string16:
@@ -3047,25 +5540,25 @@ __xcc1_internal_1:
 .Linfo_string19:
 .asciiz"_FUNCTION_SELECTION"
 .Linfo_string20:
-.asciiz"__TYPE_5"
+.asciiz"__TYPE_16"
 .Linfo_string21:
-.asciiz"TotalTimeString"
+.asciiz"NumChan"
 .Linfo_string22:
-.asciiz"SecElapsed"
+.asciiz"SampFreq"
 .Linfo_string23:
-.asciiz"state"
+.asciiz"SampRes"
 .Linfo_string24:
-.asciiz"_PAUSING"
+.asciiz"stream_format_string"
 .Linfo_string25:
-.asciiz"_SCROLLING"
+.asciiz"unsigned char"
 .Linfo_string26:
-.asciiz"__TYPE_12"
+.asciiz"sizetype"
 .Linfo_string27:
-.asciiz"pause_counter"
+.asciiz"audio_property_string"
 .Linfo_string28:
-.asciiz"scrolling_row"
+.asciiz"SecElapsed"
 .Linfo_string29:
-.asciiz"UsbAudioStatus"
+.asciiz"TotalTimeString"
 .Linfo_string30:
 .asciiz"_TBD"
 .Linfo_string31:
@@ -3081,629 +5574,663 @@ __xcc1_internal_1:
 .Linfo_string36:
 .asciiz"_SINC8"
 .Linfo_string37:
-.asciiz"__TYPE_10"
+.asciiz"__TYPE_18"
 .Linfo_string38:
 .asciiz"_USB_DAC"
 .Linfo_string39:
 .asciiz"_SDC_PLAY"
 .Linfo_string40:
-.asciiz"__TYPE_6"
+.asciiz"__TYPE_20"
 .Linfo_string41:
-.asciiz"clear_display_control_flag"
-.Linfo_string42:
-.asciiz"bitmask"
-.Linfo_string43:
-.asciiz"ptr"
-.Linfo_string44:
 .asciiz"test_display_control_flag"
-.Linfo_string45:
+.Linfo_string42:
 .asciiz"int"
+.Linfo_string43:
+.asciiz"bitmask"
+.Linfo_string44:
+.asciiz"ptr"
+.Linfo_string45:
+.asciiz"clear_display_control_flag"
 .Linfo_string46:
 .asciiz"get_console_mode"
 .Linfo_string47:
-.asciiz"FixedInterpolationMode"
-.Linfo_string48:
-.asciiz"p"
-.Linfo_string49:
-.asciiz"temp"
-.Linfo_string50:
 .asciiz"ShowFolder"
-.Linfo_string51:
-.asciiz"ShowTrack"
-.Linfo_string52:
-.asciiz"ShowAudioAttribute"
-.Linfo_string53:
-.asciiz"UpdateTime"
-.Linfo_string54:
-.asciiz"s"
-.Linfo_string55:
-.asciiz"min"
-.Linfo_string56:
-.asciiz"sec"
-.Linfo_string57:
-.asciiz"ProposedInterpolationMode"
-.Linfo_string58:
-.asciiz"SelectedFunction"
-.Linfo_string59:
-.asciiz"GetFunctionString"
-.Linfo_string60:
-.asciiz"func"
-.Linfo_string61:
-.asciiz"delay_seconds"
-.Linfo_string62:
-.asciiz"delay_milliseconds"
-.Linfo_string63:
-.asciiz"delay_microseconds"
-.Linfo_string64:
-.asciiz"_safe_memcmp"
-.Linfo_string65:
-.asciiz"_safe_memmove"
-.Linfo_string66:
-.asciiz"_safe_memset"
-.Linfo_string67:
-.asciiz"update_samp_freq"
-.Linfo_string68:
-.asciiz"update_samp_resolution"
-.Linfo_string69:
-.asciiz"update_chan_count"
-.Linfo_string70:
-.asciiz"set_display_control_flag"
-.Linfo_string71:
-.asciiz"set_console_mode"
-.Linfo_string72:
-.asciiz"ShowInterpolationMode"
-.Linfo_string73:
-.asciiz"ShowUsbAudioStatus"
-.Linfo_string74:
-.asciiz"init_display_frame"
-.Linfo_string75:
-.asciiz"handle_display_frame"
-.Linfo_string76:
-.asciiz"display_control_core"
-.Linfo_string77:
-.asciiz"freq"
-.Linfo_string78:
-.asciiz"res"
-.Linfo_string79:
-.asciiz"ch"
-.Linfo_string80:
-.asciiz"time"
-.Linfo_string81:
-.asciiz"t"
-.Linfo_string82:
-.asciiz"timer"
-.Linfo_string83:
-.asciiz"value"
-.Linfo_string84:
-.asciiz"mode"
-.Linfo_string85:
+.Linfo_string48:
 .asciiz"row"
+.Linfo_string49:
+.asciiz"ShowTrack"
+.Linfo_string50:
+.asciiz"ShowAudioProperty"
+.Linfo_string51:
+.asciiz"UpdateTime"
+.Linfo_string52:
+.asciiz"s"
+.Linfo_string53:
+.asciiz"min"
+.Linfo_string54:
+.asciiz"sec"
+.Linfo_string55:
+.asciiz"FixedInterpolationMode"
+.Linfo_string56:
+.asciiz"p"
+.Linfo_string57:
+.asciiz"temp"
+.Linfo_string58:
+.asciiz"ProposedInterpolationMode"
+.Linfo_string59:
+.asciiz"SelectedFunction"
+.Linfo_string60:
+.asciiz"GetFunctionString"
+.Linfo_string61:
+.asciiz"func"
+.Linfo_string62:
+.asciiz"_i.qspi_access._chan.read"
+.Linfo_string63:
+.asciiz"_i.qspi_access._chan.write"
+.Linfo_string64:
+.asciiz"_i.qspi_access._chan_yield.read"
+.Linfo_string65:
+.asciiz"_i.qspi_access._chan_yield.write"
+.Linfo_string66:
+.asciiz"delay_seconds"
+.Linfo_string67:
+.asciiz"delay_milliseconds"
+.Linfo_string68:
+.asciiz"delay_microseconds"
+.Linfo_string69:
+.asciiz"_safe_memcmp"
+.Linfo_string70:
+.asciiz"_safe_memmove"
+.Linfo_string71:
+.asciiz"_safe_memset"
+.Linfo_string72:
+.asciiz"set_display_control_flag"
+.Linfo_string73:
+.asciiz"set_console_mode"
+.Linfo_string74:
+.asciiz"update_samp_freq"
+.Linfo_string75:
+.asciiz"update_stream_format"
+.Linfo_string76:
+.asciiz"ShowStreamFormat"
+.Linfo_string77:
+.asciiz"GetStreamFormatString"
+.Linfo_string78:
+.asciiz"ShowInterpolationMode"
+.Linfo_string79:
+.asciiz"init_display_frame"
+.Linfo_string80:
+.asciiz"handle_display_frame"
+.Linfo_string81:
+.asciiz"display_control_core"
+.Linfo_string82:
+.asciiz"freq"
+.Linfo_string83:
+.asciiz"num_chan"
+.Linfo_string84:
+.asciiz"samp_res"
+.Linfo_string85:
+.asciiz"value"
 .Linfo_string86:
-.asciiz"delay"
+.asciiz"freq_p"
 .Linfo_string87:
-.asciiz"s1"
+.asciiz"str"
 .Linfo_string88:
-.asciiz"s2"
+.asciiz"mode"
 .Linfo_string89:
-.asciiz"n"
+.asciiz"i"
 .Linfo_string90:
+.asciiz"interface"
+.Linfo_string91:
+.asciiz"byte"
+.Linfo_string92:
+.asciiz"__TYPE_24"
+.Linfo_string93:
+.asciiz"time"
+.Linfo_string94:
+.asciiz"t"
+.Linfo_string95:
+.asciiz"timer"
+.Linfo_string96:
+.asciiz"dest"
+.Linfo_string97:
+.asciiz"chanend"
+.Linfo_string98:
+.asciiz"param1"
+.Linfo_string99:
+.asciiz"param2"
+.Linfo_string100:
+.asciiz"param3"
+.Linfo_string101:
+.asciiz"yield"
+.Linfo_string102:
+.asciiz"yieldArg"
+.Linfo_string103:
+.asciiz"delay"
+.Linfo_string104:
+.asciiz"s1"
+.Linfo_string105:
+.asciiz"s2"
+.Linfo_string106:
+.asciiz"n"
+.Linfo_string107:
 .asciiz"c"
 	.section	.debug_info,"",@progbits
 .L.debug_info_begin0:
-	.long	3395                    # Length of Unit
+	.long	5073                    # Length of Unit
 	.short	3                       # DWARF version number
 	.long	.Lsection_abbrev        # Offset Into Abbrev. Section
 	.byte	4                       # Address Size (in bytes)
-	.byte	1                       # Abbrev [1] 0xb:0xd3c DW_TAG_compile_unit
+	.byte	1                       # Abbrev [1] 0xb:0x13ca DW_TAG_compile_unit
 	.long	.Linfo_string0          # DW_AT_producer
 	.short	49152                   # DW_AT_language
 	.long	.Linfo_string1          # DW_AT_name
 	.long	.Lline_table_start0     # DW_AT_stmt_list
 	.long	.Linfo_string2          # DW_AT_comp_dir
 	.byte	1                       # DW_AT_APPLE_optimized
-	.byte	2                       # Abbrev [2] 0x1f:0x16 DW_TAG_variable
+	.byte	2                       # Abbrev [2] 0x1f:0xb DW_TAG_variable
 	.long	.Linfo_string3          # DW_AT_name
-	.long	53                      # DW_AT_type
-	.byte	1                       # DW_AT_external
+	.long	42                      # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	27                      # DW_AT_decl_line
-	.byte	5                       # DW_AT_location
-	.byte	3
-	.long	r_i2c2
-	.long	.Linfo_string3          # DW_AT_MIPS_linkage_name
-	.byte	3                       # Abbrev [3] 0x35:0x15 DW_TAG_structure_type
+	.byte	41                      # DW_AT_decl_line
+	.byte	3                       # Abbrev [3] 0x2a:0x15 DW_TAG_enumeration_type
 	.long	.Linfo_string6          # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	27                      # DW_AT_decl_line
-	.byte	4                       # Abbrev [4] 0x3d:0xc DW_TAG_member
+	.byte	41                      # DW_AT_decl_line
+	.byte	4                       # Abbrev [4] 0x32:0x6 DW_TAG_enumerator
 	.long	.Linfo_string4          # DW_AT_name
-	.long	74                      # DW_AT_type
-	.byte	1                       # DW_AT_decl_file
-	.byte	27                      # DW_AT_decl_line
-	.byte	0                       # DW_AT_data_member_location
-	.byte	0                       # End Of Children Mark
-	.byte	5                       # Abbrev [5] 0x4a:0x7 DW_TAG_base_type
+	.byte	0                       # DW_AT_const_value
+	.byte	4                       # Abbrev [4] 0x38:0x6 DW_TAG_enumerator
 	.long	.Linfo_string5          # DW_AT_name
-	.byte	7                       # DW_AT_encoding
-	.byte	4                       # DW_AT_byte_size
-	.byte	2                       # Abbrev [2] 0x51:0x16 DW_TAG_variable
+	.byte	1                       # DW_AT_const_value
+	.byte	0                       # End Of Children Mark
+	.byte	5                       # Abbrev [5] 0x3f:0x16 DW_TAG_variable
 	.long	.Linfo_string7          # DW_AT_name
-	.long	103                     # DW_AT_type
+	.long	85                      # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	36                      # DW_AT_decl_line
+	.byte	43                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
-	.long	information_string
+	.long	pause_counter
 	.long	.Linfo_string7          # DW_AT_MIPS_linkage_name
-	.byte	6                       # Abbrev [6] 0x67:0xd DW_TAG_array_type
-	.long	116                     # DW_AT_type
-	.byte	7                       # Abbrev [7] 0x6c:0x7 DW_TAG_subrange_type
-	.long	123                     # DW_AT_type
-	.byte	0                       # DW_AT_lower_bound
-	.byte	99                      # DW_AT_upper_bound
-	.byte	0                       # End Of Children Mark
-	.byte	5                       # Abbrev [5] 0x74:0x7 DW_TAG_base_type
+	.byte	6                       # Abbrev [6] 0x55:0x7 DW_TAG_base_type
 	.long	.Linfo_string8          # DW_AT_name
-	.byte	8                       # DW_AT_encoding
-	.byte	1                       # DW_AT_byte_size
-	.byte	8                       # Abbrev [8] 0x7b:0x7 DW_TAG_base_type
-	.long	.Linfo_string9          # DW_AT_name
-	.byte	8                       # DW_AT_byte_size
 	.byte	7                       # DW_AT_encoding
-	.byte	2                       # Abbrev [2] 0x82:0x16 DW_TAG_variable
-	.long	.Linfo_string10         # DW_AT_name
-	.long	152                     # DW_AT_type
+	.byte	4                       # DW_AT_byte_size
+	.byte	5                       # Abbrev [5] 0x5c:0x16 DW_TAG_variable
+	.long	.Linfo_string9          # DW_AT_name
+	.long	85                      # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	39                      # DW_AT_decl_line
+	.byte	44                      # DW_AT_decl_line
+	.byte	5                       # DW_AT_location
+	.byte	3
+	.long	scrolling_row
+	.long	.Linfo_string9          # DW_AT_MIPS_linkage_name
+	.byte	5                       # Abbrev [5] 0x72:0x16 DW_TAG_variable
+	.long	.Linfo_string10         # DW_AT_name
+	.long	136                     # DW_AT_type
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_decl_file
+	.byte	51                      # DW_AT_decl_line
+	.byte	5                       # DW_AT_location
+	.byte	3
+	.long	r_i2c2
+	.long	.Linfo_string10         # DW_AT_MIPS_linkage_name
+	.byte	7                       # Abbrev [7] 0x88:0x15 DW_TAG_structure_type
+	.long	.Linfo_string13         # DW_AT_name
+	.byte	4                       # DW_AT_byte_size
+	.byte	1                       # DW_AT_decl_file
+	.byte	51                      # DW_AT_decl_line
+	.byte	8                       # Abbrev [8] 0x90:0xc DW_TAG_member
+	.long	.Linfo_string11         # DW_AT_name
+	.long	157                     # DW_AT_type
+	.byte	1                       # DW_AT_decl_file
+	.byte	51                      # DW_AT_decl_line
+	.byte	0                       # DW_AT_data_member_location
+	.byte	0                       # End Of Children Mark
+	.byte	6                       # Abbrev [6] 0x9d:0x7 DW_TAG_base_type
+	.long	.Linfo_string12         # DW_AT_name
+	.byte	7                       # DW_AT_encoding
+	.byte	4                       # DW_AT_byte_size
+	.byte	5                       # Abbrev [5] 0xa4:0x16 DW_TAG_variable
+	.long	.Linfo_string14         # DW_AT_name
+	.long	85                      # DW_AT_type
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_decl_file
+	.byte	54                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	display_control_flag
-	.long	.Linfo_string10         # DW_AT_MIPS_linkage_name
-	.byte	5                       # Abbrev [5] 0x98:0x7 DW_TAG_base_type
-	.long	.Linfo_string11         # DW_AT_name
-	.byte	7                       # DW_AT_encoding
-	.byte	4                       # DW_AT_byte_size
-	.byte	2                       # Abbrev [2] 0x9f:0x16 DW_TAG_variable
-	.long	.Linfo_string12         # DW_AT_name
-	.long	152                     # DW_AT_type
-	.byte	1                       # DW_AT_external
-	.byte	1                       # DW_AT_decl_file
-	.byte	40                      # DW_AT_decl_line
-	.byte	5                       # DW_AT_location
-	.byte	3
-	.long	NumChan
-	.long	.Linfo_string12         # DW_AT_MIPS_linkage_name
-	.byte	2                       # Abbrev [2] 0xb5:0x16 DW_TAG_variable
-	.long	.Linfo_string13         # DW_AT_name
-	.long	152                     # DW_AT_type
-	.byte	1                       # DW_AT_external
-	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
-	.byte	5                       # DW_AT_location
-	.byte	3
-	.long	SampFreq
-	.long	.Linfo_string13         # DW_AT_MIPS_linkage_name
-	.byte	2                       # Abbrev [2] 0xcb:0x16 DW_TAG_variable
-	.long	.Linfo_string14         # DW_AT_name
-	.long	152                     # DW_AT_type
-	.byte	1                       # DW_AT_external
-	.byte	1                       # DW_AT_decl_file
-	.byte	42                      # DW_AT_decl_line
-	.byte	5                       # DW_AT_location
-	.byte	3
-	.long	SampRes
 	.long	.Linfo_string14         # DW_AT_MIPS_linkage_name
-	.byte	2                       # Abbrev [2] 0xe1:0x16 DW_TAG_variable
+	.byte	5                       # Abbrev [5] 0xba:0x16 DW_TAG_variable
 	.long	.Linfo_string15         # DW_AT_name
-	.long	247                     # DW_AT_type
+	.long	208                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	68                      # DW_AT_decl_line
+	.byte	80                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	console_mode
 	.long	.Linfo_string15         # DW_AT_MIPS_linkage_name
-	.byte	9                       # Abbrev [9] 0xf7:0x21 DW_TAG_enumeration_type
+	.byte	3                       # Abbrev [3] 0xd0:0x21 DW_TAG_enumeration_type
 	.long	.Linfo_string20         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	68                      # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0xff:0x6 DW_TAG_enumerator
+	.byte	80                      # DW_AT_decl_line
+	.byte	4                       # Abbrev [4] 0xd8:0x6 DW_TAG_enumerator
 	.long	.Linfo_string16         # DW_AT_name
 	.byte	1                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x105:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0xde:0x6 DW_TAG_enumerator
 	.long	.Linfo_string17         # DW_AT_name
 	.byte	2                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x10b:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0xe4:0x6 DW_TAG_enumerator
 	.long	.Linfo_string18         # DW_AT_name
 	.byte	3                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x111:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0xea:0x6 DW_TAG_enumerator
 	.long	.Linfo_string19         # DW_AT_name
 	.byte	4                       # DW_AT_const_value
 	.byte	0                       # End Of Children Mark
-	.byte	2                       # Abbrev [2] 0x118:0x16 DW_TAG_variable
+	.byte	5                       # Abbrev [5] 0xf1:0x16 DW_TAG_variable
 	.long	.Linfo_string21         # DW_AT_name
-	.long	302                     # DW_AT_type
+	.long	85                      # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	110                     # DW_AT_decl_line
+	.byte	100                     # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
-	.long	TotalTimeString
+	.long	NumChan
 	.long	.Linfo_string21         # DW_AT_MIPS_linkage_name
-	.byte	6                       # Abbrev [6] 0x12e:0xd DW_TAG_array_type
-	.long	116                     # DW_AT_type
-	.byte	7                       # Abbrev [7] 0x133:0x7 DW_TAG_subrange_type
-	.long	123                     # DW_AT_type
-	.byte	0                       # DW_AT_lower_bound
-	.byte	5                       # DW_AT_upper_bound
-	.byte	0                       # End Of Children Mark
-	.byte	2                       # Abbrev [2] 0x13b:0x16 DW_TAG_variable
+	.byte	5                       # Abbrev [5] 0x107:0x16 DW_TAG_variable
 	.long	.Linfo_string22         # DW_AT_name
-	.long	152                     # DW_AT_type
+	.long	85                      # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	111                     # DW_AT_decl_line
+	.byte	101                     # DW_AT_decl_line
+	.byte	5                       # DW_AT_location
+	.byte	3
+	.long	SampFreq
+	.long	.Linfo_string22         # DW_AT_MIPS_linkage_name
+	.byte	5                       # Abbrev [5] 0x11d:0x16 DW_TAG_variable
+	.long	.Linfo_string23         # DW_AT_name
+	.long	85                      # DW_AT_type
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_decl_file
+	.byte	102                     # DW_AT_decl_line
+	.byte	5                       # DW_AT_location
+	.byte	3
+	.long	SampRes
+	.long	.Linfo_string23         # DW_AT_MIPS_linkage_name
+	.byte	5                       # Abbrev [5] 0x133:0x16 DW_TAG_variable
+	.long	.Linfo_string24         # DW_AT_name
+	.long	329                     # DW_AT_type
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_decl_file
+	.byte	103                     # DW_AT_decl_line
+	.byte	5                       # DW_AT_location
+	.byte	3
+	.long	stream_format_string
+	.long	.Linfo_string24         # DW_AT_MIPS_linkage_name
+	.byte	9                       # Abbrev [9] 0x149:0xd DW_TAG_array_type
+	.long	342                     # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x14e:0x7 DW_TAG_subrange_type
+	.long	349                     # DW_AT_type
+	.byte	0                       # DW_AT_lower_bound
+	.byte	99                      # DW_AT_upper_bound
+	.byte	0                       # End Of Children Mark
+	.byte	6                       # Abbrev [6] 0x156:0x7 DW_TAG_base_type
+	.long	.Linfo_string25         # DW_AT_name
+	.byte	8                       # DW_AT_encoding
+	.byte	1                       # DW_AT_byte_size
+	.byte	11                      # Abbrev [11] 0x15d:0x7 DW_TAG_base_type
+	.long	.Linfo_string26         # DW_AT_name
+	.byte	8                       # DW_AT_byte_size
+	.byte	7                       # DW_AT_encoding
+	.byte	5                       # Abbrev [5] 0x164:0x16 DW_TAG_variable
+	.long	.Linfo_string27         # DW_AT_name
+	.long	329                     # DW_AT_type
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_decl_file
+	.byte	152                     # DW_AT_decl_line
+	.byte	5                       # DW_AT_location
+	.byte	3
+	.long	audio_property_string
+	.long	.Linfo_string27         # DW_AT_MIPS_linkage_name
+	.byte	5                       # Abbrev [5] 0x17a:0x16 DW_TAG_variable
+	.long	.Linfo_string28         # DW_AT_name
+	.long	85                      # DW_AT_type
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_decl_file
+	.byte	153                     # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	SecElapsed
-	.long	.Linfo_string22         # DW_AT_MIPS_linkage_name
-	.byte	11                      # Abbrev [11] 0x151:0xb DW_TAG_variable
-	.long	.Linfo_string23         # DW_AT_name
-	.long	348                     # DW_AT_type
-	.byte	1                       # DW_AT_decl_file
-	.byte	132                     # DW_AT_decl_line
-	.byte	9                       # Abbrev [9] 0x15c:0x15 DW_TAG_enumeration_type
-	.long	.Linfo_string26         # DW_AT_name
-	.byte	4                       # DW_AT_byte_size
-	.byte	1                       # DW_AT_decl_file
-	.byte	132                     # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0x164:0x6 DW_TAG_enumerator
-	.long	.Linfo_string24         # DW_AT_name
-	.byte	0                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x16a:0x6 DW_TAG_enumerator
-	.long	.Linfo_string25         # DW_AT_name
-	.byte	1                       # DW_AT_const_value
-	.byte	0                       # End Of Children Mark
-	.byte	2                       # Abbrev [2] 0x171:0x16 DW_TAG_variable
-	.long	.Linfo_string27         # DW_AT_name
-	.long	152                     # DW_AT_type
-	.byte	1                       # DW_AT_external
-	.byte	1                       # DW_AT_decl_file
-	.byte	133                     # DW_AT_decl_line
-	.byte	5                       # DW_AT_location
-	.byte	3
-	.long	pause_counter
-	.long	.Linfo_string27         # DW_AT_MIPS_linkage_name
-	.byte	2                       # Abbrev [2] 0x187:0x16 DW_TAG_variable
-	.long	.Linfo_string28         # DW_AT_name
-	.long	152                     # DW_AT_type
-	.byte	1                       # DW_AT_external
-	.byte	1                       # DW_AT_decl_file
-	.byte	134                     # DW_AT_decl_line
-	.byte	5                       # DW_AT_location
-	.byte	3
-	.long	scrolling_row
 	.long	.Linfo_string28         # DW_AT_MIPS_linkage_name
-	.byte	2                       # Abbrev [2] 0x19d:0x16 DW_TAG_variable
+	.byte	5                       # Abbrev [5] 0x190:0x16 DW_TAG_variable
 	.long	.Linfo_string29         # DW_AT_name
-	.long	103                     # DW_AT_type
+	.long	422                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	247                     # DW_AT_decl_line
+	.byte	154                     # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
-	.long	UsbAudioStatus
+	.long	TotalTimeString
 	.long	.Linfo_string29         # DW_AT_MIPS_linkage_name
-	.byte	9                       # Abbrev [9] 0x1b3:0x21 DW_TAG_enumeration_type
+	.byte	9                       # Abbrev [9] 0x1a6:0xd DW_TAG_array_type
+	.long	342                     # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x1ab:0x7 DW_TAG_subrange_type
+	.long	349                     # DW_AT_type
+	.byte	0                       # DW_AT_lower_bound
+	.byte	5                       # DW_AT_upper_bound
+	.byte	0                       # End Of Children Mark
+	.byte	3                       # Abbrev [3] 0x1b3:0x21 DW_TAG_enumeration_type
 	.long	.Linfo_string20         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	94                      # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0x1bb:0x6 DW_TAG_enumerator
+	.byte	82                      # DW_AT_decl_line
+	.byte	4                       # Abbrev [4] 0x1bb:0x6 DW_TAG_enumerator
 	.long	.Linfo_string16         # DW_AT_name
 	.byte	1                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x1c1:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x1c1:0x6 DW_TAG_enumerator
 	.long	.Linfo_string17         # DW_AT_name
 	.byte	2                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x1c7:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x1c7:0x6 DW_TAG_enumerator
 	.long	.Linfo_string18         # DW_AT_name
 	.byte	3                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x1cd:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x1cd:0x6 DW_TAG_enumerator
 	.long	.Linfo_string19         # DW_AT_name
 	.byte	4                       # DW_AT_const_value
 	.byte	0                       # End Of Children Mark
-	.byte	9                       # Abbrev [9] 0x1d4:0x21 DW_TAG_enumeration_type
+	.byte	3                       # Abbrev [3] 0x1d4:0x21 DW_TAG_enumeration_type
 	.long	.Linfo_string20         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	95                      # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0x1dc:0x6 DW_TAG_enumerator
+	.byte	83                      # DW_AT_decl_line
+	.byte	4                       # Abbrev [4] 0x1dc:0x6 DW_TAG_enumerator
 	.long	.Linfo_string16         # DW_AT_name
 	.byte	1                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x1e2:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x1e2:0x6 DW_TAG_enumerator
 	.long	.Linfo_string17         # DW_AT_name
 	.byte	2                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x1e8:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x1e8:0x6 DW_TAG_enumerator
 	.long	.Linfo_string18         # DW_AT_name
 	.byte	3                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x1ee:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x1ee:0x6 DW_TAG_enumerator
 	.long	.Linfo_string19         # DW_AT_name
 	.byte	4                       # DW_AT_const_value
 	.byte	0                       # End Of Children Mark
-	.byte	9                       # Abbrev [9] 0x1f5:0x21 DW_TAG_enumeration_type
+	.byte	3                       # Abbrev [3] 0x1f5:0x21 DW_TAG_enumeration_type
 	.long	.Linfo_string20         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	102                     # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0x1fd:0x6 DW_TAG_enumerator
+	.byte	90                      # DW_AT_decl_line
+	.byte	4                       # Abbrev [4] 0x1fd:0x6 DW_TAG_enumerator
 	.long	.Linfo_string16         # DW_AT_name
 	.byte	1                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x203:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x203:0x6 DW_TAG_enumerator
 	.long	.Linfo_string17         # DW_AT_name
 	.byte	2                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x209:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x209:0x6 DW_TAG_enumerator
 	.long	.Linfo_string18         # DW_AT_name
 	.byte	3                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x20f:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x20f:0x6 DW_TAG_enumerator
 	.long	.Linfo_string19         # DW_AT_name
 	.byte	4                       # DW_AT_const_value
 	.byte	0                       # End Of Children Mark
-	.byte	9                       # Abbrev [9] 0x216:0x21 DW_TAG_enumeration_type
+	.byte	3                       # Abbrev [3] 0x216:0x21 DW_TAG_enumeration_type
 	.long	.Linfo_string20         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	103                     # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0x21e:0x6 DW_TAG_enumerator
+	.byte	91                      # DW_AT_decl_line
+	.byte	4                       # Abbrev [4] 0x21e:0x6 DW_TAG_enumerator
 	.long	.Linfo_string16         # DW_AT_name
 	.byte	1                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x224:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x224:0x6 DW_TAG_enumerator
 	.long	.Linfo_string17         # DW_AT_name
 	.byte	2                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x22a:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x22a:0x6 DW_TAG_enumerator
 	.long	.Linfo_string18         # DW_AT_name
 	.byte	3                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x230:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x230:0x6 DW_TAG_enumerator
 	.long	.Linfo_string19         # DW_AT_name
 	.byte	4                       # DW_AT_const_value
 	.byte	0                       # End Of Children Mark
-	.byte	9                       # Abbrev [9] 0x237:0x33 DW_TAG_enumeration_type
+	.byte	3                       # Abbrev [3] 0x237:0x33 DW_TAG_enumeration_type
 	.long	.Linfo_string37         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	185                     # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0x23f:0x6 DW_TAG_enumerator
+	.byte	188                     # DW_AT_decl_line
+	.byte	4                       # Abbrev [4] 0x23f:0x6 DW_TAG_enumerator
 	.long	.Linfo_string30         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x245:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x245:0x6 DW_TAG_enumerator
 	.long	.Linfo_string31         # DW_AT_name
 	.byte	1                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x24b:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x24b:0x6 DW_TAG_enumerator
 	.long	.Linfo_string32         # DW_AT_name
 	.byte	2                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x251:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x251:0x6 DW_TAG_enumerator
 	.long	.Linfo_string33         # DW_AT_name
 	.byte	3                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x257:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x257:0x6 DW_TAG_enumerator
 	.long	.Linfo_string34         # DW_AT_name
 	.byte	4                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x25d:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x25d:0x6 DW_TAG_enumerator
 	.long	.Linfo_string35         # DW_AT_name
 	.byte	5                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x263:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x263:0x6 DW_TAG_enumerator
 	.long	.Linfo_string36         # DW_AT_name
 	.byte	6                       # DW_AT_const_value
 	.byte	0                       # End Of Children Mark
-	.byte	9                       # Abbrev [9] 0x26a:0x33 DW_TAG_enumeration_type
+	.byte	3                       # Abbrev [3] 0x26a:0x33 DW_TAG_enumeration_type
 	.long	.Linfo_string37         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	186                     # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0x272:0x6 DW_TAG_enumerator
+	.byte	189                     # DW_AT_decl_line
+	.byte	4                       # Abbrev [4] 0x272:0x6 DW_TAG_enumerator
 	.long	.Linfo_string30         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x278:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x278:0x6 DW_TAG_enumerator
 	.long	.Linfo_string31         # DW_AT_name
 	.byte	1                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x27e:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x27e:0x6 DW_TAG_enumerator
 	.long	.Linfo_string32         # DW_AT_name
 	.byte	2                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x284:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x284:0x6 DW_TAG_enumerator
 	.long	.Linfo_string33         # DW_AT_name
 	.byte	3                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x28a:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x28a:0x6 DW_TAG_enumerator
 	.long	.Linfo_string34         # DW_AT_name
 	.byte	4                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x290:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x290:0x6 DW_TAG_enumerator
 	.long	.Linfo_string35         # DW_AT_name
 	.byte	5                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x296:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x296:0x6 DW_TAG_enumerator
 	.long	.Linfo_string36         # DW_AT_name
 	.byte	6                       # DW_AT_const_value
 	.byte	0                       # End Of Children Mark
-	.byte	9                       # Abbrev [9] 0x29d:0x33 DW_TAG_enumeration_type
+	.byte	3                       # Abbrev [3] 0x29d:0x33 DW_TAG_enumeration_type
 	.long	.Linfo_string37         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	187                     # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0x2a5:0x6 DW_TAG_enumerator
+	.byte	190                     # DW_AT_decl_line
+	.byte	4                       # Abbrev [4] 0x2a5:0x6 DW_TAG_enumerator
 	.long	.Linfo_string30         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x2ab:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x2ab:0x6 DW_TAG_enumerator
 	.long	.Linfo_string31         # DW_AT_name
 	.byte	1                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x2b1:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x2b1:0x6 DW_TAG_enumerator
 	.long	.Linfo_string32         # DW_AT_name
 	.byte	2                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x2b7:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x2b7:0x6 DW_TAG_enumerator
 	.long	.Linfo_string33         # DW_AT_name
 	.byte	3                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x2bd:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x2bd:0x6 DW_TAG_enumerator
 	.long	.Linfo_string34         # DW_AT_name
 	.byte	4                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x2c3:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x2c3:0x6 DW_TAG_enumerator
 	.long	.Linfo_string35         # DW_AT_name
 	.byte	5                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x2c9:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x2c9:0x6 DW_TAG_enumerator
 	.long	.Linfo_string36         # DW_AT_name
 	.byte	6                       # DW_AT_const_value
 	.byte	0                       # End Of Children Mark
-	.byte	9                       # Abbrev [9] 0x2d0:0x33 DW_TAG_enumeration_type
+	.byte	3                       # Abbrev [3] 0x2d0:0x33 DW_TAG_enumeration_type
 	.long	.Linfo_string37         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	194                     # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0x2d8:0x6 DW_TAG_enumerator
+	.byte	197                     # DW_AT_decl_line
+	.byte	4                       # Abbrev [4] 0x2d8:0x6 DW_TAG_enumerator
 	.long	.Linfo_string30         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x2de:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x2de:0x6 DW_TAG_enumerator
 	.long	.Linfo_string31         # DW_AT_name
 	.byte	1                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x2e4:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x2e4:0x6 DW_TAG_enumerator
 	.long	.Linfo_string32         # DW_AT_name
 	.byte	2                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x2ea:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x2ea:0x6 DW_TAG_enumerator
 	.long	.Linfo_string33         # DW_AT_name
 	.byte	3                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x2f0:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x2f0:0x6 DW_TAG_enumerator
 	.long	.Linfo_string34         # DW_AT_name
 	.byte	4                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x2f6:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x2f6:0x6 DW_TAG_enumerator
 	.long	.Linfo_string35         # DW_AT_name
 	.byte	5                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x2fc:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x2fc:0x6 DW_TAG_enumerator
 	.long	.Linfo_string36         # DW_AT_name
 	.byte	6                       # DW_AT_const_value
 	.byte	0                       # End Of Children Mark
-	.byte	9                       # Abbrev [9] 0x303:0x33 DW_TAG_enumeration_type
+	.byte	3                       # Abbrev [3] 0x303:0x33 DW_TAG_enumeration_type
 	.long	.Linfo_string37         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	195                     # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0x30b:0x6 DW_TAG_enumerator
+	.byte	198                     # DW_AT_decl_line
+	.byte	4                       # Abbrev [4] 0x30b:0x6 DW_TAG_enumerator
 	.long	.Linfo_string30         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x311:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x311:0x6 DW_TAG_enumerator
 	.long	.Linfo_string31         # DW_AT_name
 	.byte	1                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x317:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x317:0x6 DW_TAG_enumerator
 	.long	.Linfo_string32         # DW_AT_name
 	.byte	2                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x31d:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x31d:0x6 DW_TAG_enumerator
 	.long	.Linfo_string33         # DW_AT_name
 	.byte	3                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x323:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x323:0x6 DW_TAG_enumerator
 	.long	.Linfo_string34         # DW_AT_name
 	.byte	4                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x329:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x329:0x6 DW_TAG_enumerator
 	.long	.Linfo_string35         # DW_AT_name
 	.byte	5                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x32f:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x32f:0x6 DW_TAG_enumerator
 	.long	.Linfo_string36         # DW_AT_name
 	.byte	6                       # DW_AT_const_value
 	.byte	0                       # End Of Children Mark
-	.byte	9                       # Abbrev [9] 0x336:0x33 DW_TAG_enumeration_type
+	.byte	3                       # Abbrev [3] 0x336:0x33 DW_TAG_enumeration_type
 	.long	.Linfo_string37         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	196                     # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0x33e:0x6 DW_TAG_enumerator
+	.byte	199                     # DW_AT_decl_line
+	.byte	4                       # Abbrev [4] 0x33e:0x6 DW_TAG_enumerator
 	.long	.Linfo_string30         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x344:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x344:0x6 DW_TAG_enumerator
 	.long	.Linfo_string31         # DW_AT_name
 	.byte	1                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x34a:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x34a:0x6 DW_TAG_enumerator
 	.long	.Linfo_string32         # DW_AT_name
 	.byte	2                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x350:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x350:0x6 DW_TAG_enumerator
 	.long	.Linfo_string33         # DW_AT_name
 	.byte	3                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x356:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x356:0x6 DW_TAG_enumerator
 	.long	.Linfo_string34         # DW_AT_name
 	.byte	4                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x35c:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x35c:0x6 DW_TAG_enumerator
 	.long	.Linfo_string35         # DW_AT_name
 	.byte	5                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x362:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x362:0x6 DW_TAG_enumerator
 	.long	.Linfo_string36         # DW_AT_name
 	.byte	6                       # DW_AT_const_value
 	.byte	0                       # End Of Children Mark
-	.byte	9                       # Abbrev [9] 0x369:0x15 DW_TAG_enumeration_type
-	.long	.Linfo_string40         # DW_AT_name
-	.byte	4                       # DW_AT_byte_size
-	.byte	1                       # DW_AT_decl_file
-	.byte	203                     # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0x371:0x6 DW_TAG_enumerator
-	.long	.Linfo_string38         # DW_AT_name
-	.byte	0                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x377:0x6 DW_TAG_enumerator
-	.long	.Linfo_string39         # DW_AT_name
-	.byte	1                       # DW_AT_const_value
-	.byte	0                       # End Of Children Mark
-	.byte	9                       # Abbrev [9] 0x37e:0x15 DW_TAG_enumeration_type
-	.long	.Linfo_string40         # DW_AT_name
-	.byte	4                       # DW_AT_byte_size
-	.byte	1                       # DW_AT_decl_file
-	.byte	204                     # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0x386:0x6 DW_TAG_enumerator
-	.long	.Linfo_string38         # DW_AT_name
-	.byte	0                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x38c:0x6 DW_TAG_enumerator
-	.long	.Linfo_string39         # DW_AT_name
-	.byte	1                       # DW_AT_const_value
-	.byte	0                       # End Of Children Mark
-	.byte	9                       # Abbrev [9] 0x393:0x15 DW_TAG_enumeration_type
-	.long	.Linfo_string40         # DW_AT_name
+	.byte	3                       # Abbrev [3] 0x369:0x33 DW_TAG_enumeration_type
+	.long	.Linfo_string37         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
 	.byte	205                     # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0x39b:0x6 DW_TAG_enumerator
-	.long	.Linfo_string38         # DW_AT_name
-	.byte	0                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x3a1:0x6 DW_TAG_enumerator
-	.long	.Linfo_string39         # DW_AT_name
-	.byte	1                       # DW_AT_const_value
-	.byte	0                       # End Of Children Mark
-	.byte	9                       # Abbrev [9] 0x3a8:0x33 DW_TAG_enumeration_type
-	.long	.Linfo_string37         # DW_AT_name
-	.byte	4                       # DW_AT_byte_size
-	.byte	1                       # DW_AT_decl_file
-	.byte	210                     # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0x3b0:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x371:0x6 DW_TAG_enumerator
 	.long	.Linfo_string30         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x3b6:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x377:0x6 DW_TAG_enumerator
 	.long	.Linfo_string31         # DW_AT_name
 	.byte	1                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x3bc:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x37d:0x6 DW_TAG_enumerator
 	.long	.Linfo_string32         # DW_AT_name
 	.byte	2                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x3c2:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x383:0x6 DW_TAG_enumerator
 	.long	.Linfo_string33         # DW_AT_name
 	.byte	3                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x3c8:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x389:0x6 DW_TAG_enumerator
 	.long	.Linfo_string34         # DW_AT_name
 	.byte	4                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x3ce:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x38f:0x6 DW_TAG_enumerator
 	.long	.Linfo_string35         # DW_AT_name
 	.byte	5                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x3d4:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x395:0x6 DW_TAG_enumerator
 	.long	.Linfo_string36         # DW_AT_name
 	.byte	6                       # DW_AT_const_value
 	.byte	0                       # End Of Children Mark
-	.byte	9                       # Abbrev [9] 0x3db:0x15 DW_TAG_enumeration_type
+	.byte	3                       # Abbrev [3] 0x39c:0x15 DW_TAG_enumeration_type
 	.long	.Linfo_string40         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	236                     # DW_AT_decl_line
-	.byte	10                      # Abbrev [10] 0x3e3:0x6 DW_TAG_enumerator
+	.byte	233                     # DW_AT_decl_line
+	.byte	4                       # Abbrev [4] 0x3a4:0x6 DW_TAG_enumerator
 	.long	.Linfo_string38         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
-	.byte	10                      # Abbrev [10] 0x3e9:0x6 DW_TAG_enumerator
+	.byte	4                       # Abbrev [4] 0x3aa:0x6 DW_TAG_enumerator
+	.long	.Linfo_string39         # DW_AT_name
+	.byte	1                       # DW_AT_const_value
+	.byte	0                       # End Of Children Mark
+	.byte	3                       # Abbrev [3] 0x3b1:0x15 DW_TAG_enumeration_type
+	.long	.Linfo_string40         # DW_AT_name
+	.byte	4                       # DW_AT_byte_size
+	.byte	1                       # DW_AT_decl_file
+	.byte	234                     # DW_AT_decl_line
+	.byte	4                       # Abbrev [4] 0x3b9:0x6 DW_TAG_enumerator
+	.long	.Linfo_string38         # DW_AT_name
+	.byte	0                       # DW_AT_const_value
+	.byte	4                       # Abbrev [4] 0x3bf:0x6 DW_TAG_enumerator
+	.long	.Linfo_string39         # DW_AT_name
+	.byte	1                       # DW_AT_const_value
+	.byte	0                       # End Of Children Mark
+	.byte	3                       # Abbrev [3] 0x3c6:0x15 DW_TAG_enumeration_type
+	.long	.Linfo_string40         # DW_AT_name
+	.byte	4                       # DW_AT_byte_size
+	.byte	1                       # DW_AT_decl_file
+	.byte	235                     # DW_AT_decl_line
+	.byte	4                       # Abbrev [4] 0x3ce:0x6 DW_TAG_enumerator
+	.long	.Linfo_string38         # DW_AT_name
+	.byte	0                       # DW_AT_const_value
+	.byte	4                       # Abbrev [4] 0x3d4:0x6 DW_TAG_enumerator
+	.long	.Linfo_string39         # DW_AT_name
+	.byte	1                       # DW_AT_const_value
+	.byte	0                       # End Of Children Mark
+	.byte	3                       # Abbrev [3] 0x3db:0x15 DW_TAG_enumeration_type
+	.long	.Linfo_string40         # DW_AT_name
+	.byte	4                       # DW_AT_byte_size
+	.byte	1                       # DW_AT_decl_file
+	.byte	240                     # DW_AT_decl_line
+	.byte	4                       # Abbrev [4] 0x3e3:0x6 DW_TAG_enumerator
+	.long	.Linfo_string38         # DW_AT_name
+	.byte	0                       # DW_AT_const_value
+	.byte	4                       # Abbrev [4] 0x3e9:0x6 DW_TAG_enumerator
 	.long	.Linfo_string39         # DW_AT_name
 	.byte	1                       # DW_AT_const_value
 	.byte	0                       # End Of Children Mark
@@ -3712,24 +6239,24 @@ __xcc1_internal_1:
 	.byte	1                       # DW_AT_frame_base
 	.byte	94
 	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	.Linfo_string70         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string70         # DW_AT_name
+	.long	.Linfo_string72         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string72         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	70                      # DW_AT_decl_line
+	.byte	56                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	13                      # Abbrev [13] 0x403:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc0            # DW_AT_location
-	.long	.Linfo_string42         # DW_AT_name
+	.long	.Linfo_string43         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	70                      # DW_AT_decl_line
-	.long	152                     # DW_AT_type
+	.byte	56                      # DW_AT_decl_line
+	.long	85                      # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x412:0x11 DW_TAG_lexical_block
 	.long	.Ldebug_ranges1         # DW_AT_ranges
 	.byte	15                      # Abbrev [15] 0x417:0xb DW_TAG_variable
-	.long	.Linfo_string43         # DW_AT_name
+	.long	.Linfo_string44         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	71                      # DW_AT_decl_line
-	.long	1508                    # DW_AT_type
+	.byte	57                      # DW_AT_decl_line
+	.long	2204                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
 	.byte	12                      # Abbrev [12] 0x424:0x34 DW_TAG_subprogram
@@ -3737,1140 +6264,1894 @@ __xcc1_internal_1:
 	.byte	1                       # DW_AT_frame_base
 	.byte	94
 	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	.Linfo_string67         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string67         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	44                      # DW_AT_decl_line
-	.byte	1                       # DW_AT_external
-	.byte	13                      # Abbrev [13] 0x437:0xf DW_TAG_formal_parameter
-	.long	.Ldebug_loc1            # DW_AT_location
-	.long	.Linfo_string77         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	44                      # DW_AT_decl_line
-	.long	152                     # DW_AT_type
-	.byte	14                      # Abbrev [14] 0x446:0x11 DW_TAG_lexical_block
-	.long	.Ldebug_ranges3         # DW_AT_ranges
-	.byte	15                      # Abbrev [15] 0x44b:0xb DW_TAG_variable
-	.long	.Linfo_string43         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	45                      # DW_AT_decl_line
-	.long	1508                    # DW_AT_type
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	12                      # Abbrev [12] 0x458:0x34 DW_TAG_subprogram
-	.long	.Ldebug_ranges4         # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	.Linfo_string68         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string68         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	52                      # DW_AT_decl_line
-	.byte	1                       # DW_AT_external
-	.byte	13                      # Abbrev [13] 0x46b:0xf DW_TAG_formal_parameter
-	.long	.Ldebug_loc2            # DW_AT_location
-	.long	.Linfo_string78         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	52                      # DW_AT_decl_line
-	.long	152                     # DW_AT_type
-	.byte	14                      # Abbrev [14] 0x47a:0x11 DW_TAG_lexical_block
-	.long	.Ldebug_ranges5         # DW_AT_ranges
-	.byte	15                      # Abbrev [15] 0x47f:0xb DW_TAG_variable
-	.long	.Linfo_string43         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	53                      # DW_AT_decl_line
-	.long	1508                    # DW_AT_type
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	12                      # Abbrev [12] 0x48c:0x34 DW_TAG_subprogram
-	.long	.Ldebug_ranges6         # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	.Linfo_string69         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string69         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	60                      # DW_AT_decl_line
-	.byte	1                       # DW_AT_external
-	.byte	13                      # Abbrev [13] 0x49f:0xf DW_TAG_formal_parameter
-	.long	.Ldebug_loc3            # DW_AT_location
-	.long	.Linfo_string79         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	60                      # DW_AT_decl_line
-	.long	152                     # DW_AT_type
-	.byte	14                      # Abbrev [14] 0x4ae:0x11 DW_TAG_lexical_block
-	.long	.Ldebug_ranges7         # DW_AT_ranges
-	.byte	15                      # Abbrev [15] 0x4b3:0xb DW_TAG_variable
-	.long	.Linfo_string43         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	61                      # DW_AT_decl_line
-	.long	1508                    # DW_AT_type
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	16                      # Abbrev [16] 0x4c0:0x3d DW_TAG_subprogram
-	.long	.Ldebug_ranges8         # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	.Linfo_string76         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string76         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	393                     # DW_AT_decl_line
-	.byte	1                       # DW_AT_external
-	.byte	14                      # Abbrev [14] 0x4d4:0x28 DW_TAG_lexical_block
-	.long	.Ldebug_ranges10        # DW_AT_ranges
-	.byte	17                      # Abbrev [17] 0x4d9:0xc DW_TAG_variable
-	.long	.Linfo_string81         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	395                     # DW_AT_decl_line
-	.long	3358                    # DW_AT_type
-	.byte	14                      # Abbrev [14] 0x4e5:0x16 DW_TAG_lexical_block
-	.long	.Ldebug_ranges9         # DW_AT_ranges
-	.byte	18                      # Abbrev [18] 0x4ea:0x10 DW_TAG_variable
-	.long	.Ldebug_loc4            # DW_AT_location
-	.long	.Linfo_string80         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	396                     # DW_AT_decl_line
-	.long	152                     # DW_AT_type
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	19                      # Abbrev [19] 0x4fd:0x18 DW_TAG_subprogram
-	.long	.Ldebug_ranges11        # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	2019                    # DW_AT_abstract_origin
-	.byte	14                      # Abbrev [14] 0x509:0xb DW_TAG_lexical_block
-	.long	.Ldebug_ranges12        # DW_AT_ranges
-	.byte	20                      # Abbrev [20] 0x50e:0x5 DW_TAG_variable
-	.long	2037                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	12                      # Abbrev [12] 0x515:0x32 DW_TAG_subprogram
-	.long	.Ldebug_ranges13        # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	.Linfo_string71         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string71         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	102                     # DW_AT_decl_line
-	.byte	1                       # DW_AT_external
-	.byte	21                      # Abbrev [21] 0x528:0xd DW_TAG_formal_parameter
-	.byte	1                       # DW_AT_location
-	.byte	80
-	.long	.Linfo_string83         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	102                     # DW_AT_decl_line
-	.long	501                     # DW_AT_type
-	.byte	14                      # Abbrev [14] 0x535:0x11 DW_TAG_lexical_block
-	.long	.Ldebug_ranges14        # DW_AT_ranges
-	.byte	15                      # Abbrev [15] 0x53a:0xb DW_TAG_variable
-	.long	.Linfo_string43         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	103                     # DW_AT_decl_line
-	.long	3365                    # DW_AT_type
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	12                      # Abbrev [12] 0x547:0x37 DW_TAG_subprogram
-	.long	.Ldebug_ranges15        # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	.Linfo_string71         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string71         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	102                     # DW_AT_decl_line
-	.byte	1                       # DW_AT_external
-	.byte	14                      # Abbrev [14] 0x55a:0x23 DW_TAG_lexical_block
-	.long	.Ldebug_ranges17        # DW_AT_ranges
-	.byte	22                      # Abbrev [22] 0x55f:0xc DW_TAG_variable
-	.byte	1                       # DW_AT_const_value
-	.long	.Linfo_string83         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	102                     # DW_AT_decl_line
-	.long	501                     # DW_AT_type
-	.byte	14                      # Abbrev [14] 0x56b:0x11 DW_TAG_lexical_block
-	.long	.Ldebug_ranges16        # DW_AT_ranges
-	.byte	15                      # Abbrev [15] 0x570:0xb DW_TAG_variable
-	.long	.Linfo_string43         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	103                     # DW_AT_decl_line
-	.long	3365                    # DW_AT_type
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	19                      # Abbrev [19] 0x57e:0x21 DW_TAG_subprogram
-	.long	.Ldebug_ranges18        # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	1970                    # DW_AT_abstract_origin
-	.byte	23                      # Abbrev [23] 0x58a:0x9 DW_TAG_formal_parameter
-	.long	.Ldebug_loc5            # DW_AT_location
-	.long	1987                    # DW_AT_abstract_origin
-	.byte	14                      # Abbrev [14] 0x593:0xb DW_TAG_lexical_block
-	.long	.Ldebug_ranges19        # DW_AT_ranges
-	.byte	20                      # Abbrev [20] 0x598:0x5 DW_TAG_variable
-	.long	1999                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	19                      # Abbrev [19] 0x59f:0x1f DW_TAG_subprogram
-	.long	.Ldebug_ranges20        # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	1470                    # DW_AT_abstract_origin
-	.byte	24                      # Abbrev [24] 0x5ab:0x7 DW_TAG_formal_parameter
-	.byte	1                       # DW_AT_location
-	.byte	80
-	.long	1483                    # DW_AT_abstract_origin
-	.byte	14                      # Abbrev [14] 0x5b2:0xb DW_TAG_lexical_block
-	.long	.Ldebug_ranges21        # DW_AT_ranges
-	.byte	20                      # Abbrev [20] 0x5b7:0x5 DW_TAG_variable
-	.long	1495                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	25                      # Abbrev [25] 0x5be:0x26 DW_TAG_subprogram
-	.long	.Linfo_string41         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string41         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	86                      # DW_AT_decl_line
-	.byte	1                       # DW_AT_external
-	.byte	1                       # DW_AT_inline
-	.byte	26                      # Abbrev [26] 0x5cb:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string42         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	86                      # DW_AT_decl_line
-	.long	152                     # DW_AT_type
-	.byte	27                      # Abbrev [27] 0x5d6:0xd DW_TAG_lexical_block
-	.byte	15                      # Abbrev [15] 0x5d7:0xb DW_TAG_variable
-	.long	.Linfo_string43         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	87                      # DW_AT_decl_line
-	.long	1508                    # DW_AT_type
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	28                      # Abbrev [28] 0x5e4:0x5 DW_TAG_pointer_type
-	.long	152                     # DW_AT_type
-	.byte	19                      # Abbrev [19] 0x5e9:0x47 DW_TAG_subprogram
-	.long	.Ldebug_ranges22        # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	2143                    # DW_AT_abstract_origin
-	.byte	14                      # Abbrev [14] 0x5f5:0x3a DW_TAG_lexical_block
-	.long	.Ldebug_ranges26        # DW_AT_ranges
-	.byte	29                      # Abbrev [29] 0x5fa:0x8 DW_TAG_variable
-	.byte	2                       # DW_AT_location
-	.byte	145
-	.byte	4
-	.long	2157                    # DW_AT_abstract_origin
-	.byte	14                      # Abbrev [14] 0x602:0x2c DW_TAG_lexical_block
-	.long	.Ldebug_ranges25        # DW_AT_ranges
-	.byte	20                      # Abbrev [20] 0x607:0x5 DW_TAG_variable
-	.long	2169                    # DW_AT_abstract_origin
-	.byte	14                      # Abbrev [14] 0x60c:0x21 DW_TAG_lexical_block
-	.long	.Ldebug_ranges24        # DW_AT_ranges
-	.byte	30                      # Abbrev [30] 0x611:0x9 DW_TAG_variable
-	.long	.Ldebug_loc6            # DW_AT_location
-	.long	2181                    # DW_AT_abstract_origin
-	.byte	31                      # Abbrev [31] 0x61a:0x12 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges23        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.byte	145                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0x625:0x6 DW_TAG_formal_parameter
-	.byte	4                       # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	19                      # Abbrev [19] 0x630:0x1f DW_TAG_subprogram
-	.long	.Ldebug_ranges27        # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	2104                    # DW_AT_abstract_origin
-	.byte	31                      # Abbrev [31] 0x63c:0x12 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges28        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.byte	153                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0x647:0x6 DW_TAG_formal_parameter
-	.byte	2                       # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	19                      # Abbrev [19] 0x64f:0x1f DW_TAG_subprogram
-	.long	.Ldebug_ranges29        # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	2117                    # DW_AT_abstract_origin
-	.byte	31                      # Abbrev [31] 0x65b:0x12 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges30        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.byte	161                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0x666:0x6 DW_TAG_formal_parameter
-	.byte	1                       # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	19                      # Abbrev [19] 0x66e:0x1f DW_TAG_subprogram
-	.long	.Ldebug_ranges31        # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	2130                    # DW_AT_abstract_origin
-	.byte	31                      # Abbrev [31] 0x67a:0x12 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges32        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.byte	169                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0x685:0x6 DW_TAG_formal_parameter
-	.byte	8                       # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	19                      # Abbrev [19] 0x68d:0x25 DW_TAG_subprogram
-	.long	.Ldebug_ranges33        # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	2209                    # DW_AT_abstract_origin
-	.byte	14                      # Abbrev [14] 0x699:0x18 DW_TAG_lexical_block
-	.long	.Ldebug_ranges35        # DW_AT_ranges
-	.byte	20                      # Abbrev [20] 0x69e:0x5 DW_TAG_variable
-	.long	2227                    # DW_AT_abstract_origin
-	.byte	14                      # Abbrev [14] 0x6a3:0xd DW_TAG_lexical_block
-	.long	.Ldebug_ranges34        # DW_AT_ranges
-	.byte	29                      # Abbrev [29] 0x6a8:0x7 DW_TAG_variable
-	.byte	1                       # DW_AT_location
-	.byte	80
-	.long	2239                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	19                      # Abbrev [19] 0x6b2:0x25 DW_TAG_subprogram
-	.long	.Ldebug_ranges36        # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	2055                    # DW_AT_abstract_origin
-	.byte	14                      # Abbrev [14] 0x6be:0x18 DW_TAG_lexical_block
-	.long	.Ldebug_ranges38        # DW_AT_ranges
-	.byte	20                      # Abbrev [20] 0x6c3:0x5 DW_TAG_variable
-	.long	2073                    # DW_AT_abstract_origin
-	.byte	14                      # Abbrev [14] 0x6c8:0xd DW_TAG_lexical_block
-	.long	.Ldebug_ranges37        # DW_AT_ranges
-	.byte	29                      # Abbrev [29] 0x6cd:0x7 DW_TAG_variable
-	.byte	1                       # DW_AT_location
-	.byte	80
-	.long	2085                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	19                      # Abbrev [19] 0x6d7:0x25 DW_TAG_subprogram
-	.long	.Ldebug_ranges39        # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	2258                    # DW_AT_abstract_origin
-	.byte	14                      # Abbrev [14] 0x6e3:0x18 DW_TAG_lexical_block
-	.long	.Ldebug_ranges41        # DW_AT_ranges
-	.byte	20                      # Abbrev [20] 0x6e8:0x5 DW_TAG_variable
-	.long	2276                    # DW_AT_abstract_origin
-	.byte	14                      # Abbrev [14] 0x6ed:0xd DW_TAG_lexical_block
-	.long	.Ldebug_ranges40        # DW_AT_ranges
-	.byte	29                      # Abbrev [29] 0x6f2:0x7 DW_TAG_variable
-	.byte	1                       # DW_AT_location
-	.byte	80
-	.long	2288                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	12                      # Abbrev [12] 0x6fc:0x23 DW_TAG_subprogram
-	.long	.Ldebug_ranges42        # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	.Linfo_string72         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string72         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	210                     # DW_AT_decl_line
-	.byte	1                       # DW_AT_external
-	.byte	13                      # Abbrev [13] 0x70f:0xf DW_TAG_formal_parameter
-	.long	.Ldebug_loc7            # DW_AT_location
-	.long	.Linfo_string84         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	210                     # DW_AT_decl_line
-	.long	936                     # DW_AT_type
-	.byte	0                       # End Of Children Mark
-	.byte	19                      # Abbrev [19] 0x71f:0x16 DW_TAG_subprogram
-	.long	.Ldebug_ranges43        # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	2307                    # DW_AT_abstract_origin
-	.byte	23                      # Abbrev [23] 0x72b:0x9 DW_TAG_formal_parameter
-	.long	.Ldebug_loc8            # DW_AT_location
-	.long	2324                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	33                      # Abbrev [33] 0x735:0x13 DW_TAG_subprogram
-	.long	.Ldebug_ranges44        # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	.Linfo_string73         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string73         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	249                     # DW_AT_decl_line
-	.byte	1                       # DW_AT_external
-	.byte	16                      # Abbrev [16] 0x748:0x6a DW_TAG_subprogram
-	.long	.Ldebug_ranges45        # DW_AT_ranges
-	.byte	1                       # DW_AT_frame_base
-	.byte	94
-	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
 	.long	.Linfo_string74         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string74         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	260                     # DW_AT_decl_line
+	.byte	105                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
-	.byte	14                      # Abbrev [14] 0x75c:0x55 DW_TAG_lexical_block
-	.long	.Ldebug_ranges47        # DW_AT_ranges
-	.byte	34                      # Abbrev [34] 0x761:0xd DW_TAG_variable
-	.byte	1                       # DW_AT_const_value
-	.long	.Linfo_string85         # DW_AT_name
+	.byte	13                      # Abbrev [13] 0x437:0xf DW_TAG_formal_parameter
+	.long	.Ldebug_loc1            # DW_AT_location
+	.long	.Linfo_string82         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	264                     # DW_AT_decl_line
-	.long	2012                    # DW_AT_type
-	.byte	14                      # Abbrev [14] 0x76e:0x42 DW_TAG_lexical_block
-	.long	.Ldebug_ranges46        # DW_AT_ranges
-	.byte	35                      # Abbrev [35] 0x773:0xf DW_TAG_variable
-	.byte	2                       # DW_AT_location
-	.byte	145
-	.byte	4
-	.long	.Linfo_string54         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	265                     # DW_AT_decl_line
-	.long	3370                    # DW_AT_type
-	.byte	35                      # Abbrev [35] 0x782:0xf DW_TAG_variable
-	.byte	2                       # DW_AT_location
-	.byte	145
-	.byte	4
-	.long	.Linfo_string54         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	265                     # DW_AT_decl_line
-	.long	3370                    # DW_AT_type
-	.byte	35                      # Abbrev [35] 0x791:0xf DW_TAG_variable
-	.byte	2                       # DW_AT_location
-	.byte	145
-	.byte	4
-	.long	.Linfo_string54         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	265                     # DW_AT_decl_line
-	.long	3370                    # DW_AT_type
-	.byte	35                      # Abbrev [35] 0x7a0:0xf DW_TAG_variable
-	.byte	2                       # DW_AT_location
-	.byte	145
-	.byte	4
-	.long	.Linfo_string54         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	265                     # DW_AT_decl_line
-	.long	3370                    # DW_AT_type
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	36                      # Abbrev [36] 0x7b2:0x2a DW_TAG_subprogram
-	.long	.Linfo_string44         # DW_AT_MIPS_linkage_name
+	.byte	105                     # DW_AT_decl_line
+	.long	85                      # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x446:0x11 DW_TAG_lexical_block
+	.long	.Ldebug_ranges3         # DW_AT_ranges
+	.byte	15                      # Abbrev [15] 0x44b:0xb DW_TAG_variable
 	.long	.Linfo_string44         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	78                      # DW_AT_decl_line
-	.long	2012                    # DW_AT_type
-	.byte	1                       # DW_AT_external
-	.byte	1                       # DW_AT_inline
-	.byte	26                      # Abbrev [26] 0x7c3:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string42         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	78                      # DW_AT_decl_line
-	.long	152                     # DW_AT_type
-	.byte	27                      # Abbrev [27] 0x7ce:0xd DW_TAG_lexical_block
-	.byte	15                      # Abbrev [15] 0x7cf:0xb DW_TAG_variable
-	.long	.Linfo_string43         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	79                      # DW_AT_decl_line
-	.long	1508                    # DW_AT_type
+	.byte	106                     # DW_AT_decl_line
+	.long	2204                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
-	.byte	5                       # Abbrev [5] 0x7dc:0x7 DW_TAG_base_type
-	.long	.Linfo_string45         # DW_AT_name
-	.byte	5                       # DW_AT_encoding
-	.byte	4                       # DW_AT_byte_size
-	.byte	36                      # Abbrev [36] 0x7e3:0x1f DW_TAG_subprogram
-	.long	.Linfo_string46         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string46         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	94                      # DW_AT_decl_line
-	.long	435                     # DW_AT_type
-	.byte	1                       # DW_AT_external
-	.byte	1                       # DW_AT_inline
-	.byte	27                      # Abbrev [27] 0x7f4:0xd DW_TAG_lexical_block
-	.byte	15                      # Abbrev [15] 0x7f5:0xb DW_TAG_variable
-	.long	.Linfo_string43         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	95                      # DW_AT_decl_line
-	.long	2050                    # DW_AT_type
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	28                      # Abbrev [28] 0x802:0x5 DW_TAG_pointer_type
-	.long	468                     # DW_AT_type
-	.byte	36                      # Abbrev [36] 0x807:0x2c DW_TAG_subprogram
-	.long	.Linfo_string47         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string47         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	194                     # DW_AT_decl_line
-	.long	720                     # DW_AT_type
-	.byte	1                       # DW_AT_external
-	.byte	1                       # DW_AT_inline
-	.byte	27                      # Abbrev [27] 0x818:0x1a DW_TAG_lexical_block
-	.byte	15                      # Abbrev [15] 0x819:0xb DW_TAG_variable
-	.long	.Linfo_string48         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	195                     # DW_AT_decl_line
-	.long	2099                    # DW_AT_type
-	.byte	27                      # Abbrev [27] 0x824:0xd DW_TAG_lexical_block
-	.byte	15                      # Abbrev [15] 0x825:0xb DW_TAG_variable
-	.long	.Linfo_string49         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	196                     # DW_AT_decl_line
-	.long	822                     # DW_AT_type
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	28                      # Abbrev [28] 0x833:0x5 DW_TAG_pointer_type
-	.long	771                     # DW_AT_type
-	.byte	37                      # Abbrev [37] 0x838:0xd DW_TAG_subprogram
-	.long	.Linfo_string50         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string50         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	148                     # DW_AT_decl_line
-	.byte	1                       # DW_AT_external
-	.byte	1                       # DW_AT_inline
-	.byte	37                      # Abbrev [37] 0x845:0xd DW_TAG_subprogram
-	.long	.Linfo_string51         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string51         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	156                     # DW_AT_decl_line
-	.byte	1                       # DW_AT_external
-	.byte	1                       # DW_AT_inline
-	.byte	37                      # Abbrev [37] 0x852:0xd DW_TAG_subprogram
-	.long	.Linfo_string52         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string52         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	164                     # DW_AT_decl_line
-	.byte	1                       # DW_AT_external
-	.byte	1                       # DW_AT_inline
-	.byte	25                      # Abbrev [25] 0x85f:0x35 DW_TAG_subprogram
-	.long	.Linfo_string53         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string53         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	138                     # DW_AT_decl_line
-	.byte	1                       # DW_AT_external
-	.byte	1                       # DW_AT_inline
-	.byte	27                      # Abbrev [27] 0x86c:0x27 DW_TAG_lexical_block
-	.byte	15                      # Abbrev [15] 0x86d:0xb DW_TAG_variable
-	.long	.Linfo_string54         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	139                     # DW_AT_decl_line
-	.long	2196                    # DW_AT_type
-	.byte	27                      # Abbrev [27] 0x878:0x1a DW_TAG_lexical_block
-	.byte	15                      # Abbrev [15] 0x879:0xb DW_TAG_variable
-	.long	.Linfo_string55         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	140                     # DW_AT_decl_line
-	.long	152                     # DW_AT_type
-	.byte	27                      # Abbrev [27] 0x884:0xd DW_TAG_lexical_block
-	.byte	15                      # Abbrev [15] 0x885:0xb DW_TAG_variable
-	.long	.Linfo_string56         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	141                     # DW_AT_decl_line
-	.long	152                     # DW_AT_type
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	6                       # Abbrev [6] 0x894:0xd DW_TAG_array_type
-	.long	116                     # DW_AT_type
-	.byte	7                       # Abbrev [7] 0x899:0x7 DW_TAG_subrange_type
-	.long	123                     # DW_AT_type
-	.byte	0                       # DW_AT_lower_bound
-	.byte	11                      # DW_AT_upper_bound
-	.byte	0                       # End Of Children Mark
-	.byte	36                      # Abbrev [36] 0x8a1:0x2c DW_TAG_subprogram
-	.long	.Linfo_string57         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string57         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	185                     # DW_AT_decl_line
-	.long	567                     # DW_AT_type
-	.byte	1                       # DW_AT_external
-	.byte	1                       # DW_AT_inline
-	.byte	27                      # Abbrev [27] 0x8b2:0x1a DW_TAG_lexical_block
-	.byte	15                      # Abbrev [15] 0x8b3:0xb DW_TAG_variable
-	.long	.Linfo_string48         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	186                     # DW_AT_decl_line
-	.long	2253                    # DW_AT_type
-	.byte	27                      # Abbrev [27] 0x8be:0xd DW_TAG_lexical_block
-	.byte	15                      # Abbrev [15] 0x8bf:0xb DW_TAG_variable
-	.long	.Linfo_string49         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	187                     # DW_AT_decl_line
-	.long	669                     # DW_AT_type
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	28                      # Abbrev [28] 0x8cd:0x5 DW_TAG_pointer_type
-	.long	618                     # DW_AT_type
-	.byte	36                      # Abbrev [36] 0x8d2:0x2c DW_TAG_subprogram
-	.long	.Linfo_string58         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string58         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	203                     # DW_AT_decl_line
-	.long	873                     # DW_AT_type
-	.byte	1                       # DW_AT_external
-	.byte	1                       # DW_AT_inline
-	.byte	27                      # Abbrev [27] 0x8e3:0x1a DW_TAG_lexical_block
-	.byte	15                      # Abbrev [15] 0x8e4:0xb DW_TAG_variable
-	.long	.Linfo_string48         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	204                     # DW_AT_decl_line
-	.long	2302                    # DW_AT_type
-	.byte	27                      # Abbrev [27] 0x8ef:0xd DW_TAG_lexical_block
-	.byte	15                      # Abbrev [15] 0x8f0:0xb DW_TAG_variable
-	.long	.Linfo_string49         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	205                     # DW_AT_decl_line
-	.long	915                     # DW_AT_type
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	28                      # Abbrev [28] 0x8fe:0x5 DW_TAG_pointer_type
-	.long	894                     # DW_AT_type
-	.byte	36                      # Abbrev [36] 0x903:0x1d DW_TAG_subprogram
-	.long	.Linfo_string59         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string59         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	236                     # DW_AT_decl_line
-	.long	2336                    # DW_AT_type
-	.byte	1                       # DW_AT_external
-	.byte	1                       # DW_AT_inline
-	.byte	26                      # Abbrev [26] 0x914:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string60         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.byte	236                     # DW_AT_decl_line
-	.long	987                     # DW_AT_type
-	.byte	0                       # End Of Children Mark
-	.byte	28                      # Abbrev [28] 0x920:0x5 DW_TAG_pointer_type
-	.long	116                     # DW_AT_type
-	.byte	16                      # Abbrev [16] 0x925:0x31b DW_TAG_subprogram
-	.long	.Ldebug_ranges48        # DW_AT_ranges
+	.byte	12                      # Abbrev [12] 0x458:0x43 DW_TAG_subprogram
+	.long	.Ldebug_ranges4         # DW_AT_ranges
 	.byte	1                       # DW_AT_frame_base
 	.byte	94
 	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
 	.long	.Linfo_string75         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string75         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	277                     # DW_AT_decl_line
+	.byte	113                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
-	.byte	38                      # Abbrev [38] 0x939:0x13 DW_TAG_inlined_subroutine
-	.long	1970                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges49        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	279                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0x945:0x6 DW_TAG_formal_parameter
-	.byte	16                      # DW_AT_const_value
-	.long	1987                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0x94c:0x13 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges50        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	280                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0x958:0x6 DW_TAG_formal_parameter
-	.byte	16                      # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	39                      # Abbrev [39] 0x95f:0xc DW_TAG_inlined_subroutine
-	.long	2019                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges51        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	282                     # DW_AT_call_line
-	.byte	38                      # Abbrev [38] 0x96b:0x1c DW_TAG_inlined_subroutine
-	.long	2055                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges52        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	303                     # DW_AT_call_line
-	.byte	14                      # Abbrev [14] 0x977:0xf DW_TAG_lexical_block
-	.long	.Ldebug_ranges53        # DW_AT_ranges
-	.byte	30                      # Abbrev [30] 0x97c:0x9 DW_TAG_variable
-	.long	.Ldebug_loc9            # DW_AT_location
-	.long	2085                    # DW_AT_abstract_origin
+	.byte	13                      # Abbrev [13] 0x46b:0xf DW_TAG_formal_parameter
+	.long	.Ldebug_loc2            # DW_AT_location
+	.long	.Linfo_string83         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	113                     # DW_AT_decl_line
+	.long	85                      # DW_AT_type
+	.byte	13                      # Abbrev [13] 0x47a:0xf DW_TAG_formal_parameter
+	.long	.Ldebug_loc3            # DW_AT_location
+	.long	.Linfo_string84         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	113                     # DW_AT_decl_line
+	.long	85                      # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x489:0x11 DW_TAG_lexical_block
+	.long	.Ldebug_ranges5         # DW_AT_ranges
+	.byte	15                      # Abbrev [15] 0x48e:0xb DW_TAG_variable
+	.long	.Linfo_string44         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	115                     # DW_AT_decl_line
+	.long	2204                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0x987:0x1f DW_TAG_inlined_subroutine
-	.long	2104                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges54        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	286                     # DW_AT_call_line
-	.byte	31                      # Abbrev [31] 0x993:0x12 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges55        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.byte	153                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0x99e:0x6 DW_TAG_formal_parameter
-	.byte	2                       # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
+	.byte	12                      # Abbrev [12] 0x49b:0x2a DW_TAG_subprogram
+	.long	.Ldebug_ranges6         # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	.Linfo_string79         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string79         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	253                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	14                      # Abbrev [14] 0x4ae:0x16 DW_TAG_lexical_block
+	.long	.Ldebug_ranges7         # DW_AT_ranges
+	.byte	16                      # Abbrev [16] 0x4b3:0x10 DW_TAG_variable
+	.long	.Ldebug_loc4            # DW_AT_location
+	.long	.Linfo_string48         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	257                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0x9a6:0x1f DW_TAG_inlined_subroutine
-	.long	2117                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges56        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	287                     # DW_AT_call_line
-	.byte	31                      # Abbrev [31] 0x9b2:0x12 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges57        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.byte	161                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0x9bd:0x6 DW_TAG_formal_parameter
-	.byte	1                       # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
+	.byte	17                      # Abbrev [17] 0x4c5:0x18 DW_TAG_subprogram
+	.long	.Ldebug_ranges8         # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	2247                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0x4d1:0xb DW_TAG_lexical_block
+	.long	.Ldebug_ranges9         # DW_AT_ranges
+	.byte	18                      # Abbrev [18] 0x4d6:0x5 DW_TAG_variable
+	.long	2265                    # DW_AT_abstract_origin
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0x9c5:0x1f DW_TAG_inlined_subroutine
-	.long	2130                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges58        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	288                     # DW_AT_call_line
-	.byte	31                      # Abbrev [31] 0x9d1:0x12 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges59        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.byte	169                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0x9dc:0x6 DW_TAG_formal_parameter
-	.byte	8                       # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
+	.byte	12                      # Abbrev [12] 0x4dd:0x32 DW_TAG_subprogram
+	.long	.Ldebug_ranges10        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	.Linfo_string73         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string73         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	90                      # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	19                      # Abbrev [19] 0x4f0:0xd DW_TAG_formal_parameter
+	.byte	1                       # DW_AT_location
+	.byte	80
+	.long	.Linfo_string85         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	90                      # DW_AT_decl_line
+	.long	501                     # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x4fd:0x11 DW_TAG_lexical_block
+	.long	.Ldebug_ranges11        # DW_AT_ranges
+	.byte	15                      # Abbrev [15] 0x502:0xb DW_TAG_variable
+	.long	.Linfo_string44         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	91                      # DW_AT_decl_line
+	.long	4931                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0x9e4:0x3c DW_TAG_inlined_subroutine
-	.long	2143                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges60        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	289                     # DW_AT_call_line
-	.byte	14                      # Abbrev [14] 0x9f0:0x2f DW_TAG_lexical_block
-	.long	.Ldebug_ranges63        # DW_AT_ranges
-	.byte	29                      # Abbrev [29] 0x9f5:0x8 DW_TAG_variable
-	.byte	2                       # DW_AT_location
-	.byte	145
-	.byte	4
-	.long	2157                    # DW_AT_abstract_origin
-	.byte	14                      # Abbrev [14] 0x9fd:0x21 DW_TAG_lexical_block
-	.long	.Ldebug_ranges62        # DW_AT_ranges
-	.byte	30                      # Abbrev [30] 0xa02:0x9 DW_TAG_variable
-	.long	.Ldebug_loc10           # DW_AT_location
-	.long	2181                    # DW_AT_abstract_origin
-	.byte	31                      # Abbrev [31] 0xa0b:0x12 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges61        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.byte	145                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xa16:0x6 DW_TAG_formal_parameter
-	.byte	4                       # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
+	.byte	17                      # Abbrev [17] 0x50f:0x21 DW_TAG_subprogram
+	.long	.Ldebug_ranges12        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	2155                    # DW_AT_abstract_origin
+	.byte	20                      # Abbrev [20] 0x51b:0x9 DW_TAG_formal_parameter
+	.long	.Ldebug_loc5            # DW_AT_location
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0x524:0xb DW_TAG_lexical_block
+	.long	.Ldebug_ranges13        # DW_AT_ranges
+	.byte	18                      # Abbrev [18] 0x529:0x5 DW_TAG_variable
+	.long	2184                    # DW_AT_abstract_origin
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	39                      # Abbrev [39] 0xa20:0xc DW_TAG_inlined_subroutine
-	.long	2019                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges64        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	316                     # DW_AT_call_line
-	.byte	38                      # Abbrev [38] 0xa2c:0x14 DW_TAG_inlined_subroutine
-	.long	1970                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges65        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	355                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xa38:0x7 DW_TAG_formal_parameter
-	.ascii	"\200\002"              # DW_AT_const_value
-	.long	1987                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xa40:0x14 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges66        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	356                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xa4c:0x7 DW_TAG_formal_parameter
-	.ascii	"\200\002"              # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xa54:0x1c DW_TAG_inlined_subroutine
+	.byte	17                      # Abbrev [17] 0x530:0x1f DW_TAG_subprogram
+	.long	.Ldebug_ranges14        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
 	.long	2209                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges67        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	357                     # DW_AT_call_line
-	.byte	14                      # Abbrev [14] 0xa60:0xf DW_TAG_lexical_block
-	.long	.Ldebug_ranges68        # DW_AT_ranges
-	.byte	30                      # Abbrev [30] 0xa65:0x9 DW_TAG_variable
+	.byte	21                      # Abbrev [21] 0x53c:0x7 DW_TAG_formal_parameter
+	.byte	1                       # DW_AT_location
+	.byte	80
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0x543:0xb DW_TAG_lexical_block
+	.long	.Ldebug_ranges15        # DW_AT_ranges
+	.byte	18                      # Abbrev [18] 0x548:0x5 DW_TAG_variable
+	.long	2234                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	12                      # Abbrev [12] 0x54f:0x49 DW_TAG_subprogram
+	.long	.Ldebug_ranges16        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	.Linfo_string76         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string76         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	123                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	13                      # Abbrev [13] 0x562:0xf DW_TAG_formal_parameter
+	.long	.Ldebug_loc6            # DW_AT_location
+	.long	.Linfo_string48         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	123                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x571:0x26 DW_TAG_lexical_block
+	.long	.Ldebug_ranges18        # DW_AT_ranges
+	.byte	15                      # Abbrev [15] 0x576:0xb DW_TAG_variable
+	.long	.Linfo_string82         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	124                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x581:0x15 DW_TAG_lexical_block
+	.long	.Ldebug_ranges17        # DW_AT_ranges
+	.byte	22                      # Abbrev [22] 0x586:0xf DW_TAG_variable
+	.long	.Ldebug_loc7            # DW_AT_location
+	.long	.Linfo_string86         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	125                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	12                      # Abbrev [12] 0x598:0x4c DW_TAG_subprogram
+	.long	.Ldebug_ranges19        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	.Linfo_string76         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string76         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	123                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	14                      # Abbrev [14] 0x5ab:0x38 DW_TAG_lexical_block
+	.long	.Ldebug_ranges22        # DW_AT_ranges
+	.byte	23                      # Abbrev [23] 0x5b0:0xc DW_TAG_variable
+	.byte	2                       # DW_AT_const_value
+	.long	.Linfo_string48         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	123                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x5bc:0x26 DW_TAG_lexical_block
+	.long	.Ldebug_ranges21        # DW_AT_ranges
+	.byte	15                      # Abbrev [15] 0x5c1:0xb DW_TAG_variable
+	.long	.Linfo_string82         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	124                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x5cc:0x15 DW_TAG_lexical_block
+	.long	.Ldebug_ranges20        # DW_AT_ranges
+	.byte	22                      # Abbrev [22] 0x5d1:0xf DW_TAG_variable
+	.long	.Ldebug_loc8            # DW_AT_location
+	.long	.Linfo_string86         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	125                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	12                      # Abbrev [12] 0x5e4:0x49 DW_TAG_subprogram
+	.long	.Ldebug_ranges23        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	.Linfo_string77         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string77         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	134                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	13                      # Abbrev [13] 0x5f7:0xf DW_TAG_formal_parameter
+	.long	.Ldebug_loc9            # DW_AT_location
+	.long	.Linfo_string87         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	134                     # DW_AT_decl_line
+	.long	4936                    # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x606:0x26 DW_TAG_lexical_block
+	.long	.Ldebug_ranges25        # DW_AT_ranges
+	.byte	15                      # Abbrev [15] 0x60b:0xb DW_TAG_variable
+	.long	.Linfo_string82         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	135                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x616:0x15 DW_TAG_lexical_block
+	.long	.Ldebug_ranges24        # DW_AT_ranges
+	.byte	22                      # Abbrev [22] 0x61b:0xf DW_TAG_variable
+	.long	.Ldebug_loc10           # DW_AT_location
+	.long	.Linfo_string86         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	136                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	12                      # Abbrev [12] 0x62d:0x5d DW_TAG_subprogram
+	.long	.Ldebug_ranges26        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	.Linfo_string51         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string51         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	156                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	13                      # Abbrev [13] 0x640:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc11           # DW_AT_location
-	.long	2239                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xa70:0x14 DW_TAG_inlined_subroutine
-	.long	1970                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges69        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	359                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xa7c:0x7 DW_TAG_formal_parameter
-	.ascii	"\200\004"              # DW_AT_const_value
-	.long	1987                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xa84:0x14 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges70        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	360                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xa90:0x7 DW_TAG_formal_parameter
-	.ascii	"\200\004"              # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xa98:0x1c DW_TAG_inlined_subroutine
-	.long	2055                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges71        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	361                     # DW_AT_call_line
-	.byte	14                      # Abbrev [14] 0xaa4:0xf DW_TAG_lexical_block
-	.long	.Ldebug_ranges72        # DW_AT_ranges
-	.byte	30                      # Abbrev [30] 0xaa9:0x9 DW_TAG_variable
-	.long	.Ldebug_loc12           # DW_AT_location
-	.long	2085                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xab4:0x13 DW_TAG_inlined_subroutine
-	.long	1970                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges73        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	320                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xac0:0x6 DW_TAG_formal_parameter
-	.byte	4                       # DW_AT_const_value
-	.long	1987                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xac7:0x13 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges74        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	321                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xad3:0x6 DW_TAG_formal_parameter
-	.byte	4                       # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xada:0x3c DW_TAG_inlined_subroutine
-	.long	2143                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges75        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	322                     # DW_AT_call_line
-	.byte	14                      # Abbrev [14] 0xae6:0x2f DW_TAG_lexical_block
-	.long	.Ldebug_ranges78        # DW_AT_ranges
-	.byte	29                      # Abbrev [29] 0xaeb:0x8 DW_TAG_variable
+	.long	.Linfo_string48         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	156                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x64f:0x3a DW_TAG_lexical_block
+	.long	.Ldebug_ranges29        # DW_AT_ranges
+	.byte	24                      # Abbrev [24] 0x654:0xe DW_TAG_variable
 	.byte	2                       # DW_AT_location
 	.byte	145
 	.byte	4
-	.long	2157                    # DW_AT_abstract_origin
-	.byte	14                      # Abbrev [14] 0xaf3:0x21 DW_TAG_lexical_block
-	.long	.Ldebug_ranges77        # DW_AT_ranges
-	.byte	30                      # Abbrev [30] 0xaf8:0x9 DW_TAG_variable
+	.long	.Linfo_string52         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	157                     # DW_AT_decl_line
+	.long	2430                    # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x662:0x26 DW_TAG_lexical_block
+	.long	.Ldebug_ranges28        # DW_AT_ranges
+	.byte	15                      # Abbrev [15] 0x667:0xb DW_TAG_variable
+	.long	.Linfo_string53         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	158                     # DW_AT_decl_line
+	.long	85                      # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x672:0x15 DW_TAG_lexical_block
+	.long	.Ldebug_ranges27        # DW_AT_ranges
+	.byte	22                      # Abbrev [22] 0x677:0xf DW_TAG_variable
+	.long	.Ldebug_loc12           # DW_AT_location
+	.long	.Linfo_string54         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	159                     # DW_AT_decl_line
+	.long	85                      # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	17                      # Abbrev [17] 0x68a:0x41 DW_TAG_subprogram
+	.long	.Ldebug_ranges30        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	2364                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0x696:0x34 DW_TAG_lexical_block
+	.long	.Ldebug_ranges34        # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0x69b:0x6 DW_TAG_variable
+	.byte	3                       # DW_AT_const_value
+	.long	2378                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0x6a1:0x28 DW_TAG_lexical_block
+	.long	.Ldebug_ranges33        # DW_AT_ranges
+	.byte	26                      # Abbrev [26] 0x6a6:0x8 DW_TAG_variable
+	.byte	2                       # DW_AT_location
+	.byte	145
+	.byte	4
+	.long	2390                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0x6ae:0x1a DW_TAG_lexical_block
+	.long	.Ldebug_ranges32        # DW_AT_ranges
+	.byte	18                      # Abbrev [18] 0x6b3:0x5 DW_TAG_variable
+	.long	2402                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0x6b8:0xf DW_TAG_lexical_block
+	.long	.Ldebug_ranges31        # DW_AT_ranges
+	.byte	27                      # Abbrev [27] 0x6bd:0x9 DW_TAG_variable
 	.long	.Ldebug_loc13           # DW_AT_location
-	.long	2181                    # DW_AT_abstract_origin
-	.byte	31                      # Abbrev [31] 0xb01:0x12 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges76        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.byte	145                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xb0c:0x6 DW_TAG_formal_parameter
-	.byte	4                       # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
+	.long	2414                    # DW_AT_abstract_origin
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xb16:0x13 DW_TAG_inlined_subroutine
-	.long	1970                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges79        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	325                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xb22:0x6 DW_TAG_formal_parameter
-	.byte	2                       # DW_AT_const_value
-	.long	1987                    # DW_AT_abstract_origin
 	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xb29:0x13 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges80        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	326                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xb35:0x6 DW_TAG_formal_parameter
-	.byte	2                       # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xb3c:0x1f DW_TAG_inlined_subroutine
-	.long	2104                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges81        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	327                     # DW_AT_call_line
-	.byte	31                      # Abbrev [31] 0xb48:0x12 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges82        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.byte	153                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xb53:0x6 DW_TAG_formal_parameter
-	.byte	2                       # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xb5b:0x13 DW_TAG_inlined_subroutine
-	.long	1970                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges83        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	330                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xb67:0x6 DW_TAG_formal_parameter
-	.byte	1                       # DW_AT_const_value
-	.long	1987                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xb6e:0x13 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges84        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	331                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xb7a:0x6 DW_TAG_formal_parameter
-	.byte	1                       # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xb81:0x1f DW_TAG_inlined_subroutine
-	.long	2117                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges85        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	332                     # DW_AT_call_line
-	.byte	31                      # Abbrev [31] 0xb8d:0x12 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges86        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.byte	161                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xb98:0x6 DW_TAG_formal_parameter
-	.byte	1                       # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xba0:0x13 DW_TAG_inlined_subroutine
-	.long	1970                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges87        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	335                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xbac:0x6 DW_TAG_formal_parameter
-	.byte	8                       # DW_AT_const_value
-	.long	1987                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xbb3:0x13 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges88        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	336                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xbbf:0x6 DW_TAG_formal_parameter
-	.byte	8                       # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xbc6:0x1f DW_TAG_inlined_subroutine
-	.long	2130                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges89        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	337                     # DW_AT_call_line
-	.byte	31                      # Abbrev [31] 0xbd2:0x12 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges90        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.byte	169                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xbdd:0x6 DW_TAG_formal_parameter
-	.byte	8                       # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xbe5:0x14 DW_TAG_inlined_subroutine
-	.long	1970                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges91        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	365                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xbf1:0x7 DW_TAG_formal_parameter
-	.ascii	"\200\b"                # DW_AT_const_value
-	.long	1987                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xbf9:0x14 DW_TAG_inlined_subroutine
-	.long	1470                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges92        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	366                     # DW_AT_call_line
-	.byte	32                      # Abbrev [32] 0xc05:0x7 DW_TAG_formal_parameter
-	.ascii	"\200\b"                # DW_AT_const_value
-	.long	1483                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xc0d:0x1c DW_TAG_inlined_subroutine
-	.long	2258                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges93        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	367                     # DW_AT_call_line
-	.byte	14                      # Abbrev [14] 0xc19:0xf DW_TAG_lexical_block
-	.long	.Ldebug_ranges94        # DW_AT_ranges
-	.byte	30                      # Abbrev [30] 0xc1e:0x9 DW_TAG_variable
-	.long	.Ldebug_loc15           # DW_AT_location
-	.long	2288                    # DW_AT_abstract_origin
-	.byte	0                       # End Of Children Mark
-	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xc29:0x16 DW_TAG_inlined_subroutine
-	.long	2307                    # DW_AT_abstract_origin
-	.long	.Ldebug_ranges95        # DW_AT_ranges
-	.byte	1                       # DW_AT_call_file
-	.short	367                     # DW_AT_call_line
-	.byte	23                      # Abbrev [23] 0xc35:0x9 DW_TAG_formal_parameter
+	.byte	12                      # Abbrev [12] 0x6cb:0x23 DW_TAG_subprogram
+	.long	.Ldebug_ranges35        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	.Linfo_string47         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string47         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	164                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	13                      # Abbrev [13] 0x6de:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc14           # DW_AT_location
+	.long	.Linfo_string48         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	164                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	17                      # Abbrev [17] 0x6ee:0x19 DW_TAG_subprogram
+	.long	.Ldebug_ranges36        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	2283                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0x6fa:0xc DW_TAG_lexical_block
+	.long	.Ldebug_ranges37        # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0x6ff:0x6 DW_TAG_variable
+	.byte	0                       # DW_AT_const_value
+	.long	2297                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	12                      # Abbrev [12] 0x707:0x23 DW_TAG_subprogram
+	.long	.Ldebug_ranges38        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	.Linfo_string49         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string49         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	171                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	13                      # Abbrev [13] 0x71a:0xf DW_TAG_formal_parameter
+	.long	.Ldebug_loc15           # DW_AT_location
+	.long	.Linfo_string48         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	171                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	17                      # Abbrev [17] 0x72a:0x19 DW_TAG_subprogram
+	.long	.Ldebug_ranges39        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	2310                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0x736:0xc DW_TAG_lexical_block
+	.long	.Ldebug_ranges40        # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0x73b:0x6 DW_TAG_variable
+	.byte	1                       # DW_AT_const_value
 	.long	2324                    # DW_AT_abstract_origin
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
-	.byte	40                      # Abbrev [40] 0xc40:0x18 DW_TAG_subprogram
-	.long	.Linfo_string61         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string61         # DW_AT_name
-	.byte	2                       # DW_AT_decl_file
-	.byte	46                      # DW_AT_decl_line
+	.byte	12                      # Abbrev [12] 0x743:0x23 DW_TAG_subprogram
+	.long	.Ldebug_ranges41        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	.Linfo_string50         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string50         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	178                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
-	.byte	26                      # Abbrev [26] 0xc4c:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string86         # DW_AT_name
-	.byte	2                       # DW_AT_decl_file
-	.byte	46                      # DW_AT_decl_line
-	.long	152                     # DW_AT_type
+	.byte	13                      # Abbrev [13] 0x756:0xf DW_TAG_formal_parameter
+	.long	.Ldebug_loc16           # DW_AT_location
+	.long	.Linfo_string48         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	178                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	40                      # Abbrev [40] 0xc58:0x18 DW_TAG_subprogram
+	.byte	17                      # Abbrev [17] 0x766:0x19 DW_TAG_subprogram
+	.long	.Ldebug_ranges42        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	2337                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0x772:0xc DW_TAG_lexical_block
+	.long	.Ldebug_ranges43        # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0x777:0x6 DW_TAG_variable
+	.byte	2                       # DW_AT_const_value
+	.long	2351                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	17                      # Abbrev [17] 0x77f:0x25 DW_TAG_subprogram
+	.long	.Ldebug_ranges44        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	2492                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0x78b:0x18 DW_TAG_lexical_block
+	.long	.Ldebug_ranges46        # DW_AT_ranges
+	.byte	18                      # Abbrev [18] 0x790:0x5 DW_TAG_variable
+	.long	2510                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0x795:0xd DW_TAG_lexical_block
+	.long	.Ldebug_ranges45        # DW_AT_ranges
+	.byte	26                      # Abbrev [26] 0x79a:0x7 DW_TAG_variable
+	.byte	1                       # DW_AT_location
+	.byte	80
+	.long	2522                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	17                      # Abbrev [17] 0x7a4:0x25 DW_TAG_subprogram
+	.long	.Ldebug_ranges47        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	2443                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0x7b0:0x18 DW_TAG_lexical_block
+	.long	.Ldebug_ranges49        # DW_AT_ranges
+	.byte	18                      # Abbrev [18] 0x7b5:0x5 DW_TAG_variable
+	.long	2461                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0x7ba:0xd DW_TAG_lexical_block
+	.long	.Ldebug_ranges48        # DW_AT_ranges
+	.byte	26                      # Abbrev [26] 0x7bf:0x7 DW_TAG_variable
+	.byte	1                       # DW_AT_location
+	.byte	80
+	.long	2473                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	12                      # Abbrev [12] 0x7c9:0x32 DW_TAG_subprogram
+	.long	.Ldebug_ranges50        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	.Linfo_string78         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string78         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	205                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	13                      # Abbrev [13] 0x7dc:0xf DW_TAG_formal_parameter
+	.long	.Ldebug_loc17           # DW_AT_location
+	.long	.Linfo_string48         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	205                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	13                      # Abbrev [13] 0x7eb:0xf DW_TAG_formal_parameter
+	.long	.Ldebug_loc18           # DW_AT_location
+	.long	.Linfo_string88         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	205                     # DW_AT_decl_line
+	.long	873                     # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	12                      # Abbrev [12] 0x7fb:0x35 DW_TAG_subprogram
+	.long	.Ldebug_ranges51        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	.Linfo_string78         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string78         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	205                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	13                      # Abbrev [13] 0x80e:0xf DW_TAG_formal_parameter
+	.long	.Ldebug_loc19           # DW_AT_location
+	.long	.Linfo_string88         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	205                     # DW_AT_decl_line
+	.long	873                     # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x81d:0x12 DW_TAG_lexical_block
+	.long	.Ldebug_ranges52        # DW_AT_ranges
+	.byte	23                      # Abbrev [23] 0x822:0xc DW_TAG_variable
+	.byte	3                       # DW_AT_const_value
+	.long	.Linfo_string48         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	205                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	17                      # Abbrev [17] 0x830:0x25 DW_TAG_subprogram
+	.long	.Ldebug_ranges53        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	2541                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0x83c:0x18 DW_TAG_lexical_block
+	.long	.Ldebug_ranges55        # DW_AT_ranges
+	.byte	18                      # Abbrev [18] 0x841:0x5 DW_TAG_variable
+	.long	2559                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0x846:0xd DW_TAG_lexical_block
+	.long	.Ldebug_ranges54        # DW_AT_ranges
+	.byte	26                      # Abbrev [26] 0x84b:0x7 DW_TAG_variable
+	.byte	1                       # DW_AT_location
+	.byte	80
+	.long	2571                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	17                      # Abbrev [17] 0x855:0x16 DW_TAG_subprogram
+	.long	.Ldebug_ranges56        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	2590                    # DW_AT_abstract_origin
+	.byte	20                      # Abbrev [20] 0x861:0x9 DW_TAG_formal_parameter
+	.long	.Ldebug_loc20           # DW_AT_location
+	.long	2607                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	28                      # Abbrev [28] 0x86b:0x2a DW_TAG_subprogram
+	.long	.Linfo_string41         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string41         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	64                      # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_inline
+	.byte	29                      # Abbrev [29] 0x87c:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string43         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	64                      # DW_AT_decl_line
+	.long	85                      # DW_AT_type
+	.byte	30                      # Abbrev [30] 0x887:0xd DW_TAG_lexical_block
+	.byte	15                      # Abbrev [15] 0x888:0xb DW_TAG_variable
+	.long	.Linfo_string44         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	65                      # DW_AT_decl_line
+	.long	2204                    # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	6                       # Abbrev [6] 0x895:0x7 DW_TAG_base_type
+	.long	.Linfo_string42         # DW_AT_name
+	.byte	5                       # DW_AT_encoding
+	.byte	4                       # DW_AT_byte_size
+	.byte	31                      # Abbrev [31] 0x89c:0x5 DW_TAG_pointer_type
+	.long	85                      # DW_AT_type
+	.byte	32                      # Abbrev [32] 0x8a1:0x26 DW_TAG_subprogram
+	.long	.Linfo_string45         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string45         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	72                      # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_inline
+	.byte	29                      # Abbrev [29] 0x8ae:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string43         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	72                      # DW_AT_decl_line
+	.long	85                      # DW_AT_type
+	.byte	30                      # Abbrev [30] 0x8b9:0xd DW_TAG_lexical_block
+	.byte	15                      # Abbrev [15] 0x8ba:0xb DW_TAG_variable
+	.long	.Linfo_string44         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	73                      # DW_AT_decl_line
+	.long	2204                    # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	28                      # Abbrev [28] 0x8c7:0x1f DW_TAG_subprogram
+	.long	.Linfo_string46         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string46         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	82                      # DW_AT_decl_line
+	.long	435                     # DW_AT_type
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_inline
+	.byte	30                      # Abbrev [30] 0x8d8:0xd DW_TAG_lexical_block
+	.byte	15                      # Abbrev [15] 0x8d9:0xb DW_TAG_variable
+	.long	.Linfo_string44         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	83                      # DW_AT_decl_line
+	.long	2278                    # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	31                      # Abbrev [31] 0x8e6:0x5 DW_TAG_pointer_type
+	.long	468                     # DW_AT_type
+	.byte	32                      # Abbrev [32] 0x8eb:0x1b DW_TAG_subprogram
+	.long	.Linfo_string47         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string47         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	164                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_inline
+	.byte	30                      # Abbrev [30] 0x8f8:0xd DW_TAG_lexical_block
+	.byte	15                      # Abbrev [15] 0x8f9:0xb DW_TAG_variable
+	.long	.Linfo_string48         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	164                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	32                      # Abbrev [32] 0x906:0x1b DW_TAG_subprogram
+	.long	.Linfo_string49         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string49         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	171                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_inline
+	.byte	30                      # Abbrev [30] 0x913:0xd DW_TAG_lexical_block
+	.byte	15                      # Abbrev [15] 0x914:0xb DW_TAG_variable
+	.long	.Linfo_string48         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	171                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	32                      # Abbrev [32] 0x921:0x1b DW_TAG_subprogram
+	.long	.Linfo_string50         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string50         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	178                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_inline
+	.byte	30                      # Abbrev [30] 0x92e:0xd DW_TAG_lexical_block
+	.byte	15                      # Abbrev [15] 0x92f:0xb DW_TAG_variable
+	.long	.Linfo_string48         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	178                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	32                      # Abbrev [32] 0x93c:0x42 DW_TAG_subprogram
+	.long	.Linfo_string51         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string51         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	156                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_inline
+	.byte	30                      # Abbrev [30] 0x949:0x34 DW_TAG_lexical_block
+	.byte	15                      # Abbrev [15] 0x94a:0xb DW_TAG_variable
+	.long	.Linfo_string48         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	156                     # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	30                      # Abbrev [30] 0x955:0x27 DW_TAG_lexical_block
+	.byte	15                      # Abbrev [15] 0x956:0xb DW_TAG_variable
+	.long	.Linfo_string52         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	157                     # DW_AT_decl_line
+	.long	2430                    # DW_AT_type
+	.byte	30                      # Abbrev [30] 0x961:0x1a DW_TAG_lexical_block
+	.byte	15                      # Abbrev [15] 0x962:0xb DW_TAG_variable
+	.long	.Linfo_string53         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	158                     # DW_AT_decl_line
+	.long	85                      # DW_AT_type
+	.byte	30                      # Abbrev [30] 0x96d:0xd DW_TAG_lexical_block
+	.byte	15                      # Abbrev [15] 0x96e:0xb DW_TAG_variable
+	.long	.Linfo_string54         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	159                     # DW_AT_decl_line
+	.long	85                      # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	9                       # Abbrev [9] 0x97e:0xd DW_TAG_array_type
+	.long	342                     # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x983:0x7 DW_TAG_subrange_type
+	.long	349                     # DW_AT_type
+	.byte	0                       # DW_AT_lower_bound
+	.byte	11                      # DW_AT_upper_bound
+	.byte	0                       # End Of Children Mark
+	.byte	28                      # Abbrev [28] 0x98b:0x2c DW_TAG_subprogram
+	.long	.Linfo_string55         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string55         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	197                     # DW_AT_decl_line
+	.long	720                     # DW_AT_type
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_inline
+	.byte	30                      # Abbrev [30] 0x99c:0x1a DW_TAG_lexical_block
+	.byte	15                      # Abbrev [15] 0x99d:0xb DW_TAG_variable
+	.long	.Linfo_string56         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	198                     # DW_AT_decl_line
+	.long	2487                    # DW_AT_type
+	.byte	30                      # Abbrev [30] 0x9a8:0xd DW_TAG_lexical_block
+	.byte	15                      # Abbrev [15] 0x9a9:0xb DW_TAG_variable
+	.long	.Linfo_string57         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	199                     # DW_AT_decl_line
+	.long	822                     # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	31                      # Abbrev [31] 0x9b7:0x5 DW_TAG_pointer_type
+	.long	771                     # DW_AT_type
+	.byte	28                      # Abbrev [28] 0x9bc:0x2c DW_TAG_subprogram
+	.long	.Linfo_string58         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string58         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	188                     # DW_AT_decl_line
+	.long	567                     # DW_AT_type
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_inline
+	.byte	30                      # Abbrev [30] 0x9cd:0x1a DW_TAG_lexical_block
+	.byte	15                      # Abbrev [15] 0x9ce:0xb DW_TAG_variable
+	.long	.Linfo_string56         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	189                     # DW_AT_decl_line
+	.long	2536                    # DW_AT_type
+	.byte	30                      # Abbrev [30] 0x9d9:0xd DW_TAG_lexical_block
+	.byte	15                      # Abbrev [15] 0x9da:0xb DW_TAG_variable
+	.long	.Linfo_string57         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	190                     # DW_AT_decl_line
+	.long	669                     # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	31                      # Abbrev [31] 0x9e8:0x5 DW_TAG_pointer_type
+	.long	618                     # DW_AT_type
+	.byte	28                      # Abbrev [28] 0x9ed:0x2c DW_TAG_subprogram
+	.long	.Linfo_string59         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string59         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	233                     # DW_AT_decl_line
+	.long	924                     # DW_AT_type
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_inline
+	.byte	30                      # Abbrev [30] 0x9fe:0x1a DW_TAG_lexical_block
+	.byte	15                      # Abbrev [15] 0x9ff:0xb DW_TAG_variable
+	.long	.Linfo_string56         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	234                     # DW_AT_decl_line
+	.long	2585                    # DW_AT_type
+	.byte	30                      # Abbrev [30] 0xa0a:0xd DW_TAG_lexical_block
+	.byte	15                      # Abbrev [15] 0xa0b:0xb DW_TAG_variable
+	.long	.Linfo_string57         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	235                     # DW_AT_decl_line
+	.long	966                     # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	31                      # Abbrev [31] 0xa19:0x5 DW_TAG_pointer_type
+	.long	945                     # DW_AT_type
+	.byte	28                      # Abbrev [28] 0xa1e:0x1d DW_TAG_subprogram
+	.long	.Linfo_string60         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string60         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	240                     # DW_AT_decl_line
+	.long	2619                    # DW_AT_type
+	.byte	1                       # DW_AT_external
+	.byte	1                       # DW_AT_inline
+	.byte	29                      # Abbrev [29] 0xa2f:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string61         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.byte	240                     # DW_AT_decl_line
+	.long	987                     # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	31                      # Abbrev [31] 0xa3b:0x5 DW_TAG_pointer_type
+	.long	342                     # DW_AT_type
+	.byte	33                      # Abbrev [33] 0xa40:0x351 DW_TAG_subprogram
+	.long	.Ldebug_ranges57        # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	.Linfo_string80         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string80         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	271                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	34                      # Abbrev [34] 0xa54:0x10 DW_TAG_formal_parameter
+	.long	.Ldebug_loc21           # DW_AT_location
+	.long	.Linfo_string89         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	271                     # DW_AT_decl_line
+	.long	4946                    # DW_AT_type
+	.byte	35                      # Abbrev [35] 0xa64:0x13 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges58        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	273                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xa70:0x6 DW_TAG_formal_parameter
+	.byte	16                      # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xa77:0x13 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges59        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	274                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xa83:0x6 DW_TAG_formal_parameter
+	.byte	16                      # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	37                      # Abbrev [37] 0xa8a:0xc DW_TAG_inlined_subroutine
+	.long	2247                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges60        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	276                     # DW_AT_call_line
+	.byte	35                      # Abbrev [35] 0xa96:0x19 DW_TAG_inlined_subroutine
+	.long	2283                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges61        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	279                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xaa2:0xc DW_TAG_lexical_block
+	.long	.Ldebug_ranges62        # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0xaa7:0x6 DW_TAG_variable
+	.byte	0                       # DW_AT_const_value
+	.long	2297                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xaaf:0x19 DW_TAG_inlined_subroutine
+	.long	2310                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges63        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	280                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xabb:0xc DW_TAG_lexical_block
+	.long	.Ldebug_ranges64        # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0xac0:0x6 DW_TAG_variable
+	.byte	1                       # DW_AT_const_value
+	.long	2324                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xac8:0x19 DW_TAG_inlined_subroutine
+	.long	2337                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges65        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	281                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xad4:0xc DW_TAG_lexical_block
+	.long	.Ldebug_ranges66        # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0xad9:0x6 DW_TAG_variable
+	.byte	2                       # DW_AT_const_value
+	.long	2351                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xae1:0x36 DW_TAG_inlined_subroutine
+	.long	2364                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges67        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	282                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xaed:0x29 DW_TAG_lexical_block
+	.long	.Ldebug_ranges70        # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0xaf2:0x6 DW_TAG_variable
+	.byte	3                       # DW_AT_const_value
+	.long	2378                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0xaf8:0x1d DW_TAG_lexical_block
+	.long	.Ldebug_ranges69        # DW_AT_ranges
+	.byte	26                      # Abbrev [26] 0xafd:0x8 DW_TAG_variable
+	.byte	2                       # DW_AT_location
+	.byte	145
+	.byte	12
+	.long	2390                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0xb05:0xf DW_TAG_lexical_block
+	.long	.Ldebug_ranges68        # DW_AT_ranges
+	.byte	27                      # Abbrev [27] 0xb0a:0x9 DW_TAG_variable
+	.long	.Ldebug_loc22           # DW_AT_location
+	.long	2414                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xb17:0x1c DW_TAG_inlined_subroutine
+	.long	2443                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges71        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	296                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xb23:0xf DW_TAG_lexical_block
+	.long	.Ldebug_ranges72        # DW_AT_ranges
+	.byte	27                      # Abbrev [27] 0xb28:0x9 DW_TAG_variable
+	.long	.Ldebug_loc23           # DW_AT_location
+	.long	2473                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	37                      # Abbrev [37] 0xb33:0xc DW_TAG_inlined_subroutine
+	.long	2247                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges73        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	308                     # DW_AT_call_line
+	.byte	35                      # Abbrev [35] 0xb3f:0x13 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges74        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	312                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xb4b:0x6 DW_TAG_formal_parameter
+	.byte	2                       # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xb52:0x13 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges75        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	313                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xb5e:0x6 DW_TAG_formal_parameter
+	.byte	2                       # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xb65:0x19 DW_TAG_inlined_subroutine
+	.long	2283                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges76        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	314                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xb71:0xc DW_TAG_lexical_block
+	.long	.Ldebug_ranges77        # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0xb76:0x6 DW_TAG_variable
+	.byte	0                       # DW_AT_const_value
+	.long	2297                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xb7e:0x13 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges78        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	316                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xb8a:0x6 DW_TAG_formal_parameter
+	.byte	1                       # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xb91:0x13 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges79        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	317                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xb9d:0x6 DW_TAG_formal_parameter
+	.byte	1                       # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xba4:0x19 DW_TAG_inlined_subroutine
+	.long	2310                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges80        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	318                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xbb0:0xc DW_TAG_lexical_block
+	.long	.Ldebug_ranges81        # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0xbb5:0x6 DW_TAG_variable
+	.byte	1                       # DW_AT_const_value
+	.long	2324                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xbbd:0x13 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges82        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	320                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xbc9:0x6 DW_TAG_formal_parameter
+	.byte	8                       # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xbd0:0x13 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges83        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	321                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xbdc:0x6 DW_TAG_formal_parameter
+	.byte	8                       # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xbe3:0x19 DW_TAG_inlined_subroutine
+	.long	2337                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges84        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	322                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xbef:0xc DW_TAG_lexical_block
+	.long	.Ldebug_ranges85        # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0xbf4:0x6 DW_TAG_variable
+	.byte	2                       # DW_AT_const_value
+	.long	2351                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xbfc:0x13 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges86        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	324                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xc08:0x6 DW_TAG_formal_parameter
+	.byte	4                       # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xc0f:0x13 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges87        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	325                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xc1b:0x6 DW_TAG_formal_parameter
+	.byte	4                       # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xc22:0x36 DW_TAG_inlined_subroutine
+	.long	2364                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges88        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	326                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xc2e:0x29 DW_TAG_lexical_block
+	.long	.Ldebug_ranges91        # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0xc33:0x6 DW_TAG_variable
+	.byte	3                       # DW_AT_const_value
+	.long	2378                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0xc39:0x1d DW_TAG_lexical_block
+	.long	.Ldebug_ranges90        # DW_AT_ranges
+	.byte	26                      # Abbrev [26] 0xc3e:0x8 DW_TAG_variable
+	.byte	2                       # DW_AT_location
+	.byte	145
+	.byte	12
+	.long	2390                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0xc46:0xf DW_TAG_lexical_block
+	.long	.Ldebug_ranges89        # DW_AT_ranges
+	.byte	27                      # Abbrev [27] 0xc4b:0x9 DW_TAG_variable
+	.long	.Ldebug_loc24           # DW_AT_location
+	.long	2414                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xc58:0x14 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges92        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	333                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xc64:0x7 DW_TAG_formal_parameter
+	.ascii	"\200\001"              # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xc6c:0x14 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges93        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	334                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xc78:0x7 DW_TAG_formal_parameter
+	.ascii	"\200\001"              # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xc80:0x14 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges94        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	340                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xc8c:0x7 DW_TAG_formal_parameter
+	.ascii	"\200\002"              # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xc94:0x14 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges95        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	341                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xca0:0x7 DW_TAG_formal_parameter
+	.ascii	"\200\002"              # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xca8:0x1c DW_TAG_inlined_subroutine
+	.long	2492                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges96        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	342                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xcb4:0xf DW_TAG_lexical_block
+	.long	.Ldebug_ranges97        # DW_AT_ranges
+	.byte	27                      # Abbrev [27] 0xcb9:0x9 DW_TAG_variable
+	.long	.Ldebug_loc25           # DW_AT_location
+	.long	2522                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xcc4:0x14 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges98        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	344                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xcd0:0x7 DW_TAG_formal_parameter
+	.ascii	"\200\004"              # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xcd8:0x14 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges99        # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	345                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xce4:0x7 DW_TAG_formal_parameter
+	.ascii	"\200\004"              # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xcec:0x1c DW_TAG_inlined_subroutine
+	.long	2443                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges100       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	346                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xcf8:0xf DW_TAG_lexical_block
+	.long	.Ldebug_ranges101       # DW_AT_ranges
+	.byte	27                      # Abbrev [27] 0xcfd:0x9 DW_TAG_variable
+	.long	.Ldebug_loc26           # DW_AT_location
+	.long	2473                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xd08:0x14 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges102       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	350                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xd14:0x7 DW_TAG_formal_parameter
+	.ascii	"\200\b"                # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xd1c:0x14 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges103       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	351                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xd28:0x7 DW_TAG_formal_parameter
+	.ascii	"\200\b"                # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xd30:0x1c DW_TAG_inlined_subroutine
+	.long	2541                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges104       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	352                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xd3c:0xf DW_TAG_lexical_block
+	.long	.Ldebug_ranges105       # DW_AT_ranges
+	.byte	27                      # Abbrev [27] 0xd41:0x9 DW_TAG_variable
+	.long	.Ldebug_loc28           # DW_AT_location
+	.long	2571                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xd4c:0x16 DW_TAG_inlined_subroutine
+	.long	2590                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges106       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	352                     # DW_AT_call_line
+	.byte	20                      # Abbrev [20] 0xd58:0x9 DW_TAG_formal_parameter
+	.long	.Ldebug_loc27           # DW_AT_location
+	.long	2607                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	14                      # Abbrev [14] 0xd62:0x2e DW_TAG_lexical_block
+	.long	.Ldebug_ranges109       # DW_AT_ranges
+	.byte	38                      # Abbrev [38] 0xd67:0xc DW_TAG_variable
+	.long	.Linfo_string57         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	353                     # DW_AT_decl_line
+	.long	4953                    # DW_AT_type
+	.byte	35                      # Abbrev [35] 0xd73:0x1c DW_TAG_inlined_subroutine
+	.long	2541                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges107       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	354                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xd7f:0xf DW_TAG_lexical_block
+	.long	.Ldebug_ranges108       # DW_AT_ranges
+	.byte	27                      # Abbrev [27] 0xd84:0x9 DW_TAG_variable
+	.long	.Ldebug_loc29           # DW_AT_location
+	.long	2571                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	33                      # Abbrev [33] 0xd91:0x353 DW_TAG_subprogram
+	.long	.Ldebug_ranges110       # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	.Linfo_string80         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string80         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	271                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	14                      # Abbrev [14] 0xda5:0x33e DW_TAG_lexical_block
+	.long	.Ldebug_ranges163       # DW_AT_ranges
+	.byte	38                      # Abbrev [38] 0xdaa:0xc DW_TAG_variable
+	.long	.Linfo_string89         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	271                     # DW_AT_decl_line
+	.long	4946                    # DW_AT_type
+	.byte	35                      # Abbrev [35] 0xdb6:0x13 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges111       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	273                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xdc2:0x6 DW_TAG_formal_parameter
+	.byte	16                      # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xdc9:0x13 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges112       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	274                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xdd5:0x6 DW_TAG_formal_parameter
+	.byte	16                      # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	37                      # Abbrev [37] 0xddc:0xc DW_TAG_inlined_subroutine
+	.long	2247                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges113       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	276                     # DW_AT_call_line
+	.byte	35                      # Abbrev [35] 0xde8:0x19 DW_TAG_inlined_subroutine
+	.long	2283                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges114       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	279                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xdf4:0xc DW_TAG_lexical_block
+	.long	.Ldebug_ranges115       # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0xdf9:0x6 DW_TAG_variable
+	.byte	0                       # DW_AT_const_value
+	.long	2297                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xe01:0x19 DW_TAG_inlined_subroutine
+	.long	2310                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges116       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	280                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xe0d:0xc DW_TAG_lexical_block
+	.long	.Ldebug_ranges117       # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0xe12:0x6 DW_TAG_variable
+	.byte	1                       # DW_AT_const_value
+	.long	2324                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xe1a:0x19 DW_TAG_inlined_subroutine
+	.long	2337                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges118       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	281                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xe26:0xc DW_TAG_lexical_block
+	.long	.Ldebug_ranges119       # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0xe2b:0x6 DW_TAG_variable
+	.byte	2                       # DW_AT_const_value
+	.long	2351                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xe33:0x36 DW_TAG_inlined_subroutine
+	.long	2364                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges120       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	282                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xe3f:0x29 DW_TAG_lexical_block
+	.long	.Ldebug_ranges123       # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0xe44:0x6 DW_TAG_variable
+	.byte	3                       # DW_AT_const_value
+	.long	2378                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0xe4a:0x1d DW_TAG_lexical_block
+	.long	.Ldebug_ranges122       # DW_AT_ranges
+	.byte	26                      # Abbrev [26] 0xe4f:0x8 DW_TAG_variable
+	.byte	2                       # DW_AT_location
+	.byte	145
+	.byte	12
+	.long	2390                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0xe57:0xf DW_TAG_lexical_block
+	.long	.Ldebug_ranges121       # DW_AT_ranges
+	.byte	27                      # Abbrev [27] 0xe5c:0x9 DW_TAG_variable
+	.long	.Ldebug_loc30           # DW_AT_location
+	.long	2414                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xe69:0x1c DW_TAG_inlined_subroutine
+	.long	2443                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges124       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	296                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xe75:0xf DW_TAG_lexical_block
+	.long	.Ldebug_ranges125       # DW_AT_ranges
+	.byte	27                      # Abbrev [27] 0xe7a:0x9 DW_TAG_variable
+	.long	.Ldebug_loc31           # DW_AT_location
+	.long	2473                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	37                      # Abbrev [37] 0xe85:0xc DW_TAG_inlined_subroutine
+	.long	2247                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges126       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	308                     # DW_AT_call_line
+	.byte	35                      # Abbrev [35] 0xe91:0x13 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges127       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	312                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xe9d:0x6 DW_TAG_formal_parameter
+	.byte	2                       # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xea4:0x13 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges128       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	313                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xeb0:0x6 DW_TAG_formal_parameter
+	.byte	2                       # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xeb7:0x19 DW_TAG_inlined_subroutine
+	.long	2283                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges129       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	314                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xec3:0xc DW_TAG_lexical_block
+	.long	.Ldebug_ranges130       # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0xec8:0x6 DW_TAG_variable
+	.byte	0                       # DW_AT_const_value
+	.long	2297                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xed0:0x13 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges131       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	316                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xedc:0x6 DW_TAG_formal_parameter
+	.byte	1                       # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xee3:0x13 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges132       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	317                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xeef:0x6 DW_TAG_formal_parameter
+	.byte	1                       # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xef6:0x19 DW_TAG_inlined_subroutine
+	.long	2310                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges133       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	318                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xf02:0xc DW_TAG_lexical_block
+	.long	.Ldebug_ranges134       # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0xf07:0x6 DW_TAG_variable
+	.byte	1                       # DW_AT_const_value
+	.long	2324                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xf0f:0x13 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges135       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	320                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xf1b:0x6 DW_TAG_formal_parameter
+	.byte	8                       # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xf22:0x13 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges136       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	321                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xf2e:0x6 DW_TAG_formal_parameter
+	.byte	8                       # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xf35:0x19 DW_TAG_inlined_subroutine
+	.long	2337                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges137       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	322                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xf41:0xc DW_TAG_lexical_block
+	.long	.Ldebug_ranges138       # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0xf46:0x6 DW_TAG_variable
+	.byte	2                       # DW_AT_const_value
+	.long	2351                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xf4e:0x13 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges139       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	324                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xf5a:0x6 DW_TAG_formal_parameter
+	.byte	4                       # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xf61:0x13 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges140       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	325                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xf6d:0x6 DW_TAG_formal_parameter
+	.byte	4                       # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xf74:0x36 DW_TAG_inlined_subroutine
+	.long	2364                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges141       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	326                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0xf80:0x29 DW_TAG_lexical_block
+	.long	.Ldebug_ranges144       # DW_AT_ranges
+	.byte	25                      # Abbrev [25] 0xf85:0x6 DW_TAG_variable
+	.byte	3                       # DW_AT_const_value
+	.long	2378                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0xf8b:0x1d DW_TAG_lexical_block
+	.long	.Ldebug_ranges143       # DW_AT_ranges
+	.byte	26                      # Abbrev [26] 0xf90:0x8 DW_TAG_variable
+	.byte	2                       # DW_AT_location
+	.byte	145
+	.byte	12
+	.long	2390                    # DW_AT_abstract_origin
+	.byte	14                      # Abbrev [14] 0xf98:0xf DW_TAG_lexical_block
+	.long	.Ldebug_ranges142       # DW_AT_ranges
+	.byte	27                      # Abbrev [27] 0xf9d:0x9 DW_TAG_variable
+	.long	.Ldebug_loc32           # DW_AT_location
+	.long	2414                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xfaa:0x14 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges145       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	333                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xfb6:0x7 DW_TAG_formal_parameter
+	.ascii	"\200\001"              # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xfbe:0x14 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges146       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	334                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xfca:0x7 DW_TAG_formal_parameter
+	.ascii	"\200\001"              # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xfd2:0x14 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges147       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	340                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xfde:0x7 DW_TAG_formal_parameter
+	.ascii	"\200\002"              # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xfe6:0x14 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges148       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	341                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0xff2:0x7 DW_TAG_formal_parameter
+	.ascii	"\200\002"              # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0xffa:0x1c DW_TAG_inlined_subroutine
+	.long	2492                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges149       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	342                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0x1006:0xf DW_TAG_lexical_block
+	.long	.Ldebug_ranges150       # DW_AT_ranges
+	.byte	27                      # Abbrev [27] 0x100b:0x9 DW_TAG_variable
+	.long	.Ldebug_loc33           # DW_AT_location
+	.long	2522                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0x1016:0x14 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges151       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	344                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0x1022:0x7 DW_TAG_formal_parameter
+	.ascii	"\200\004"              # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0x102a:0x14 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges152       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	345                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0x1036:0x7 DW_TAG_formal_parameter
+	.ascii	"\200\004"              # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0x103e:0x1c DW_TAG_inlined_subroutine
+	.long	2443                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges153       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	346                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0x104a:0xf DW_TAG_lexical_block
+	.long	.Ldebug_ranges154       # DW_AT_ranges
+	.byte	27                      # Abbrev [27] 0x104f:0x9 DW_TAG_variable
+	.long	.Ldebug_loc34           # DW_AT_location
+	.long	2473                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0x105a:0x14 DW_TAG_inlined_subroutine
+	.long	2155                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges155       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	350                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0x1066:0x7 DW_TAG_formal_parameter
+	.ascii	"\200\b"                # DW_AT_const_value
+	.long	2172                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0x106e:0x14 DW_TAG_inlined_subroutine
+	.long	2209                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges156       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	351                     # DW_AT_call_line
+	.byte	36                      # Abbrev [36] 0x107a:0x7 DW_TAG_formal_parameter
+	.ascii	"\200\b"                # DW_AT_const_value
+	.long	2222                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0x1082:0x1c DW_TAG_inlined_subroutine
+	.long	2541                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges157       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	352                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0x108e:0xf DW_TAG_lexical_block
+	.long	.Ldebug_ranges158       # DW_AT_ranges
+	.byte	27                      # Abbrev [27] 0x1093:0x9 DW_TAG_variable
+	.long	.Ldebug_loc36           # DW_AT_location
+	.long	2571                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	35                      # Abbrev [35] 0x109e:0x16 DW_TAG_inlined_subroutine
+	.long	2590                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges159       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	352                     # DW_AT_call_line
+	.byte	20                      # Abbrev [20] 0x10aa:0x9 DW_TAG_formal_parameter
+	.long	.Ldebug_loc35           # DW_AT_location
+	.long	2607                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	14                      # Abbrev [14] 0x10b4:0x2e DW_TAG_lexical_block
+	.long	.Ldebug_ranges162       # DW_AT_ranges
+	.byte	38                      # Abbrev [38] 0x10b9:0xc DW_TAG_variable
+	.long	.Linfo_string57         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	353                     # DW_AT_decl_line
+	.long	4953                    # DW_AT_type
+	.byte	35                      # Abbrev [35] 0x10c5:0x1c DW_TAG_inlined_subroutine
+	.long	2541                    # DW_AT_abstract_origin
+	.long	.Ldebug_ranges160       # DW_AT_ranges
+	.byte	1                       # DW_AT_call_file
+	.short	354                     # DW_AT_call_line
+	.byte	14                      # Abbrev [14] 0x10d1:0xf DW_TAG_lexical_block
+	.long	.Ldebug_ranges161       # DW_AT_ranges
+	.byte	27                      # Abbrev [27] 0x10d6:0x9 DW_TAG_variable
+	.long	.Ldebug_loc37           # DW_AT_location
+	.long	2571                    # DW_AT_abstract_origin
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	33                      # Abbrev [33] 0x10e4:0x62 DW_TAG_subprogram
+	.long	.Ldebug_ranges164       # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	.Linfo_string81         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string81         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	382                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	34                      # Abbrev [34] 0x10f8:0x10 DW_TAG_formal_parameter
+	.long	.Ldebug_loc38           # DW_AT_location
+	.long	.Linfo_string89         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	382                     # DW_AT_decl_line
+	.long	4946                    # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x1108:0x3d DW_TAG_lexical_block
+	.long	.Ldebug_ranges167       # DW_AT_ranges
+	.byte	39                      # Abbrev [39] 0x110d:0xf DW_TAG_variable
+	.byte	2                       # DW_AT_location
+	.byte	145
+	.byte	12
+	.long	.Linfo_string57         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	384                     # DW_AT_decl_line
+	.long	5002                    # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x111c:0x28 DW_TAG_lexical_block
+	.long	.Ldebug_ranges166       # DW_AT_ranges
+	.byte	38                      # Abbrev [38] 0x1121:0xc DW_TAG_variable
+	.long	.Linfo_string94         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	391                     # DW_AT_decl_line
+	.long	5015                    # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x112d:0x16 DW_TAG_lexical_block
+	.long	.Ldebug_ranges165       # DW_AT_ranges
+	.byte	16                      # Abbrev [16] 0x1132:0x10 DW_TAG_variable
+	.long	.Ldebug_loc39           # DW_AT_location
+	.long	.Linfo_string93         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	392                     # DW_AT_decl_line
+	.long	85                      # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	33                      # Abbrev [33] 0x1146:0x63 DW_TAG_subprogram
+	.long	.Ldebug_ranges168       # DW_AT_ranges
+	.byte	1                       # DW_AT_frame_base
+	.byte	94
+	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
+	.long	.Linfo_string81         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string81         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	382                     # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	14                      # Abbrev [14] 0x115a:0x4e DW_TAG_lexical_block
+	.long	.Ldebug_ranges172       # DW_AT_ranges
+	.byte	39                      # Abbrev [39] 0x115f:0xe DW_TAG_variable
+	.byte	1                       # DW_AT_location
+	.byte	84
+	.long	.Linfo_string89         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	382                     # DW_AT_decl_line
+	.long	4946                    # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x116d:0x3a DW_TAG_lexical_block
+	.long	.Ldebug_ranges171       # DW_AT_ranges
+	.byte	38                      # Abbrev [38] 0x1172:0xc DW_TAG_variable
+	.long	.Linfo_string57         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	384                     # DW_AT_decl_line
+	.long	5002                    # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x117e:0x28 DW_TAG_lexical_block
+	.long	.Ldebug_ranges170       # DW_AT_ranges
+	.byte	38                      # Abbrev [38] 0x1183:0xc DW_TAG_variable
+	.long	.Linfo_string94         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	391                     # DW_AT_decl_line
+	.long	5015                    # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x118f:0x16 DW_TAG_lexical_block
+	.long	.Ldebug_ranges169       # DW_AT_ranges
+	.byte	16                      # Abbrev [16] 0x1194:0x10 DW_TAG_variable
+	.long	.Ldebug_loc40           # DW_AT_location
+	.long	.Linfo_string93         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	392                     # DW_AT_decl_line
+	.long	85                      # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	0                       # End Of Children Mark
+	.byte	40                      # Abbrev [40] 0x11a9:0x2f DW_TAG_subprogram
 	.long	.Linfo_string62         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string62         # DW_AT_name
-	.byte	2                       # DW_AT_decl_file
-	.byte	54                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
-	.byte	26                      # Abbrev [26] 0xc64:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string86         # DW_AT_name
-	.byte	2                       # DW_AT_decl_file
-	.byte	54                      # DW_AT_decl_line
-	.long	152                     # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x11b3:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string96         # DW_AT_name
+	.long	5022                    # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x11bc:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string98         # DW_AT_name
+	.long	2197                    # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x11c5:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string99         # DW_AT_name
+	.long	2197                    # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x11ce:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string100        # DW_AT_name
+	.long	4936                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	40                      # Abbrev [40] 0xc70:0x18 DW_TAG_subprogram
+	.byte	40                      # Abbrev [40] 0x11d8:0x2f DW_TAG_subprogram
 	.long	.Linfo_string63         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string63         # DW_AT_name
-	.byte	2                       # DW_AT_decl_file
-	.byte	62                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
-	.byte	26                      # Abbrev [26] 0xc7c:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string86         # DW_AT_name
-	.byte	2                       # DW_AT_decl_file
-	.byte	62                      # DW_AT_decl_line
-	.long	152                     # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x11e2:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string96         # DW_AT_name
+	.long	5022                    # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x11eb:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string98         # DW_AT_name
+	.long	2197                    # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x11f4:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string99         # DW_AT_name
+	.long	2197                    # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x11fd:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string100        # DW_AT_name
+	.long	4936                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	41                      # Abbrev [41] 0xc88:0x32 DW_TAG_subprogram
+	.byte	40                      # Abbrev [40] 0x1207:0x2f DW_TAG_subprogram
 	.long	.Linfo_string64         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string64         # DW_AT_name
-	.byte	3                       # DW_AT_decl_file
-	.byte	8                       # DW_AT_decl_line
-	.long	2012                    # DW_AT_type
 	.byte	1                       # DW_AT_external
-	.byte	26                      # Abbrev [26] 0xc98:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string87         # DW_AT_name
-	.byte	3                       # DW_AT_decl_file
-	.byte	8                       # DW_AT_decl_line
-	.long	3383                    # DW_AT_type
-	.byte	26                      # Abbrev [26] 0xca3:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string88         # DW_AT_name
-	.byte	3                       # DW_AT_decl_file
-	.byte	8                       # DW_AT_decl_line
-	.long	3383                    # DW_AT_type
-	.byte	26                      # Abbrev [26] 0xcae:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string89         # DW_AT_name
-	.byte	3                       # DW_AT_decl_file
-	.byte	8                       # DW_AT_decl_line
-	.long	152                     # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x1211:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string52         # DW_AT_name
+	.long	5029                    # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x121a:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string98         # DW_AT_name
+	.long	2197                    # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x1223:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string99         # DW_AT_name
+	.long	2197                    # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x122c:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string100        # DW_AT_name
+	.long	4936                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	41                      # Abbrev [41] 0xcba:0x32 DW_TAG_subprogram
+	.byte	40                      # Abbrev [40] 0x1236:0x2f DW_TAG_subprogram
 	.long	.Linfo_string65         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string65         # DW_AT_name
-	.byte	3                       # DW_AT_decl_file
-	.byte	12                      # DW_AT_decl_line
-	.long	2336                    # DW_AT_type
 	.byte	1                       # DW_AT_external
-	.byte	26                      # Abbrev [26] 0xcca:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string87         # DW_AT_name
-	.byte	3                       # DW_AT_decl_file
-	.byte	12                      # DW_AT_decl_line
-	.long	2336                    # DW_AT_type
-	.byte	26                      # Abbrev [26] 0xcd5:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string88         # DW_AT_name
-	.byte	3                       # DW_AT_decl_file
-	.byte	12                      # DW_AT_decl_line
-	.long	3383                    # DW_AT_type
-	.byte	26                      # Abbrev [26] 0xce0:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string89         # DW_AT_name
-	.byte	3                       # DW_AT_decl_file
-	.byte	12                      # DW_AT_decl_line
-	.long	152                     # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x1240:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string52         # DW_AT_name
+	.long	5029                    # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x1249:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string98         # DW_AT_name
+	.long	2197                    # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x1252:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string99         # DW_AT_name
+	.long	2197                    # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x125b:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string100        # DW_AT_name
+	.long	4936                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	41                      # Abbrev [41] 0xcec:0x32 DW_TAG_subprogram
+	.byte	42                      # Abbrev [42] 0x1265:0x18 DW_TAG_subprogram
 	.long	.Linfo_string66         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string66         # DW_AT_name
-	.byte	3                       # DW_AT_decl_file
-	.byte	18                      # DW_AT_decl_line
-	.long	2336                    # DW_AT_type
+	.byte	2                       # DW_AT_decl_file
+	.byte	46                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
-	.byte	26                      # Abbrev [26] 0xcfc:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string54         # DW_AT_name
-	.byte	3                       # DW_AT_decl_file
-	.byte	18                      # DW_AT_decl_line
-	.long	2336                    # DW_AT_type
-	.byte	26                      # Abbrev [26] 0xd07:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string90         # DW_AT_name
-	.byte	3                       # DW_AT_decl_file
-	.byte	18                      # DW_AT_decl_line
-	.long	2012                    # DW_AT_type
-	.byte	26                      # Abbrev [26] 0xd12:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string89         # DW_AT_name
-	.byte	3                       # DW_AT_decl_file
-	.byte	18                      # DW_AT_decl_line
-	.long	152                     # DW_AT_type
+	.byte	29                      # Abbrev [29] 0x1271:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string103        # DW_AT_name
+	.byte	2                       # DW_AT_decl_file
+	.byte	46                      # DW_AT_decl_line
+	.long	85                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	5                       # Abbrev [5] 0xd1e:0x7 DW_TAG_base_type
-	.long	.Linfo_string82         # DW_AT_name
+	.byte	42                      # Abbrev [42] 0x127d:0x18 DW_TAG_subprogram
+	.long	.Linfo_string67         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string67         # DW_AT_name
+	.byte	2                       # DW_AT_decl_file
+	.byte	54                      # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	29                      # Abbrev [29] 0x1289:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string103        # DW_AT_name
+	.byte	2                       # DW_AT_decl_file
+	.byte	54                      # DW_AT_decl_line
+	.long	85                      # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	42                      # Abbrev [42] 0x1295:0x18 DW_TAG_subprogram
+	.long	.Linfo_string68         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string68         # DW_AT_name
+	.byte	2                       # DW_AT_decl_file
+	.byte	62                      # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	29                      # Abbrev [29] 0x12a1:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string103        # DW_AT_name
+	.byte	2                       # DW_AT_decl_file
+	.byte	62                      # DW_AT_decl_line
+	.long	85                      # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	43                      # Abbrev [43] 0x12ad:0x32 DW_TAG_subprogram
+	.long	.Linfo_string69         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string69         # DW_AT_name
+	.byte	3                       # DW_AT_decl_file
+	.byte	8                       # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	1                       # DW_AT_external
+	.byte	29                      # Abbrev [29] 0x12bd:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string104        # DW_AT_name
+	.byte	3                       # DW_AT_decl_file
+	.byte	8                       # DW_AT_decl_line
+	.long	5061                    # DW_AT_type
+	.byte	29                      # Abbrev [29] 0x12c8:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string105        # DW_AT_name
+	.byte	3                       # DW_AT_decl_file
+	.byte	8                       # DW_AT_decl_line
+	.long	5061                    # DW_AT_type
+	.byte	29                      # Abbrev [29] 0x12d3:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string106        # DW_AT_name
+	.byte	3                       # DW_AT_decl_file
+	.byte	8                       # DW_AT_decl_line
+	.long	85                      # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	43                      # Abbrev [43] 0x12df:0x32 DW_TAG_subprogram
+	.long	.Linfo_string70         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string70         # DW_AT_name
+	.byte	3                       # DW_AT_decl_file
+	.byte	12                      # DW_AT_decl_line
+	.long	2619                    # DW_AT_type
+	.byte	1                       # DW_AT_external
+	.byte	29                      # Abbrev [29] 0x12ef:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string104        # DW_AT_name
+	.byte	3                       # DW_AT_decl_file
+	.byte	12                      # DW_AT_decl_line
+	.long	2619                    # DW_AT_type
+	.byte	29                      # Abbrev [29] 0x12fa:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string105        # DW_AT_name
+	.byte	3                       # DW_AT_decl_file
+	.byte	12                      # DW_AT_decl_line
+	.long	5061                    # DW_AT_type
+	.byte	29                      # Abbrev [29] 0x1305:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string106        # DW_AT_name
+	.byte	3                       # DW_AT_decl_file
+	.byte	12                      # DW_AT_decl_line
+	.long	85                      # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	43                      # Abbrev [43] 0x1311:0x32 DW_TAG_subprogram
+	.long	.Linfo_string71         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string71         # DW_AT_name
+	.byte	3                       # DW_AT_decl_file
+	.byte	18                      # DW_AT_decl_line
+	.long	2619                    # DW_AT_type
+	.byte	1                       # DW_AT_external
+	.byte	29                      # Abbrev [29] 0x1321:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string52         # DW_AT_name
+	.byte	3                       # DW_AT_decl_file
+	.byte	18                      # DW_AT_decl_line
+	.long	2619                    # DW_AT_type
+	.byte	29                      # Abbrev [29] 0x132c:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string107        # DW_AT_name
+	.byte	3                       # DW_AT_decl_file
+	.byte	18                      # DW_AT_decl_line
+	.long	2197                    # DW_AT_type
+	.byte	29                      # Abbrev [29] 0x1337:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string106        # DW_AT_name
+	.byte	3                       # DW_AT_decl_file
+	.byte	18                      # DW_AT_decl_line
+	.long	85                      # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	31                      # Abbrev [31] 0x1343:0x5 DW_TAG_pointer_type
+	.long	534                     # DW_AT_type
+	.byte	44                      # Abbrev [44] 0x1348:0x5 DW_TAG_reference_type
+	.long	4941                    # DW_AT_type
+	.byte	45                      # Abbrev [45] 0x134d:0x5 DW_TAG_array_type
+	.long	342                     # DW_AT_type
+	.byte	6                       # Abbrev [6] 0x1352:0x7 DW_TAG_base_type
+	.long	.Linfo_string90         # DW_AT_name
 	.byte	7                       # DW_AT_encoding
 	.byte	4                       # DW_AT_byte_size
-	.byte	28                      # Abbrev [28] 0xd25:0x5 DW_TAG_pointer_type
-	.long	534                     # DW_AT_type
-	.byte	6                       # Abbrev [6] 0xd2a:0xd DW_TAG_array_type
-	.long	116                     # DW_AT_type
-	.byte	7                       # Abbrev [7] 0xd2f:0x7 DW_TAG_subrange_type
-	.long	123                     # DW_AT_type
-	.byte	0                       # DW_AT_lower_bound
-	.byte	16                      # DW_AT_upper_bound
+	.byte	46                      # Abbrev [46] 0x1359:0x24 DW_TAG_union_type
+	.long	.Linfo_string92         # DW_AT_name
+	.byte	4                       # DW_AT_byte_size
+	.byte	1                       # DW_AT_decl_file
+	.short	353                     # DW_AT_decl_line
+	.byte	47                      # Abbrev [47] 0x1362:0xd DW_TAG_member
+	.long	.Linfo_string85         # DW_AT_name
+	.long	85                      # DW_AT_type
+	.byte	1                       # DW_AT_decl_file
+	.short	353                     # DW_AT_decl_line
+	.byte	0                       # DW_AT_data_member_location
+	.byte	47                      # Abbrev [47] 0x136f:0xd DW_TAG_member
+	.long	.Linfo_string91         # DW_AT_name
+	.long	4989                    # DW_AT_type
+	.byte	1                       # DW_AT_decl_file
+	.short	353                     # DW_AT_decl_line
+	.byte	0                       # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
-	.byte	42                      # Abbrev [42] 0xd37:0x5 DW_TAG_reference_type
-	.long	3388                    # DW_AT_type
-	.byte	43                      # Abbrev [43] 0xd3c:0x5 DW_TAG_array_type
-	.long	3393                    # DW_AT_type
-	.byte	44                      # Abbrev [44] 0xd41:0x5 DW_TAG_const_type
-	.long	116                     # DW_AT_type
+	.byte	9                       # Abbrev [9] 0x137d:0xd DW_TAG_array_type
+	.long	342                     # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x1382:0x7 DW_TAG_subrange_type
+	.long	349                     # DW_AT_type
+	.byte	0                       # DW_AT_lower_bound
+	.byte	3                       # DW_AT_upper_bound
+	.byte	0                       # End Of Children Mark
+	.byte	9                       # Abbrev [9] 0x138a:0xd DW_TAG_array_type
+	.long	342                     # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x138f:0x7 DW_TAG_subrange_type
+	.long	349                     # DW_AT_type
+	.byte	0                       # DW_AT_lower_bound
+	.byte	0                       # DW_AT_upper_bound
+	.byte	0                       # End Of Children Mark
+	.byte	6                       # Abbrev [6] 0x1397:0x7 DW_TAG_base_type
+	.long	.Linfo_string95         # DW_AT_name
+	.byte	7                       # DW_AT_encoding
+	.byte	4                       # DW_AT_byte_size
+	.byte	6                       # Abbrev [6] 0x139e:0x7 DW_TAG_base_type
+	.long	.Linfo_string97         # DW_AT_name
+	.byte	7                       # DW_AT_encoding
+	.byte	4                       # DW_AT_byte_size
+	.byte	44                      # Abbrev [44] 0x13a5:0x5 DW_TAG_reference_type
+	.long	5034                    # DW_AT_type
+	.byte	48                      # Abbrev [48] 0x13aa:0x1b DW_TAG_structure_type
+	.long	.Linfo_string102        # DW_AT_name
+	.byte	8                       # DW_AT_byte_size
+	.byte	49                      # Abbrev [49] 0x13b0:0xa DW_TAG_member
+	.long	.Linfo_string96         # DW_AT_name
+	.long	5022                    # DW_AT_type
+	.byte	0                       # DW_AT_data_member_location
+	.byte	49                      # Abbrev [49] 0x13ba:0xa DW_TAG_member
+	.long	.Linfo_string101        # DW_AT_name
+	.long	85                      # DW_AT_type
+	.byte	4                       # DW_AT_data_member_location
+	.byte	0                       # End Of Children Mark
+	.byte	44                      # Abbrev [44] 0x13c5:0x5 DW_TAG_reference_type
+	.long	5066                    # DW_AT_type
+	.byte	45                      # Abbrev [45] 0x13ca:0x5 DW_TAG_array_type
+	.long	5071                    # DW_AT_type
+	.byte	50                      # Abbrev [50] 0x13cf:0x5 DW_TAG_const_type
+	.long	342                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 .L.debug_info_end0:
 	.section	.debug_abbrev,"",@progbits
@@ -4898,20 +8179,14 @@ __xcc1_internal_1:
 	.byte	14                      # DW_FORM_strp
 	.byte	73                      # DW_AT_type
 	.byte	19                      # DW_FORM_ref4
-	.byte	63                      # DW_AT_external
-	.byte	12                      # DW_FORM_flag
 	.byte	58                      # DW_AT_decl_file
 	.byte	11                      # DW_FORM_data1
 	.byte	59                      # DW_AT_decl_line
 	.byte	11                      # DW_FORM_data1
-	.byte	2                       # DW_AT_location
-	.byte	10                      # DW_FORM_block1
-	.ascii	"\207@"                 # DW_AT_MIPS_linkage_name
-	.byte	14                      # DW_FORM_strp
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
 	.byte	3                       # Abbreviation Code
-	.byte	19                      # DW_TAG_structure_type
+	.byte	4                       # DW_TAG_enumeration_type
 	.byte	1                       # DW_CHILDREN_yes
 	.byte	3                       # DW_AT_name
 	.byte	14                      # DW_FORM_strp
@@ -4924,6 +8199,58 @@ __xcc1_internal_1:
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
 	.byte	4                       # Abbreviation Code
+	.byte	40                      # DW_TAG_enumerator
+	.byte	0                       # DW_CHILDREN_no
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	28                      # DW_AT_const_value
+	.byte	13                      # DW_FORM_sdata
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	5                       # Abbreviation Code
+	.byte	52                      # DW_TAG_variable
+	.byte	0                       # DW_CHILDREN_no
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	73                      # DW_AT_type
+	.byte	19                      # DW_FORM_ref4
+	.byte	63                      # DW_AT_external
+	.byte	12                      # DW_FORM_flag
+	.byte	58                      # DW_AT_decl_file
+	.byte	11                      # DW_FORM_data1
+	.byte	59                      # DW_AT_decl_line
+	.byte	11                      # DW_FORM_data1
+	.byte	2                       # DW_AT_location
+	.byte	10                      # DW_FORM_block1
+	.ascii	"\207@"                 # DW_AT_MIPS_linkage_name
+	.byte	14                      # DW_FORM_strp
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	6                       # Abbreviation Code
+	.byte	36                      # DW_TAG_base_type
+	.byte	0                       # DW_CHILDREN_no
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	62                      # DW_AT_encoding
+	.byte	11                      # DW_FORM_data1
+	.byte	11                      # DW_AT_byte_size
+	.byte	11                      # DW_FORM_data1
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	7                       # Abbreviation Code
+	.byte	19                      # DW_TAG_structure_type
+	.byte	1                       # DW_CHILDREN_yes
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	11                      # DW_AT_byte_size
+	.byte	11                      # DW_FORM_data1
+	.byte	58                      # DW_AT_decl_file
+	.byte	11                      # DW_FORM_data1
+	.byte	59                      # DW_AT_decl_line
+	.byte	11                      # DW_FORM_data1
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	8                       # Abbreviation Code
 	.byte	13                      # DW_TAG_member
 	.byte	0                       # DW_CHILDREN_no
 	.byte	3                       # DW_AT_name
@@ -4938,25 +8265,14 @@ __xcc1_internal_1:
 	.byte	11                      # DW_FORM_data1
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
-	.byte	5                       # Abbreviation Code
-	.byte	36                      # DW_TAG_base_type
-	.byte	0                       # DW_CHILDREN_no
-	.byte	3                       # DW_AT_name
-	.byte	14                      # DW_FORM_strp
-	.byte	62                      # DW_AT_encoding
-	.byte	11                      # DW_FORM_data1
-	.byte	11                      # DW_AT_byte_size
-	.byte	11                      # DW_FORM_data1
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
-	.byte	6                       # Abbreviation Code
+	.byte	9                       # Abbreviation Code
 	.byte	1                       # DW_TAG_array_type
 	.byte	1                       # DW_CHILDREN_yes
 	.byte	73                      # DW_AT_type
 	.byte	19                      # DW_FORM_ref4
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
-	.byte	7                       # Abbreviation Code
+	.byte	10                      # Abbreviation Code
 	.byte	33                      # DW_TAG_subrange_type
 	.byte	0                       # DW_CHILDREN_no
 	.byte	73                      # DW_AT_type
@@ -4967,7 +8283,7 @@ __xcc1_internal_1:
 	.byte	11                      # DW_FORM_data1
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
-	.byte	8                       # Abbreviation Code
+	.byte	11                      # Abbreviation Code
 	.byte	36                      # DW_TAG_base_type
 	.byte	0                       # DW_CHILDREN_no
 	.byte	3                       # DW_AT_name
@@ -4975,41 +8291,6 @@ __xcc1_internal_1:
 	.byte	11                      # DW_AT_byte_size
 	.byte	11                      # DW_FORM_data1
 	.byte	62                      # DW_AT_encoding
-	.byte	11                      # DW_FORM_data1
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
-	.byte	9                       # Abbreviation Code
-	.byte	4                       # DW_TAG_enumeration_type
-	.byte	1                       # DW_CHILDREN_yes
-	.byte	3                       # DW_AT_name
-	.byte	14                      # DW_FORM_strp
-	.byte	11                      # DW_AT_byte_size
-	.byte	11                      # DW_FORM_data1
-	.byte	58                      # DW_AT_decl_file
-	.byte	11                      # DW_FORM_data1
-	.byte	59                      # DW_AT_decl_line
-	.byte	11                      # DW_FORM_data1
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
-	.byte	10                      # Abbreviation Code
-	.byte	40                      # DW_TAG_enumerator
-	.byte	0                       # DW_CHILDREN_no
-	.byte	3                       # DW_AT_name
-	.byte	14                      # DW_FORM_strp
-	.byte	28                      # DW_AT_const_value
-	.byte	13                      # DW_FORM_sdata
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
-	.byte	11                      # Abbreviation Code
-	.byte	52                      # DW_TAG_variable
-	.byte	0                       # DW_CHILDREN_no
-	.byte	3                       # DW_AT_name
-	.byte	14                      # DW_FORM_strp
-	.byte	73                      # DW_AT_type
-	.byte	19                      # DW_FORM_ref4
-	.byte	58                      # DW_AT_decl_file
-	.byte	11                      # DW_FORM_data1
-	.byte	59                      # DW_AT_decl_line
 	.byte	11                      # DW_FORM_data1
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
@@ -5070,40 +8351,6 @@ __xcc1_internal_1:
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
 	.byte	16                      # Abbreviation Code
-	.byte	46                      # DW_TAG_subprogram
-	.byte	1                       # DW_CHILDREN_yes
-	.byte	85                      # DW_AT_ranges
-	.byte	6                       # DW_FORM_data4
-	.byte	64                      # DW_AT_frame_base
-	.byte	10                      # DW_FORM_block1
-	.ascii	"\347\177"              # DW_AT_APPLE_omit_frame_ptr
-	.byte	12                      # DW_FORM_flag
-	.ascii	"\207@"                 # DW_AT_MIPS_linkage_name
-	.byte	14                      # DW_FORM_strp
-	.byte	3                       # DW_AT_name
-	.byte	14                      # DW_FORM_strp
-	.byte	58                      # DW_AT_decl_file
-	.byte	11                      # DW_FORM_data1
-	.byte	59                      # DW_AT_decl_line
-	.byte	5                       # DW_FORM_data2
-	.byte	63                      # DW_AT_external
-	.byte	12                      # DW_FORM_flag
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
-	.byte	17                      # Abbreviation Code
-	.byte	52                      # DW_TAG_variable
-	.byte	0                       # DW_CHILDREN_no
-	.byte	3                       # DW_AT_name
-	.byte	14                      # DW_FORM_strp
-	.byte	58                      # DW_AT_decl_file
-	.byte	11                      # DW_FORM_data1
-	.byte	59                      # DW_AT_decl_line
-	.byte	5                       # DW_FORM_data2
-	.byte	73                      # DW_AT_type
-	.byte	19                      # DW_FORM_ref4
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
-	.byte	18                      # Abbreviation Code
 	.byte	52                      # DW_TAG_variable
 	.byte	0                       # DW_CHILDREN_no
 	.byte	2                       # DW_AT_location
@@ -5118,7 +8365,7 @@ __xcc1_internal_1:
 	.byte	19                      # DW_FORM_ref4
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
-	.byte	19                      # Abbreviation Code
+	.byte	17                      # Abbreviation Code
 	.byte	46                      # DW_TAG_subprogram
 	.byte	1                       # DW_CHILDREN_yes
 	.byte	85                      # DW_AT_ranges
@@ -5131,14 +8378,14 @@ __xcc1_internal_1:
 	.byte	19                      # DW_FORM_ref4
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
-	.byte	20                      # Abbreviation Code
+	.byte	18                      # Abbreviation Code
 	.byte	52                      # DW_TAG_variable
 	.byte	0                       # DW_CHILDREN_no
 	.byte	49                      # DW_AT_abstract_origin
 	.byte	19                      # DW_FORM_ref4
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
-	.byte	21                      # Abbreviation Code
+	.byte	19                      # Abbreviation Code
 	.byte	5                       # DW_TAG_formal_parameter
 	.byte	0                       # DW_CHILDREN_no
 	.byte	2                       # DW_AT_location
@@ -5153,11 +8400,29 @@ __xcc1_internal_1:
 	.byte	19                      # DW_FORM_ref4
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
+	.byte	20                      # Abbreviation Code
+	.byte	5                       # DW_TAG_formal_parameter
+	.byte	0                       # DW_CHILDREN_no
+	.byte	2                       # DW_AT_location
+	.byte	6                       # DW_FORM_data4
+	.byte	49                      # DW_AT_abstract_origin
+	.byte	19                      # DW_FORM_ref4
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	21                      # Abbreviation Code
+	.byte	5                       # DW_TAG_formal_parameter
+	.byte	0                       # DW_CHILDREN_no
+	.byte	2                       # DW_AT_location
+	.byte	10                      # DW_FORM_block1
+	.byte	49                      # DW_AT_abstract_origin
+	.byte	19                      # DW_FORM_ref4
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
 	.byte	22                      # Abbreviation Code
 	.byte	52                      # DW_TAG_variable
 	.byte	0                       # DW_CHILDREN_no
-	.byte	28                      # DW_AT_const_value
-	.byte	13                      # DW_FORM_sdata
+	.byte	2                       # DW_AT_location
+	.byte	6                       # DW_FORM_data4
 	.byte	3                       # DW_AT_name
 	.byte	14                      # DW_FORM_strp
 	.byte	58                      # DW_AT_decl_file
@@ -5169,16 +8434,46 @@ __xcc1_internal_1:
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
 	.byte	23                      # Abbreviation Code
-	.byte	5                       # DW_TAG_formal_parameter
+	.byte	52                      # DW_TAG_variable
 	.byte	0                       # DW_CHILDREN_no
-	.byte	2                       # DW_AT_location
-	.byte	6                       # DW_FORM_data4
-	.byte	49                      # DW_AT_abstract_origin
+	.byte	28                      # DW_AT_const_value
+	.byte	13                      # DW_FORM_sdata
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	58                      # DW_AT_decl_file
+	.byte	11                      # DW_FORM_data1
+	.byte	59                      # DW_AT_decl_line
+	.byte	11                      # DW_FORM_data1
+	.byte	73                      # DW_AT_type
 	.byte	19                      # DW_FORM_ref4
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
 	.byte	24                      # Abbreviation Code
-	.byte	5                       # DW_TAG_formal_parameter
+	.byte	52                      # DW_TAG_variable
+	.byte	0                       # DW_CHILDREN_no
+	.byte	2                       # DW_AT_location
+	.byte	10                      # DW_FORM_block1
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	58                      # DW_AT_decl_file
+	.byte	11                      # DW_FORM_data1
+	.byte	59                      # DW_AT_decl_line
+	.byte	11                      # DW_FORM_data1
+	.byte	73                      # DW_AT_type
+	.byte	19                      # DW_FORM_ref4
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	25                      # Abbreviation Code
+	.byte	52                      # DW_TAG_variable
+	.byte	0                       # DW_CHILDREN_no
+	.byte	28                      # DW_AT_const_value
+	.byte	13                      # DW_FORM_sdata
+	.byte	49                      # DW_AT_abstract_origin
+	.byte	19                      # DW_FORM_ref4
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	26                      # Abbreviation Code
+	.byte	52                      # DW_TAG_variable
 	.byte	0                       # DW_CHILDREN_no
 	.byte	2                       # DW_AT_location
 	.byte	10                      # DW_FORM_block1
@@ -5186,7 +8481,60 @@ __xcc1_internal_1:
 	.byte	19                      # DW_FORM_ref4
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
-	.byte	25                      # Abbreviation Code
+	.byte	27                      # Abbreviation Code
+	.byte	52                      # DW_TAG_variable
+	.byte	0                       # DW_CHILDREN_no
+	.byte	2                       # DW_AT_location
+	.byte	6                       # DW_FORM_data4
+	.byte	49                      # DW_AT_abstract_origin
+	.byte	19                      # DW_FORM_ref4
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	28                      # Abbreviation Code
+	.byte	46                      # DW_TAG_subprogram
+	.byte	1                       # DW_CHILDREN_yes
+	.ascii	"\207@"                 # DW_AT_MIPS_linkage_name
+	.byte	14                      # DW_FORM_strp
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	58                      # DW_AT_decl_file
+	.byte	11                      # DW_FORM_data1
+	.byte	59                      # DW_AT_decl_line
+	.byte	11                      # DW_FORM_data1
+	.byte	73                      # DW_AT_type
+	.byte	19                      # DW_FORM_ref4
+	.byte	63                      # DW_AT_external
+	.byte	12                      # DW_FORM_flag
+	.byte	32                      # DW_AT_inline
+	.byte	11                      # DW_FORM_data1
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	29                      # Abbreviation Code
+	.byte	5                       # DW_TAG_formal_parameter
+	.byte	0                       # DW_CHILDREN_no
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	58                      # DW_AT_decl_file
+	.byte	11                      # DW_FORM_data1
+	.byte	59                      # DW_AT_decl_line
+	.byte	11                      # DW_FORM_data1
+	.byte	73                      # DW_AT_type
+	.byte	19                      # DW_FORM_ref4
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	30                      # Abbreviation Code
+	.byte	11                      # DW_TAG_lexical_block
+	.byte	1                       # DW_CHILDREN_yes
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	31                      # Abbreviation Code
+	.byte	15                      # DW_TAG_pointer_type
+	.byte	0                       # DW_CHILDREN_no
+	.byte	73                      # DW_AT_type
+	.byte	19                      # DW_FORM_ref4
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	32                      # Abbreviation Code
 	.byte	46                      # DW_TAG_subprogram
 	.byte	1                       # DW_CHILDREN_yes
 	.ascii	"\207@"                 # DW_AT_MIPS_linkage_name
@@ -5203,74 +8551,9 @@ __xcc1_internal_1:
 	.byte	11                      # DW_FORM_data1
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
-	.byte	26                      # Abbreviation Code
-	.byte	5                       # DW_TAG_formal_parameter
-	.byte	0                       # DW_CHILDREN_no
-	.byte	3                       # DW_AT_name
-	.byte	14                      # DW_FORM_strp
-	.byte	58                      # DW_AT_decl_file
-	.byte	11                      # DW_FORM_data1
-	.byte	59                      # DW_AT_decl_line
-	.byte	11                      # DW_FORM_data1
-	.byte	73                      # DW_AT_type
-	.byte	19                      # DW_FORM_ref4
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
-	.byte	27                      # Abbreviation Code
-	.byte	11                      # DW_TAG_lexical_block
-	.byte	1                       # DW_CHILDREN_yes
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
-	.byte	28                      # Abbreviation Code
-	.byte	15                      # DW_TAG_pointer_type
-	.byte	0                       # DW_CHILDREN_no
-	.byte	73                      # DW_AT_type
-	.byte	19                      # DW_FORM_ref4
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
-	.byte	29                      # Abbreviation Code
-	.byte	52                      # DW_TAG_variable
-	.byte	0                       # DW_CHILDREN_no
-	.byte	2                       # DW_AT_location
-	.byte	10                      # DW_FORM_block1
-	.byte	49                      # DW_AT_abstract_origin
-	.byte	19                      # DW_FORM_ref4
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
-	.byte	30                      # Abbreviation Code
-	.byte	52                      # DW_TAG_variable
-	.byte	0                       # DW_CHILDREN_no
-	.byte	2                       # DW_AT_location
-	.byte	6                       # DW_FORM_data4
-	.byte	49                      # DW_AT_abstract_origin
-	.byte	19                      # DW_FORM_ref4
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
-	.byte	31                      # Abbreviation Code
-	.byte	29                      # DW_TAG_inlined_subroutine
-	.byte	1                       # DW_CHILDREN_yes
-	.byte	49                      # DW_AT_abstract_origin
-	.byte	19                      # DW_FORM_ref4
-	.byte	85                      # DW_AT_ranges
-	.byte	6                       # DW_FORM_data4
-	.byte	88                      # DW_AT_call_file
-	.byte	11                      # DW_FORM_data1
-	.byte	89                      # DW_AT_call_line
-	.byte	11                      # DW_FORM_data1
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
-	.byte	32                      # Abbreviation Code
-	.byte	5                       # DW_TAG_formal_parameter
-	.byte	0                       # DW_CHILDREN_no
-	.byte	28                      # DW_AT_const_value
-	.byte	15                      # DW_FORM_udata
-	.byte	49                      # DW_AT_abstract_origin
-	.byte	19                      # DW_FORM_ref4
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
 	.byte	33                      # Abbreviation Code
 	.byte	46                      # DW_TAG_subprogram
-	.byte	0                       # DW_CHILDREN_no
+	.byte	1                       # DW_CHILDREN_yes
 	.byte	85                      # DW_AT_ranges
 	.byte	6                       # DW_FORM_data4
 	.byte	64                      # DW_AT_frame_base
@@ -5284,16 +8567,16 @@ __xcc1_internal_1:
 	.byte	58                      # DW_AT_decl_file
 	.byte	11                      # DW_FORM_data1
 	.byte	59                      # DW_AT_decl_line
-	.byte	11                      # DW_FORM_data1
+	.byte	5                       # DW_FORM_data2
 	.byte	63                      # DW_AT_external
 	.byte	12                      # DW_FORM_flag
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
 	.byte	34                      # Abbreviation Code
-	.byte	52                      # DW_TAG_variable
+	.byte	5                       # DW_TAG_formal_parameter
 	.byte	0                       # DW_CHILDREN_no
-	.byte	28                      # DW_AT_const_value
-	.byte	13                      # DW_FORM_sdata
+	.byte	2                       # DW_AT_location
+	.byte	6                       # DW_FORM_data4
 	.byte	3                       # DW_AT_name
 	.byte	14                      # DW_FORM_strp
 	.byte	58                      # DW_AT_decl_file
@@ -5305,6 +8588,54 @@ __xcc1_internal_1:
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
 	.byte	35                      # Abbreviation Code
+	.byte	29                      # DW_TAG_inlined_subroutine
+	.byte	1                       # DW_CHILDREN_yes
+	.byte	49                      # DW_AT_abstract_origin
+	.byte	19                      # DW_FORM_ref4
+	.byte	85                      # DW_AT_ranges
+	.byte	6                       # DW_FORM_data4
+	.byte	88                      # DW_AT_call_file
+	.byte	11                      # DW_FORM_data1
+	.byte	89                      # DW_AT_call_line
+	.byte	5                       # DW_FORM_data2
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	36                      # Abbreviation Code
+	.byte	5                       # DW_TAG_formal_parameter
+	.byte	0                       # DW_CHILDREN_no
+	.byte	28                      # DW_AT_const_value
+	.byte	15                      # DW_FORM_udata
+	.byte	49                      # DW_AT_abstract_origin
+	.byte	19                      # DW_FORM_ref4
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	37                      # Abbreviation Code
+	.byte	29                      # DW_TAG_inlined_subroutine
+	.byte	0                       # DW_CHILDREN_no
+	.byte	49                      # DW_AT_abstract_origin
+	.byte	19                      # DW_FORM_ref4
+	.byte	85                      # DW_AT_ranges
+	.byte	6                       # DW_FORM_data4
+	.byte	88                      # DW_AT_call_file
+	.byte	11                      # DW_FORM_data1
+	.byte	89                      # DW_AT_call_line
+	.byte	5                       # DW_FORM_data2
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	38                      # Abbreviation Code
+	.byte	52                      # DW_TAG_variable
+	.byte	0                       # DW_CHILDREN_no
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	58                      # DW_AT_decl_file
+	.byte	11                      # DW_FORM_data1
+	.byte	59                      # DW_AT_decl_line
+	.byte	5                       # DW_FORM_data2
+	.byte	73                      # DW_AT_type
+	.byte	19                      # DW_FORM_ref4
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	39                      # Abbreviation Code
 	.byte	52                      # DW_TAG_variable
 	.byte	0                       # DW_CHILDREN_no
 	.byte	2                       # DW_AT_location
@@ -5319,68 +8650,6 @@ __xcc1_internal_1:
 	.byte	19                      # DW_FORM_ref4
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
-	.byte	36                      # Abbreviation Code
-	.byte	46                      # DW_TAG_subprogram
-	.byte	1                       # DW_CHILDREN_yes
-	.ascii	"\207@"                 # DW_AT_MIPS_linkage_name
-	.byte	14                      # DW_FORM_strp
-	.byte	3                       # DW_AT_name
-	.byte	14                      # DW_FORM_strp
-	.byte	58                      # DW_AT_decl_file
-	.byte	11                      # DW_FORM_data1
-	.byte	59                      # DW_AT_decl_line
-	.byte	11                      # DW_FORM_data1
-	.byte	73                      # DW_AT_type
-	.byte	19                      # DW_FORM_ref4
-	.byte	63                      # DW_AT_external
-	.byte	12                      # DW_FORM_flag
-	.byte	32                      # DW_AT_inline
-	.byte	11                      # DW_FORM_data1
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
-	.byte	37                      # Abbreviation Code
-	.byte	46                      # DW_TAG_subprogram
-	.byte	0                       # DW_CHILDREN_no
-	.ascii	"\207@"                 # DW_AT_MIPS_linkage_name
-	.byte	14                      # DW_FORM_strp
-	.byte	3                       # DW_AT_name
-	.byte	14                      # DW_FORM_strp
-	.byte	58                      # DW_AT_decl_file
-	.byte	11                      # DW_FORM_data1
-	.byte	59                      # DW_AT_decl_line
-	.byte	11                      # DW_FORM_data1
-	.byte	63                      # DW_AT_external
-	.byte	12                      # DW_FORM_flag
-	.byte	32                      # DW_AT_inline
-	.byte	11                      # DW_FORM_data1
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
-	.byte	38                      # Abbreviation Code
-	.byte	29                      # DW_TAG_inlined_subroutine
-	.byte	1                       # DW_CHILDREN_yes
-	.byte	49                      # DW_AT_abstract_origin
-	.byte	19                      # DW_FORM_ref4
-	.byte	85                      # DW_AT_ranges
-	.byte	6                       # DW_FORM_data4
-	.byte	88                      # DW_AT_call_file
-	.byte	11                      # DW_FORM_data1
-	.byte	89                      # DW_AT_call_line
-	.byte	5                       # DW_FORM_data2
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
-	.byte	39                      # Abbreviation Code
-	.byte	29                      # DW_TAG_inlined_subroutine
-	.byte	0                       # DW_CHILDREN_no
-	.byte	49                      # DW_AT_abstract_origin
-	.byte	19                      # DW_FORM_ref4
-	.byte	85                      # DW_AT_ranges
-	.byte	6                       # DW_FORM_data4
-	.byte	88                      # DW_AT_call_file
-	.byte	11                      # DW_FORM_data1
-	.byte	89                      # DW_AT_call_line
-	.byte	5                       # DW_FORM_data2
-	.byte	0                       # EOM(1)
-	.byte	0                       # EOM(2)
 	.byte	40                      # Abbreviation Code
 	.byte	46                      # DW_TAG_subprogram
 	.byte	1                       # DW_CHILDREN_yes
@@ -5388,6 +8657,26 @@ __xcc1_internal_1:
 	.byte	14                      # DW_FORM_strp
 	.byte	3                       # DW_AT_name
 	.byte	14                      # DW_FORM_strp
+	.byte	63                      # DW_AT_external
+	.byte	12                      # DW_FORM_flag
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	41                      # Abbreviation Code
+	.byte	5                       # DW_TAG_formal_parameter
+	.byte	0                       # DW_CHILDREN_no
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	73                      # DW_AT_type
+	.byte	19                      # DW_FORM_ref4
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	42                      # Abbreviation Code
+	.byte	46                      # DW_TAG_subprogram
+	.byte	1                       # DW_CHILDREN_yes
+	.ascii	"\207@"                 # DW_AT_MIPS_linkage_name
+	.byte	14                      # DW_FORM_strp
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
 	.byte	58                      # DW_AT_decl_file
 	.byte	11                      # DW_FORM_data1
 	.byte	59                      # DW_AT_decl_line
@@ -5396,7 +8685,7 @@ __xcc1_internal_1:
 	.byte	12                      # DW_FORM_flag
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
-	.byte	41                      # Abbreviation Code
+	.byte	43                      # Abbreviation Code
 	.byte	46                      # DW_TAG_subprogram
 	.byte	1                       # DW_CHILDREN_yes
 	.ascii	"\207@"                 # DW_AT_MIPS_linkage_name
@@ -5413,21 +8702,69 @@ __xcc1_internal_1:
 	.byte	12                      # DW_FORM_flag
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
-	.byte	42                      # Abbreviation Code
+	.byte	44                      # Abbreviation Code
 	.byte	16                      # DW_TAG_reference_type
 	.byte	0                       # DW_CHILDREN_no
 	.byte	73                      # DW_AT_type
 	.byte	19                      # DW_FORM_ref4
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
-	.byte	43                      # Abbreviation Code
+	.byte	45                      # Abbreviation Code
 	.byte	1                       # DW_TAG_array_type
 	.byte	0                       # DW_CHILDREN_no
 	.byte	73                      # DW_AT_type
 	.byte	19                      # DW_FORM_ref4
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
-	.byte	44                      # Abbreviation Code
+	.byte	46                      # Abbreviation Code
+	.byte	23                      # DW_TAG_union_type
+	.byte	1                       # DW_CHILDREN_yes
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	11                      # DW_AT_byte_size
+	.byte	11                      # DW_FORM_data1
+	.byte	58                      # DW_AT_decl_file
+	.byte	11                      # DW_FORM_data1
+	.byte	59                      # DW_AT_decl_line
+	.byte	5                       # DW_FORM_data2
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	47                      # Abbreviation Code
+	.byte	13                      # DW_TAG_member
+	.byte	0                       # DW_CHILDREN_no
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	73                      # DW_AT_type
+	.byte	19                      # DW_FORM_ref4
+	.byte	58                      # DW_AT_decl_file
+	.byte	11                      # DW_FORM_data1
+	.byte	59                      # DW_AT_decl_line
+	.byte	5                       # DW_FORM_data2
+	.byte	56                      # DW_AT_data_member_location
+	.byte	11                      # DW_FORM_data1
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	48                      # Abbreviation Code
+	.byte	19                      # DW_TAG_structure_type
+	.byte	1                       # DW_CHILDREN_yes
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	11                      # DW_AT_byte_size
+	.byte	11                      # DW_FORM_data1
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	49                      # Abbreviation Code
+	.byte	13                      # DW_TAG_member
+	.byte	0                       # DW_CHILDREN_no
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	73                      # DW_AT_type
+	.byte	19                      # DW_FORM_ref4
+	.byte	56                      # DW_AT_data_member_location
+	.byte	11                      # DW_FORM_data1
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	50                      # Abbreviation Code
 	.byte	38                      # DW_TAG_const_type
 	.byte	0                       # DW_CHILDREN_no
 	.byte	73                      # DW_AT_type
@@ -5437,798 +8774,1619 @@ __xcc1_internal_1:
 	.byte	0                       # EOM(3)
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.long	.Lfunc_begin0
-	.long	.Lfunc_end0
-	.long	0
-	.long	0
-.Ldebug_ranges1:
-	.long	.Ltmp0
-	.long	.Ltmp2
-	.long	0
-	.long	0
-.Ldebug_ranges2:
-	.long	.Lfunc_begin1
-	.long	.Lfunc_end1
-	.long	0
-	.long	0
-.Ldebug_ranges3:
-	.long	.Ltmp4
-	.long	.Ltmp6
-	.long	0
-	.long	0
-.Ldebug_ranges4:
-	.long	.Lfunc_begin2
-	.long	.Lfunc_end2
-	.long	0
-	.long	0
-.Ldebug_ranges5:
-	.long	.Ltmp8
-	.long	.Ltmp10
-	.long	0
-	.long	0
-.Ldebug_ranges6:
-	.long	.Lfunc_begin3
-	.long	.Lfunc_end3
-	.long	0
-	.long	0
-.Ldebug_ranges7:
-	.long	.Ltmp12
-	.long	.Ltmp14
-	.long	0
-	.long	0
-.Ldebug_ranges8:
 	.long	.Lfunc_begin4
 	.long	.Lfunc_end4
 	.long	0
 	.long	0
-.Ldebug_ranges9:
+.Ldebug_ranges1:
 	.long	.Ltmp18
-	.long	.Ltmp27
+	.long	.Ltmp20
 	.long	0
 	.long	0
-.Ldebug_ranges10:
-	.long	.Ltmp18
-	.long	.Ltmp27
-	.long	0
-	.long	0
-.Ldebug_ranges11:
+.Ldebug_ranges2:
 	.long	.Lfunc_begin5
 	.long	.Lfunc_end5
 	.long	0
 	.long	0
-.Ldebug_ranges12:
-	.long	.Ltmp31
-	.long	.Ltmp32
+.Ldebug_ranges3:
+	.long	.Ltmp22
+	.long	.Ltmp24
 	.long	0
 	.long	0
-.Ldebug_ranges13:
+.Ldebug_ranges4:
 	.long	.Lfunc_begin6
 	.long	.Lfunc_end6
 	.long	0
 	.long	0
-.Ldebug_ranges14:
-	.long	.Ltmp34
-	.long	.Ltmp35
+.Ldebug_ranges5:
+	.long	.Ltmp26
+	.long	.Ltmp29
 	.long	0
 	.long	0
-.Ldebug_ranges15:
+.Ldebug_ranges6:
 	.long	.Lfunc_begin7
 	.long	.Lfunc_end7
 	.long	0
 	.long	0
-.Ldebug_ranges16:
+.Ldebug_ranges7:
 	.long	.Ltmp37
-	.long	.Ltmp38
+	.long	.Ltmp39
 	.long	0
 	.long	0
-.Ldebug_ranges17:
-	.long	.Ltmp37
-	.long	.Ltmp38
-	.long	0
-	.long	0
-.Ldebug_ranges18:
+.Ldebug_ranges8:
 	.long	.Lfunc_begin8
 	.long	.Lfunc_end8
 	.long	0
 	.long	0
-.Ldebug_ranges19:
-	.long	.Ltmp42
+.Ldebug_ranges9:
 	.long	.Ltmp44
+	.long	.Ltmp45
 	.long	0
 	.long	0
-.Ldebug_ranges20:
+.Ldebug_ranges10:
 	.long	.Lfunc_begin9
 	.long	.Lfunc_end9
 	.long	0
 	.long	0
-.Ldebug_ranges21:
-	.long	.Ltmp46
+.Ldebug_ranges11:
 	.long	.Ltmp47
+	.long	.Ltmp48
 	.long	0
 	.long	0
-.Ldebug_ranges22:
+.Ldebug_ranges12:
 	.long	.Lfunc_begin10
 	.long	.Lfunc_end10
 	.long	0
 	.long	0
-.Ldebug_ranges23:
-	.long	.Ltmp56
-	.long	.Ltmp57
-	.long	0
-	.long	0
-.Ldebug_ranges24:
-	.long	.Ltmp53
-	.long	.Ltmp57
-	.long	0
-	.long	0
-.Ldebug_ranges25:
+.Ldebug_ranges13:
 	.long	.Ltmp52
-	.long	.Ltmp57
+	.long	.Ltmp54
 	.long	0
 	.long	0
-.Ldebug_ranges26:
-	.long	.Ltmp52
-	.long	.Ltmp57
-	.long	0
-	.long	0
-.Ldebug_ranges27:
+.Ldebug_ranges14:
 	.long	.Lfunc_begin11
 	.long	.Lfunc_end11
 	.long	0
 	.long	0
-.Ldebug_ranges28:
-	.long	.Ltmp63
-	.long	.Ltmp64
+.Ldebug_ranges15:
+	.long	.Ltmp56
+	.long	.Ltmp57
 	.long	0
 	.long	0
-.Ldebug_ranges29:
+.Ldebug_ranges16:
 	.long	.Lfunc_begin12
 	.long	.Lfunc_end12
 	.long	0
 	.long	0
-.Ldebug_ranges30:
-	.long	.Ltmp70
-	.long	.Ltmp71
+.Ldebug_ranges17:
+	.long	.Ltmp66
+	.long	.Ltmp69
 	.long	0
 	.long	0
-.Ldebug_ranges31:
+.Ldebug_ranges18:
+	.long	.Ltmp65
+	.long	.Ltmp69
+	.long	0
+	.long	0
+.Ldebug_ranges19:
 	.long	.Lfunc_begin13
 	.long	.Lfunc_end13
 	.long	0
 	.long	0
-.Ldebug_ranges32:
+.Ldebug_ranges20:
 	.long	.Ltmp77
-	.long	.Ltmp78
+	.long	.Ltmp80
 	.long	0
 	.long	0
-.Ldebug_ranges33:
+.Ldebug_ranges21:
+	.long	.Ltmp76
+	.long	.Ltmp80
+	.long	0
+	.long	0
+.Ldebug_ranges22:
+	.long	.Ltmp76
+	.long	.Ltmp80
+	.long	0
+	.long	0
+.Ldebug_ranges23:
 	.long	.Lfunc_begin14
 	.long	.Lfunc_end14
 	.long	0
 	.long	0
-.Ldebug_ranges34:
-	.long	.Ltmp80
-	.long	.Ltmp82
+.Ldebug_ranges24:
+	.long	.Ltmp85
+	.long	.Ltmp89
 	.long	0
 	.long	0
-.Ldebug_ranges35:
-	.long	.Ltmp80
-	.long	.Ltmp82
+.Ldebug_ranges25:
+	.long	.Ltmp84
+	.long	.Ltmp89
 	.long	0
 	.long	0
-.Ldebug_ranges36:
+.Ldebug_ranges26:
 	.long	.Lfunc_begin15
 	.long	.Lfunc_end15
 	.long	0
 	.long	0
-.Ldebug_ranges37:
-	.long	.Ltmp84
-	.long	.Ltmp86
+.Ldebug_ranges27:
+	.long	.Ltmp96
+	.long	.Ltmp100
 	.long	0
 	.long	0
-.Ldebug_ranges38:
-	.long	.Ltmp84
-	.long	.Ltmp86
+.Ldebug_ranges28:
+	.long	.Ltmp95
+	.long	.Ltmp100
 	.long	0
 	.long	0
-.Ldebug_ranges39:
+.Ldebug_ranges29:
+	.long	.Ltmp95
+	.long	.Ltmp100
+	.long	0
+	.long	0
+.Ldebug_ranges30:
 	.long	.Lfunc_begin16
 	.long	.Lfunc_end16
 	.long	0
 	.long	0
-.Ldebug_ranges40:
-	.long	.Ltmp88
-	.long	.Ltmp90
+.Ldebug_ranges31:
+	.long	.Ltmp106
+	.long	.Ltmp109
 	.long	0
 	.long	0
-.Ldebug_ranges41:
-	.long	.Ltmp88
-	.long	.Ltmp90
+.Ldebug_ranges32:
+	.long	.Ltmp105
+	.long	.Ltmp109
 	.long	0
 	.long	0
-.Ldebug_ranges42:
+.Ldebug_ranges33:
+	.long	.Ltmp105
+	.long	.Ltmp109
+	.long	0
+	.long	0
+.Ldebug_ranges34:
+	.long	.Ltmp105
+	.long	.Ltmp109
+	.long	0
+	.long	0
+.Ldebug_ranges35:
 	.long	.Lfunc_begin17
 	.long	.Lfunc_end17
 	.long	0
 	.long	0
-.Ldebug_ranges43:
+.Ldebug_ranges36:
 	.long	.Lfunc_begin18
 	.long	.Lfunc_end18
 	.long	0
 	.long	0
-.Ldebug_ranges44:
+.Ldebug_ranges37:
+	.long	.Ltmp121
+	.long	.Ltmp122
+	.long	0
+	.long	0
+.Ldebug_ranges38:
 	.long	.Lfunc_begin19
 	.long	.Lfunc_end19
 	.long	0
 	.long	0
-.Ldebug_ranges45:
+.Ldebug_ranges39:
 	.long	.Lfunc_begin20
 	.long	.Lfunc_end20
 	.long	0
 	.long	0
-.Ldebug_ranges46:
-	.long	.Ltmp117
-	.long	.Ltmp120
+.Ldebug_ranges40:
+	.long	.Ltmp134
+	.long	.Ltmp135
 	.long	0
 	.long	0
-.Ldebug_ranges47:
-	.long	.Ltmp117
-	.long	.Ltmp120
-	.long	0
-	.long	0
-.Ldebug_ranges48:
+.Ldebug_ranges41:
 	.long	.Lfunc_begin21
 	.long	.Lfunc_end21
 	.long	0
 	.long	0
+.Ldebug_ranges42:
+	.long	.Lfunc_begin22
+	.long	.Lfunc_end22
+	.long	0
+	.long	0
+.Ldebug_ranges43:
+	.long	.Ltmp147
+	.long	.Ltmp148
+	.long	0
+	.long	0
+.Ldebug_ranges44:
+	.long	.Lfunc_begin23
+	.long	.Lfunc_end23
+	.long	0
+	.long	0
+.Ldebug_ranges45:
+	.long	.Ltmp150
+	.long	.Ltmp152
+	.long	0
+	.long	0
+.Ldebug_ranges46:
+	.long	.Ltmp150
+	.long	.Ltmp152
+	.long	0
+	.long	0
+.Ldebug_ranges47:
+	.long	.Lfunc_begin24
+	.long	.Lfunc_end24
+	.long	0
+	.long	0
+.Ldebug_ranges48:
+	.long	.Ltmp154
+	.long	.Ltmp156
+	.long	0
+	.long	0
 .Ldebug_ranges49:
-	.long	.Ltmp129
-	.long	.Ltmp130
+	.long	.Ltmp154
+	.long	.Ltmp156
 	.long	0
 	.long	0
 .Ldebug_ranges50:
-	.long	.Ltmp130
-	.long	.Ltmp131
+	.long	.Lfunc_begin25
+	.long	.Lfunc_end25
 	.long	0
 	.long	0
 .Ldebug_ranges51:
-	.long	.Ltmp131
-	.long	.Ltmp132
+	.long	.Lfunc_begin26
+	.long	.Lfunc_end26
 	.long	0
 	.long	0
 .Ldebug_ranges52:
-	.long	.Ltmp133
-	.long	.Ltmp134
+	.long	.Ltmp177
+	.long	.Ltmp178
 	.long	0
 	.long	0
 .Ldebug_ranges53:
-	.long	.Ltmp133
-	.long	.Ltmp134
+	.long	.Lfunc_begin27
+	.long	.Lfunc_end27
 	.long	0
 	.long	0
 .Ldebug_ranges54:
-	.long	.Ltmp136
-	.long	.Ltmp137
-	.long	.Ltmp138
-	.long	.Ltmp139
-	.long	.Ltmp140
-	.long	.Ltmp142
+	.long	.Ltmp180
+	.long	.Ltmp182
 	.long	0
 	.long	0
 .Ldebug_ranges55:
-	.long	.Ltmp141
-	.long	.Ltmp142
+	.long	.Ltmp180
+	.long	.Ltmp182
 	.long	0
 	.long	0
 .Ldebug_ranges56:
-	.long	.Ltmp142
-	.long	.Ltmp143
-	.long	.Ltmp144
-	.long	.Ltmp146
+	.long	.Lfunc_begin28
+	.long	.Lfunc_end28
 	.long	0
 	.long	0
 .Ldebug_ranges57:
-	.long	.Ltmp145
-	.long	.Ltmp146
+	.long	.Lfunc_begin29
+	.long	.Lfunc_end29
 	.long	0
 	.long	0
 .Ldebug_ranges58:
-	.long	.Ltmp146
-	.long	.Ltmp147
-	.long	.Ltmp148
-	.long	.Ltmp150
-	.long	0
-	.long	0
-.Ldebug_ranges59:
-	.long	.Ltmp149
-	.long	.Ltmp150
-	.long	0
-	.long	0
-.Ldebug_ranges60:
-	.long	.Ltmp150
-	.long	.Ltmp156
-	.long	0
-	.long	0
-.Ldebug_ranges61:
-	.long	.Ltmp155
-	.long	.Ltmp156
-	.long	0
-	.long	0
-.Ldebug_ranges62:
-	.long	.Ltmp151
-	.long	.Ltmp156
-	.long	0
-	.long	0
-.Ldebug_ranges63:
-	.long	.Ltmp150
-	.long	.Ltmp156
-	.long	0
-	.long	0
-.Ldebug_ranges64:
-	.long	.Ltmp157
-	.long	.Ltmp158
-	.long	0
-	.long	0
-.Ldebug_ranges65:
-	.long	.Ltmp159
-	.long	.Ltmp160
-	.long	0
-	.long	0
-.Ldebug_ranges66:
-	.long	.Ltmp160
-	.long	.Ltmp161
-	.long	0
-	.long	0
-.Ldebug_ranges67:
-	.long	.Ltmp161
-	.long	.Ltmp162
-	.long	0
-	.long	0
-.Ldebug_ranges68:
-	.long	.Ltmp161
-	.long	.Ltmp162
-	.long	0
-	.long	0
-.Ldebug_ranges69:
-	.long	.Ltmp163
-	.long	.Ltmp164
-	.long	0
-	.long	0
-.Ldebug_ranges70:
-	.long	.Ltmp164
-	.long	.Ltmp165
-	.long	0
-	.long	0
-.Ldebug_ranges71:
-	.long	.Ltmp165
-	.long	.Ltmp166
-	.long	0
-	.long	0
-.Ldebug_ranges72:
-	.long	.Ltmp165
-	.long	.Ltmp166
-	.long	0
-	.long	0
-.Ldebug_ranges73:
-	.long	.Ltmp168
-	.long	.Ltmp169
-	.long	0
-	.long	0
-.Ldebug_ranges74:
-	.long	.Ltmp169
-	.long	.Ltmp170
-	.long	0
-	.long	0
-.Ldebug_ranges75:
-	.long	.Ltmp170
-	.long	.Ltmp176
-	.long	0
-	.long	0
-.Ldebug_ranges76:
-	.long	.Ltmp175
-	.long	.Ltmp176
-	.long	0
-	.long	0
-.Ldebug_ranges77:
-	.long	.Ltmp171
-	.long	.Ltmp176
-	.long	0
-	.long	0
-.Ldebug_ranges78:
-	.long	.Ltmp170
-	.long	.Ltmp176
-	.long	0
-	.long	0
-.Ldebug_ranges79:
-	.long	.Ltmp176
-	.long	.Ltmp177
-	.long	0
-	.long	0
-.Ldebug_ranges80:
-	.long	.Ltmp177
-	.long	.Ltmp178
-	.long	0
-	.long	0
-.Ldebug_ranges81:
-	.long	.Ltmp178
-	.long	.Ltmp179
-	.long	.Ltmp180
-	.long	.Ltmp181
-	.long	.Ltmp182
-	.long	.Ltmp184
-	.long	0
-	.long	0
-.Ldebug_ranges82:
-	.long	.Ltmp183
-	.long	.Ltmp184
-	.long	0
-	.long	0
-.Ldebug_ranges83:
-	.long	.Ltmp184
-	.long	.Ltmp185
-	.long	0
-	.long	0
-.Ldebug_ranges84:
-	.long	.Ltmp185
-	.long	.Ltmp186
-	.long	0
-	.long	0
-.Ldebug_ranges85:
-	.long	.Ltmp186
-	.long	.Ltmp187
-	.long	.Ltmp188
-	.long	.Ltmp190
-	.long	0
-	.long	0
-.Ldebug_ranges86:
-	.long	.Ltmp189
-	.long	.Ltmp190
-	.long	0
-	.long	0
-.Ldebug_ranges87:
-	.long	.Ltmp190
-	.long	.Ltmp191
-	.long	0
-	.long	0
-.Ldebug_ranges88:
-	.long	.Ltmp191
-	.long	.Ltmp192
-	.long	0
-	.long	0
-.Ldebug_ranges89:
-	.long	.Ltmp192
-	.long	.Ltmp193
-	.long	.Ltmp194
-	.long	.Ltmp196
-	.long	0
-	.long	0
-.Ldebug_ranges90:
-	.long	.Ltmp195
-	.long	.Ltmp196
-	.long	0
-	.long	0
-.Ldebug_ranges91:
 	.long	.Ltmp197
 	.long	.Ltmp198
 	.long	0
 	.long	0
-.Ldebug_ranges92:
+.Ldebug_ranges59:
 	.long	.Ltmp198
 	.long	.Ltmp199
 	.long	0
 	.long	0
-.Ldebug_ranges93:
+.Ldebug_ranges60:
 	.long	.Ltmp199
-	.long	.Ltmp201
+	.long	.Ltmp200
+	.long	0
+	.long	0
+.Ldebug_ranges61:
+	.long	.Ltmp202
+	.long	.Ltmp203
+	.long	.Ltmp204
+	.long	.Ltmp205
+	.long	.Ltmp206
+	.long	.Ltmp207
+	.long	0
+	.long	0
+.Ldebug_ranges62:
+	.long	.Ltmp202
+	.long	.Ltmp203
+	.long	.Ltmp204
+	.long	.Ltmp205
+	.long	.Ltmp206
+	.long	.Ltmp207
+	.long	0
+	.long	0
+.Ldebug_ranges63:
+	.long	.Ltmp207
+	.long	.Ltmp208
+	.long	.Ltmp209
+	.long	.Ltmp210
+	.long	0
+	.long	0
+.Ldebug_ranges64:
+	.long	.Ltmp207
+	.long	.Ltmp208
+	.long	.Ltmp209
+	.long	.Ltmp210
+	.long	0
+	.long	0
+.Ldebug_ranges65:
+	.long	.Ltmp210
+	.long	.Ltmp211
+	.long	.Ltmp212
+	.long	.Ltmp213
+	.long	0
+	.long	0
+.Ldebug_ranges66:
+	.long	.Ltmp210
+	.long	.Ltmp211
+	.long	.Ltmp212
+	.long	.Ltmp213
+	.long	0
+	.long	0
+.Ldebug_ranges67:
+	.long	.Ltmp213
+	.long	.Ltmp218
+	.long	.Ltmp225
+	.long	.Ltmp226
+	.long	0
+	.long	0
+.Ldebug_ranges68:
+	.long	.Ltmp214
+	.long	.Ltmp218
+	.long	.Ltmp225
+	.long	.Ltmp226
+	.long	0
+	.long	0
+.Ldebug_ranges69:
+	.long	.Ltmp213
+	.long	.Ltmp218
+	.long	.Ltmp225
+	.long	.Ltmp226
+	.long	0
+	.long	0
+.Ldebug_ranges70:
+	.long	.Ltmp213
+	.long	.Ltmp218
+	.long	.Ltmp225
+	.long	.Ltmp226
+	.long	0
+	.long	0
+.Ldebug_ranges71:
+	.long	.Ltmp220
+	.long	.Ltmp221
+	.long	0
+	.long	0
+.Ldebug_ranges72:
+	.long	.Ltmp220
+	.long	.Ltmp221
+	.long	0
+	.long	0
+.Ldebug_ranges73:
+	.long	.Ltmp226
+	.long	.Ltmp227
+	.long	0
+	.long	0
+.Ldebug_ranges74:
+	.long	.Ltmp229
+	.long	.Ltmp230
+	.long	0
+	.long	0
+.Ldebug_ranges75:
+	.long	.Ltmp230
+	.long	.Ltmp231
+	.long	0
+	.long	0
+.Ldebug_ranges76:
+	.long	.Ltmp231
+	.long	.Ltmp232
+	.long	.Ltmp233
+	.long	.Ltmp234
+	.long	.Ltmp235
+	.long	.Ltmp236
+	.long	0
+	.long	0
+.Ldebug_ranges77:
+	.long	.Ltmp231
+	.long	.Ltmp232
+	.long	.Ltmp233
+	.long	.Ltmp234
+	.long	.Ltmp235
+	.long	.Ltmp236
+	.long	0
+	.long	0
+.Ldebug_ranges78:
+	.long	.Ltmp236
+	.long	.Ltmp237
+	.long	0
+	.long	0
+.Ldebug_ranges79:
+	.long	.Ltmp237
+	.long	.Ltmp238
+	.long	0
+	.long	0
+.Ldebug_ranges80:
+	.long	.Ltmp238
+	.long	.Ltmp239
+	.long	.Ltmp240
+	.long	.Ltmp241
+	.long	0
+	.long	0
+.Ldebug_ranges81:
+	.long	.Ltmp238
+	.long	.Ltmp239
+	.long	.Ltmp240
+	.long	.Ltmp241
+	.long	0
+	.long	0
+.Ldebug_ranges82:
+	.long	.Ltmp241
+	.long	.Ltmp242
+	.long	0
+	.long	0
+.Ldebug_ranges83:
+	.long	.Ltmp242
+	.long	.Ltmp243
+	.long	0
+	.long	0
+.Ldebug_ranges84:
+	.long	.Ltmp243
+	.long	.Ltmp244
+	.long	.Ltmp245
+	.long	.Ltmp246
+	.long	0
+	.long	0
+.Ldebug_ranges85:
+	.long	.Ltmp243
+	.long	.Ltmp244
+	.long	.Ltmp245
+	.long	.Ltmp246
+	.long	0
+	.long	0
+.Ldebug_ranges86:
+	.long	.Ltmp246
+	.long	.Ltmp247
+	.long	0
+	.long	0
+.Ldebug_ranges87:
+	.long	.Ltmp247
+	.long	.Ltmp248
+	.long	0
+	.long	0
+.Ldebug_ranges88:
+	.long	.Ltmp248
+	.long	.Ltmp253
+	.long	0
+	.long	0
+.Ldebug_ranges89:
+	.long	.Ltmp249
+	.long	.Ltmp253
+	.long	0
+	.long	0
+.Ldebug_ranges90:
+	.long	.Ltmp248
+	.long	.Ltmp253
+	.long	0
+	.long	0
+.Ldebug_ranges91:
+	.long	.Ltmp248
+	.long	.Ltmp253
+	.long	0
+	.long	0
+.Ldebug_ranges92:
+	.long	.Ltmp253
+	.long	.Ltmp254
+	.long	0
+	.long	0
+.Ldebug_ranges93:
+	.long	.Ltmp254
+	.long	.Ltmp255
 	.long	0
 	.long	0
 .Ldebug_ranges94:
-	.long	.Ltmp199
-	.long	.Ltmp201
+	.long	.Ltmp256
+	.long	.Ltmp257
 	.long	0
 	.long	0
 .Ldebug_ranges95:
-	.long	.Ltmp201
-	.long	.Ltmp202
+	.long	.Ltmp257
+	.long	.Ltmp258
+	.long	0
+	.long	0
+.Ldebug_ranges96:
+	.long	.Ltmp258
+	.long	.Ltmp259
+	.long	0
+	.long	0
+.Ldebug_ranges97:
+	.long	.Ltmp258
+	.long	.Ltmp259
+	.long	0
+	.long	0
+.Ldebug_ranges98:
+	.long	.Ltmp260
+	.long	.Ltmp261
+	.long	0
+	.long	0
+.Ldebug_ranges99:
+	.long	.Ltmp261
+	.long	.Ltmp262
+	.long	0
+	.long	0
+.Ldebug_ranges100:
+	.long	.Ltmp262
+	.long	.Ltmp263
+	.long	0
+	.long	0
+.Ldebug_ranges101:
+	.long	.Ltmp262
+	.long	.Ltmp263
+	.long	0
+	.long	0
+.Ldebug_ranges102:
+	.long	.Ltmp265
+	.long	.Ltmp266
+	.long	0
+	.long	0
+.Ldebug_ranges103:
+	.long	.Ltmp266
+	.long	.Ltmp267
+	.long	0
+	.long	0
+.Ldebug_ranges104:
+	.long	.Ltmp267
+	.long	.Ltmp269
+	.long	0
+	.long	0
+.Ldebug_ranges105:
+	.long	.Ltmp267
+	.long	.Ltmp269
+	.long	0
+	.long	0
+.Ldebug_ranges106:
+	.long	.Ltmp269
+	.long	.Ltmp270
+	.long	0
+	.long	0
+.Ldebug_ranges107:
+	.long	.Ltmp274
+	.long	.Ltmp277
+	.long	0
+	.long	0
+.Ldebug_ranges108:
+	.long	.Ltmp274
+	.long	.Ltmp277
+	.long	0
+	.long	0
+.Ldebug_ranges109:
+	.long	.Ltmp274
+	.long	.Ltmp278
+	.long	0
+	.long	0
+.Ldebug_ranges110:
+	.long	.Lfunc_begin30
+	.long	.Lfunc_end30
+	.long	0
+	.long	0
+.Ldebug_ranges111:
+	.long	.Ltmp287
+	.long	.Ltmp288
+	.long	0
+	.long	0
+.Ldebug_ranges112:
+	.long	.Ltmp288
+	.long	.Ltmp289
+	.long	0
+	.long	0
+.Ldebug_ranges113:
+	.long	.Ltmp289
+	.long	.Ltmp290
+	.long	0
+	.long	0
+.Ldebug_ranges114:
+	.long	.Ltmp291
+	.long	.Ltmp292
+	.long	.Ltmp293
+	.long	.Ltmp294
+	.long	.Ltmp295
+	.long	.Ltmp296
+	.long	0
+	.long	0
+.Ldebug_ranges115:
+	.long	.Ltmp291
+	.long	.Ltmp292
+	.long	.Ltmp293
+	.long	.Ltmp294
+	.long	.Ltmp295
+	.long	.Ltmp296
+	.long	0
+	.long	0
+.Ldebug_ranges116:
+	.long	.Ltmp296
+	.long	.Ltmp297
+	.long	.Ltmp298
+	.long	.Ltmp299
+	.long	0
+	.long	0
+.Ldebug_ranges117:
+	.long	.Ltmp296
+	.long	.Ltmp297
+	.long	.Ltmp298
+	.long	.Ltmp299
+	.long	0
+	.long	0
+.Ldebug_ranges118:
+	.long	.Ltmp299
+	.long	.Ltmp300
+	.long	.Ltmp301
+	.long	.Ltmp302
+	.long	0
+	.long	0
+.Ldebug_ranges119:
+	.long	.Ltmp299
+	.long	.Ltmp300
+	.long	.Ltmp301
+	.long	.Ltmp302
+	.long	0
+	.long	0
+.Ldebug_ranges120:
+	.long	.Ltmp302
+	.long	.Ltmp307
+	.long	.Ltmp311
+	.long	.Ltmp312
+	.long	0
+	.long	0
+.Ldebug_ranges121:
+	.long	.Ltmp303
+	.long	.Ltmp307
+	.long	.Ltmp311
+	.long	.Ltmp312
+	.long	0
+	.long	0
+.Ldebug_ranges122:
+	.long	.Ltmp302
+	.long	.Ltmp307
+	.long	.Ltmp311
+	.long	.Ltmp312
+	.long	0
+	.long	0
+.Ldebug_ranges123:
+	.long	.Ltmp302
+	.long	.Ltmp307
+	.long	.Ltmp311
+	.long	.Ltmp312
+	.long	0
+	.long	0
+.Ldebug_ranges124:
+	.long	.Ltmp308
+	.long	.Ltmp309
+	.long	0
+	.long	0
+.Ldebug_ranges125:
+	.long	.Ltmp308
+	.long	.Ltmp309
+	.long	0
+	.long	0
+.Ldebug_ranges126:
+	.long	.Ltmp312
+	.long	.Ltmp313
+	.long	0
+	.long	0
+.Ldebug_ranges127:
+	.long	.Ltmp314
+	.long	.Ltmp315
+	.long	0
+	.long	0
+.Ldebug_ranges128:
+	.long	.Ltmp315
+	.long	.Ltmp316
+	.long	0
+	.long	0
+.Ldebug_ranges129:
+	.long	.Ltmp316
+	.long	.Ltmp317
+	.long	.Ltmp318
+	.long	.Ltmp319
+	.long	.Ltmp320
+	.long	.Ltmp321
+	.long	0
+	.long	0
+.Ldebug_ranges130:
+	.long	.Ltmp316
+	.long	.Ltmp317
+	.long	.Ltmp318
+	.long	.Ltmp319
+	.long	.Ltmp320
+	.long	.Ltmp321
+	.long	0
+	.long	0
+.Ldebug_ranges131:
+	.long	.Ltmp321
+	.long	.Ltmp322
+	.long	0
+	.long	0
+.Ldebug_ranges132:
+	.long	.Ltmp322
+	.long	.Ltmp323
+	.long	0
+	.long	0
+.Ldebug_ranges133:
+	.long	.Ltmp323
+	.long	.Ltmp324
+	.long	.Ltmp325
+	.long	.Ltmp326
+	.long	0
+	.long	0
+.Ldebug_ranges134:
+	.long	.Ltmp323
+	.long	.Ltmp324
+	.long	.Ltmp325
+	.long	.Ltmp326
+	.long	0
+	.long	0
+.Ldebug_ranges135:
+	.long	.Ltmp326
+	.long	.Ltmp327
+	.long	0
+	.long	0
+.Ldebug_ranges136:
+	.long	.Ltmp327
+	.long	.Ltmp328
+	.long	0
+	.long	0
+.Ldebug_ranges137:
+	.long	.Ltmp328
+	.long	.Ltmp329
+	.long	.Ltmp330
+	.long	.Ltmp331
+	.long	0
+	.long	0
+.Ldebug_ranges138:
+	.long	.Ltmp328
+	.long	.Ltmp329
+	.long	.Ltmp330
+	.long	.Ltmp331
+	.long	0
+	.long	0
+.Ldebug_ranges139:
+	.long	.Ltmp331
+	.long	.Ltmp332
+	.long	0
+	.long	0
+.Ldebug_ranges140:
+	.long	.Ltmp332
+	.long	.Ltmp333
+	.long	0
+	.long	0
+.Ldebug_ranges141:
+	.long	.Ltmp333
+	.long	.Ltmp338
+	.long	0
+	.long	0
+.Ldebug_ranges142:
+	.long	.Ltmp334
+	.long	.Ltmp338
+	.long	0
+	.long	0
+.Ldebug_ranges143:
+	.long	.Ltmp333
+	.long	.Ltmp338
+	.long	0
+	.long	0
+.Ldebug_ranges144:
+	.long	.Ltmp333
+	.long	.Ltmp338
+	.long	0
+	.long	0
+.Ldebug_ranges145:
+	.long	.Ltmp338
+	.long	.Ltmp339
+	.long	0
+	.long	0
+.Ldebug_ranges146:
+	.long	.Ltmp339
+	.long	.Ltmp340
+	.long	0
+	.long	0
+.Ldebug_ranges147:
+	.long	.Ltmp341
+	.long	.Ltmp342
+	.long	0
+	.long	0
+.Ldebug_ranges148:
+	.long	.Ltmp342
+	.long	.Ltmp343
+	.long	0
+	.long	0
+.Ldebug_ranges149:
+	.long	.Ltmp343
+	.long	.Ltmp344
+	.long	0
+	.long	0
+.Ldebug_ranges150:
+	.long	.Ltmp343
+	.long	.Ltmp344
+	.long	0
+	.long	0
+.Ldebug_ranges151:
+	.long	.Ltmp345
+	.long	.Ltmp346
+	.long	0
+	.long	0
+.Ldebug_ranges152:
+	.long	.Ltmp346
+	.long	.Ltmp347
+	.long	0
+	.long	0
+.Ldebug_ranges153:
+	.long	.Ltmp347
+	.long	.Ltmp348
+	.long	0
+	.long	0
+.Ldebug_ranges154:
+	.long	.Ltmp347
+	.long	.Ltmp348
+	.long	0
+	.long	0
+.Ldebug_ranges155:
+	.long	.Ltmp350
+	.long	.Ltmp351
+	.long	0
+	.long	0
+.Ldebug_ranges156:
+	.long	.Ltmp351
+	.long	.Ltmp352
+	.long	0
+	.long	0
+.Ldebug_ranges157:
+	.long	.Ltmp352
+	.long	.Ltmp354
+	.long	0
+	.long	0
+.Ldebug_ranges158:
+	.long	.Ltmp352
+	.long	.Ltmp354
+	.long	0
+	.long	0
+.Ldebug_ranges159:
+	.long	.Ltmp354
+	.long	.Ltmp355
+	.long	0
+	.long	0
+.Ldebug_ranges160:
+	.long	.Ltmp356
+	.long	.Ltmp357
+	.long	0
+	.long	0
+.Ldebug_ranges161:
+	.long	.Ltmp356
+	.long	.Ltmp357
+	.long	0
+	.long	0
+.Ldebug_ranges162:
+	.long	.Ltmp356
+	.long	.Ltmp359
+	.long	0
+	.long	0
+.Ldebug_ranges163:
+	.long	.Ltmp287
+	.long	.Ltmp360
+	.long	0
+	.long	0
+.Ldebug_ranges164:
+	.long	.Lfunc_begin31
+	.long	.Lfunc_end31
+	.long	0
+	.long	0
+.Ldebug_ranges165:
+	.long	.Ltmp371
+	.long	.Ltmp377
+	.long	0
+	.long	0
+.Ldebug_ranges166:
+	.long	.Ltmp371
+	.long	.Ltmp377
+	.long	0
+	.long	0
+.Ldebug_ranges167:
+	.long	.Ltmp370
+	.long	.Ltmp377
+	.long	0
+	.long	0
+.Ldebug_ranges168:
+	.long	.Lfunc_begin32
+	.long	.Lfunc_end32
+	.long	0
+	.long	0
+.Ldebug_ranges169:
+	.long	.Ltmp381
+	.long	.Ltmp391
+	.long	0
+	.long	0
+.Ldebug_ranges170:
+	.long	.Ltmp381
+	.long	.Ltmp391
+	.long	0
+	.long	0
+.Ldebug_ranges171:
+	.long	.Ltmp381
+	.long	.Ltmp391
+	.long	0
+	.long	0
+.Ldebug_ranges172:
+	.long	.Ltmp381
+	.long	.Ltmp391
 	.long	0
 	.long	0
 	.section	.debug_loc,"",@progbits
 .Ldebug_loc0:
-	.long	.Lfunc_begin0
-	.long	.Ltmp1
-.Lset0 = .Ltmp206-.Ltmp205              # Loc expr size
+	.long	.Lfunc_begin4
+	.long	.Ltmp19
+.Lset0 = .Ltmp394-.Ltmp393              # Loc expr size
 	.short	.Lset0
-.Ltmp205:
+.Ltmp393:
 	.byte	80                      # DW_OP_reg0
-.Ltmp206:
+.Ltmp394:
 	.long	0
 	.long	0
 .Ldebug_loc1:
-	.long	.Lfunc_begin1
-	.long	.Ltmp5
-.Lset1 = .Ltmp208-.Ltmp207              # Loc expr size
+	.long	.Lfunc_begin5
+	.long	.Ltmp23
+.Lset1 = .Ltmp396-.Ltmp395              # Loc expr size
 	.short	.Lset1
-.Ltmp207:
+.Ltmp395:
 	.byte	80                      # DW_OP_reg0
-.Ltmp208:
+.Ltmp396:
 	.long	0
 	.long	0
 .Ldebug_loc2:
-	.long	.Lfunc_begin2
-	.long	.Ltmp9
-.Lset2 = .Ltmp210-.Ltmp209              # Loc expr size
+	.long	.Lfunc_begin6
+	.long	.Ltmp27
+.Lset2 = .Ltmp398-.Ltmp397              # Loc expr size
 	.short	.Lset2
-.Ltmp209:
+.Ltmp397:
 	.byte	80                      # DW_OP_reg0
-.Ltmp210:
+.Ltmp398:
 	.long	0
 	.long	0
 .Ldebug_loc3:
-	.long	.Lfunc_begin3
-	.long	.Ltmp13
-.Lset3 = .Ltmp212-.Ltmp211              # Loc expr size
+	.long	.Lfunc_begin6
+	.long	.Ltmp28
+.Lset3 = .Ltmp400-.Ltmp399              # Loc expr size
 	.short	.Lset3
-.Ltmp211:
-	.byte	80                      # DW_OP_reg0
-.Ltmp212:
+.Ltmp399:
+	.byte	81                      # DW_OP_reg1
+.Ltmp400:
 	.long	0
 	.long	0
 .Ldebug_loc4:
-	.long	.Ltmp24
-	.long	.Ltmp25
-.Lset4 = .Ltmp214-.Ltmp213              # Loc expr size
+	.long	.Ltmp37
+	.long	.Ltmp38
+.Lset4 = .Ltmp402-.Ltmp401              # Loc expr size
 	.short	.Lset4
-.Ltmp213:
-	.byte	80                      # DW_OP_reg0
-.Ltmp214:
-	.long	.Ltmp25
-	.long	.Lfunc_end4
-.Lset5 = .Ltmp216-.Ltmp215              # Loc expr size
+.Ltmp401:
+	.byte	17                      # DW_OP_consts
+	.byte	1                       # 
+.Ltmp402:
+	.long	.Ltmp38
+	.long	.Lfunc_end7
+.Lset5 = .Ltmp404-.Ltmp403              # Loc expr size
 	.short	.Lset5
-.Ltmp215:
-	.byte	86                      # DW_OP_reg6
-.Ltmp216:
+.Ltmp403:
+	.byte	17                      # DW_OP_consts
+	.byte	2                       # 
+.Ltmp404:
 	.long	0
 	.long	0
 .Ldebug_loc5:
-	.long	.Lfunc_begin8
-	.long	.Ltmp43
-.Lset6 = .Ltmp218-.Ltmp217              # Loc expr size
+	.long	.Lfunc_begin10
+	.long	.Ltmp53
+.Lset6 = .Ltmp406-.Ltmp405              # Loc expr size
 	.short	.Lset6
-.Ltmp217:
+.Ltmp405:
 	.byte	80                      # DW_OP_reg0
-.Ltmp218:
+.Ltmp406:
 	.long	0
 	.long	0
 .Ldebug_loc6:
-	.long	.Ltmp54
-	.long	.Ltmp55
-.Lset7 = .Ltmp220-.Ltmp219              # Loc expr size
+	.long	.Lfunc_begin12
+	.long	.Ltmp64
+.Lset7 = .Ltmp408-.Ltmp407              # Loc expr size
 	.short	.Lset7
-.Ltmp219:
-	.byte	83                      # DW_OP_reg3
-.Ltmp220:
+.Ltmp407:
+	.byte	80                      # DW_OP_reg0
+.Ltmp408:
+	.long	.Ltmp64
+	.long	.Ltmp65
+.Lset8 = .Ltmp410-.Ltmp409              # Loc expr size
+	.short	.Lset8
+.Ltmp409:
+	.byte	84                      # DW_OP_reg4
+.Ltmp410:
 	.long	0
 	.long	0
 .Ldebug_loc7:
-	.long	.Lfunc_begin17
-	.long	.Ltmp94
-.Lset8 = .Ltmp222-.Ltmp221              # Loc expr size
-	.short	.Lset8
-.Ltmp221:
+	.long	.Ltmp67
+	.long	.Ltmp68
+.Lset9 = .Ltmp412-.Ltmp411              # Loc expr size
+	.short	.Lset9
+.Ltmp411:
 	.byte	80                      # DW_OP_reg0
-.Ltmp222:
+.Ltmp412:
 	.long	0
 	.long	0
 .Ldebug_loc8:
-	.long	.Lfunc_begin18
-	.long	.Ltmp99
-.Lset9 = .Ltmp224-.Ltmp223              # Loc expr size
-	.short	.Lset9
-.Ltmp223:
-	.byte	80                      # DW_OP_reg0
-.Ltmp224:
-	.long	.Ltmp100
-	.long	.Ltmp101
-.Lset10 = .Ltmp226-.Ltmp225             # Loc expr size
+	.long	.Ltmp78
+	.long	.Ltmp79
+.Lset10 = .Ltmp414-.Ltmp413             # Loc expr size
 	.short	.Lset10
-.Ltmp225:
+.Ltmp413:
 	.byte	80                      # DW_OP_reg0
-.Ltmp226:
+.Ltmp414:
 	.long	0
 	.long	0
 .Ldebug_loc9:
-	.long	.Ltmp134
-	.long	.Ltmp135
-.Lset11 = .Ltmp228-.Ltmp227             # Loc expr size
+	.long	.Lfunc_begin14
+	.long	.Ltmp88
+.Lset11 = .Ltmp416-.Ltmp415             # Loc expr size
 	.short	.Lset11
-.Ltmp227:
+.Ltmp415:
 	.byte	80                      # DW_OP_reg0
-.Ltmp228:
+.Ltmp416:
 	.long	0
 	.long	0
 .Ldebug_loc10:
-	.long	.Ltmp152
-	.long	.Ltmp154
-.Lset12 = .Ltmp230-.Ltmp229             # Loc expr size
+	.long	.Ltmp86
+	.long	.Ltmp87
+.Lset12 = .Ltmp418-.Ltmp417             # Loc expr size
 	.short	.Lset12
-.Ltmp229:
-	.byte	83                      # DW_OP_reg3
-.Ltmp230:
+.Ltmp417:
+	.byte	81                      # DW_OP_reg1
+.Ltmp418:
 	.long	0
 	.long	0
 .Ldebug_loc11:
-	.long	.Ltmp162
-	.long	.Ltmp163
-.Lset13 = .Ltmp232-.Ltmp231             # Loc expr size
+	.long	.Lfunc_begin15
+	.long	.Ltmp95
+.Lset13 = .Ltmp420-.Ltmp419             # Loc expr size
 	.short	.Lset13
-.Ltmp231:
+.Ltmp419:
 	.byte	80                      # DW_OP_reg0
-.Ltmp232:
+.Ltmp420:
+	.long	.Ltmp95
+	.long	.Ltmp98
+.Lset14 = .Ltmp422-.Ltmp421             # Loc expr size
+	.short	.Lset14
+.Ltmp421:
+	.byte	84                      # DW_OP_reg4
+.Ltmp422:
+	.long	.Ltmp98
+	.long	.Ltmp99
+.Lset15 = .Ltmp424-.Ltmp423             # Loc expr size
+	.short	.Lset15
+.Ltmp423:
+	.byte	80                      # DW_OP_reg0
+.Ltmp424:
 	.long	0
 	.long	0
 .Ldebug_loc12:
-	.long	.Ltmp166
-	.long	.Ltmp167
-.Lset14 = .Ltmp234-.Ltmp233             # Loc expr size
-	.short	.Lset14
-.Ltmp233:
-	.byte	80                      # DW_OP_reg0
-.Ltmp234:
+	.long	.Ltmp97
+	.long	.Ltmp98
+.Lset16 = .Ltmp426-.Ltmp425             # Loc expr size
+	.short	.Lset16
+.Ltmp425:
+	.byte	83                      # DW_OP_reg3
+.Ltmp426:
 	.long	0
 	.long	0
 .Ldebug_loc13:
-	.long	.Ltmp172
-	.long	.Ltmp174
-.Lset15 = .Ltmp236-.Ltmp235             # Loc expr size
-	.short	.Lset15
-.Ltmp235:
+	.long	.Ltmp107
+	.long	.Ltmp108
+.Lset17 = .Ltmp428-.Ltmp427             # Loc expr size
+	.short	.Lset17
+.Ltmp427:
 	.byte	83                      # DW_OP_reg3
-.Ltmp236:
+.Ltmp428:
 	.long	0
 	.long	0
 .Ldebug_loc14:
-	.long	.Ltmp200
-	.long	.Ltmp202
-.Lset16 = .Ltmp238-.Ltmp237             # Loc expr size
-	.short	.Lset16
-.Ltmp237:
+	.long	.Lfunc_begin17
+	.long	.Ltmp114
+.Lset18 = .Ltmp430-.Ltmp429             # Loc expr size
+	.short	.Lset18
+.Ltmp429:
 	.byte	80                      # DW_OP_reg0
-.Ltmp238:
+.Ltmp430:
+	.long	.Ltmp114
+	.long	.Ltmp115
+.Lset19 = .Ltmp432-.Ltmp431             # Loc expr size
+	.short	.Lset19
+.Ltmp431:
+	.byte	84                      # DW_OP_reg4
+.Ltmp432:
 	.long	0
 	.long	0
 .Ldebug_loc15:
-	.long	.Ltmp200
-	.long	.Ltmp202
-.Lset17 = .Ltmp240-.Ltmp239             # Loc expr size
-	.short	.Lset17
-.Ltmp239:
+	.long	.Lfunc_begin19
+	.long	.Ltmp127
+.Lset20 = .Ltmp434-.Ltmp433             # Loc expr size
+	.short	.Lset20
+.Ltmp433:
 	.byte	80                      # DW_OP_reg0
-.Ltmp240:
+.Ltmp434:
+	.long	.Ltmp127
+	.long	.Ltmp128
+.Lset21 = .Ltmp436-.Ltmp435             # Loc expr size
+	.short	.Lset21
+.Ltmp435:
+	.byte	84                      # DW_OP_reg4
+.Ltmp436:
+	.long	0
+	.long	0
+.Ldebug_loc16:
+	.long	.Lfunc_begin21
+	.long	.Ltmp140
+.Lset22 = .Ltmp438-.Ltmp437             # Loc expr size
+	.short	.Lset22
+.Ltmp437:
+	.byte	80                      # DW_OP_reg0
+.Ltmp438:
+	.long	.Ltmp140
+	.long	.Ltmp141
+.Lset23 = .Ltmp440-.Ltmp439             # Loc expr size
+	.short	.Lset23
+.Ltmp439:
+	.byte	84                      # DW_OP_reg4
+.Ltmp440:
+	.long	0
+	.long	0
+.Ldebug_loc17:
+	.long	.Lfunc_begin25
+	.long	.Ltmp163
+.Lset24 = .Ltmp442-.Ltmp441             # Loc expr size
+	.short	.Lset24
+.Ltmp441:
+	.byte	80                      # DW_OP_reg0
+.Ltmp442:
+	.long	.Ltmp164
+	.long	.Lfunc_end25
+.Lset25 = .Ltmp444-.Ltmp443             # Loc expr size
+	.short	.Lset25
+.Ltmp443:
+	.byte	80                      # DW_OP_reg0
+.Ltmp444:
+	.long	0
+	.long	0
+.Ldebug_loc18:
+	.long	.Lfunc_begin25
+	.long	.Ltmp160
+.Lset26 = .Ltmp446-.Ltmp445             # Loc expr size
+	.short	.Lset26
+.Ltmp445:
+	.byte	81                      # DW_OP_reg1
+.Ltmp446:
+	.long	0
+	.long	0
+.Ldebug_loc19:
+	.long	.Lfunc_begin26
+	.long	.Ltmp176
+.Lset27 = .Ltmp448-.Ltmp447             # Loc expr size
+	.short	.Lset27
+.Ltmp447:
+	.byte	80                      # DW_OP_reg0
+.Ltmp448:
+	.long	0
+	.long	0
+.Ldebug_loc20:
+	.long	.Lfunc_begin28
+	.long	.Ltmp185
+.Lset28 = .Ltmp450-.Ltmp449             # Loc expr size
+	.short	.Lset28
+.Ltmp449:
+	.byte	80                      # DW_OP_reg0
+.Ltmp450:
+	.long	.Ltmp186
+	.long	.Ltmp187
+.Lset29 = .Ltmp452-.Ltmp451             # Loc expr size
+	.short	.Lset29
+.Ltmp451:
+	.byte	80                      # DW_OP_reg0
+.Ltmp452:
+	.long	0
+	.long	0
+.Ldebug_loc21:
+	.long	.Lfunc_begin29
+	.long	.Ltmp196
+.Lset30 = .Ltmp454-.Ltmp453             # Loc expr size
+	.short	.Lset30
+.Ltmp453:
+	.byte	80                      # DW_OP_reg0
+.Ltmp454:
+	.long	.Ltmp196
+	.long	.Ltmp197
+.Lset31 = .Ltmp456-.Ltmp455             # Loc expr size
+	.short	.Lset31
+.Ltmp455:
+	.byte	84                      # DW_OP_reg4
+.Ltmp456:
+	.long	.Ltmp198
+	.long	.Ltmp224
+.Lset32 = .Ltmp458-.Ltmp457             # Loc expr size
+	.short	.Lset32
+.Ltmp457:
+	.byte	84                      # DW_OP_reg4
+.Ltmp458:
+	.long	.Ltmp226
+	.long	.Ltmp229
+.Lset33 = .Ltmp460-.Ltmp459             # Loc expr size
+	.short	.Lset33
+.Ltmp459:
+	.byte	84                      # DW_OP_reg4
+.Ltmp460:
+	.long	.Ltmp265
+	.long	.Ltmp278
+.Lset34 = .Ltmp462-.Ltmp461             # Loc expr size
+	.short	.Lset34
+.Ltmp461:
+	.byte	84                      # DW_OP_reg4
+.Ltmp462:
+	.long	0
+	.long	0
+.Ldebug_loc22:
+	.long	.Ltmp215
+	.long	.Ltmp217
+.Lset35 = .Ltmp464-.Ltmp463             # Loc expr size
+	.short	.Lset35
+.Ltmp463:
+	.byte	83                      # DW_OP_reg3
+.Ltmp464:
+	.long	0
+	.long	0
+.Ldebug_loc23:
+	.long	.Ltmp221
+	.long	.Ltmp222
+.Lset36 = .Ltmp466-.Ltmp465             # Loc expr size
+	.short	.Lset36
+.Ltmp465:
+	.byte	80                      # DW_OP_reg0
+.Ltmp466:
+	.long	0
+	.long	0
+.Ldebug_loc24:
+	.long	.Ltmp250
+	.long	.Ltmp252
+.Lset37 = .Ltmp468-.Ltmp467             # Loc expr size
+	.short	.Lset37
+.Ltmp467:
+	.byte	83                      # DW_OP_reg3
+.Ltmp468:
+	.long	0
+	.long	0
+.Ldebug_loc25:
+	.long	.Ltmp259
+	.long	.Ltmp260
+.Lset38 = .Ltmp470-.Ltmp469             # Loc expr size
+	.short	.Lset38
+.Ltmp469:
+	.byte	80                      # DW_OP_reg0
+.Ltmp470:
+	.long	0
+	.long	0
+.Ldebug_loc26:
+	.long	.Ltmp263
+	.long	.Ltmp264
+.Lset39 = .Ltmp472-.Ltmp471             # Loc expr size
+	.short	.Lset39
+.Ltmp471:
+	.byte	80                      # DW_OP_reg0
+.Ltmp472:
+	.long	0
+	.long	0
+.Ldebug_loc27:
+	.long	.Ltmp268
+	.long	.Ltmp270
+.Lset40 = .Ltmp474-.Ltmp473             # Loc expr size
+	.short	.Lset40
+.Ltmp473:
+	.byte	80                      # DW_OP_reg0
+.Ltmp474:
+	.long	0
+	.long	0
+.Ldebug_loc28:
+	.long	.Ltmp268
+	.long	.Ltmp270
+.Lset41 = .Ltmp476-.Ltmp475             # Loc expr size
+	.short	.Lset41
+.Ltmp475:
+	.byte	80                      # DW_OP_reg0
+.Ltmp476:
+	.long	0
+	.long	0
+.Ldebug_loc29:
+	.long	.Ltmp275
+	.long	.Ltmp276
+.Lset42 = .Ltmp478-.Ltmp477             # Loc expr size
+	.short	.Lset42
+.Ltmp477:
+	.byte	80                      # DW_OP_reg0
+.Ltmp478:
+	.long	0
+	.long	0
+.Ldebug_loc30:
+	.long	.Ltmp304
+	.long	.Ltmp306
+.Lset43 = .Ltmp480-.Ltmp479             # Loc expr size
+	.short	.Lset43
+.Ltmp479:
+	.byte	83                      # DW_OP_reg3
+.Ltmp480:
+	.long	0
+	.long	0
+.Ldebug_loc31:
+	.long	.Ltmp309
+	.long	.Ltmp310
+.Lset44 = .Ltmp482-.Ltmp481             # Loc expr size
+	.short	.Lset44
+.Ltmp481:
+	.byte	80                      # DW_OP_reg0
+.Ltmp482:
+	.long	0
+	.long	0
+.Ldebug_loc32:
+	.long	.Ltmp335
+	.long	.Ltmp337
+.Lset45 = .Ltmp484-.Ltmp483             # Loc expr size
+	.short	.Lset45
+.Ltmp483:
+	.byte	83                      # DW_OP_reg3
+.Ltmp484:
+	.long	0
+	.long	0
+.Ldebug_loc33:
+	.long	.Ltmp344
+	.long	.Ltmp345
+.Lset46 = .Ltmp486-.Ltmp485             # Loc expr size
+	.short	.Lset46
+.Ltmp485:
+	.byte	80                      # DW_OP_reg0
+.Ltmp486:
+	.long	0
+	.long	0
+.Ldebug_loc34:
+	.long	.Ltmp348
+	.long	.Ltmp349
+.Lset47 = .Ltmp488-.Ltmp487             # Loc expr size
+	.short	.Lset47
+.Ltmp487:
+	.byte	80                      # DW_OP_reg0
+.Ltmp488:
+	.long	0
+	.long	0
+.Ldebug_loc35:
+	.long	.Ltmp353
+	.long	.Ltmp355
+.Lset48 = .Ltmp490-.Ltmp489             # Loc expr size
+	.short	.Lset48
+.Ltmp489:
+	.byte	80                      # DW_OP_reg0
+.Ltmp490:
+	.long	0
+	.long	0
+.Ldebug_loc36:
+	.long	.Ltmp353
+	.long	.Ltmp355
+.Lset49 = .Ltmp492-.Ltmp491             # Loc expr size
+	.short	.Lset49
+.Ltmp491:
+	.byte	80                      # DW_OP_reg0
+.Ltmp492:
+	.long	0
+	.long	0
+.Ldebug_loc37:
+	.long	.Ltmp357
+	.long	.Ltmp358
+.Lset50 = .Ltmp494-.Ltmp493             # Loc expr size
+	.short	.Lset50
+.Ltmp493:
+	.byte	80                      # DW_OP_reg0
+.Ltmp494:
+	.long	0
+	.long	0
+.Ldebug_loc38:
+	.long	.Lfunc_begin31
+	.long	.Ltmp368
+.Lset51 = .Ltmp496-.Ltmp495             # Loc expr size
+	.short	.Lset51
+.Ltmp495:
+	.byte	80                      # DW_OP_reg0
+.Ltmp496:
+	.long	.Ltmp368
+	.long	.Lfunc_end31
+.Lset52 = .Ltmp498-.Ltmp497             # Loc expr size
+	.short	.Lset52
+.Ltmp497:
+	.byte	84                      # DW_OP_reg4
+.Ltmp498:
+	.long	0
+	.long	0
+.Ldebug_loc39:
+	.long	.Ltmp374
+	.long	.Ltmp374
+.Lset53 = .Ltmp500-.Ltmp499             # Loc expr size
+	.short	.Lset53
+.Ltmp499:
+	.byte	80                      # DW_OP_reg0
+.Ltmp500:
+	.long	.Ltmp374
+	.long	.Ltmp375
+.Lset54 = .Ltmp502-.Ltmp501             # Loc expr size
+	.short	.Lset54
+.Ltmp501:
+	.byte	87                      # DW_OP_reg7
+.Ltmp502:
+	.long	0
+	.long	0
+.Ldebug_loc40:
+	.long	.Ltmp388
+	.long	.Ltmp388
+.Lset55 = .Ltmp504-.Ltmp503             # Loc expr size
+	.short	.Lset55
+.Ltmp503:
+	.byte	80                      # DW_OP_reg0
+.Ltmp504:
+	.long	.Ltmp388
+	.long	.Ltmp389
+.Lset56 = .Ltmp506-.Ltmp505             # Loc expr size
+	.short	.Lset56
+.Ltmp505:
+	.byte	87                      # DW_OP_reg7
+.Ltmp506:
 	.long	0
 	.long	0
 	.section	.debug_pubnames,"",@progbits
-.Lset18 = .LpubNames_end0-.LpubNames_begin0 # Length of Public Names Info
-	.long	.Lset18
+.Lset57 = .LpubNames_end0-.LpubNames_begin0 # Length of Public Names Info
+	.long	.Lset57
 .LpubNames_begin0:
 	.short	2                       # DWARF Version
 	.long	.L.debug_info_begin0    # Offset of Compilation Unit Info
-.Lset19 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
-	.long	.Lset19
-	.long	2055                    # DIE offset
-.asciiz"FixedInterpolationMode"         # External Name
-	.long	31                      # DIE offset
+.Lset58 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
+	.long	.Lset58
+	.long	4662                    # DIE offset
+.asciiz"_i.qspi_access._chan_yield.write" # External Name
+	.long	114                     # DIE offset
 .asciiz"r_i2c2"                         # External Name
-	.long	1351                    # DIE offset
+	.long	1245                    # DIE offset
 .asciiz"set_console_mode"               # External Name
-	.long	391                     # DIE offset
+	.long	4709                    # DIE offset
+.asciiz"delay_seconds"                  # External Name
+	.long	92                      # DIE offset
 .asciiz"scrolling_row"                  # External Name
-	.long	1164                    # DIE offset
-.asciiz"update_chan_count"              # External Name
-	.long	2130                    # DIE offset
-.asciiz"ShowAudioAttribute"             # External Name
-	.long	159                     # DIE offset
-.asciiz"NumChan"                        # External Name
-	.long	280                     # DIE offset
+	.long	4568                    # DIE offset
+.asciiz"_i.qspi_access._chan.write"     # External Name
+	.long	4757                    # DIE offset
+.asciiz"delay_microseconds"             # External Name
+	.long	400                     # DIE offset
 .asciiz"TotalTimeString"                # External Name
-	.long	2341                    # DIE offset
-.asciiz"handle_display_frame"           # External Name
-	.long	1970                    # DIE offset
+	.long	241                     # DIE offset
+.asciiz"NumChan"                        # External Name
+	.long	356                     # DIE offset
+.asciiz"audio_property_string"          # External Name
+	.long	1508                    # DIE offset
+.asciiz"GetStreamFormatString"          # External Name
+	.long	2155                    # DIE offset
 .asciiz"test_display_control_flag"      # External Name
-	.long	130                     # DIE offset
+	.long	164                     # DIE offset
 .asciiz"display_control_flag"           # External Name
-	.long	1845                    # DIE offset
-.asciiz"ShowUsbAudioStatus"             # External Name
-	.long	1788                    # DIE offset
+	.long	2043                    # DIE offset
 .asciiz"ShowInterpolationMode"          # External Name
-	.long	3258                    # DIE offset
+	.long	4831                    # DIE offset
 .asciiz"_safe_memmove"                  # External Name
-	.long	3160                    # DIE offset
+	.long	4733                    # DIE offset
 .asciiz"delay_milliseconds"             # External Name
-	.long	2117                    # DIE offset
+	.long	3473                    # DIE offset
+.asciiz"handle_display_frame"           # External Name
+	.long	1799                    # DIE offset
 .asciiz"ShowTrack"                      # External Name
-	.long	1864                    # DIE offset
+	.long	1432                    # DIE offset
+.asciiz"ShowStreamFormat"               # External Name
+	.long	1859                    # DIE offset
+.asciiz"ShowAudioProperty"              # External Name
+	.long	1179                    # DIE offset
 .asciiz"init_display_frame"             # External Name
 	.long	1008                    # DIE offset
 .asciiz"set_display_control_flag"       # External Name
-	.long	81                      # DIE offset
-.asciiz"information_string"             # External Name
-	.long	2104                    # DIE offset
-.asciiz"ShowFolder"                     # External Name
-	.long	369                     # DIE offset
-.asciiz"pause_counter"                  # External Name
-	.long	3208                    # DIE offset
+	.long	4781                    # DIE offset
 .asciiz"_safe_memcmp"                   # External Name
-	.long	413                     # DIE offset
-.asciiz"UsbAudioStatus"                 # External Name
-	.long	337                     # DIE offset
-.asciiz"state"                          # External Name
+	.long	63                      # DIE offset
+.asciiz"pause_counter"                  # External Name
+	.long	1739                    # DIE offset
+.asciiz"ShowFolder"                     # External Name
+	.long	4422                    # DIE offset
+.asciiz"display_control_core"           # External Name
 	.long	1060                    # DIE offset
 .asciiz"update_samp_freq"               # External Name
-	.long	1216                    # DIE offset
-.asciiz"display_control_core"           # External Name
-	.long	1112                    # DIE offset
-.asciiz"update_samp_resolution"         # External Name
-	.long	3308                    # DIE offset
+	.long	31                      # DIE offset
+.asciiz"state"                          # External Name
+	.long	4881                    # DIE offset
 .asciiz"_safe_memset"                   # External Name
-	.long	2258                    # DIE offset
+	.long	307                     # DIE offset
+.asciiz"stream_format_string"           # External Name
+	.long	4615                    # DIE offset
+.asciiz"_i.qspi_access._chan_yield.read" # External Name
+	.long	2541                    # DIE offset
 .asciiz"SelectedFunction"               # External Name
-	.long	2143                    # DIE offset
+	.long	1581                    # DIE offset
 .asciiz"UpdateTime"                     # External Name
-	.long	1470                    # DIE offset
-.asciiz"clear_display_control_flag"     # External Name
-	.long	2019                    # DIE offset
-.asciiz"get_console_mode"               # External Name
-	.long	225                     # DIE offset
-.asciiz"console_mode"                   # External Name
-	.long	3184                    # DIE offset
-.asciiz"delay_microseconds"             # External Name
-	.long	315                     # DIE offset
-.asciiz"SecElapsed"                     # External Name
+	.long	4521                    # DIE offset
+.asciiz"_i.qspi_access._chan.read"      # External Name
 	.long	2209                    # DIE offset
+.asciiz"clear_display_control_flag"     # External Name
+	.long	2247                    # DIE offset
+.asciiz"get_console_mode"               # External Name
+	.long	186                     # DIE offset
+.asciiz"console_mode"                   # External Name
+	.long	378                     # DIE offset
+.asciiz"SecElapsed"                     # External Name
+	.long	2492                    # DIE offset
 .asciiz"ProposedInterpolationMode"      # External Name
-	.long	203                     # DIE offset
+	.long	285                     # DIE offset
 .asciiz"SampRes"                        # External Name
-	.long	2307                    # DIE offset
+	.long	1112                    # DIE offset
+.asciiz"update_stream_format"           # External Name
+	.long	2443                    # DIE offset
+.asciiz"FixedInterpolationMode"         # External Name
+	.long	2590                    # DIE offset
 .asciiz"GetFunctionString"              # External Name
-	.long	3136                    # DIE offset
-.asciiz"delay_seconds"                  # External Name
-	.long	181                     # DIE offset
+	.long	263                     # DIE offset
 .asciiz"SampFreq"                       # External Name
 	.long	0                       # End Mark
 .LpubNames_end0:
 	.section	.debug_pubtypes,"",@progbits
-.Lset20 = .LpubTypes_end0-.LpubTypes_begin0 # Length of Public Types Info
-	.long	.Lset20
+.Lset59 = .LpubTypes_end0-.LpubTypes_begin0 # Length of Public Types Info
+	.long	.Lset59
 .LpubTypes_begin0:
 	.short	2                       # DWARF Version
 	.long	.L.debug_info_begin0    # Offset of Compilation Unit Info
-.Lset21 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
-	.long	.Lset21
-	.long	936                     # DIE offset
-.asciiz"__TYPE_10"                      # External Name
-	.long	3358                    # DIE offset
-.asciiz"timer"                          # External Name
-	.long	348                     # DIE offset
-.asciiz"__TYPE_12"                      # External Name
-	.long	534                     # DIE offset
-.asciiz"__TYPE_5"                       # External Name
-	.long	74                      # DIE offset
-.asciiz"port"                           # External Name
+.Lset60 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
+	.long	.Lset60
 	.long	987                     # DIE offset
-.asciiz"__TYPE_6"                       # External Name
-	.long	152                     # DIE offset
+.asciiz"__TYPE_20"                      # External Name
+	.long	5015                    # DIE offset
+.asciiz"timer"                          # External Name
+	.long	42                      # DIE offset
+.asciiz"__TYPE_23"                      # External Name
+	.long	157                     # DIE offset
+.asciiz"port"                           # External Name
+	.long	534                     # DIE offset
+.asciiz"__TYPE_16"                      # External Name
+	.long	85                      # DIE offset
 .asciiz"unsigned int"                   # External Name
-	.long	116                     # DIE offset
-.asciiz"unsigned char"                  # External Name
-	.long	2012                    # DIE offset
+	.long	873                     # DIE offset
+.asciiz"__TYPE_18"                      # External Name
+	.long	4953                    # DIE offset
+.asciiz"__TYPE_24"                      # External Name
+	.long	2197                    # DIE offset
 .asciiz"int"                            # External Name
-	.long	53                      # DIE offset
+	.long	136                     # DIE offset
 .asciiz"r_i2c"                          # External Name
+	.long	5022                    # DIE offset
+.asciiz"chanend"                        # External Name
+	.long	4946                    # DIE offset
+.asciiz"interface"                      # External Name
+	.long	5034                    # DIE offset
+.asciiz"yieldArg"                       # External Name
+	.long	342                     # DIE offset
+.asciiz"unsigned char"                  # External Name
 	.long	0                       # End Mark
 .LpubTypes_end0:
 	.cfi_sections .debug_frame
 
+	.typestring _i.qspi_access._chan.read, "f{0}(chd,si,si,&(a(:uc)))"
+	.typestring _i.qspi_access._chan.write, "f{0}(chd,si,si,&(a(:uc)))"
+	.typestring _i.qspi_access._chan_yield.read, "f{0}(&(s(yieldArg){m(dest){chd},m(yield){ui}}),si,si,&(a(:uc)))"
+	.overlay_reference _i.qspi_access._chan_yield.read,_i.qspi_access._client_call_y.fns
+	.typestring _i.qspi_access._chan_yield.write, "f{0}(&(s(yieldArg){m(dest){chd},m(yield){ui}}),si,si,&(a(:uc)))"
+	.overlay_reference _i.qspi_access._chan_yield.write,_i.qspi_access._client_call_y.fns
 	.typestring iprintf, "f{si}(u:q(c:uc),va)"
 	.typestring siprintf, "f{si}(u:q(uc),u:q(c:uc),va)"
 	.typestring OLED_SSD1306_begin, "f{0}(0)"
@@ -6236,301 +10394,558 @@ __xcc1_internal_1:
 	.typestring OLED_SSD1306_shift_left, "f{e(){m(_END_OF_LINE){0},m(_OK){1}}}(si)"
 	.typestring set_display_control_flag, "f{0}(ui)"
 	.typestring update_samp_freq, "f{0}(ui)"
-	.typestring update_samp_resolution, "f{0}(ui)"
-	.typestring update_chan_count, "f{0}(ui)"
-	.typestring display_control_core, "f{0}(0)"
+	.typestring update_stream_format, "f{0}(ui,ui)"
+	.typestring init_display_frame, "f{0}(0)"
 	.typestring get_console_mode, "f{e(){m(_DAC_MODE_SELECTION){3},m(_FUNCTION_SELECTION){4},m(_SDC_AUDIO){1},m(_USB_AUDIO){2}}}(0)"
 	.typestring set_console_mode, "f{0}(e(){m(_DAC_MODE_SELECTION){3},m(_FUNCTION_SELECTION){4},m(_SDC_AUDIO){1},m(_USB_AUDIO){2}})"
-	.typestring _Sset_console_mode_0, "f{0}(0)"
 	.typestring test_display_control_flag, "f{si}(ui)"
 	.typestring clear_display_control_flag, "f{0}(ui)"
-	.typestring UpdateTime, "f{0}(0)"
-	.typestring ShowFolder, "f{0}(0)"
-	.typestring ShowTrack, "f{0}(0)"
-	.typestring ShowAudioAttribute, "f{0}(0)"
+	.typestring ShowStreamFormat, "f{0}(si)"
+	.typestring _SShowStreamFormat_0, "f{0}(0)"
+	.typestring GetStreamFormatString, "f{0}(&(a(:uc)))"
+	.typestring UpdateTime, "f{0}(si)"
+	.typestring _SUpdateTime_0, "f{0}(0)"
+	.typestring ShowFolder, "f{0}(si)"
+	.typestring _SShowFolder_0, "f{0}(0)"
+	.typestring ShowTrack, "f{0}(si)"
+	.typestring _SShowTrack_0, "f{0}(0)"
+	.typestring ShowAudioProperty, "f{0}(si)"
+	.typestring _SShowAudioProperty_0, "f{0}(0)"
 	.typestring ProposedInterpolationMode, "f{e(){m(_CUBIC){4},m(_LINEAR){2},m(_QUAD){3},m(_SINC4){5},m(_SINC8){6},m(_STEP){1},m(_TBD){0}}}(0)"
 	.typestring FixedInterpolationMode, "f{e(){m(_CUBIC){4},m(_LINEAR){2},m(_QUAD){3},m(_SINC4){5},m(_SINC8){6},m(_STEP){1},m(_TBD){0}}}(0)"
+	.typestring ShowInterpolationMode, "f{0}(si,e(){m(_CUBIC){4},m(_LINEAR){2},m(_QUAD){3},m(_SINC4){5},m(_SINC8){6},m(_STEP){1},m(_TBD){0}})"
+	.typestring _SShowInterpolationMode_0, "f{0}(e(){m(_CUBIC){4},m(_LINEAR){2},m(_QUAD){3},m(_SINC4){5},m(_SINC8){6},m(_STEP){1},m(_TBD){0}})"
 	.typestring SelectedFunction, "f{e(){m(_SDC_PLAY){1},m(_USB_DAC){0}}}(0)"
-	.typestring ShowInterpolationMode, "f{0}(e(){m(_CUBIC){4},m(_LINEAR){2},m(_QUAD){3},m(_SINC4){5},m(_SINC8){6},m(_STEP){1},m(_TBD){0}})"
 	.typestring GetFunctionString, "f{a:q(uc)}(e(){m(_SDC_PLAY){1},m(_USB_DAC){0}})"
-	.typestring ShowUsbAudioStatus, "f{0}(0)"
-	.typestring init_display_frame, "f{0}(0)"
-	.typestring handle_display_frame, "f{0}(0)"
+	.typestring handle_display_frame, "f{0}(n:ic(qspi_access){m(write){f{0}(si,si,&(a(:uc)))},m(read){f{0}(si,si,&(a(:uc)))}})"
+	.overlay_reference handle_display_frame,_i.qspi_access.write.fns
+	.typestring _Shandle_display_frame_0, "f{0}(0)"
+	.overlay_reference _Shandle_display_frame_0,_i.qspi_access.write.fns
+	.typestring display_control_core, "f{0}(n:ic(qspi_access){m(write){f{0}(si,si,&(a(:uc)))},m(read){f{0}(si,si,&(a(:uc)))}})"
+	.overlay_reference display_control_core,_i.qspi_access.read.fns
+	.typestring _Sdisplay_control_core_0, "f{0}(0)"
+	.overlay_reference _Sdisplay_control_core_0,_i.qspi_access.read.fns
+	.typestring pause_counter, "ui"
+	.typestring scrolling_row, "ui"
 	.typestring r_i2c2, "s(r_i2c){m(p_i2c){p}}"
-	.typestring track_string, "a(*:uc)"
-	.typestring folder_string, "a(*:uc)"
-	.typestring information_string, "a(100:uc)"
 	.typestring display_control_flag, "ui"
+	.typestring console_mode, "e(){m(_DAC_MODE_SELECTION){3},m(_FUNCTION_SELECTION){4},m(_SDC_AUDIO){1},m(_USB_AUDIO){2}}"
 	.typestring NumChan, "ui"
 	.typestring SampFreq, "ui"
 	.typestring SampRes, "ui"
-	.typestring console_mode, "e(){m(_DAC_MODE_SELECTION){3},m(_FUNCTION_SELECTION){4},m(_SDC_AUDIO){1},m(_USB_AUDIO){2}}"
-	.typestring TotalTimeString, "a(6:uc)"
+	.typestring stream_format_string, "a(100:uc)"
+	.typestring track_string, "a(*:uc)"
+	.typestring folder_string, "a(*:uc)"
+	.typestring audio_property_string, "a(100:uc)"
 	.typestring SecElapsed, "ui"
-	.typestring pause_counter, "ui"
-	.typestring scrolling_row, "ui"
+	.typestring TotalTimeString, "a(6:uc)"
 	.typestring proposed_intpol_mode, "e(){m(_CUBIC){4},m(_LINEAR){2},m(_QUAD){3},m(_SINC4){5},m(_SINC8){6},m(_STEP){1},m(_TBD){0}}"
 	.typestring fixed_intpol_mode, "e(){m(_CUBIC){4},m(_LINEAR){2},m(_QUAD){3},m(_SINC4){5},m(_SINC8){6},m(_STEP){1},m(_TBD){0}}"
 	.typestring selected_function, "e(){m(_SDC_PLAY){1},m(_USB_DAC){0}}"
-	.typestring UsbAudioStatus, "a(100:uc)"
 	.section	.xtacalltable,"",@progbits
 .Lentries_start0:
 	.long	.Lentries_end1-.Lentries_start0
 	.long	0
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 	.byte	0
-.cc_top cc_0,.Lxta.call_labels2
+.cc_top cc_0,.Lxta.call_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	143
-	.long	.Lxta.call_labels2
-.cc_bottom cc_0
-.cc_top cc_1,.Lxta.call_labels34
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	143
-	.long	.Lxta.call_labels34
-.cc_bottom cc_1
-.cc_top cc_2,.Lxta.call_labels26
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	143
-	.long	.Lxta.call_labels26
-.cc_bottom cc_2
-.cc_top cc_3,.Lxta.call_labels35
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	144
-	.long	.Lxta.call_labels35
-.cc_bottom cc_3
-.cc_top cc_4,.Lxta.call_labels3
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	144
-	.long	.Lxta.call_labels3
-.cc_bottom cc_4
-.cc_top cc_5,.Lxta.call_labels27
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	144
-	.long	.Lxta.call_labels27
-.cc_bottom cc_5
-.cc_top cc_6,.Lxta.call_labels4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	149
-	.long	.Lxta.call_labels4
-.cc_bottom cc_6
-.cc_top cc_7,.Lxta.call_labels23
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	149
-	.long	.Lxta.call_labels23
-.cc_bottom cc_7
-.cc_top cc_8,.Lxta.call_labels36
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	149
-	.long	.Lxta.call_labels36
-.cc_bottom cc_8
-.cc_top cc_9,.Lxta.call_labels5
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	157
+	.long	126
 	.long	.Lxta.call_labels5
-.cc_bottom cc_9
-.cc_top cc_10,.Lxta.call_labels24
+.cc_bottom cc_0
+.cc_top cc_1,.Lxta.call_labels8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	157
-	.long	.Lxta.call_labels24
-.cc_bottom cc_10
-.cc_top cc_11,.Lxta.call_labels37
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	157
-	.long	.Lxta.call_labels37
-.cc_bottom cc_11
-.cc_top cc_12,.Lxta.call_labels6
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	165
-	.long	.Lxta.call_labels6
-.cc_bottom cc_12
-.cc_top cc_13,.Lxta.call_labels25
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	165
-	.long	.Lxta.call_labels25
-.cc_bottom cc_13
-.cc_top cc_14,.Lxta.call_labels38
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	165
-	.long	.Lxta.call_labels38
-.cc_bottom cc_14
-.cc_top cc_15,.Lxta.call_labels7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	228
-	.long	.Lxta.call_labels7
-.cc_bottom cc_15
-.cc_top cc_16,.Lxta.call_labels8
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	251
+	.long	126
 	.long	.Lxta.call_labels8
-.cc_bottom cc_16
-.cc_top cc_17,.Lxta.call_labels9
+.cc_bottom cc_1
+.cc_top cc_2,.Lxta.call_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	252
+	.long	127
+	.long	.Lxta.call_labels6
+.cc_bottom cc_2
+.cc_top cc_3,.Lxta.call_labels9
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	127
 	.long	.Lxta.call_labels9
-.cc_bottom cc_17
-.cc_top cc_18,.Lxta.call_labels10
+.cc_bottom cc_3
+.cc_top cc_4,.Lxta.call_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	254
+	.long	128
 	.long	.Lxta.call_labels10
-.cc_bottom cc_18
-.cc_top cc_19,.Lxta.call_labels11
+.cc_bottom cc_4
+.cc_top cc_5,.Lxta.call_labels7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	262
+	.long	128
+	.long	.Lxta.call_labels7
+.cc_bottom cc_5
+.cc_top cc_6,.Lxta.call_labels11
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	137
 	.long	.Lxta.call_labels11
-.cc_bottom cc_19
-.cc_top cc_20,.Lxta.call_labels18
+.cc_bottom cc_6
+.cc_top cc_7,.Lxta.call_labels54
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	266
-	.long	.Lxta.call_labels18
+	.long	160
+	.long	.Lxta.call_labels54
+.cc_bottom cc_7
+.cc_top cc_8,.Lxta.call_labels12
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	160
+	.long	.Lxta.call_labels12
+.cc_bottom cc_8
+.cc_top cc_9,.Lxta.call_labels14
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	160
+	.long	.Lxta.call_labels14
+.cc_bottom cc_9
+.cc_top cc_10,.Lxta.call_labels42
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	160
+	.long	.Lxta.call_labels42
+.cc_bottom cc_10
+.cc_top cc_11,.Lxta.call_labels27
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	160
+	.long	.Lxta.call_labels27
+.cc_bottom cc_11
+.cc_top cc_12,.Lxta.call_labels69
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	160
+	.long	.Lxta.call_labels69
+.cc_bottom cc_12
+.cc_top cc_13,.Lxta.call_labels65
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	161
+	.long	.Lxta.call_labels65
+.cc_bottom cc_13
+.cc_top cc_14,.Lxta.call_labels13
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	161
+	.long	.Lxta.call_labels13
+.cc_bottom cc_14
+.cc_top cc_15,.Lxta.call_labels15
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	161
+	.long	.Lxta.call_labels15
+.cc_bottom cc_15
+.cc_top cc_16,.Lxta.call_labels43
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	161
+	.long	.Lxta.call_labels43
+.cc_bottom cc_16
+.cc_top cc_17,.Lxta.call_labels38
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	161
+	.long	.Lxta.call_labels38
+.cc_bottom cc_17
+.cc_top cc_18,.Lxta.call_labels70
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	161
+	.long	.Lxta.call_labels70
+.cc_bottom cc_18
+.cc_top cc_19,.Lxta.call_labels51
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	165
+	.long	.Lxta.call_labels51
+.cc_bottom cc_19
+.cc_top cc_20,.Lxta.call_labels66
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	165
+	.long	.Lxta.call_labels66
 .cc_bottom cc_20
 .cc_top cc_21,.Lxta.call_labels16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	266
+	.long	165
 	.long	.Lxta.call_labels16
 .cc_bottom cc_21
-.cc_top cc_22,.Lxta.call_labels12
+.cc_top cc_22,.Lxta.call_labels17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	266
-	.long	.Lxta.call_labels12
-.cc_bottom cc_22
-.cc_top cc_23,.Lxta.call_labels14
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	266
-	.long	.Lxta.call_labels14
-.cc_bottom cc_23
-.cc_top cc_24,.Lxta.call_labels19
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	267
-	.long	.Lxta.call_labels19
-.cc_bottom cc_24
-.cc_top cc_25,.Lxta.call_labels17
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	267
+	.long	165
 	.long	.Lxta.call_labels17
+.cc_bottom cc_22
+.cc_top cc_23,.Lxta.call_labels39
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	165
+	.long	.Lxta.call_labels39
+.cc_bottom cc_23
+.cc_top cc_24,.Lxta.call_labels24
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	165
+	.long	.Lxta.call_labels24
+.cc_bottom cc_24
+.cc_top cc_25,.Lxta.call_labels52
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	172
+	.long	.Lxta.call_labels52
 .cc_bottom cc_25
-.cc_top cc_26,.Lxta.call_labels15
+.cc_top cc_26,.Lxta.call_labels18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	267
-	.long	.Lxta.call_labels15
+	.long	172
+	.long	.Lxta.call_labels18
 .cc_bottom cc_26
-.cc_top cc_27,.Lxta.call_labels13
+.cc_top cc_27,.Lxta.call_labels19
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	267
-	.long	.Lxta.call_labels13
+	.long	172
+	.long	.Lxta.call_labels19
 .cc_bottom cc_27
-.cc_top cc_28,.Lxta.call_labels20
+.cc_top cc_28,.Lxta.call_labels25
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	172
+	.long	.Lxta.call_labels25
+.cc_bottom cc_28
+.cc_top cc_29,.Lxta.call_labels40
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	172
+	.long	.Lxta.call_labels40
+.cc_bottom cc_29
+.cc_top cc_30,.Lxta.call_labels67
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	172
+	.long	.Lxta.call_labels67
+.cc_bottom cc_30
+.cc_top cc_31,.Lxta.call_labels21
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	179
+	.long	.Lxta.call_labels21
+.cc_bottom cc_31
+.cc_top cc_32,.Lxta.call_labels53
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	179
+	.long	.Lxta.call_labels53
+.cc_bottom cc_32
+.cc_top cc_33,.Lxta.call_labels68
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	179
+	.long	.Lxta.call_labels68
+.cc_bottom cc_33
+.cc_top cc_34,.Lxta.call_labels26
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	179
+	.long	.Lxta.call_labels26
+.cc_bottom cc_34
+.cc_top cc_35,.Lxta.call_labels20
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	179
+	.long	.Lxta.call_labels20
+.cc_bottom cc_35
+.cc_top cc_36,.Lxta.call_labels41
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	179
+	.long	.Lxta.call_labels41
+.cc_bottom cc_36
+.cc_top cc_37,.Lxta.call_labels22
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	223
+	.long	.Lxta.call_labels22
+.cc_bottom cc_37
+.cc_top cc_38,.Lxta.call_labels23
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	223
+	.long	.Lxta.call_labels23
+.cc_bottom cc_38
+.cc_top cc_39,.Lxta.call_labels0
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	255
+	.long	.Lxta.call_labels0
+.cc_bottom cc_39
+.cc_top cc_40,.Lxta.call_labels1
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	256
+	.long	.Lxta.call_labels1
+.cc_bottom cc_40
+.cc_top cc_41,.Lxta.call_labels2
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	258
+	.long	.Lxta.call_labels2
+.cc_bottom cc_41
+.cc_top cc_42,.Lxta.call_labels3
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	258
+	.long	.Lxta.call_labels3
+.cc_bottom cc_42
+.cc_top cc_43,.Lxta.call_labels4
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	258
+	.long	.Lxta.call_labels4
+.cc_bottom cc_43
+.cc_top cc_44,.Lxta.call_labels55
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	286
+	.long	.Lxta.call_labels55
+.cc_bottom cc_44
+.cc_top cc_45,.Lxta.call_labels28
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	286
+	.long	.Lxta.call_labels28
+.cc_bottom cc_45
+.cc_top cc_46,.Lxta.call_labels56
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	287
+	.long	.Lxta.call_labels56
+.cc_bottom cc_46
+.cc_top cc_47,.Lxta.call_labels29
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	287
+	.long	.Lxta.call_labels29
+.cc_bottom cc_47
+.cc_top cc_48,.Lxta.call_labels57
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	288
+	.long	.Lxta.call_labels57
+.cc_bottom cc_48
+.cc_top cc_49,.Lxta.call_labels30
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	288
+	.long	.Lxta.call_labels30
+.cc_bottom cc_49
+.cc_top cc_50,.Lxta.call_labels58
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	293
+	.long	.Lxta.call_labels58
+.cc_bottom cc_50
+.cc_top cc_51,.Lxta.call_labels31
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	293
+	.long	.Lxta.call_labels31
+.cc_bottom cc_51
+.cc_top cc_52,.Lxta.call_labels32
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	294
+	.long	.Lxta.call_labels32
+.cc_bottom cc_52
+.cc_top cc_53,.Lxta.call_labels59
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	294
+	.long	.Lxta.call_labels59
+.cc_bottom cc_53
+.cc_top cc_54,.Lxta.call_labels60
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	295
+	.long	.Lxta.call_labels60
+.cc_bottom cc_54
+.cc_top cc_55,.Lxta.call_labels33
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	295
+	.long	.Lxta.call_labels33
+.cc_bottom cc_55
+.cc_top cc_56,.Lxta.call_labels61
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	296
+	.long	.Lxta.call_labels61
+.cc_bottom cc_56
+.cc_top cc_57,.Lxta.call_labels34
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	296
+	.long	.Lxta.call_labels34
+.cc_bottom cc_57
+.cc_top cc_58,.Lxta.call_labels62
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	300
+	.long	.Lxta.call_labels62
+.cc_bottom cc_58
+.cc_top cc_59,.Lxta.call_labels35
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	300
+	.long	.Lxta.call_labels35
+.cc_bottom cc_59
+.cc_top cc_60,.Lxta.call_labels63
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	301
+	.long	.Lxta.call_labels63
+.cc_bottom cc_60
+.cc_top cc_61,.Lxta.call_labels36
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	301
+	.long	.Lxta.call_labels36
+.cc_bottom cc_61
+.cc_top cc_62,.Lxta.call_labels64
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	302
-	.long	.Lxta.call_labels20
-.cc_bottom cc_28
-.cc_top cc_29,.Lxta.call_labels21
+	.long	.Lxta.call_labels64
+.cc_bottom cc_62
+.cc_top cc_63,.Lxta.call_labels37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	303
-	.long	.Lxta.call_labels21
-.cc_bottom cc_29
-.cc_top cc_30,.Lxta.call_labels22
+	.long	302
+	.long	.Lxta.call_labels37
+.cc_bottom cc_63
+.cc_top cc_64,.Lxta.call_labels44
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	304
-	.long	.Lxta.call_labels22
-.cc_bottom cc_30
-.cc_top cc_31,.Lxta.call_labels31
+	.long	335
+	.long	.Lxta.call_labels44
+.cc_bottom cc_64
+.cc_top cc_65,.Lxta.call_labels71
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	305
-	.long	.Lxta.call_labels31
-.cc_bottom cc_31
-.cc_top cc_32,.Lxta.call_labels28
+	.long	335
+	.long	.Lxta.call_labels71
+.cc_bottom cc_65
+.cc_top cc_66,.Lxta.call_labels45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	308
-	.long	.Lxta.call_labels28
-.cc_bottom cc_32
-.cc_top cc_33,.Lxta.call_labels29
+	.long	342
+	.long	.Lxta.call_labels45
+.cc_bottom cc_66
+.cc_top cc_67,.Lxta.call_labels72
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	309
-	.long	.Lxta.call_labels29
-.cc_bottom cc_33
-.cc_top cc_34,.Lxta.call_labels30
+	.long	342
+	.long	.Lxta.call_labels72
+.cc_bottom cc_67
+.cc_top cc_68,.Lxta.call_labels46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	310
-	.long	.Lxta.call_labels30
-.cc_bottom cc_34
-.cc_top cc_35,.Lxta.call_labels32
+	.long	346
+	.long	.Lxta.call_labels46
+.cc_bottom cc_68
+.cc_top cc_69,.Lxta.call_labels73
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	357
-	.long	.Lxta.call_labels32
-.cc_bottom cc_35
-.cc_top cc_36,.Lxta.call_labels33
+	.long	346
+	.long	.Lxta.call_labels73
+.cc_bottom cc_69
+.cc_top cc_70,.Lxta.call_labels47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	361
-	.long	.Lxta.call_labels33
-.cc_bottom cc_36
-.cc_top cc_37,.Lxta.call_labels39
+	.long	352
+	.long	.Lxta.call_labels47
+.cc_bottom cc_70
+.cc_top cc_71,.Lxta.call_labels74
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	367
-	.long	.Lxta.call_labels39
-.cc_bottom cc_37
-.cc_top cc_38,.Lxta.call_labels40
+	.long	352
+	.long	.Lxta.call_labels74
+.cc_bottom cc_71
+.cc_top cc_72,.Lxta.call_labels48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	380
-	.long	.Lxta.call_labels40
-.cc_bottom cc_38
-.cc_top cc_39,.Lxta.call_labels41
+	.long	356
+	.long	.Lxta.call_labels48
+.cc_bottom cc_72
+.cc_top cc_73,.Lxta.call_labels75
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	383
-	.long	.Lxta.call_labels41
-.cc_bottom cc_39
-.cc_top cc_40,.Lxta.call_labels0
+	.long	356
+	.long	.Lxta.call_labels75
+.cc_bottom cc_73
+.cc_top cc_74,.Lxta.call_labels49
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	399
-	.long	.Lxta.call_labels0
-.cc_bottom cc_40
-.cc_top cc_41,.Lxta.call_labels1
+	.long	369
+	.long	.Lxta.call_labels49
+.cc_bottom cc_74
+.cc_top cc_75,.Lxta.call_labels76
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	406
-	.long	.Lxta.call_labels1
-.cc_bottom cc_41
+	.long	369
+	.long	.Lxta.call_labels76
+.cc_bottom cc_75
+.cc_top cc_76,.Lxta.call_labels50
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	372
+	.long	.Lxta.call_labels50
+.cc_bottom cc_76
+.cc_top cc_77,.Lxta.call_labels77
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	372
+	.long	.Lxta.call_labels77
+.cc_bottom cc_77
+.cc_top cc_78,.Lxta.call_labels78
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	386
+	.long	.Lxta.call_labels78
+.cc_bottom cc_78
+.cc_top cc_79,.Lxta.call_labels79
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	394
+	.long	.Lxta.call_labels79
+.cc_bottom cc_79
+.cc_top cc_80,.Lxta.call_labels81
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	394
+	.long	.Lxta.call_labels81
+.cc_bottom cc_80
+.cc_top cc_81,.Lxta.call_labels80
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	401
+	.long	.Lxta.call_labels80
+.cc_bottom cc_81
+.cc_top cc_82,.Lxta.call_labels82
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	401
+	.long	.Lxta.call_labels82
+.cc_bottom cc_82
 .Lentries_end1:
 	.section	.xtaendpointtable,"",@progbits
 .Lentries_start2:
@@ -6538,12 +10953,18 @@ __xcc1_internal_1:
 	.long	0
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 	.byte	0
-.cc_top cc_42,.Lxta.endpoint_labels0
+.cc_top cc_83,.Lxta.endpoint_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	408
+	.long	403
 	.long	.Lxta.endpoint_labels0
-.cc_bottom cc_42
+.cc_bottom cc_83
+.cc_top cc_84,.Lxta.endpoint_labels1
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	403
+	.long	.Lxta.endpoint_labels1
+.cc_bottom cc_84
 .Lentries_end3:
 	.section	.xtalabeltable,"",@progbits
 .Lentries_start4:
@@ -6551,1126 +10972,1889 @@ __xcc1_internal_1:
 	.long	0
 	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 	.byte	0
-.cc_top cc_43,.Lxtalabel1
+.cc_top cc_85,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	45
-	.long	50
-	.long	.Lxtalabel1
-.cc_bottom cc_43
-.cc_top cc_44,.Lxtalabel2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	53
-	.long	58
-	.long	.Lxtalabel2
-.cc_bottom cc_44
-.cc_top cc_45,.Lxtalabel3
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	61
-	.long	66
-	.long	.Lxtalabel3
-.cc_bottom cc_45
-.cc_top cc_46,.Lxtalabel0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	71
-	.long	76
+	.long	57
+	.long	62
 	.long	.Lxtalabel0
-.cc_bottom cc_46
-.cc_top cc_47,.Lxtalabel57
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	79
-	.long	84
-	.long	.Lxtalabel57
-.cc_bottom cc_47
-.cc_top cc_48,.Lxtalabel9
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	79
-	.long	84
-	.long	.Lxtalabel9
-.cc_bottom cc_48
-.cc_top cc_49,.Lxtalabel46
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	79
-	.long	84
-	.long	.Lxtalabel46
-.cc_bottom cc_49
-.cc_top cc_50,.Lxtalabel48
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	79
-	.long	84
-	.long	.Lxtalabel48
-.cc_bottom cc_50
-.cc_top cc_51,.Lxtalabel34
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	79
-	.long	84
-	.long	.Lxtalabel34
-.cc_bottom cc_51
-.cc_top cc_52,.Lxtalabel54
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	79
-	.long	84
-	.long	.Lxtalabel54
-.cc_bottom cc_52
-.cc_top cc_53,.Lxtalabel52
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	79
-	.long	84
-	.long	.Lxtalabel52
-.cc_bottom cc_53
-.cc_top cc_54,.Lxtalabel50
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	79
-	.long	84
-	.long	.Lxtalabel50
-.cc_bottom cc_54
-.cc_top cc_55,.Lxtalabel44
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	79
-	.long	84
-	.long	.Lxtalabel44
-.cc_bottom cc_55
-.cc_top cc_56,.Lxtalabel38
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel38
-.cc_bottom cc_56
-.cc_top cc_57,.Lxtalabel38
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel38
-.cc_bottom cc_57
-.cc_top cc_58,.Lxtalabel55
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel55
-.cc_bottom cc_58
-.cc_top cc_59,.Lxtalabel55
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel55
-.cc_bottom cc_59
-.cc_top cc_60,.Lxtalabel13
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel13
-.cc_bottom cc_60
-.cc_top cc_61,.Lxtalabel38
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel38
-.cc_bottom cc_61
-.cc_top cc_62,.Lxtalabel58
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel58
-.cc_bottom cc_62
-.cc_top cc_63,.Lxtalabel10
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel10
-.cc_bottom cc_63
-.cc_top cc_64,.Lxtalabel11
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel11
-.cc_bottom cc_64
-.cc_top cc_65,.Lxtalabel60
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel60
-.cc_bottom cc_65
-.cc_top cc_66,.Lxtalabel53
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel53
-.cc_bottom cc_66
-.cc_top cc_67,.Lxtalabel12
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel12
-.cc_bottom cc_67
-.cc_top cc_68,.Lxtalabel53
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel53
-.cc_bottom cc_68
-.cc_top cc_69,.Lxtalabel51
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel51
-.cc_bottom cc_69
-.cc_top cc_70,.Lxtalabel51
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel51
-.cc_bottom cc_70
-.cc_top cc_71,.Lxtalabel14
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel14
-.cc_bottom cc_71
-.cc_top cc_72,.Lxtalabel49
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel49
-.cc_bottom cc_72
-.cc_top cc_73,.Lxtalabel49
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel49
-.cc_bottom cc_73
-.cc_top cc_74,.Lxtalabel35
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel35
-.cc_bottom cc_74
-.cc_top cc_75,.Lxtalabel47
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel47
-.cc_bottom cc_75
-.cc_top cc_76,.Lxtalabel39
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel39
-.cc_bottom cc_76
-.cc_top cc_77,.Lxtalabel36
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel36
-.cc_bottom cc_77
-.cc_top cc_78,.Lxtalabel45
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel45
-.cc_bottom cc_78
-.cc_top cc_79,.Lxtalabel38
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	87
-	.long	92
-	.long	.Lxtalabel38
-.cc_bottom cc_79
-.cc_top cc_80,.Lxtalabel56
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	95
-	.long	100
-	.long	.Lxtalabel56
-.cc_bottom cc_80
-.cc_top cc_81,.Lxtalabel41
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	95
-	.long	100
-	.long	.Lxtalabel41
-.cc_bottom cc_81
-.cc_top cc_82,.Lxtalabel43
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	95
-	.long	100
-	.long	.Lxtalabel43
-.cc_bottom cc_82
-.cc_top cc_83,.Lxtalabel6
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	95
-	.long	100
-	.long	.Lxtalabel6
-.cc_bottom cc_83
-.cc_top cc_84,.Lxtalabel42
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	95
-	.long	100
-	.long	.Lxtalabel42
-.cc_bottom cc_84
-.cc_top cc_85,.Lxtalabel36
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	95
-	.long	100
-	.long	.Lxtalabel36
 .cc_bottom cc_85
-.cc_top cc_86,.Lxtalabel35
+.cc_top cc_86,.Lxtalabel103
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	95
-	.long	100
-	.long	.Lxtalabel35
+	.long	65
+	.long	70
+	.long	.Lxtalabel103
 .cc_bottom cc_86
-.cc_top cc_87,.Lxtalabel39
+.cc_top cc_87,.Lxtalabel99
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	95
-	.long	100
-	.long	.Lxtalabel39
+	.long	65
+	.long	70
+	.long	.Lxtalabel99
 .cc_bottom cc_87
-.cc_top cc_88,.Lxtalabel7
+.cc_top cc_88,.Lxtalabel65
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	103
-	.long	108
-	.long	.Lxtalabel7
+	.long	65
+	.long	70
+	.long	.Lxtalabel65
 .cc_bottom cc_88
-.cc_top cc_89,.Lxtalabel8
+.cc_top cc_89,.Lxtalabel71
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	103
-	.long	108
-	.long	.Lxtalabel8
+	.long	65
+	.long	70
+	.long	.Lxtalabel71
 .cc_bottom cc_89
-.cc_top cc_90,.Lxtalabel11
+.cc_top cc_90,.Lxtalabel105
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	139
-	.long	141
-	.long	.Lxtalabel11
+	.long	65
+	.long	70
+	.long	.Lxtalabel105
 .cc_bottom cc_90
-.cc_top cc_91,.Lxtalabel38
+.cc_top cc_91,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	139
-	.long	141
-	.long	.Lxtalabel38
+	.long	65
+	.long	70
+	.long	.Lxtalabel67
 .cc_bottom cc_91
-.cc_top cc_92,.Lxtalabel49
+.cc_top cc_92,.Lxtalabel107
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	139
-	.long	141
-	.long	.Lxtalabel49
+	.long	65
+	.long	70
+	.long	.Lxtalabel107
 .cc_bottom cc_92
-.cc_top cc_93,.Lxtalabel11
+.cc_top cc_93,.Lxtalabel86
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	143
-	.long	146
-	.long	.Lxtalabel11
+	.long	65
+	.long	70
+	.long	.Lxtalabel86
 .cc_bottom cc_93
-.cc_top cc_94,.Lxtalabel38
+.cc_top cc_94,.Lxtalabel101
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	143
-	.long	146
-	.long	.Lxtalabel38
+	.long	65
+	.long	70
+	.long	.Lxtalabel101
 .cc_bottom cc_94
-.cc_top cc_95,.Lxtalabel49
+.cc_top cc_95,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	143
-	.long	146
-	.long	.Lxtalabel49
+	.long	65
+	.long	70
+	.long	.Lxtalabel46
 .cc_bottom cc_95
-.cc_top cc_96,.Lxtalabel51
+.cc_top cc_96,.Lxtalabel6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	149
-	.long	154
-	.long	.Lxtalabel51
+	.long	65
+	.long	70
+	.long	.Lxtalabel6
 .cc_bottom cc_96
-.cc_top cc_97,.Lxtalabel38
+.cc_top cc_97,.Lxtalabel69
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	149
-	.long	154
-	.long	.Lxtalabel38
+	.long	65
+	.long	70
+	.long	.Lxtalabel69
 .cc_bottom cc_97
-.cc_top cc_98,.Lxtalabel12
+.cc_top cc_98,.Lxtalabel97
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	149
-	.long	154
-	.long	.Lxtalabel12
+	.long	65
+	.long	70
+	.long	.Lxtalabel97
 .cc_bottom cc_98
-.cc_top cc_99,.Lxtalabel13
+.cc_top cc_99,.Lxtalabel57
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	157
-	.long	162
-	.long	.Lxtalabel13
+	.long	65
+	.long	70
+	.long	.Lxtalabel57
 .cc_bottom cc_99
-.cc_top cc_100,.Lxtalabel53
+.cc_top cc_100,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	157
-	.long	162
-	.long	.Lxtalabel53
-.cc_bottom cc_100
-.cc_top cc_101,.Lxtalabel38
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	157
-	.long	162
-	.long	.Lxtalabel38
-.cc_bottom cc_101
-.cc_top cc_102,.Lxtalabel55
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	165
-	.long	170
-	.long	.Lxtalabel55
-.cc_bottom cc_102
-.cc_top cc_103,.Lxtalabel14
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	165
-	.long	170
-	.long	.Lxtalabel14
-.cc_bottom cc_103
-.cc_top cc_104,.Lxtalabel38
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	165
-	.long	170
-	.long	.Lxtalabel38
-.cc_bottom cc_104
-.cc_top cc_105,.Lxtalabel15
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	186
-	.long	190
-	.long	.Lxtalabel15
-.cc_bottom cc_105
-.cc_top cc_106,.Lxtalabel45
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	186
-	.long	190
-	.long	.Lxtalabel45
-.cc_bottom cc_106
-.cc_top cc_107,.Lxtalabel16
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	195
-	.long	199
-	.long	.Lxtalabel16
-.cc_bottom cc_107
-.cc_top cc_108,.Lxtalabel37
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	195
-	.long	199
-	.long	.Lxtalabel37
-.cc_bottom cc_108
-.cc_top cc_109,.Lxtalabel47
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	195
-	.long	199
-	.long	.Lxtalabel47
-.cc_bottom cc_109
-.cc_top cc_110,.Lxtalabel17
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	204
-	.long	208
-	.long	.Lxtalabel17
-.cc_bottom cc_110
-.cc_top cc_111,.Lxtalabel58
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	204
-	.long	208
-	.long	.Lxtalabel58
-.cc_bottom cc_111
-.cc_top cc_112,.Lxtalabel60
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	204
-	.long	208
-	.long	.Lxtalabel60
-.cc_bottom cc_112
-.cc_top cc_113,.Lxtalabel18
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	211
-	.long	212
-	.long	.Lxtalabel18
-.cc_bottom cc_113
-.cc_top cc_114,.Lxtalabel21
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	211
-	.long	212
-	.long	.Lxtalabel21
-.cc_bottom cc_114
-.cc_top cc_115,.Lxtalabel22
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	213
-	.long	215
-	.long	.Lxtalabel22
-.cc_bottom cc_115
-.cc_top cc_116,.Lxtalabel23
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	216
-	.long	218
-	.long	.Lxtalabel23
-.cc_bottom cc_116
-.cc_top cc_117,.Lxtalabel24
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	219
-	.long	221
-	.long	.Lxtalabel24
-.cc_bottom cc_117
-.cc_top cc_118,.Lxtalabel25
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	222
-	.long	224
-	.long	.Lxtalabel25
-.cc_bottom cc_118
-.cc_top cc_119,.Lxtalabel26
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	225
-	.long	227
-	.long	.Lxtalabel26
-.cc_bottom cc_119
-.cc_top cc_120,.Lxtalabel27
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	228
-	.long	230
-	.long	.Lxtalabel27
-.cc_bottom cc_120
-.cc_top cc_121,.Lxtalabel19
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	231
-	.long	233
-	.long	.Lxtalabel19
-.cc_bottom cc_121
-.cc_top cc_122,.Lxtalabel20
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	234
-	.long	234
-	.long	.Lxtalabel20
-.cc_bottom cc_122
-.cc_top cc_123,.Lxtalabel28
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	237
-	.long	238
-	.long	.Lxtalabel28
-.cc_bottom cc_123
-.cc_top cc_124,.Lxtalabel30
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	237
-	.long	238
-	.long	.Lxtalabel30
-.cc_bottom cc_124
-.cc_top cc_125,.Lxtalabel58
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	237
-	.long	238
-	.long	.Lxtalabel58
-.cc_bottom cc_125
-.cc_top cc_126,.Lxtalabel60
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	237
-	.long	238
-	.long	.Lxtalabel60
-.cc_bottom cc_126
-.cc_top cc_127,.Lxtalabel31
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	239
-	.long	240
-	.long	.Lxtalabel31
-.cc_bottom cc_127
-.cc_top cc_128,.Lxtalabel61
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	239
-	.long	240
-	.long	.Lxtalabel61
-.cc_bottom cc_128
-.cc_top cc_129,.Lxtalabel59
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	241
-	.long	242
+	.long	65
+	.long	70
 	.long	.Lxtalabel59
+.cc_bottom cc_100
+.cc_top cc_101,.Lxtalabel61
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	65
+	.long	70
+	.long	.Lxtalabel61
+.cc_bottom cc_101
+.cc_top cc_102,.Lxtalabel63
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	65
+	.long	70
+	.long	.Lxtalabel63
+.cc_bottom cc_102
+.cc_top cc_103,.Lxtalabel111
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	65
+	.long	70
+	.long	.Lxtalabel111
+.cc_bottom cc_103
+.cc_top cc_104,.Lxtalabel109
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	65
+	.long	70
+	.long	.Lxtalabel109
+.cc_bottom cc_104
+.cc_top cc_105,.Lxtalabel108
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel108
+.cc_bottom cc_105
+.cc_top cc_106,.Lxtalabel112
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel112
+.cc_bottom cc_106
+.cc_top cc_107,.Lxtalabel7
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel7
+.cc_bottom cc_107
+.cc_top cc_108,.Lxtalabel74
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel74
+.cc_bottom cc_108
+.cc_top cc_109,.Lxtalabel106
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel106
+.cc_bottom cc_109
+.cc_top cc_110,.Lxtalabel72
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel72
+.cc_bottom cc_110
+.cc_top cc_111,.Lxtalabel70
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel70
+.cc_bottom cc_111
+.cc_top cc_112,.Lxtalabel68
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel68
+.cc_bottom cc_112
+.cc_top cc_113,.Lxtalabel87
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel87
+.cc_bottom cc_113
+.cc_top cc_114,.Lxtalabel66
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel66
+.cc_bottom cc_114
+.cc_top cc_115,.Lxtalabel88
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel88
+.cc_bottom cc_115
+.cc_top cc_116,.Lxtalabel64
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel64
+.cc_bottom cc_116
+.cc_top cc_117,.Lxtalabel62
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel62
+.cc_bottom cc_117
+.cc_top cc_118,.Lxtalabel60
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel60
+.cc_bottom cc_118
+.cc_top cc_119,.Lxtalabel58
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel58
+.cc_bottom cc_119
+.cc_top cc_120,.Lxtalabel98
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel98
+.cc_bottom cc_120
+.cc_top cc_121,.Lxtalabel102
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel102
+.cc_bottom cc_121
+.cc_top cc_122,.Lxtalabel100
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel100
+.cc_bottom cc_122
+.cc_top cc_123,.Lxtalabel48
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel48
+.cc_bottom cc_123
+.cc_top cc_124,.Lxtalabel47
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel47
+.cc_bottom cc_124
+.cc_top cc_125,.Lxtalabel104
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel104
+.cc_bottom cc_125
+.cc_top cc_126,.Lxtalabel110
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel110
+.cc_bottom cc_126
+.cc_top cc_127,.Lxtalabel114
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	73
+	.long	78
+	.long	.Lxtalabel114
+.cc_bottom cc_127
+.cc_top cc_128,.Lxtalabel56
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	83
+	.long	88
+	.long	.Lxtalabel56
+.cc_bottom cc_128
+.cc_top cc_129,.Lxtalabel88
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	83
+	.long	88
+	.long	.Lxtalabel88
 .cc_bottom cc_129
-.cc_top cc_130,.Lxtalabel29
+.cc_top cc_130,.Lxtalabel55
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	83
+	.long	88
+	.long	.Lxtalabel55
+.cc_bottom cc_130
+.cc_top cc_131,.Lxtalabel54
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	83
+	.long	88
+	.long	.Lxtalabel54
+.cc_bottom cc_131
+.cc_top cc_132,.Lxtalabel4
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	83
+	.long	88
+	.long	.Lxtalabel4
+.cc_bottom cc_132
+.cc_top cc_133,.Lxtalabel53
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	83
+	.long	88
+	.long	.Lxtalabel53
+.cc_bottom cc_133
+.cc_top cc_134,.Lxtalabel93
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	83
+	.long	88
+	.long	.Lxtalabel93
+.cc_bottom cc_134
+.cc_top cc_135,.Lxtalabel94
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	83
+	.long	88
+	.long	.Lxtalabel94
+.cc_bottom cc_135
+.cc_top cc_136,.Lxtalabel47
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	83
+	.long	88
+	.long	.Lxtalabel47
+.cc_bottom cc_136
+.cc_top cc_137,.Lxtalabel87
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	83
+	.long	88
+	.long	.Lxtalabel87
+.cc_bottom cc_137
+.cc_top cc_138,.Lxtalabel95
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	83
+	.long	88
+	.long	.Lxtalabel95
+.cc_bottom cc_138
+.cc_top cc_139,.Lxtalabel96
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	83
+	.long	88
+	.long	.Lxtalabel96
+.cc_bottom cc_139
+.cc_top cc_140,.Lxtalabel48
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	83
+	.long	88
+	.long	.Lxtalabel48
+.cc_bottom cc_140
+.cc_top cc_141,.Lxtalabel5
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	91
+	.long	96
+	.long	.Lxtalabel5
+.cc_bottom cc_141
+.cc_top cc_142,.Lxtalabel1
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	106
+	.long	111
+	.long	.Lxtalabel1
+.cc_bottom cc_142
+.cc_top cc_143,.Lxtalabel2
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	115
+	.long	121
+	.long	.Lxtalabel2
+.cc_bottom cc_143
+.cc_top cc_144,.Lxtalabel8
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	124
+	.long	132
+	.long	.Lxtalabel8
+.cc_bottom cc_144
+.cc_top cc_145,.Lxtalabel9
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	124
+	.long	132
+	.long	.Lxtalabel9
+.cc_bottom cc_145
+.cc_top cc_146,.Lxtalabel10
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	135
+	.long	138
+	.long	.Lxtalabel10
+.cc_bottom cc_146
+.cc_top cc_147,.Lxtalabel10
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	144
+	.long	144
+	.long	.Lxtalabel10
+.cc_bottom cc_147
+.cc_top cc_148,.Lxtalabel12
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	157
+	.long	162
+	.long	.Lxtalabel12
+.cc_bottom cc_148
+.cc_top cc_149,.Lxtalabel11
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	157
+	.long	162
+	.long	.Lxtalabel11
+.cc_bottom cc_149
+.cc_top cc_150,.Lxtalabel89
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	157
+	.long	162
+	.long	.Lxtalabel89
+.cc_bottom cc_150
+.cc_top cc_151,.Lxtalabel64
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	157
+	.long	162
+	.long	.Lxtalabel64
+.cc_bottom cc_151
+.cc_top cc_152,.Lxtalabel104
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	157
+	.long	162
+	.long	.Lxtalabel104
+.cc_bottom cc_152
+.cc_top cc_153,.Lxtalabel49
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	157
+	.long	162
+	.long	.Lxtalabel49
+.cc_bottom cc_153
+.cc_top cc_154,.Lxtalabel49
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	165
+	.long	169
+	.long	.Lxtalabel49
+.cc_bottom cc_154
+.cc_top cc_155,.Lxtalabel89
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	165
+	.long	169
+	.long	.Lxtalabel89
+.cc_bottom cc_155
+.cc_top cc_156,.Lxtalabel98
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	165
+	.long	169
+	.long	.Lxtalabel98
+.cc_bottom cc_156
+.cc_top cc_157,.Lxtalabel13
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	165
+	.long	169
+	.long	.Lxtalabel13
+.cc_bottom cc_157
+.cc_top cc_158,.Lxtalabel14
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	165
+	.long	169
+	.long	.Lxtalabel14
+.cc_bottom cc_158
+.cc_top cc_159,.Lxtalabel58
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	165
+	.long	169
+	.long	.Lxtalabel58
+.cc_bottom cc_159
+.cc_top cc_160,.Lxtalabel16
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	172
+	.long	176
+	.long	.Lxtalabel16
+.cc_bottom cc_160
+.cc_top cc_161,.Lxtalabel49
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	172
+	.long	176
+	.long	.Lxtalabel49
+.cc_bottom cc_161
+.cc_top cc_162,.Lxtalabel60
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	172
+	.long	176
+	.long	.Lxtalabel60
+.cc_bottom cc_162
+.cc_top cc_163,.Lxtalabel89
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	172
+	.long	176
+	.long	.Lxtalabel89
+.cc_bottom cc_163
+.cc_top cc_164,.Lxtalabel15
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	172
+	.long	176
+	.long	.Lxtalabel15
+.cc_bottom cc_164
+.cc_top cc_165,.Lxtalabel100
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	172
+	.long	176
+	.long	.Lxtalabel100
+.cc_bottom cc_165
+.cc_top cc_166,.Lxtalabel102
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	179
+	.long	183
+	.long	.Lxtalabel102
+.cc_bottom cc_166
+.cc_top cc_167,.Lxtalabel49
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	179
+	.long	183
+	.long	.Lxtalabel49
+.cc_bottom cc_167
+.cc_top cc_168,.Lxtalabel62
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	179
+	.long	183
+	.long	.Lxtalabel62
+.cc_bottom cc_168
+.cc_top cc_169,.Lxtalabel17
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	179
+	.long	183
+	.long	.Lxtalabel17
+.cc_bottom cc_169
+.cc_top cc_170,.Lxtalabel89
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	179
+	.long	183
+	.long	.Lxtalabel89
+.cc_bottom cc_170
+.cc_top cc_171,.Lxtalabel18
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	179
+	.long	183
+	.long	.Lxtalabel18
+.cc_bottom cc_171
+.cc_top cc_172,.Lxtalabel19
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	189
+	.long	193
+	.long	.Lxtalabel19
+.cc_bottom cc_172
+.cc_top cc_173,.Lxtalabel68
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	189
+	.long	193
+	.long	.Lxtalabel68
+.cc_bottom cc_173
+.cc_top cc_174,.Lxtalabel108
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	189
+	.long	193
+	.long	.Lxtalabel108
+.cc_bottom cc_174
+.cc_top cc_175,.Lxtalabel110
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	198
+	.long	202
+	.long	.Lxtalabel110
+.cc_bottom cc_175
+.cc_top cc_176,.Lxtalabel20
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	198
+	.long	202
+	.long	.Lxtalabel20
+.cc_bottom cc_176
+.cc_top cc_177,.Lxtalabel91
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	198
+	.long	202
+	.long	.Lxtalabel91
+.cc_bottom cc_177
+.cc_top cc_178,.Lxtalabel70
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	198
+	.long	202
+	.long	.Lxtalabel70
+.cc_bottom cc_178
+.cc_top cc_179,.Lxtalabel51
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	198
+	.long	202
+	.long	.Lxtalabel51
+.cc_bottom cc_179
+.cc_top cc_180,.Lxtalabel34
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	206
+	.long	207
+	.long	.Lxtalabel34
+.cc_bottom cc_180
+.cc_top cc_181,.Lxtalabel24
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	206
+	.long	207
+	.long	.Lxtalabel24
+.cc_bottom cc_181
+.cc_top cc_182,.Lxtalabel21
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	206
+	.long	207
+	.long	.Lxtalabel21
+.cc_bottom cc_182
+.cc_top cc_183,.Lxtalabel31
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	206
+	.long	207
+	.long	.Lxtalabel31
+.cc_bottom cc_183
+.cc_top cc_184,.Lxtalabel35
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	208
+	.long	210
+	.long	.Lxtalabel35
+.cc_bottom cc_184
+.cc_top cc_185,.Lxtalabel25
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	208
+	.long	210
+	.long	.Lxtalabel25
+.cc_bottom cc_185
+.cc_top cc_186,.Lxtalabel26
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	211
+	.long	213
+	.long	.Lxtalabel26
+.cc_bottom cc_186
+.cc_top cc_187,.Lxtalabel36
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	211
+	.long	213
+	.long	.Lxtalabel36
+.cc_bottom cc_187
+.cc_top cc_188,.Lxtalabel27
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	214
+	.long	216
+	.long	.Lxtalabel27
+.cc_bottom cc_188
+.cc_top cc_189,.Lxtalabel37
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	214
+	.long	216
+	.long	.Lxtalabel37
+.cc_bottom cc_189
+.cc_top cc_190,.Lxtalabel38
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	217
+	.long	219
+	.long	.Lxtalabel38
+.cc_bottom cc_190
+.cc_top cc_191,.Lxtalabel28
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	217
+	.long	219
+	.long	.Lxtalabel28
+.cc_bottom cc_191
+.cc_top cc_192,.Lxtalabel39
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	220
+	.long	222
+	.long	.Lxtalabel39
+.cc_bottom cc_192
+.cc_top cc_193,.Lxtalabel29
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	220
+	.long	222
+	.long	.Lxtalabel29
+.cc_bottom cc_193
+.cc_top cc_194,.Lxtalabel30
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	223
+	.long	225
+	.long	.Lxtalabel30
+.cc_bottom cc_194
+.cc_top cc_195,.Lxtalabel40
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	223
+	.long	225
+	.long	.Lxtalabel40
+.cc_bottom cc_195
+.cc_top cc_196,.Lxtalabel32
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	226
+	.long	228
+	.long	.Lxtalabel32
+.cc_bottom cc_196
+.cc_top cc_197,.Lxtalabel22
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	226
+	.long	228
+	.long	.Lxtalabel22
+.cc_bottom cc_197
+.cc_top cc_198,.Lxtalabel33
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	229
+	.long	229
+	.long	.Lxtalabel33
+.cc_bottom cc_198
+.cc_top cc_199,.Lxtalabel23
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	229
+	.long	229
+	.long	.Lxtalabel23
+.cc_bottom cc_199
+.cc_top cc_200,.Lxtalabel41
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	234
+	.long	238
+	.long	.Lxtalabel41
+.cc_bottom cc_200
+.cc_top cc_201,.Lxtalabel76
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	234
+	.long	238
+	.long	.Lxtalabel76
+.cc_bottom cc_201
+.cc_top cc_202,.Lxtalabel114
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	234
+	.long	238
+	.long	.Lxtalabel114
+.cc_bottom cc_202
+.cc_top cc_203,.Lxtalabel116
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	234
+	.long	238
+	.long	.Lxtalabel116
+.cc_bottom cc_203
+.cc_top cc_204,.Lxtalabel112
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	234
+	.long	238
+	.long	.Lxtalabel112
+.cc_bottom cc_204
+.cc_top cc_205,.Lxtalabel72
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	234
+	.long	238
+	.long	.Lxtalabel72
+.cc_bottom cc_205
+.cc_top cc_206,.Lxtalabel74
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	234
+	.long	238
+	.long	.Lxtalabel74
+.cc_bottom cc_206
+.cc_top cc_207,.Lxtalabel44
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	241
 	.long	242
-	.long	.Lxtalabel29
-.cc_bottom cc_130
-.cc_top cc_131,.Lxtalabel60
+	.long	.Lxtalabel44
+.cc_bottom cc_207
+.cc_top cc_208,.Lxtalabel112
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	241
+	.long	242
+	.long	.Lxtalabel112
+.cc_bottom cc_208
+.cc_top cc_209,.Lxtalabel42
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	241
+	.long	242
+	.long	.Lxtalabel42
+.cc_bottom cc_209
+.cc_top cc_210,.Lxtalabel72
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	241
+	.long	242
+	.long	.Lxtalabel72
+.cc_bottom cc_210
+.cc_top cc_211,.Lxtalabel74
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	241
+	.long	242
+	.long	.Lxtalabel74
+.cc_bottom cc_211
+.cc_top cc_212,.Lxtalabel114
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	241
+	.long	242
+	.long	.Lxtalabel114
+.cc_bottom cc_212
+.cc_top cc_213,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	243
 	.long	244
-	.long	.Lxtalabel60
-.cc_bottom cc_131
-.cc_top cc_132,.Lxtalabel28
+	.long	.Lxtalabel45
+.cc_bottom cc_213
+.cc_top cc_214,.Lxtalabel115
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	243
 	.long	244
-	.long	.Lxtalabel28
-.cc_bottom cc_132
-.cc_top cc_133,.Lxtalabel30
+	.long	.Lxtalabel115
+.cc_bottom cc_214
+.cc_top cc_215,.Lxtalabel75
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	243
 	.long	244
-	.long	.Lxtalabel30
-.cc_bottom cc_133
-.cc_top cc_134,.Lxtalabel58
+	.long	.Lxtalabel75
+.cc_bottom cc_215
+.cc_top cc_216,.Lxtalabel43
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	243
-	.long	244
-	.long	.Lxtalabel58
-.cc_bottom cc_134
-.cc_top cc_135,.Lxtalabel32
+	.long	245
+	.long	246
+	.long	.Lxtalabel43
+.cc_bottom cc_216
+.cc_top cc_217,.Lxtalabel113
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	251
-	.long	252
-	.long	.Lxtalabel32
-.cc_bottom cc_135
-.cc_top cc_136,.Lxtalabel32
+	.long	245
+	.long	246
+	.long	.Lxtalabel113
+.cc_bottom cc_217
+.cc_top cc_218,.Lxtalabel73
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	254
+	.long	245
+	.long	246
+	.long	.Lxtalabel73
+.cc_bottom cc_218
+.cc_top cc_219,.Lxtalabel74
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	247
+	.long	248
+	.long	.Lxtalabel74
+.cc_bottom cc_219
+.cc_top cc_220,.Lxtalabel112
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	247
+	.long	248
+	.long	.Lxtalabel112
+.cc_bottom cc_220
+.cc_top cc_221,.Lxtalabel114
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	247
+	.long	248
+	.long	.Lxtalabel114
+.cc_bottom cc_221
+.cc_top cc_222,.Lxtalabel42
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	247
+	.long	248
+	.long	.Lxtalabel42
+.cc_bottom cc_222
+.cc_top cc_223,.Lxtalabel44
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	247
+	.long	248
+	.long	.Lxtalabel44
+.cc_bottom cc_223
+.cc_top cc_224,.Lxtalabel72
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	247
+	.long	248
+	.long	.Lxtalabel72
+.cc_bottom cc_224
+.cc_top cc_225,.Lxtalabel3
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	255
+	.long	257
+	.long	.Lxtalabel3
+.cc_bottom cc_225
+.cc_top cc_226,.Lxtalabel3
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
 	.long	258
-	.long	.Lxtalabel32
-.cc_bottom cc_136
-.cc_top cc_137,.Lxtalabel33
+	.long	259
+	.long	.Lxtalabel3
+.cc_bottom cc_226
+.cc_top cc_227,.Lxtalabel3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
+	.long	258
+	.long	259
+	.long	.Lxtalabel3
+.cc_bottom cc_227
+.cc_top cc_228,.Lxtalabel3
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	258
+	.long	259
+	.long	.Lxtalabel3
+.cc_bottom cc_228
+.cc_top cc_229,.Lxtalabel3
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	260
 	.long	262
-	.long	262
-	.long	.Lxtalabel33
-.cc_bottom cc_137
-.cc_top cc_138,.Lxtalabel33
+	.long	.Lxtalabel3
+.cc_bottom cc_229
+.cc_top cc_230,.Lxtalabel3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	264
 	.long	264
-	.long	.Lxtalabel33
-.cc_bottom cc_138
-.cc_top cc_139,.Lxtalabel33
+	.long	.Lxtalabel3
+.cc_bottom cc_230
+.cc_top cc_231,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	265
-	.long	268
-	.long	.Lxtalabel33
-.cc_bottom cc_139
-.cc_top cc_140,.Lxtalabel33
+	.long	273
+	.long	273
+	.long	.Lxtalabel46
+.cc_bottom cc_231
+.cc_top cc_232,.Lxtalabel86
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	265
-	.long	268
-	.long	.Lxtalabel33
-.cc_bottom cc_140
-.cc_top cc_141,.Lxtalabel33
+	.long	273
+	.long	273
+	.long	.Lxtalabel86
+.cc_bottom cc_232
+.cc_top cc_233,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	265
-	.long	268
-	.long	.Lxtalabel33
-.cc_bottom cc_141
-.cc_top cc_142,.Lxtalabel33
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	265
-	.long	268
-	.long	.Lxtalabel33
-.cc_bottom cc_142
-.cc_top cc_143,.Lxtalabel33
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	270
-	.long	270
-	.long	.Lxtalabel33
-.cc_bottom cc_143
-.cc_top cc_144,.Lxtalabel33
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	272
 	.long	274
-	.long	.Lxtalabel33
-.cc_bottom cc_144
-.cc_top cc_145,.Lxtalabel33
+	.long	274
+	.long	.Lxtalabel47
+.cc_bottom cc_233
+.cc_top cc_234,.Lxtalabel48
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	274
+	.long	274
+	.long	.Lxtalabel48
+.cc_bottom cc_234
+.cc_top cc_235,.Lxtalabel87
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	274
+	.long	274
+	.long	.Lxtalabel87
+.cc_bottom cc_235
+.cc_top cc_236,.Lxtalabel88
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	274
+	.long	274
+	.long	.Lxtalabel88
+.cc_bottom cc_236
+.cc_top cc_237,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	276
 	.long	276
-	.long	.Lxtalabel33
-.cc_bottom cc_145
-.cc_top cc_146,.Lxtalabel34
+	.long	.Lxtalabel48
+.cc_bottom cc_237
+.cc_top cc_238,.Lxtalabel47
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	276
+	.long	276
+	.long	.Lxtalabel47
+.cc_bottom cc_238
+.cc_top cc_239,.Lxtalabel87
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	276
+	.long	276
+	.long	.Lxtalabel87
+.cc_bottom cc_239
+.cc_top cc_240,.Lxtalabel88
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	276
+	.long	276
+	.long	.Lxtalabel88
+.cc_bottom cc_240
+.cc_top cc_241,.Lxtalabel47
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	278
+	.long	278
+	.long	.Lxtalabel47
+.cc_bottom cc_241
+.cc_top cc_242,.Lxtalabel48
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	278
+	.long	278
+	.long	.Lxtalabel48
+.cc_bottom cc_242
+.cc_top cc_243,.Lxtalabel87
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	278
+	.long	278
+	.long	.Lxtalabel87
+.cc_bottom cc_243
+.cc_top cc_244,.Lxtalabel88
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	278
+	.long	278
+	.long	.Lxtalabel88
+.cc_bottom cc_244
+.cc_top cc_245,.Lxtalabel49
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	279
+	.long	283
+	.long	.Lxtalabel49
+.cc_bottom cc_245
+.cc_top cc_246,.Lxtalabel89
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
 	.long	279
-	.long	.Lxtalabel34
-.cc_bottom cc_146
-.cc_top cc_147,.Lxtalabel36
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	280
-	.long	280
-	.long	.Lxtalabel36
-.cc_bottom cc_147
-.cc_top cc_148,.Lxtalabel39
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	280
-	.long	280
-	.long	.Lxtalabel39
-.cc_bottom cc_148
-.cc_top cc_149,.Lxtalabel35
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	280
-	.long	280
-	.long	.Lxtalabel35
-.cc_bottom cc_149
-.cc_top cc_150,.Lxtalabel36
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	282
-	.long	282
-	.long	.Lxtalabel36
-.cc_bottom cc_150
-.cc_top cc_151,.Lxtalabel35
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	282
-	.long	282
-	.long	.Lxtalabel35
-.cc_bottom cc_151
-.cc_top cc_152,.Lxtalabel39
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	282
-	.long	282
-	.long	.Lxtalabel39
-.cc_bottom cc_152
-.cc_top cc_153,.Lxtalabel36
+	.long	283
+	.long	.Lxtalabel89
+.cc_bottom cc_246
+.cc_top cc_247,.Lxtalabel49
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	285
 	.long	285
-	.long	.Lxtalabel36
-.cc_bottom cc_153
-.cc_top cc_154,.Lxtalabel39
+	.long	.Lxtalabel49
+.cc_bottom cc_247
+.cc_top cc_248,.Lxtalabel89
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	285
 	.long	285
-	.long	.Lxtalabel39
-.cc_bottom cc_154
-.cc_top cc_155,.Lxtalabel35
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	285
-	.long	285
-	.long	.Lxtalabel35
-.cc_bottom cc_155
-.cc_top cc_156,.Lxtalabel38
+	.long	.Lxtalabel89
+.cc_bottom cc_248
+.cc_top cc_249,.Lxtalabel50
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	286
 	.long	290
-	.long	.Lxtalabel38
-.cc_bottom cc_156
-.cc_top cc_157,.Lxtalabel38
+	.long	.Lxtalabel50
+.cc_bottom cc_249
+.cc_top cc_250,.Lxtalabel90
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	301
-	.long	301
-	.long	.Lxtalabel38
-.cc_bottom cc_157
-.cc_top cc_158,.Lxtalabel37
+	.long	286
+	.long	290
+	.long	.Lxtalabel90
+.cc_bottom cc_250
+.cc_top cc_251,.Lxtalabel90
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	302
-	.long	307
-	.long	.Lxtalabel37
-.cc_bottom cc_158
-.cc_top cc_159,.Lxtalabel40
+	.long	292
+	.long	292
+	.long	.Lxtalabel90
+.cc_bottom cc_251
+.cc_top cc_252,.Lxtalabel50
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	292
+	.long	292
+	.long	.Lxtalabel50
+.cc_bottom cc_252
+.cc_top cc_253,.Lxtalabel51
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	293
+	.long	297
+	.long	.Lxtalabel51
+.cc_bottom cc_253
+.cc_top cc_254,.Lxtalabel91
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	293
+	.long	297
+	.long	.Lxtalabel91
+.cc_bottom cc_254
+.cc_top cc_255,.Lxtalabel91
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	299
+	.long	299
+	.long	.Lxtalabel91
+.cc_bottom cc_255
+.cc_top cc_256,.Lxtalabel51
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	299
+	.long	299
+	.long	.Lxtalabel51
+.cc_bottom cc_256
+.cc_top cc_257,.Lxtalabel92
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	300
+	.long	305
+	.long	.Lxtalabel92
+.cc_bottom cc_257
+.cc_top cc_258,.Lxtalabel52
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	300
+	.long	305
+	.long	.Lxtalabel52
+.cc_bottom cc_258
+.cc_top cc_259,.Lxtalabel55
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	308
+	.long	308
+	.long	.Lxtalabel55
+.cc_bottom cc_259
+.cc_top cc_260,.Lxtalabel96
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	308
+	.long	308
+	.long	.Lxtalabel96
+.cc_bottom cc_260
+.cc_top cc_261,.Lxtalabel53
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	308
+	.long	308
+	.long	.Lxtalabel53
+.cc_bottom cc_261
+.cc_top cc_262,.Lxtalabel95
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	308
+	.long	308
+	.long	.Lxtalabel95
+.cc_bottom cc_262
+.cc_top cc_263,.Lxtalabel93
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	308
+	.long	308
+	.long	.Lxtalabel93
+.cc_bottom cc_263
+.cc_top cc_264,.Lxtalabel56
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	308
+	.long	308
+	.long	.Lxtalabel56
+.cc_bottom cc_264
+.cc_top cc_265,.Lxtalabel54
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	308
+	.long	308
+	.long	.Lxtalabel54
+.cc_bottom cc_265
+.cc_top cc_266,.Lxtalabel94
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	308
+	.long	308
+	.long	.Lxtalabel94
+.cc_bottom cc_266
+.cc_top cc_267,.Lxtalabel56
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	311
+	.long	311
+	.long	.Lxtalabel56
+.cc_bottom cc_267
+.cc_top cc_268,.Lxtalabel55
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	311
+	.long	311
+	.long	.Lxtalabel55
+.cc_bottom cc_268
+.cc_top cc_269,.Lxtalabel96
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	311
+	.long	311
+	.long	.Lxtalabel96
+.cc_bottom cc_269
+.cc_top cc_270,.Lxtalabel93
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	311
+	.long	311
+	.long	.Lxtalabel93
+.cc_bottom cc_270
+.cc_top cc_271,.Lxtalabel54
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	311
+	.long	311
+	.long	.Lxtalabel54
+.cc_bottom cc_271
+.cc_top cc_272,.Lxtalabel94
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	311
+	.long	311
+	.long	.Lxtalabel94
+.cc_bottom cc_272
+.cc_top cc_273,.Lxtalabel53
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	311
+	.long	311
+	.long	.Lxtalabel53
+.cc_bottom cc_273
+.cc_top cc_274,.Lxtalabel95
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	311
+	.long	311
+	.long	.Lxtalabel95
+.cc_bottom cc_274
+.cc_top cc_275,.Lxtalabel97
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	312
+	.long	312
+	.long	.Lxtalabel97
+.cc_bottom cc_275
+.cc_top cc_276,.Lxtalabel57
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	312
+	.long	312
+	.long	.Lxtalabel57
+.cc_bottom cc_276
+.cc_top cc_277,.Lxtalabel58
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
 	.long	313
-	.long	.Lxtalabel40
-.cc_bottom cc_159
-.cc_top cc_160,.Lxtalabel43
+	.long	315
+	.long	.Lxtalabel58
+.cc_bottom cc_277
+.cc_top cc_278,.Lxtalabel98
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	313
+	.long	315
+	.long	.Lxtalabel98
+.cc_bottom cc_278
+.cc_top cc_279,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	316
 	.long	316
-	.long	.Lxtalabel43
-.cc_bottom cc_160
-.cc_top cc_161,.Lxtalabel56
+	.long	.Lxtalabel59
+.cc_bottom cc_279
+.cc_top cc_280,.Lxtalabel99
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	316
 	.long	316
-	.long	.Lxtalabel56
-.cc_bottom cc_161
-.cc_top cc_162,.Lxtalabel42
+	.long	.Lxtalabel99
+.cc_bottom cc_280
+.cc_top cc_281,.Lxtalabel100
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	316
-	.long	316
-	.long	.Lxtalabel42
-.cc_bottom cc_162
-.cc_top cc_163,.Lxtalabel41
+	.long	317
+	.long	319
+	.long	.Lxtalabel100
+.cc_bottom cc_281
+.cc_top cc_282,.Lxtalabel60
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	316
-	.long	316
-	.long	.Lxtalabel41
-.cc_bottom cc_163
-.cc_top cc_164,.Lxtalabel56
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
+	.long	317
 	.long	319
-	.long	319
-	.long	.Lxtalabel56
-.cc_bottom cc_164
-.cc_top cc_165,.Lxtalabel43
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	319
-	.long	319
-	.long	.Lxtalabel43
-.cc_bottom cc_165
-.cc_top cc_166,.Lxtalabel42
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	319
-	.long	319
-	.long	.Lxtalabel42
-.cc_bottom cc_166
-.cc_top cc_167,.Lxtalabel41
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	319
-	.long	319
-	.long	.Lxtalabel41
-.cc_bottom cc_167
-.cc_top cc_168,.Lxtalabel48
+	.long	.Lxtalabel60
+.cc_bottom cc_282
+.cc_top cc_283,.Lxtalabel61
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	320
 	.long	320
-	.long	.Lxtalabel48
-.cc_bottom cc_168
-.cc_top cc_169,.Lxtalabel49
+	.long	.Lxtalabel61
+.cc_bottom cc_283
+.cc_top cc_284,.Lxtalabel101
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	320
+	.long	320
+	.long	.Lxtalabel101
+.cc_bottom cc_284
+.cc_top cc_285,.Lxtalabel62
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	321
 	.long	323
-	.long	.Lxtalabel49
-.cc_bottom cc_169
-.cc_top cc_170,.Lxtalabel50
+	.long	.Lxtalabel62
+.cc_bottom cc_285
+.cc_top cc_286,.Lxtalabel102
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	321
+	.long	323
+	.long	.Lxtalabel102
+.cc_bottom cc_286
+.cc_top cc_287,.Lxtalabel103
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	324
+	.long	324
+	.long	.Lxtalabel103
+.cc_bottom cc_287
+.cc_top cc_288,.Lxtalabel63
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	324
+	.long	324
+	.long	.Lxtalabel63
+.cc_bottom cc_288
+.cc_top cc_289,.Lxtalabel104
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	325
+	.long	327
+	.long	.Lxtalabel104
+.cc_bottom cc_289
+.cc_top cc_290,.Lxtalabel64
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
 	.long	325
-	.long	.Lxtalabel50
-.cc_bottom cc_170
-.cc_top cc_171,.Lxtalabel51
+	.long	327
+	.long	.Lxtalabel64
+.cc_bottom cc_290
+.cc_top cc_291,.Lxtalabel105
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	326
-	.long	328
-	.long	.Lxtalabel51
-.cc_bottom cc_171
-.cc_top cc_172,.Lxtalabel52
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	330
-	.long	330
-	.long	.Lxtalabel52
-.cc_bottom cc_172
-.cc_top cc_173,.Lxtalabel53
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	331
 	.long	333
-	.long	.Lxtalabel53
-.cc_bottom cc_173
-.cc_top cc_174,.Lxtalabel54
+	.long	333
+	.long	.Lxtalabel105
+.cc_bottom cc_291
+.cc_top cc_292,.Lxtalabel65
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	335
-	.long	335
-	.long	.Lxtalabel54
-.cc_bottom cc_174
-.cc_top cc_175,.Lxtalabel55
+	.long	333
+	.long	333
+	.long	.Lxtalabel65
+.cc_bottom cc_292
+.cc_top cc_293,.Lxtalabel66
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
+	.long	334
 	.long	336
-	.long	338
-	.long	.Lxtalabel55
-.cc_bottom cc_175
-.cc_top cc_176,.Lxtalabel44
+	.long	.Lxtalabel66
+.cc_bottom cc_293
+.cc_top cc_294,.Lxtalabel106
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	355
-	.long	355
-	.long	.Lxtalabel44
-.cc_bottom cc_176
-.cc_top cc_177,.Lxtalabel45
+	.long	334
+	.long	336
+	.long	.Lxtalabel106
+.cc_bottom cc_294
+.cc_top cc_295,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	356
-	.long	358
-	.long	.Lxtalabel45
-.cc_bottom cc_177
-.cc_top cc_178,.Lxtalabel46
+	.long	340
+	.long	340
+	.long	.Lxtalabel67
+.cc_bottom cc_295
+.cc_top cc_296,.Lxtalabel107
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	359
-	.long	359
-	.long	.Lxtalabel46
-.cc_bottom cc_178
-.cc_top cc_179,.Lxtalabel47
+	.long	340
+	.long	340
+	.long	.Lxtalabel107
+.cc_bottom cc_296
+.cc_top cc_297,.Lxtalabel108
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	341
+	.long	343
+	.long	.Lxtalabel108
+.cc_bottom cc_297
+.cc_top cc_298,.Lxtalabel68
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	341
+	.long	343
+	.long	.Lxtalabel68
+.cc_bottom cc_298
+.cc_top cc_299,.Lxtalabel109
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	344
+	.long	344
+	.long	.Lxtalabel109
+.cc_bottom cc_299
+.cc_top cc_300,.Lxtalabel69
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	344
+	.long	344
+	.long	.Lxtalabel69
+.cc_bottom cc_300
+.cc_top cc_301,.Lxtalabel110
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	345
+	.long	347
+	.long	.Lxtalabel110
+.cc_bottom cc_301
+.cc_top cc_302,.Lxtalabel70
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	345
+	.long	347
+	.long	.Lxtalabel70
+.cc_bottom cc_302
+.cc_top cc_303,.Lxtalabel71
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	350
+	.long	350
+	.long	.Lxtalabel71
+.cc_bottom cc_303
+.cc_top cc_304,.Lxtalabel111
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	350
+	.long	350
+	.long	.Lxtalabel111
+.cc_bottom cc_304
+.cc_top cc_305,.Lxtalabel74
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	351
+	.long	357
+	.long	.Lxtalabel74
+.cc_bottom cc_305
+.cc_top cc_306,.Lxtalabel114
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	351
+	.long	357
+	.long	.Lxtalabel114
+.cc_bottom cc_306
+.cc_top cc_307,.Lxtalabel72
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	351
+	.long	357
+	.long	.Lxtalabel72
+.cc_bottom cc_307
+.cc_top cc_308,.Lxtalabel112
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	351
+	.long	357
+	.long	.Lxtalabel112
+.cc_bottom cc_308
+.cc_top cc_309,.Lxtalabel120
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	360
+	.long	360
+	.long	.Lxtalabel120
+.cc_bottom cc_309
+.cc_top cc_310,.Lxtalabel80
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	360
+	.long	360
+	.long	.Lxtalabel80
+.cc_bottom cc_310
+.cc_top cc_311,.Lxtalabel77
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	360
+	.long	360
+	.long	.Lxtalabel77
+.cc_bottom cc_311
+.cc_top cc_312,.Lxtalabel117
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	360
+	.long	360
+	.long	.Lxtalabel117
+.cc_bottom cc_312
+.cc_top cc_313,.Lxtalabel77
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
 	.long	362
-	.long	.Lxtalabel47
-.cc_bottom cc_179
-.cc_top cc_180,.Lxtalabel57
+	.long	362
+	.long	.Lxtalabel77
+.cc_bottom cc_313
+.cc_top cc_314,.Lxtalabel80
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	362
+	.long	362
+	.long	.Lxtalabel80
+.cc_bottom cc_314
+.cc_top cc_315,.Lxtalabel117
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	362
+	.long	362
+	.long	.Lxtalabel117
+.cc_bottom cc_315
+.cc_top cc_316,.Lxtalabel120
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	362
+	.long	362
+	.long	.Lxtalabel120
+.cc_bottom cc_316
+.cc_top cc_317,.Lxtalabel78
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	363
+	.long	364
+	.long	.Lxtalabel78
+.cc_bottom cc_317
+.cc_top cc_318,.Lxtalabel118
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	363
+	.long	364
+	.long	.Lxtalabel118
+.cc_bottom cc_318
+.cc_top cc_319,.Lxtalabel79
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	365
+	.long	366
+	.long	.Lxtalabel79
+.cc_bottom cc_319
+.cc_top cc_320,.Lxtalabel119
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
 	.long	365
-	.long	.Lxtalabel57
-.cc_bottom cc_180
-.cc_top cc_181,.Lxtalabel58
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
 	.long	366
-	.long	368
-	.long	.Lxtalabel58
-.cc_bottom cc_181
-.cc_top cc_182,.Lxtalabel60
+	.long	.Lxtalabel119
+.cc_bottom cc_320
+.cc_top cc_321,.Lxtalabel81
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	366
-	.long	368
-	.long	.Lxtalabel60
-.cc_bottom cc_182
-.cc_top cc_183,.Lxtalabel62
+	.long	369
+	.long	369
+	.long	.Lxtalabel81
+.cc_bottom cc_321
+.cc_top cc_322,.Lxtalabel121
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
+	.long	369
+	.long	369
+	.long	.Lxtalabel121
+.cc_bottom cc_322
+.cc_top cc_323,.Lxtalabel82
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	370
 	.long	371
+	.long	.Lxtalabel82
+.cc_bottom cc_323
+.cc_top cc_324,.Lxtalabel83
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	370
 	.long	371
-	.long	.Lxtalabel62
-.cc_bottom cc_183
-.cc_top cc_184,.Lxtalabel65
+	.long	.Lxtalabel83
+.cc_bottom cc_324
+.cc_top cc_325,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
+	.long	370
 	.long	371
+	.long	.Lxtalabel84
+.cc_bottom cc_325
+.cc_top cc_326,.Lxtalabel122
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	370
 	.long	371
-	.long	.Lxtalabel65
-.cc_bottom cc_184
-.cc_top cc_185,.Lxtalabel62
+	.long	.Lxtalabel122
+.cc_bottom cc_326
+.cc_top cc_327,.Lxtalabel123
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	373
-	.long	373
-	.long	.Lxtalabel62
-.cc_bottom cc_185
-.cc_top cc_186,.Lxtalabel65
+	.long	370
+	.long	371
+	.long	.Lxtalabel123
+.cc_bottom cc_327
+.cc_top cc_328,.Lxtalabel124
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	373
-	.long	373
-	.long	.Lxtalabel65
-.cc_bottom cc_186
-.cc_top cc_187,.Lxtalabel63
+	.long	370
+	.long	371
+	.long	.Lxtalabel124
+.cc_bottom cc_328
+.cc_top cc_329,.Lxtalabel82
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	374
+	.long	372
 	.long	375
-	.long	.Lxtalabel63
-.cc_bottom cc_187
-.cc_top cc_188,.Lxtalabel64
+	.long	.Lxtalabel82
+.cc_bottom cc_329
+.cc_top cc_330,.Lxtalabel124
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	376
-	.long	377
-	.long	.Lxtalabel64
-.cc_bottom cc_188
-.cc_top cc_189,.Lxtalabel66
+	.long	372
+	.long	375
+	.long	.Lxtalabel124
+.cc_bottom cc_330
+.cc_top cc_331,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	380
-	.long	380
-	.long	.Lxtalabel66
-.cc_bottom cc_189
-.cc_top cc_190,.Lxtalabel67
+	.long	372
+	.long	375
+	.long	.Lxtalabel84
+.cc_bottom cc_331
+.cc_top cc_332,.Lxtalabel83
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	381
-	.long	382
-	.long	.Lxtalabel67
-.cc_bottom cc_190
-.cc_top cc_191,.Lxtalabel68
+	.long	372
+	.long	375
+	.long	.Lxtalabel83
+.cc_bottom cc_332
+.cc_top cc_333,.Lxtalabel122
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	381
-	.long	382
-	.long	.Lxtalabel68
-.cc_bottom cc_191
-.cc_top cc_192,.Lxtalabel69
+	.long	372
+	.long	375
+	.long	.Lxtalabel122
+.cc_bottom cc_333
+.cc_top cc_334,.Lxtalabel123
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	381
-	.long	382
-	.long	.Lxtalabel69
-.cc_bottom cc_192
-.cc_top cc_193,.Lxtalabel67
+	.long	372
+	.long	375
+	.long	.Lxtalabel123
+.cc_bottom cc_334
+.cc_top cc_335,.Lxtalabel85
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	378
+	.long	378
+	.long	.Lxtalabel85
+.cc_bottom cc_335
+.cc_top cc_336,.Lxtalabel125
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	378
+	.long	378
+	.long	.Lxtalabel125
+.cc_bottom cc_336
+.cc_top cc_337,.Lxtalabel126
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	383
-	.long	386
-	.long	.Lxtalabel67
-.cc_bottom cc_193
-.cc_top cc_194,.Lxtalabel68
+	.long	385
+	.long	.Lxtalabel126
+.cc_bottom cc_337
+.cc_top cc_338,.Lxtalabel130
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	383
-	.long	386
-	.long	.Lxtalabel68
-.cc_bottom cc_194
-.cc_top cc_195,.Lxtalabel69
+	.long	385
+	.long	.Lxtalabel130
+.cc_bottom cc_338
+.cc_top cc_339,.Lxtalabel127
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	383
 	.long	386
-	.long	.Lxtalabel69
-.cc_bottom cc_195
-.cc_top cc_196,.Lxtalabel70
+	.long	388
+	.long	.Lxtalabel127
+.cc_bottom cc_339
+.cc_top cc_340,.Lxtalabel126
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	389
 	.long	389
-	.long	.Lxtalabel70
-.cc_bottom cc_196
-.cc_top cc_197,.Lxtalabel4
+	.long	.Lxtalabel126
+.cc_bottom cc_340
+.cc_top cc_341,.Lxtalabel130
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	395
-	.long	397
-	.long	.Lxtalabel4
-.cc_bottom cc_197
-.cc_top cc_198,.Lxtalabel4
+	.long	389
+	.long	389
+	.long	.Lxtalabel130
+.cc_bottom cc_341
+.cc_top cc_342,.Lxtalabel128
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
+	.long	391
+	.long	392
+	.long	.Lxtalabel128
+.cc_bottom cc_342
+.cc_top cc_343,.Lxtalabel130
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	391
+	.long	392
+	.long	.Lxtalabel130
+.cc_bottom cc_343
+.cc_top cc_344,.Lxtalabel128
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	394
+	.long	394
+	.long	.Lxtalabel128
+.cc_bottom cc_344
+.cc_top cc_345,.Lxtalabel130
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	394
+	.long	394
+	.long	.Lxtalabel130
+.cc_bottom cc_345
+.cc_top cc_346,.Lxtalabel128
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	396
+	.long	396
+	.long	.Lxtalabel128
+.cc_bottom cc_346
+.cc_top cc_347,.Lxtalabel130
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	396
+	.long	396
+	.long	.Lxtalabel130
+.cc_bottom cc_347
+.cc_top cc_348,.Lxtalabel129
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	398
 	.long	399
+	.long	.Lxtalabel129
+.cc_bottom cc_348
+.cc_top cc_349,.Lxtalabel131
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	398
 	.long	399
-	.long	.Lxtalabel4
-.cc_bottom cc_198
-.cc_top cc_199,.Lxtalabel4
+	.long	.Lxtalabel131
+.cc_bottom cc_349
+.cc_top cc_350,.Lxtalabel129
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	401
 	.long	401
-	.long	.Lxtalabel4
-.cc_bottom cc_199
-.cc_top cc_200,.Lxtalabel5
+	.long	.Lxtalabel129
+.cc_bottom cc_350
+.cc_top cc_351,.Lxtalabel131
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+	.byte	0
+	.long	401
+	.long	401
+	.long	.Lxtalabel131
+.cc_bottom cc_351
+.cc_top cc_352,.Lxtalabel129
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
 	.long	403
 	.long	404
-	.long	.Lxtalabel5
-.cc_bottom cc_200
-.cc_top cc_201,.Lxtalabel5
+	.long	.Lxtalabel129
+.cc_bottom cc_352
+.cc_top cc_353,.Lxtalabel131
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 	.byte	0
-	.long	406
-	.long	406
-	.long	.Lxtalabel5
-.cc_bottom cc_201
-.cc_top cc_202,.Lxtalabel5
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
-	.byte	0
-	.long	408
-	.long	409
-	.long	.Lxtalabel5
-.cc_bottom cc_202
+	.long	403
+	.long	404
+	.long	.Lxtalabel131
+.cc_bottom cc_353
 .Lentries_end5:
 	.section	.trap_info,"",@progbits
 .Ltrap_info_entries_start0:

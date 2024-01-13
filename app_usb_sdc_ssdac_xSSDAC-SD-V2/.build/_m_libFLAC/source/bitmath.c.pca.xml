@@ -1,9 +1,7 @@
 <preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitmath.c">
   <fCall global="true" name="FLAC__bitmath_silog2"/>
   <fCall global="true" name="FLAC__bitmath_silog2.nstackwords"/>
-  <fCall global="true" name="assert.nstackwords"/>
   <fCall global="true" name="FLAC__bitmath_silog2.maxcores"/>
   <fCall global="true" name="FLAC__bitmath_silog2.maxtimers"/>
   <fCall global="true" name="FLAC__bitmath_silog2.maxchanends"/>
-  <fCall global="true" name="assert"/>
 </preCompilationAnalysis>

@@ -870,8 +870,13 @@ char *strupr (char *);
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys/string.h" 1 3
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 2 3
 # 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
+
+# 1 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h" 1
+# 100 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h"
+inline int xassert_msg(const char msg[]) { return 1; }
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h" 1
-# 41 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h" 1
 # 36 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/export.h" 1
@@ -1616,7 +1621,7 @@ extern const uint32_t FLAC__STREAM_METADATA_LENGTH_LEN;
          FLAC__bool FLAC__format_cuesheet_is_legal(const FLAC__StreamMetadata_CueSheet *cue_sheet, FLAC__bool check_cd_da_subset, const char **violation);
 # 1024 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
          FLAC__bool FLAC__format_picture_is_legal(const FLAC__StreamMetadata_Picture *picture, const char **violation);
-# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
+# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h" 1
 # 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\limits.h" 1 3
@@ -2055,7 +2060,7 @@ static inline void *safe_realloc_nofree_muladd2_(void *ptr, size_t size1, size_t
   return 0;
  return safe_realloc_nofree_mul_2op_(ptr, size1, size2);
 }
-# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
+# 45 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/format.h" 1
 # 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/format.h"
@@ -2064,10 +2069,10 @@ uint32_t FLAC__format_get_max_rice_partition_order_from_blocksize_limited_max_an
 void FLAC__format_entropy_coding_method_partitioned_rice_contents_init(FLAC__EntropyCodingMethod_PartitionedRiceContents *object);
 void FLAC__format_entropy_coding_method_partitioned_rice_contents_clear(FLAC__EntropyCodingMethod_PartitionedRiceContents *object);
 FLAC__bool FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_size(FLAC__EntropyCodingMethod_PartitionedRiceContents *object, uint32_t max_partition_order);
-# 45 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
+# 47 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/macros.h" 1
-# 46 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
-# 58 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c"
+# 48 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
+# 60 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c"
          const char *FLAC__VERSION_STRING = "012345";
          const char *FLAC__VENDOR_STRING = "reference libFLAC " "012345" " 20221022";
 
@@ -2532,7 +2537,7 @@ static uint32_t utf8len_(const FLAC__byte *utf8)
 
  return 1;
 }
-# 538 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c"
+# 540 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c"
 uint32_t FLAC__format_get_max_rice_partition_order_from_blocksize(uint32_t blocksize)
 {
  uint32_t max_rice_partition_order = 0;

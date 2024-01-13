@@ -1,10 +1,10 @@
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 141 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 1 3
 # 23 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/timer.h" 1 3
@@ -389,7 +389,7 @@ unsigned get_local_tile_id(void);
 unsigned get_tile_id(tileref t);
 # 2136 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 3
 unsigned get_logical_core_id(void);
-# 2 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc" 2
+# 2 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\assert.h" 1 3
 
@@ -422,7 +422,7 @@ void __assert_func (const char *__file, int, const char *__function, const char 
 
 
 }
-# 4 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc" 2
+# 4 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
 # 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_simple_ssdac_xSSDAC-SD-V2\\\\.build\\\\xSSDAC-SD-V2.h" 1 3
@@ -435,7 +435,7 @@ extern tileref usb_tile;
 
 service xscope_host_data(chanend c);;
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 5 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc" 2
+# 5 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 
 
@@ -1047,11 +1047,11 @@ int _safe_fclose(FILE * movable fp);
 int _safe_remove(const char file[]);
 int _safe_rename(const char from[], const char to[]);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 2 3
-# 6 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc" 2
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\gpio_access.h" 1
-# 30 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\gpio_access.h"
+# 6 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\gpio_access.h" 1
+# 30 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\gpio_access.h"
 void set_gpio(unsigned bit, unsigned value);
-# 7 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc" 2
+# 7 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc" 2
 # 1 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h" 1
 # 10 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 1 3
@@ -1072,7 +1072,7 @@ typedef out buffered port:32 out_buffered_port_32_t;
 # 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h" 2
 # 1 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 1
 # 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\i2c_conf.h" 1
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\i2c_conf.h" 1
 # 12 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 2
 # 92 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
 struct r_i2c {
@@ -1132,10 +1132,10 @@ int i2c_shared_master_write_part(
         int end,
         int offset
         );
-# 8 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc" 2
+# 8 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc" 2
 
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\si5351a.h" 1
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\si5351a.h" 1
 
 
 
@@ -1150,9 +1150,9 @@ typedef struct
     unsigned char value;
 
 } si5351a_revb_register_t;
-# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc" 2
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\Si5351A-441-Registers.h" 1
-# 27 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\Si5351A-441-Registers.h"
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\Si5351A-441-Registers.h" 1
+# 27 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\Si5351A-441-Registers.h"
 si5351a_revb_register_t const si5351a_revb_441[61] =
 {
         { 0x0002, 0x53 },
@@ -1218,9 +1218,9 @@ si5351a_revb_register_t const si5351a_revb_441[61] =
         { 0x00B7, 0x92 },
 
     };
-# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc" 2
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\Si5351A-48-Registers.h" 1
-# 27 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\Si5351A-48-Registers.h"
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\Si5351A-48-Registers.h" 1
+# 27 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\Si5351A-48-Registers.h"
 si5351a_revb_register_t const si5351a_revb_48[61] =
 {
         { 0x0002, 0x53 },
@@ -1286,42 +1286,9 @@ si5351a_revb_register_t const si5351a_revb_48[61] =
         { 0x00B7, 0x92 },
 
     };
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc" 2
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h" 1
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
-typedef enum {
-    _GET_INTERPOLATION_MODE =1,
-    _SET_INTERPOLATION_MODE =2
-} DAC_COMMAND;
-
-
-
-
-typedef enum {
-    _TBD =0,
-    _STEP =1,
-    _LINEAR =2,
-    _QUAD =3,
-    _CUBIC =4,
-    _SINC4 =5,
-    _SINC8 =6
-} INTERPOLATION_MODE;
-
-
-
-
-
-
-typedef enum {
-    _AUDIO_FORMAT_CHANGE = 0,
-    _INTERPOLATION_MODE_CHANGE = 1
-} DAC_RETURN_CODE;
-
-
-
-
-
-
+# 29 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
 void ConfigureSerialDacPorts();
 
 void InitDebugOut(out port txd);
@@ -1337,9 +1304,9 @@ unsigned start_fir(chanend c_in, unsigned sample_rate);
 
 unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
 
-void audio_xss(chanend c_in, chanend ?c_control);
-# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc" 2
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+void ssdac_core(chanend c_in, chanend ?c_control);
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc" 2
+# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 on tile[0] : out port p_gpio = on tile[0]: 0x80100;
 
 
@@ -1353,7 +1320,7 @@ unsigned char user_led_save;
 
 
 on tile [0] : struct r_i2c r_i2c = {0x40000};
-# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 void ConfigSi5351A(const si5351a_revb_register_t param[]){
 
     i2c_shared_master_init(r_i2c);

@@ -1702,11 +1702,16 @@ FLAC__bool FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_s
 # 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/stream_encoder.h" 1
 # 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
+
+# 1 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h" 1
+# 100 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h"
+inline int xassert_msg(const char msg[]) { return 1; }
+# 46 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h" 1
 # 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h"
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 1
 # 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 2
-# 45 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
+# 47 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h" 1
 # 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\limits.h" 1 3
@@ -2145,10 +2150,10 @@ static inline void *safe_realloc_nofree_muladd2_(void *ptr, size_t size1, size_t
   return 0;
  return safe_realloc_nofree_mul_2op_(ptr, size1, size2);
 }
-# 46 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
+# 48 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/endswap.h" 1
-# 48 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
+# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
 
 
 
@@ -2157,7 +2162,7 @@ static inline void *safe_realloc_nofree_muladd2_(void *ptr, size_t size1, size_t
 
 
 typedef FLAC__uint32 bwword;
-# 85 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
+# 87 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
 static const uint32_t FLAC__BITWRITER_DEFAULT_CAPACITY = 32768u / sizeof(bwword);
 
 static const uint32_t FLAC__BITWRITER_DEFAULT_INCREMENT = 4096u / sizeof(bwword);
@@ -2182,8 +2187,8 @@ FLAC__bool bitwriter_grow_(FLAC__BitWriter *bw, uint32_t bits_to_add)
  uint32_t new_capacity;
  bwword *new_buffer;
 
- assert(0 != bw);
- assert(0 != bw->buffer);
+ do { if (!(0 != bw)) __builtin_trap();} while(0);
+ do { if (!(0 != bw->buffer)) __builtin_trap();} while(0);
 
 
  new_capacity = bw->words + ((bw->bits + bits_to_add + 32 - 1) / 32);
@@ -2205,9 +2210,9 @@ FLAC__bool bitwriter_grow_(FLAC__BitWriter *bw, uint32_t bits_to_add)
  if((new_capacity - bw->capacity) % FLAC__BITWRITER_DEFAULT_INCREMENT)
   new_capacity += FLAC__BITWRITER_DEFAULT_INCREMENT - ((new_capacity - bw->capacity) % FLAC__BITWRITER_DEFAULT_INCREMENT);
 
- assert(0 == (new_capacity - bw->capacity) % FLAC__BITWRITER_DEFAULT_INCREMENT);
- assert(new_capacity > bw->capacity);
- assert(new_capacity >= bw->words + ((bw->bits + bits_to_add + 32 - 1) / 32));
+ do { if (!(0 == (new_capacity - bw->capacity) % FLAC__BITWRITER_DEFAULT_INCREMENT)) __builtin_trap();} while(0);
+ do { if (!(new_capacity > bw->capacity)) __builtin_trap();} while(0);
+ do { if (!(new_capacity >= bw->words + ((bw->bits + bits_to_add + 32 - 1) / 32))) __builtin_trap();} while(0);
 
  new_buffer = safe_realloc_nofree_mul_2op_(bw->buffer, sizeof(bwword), new_capacity);
  if(new_buffer == 0)
@@ -2216,7 +2221,7 @@ FLAC__bool bitwriter_grow_(FLAC__BitWriter *bw, uint32_t bits_to_add)
  bw->capacity = new_capacity;
  return 1;
 }
-# 151 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
+# 153 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
 FLAC__BitWriter *FLAC__bitwriter_new(void)
 {
  FLAC__BitWriter *bw = calloc(1, sizeof(FLAC__BitWriter));
@@ -2226,7 +2231,7 @@ FLAC__BitWriter *FLAC__bitwriter_new(void)
 
 void FLAC__bitwriter_delete(FLAC__BitWriter *bw)
 {
- assert(0 != bw);
+ do { if (!(0 != bw)) __builtin_trap();} while(0);
 
  FLAC__bitwriter_free(bw);
  free(bw);
@@ -2240,7 +2245,7 @@ void FLAC__bitwriter_delete(FLAC__BitWriter *bw)
 
 FLAC__bool FLAC__bitwriter_init(FLAC__BitWriter *bw)
 {
- assert(0 != bw);
+ do { if (!(0 != bw)) __builtin_trap();} while(0);
 
  bw->words = bw->bits = 0;
  bw->capacity = FLAC__BITWRITER_DEFAULT_CAPACITY;
@@ -2253,7 +2258,7 @@ FLAC__bool FLAC__bitwriter_init(FLAC__BitWriter *bw)
 
 void FLAC__bitwriter_free(FLAC__BitWriter *bw)
 {
- assert(0 != bw);
+ do { if (!(0 != bw)) __builtin_trap();} while(0);
 
  if(0 != bw->buffer)
   free(bw->buffer);
@@ -2272,7 +2277,7 @@ FLAC__bool FLAC__bitwriter_get_write_crc16(FLAC__BitWriter *bw, FLAC__uint16 *cr
  const FLAC__byte *buffer;
  size_t bytes;
 
- assert((bw->bits & 7) == 0);
+ do { if (!((bw->bits & 7) == 0)) __builtin_trap();} while(0);
 
  if(!FLAC__bitwriter_get_buffer(bw, &buffer, &bytes))
   return 0;
@@ -2287,7 +2292,7 @@ FLAC__bool FLAC__bitwriter_get_write_crc8(FLAC__BitWriter *bw, FLAC__byte *crc)
  const FLAC__byte *buffer;
  size_t bytes;
 
- assert((bw->bits & 7) == 0);
+ do { if (!((bw->bits & 7) == 0)) __builtin_trap();} while(0);
 
  if(!FLAC__bitwriter_get_buffer(bw, &buffer, &bytes))
   return 0;
@@ -2309,13 +2314,13 @@ uint32_t FLAC__bitwriter_get_input_bits_unconsumed(const FLAC__BitWriter *bw)
 
 FLAC__bool FLAC__bitwriter_get_buffer(FLAC__BitWriter *bw, const FLAC__byte **buffer, size_t *bytes)
 {
- assert((bw->bits & 7) == 0);
+ do { if (!((bw->bits & 7) == 0)) __builtin_trap();} while(0);
 
  if(bw->bits & 7)
   return 0;
 
  if(bw->bits) {
-  assert(bw->words <= bw->capacity);
+  do { if (!(bw->words <= bw->capacity)) __builtin_trap();} while(0);
   if(bw->words == bw->capacity && !bitwriter_grow_(bw, 32))
    return 0;
 
@@ -2339,8 +2344,8 @@ inline FLAC__bool FLAC__bitwriter_write_zeroes(FLAC__BitWriter *bw, uint32_t bit
 {
  uint32_t n;
 
- assert(0 != bw);
- assert(0 != bw->buffer);
+ do { if (!(0 != bw)) __builtin_trap();} while(0);
+ do { if (!(0 != bw->buffer)) __builtin_trap();} while(0);
 
  if(bits == 0)
   return 1;
@@ -2378,7 +2383,7 @@ static inline FLAC__bool FLAC__bitwriter_write_raw_uint32_nocheck(FLAC__BitWrite
  register uint32_t left;
 
 
- assert(32 >= 32);
+ do { if (!(32 >= 32)) __builtin_trap();} while(0);
 
  if(bw == 0 || bw->buffer == 0)
   return 0;
@@ -2389,7 +2394,7 @@ static inline FLAC__bool FLAC__bitwriter_write_raw_uint32_nocheck(FLAC__BitWrite
  if(bits == 0)
   return 1;
 
- assert((bits == 32) || (val>>bits == 0));
+ do { if (!((bits == 32) || (val>>bits == 0))) __builtin_trap();} while(0);
 
 
  if(bw->capacity <= bw->words + bits && !bitwriter_grow_(bw, bits))
@@ -2495,7 +2500,7 @@ FLAC__bool FLAC__bitwriter_write_unary_unsigned(FLAC__BitWriter *bw, uint32_t va
    FLAC__bitwriter_write_zeroes(bw, val) &&
    FLAC__bitwriter_write_raw_uint32_nocheck(bw, 1, 1);
 }
-# 536 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
+# 538 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
 FLAC__bool FLAC__bitwriter_write_rice_signed_block(FLAC__BitWriter *bw, const FLAC__int32 *vals, uint32_t nvals, uint32_t parameter)
 {
  const FLAC__uint32 mask1 = (FLAC__uint32)0xffffffff << parameter;
@@ -2505,11 +2510,11 @@ FLAC__bool FLAC__bitwriter_write_rice_signed_block(FLAC__BitWriter *bw, const FL
  const uint32_t lsbits = 1 + parameter;
  uint32_t msbits, total_bits;
 
- assert(0 != bw);
- assert(0 != bw->buffer);
- assert(parameter < 31);
+ do { if (!(0 != bw)) __builtin_trap();} while(0);
+ do { if (!(0 != bw->buffer)) __builtin_trap();} while(0);
+ do { if (!(parameter < 31)) __builtin_trap();} while(0);
 
- assert(32 >= 32);
+ do { if (!(32 >= 32)) __builtin_trap();} while(0);
 
  while(nvals) {
 
@@ -2576,8 +2581,8 @@ break1:
 
 
 
-    assert(bw->bits);
-    assert(left < 32);
+    do { if (!(bw->bits)) __builtin_trap();} while(0);
+    do { if (!(left < 32)) __builtin_trap();} while(0);
     bw->accum <<= left;
     bw->accum |= uval >> (bw->bits = lsbits - left);
     bw->buffer[bw->words++] = ((((bw->accum) >> 24) & 0xFF) | (((bw->accum) >> 8) & 0xFF00) | (((bw->accum) & 0xFF00) << 8) | (((bw->accum) & 0xFF) << 24));
@@ -2589,13 +2594,13 @@ break1:
  }
  return 1;
 }
-# 754 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
+# 756 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
 FLAC__bool FLAC__bitwriter_write_utf8_uint32(FLAC__BitWriter *bw, FLAC__uint32 val)
 {
  FLAC__bool ok = 1;
 
- assert(0 != bw);
- assert(0 != bw->buffer);
+ do { if (!(0 != bw)) __builtin_trap();} while(0);
+ do { if (!(0 != bw->buffer)) __builtin_trap();} while(0);
 
  if((val & 0x80000000) != 0)
   return 0;
@@ -2641,8 +2646,8 @@ FLAC__bool FLAC__bitwriter_write_utf8_uint64(FLAC__BitWriter *bw, FLAC__uint64 v
 {
  FLAC__bool ok = 1;
 
- assert(0 != bw);
- assert(0 != bw->buffer);
+ do { if (!(0 != bw)) __builtin_trap();} while(0);
+ do { if (!(0 != bw->buffer)) __builtin_trap();} while(0);
 
  if((val & 0xFFFFFFF000000000ULL) != 0)
   return 0;
@@ -2701,7 +2706,7 @@ FLAC__bool FLAC__bitwriter_zero_pad_to_byte_boundary(FLAC__BitWriter *bw)
  else
   return 1;
 }
-# 874 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
+# 876 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
 extern FLAC__bool FLAC__bitwriter_write_zeroes(FLAC__BitWriter *bw, uint32_t bits);
 extern FLAC__bool FLAC__bitwriter_write_raw_uint32(FLAC__BitWriter *bw, FLAC__uint32 val, uint32_t bits);
 extern FLAC__bool FLAC__bitwriter_write_raw_int32(FLAC__BitWriter *bw, FLAC__int32 val, uint32_t bits);

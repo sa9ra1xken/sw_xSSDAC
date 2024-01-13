@@ -24,22 +24,21 @@ UserHostActive:
 	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/hostactive\\hostactive.c"
 	.loc	1 4 0
 	.cfi_startproc
-	.issue_mode single
-	ENTSP_lu6 2
-.Ltmp0:
-	.cfi_def_cfa_offset 8
-.Ltmp1:
-	.cfi_offset 15, 0
-	mov r1, r0
-	stw r0, sp[1]
+	.issue_mode dual
+	{
+		nop
+		dualentsp 0
+	}
+	{
+		nop
+		retsp 0
+	}
 	.loc	1 5 5 prologue_end
-.Ltmp2:
-	stw r1, sp[0]
-	retsp 2
+.Ltmp0:
 	# RETURN_REG_HOLDER
-.Ltmp3:
+.Ltmp1:
 	.cc_bottom UserHostActive.function
-	.set	UserHostActive.nstackwords,2
+	.set	UserHostActive.nstackwords,0
 	.globl	UserHostActive.nstackwords
 	.weak	UserHostActive.nstackwords
 	.set	UserHostActive.maxcores,1
@@ -51,8 +50,8 @@ UserHostActive:
 	.set	UserHostActive.maxchanends,0
 	.globl	UserHostActive.maxchanends
 	.weak	UserHostActive.maxchanends
-.Ltmp4:
-	.size	UserHostActive, .Ltmp4-UserHostActive
+.Ltmp2:
+	.size	UserHostActive, .Ltmp2-UserHostActive
 .Lfunc_end0:
 	.cfi_endproc
 
@@ -82,6 +81,7 @@ UserHostActive:
 	.long	.Linfo_string1
 	.long	.Lline_table_start0
 	.long	.Linfo_string2
+	.byte	1
 	.byte	2
 	.long	.Ldebug_ranges0
 	.byte	1
@@ -93,9 +93,8 @@ UserHostActive:
 	.byte	1
 	.byte	1
 	.byte	3
-	.byte	2
-	.byte	145
-	.byte	4
+	.byte	1
+	.byte	80
 	.long	.Linfo_string4
 	.byte	1
 	.byte	3
@@ -121,6 +120,8 @@ UserHostActive:
 	.byte	6
 	.byte	27
 	.byte	14
+	.ascii	"\341\177"
+	.byte	12
 	.byte	0
 	.byte	0
 	.byte	2
@@ -186,7 +187,7 @@ UserHostActive:
 	.long	.L.debug_info_begin0
 .Lset1 = .L.debug_info_end0-.L.debug_info_begin0
 	.long	.Lset1
-	.long	30
+	.long	31
 .asciiz"UserHostActive"
 	.long	0
 .LpubNames_end0:

@@ -1704,6 +1704,28 @@ typedef out buffered port:16 out_buffered_port_16_t;
 typedef out buffered port:32 out_buffered_port_32_t;
 # 20 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
 
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h" 1
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h"
+int qspi_write(int offset, int size, char * buffer, char * scratch);
+
+int qspi_read(int offset, int size, char * buffer);
+
+
+
+interface qspi_access{
+
+    void write(int offset, int size, char buffer[]);
+
+    void read(int offset, int size, char buffer[]);
+};
+
+void qspi_server(server interface qspi_access i);
+# 41 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h"
+void qspi_if_write(client interface qspi_access i, int offset, int size, char buffer[]);
+
+void qspi_if_read(client interface qspi_access i, int offset, int size, char buffer[]);
+# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
+
 
 
 
@@ -1718,10 +1740,7 @@ fl_QSPIPorts ports = {
     on tile[0]: 0x106
 };
 
-interface qspi_access{
-    void write(int offset, int size, char buffer[]);
-    void read(int offset, int size, char buffer[]);
-};
+
 
 
 fl_QuadDeviceSpec deviceSpecs[] =

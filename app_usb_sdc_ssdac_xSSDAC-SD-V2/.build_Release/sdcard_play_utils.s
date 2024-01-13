@@ -14,14 +14,6 @@
 .Lsection_debug_loc:
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
-	.section	.cp.rodata.cst4,"aMc",@progbits,4
-	.cc_top .LCPI0_0.data,.LCPI0_0
-	.align	4
-	.type	.LCPI0_0,@object
-	.size	.LCPI0_0, 4
-.LCPI0_0:
-	.long	4294967288
-	.cc_bottom .LCPI0_0.data
 	.text
 	.globl	ReadUnsigned
 	.align	4
@@ -41,83 +33,50 @@ ReadUnsigned:
 	.cfi_def_cfa_offset 32
 .Ltmp1:
 	.cfi_offset 15, 0
+	std r5, r4, sp[2]
 .Ltmp2:
-	.cfi_offset 10, -24
-.Ltmp3:
-	.cfi_def_cfa_register 10
-	{
-		ldaw r10, sp[0]
-		stw r10, sp[2]
-	}
-	std r5, r4, r10[2]
-.Ltmp4:
 	.cfi_offset 4, -16
-.Ltmp5:
+.Ltmp3:
 	.cfi_offset 5, -12
-.Ltmp6:
+.Ltmp4:
 	.cfi_offset 6, -8
-.Ltmp7:
+.Ltmp5:
 	{
 		mov r6, r2
-		stw r6, r10[6]
+		stw r6, sp[6]
 	}
-.Ltmp8:
+.Ltmp6:
 	{
 		mov r4, r1
-		add r1, r6, 7
+		ldaw r5, sp[2]
 	}
-.Ltmp9:
-	ldw r2, cp[.LCPI0_0]
-	.loc	1 14 5 prologue_end
-.Ltmp10:
+.Ltmp7:
 	{
-		and r1, r1, r2
-		ldaw r2, sp[0]
-	}
-	{
-		sub r5, r2, r1
-		nop
-	}
-.Ltmp11:
-	{
-		nop
-		set sp, r5
-	}
-	# ALLOCA 0
-	.loc	1 17 23
-	# STACKUP 
-	# ALLOCA 1
-	{
-		extsp 2
-		nop
-	}
-	ldaw r3, r10[3]
-.Ltmp12:
-	{
+		ldaw r3, sp[1]
 		mov r1, r5
-		mov r2, r6
 	}
+.Ltmp8:
+	.loc	1 18 23 prologue_end
 	bl f_read
-.Ltmp13:
-	# STACKDOWN
+.Ltmp9:
 	{
-		ldaw sp, sp[2]
-		ldw r0, r10[3]
+		nop
+		ldw r0, sp[1]
 	}
-	.loc	1 18 9
-.Ltmp14:
+	.loc	1 19 9
+.Ltmp10:
 	{
 		eq r0, r0, r6
 		nop
 	}
 	bf r0, .LBB0_1
-.Ltmp15:
+.Ltmp11:
 	{
 		ldc r1, 0
 		nop
 	}
-	.loc	1 22 9
-.Ltmp16:
+	.loc	1 23 9
+.Ltmp12:
 	{
 		sub r2, r6, 1
 		stw r1, r4[0]
@@ -126,33 +85,33 @@ ReadUnsigned:
 		mkmsk r0, 1
 		nop
 	}
-.Ltmp17:
-	.loc	1 20 5
+.Ltmp13:
+	.loc	1 21 5
 	ashr r3, r2, 32
 	bt r3, .LBB0_5
-.Ltmp18:
+.Ltmp14:
 .LBB0_3:
-	.loc	1 21 9
+	.loc	1 22 9
 	{
 		shl r1, r1, 8
 		ld8u r3, r5[r2]
 	}
-	.loc	1 22 9
+	.loc	1 23 9
 	{
 		or r1, r3, r1
 		sub r2, r2, 1
 	}
-.Ltmp19:
-	.loc	1 20 5
+.Ltmp15:
+	.loc	1 21 5
 	ashr r3, r2, 32
 	bf r3, .LBB0_3
-.Ltmp20:
+.Ltmp16:
 	{
 		nop
 		stw r1, r4[0]
 	}
 	bu .LBB0_5
-.Ltmp21:
+.Ltmp17:
 .LBB0_1:
 	{
 		ldc r0, 0
@@ -161,33 +120,27 @@ ReadUnsigned:
 .LBB0_5:
 	{
 		nop
-		ldw r6, r10[6]
+		ldw r6, sp[6]
 	}
-	.loc	1 25 1
-	ldd r5, r4, r10[2]
-	{
-		nop
-		set sp, r10
-	}
-	{
-		nop
-		ldw r10, sp[2]
-	}
+	.loc	1 26 1
+	ldd r5, r4, sp[2]
 	{
 		nop
 		retsp 8
 	}
 	# RETURN_REG_HOLDER
-.Ltmp22:
+.Ltmp18:
 	.cc_bottom ReadUnsigned.function
+	.set	ReadUnsigned.nstackwords,(f_read.nstackwords + 8)
+	.globl	ReadUnsigned.nstackwords
 	.set	ReadUnsigned.maxcores,f_read.maxcores $M 1
 	.globl	ReadUnsigned.maxcores
 	.set	ReadUnsigned.maxtimers,f_read.maxtimers $M 0
 	.globl	ReadUnsigned.maxtimers
 	.set	ReadUnsigned.maxchanends,f_read.maxchanends $M 0
 	.globl	ReadUnsigned.maxchanends
-.Ltmp23:
-	.size	ReadUnsigned, .Ltmp23-ReadUnsigned
+.Ltmp19:
+	.size	ReadUnsigned, .Ltmp19-ReadUnsigned
 .Lfunc_end0:
 	.cfi_endproc
 
@@ -197,22 +150,22 @@ ReadUnsigned:
 	.cc_top WriteHexString.function,WriteHexString
 WriteHexString:
 .Lfunc_begin1:
-	.loc	1 27 0
+	.loc	1 28 0
 	.cfi_startproc
 	.issue_mode dual
 	{
 		nop
 		dualentsp 0
 	}
-.Ltmp24:
+.Ltmp20:
 	{
 		nop
 		retsp 0
 	}
-	.loc	1 31 1 prologue_end
-.Ltmp25:
+	.loc	1 32 1 prologue_end
+.Ltmp21:
 	# RETURN_REG_HOLDER
-.Ltmp26:
+.Ltmp22:
 	.cc_bottom WriteHexString.function
 	.set	WriteHexString.nstackwords,0
 	.globl	WriteHexString.nstackwords
@@ -222,8 +175,8 @@ WriteHexString:
 	.globl	WriteHexString.maxtimers
 	.set	WriteHexString.maxchanends,0
 	.globl	WriteHexString.maxchanends
-.Ltmp27:
-	.size	WriteHexString, .Ltmp27-WriteHexString
+.Ltmp23:
+	.size	WriteHexString, .Ltmp23-WriteHexString
 .Lfunc_end1:
 	.cfi_endproc
 
@@ -236,7 +189,7 @@ WriteHexString:
 .Linfo_string1:
 .asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\sdcard_play_utils.c"
 .Linfo_string2:
-.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 .Linfo_string3:
 .asciiz"ReadUnsigned"
 .Linfo_string4:
@@ -244,93 +197,93 @@ WriteHexString:
 .Linfo_string5:
 .asciiz"WriteHexString"
 .Linfo_string6:
-.asciiz"fp"
-.Linfo_string7:
-.asciiz"fs"
-.Linfo_string8:
-.asciiz"fs_type"
-.Linfo_string9:
-.asciiz"unsigned char"
-.Linfo_string10:
-.asciiz"BYTE"
-.Linfo_string11:
-.asciiz"drv"
-.Linfo_string12:
-.asciiz"csize"
-.Linfo_string13:
-.asciiz"n_fats"
-.Linfo_string14:
-.asciiz"wflag"
-.Linfo_string15:
-.asciiz"fsi_flag"
-.Linfo_string16:
-.asciiz"id"
-.Linfo_string17:
-.asciiz"unsigned short"
-.Linfo_string18:
-.asciiz"WORD"
-.Linfo_string19:
-.asciiz"n_rootdir"
-.Linfo_string20:
-.asciiz"last_clust"
-.Linfo_string21:
-.asciiz"long unsigned int"
-.Linfo_string22:
-.asciiz"DWORD"
-.Linfo_string23:
-.asciiz"free_clust"
-.Linfo_string24:
-.asciiz"fsi_sector"
-.Linfo_string25:
-.asciiz"cdir"
-.Linfo_string26:
-.asciiz"n_fatent"
-.Linfo_string27:
-.asciiz"fsize"
-.Linfo_string28:
-.asciiz"fatbase"
-.Linfo_string29:
-.asciiz"dirbase"
-.Linfo_string30:
-.asciiz"database"
-.Linfo_string31:
-.asciiz"winsect"
-.Linfo_string32:
-.asciiz"win"
-.Linfo_string33:
-.asciiz"sizetype"
-.Linfo_string34:
-.asciiz"FATFS"
-.Linfo_string35:
-.asciiz"flag"
-.Linfo_string36:
-.asciiz"pad1"
-.Linfo_string37:
-.asciiz"fptr"
-.Linfo_string38:
-.asciiz"sclust"
-.Linfo_string39:
-.asciiz"clust"
-.Linfo_string40:
-.asciiz"dsect"
-.Linfo_string41:
-.asciiz"dir_sect"
-.Linfo_string42:
-.asciiz"dir_ptr"
-.Linfo_string43:
-.asciiz"FIL"
-.Linfo_string44:
-.asciiz"dp"
-.Linfo_string45:
-.asciiz"unsigned int"
-.Linfo_string46:
-.asciiz"UINT"
-.Linfo_string47:
-.asciiz"size"
-.Linfo_string48:
 .asciiz"buff"
-.Linfo_string49:
+.Linfo_string7:
 .asciiz"char"
+.Linfo_string8:
+.asciiz"sizetype"
+.Linfo_string9:
+.asciiz"fp"
+.Linfo_string10:
+.asciiz"fs"
+.Linfo_string11:
+.asciiz"fs_type"
+.Linfo_string12:
+.asciiz"unsigned char"
+.Linfo_string13:
+.asciiz"BYTE"
+.Linfo_string14:
+.asciiz"drv"
+.Linfo_string15:
+.asciiz"csize"
+.Linfo_string16:
+.asciiz"n_fats"
+.Linfo_string17:
+.asciiz"wflag"
+.Linfo_string18:
+.asciiz"fsi_flag"
+.Linfo_string19:
+.asciiz"id"
+.Linfo_string20:
+.asciiz"unsigned short"
+.Linfo_string21:
+.asciiz"WORD"
+.Linfo_string22:
+.asciiz"n_rootdir"
+.Linfo_string23:
+.asciiz"last_clust"
+.Linfo_string24:
+.asciiz"long unsigned int"
+.Linfo_string25:
+.asciiz"DWORD"
+.Linfo_string26:
+.asciiz"free_clust"
+.Linfo_string27:
+.asciiz"fsi_sector"
+.Linfo_string28:
+.asciiz"cdir"
+.Linfo_string29:
+.asciiz"n_fatent"
+.Linfo_string30:
+.asciiz"fsize"
+.Linfo_string31:
+.asciiz"fatbase"
+.Linfo_string32:
+.asciiz"dirbase"
+.Linfo_string33:
+.asciiz"database"
+.Linfo_string34:
+.asciiz"winsect"
+.Linfo_string35:
+.asciiz"win"
+.Linfo_string36:
+.asciiz"FATFS"
+.Linfo_string37:
+.asciiz"flag"
+.Linfo_string38:
+.asciiz"pad1"
+.Linfo_string39:
+.asciiz"fptr"
+.Linfo_string40:
+.asciiz"sclust"
+.Linfo_string41:
+.asciiz"clust"
+.Linfo_string42:
+.asciiz"dsect"
+.Linfo_string43:
+.asciiz"dir_sect"
+.Linfo_string44:
+.asciiz"dir_ptr"
+.Linfo_string45:
+.asciiz"FIL"
+.Linfo_string46:
+.asciiz"dp"
+.Linfo_string47:
+.asciiz"unsigned int"
+.Linfo_string48:
+.asciiz"UINT"
+.Linfo_string49:
+.asciiz"size"
 .Linfo_string50:
 .asciiz"ByteRead"
 .Linfo_string51:
@@ -359,353 +312,356 @@ WriteHexString:
 	.byte	2
 	.long	.Ldebug_ranges0
 	.byte	1
-	.byte	90
+	.byte	94
 	.byte	1
 	.long	.Linfo_string3
 	.byte	1
 	.byte	13
 	.byte	1
-	.long	187
+	.long	186
 	.byte	1
 	.byte	3
 	.long	.Ldebug_loc0
-	.long	.Linfo_string6
+	.long	.Linfo_string9
 	.byte	1
 	.byte	13
-	.long	194
+	.long	219
 	.byte	3
 	.long	.Ldebug_loc1
-	.long	.Linfo_string44
+	.long	.Linfo_string46
 	.byte	1
 	.byte	13
-	.long	676
+	.long	694
 	.byte	3
 	.long	.Ldebug_loc2
-	.long	.Linfo_string47
+	.long	.Linfo_string49
 	.byte	1
 	.byte	13
-	.long	681
-	.byte	4
-	.long	.Ldebug_loc3
-	.long	.Linfo_string48
-	.byte	1
-	.byte	14
 	.long	699
 	.byte	4
-	.long	.Ldebug_loc4
-	.long	.Linfo_string50
+	.byte	2
+	.byte	145
+	.byte	8
+	.long	.Linfo_string6
 	.byte	1
 	.byte	15
-	.long	681
+	.long	193
 	.byte	5
-	.long	.Ldebug_ranges1
+	.long	.Ldebug_loc3
+	.long	.Linfo_string50
+	.byte	1
+	.byte	16
+	.long	699
 	.byte	6
+	.long	.Ldebug_ranges1
+	.byte	7
 	.long	.Linfo_string51
 	.byte	1
-	.byte	20
+	.byte	21
 	.long	717
 	.byte	0
 	.byte	0
-	.byte	7
+	.byte	8
 	.long	.Ldebug_ranges2
 	.byte	1
 	.byte	94
 	.byte	1
 	.long	.Linfo_string5
 	.byte	1
-	.byte	27
+	.byte	28
 	.byte	1
 	.byte	1
-	.byte	8
+	.byte	9
 	.byte	1
 	.byte	80
 	.long	.Linfo_string53
 	.byte	1
-	.byte	27
+	.byte	28
 	.long	724
-	.byte	8
+	.byte	9
 	.byte	1
 	.byte	81
 	.long	.Linfo_string55
 	.byte	1
-	.byte	27
+	.byte	28
 	.long	717
 	.byte	0
-	.byte	9
+	.byte	10
 	.long	.Linfo_string4
 	.byte	2
 	.byte	1
-	.byte	10
-	.long	199
 	.byte	11
-	.long	210
-	.long	.Linfo_string43
+	.long	205
+	.byte	12
+	.long	212
+	.byte	7
+	.byte	0
+	.byte	10
+	.long	.Linfo_string7
+	.byte	8
+	.byte	1
+	.byte	13
+	.long	.Linfo_string8
+	.byte	8
+	.byte	7
+	.byte	14
+	.long	224
+	.byte	15
+	.long	235
+	.long	.Linfo_string45
 	.byte	3
 	.byte	136
-	.byte	12
+	.byte	16
 	.byte	36
 	.byte	3
 	.byte	113
-	.byte	13
-	.long	.Linfo_string7
-	.long	347
+	.byte	17
+	.long	.Linfo_string10
+	.long	372
 	.byte	3
 	.byte	114
 	.byte	0
-	.byte	13
-	.long	.Linfo_string16
-	.long	615
+	.byte	17
+	.long	.Linfo_string19
+	.long	640
 	.byte	3
 	.byte	115
 	.byte	4
-	.byte	13
-	.long	.Linfo_string35
-	.long	597
+	.byte	17
+	.long	.Linfo_string37
+	.long	622
 	.byte	3
 	.byte	116
 	.byte	6
-	.byte	13
-	.long	.Linfo_string36
-	.long	597
+	.byte	17
+	.long	.Linfo_string38
+	.long	622
 	.byte	3
 	.byte	117
 	.byte	7
-	.byte	13
-	.long	.Linfo_string37
-	.long	633
+	.byte	17
+	.long	.Linfo_string39
+	.long	658
 	.byte	3
 	.byte	118
 	.byte	8
-	.byte	13
-	.long	.Linfo_string27
-	.long	633
+	.byte	17
+	.long	.Linfo_string30
+	.long	658
 	.byte	3
 	.byte	119
 	.byte	12
-	.byte	13
-	.long	.Linfo_string38
-	.long	633
+	.byte	17
+	.long	.Linfo_string40
+	.long	658
 	.byte	3
 	.byte	120
 	.byte	16
-	.byte	13
-	.long	.Linfo_string39
-	.long	633
+	.byte	17
+	.long	.Linfo_string41
+	.long	658
 	.byte	3
 	.byte	121
 	.byte	20
-	.byte	13
-	.long	.Linfo_string40
-	.long	633
+	.byte	17
+	.long	.Linfo_string42
+	.long	658
 	.byte	3
 	.byte	122
 	.byte	24
-	.byte	13
-	.long	.Linfo_string41
-	.long	633
+	.byte	17
+	.long	.Linfo_string43
+	.long	658
 	.byte	3
 	.byte	124
 	.byte	28
-	.byte	13
-	.long	.Linfo_string42
-	.long	671
+	.byte	17
+	.long	.Linfo_string44
+	.long	689
 	.byte	3
 	.byte	125
 	.byte	32
 	.byte	0
-	.byte	10
-	.long	352
-	.byte	11
-	.long	363
-	.long	.Linfo_string34
+	.byte	14
+	.long	377
+	.byte	15
+	.long	388
+	.long	.Linfo_string36
 	.byte	3
 	.byte	107
-	.byte	14
+	.byte	18
 	.short	564
 	.byte	3
 	.byte	77
-	.byte	13
-	.long	.Linfo_string8
-	.long	597
+	.byte	17
+	.long	.Linfo_string11
+	.long	622
 	.byte	3
 	.byte	78
 	.byte	0
-	.byte	13
-	.long	.Linfo_string11
-	.long	597
+	.byte	17
+	.long	.Linfo_string14
+	.long	622
 	.byte	3
 	.byte	79
 	.byte	1
-	.byte	13
-	.long	.Linfo_string12
-	.long	597
+	.byte	17
+	.long	.Linfo_string15
+	.long	622
 	.byte	3
 	.byte	80
 	.byte	2
-	.byte	13
-	.long	.Linfo_string13
-	.long	597
+	.byte	17
+	.long	.Linfo_string16
+	.long	622
 	.byte	3
 	.byte	81
 	.byte	3
-	.byte	13
-	.long	.Linfo_string14
-	.long	597
+	.byte	17
+	.long	.Linfo_string17
+	.long	622
 	.byte	3
 	.byte	82
 	.byte	4
-	.byte	13
-	.long	.Linfo_string15
-	.long	597
+	.byte	17
+	.long	.Linfo_string18
+	.long	622
 	.byte	3
 	.byte	83
 	.byte	5
-	.byte	13
-	.long	.Linfo_string16
-	.long	615
+	.byte	17
+	.long	.Linfo_string19
+	.long	640
 	.byte	3
 	.byte	84
 	.byte	6
-	.byte	13
-	.long	.Linfo_string19
-	.long	615
+	.byte	17
+	.long	.Linfo_string22
+	.long	640
 	.byte	3
 	.byte	85
 	.byte	8
-	.byte	13
-	.long	.Linfo_string20
-	.long	633
+	.byte	17
+	.long	.Linfo_string23
+	.long	658
 	.byte	3
 	.byte	93
 	.byte	12
-	.byte	13
-	.long	.Linfo_string23
-	.long	633
+	.byte	17
+	.long	.Linfo_string26
+	.long	658
 	.byte	3
 	.byte	94
 	.byte	16
-	.byte	13
-	.long	.Linfo_string24
-	.long	633
+	.byte	17
+	.long	.Linfo_string27
+	.long	658
 	.byte	3
 	.byte	95
 	.byte	20
-	.byte	13
-	.long	.Linfo_string25
-	.long	633
+	.byte	17
+	.long	.Linfo_string28
+	.long	658
 	.byte	3
 	.byte	98
 	.byte	24
-	.byte	13
-	.long	.Linfo_string26
-	.long	633
+	.byte	17
+	.long	.Linfo_string29
+	.long	658
 	.byte	3
 	.byte	100
 	.byte	28
-	.byte	13
-	.long	.Linfo_string27
-	.long	633
+	.byte	17
+	.long	.Linfo_string30
+	.long	658
 	.byte	3
 	.byte	101
 	.byte	32
-	.byte	13
-	.long	.Linfo_string28
-	.long	633
+	.byte	17
+	.long	.Linfo_string31
+	.long	658
 	.byte	3
 	.byte	102
 	.byte	36
-	.byte	13
-	.long	.Linfo_string29
-	.long	633
+	.byte	17
+	.long	.Linfo_string32
+	.long	658
 	.byte	3
 	.byte	103
 	.byte	40
-	.byte	13
-	.long	.Linfo_string30
-	.long	633
+	.byte	17
+	.long	.Linfo_string33
+	.long	658
 	.byte	3
 	.byte	104
 	.byte	44
-	.byte	13
-	.long	.Linfo_string31
-	.long	633
+	.byte	17
+	.long	.Linfo_string34
+	.long	658
 	.byte	3
 	.byte	105
 	.byte	48
-	.byte	13
-	.long	.Linfo_string32
-	.long	651
+	.byte	17
+	.long	.Linfo_string35
+	.long	676
 	.byte	3
 	.byte	106
 	.byte	52
 	.byte	0
-	.byte	11
-	.long	608
-	.long	.Linfo_string10
+	.byte	15
+	.long	633
+	.long	.Linfo_string13
 	.byte	2
 	.byte	22
-	.byte	9
-	.long	.Linfo_string9
+	.byte	10
+	.long	.Linfo_string12
 	.byte	8
 	.byte	1
-	.byte	11
-	.long	626
-	.long	.Linfo_string18
+	.byte	15
+	.long	651
+	.long	.Linfo_string21
 	.byte	2
 	.byte	27
-	.byte	9
-	.long	.Linfo_string17
+	.byte	10
+	.long	.Linfo_string20
 	.byte	7
 	.byte	2
-	.byte	11
-	.long	644
-	.long	.Linfo_string22
+	.byte	15
+	.long	669
+	.long	.Linfo_string25
 	.byte	2
 	.byte	33
-	.byte	9
-	.long	.Linfo_string21
+	.byte	10
+	.long	.Linfo_string24
 	.byte	7
 	.byte	4
-	.byte	15
-	.long	597
-	.byte	16
-	.long	664
+	.byte	11
+	.long	622
+	.byte	19
+	.long	212
 	.short	511
 	.byte	0
-	.byte	17
-	.long	.Linfo_string33
-	.byte	8
-	.byte	7
-	.byte	10
-	.long	597
-	.byte	10
-	.long	681
-	.byte	11
-	.long	692
-	.long	.Linfo_string46
-	.byte	2
-	.byte	17
-	.byte	9
-	.long	.Linfo_string45
-	.byte	7
-	.byte	4
+	.byte	14
+	.long	622
+	.byte	14
+	.long	699
 	.byte	15
 	.long	710
-	.byte	18
-	.long	664
-	.byte	0
-	.byte	9
-	.long	.Linfo_string49
-	.byte	8
-	.byte	1
-	.byte	9
+	.long	.Linfo_string48
+	.byte	2
+	.byte	17
+	.byte	10
+	.long	.Linfo_string47
+	.byte	7
+	.byte	4
+	.byte	10
 	.long	.Linfo_string52
 	.byte	5
 	.byte	4
-	.byte	10
+	.byte	14
 	.long	729
-	.byte	11
-	.long	710
+	.byte	15
+	.long	205
 	.long	.Linfo_string54
 	.byte	3
 	.byte	66
@@ -771,7 +727,7 @@ WriteHexString:
 	.byte	52
 	.byte	0
 	.byte	2
-	.byte	6
+	.byte	10
 	.byte	3
 	.byte	14
 	.byte	58
@@ -783,13 +739,28 @@ WriteHexString:
 	.byte	0
 	.byte	0
 	.byte	5
+	.byte	52
+	.byte	0
+	.byte	2
+	.byte	6
+	.byte	3
+	.byte	14
+	.byte	58
+	.byte	11
+	.byte	59
+	.byte	11
+	.byte	73
+	.byte	19
+	.byte	0
+	.byte	0
+	.byte	6
 	.byte	11
 	.byte	1
 	.byte	85
 	.byte	6
 	.byte	0
 	.byte	0
-	.byte	6
+	.byte	7
 	.byte	52
 	.byte	0
 	.byte	3
@@ -802,7 +773,7 @@ WriteHexString:
 	.byte	19
 	.byte	0
 	.byte	0
-	.byte	7
+	.byte	8
 	.byte	46
 	.byte	1
 	.byte	85
@@ -823,7 +794,7 @@ WriteHexString:
 	.byte	12
 	.byte	0
 	.byte	0
-	.byte	8
+	.byte	9
 	.byte	5
 	.byte	0
 	.byte	2
@@ -838,7 +809,7 @@ WriteHexString:
 	.byte	19
 	.byte	0
 	.byte	0
-	.byte	9
+	.byte	10
 	.byte	36
 	.byte	0
 	.byte	3
@@ -849,14 +820,41 @@ WriteHexString:
 	.byte	11
 	.byte	0
 	.byte	0
-	.byte	10
+	.byte	11
+	.byte	1
+	.byte	1
+	.byte	73
+	.byte	19
+	.byte	0
+	.byte	0
+	.byte	12
+	.byte	33
+	.byte	0
+	.byte	73
+	.byte	19
+	.byte	47
+	.byte	11
+	.byte	0
+	.byte	0
+	.byte	13
+	.byte	36
+	.byte	0
+	.byte	3
+	.byte	14
+	.byte	11
+	.byte	11
+	.byte	62
+	.byte	11
+	.byte	0
+	.byte	0
+	.byte	14
 	.byte	15
 	.byte	0
 	.byte	73
 	.byte	19
 	.byte	0
 	.byte	0
-	.byte	11
+	.byte	15
 	.byte	22
 	.byte	0
 	.byte	73
@@ -869,7 +867,7 @@ WriteHexString:
 	.byte	11
 	.byte	0
 	.byte	0
-	.byte	12
+	.byte	16
 	.byte	19
 	.byte	1
 	.byte	11
@@ -880,7 +878,7 @@ WriteHexString:
 	.byte	11
 	.byte	0
 	.byte	0
-	.byte	13
+	.byte	17
 	.byte	13
 	.byte	0
 	.byte	3
@@ -895,7 +893,7 @@ WriteHexString:
 	.byte	11
 	.byte	0
 	.byte	0
-	.byte	14
+	.byte	18
 	.byte	19
 	.byte	1
 	.byte	11
@@ -906,38 +904,13 @@ WriteHexString:
 	.byte	11
 	.byte	0
 	.byte	0
-	.byte	15
-	.byte	1
-	.byte	1
-	.byte	73
 	.byte	19
-	.byte	0
-	.byte	0
-	.byte	16
 	.byte	33
 	.byte	0
 	.byte	73
 	.byte	19
 	.byte	47
 	.byte	5
-	.byte	0
-	.byte	0
-	.byte	17
-	.byte	36
-	.byte	0
-	.byte	3
-	.byte	14
-	.byte	11
-	.byte	11
-	.byte	62
-	.byte	11
-	.byte	0
-	.byte	0
-	.byte	18
-	.byte	33
-	.byte	0
-	.byte	73
-	.byte	19
 	.byte	0
 	.byte	0
 	.byte	0
@@ -948,8 +921,8 @@ WriteHexString:
 	.long	0
 	.long	0
 .Ldebug_ranges1:
+	.long	.Ltmp12
 	.long	.Ltmp16
-	.long	.Ltmp20
 	.long	0
 	.long	0
 .Ldebug_ranges2:
@@ -960,134 +933,122 @@ WriteHexString:
 	.section	.debug_loc,"",@progbits
 .Ldebug_loc0:
 	.long	.Lfunc_begin0
-	.long	.Ltmp13
-.Lset0 = .Ltmp29-.Ltmp28
+	.long	.Ltmp9
+.Lset0 = .Ltmp25-.Ltmp24
 	.short	.Lset0
-.Ltmp28:
+.Ltmp24:
 	.byte	80
-.Ltmp29:
+.Ltmp25:
 	.long	0
 	.long	0
 .Ldebug_loc1:
 	.long	.Lfunc_begin0
-	.long	.Ltmp8
-.Lset1 = .Ltmp31-.Ltmp30
+	.long	.Ltmp6
+.Lset1 = .Ltmp27-.Ltmp26
 	.short	.Lset1
-.Ltmp30:
+.Ltmp26:
 	.byte	81
-.Ltmp31:
-	.long	.Ltmp8
-	.long	.Ltmp9
-.Lset2 = .Ltmp33-.Ltmp32
+.Ltmp27:
+	.long	.Ltmp6
+	.long	.Ltmp7
+.Lset2 = .Ltmp29-.Ltmp28
 	.short	.Lset2
-.Ltmp32:
+.Ltmp28:
 	.byte	84
-.Ltmp33:
-	.long	.Ltmp15
-	.long	.Ltmp21
-.Lset3 = .Ltmp35-.Ltmp34
+.Ltmp29:
+	.long	.Ltmp11
+	.long	.Ltmp17
+.Lset3 = .Ltmp31-.Ltmp30
 	.short	.Lset3
-.Ltmp34:
+.Ltmp30:
 	.byte	84
-.Ltmp35:
+.Ltmp31:
 	.long	0
 	.long	0
 .Ldebug_loc2:
 	.long	.Lfunc_begin0
-	.long	.Ltmp7
-.Lset4 = .Ltmp37-.Ltmp36
+	.long	.Ltmp5
+.Lset4 = .Ltmp33-.Ltmp32
 	.short	.Lset4
-.Ltmp36:
+.Ltmp32:
 	.byte	82
-.Ltmp37:
-	.long	.Ltmp7
-	.long	.Ltmp8
-.Lset5 = .Ltmp39-.Ltmp38
+.Ltmp33:
+	.long	.Ltmp5
+	.long	.Ltmp6
+.Lset5 = .Ltmp35-.Ltmp34
 	.short	.Lset5
-.Ltmp38:
+.Ltmp34:
 	.byte	86
-.Ltmp39:
-	.long	.Ltmp15
-	.long	.Ltmp18
-.Lset6 = .Ltmp41-.Ltmp40
+.Ltmp35:
+	.long	.Ltmp11
+	.long	.Ltmp14
+.Lset6 = .Ltmp37-.Ltmp36
 	.short	.Lset6
-.Ltmp40:
+.Ltmp36:
 	.byte	86
-.Ltmp41:
+.Ltmp37:
 	.long	0
 	.long	0
 .Ldebug_loc3:
-	.long	.Ltmp11
-	.long	.Ltmp15
-.Lset7 = .Ltmp43-.Ltmp42
+	.long	.Ltmp7
+	.long	.Ltmp8
+.Lset7 = .Ltmp39-.Ltmp38
 	.short	.Lset7
-.Ltmp42:
-	.byte	117
-	.byte	0
-	.byte	6
-.Ltmp43:
-	.long	0
-	.long	0
-.Ldebug_loc4:
-	.long	.Ltmp12
-	.long	.Ltmp13
-.Lset8 = .Ltmp45-.Ltmp44
-	.short	.Lset8
-.Ltmp44:
+.Ltmp38:
 	.byte	115
 	.byte	0
-.Ltmp45:
+.Ltmp39:
 	.long	0
 	.long	0
 	.section	.debug_pubnames,"",@progbits
-.Lset9 = .LpubNames_end0-.LpubNames_begin0
-	.long	.Lset9
+.Lset8 = .LpubNames_end0-.LpubNames_begin0
+	.long	.Lset8
 .LpubNames_begin0:
 	.short	2
 	.long	.L.debug_info_begin0
-.Lset10 = .L.debug_info_end0-.L.debug_info_begin0
-	.long	.Lset10
-	.long	144
+.Lset9 = .L.debug_info_end0-.L.debug_info_begin0
+	.long	.Lset9
+	.long	143
 .asciiz"WriteHexString"
 	.long	31
 .asciiz"ReadUnsigned"
 	.long	0
 .LpubNames_end0:
 	.section	.debug_pubtypes,"",@progbits
-.Lset11 = .LpubTypes_end0-.LpubTypes_begin0
-	.long	.Lset11
+.Lset10 = .LpubTypes_end0-.LpubTypes_begin0
+	.long	.Lset10
 .LpubTypes_begin0:
 	.short	2
 	.long	.L.debug_info_begin0
-.Lset12 = .L.debug_info_end0-.L.debug_info_begin0
-	.long	.Lset12
-	.long	633
+.Lset11 = .L.debug_info_end0-.L.debug_info_begin0
+	.long	.Lset11
+	.long	658
 .asciiz"DWORD"
-	.long	681
+	.long	699
 .asciiz"UINT"
-	.long	692
+	.long	710
 .asciiz"unsigned int"
 	.long	717
 .asciiz"int"
-	.long	187
+	.long	186
 .asciiz"_Bool"
-	.long	626
+	.long	651
 .asciiz"unsigned short"
 	.long	729
 .asciiz"TCHAR"
-	.long	352
+	.long	377
 .asciiz"FATFS"
-	.long	597
+	.long	622
 .asciiz"BYTE"
-	.long	644
+	.long	669
 .asciiz"long unsigned int"
-	.long	199
-.asciiz"FIL"
-	.long	615
-.asciiz"WORD"
-	.long	608
+	.long	633
 .asciiz"unsigned char"
-	.long	710
+	.long	224
+.asciiz"FIL"
+	.long	640
+.asciiz"WORD"
+	.long	205
 .asciiz"char"
 	.long	0
 .LpubTypes_end0:

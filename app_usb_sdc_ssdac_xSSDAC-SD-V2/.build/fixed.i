@@ -1030,7 +1030,16 @@ int flac_snprintf(char *str, size_t size, const char *fmt, ...);
 int flac_vsnprintf(char *str, size_t size, const char *fmt, va_list va);
 # 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 1
-# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 33 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 1 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h" 1
+# 100 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h"
+inline int xassert_msg(const char msg[]) { return 1; }
+# 34 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
+
+
+
+
+
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/ordinals.h" 1
 # 55 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/ordinals.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h" 1 3
@@ -1112,13 +1121,13 @@ typedef uint64_t FLAC__uint64;
 typedef int FLAC__bool;
 
 typedef FLAC__uint8 FLAC__byte;
-# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
+# 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/assert.h" 1
 # 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/assert.h"
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 1
 # 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 2
-# 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
 
 
 
@@ -1157,14 +1166,14 @@ static inline uint32_t FLAC__clz_soft_uint32(FLAC__uint32 word)
 static inline uint32_t FLAC__clz_uint32(FLAC__uint32 v)
 {
 
- assert(v > 0);
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
 
 
 
 
  return __builtin_clz(v);
-# 94 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 96 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -1177,10 +1186,10 @@ static inline uint32_t FLAC__clz_soft_uint64(FLAC__uint64 word)
 static inline uint32_t FLAC__clz_uint64(FLAC__uint64 v)
 {
 
- assert(v > 0);
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
  return __builtin_clzll(v);
-# 118 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 120 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -1197,21 +1206,21 @@ static inline uint32_t FLAC__clz2_uint64(FLAC__uint64 v)
   return 64;
  return FLAC__clz_uint64(v);
 }
-# 158 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 160 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 static inline uint32_t FLAC__bitmath_ilog2(FLAC__uint32 v)
 {
- assert(v > 0);
-# 170 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+ do { if (!(v > 0)) __builtin_trap();} while(0);
+# 172 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
  return FLAC__clz_uint32(v) ^ 31U;
 
 }
 
 static inline uint32_t FLAC__bitmath_ilog2_wide(FLAC__uint64 v)
 {
- assert(v > 0);
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
  return __builtin_clzll(v) ^ 63U;
-# 208 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 210 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 uint32_t FLAC__bitmath_silog2(FLAC__int64 v);
@@ -1982,11 +1991,11 @@ uint32_t FLAC__fixed_compute_best_predictor(const FLAC__int32 data[], uint32_t d
 
 
 
- assert(data_len > 0 || total_error_0 == 0);
- assert(data_len > 0 || total_error_1 == 0);
- assert(data_len > 0 || total_error_2 == 0);
- assert(data_len > 0 || total_error_3 == 0);
- assert(data_len > 0 || total_error_4 == 0);
+ do { if (!(data_len > 0 || total_error_0 == 0)) __builtin_trap();} while(0);
+ do { if (!(data_len > 0 || total_error_1 == 0)) __builtin_trap();} while(0);
+ do { if (!(data_len > 0 || total_error_2 == 0)) __builtin_trap();} while(0);
+ do { if (!(data_len > 0 || total_error_3 == 0)) __builtin_trap();} while(0);
+ do { if (!(data_len > 0 || total_error_4 == 0)) __builtin_trap();} while(0);
 
  residual_bits_per_sample[0] = (float)((total_error_0 > 0) ? log(0.69314718055994530942 * (double)total_error_0 / (double)data_len) / 0.69314718055994530942 : 0.0);
  residual_bits_per_sample[1] = (float)((total_error_1 > 0) ? log(0.69314718055994530942 * (double)total_error_1 / (double)data_len) / 0.69314718055994530942 : 0.0);
@@ -2030,11 +2039,11 @@ uint32_t FLAC__fixed_compute_best_predictor_wide(const FLAC__int32 data[], uint3
 
 
 
- assert(data_len > 0 || total_error_0 == 0);
- assert(data_len > 0 || total_error_1 == 0);
- assert(data_len > 0 || total_error_2 == 0);
- assert(data_len > 0 || total_error_3 == 0);
- assert(data_len > 0 || total_error_4 == 0);
+ do { if (!(data_len > 0 || total_error_0 == 0)) __builtin_trap();} while(0);
+ do { if (!(data_len > 0 || total_error_1 == 0)) __builtin_trap();} while(0);
+ do { if (!(data_len > 0 || total_error_2 == 0)) __builtin_trap();} while(0);
+ do { if (!(data_len > 0 || total_error_3 == 0)) __builtin_trap();} while(0);
+ do { if (!(data_len > 0 || total_error_4 == 0)) __builtin_trap();} while(0);
 
  residual_bits_per_sample[0] = (float)((total_error_0 > 0) ? log(0.69314718055994530942 * (double)total_error_0 / (double)data_len) / 0.69314718055994530942 : 0.0);
  residual_bits_per_sample[1] = (float)((total_error_1 > 0) ? log(0.69314718055994530942 * (double)total_error_1 / (double)data_len) / 0.69314718055994530942 : 0.0);
@@ -2145,7 +2154,7 @@ void FLAC__fixed_compute_residual(const FLAC__int32 data[], uint32_t data_len, u
 
  switch(order) {
   case 0:
-   assert(sizeof(residual[0]) == sizeof(data[0]));
+   do { if (!(sizeof(residual[0]) == sizeof(data[0]))) __builtin_trap();} while(0);
    memcpy(residual, data, sizeof(residual[0])*data_len);
    break;
   case 1:
@@ -2165,7 +2174,7 @@ void FLAC__fixed_compute_residual(const FLAC__int32 data[], uint32_t data_len, u
     residual[i] = data[i] - 4*data[i-1] + 6*data[i-2] - 4*data[i-3] + data[i-4];
    break;
   default:
-   assert(0);
+   do { if (!(0)) __builtin_trap();} while(0);
  }
 }
 
@@ -2176,7 +2185,7 @@ void FLAC__fixed_compute_residual_wide(const FLAC__int32 data[], uint32_t data_l
 
  switch(order) {
   case 0:
-   assert(sizeof(residual[0]) == sizeof(data[0]));
+   do { if (!(sizeof(residual[0]) == sizeof(data[0]))) __builtin_trap();} while(0);
    memcpy(residual, data, sizeof(residual[0])*data_len);
    break;
   case 1:
@@ -2196,7 +2205,7 @@ void FLAC__fixed_compute_residual_wide(const FLAC__int32 data[], uint32_t data_l
     residual[i] = (FLAC__int64)data[i] - 4*(FLAC__int64)data[i-1] + 6*(FLAC__int64)data[i-2] - 4*(FLAC__int64)data[i-3] + data[i-4];
    break;
   default:
-   assert(0);
+   do { if (!(0)) __builtin_trap();} while(0);
  }
 }
 
@@ -2227,7 +2236,7 @@ void FLAC__fixed_compute_residual_wide_33bit(const FLAC__int64 data[], uint32_t 
     residual[i] = data[i] - 4*data[i-1] + 6*data[i-2] - 4*data[i-3] + data[i-4];
    break;
   default:
-   assert(0);
+   do { if (!(0)) __builtin_trap();} while(0);
  }
 }
 # 571 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c"
@@ -2237,7 +2246,7 @@ void FLAC__fixed_restore_signal(const FLAC__int32 residual[], uint32_t data_len,
 
  switch(order) {
   case 0:
-   assert(sizeof(residual[0]) == sizeof(data[0]));
+   do { if (!(sizeof(residual[0]) == sizeof(data[0]))) __builtin_trap();} while(0);
    memcpy(data, residual, sizeof(residual[0])*data_len);
    break;
   case 1:
@@ -2257,7 +2266,7 @@ void FLAC__fixed_restore_signal(const FLAC__int32 residual[], uint32_t data_len,
     data[i] = residual[i] + 4*data[i-1] - 6*data[i-2] + 4*data[i-3] - data[i-4];
    break;
   default:
-   assert(0);
+   do { if (!(0)) __builtin_trap();} while(0);
  }
 }
 
@@ -2267,7 +2276,7 @@ void FLAC__fixed_restore_signal_wide(const FLAC__int32 residual[], uint32_t data
 
  switch(order) {
   case 0:
-   assert(sizeof(residual[0]) == sizeof(data[0]));
+   do { if (!(sizeof(residual[0]) == sizeof(data[0]))) __builtin_trap();} while(0);
    memcpy(data, residual, sizeof(residual[0])*data_len);
    break;
   case 1:
@@ -2287,7 +2296,7 @@ void FLAC__fixed_restore_signal_wide(const FLAC__int32 residual[], uint32_t data
     data[i] = (FLAC__int64)residual[i] + 4*(FLAC__int64)data[i-1] - 6*(FLAC__int64)data[i-2] + 4*(FLAC__int64)data[i-3] - (FLAC__int64)data[i-4];
    break;
   default:
-   assert(0);
+   do { if (!(0)) __builtin_trap();} while(0);
  }
 }
 # 639 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c"
@@ -2317,6 +2326,6 @@ void FLAC__fixed_restore_signal_wide_33bit(const FLAC__int32 residual[], uint32_
     data[i] = (FLAC__int64)residual[i] + 4*data[i-1] - 6*data[i-2] + 4*data[i-3] - data[i-4];
    break;
   default:
-   assert(0);
+   do { if (!(0)) __builtin_trap();} while(0);
  }
 }

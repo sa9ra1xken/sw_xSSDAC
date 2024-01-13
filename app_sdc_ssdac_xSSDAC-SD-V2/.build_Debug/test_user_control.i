@@ -1919,7 +1919,11 @@ typedef enum {
 } PLAY_COMMAND;
 
 unsigned QueryChannel(chanend ch, unsigned command);
-void button_listener_core(chanend c_play_control, chanend c_dac_control);
+void button_listener_core(
+        FUNCTION_SELECTOR func,
+        chanend c_play_control,
+        chanend c_dac_control
+        );
 void KeyScan();
 void SendBackTrackControl(chanend c_track_control);
 void HandleDacCommand(chanend c_control, DAC_COMMAND command);
@@ -2533,7 +2537,7 @@ void debug_printf(char fmt[], ...);
 # 17 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c" 2
 
 
-
+#pragma stackfunction 400
 USER_CONTROL_TYPE TestUserControl(
         chanend c_control,
         PLAY_TRACK_RC *rc,

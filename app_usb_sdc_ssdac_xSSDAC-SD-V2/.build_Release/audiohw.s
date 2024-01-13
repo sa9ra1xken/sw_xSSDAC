@@ -1,5 +1,5 @@
 	.text
-	.file	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.file	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
                                         # Start of file scope inline assembly
 	.inline_definition delay_seconds
 	.inline_definition delay_milliseconds
@@ -21,11 +21,11 @@ __xcc1_internal_1.info:
 	.set usage.anon.0,0
 	.set usage.anon.1,0
 	.set usage.anon.2,0
-	.globread AudioHwConfig,si5351a_revb_48,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:115:27: note: object used here\n            ConfigSi5351A(si5351a_revb_48);\n                          ^~~~~~~~~~~~~~~"
-	.globread AudioHwConfig,si5351a_revb_441,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:111:27: note: object used here\n            ConfigSi5351A(si5351a_revb_441);\n                          ^~~~~~~~~~~~~~~~"
-	.globread AudioHwInit,si5351a_revb_441,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:91:19: note: object used here\n    ConfigSi5351A(si5351a_revb_441);\n                  ^~~~~~~~~~~~~~~~"
-	.globwrite ConfigSi5351_RB,r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:65:28: note: object used here\n    i2c_shared_master_init(r_i2c);\n                           ^~~~~"
-	.globwrite ConfigSi5351A,r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:52:28: note: object used here\n    i2c_shared_master_init(r_i2c);\n                           ^~~~~"
+	.globread AudioHwConfig,si5351a_revb_48,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:115:27: note: object used here\n            ConfigSi5351A(si5351a_revb_48);\n                          ^~~~~~~~~~~~~~~"
+	.globread AudioHwConfig,si5351a_revb_441,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:111:27: note: object used here\n            ConfigSi5351A(si5351a_revb_441);\n                          ^~~~~~~~~~~~~~~~"
+	.globread AudioHwInit,si5351a_revb_441,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:91:19: note: object used here\n    ConfigSi5351A(si5351a_revb_441);\n                  ^~~~~~~~~~~~~~~~"
+	.globwrite ConfigSi5351_RB,r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:65:28: note: object used here\n    i2c_shared_master_init(r_i2c);\n                           ^~~~~"
+	.globwrite ConfigSi5351A,r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:52:28: note: object used here\n    i2c_shared_master_init(r_i2c);\n                           ^~~~~"
 	.call ClipIndicator,set_gpio
 	.call ReleaseMute,set_gpio
 	.call AudioHwConfig,wait_us
@@ -50,20 +50,20 @@ __xcc1_internal_1.info:
 	.set ConfigSi5351_RB.locnoglobalaccess, 0
 	.set AudioHwInit.locnoglobalaccess, 0
 	.set AudioHwConfig.locnoglobalaccess, 0
-	.globpassesref ConfigSi5351A, si5351a_revb_48,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:131:13: error: call to `ConfigSi5351A\' in `AudioHwConfig\' makes alias of global \'si5351a_revb_48\'\n            ConfigSi5351A(si5351a_revb_48);\n            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref ConfigSi5351A, si5351a_revb_441,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:127:13: error: call to `ConfigSi5351A\' in `AudioHwConfig\' makes alias of global \'si5351a_revb_441\'\n            ConfigSi5351A(si5351a_revb_441);\n            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref ConfigSi5351A, si5351a_revb_48,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:123:13: error: call to `ConfigSi5351A\' in `AudioHwConfig\' makes alias of global \'si5351a_revb_48\'\n            ConfigSi5351A(si5351a_revb_48);\n            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref ConfigSi5351A, si5351a_revb_441,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:119:13: error: call to `ConfigSi5351A\' in `AudioHwConfig\' makes alias of global \'si5351a_revb_441\'\n            ConfigSi5351A(si5351a_revb_441);\n            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref ConfigSi5351A, si5351a_revb_48,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:115:13: error: call to `ConfigSi5351A\' in `AudioHwConfig\' makes alias of global \'si5351a_revb_48\'\n            ConfigSi5351A(si5351a_revb_48);\n            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref ConfigSi5351A, si5351a_revb_441,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:111:13: error: call to `ConfigSi5351A\' in `AudioHwConfig\' makes alias of global \'si5351a_revb_441\'\n            ConfigSi5351A(si5351a_revb_441);\n            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref ConfigSi5351A, si5351a_revb_441,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:91:5: error: call to `ConfigSi5351A\' in `AudioHwInit\' makes alias of global \'si5351a_revb_441\'\n    ConfigSi5351A(si5351a_revb_441);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref i2c_master_write_reg, r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:77:5: error: call to `i2c_master_write_reg\' in `ConfigSi5351_RB\' makes alias of global \'r_i2c\'\n    SI5351A_REGWRITE(SI5351A_PLL_RESET_REG, SI5351A_PLLB_RESET | SI5351A_PLLA_RESET );\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:45:52: note: expanded from here\n#define SI5351A_REGWRITE(reg, val) {data[0] = val; i2c_master_write_reg(SI5351A_I2C_ADDR, reg, data, 1, r_i2c);}\n                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref i2c_master_read_reg, r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:73:13: error: call to `i2c_master_read_reg\' in `ConfigSi5351_RB\' makes alias of global \'r_i2c\'\n            SI5351A_REGREAD(param[i].address, data);\n            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:48:37: note: expanded from here\n#define SI5351A_REGREAD(reg, val)  {i2c_master_read_reg(SI5351A_I2C_ADDR, reg, val, 1, r_i2c);}\n                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref i2c_master_write_reg, r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:72:13: error: call to `i2c_master_write_reg\' in `ConfigSi5351_RB\' makes alias of global \'r_i2c\'\n            SI5351A_REGWRITE(param[i].address, param[i].value);\n            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:45:52: note: expanded from here\n#define SI5351A_REGWRITE(reg, val) {data[0] = val; i2c_master_write_reg(SI5351A_I2C_ADDR, reg, data, 1, r_i2c);}\n                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref i2c_shared_master_init, r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:65:5: error: call to `i2c_shared_master_init\' in `ConfigSi5351_RB\' makes alias of global \'r_i2c\'\n    i2c_shared_master_init(r_i2c);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref i2c_master_write_reg, r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:60:5: error: call to `i2c_master_write_reg\' in `ConfigSi5351A\' makes alias of global \'r_i2c\'\n    SI5351A_REGWRITE(SI5351A_PLL_RESET_REG, SI5351A_PLLB_RESET | SI5351A_PLLA_RESET );\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:45:52: note: expanded from here\n#define SI5351A_REGWRITE(reg, val) {data[0] = val; i2c_master_write_reg(SI5351A_I2C_ADDR, reg, data, 1, r_i2c);}\n                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref i2c_master_write_reg, r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:57:9: error: call to `i2c_master_write_reg\' in `ConfigSi5351A\' makes alias of global \'r_i2c\'\n        SI5351A_REGWRITE(param[i].address, param[i].value);\n        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:45:52: note: expanded from here\n#define SI5351A_REGWRITE(reg, val) {data[0] = val; i2c_master_write_reg(SI5351A_I2C_ADDR, reg, data, 1, r_i2c);}\n                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref i2c_shared_master_init, r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:52:5: error: call to `i2c_shared_master_init\' in `ConfigSi5351A\' makes alias of global \'r_i2c\'\n    i2c_shared_master_init(r_i2c);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref ConfigSi5351A, si5351a_revb_48,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:131:13: error: call to `ConfigSi5351A\' in `AudioHwConfig\' makes alias of global \'si5351a_revb_48\'\n            ConfigSi5351A(si5351a_revb_48);\n            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref ConfigSi5351A, si5351a_revb_441,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:127:13: error: call to `ConfigSi5351A\' in `AudioHwConfig\' makes alias of global \'si5351a_revb_441\'\n            ConfigSi5351A(si5351a_revb_441);\n            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref ConfigSi5351A, si5351a_revb_48,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:123:13: error: call to `ConfigSi5351A\' in `AudioHwConfig\' makes alias of global \'si5351a_revb_48\'\n            ConfigSi5351A(si5351a_revb_48);\n            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref ConfigSi5351A, si5351a_revb_441,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:119:13: error: call to `ConfigSi5351A\' in `AudioHwConfig\' makes alias of global \'si5351a_revb_441\'\n            ConfigSi5351A(si5351a_revb_441);\n            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref ConfigSi5351A, si5351a_revb_48,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:115:13: error: call to `ConfigSi5351A\' in `AudioHwConfig\' makes alias of global \'si5351a_revb_48\'\n            ConfigSi5351A(si5351a_revb_48);\n            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref ConfigSi5351A, si5351a_revb_441,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:111:13: error: call to `ConfigSi5351A\' in `AudioHwConfig\' makes alias of global \'si5351a_revb_441\'\n            ConfigSi5351A(si5351a_revb_441);\n            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref ConfigSi5351A, si5351a_revb_441,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:91:5: error: call to `ConfigSi5351A\' in `AudioHwInit\' makes alias of global \'si5351a_revb_441\'\n    ConfigSi5351A(si5351a_revb_441);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref i2c_master_write_reg, r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:77:5: error: call to `i2c_master_write_reg\' in `ConfigSi5351_RB\' makes alias of global \'r_i2c\'\n    SI5351A_REGWRITE(SI5351A_PLL_RESET_REG, SI5351A_PLLB_RESET | SI5351A_PLLA_RESET );\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:45:52: note: expanded from here\n#define SI5351A_REGWRITE(reg, val) {data[0] = val; i2c_master_write_reg(SI5351A_I2C_ADDR, reg, data, 1, r_i2c);}\n                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref i2c_master_read_reg, r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:73:13: error: call to `i2c_master_read_reg\' in `ConfigSi5351_RB\' makes alias of global \'r_i2c\'\n            SI5351A_REGREAD(param[i].address, data);\n            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:48:37: note: expanded from here\n#define SI5351A_REGREAD(reg, val)  {i2c_master_read_reg(SI5351A_I2C_ADDR, reg, val, 1, r_i2c);}\n                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref i2c_master_write_reg, r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:72:13: error: call to `i2c_master_write_reg\' in `ConfigSi5351_RB\' makes alias of global \'r_i2c\'\n            SI5351A_REGWRITE(param[i].address, param[i].value);\n            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:45:52: note: expanded from here\n#define SI5351A_REGWRITE(reg, val) {data[0] = val; i2c_master_write_reg(SI5351A_I2C_ADDR, reg, data, 1, r_i2c);}\n                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref i2c_shared_master_init, r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:65:5: error: call to `i2c_shared_master_init\' in `ConfigSi5351_RB\' makes alias of global \'r_i2c\'\n    i2c_shared_master_init(r_i2c);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref i2c_master_write_reg, r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:60:5: error: call to `i2c_master_write_reg\' in `ConfigSi5351A\' makes alias of global \'r_i2c\'\n    SI5351A_REGWRITE(SI5351A_PLL_RESET_REG, SI5351A_PLLB_RESET | SI5351A_PLLA_RESET );\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:45:52: note: expanded from here\n#define SI5351A_REGWRITE(reg, val) {data[0] = val; i2c_master_write_reg(SI5351A_I2C_ADDR, reg, data, 1, r_i2c);}\n                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref i2c_master_write_reg, r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:57:9: error: call to `i2c_master_write_reg\' in `ConfigSi5351A\' makes alias of global \'r_i2c\'\n        SI5351A_REGWRITE(param[i].address, param[i].value);\n        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:45:52: note: expanded from here\n#define SI5351A_REGWRITE(reg, val) {data[0] = val; i2c_master_write_reg(SI5351A_I2C_ADDR, reg, data, 1, r_i2c);}\n                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref i2c_shared_master_init, r_i2c,"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:52:5: error: call to `i2c_shared_master_init\' in `ConfigSi5351A\' makes alias of global \'r_i2c\'\n    i2c_shared_master_init(r_i2c);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
                                         # End of file scope inline assembly
 	.section	.debug_info,"",@progbits
@@ -80,9 +80,9 @@ __xcc1_internal_1.info:
 .Lsection_debug_loc:
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
-	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\Si5351A-441-Registers.h"
-	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\Si5351A-48-Registers.h"
-	.file	3 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\audiohw.xc"
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\Si5351A-441-Registers.h"
+	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\Si5351A-48-Registers.h"
+	.file	3 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\audiohw.xc"
 	.text
 	.globl	ConfigSi5351A
 	.align	4
@@ -90,7 +90,7 @@ __xcc1_internal_1.info:
 	.cc_top ConfigSi5351A.function,ConfigSi5351A
 ConfigSi5351A:                          # @ConfigSi5351A
 .Lfunc_begin0:
-	.loc	3 50 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:50:0
+	.loc	3 50 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:50:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -131,7 +131,7 @@ ConfigSi5351A:                          # @ConfigSi5351A
 	}
 .Ltmp9:
 	#DEBUG_VALUE: ConfigSi5351A:param <- R8
-	.loc	3 52 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:52:0
+	.loc	3 52 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:52:0
 	ldaw r0, dp[r_i2c]
 	{
 		mov r9, r0
@@ -145,7 +145,7 @@ ConfigSi5351A:                          # @ConfigSi5351A
 		ldaw r4, sp[3]
 		ldc r0, 0
 	}
-	.loc	3 54 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:54:0
+	.loc	3 54 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:54:0
 .Ltmp11:
 	st8 r0, r4[r0]
 	{
@@ -161,7 +161,7 @@ ConfigSi5351A:                          # @ConfigSi5351A
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel1:
 	#DEBUG_VALUE: i <- 0
-	.loc	3 57 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:57:0
+	.loc	3 57 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:57:0
 	{
 		lsu r0, r10, r7
 		nop
@@ -180,7 +180,7 @@ ConfigSi5351A:                          # @ConfigSi5351A
 		nop
 		ld8u r0, r8[r0]
 	}
-	.loc	3 57 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:57:0
+	.loc	3 57 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:57:0
 	st8 r0, r4[r5]
 	{
 		nop
@@ -195,7 +195,7 @@ ConfigSi5351A:                          # @ConfigSi5351A
 		stw r9, sp[1]
 	}
 	ldc r0, 96
-	.loc	3 57 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:57:0
+	.loc	3 57 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:57:0
 	{
 		mov r2, r4
 		mov r3, r6
@@ -204,7 +204,7 @@ ConfigSi5351A:                          # @ConfigSi5351A
 	bl i2c_master_write_reg
 .Ltmp13:
 	#DEBUG_VALUE: i <- R10
-	.loc	3 55 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:55:0
+	.loc	3 55 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:55:0
 	{
 		add r10, r10, 1
 		add r8, r8, 8
@@ -214,7 +214,7 @@ ConfigSi5351A:                          # @ConfigSi5351A
 		ldc r0, 61
 		nop
 	}
-	.loc	3 55 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:55:0
+	.loc	3 55 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:55:0
 	{
 		lss r0, r10, r0
 		nop
@@ -225,7 +225,7 @@ ConfigSi5351A:                          # @ConfigSi5351A
 .Ltmp15:
 # BB#2:                                 # %ifdone
 .Lxtalabel2:
-	.loc	3 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:60:0
+	.loc	3 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:60:0
 	{
 		ldc r0, 0
 		nop
@@ -242,7 +242,7 @@ ConfigSi5351A:                          # @ConfigSi5351A
 	}
 	ldc r0, 96
 	ldc r1, 177
-	.loc	3 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:60:0
+	.loc	3 60 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:60:0
 	{
 		mov r2, r4
 		mov r3, r6
@@ -282,7 +282,7 @@ ConfigSi5351A:                          # @ConfigSi5351A
 	.cc_top ConfigSi5351_RB.function,ConfigSi5351_RB
 ConfigSi5351_RB:                        # @ConfigSi5351_RB
 .Lfunc_begin1:
-	.loc	3 63 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:63:0
+	.loc	3 63 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:63:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -327,7 +327,7 @@ ConfigSi5351_RB:                        # @ConfigSi5351_RB
 	}
 .Ltmp27:
 	#DEBUG_VALUE: ConfigSi5351_RB:param <- [SP+16]
-	.loc	3 65 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:65:0
+	.loc	3 65 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:65:0
 	ldaw r0, dp[r_i2c]
 	{
 		mov r9, r0
@@ -341,7 +341,7 @@ ConfigSi5351_RB:                        # @ConfigSi5351_RB
 		ldaw r4, sp[9]
 		ldc r7, 0
 	}
-	.loc	3 68 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:68:0
+	.loc	3 68 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:68:0
 .Ltmp29:
 	st8 r7, r4[r7]
 	{
@@ -363,7 +363,7 @@ ConfigSi5351_RB:                        # @ConfigSi5351_RB
 		nop
 		ldw r0, sp[5]
 	}
-	.loc	3 72 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:72:0
+	.loc	3 72 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:72:0
 .Ltmp31:
 	{
 		lsu r0, r1, r0
@@ -376,7 +376,7 @@ ConfigSi5351_RB:                        # @ConfigSi5351_RB
 	}
 	#DEBUG_VALUE: ConfigSi5351_RB:param <- [SP+16]
 	#DEBUG_VALUE: i <- 0
-	.loc	3 72 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:72:0
+	.loc	3 72 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:72:0
 	{
 		shl r0, r1, 3
 		stw r1, sp[6]
@@ -412,7 +412,7 @@ ConfigSi5351_RB:                        # @ConfigSi5351_RB
 		nop
 		ld8u r9, r0[r7]
 	}
-	.loc	3 72 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:72:0
+	.loc	3 72 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:72:0
 	st8 r9, r4[r7]
 	{
 		nop
@@ -426,7 +426,7 @@ ConfigSi5351_RB:                        # @ConfigSi5351_RB
 		nop
 		stw r6, sp[2]
 	}
-	.loc	3 72 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:72:0
+	.loc	3 72 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:72:0
 	{
 		mov r0, r2
 		stw r5, sp[1]
@@ -445,7 +445,7 @@ ConfigSi5351_RB:                        # @ConfigSi5351_RB
 		nop
 		stw r6, sp[2]
 	}
-	.loc	3 73 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:73:0
+	.loc	3 73 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:73:0
 	{
 		mov r0, r8
 		stw r5, sp[1]
@@ -464,14 +464,14 @@ ConfigSi5351_RB:                        # @ConfigSi5351_RB
 		mov r2, r8
 		ld8u r0, r4[r7]
 	}
-	.loc	3 74 11                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:74:11
+	.loc	3 74 11                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:74:11
 	{
 		eq r0, r9, r0
 		nop
 	}
 .Lxta.loop_labels1:
 	# LOOPMARKER 0
-	.loc	3 74 11                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:74:11
+	.loc	3 74 11                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:74:11
 	bf r0, .LBB1_2
 .Ltmp33:
 # BB#3:                                 # %LoopIncrement
@@ -485,13 +485,13 @@ ConfigSi5351_RB:                        # @ConfigSi5351_RB
 	}
 .Ltmp34:
 	#DEBUG_VALUE: i <- R1
-	.loc	3 69 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:69:0
+	.loc	3 69 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:69:0
 	{
 		add r1, r1, 1
 		ldc r0, 61
 	}
 .Ltmp35:
-	.loc	3 69 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:69:0
+	.loc	3 69 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:69:0
 	{
 		lss r0, r1, r0
 		nop
@@ -502,7 +502,7 @@ ConfigSi5351_RB:                        # @ConfigSi5351_RB
 .Ltmp36:
 # BB#4:                                 # %ifdone
 .Lxtalabel6:
-	.loc	3 77 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:77:0
+	.loc	3 77 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:77:0
 	{
 		ldc r0, 0
 		nop
@@ -519,7 +519,7 @@ ConfigSi5351_RB:                        # @ConfigSi5351_RB
 	}
 	ldc r0, 96
 	ldc r1, 177
-	.loc	3 77 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:77:0
+	.loc	3 77 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:77:0
 	{
 		mov r2, r4
 		mov r3, r6
@@ -559,7 +559,7 @@ ConfigSi5351_RB:                        # @ConfigSi5351_RB
 	.cc_top wait_us.function,wait_us
 wait_us:                                # @wait_us
 .Lfunc_begin2:
-	.loc	3 81 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:81:0
+	.loc	3 81 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:81:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -571,37 +571,37 @@ wait_us:                                # @wait_us
 		dualentsp 0
 	}
 .Ltmp39:
-	.loc	3 86 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	{
 		get r11, id
 		nop
 	}
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	ldaw r2, dp[__timers]
 	{
 		nop
 		ldw r2, r2[r11]
 	}
 	ldc r3, 100
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	mul r0, r0, r3
 .Ltmp40:
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	{
 		add r0, r1, r0
 		nop
 	}
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	{
 		setd res[r2], r0
 		nop
 	}
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	{
 		setc res[r2], 9
 		nop
 	}
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 .Ltmp41:
 .Lxta.endpoint_labels0:
 	{
@@ -639,7 +639,7 @@ wait_us:                                # @wait_us
 	.cc_top _Swait_us_0.function,_Swait_us_0
 _Swait_us_0:                            # @_Swait_us_0
 .Lfunc_begin3:
-	.loc	3 81 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:81:0
+	.loc	3 81 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:81:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -651,34 +651,34 @@ _Swait_us_0:                            # @_Swait_us_0
 		dualentsp 0
 	}
 .Ltmp44:
-	.loc	3 86 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	{
 		get r11, id
 		nop
 	}
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	ldaw r1, dp[__timers]
 	{
 		nop
 		ldw r1, r1[r11]
 	}
 	ldw r2, cp[.LCPI3_0]
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	{
 		add r0, r0, r2
 		nop
 	}
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	{
 		setd res[r1], r0
 		nop
 	}
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	{
 		setc res[r1], 9
 		nop
 	}
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 .Ltmp45:
 .Lxta.endpoint_labels1:
 	{
@@ -707,7 +707,7 @@ _Swait_us_0:                            # @_Swait_us_0
 	.cc_top AudioHwInit.function,AudioHwInit
 AudioHwInit:                            # @AudioHwInit
 .Lfunc_begin4:
-	.loc	3 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:90:0
+	.loc	3 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:90:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -720,7 +720,7 @@ AudioHwInit:                            # @AudioHwInit
 	.cfi_def_cfa_offset 8
 .Ltmp49:
 	.cfi_offset 15, 0
-	.loc	3 91 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:91:0
+	.loc	3 91 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:91:0
 .Ltmp50:
 	ldaw r11, cp[si5351a_revb_441]
 	{
@@ -729,7 +729,7 @@ AudioHwInit:                            # @AudioHwInit
 	}
 .Lxta.call_labels7:
 	bl ConfigSi5351A
-	.loc	3 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:92:0
+	.loc	3 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:92:0
 .Lxta.call_labels8:
 	bl ConfigureSerialDacPorts
 	{
@@ -816,7 +816,7 @@ AudioHwInit:                            # @AudioHwInit
 	.cc_top AudioHwConfig.function,AudioHwConfig
 AudioHwConfig:                          # @AudioHwConfig
 .Lfunc_begin5:
-	.loc	3 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:100:0
+	.loc	3 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:100:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -843,7 +843,7 @@ AudioHwConfig:                          # @AudioHwConfig
 		stw r4, sp[2]
 	}
 .Ltmp57:
-	.loc	3 103 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:103:0
+	.loc	3 103 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:103:0
 	ldaw r11, cp[.str12]
 	{
 		mov r0, r11
@@ -853,13 +853,13 @@ AudioHwConfig:                          # @AudioHwConfig
 .Lxta.call_labels9:
 	bl iprintf
 .Ltmp59:
-	.loc	3 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:104:0
+	.loc	3 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:104:0
 	bl __getstdout
-	.loc	3 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:104:0
+	.loc	3 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:104:0
 .Lxta.call_labels10:
 	bl fflush
 	ldw r0, cp[.LCPI5_0]
-	.loc	3 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:108:0
+	.loc	3 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:108:0
 	{
 		lss r0, r0, r4
 		nop
@@ -965,7 +965,7 @@ AudioHwConfig:                          # @AudioHwConfig
 	#DEBUG_VALUE: AudioHwConfig:dsdMode <- R2
 	#DEBUG_VALUE: AudioHwConfig:sampRes_DAC <- R3
 	#DEBUG_VALUE: AudioHwConfig:sampRes_ADC <- [SP+20]
-	.loc	3 111 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:111:0
+	.loc	3 111 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:111:0
 	ldaw r11, cp[si5351a_revb_441]
 	bu .LBB5_8
 .Ltmp69:
@@ -992,7 +992,7 @@ AudioHwConfig:                          # @AudioHwConfig
 	#DEBUG_VALUE: AudioHwConfig:dsdMode <- R2
 	#DEBUG_VALUE: AudioHwConfig:sampRes_DAC <- R3
 	#DEBUG_VALUE: AudioHwConfig:sampRes_ADC <- [SP+20]
-	.loc	3 115 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:115:0
+	.loc	3 115 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:115:0
 	ldaw r11, cp[si5351a_revb_48]
 .Ltmp72:
 .LBB5_8:                                # %switchdone
@@ -1001,7 +1001,7 @@ AudioHwConfig:                          # @AudioHwConfig
 		ldc r1, 61
 		mov r0, r11
 	}
-	.loc	3 111 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:111:0
+	.loc	3 111 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:111:0
 .Lxta.call_labels11:
 	bl ConfigSi5351A
 .LBB5_11:                               # %switchdone
@@ -1013,13 +1013,13 @@ AudioHwConfig:                          # @AudioHwConfig
 	#DEBUG_VALUE: AudioHwConfig:sampRes_ADC <- [SP+20]
 	#DEBUG_VALUE: microseconds <- 20000
 	#DEBUG_VALUE: time <- R0
-	.loc	3 85 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:85:0
+	.loc	3 85 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:85:0
 	{
 		gettime r0
 		get r11, id
 	}
 .Ltmp74:
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	ldaw r1, dp[__timers]
 .Ltmp75:
 	{
@@ -1028,22 +1028,22 @@ AudioHwConfig:                          # @AudioHwConfig
 	}
 	ldw r2, cp[.LCPI5_7]
 .Ltmp76:
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	{
 		add r0, r0, r2
 		nop
 	}
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	{
 		setd res[r1], r0
 		nop
 	}
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	{
 		setc res[r1], 9
 		nop
 	}
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 .Ltmp77:
 .Lxta.endpoint_labels2:
 	{
@@ -1135,7 +1135,7 @@ AudioHwConfig:                          # @AudioHwConfig
 	.cc_top _SAudioHwConfig_0.function,_SAudioHwConfig_0
 _SAudioHwConfig_0:                      # @_SAudioHwConfig_0
 .Lfunc_begin6:
-	.loc	3 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:100:0
+	.loc	3 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:100:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1162,7 +1162,7 @@ _SAudioHwConfig_0:                      # @_SAudioHwConfig_0
 		stw r4, sp[2]
 	}
 .Ltmp85:
-	.loc	3 103 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:103:0
+	.loc	3 103 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:103:0
 	ldaw r11, cp[.str13]
 	{
 		mov r0, r11
@@ -1170,13 +1170,13 @@ _SAudioHwConfig_0:                      # @_SAudioHwConfig_0
 	}
 .Lxta.call_labels12:
 	bl iprintf
-	.loc	3 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:104:0
+	.loc	3 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:104:0
 	bl __getstdout
-	.loc	3 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:104:0
+	.loc	3 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:104:0
 .Lxta.call_labels13:
 	bl fflush
 	ldw r0, cp[.LCPI6_0]
-	.loc	3 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:108:0
+	.loc	3 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:108:0
 	{
 		lss r0, r0, r4
 		nop
@@ -1249,7 +1249,7 @@ _SAudioHwConfig_0:                      # @_SAudioHwConfig_0
 	bf r0, .LBB6_11
 .LBB6_7:                                # %switchcase
 .Lxtalabel34:
-	.loc	3 111 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:111:0
+	.loc	3 111 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:111:0
 	ldaw r11, cp[si5351a_revb_441]
 	bu .LBB6_8
 .LBB6_12:                               # %allocas
@@ -1267,7 +1267,7 @@ _SAudioHwConfig_0:                      # @_SAudioHwConfig_0
 	bf r0, .LBB6_11
 .LBB6_13:                               # %switchcase2
 .Lxtalabel37:
-	.loc	3 115 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:115:0
+	.loc	3 115 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:115:0
 	ldaw r11, cp[si5351a_revb_48]
 .LBB6_8:                                # %switchdone
 .Lxtalabel38:
@@ -1275,7 +1275,7 @@ _SAudioHwConfig_0:                      # @_SAudioHwConfig_0
 		ldc r1, 61
 		mov r0, r11
 	}
-	.loc	3 111 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:111:0
+	.loc	3 111 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:111:0
 .Lxta.call_labels14:
 	bl ConfigSi5351A
 .LBB6_11:                               # %switchdone
@@ -1287,35 +1287,35 @@ _SAudioHwConfig_0:                      # @_SAudioHwConfig_0
 .Ltmp96:
 	#DEBUG_VALUE: microseconds <- 20000
 	#DEBUG_VALUE: time <- R0
-	.loc	3 85 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:85:0
+	.loc	3 85 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:85:0
 	{
 		gettime r0
 		get r11, id
 	}
 .Ltmp97:
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	ldaw r1, dp[__timers]
 	{
 		nop
 		ldw r1, r1[r11]
 	}
 	ldw r2, cp[.LCPI6_7]
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	{
 		add r0, r0, r2
 		nop
 	}
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	{
 		setd res[r1], r0
 		nop
 	}
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 	{
 		setc res[r1], 9
 		nop
 	}
-	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:86:0
+	.loc	3 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:86:0
 .Ltmp98:
 .Lxta.endpoint_labels3:
 	{
@@ -1348,7 +1348,7 @@ _SAudioHwConfig_0:                      # @_SAudioHwConfig_0
 	.cc_top ReleaseMute.function,ReleaseMute
 ReleaseMute:                            # @ReleaseMute
 .Lfunc_begin7:
-	.loc	3 146 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:146:0
+	.loc	3 146 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:146:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1361,7 +1361,7 @@ ReleaseMute:                            # @ReleaseMute
 		mkmsk r0, 1
 		dualentsp 2
 	}
-	.loc	3 147 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:147:0
+	.loc	3 147 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:147:0
 .Ltmp103:
 	{
 		mov r1, r0
@@ -1395,7 +1395,7 @@ ReleaseMute:                            # @ReleaseMute
 	.cc_top ClipIndicator.function,ClipIndicator
 ClipIndicator:                          # @ClipIndicator
 .Lfunc_begin8:
-	.loc	3 150 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:150:0
+	.loc	3 150 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:150:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1416,7 +1416,7 @@ ClipIndicator:                          # @ClipIndicator
 		ldc r0, 16
 		nop
 	}
-	.loc	3 151 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:151:0
+	.loc	3 151 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:151:0
 .Ltmp110:
 .Lxta.call_labels16:
 	bl set_gpio
@@ -1880,9 +1880,9 @@ __xcc1_internal_1:
 .Linfo_string0:
 .asciiz"XMOS 32-bit XC Compiler Community_14.4.1 (build 235-acbb966, Dec-01-2019)"
 .Linfo_string1:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 .Linfo_string2:
-.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 .Linfo_string3:
 .asciiz"si5351a_revb_441"
 .Linfo_string4:
@@ -3381,106 +3381,106 @@ __xcc1_internal_1:
 .Lentries_start0:
 	.long	.Lentries_end1-.Lentries_start0
 	.long	0
-	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 	.byte	0
 .cc_top cc_0,.Lxta.call_labels0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	52
 	.long	.Lxta.call_labels0
 .cc_bottom cc_0
 .cc_top cc_1,.Lxta.call_labels1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	57
 	.long	.Lxta.call_labels1
 .cc_bottom cc_1
 .cc_top cc_2,.Lxta.call_labels2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	60
 	.long	.Lxta.call_labels2
 .cc_bottom cc_2
 .cc_top cc_3,.Lxta.call_labels3
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	65
 	.long	.Lxta.call_labels3
 .cc_bottom cc_3
 .cc_top cc_4,.Lxta.call_labels4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	72
 	.long	.Lxta.call_labels4
 .cc_bottom cc_4
 .cc_top cc_5,.Lxta.call_labels5
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	73
 	.long	.Lxta.call_labels5
 .cc_bottom cc_5
 .cc_top cc_6,.Lxta.call_labels6
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	77
 	.long	.Lxta.call_labels6
 .cc_bottom cc_6
 .cc_top cc_7,.Lxta.call_labels7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	91
 	.long	.Lxta.call_labels7
 .cc_bottom cc_7
 .cc_top cc_8,.Lxta.call_labels8
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	92
 	.long	.Lxta.call_labels8
 .cc_bottom cc_8
 .cc_top cc_9,.Lxta.call_labels9
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	.Lxta.call_labels9
 .cc_bottom cc_9
 .cc_top cc_10,.Lxta.call_labels12
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	.Lxta.call_labels12
 .cc_bottom cc_10
 .cc_top cc_11,.Lxta.call_labels10
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	104
 	.long	.Lxta.call_labels10
 .cc_bottom cc_11
 .cc_top cc_12,.Lxta.call_labels13
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	104
 	.long	.Lxta.call_labels13
 .cc_bottom cc_12
 .cc_top cc_13,.Lxta.call_labels11
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	111
 	.long	.Lxta.call_labels11
 .cc_bottom cc_13
 .cc_top cc_14,.Lxta.call_labels14
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	111
 	.long	.Lxta.call_labels14
 .cc_bottom cc_14
 .cc_top cc_15,.Lxta.call_labels15
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	147
 	.long	.Lxta.call_labels15
 .cc_bottom cc_15
 .cc_top cc_16,.Lxta.call_labels16
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	151
 	.long	.Lxta.call_labels16
@@ -3490,28 +3490,28 @@ __xcc1_internal_1:
 .Lentries_start2:
 	.long	.Lentries_end3-.Lentries_start2
 	.long	0
-	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 	.byte	0
 .cc_top cc_17,.Lxta.endpoint_labels0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	86
 	.long	.Lxta.endpoint_labels0
 .cc_bottom cc_17
 .cc_top cc_18,.Lxta.endpoint_labels1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	86
 	.long	.Lxta.endpoint_labels1
 .cc_bottom cc_18
 .cc_top cc_19,.Lxta.endpoint_labels2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	86
 	.long	.Lxta.endpoint_labels2
 .cc_bottom cc_19
 .cc_top cc_20,.Lxta.endpoint_labels3
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	86
 	.long	.Lxta.endpoint_labels3
@@ -3521,934 +3521,934 @@ __xcc1_internal_1:
 .Lentries_start4:
 	.long	.Lentries_end5-.Lentries_start4
 	.long	0
-	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 	.byte	0
 .cc_top cc_21,.Lxtalabel0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	52
 	.long	52
 	.long	.Lxtalabel0
 .cc_bottom cc_21
 .cc_top cc_22,.Lxtalabel0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	54
 	.long	55
 	.long	.Lxtalabel0
 .cc_bottom cc_22
 .cc_top cc_23,.Lxtalabel1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	57
 	.long	57
 	.long	.Lxtalabel1
 .cc_bottom cc_23
 .cc_top cc_24,.Lxtalabel1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	58
 	.long	58
 	.long	.Lxtalabel1
 .cc_bottom cc_24
 .cc_top cc_25,.Lxtalabel2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	60
 	.long	60
 	.long	.Lxtalabel2
 .cc_bottom cc_25
 .cc_top cc_26,.Lxtalabel2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	61
 	.long	61
 	.long	.Lxtalabel2
 .cc_bottom cc_26
 .cc_top cc_27,.Lxtalabel3
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	65
 	.long	65
 	.long	.Lxtalabel3
 .cc_bottom cc_27
 .cc_top cc_28,.Lxtalabel3
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	68
 	.long	69
 	.long	.Lxtalabel3
 .cc_bottom cc_28
 .cc_top cc_29,.Lxtalabel4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	72
 	.long	72
 	.long	.Lxtalabel4
 .cc_bottom cc_29
 .cc_top cc_30,.Lxtalabel4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	73
 	.long	73
 	.long	.Lxtalabel4
 .cc_bottom cc_30
 .cc_top cc_31,.Lxtalabel4
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	74
 	.long	74
 	.long	.Lxtalabel4
 .cc_bottom cc_31
 .cc_top cc_32,.Lxtalabel5
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	75
 	.long	75
 	.long	.Lxtalabel5
 .cc_bottom cc_32
 .cc_top cc_33,.Lxtalabel6
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	77
 	.long	77
 	.long	.Lxtalabel6
 .cc_bottom cc_33
 .cc_top cc_34,.Lxtalabel6
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	78
 	.long	78
 	.long	.Lxtalabel6
 .cc_bottom cc_34
 .cc_top cc_35,.Lxtalabel7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	81
 	.long	83
 	.long	.Lxtalabel7
 .cc_bottom cc_35
 .cc_top cc_36,.Lxtalabel8
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	81
 	.long	83
 	.long	.Lxtalabel8
 .cc_bottom cc_36
 .cc_top cc_37,.Lxtalabel24
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	81
 	.long	83
 	.long	.Lxtalabel24
 .cc_bottom cc_37
 .cc_top cc_38,.Lxtalabel23
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	81
 	.long	83
 	.long	.Lxtalabel23
 .cc_bottom cc_38
 .cc_top cc_39,.Lxtalabel39
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	81
 	.long	83
 	.long	.Lxtalabel39
 .cc_bottom cc_39
 .cc_top cc_40,.Lxtalabel38
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	81
 	.long	83
 	.long	.Lxtalabel38
 .cc_bottom cc_40
 .cc_top cc_41,.Lxtalabel7
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	85
 	.long	87
 	.long	.Lxtalabel7
 .cc_bottom cc_41
 .cc_top cc_42,.Lxtalabel8
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	85
 	.long	87
 	.long	.Lxtalabel8
 .cc_bottom cc_42
 .cc_top cc_43,.Lxtalabel24
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	85
 	.long	87
 	.long	.Lxtalabel24
 .cc_bottom cc_43
 .cc_top cc_44,.Lxtalabel23
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	85
 	.long	87
 	.long	.Lxtalabel23
 .cc_bottom cc_44
 .cc_top cc_45,.Lxtalabel39
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	85
 	.long	87
 	.long	.Lxtalabel39
 .cc_bottom cc_45
 .cc_top cc_46,.Lxtalabel38
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	85
 	.long	87
 	.long	.Lxtalabel38
 .cc_bottom cc_46
 .cc_top cc_47,.Lxtalabel9
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	90
 	.long	93
 	.long	.Lxtalabel9
 .cc_bottom cc_47
 .cc_top cc_48,.Lxtalabel13
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel13
 .cc_bottom cc_48
 .cc_top cc_49,.Lxtalabel12
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel12
 .cc_bottom cc_49
 .cc_top cc_50,.Lxtalabel14
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel14
 .cc_bottom cc_50
 .cc_top cc_51,.Lxtalabel27
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel27
 .cc_bottom cc_51
 .cc_top cc_52,.Lxtalabel15
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel15
 .cc_bottom cc_52
 .cc_top cc_53,.Lxtalabel10
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel10
 .cc_bottom cc_53
 .cc_top cc_54,.Lxtalabel16
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel16
 .cc_bottom cc_54
 .cc_top cc_55,.Lxtalabel25
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel25
 .cc_bottom cc_55
 .cc_top cc_56,.Lxtalabel26
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel26
 .cc_bottom cc_56
 .cc_top cc_57,.Lxtalabel29
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel29
 .cc_bottom cc_57
 .cc_top cc_58,.Lxtalabel21
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel21
 .cc_bottom cc_58
 .cc_top cc_59,.Lxtalabel18
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel18
 .cc_bottom cc_59
 .cc_top cc_60,.Lxtalabel11
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel11
 .cc_bottom cc_60
 .cc_top cc_61,.Lxtalabel30
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel30
 .cc_bottom cc_61
 .cc_top cc_62,.Lxtalabel31
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel31
 .cc_bottom cc_62
 .cc_top cc_63,.Lxtalabel17
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel17
 .cc_bottom cc_63
 .cc_top cc_64,.Lxtalabel33
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel33
 .cc_bottom cc_64
 .cc_top cc_65,.Lxtalabel35
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel35
 .cc_bottom cc_65
 .cc_top cc_66,.Lxtalabel36
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel36
 .cc_bottom cc_66
 .cc_top cc_67,.Lxtalabel28
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel28
 .cc_bottom cc_67
 .cc_top cc_68,.Lxtalabel20
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel20
 .cc_bottom cc_68
 .cc_top cc_69,.Lxtalabel32
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	100
 	.long	100
 	.long	.Lxtalabel32
 .cc_bottom cc_69
 .cc_top cc_70,.Lxtalabel17
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel17
 .cc_bottom cc_70
 .cc_top cc_71,.Lxtalabel14
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel14
 .cc_bottom cc_71
 .cc_top cc_72,.Lxtalabel25
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel25
 .cc_bottom cc_72
 .cc_top cc_73,.Lxtalabel20
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel20
 .cc_bottom cc_73
 .cc_top cc_74,.Lxtalabel18
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel18
 .cc_bottom cc_74
 .cc_top cc_75,.Lxtalabel10
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel10
 .cc_bottom cc_75
 .cc_top cc_76,.Lxtalabel11
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel11
 .cc_bottom cc_76
 .cc_top cc_77,.Lxtalabel30
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel30
 .cc_bottom cc_77
 .cc_top cc_78,.Lxtalabel15
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel15
 .cc_bottom cc_78
 .cc_top cc_79,.Lxtalabel31
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel31
 .cc_bottom cc_79
 .cc_top cc_80,.Lxtalabel28
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel28
 .cc_bottom cc_80
 .cc_top cc_81,.Lxtalabel32
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel32
 .cc_bottom cc_81
 .cc_top cc_82,.Lxtalabel26
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel26
 .cc_bottom cc_82
 .cc_top cc_83,.Lxtalabel21
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel21
 .cc_bottom cc_83
 .cc_top cc_84,.Lxtalabel12
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel12
 .cc_bottom cc_84
 .cc_top cc_85,.Lxtalabel35
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel35
 .cc_bottom cc_85
 .cc_top cc_86,.Lxtalabel16
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel16
 .cc_bottom cc_86
 .cc_top cc_87,.Lxtalabel36
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel36
 .cc_bottom cc_87
 .cc_top cc_88,.Lxtalabel13
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel13
 .cc_bottom cc_88
 .cc_top cc_89,.Lxtalabel27
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel27
 .cc_bottom cc_89
 .cc_top cc_90,.Lxtalabel29
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel29
 .cc_bottom cc_90
 .cc_top cc_91,.Lxtalabel33
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	103
 	.long	104
 	.long	.Lxtalabel33
 .cc_bottom cc_91
 .cc_top cc_92,.Lxtalabel10
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel10
 .cc_bottom cc_92
 .cc_top cc_93,.Lxtalabel11
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel11
 .cc_bottom cc_93
 .cc_top cc_94,.Lxtalabel30
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel30
 .cc_bottom cc_94
 .cc_top cc_95,.Lxtalabel12
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel12
 .cc_bottom cc_95
 .cc_top cc_96,.Lxtalabel13
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel13
 .cc_bottom cc_96
 .cc_top cc_97,.Lxtalabel31
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel31
 .cc_bottom cc_97
 .cc_top cc_98,.Lxtalabel14
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel14
 .cc_bottom cc_98
 .cc_top cc_99,.Lxtalabel15
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel15
 .cc_bottom cc_99
 .cc_top cc_100,.Lxtalabel32
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel32
 .cc_bottom cc_100
 .cc_top cc_101,.Lxtalabel16
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel16
 .cc_bottom cc_101
 .cc_top cc_102,.Lxtalabel17
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel17
 .cc_bottom cc_102
 .cc_top cc_103,.Lxtalabel33
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel33
 .cc_bottom cc_103
 .cc_top cc_104,.Lxtalabel18
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel18
 .cc_bottom cc_104
 .cc_top cc_105,.Lxtalabel20
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel20
 .cc_bottom cc_105
 .cc_top cc_106,.Lxtalabel35
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel35
 .cc_bottom cc_106
 .cc_top cc_107,.Lxtalabel21
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel21
 .cc_bottom cc_107
 .cc_top cc_108,.Lxtalabel26
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel26
 .cc_bottom cc_108
 .cc_top cc_109,.Lxtalabel36
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel36
 .cc_bottom cc_109
 .cc_top cc_110,.Lxtalabel25
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel25
 .cc_bottom cc_110
 .cc_top cc_111,.Lxtalabel27
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel27
 .cc_bottom cc_111
 .cc_top cc_112,.Lxtalabel28
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel28
 .cc_bottom cc_112
 .cc_top cc_113,.Lxtalabel29
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	108
 	.long	110
 	.long	.Lxtalabel29
 .cc_bottom cc_113
 .cc_top cc_114,.Lxtalabel19
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	111
 	.long	111
 	.long	.Lxtalabel19
 .cc_bottom cc_114
 .cc_top cc_115,.Lxtalabel34
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	111
 	.long	111
 	.long	.Lxtalabel34
 .cc_bottom cc_115
 .cc_top cc_116,.Lxtalabel34
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	113
 	.long	114
 	.long	.Lxtalabel34
 .cc_bottom cc_116
 .cc_top cc_117,.Lxtalabel19
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	113
 	.long	114
 	.long	.Lxtalabel19
 .cc_bottom cc_117
 .cc_top cc_118,.Lxtalabel22
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	115
 	.long	115
 	.long	.Lxtalabel22
 .cc_bottom cc_118
 .cc_top cc_119,.Lxtalabel37
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	115
 	.long	115
 	.long	.Lxtalabel37
 .cc_bottom cc_119
 .cc_top cc_120,.Lxtalabel22
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	117
 	.long	118
 	.long	.Lxtalabel22
 .cc_bottom cc_120
 .cc_top cc_121,.Lxtalabel37
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	117
 	.long	118
 	.long	.Lxtalabel37
 .cc_bottom cc_121
 .cc_top cc_122,.Lxtalabel10
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel10
 .cc_bottom cc_122
 .cc_top cc_123,.Lxtalabel11
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel11
 .cc_bottom cc_123
 .cc_top cc_124,.Lxtalabel30
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel30
 .cc_bottom cc_124
 .cc_top cc_125,.Lxtalabel20
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel20
 .cc_bottom cc_125
 .cc_top cc_126,.Lxtalabel31
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel31
 .cc_bottom cc_126
 .cc_top cc_127,.Lxtalabel25
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel25
 .cc_bottom cc_127
 .cc_top cc_128,.Lxtalabel32
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel32
 .cc_bottom cc_128
 .cc_top cc_129,.Lxtalabel18
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel18
 .cc_bottom cc_129
 .cc_top cc_130,.Lxtalabel26
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel26
 .cc_bottom cc_130
 .cc_top cc_131,.Lxtalabel33
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel33
 .cc_bottom cc_131
 .cc_top cc_132,.Lxtalabel17
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel17
 .cc_bottom cc_132
 .cc_top cc_133,.Lxtalabel16
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel16
 .cc_bottom cc_133
 .cc_top cc_134,.Lxtalabel35
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel35
 .cc_bottom cc_134
 .cc_top cc_135,.Lxtalabel27
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel27
 .cc_bottom cc_135
 .cc_top cc_136,.Lxtalabel15
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel15
 .cc_bottom cc_136
 .cc_top cc_137,.Lxtalabel14
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel14
 .cc_bottom cc_137
 .cc_top cc_138,.Lxtalabel36
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel36
 .cc_bottom cc_138
 .cc_top cc_139,.Lxtalabel21
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel21
 .cc_bottom cc_139
 .cc_top cc_140,.Lxtalabel28
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel28
 .cc_bottom cc_140
 .cc_top cc_141,.Lxtalabel13
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel13
 .cc_bottom cc_141
 .cc_top cc_142,.Lxtalabel12
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel12
 .cc_bottom cc_142
 .cc_top cc_143,.Lxtalabel29
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	136
 	.long	137
 	.long	.Lxtalabel29
 .cc_bottom cc_143
 .cc_top cc_144,.Lxtalabel23
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	140
 	.long	140
 	.long	.Lxtalabel23
 .cc_bottom cc_144
 .cc_top cc_145,.Lxtalabel38
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	140
 	.long	140
 	.long	.Lxtalabel38
 .cc_bottom cc_145
 .cc_top cc_146,.Lxtalabel24
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	140
 	.long	140
 	.long	.Lxtalabel24
 .cc_bottom cc_146
 .cc_top cc_147,.Lxtalabel39
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	140
 	.long	140
 	.long	.Lxtalabel39
 .cc_bottom cc_147
 .cc_top cc_148,.Lxtalabel23
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	142
 	.long	143
 	.long	.Lxtalabel23
 .cc_bottom cc_148
 .cc_top cc_149,.Lxtalabel38
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	142
 	.long	143
 	.long	.Lxtalabel38
 .cc_bottom cc_149
 .cc_top cc_150,.Lxtalabel24
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	142
 	.long	143
 	.long	.Lxtalabel24
 .cc_bottom cc_150
 .cc_top cc_151,.Lxtalabel39
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	142
 	.long	143
 	.long	.Lxtalabel39
 .cc_bottom cc_151
 .cc_top cc_152,.Lxtalabel40
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	147
 	.long	148
 	.long	.Lxtalabel40
 .cc_bottom cc_152
 .cc_top cc_153,.Lxtalabel41
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	151
 	.long	152
@@ -4459,52 +4459,52 @@ __xcc1_internal_1:
 .Lentries_start6:
 	.long	.Lentries_end7-.Lentries_start6
 	.long	0
-	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 	.byte	0
 .cc_top cc_154,.Lxta.loop_labels0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	57
 	.long	57
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_154
 .cc_top cc_155,.Lxta.loop_labels0
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	58
 	.long	58
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_155
 .cc_top cc_156,.Lxta.loop_labels2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	71
 	.long	71
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_156
 .cc_top cc_157,.Lxta.loop_labels1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	72
 	.long	72
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_157
 .cc_top cc_158,.Lxta.loop_labels1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	73
 	.long	73
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_158
 .cc_top cc_159,.Lxta.loop_labels1
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	74
 	.long	74
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_159
 .cc_top cc_160,.Lxta.loop_labels2
-	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc"
 	.byte	0
 	.long	75
 	.long	75
@@ -4517,7 +4517,7 @@ __xcc1_internal_1:
 	.long	1
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str0:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:57:44: error: out of bounds array access\n        SI5351A_REGWRITE(param[i].address, param[i].value);\n                                           ^~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:45:47: note: expanded from here\n#define SI5351A_REGWRITE(reg, val) {data[0] = val; i2c_master_write_reg(SI5351A_I2C_ADDR, reg, data, 1, r_i2c);}\n                                              ^\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:57:44: error: out of bounds array access\n        SI5351A_REGWRITE(param[i].address, param[i].value);\n                                           ^~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:45:47: note: expanded from here\n#define SI5351A_REGWRITE(reg, val) {data[0] = val; i2c_master_write_reg(SI5351A_I2C_ADDR, reg, data, 1, r_i2c);}\n                                              ^\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_0,.Ltrap_info0
 	.long	.Ltrap_info0
@@ -4525,7 +4525,7 @@ __xcc1_internal_1:
 .cc_bottom cc_trapinfo_0
 	.section	.trap_info_str,"MS",@progbits
 .Ltrap_info_str1:
-.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:72:48: error: out of bounds array access\n            SI5351A_REGWRITE(param[i].address, param[i].value);\n                                               ^~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src/audiohw.xc:45:47: note: expanded from here\n#define SI5351A_REGWRITE(reg, val) {data[0] = val; i2c_master_write_reg(SI5351A_I2C_ADDR, reg, data, 1, r_i2c);}\n                                              ^\n"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:72:48: error: out of bounds array access\n            SI5351A_REGWRITE(param[i].address, param[i].value);\n                                               ^~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc:45:47: note: expanded from here\n#define SI5351A_REGWRITE(reg, val) {data[0] = val; i2c_master_write_reg(SI5351A_I2C_ADDR, reg, data, 1, r_i2c);}\n                                              ^\n"
 	.section	.trap_info,"",@progbits
 .cc_top cc_trapinfo_1,.Ltrap_info1
 	.long	.Ltrap_info1

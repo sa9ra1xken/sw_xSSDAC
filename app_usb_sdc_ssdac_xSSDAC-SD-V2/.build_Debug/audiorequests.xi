@@ -675,7 +675,7 @@ inline int XUD_SetReady_Out(XUD_ep ep, unsigned char buffer[])
     return 0;
 }
 # 426 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-inline int XUD_SetReady_OutPtr(XUD_ep ep, unsigned addr)
+static inline int XUD_SetReady_OutPtr(XUD_ep ep, unsigned addr)
 {
     int chan_array_ptr;
     int reset;
@@ -693,7 +693,7 @@ inline int XUD_SetReady_OutPtr(XUD_ep ep, unsigned addr)
     return XUD_RES_OKAY;
 }
 # 453 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-inline XUD_Result_t XUD_SetReady_InPtr(XUD_ep ep, unsigned addr, int len)
+static inline XUD_Result_t XUD_SetReady_InPtr(XUD_ep ep, unsigned addr, int len)
 {
     int chan_array_ptr;
     int tmp, tmp2;
@@ -736,7 +736,7 @@ inline XUD_Result_t XUD_SetReady_InPtr(XUD_ep ep, unsigned addr, int len)
     return XUD_RES_OKAY;
 }
 # 504 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-inline XUD_Result_t XUD_SetReady_In(XUD_ep ep, unsigned char buffer[], int len)
+static inline XUD_Result_t XUD_SetReady_In(XUD_ep ep, unsigned char buffer[], int len)
 {
     unsigned addr;
 
@@ -1584,7 +1584,7 @@ int AudioClassRequests_2(XUD_ep ep0_out, XUD_ep ep0_in, USB_SetupPacket_t &sp, c
 
                                 int currentFreq44 = 11025;
                                 int currentFreq48 = 8000;
-                                unsigned maxFreq = (192000);
+                                unsigned maxFreq = (384000);
 
 
                                 unsigned usbSpeed;
@@ -1600,7 +1600,7 @@ int AudioClassRequests_2(XUD_ep ep0_out, XUD_ep ep0_in, USB_SetupPacket_t &sp, c
 
                                 for (int k = 0; k < sizeof(lowSampleRateList)/sizeof(unsigned); k++)
                                 {
-                                    if((lowSampleRateList[k] >= (44100)) && (lowSampleRateList[k] <= (192000)))
+                                    if((lowSampleRateList[k] >= (44100)) && (lowSampleRateList[k] <= (384000)))
                                     {
                                         storeFreq(buffer, i, lowSampleRateList[k]);
                                         num_freqs++;

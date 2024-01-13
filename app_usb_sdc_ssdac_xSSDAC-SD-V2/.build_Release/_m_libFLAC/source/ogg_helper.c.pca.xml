@@ -16,6 +16,7 @@
   <fCall global="true" name="simple_ogg_page__get_at"/>
   <fCall global="true" name="simple_ogg_page__set_at"/>
   <fCall global="true" name="free"/>
+  <fCall global="true" name="assert"/>
   <fCall global="true" name="memcmp"/>
   <fCall global="true" name="ogg_page_checksum_set"/>
   <fCall global="true" name="malloc"/>

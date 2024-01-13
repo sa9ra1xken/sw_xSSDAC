@@ -34,7 +34,6 @@
   <fCall global="true" name="FLAC__lpc_window_data_partial_wide.maxchanends"/>
   <fCall global="true" name="FLAC__lpc_compute_autocorrelation"/>
   <fCall global="true" name="FLAC__lpc_compute_autocorrelation.nstackwords"/>
-  <fCall global="true" name="assert.nstackwords"/>
   <fCall global="true" name="memset.nstackwords"/>
   <fCall global="true" name="__extendsfdf2.nstackwords"/>
   <fCall global="true" name="__muldf3.nstackwords"/>
@@ -43,6 +42,7 @@
   <fCall global="true" name="FLAC__lpc_compute_autocorrelation.maxchanends"/>
   <fCall global="true" name="FLAC__lpc_compute_lp_coefficients"/>
   <fCall global="true" name="FLAC__lpc_compute_lp_coefficients.nstackwords"/>
+  <fCall global="true" name="__eqdf2.nstackwords"/>
   <fCall global="true" name="__divdf3.nstackwords"/>
   <fCall global="true" name="__truncdfsf2.nstackwords"/>
   <fCall global="true" name="__subsf3.nstackwords"/>
@@ -147,7 +147,6 @@
   <fCall global="true" name="FLAC__lpc_compute_best_order.maxcores"/>
   <fCall global="true" name="FLAC__lpc_compute_best_order.maxtimers"/>
   <fCall global="true" name="FLAC__lpc_compute_best_order.maxchanends"/>
-  <fCall global="true" name="assert"/>
   <fCall global="true" name="frexp"/>
   <fCall global="true" name="fprintf"/>
   <fCall global="true" name="__getstderr"/>
@@ -162,11 +161,12 @@
   <fCall global="true" name="memset"/>
   <fCall global="true" name="__extendsfdf2"/>
   <fCall global="true" name="__muldf3"/>
-  <fCall global="true" name="__nedf2"/>
+  <fCall global="true" name="__eqdf2"/>
   <fCall global="true" name="__subdf3"/>
   <fCall global="true" name="__divdf3"/>
   <fCall global="true" name="__truncdfsf2"/>
   <fCall global="true" name="__subsf3"/>
+  <fCall global="true" name="__nedf2"/>
   <fCall global="true" name="__gtdf2"/>
   <fCall global="true" name="__ledf2"/>
   <fCall global="true" name="__floatsidf"/>

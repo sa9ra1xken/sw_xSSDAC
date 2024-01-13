@@ -8,7 +8,7 @@
 # 13 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
-# 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xSSDAC-SD-V2.h" 1 3
+# 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xSSDAC-SD-V2.h" 1 3
 
 
 
@@ -396,7 +396,7 @@ unsigned get_local_tile_id(void);
 unsigned get_tile_id(tileref t);
 # 2136 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 3
 unsigned get_logical_core_id(void);
-# 5 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xSSDAC-SD-V2.h" 2 3
+# 5 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xSSDAC-SD-V2.h" 2 3
 
 
 
@@ -1179,12 +1179,32 @@ void xscope_data_from_host(chanend c, char buf[256], int &n);
 
 void xscope_connect_data_from_host(chanend from_host);
 # 420 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xscope.h" 3
-# 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xscope_probes.h" 1 3
+# 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xscope_probes.h" 1 3
 # 420 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xscope.h" 2 3
 # 19 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h" 1
-# 31 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
+# 29 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
+void ConfigureSerialDacPorts();
+
+void InitDebugOut(out port txd);
+
+void DebugOut(unsigned data, unsigned count, out port txd);
+
+
+unsigned start_ssdac(chanend c_in, unsigned sample_rate);
+
+
+unsigned start_fir(chanend c_in, unsigned sample_rate);
+
+
+unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
+
+void ssdac_core(chanend c_in, chanend ?c_control);
+# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h" 1
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h"
 typedef enum {
     _GET_INTERPOLATION_MODE =1,
     _SET_INTERPOLATION_MODE =2
@@ -1206,35 +1226,11 @@ typedef enum {
 
 
 
-
-
 typedef enum {
     _AUDIO_FORMAT_CHANGE = 0,
     _INTERPOLATION_MODE_CHANGE = 1
 } DAC_RETURN_CODE;
-
-
-
-
-
-
-void ConfigureSerialDacPorts();
-
-void InitDebugOut(out port txd);
-
-void DebugOut(unsigned data, unsigned count, out port txd);
-
-
-unsigned start_ssdac(chanend c_in, unsigned sample_rate);
-
-
-unsigned start_fir(chanend c_in, unsigned sample_rate);
-
-
-unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
-
-void audio_xss(chanend c_in, chanend ?c_control);
-# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h" 1
 # 15 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h"
@@ -1249,36 +1245,19 @@ extern port tp24_interpolator;
 {DAC_RETURN_CODE, unsigned} fir_sinc8(chanend c_in, streaming chanend c_out, chanend ?c_control, unsigned sample_rate);
 
 {DAC_RETURN_CODE, unsigned} fir_sinc4(chanend c_in, streaming chanend c_out, chanend ?c_control, unsigned sample_rate);
-# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ring_buffer.h" 1
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ring_buffer.h"
 void init_ring_buff();
 void add_sample(int left, int right);
 {int, int} sample_at(int offset);
-# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\audiohw.h" 1
-
-
-
-
-
-
-void AudioHwInit( );
-
-
-void AudioHwConfig(unsigned samFreq, unsigned mClk, unsigned dsdMode,
-        unsigned sampRes_DAC, unsigned sampRes_ADC);
-
-void ReleaseMute();
-
-void ClipIndicator(unsigned state);
 # 23 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 
+
 # 1 ".././src\\ssdac_conf.h" 1
-# 25 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h" 1
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
@@ -1306,8 +1285,22 @@ static inline unsigned DoSampleTransfer(chanend c_out, const unsigned underflowW
     }
     return 0;
 }
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
-# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+# 27 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+
+
+
+
+
+void AudioHwInit( );
+
+
+void AudioHwConfig(unsigned samFreq, unsigned mClk, unsigned dsdMode,
+        unsigned sampRes_DAC, unsigned sampRes_ADC);
+
+void ReleaseMute();
+
+void ClipIndicator(unsigned state);
+# 57 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 on tile[0]: port tp5 = on tile[0]: 0x10200;
 on tile[0]: port tp23_solver = on tile[0]: 0x10c00;
 on tile[0]: port tp24_interpolator = on tile[0]: 0x10d00;
@@ -1342,7 +1335,7 @@ void ConfigureSerialDacPorts(){
 
 
     configure_clock_src(clk_spi, p_spidac_mclk_in);
-# 88 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+# 101 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
     configure_out_port_strobed_master(p_data_left, p_cs_n_0, clk_spi, 0x00);
     configure_out_port_strobed_master(p_data_right, p_cs_n_1, clk_spi,0x00);
 
@@ -1429,7 +1422,7 @@ void serial_dac_driver_preserve(streaming chanend c_in, unsigned space_count ){
     unsigned data_left, data_right;
     unsigned left, right;
     timer t;
-# 188 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+# 201 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
     time = __builtin_partout_timestamped(p_data_left, 16, __builtin_bitrev(0x80000000));
     time = __builtin_partout_timestamped(p_data_right, 16, __builtin_bitrev(0x80000000));
 
@@ -1460,7 +1453,7 @@ void serial_dac_driver_preserve(streaming chanend c_in, unsigned space_count ){
 
         data_left = __builtin_bitrev(left + 0x80000000);
         data_right = __builtin_bitrev(right + 0x80000000);
-# 226 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+# 239 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
         time += space_count;
 
 
@@ -1551,6 +1544,12 @@ void interpolator(
 
 
     switch (sample_rate){
+        case 384000:
+            ss_factor_bits = 2;
+            break;
+        case 352800:
+            ss_factor_bits = 2;
+            break;
         case 192000:
             ss_factor_bits = 3;
             break;
@@ -1828,14 +1827,14 @@ unsigned start_fir(chanend c_in, unsigned sample_rate){
 
 
 
-unsigned config_audo_core(chanend c_in, chanend ?c_control, unsigned sample_rate, INTERPOLATION_MODE &cur_mode){
+unsigned configure_audio_process(chanend c_in, chanend ?c_control, unsigned sample_rate, INTERPOLATION_MODE &cur_mode){
 
     streaming chan c_coefficients;
     streaming chan c_super_sample;
     streaming chan c_clipped;
     streaming chan c_over;
 
-    INTERPOLATION_MODE proposed_mode = _QUAD;
+    INTERPOLATION_MODE proposed_mode = _CUBIC;
 
                                               ;
 
@@ -1853,23 +1852,32 @@ unsigned config_audo_core(chanend c_in, chanend ?c_control, unsigned sample_rate
 
         switch (proposed_mode)
         {
-        case _SINC8:
-            if (sample_rate > 48000){
-                cur_mode = _CUBIC;
-                                                                                                            ;
-            }
-            else cur_mode = proposed_mode;
-            break;
-        case _SINC4:
-            if (sample_rate > 48000){
-                cur_mode = _CUBIC;
-                                                                                                            ;
-            }
-            else cur_mode = proposed_mode;
-            break;
-        default:
-            cur_mode = proposed_mode;
-            break;
+            case _SINC8:
+                if (sample_rate > 48000){
+                    cur_mode = _CUBIC;
+                                                                                                                ;
+                }
+                else cur_mode = proposed_mode;
+                break;
+            case _SINC4:
+                if (sample_rate > 48000){
+                    cur_mode = _CUBIC;
+                                                                                                                ;
+                }
+                else cur_mode = proposed_mode;
+                break;
+            case _CUBIC:
+                if (sample_rate > 192000){
+                    cur_mode = _STEP;
+                                                                                                                       ;
+                }
+                else cur_mode = proposed_mode;
+                break;
+
+
+            default:
+                cur_mode = proposed_mode;
+                break;
         }
         if (!isnull(c_control)){
             c_control <: _SET_INTERPOLATION_MODE;
@@ -1906,6 +1914,12 @@ unsigned config_audo_core(chanend c_in, chanend ?c_control, unsigned sample_rate
                                                       ;
                 unsigned space_count;
                 switch (sample_rate){
+                    case 384000:
+                        space_count = 768 / 8 - 16;
+                        break;
+                    case 352800:
+                        space_count = 768 / 8 - 16;
+                        break;
                     case 192000:
                         space_count = 768 / 4 - 16;
                         break;
@@ -1950,7 +1964,7 @@ unsigned config_audo_core(chanend c_in, chanend ?c_control, unsigned sample_rate
     return audio_cmd;
 }
 
-void audio_xss(chanend c_in, chanend ?c_control)
+void ssdac_core(chanend c_in, chanend ?c_control)
 {
     unsigned curSamFreq = 44100;
     unsigned dsdMode = 0;
@@ -1978,7 +1992,7 @@ void audio_xss(chanend c_in, chanend ?c_control)
         firstRun = 0;
 
 
-        command = config_audo_core(c_in, c_control, curSamFreq, cur_interpolation_mode);
+        command = configure_audio_process(c_in, c_control, curSamFreq, cur_interpolation_mode);
 
         if (command == 4)
         {

@@ -6,6 +6,7 @@
   <fCall global="true" name="malloc.nstackwords"/>
   <fCall global="true" name="memcpy.nstackwords"/>
   <fCall global="true" name="strdup.nstackwords"/>
+  <fCall global="true" name="assert.nstackwords"/>
   <fCall global="true" name="free.nstackwords"/>
   <fCall global="true" name="FLAC__metadata_object_new.maxcores"/>
   <fCall global="true" name="calloc.maxcores"/>
@@ -326,6 +327,7 @@
   <fCall global="true" name="calloc"/>
   <fCall global="true" name="strlen"/>
   <fCall global="true" name="free"/>
+  <fCall global="true" name="assert"/>
   <fCall global="true" name="realloc"/>
   <fCall global="true" name="FLAC__format_seektable_is_legal"/>
   <fCall global="true" name="FLAC__format_seektable_sort"/>

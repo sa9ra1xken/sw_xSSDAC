@@ -8,6 +8,59 @@
 	.inline_definition XUD_SetReady_OutPtr
 	.inline_definition XUD_SetReady_InPtr
 	.inline_definition XUD_SetReady_In
+	.weak _i.qspi_access.write.maxchanends.group
+	.max_reduce _i.qspi_access.write.max.maxchanends, _i.qspi_access.write.maxchanends.group, 0
+	.weak _i.qspi_access.write.maxcores.group
+	.max_reduce _i.qspi_access.write.max.maxcores, _i.qspi_access.write.maxcores.group, 0
+	.weak _i.qspi_access.write.maxtimers.group
+	.max_reduce _i.qspi_access.write.max.maxtimers, _i.qspi_access.write.maxtimers.group, 0
+	.weak _i.qspi_access.write.nstackwords.group
+	.globl _i.qspi_access.write.nstackwords.group
+	.weak _i.qspi_access.write.fns.group
+	.globl _i.qspi_access.write.fns.group
+	.max_reduce _i.qspi_access.write.max.nstackwords, _i.qspi_access.write.nstackwords.group, 0
+	.max_reduce _i.qspi_access.write.fns, _i.qspi_access.write.fns.group, 0
+	.weak _i.qspi_access.read.maxchanends.group
+	.max_reduce _i.qspi_access.read.max.maxchanends, _i.qspi_access.read.maxchanends.group, 0
+	.weak _i.qspi_access.read.maxcores.group
+	.max_reduce _i.qspi_access.read.max.maxcores, _i.qspi_access.read.maxcores.group, 0
+	.weak _i.qspi_access.read.maxtimers.group
+	.max_reduce _i.qspi_access.read.max.maxtimers, _i.qspi_access.read.maxtimers.group, 0
+	.weak _i.qspi_access.read.nstackwords.group
+	.globl _i.qspi_access.read.nstackwords.group
+	.weak _i.qspi_access.read.fns.group
+	.globl _i.qspi_access.read.fns.group
+	.max_reduce _i.qspi_access.read.max.nstackwords, _i.qspi_access.read.nstackwords.group, 0
+	.max_reduce _i.qspi_access.read.fns, _i.qspi_access.read.fns.group, 0
+	.weak _i.qspi_access.__interface_init.maxchanends.group
+	.max_reduce _i.qspi_access.__interface_init.max.maxchanends, _i.qspi_access.__interface_init.maxchanends.group, 0
+	.weak _i.qspi_access.__interface_init.maxcores.group
+	.max_reduce _i.qspi_access.__interface_init.max.maxcores, _i.qspi_access.__interface_init.maxcores.group, 0
+	.weak _i.qspi_access.__interface_init.maxtimers.group
+	.max_reduce _i.qspi_access.__interface_init.max.maxtimers, _i.qspi_access.__interface_init.maxtimers.group, 0
+	.weak _i.qspi_access.__interface_init.nstackwords.group
+	.globl _i.qspi_access.__interface_init.nstackwords.group
+	.weak _i.qspi_access.__interface_init.fns.group
+	.globl _i.qspi_access.__interface_init.fns.group
+	.max_reduce _i.qspi_access.__interface_init.max.nstackwords, _i.qspi_access.__interface_init.nstackwords.group, 0
+	.max_reduce _i.qspi_access.__interface_init.fns, _i.qspi_access.__interface_init.fns.group, 0
+	.weak _i.qspi_access._client_call_y.maxchanends.group
+	.add_to_set _i.qspi_access._client_call_y.maxchanends.group, (__interface_client_call_y_other.maxchanends + __interface_client_call_y_extra.maxchanends), __interface_client_call_y_other
+	.max_reduce _i.qspi_access._client_call_y.max.maxchanends, _i.qspi_access._client_call_y.maxchanends.group, 0
+	.weak _i.qspi_access._client_call_y.maxcores.group
+	.add_to_set _i.qspi_access._client_call_y.maxcores.group, (__interface_client_call_y_other.maxcores + __interface_client_call_y_extra.maxcores), __interface_client_call_y_other
+	.max_reduce _i.qspi_access._client_call_y.max.maxcores, _i.qspi_access._client_call_y.maxcores.group, 0
+	.weak _i.qspi_access._client_call_y.maxtimers.group
+	.add_to_set _i.qspi_access._client_call_y.maxtimers.group, (__interface_client_call_y_other.maxtimers + __interface_client_call_y_extra.maxtimers), __interface_client_call_y_other
+	.max_reduce _i.qspi_access._client_call_y.max.maxtimers, _i.qspi_access._client_call_y.maxtimers.group, 0
+	.weak _i.qspi_access._client_call_y.nstackwords.group
+	.globl _i.qspi_access._client_call_y.nstackwords.group
+	.weak _i.qspi_access._client_call_y.fns.group
+	.globl _i.qspi_access._client_call_y.fns.group
+	.add_to_set _i.qspi_access._client_call_y.nstackwords.group, (__interface_client_call_y_other.nstackwords + __interface_client_call_y_extra.nstackwords), __interface_client_call_y_other
+	.add_to_set _i.qspi_access._client_call_y.fns.group, __interface_client_call_y_other, __interface_client_call_y_other
+	.max_reduce _i.qspi_access._client_call_y.max.nstackwords, _i.qspi_access._client_call_y.nstackwords.group, 0
+	.max_reduce _i.qspi_access._client_call_y.fns, _i.qspi_access._client_call_y.fns.group, 0
 	.weak _i.i_dfu.HandleDfuRequest.maxchanends.group
 	.max_reduce _i.i_dfu.HandleDfuRequest.max.maxchanends, _i.i_dfu.HandleDfuRequest.maxchanends.group, 0
 	.weak _i.i_dfu.HandleDfuRequest.maxcores.group
@@ -479,6 +532,402 @@ _i.i_dfu._chan_yield.HandleDfuRequest:  # @_i.i_dfu._chan_yield.HandleDfuRequest
 	.size	_i.i_dfu._chan_yield.HandleDfuRequest, .Ltmp15-_i.i_dfu._chan_yield.HandleDfuRequest
 	.cfi_endproc
 
+	.weak	_i.qspi_access._chan.read
+	.align	4
+	.type	_i.qspi_access._chan.read,@function
+	.cc_top _i.qspi_access._chan.read.function,_i.qspi_access._chan.read
+_i.qspi_access._chan.read:              # @_i.qspi_access._chan.read
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp16:
+	.cfi_def_cfa_offset 16
+.Ltmp17:
+	.cfi_offset 15, 0
+	{
+		nop
+		stw r4, sp[2]
+	}
+.Ltmp18:
+	.cfi_offset 4, -8
+	#DEBUG_VALUE: _i.qspi_access._chan.read:dest <- R0
+	#DEBUG_VALUE: _i.qspi_access._chan.read:param1 <- R1
+	#DEBUG_VALUE: _i.qspi_access._chan.read:param2 <- R2
+	#DEBUG_VALUE: _i.qspi_access._chan.read:param3 <- R3
+	{
+		getr r4, 2
+		ldw r11, sp[5]
+	}
+	{
+		setd res[r4], r0
+		add r0, r4, 1
+	}
+	{
+		out res[r4], r0
+		nop
+	}
+	{
+		outct res[r4], 2
+		nop
+	}
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		out res[r4], r1
+		nop
+	}
+	{
+		out res[r4], r2
+		nop
+	}
+	{
+		out res[r4], r11
+		stw r3, sp[1]
+	}
+	{
+		outct res[r4], 2
+		ldaw r1, sp[1]
+	}
+	{
+		mov r0, r4
+		nop
+	}
+	bl __interface_client_call
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		freer res[r4]
+		ldw r4, sp[2]
+	}
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+	.cc_bottom _i.qspi_access._chan.read.function
+	.set	_i.qspi_access._chan.read.nstackwords,(__interface_client_call.nstackwords + 4)
+	.globl	_i.qspi_access._chan.read.nstackwords
+	.weak	_i.qspi_access._chan.read.nstackwords
+	.set	_i.qspi_access._chan.read.maxcores,__interface_client_call.maxcores $M 1
+	.globl	_i.qspi_access._chan.read.maxcores
+	.weak	_i.qspi_access._chan.read.maxcores
+	.set	_i.qspi_access._chan.read.maxtimers,__interface_client_call.maxtimers $M 0
+	.globl	_i.qspi_access._chan.read.maxtimers
+	.weak	_i.qspi_access._chan.read.maxtimers
+	.set	_i.qspi_access._chan.read.maxchanends,(1 + __interface_client_call.maxchanends) $M 1
+	.globl	_i.qspi_access._chan.read.maxchanends
+	.weak	_i.qspi_access._chan.read.maxchanends
+.Ltmp19:
+	.size	_i.qspi_access._chan.read, .Ltmp19-_i.qspi_access._chan.read
+	.cfi_endproc
+
+	.weak	_i.qspi_access._chan.write
+	.align	4
+	.type	_i.qspi_access._chan.write,@function
+	.cc_top _i.qspi_access._chan.write.function,_i.qspi_access._chan.write
+_i.qspi_access._chan.write:             # @_i.qspi_access._chan.write
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp20:
+	.cfi_def_cfa_offset 16
+.Ltmp21:
+	.cfi_offset 15, 0
+	{
+		nop
+		stw r4, sp[2]
+	}
+.Ltmp22:
+	.cfi_offset 4, -8
+	#DEBUG_VALUE: _i.qspi_access._chan.write:dest <- R0
+	#DEBUG_VALUE: _i.qspi_access._chan.write:param1 <- R1
+	#DEBUG_VALUE: _i.qspi_access._chan.write:param2 <- R2
+	#DEBUG_VALUE: _i.qspi_access._chan.write:param3 <- R3
+	{
+		getr r4, 2
+		ldw r11, sp[5]
+	}
+	{
+		setd res[r4], r0
+		nop
+	}
+	{
+		out res[r4], r4
+		nop
+	}
+	{
+		outct res[r4], 2
+		nop
+	}
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		out res[r4], r1
+		nop
+	}
+	{
+		out res[r4], r2
+		nop
+	}
+	{
+		out res[r4], r11
+		stw r3, sp[1]
+	}
+	{
+		outct res[r4], 2
+		ldaw r1, sp[1]
+	}
+	{
+		mov r0, r4
+		nop
+	}
+	bl __interface_client_call
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		freer res[r4]
+		ldw r4, sp[2]
+	}
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+	.cc_bottom _i.qspi_access._chan.write.function
+	.set	_i.qspi_access._chan.write.nstackwords,(__interface_client_call.nstackwords + 4)
+	.globl	_i.qspi_access._chan.write.nstackwords
+	.weak	_i.qspi_access._chan.write.nstackwords
+	.set	_i.qspi_access._chan.write.maxcores,__interface_client_call.maxcores $M 1
+	.globl	_i.qspi_access._chan.write.maxcores
+	.weak	_i.qspi_access._chan.write.maxcores
+	.set	_i.qspi_access._chan.write.maxtimers,__interface_client_call.maxtimers $M 0
+	.globl	_i.qspi_access._chan.write.maxtimers
+	.weak	_i.qspi_access._chan.write.maxtimers
+	.set	_i.qspi_access._chan.write.maxchanends,(1 + __interface_client_call.maxchanends) $M 1
+	.globl	_i.qspi_access._chan.write.maxchanends
+	.weak	_i.qspi_access._chan.write.maxchanends
+.Ltmp23:
+	.size	_i.qspi_access._chan.write, .Ltmp23-_i.qspi_access._chan.write
+	.cfi_endproc
+
+	.weak	_i.qspi_access._chan_yield.read
+	.align	4
+	.type	_i.qspi_access._chan_yield.read,@function
+	.cc_top _i.qspi_access._chan_yield.read.function,_i.qspi_access._chan_yield.read
+_i.qspi_access._chan_yield.read:        # @_i.qspi_access._chan_yield.read
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp24:
+	.cfi_def_cfa_offset 16
+.Ltmp25:
+	.cfi_offset 15, 0
+	std r5, r4, sp[1]               # 4-byte Folded Spill
+.Ltmp26:
+	.cfi_offset 4, -8
+.Ltmp27:
+	.cfi_offset 5, -4
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.read:s <- R0
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.read:param1 <- R1
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.read:param2 <- R2
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.read:param3 <- R3
+	{
+		nop
+		ldw r11, sp[5]
+	}
+	{
+		getr r4, 2
+		ldw r5, r0[0]
+	}
+	{
+		setd res[r4], r5
+		add r5, r4, 1
+	}
+	{
+		out res[r4], r5
+		nop
+	}
+	{
+		outct res[r4], 2
+		nop
+	}
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		out res[r4], r1
+		nop
+	}
+	{
+		out res[r4], r2
+		nop
+	}
+	{
+		out res[r4], r11
+		stw r3, sp[1]
+	}
+	{
+		outct res[r4], 2
+		ldw r2, r0[1]
+	}
+	{
+		ldaw r1, sp[1]
+		mov r0, r4
+	}
+	bl __interface_client_call_y
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		freer res[r4]
+		nop
+	}
+	ldd r5, r4, sp[1]               # 4-byte Folded Reload
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+	.cc_bottom _i.qspi_access._chan_yield.read.function
+	.set	_i.qspi_access._chan_yield.read.nstackwords,((_i.qspi_access._client_call_y.max.nstackwords $M ($D __interface_client_call_y.nstackwords ? __interface_client_call_y.nstackwords $: _i.qspi_access._client_call_y.max.nstackwords)) + 4)
+	.globl	_i.qspi_access._chan_yield.read.nstackwords
+	.weak	_i.qspi_access._chan_yield.read.nstackwords
+	.set	_i.qspi_access._chan_yield.read.maxcores,($D __interface_client_call_y.maxcores ? __interface_client_call_y.maxcores $: _i.qspi_access._client_call_y.max.maxcores) $M 1
+	.globl	_i.qspi_access._chan_yield.read.maxcores
+	.weak	_i.qspi_access._chan_yield.read.maxcores
+	.set	_i.qspi_access._chan_yield.read.maxtimers,($D __interface_client_call_y.maxtimers ? __interface_client_call_y.maxtimers $: _i.qspi_access._client_call_y.max.maxtimers) $M 0
+	.globl	_i.qspi_access._chan_yield.read.maxtimers
+	.weak	_i.qspi_access._chan_yield.read.maxtimers
+	.set	_i.qspi_access._chan_yield.read.maxchanends,(1 + ($D __interface_client_call_y.maxchanends ? __interface_client_call_y.maxchanends $: _i.qspi_access._client_call_y.max.maxchanends)) $M 1
+	.globl	_i.qspi_access._chan_yield.read.maxchanends
+	.weak	_i.qspi_access._chan_yield.read.maxchanends
+.Ltmp28:
+	.size	_i.qspi_access._chan_yield.read, .Ltmp28-_i.qspi_access._chan_yield.read
+	.cfi_endproc
+
+	.weak	_i.qspi_access._chan_yield.write
+	.align	4
+	.type	_i.qspi_access._chan_yield.write,@function
+	.cc_top _i.qspi_access._chan_yield.write.function,_i.qspi_access._chan_yield.write
+_i.qspi_access._chan_yield.write:       # @_i.qspi_access._chan_yield.write
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp29:
+	.cfi_def_cfa_offset 16
+.Ltmp30:
+	.cfi_offset 15, 0
+	std r5, r4, sp[1]               # 4-byte Folded Spill
+.Ltmp31:
+	.cfi_offset 4, -8
+.Ltmp32:
+	.cfi_offset 5, -4
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.write:s <- R0
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.write:param1 <- R1
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.write:param2 <- R2
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.write:param3 <- R3
+	{
+		nop
+		ldw r11, sp[5]
+	}
+	{
+		getr r4, 2
+		ldw r5, r0[0]
+	}
+	{
+		setd res[r4], r5
+		nop
+	}
+	{
+		out res[r4], r4
+		nop
+	}
+	{
+		outct res[r4], 2
+		nop
+	}
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		out res[r4], r1
+		nop
+	}
+	{
+		out res[r4], r2
+		nop
+	}
+	{
+		out res[r4], r11
+		stw r3, sp[1]
+	}
+	{
+		outct res[r4], 2
+		ldw r2, r0[1]
+	}
+	{
+		ldaw r1, sp[1]
+		mov r0, r4
+	}
+	bl __interface_client_call_y
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		freer res[r4]
+		nop
+	}
+	ldd r5, r4, sp[1]               # 4-byte Folded Reload
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+	.cc_bottom _i.qspi_access._chan_yield.write.function
+	.set	_i.qspi_access._chan_yield.write.nstackwords,((_i.qspi_access._client_call_y.max.nstackwords $M ($D __interface_client_call_y.nstackwords ? __interface_client_call_y.nstackwords $: _i.qspi_access._client_call_y.max.nstackwords)) + 4)
+	.globl	_i.qspi_access._chan_yield.write.nstackwords
+	.weak	_i.qspi_access._chan_yield.write.nstackwords
+	.set	_i.qspi_access._chan_yield.write.maxcores,($D __interface_client_call_y.maxcores ? __interface_client_call_y.maxcores $: _i.qspi_access._client_call_y.max.maxcores) $M 1
+	.globl	_i.qspi_access._chan_yield.write.maxcores
+	.weak	_i.qspi_access._chan_yield.write.maxcores
+	.set	_i.qspi_access._chan_yield.write.maxtimers,($D __interface_client_call_y.maxtimers ? __interface_client_call_y.maxtimers $: _i.qspi_access._client_call_y.max.maxtimers) $M 0
+	.globl	_i.qspi_access._chan_yield.write.maxtimers
+	.weak	_i.qspi_access._chan_yield.write.maxtimers
+	.set	_i.qspi_access._chan_yield.write.maxchanends,(1 + ($D __interface_client_call_y.maxchanends ? __interface_client_call_y.maxchanends $: _i.qspi_access._client_call_y.max.maxchanends)) $M 1
+	.globl	_i.qspi_access._chan_yield.write.maxchanends
+	.weak	_i.qspi_access._chan_yield.write.maxchanends
+.Ltmp33:
+	.size	_i.qspi_access._chan_yield.write, .Ltmp33-_i.qspi_access._chan_yield.write
+	.cfi_endproc
+
 .Ldebug_end0:
 	.file	2 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\timer.h"
 	.section	.debug_str,"MS",@progbits,1
@@ -505,96 +954,104 @@ _i.i_dfu._chan_yield.HandleDfuRequest:  # @_i.i_dfu._chan_yield.HandleDfuRequest
 .Linfo_string10:
 .asciiz"_i.i_dfu._chan_yield.HandleDfuRequest"
 .Linfo_string11:
-.asciiz"delay_seconds"
+.asciiz"_i.qspi_access._chan.read"
 .Linfo_string12:
-.asciiz"delay_milliseconds"
+.asciiz"_i.qspi_access._chan.write"
 .Linfo_string13:
-.asciiz"delay_microseconds"
+.asciiz"_i.qspi_access._chan_yield.read"
 .Linfo_string14:
-.asciiz"XUD_SetReady_Out"
+.asciiz"_i.qspi_access._chan_yield.write"
 .Linfo_string15:
-.asciiz"int"
+.asciiz"delay_seconds"
 .Linfo_string16:
-.asciiz"XUD_SetReady_OutPtr"
+.asciiz"delay_milliseconds"
 .Linfo_string17:
-.asciiz"XUD_SetReady_InPtr"
+.asciiz"delay_microseconds"
 .Linfo_string18:
-.asciiz"XUD_SetReady_In"
+.asciiz"XUD_SetReady_Out"
 .Linfo_string19:
-.asciiz"dest"
+.asciiz"int"
 .Linfo_string20:
-.asciiz"chanend"
+.asciiz"XUD_SetReady_OutPtr"
 .Linfo_string21:
-.asciiz"param1"
+.asciiz"XUD_SetReady_InPtr"
 .Linfo_string22:
-.asciiz"bmRequestType"
+.asciiz"XUD_SetReady_In"
 .Linfo_string23:
-.asciiz"Recipient"
+.asciiz"dest"
 .Linfo_string24:
-.asciiz"unsigned char"
+.asciiz"chanend"
 .Linfo_string25:
-.asciiz"Type"
+.asciiz"param1"
 .Linfo_string26:
-.asciiz"Direction"
+.asciiz"bmRequestType"
 .Linfo_string27:
-.asciiz"USB_BmRequestType"
+.asciiz"Recipient"
 .Linfo_string28:
-.asciiz"bRequest"
+.asciiz"unsigned char"
 .Linfo_string29:
-.asciiz"wValue"
+.asciiz"Type"
 .Linfo_string30:
-.asciiz"unsigned short"
+.asciiz"Direction"
 .Linfo_string31:
-.asciiz"wIndex"
+.asciiz"USB_BmRequestType"
 .Linfo_string32:
-.asciiz"wLength"
+.asciiz"bRequest"
 .Linfo_string33:
-.asciiz"USB_SetupPacket"
+.asciiz"wValue"
 .Linfo_string34:
-.asciiz"param2"
+.asciiz"unsigned short"
 .Linfo_string35:
-.asciiz"unsigned int"
+.asciiz"wIndex"
 .Linfo_string36:
-.asciiz"sizetype"
+.asciiz"wLength"
 .Linfo_string37:
-.asciiz"param3"
+.asciiz"USB_SetupPacket"
 .Linfo_string38:
-.asciiz"param4"
+.asciiz"param2"
 .Linfo_string39:
-.asciiz"s"
+.asciiz"unsigned int"
 .Linfo_string40:
-.asciiz"yield"
+.asciiz"sizetype"
 .Linfo_string41:
-.asciiz"yieldArg"
+.asciiz"param3"
 .Linfo_string42:
-.asciiz"delay"
+.asciiz"param4"
 .Linfo_string43:
-.asciiz"ep"
+.asciiz"s"
 .Linfo_string44:
-.asciiz"buffer"
+.asciiz"yield"
 .Linfo_string45:
-.asciiz"chan_array_ptr"
+.asciiz"yieldArg"
 .Linfo_string46:
-.asciiz"reset"
+.asciiz"delay"
 .Linfo_string47:
-.asciiz"addr"
+.asciiz"ep"
 .Linfo_string48:
-.asciiz"len"
+.asciiz"buffer"
 .Linfo_string49:
-.asciiz"tmp"
+.asciiz"chan_array_ptr"
 .Linfo_string50:
-.asciiz"tmp2"
+.asciiz"reset"
 .Linfo_string51:
-.asciiz"wordlength"
+.asciiz"addr"
 .Linfo_string52:
+.asciiz"len"
+.Linfo_string53:
+.asciiz"tmp"
+.Linfo_string54:
+.asciiz"tmp2"
+.Linfo_string55:
+.asciiz"wordlength"
+.Linfo_string56:
 .asciiz"taillength"
 	.section	.debug_info,"",@progbits
 .L.debug_info_begin0:
-	.long	825                     # Length of Unit
+	.long	1013                    # Length of Unit
 	.short	3                       # DWARF version number
 	.long	.Lsection_abbrev        # Offset Into Abbrev. Section
 	.byte	4                       # Address Size (in bytes)
-	.byte	1                       # Abbrev [1] 0xb:0x332 DW_TAG_compile_unit
+	.byte	1                       # Abbrev [1] 0xb:0x3ee DW_TAG_compile_unit
 	.long	.Linfo_string0          # DW_AT_producer
 	.short	49152                   # DW_AT_language
 	.long	.Linfo_string1          # DW_AT_name
@@ -636,318 +1093,386 @@ _i.i_dfu._chan_yield.HandleDfuRequest:  # @_i.i_dfu._chan_yield.HandleDfuRequest
 	.long	.Linfo_string7          # DW_AT_name
 	.byte	1                       # DW_AT_external
 	.byte	5                       # Abbrev [5] 0x61:0x9 DW_TAG_formal_parameter
-	.long	.Linfo_string19         # DW_AT_name
-	.long	642                     # DW_AT_type
+	.long	.Linfo_string23         # DW_AT_name
+	.long	830                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	4                       # Abbrev [4] 0x6b:0x38 DW_TAG_subprogram
 	.long	.Linfo_string8          # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string8          # DW_AT_name
 	.byte	1                       # DW_AT_external
 	.byte	5                       # Abbrev [5] 0x75:0x9 DW_TAG_formal_parameter
-	.long	.Linfo_string19         # DW_AT_name
-	.long	642                     # DW_AT_type
+	.long	.Linfo_string23         # DW_AT_name
+	.long	830                     # DW_AT_type
 	.byte	5                       # Abbrev [5] 0x7e:0x9 DW_TAG_formal_parameter
-	.long	.Linfo_string21         # DW_AT_name
-	.long	649                     # DW_AT_type
+	.long	.Linfo_string25         # DW_AT_name
+	.long	837                     # DW_AT_type
 	.byte	5                       # Abbrev [5] 0x87:0x9 DW_TAG_formal_parameter
-	.long	.Linfo_string34         # DW_AT_name
-	.long	762                     # DW_AT_type
-	.byte	5                       # Abbrev [5] 0x90:0x9 DW_TAG_formal_parameter
-	.long	.Linfo_string37         # DW_AT_name
-	.long	772                     # DW_AT_type
-	.byte	5                       # Abbrev [5] 0x99:0x9 DW_TAG_formal_parameter
 	.long	.Linfo_string38         # DW_AT_name
-	.long	772                     # DW_AT_type
+	.long	950                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0x90:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string41         # DW_AT_name
+	.long	960                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0x99:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string42         # DW_AT_name
+	.long	960                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	4                       # Abbrev [4] 0xa3:0x14 DW_TAG_subprogram
 	.long	.Linfo_string9          # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string9          # DW_AT_name
 	.byte	1                       # DW_AT_external
 	.byte	5                       # Abbrev [5] 0xad:0x9 DW_TAG_formal_parameter
-	.long	.Linfo_string39         # DW_AT_name
-	.long	786                     # DW_AT_type
+	.long	.Linfo_string43         # DW_AT_name
+	.long	974                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	4                       # Abbrev [4] 0xb7:0x38 DW_TAG_subprogram
 	.long	.Linfo_string10         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string10         # DW_AT_name
 	.byte	1                       # DW_AT_external
 	.byte	5                       # Abbrev [5] 0xc1:0x9 DW_TAG_formal_parameter
-	.long	.Linfo_string39         # DW_AT_name
-	.long	786                     # DW_AT_type
+	.long	.Linfo_string43         # DW_AT_name
+	.long	974                     # DW_AT_type
 	.byte	5                       # Abbrev [5] 0xca:0x9 DW_TAG_formal_parameter
-	.long	.Linfo_string21         # DW_AT_name
-	.long	649                     # DW_AT_type
+	.long	.Linfo_string25         # DW_AT_name
+	.long	837                     # DW_AT_type
 	.byte	5                       # Abbrev [5] 0xd3:0x9 DW_TAG_formal_parameter
-	.long	.Linfo_string34         # DW_AT_name
-	.long	762                     # DW_AT_type
-	.byte	5                       # Abbrev [5] 0xdc:0x9 DW_TAG_formal_parameter
-	.long	.Linfo_string37         # DW_AT_name
-	.long	772                     # DW_AT_type
-	.byte	5                       # Abbrev [5] 0xe5:0x9 DW_TAG_formal_parameter
 	.long	.Linfo_string38         # DW_AT_name
-	.long	772                     # DW_AT_type
+	.long	950                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0xdc:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string41         # DW_AT_name
+	.long	960                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0xe5:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string42         # DW_AT_name
+	.long	960                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	6                       # Abbrev [6] 0xef:0x18 DW_TAG_subprogram
+	.byte	4                       # Abbrev [4] 0xef:0x2f DW_TAG_subprogram
 	.long	.Linfo_string11         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string11         # DW_AT_name
-	.byte	2                       # DW_AT_decl_file
-	.byte	46                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
-	.byte	7                       # Abbrev [7] 0xfb:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string42         # DW_AT_name
-	.byte	2                       # DW_AT_decl_file
-	.byte	46                      # DW_AT_decl_line
-	.long	772                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0xf9:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string23         # DW_AT_name
+	.long	830                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0x102:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string25         # DW_AT_name
+	.long	565                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0x10b:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string38         # DW_AT_name
+	.long	565                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0x114:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string41         # DW_AT_name
+	.long	1006                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	6                       # Abbrev [6] 0x107:0x18 DW_TAG_subprogram
+	.byte	4                       # Abbrev [4] 0x11e:0x2f DW_TAG_subprogram
 	.long	.Linfo_string12         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string12         # DW_AT_name
-	.byte	2                       # DW_AT_decl_file
-	.byte	54                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
-	.byte	7                       # Abbrev [7] 0x113:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string42         # DW_AT_name
-	.byte	2                       # DW_AT_decl_file
-	.byte	54                      # DW_AT_decl_line
-	.long	772                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0x128:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string23         # DW_AT_name
+	.long	830                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0x131:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string25         # DW_AT_name
+	.long	565                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0x13a:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string38         # DW_AT_name
+	.long	565                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0x143:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string41         # DW_AT_name
+	.long	1006                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	6                       # Abbrev [6] 0x11f:0x18 DW_TAG_subprogram
+	.byte	4                       # Abbrev [4] 0x14d:0x2f DW_TAG_subprogram
 	.long	.Linfo_string13         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string13         # DW_AT_name
-	.byte	2                       # DW_AT_decl_file
-	.byte	62                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
-	.byte	7                       # Abbrev [7] 0x12b:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string42         # DW_AT_name
-	.byte	2                       # DW_AT_decl_file
-	.byte	62                      # DW_AT_decl_line
-	.long	772                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0x157:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string43         # DW_AT_name
+	.long	974                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0x160:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string25         # DW_AT_name
+	.long	565                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0x169:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string38         # DW_AT_name
+	.long	565                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0x172:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string41         # DW_AT_name
+	.long	1006                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	8                       # Abbrev [8] 0x137:0x42 DW_TAG_subprogram
+	.byte	4                       # Abbrev [4] 0x17c:0x2f DW_TAG_subprogram
 	.long	.Linfo_string14         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string14         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	401                     # DW_AT_decl_line
-	.long	377                     # DW_AT_type
 	.byte	1                       # DW_AT_external
-	.byte	9                       # Abbrev [9] 0x148:0xc DW_TAG_formal_parameter
+	.byte	5                       # Abbrev [5] 0x186:0x9 DW_TAG_formal_parameter
 	.long	.Linfo_string43         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	400                     # DW_AT_decl_line
-	.long	772                     # DW_AT_type
-	.byte	9                       # Abbrev [9] 0x154:0xc DW_TAG_formal_parameter
-	.long	.Linfo_string44         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	400                     # DW_AT_decl_line
-	.long	818                     # DW_AT_type
-	.byte	10                      # Abbrev [10] 0x160:0xc DW_TAG_variable
-	.long	.Linfo_string45         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	402                     # DW_AT_decl_line
-	.long	377                     # DW_AT_type
-	.byte	10                      # Abbrev [10] 0x16c:0xc DW_TAG_variable
-	.long	.Linfo_string46         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	403                     # DW_AT_decl_line
-	.long	377                     # DW_AT_type
+	.long	974                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0x18f:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string25         # DW_AT_name
+	.long	565                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0x198:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string38         # DW_AT_name
+	.long	565                     # DW_AT_type
+	.byte	5                       # Abbrev [5] 0x1a1:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string41         # DW_AT_name
+	.long	1006                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	11                      # Abbrev [11] 0x179:0x7 DW_TAG_base_type
+	.byte	6                       # Abbrev [6] 0x1ab:0x18 DW_TAG_subprogram
+	.long	.Linfo_string15         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string15         # DW_AT_name
-	.byte	5                       # DW_AT_encoding
-	.byte	4                       # DW_AT_byte_size
-	.byte	8                       # Abbrev [8] 0x180:0x42 DW_TAG_subprogram
+	.byte	2                       # DW_AT_decl_file
+	.byte	46                      # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	7                       # Abbrev [7] 0x1b7:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string46         # DW_AT_name
+	.byte	2                       # DW_AT_decl_file
+	.byte	46                      # DW_AT_decl_line
+	.long	960                     # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	6                       # Abbrev [6] 0x1c3:0x18 DW_TAG_subprogram
 	.long	.Linfo_string16         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string16         # DW_AT_name
+	.byte	2                       # DW_AT_decl_file
+	.byte	54                      # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	7                       # Abbrev [7] 0x1cf:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string46         # DW_AT_name
+	.byte	2                       # DW_AT_decl_file
+	.byte	54                      # DW_AT_decl_line
+	.long	960                     # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	6                       # Abbrev [6] 0x1db:0x18 DW_TAG_subprogram
+	.long	.Linfo_string17         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string17         # DW_AT_name
+	.byte	2                       # DW_AT_decl_file
+	.byte	62                      # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	7                       # Abbrev [7] 0x1e7:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string46         # DW_AT_name
+	.byte	2                       # DW_AT_decl_file
+	.byte	62                      # DW_AT_decl_line
+	.long	960                     # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	8                       # Abbrev [8] 0x1f3:0x42 DW_TAG_subprogram
+	.long	.Linfo_string18         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string18         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	401                     # DW_AT_decl_line
+	.long	565                     # DW_AT_type
+	.byte	1                       # DW_AT_external
+	.byte	9                       # Abbrev [9] 0x204:0xc DW_TAG_formal_parameter
+	.long	.Linfo_string47         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	400                     # DW_AT_decl_line
+	.long	960                     # DW_AT_type
+	.byte	9                       # Abbrev [9] 0x210:0xc DW_TAG_formal_parameter
+	.long	.Linfo_string48         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	400                     # DW_AT_decl_line
+	.long	1006                    # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x21c:0xc DW_TAG_variable
+	.long	.Linfo_string49         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	402                     # DW_AT_decl_line
+	.long	565                     # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x228:0xc DW_TAG_variable
+	.long	.Linfo_string50         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	403                     # DW_AT_decl_line
+	.long	565                     # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	11                      # Abbrev [11] 0x235:0x7 DW_TAG_base_type
+	.long	.Linfo_string19         # DW_AT_name
+	.byte	5                       # DW_AT_encoding
+	.byte	4                       # DW_AT_byte_size
+	.byte	8                       # Abbrev [8] 0x23c:0x42 DW_TAG_subprogram
+	.long	.Linfo_string20         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string20         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	427                     # DW_AT_decl_line
-	.long	377                     # DW_AT_type
+	.long	565                     # DW_AT_type
 	.byte	1                       # DW_AT_external
-	.byte	9                       # Abbrev [9] 0x191:0xc DW_TAG_formal_parameter
-	.long	.Linfo_string43         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	426                     # DW_AT_decl_line
-	.long	772                     # DW_AT_type
-	.byte	9                       # Abbrev [9] 0x19d:0xc DW_TAG_formal_parameter
+	.byte	9                       # Abbrev [9] 0x24d:0xc DW_TAG_formal_parameter
 	.long	.Linfo_string47         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	426                     # DW_AT_decl_line
-	.long	772                     # DW_AT_type
-	.byte	10                      # Abbrev [10] 0x1a9:0xc DW_TAG_variable
-	.long	.Linfo_string45         # DW_AT_name
+	.long	960                     # DW_AT_type
+	.byte	9                       # Abbrev [9] 0x259:0xc DW_TAG_formal_parameter
+	.long	.Linfo_string51         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	426                     # DW_AT_decl_line
+	.long	960                     # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x265:0xc DW_TAG_variable
+	.long	.Linfo_string49         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	428                     # DW_AT_decl_line
-	.long	377                     # DW_AT_type
-	.byte	10                      # Abbrev [10] 0x1b5:0xc DW_TAG_variable
-	.long	.Linfo_string46         # DW_AT_name
+	.long	565                     # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x271:0xc DW_TAG_variable
+	.long	.Linfo_string50         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	429                     # DW_AT_decl_line
-	.long	377                     # DW_AT_type
+	.long	565                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	8                       # Abbrev [8] 0x1c2:0x7e DW_TAG_subprogram
-	.long	.Linfo_string17         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string17         # DW_AT_name
+	.byte	8                       # Abbrev [8] 0x27e:0x7e DW_TAG_subprogram
+	.long	.Linfo_string21         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string21         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	454                     # DW_AT_decl_line
 	.long	31                      # DW_AT_type
 	.byte	1                       # DW_AT_external
-	.byte	9                       # Abbrev [9] 0x1d3:0xc DW_TAG_formal_parameter
-	.long	.Linfo_string43         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	453                     # DW_AT_decl_line
-	.long	772                     # DW_AT_type
-	.byte	9                       # Abbrev [9] 0x1df:0xc DW_TAG_formal_parameter
+	.byte	9                       # Abbrev [9] 0x28f:0xc DW_TAG_formal_parameter
 	.long	.Linfo_string47         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	453                     # DW_AT_decl_line
-	.long	772                     # DW_AT_type
-	.byte	9                       # Abbrev [9] 0x1eb:0xc DW_TAG_formal_parameter
-	.long	.Linfo_string48         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	453                     # DW_AT_decl_line
-	.long	377                     # DW_AT_type
-	.byte	10                      # Abbrev [10] 0x1f7:0xc DW_TAG_variable
-	.long	.Linfo_string45         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	455                     # DW_AT_decl_line
-	.long	377                     # DW_AT_type
-	.byte	10                      # Abbrev [10] 0x203:0xc DW_TAG_variable
-	.long	.Linfo_string49         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	456                     # DW_AT_decl_line
-	.long	377                     # DW_AT_type
-	.byte	10                      # Abbrev [10] 0x20f:0xc DW_TAG_variable
-	.long	.Linfo_string50         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	456                     # DW_AT_decl_line
-	.long	377                     # DW_AT_type
-	.byte	10                      # Abbrev [10] 0x21b:0xc DW_TAG_variable
+	.long	960                     # DW_AT_type
+	.byte	9                       # Abbrev [9] 0x29b:0xc DW_TAG_formal_parameter
 	.long	.Linfo_string51         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	457                     # DW_AT_decl_line
-	.long	377                     # DW_AT_type
-	.byte	10                      # Abbrev [10] 0x227:0xc DW_TAG_variable
+	.short	453                     # DW_AT_decl_line
+	.long	960                     # DW_AT_type
+	.byte	9                       # Abbrev [9] 0x2a7:0xc DW_TAG_formal_parameter
 	.long	.Linfo_string52         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
+	.short	453                     # DW_AT_decl_line
+	.long	565                     # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x2b3:0xc DW_TAG_variable
+	.long	.Linfo_string49         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	455                     # DW_AT_decl_line
+	.long	565                     # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x2bf:0xc DW_TAG_variable
+	.long	.Linfo_string53         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	456                     # DW_AT_decl_line
+	.long	565                     # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x2cb:0xc DW_TAG_variable
+	.long	.Linfo_string54         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	456                     # DW_AT_decl_line
+	.long	565                     # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x2d7:0xc DW_TAG_variable
+	.long	.Linfo_string55         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	457                     # DW_AT_decl_line
+	.long	565                     # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x2e3:0xc DW_TAG_variable
+	.long	.Linfo_string56         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
 	.short	458                     # DW_AT_decl_line
-	.long	377                     # DW_AT_type
-	.byte	10                      # Abbrev [10] 0x233:0xc DW_TAG_variable
-	.long	.Linfo_string46         # DW_AT_name
+	.long	565                     # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x2ef:0xc DW_TAG_variable
+	.long	.Linfo_string50         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	460                     # DW_AT_decl_line
-	.long	377                     # DW_AT_type
+	.long	565                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	8                       # Abbrev [8] 0x240:0x42 DW_TAG_subprogram
-	.long	.Linfo_string18         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string18         # DW_AT_name
+	.byte	8                       # Abbrev [8] 0x2fc:0x42 DW_TAG_subprogram
+	.long	.Linfo_string22         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string22         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	505                     # DW_AT_decl_line
 	.long	59                      # DW_AT_type
 	.byte	1                       # DW_AT_external
-	.byte	9                       # Abbrev [9] 0x251:0xc DW_TAG_formal_parameter
-	.long	.Linfo_string43         # DW_AT_name
+	.byte	9                       # Abbrev [9] 0x30d:0xc DW_TAG_formal_parameter
+	.long	.Linfo_string47         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	504                     # DW_AT_decl_line
-	.long	772                     # DW_AT_type
-	.byte	9                       # Abbrev [9] 0x25d:0xc DW_TAG_formal_parameter
-	.long	.Linfo_string44         # DW_AT_name
-	.byte	1                       # DW_AT_decl_file
-	.short	504                     # DW_AT_decl_line
-	.long	818                     # DW_AT_type
-	.byte	9                       # Abbrev [9] 0x269:0xc DW_TAG_formal_parameter
+	.long	960                     # DW_AT_type
+	.byte	9                       # Abbrev [9] 0x319:0xc DW_TAG_formal_parameter
 	.long	.Linfo_string48         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	504                     # DW_AT_decl_line
-	.long	377                     # DW_AT_type
-	.byte	10                      # Abbrev [10] 0x275:0xc DW_TAG_variable
-	.long	.Linfo_string47         # DW_AT_name
+	.long	1006                    # DW_AT_type
+	.byte	9                       # Abbrev [9] 0x325:0xc DW_TAG_formal_parameter
+	.long	.Linfo_string52         # DW_AT_name
+	.byte	1                       # DW_AT_decl_file
+	.short	504                     # DW_AT_decl_line
+	.long	565                     # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x331:0xc DW_TAG_variable
+	.long	.Linfo_string51         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	506                     # DW_AT_decl_line
-	.long	772                     # DW_AT_type
+	.long	960                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	11                      # Abbrev [11] 0x282:0x7 DW_TAG_base_type
-	.long	.Linfo_string20         # DW_AT_name
+	.byte	11                      # Abbrev [11] 0x33e:0x7 DW_TAG_base_type
+	.long	.Linfo_string24         # DW_AT_name
 	.byte	7                       # DW_AT_encoding
 	.byte	4                       # DW_AT_byte_size
-	.byte	12                      # Abbrev [12] 0x289:0x5 DW_TAG_reference_type
-	.long	654                     # DW_AT_type
-	.byte	13                      # Abbrev [13] 0x28e:0x39 DW_TAG_structure_type
-	.long	.Linfo_string33         # DW_AT_name
+	.byte	12                      # Abbrev [12] 0x345:0x5 DW_TAG_reference_type
+	.long	842                     # DW_AT_type
+	.byte	13                      # Abbrev [13] 0x34a:0x39 DW_TAG_structure_type
+	.long	.Linfo_string37         # DW_AT_name
 	.byte	10                      # DW_AT_byte_size
-	.byte	14                      # Abbrev [14] 0x294:0xa DW_TAG_member
-	.long	.Linfo_string22         # DW_AT_name
-	.long	711                     # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x350:0xa DW_TAG_member
+	.long	.Linfo_string26         # DW_AT_name
+	.long	899                     # DW_AT_type
 	.byte	0                       # DW_AT_data_member_location
-	.byte	14                      # Abbrev [14] 0x29e:0xa DW_TAG_member
-	.long	.Linfo_string28         # DW_AT_name
-	.long	748                     # DW_AT_type
-	.byte	3                       # DW_AT_data_member_location
-	.byte	14                      # Abbrev [14] 0x2a8:0xa DW_TAG_member
-	.long	.Linfo_string29         # DW_AT_name
-	.long	755                     # DW_AT_type
-	.byte	4                       # DW_AT_data_member_location
-	.byte	14                      # Abbrev [14] 0x2b2:0xa DW_TAG_member
-	.long	.Linfo_string31         # DW_AT_name
-	.long	755                     # DW_AT_type
-	.byte	6                       # DW_AT_data_member_location
-	.byte	14                      # Abbrev [14] 0x2bc:0xa DW_TAG_member
+	.byte	14                      # Abbrev [14] 0x35a:0xa DW_TAG_member
 	.long	.Linfo_string32         # DW_AT_name
-	.long	755                     # DW_AT_type
+	.long	936                     # DW_AT_type
+	.byte	3                       # DW_AT_data_member_location
+	.byte	14                      # Abbrev [14] 0x364:0xa DW_TAG_member
+	.long	.Linfo_string33         # DW_AT_name
+	.long	943                     # DW_AT_type
+	.byte	4                       # DW_AT_data_member_location
+	.byte	14                      # Abbrev [14] 0x36e:0xa DW_TAG_member
+	.long	.Linfo_string35         # DW_AT_name
+	.long	943                     # DW_AT_type
+	.byte	6                       # DW_AT_data_member_location
+	.byte	14                      # Abbrev [14] 0x378:0xa DW_TAG_member
+	.long	.Linfo_string36         # DW_AT_name
+	.long	943                     # DW_AT_type
 	.byte	8                       # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
-	.byte	13                      # Abbrev [13] 0x2c7:0x25 DW_TAG_structure_type
-	.long	.Linfo_string27         # DW_AT_name
+	.byte	13                      # Abbrev [13] 0x383:0x25 DW_TAG_structure_type
+	.long	.Linfo_string31         # DW_AT_name
 	.byte	3                       # DW_AT_byte_size
-	.byte	14                      # Abbrev [14] 0x2cd:0xa DW_TAG_member
-	.long	.Linfo_string23         # DW_AT_name
-	.long	748                     # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x389:0xa DW_TAG_member
+	.long	.Linfo_string27         # DW_AT_name
+	.long	936                     # DW_AT_type
 	.byte	0                       # DW_AT_data_member_location
-	.byte	14                      # Abbrev [14] 0x2d7:0xa DW_TAG_member
-	.long	.Linfo_string25         # DW_AT_name
-	.long	748                     # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x393:0xa DW_TAG_member
+	.long	.Linfo_string29         # DW_AT_name
+	.long	936                     # DW_AT_type
 	.byte	1                       # DW_AT_data_member_location
-	.byte	14                      # Abbrev [14] 0x2e1:0xa DW_TAG_member
-	.long	.Linfo_string26         # DW_AT_name
-	.long	748                     # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x39d:0xa DW_TAG_member
+	.long	.Linfo_string30         # DW_AT_name
+	.long	936                     # DW_AT_type
 	.byte	2                       # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
-	.byte	11                      # Abbrev [11] 0x2ec:0x7 DW_TAG_base_type
-	.long	.Linfo_string24         # DW_AT_name
+	.byte	11                      # Abbrev [11] 0x3a8:0x7 DW_TAG_base_type
+	.long	.Linfo_string28         # DW_AT_name
 	.byte	8                       # DW_AT_encoding
 	.byte	1                       # DW_AT_byte_size
-	.byte	11                      # Abbrev [11] 0x2f3:0x7 DW_TAG_base_type
-	.long	.Linfo_string30         # DW_AT_name
+	.byte	11                      # Abbrev [11] 0x3af:0x7 DW_TAG_base_type
+	.long	.Linfo_string34         # DW_AT_name
 	.byte	7                       # DW_AT_encoding
 	.byte	2                       # DW_AT_byte_size
-	.byte	12                      # Abbrev [12] 0x2fa:0x5 DW_TAG_reference_type
-	.long	767                     # DW_AT_type
-	.byte	15                      # Abbrev [15] 0x2ff:0x5 DW_TAG_array_type
-	.long	772                     # DW_AT_type
-	.byte	11                      # Abbrev [11] 0x304:0x7 DW_TAG_base_type
-	.long	.Linfo_string35         # DW_AT_name
+	.byte	12                      # Abbrev [12] 0x3b6:0x5 DW_TAG_reference_type
+	.long	955                     # DW_AT_type
+	.byte	15                      # Abbrev [15] 0x3bb:0x5 DW_TAG_array_type
+	.long	960                     # DW_AT_type
+	.byte	11                      # Abbrev [11] 0x3c0:0x7 DW_TAG_base_type
+	.long	.Linfo_string39         # DW_AT_name
 	.byte	7                       # DW_AT_encoding
 	.byte	4                       # DW_AT_byte_size
-	.byte	16                      # Abbrev [16] 0x30b:0x7 DW_TAG_base_type
-	.long	.Linfo_string36         # DW_AT_name
+	.byte	16                      # Abbrev [16] 0x3c7:0x7 DW_TAG_base_type
+	.long	.Linfo_string40         # DW_AT_name
 	.byte	8                       # DW_AT_byte_size
 	.byte	7                       # DW_AT_encoding
-	.byte	12                      # Abbrev [12] 0x312:0x5 DW_TAG_reference_type
-	.long	791                     # DW_AT_type
-	.byte	13                      # Abbrev [13] 0x317:0x1b DW_TAG_structure_type
-	.long	.Linfo_string41         # DW_AT_name
+	.byte	12                      # Abbrev [12] 0x3ce:0x5 DW_TAG_reference_type
+	.long	979                     # DW_AT_type
+	.byte	13                      # Abbrev [13] 0x3d3:0x1b DW_TAG_structure_type
+	.long	.Linfo_string45         # DW_AT_name
 	.byte	8                       # DW_AT_byte_size
-	.byte	14                      # Abbrev [14] 0x31d:0xa DW_TAG_member
-	.long	.Linfo_string19         # DW_AT_name
-	.long	642                     # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x3d9:0xa DW_TAG_member
+	.long	.Linfo_string23         # DW_AT_name
+	.long	830                     # DW_AT_type
 	.byte	0                       # DW_AT_data_member_location
-	.byte	14                      # Abbrev [14] 0x327:0xa DW_TAG_member
-	.long	.Linfo_string40         # DW_AT_name
-	.long	772                     # DW_AT_type
+	.byte	14                      # Abbrev [14] 0x3e3:0xa DW_TAG_member
+	.long	.Linfo_string44         # DW_AT_name
+	.long	960                     # DW_AT_type
 	.byte	4                       # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
-	.byte	12                      # Abbrev [12] 0x332:0x5 DW_TAG_reference_type
-	.long	823                     # DW_AT_type
-	.byte	15                      # Abbrev [15] 0x337:0x5 DW_TAG_array_type
-	.long	748                     # DW_AT_type
+	.byte	12                      # Abbrev [12] 0x3ee:0x5 DW_TAG_reference_type
+	.long	1011                    # DW_AT_type
+	.byte	15                      # Abbrev [15] 0x3f3:0x5 DW_TAG_array_type
+	.long	936                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 .L.debug_info_end0:
 	.section	.debug_abbrev,"",@progbits
@@ -1148,27 +1673,35 @@ _i.i_dfu._chan_yield.HandleDfuRequest:  # @_i.i_dfu._chan_yield.HandleDfuRequest
 	.long	.L.debug_info_begin0    # Offset of Compilation Unit Info
 .Lset1 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
 	.long	.Lset1
-	.long	450                     # DIE offset
+	.long	638                     # DIE offset
 .asciiz"XUD_SetReady_InPtr"             # External Name
-	.long	87                      # DIE offset
-.asciiz"_i.i_dfu._chan.finish"          # External Name
-	.long	263                     # DIE offset
-.asciiz"delay_milliseconds"             # External Name
+	.long	286                     # DIE offset
+.asciiz"_i.qspi_access._chan.write"     # External Name
 	.long	107                     # DIE offset
 .asciiz"_i.i_dfu._chan.HandleDfuRequest" # External Name
-	.long	287                     # DIE offset
-.asciiz"delay_microseconds"             # External Name
-	.long	311                     # DIE offset
+	.long	764                     # DIE offset
+.asciiz"XUD_SetReady_In"                # External Name
+	.long	499                     # DIE offset
 .asciiz"XUD_SetReady_Out"               # External Name
 	.long	163                     # DIE offset
 .asciiz"_i.i_dfu._chan_yield.finish"    # External Name
-	.long	576                     # DIE offset
-.asciiz"XUD_SetReady_In"                # External Name
+	.long	333                     # DIE offset
+.asciiz"_i.qspi_access._chan_yield.read" # External Name
+	.long	87                      # DIE offset
+.asciiz"_i.i_dfu._chan.finish"          # External Name
+	.long	451                     # DIE offset
+.asciiz"delay_milliseconds"             # External Name
+	.long	239                     # DIE offset
+.asciiz"_i.qspi_access._chan.read"      # External Name
+	.long	475                     # DIE offset
+.asciiz"delay_microseconds"             # External Name
+	.long	380                     # DIE offset
+.asciiz"_i.qspi_access._chan_yield.write" # External Name
 	.long	183                     # DIE offset
 .asciiz"_i.i_dfu._chan_yield.HandleDfuRequest" # External Name
-	.long	239                     # DIE offset
+	.long	427                     # DIE offset
 .asciiz"delay_seconds"                  # External Name
-	.long	384                     # DIE offset
+	.long	572                     # DIE offset
 .asciiz"XUD_SetReady_OutPtr"            # External Name
 	.long	0                       # End Mark
 .LpubNames_end0:
@@ -1180,21 +1713,21 @@ _i.i_dfu._chan_yield.HandleDfuRequest:  # @_i.i_dfu._chan_yield.HandleDfuRequest
 	.long	.L.debug_info_begin0    # Offset of Compilation Unit Info
 .Lset3 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
 	.long	.Lset3
-	.long	642                     # DIE offset
+	.long	830                     # DIE offset
 .asciiz"chanend"                        # External Name
-	.long	654                     # DIE offset
+	.long	842                     # DIE offset
 .asciiz"USB_SetupPacket"                # External Name
-	.long	711                     # DIE offset
+	.long	899                     # DIE offset
 .asciiz"USB_BmRequestType"              # External Name
-	.long	791                     # DIE offset
+	.long	979                     # DIE offset
 .asciiz"yieldArg"                       # External Name
-	.long	772                     # DIE offset
+	.long	960                     # DIE offset
 .asciiz"unsigned int"                   # External Name
-	.long	377                     # DIE offset
+	.long	565                     # DIE offset
 .asciiz"int"                            # External Name
-	.long	748                     # DIE offset
+	.long	936                     # DIE offset
 .asciiz"unsigned char"                  # External Name
-	.long	755                     # DIE offset
+	.long	943                     # DIE offset
 .asciiz"unsigned short"                 # External Name
 	.long	59                      # DIE offset
 .asciiz"XUD_Result"                     # External Name
@@ -1208,6 +1741,12 @@ _i.i_dfu._chan_yield.HandleDfuRequest:  # @_i.i_dfu._chan_yield.HandleDfuRequest
 	.overlay_reference _i.i_dfu._chan_yield.finish,_i.i_dfu._client_call_y.fns
 	.typestring _i.i_dfu._chan_yield.HandleDfuRequest, "f{ui,si,si,si,ui}(&(s(yieldArg){m(dest){chd},m(yield){ui}}),&(s(USB_SetupPacket){m(bmRequestType){s(USB_BmRequestType){m(Recipient){uc},m(Type){uc},m(Direction){uc}}},m(bRequest){uc},m(wValue){us},m(wIndex){us},m(wLength){us}}),&(a(:ui)),ui,ui)"
 	.overlay_reference _i.i_dfu._chan_yield.HandleDfuRequest,_i.i_dfu._client_call_y.fns
+	.typestring _i.qspi_access._chan.read, "f{0}(chd,si,si,&(a(:uc)))"
+	.typestring _i.qspi_access._chan.write, "f{0}(chd,si,si,&(a(:uc)))"
+	.typestring _i.qspi_access._chan_yield.read, "f{0}(&(s(yieldArg){m(dest){chd},m(yield){ui}}),si,si,&(a(:uc)))"
+	.overlay_reference _i.qspi_access._chan_yield.read,_i.qspi_access._client_call_y.fns
+	.typestring _i.qspi_access._chan_yield.write, "f{0}(&(s(yieldArg){m(dest){chd},m(yield){ui}}),si,si,&(a(:uc)))"
+	.overlay_reference _i.qspi_access._chan_yield.write,_i.qspi_access._client_call_y.fns
 	.section	.trap_info,"",@progbits
 .Ltrap_info_entries_start0:
 	.long	.Ltrap_info_entries_end0-.Ltrap_info_entries_start0

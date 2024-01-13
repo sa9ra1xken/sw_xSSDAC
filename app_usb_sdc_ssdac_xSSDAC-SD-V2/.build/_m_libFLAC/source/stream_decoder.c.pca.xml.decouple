@@ -1,7 +1,6 @@
 <preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c">
   <fCall global="true" name="FLAC__stream_decoder_new"/>
   <fCall global="true" name="FLAC__stream_decoder_new.nstackwords"/>
-  <fCall global="true" name="assert.nstackwords"/>
   <fCall global="true" name="calloc.nstackwords"/>
   <fCall global="true" name="FLAC__bitreader_new.nstackwords"/>
   <fCall global="true" name="free.nstackwords"/>
@@ -225,12 +224,9 @@
   <fCall global="true" name="FLAC__stream_decoder_flush.maxchanends"/>
   <fCall global="true" name="FLAC__bitreader_clear.maxchanends"/>
   <fCall global="true" name="FLAC__stream_decoder_reset"/>
+  <fCall global="true" name="FLAC__stream_decoder_reset.nstackwords.pragma"/>
   <fCall global="true" name="FLAC__stream_decoder_process_single"/>
   <fCall global="true" name="FLAC__stream_decoder_process_single.nstackwords"/>
-  <fCall global="true" name="find_metadata_.nstackwords"/>
-  <fCall global="true" name="read_metadata_.nstackwords"/>
-  <fCall global="true" name="frame_sync_.nstackwords"/>
-  <fCall global="true" name="read_frame_.nstackwords"/>
   <fCall global="true" name="FLAC__stream_decoder_process_single.maxcores"/>
   <fCall global="true" name="find_metadata_.maxcores"/>
   <fCall global="true" name="frame_sync_.maxcores"/>
@@ -307,7 +303,6 @@
   <fCall global="true" name="FLAC__StreamDecoderWriteStatusString"/>
   <fCall global="true" name="FLAC__StreamDecoderErrorStatusString.globound"/>
   <fCall global="true" name="FLAC__StreamDecoderErrorStatusString"/>
-  <fCall global="true" name="assert"/>
   <fCall global="true" name="calloc"/>
   <fCall global="true" name="free"/>
   <fCall global="true" name="FLAC__bitreader_new"/>
@@ -422,8 +417,8 @@
   <fCall global="true" name="FLAC__STREAM_SYNC_STRING"/>
   <fCall global="true" name="memset"/>
   <fCall global="true" name="memcpy"/>
-  <fCall global="true" name="__ashldi3"/>
   <fCall global="true" name="__memcpy_4"/>
+  <fCall global="true" name="__ashldi3"/>
   <fCall global="true" name="fwrite"/>
   <fCall global="true" name="fiprintf"/>
   <fCall global="true" name="__udivdi3"/>

@@ -58,10 +58,10 @@
     </values>
   </arg>
 </fCall>
-<fCall name="button_listener_core" global="true" numArgs="2" impId="2">
+<fCall name="button_listener_core" global="true" numArgs="3" impId="2">
   <arg num="0">
     <values>
-      <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="1"/></value>
     </values>
   </arg>
   <arg num="1">
@@ -69,10 +69,20 @@
       <value type="unknown"/>
     </values>
   </arg>
+  <arg num="2">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
 </fCall>
-<fCall name="display_control_core" global="true" numArgs="0" impId="3">
+<fCall name="display_control_core" global="true" numArgs="1" impId="3">
+  <arg num="0">
+    <values>
+      <value type="null"/>
+    </values>
+  </arg>
 </fCall>
-<fCall name="audio_xss" global="true" numArgs="2" impId="4">
+<fCall name="ssdac_core" global="true" numArgs="2" impId="4">
   <arg num="0">
     <values>
       <value type="unknown"/>

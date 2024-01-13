@@ -9,7 +9,7 @@
 <fDef name="QueryChannel" global="true" noreturn="false" doNotSpecialize="false" numParams="2"/>
 <fDef name="SendBackTrackControl" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
 <fDef name="SwitchConsoleMode" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
-<fDef name="button_listener_core" global="true" noreturn="true" doNotSpecialize="false" numParams="2"/>
+<fDef name="button_listener_core" global="true" noreturn="true" doNotSpecialize="false" numParams="3"/>
 <fDef name="delay_microseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="delay_milliseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="delay_seconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
@@ -120,6 +120,13 @@
   <arg num="0">
     <values>
       <value type="intval"><intval isSigned="true" val="1024"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="SwitchConsoleMode" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="2"/></value>
     </values>
   </arg>
 </fCall>

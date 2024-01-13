@@ -450,59 +450,8 @@ typedef out buffered port:16 out_buffered_port_16_t;
 typedef out buffered port:32 out_buffered_port_32_t;
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 2
 
-
-typedef enum {
-    _USB_DAC = 0,
-    _SDC_PLAY = 1,
-} FUNCTION_SELECTOR;
-
-
-typedef enum {
-    _PENDING_Q = 0,
-    _INPUT_Q = 1,
-    _CURRENT_Q = 2
-} QUERY_TYPE;
-
-typedef enum {
-    _PLAY_CMD_EMPTY,
-    _PLAY_CMD_PREV_FOLDER,
-    _PLAY_CMD_NEXT_FOLDER,
-    _PLAY_CMD_PREV_TRACK,
-    _PLAY_CMD_NEXT_TRACK,
-    _PLAY_CMD_REWIND,
-    _PLAY_CMD_REVERSE_SKIP,
-    _PLAY_CMD_FORWARD_SKIP,
-    _PLAY_CMD_PAUSE,
-    _PLAY_CMD_STOP
-} PLAY_COMMAND;
-
-unsigned QueryChannel(chanend ch, unsigned command);
-
-void button_listener_core(chanend ?c_play_control, chanend ?c_dac_control);
-# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 1
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
-void set_display_control_flag(unsigned bitmask);
-void update_samp_freq(unsigned freq);
-void update_samp_resolution(unsigned res);
-void update_chan_count(unsigned ch);
-
-void display_control_core();
-
-typedef enum {
-    _SDC_AUDIO = 1,
-    _USB_AUDIO = 2,
-    _DAC_MODE_SELECTION = 3,
-    _FUNCTION_SELECTION = 4
-} CONSOLE_MODE;
-
-CONSOLE_MODE get_console_mode();
-void set_console_mode(CONSOLE_MODE value);
-# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h" 1
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h" 1
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h"
 typedef enum {
     _GET_INTERPOLATION_MODE =1,
     _SET_INTERPOLATION_MODE =2
@@ -524,38 +473,458 @@ typedef enum {
 
 
 
-
-
 typedef enum {
     _AUDIO_FORMAT_CHANGE = 0,
     _INTERPOLATION_MODE_CHANGE = 1
 } DAC_RETURN_CODE;
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 2
+
+
+
+typedef enum {
+    _USB_DAC = 0,
+    _SDC_PLAY = 1,
+} FUNCTION_SELECTOR;
+
+typedef enum {
+    _PENDING_Q = 0,
+    _INPUT_Q = 1,
+    _CURRENT_Q = 2
+} QUERY_TYPE;
+
+typedef enum {
+    _PLAY_CMD_EMPTY,
+    _PLAY_CMD_PREV_FOLDER,
+    _PLAY_CMD_NEXT_FOLDER,
+    _PLAY_CMD_PREV_TRACK,
+    _PLAY_CMD_NEXT_TRACK,
+    _PLAY_CMD_REWIND,
+    _PLAY_CMD_REVERSE_SKIP,
+    _PLAY_CMD_FORWARD_SKIP,
+    _PLAY_CMD_PAUSE,
+    _PLAY_CMD_STOP
+} PLAY_COMMAND;
+
+unsigned QueryChannel(chanend ch, unsigned command);
+void button_listener_core(chanend ?c_play_control, chanend ?c_dac_control);
+void KeyScan();
+void SendBackTrackControl(chanend c_track_control);
+void HandleDacCommand(chanend c_control, DAC_COMMAND command);
+void HandlePlayCommand(chanend c_control, QUERY_TYPE type);
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 1
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 1 3
+# 19 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 1 3
+# 34 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+typedef enum {
+  PROT_TYPE_NONE=0,
+  PROT_TYPE_SR=1,
+  PROT_TYPE_SECS=2,
+  PROT_TYPE_SR_2X=3,
+} fl_ProtectionType;
+
+
+typedef enum {
+  SECTOR_LAYOUT_REGULAR=0,
+  SECTOR_LAYOUT_IRREGULAR
+} fl_SectorLayout;
+
+
+typedef struct {
+
+  unsigned flashId;
+
+  unsigned pageSize;
+
+  unsigned numPages;
+
+  unsigned char addrSize;
+
+  unsigned clockDiv;
+
+  unsigned char idCommand;
+
+
+
+
+  unsigned char idDummyBytes;
+
+  unsigned char idBytes;
+
+  unsigned idValue;
+
+  unsigned char sectorEraseCommand;
+
+
+
+
+  unsigned sectorEraseSize;
+
+  unsigned char writeEnableCommand;
+
+  unsigned char writeDisableCommand;
+
+  fl_ProtectionType protectionType;
+  struct {
+    struct {
+
+      unsigned char setProtectedValue;
+
+      unsigned char setUnprotectedValue;
+    } statusBits;
+    struct {
+
+      unsigned char sectorProtectCommand;
+
+      unsigned char sectorUnprotectCommand;
+    } commandValues;
+  } protection;
+
+  unsigned int programPageCommand;
+
+  unsigned char readCommand;
+
+
+
+
+  unsigned char readDummyBytes;
+
+  fl_SectorLayout sectorLayout;
+  struct {
+
+    unsigned regularSectorSize;
+    struct {
+
+      unsigned char sectorCount;
+
+
+
+
+      unsigned char sectorSizesLog2[32];
+    } irregularSectorSizes;
+  } sectorSizes;
+
+  unsigned char readSRCommand;
+
+  unsigned int writeSRCommand;
+
+  unsigned char wipBitMask;
+} fl_QuadDeviceSpec;
+
+
+typedef struct {
+
+  out port qspiCS;
+  out port qspiSCLK;
+  [[bidirectional]]buffered port:32 qspiSIO;
+  __clock_t qspiClkblk;
 
 
 
 
 
 
-void ConfigureSerialDacPorts();
-
-void InitDebugOut(out port txd);
-
-void DebugOut(unsigned data, unsigned count, out port txd);
+} fl_QSPIPorts;
 
 
-unsigned start_ssdac(chanend c_in, unsigned sample_rate);
 
 
-unsigned start_fir(chanend c_in, unsigned sample_rate);
 
 
-unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
 
-void audio_xss(chanend c_in, chanend ?c_control);
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
+int fl_connect(fl_QSPIPorts& QSPI);
+# 167 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_connectToDevice(fl_QSPIPorts &QSPI, const fl_QuadDeviceSpec spec[], unsigned n);
+# 179 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_dividerOverride(int div);
+# 189 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_getFlashType();
+
+
+
+
+
+
+unsigned fl_getFlashSize();
+
+
+
+
+
+
+void fl_getSpiId(fl_QSPIPorts & QSPI, unsigned id_command, unsigned char destination[]);
+# 213 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+unsigned fl_getSpiStatus(fl_QSPIPorts & QSPI, unsigned status_command);
+# 222 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_disconnect();
+
+
+
+
+
+
+
+int fl_getFlashIdNum();
+# 239 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_getFlashIdStr( char buf[], int maxlen );
+
+
+
+
+
+typedef struct {
+  unsigned startAddress;
+  unsigned size;
+  unsigned version;
+  int factory;
+} fl_BootImageInfo;
+# 260 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_getFactoryImage(fl_BootImageInfo& bootImageInfo);
+# 274 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_getNextBootImage(fl_BootImageInfo& bootImageInfo);
+# 285 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+unsigned fl_getImageVersion(fl_BootImageInfo& bootImageInfo);
+# 305 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_startImageAdd(fl_BootImageInfo &bootImageInfo, unsigned maxsize,
+                     unsigned padding);
+# 324 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_startImageAddAt( unsigned offset, unsigned maxsize);
+# 342 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_startImageReplace(fl_BootImageInfo &bootImageInfo, unsigned maxsize);
+# 352 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_writeImagePage(const unsigned char page[]);
+
+
+
+
+
+int fl_endWriteImage(void);
+# 368 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_deleteImage(fl_BootImageInfo &bootImageInfo);
+# 380 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_startDeleteImage(fl_BootImageInfo &bootImageInfo);
+# 390 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_startImageRead(fl_BootImageInfo &bootImageInfo);
+
+
+
+
+
+
+
+int fl_readImagePage(unsigned char page[]);
+# 419 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+unsigned fl_getDataPartitionSize(void);
+# 429 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_readData(unsigned offset, unsigned size, unsigned char dst[]);
+# 438 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+unsigned fl_getWriteScratchSize(unsigned offset, unsigned size);
+# 450 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_writeData(unsigned offset, unsigned size, const unsigned char src[],
+                 unsigned char buffer[]);
+
+
+
+
+
+
+
+unsigned fl_getPageSize(void);
+
+
+
+
+
+unsigned fl_getNumDataPages(void);
+# 474 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_writeDataPage(unsigned n, const unsigned char src[]);
+
+
+
+
+
+
+
+int fl_readDataPage(unsigned n, unsigned char dst[]);
+
+
+
+
+
+
+
+unsigned fl_getNumDataSectors(void);
+
+
+
+
+
+
+unsigned fl_getDataSectorSize(unsigned n);
+
+
+
+
+
+
+int fl_eraseDataSector(unsigned n);
+
+
+
+
+
+int fl_eraseAllDataSectors(void);
+
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/QuadSpecEnum.h" 1 3
+
+
+
+typedef enum
+{
+  UNKNOWN = 0,
+  ISSI_IS25LP016D = 8,
+  ISSI_IS25LP032 = 9,
+  ISSI_IS25LP064 = 10,
+  ISSI_IS25LP080D = 7,
+  ISSI_IS25LP128 = 11,
+  ISSI_IS25LQ016B = 5,
+  ISSI_IS25LQ032B = 6,
+  ISSI_IS25LQ080B = 4,
+  SPANSION_S25FL116K = 1,
+  SPANSION_S25FL132K = 2,
+  SPANSION_S25FL164K = 3,
+  WINBOND_W25Q128JV = 15,
+  WINBOND_W25Q16JV = 12,
+  WINBOND_W25Q32JV = 13,
+  WINBOND_W25Q64JV = 14,
+} fl_QuadFlashId;
+# 516 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 2 3
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/QuadSpecMacros.h" 1 3
+# 521 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 2 3
+# 19 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 2 3
+
+
+
+
+
+
+
+typedef fl_QSPIPorts fl_PortHolderStruct;
+
+
+
+
+
+int fl_getBusyStatus();
+
+
+unsigned int fl_getFullStatus();
+
+
+
+
+
+
+int fl_quadEnable();
+
+
+int fl_eraseAll();
+
+
+int fl_setWritability(int enable);
+# 58 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
+fl_SectorLayout fl_getSectorLayoutType();
+
+
+int fl_getNumSectors();
+
+
+int fl_getSectorSize(int sectorNum);
+
+
+int fl_getSectorAddress(int sectorNum);
+
+
+int fl_eraseSector(int sectorNum);
+# 80 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
+unsigned fl_getNumPages();
+
+
+int fl_writePage(unsigned int address, const unsigned char data[]);
+
+
+int fl_readPage(unsigned int address, unsigned char data[]);
+# 96 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
+unsigned int fl_setBootPartitionSize( unsigned int s );
+unsigned int fl_getBootPartitionSize();
+
+
+unsigned fl_getDataPartitionBase();
+# 114 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
+int fl_eraseNextBootImage( fl_BootImageInfo& bootImageInfo );
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 2
+
+
+
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h" 1
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h"
+int qspi_write(int offset, int size, char * buffer, char * scratch);
+
+int qspi_read(int offset, int size, char * buffer);
+
+
+
+interface qspi_access{
+
+    void write(int offset, int size, char buffer[]);
+
+    void read(int offset, int size, char buffer[]);
+};
+
+void qspi_server(server interface qspi_access i);
+# 41 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h"
+void qspi_if_write(client interface qspi_access i, int offset, int size, char buffer[]);
+
+void qspi_if_read(client interface qspi_access i, int offset, int size, char buffer[]);
+# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 2
+# 29 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
+void set_display_control_flag(unsigned bitmask);
+void update_samp_freq(unsigned freq);
+void update_stream_format(unsigned numUsbChan, unsigned sampRes);
+
+
+
+void init_display_frame();
+void handle_display_frame();
+
+typedef enum {
+    _SDC_AUDIO = 1,
+    _USB_AUDIO = 2,
+    _DAC_MODE_SELECTION = 3,
+    _FUNCTION_SELECTION = 4
+} CONSOLE_MODE;
+
+CONSOLE_MODE get_console_mode();
+void set_console_mode(CONSOLE_MODE value);
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
 
 # 1 ".././src/core\\ssdac_conf.h" 1
-# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
+
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 
@@ -1273,6 +1642,14 @@ void HandlePlayCommand(chanend c_control, QUERY_TYPE type){
     }
 }
 
+void SendBackTrackControl(chanend c_track_control){
+    if ( (play_command_request == 1) && ( play_command != _PLAY_CMD_EMPTY ) ){
+        c_track_control <: play_command;
+        play_command = _PLAY_CMD_EMPTY;
+        play_command_request = 0;
+    }
+}
+
 void HandleDacCommand(chanend c_control, DAC_COMMAND command){
     switch (command){
     case _GET_INTERPOLATION_MODE :
@@ -1378,10 +1755,12 @@ inline void KeyEventInFunctionSelection(BUTTON_EVENT event){
     }
 
     switch (event){
+
     case _BTN_1_DOWN:
         unsafe { *p_selected_function = _USB_DAC; }
         set_display_control_flag(0x00000400);
         break;
+
     case _BTN_2_DOWN:
         unsafe { *p_selected_function = _SDC_PLAY; }
         set_display_control_flag(0x00000400);
@@ -1392,9 +1771,7 @@ inline void KeyEventInFunctionSelection(BUTTON_EVENT event){
 
 
 
-            printf("\nSwitching to USB Audio Menu");
             SwitchConsoleMode(_USB_AUDIO);
-
 
             break;
     }
@@ -1432,7 +1809,7 @@ void KeyEvent(BUTTON_EVENT event){
     }
 }
 
-void ExamineKeyInput(){
+void KeyScan(){
     timer t;
     unsigned now;
     key_buff[2] = key_buff[1];
@@ -1503,10 +1880,9 @@ void ExamineKeyInput(){
     }
 }
 
-void button_listener_core(chanend ?c_play_control, chanend ?c_dac_control){
+void button_listener_core(chanend ? c_play_control, chanend ? c_dac_control){
 
     unsafe {p_console_mode = &console_mode;}
-
     timer t;
 
     p_key :> key_buff[0];
@@ -1515,37 +1891,26 @@ void button_listener_core(chanend ?c_play_control, chanend ?c_dac_control){
 
     t :> scan_time;
 
+    DAC_COMMAND dac_command;
+    QUERY_TYPE query_type;
 
-
-
-
-    set_console_mode(_USB_AUDIO);
-
-
-    set_display_control_flag(0x00000010);
-
-    while (1){
-
-
-
-
-        if ( (play_command_request == 1) && ( play_command != _PLAY_CMD_EMPTY ) ){
-            c_play_control <: play_command;
-            play_command = _PLAY_CMD_EMPTY;
-            play_command_request = 0;
-        }
-
-        DAC_COMMAND dac_command;
-        QUERY_TYPE query_type;
+    while (1)
+    {
+        SendBackTrackControl(c_play_control);
 
         select {
-# 368 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc"
+
+        case c_play_control :> query_type:
+                HandlePlayCommand(c_play_control, query_type);
+                break;
+
+
         case c_dac_control :> dac_command:
                 HandleDacCommand(c_dac_control, dac_command);
                 break;
 
         case t when __builtin_timer_after(scan_time) :> void:
-                ExamineKeyInput();
+                KeyScan();
                 scan_time += 1000000;
                 break;
         }

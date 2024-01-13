@@ -39,6 +39,8 @@
 #endif
 
 #include "private/memory.h"
+
+#include "xassert.h"
 #include "FLAC/assert.h"
 #include "share/compat.h"
 #include "share/alloc.h"

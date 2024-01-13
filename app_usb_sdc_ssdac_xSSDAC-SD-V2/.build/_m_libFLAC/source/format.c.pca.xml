@@ -16,7 +16,6 @@
   <fCall global="true" name="FLAC__format_sample_rate_is_subset.maxchanends"/>
   <fCall global="true" name="FLAC__format_seektable_is_legal"/>
   <fCall global="true" name="FLAC__format_seektable_is_legal.nstackwords"/>
-  <fCall global="true" name="assert.nstackwords"/>
   <fCall global="true" name="FLAC__format_seektable_is_legal.maxcores"/>
   <fCall global="true" name="FLAC__format_seektable_is_legal.maxtimers"/>
   <fCall global="true" name="FLAC__format_seektable_is_legal.maxchanends"/>
@@ -177,7 +176,6 @@
   <fCall global="true" name="FLAC__MetadataTypeString"/>
   <fCall global="true" name="FLAC__StreamMetadata_Picture_TypeString.globound"/>
   <fCall global="true" name="FLAC__StreamMetadata_Picture_TypeString"/>
-  <fCall global="true" name="assert"/>
   <fCall global="true" name="qsort"/>
   <fCall global="true" name="free"/>
   <fCall global="true" name="realloc"/>

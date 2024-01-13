@@ -316,6 +316,9 @@ char *strupr (char *);
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 2 3
 # 38 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_encoder_aspect.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h" 1
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 1
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 2
 # 39 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_encoder_aspect.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/ogg_encoder_aspect.h" 1
 # 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/ogg_encoder_aspect.h"
@@ -2494,7 +2497,7 @@ FLAC__StreamEncoderWriteStatus FLAC__ogg_encoder_aspect_write_callback_wrapper(F
 
 
 
-                   ;
+    assert(0);
     return FLAC__STREAM_ENCODER_WRITE_STATUS_FATAL_ERROR;
    }
 
@@ -2519,7 +2522,7 @@ FLAC__StreamEncoderWriteStatus FLAC__ogg_encoder_aspect_write_callback_wrapper(F
    b += (4u);
 
    memcpy(b, buffer, bytes);
-                                                                                               ;
+   assert(b + bytes - synthetic_first_packet_body == sizeof(synthetic_first_packet_body));
    packet.packet = (uint8_t *)synthetic_first_packet_body;
    packet.bytes = sizeof(synthetic_first_packet_body);
 
@@ -2568,7 +2571,7 @@ FLAC__StreamEncoderWriteStatus FLAC__ogg_encoder_aspect_write_callback_wrapper(F
 
 
 
-                 ;
+  assert(0);
   return FLAC__STREAM_ENCODER_WRITE_STATUS_FATAL_ERROR;
  }
 

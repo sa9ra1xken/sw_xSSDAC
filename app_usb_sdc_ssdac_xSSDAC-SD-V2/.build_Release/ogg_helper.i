@@ -487,6 +487,9 @@ char *strupr (char *);
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 2 3
 # 39 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_helper.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h" 1
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 1
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 2
 # 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_helper.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h" 1
 # 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h"
@@ -3094,7 +3097,7 @@ static FLAC__bool full_read_(FLAC__StreamEncoder *encoder, FLAC__byte *buffer, s
     return 0;
    default:
 
-                   ;
+    assert(0);
     encoder->protected_->state = FLAC__STREAM_ENCODER_CLIENT_ERROR;
     return 0;
   }
@@ -3127,10 +3130,10 @@ FLAC__bool simple_ogg_page__get_at(FLAC__StreamEncoder *encoder, FLAC__uint64 po
  FLAC__byte crc[4];
  FLAC__StreamEncoderSeekStatus seek_status;
 
-                                ;
-                                    ;
-                              ;
-                                  ;
+ assert(page->header == 0);
+ assert(page->header_len == 0);
+ assert(page->body == 0);
+ assert(page->body_len == 0);
 
 
  if(0 == seek_callback)
@@ -3208,10 +3211,10 @@ FLAC__bool simple_ogg_page__set_at(FLAC__StreamEncoder *encoder, FLAC__uint64 po
 {
  FLAC__StreamEncoderSeekStatus seek_status;
 
-                                ;
-                                    ;
-                              ;
-                                  ;
+ assert(page->header != 0);
+ assert(page->header_len != 0);
+ assert(page->body != 0);
+ assert(page->body_len != 0);
 
 
  if(0 == seek_callback)

@@ -21,12 +21,24 @@
 #include "SSDAC_MODE.h"
 #include "fir_interpolator.h"
 #include "ring_buffer.h"
-#include "audiohw.h"
+//#include "audiohw.h"
 //#include "customdefines.h"
 #include "ssdac_conf.h"
 #include <do_sample_transfer.h>
 //#include "xc_ptr.h" required for tool version 15?
 //#include "display_control.h"
+
+//prototypes
+void AudioHwInit(/*chanend ?c_codec*/);
+
+/* Configure audio hardware (clocking, CODECs etc) for a specific mClk/Sample frquency - run on every sample frequency change */
+void AudioHwConfig(unsigned samFreq, unsigned mClk, /*chanend ?c_codec,*/ unsigned dsdMode,
+        unsigned sampRes_DAC, unsigned sampRes_ADC);
+
+void ReleaseMute();
+
+void ClipIndicator(unsigned state);
+
 
 /* c_audioControl */
 #define SET_SAMPLE_FREQ         4

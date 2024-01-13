@@ -7,6 +7,9 @@
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/float.c" 2
 # 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/float.c"
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h" 1
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 1
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 2
 # 38 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/float.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 1
 # 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h"

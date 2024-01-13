@@ -210,6 +210,10 @@ TestUserControl:
 	# RETURN_REG_HOLDER
 .Ltmp26:
 	.cc_bottom TestUserControl.function
+	.set	TestUserControl.nstackwords.pragma,400
+	.globl	TestUserControl.nstackwords.pragma
+	.set	TestUserControl.nstackwords,TestUserControl.nstackwords
+	.globl	TestUserControl.nstackwords
 
 	.globl	TestUserControl.maxcores
 
@@ -370,7 +374,7 @@ TestUserControl:
 	.byte	2
 	.byte	4
 	.byte	3
-	.byte	25
+	.byte	26
 	.byte	3
 	.long	.Linfo_string14
 	.byte	0
@@ -405,7 +409,7 @@ TestUserControl:
 	.byte	2
 	.byte	4
 	.byte	3
-	.byte	19
+	.byte	20
 	.byte	3
 	.long	.Linfo_string24
 	.byte	0
@@ -499,7 +503,7 @@ TestUserControl:
 	.long	112
 	.long	.Linfo_string38
 	.byte	3
-	.byte	36
+	.byte	37
 	.byte	9
 	.long	.Linfo_string40
 	.byte	2

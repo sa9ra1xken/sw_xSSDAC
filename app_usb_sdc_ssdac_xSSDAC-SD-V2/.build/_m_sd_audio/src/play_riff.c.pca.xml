@@ -14,11 +14,13 @@
   <fCall global="true" name="fflush.nstackwords"/>
   <fCall global="true" name="set_display_control_flag.nstackwords"/>
   <fCall global="true" name="WriteHexString.nstackwords"/>
+  <fCall global="true" name="debug_printf.nstackwords"/>
   <fCall global="true" name="PlayRIFF.maxcores"/>
   <fCall global="true" name="ReadUnsigned.maxcores"/>
   <fCall global="true" name="TestUserControl.maxcores"/>
   <fCall global="true" name="WriteHexString.maxcores"/>
   <fCall global="true" name="__getstdout.maxcores"/>
+  <fCall global="true" name="debug_printf.maxcores"/>
   <fCall global="true" name="f_read.maxcores"/>
   <fCall global="true" name="fflush.maxcores"/>
   <fCall global="true" name="set_display_control_flag.maxcores"/>
@@ -30,6 +32,7 @@
   <fCall global="true" name="TestUserControl.maxtimers"/>
   <fCall global="true" name="WriteHexString.maxtimers"/>
   <fCall global="true" name="__getstdout.maxtimers"/>
+  <fCall global="true" name="debug_printf.maxtimers"/>
   <fCall global="true" name="f_read.maxtimers"/>
   <fCall global="true" name="fflush.maxtimers"/>
   <fCall global="true" name="set_display_control_flag.maxtimers"/>
@@ -41,6 +44,7 @@
   <fCall global="true" name="TestUserControl.maxchanends"/>
   <fCall global="true" name="WriteHexString.maxchanends"/>
   <fCall global="true" name="__getstdout.maxchanends"/>
+  <fCall global="true" name="debug_printf.maxchanends"/>
   <fCall global="true" name="f_read.maxchanends"/>
   <fCall global="true" name="fflush.maxchanends"/>
   <fCall global="true" name="set_display_control_flag.maxchanends"/>
@@ -53,6 +57,7 @@
   <fCall global="true" name="f_lseek.maxchanends"/>
   <fCall global="true" name="p_file"/>
   <fCall global="true" name="c_handshake"/>
+  <fCall global="true" name="debug_printf"/>
   <fCall global="true" name="ReadUnsigned"/>
   <fCall global="true" name="f_read"/>
   <fCall global="true" name="strncmp"/>

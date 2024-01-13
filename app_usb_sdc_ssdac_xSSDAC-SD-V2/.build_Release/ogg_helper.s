@@ -214,26 +214,86 @@ simple_ogg_page__get_at:
 	}
 .Ltmp25:
 	{
+		mov r8, r2
+		mov r9, r1
+	}
+	{
 		mov r4, r0
 		nop
 	}
 .Ltmp26:
-	ldd r6, r10, sp[7]
+	ldd r6, r0, sp[7]
+	{
+		nop
+		stw r0, sp[1]
+	}
+	{
+		nop
+		ldw r10, sp[13]
+	}
+	{
+		nop
+		ldw r0, r5[0]
+	}
+	.loc	2 102 2 prologue_end
+.Ltmp27:
+	{
+		eq r0, r0, 0
+		nop
+	}
+	.loc	2 102 2
+	bl assert
+	{
+		nop
+		ldw r0, r5[1]
+	}
+	.loc	2 103 2
+	{
+		eq r0, r0, 0
+		nop
+	}
+	.loc	2 103 2
+	bl assert
+	{
+		nop
+		ldw r0, r5[2]
+	}
+	.loc	2 104 2
+	{
+		eq r0, r0, 0
+		nop
+	}
+	.loc	2 104 2
+	bl assert
+	{
+		nop
+		ldw r0, r5[3]
+	}
+	.loc	2 105 2
+	{
+		eq r0, r0, 0
+		nop
+	}
+	.loc	2 105 2
+	bl assert
 	{
 		ldc r7, 0
-		ldw r11, sp[13]
+		nop
 	}
-.Ltmp27:
-	bf r11, .LBB2_46
+	bf r10, .LBB2_48
 .Ltmp28:
-	.loc	2 110 20 prologue_end
+	.loc	2 110 20
 	{
 		mov r0, r4
+		mov r1, r9
+	}
+	{
+		mov r2, r8
 		mov r3, r6
 	}
 	{
 		nop
-		bla r11
+		bla r10
 	}
 .Ltmp29:
 	.loc	2 110 20
@@ -258,19 +318,15 @@ simple_ogg_page__get_at:
 	bf r8, .LBB2_5
 .Ltmp34:
 	{
-		ldc r5, 27
-		stw r5, sp[1]
-	}
-	{
+		ldc r10, 27
 		ldaw r9, sp[3]
-		nop
 	}
 .Ltmp35:
 .LBB2_7:
 	.loc	2 48 3
 	{
 		mov r0, r4
-		stw r5, sp[3]
+		stw r10, sp[3]
 	}
 	.loc	2 49 10
 	{
@@ -279,11 +335,11 @@ simple_ogg_page__get_at:
 	}
 	{
 		mov r3, r6
-		nop
+		ldw r11, sp[1]
 	}
 	{
 		nop
-		bla r10
+		bla r11
 	}
 	{
 		mkmsk r1, 2
@@ -304,7 +360,7 @@ simple_ogg_page__get_at:
 		nop
 		bru r0
 	}
-	.jmptable32 .LBB2_11,.LBB2_9,.LBB2_18,.LBB2_46
+	.jmptable32 .LBB2_11,.LBB2_9,.LBB2_19,.LBB2_48
 .Ltmp37:
 .LBB2_11:
 	{
@@ -324,21 +380,16 @@ simple_ogg_page__get_at:
 	.loc	2 60 5
 	{
 		add r8, r8, r0
-		sub r1, r5, r0
+		sub r1, r10, r0
 	}
 .Ltmp40:
 	.loc	2 47 2
 	{
-		eq r0, r5, r0
-		mov r5, r1
+		eq r0, r10, r0
+		mov r10, r1
 	}
 	bf r0, .LBB2_7
 .Ltmp41:
-	{
-		nop
-		ldw r5, sp[1]
-	}
-.Ltmp42:
 	.loc	2 127 2
 	{
 		ldc r0, 26
@@ -346,12 +397,12 @@ simple_ogg_page__get_at:
 	}
 	.loc	2 127 2
 	{
-		ldc r1, 27
+		ldc r10, 27
 		ld8u r0, r9[r0]
 	}
 	.loc	2 127 2
 	{
-		add r0, r0, r1
+		add r0, r0, r10
 		nop
 	}
 	.loc	2 127 2
@@ -360,7 +411,7 @@ simple_ogg_page__get_at:
 		stw r0, r5[1]
 	}
 	.loc	2 131 3
-.Ltmp43:
+.Ltmp42:
 	bl __misaligned_load
 	ldw r1, cp[.LCPI2_0]
 	.loc	2 131 3
@@ -369,7 +420,7 @@ simple_ogg_page__get_at:
 		nop
 	}
 	bf r0, .LBB2_17
-.Ltmp44:
+.Ltmp43:
 	{
 		ldc r0, 5
 		nop
@@ -384,7 +435,7 @@ simple_ogg_page__get_at:
 		nop
 	}
 	bt r0, .LBB2_17
-.Ltmp45:
+.Ltmp44:
 	.loc	2 133 3
 	{
 		add r0, r9, 6
@@ -398,7 +449,7 @@ simple_ogg_page__get_at:
 	}
 	bl memcmp
 	bt r0, .LBB2_17
-.Ltmp46:
+.Ltmp45:
 	{
 		ldc r0, 26
 		nop
@@ -413,19 +464,14 @@ simple_ogg_page__get_at:
 		ld8u r8, r0[r1]
 	}
 	bf r8, .LBB2_17
-.Ltmp47:
-	{
-		ldc r0, 27
-		nop
-	}
-.Ltmp48:
+.Ltmp46:
 	.loc	2 141 6
 	{
-		add r7, r9, r0
+		add r7, r9, r10
 		ldaw r9, sp[3]
 	}
-.Ltmp49:
-.LBB2_21:
+.Ltmp47:
+.LBB2_22:
 	.loc	2 48 3
 	{
 		mov r0, r4
@@ -438,11 +484,11 @@ simple_ogg_page__get_at:
 	}
 	{
 		mov r3, r6
-		nop
+		ldw r11, sp[1]
 	}
 	{
 		nop
-		bla r10
+		bla r11
 	}
 	{
 		mkmsk r1, 2
@@ -453,8 +499,8 @@ simple_ogg_page__get_at:
 		lsu r1, r1, r0
 		nop
 	}
-	bt r1, .LBB2_43
-.Ltmp50:
+	bt r1, .LBB2_44
+.Ltmp48:
 
 	.xtabranch .Ljumptable1+4,.Ljumptable1+8,.Ljumptable1+12,.Ljumptable1+16
 .Ljumptable1:
@@ -463,36 +509,36 @@ simple_ogg_page__get_at:
 		nop
 		bru r0
 	}
-	.jmptable32 .LBB2_25,.LBB2_23,.LBB2_43,.LBB2_45
-.Ltmp51:
-.LBB2_25:
-	{
-		nop
-		ldw r0, sp[3]
-	}
-	bu .LBB2_26
-.Ltmp52:
-.LBB2_23:
-	{
-		nop
-		ldw r0, sp[3]
-	}
-	bf r0, .LBB2_24
-.Ltmp53:
+	.jmptable32 .LBB2_26,.LBB2_24,.LBB2_45,.LBB2_47
+.Ltmp49:
 .LBB2_26:
+	{
+		nop
+		ldw r0, sp[3]
+	}
+	bu .LBB2_27
+.Ltmp50:
+.LBB2_24:
+	{
+		nop
+		ldw r0, sp[3]
+	}
+	bf r0, .LBB2_25
+.Ltmp51:
+.LBB2_27:
 	.loc	2 60 5
 	{
 		add r7, r7, r0
 		sub r1, r8, r0
 	}
-.Ltmp54:
+.Ltmp52:
 	.loc	2 47 2
 	{
 		eq r0, r8, r0
 		mov r8, r1
 	}
-	bf r0, .LBB2_21
-.Ltmp55:
+	bf r0, .LBB2_22
+.Ltmp53:
 	.loc	2 148 3
 	{
 		ldc r0, 26
@@ -507,34 +553,30 @@ simple_ogg_page__get_at:
 		eq r1, r0, 1
 		ldc r11, 0
 	}
-	bt r1, .LBB2_31
-.Ltmp56:
+	bt r1, .LBB2_32
+.Ltmp54:
 	{
-		ldc r1, 27
-		nop
-	}
-	{
-		add r1, r9, r1
+		add r1, r9, r10
 		ldc r11, 0
 	}
 	{
 		mkmsk r2, 8
 		nop
 	}
-.Ltmp57:
-.LBB2_30:
+.Ltmp55:
+.LBB2_31:
 	{
 		nop
 		ld8u r3, r1[r11]
 	}
 	.loc	2 149 7
-.Ltmp58:
+.Ltmp56:
 	{
 		eq r3, r3, r2
 		nop
 	}
-	bf r3, .LBB2_24
-.Ltmp59:
+	bf r3, .LBB2_25
+.Ltmp57:
 	.loc	2 148 50
 	{
 		add r11, r11, 1
@@ -545,9 +587,9 @@ simple_ogg_page__get_at:
 		lsu r3, r11, r3
 		nop
 	}
-	bt r3, .LBB2_30
-.Ltmp60:
-.LBB2_31:
+	bt r3, .LBB2_31
+.Ltmp58:
+.LBB2_32:
 	{
 		mkmsk r0, 8
 		nop
@@ -557,53 +599,53 @@ simple_ogg_page__get_at:
 	.loc	2 155 3
 	{
 		add r1, r11, r9
-		ldc r2, 27
+		nop
 	}
 	{
 		nop
-		ld8u r1, r1[r2]
+		ld8u r1, r1[r10]
 	}
 	.loc	2 155 3
 	{
 		add r8, r1, r0
 		nop
 	}
-.Ltmp61:
+.Ltmp59:
 	.loc	2 155 3
 	{
 		eq r0, r8, 0
 		stw r8, r5[3]
 	}
-.Ltmp62:
+.Ltmp60:
 	.loc	8 93 5
 	{
 		add r0, r0, r8
 		nop
 	}
-.Ltmp63:
+.Ltmp61:
 	.loc	8 95 9
 	bl malloc
 	{
 		mov r7, r0
 		nop
 	}
-.Ltmp64:
+.Ltmp62:
 	{
 		nop
 		stw r7, r5[2]
 	}
-.Ltmp65:
+.Ltmp63:
 	.loc	2 159 24
-	bf r7, .LBB2_32
-.Ltmp66:
-	bf r8, .LBB2_41
-.Ltmp67:
+	bf r7, .LBB2_33
+.Ltmp64:
+	bf r8, .LBB2_42
+.Ltmp65:
 	{
 		ldaw r9, sp[3]
 		nop
 	}
-.Ltmp68:
-.LBB2_35:
+.Ltmp66:
+.LBB2_36:
 	.loc	2 48 3
 	{
 		mov r0, r4
@@ -616,11 +658,11 @@ simple_ogg_page__get_at:
 	}
 	{
 		mov r3, r6
-		nop
+		ldw r11, sp[1]
 	}
 	{
 		nop
-		bla r10
+		bla r11
 	}
 	{
 		mkmsk r1, 2
@@ -631,8 +673,8 @@ simple_ogg_page__get_at:
 		lsu r1, r1, r0
 		nop
 	}
-	bt r1, .LBB2_43
-.Ltmp69:
+	bt r1, .LBB2_44
+.Ltmp67:
 
 	.xtabranch .Ljumptable2+4,.Ljumptable2+8,.Ljumptable2+12,.Ljumptable2+16
 .Ljumptable2:
@@ -641,74 +683,68 @@ simple_ogg_page__get_at:
 		nop
 		bru r0
 	}
-	.jmptable32 .LBB2_38,.LBB2_37,.LBB2_43,.LBB2_45
-.Ltmp70:
+	.jmptable32 .LBB2_39,.LBB2_38,.LBB2_45,.LBB2_47
+.Ltmp68:
+.LBB2_39:
+	{
+		nop
+		ldw r0, sp[3]
+	}
+	bu .LBB2_40
+.Ltmp69:
 .LBB2_38:
 	{
 		nop
 		ldw r0, sp[3]
 	}
-	bu .LBB2_39
-.Ltmp71:
-.LBB2_37:
-	{
-		nop
-		ldw r0, sp[3]
-	}
-	bf r0, .LBB2_24
-.Ltmp72:
-.LBB2_39:
+	bf r0, .LBB2_25
+.Ltmp70:
+.LBB2_40:
 	.loc	2 60 5
 	{
 		add r7, r7, r0
 		sub r1, r8, r0
 	}
-.Ltmp73:
+.Ltmp71:
 	.loc	2 47 2
 	{
 		eq r0, r8, r0
 		mov r8, r1
 	}
-	bf r0, .LBB2_35
-.Ltmp74:
+	bf r0, .LBB2_36
+.Ltmp72:
 	{
 		nop
 		ldw r9, r5[0]
 	}
-.Ltmp75:
-.LBB2_41:
+.Ltmp73:
+.LBB2_42:
 	{
-		ldc r7, 22
+		ldc r6, 22
 		nop
 	}
 	.loc	2 169 2
 	{
-		add r0, r9, r7
+		add r0, r9, r6
 		nop
 	}
 	.loc	2 169 2
 	bl __misaligned_load
-.Ltmp76:
 	.loc	2 169 2
 	{
-		mov r6, r5
+		mov r0, r5
 		stw r0, sp[2]
 	}
-.Ltmp77:
 	.loc	2 170 2
-	{
-		mov r0, r6
-		nop
-	}
 	bl ogg_page_checksum_set
 	{
 		nop
-		ldw r0, r6[0]
+		ldw r0, r5[0]
 	}
 	.loc	2 171 5
-.Ltmp78:
+.Ltmp74:
 	{
-		add r0, r0, r7
+		add r0, r0, r6
 		nop
 	}
 	.loc	2 171 5
@@ -722,24 +758,24 @@ simple_ogg_page__get_at:
 		eq r0, r1, r0
 		nop
 	}
-	bt r0, .LBB2_42
-.Ltmp79:
-.LBB2_24:
+	bt r0, .LBB2_43
+.Ltmp75:
+.LBB2_25:
 	.loc	2 56 6
 	{
 		ldc r1, 2
 		ldw r0, r4[0]
 	}
-	bu .LBB2_44
-.Ltmp80:
+	bu .LBB2_46
+.Ltmp76:
 .LBB2_2:
 	{
 		eq r0, r0, 1
 		nop
 	}
-.Ltmp81:
-	bf r0, .LBB2_46
-.Ltmp82:
+.Ltmp77:
+	bf r0, .LBB2_48
+.Ltmp78:
 	.loc	2 112 4
 	{
 		ldc r1, 5
@@ -749,8 +785,8 @@ simple_ogg_page__get_at:
 		nop
 		stw r1, r0[0]
 	}
-	bu .LBB2_46
-.Ltmp83:
+	bu .LBB2_48
+.Ltmp79:
 .LBB2_5:
 	.loc	2 118 3
 	{
@@ -761,9 +797,18 @@ simple_ogg_page__get_at:
 		nop
 		stw r1, r0[0]
 	}
-	bu .LBB2_46
-.Ltmp84:
+	bu .LBB2_48
+.Ltmp80:
 .LBB2_18:
+	{
+		ldc r0, 0
+		nop
+	}
+	.loc	2 69 5
+.Ltmp81:
+	bl assert
+.Ltmp82:
+.LBB2_19:
 	.loc	2 70 5
 	{
 		ldc r1, 5
@@ -773,8 +818,8 @@ simple_ogg_page__get_at:
 		nop
 		stw r1, r0[0]
 	}
-	bu .LBB2_46
-.Ltmp85:
+	bu .LBB2_48
+.Ltmp83:
 .LBB2_17:
 	.loc	2 136 3
 	{
@@ -785,8 +830,8 @@ simple_ogg_page__get_at:
 		nop
 		stw r1, r0[0]
 	}
-	bu .LBB2_46
-.Ltmp86:
+	bu .LBB2_48
+.Ltmp84:
 .LBB2_10:
 	.loc	2 56 6
 	{
@@ -797,8 +842,8 @@ simple_ogg_page__get_at:
 		nop
 		stw r1, r0[0]
 	}
-.Ltmp87:
-.LBB2_46:
+.Ltmp85:
+.LBB2_48:
 	.loc	2 177 1
 	{
 		mov r0, r7
@@ -812,40 +857,49 @@ simple_ogg_page__get_at:
 		retsp 12
 	}
 	# RETURN_REG_HOLDER
-.LBB2_43:
+.LBB2_44:
+.Ltmp86:
+	{
+		ldc r0, 0
+		nop
+	}
+	.loc	2 69 5
+.Ltmp87:
+	bl assert
 .Ltmp88:
+.LBB2_45:
 	.loc	2 70 5
 	{
 		ldc r1, 5
 		ldw r0, r4[0]
 	}
 .Ltmp89:
-.LBB2_44:
+.LBB2_46:
 	{
 		nop
 		stw r1, r0[0]
 	}
-.LBB2_45:
+.LBB2_47:
 	{
 		ldc r7, 0
 		nop
 	}
-	bu .LBB2_46
-.LBB2_32:
+	bu .LBB2_48
+.LBB2_33:
 .Ltmp90:
 	.loc	2 160 3
 	{
 		ldc r1, 8
 		ldw r0, r4[0]
 	}
-	bu .LBB2_44
+	bu .LBB2_46
 .Ltmp91:
-.LBB2_42:
+.LBB2_43:
 	{
 		mkmsk r7, 1
 		nop
 	}
-	bu .LBB2_46
+	bu .LBB2_48
 	.cc_bottom simple_ogg_page__get_at.function
 
 	.globl	simple_ogg_page__get_at.maxcores
@@ -870,110 +924,193 @@ simple_ogg_page__set_at:
 	.issue_mode dual
 	{
 		nop
-		dualentsp 10
+		dualentsp 12
 	}
 .Ltmp93:
-	.cfi_def_cfa_offset 40
+	.cfi_def_cfa_offset 48
 .Ltmp94:
 	.cfi_offset 15, 0
 	std r5, r4, sp[2]
 .Ltmp95:
-	.cfi_offset 4, -24
+	.cfi_offset 4, -32
 .Ltmp96:
-	.cfi_offset 5, -20
+	.cfi_offset 5, -28
 	std r7, r6, sp[3]
 .Ltmp97:
-	.cfi_offset 6, -16
+	.cfi_offset 6, -24
 .Ltmp98:
-	.cfi_offset 7, -12
+	.cfi_offset 7, -20
+	std r9, r8, sp[4]
 .Ltmp99:
-	.cfi_offset 8, -8
+	.cfi_offset 8, -16
 .Ltmp100:
-	{
-		mov r6, r3
-		stw r8, sp[8]
-	}
+	.cfi_offset 9, -12
 .Ltmp101:
-	{
-		mov r5, r0
-		nop
-	}
+	.cfi_offset 10, -8
 .Ltmp102:
-	ldd r7, r8, sp[6]
 	{
-		ldc r4, 0
-		ldw r11, sp[11]
+		mov r5, r3
+		stw r10, sp[10]
 	}
 .Ltmp103:
-	bf r11, .LBB3_7
-.Ltmp104:
-	.loc	2 191 20 prologue_end
 	{
-		mov r0, r5
-		mov r3, r7
+		mov r8, r2
+		mov r9, r1
+	}
+	{
+		mov r4, r0
+		nop
+	}
+.Ltmp104:
+	ldd r6, r0, sp[7]
+	{
+		nop
+		stw r0, sp[3]
 	}
 	{
 		nop
-		bla r11
+		ldw r10, sp[13]
 	}
+	{
+		nop
+		ldw r0, r5[0]
+	}
+	.loc	2 183 2 prologue_end
 .Ltmp105:
+	{
+		eq r0, r0, 0
+		nop
+	}
+	{
+		eq r0, r0, 0
+		nop
+	}
+	.loc	2 183 2
+	bl assert
+	{
+		nop
+		ldw r0, r5[1]
+	}
+	.loc	2 184 2
+	{
+		eq r0, r0, 0
+		nop
+	}
+	{
+		eq r0, r0, 0
+		nop
+	}
+	.loc	2 184 2
+	bl assert
+	{
+		nop
+		ldw r0, r5[2]
+	}
+	.loc	2 185 2
+	{
+		eq r0, r0, 0
+		nop
+	}
+	{
+		eq r0, r0, 0
+		nop
+	}
+	.loc	2 185 2
+	bl assert
+	{
+		nop
+		ldw r0, r5[3]
+	}
+	.loc	2 186 2
+	{
+		eq r0, r0, 0
+		nop
+	}
+	{
+		eq r0, r0, 0
+		nop
+	}
+	.loc	2 186 2
+	bl assert
+	{
+		ldc r7, 0
+		nop
+	}
+	bf r10, .LBB3_7
+.Ltmp106:
+	.loc	2 191 20
+	{
+		mov r0, r4
+		mov r1, r9
+	}
+	{
+		mov r2, r8
+		mov r3, r6
+	}
+	{
+		nop
+		bla r10
+	}
+.Ltmp107:
 	.loc	2 191 20
 	bt r0, .LBB3_2
-.Ltmp106:
+.Ltmp108:
 	.loc	2 197 2
 	{
-		mov r0, r6
+		mov r0, r5
 		nop
 	}
 	bl ogg_page_checksum_set
 	{
 		nop
-		ldw r1, r6[0]
+		ldw r1, r5[0]
 	}
 	{
 		nop
-		ldw r2, r6[1]
+		ldw r2, r5[1]
 	}
 	.loc	2 200 5
-.Ltmp107:
-	{
-		ldc r4, 0
-		stw r7, sp[2]
-	}
-	{
-		mov r0, r5
-		stw r4, sp[1]
-	}
-	{
-		mov r3, r4
-		nop
-	}
-	{
-		nop
-		bla r8
-	}
-	bt r0, .LBB3_3
-.Ltmp108:
-	{
-		nop
-		ldw r1, r6[2]
-	}
-	{
-		nop
-		ldw r2, r6[3]
-	}
-	.loc	2 204 5
 .Ltmp109:
 	{
-		ldc r4, 0
-		stw r7, sp[2]
+		ldc r7, 0
+		stw r6, sp[2]
 	}
 	{
-		mov r0, r5
-		stw r4, sp[1]
+		mov r0, r4
+		stw r7, sp[1]
+	}
+.Ltmp110:
+	{
+		mov r3, r7
+		ldw r8, sp[3]
+	}
+.Ltmp111:
+	{
+		nop
+		bla r8
+	}
+	bt r0, .LBB3_3
+.Ltmp112:
+	{
+		nop
+		ldw r1, r5[2]
 	}
 	{
-		mov r3, r4
+		nop
+		ldw r2, r5[3]
+	}
+	.loc	2 204 5
+.Ltmp113:
+	{
+		ldc r7, 0
+		stw r6, sp[2]
+	}
+	{
+		mov r0, r4
+		stw r7, sp[1]
+	}
+	{
+		mov r3, r7
 		nop
 	}
 	{
@@ -981,46 +1118,47 @@ simple_ogg_page__set_at:
 		bla r8
 	}
 	bt r0, .LBB3_3
-.Ltmp110:
+.Ltmp114:
 	{
-		mkmsk r4, 1
+		mkmsk r7, 1
 		nop
 	}
 	bu .LBB3_7
 .LBB3_2:
-.Ltmp111:
+.Ltmp115:
 	{
 		eq r0, r0, 1
 		nop
 	}
-.Ltmp112:
+.Ltmp116:
 	bf r0, .LBB3_7
-.Ltmp113:
+.Ltmp117:
 .LBB3_3:
 	.loc	2 205 3
 	{
 		ldc r1, 5
-		ldw r0, r5[0]
+		ldw r0, r4[0]
 	}
 	{
 		nop
 		stw r1, r0[0]
 	}
-.Ltmp114:
+.Ltmp118:
 .LBB3_7:
 	.loc	2 210 1
 	{
-		mov r0, r4
-		ldw r8, sp[8]
+		mov r0, r7
+		ldw r10, sp[10]
 	}
+	ldd r9, r8, sp[4]
 	ldd r7, r6, sp[3]
 	ldd r5, r4, sp[2]
 	{
 		nop
-		retsp 10
+		retsp 12
 	}
 	# RETURN_REG_HOLDER
-.Ltmp115:
+.Ltmp119:
 	.cc_bottom simple_ogg_page__set_at.function
 
 	.globl	simple_ogg_page__set_at.maxcores
@@ -1028,8 +1166,8 @@ simple_ogg_page__set_at:
 	.globl	simple_ogg_page__set_at.maxtimers
 
 	.globl	simple_ogg_page__set_at.maxchanends
-.Ltmp116:
-	.size	simple_ogg_page__set_at, .Ltmp116-simple_ogg_page__set_at
+.Ltmp120:
+	.size	simple_ogg_page__set_at, .Ltmp120-simple_ogg_page__set_at
 .Lfunc_end3:
 	.cfi_endproc
 
@@ -1058,7 +1196,7 @@ simple_ogg_page__set_at:
 .Linfo_string1:
 .asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\ogg_helper.c"
 .Linfo_string2:
-.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 .Linfo_string3:
 .asciiz"OGG_HEADER_FIXED_PORTION_LEN"
 .Linfo_string4:
@@ -3685,56 +3823,56 @@ simple_ogg_page__set_at:
 .Ldebug_ranges4:
 	.long	.Ltmp35
 	.long	.Ltmp41
+	.long	.Ltmp81
+	.long	.Ltmp83
 	.long	.Ltmp84
 	.long	.Ltmp85
-	.long	.Ltmp86
-	.long	.Ltmp87
 	.long	0
 	.long	0
 .Ldebug_ranges5:
 	.long	.Ltmp35
 	.long	.Ltmp40
+	.long	.Ltmp81
+	.long	.Ltmp83
 	.long	.Ltmp84
 	.long	.Ltmp85
-	.long	.Ltmp86
-	.long	.Ltmp87
 	.long	0
 	.long	0
 .Ldebug_ranges6:
-	.long	.Ltmp49
-	.long	.Ltmp55
-	.long	.Ltmp79
-	.long	.Ltmp80
+	.long	.Ltmp47
+	.long	.Ltmp53
+	.long	.Ltmp75
+	.long	.Ltmp76
 	.long	0
 	.long	0
 .Ldebug_ranges7:
-	.long	.Ltmp49
-	.long	.Ltmp54
-	.long	.Ltmp79
-	.long	.Ltmp80
+	.long	.Ltmp47
+	.long	.Ltmp52
+	.long	.Ltmp75
+	.long	.Ltmp76
 	.long	0
 	.long	0
 .Ldebug_ranges8:
-	.long	.Ltmp55
-	.long	.Ltmp62
+	.long	.Ltmp53
+	.long	.Ltmp60
 	.long	0
 	.long	0
 .Ldebug_ranges9:
-	.long	.Ltmp62
-	.long	.Ltmp65
+	.long	.Ltmp60
+	.long	.Ltmp63
 	.long	0
 	.long	0
 .Ldebug_ranges10:
-	.long	.Ltmp68
-	.long	.Ltmp74
-	.long	.Ltmp88
+	.long	.Ltmp66
+	.long	.Ltmp72
+	.long	.Ltmp87
 	.long	.Ltmp89
 	.long	0
 	.long	0
 .Ldebug_ranges11:
-	.long	.Ltmp68
-	.long	.Ltmp73
-	.long	.Ltmp88
+	.long	.Ltmp66
+	.long	.Ltmp71
+	.long	.Ltmp87
 	.long	.Ltmp89
 	.long	0
 	.long	0
@@ -3747,109 +3885,94 @@ simple_ogg_page__set_at:
 .Ldebug_loc0:
 	.long	.Lfunc_begin1
 	.long	.Ltmp6
-.Lset0 = .Ltmp118-.Ltmp117
+.Lset0 = .Ltmp122-.Ltmp121
 	.short	.Lset0
-.Ltmp117:
+.Ltmp121:
 	.byte	80
-.Ltmp118:
+.Ltmp122:
 	.long	.Ltmp6
 	.long	.Ltmp7
-.Lset1 = .Ltmp120-.Ltmp119
+.Lset1 = .Ltmp124-.Ltmp123
 	.short	.Lset1
-.Ltmp119:
+.Ltmp123:
 	.byte	84
-.Ltmp120:
+.Ltmp124:
 	.long	.Ltmp8
 	.long	.Ltmp12
-.Lset2 = .Ltmp122-.Ltmp121
+.Lset2 = .Ltmp126-.Ltmp125
 	.short	.Lset2
-.Ltmp121:
+.Ltmp125:
 	.byte	84
-.Ltmp122:
+.Ltmp126:
 	.long	0
 	.long	0
 .Ldebug_loc1:
 	.long	.Lfunc_begin2
 	.long	.Ltmp26
-.Lset3 = .Ltmp124-.Ltmp123
+.Lset3 = .Ltmp128-.Ltmp127
 	.short	.Lset3
-.Ltmp123:
-	.byte	80
-.Ltmp124:
-	.long	.Ltmp26
-	.long	.Ltmp87
-.Lset4 = .Ltmp126-.Ltmp125
-	.short	.Lset4
-.Ltmp125:
-	.byte	84
-.Ltmp126:
-	.long	.Ltmp88
-	.long	.Ltmp89
-.Lset5 = .Ltmp128-.Ltmp127
-	.short	.Lset5
 .Ltmp127:
-	.byte	84
+	.byte	80
 .Ltmp128:
-	.long	.Ltmp90
-	.long	.Ltmp91
-.Lset6 = .Ltmp130-.Ltmp129
-	.short	.Lset6
+	.long	.Ltmp26
+	.long	.Ltmp82
+.Lset4 = .Ltmp130-.Ltmp129
+	.short	.Lset4
 .Ltmp129:
 	.byte	84
 .Ltmp130:
+	.long	.Ltmp83
+	.long	.Ltmp85
+.Lset5 = .Ltmp132-.Ltmp131
+	.short	.Lset5
+.Ltmp131:
+	.byte	84
+.Ltmp132:
+	.long	.Ltmp86
+	.long	.Ltmp88
+.Lset6 = .Ltmp134-.Ltmp133
+	.short	.Lset6
+.Ltmp133:
+	.byte	84
+.Ltmp134:
+	.long	.Ltmp90
+	.long	.Ltmp91
+.Lset7 = .Ltmp136-.Ltmp135
+	.short	.Lset7
+.Ltmp135:
+	.byte	84
+.Ltmp136:
 	.long	0
 	.long	0
 .Ldebug_loc2:
 	.long	.Lfunc_begin2
 	.long	.Ltmp24
-.Lset7 = .Ltmp132-.Ltmp131
-	.short	.Lset7
-.Ltmp131:
+.Lset8 = .Ltmp138-.Ltmp137
+	.short	.Lset8
+.Ltmp137:
 	.byte	83
-.Ltmp132:
+.Ltmp138:
 	.long	.Ltmp24
 	.long	.Ltmp25
-.Lset8 = .Ltmp134-.Ltmp133
-	.short	.Lset8
-.Ltmp133:
-	.byte	85
-.Ltmp134:
-	.long	.Ltmp28
-	.long	.Ltmp34
-.Lset9 = .Ltmp136-.Ltmp135
+.Lset9 = .Ltmp140-.Ltmp139
 	.short	.Lset9
-.Ltmp135:
-	.byte	85
-.Ltmp136:
-	.long	.Ltmp34
-	.long	.Ltmp42
-.Lset10 = .Ltmp138-.Ltmp137
-	.short	.Lset10
-.Ltmp137:
-	.byte	126
-	.byte	4
-.Ltmp138:
-	.long	.Ltmp42
-	.long	.Ltmp76
-.Lset11 = .Ltmp140-.Ltmp139
-	.short	.Lset11
 .Ltmp139:
 	.byte	85
 .Ltmp140:
-	.long	.Ltmp76
-	.long	.Ltmp77
-.Lset12 = .Ltmp142-.Ltmp141
-	.short	.Lset12
+	.long	.Ltmp28
+	.long	.Ltmp75
+.Lset10 = .Ltmp142-.Ltmp141
+	.short	.Lset10
 .Ltmp141:
-	.byte	86
+	.byte	85
 .Ltmp142:
 	.long	0
 	.long	0
 .Ldebug_loc3:
 	.long	.Lfunc_begin2
-	.long	.Ltmp74
-.Lset13 = .Ltmp144-.Ltmp143
-	.short	.Lset13
+	.long	.Ltmp72
+.Lset11 = .Ltmp144-.Ltmp143
+	.short	.Lset11
 .Ltmp143:
 	.byte	86
 .Ltmp144:
@@ -3857,386 +3980,391 @@ simple_ogg_page__set_at:
 	.long	0
 .Ldebug_loc4:
 	.long	.Lfunc_begin2
-	.long	.Ltmp74
-.Lset14 = .Ltmp146-.Ltmp145
-	.short	.Lset14
+	.long	.Ltmp72
+.Lset12 = .Ltmp146-.Ltmp145
+	.short	.Lset12
 .Ltmp145:
-	.byte	90
+	.byte	126
+	.byte	4
 .Ltmp146:
 	.long	0
 	.long	0
 .Ldebug_loc5:
 	.long	.Lfunc_begin2
-	.long	.Ltmp27
-.Lset15 = .Ltmp148-.Ltmp147
-	.short	.Lset15
+	.long	.Ltmp30
+.Lset13 = .Ltmp148-.Ltmp147
+	.short	.Lset13
 .Ltmp147:
-	.byte	91
+	.byte	90
 .Ltmp148:
-	.long	.Ltmp28
-	.long	.Ltmp29
-.Lset16 = .Ltmp150-.Ltmp149
-	.short	.Lset16
-.Ltmp149:
-	.byte	91
-.Ltmp150:
 	.long	0
 	.long	0
 .Ldebug_loc6:
 	.long	.Lfunc_begin2
-	.long	.Ltmp29
-.Lset17 = .Ltmp152-.Ltmp151
-	.short	.Lset17
-.Ltmp151:
-	.byte	81
-.Ltmp152:
+	.long	.Ltmp30
+.Lset14 = .Ltmp150-.Ltmp149
+	.short	.Lset14
+.Ltmp149:
+	.byte	89
+.Ltmp150:
 	.long	0
 	.long	0
 .Ldebug_loc7:
 	.long	.Ltmp29
 	.long	.Ltmp30
-.Lset18 = .Ltmp154-.Ltmp153
-	.short	.Lset18
+.Lset15 = .Ltmp152-.Ltmp151
+	.short	.Lset15
+.Ltmp151:
+	.byte	80
+.Ltmp152:
+	.long	.Ltmp76
+	.long	.Ltmp77
+.Lset16 = .Ltmp154-.Ltmp153
+	.short	.Lset16
 .Ltmp153:
 	.byte	80
 .Ltmp154:
-	.long	.Ltmp80
-	.long	.Ltmp81
-.Lset19 = .Ltmp156-.Ltmp155
-	.short	.Lset19
-.Ltmp155:
-	.byte	80
-.Ltmp156:
 	.long	0
 	.long	0
 .Ldebug_loc8:
 	.long	.Ltmp32
 	.long	.Ltmp34
-.Lset20 = .Ltmp158-.Ltmp157
-	.short	.Lset20
-.Ltmp157:
+.Lset17 = .Ltmp156-.Ltmp155
+	.short	.Lset17
+.Ltmp155:
 	.byte	88
-.Ltmp158:
+.Ltmp156:
 	.long	0
 	.long	0
 .Ldebug_loc9:
 	.long	.Ltmp35
 	.long	.Ltmp35
-.Lset21 = .Ltmp160-.Ltmp159
-	.short	.Lset21
-.Ltmp159:
-	.byte	85
-.Ltmp160:
+.Lset18 = .Ltmp158-.Ltmp157
+	.short	.Lset18
+.Ltmp157:
+	.byte	90
+.Ltmp158:
 	.long	.Ltmp35
 	.long	.Ltmp36
-.Lset22 = .Ltmp162-.Ltmp161
-	.short	.Lset22
-.Ltmp161:
+.Lset19 = .Ltmp160-.Ltmp159
+	.short	.Lset19
+.Ltmp159:
 	.byte	121
 	.byte	0
-.Ltmp162:
+.Ltmp160:
 	.long	0
 	.long	0
 .Ldebug_loc10:
 	.long	.Ltmp35
 	.long	.Ltmp36
-.Lset23 = .Ltmp164-.Ltmp163
-	.short	.Lset23
-.Ltmp163:
-	.byte	90
-.Ltmp164:
+.Lset20 = .Ltmp162-.Ltmp161
+	.short	.Lset20
+.Ltmp161:
+	.byte	126
+	.byte	4
+.Ltmp162:
 	.long	0
 	.long	0
 .Ldebug_loc11:
 	.long	.Ltmp35
 	.long	.Ltmp36
-.Lset24 = .Ltmp166-.Ltmp165
-	.short	.Lset24
-.Ltmp165:
+.Lset21 = .Ltmp164-.Ltmp163
+	.short	.Lset21
+.Ltmp163:
 	.byte	86
-.Ltmp166:
+.Ltmp164:
 	.long	0
 	.long	0
 .Ldebug_loc12:
 	.long	.Ltmp35
 	.long	.Ltmp36
-.Lset25 = .Ltmp168-.Ltmp167
-	.short	.Lset25
+.Lset22 = .Ltmp166-.Ltmp165
+	.short	.Lset22
+.Ltmp165:
+	.byte	84
+.Ltmp166:
+	.long	.Ltmp80
+	.long	.Ltmp82
+.Lset23 = .Ltmp168-.Ltmp167
+	.short	.Lset23
 .Ltmp167:
 	.byte	84
 .Ltmp168:
-	.long	.Ltmp84
-	.long	.Ltmp85
-.Lset26 = .Ltmp170-.Ltmp169
-	.short	.Lset26
-.Ltmp169:
-	.byte	84
-.Ltmp170:
 	.long	0
 	.long	0
 .Ldebug_loc13:
-	.long	.Ltmp48
-	.long	.Ltmp49
-.Lset27 = .Ltmp172-.Ltmp171
-	.short	.Lset27
-.Ltmp171:
+	.long	.Ltmp46
+	.long	.Ltmp47
+.Lset24 = .Ltmp170-.Ltmp169
+	.short	.Lset24
+.Ltmp169:
 	.byte	87
-.Ltmp172:
+.Ltmp170:
 	.long	0
 	.long	0
 .Ldebug_loc14:
-	.long	.Ltmp49
-	.long	.Ltmp49
-.Lset28 = .Ltmp174-.Ltmp173
-	.short	.Lset28
-.Ltmp173:
+	.long	.Ltmp47
+	.long	.Ltmp47
+.Lset25 = .Ltmp172-.Ltmp171
+	.short	.Lset25
+.Ltmp171:
 	.byte	88
-.Ltmp174:
-	.long	.Ltmp49
-	.long	.Ltmp50
-.Lset29 = .Ltmp176-.Ltmp175
-	.short	.Lset29
-.Ltmp175:
+.Ltmp172:
+	.long	.Ltmp47
+	.long	.Ltmp48
+.Lset26 = .Ltmp174-.Ltmp173
+	.short	.Lset26
+.Ltmp173:
 	.byte	121
 	.byte	0
-.Ltmp176:
+.Ltmp174:
 	.long	0
 	.long	0
 .Ldebug_loc15:
-	.long	.Ltmp49
-	.long	.Ltmp50
-.Lset30 = .Ltmp178-.Ltmp177
-	.short	.Lset30
-.Ltmp177:
-	.byte	90
-.Ltmp178:
+	.long	.Ltmp47
+	.long	.Ltmp48
+.Lset27 = .Ltmp176-.Ltmp175
+	.short	.Lset27
+.Ltmp175:
+	.byte	126
+	.byte	4
+.Ltmp176:
 	.long	0
 	.long	0
 .Ldebug_loc16:
-	.long	.Ltmp49
-	.long	.Ltmp50
-.Lset31 = .Ltmp180-.Ltmp179
-	.short	.Lset31
-.Ltmp179:
+	.long	.Ltmp47
+	.long	.Ltmp48
+.Lset28 = .Ltmp178-.Ltmp177
+	.short	.Lset28
+.Ltmp177:
 	.byte	86
-.Ltmp180:
+.Ltmp178:
 	.long	0
 	.long	0
 .Ldebug_loc17:
-	.long	.Ltmp49
-	.long	.Ltmp50
-.Lset32 = .Ltmp182-.Ltmp181
-	.short	.Lset32
-.Ltmp181:
+	.long	.Ltmp47
+	.long	.Ltmp48
+.Lset29 = .Ltmp180-.Ltmp179
+	.short	.Lset29
+.Ltmp179:
 	.byte	84
-.Ltmp182:
+.Ltmp180:
 	.long	0
 	.long	0
 .Ldebug_loc18:
-	.long	.Ltmp61
-	.long	.Ltmp66
-.Lset33 = .Ltmp184-.Ltmp183
-	.short	.Lset33
+	.long	.Ltmp59
+	.long	.Ltmp64
+.Lset30 = .Ltmp182-.Ltmp181
+	.short	.Lset30
+.Ltmp181:
+	.byte	88
+.Ltmp182:
+	.long	0
+	.long	0
+.Ldebug_loc19:
+	.long	.Ltmp59
+	.long	.Ltmp65
+.Lset31 = .Ltmp184-.Ltmp183
+	.short	.Lset31
 .Ltmp183:
 	.byte	88
 .Ltmp184:
 	.long	0
 	.long	0
-.Ldebug_loc19:
-	.long	.Ltmp61
-	.long	.Ltmp67
-.Lset34 = .Ltmp186-.Ltmp185
-	.short	.Lset34
+.Ldebug_loc20:
+	.long	.Ltmp62
+	.long	.Ltmp65
+.Lset32 = .Ltmp186-.Ltmp185
+	.short	.Lset32
 .Ltmp185:
-	.byte	88
+	.byte	87
 .Ltmp186:
 	.long	0
 	.long	0
-.Ldebug_loc20:
-	.long	.Ltmp64
-	.long	.Ltmp67
-.Lset35 = .Ltmp188-.Ltmp187
-	.short	.Lset35
-.Ltmp187:
-	.byte	87
-.Ltmp188:
-	.long	0
-	.long	0
 .Ldebug_loc21:
-	.long	.Ltmp68
-	.long	.Ltmp68
-.Lset36 = .Ltmp190-.Ltmp189
-	.short	.Lset36
-.Ltmp189:
+	.long	.Ltmp66
+	.long	.Ltmp66
+.Lset33 = .Ltmp188-.Ltmp187
+	.short	.Lset33
+.Ltmp187:
 	.byte	88
-.Ltmp190:
-	.long	.Ltmp68
-	.long	.Ltmp69
-.Lset37 = .Ltmp192-.Ltmp191
-	.short	.Lset37
-.Ltmp191:
+.Ltmp188:
+	.long	.Ltmp66
+	.long	.Ltmp67
+.Lset34 = .Ltmp190-.Ltmp189
+	.short	.Lset34
+.Ltmp189:
 	.byte	121
 	.byte	0
-.Ltmp192:
+.Ltmp190:
 	.long	0
 	.long	0
 .Ldebug_loc22:
-	.long	.Ltmp68
-	.long	.Ltmp69
-.Lset38 = .Ltmp194-.Ltmp193
-	.short	.Lset38
-.Ltmp193:
-	.byte	90
-.Ltmp194:
+	.long	.Ltmp66
+	.long	.Ltmp67
+.Lset35 = .Ltmp192-.Ltmp191
+	.short	.Lset35
+.Ltmp191:
+	.byte	126
+	.byte	4
+.Ltmp192:
 	.long	0
 	.long	0
 .Ldebug_loc23:
-	.long	.Ltmp68
-	.long	.Ltmp69
-.Lset39 = .Ltmp196-.Ltmp195
-	.short	.Lset39
-.Ltmp195:
+	.long	.Ltmp66
+	.long	.Ltmp67
+.Lset36 = .Ltmp194-.Ltmp193
+	.short	.Lset36
+.Ltmp193:
 	.byte	86
-.Ltmp196:
+.Ltmp194:
 	.long	0
 	.long	0
 .Ldebug_loc24:
-	.long	.Ltmp68
-	.long	.Ltmp69
-.Lset40 = .Ltmp198-.Ltmp197
-	.short	.Lset40
+	.long	.Ltmp66
+	.long	.Ltmp67
+.Lset37 = .Ltmp196-.Ltmp195
+	.short	.Lset37
+.Ltmp195:
+	.byte	84
+.Ltmp196:
+	.long	.Ltmp86
+	.long	.Ltmp88
+.Lset38 = .Ltmp198-.Ltmp197
+	.short	.Lset38
 .Ltmp197:
 	.byte	84
 .Ltmp198:
-	.long	.Ltmp88
-	.long	.Ltmp89
-.Lset41 = .Ltmp200-.Ltmp199
-	.short	.Lset41
-.Ltmp199:
-	.byte	84
-.Ltmp200:
 	.long	0
 	.long	0
 .Ldebug_loc25:
 	.long	.Lfunc_begin3
-	.long	.Ltmp102
-.Lset42 = .Ltmp202-.Ltmp201
-	.short	.Lset42
-.Ltmp201:
+	.long	.Ltmp104
+.Lset39 = .Ltmp200-.Ltmp199
+	.short	.Lset39
+.Ltmp199:
 	.byte	80
-.Ltmp202:
-	.long	.Ltmp102
-	.long	.Ltmp110
-.Lset43 = .Ltmp204-.Ltmp203
-	.short	.Lset43
-.Ltmp203:
-	.byte	85
-.Ltmp204:
-	.long	.Ltmp111
+.Ltmp200:
+	.long	.Ltmp104
 	.long	.Ltmp114
-.Lset44 = .Ltmp206-.Ltmp205
-	.short	.Lset44
-.Ltmp205:
-	.byte	85
-.Ltmp206:
+.Lset40 = .Ltmp202-.Ltmp201
+	.short	.Lset40
+.Ltmp201:
+	.byte	84
+.Ltmp202:
+	.long	.Ltmp115
+	.long	.Ltmp118
+.Lset41 = .Ltmp204-.Ltmp203
+	.short	.Lset41
+.Ltmp203:
+	.byte	84
+.Ltmp204:
 	.long	0
 	.long	0
 .Ldebug_loc26:
 	.long	.Lfunc_begin3
-	.long	.Ltmp100
-.Lset45 = .Ltmp208-.Ltmp207
-	.short	.Lset45
-.Ltmp207:
+	.long	.Ltmp102
+.Lset42 = .Ltmp206-.Ltmp205
+	.short	.Lset42
+.Ltmp205:
 	.byte	83
+.Ltmp206:
+	.long	.Ltmp102
+	.long	.Ltmp103
+.Lset43 = .Ltmp208-.Ltmp207
+	.short	.Lset43
+.Ltmp207:
+	.byte	85
 .Ltmp208:
-	.long	.Ltmp100
-	.long	.Ltmp101
-.Lset46 = .Ltmp210-.Ltmp209
-	.short	.Lset46
+	.long	.Ltmp106
+	.long	.Ltmp114
+.Lset44 = .Ltmp210-.Ltmp209
+	.short	.Lset44
 .Ltmp209:
-	.byte	86
+	.byte	85
 .Ltmp210:
-	.long	.Ltmp104
-	.long	.Ltmp110
-.Lset47 = .Ltmp212-.Ltmp211
-	.short	.Lset47
+	.long	0
+	.long	0
+.Ldebug_loc27:
+	.long	.Lfunc_begin3
+	.long	.Ltmp114
+.Lset45 = .Ltmp212-.Ltmp211
+	.short	.Lset45
 .Ltmp211:
 	.byte	86
 .Ltmp212:
 	.long	0
 	.long	0
-.Ldebug_loc27:
-	.long	.Lfunc_begin3
-	.long	.Ltmp110
-.Lset48 = .Ltmp214-.Ltmp213
-	.short	.Lset48
-.Ltmp213:
-	.byte	87
-.Ltmp214:
-	.long	0
-	.long	0
 .Ldebug_loc28:
 	.long	.Lfunc_begin3
 	.long	.Ltmp110
-.Lset49 = .Ltmp216-.Ltmp215
-	.short	.Lset49
+.Lset46 = .Ltmp214-.Ltmp213
+	.short	.Lset46
+.Ltmp213:
+	.byte	126
+	.byte	12
+.Ltmp214:
+	.long	.Ltmp110
+	.long	.Ltmp111
+.Lset47 = .Ltmp216-.Ltmp215
+	.short	.Lset47
 .Ltmp215:
 	.byte	88
 .Ltmp216:
+	.long	.Ltmp112
+	.long	.Ltmp114
+.Lset48 = .Ltmp218-.Ltmp217
+	.short	.Lset48
+.Ltmp217:
+	.byte	88
+.Ltmp218:
 	.long	0
 	.long	0
 .Ldebug_loc29:
 	.long	.Lfunc_begin3
-	.long	.Ltmp103
-.Lset50 = .Ltmp218-.Ltmp217
-	.short	.Lset50
-.Ltmp217:
-	.byte	91
-.Ltmp218:
-	.long	.Ltmp104
-	.long	.Ltmp105
-.Lset51 = .Ltmp220-.Ltmp219
-	.short	.Lset51
+	.long	.Ltmp108
+.Lset49 = .Ltmp220-.Ltmp219
+	.short	.Lset49
 .Ltmp219:
-	.byte	91
+	.byte	90
 .Ltmp220:
 	.long	0
 	.long	0
 .Ldebug_loc30:
 	.long	.Lfunc_begin3
-	.long	.Ltmp105
-.Lset52 = .Ltmp222-.Ltmp221
-	.short	.Lset52
+	.long	.Ltmp108
+.Lset50 = .Ltmp222-.Ltmp221
+	.short	.Lset50
 .Ltmp221:
-	.byte	81
+	.byte	89
 .Ltmp222:
 	.long	0
 	.long	0
 .Ldebug_loc31:
-	.long	.Ltmp105
-	.long	.Ltmp106
-.Lset53 = .Ltmp224-.Ltmp223
-	.short	.Lset53
+	.long	.Ltmp107
+	.long	.Ltmp108
+.Lset51 = .Ltmp224-.Ltmp223
+	.short	.Lset51
 .Ltmp223:
 	.byte	80
 .Ltmp224:
-	.long	.Ltmp111
-	.long	.Ltmp112
-.Lset54 = .Ltmp226-.Ltmp225
-	.short	.Lset54
+	.long	.Ltmp115
+	.long	.Ltmp116
+.Lset52 = .Ltmp226-.Ltmp225
+	.short	.Lset52
 .Ltmp225:
 	.byte	80
 .Ltmp226:
 	.long	0
 	.long	0
 	.section	.debug_pubnames,"",@progbits
-.Lset55 = .LpubNames_end0-.LpubNames_begin0
-	.long	.Lset55
+.Lset53 = .LpubNames_end0-.LpubNames_begin0
+	.long	.Lset53
 .LpubNames_begin0:
 	.short	2
 	.long	.L.debug_info_begin0
-.Lset56 = .L.debug_info_end0-.L.debug_info_begin0
-	.long	.Lset56
+.Lset54 = .L.debug_info_end0-.L.debug_info_begin0
+	.long	.Lset54
 	.long	3097
 .asciiz"simple_ogg_page__set_at"
 	.long	2838
@@ -4256,13 +4384,13 @@ simple_ogg_page__set_at:
 	.long	0
 .LpubNames_end0:
 	.section	.debug_pubtypes,"",@progbits
-.Lset57 = .LpubTypes_end0-.LpubTypes_begin0
-	.long	.Lset57
+.Lset55 = .LpubTypes_end0-.LpubTypes_begin0
+	.long	.Lset55
 .LpubTypes_begin0:
 	.short	2
 	.long	.L.debug_info_begin0
-.Lset58 = .L.debug_info_end0-.L.debug_info_begin0
-	.long	.Lset58
+.Lset56 = .L.debug_info_end0-.L.debug_info_begin0
+	.long	.Lset56
 	.long	922
 .asciiz"FLAC__StreamEncoder"
 	.long	1320
@@ -4366,6 +4494,7 @@ simple_ogg_page__set_at:
 	.typestring simple_ogg_page__clear, "f{0}(p(s(){m(header){p(uc)},m(header_len){sl},m(body){p(uc)},m(body_len){sl}}))"
 	.typestring free, "f{0}(p(0))"
 	.typestring simple_ogg_page__get_at, "f{si}(p(s(){m(protected_){p(s(FLAC__StreamEncoderProtected){m(state){e(){m(FLAC__STREAM_ENCODER_CLIENT_ERROR){5},m(FLAC__STREAM_ENCODER_FRAMING_ERROR){7},m(FLAC__STREAM_ENCODER_IO_ERROR){6},m(FLAC__STREAM_ENCODER_MEMORY_ALLOCATION_ERROR){8},m(FLAC__STREAM_ENCODER_OGG_ERROR){2},m(FLAC__STREAM_ENCODER_OK){0},m(FLAC__STREAM_ENCODER_UNINITIALIZED){1},m(FLAC__STREAM_ENCODER_VERIFY_DECODER_ERROR){3},m(FLAC__STREAM_ENCODER_VERIFY_MISMATCH_IN_AUDIO_DATA){4}}},m(verify){si},m(streamable_subset){si},m(do_md5){si},m(do_mid_side_stereo){si},m(loose_mid_side_stereo){si},m(channels){ul},m(bits_per_sample){ul},m(sample_rate){ul},m(blocksize){ul},m(num_apodizations){ul},m(apodizations){a(32:s(){m(type){e(){m(FLAC__APODIZATION_BARTLETT){0},m(FLAC__APODIZATION_BARTLETT_HANN){1},m(FLAC__APODIZATION_BLACKMAN){2},m(FLAC__APODIZATION_BLACKMAN_HARRIS_4TERM_92DB_SIDELOBE){3},m(FLAC__APODIZATION_CONNES){4},m(FLAC__APODIZATION_FLATTOP){5},m(FLAC__APODIZATION_GAUSS){6},m(FLAC__APODIZATION_HAMMING){7},m(FLAC__APODIZATION_HANN){8},m(FLAC__APODIZATION_KAISER_BESSEL){9},m(FLAC__APODIZATION_NUTTALL){10},m(FLAC__APODIZATION_PARTIAL_TUKEY){14},m(FLAC__APODIZATION_PUNCHOUT_TUKEY){15},m(FLAC__APODIZATION_RECTANGLE){11},m(FLAC__APODIZATION_SUBDIVIDE_TUKEY){16},m(FLAC__APODIZATION_TRIANGLE){12},m(FLAC__APODIZATION_TUKEY){13},m(FLAC__APODIZATION_WELCH){17}}},m(parameters){u(){m(gauss){s(){m(stddev){ft}}},m(multiple_tukey){s(){m(p){ft},m(start){ft},m(end){ft}}},m(subdivide_tukey){s(){m(p){ft},m(parts){sl}}},m(tukey){s(){m(p){ft}}}}}})},m(max_lpc_order){ul},m(qlp_coeff_precision){ul},m(do_qlp_coeff_prec_search){si},m(do_exhaustive_model_search){si},m(do_escape_coding){si},m(min_residual_partition_order){ul},m(max_residual_partition_order){ul},m(rice_parameter_search_dist){ul},m(total_samples_estimate){ull},m(limit_min_bitrate){si},m(metadata){p(p(s(FLAC__StreamMetadata){m(type){e(){m(FLAC__MAX_METADATA_TYPE){126},m(FLAC__METADATA_TYPE_APPLICATION){2},m(FLAC__METADATA_TYPE_CUESHEET){5},m(FLAC__METADATA_TYPE_PADDING){1},m(FLAC__METADATA_TYPE_PICTURE){6},m(FLAC__METADATA_TYPE_SEEKTABLE){3},m(FLAC__METADATA_TYPE_STREAMINFO){0},m(FLAC__METADATA_TYPE_UNDEFINED){7},m(FLAC__METADATA_TYPE_VORBIS_COMMENT){4}}},m(is_last){si},m(length){ul},m(data){u(){m(application){s(){m(id){a(4:uc)},m(data){p(uc)}}},m(cue_sheet){s(){m(media_catalog_number){a(129:uc)},m(lead_in){ull},m(is_cd){si},m(num_tracks){ul},m(tracks){p(s(){m(offset){ull},m(number){uc},m(isrc){a(13:uc)},m(type){b(1:ul)},m(pre_emphasis){b(1:ul)},m(num_indices){uc},m(indices){p(s(){m(offset){ull},m(number){uc}})}})}}},m(padding){s(){m(dummy){si}}},m(picture){s(){m(type){e(){m(FLAC__STREAM_METADATA_PICTURE_TYPE_ARTIST){8},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BACK_COVER){4},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BAND){10},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BAND_LOGOTYPE){19},m(FLAC__STREAM_METADATA_PICTURE_TYPE_COMPOSER){11},m(FLAC__STREAM_METADATA_PICTURE_TYPE_CONDUCTOR){9},m(FLAC__STREAM_METADATA_PICTURE_TYPE_DURING_PERFORMANCE){15},m(FLAC__STREAM_METADATA_PICTURE_TYPE_DURING_RECORDING){14},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FILE_ICON){2},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FILE_ICON_STANDARD){1},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FISH){17},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FRONT_COVER){3},m(FLAC__STREAM_METADATA_PICTURE_TYPE_ILLUSTRATION){18},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LEAD_ARTIST){7},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LEAFLET_PAGE){5},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LYRICIST){12},m(FLAC__STREAM_METADATA_PICTURE_TYPE_MEDIA){6},m(FLAC__STREAM_METADATA_PICTURE_TYPE_OTHER){0},m(FLAC__STREAM_METADATA_PICTURE_TYPE_PUBLISHER_LOGOTYPE){20},m(FLAC__STREAM_METADATA_PICTURE_TYPE_RECORDING_LOCATION){13},m(FLAC__STREAM_METADATA_PICTURE_TYPE_UNDEFINED){21},m(FLAC__STREAM_METADATA_PICTURE_TYPE_VIDEO_SCREEN_CAPTURE){16}}},m(mime_type){p(uc)},m(description){p(uc)},m(width){ul},m(height){ul},m(depth){ul},m(colors){ul},m(data_length){ul},m(data){p(uc)}}},m(seek_table){s(){m(num_points){ul},m(points){p(s(){m(sample_number){ull},m(stream_offset){ull},m(frame_samples){ul}})}}},m(stream_info){s(){m(min_blocksize){ul},m(max_blocksize){ul},m(min_framesize){ul},m(max_framesize){ul},m(sample_rate){ul},m(channels){ul},m(bits_per_sample){ul},m(total_samples){ull},m(md5sum){a(16:uc)}}},m(unknown){s(){m(data){p(uc)}}},m(vorbis_comment){s(){m(vendor_string){s(){m(length){ul},m(entry){p(uc)}}},m(num_comments){ul},m(comments){p(s(){m(length){ul},m(entry){p(uc)}})}}}}}}))},m(num_metadata_blocks){ul},m(streaminfo_offset){ull},m(seektable_offset){ull},m(audio_offset){ull}})},m(private_){p(s(FLAC__StreamEncoderPrivate){})}}),ull,p(s(){m(header){p(uc)},m(header_len){sl},m(body){p(uc)},m(body_len){sl}}),p(f{e(){m(FLAC__STREAM_ENCODER_SEEK_STATUS_ERROR){1},m(FLAC__STREAM_ENCODER_SEEK_STATUS_OK){0},m(FLAC__STREAM_ENCODER_SEEK_STATUS_UNSUPPORTED){2}}}(p(c:s(){m(protected_){p(s(FLAC__StreamEncoderProtected){m(state){e(){m(FLAC__STREAM_ENCODER_CLIENT_ERROR){5},m(FLAC__STREAM_ENCODER_FRAMING_ERROR){7},m(FLAC__STREAM_ENCODER_IO_ERROR){6},m(FLAC__STREAM_ENCODER_MEMORY_ALLOCATION_ERROR){8},m(FLAC__STREAM_ENCODER_OGG_ERROR){2},m(FLAC__STREAM_ENCODER_OK){0},m(FLAC__STREAM_ENCODER_UNINITIALIZED){1},m(FLAC__STREAM_ENCODER_VERIFY_DECODER_ERROR){3},m(FLAC__STREAM_ENCODER_VERIFY_MISMATCH_IN_AUDIO_DATA){4}}},m(verify){si},m(streamable_subset){si},m(do_md5){si},m(do_mid_side_stereo){si},m(loose_mid_side_stereo){si},m(channels){ul},m(bits_per_sample){ul},m(sample_rate){ul},m(blocksize){ul},m(num_apodizations){ul},m(apodizations){a(32:s(){m(type){e(){m(FLAC__APODIZATION_BARTLETT){0},m(FLAC__APODIZATION_BARTLETT_HANN){1},m(FLAC__APODIZATION_BLACKMAN){2},m(FLAC__APODIZATION_BLACKMAN_HARRIS_4TERM_92DB_SIDELOBE){3},m(FLAC__APODIZATION_CONNES){4},m(FLAC__APODIZATION_FLATTOP){5},m(FLAC__APODIZATION_GAUSS){6},m(FLAC__APODIZATION_HAMMING){7},m(FLAC__APODIZATION_HANN){8},m(FLAC__APODIZATION_KAISER_BESSEL){9},m(FLAC__APODIZATION_NUTTALL){10},m(FLAC__APODIZATION_PARTIAL_TUKEY){14},m(FLAC__APODIZATION_PUNCHOUT_TUKEY){15},m(FLAC__APODIZATION_RECTANGLE){11},m(FLAC__APODIZATION_SUBDIVIDE_TUKEY){16},m(FLAC__APODIZATION_TRIANGLE){12},m(FLAC__APODIZATION_TUKEY){13},m(FLAC__APODIZATION_WELCH){17}}},m(parameters){u(){m(gauss){s(){m(stddev){ft}}},m(multiple_tukey){s(){m(p){ft},m(start){ft},m(end){ft}}},m(subdivide_tukey){s(){m(p){ft},m(parts){sl}}},m(tukey){s(){m(p){ft}}}}}})},m(max_lpc_order){ul},m(qlp_coeff_precision){ul},m(do_qlp_coeff_prec_search){si},m(do_exhaustive_model_search){si},m(do_escape_coding){si},m(min_residual_partition_order){ul},m(max_residual_partition_order){ul},m(rice_parameter_search_dist){ul},m(total_samples_estimate){ull},m(limit_min_bitrate){si},m(metadata){p(p(s(FLAC__StreamMetadata){m(type){e(){m(FLAC__MAX_METADATA_TYPE){126},m(FLAC__METADATA_TYPE_APPLICATION){2},m(FLAC__METADATA_TYPE_CUESHEET){5},m(FLAC__METADATA_TYPE_PADDING){1},m(FLAC__METADATA_TYPE_PICTURE){6},m(FLAC__METADATA_TYPE_SEEKTABLE){3},m(FLAC__METADATA_TYPE_STREAMINFO){0},m(FLAC__METADATA_TYPE_UNDEFINED){7},m(FLAC__METADATA_TYPE_VORBIS_COMMENT){4}}},m(is_last){si},m(length){ul},m(data){u(){m(application){s(){m(id){a(4:uc)},m(data){p(uc)}}},m(cue_sheet){s(){m(media_catalog_number){a(129:uc)},m(lead_in){ull},m(is_cd){si},m(num_tracks){ul},m(tracks){p(s(){m(offset){ull},m(number){uc},m(isrc){a(13:uc)},m(type){b(1:ul)},m(pre_emphasis){b(1:ul)},m(num_indices){uc},m(indices){p(s(){m(offset){ull},m(number){uc}})}})}}},m(padding){s(){m(dummy){si}}},m(picture){s(){m(type){e(){m(FLAC__STREAM_METADATA_PICTURE_TYPE_ARTIST){8},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BACK_COVER){4},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BAND){10},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BAND_LOGOTYPE){19},m(FLAC__STREAM_METADATA_PICTURE_TYPE_COMPOSER){11},m(FLAC__STREAM_METADATA_PICTURE_TYPE_CONDUCTOR){9},m(FLAC__STREAM_METADATA_PICTURE_TYPE_DURING_PERFORMANCE){15},m(FLAC__STREAM_METADATA_PICTURE_TYPE_DURING_RECORDING){14},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FILE_ICON){2},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FILE_ICON_STANDARD){1},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FISH){17},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FRONT_COVER){3},m(FLAC__STREAM_METADATA_PICTURE_TYPE_ILLUSTRATION){18},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LEAD_ARTIST){7},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LEAFLET_PAGE){5},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LYRICIST){12},m(FLAC__STREAM_METADATA_PICTURE_TYPE_MEDIA){6},m(FLAC__STREAM_METADATA_PICTURE_TYPE_OTHER){0},m(FLAC__STREAM_METADATA_PICTURE_TYPE_PUBLISHER_LOGOTYPE){20},m(FLAC__STREAM_METADATA_PICTURE_TYPE_RECORDING_LOCATION){13},m(FLAC__STREAM_METADATA_PICTURE_TYPE_UNDEFINED){21},m(FLAC__STREAM_METADATA_PICTURE_TYPE_VIDEO_SCREEN_CAPTURE){16}}},m(mime_type){p(uc)},m(description){p(uc)},m(width){ul},m(height){ul},m(depth){ul},m(colors){ul},m(data_length){ul},m(data){p(uc)}}},m(seek_table){s(){m(num_points){ul},m(points){p(s(){m(sample_number){ull},m(stream_offset){ull},m(frame_samples){ul}})}}},m(stream_info){s(){m(min_blocksize){ul},m(max_blocksize){ul},m(min_framesize){ul},m(max_framesize){ul},m(sample_rate){ul},m(channels){ul},m(bits_per_sample){ul},m(total_samples){ull},m(md5sum){a(16:uc)}}},m(unknown){s(){m(data){p(uc)}}},m(vorbis_comment){s(){m(vendor_string){s(){m(length){ul},m(entry){p(uc)}}},m(num_comments){ul},m(comments){p(s(){m(length){ul},m(entry){p(uc)}})}}}}}}))},m(num_metadata_blocks){ul},m(streaminfo_offset){ull},m(seektable_offset){ull},m(audio_offset){ull}})},m(private_){p(s(FLAC__StreamEncoderPrivate){})}}),ull,p(0))),p(f{e(){m(FLAC__STREAM_ENCODER_READ_STATUS_ABORT){2},m(FLAC__STREAM_ENCODER_READ_STATUS_CONTINUE){0},m(FLAC__STREAM_ENCODER_READ_STATUS_END_OF_STREAM){1},m(FLAC__STREAM_ENCODER_READ_STATUS_UNSUPPORTED){3}}}(p(c:s(){m(protected_){p(s(FLAC__StreamEncoderProtected){m(state){e(){m(FLAC__STREAM_ENCODER_CLIENT_ERROR){5},m(FLAC__STREAM_ENCODER_FRAMING_ERROR){7},m(FLAC__STREAM_ENCODER_IO_ERROR){6},m(FLAC__STREAM_ENCODER_MEMORY_ALLOCATION_ERROR){8},m(FLAC__STREAM_ENCODER_OGG_ERROR){2},m(FLAC__STREAM_ENCODER_OK){0},m(FLAC__STREAM_ENCODER_UNINITIALIZED){1},m(FLAC__STREAM_ENCODER_VERIFY_DECODER_ERROR){3},m(FLAC__STREAM_ENCODER_VERIFY_MISMATCH_IN_AUDIO_DATA){4}}},m(verify){si},m(streamable_subset){si},m(do_md5){si},m(do_mid_side_stereo){si},m(loose_mid_side_stereo){si},m(channels){ul},m(bits_per_sample){ul},m(sample_rate){ul},m(blocksize){ul},m(num_apodizations){ul},m(apodizations){a(32:s(){m(type){e(){m(FLAC__APODIZATION_BARTLETT){0},m(FLAC__APODIZATION_BARTLETT_HANN){1},m(FLAC__APODIZATION_BLACKMAN){2},m(FLAC__APODIZATION_BLACKMAN_HARRIS_4TERM_92DB_SIDELOBE){3},m(FLAC__APODIZATION_CONNES){4},m(FLAC__APODIZATION_FLATTOP){5},m(FLAC__APODIZATION_GAUSS){6},m(FLAC__APODIZATION_HAMMING){7},m(FLAC__APODIZATION_HANN){8},m(FLAC__APODIZATION_KAISER_BESSEL){9},m(FLAC__APODIZATION_NUTTALL){10},m(FLAC__APODIZATION_PARTIAL_TUKEY){14},m(FLAC__APODIZATION_PUNCHOUT_TUKEY){15},m(FLAC__APODIZATION_RECTANGLE){11},m(FLAC__APODIZATION_SUBDIVIDE_TUKEY){16},m(FLAC__APODIZATION_TRIANGLE){12},m(FLAC__APODIZATION_TUKEY){13},m(FLAC__APODIZATION_WELCH){17}}},m(parameters){u(){m(gauss){s(){m(stddev){ft}}},m(multiple_tukey){s(){m(p){ft},m(start){ft},m(end){ft}}},m(subdivide_tukey){s(){m(p){ft},m(parts){sl}}},m(tukey){s(){m(p){ft}}}}}})},m(max_lpc_order){ul},m(qlp_coeff_precision){ul},m(do_qlp_coeff_prec_search){si},m(do_exhaustive_model_search){si},m(do_escape_coding){si},m(min_residual_partition_order){ul},m(max_residual_partition_order){ul},m(rice_parameter_search_dist){ul},m(total_samples_estimate){ull},m(limit_min_bitrate){si},m(metadata){p(p(s(FLAC__StreamMetadata){m(type){e(){m(FLAC__MAX_METADATA_TYPE){126},m(FLAC__METADATA_TYPE_APPLICATION){2},m(FLAC__METADATA_TYPE_CUESHEET){5},m(FLAC__METADATA_TYPE_PADDING){1},m(FLAC__METADATA_TYPE_PICTURE){6},m(FLAC__METADATA_TYPE_SEEKTABLE){3},m(FLAC__METADATA_TYPE_STREAMINFO){0},m(FLAC__METADATA_TYPE_UNDEFINED){7},m(FLAC__METADATA_TYPE_VORBIS_COMMENT){4}}},m(is_last){si},m(length){ul},m(data){u(){m(application){s(){m(id){a(4:uc)},m(data){p(uc)}}},m(cue_sheet){s(){m(media_catalog_number){a(129:uc)},m(lead_in){ull},m(is_cd){si},m(num_tracks){ul},m(tracks){p(s(){m(offset){ull},m(number){uc},m(isrc){a(13:uc)},m(type){b(1:ul)},m(pre_emphasis){b(1:ul)},m(num_indices){uc},m(indices){p(s(){m(offset){ull},m(number){uc}})}})}}},m(padding){s(){m(dummy){si}}},m(picture){s(){m(type){e(){m(FLAC__STREAM_METADATA_PICTURE_TYPE_ARTIST){8},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BACK_COVER){4},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BAND){10},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BAND_LOGOTYPE){19},m(FLAC__STREAM_METADATA_PICTURE_TYPE_COMPOSER){11},m(FLAC__STREAM_METADATA_PICTURE_TYPE_CONDUCTOR){9},m(FLAC__STREAM_METADATA_PICTURE_TYPE_DURING_PERFORMANCE){15},m(FLAC__STREAM_METADATA_PICTURE_TYPE_DURING_RECORDING){14},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FILE_ICON){2},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FILE_ICON_STANDARD){1},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FISH){17},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FRONT_COVER){3},m(FLAC__STREAM_METADATA_PICTURE_TYPE_ILLUSTRATION){18},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LEAD_ARTIST){7},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LEAFLET_PAGE){5},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LYRICIST){12},m(FLAC__STREAM_METADATA_PICTURE_TYPE_MEDIA){6},m(FLAC__STREAM_METADATA_PICTURE_TYPE_OTHER){0},m(FLAC__STREAM_METADATA_PICTURE_TYPE_PUBLISHER_LOGOTYPE){20},m(FLAC__STREAM_METADATA_PICTURE_TYPE_RECORDING_LOCATION){13},m(FLAC__STREAM_METADATA_PICTURE_TYPE_UNDEFINED){21},m(FLAC__STREAM_METADATA_PICTURE_TYPE_VIDEO_SCREEN_CAPTURE){16}}},m(mime_type){p(uc)},m(description){p(uc)},m(width){ul},m(height){ul},m(depth){ul},m(colors){ul},m(data_length){ul},m(data){p(uc)}}},m(seek_table){s(){m(num_points){ul},m(points){p(s(){m(sample_number){ull},m(stream_offset){ull},m(frame_samples){ul}})}}},m(stream_info){s(){m(min_blocksize){ul},m(max_blocksize){ul},m(min_framesize){ul},m(max_framesize){ul},m(sample_rate){ul},m(channels){ul},m(bits_per_sample){ul},m(total_samples){ull},m(md5sum){a(16:uc)}}},m(unknown){s(){m(data){p(uc)}}},m(vorbis_comment){s(){m(vendor_string){s(){m(length){ul},m(entry){p(uc)}}},m(num_comments){ul},m(comments){p(s(){m(length){ul},m(entry){p(uc)}})}}}}}}))},m(num_metadata_blocks){ul},m(streaminfo_offset){ull},m(seektable_offset){ull},m(audio_offset){ull}})},m(private_){p(s(FLAC__StreamEncoderPrivate){})}}),p(uc),p(ui),p(0))),p(0))"
+	.typestring assert, "f{si}()"
 	.typestring memcmp, "f{si}(p(c:0),p(c:0),ui)"
 	.typestring ogg_page_checksum_set, "f{0}(p(s(){m(header){p(uc)},m(header_len){sl},m(body){p(uc)},m(body_len){sl}}))"
 	.typestring simple_ogg_page__set_at, "f{si}(p(s(){m(protected_){p(s(FLAC__StreamEncoderProtected){m(state){e(){m(FLAC__STREAM_ENCODER_CLIENT_ERROR){5},m(FLAC__STREAM_ENCODER_FRAMING_ERROR){7},m(FLAC__STREAM_ENCODER_IO_ERROR){6},m(FLAC__STREAM_ENCODER_MEMORY_ALLOCATION_ERROR){8},m(FLAC__STREAM_ENCODER_OGG_ERROR){2},m(FLAC__STREAM_ENCODER_OK){0},m(FLAC__STREAM_ENCODER_UNINITIALIZED){1},m(FLAC__STREAM_ENCODER_VERIFY_DECODER_ERROR){3},m(FLAC__STREAM_ENCODER_VERIFY_MISMATCH_IN_AUDIO_DATA){4}}},m(verify){si},m(streamable_subset){si},m(do_md5){si},m(do_mid_side_stereo){si},m(loose_mid_side_stereo){si},m(channels){ul},m(bits_per_sample){ul},m(sample_rate){ul},m(blocksize){ul},m(num_apodizations){ul},m(apodizations){a(32:s(){m(type){e(){m(FLAC__APODIZATION_BARTLETT){0},m(FLAC__APODIZATION_BARTLETT_HANN){1},m(FLAC__APODIZATION_BLACKMAN){2},m(FLAC__APODIZATION_BLACKMAN_HARRIS_4TERM_92DB_SIDELOBE){3},m(FLAC__APODIZATION_CONNES){4},m(FLAC__APODIZATION_FLATTOP){5},m(FLAC__APODIZATION_GAUSS){6},m(FLAC__APODIZATION_HAMMING){7},m(FLAC__APODIZATION_HANN){8},m(FLAC__APODIZATION_KAISER_BESSEL){9},m(FLAC__APODIZATION_NUTTALL){10},m(FLAC__APODIZATION_PARTIAL_TUKEY){14},m(FLAC__APODIZATION_PUNCHOUT_TUKEY){15},m(FLAC__APODIZATION_RECTANGLE){11},m(FLAC__APODIZATION_SUBDIVIDE_TUKEY){16},m(FLAC__APODIZATION_TRIANGLE){12},m(FLAC__APODIZATION_TUKEY){13},m(FLAC__APODIZATION_WELCH){17}}},m(parameters){u(){m(gauss){s(){m(stddev){ft}}},m(multiple_tukey){s(){m(p){ft},m(start){ft},m(end){ft}}},m(subdivide_tukey){s(){m(p){ft},m(parts){sl}}},m(tukey){s(){m(p){ft}}}}}})},m(max_lpc_order){ul},m(qlp_coeff_precision){ul},m(do_qlp_coeff_prec_search){si},m(do_exhaustive_model_search){si},m(do_escape_coding){si},m(min_residual_partition_order){ul},m(max_residual_partition_order){ul},m(rice_parameter_search_dist){ul},m(total_samples_estimate){ull},m(limit_min_bitrate){si},m(metadata){p(p(s(FLAC__StreamMetadata){m(type){e(){m(FLAC__MAX_METADATA_TYPE){126},m(FLAC__METADATA_TYPE_APPLICATION){2},m(FLAC__METADATA_TYPE_CUESHEET){5},m(FLAC__METADATA_TYPE_PADDING){1},m(FLAC__METADATA_TYPE_PICTURE){6},m(FLAC__METADATA_TYPE_SEEKTABLE){3},m(FLAC__METADATA_TYPE_STREAMINFO){0},m(FLAC__METADATA_TYPE_UNDEFINED){7},m(FLAC__METADATA_TYPE_VORBIS_COMMENT){4}}},m(is_last){si},m(length){ul},m(data){u(){m(application){s(){m(id){a(4:uc)},m(data){p(uc)}}},m(cue_sheet){s(){m(media_catalog_number){a(129:uc)},m(lead_in){ull},m(is_cd){si},m(num_tracks){ul},m(tracks){p(s(){m(offset){ull},m(number){uc},m(isrc){a(13:uc)},m(type){b(1:ul)},m(pre_emphasis){b(1:ul)},m(num_indices){uc},m(indices){p(s(){m(offset){ull},m(number){uc}})}})}}},m(padding){s(){m(dummy){si}}},m(picture){s(){m(type){e(){m(FLAC__STREAM_METADATA_PICTURE_TYPE_ARTIST){8},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BACK_COVER){4},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BAND){10},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BAND_LOGOTYPE){19},m(FLAC__STREAM_METADATA_PICTURE_TYPE_COMPOSER){11},m(FLAC__STREAM_METADATA_PICTURE_TYPE_CONDUCTOR){9},m(FLAC__STREAM_METADATA_PICTURE_TYPE_DURING_PERFORMANCE){15},m(FLAC__STREAM_METADATA_PICTURE_TYPE_DURING_RECORDING){14},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FILE_ICON){2},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FILE_ICON_STANDARD){1},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FISH){17},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FRONT_COVER){3},m(FLAC__STREAM_METADATA_PICTURE_TYPE_ILLUSTRATION){18},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LEAD_ARTIST){7},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LEAFLET_PAGE){5},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LYRICIST){12},m(FLAC__STREAM_METADATA_PICTURE_TYPE_MEDIA){6},m(FLAC__STREAM_METADATA_PICTURE_TYPE_OTHER){0},m(FLAC__STREAM_METADATA_PICTURE_TYPE_PUBLISHER_LOGOTYPE){20},m(FLAC__STREAM_METADATA_PICTURE_TYPE_RECORDING_LOCATION){13},m(FLAC__STREAM_METADATA_PICTURE_TYPE_UNDEFINED){21},m(FLAC__STREAM_METADATA_PICTURE_TYPE_VIDEO_SCREEN_CAPTURE){16}}},m(mime_type){p(uc)},m(description){p(uc)},m(width){ul},m(height){ul},m(depth){ul},m(colors){ul},m(data_length){ul},m(data){p(uc)}}},m(seek_table){s(){m(num_points){ul},m(points){p(s(){m(sample_number){ull},m(stream_offset){ull},m(frame_samples){ul}})}}},m(stream_info){s(){m(min_blocksize){ul},m(max_blocksize){ul},m(min_framesize){ul},m(max_framesize){ul},m(sample_rate){ul},m(channels){ul},m(bits_per_sample){ul},m(total_samples){ull},m(md5sum){a(16:uc)}}},m(unknown){s(){m(data){p(uc)}}},m(vorbis_comment){s(){m(vendor_string){s(){m(length){ul},m(entry){p(uc)}}},m(num_comments){ul},m(comments){p(s(){m(length){ul},m(entry){p(uc)}})}}}}}}))},m(num_metadata_blocks){ul},m(streaminfo_offset){ull},m(seektable_offset){ull},m(audio_offset){ull}})},m(private_){p(s(FLAC__StreamEncoderPrivate){})}}),ull,p(s(){m(header){p(uc)},m(header_len){sl},m(body){p(uc)},m(body_len){sl}}),p(f{e(){m(FLAC__STREAM_ENCODER_SEEK_STATUS_ERROR){1},m(FLAC__STREAM_ENCODER_SEEK_STATUS_OK){0},m(FLAC__STREAM_ENCODER_SEEK_STATUS_UNSUPPORTED){2}}}(p(c:s(){m(protected_){p(s(FLAC__StreamEncoderProtected){m(state){e(){m(FLAC__STREAM_ENCODER_CLIENT_ERROR){5},m(FLAC__STREAM_ENCODER_FRAMING_ERROR){7},m(FLAC__STREAM_ENCODER_IO_ERROR){6},m(FLAC__STREAM_ENCODER_MEMORY_ALLOCATION_ERROR){8},m(FLAC__STREAM_ENCODER_OGG_ERROR){2},m(FLAC__STREAM_ENCODER_OK){0},m(FLAC__STREAM_ENCODER_UNINITIALIZED){1},m(FLAC__STREAM_ENCODER_VERIFY_DECODER_ERROR){3},m(FLAC__STREAM_ENCODER_VERIFY_MISMATCH_IN_AUDIO_DATA){4}}},m(verify){si},m(streamable_subset){si},m(do_md5){si},m(do_mid_side_stereo){si},m(loose_mid_side_stereo){si},m(channels){ul},m(bits_per_sample){ul},m(sample_rate){ul},m(blocksize){ul},m(num_apodizations){ul},m(apodizations){a(32:s(){m(type){e(){m(FLAC__APODIZATION_BARTLETT){0},m(FLAC__APODIZATION_BARTLETT_HANN){1},m(FLAC__APODIZATION_BLACKMAN){2},m(FLAC__APODIZATION_BLACKMAN_HARRIS_4TERM_92DB_SIDELOBE){3},m(FLAC__APODIZATION_CONNES){4},m(FLAC__APODIZATION_FLATTOP){5},m(FLAC__APODIZATION_GAUSS){6},m(FLAC__APODIZATION_HAMMING){7},m(FLAC__APODIZATION_HANN){8},m(FLAC__APODIZATION_KAISER_BESSEL){9},m(FLAC__APODIZATION_NUTTALL){10},m(FLAC__APODIZATION_PARTIAL_TUKEY){14},m(FLAC__APODIZATION_PUNCHOUT_TUKEY){15},m(FLAC__APODIZATION_RECTANGLE){11},m(FLAC__APODIZATION_SUBDIVIDE_TUKEY){16},m(FLAC__APODIZATION_TRIANGLE){12},m(FLAC__APODIZATION_TUKEY){13},m(FLAC__APODIZATION_WELCH){17}}},m(parameters){u(){m(gauss){s(){m(stddev){ft}}},m(multiple_tukey){s(){m(p){ft},m(start){ft},m(end){ft}}},m(subdivide_tukey){s(){m(p){ft},m(parts){sl}}},m(tukey){s(){m(p){ft}}}}}})},m(max_lpc_order){ul},m(qlp_coeff_precision){ul},m(do_qlp_coeff_prec_search){si},m(do_exhaustive_model_search){si},m(do_escape_coding){si},m(min_residual_partition_order){ul},m(max_residual_partition_order){ul},m(rice_parameter_search_dist){ul},m(total_samples_estimate){ull},m(limit_min_bitrate){si},m(metadata){p(p(s(FLAC__StreamMetadata){m(type){e(){m(FLAC__MAX_METADATA_TYPE){126},m(FLAC__METADATA_TYPE_APPLICATION){2},m(FLAC__METADATA_TYPE_CUESHEET){5},m(FLAC__METADATA_TYPE_PADDING){1},m(FLAC__METADATA_TYPE_PICTURE){6},m(FLAC__METADATA_TYPE_SEEKTABLE){3},m(FLAC__METADATA_TYPE_STREAMINFO){0},m(FLAC__METADATA_TYPE_UNDEFINED){7},m(FLAC__METADATA_TYPE_VORBIS_COMMENT){4}}},m(is_last){si},m(length){ul},m(data){u(){m(application){s(){m(id){a(4:uc)},m(data){p(uc)}}},m(cue_sheet){s(){m(media_catalog_number){a(129:uc)},m(lead_in){ull},m(is_cd){si},m(num_tracks){ul},m(tracks){p(s(){m(offset){ull},m(number){uc},m(isrc){a(13:uc)},m(type){b(1:ul)},m(pre_emphasis){b(1:ul)},m(num_indices){uc},m(indices){p(s(){m(offset){ull},m(number){uc}})}})}}},m(padding){s(){m(dummy){si}}},m(picture){s(){m(type){e(){m(FLAC__STREAM_METADATA_PICTURE_TYPE_ARTIST){8},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BACK_COVER){4},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BAND){10},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BAND_LOGOTYPE){19},m(FLAC__STREAM_METADATA_PICTURE_TYPE_COMPOSER){11},m(FLAC__STREAM_METADATA_PICTURE_TYPE_CONDUCTOR){9},m(FLAC__STREAM_METADATA_PICTURE_TYPE_DURING_PERFORMANCE){15},m(FLAC__STREAM_METADATA_PICTURE_TYPE_DURING_RECORDING){14},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FILE_ICON){2},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FILE_ICON_STANDARD){1},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FISH){17},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FRONT_COVER){3},m(FLAC__STREAM_METADATA_PICTURE_TYPE_ILLUSTRATION){18},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LEAD_ARTIST){7},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LEAFLET_PAGE){5},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LYRICIST){12},m(FLAC__STREAM_METADATA_PICTURE_TYPE_MEDIA){6},m(FLAC__STREAM_METADATA_PICTURE_TYPE_OTHER){0},m(FLAC__STREAM_METADATA_PICTURE_TYPE_PUBLISHER_LOGOTYPE){20},m(FLAC__STREAM_METADATA_PICTURE_TYPE_RECORDING_LOCATION){13},m(FLAC__STREAM_METADATA_PICTURE_TYPE_UNDEFINED){21},m(FLAC__STREAM_METADATA_PICTURE_TYPE_VIDEO_SCREEN_CAPTURE){16}}},m(mime_type){p(uc)},m(description){p(uc)},m(width){ul},m(height){ul},m(depth){ul},m(colors){ul},m(data_length){ul},m(data){p(uc)}}},m(seek_table){s(){m(num_points){ul},m(points){p(s(){m(sample_number){ull},m(stream_offset){ull},m(frame_samples){ul}})}}},m(stream_info){s(){m(min_blocksize){ul},m(max_blocksize){ul},m(min_framesize){ul},m(max_framesize){ul},m(sample_rate){ul},m(channels){ul},m(bits_per_sample){ul},m(total_samples){ull},m(md5sum){a(16:uc)}}},m(unknown){s(){m(data){p(uc)}}},m(vorbis_comment){s(){m(vendor_string){s(){m(length){ul},m(entry){p(uc)}}},m(num_comments){ul},m(comments){p(s(){m(length){ul},m(entry){p(uc)}})}}}}}}))},m(num_metadata_blocks){ul},m(streaminfo_offset){ull},m(seektable_offset){ull},m(audio_offset){ull}})},m(private_){p(s(FLAC__StreamEncoderPrivate){})}}),ull,p(0))),p(f{e(){m(FLAC__STREAM_ENCODER_WRITE_STATUS_FATAL_ERROR){1},m(FLAC__STREAM_ENCODER_WRITE_STATUS_OK){0}}}(p(c:s(){m(protected_){p(s(FLAC__StreamEncoderProtected){m(state){e(){m(FLAC__STREAM_ENCODER_CLIENT_ERROR){5},m(FLAC__STREAM_ENCODER_FRAMING_ERROR){7},m(FLAC__STREAM_ENCODER_IO_ERROR){6},m(FLAC__STREAM_ENCODER_MEMORY_ALLOCATION_ERROR){8},m(FLAC__STREAM_ENCODER_OGG_ERROR){2},m(FLAC__STREAM_ENCODER_OK){0},m(FLAC__STREAM_ENCODER_UNINITIALIZED){1},m(FLAC__STREAM_ENCODER_VERIFY_DECODER_ERROR){3},m(FLAC__STREAM_ENCODER_VERIFY_MISMATCH_IN_AUDIO_DATA){4}}},m(verify){si},m(streamable_subset){si},m(do_md5){si},m(do_mid_side_stereo){si},m(loose_mid_side_stereo){si},m(channels){ul},m(bits_per_sample){ul},m(sample_rate){ul},m(blocksize){ul},m(num_apodizations){ul},m(apodizations){a(32:s(){m(type){e(){m(FLAC__APODIZATION_BARTLETT){0},m(FLAC__APODIZATION_BARTLETT_HANN){1},m(FLAC__APODIZATION_BLACKMAN){2},m(FLAC__APODIZATION_BLACKMAN_HARRIS_4TERM_92DB_SIDELOBE){3},m(FLAC__APODIZATION_CONNES){4},m(FLAC__APODIZATION_FLATTOP){5},m(FLAC__APODIZATION_GAUSS){6},m(FLAC__APODIZATION_HAMMING){7},m(FLAC__APODIZATION_HANN){8},m(FLAC__APODIZATION_KAISER_BESSEL){9},m(FLAC__APODIZATION_NUTTALL){10},m(FLAC__APODIZATION_PARTIAL_TUKEY){14},m(FLAC__APODIZATION_PUNCHOUT_TUKEY){15},m(FLAC__APODIZATION_RECTANGLE){11},m(FLAC__APODIZATION_SUBDIVIDE_TUKEY){16},m(FLAC__APODIZATION_TRIANGLE){12},m(FLAC__APODIZATION_TUKEY){13},m(FLAC__APODIZATION_WELCH){17}}},m(parameters){u(){m(gauss){s(){m(stddev){ft}}},m(multiple_tukey){s(){m(p){ft},m(start){ft},m(end){ft}}},m(subdivide_tukey){s(){m(p){ft},m(parts){sl}}},m(tukey){s(){m(p){ft}}}}}})},m(max_lpc_order){ul},m(qlp_coeff_precision){ul},m(do_qlp_coeff_prec_search){si},m(do_exhaustive_model_search){si},m(do_escape_coding){si},m(min_residual_partition_order){ul},m(max_residual_partition_order){ul},m(rice_parameter_search_dist){ul},m(total_samples_estimate){ull},m(limit_min_bitrate){si},m(metadata){p(p(s(FLAC__StreamMetadata){m(type){e(){m(FLAC__MAX_METADATA_TYPE){126},m(FLAC__METADATA_TYPE_APPLICATION){2},m(FLAC__METADATA_TYPE_CUESHEET){5},m(FLAC__METADATA_TYPE_PADDING){1},m(FLAC__METADATA_TYPE_PICTURE){6},m(FLAC__METADATA_TYPE_SEEKTABLE){3},m(FLAC__METADATA_TYPE_STREAMINFO){0},m(FLAC__METADATA_TYPE_UNDEFINED){7},m(FLAC__METADATA_TYPE_VORBIS_COMMENT){4}}},m(is_last){si},m(length){ul},m(data){u(){m(application){s(){m(id){a(4:uc)},m(data){p(uc)}}},m(cue_sheet){s(){m(media_catalog_number){a(129:uc)},m(lead_in){ull},m(is_cd){si},m(num_tracks){ul},m(tracks){p(s(){m(offset){ull},m(number){uc},m(isrc){a(13:uc)},m(type){b(1:ul)},m(pre_emphasis){b(1:ul)},m(num_indices){uc},m(indices){p(s(){m(offset){ull},m(number){uc}})}})}}},m(padding){s(){m(dummy){si}}},m(picture){s(){m(type){e(){m(FLAC__STREAM_METADATA_PICTURE_TYPE_ARTIST){8},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BACK_COVER){4},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BAND){10},m(FLAC__STREAM_METADATA_PICTURE_TYPE_BAND_LOGOTYPE){19},m(FLAC__STREAM_METADATA_PICTURE_TYPE_COMPOSER){11},m(FLAC__STREAM_METADATA_PICTURE_TYPE_CONDUCTOR){9},m(FLAC__STREAM_METADATA_PICTURE_TYPE_DURING_PERFORMANCE){15},m(FLAC__STREAM_METADATA_PICTURE_TYPE_DURING_RECORDING){14},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FILE_ICON){2},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FILE_ICON_STANDARD){1},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FISH){17},m(FLAC__STREAM_METADATA_PICTURE_TYPE_FRONT_COVER){3},m(FLAC__STREAM_METADATA_PICTURE_TYPE_ILLUSTRATION){18},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LEAD_ARTIST){7},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LEAFLET_PAGE){5},m(FLAC__STREAM_METADATA_PICTURE_TYPE_LYRICIST){12},m(FLAC__STREAM_METADATA_PICTURE_TYPE_MEDIA){6},m(FLAC__STREAM_METADATA_PICTURE_TYPE_OTHER){0},m(FLAC__STREAM_METADATA_PICTURE_TYPE_PUBLISHER_LOGOTYPE){20},m(FLAC__STREAM_METADATA_PICTURE_TYPE_RECORDING_LOCATION){13},m(FLAC__STREAM_METADATA_PICTURE_TYPE_UNDEFINED){21},m(FLAC__STREAM_METADATA_PICTURE_TYPE_VIDEO_SCREEN_CAPTURE){16}}},m(mime_type){p(uc)},m(description){p(uc)},m(width){ul},m(height){ul},m(depth){ul},m(colors){ul},m(data_length){ul},m(data){p(uc)}}},m(seek_table){s(){m(num_points){ul},m(points){p(s(){m(sample_number){ull},m(stream_offset){ull},m(frame_samples){ul}})}}},m(stream_info){s(){m(min_blocksize){ul},m(max_blocksize){ul},m(min_framesize){ul},m(max_framesize){ul},m(sample_rate){ul},m(channels){ul},m(bits_per_sample){ul},m(total_samples){ull},m(md5sum){a(16:uc)}}},m(unknown){s(){m(data){p(uc)}}},m(vorbis_comment){s(){m(vendor_string){s(){m(length){ul},m(entry){p(uc)}}},m(num_comments){ul},m(comments){p(s(){m(length){ul},m(entry){p(uc)}})}}}}}}))},m(num_metadata_blocks){ul},m(streaminfo_offset){ull},m(seektable_offset){ull},m(audio_offset){ull}})},m(private_){p(s(FLAC__StreamEncoderPrivate){})}}),p(c:uc),ui,ul,ul,p(0))),p(0))"

@@ -214,7 +214,7 @@ PLAY_TRACK_RC PlayRIFF(FIL* file, chanend handshake, chanend c_control)
     sprintf(TotalTimeString,"%02d:%02d", TotalMin, TotalSec);
 
     sprintf(audio_property_string,"LINEAR PCM %1dch %4.1fksps %2dbit %s", ChannelCount, ((float)SampleRate/1000),bit_depth, TotalTimeString);
-    set_display_control_flag(BITMASK_UPDATE_INFO);
+    set_display_control_flag(BITMASK_SHOW_AUDIO_PROPERTY);
 
     debug_printf("\n%s", audio_property_string);
     fflush(stdout);

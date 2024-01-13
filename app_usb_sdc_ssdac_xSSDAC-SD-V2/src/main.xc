@@ -14,6 +14,8 @@
 #include <print.h>
 #include <stdio.h>	//added by sakurai
 #include <xscope.h>	//added by sakurai
+#include <quadflashlib.h>
+
 #ifdef XSCOPE
 #include <xscope.h>
 #endif
@@ -29,25 +31,24 @@
 
 #include "clocking.h"
 
-/* below section added for ssdac by sakurai*/
 #include <debug_print.h>
 #include "qspi_access.h"
 #include "ssdac_conf.h"
 #include "ssdac.h"
-//#ifdef _USB_AUDIO_USE_DISPLAY
-#include "display_control.h" //added for ssdac by sakurai
-//#endif
+#include "sdcard_play.h"
+#include "display_control.h"
 #if _DAC_MODE_SELECTOR == _DAC_MODE_SELECTOR_EXPLORER
 #include "explorer_unique.h"
 #endif
 #if _DAC_MODE_SELECTOR == _DAC_MODE_SELECTOR_BTN_LSTN
 #include "button_listener.h"
-#include "display_control.h"
 #endif
 
-void qspi_server(server interface qspi_access i);
+#include "ffconf.h"
 
-/* end of addition by sakurai*/
+#include "flash_map.h"
+
+#define FAST_MODE
 
 [[distributable]]
 void DFUHandler(server interface i_dfu i, chanend ?c_user_cmd);
@@ -169,21 +170,63 @@ void usb_audio_core(
 }
 
 
-void config_audio_source(client interface qspi_access ? i, chanend c_audio)
+#define FUNC_SEL_OFFSET    0
+#define FUNC_SEL_SIZE      1
+
+void display_control_core(client interface qspi_access ? i);
+
+void sdcard_play(
+        chanend c_handshake
+        , chanend c_play_control
+        /*, client interface qspi_access ? i*/
+        );
+
+void decoupler(chanend c_handshake, chanend c_audio);
+
+typedef union {
+    unsigned int value;
+    unsigned char byte[sizeof(int)];
+} unsigned_byte ;
+
+extern char folder_string[];
+extern char track_string[];
+
+void config_audio_source(client interface qspi_access ? i, chanend c_audio, chanend c_dac_control)
 {
-    char data[1];
+    unsigned_byte config;
+    int size = sizeof(config);
 
-    if (!isnull(i)){
-        i.read(0, 1, data);
-        debug_printf("\ncofig data:%d", data[0]);
-    }
-    else{
+    i.read(CONFIG_OFFSET, size, config.byte);
+    debug_printf("\nsize:%d config_data:%d", size, config.value);
 
-    }
+    i.read(FOLDER_STRING_OFFSET, FOLDER_STRING_SIZE, folder_string);
+    folder_string[FOLDER_STRING_SIZE-1]='\0';
+    i.read(TRACK_STRING_OFFSET, TRACK_STRING_SIZE, track_string);
+    track_string[TRACK_STRING_SIZE-1]='\0';
 
+    chan c_play_control;
+    chan c_handshake;
 
-    par{
-        usb_audio_core(c_audio /*, null, null, dfuInterface*/ );
+    switch (config.value){
+    case _USB_DAC:
+        par
+        {
+            usb_audio_core(c_audio /*, null, null, dfuInterface*/ );
+            button_listener_core(config.value, c_play_control, c_dac_control );
+            display_control_core(i);
+        }
+        break;
+
+    case _SDC_PLAY:
+    default:
+        par
+        {
+            display_control_core(i);
+            sdcard_play(c_handshake, c_play_control/*, null*/);
+            decoupler(c_handshake, c_audio);
+            button_listener_core(config.value, c_play_control, c_dac_control );
+        }
+        break;
     }
 }
 
@@ -192,15 +235,22 @@ int main()
     chan c_audio;
     chan c_dac_control;
     chan c_play_control;
-    //interface qspi_access i;
+    interface qspi_access i;
 
     par
     {
-        //on tile[AUDIO_IO_TILE]: qspi_server(i);
-        on tile[SDC_TILE]: config_audio_source(/*i*/null, c_audio );
-        on tile[AUDIO_IO_TILE]: ssdac_core(c_audio, c_dac_control );
-        on tile[OLED_TILE]: display_control_core();
-        on tile[OLED_TILE]: button_listener_core(c_play_control, c_dac_control );
+        on tile[AUDIO_IO_TILE]:{
+            thread_speed();
+            qspi_server(i);
+        }
+        on tile[SDC_TILE]:{
+            thread_speed();
+            config_audio_source(i, c_audio, c_dac_control );
+        }
+        on tile[AUDIO_IO_TILE]:{
+            thread_speed();
+            ssdac_core(c_audio, c_dac_control );
+        }
     }
     return 0;
 }

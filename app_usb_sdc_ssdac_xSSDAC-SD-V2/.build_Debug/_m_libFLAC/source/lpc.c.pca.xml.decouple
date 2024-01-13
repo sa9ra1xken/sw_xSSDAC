@@ -42,6 +42,7 @@
   <fCall global="true" name="FLAC__lpc_compute_autocorrelation.maxchanends"/>
   <fCall global="true" name="FLAC__lpc_compute_lp_coefficients"/>
   <fCall global="true" name="FLAC__lpc_compute_lp_coefficients.nstackwords"/>
+  <fCall global="true" name="__eqdf2.nstackwords"/>
   <fCall global="true" name="__divdf3.nstackwords"/>
   <fCall global="true" name="__truncdfsf2.nstackwords"/>
   <fCall global="true" name="__subsf3.nstackwords"/>
@@ -55,16 +56,24 @@
   <fCall global="true" name="__gtdf2.nstackwords"/>
   <fCall global="true" name="__ledf2.nstackwords"/>
   <fCall global="true" name="frexp.nstackwords"/>
+  <fCall global="true" name="__getstderr.nstackwords"/>
+  <fCall global="true" name="fprintf.nstackwords"/>
   <fCall global="true" name="__divsf3.nstackwords"/>
   <fCall global="true" name="__floatsidf.nstackwords"/>
   <fCall global="true" name="FLAC__lpc_quantize_coefficients.maxcores"/>
+  <fCall global="true" name="__getstderr.maxcores"/>
   <fCall global="true" name="fabsf.maxcores"/>
+  <fCall global="true" name="fprintf.maxcores"/>
   <fCall global="true" name="frexp.maxcores"/>
   <fCall global="true" name="FLAC__lpc_quantize_coefficients.maxtimers"/>
+  <fCall global="true" name="__getstderr.maxtimers"/>
   <fCall global="true" name="fabsf.maxtimers"/>
+  <fCall global="true" name="fprintf.maxtimers"/>
   <fCall global="true" name="frexp.maxtimers"/>
   <fCall global="true" name="FLAC__lpc_quantize_coefficients.maxchanends"/>
+  <fCall global="true" name="__getstderr.maxchanends"/>
   <fCall global="true" name="fabsf.maxchanends"/>
+  <fCall global="true" name="fprintf.maxchanends"/>
   <fCall global="true" name="frexp.maxchanends"/>
   <fCall global="true" name="FLAC__lpc_compute_residual_from_qlp_coefficients"/>
   <fCall global="true" name="FLAC__lpc_compute_residual_from_qlp_coefficients.nstackwords"/>
@@ -139,6 +148,8 @@
   <fCall global="true" name="FLAC__lpc_compute_best_order.maxtimers"/>
   <fCall global="true" name="FLAC__lpc_compute_best_order.maxchanends"/>
   <fCall global="true" name="frexp"/>
+  <fCall global="true" name="fprintf"/>
+  <fCall global="true" name="__getstderr"/>
   <fCall global="true" name="FLAC__bitmath_silog2"/>
   <fCall global="true" name="log"/>
   <fCall global="true" name="FLAC__SUBFRAME_LPC_QLP_SHIFT_LEN"/>
@@ -150,6 +161,7 @@
   <fCall global="true" name="memset"/>
   <fCall global="true" name="__extendsfdf2"/>
   <fCall global="true" name="__muldf3"/>
+  <fCall global="true" name="__eqdf2"/>
   <fCall global="true" name="__subdf3"/>
   <fCall global="true" name="__divdf3"/>
   <fCall global="true" name="__truncdfsf2"/>

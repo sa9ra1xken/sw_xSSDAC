@@ -210,6 +210,10 @@ TestUserControl:
 	# RETURN_REG_HOLDER
 .Ltmp26:
 	.cc_bottom TestUserControl.function
+	.set	TestUserControl.nstackwords.pragma,400
+	.globl	TestUserControl.nstackwords.pragma
+	.set	TestUserControl.nstackwords,TestUserControl.nstackwords
+	.globl	TestUserControl.nstackwords
 
 	.globl	TestUserControl.maxcores
 

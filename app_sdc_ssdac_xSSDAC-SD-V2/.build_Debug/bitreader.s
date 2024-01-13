@@ -4166,7 +4166,7 @@ FLAC__bitreader_read_unary_unsigned:
 .Ltmp482:
 .LBB25_4:
 	.file	6 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private\\bitmath.h"
-	.loc	6 84 9
+	.loc	6 86 9
 	{
 		clz r0, r0
 		ldw r1, r6[0]
@@ -4230,7 +4230,7 @@ FLAC__bitreader_read_unary_unsigned:
 	bu .LBB25_12
 .Ltmp487:
 .LBB25_9:
-	.loc	6 84 9
+	.loc	6 86 9
 	{
 		clz r0, r0
 		ldw r1, r6[0]
@@ -4413,10 +4413,10 @@ FLAC__bitreader_read_rice_signed_block:
 	}
 .Ltmp512:
 .LBB26_11:
-	.loc	6 123 6
+	.loc	6 125 6
 	bf r10, .LBB26_12
 .Ltmp513:
-	.loc	6 84 9
+	.loc	6 86 9
 	{
 		clz r9, r10
 		nop
@@ -4453,7 +4453,7 @@ FLAC__bitreader_read_rice_signed_block:
 		nop
 		ldw r10, r5[r0]
 	}
-	.loc	6 123 6
+	.loc	6 125 6
 .Ltmp519:
 	bt r10, .LBB26_21
 .Ltmp520:
@@ -4475,7 +4475,7 @@ FLAC__bitreader_read_rice_signed_block:
 	bu .LBB26_14
 .Ltmp523:
 .LBB26_21:
-	.loc	6 84 9
+	.loc	6 86 9
 	{
 		clz r5, r10
 		nop
@@ -7222,14 +7222,14 @@ FLAC__bitreader_read_utf8_uint64:
 	.byte	36
 	.long	.Linfo_string47
 	.byte	6
-	.byte	75
+	.byte	77
 	.byte	1
 	.long	49
 	.byte	1
 	.byte	24
 	.long	.Linfo_string48
 	.byte	6
-	.byte	75
+	.byte	77
 	.long	67
 	.byte	0
 	.byte	21
@@ -7305,14 +7305,14 @@ FLAC__bitreader_read_utf8_uint64:
 	.byte	36
 	.long	.Linfo_string49
 	.byte	6
-	.byte	121
+	.byte	123
 	.byte	1
 	.long	49
 	.byte	1
 	.byte	24
 	.long	.Linfo_string48
 	.byte	6
-	.byte	121
+	.byte	123
 	.long	67
 	.byte	0
 	.byte	21
@@ -7428,7 +7428,7 @@ FLAC__bitreader_read_utf8_uint64:
 	.long	2382
 	.long	.Ldebug_ranges45
 	.byte	6
-	.byte	125
+	.byte	127
 	.byte	0
 	.byte	18
 	.long	2573
@@ -7442,7 +7442,7 @@ FLAC__bitreader_read_utf8_uint64:
 	.long	2382
 	.long	.Ldebug_ranges47
 	.byte	6
-	.byte	125
+	.byte	127
 	.byte	0
 	.byte	0
 	.byte	21

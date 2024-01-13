@@ -411,7 +411,7 @@ inline int XUD_SetReady_Out(XUD_ep ep, unsigned char buffer[])
     return 0;
 }
 # 426 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-inline int XUD_SetReady_OutPtr(XUD_ep ep, unsigned addr)
+static inline int XUD_SetReady_OutPtr(XUD_ep ep, unsigned addr)
 {
     int chan_array_ptr;
     int reset;

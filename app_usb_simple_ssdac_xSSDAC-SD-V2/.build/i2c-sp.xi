@@ -1037,7 +1037,7 @@ int _safe_rename(const char from[], const char to[]);
 # 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src/i2c-sp.xc" 2
 # 1 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 1
 # 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\i2c_conf.h" 1
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\i2c_conf.h" 1
 # 12 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 2
 
 

@@ -1533,6 +1533,9 @@ FLAC__uint16 FLAC__crc16_update_words32(const FLAC__uint32 *words, uint32_t len,
 FLAC__uint16 FLAC__crc16_update_words64(const FLAC__uint64 *words, uint32_t len, FLAC__uint16 crc);
 # 41 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder_framing.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h" 1
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 1
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 2
 # 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder_framing.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 1
 # 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h"
@@ -1765,7 +1768,7 @@ FLAC__bool FLAC__add_metadata_block(const FLAC__StreamMetadata *metadata, FLAC__
  const uint32_t vendor_string_length = (uint32_t)strlen(FLAC__VENDOR_STRING);
  const uint32_t start_bits = FLAC__bitwriter_get_input_bits_unconsumed(bw);
 
-                                                  ;
+ assert(FLAC__bitwriter_is_byte_aligned(bw));
 
  if(!FLAC__bitwriter_write_raw_uint32(bw, metadata->is_last, FLAC__STREAM_METADATA_IS_LAST_LEN))
   return 0;
@@ -1778,11 +1781,11 @@ FLAC__bool FLAC__add_metadata_block(const FLAC__StreamMetadata *metadata, FLAC__
 
  metadata_length = metadata->length;
  if(metadata->type == FLAC__METADATA_TYPE_VORBIS_COMMENT) {
-                                                                                                                                 ;
+  assert(metadata->data.vorbis_comment.vendor_string.length == 0 || 0 != metadata->data.vorbis_comment.vendor_string.entry);
   metadata_length -= metadata->data.vorbis_comment.vendor_string.length;
   metadata_length += vendor_string_length;
  }
-                                                                         ;
+ assert(metadata_length < (1u << FLAC__STREAM_METADATA_LENGTH_LEN));
 
  if(metadata_length >= (1u << FLAC__STREAM_METADATA_LENGTH_LEN))
   return 0;
@@ -1791,27 +1794,27 @@ FLAC__bool FLAC__add_metadata_block(const FLAC__StreamMetadata *metadata, FLAC__
 
  switch(metadata->type) {
   case FLAC__METADATA_TYPE_STREAMINFO:
-                                                                                                                       ;
+   assert(metadata->data.stream_info.min_blocksize < (1u << FLAC__STREAM_METADATA_STREAMINFO_MIN_BLOCK_SIZE_LEN));
    if(!FLAC__bitwriter_write_raw_uint32(bw, metadata->data.stream_info.min_blocksize, FLAC__STREAM_METADATA_STREAMINFO_MIN_BLOCK_SIZE_LEN))
     return 0;
-                                                                                                                       ;
+   assert(metadata->data.stream_info.max_blocksize < (1u << FLAC__STREAM_METADATA_STREAMINFO_MAX_BLOCK_SIZE_LEN));
    if(!FLAC__bitwriter_write_raw_uint32(bw, metadata->data.stream_info.max_blocksize, FLAC__STREAM_METADATA_STREAMINFO_MAX_BLOCK_SIZE_LEN))
     return 0;
-                                                                                                                       ;
+   assert(metadata->data.stream_info.min_framesize < (1u << FLAC__STREAM_METADATA_STREAMINFO_MIN_FRAME_SIZE_LEN));
    if(!FLAC__bitwriter_write_raw_uint32(bw, metadata->data.stream_info.min_framesize, FLAC__STREAM_METADATA_STREAMINFO_MIN_FRAME_SIZE_LEN))
     return 0;
-                                                                                                                       ;
+   assert(metadata->data.stream_info.max_framesize < (1u << FLAC__STREAM_METADATA_STREAMINFO_MAX_FRAME_SIZE_LEN));
    if(!FLAC__bitwriter_write_raw_uint32(bw, metadata->data.stream_info.max_framesize, FLAC__STREAM_METADATA_STREAMINFO_MAX_FRAME_SIZE_LEN))
     return 0;
-                                                                                          ;
+   assert(FLAC__format_sample_rate_is_valid(metadata->data.stream_info.sample_rate));
    if(!FLAC__bitwriter_write_raw_uint32(bw, metadata->data.stream_info.sample_rate, FLAC__STREAM_METADATA_STREAMINFO_SAMPLE_RATE_LEN))
     return 0;
-                                                        ;
-                                                                                                             ;
+   assert(metadata->data.stream_info.channels > 0);
+   assert(metadata->data.stream_info.channels <= (1u << FLAC__STREAM_METADATA_STREAMINFO_CHANNELS_LEN));
    if(!FLAC__bitwriter_write_raw_uint32(bw, metadata->data.stream_info.channels-1, FLAC__STREAM_METADATA_STREAMINFO_CHANNELS_LEN))
     return 0;
-                                                               ;
-                                                                                                                           ;
+   assert(metadata->data.stream_info.bits_per_sample > 0);
+   assert(metadata->data.stream_info.bits_per_sample <= (1u << FLAC__STREAM_METADATA_STREAMINFO_BITS_PER_SAMPLE_LEN));
    if(!FLAC__bitwriter_write_raw_uint32(bw, metadata->data.stream_info.bits_per_sample-1, FLAC__STREAM_METADATA_STREAMINFO_BITS_PER_SAMPLE_LEN))
     return 0;
    if(metadata->data.stream_info.total_samples >= (1ULL << FLAC__STREAM_METADATA_STREAMINFO_TOTAL_SAMPLES_LEN)){
@@ -1859,7 +1862,7 @@ FLAC__bool FLAC__add_metadata_block(const FLAC__StreamMetadata *metadata, FLAC__
    }
    break;
   case FLAC__METADATA_TYPE_CUESHEET:
-                                                                                 ;
+   assert(FLAC__STREAM_METADATA_CUESHEET_MEDIA_CATALOG_NUMBER_LEN % 8 == 0);
    if(!FLAC__bitwriter_write_byte_block(bw, (const FLAC__byte*)metadata->data.cue_sheet.media_catalog_number, FLAC__STREAM_METADATA_CUESHEET_MEDIA_CATALOG_NUMBER_LEN/8))
     return 0;
    if(!FLAC__bitwriter_write_raw_uint64(bw, metadata->data.cue_sheet.lead_in, FLAC__STREAM_METADATA_CUESHEET_LEAD_IN_LEN))
@@ -1877,7 +1880,7 @@ FLAC__bool FLAC__add_metadata_block(const FLAC__StreamMetadata *metadata, FLAC__
      return 0;
     if(!FLAC__bitwriter_write_raw_uint32(bw, track->number, FLAC__STREAM_METADATA_CUESHEET_TRACK_NUMBER_LEN))
      return 0;
-                                                                        ;
+    assert(FLAC__STREAM_METADATA_CUESHEET_TRACK_ISRC_LEN % 8 == 0);
     if(!FLAC__bitwriter_write_byte_block(bw, (const FLAC__byte*)track->isrc, FLAC__STREAM_METADATA_CUESHEET_TRACK_ISRC_LEN/8))
      return 0;
     if(!FLAC__bitwriter_write_raw_uint32(bw, track->type, FLAC__STREAM_METADATA_CUESHEET_TRACK_TYPE_LEN))
@@ -1945,7 +1948,7 @@ FLAC__bool FLAC__add_metadata_block(const FLAC__StreamMetadata *metadata, FLAC__
    return 0;
  }
 
-                                                  ;
+ assert(FLAC__bitwriter_is_byte_aligned(bw));
  return 1;
 }
 
@@ -1954,7 +1957,7 @@ FLAC__bool FLAC__frame_add_header(const FLAC__FrameHeader *header, FLAC__BitWrit
  uint32_t u, blocksize_hint, sample_rate_hint;
  FLAC__byte crc;
 
-                                                  ;
+ assert(FLAC__bitwriter_is_byte_aligned(bw));
 
  if(!FLAC__bitwriter_write_raw_uint32(bw, FLAC__FRAME_HEADER_SYNC, FLAC__FRAME_HEADER_SYNC_LEN))
   return 0;
@@ -1965,9 +1968,9 @@ FLAC__bool FLAC__frame_add_header(const FLAC__FrameHeader *header, FLAC__BitWrit
  if(!FLAC__bitwriter_write_raw_uint32(bw, (header->number_type == FLAC__FRAME_NUMBER_TYPE_FRAME_NUMBER)? 0 : 1, FLAC__FRAME_HEADER_BLOCKING_STRATEGY_LEN))
   return 0;
 
-                                                                                 ;
+ assert(header->blocksize > 0 && header->blocksize <= (65535u));
 
-                                             ;
+ assert((65535u) <= 65535u);
  blocksize_hint = 0;
  switch(header->blocksize) {
   case 192: u = 1; break;
@@ -1993,7 +1996,7 @@ FLAC__bool FLAC__frame_add_header(const FLAC__FrameHeader *header, FLAC__BitWrit
  if(!FLAC__bitwriter_write_raw_uint32(bw, u, FLAC__FRAME_HEADER_BLOCK_SIZE_LEN))
   return 0;
 
-                                                                     ;
+ assert(FLAC__format_sample_rate_is_valid(header->sample_rate));
  sample_rate_hint = 0;
  switch(header->sample_rate) {
   case 88200: u = 1; break;
@@ -2021,30 +2024,30 @@ FLAC__bool FLAC__frame_add_header(const FLAC__FrameHeader *header, FLAC__BitWrit
  if(!FLAC__bitwriter_write_raw_uint32(bw, u, FLAC__FRAME_HEADER_SAMPLE_RATE_LEN))
   return 0;
 
-                                                                                                                                                          ;
+ assert(header->channels > 0 && header->channels <= (1u << FLAC__STREAM_METADATA_STREAMINFO_CHANNELS_LEN) && header->channels <= (8u));
  switch(header->channel_assignment) {
   case FLAC__CHANNEL_ASSIGNMENT_INDEPENDENT:
    u = header->channels - 1;
    break;
   case FLAC__CHANNEL_ASSIGNMENT_LEFT_SIDE:
-                                      ;
+   assert(header->channels == 2);
    u = 8;
    break;
   case FLAC__CHANNEL_ASSIGNMENT_RIGHT_SIDE:
-                                      ;
+   assert(header->channels == 2);
    u = 9;
    break;
   case FLAC__CHANNEL_ASSIGNMENT_MID_SIDE:
-                                      ;
+   assert(header->channels == 2);
    u = 10;
    break;
   default:
-                  ;
+   assert(0);
  }
  if(!FLAC__bitwriter_write_raw_uint32(bw, u, FLAC__FRAME_HEADER_CHANNEL_ASSIGNMENT_LEN))
   return 0;
 
-                                                                                                                                     ;
+ assert(header->bits_per_sample > 0 && header->bits_per_sample <= (1u << FLAC__STREAM_METADATA_STREAMINFO_BITS_PER_SAMPLE_LEN));
  switch(header->bits_per_sample) {
   case 8 : u = 1; break;
   case 12: u = 2; break;
@@ -2142,7 +2145,7 @@ FLAC__bool FLAC__subframe_add_fixed(const FLAC__Subframe_Fixed *subframe, uint32
     return 0;
    break;
   default:
-                  ;
+   assert(0);
  }
 
  return 1;
@@ -2188,7 +2191,7 @@ FLAC__bool FLAC__subframe_add_lpc(const FLAC__Subframe_LPC *subframe, uint32_t r
     return 0;
    break;
   default:
-                  ;
+   assert(0);
  }
 
  return 1;
@@ -2207,7 +2210,7 @@ FLAC__bool FLAC__subframe_add_verbatim(const FLAC__Subframe_Verbatim *subframe, 
  if(subframe->data_type == FLAC__VERBATIM_SUBFRAME_DATA_TYPE_INT32) {
   const FLAC__int32 *signal = subframe->data.int32;
 
-                                 ;
+  assert(subframe_bps < 33);
 
   for(i = 0; i < samples; i++)
    if(!FLAC__bitwriter_write_raw_int32(bw, signal[i], subframe_bps))
@@ -2216,7 +2219,7 @@ FLAC__bool FLAC__subframe_add_verbatim(const FLAC__Subframe_Verbatim *subframe, 
  else {
   const FLAC__int64 *signal = subframe->data.int64;
 
-                                  ;
+  assert(subframe_bps == 33);
 
   for(i = 0; i < samples; i++)
    if(!FLAC__bitwriter_write_raw_int64(bw, (FLAC__int64)signal[i], subframe_bps))
@@ -2237,7 +2240,7 @@ FLAC__bool add_entropy_coding_method_(FLAC__BitWriter *bw, const FLAC__EntropyCo
     return 0;
    break;
   default:
-                  ;
+   assert(0);
  }
  return 1;
 }
@@ -2257,7 +2260,7 @@ FLAC__bool add_residual_partitioned_rice_(FLAC__BitWriter *bw, const FLAC__int32
     return 0;
   }
   else {
-                                        ;
+   assert(rice_parameters[0] == 0);
    if(!FLAC__bitwriter_write_raw_uint32(bw, pesc, plen))
     return 0;
    if(!FLAC__bitwriter_write_raw_uint32(bw, raw_bits[0], FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE_RAW_LEN))

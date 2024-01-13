@@ -76,7 +76,7 @@
 	main.parinfo.debugstring0:
 	.asciiz "# -1 \"\""
 	main.parinfo.debugstring1:
-	.asciiz "# 101 \"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc\""
+	.asciiz "# 104 \"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc\""
 	.cc_top main.parinfo.cc, main.parinfo
 	.globl main.parinfo
 	.type main.parinfo, @object
@@ -144,21 +144,21 @@
 	.call usage.anon.2,delay_ticks_longlong
 	.call usage.anon.1,delay_ticks_longlong
 	.call usage.anon.0,delay_ticks_longlong
-	.par sdcard_play,decoupler,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par sdcard_play,button_listener_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par sdcard_play,display_control_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par sdcard_play,ssdac_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par sdcard_play,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par decoupler,button_listener_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par decoupler,display_control_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par decoupler,ssdac_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par decoupler,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par button_listener_core,display_control_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par button_listener_core,ssdac_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par button_listener_core,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par display_control_core,ssdac_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par display_control_core,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
-	.par ssdac_core,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par sdcard_play,decoupler,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par sdcard_play,button_listener_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par sdcard_play,display_control_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par sdcard_play,ssdac_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par sdcard_play,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par decoupler,button_listener_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par decoupler,display_control_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par decoupler,ssdac_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par decoupler,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par button_listener_core,display_control_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par button_listener_core,ssdac_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par button_listener_core,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par display_control_core,ssdac_core,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par display_control_core,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
+	.par ssdac_core,qspi_server,"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:72:5: error: use of `%s\' violates parallel usage rules\n    par{\n    ^~~"
 	.set main.locnoside, 0
 	.set main.locnochandec, 0
 	.overlay_subgraph_conflict __main__main_tile_1_task_sdcard_play_0, __main__main_tile_1_task_decoupler_1, __main__main_tile_1_task_button_listener_core_2, __main__main_tile_1_task_display_control_core_3
@@ -583,7 +583,7 @@ _i.qspi_access._chan_yield.write:       # @_i.qspi_access._chan_yield.write
 thread_speed:                           # @thread_speed
 .Lfunc_begin4:
 	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\main.xc"
-	.loc	1 55 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:55:0
+	.loc	1 54 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:54:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -592,7 +592,7 @@ thread_speed:                           # @thread_speed
 		nop
 		dualentsp 0
 	}
-	.loc	1 60 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:60:0
+	.loc	1 59 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:59:0
 .Ltmp18:
 	clrsr 128
 	{
@@ -625,25 +625,36 @@ __main__main_tile_1:                    # @__main__main_tile_1
 # BB#0:                                 # %allocas
 	{
 		nop
-		dualentsp 20
+		dualentsp 18
 	}
 .Ltmp21:
-	.cfi_def_cfa_offset 80
+	.cfi_def_cfa_offset 72
 .Ltmp22:
 	.cfi_offset 15, 0
 	std r5, r4, sp[8]               # 4-byte Folded Spill
 .Ltmp23:
-	.cfi_offset 4, -16
+	.cfi_offset 4, -8
 .Ltmp24:
-	.cfi_offset 5, -12
-	std r7, r6, sp[9]               # 4-byte Folded Spill
-.Ltmp25:
-	.cfi_offset 6, -8
-.Ltmp26:
-	.cfi_offset 7, -4
+	.cfi_offset 5, -4
 	#DEBUG_VALUE: __main__main_tile_1:formal.c_audio1 <- R0
 	#DEBUG_VALUE: __main__main_tile_1:formal.c_dac_control2 <- R1
 	#DEBUG_VALUE: __main__main_tile_1:formal.i3 <- R2
+	{
+		getr r3, 2
+		nop
+	}
+	{
+		getr r11, 2
+		nop
+	}
+	{
+		setd res[r3], r11
+		nop
+	}
+	{
+		setd res[r11], r3
+		nop
+	}
 	{
 		getr r4, 2
 		nop
@@ -658,35 +669,19 @@ __main__main_tile_1:                    # @__main__main_tile_1
 	}
 	{
 		setd res[r5], r4
-		nop
-	}
-	{
-		getr r6, 2
-		nop
-	}
-	{
-		getr r7, 2
-		nop
-	}
-	{
-		setd res[r6], r7
-		nop
-	}
-	{
-		setd res[r7], r6
-		stw r4, sp[14]
+		stw r3, sp[14]
 	}
 	{
 		nop
-		stw r5, sp[15]
+		stw r11, sp[15]
 	}
 	{
 		nop
-		stw r6, sp[12]
+		stw r4, sp[12]
 	}
 	{
 		nop
-		stw r7, sp[13]
+		stw r5, sp[13]
 	}
 	{
 		nop
@@ -718,31 +713,8 @@ __main__main_tile_1:                    # @__main__main_tile_1
 		nop
 	}
 	bl __start_other_cores
-	{
-		freer res[r4]
-		nop
-	}
-	{
-		freer res[r5]
-		nop
-	}
-	{
-		freer res[r6]
-		nop
-	}
-	{
-		freer res[r7]
-		nop
-	}
-	ldd r7, r6, sp[9]               # 4-byte Folded Reload
-	ldd r5, r4, sp[8]               # 4-byte Folded Reload
-	{
-		nop
-		retsp 20
-	}
-	# RETURN_REG_HOLDER
 	.cc_bottom __main__main_tile_1.function
-	.set	__main__main_tile_1.nstackwords,((par.extra_stackwords + __main__main_tile_1_task_sdcard_play_0.nstackwords + ((1 + __main__main_tile_1_task_decoupler_1.nstackwords) $A 2) + ((1 + __main__main_tile_1_task_button_listener_core_2.nstackwords) $A 2) + ((1 + __main__main_tile_1_task_display_control_core_3.nstackwords) $A 2)) + 20)
+	.set	__main__main_tile_1.nstackwords,((par.extra_stackwords + __main__main_tile_1_task_sdcard_play_0.nstackwords + ((1 + __main__main_tile_1_task_decoupler_1.nstackwords) $A 2) + ((1 + __main__main_tile_1_task_button_listener_core_2.nstackwords) $A 2) + ((1 + __main__main_tile_1_task_display_control_core_3.nstackwords) $A 2)) + 18)
 	.globl	__main__main_tile_1.nstackwords
 	.set	__main__main_tile_1.maxcores,(0 + __main__main_tile_1_task_sdcard_play_0.maxcores + __main__main_tile_1_task_decoupler_1.maxcores + __main__main_tile_1_task_button_listener_core_2.maxcores + __main__main_tile_1_task_display_control_core_3.maxcores) $M 1
 	.globl	__main__main_tile_1.maxcores
@@ -750,8 +722,8 @@ __main__main_tile_1:                    # @__main__main_tile_1
 	.globl	__main__main_tile_1.maxtimers
 	.set	__main__main_tile_1.maxchanends,(4 + (0 + __main__main_tile_1_task_sdcard_play_0.maxchanends + __main__main_tile_1_task_decoupler_1.maxchanends + __main__main_tile_1_task_button_listener_core_2.maxchanends + __main__main_tile_1_task_display_control_core_3.maxchanends)) $M 4
 	.globl	__main__main_tile_1.maxchanends
-.Ltmp27:
-	.size	__main__main_tile_1, .Ltmp27-__main__main_tile_1
+.Ltmp25:
+	.size	__main__main_tile_1, .Ltmp25-__main__main_tile_1
 	.cfi_endproc
 
 	.align	4
@@ -759,21 +731,21 @@ __main__main_tile_1:                    # @__main__main_tile_1
 	.cc_top __main__main_tile_1_task_sdcard_play_0.function,__main__main_tile_1_task_sdcard_play_0
 __main__main_tile_1_task_sdcard_play_0: # @__main__main_tile_1_task_sdcard_play_0
 .Lfunc_begin6:
-	.loc	1 74 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:74:0
+	.loc	1 73 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
-.Ltmp28:
+.Ltmp26:
 	.cfi_def_cfa_offset 8
-.Ltmp29:
+.Ltmp27:
 	.cfi_offset 15, 0
 	#DEBUG_VALUE: __main__main_tile_1_task_sdcard_play_0:frame <- R0
 	{
 		ldc r1, 52
 		dualentsp 2
 	}
-	.loc	1 74 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:74:0
-.Ltmp30:
+	.loc	1 73 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:0
+.Ltmp28:
 	{
 		add r1, r0, r1
 		nop
@@ -786,13 +758,13 @@ __main__main_tile_1_task_sdcard_play_0: # @__main__main_tile_1_task_sdcard_play_
 		nop
 		ldw r1, r0[11]
 	}
-	.loc	1 74 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:74:0
+	.loc	1 73 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:0
 	{
 		mov r0, r3
 		ldw r2, r0[1]
 	}
-.Ltmp31:
-	.loc	1 74 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:74:0
+.Ltmp29:
+	.loc	1 73 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:73:0
 .Lxta.call_labels0:
 	bl sdcard_play
 	{
@@ -800,14 +772,14 @@ __main__main_tile_1_task_sdcard_play_0: # @__main__main_tile_1_task_sdcard_play_
 		retsp 2
 	}
 	# RETURN_REG_HOLDER
-.Ltmp32:
+.Ltmp30:
 	.cc_bottom __main__main_tile_1_task_sdcard_play_0.function
 	.set	__main__main_tile_1_task_sdcard_play_0.nstackwords,(sdcard_play.nstackwords + 2)
 	.set	__main__main_tile_1_task_sdcard_play_0.maxcores,sdcard_play.maxcores $M 1
 	.set	__main__main_tile_1_task_sdcard_play_0.maxtimers,sdcard_play.maxtimers $M 0
 	.set	__main__main_tile_1_task_sdcard_play_0.maxchanends,sdcard_play.maxchanends $M 0
-.Ltmp33:
-	.size	__main__main_tile_1_task_sdcard_play_0, .Ltmp33-__main__main_tile_1_task_sdcard_play_0
+.Ltmp31:
+	.size	__main__main_tile_1_task_sdcard_play_0, .Ltmp31-__main__main_tile_1_task_sdcard_play_0
 .Lfunc_end6:
 	.cfi_endproc
 
@@ -816,21 +788,21 @@ __main__main_tile_1_task_sdcard_play_0: # @__main__main_tile_1_task_sdcard_play_
 	.cc_top __main__main_tile_1_task_decoupler_1.function,__main__main_tile_1_task_decoupler_1
 __main__main_tile_1_task_decoupler_1:   # @__main__main_tile_1_task_decoupler_1
 .Lfunc_begin7:
-	.loc	1 75 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:75:0
+	.loc	1 78 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:78:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
-.Ltmp34:
+.Ltmp32:
 	.cfi_def_cfa_offset 8
-.Ltmp35:
+.Ltmp33:
 	.cfi_offset 15, 0
 	#DEBUG_VALUE: __main__main_tile_1_task_decoupler_1:frame <- R0
 	{
 		ldc r1, 56
 		dualentsp 2
 	}
-	.loc	1 75 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:75:0
-.Ltmp36:
+	.loc	1 78 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:78:0
+.Ltmp34:
 	{
 		add r1, r0, r1
 		nop
@@ -839,13 +811,13 @@ __main__main_tile_1_task_decoupler_1:   # @__main__main_tile_1_task_decoupler_1
 		nop
 		ldw r2, r1[0]
 	}
-	.loc	1 75 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:75:0
+	.loc	1 78 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:78:0
 	{
 		mov r0, r2
 		ldw r1, r0[9]
 	}
-.Ltmp37:
-	.loc	1 75 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:75:0
+.Ltmp35:
+	.loc	1 78 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:78:0
 .Lxta.call_labels1:
 	bl decoupler
 	{
@@ -853,14 +825,14 @@ __main__main_tile_1_task_decoupler_1:   # @__main__main_tile_1_task_decoupler_1
 		retsp 2
 	}
 	# RETURN_REG_HOLDER
-.Ltmp38:
+.Ltmp36:
 	.cc_bottom __main__main_tile_1_task_decoupler_1.function
 	.set	__main__main_tile_1_task_decoupler_1.nstackwords,(decoupler.nstackwords + 2)
 	.set	__main__main_tile_1_task_decoupler_1.maxcores,decoupler.maxcores $M 1
 	.set	__main__main_tile_1_task_decoupler_1.maxtimers,decoupler.maxtimers $M 0
 	.set	__main__main_tile_1_task_decoupler_1.maxchanends,decoupler.maxchanends $M 0
-.Ltmp39:
-	.size	__main__main_tile_1_task_decoupler_1, .Ltmp39-__main__main_tile_1_task_decoupler_1
+.Ltmp37:
+	.size	__main__main_tile_1_task_decoupler_1, .Ltmp37-__main__main_tile_1_task_decoupler_1
 .Lfunc_end7:
 	.cfi_endproc
 
@@ -869,21 +841,21 @@ __main__main_tile_1_task_decoupler_1:   # @__main__main_tile_1_task_decoupler_1
 	.cc_top __main__main_tile_1_task_button_listener_core_2.function,__main__main_tile_1_task_button_listener_core_2
 __main__main_tile_1_task_button_listener_core_2: # @__main__main_tile_1_task_button_listener_core_2
 .Lfunc_begin8:
-	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:76:0
+	.loc	1 79 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:79:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
-.Ltmp40:
+.Ltmp38:
 	.cfi_def_cfa_offset 8
-.Ltmp41:
+.Ltmp39:
 	.cfi_offset 15, 0
 	#DEBUG_VALUE: __main__main_tile_1_task_button_listener_core_2:frame <- R0
 	{
 		ldc r1, 48
 		dualentsp 2
 	}
-	.loc	1 76 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:76:0
-.Ltmp42:
+	.loc	1 79 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:79:0
+.Ltmp40:
 	{
 		add r1, r0, r1
 		nop
@@ -892,28 +864,23 @@ __main__main_tile_1_task_button_listener_core_2: # @__main__main_tile_1_task_but
 		nop
 		ldw r2, r1[0]
 	}
-	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:76:0
+	.loc	1 79 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:79:0
 	{
 		mov r0, r2
 		ldw r1, r0[7]
 	}
-.Ltmp43:
-	.loc	1 76 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:76:0
+.Ltmp41:
+	.loc	1 79 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:79:0
 .Lxta.call_labels2:
-	bl button_listener_core
-	{
-		nop
-		retsp 2
-	}
-	# RETURN_REG_HOLDER
-.Ltmp44:
+	bl _Sbutton_listener_core_0
+.Ltmp42:
 	.cc_bottom __main__main_tile_1_task_button_listener_core_2.function
-	.set	__main__main_tile_1_task_button_listener_core_2.nstackwords,(button_listener_core.nstackwords + 2)
-	.set	__main__main_tile_1_task_button_listener_core_2.maxcores,button_listener_core.maxcores $M 1
-	.set	__main__main_tile_1_task_button_listener_core_2.maxtimers,button_listener_core.maxtimers $M 0
-	.set	__main__main_tile_1_task_button_listener_core_2.maxchanends,button_listener_core.maxchanends $M 0
-.Ltmp45:
-	.size	__main__main_tile_1_task_button_listener_core_2, .Ltmp45-__main__main_tile_1_task_button_listener_core_2
+	.set	__main__main_tile_1_task_button_listener_core_2.nstackwords,(_Sbutton_listener_core_0.nstackwords + 2)
+	.set	__main__main_tile_1_task_button_listener_core_2.maxcores,_Sbutton_listener_core_0.maxcores $M 1
+	.set	__main__main_tile_1_task_button_listener_core_2.maxtimers,_Sbutton_listener_core_0.maxtimers $M 0
+	.set	__main__main_tile_1_task_button_listener_core_2.maxchanends,_Sbutton_listener_core_0.maxchanends $M 0
+.Ltmp43:
+	.size	__main__main_tile_1_task_button_listener_core_2, .Ltmp43-__main__main_tile_1_task_button_listener_core_2
 .Lfunc_end8:
 	.cfi_endproc
 
@@ -922,7 +889,7 @@ __main__main_tile_1_task_button_listener_core_2: # @__main__main_tile_1_task_but
 	.cc_top __main__main_tile_1_task_display_control_core_3.function,__main__main_tile_1_task_display_control_core_3
 __main__main_tile_1_task_display_control_core_3: # @__main__main_tile_1_task_display_control_core_3
 .Lfunc_begin9:
-	.loc	1 85 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:85:0
+	.loc	1 88 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:88:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -930,29 +897,23 @@ __main__main_tile_1_task_display_control_core_3: # @__main__main_tile_1_task_dis
 		nop
 		dualentsp 2
 	}
-.Ltmp46:
+.Ltmp44:
 	.cfi_def_cfa_offset 8
-.Ltmp47:
+.Ltmp45:
 	.cfi_offset 15, 0
 	#DEBUG_VALUE: __main__main_tile_1_task_display_control_core_3:frame <- R0
-	.loc	1 85 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:85:0
-.Ltmp48:
+	.loc	1 88 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:88:0
+.Ltmp46:
 .Lxta.call_labels3:
-	bl display_control_core
-.Ltmp49:
-	{
-		nop
-		retsp 2
-	}
-	# RETURN_REG_HOLDER
-.Ltmp50:
+	bl _Sdisplay_control_core_0
+.Ltmp47:
 	.cc_bottom __main__main_tile_1_task_display_control_core_3.function
-	.set	__main__main_tile_1_task_display_control_core_3.nstackwords,(display_control_core.nstackwords + 2)
-	.set	__main__main_tile_1_task_display_control_core_3.maxcores,display_control_core.maxcores $M 1
-	.set	__main__main_tile_1_task_display_control_core_3.maxtimers,display_control_core.maxtimers $M 0
-	.set	__main__main_tile_1_task_display_control_core_3.maxchanends,display_control_core.maxchanends $M 0
-.Ltmp51:
-	.size	__main__main_tile_1_task_display_control_core_3, .Ltmp51-__main__main_tile_1_task_display_control_core_3
+	.set	__main__main_tile_1_task_display_control_core_3.nstackwords,(_Sdisplay_control_core_0.nstackwords + 2)
+	.set	__main__main_tile_1_task_display_control_core_3.maxcores,_Sdisplay_control_core_0.maxcores $M 1
+	.set	__main__main_tile_1_task_display_control_core_3.maxtimers,_Sdisplay_control_core_0.maxtimers $M 0
+	.set	__main__main_tile_1_task_display_control_core_3.maxchanends,_Sdisplay_control_core_0.maxchanends $M 0
+.Ltmp48:
+	.size	__main__main_tile_1_task_display_control_core_3, .Ltmp48-__main__main_tile_1_task_display_control_core_3
 .Lfunc_end9:
 	.cfi_endproc
 
@@ -968,9 +929,9 @@ __main__main_tile_0:                    # @__main__main_tile_0
 		nop
 		dualentsp 12
 	}
-.Ltmp52:
+.Ltmp49:
 	.cfi_def_cfa_offset 48
-.Ltmp53:
+.Ltmp50:
 	.cfi_offset 15, 0
 	#DEBUG_VALUE: __main__main_tile_0:formal.c_audio6 <- R0
 	#DEBUG_VALUE: __main__main_tile_0:formal.c_dac_control7 <- R1
@@ -1006,8 +967,8 @@ __main__main_tile_0:                    # @__main__main_tile_0
 	.globl	__main__main_tile_0.maxtimers
 	.set	__main__main_tile_0.maxchanends,(0 + __main__main_tile_0_task_ssdac_core_4.maxchanends + __main__main_tile_0_task_qspi_server_5.maxchanends) $M 0
 	.globl	__main__main_tile_0.maxchanends
-.Ltmp54:
-	.size	__main__main_tile_0, .Ltmp54-__main__main_tile_0
+.Ltmp51:
+	.size	__main__main_tile_0, .Ltmp51-__main__main_tile_0
 	.cfi_endproc
 
 	.align	4
@@ -1015,7 +976,7 @@ __main__main_tile_0:                    # @__main__main_tile_0
 	.cc_top __main__main_tile_0_task_ssdac_core_4.function,__main__main_tile_0_task_ssdac_core_4
 __main__main_tile_0_task_ssdac_core_4:  # @__main__main_tile_0_task_ssdac_core_4
 .Lfunc_begin11:
-	.loc	1 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:86:0
+	.loc	1 89 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:89:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1023,23 +984,23 @@ __main__main_tile_0_task_ssdac_core_4:  # @__main__main_tile_0_task_ssdac_core_4
 		nop
 		dualentsp 2
 	}
-.Ltmp55:
+.Ltmp52:
 	.cfi_def_cfa_offset 8
-.Ltmp56:
+.Ltmp53:
 	.cfi_offset 15, 0
 	#DEBUG_VALUE: __main__main_tile_0_task_ssdac_core_4:frame <- R0
 	{
 		nop
 		ldw r2, r0[10]
 	}
-	.loc	1 86 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:86:0
-.Ltmp57:
+	.loc	1 89 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:89:0
+.Ltmp54:
 	{
 		mov r0, r2
 		ldw r1, r0[8]
 	}
-.Ltmp58:
-	.loc	1 86 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:86:0
+.Ltmp55:
+	.loc	1 89 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:89:0
 .Lxta.call_labels4:
 	bl ssdac_core
 	{
@@ -1047,14 +1008,14 @@ __main__main_tile_0_task_ssdac_core_4:  # @__main__main_tile_0_task_ssdac_core_4
 		retsp 2
 	}
 	# RETURN_REG_HOLDER
-.Ltmp59:
+.Ltmp56:
 	.cc_bottom __main__main_tile_0_task_ssdac_core_4.function
 	.set	__main__main_tile_0_task_ssdac_core_4.nstackwords,(ssdac_core.nstackwords + 2)
 	.set	__main__main_tile_0_task_ssdac_core_4.maxcores,ssdac_core.maxcores $M 1
 	.set	__main__main_tile_0_task_ssdac_core_4.maxtimers,ssdac_core.maxtimers $M 0
 	.set	__main__main_tile_0_task_ssdac_core_4.maxchanends,ssdac_core.maxchanends $M 0
-.Ltmp60:
-	.size	__main__main_tile_0_task_ssdac_core_4, .Ltmp60-__main__main_tile_0_task_ssdac_core_4
+.Ltmp57:
+	.size	__main__main_tile_0_task_ssdac_core_4, .Ltmp57-__main__main_tile_0_task_ssdac_core_4
 .Lfunc_end11:
 	.cfi_endproc
 
@@ -1063,7 +1024,7 @@ __main__main_tile_0_task_ssdac_core_4:  # @__main__main_tile_0_task_ssdac_core_4
 	.cc_top __main__main_tile_0_task_qspi_server_5.function,__main__main_tile_0_task_qspi_server_5
 __main__main_tile_0_task_qspi_server_5: # @__main__main_tile_0_task_qspi_server_5
 .Lfunc_begin12:
-	.loc	1 98 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:98:0
+	.loc	1 101 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:101:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1071,27 +1032,27 @@ __main__main_tile_0_task_qspi_server_5: # @__main__main_tile_0_task_qspi_server_
 		nop
 		dualentsp 2
 	}
-.Ltmp61:
+.Ltmp58:
 	.cfi_def_cfa_offset 8
-.Ltmp62:
+.Ltmp59:
 	.cfi_offset 15, 0
 	#DEBUG_VALUE: __main__main_tile_0_task_qspi_server_5:frame <- R0
 	{
 		nop
 		ldw r0, r0[0]
 	}
-.Ltmp63:
-	.loc	1 98 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:98:0
+.Ltmp60:
+	.loc	1 101 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc:101:0
 .Lxta.call_labels5:
 	bl _Sqspi_server_0
-.Ltmp64:
+.Ltmp61:
 	.cc_bottom __main__main_tile_0_task_qspi_server_5.function
 	.set	__main__main_tile_0_task_qspi_server_5.nstackwords,(_Sqspi_server_0.nstackwords + 2)
 	.set	__main__main_tile_0_task_qspi_server_5.maxcores,_Sqspi_server_0.maxcores $M 1
 	.set	__main__main_tile_0_task_qspi_server_5.maxtimers,_Sqspi_server_0.maxtimers $M 0
 	.set	__main__main_tile_0_task_qspi_server_5.maxchanends,_Sqspi_server_0.maxchanends $M 0
-.Ltmp65:
-	.size	__main__main_tile_0_task_qspi_server_5, .Ltmp65-__main__main_tile_0_task_qspi_server_5
+.Ltmp62:
+	.size	__main__main_tile_0_task_qspi_server_5, .Ltmp62-__main__main_tile_0_task_qspi_server_5
 .Lfunc_end12:
 	.cfi_endproc
 
@@ -1193,9 +1154,9 @@ par.desc.2:
 .Linfo_string27:
 .asciiz"client_state"
 .Linfo_string28:
-.asciiz"__TYPE_18"
+.asciiz"__TYPE_29"
 .Linfo_string29:
-.asciiz"__TYPE_17"
+.asciiz"__TYPE_28"
 .Linfo_string30:
 .asciiz"c_dac_control"
 .Linfo_string31:
@@ -1209,9 +1170,9 @@ par.desc.2:
 .Linfo_string35:
 .asciiz"frame.1"
 .Linfo_string36:
-.asciiz"__TYPE_16"
+.asciiz"__TYPE_27"
 .Linfo_string37:
-.asciiz"__TYPE_15"
+.asciiz"__TYPE_26"
 .Linfo_string38:
 .asciiz"frame.0"
 .Linfo_string39:
@@ -1267,7 +1228,7 @@ par.desc.2:
 	.long	.Linfo_string10         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string10         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	55                      # DW_AT_decl_line
+	.byte	54                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	3                       # Abbrev [3] 0x32:0x20 DW_TAG_subprogram
 	.long	.Ldebug_ranges1         # DW_AT_ranges
@@ -1277,7 +1238,7 @@ par.desc.2:
 	.long	.Linfo_string11         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string11         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	74                      # DW_AT_decl_line
+	.byte	73                      # DW_AT_decl_line
 	.byte	4                       # Abbrev [4] 0x44:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc0            # DW_AT_location
 	.long	.Linfo_string19         # DW_AT_name
@@ -1291,7 +1252,7 @@ par.desc.2:
 	.long	.Linfo_string12         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string12         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	75                      # DW_AT_decl_line
+	.byte	78                      # DW_AT_decl_line
 	.byte	4                       # Abbrev [4] 0x64:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc1            # DW_AT_location
 	.long	.Linfo_string19         # DW_AT_name
@@ -1305,7 +1266,7 @@ par.desc.2:
 	.long	.Linfo_string13         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string13         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	76                      # DW_AT_decl_line
+	.byte	79                      # DW_AT_decl_line
 	.byte	4                       # Abbrev [4] 0x84:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc2            # DW_AT_location
 	.long	.Linfo_string19         # DW_AT_name
@@ -1319,7 +1280,7 @@ par.desc.2:
 	.long	.Linfo_string14         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string14         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	85                      # DW_AT_decl_line
+	.byte	88                      # DW_AT_decl_line
 	.byte	4                       # Abbrev [4] 0xa4:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc3            # DW_AT_location
 	.long	.Linfo_string19         # DW_AT_name
@@ -1333,7 +1294,7 @@ par.desc.2:
 	.long	.Linfo_string16         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string16         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	86                      # DW_AT_decl_line
+	.byte	89                      # DW_AT_decl_line
 	.byte	4                       # Abbrev [4] 0xc4:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc4            # DW_AT_location
 	.long	.Linfo_string19         # DW_AT_name
@@ -1347,7 +1308,7 @@ par.desc.2:
 	.long	.Linfo_string17         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string17         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	98                      # DW_AT_decl_line
+	.byte	101                     # DW_AT_decl_line
 	.byte	4                       # Abbrev [4] 0xe4:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc5            # DW_AT_location
 	.long	.Linfo_string19         # DW_AT_name
@@ -1491,54 +1452,54 @@ par.desc.2:
 	.long	.Linfo_string35         # DW_AT_name
 	.byte	60                      # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	74                      # DW_AT_decl_line
+	.byte	73                      # DW_AT_decl_line
 	.byte	11                      # Abbrev [11] 0x24f:0xc DW_TAG_member
 	.long	.Linfo_string20         # DW_AT_name
 	.long	652                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	74                      # DW_AT_decl_line
+	.byte	73                      # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	11                      # Abbrev [11] 0x25b:0xc DW_TAG_member
 	.long	.Linfo_string30         # DW_AT_name
 	.long	778                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	74                      # DW_AT_decl_line
+	.byte	73                      # DW_AT_decl_line
 	.byte	28                      # DW_AT_data_member_location
 	.byte	11                      # Abbrev [11] 0x267:0xc DW_TAG_member
 	.long	.Linfo_string32         # DW_AT_name
 	.long	778                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	74                      # DW_AT_decl_line
+	.byte	73                      # DW_AT_decl_line
 	.byte	36                      # DW_AT_data_member_location
 	.byte	11                      # Abbrev [11] 0x273:0xc DW_TAG_member
 	.long	.Linfo_string33         # DW_AT_name
 	.long	778                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	74                      # DW_AT_decl_line
+	.byte	73                      # DW_AT_decl_line
 	.byte	44                      # DW_AT_data_member_location
 	.byte	11                      # Abbrev [11] 0x27f:0xc DW_TAG_member
 	.long	.Linfo_string34         # DW_AT_name
 	.long	778                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	74                      # DW_AT_decl_line
+	.byte	73                      # DW_AT_decl_line
 	.byte	52                      # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	10                      # Abbrev [10] 0x28c:0x21 DW_TAG_structure_type
 	.long	.Linfo_string29         # DW_AT_name
 	.byte	28                      # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	74                      # DW_AT_decl_line
+	.byte	73                      # DW_AT_decl_line
 	.byte	11                      # Abbrev [11] 0x294:0xc DW_TAG_member
 	.long	.Linfo_string21         # DW_AT_name
 	.long	685                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	74                      # DW_AT_decl_line
+	.byte	73                      # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	11                      # Abbrev [11] 0x2a0:0xc DW_TAG_member
 	.long	.Linfo_string24         # DW_AT_name
 	.long	712                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	74                      # DW_AT_decl_line
+	.byte	73                      # DW_AT_decl_line
 	.byte	8                       # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	12                      # Abbrev [12] 0x2ad:0xd DW_TAG_array_type
@@ -1560,18 +1521,18 @@ par.desc.2:
 	.long	.Linfo_string28         # DW_AT_name
 	.byte	20                      # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	74                      # DW_AT_decl_line
+	.byte	73                      # DW_AT_decl_line
 	.byte	11                      # Abbrev [11] 0x2d0:0xc DW_TAG_member
 	.long	.Linfo_string25         # DW_AT_name
 	.long	745                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	74                      # DW_AT_decl_line
+	.byte	73                      # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	11                      # Abbrev [11] 0x2dc:0xc DW_TAG_member
 	.long	.Linfo_string27         # DW_AT_name
 	.long	765                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	74                      # DW_AT_decl_line
+	.byte	73                      # DW_AT_decl_line
 	.byte	4                       # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	12                      # Abbrev [12] 0x2e9:0xd DW_TAG_array_type
@@ -1609,60 +1570,60 @@ par.desc.2:
 	.long	.Linfo_string38         # DW_AT_name
 	.byte	44                      # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	86                      # DW_AT_decl_line
+	.byte	89                      # DW_AT_decl_line
 	.byte	11                      # Abbrev [11] 0x32b:0xc DW_TAG_member
 	.long	.Linfo_string20         # DW_AT_name
 	.long	848                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	86                      # DW_AT_decl_line
+	.byte	89                      # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	11                      # Abbrev [11] 0x337:0xc DW_TAG_member
 	.long	.Linfo_string30         # DW_AT_name
 	.long	778                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	86                      # DW_AT_decl_line
+	.byte	89                      # DW_AT_decl_line
 	.byte	28                      # DW_AT_data_member_location
 	.byte	11                      # Abbrev [11] 0x343:0xc DW_TAG_member
 	.long	.Linfo_string32         # DW_AT_name
 	.long	778                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	86                      # DW_AT_decl_line
+	.byte	89                      # DW_AT_decl_line
 	.byte	36                      # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	10                      # Abbrev [10] 0x350:0x21 DW_TAG_structure_type
 	.long	.Linfo_string37         # DW_AT_name
 	.byte	28                      # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	86                      # DW_AT_decl_line
+	.byte	89                      # DW_AT_decl_line
 	.byte	11                      # Abbrev [11] 0x358:0xc DW_TAG_member
 	.long	.Linfo_string21         # DW_AT_name
 	.long	685                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	86                      # DW_AT_decl_line
+	.byte	89                      # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	11                      # Abbrev [11] 0x364:0xc DW_TAG_member
 	.long	.Linfo_string24         # DW_AT_name
 	.long	881                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	86                      # DW_AT_decl_line
+	.byte	89                      # DW_AT_decl_line
 	.byte	8                       # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	10                      # Abbrev [10] 0x371:0x21 DW_TAG_structure_type
 	.long	.Linfo_string36         # DW_AT_name
 	.byte	20                      # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	86                      # DW_AT_decl_line
+	.byte	89                      # DW_AT_decl_line
 	.byte	11                      # Abbrev [11] 0x379:0xc DW_TAG_member
 	.long	.Linfo_string25         # DW_AT_name
 	.long	745                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	86                      # DW_AT_decl_line
+	.byte	89                      # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	11                      # Abbrev [11] 0x385:0xc DW_TAG_member
 	.long	.Linfo_string27         # DW_AT_name
 	.long	765                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	86                      # DW_AT_decl_line
+	.byte	89                      # DW_AT_decl_line
 	.byte	4                       # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	14                      # Abbrev [14] 0x392:0x7 DW_TAG_base_type
@@ -1959,62 +1920,62 @@ par.desc.2:
 	.section	.debug_loc,"",@progbits
 .Ldebug_loc0:
 	.long	.Lfunc_begin6
-	.long	.Ltmp31
-.Lset0 = .Ltmp67-.Ltmp66                # Loc expr size
+	.long	.Ltmp29
+.Lset0 = .Ltmp64-.Ltmp63                # Loc expr size
 	.short	.Lset0
-.Ltmp66:
+.Ltmp63:
 	.byte	80                      # DW_OP_reg0
-.Ltmp67:
+.Ltmp64:
 	.long	0
 	.long	0
 .Ldebug_loc1:
 	.long	.Lfunc_begin7
-	.long	.Ltmp37
-.Lset1 = .Ltmp69-.Ltmp68                # Loc expr size
+	.long	.Ltmp35
+.Lset1 = .Ltmp66-.Ltmp65                # Loc expr size
 	.short	.Lset1
-.Ltmp68:
+.Ltmp65:
 	.byte	80                      # DW_OP_reg0
-.Ltmp69:
+.Ltmp66:
 	.long	0
 	.long	0
 .Ldebug_loc2:
 	.long	.Lfunc_begin8
-	.long	.Ltmp43
-.Lset2 = .Ltmp71-.Ltmp70                # Loc expr size
+	.long	.Ltmp41
+.Lset2 = .Ltmp68-.Ltmp67                # Loc expr size
 	.short	.Lset2
-.Ltmp70:
+.Ltmp67:
 	.byte	80                      # DW_OP_reg0
-.Ltmp71:
+.Ltmp68:
 	.long	0
 	.long	0
 .Ldebug_loc3:
 	.long	.Lfunc_begin9
-	.long	.Ltmp49
-.Lset3 = .Ltmp73-.Ltmp72                # Loc expr size
+	.long	.Ltmp47
+.Lset3 = .Ltmp70-.Ltmp69                # Loc expr size
 	.short	.Lset3
-.Ltmp72:
+.Ltmp69:
 	.byte	80                      # DW_OP_reg0
-.Ltmp73:
+.Ltmp70:
 	.long	0
 	.long	0
 .Ldebug_loc4:
 	.long	.Lfunc_begin11
-	.long	.Ltmp58
-.Lset4 = .Ltmp75-.Ltmp74                # Loc expr size
+	.long	.Ltmp55
+.Lset4 = .Ltmp72-.Ltmp71                # Loc expr size
 	.short	.Lset4
-.Ltmp74:
+.Ltmp71:
 	.byte	80                      # DW_OP_reg0
-.Ltmp75:
+.Ltmp72:
 	.long	0
 	.long	0
 .Ldebug_loc5:
 	.long	.Lfunc_begin12
-	.long	.Ltmp63
-.Lset5 = .Ltmp77-.Ltmp76                # Loc expr size
+	.long	.Ltmp60
+.Lset5 = .Ltmp74-.Ltmp73                # Loc expr size
 	.short	.Lset5
-.Ltmp76:
+.Ltmp73:
 	.byte	80                      # DW_OP_reg0
-.Ltmp77:
+.Ltmp74:
 	.long	0
 	.long	0
 	.section	.debug_pubnames,"",@progbits
@@ -2067,30 +2028,30 @@ par.desc.2:
 	.long	.L.debug_info_begin0    # Offset of Compilation Unit Info
 .Lset9 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
 	.long	.Lset9
+	.long	931                     # DIE offset
+.asciiz"unsigned char"                  # External Name
 	.long	698                     # DIE offset
 .asciiz"interface"                      # External Name
 	.long	791                     # DIE offset
 .asciiz"chanend"                        # External Name
 	.long	943                     # DIE offset
 .asciiz"yieldArg"                       # External Name
-	.long	848                     # DIE offset
-.asciiz"__TYPE_15"                      # External Name
-	.long	881                     # DIE offset
-.asciiz"__TYPE_16"                      # External Name
-	.long	652                     # DIE offset
-.asciiz"__TYPE_17"                      # External Name
-	.long	712                     # DIE offset
-.asciiz"__TYPE_18"                      # External Name
-	.long	758                     # DIE offset
-.asciiz"unsigned int"                   # External Name
-	.long	583                     # DIE offset
-.asciiz"frame.1"                        # External Name
 	.long	914                     # DIE offset
 .asciiz"int"                            # External Name
+	.long	848                     # DIE offset
+.asciiz"__TYPE_26"                      # External Name
+	.long	758                     # DIE offset
+.asciiz"unsigned int"                   # External Name
+	.long	652                     # DIE offset
+.asciiz"__TYPE_28"                      # External Name
+	.long	583                     # DIE offset
+.asciiz"frame.1"                        # External Name
+	.long	712                     # DIE offset
+.asciiz"__TYPE_29"                      # External Name
 	.long	803                     # DIE offset
 .asciiz"frame.0"                        # External Name
-	.long	931                     # DIE offset
-.asciiz"unsigned char"                  # External Name
+	.long	881                     # DIE offset
+.asciiz"__TYPE_27"                      # External Name
 	.long	0                       # End Mark
 .LpubTypes_end0:
 	.cfi_sections .debug_frame
@@ -2102,11 +2063,11 @@ par.desc.2:
 	.typestring _i.qspi_access._chan_yield.write, "f{0}(&(s(yieldArg){m(dest){chd},m(yield){ui}}),si,si,&(a(:uc)))"
 	.overlay_reference _i.qspi_access._chan_yield.write,_i.qspi_access._client_call_y.fns
 	.typestring ssdac_core, "f{0}(chd,n:chd)"
-	.typestring button_listener_core, "f{0}(n:chd,n:chd)"
-	.typestring display_control_core, "f{0}(0)"
+	.typestring _Sbutton_listener_core_0, "f{0}(n:chd,n:chd)"
+	.typestring _Sqspi_server_0, "f{0}(is(qspi_access){m(write){f{0}(si,si,&(a(:uc)))},m(read){f{0}(si,si,&(a(:uc)))}})"
 	.typestring sdcard_play, "f{0}(chd,chd,ic(qspi_access){m(write){f{0}(si,si,&(a(:uc)))},m(read){f{0}(si,si,&(a(:uc)))}})"
 	.typestring decoupler, "f{0}(chd,chd)"
-	.typestring _Sqspi_server_0, "f{0}(is(qspi_access){m(write){f{0}(si,si,&(a(:uc)))},m(read){f{0}(si,si,&(a(:uc)))}})"
+	.typestring _Sdisplay_control_core_0, "f{0}(0)"
 	.typestring thread_speed, "f{0}(0)"
 	.typestring __main__main_tile_1, "f{0}(chd,chd,chd)"
 	.typestring __main__main_tile_0, "f{0}(chd,chd,chd)"
@@ -2119,37 +2080,37 @@ par.desc.2:
 .cc_top cc_0,.Lxta.call_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
-	.long	74
+	.long	73
 	.long	.Lxta.call_labels0
 .cc_bottom cc_0
 .cc_top cc_1,.Lxta.call_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
-	.long	75
+	.long	78
 	.long	.Lxta.call_labels1
 .cc_bottom cc_1
 .cc_top cc_2,.Lxta.call_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
-	.long	76
+	.long	79
 	.long	.Lxta.call_labels2
 .cc_bottom cc_2
 .cc_top cc_3,.Lxta.call_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
-	.long	85
+	.long	88
 	.long	.Lxta.call_labels3
 .cc_bottom cc_3
 .cc_top cc_4,.Lxta.call_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
-	.long	86
+	.long	89
 	.long	.Lxta.call_labels4
 .cc_bottom cc_4
 .cc_top cc_5,.Lxta.call_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
-	.long	98
+	.long	101
 	.long	.Lxta.call_labels5
 .cc_bottom cc_5
 .Lentries_end1:
@@ -2162,22 +2123,22 @@ par.desc.2:
 .cc_top cc_6,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
-	.long	55
-	.long	55
+	.long	54
+	.long	54
 	.long	.Lxtalabel0
 .cc_bottom cc_6
 .cc_top cc_7,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
-	.long	60
-	.long	60
+	.long	59
+	.long	59
 	.long	.Lxtalabel0
 .cc_bottom cc_7
 .cc_top cc_8,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/main.xc"
 	.byte	0
-	.long	62
-	.long	62
+	.long	61
+	.long	61
 	.long	.Lxtalabel0
 .cc_bottom cc_8
 .Lentries_end3:

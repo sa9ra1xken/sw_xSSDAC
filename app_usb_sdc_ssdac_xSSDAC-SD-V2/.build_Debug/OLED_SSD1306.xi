@@ -423,6 +423,9 @@ unsigned get_logical_core_id(void);
 # 12 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 1
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 1
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 2
 # 14 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src/OLED_SSD1306.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
@@ -1187,7 +1190,7 @@ size_t _safe_strnlen(const char s[], size_t n);
 # 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h"
 # 1 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 1
 # 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\i2c_conf.h" 1
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\i2c_conf.h" 1
 # 12 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 2
 # 92 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
 struct r_i2c {
@@ -1420,7 +1423,7 @@ unsigned time;
 
 char * unsafe string_ptr[4];
 
-int found_eol[4];
+int terminator_found_before_eol[4];
 char raster_buffer[8 * 128];
 
 int display_offset[4];
@@ -1479,21 +1482,23 @@ void send_page(int page, int offset){
 
 void OLED_SSD1306_put_string(int row, char string[]){
 
-    if (string[0]!='\0'){
-        unsafe {string_ptr[row] = string;}
+    if (string[0]!='\0') {
+        unsafe {string_ptr[row] = string;
     }
+}
+
     display_offset[row] = 0;
     rendering_x[row] = 0;
 
-    found_eol[row] = 0;
+    terminator_found_before_eol[row] = 0;
     for (rendering_col[row] = 0 ; rendering_col[row] < 16 ; rendering_col[row]++){
         unsigned char code;
         unsafe {code = string_ptr[row][rendering_col[row]];}
 
         if ( code == '\0') {
-            found_eol[row] = 1;
+            terminator_found_before_eol[row] = 1;
         }
-        if (found_eol[row] == 1) code = ' ';
+        if (terminator_found_before_eol[row] == 1) code = ' ';
 
         unsigned int char_index = 0;
         if (code > 0x20 && code < 0x80) char_index = (code - 0x20) << 4;
@@ -1515,7 +1520,7 @@ void OLED_SSD1306_put_string(int row, char string[]){
 
 RC_SCROLL OLED_SSD1306_shift_left(const int row){
 
-
+    if (terminator_found_before_eol[row]) return _END_OF_LINE;
 
     unsigned char code;
     unsafe {code = string_ptr[row][rendering_col[row]];}

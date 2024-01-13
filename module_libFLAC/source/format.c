@@ -37,6 +37,8 @@
 #include <stdio.h>
 #include <stdlib.h> /* for qsort() */
 #include <string.h> /* for memset() */
+
+#include "xassert.h"
 #include "FLAC/assert.h"
 #include "FLAC/format.h"
 #include "share/alloc.h"

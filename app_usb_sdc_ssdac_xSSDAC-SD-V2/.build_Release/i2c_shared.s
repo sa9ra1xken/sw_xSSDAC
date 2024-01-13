@@ -540,7 +540,7 @@ i2c_swlock:
 .Linfo_string1:
 .asciiz"C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.c"
 .Linfo_string2:
-.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 .Linfo_string3:
 .asciiz"i2c_swlock"
 .Linfo_string4:

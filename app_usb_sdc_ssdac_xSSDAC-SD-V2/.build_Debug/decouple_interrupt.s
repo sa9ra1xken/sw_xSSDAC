@@ -66,7 +66,7 @@ kret
 .asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Debug"
 	.section	.debug_info,"",@progbits
 .L.debug_info_begin0:
-	.long	26
+	.long	27
 	.short	3
 	.long	.Lsection_abbrev
 	.byte	4
@@ -76,6 +76,7 @@ kret
 	.long	.Linfo_string1
 	.long	.Lline_table_start0
 	.long	.Linfo_string2
+	.byte	1
 .L.debug_info_end0:
 	.section	.debug_abbrev,"",@progbits
 	.byte	1
@@ -91,6 +92,8 @@ kret
 	.byte	6
 	.byte	27
 	.byte	14
+	.ascii	"\341\177"
+	.byte	12
 	.byte	0
 	.byte	0
 	.byte	0

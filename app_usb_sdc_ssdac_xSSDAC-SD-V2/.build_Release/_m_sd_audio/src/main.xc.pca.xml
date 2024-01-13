@@ -2,10 +2,6 @@
 <fDef name="delay_microseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="delay_milliseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="delay_seconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
-<fDef name="main" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
-<fDef name="read" global="true" interface="qspi_access" noreturn="false" doNotSpecialize="false" numParams="3"/>
-<fDef name="thread_speed" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
-<fDef name="write" global="true" interface="qspi_access" noreturn="false" doNotSpecialize="false" numParams="3"/>
 <fCall name="delay_ticks_longlong" global="true" numArgs="1">
   <arg num="0">
     <values>
@@ -24,70 +20,6 @@
   <arg num="0">
     <values>
       <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="__builtin_set_thread_norm" global="true" numArgs="0">
-</fCall>
-<fCall name="sdcard_play" global="true" numArgs="3" impId="0">
-  <arg num="0">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="1">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="2">
-    <values>
-      <value type="interface"><interfaceInfo index="0" type="chan" isYielding="false"/></value>
-    </values>
-  </arg>
-</fCall>
-<fCall name="decoupler" global="true" numArgs="2" impId="1">
-  <arg num="0">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="1">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="button_listener" global="true" numArgs="2" impId="2">
-  <arg num="0">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="1">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="display_control" global="true" numArgs="0" impId="3">
-</fCall>
-<fCall name="audio_xss" global="true" numArgs="2" impId="4">
-  <arg num="0">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="1">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="qspi_server" global="true" numArgs="1" impId="5">
-  <arg num="0">
-    <values>
-      <value type="interface"><interfaceInfo index="0" type="chan" isYielding="false"/></value>
     </values>
   </arg>
 </fCall>

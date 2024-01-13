@@ -7,7 +7,16 @@
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitmath.c" 2
 # 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitmath.c"
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 1
-# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 33 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 1 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h" 1
+# 100 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h"
+inline int xassert_msg(const char msg[]) { return 1; }
+# 34 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
+
+
+
+
+
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/ordinals.h" 1
 # 55 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/ordinals.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h" 1 3
@@ -89,13 +98,13 @@ typedef uint64_t FLAC__uint64;
 typedef int FLAC__bool;
 
 typedef FLAC__uint8 FLAC__byte;
-# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
+# 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/assert.h" 1
 # 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/assert.h"
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 1
 # 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 2
-# 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../share/compat.h" 1
 # 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../share/compat.h"
@@ -588,7 +597,7 @@ struct utimbuf
 # 230 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../share/compat.h"
 int flac_snprintf(char *str, size_t size, const char *fmt, ...);
 int flac_vsnprintf(char *str, size_t size, const char *fmt, va_list va);
-# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
+# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
 
 
 
@@ -625,14 +634,14 @@ static inline uint32_t FLAC__clz_soft_uint32(FLAC__uint32 word)
 static inline uint32_t FLAC__clz_uint32(FLAC__uint32 v)
 {
 
- assert(v > 0);
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
 
 
 
 
  return __builtin_clz(v);
-# 94 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 96 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -645,10 +654,10 @@ static inline uint32_t FLAC__clz_soft_uint64(FLAC__uint64 word)
 static inline uint32_t FLAC__clz_uint64(FLAC__uint64 v)
 {
 
- assert(v > 0);
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
  return __builtin_clzll(v);
-# 118 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 120 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -665,21 +674,21 @@ static inline uint32_t FLAC__clz2_uint64(FLAC__uint64 v)
   return 64;
  return FLAC__clz_uint64(v);
 }
-# 158 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 160 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 static inline uint32_t FLAC__bitmath_ilog2(FLAC__uint32 v)
 {
- assert(v > 0);
-# 170 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+ do { if (!(v > 0)) __builtin_trap();} while(0);
+# 172 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
  return FLAC__clz_uint32(v) ^ 31U;
 
 }
 
 static inline uint32_t FLAC__bitmath_ilog2_wide(FLAC__uint64 v)
 {
- assert(v > 0);
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
  return __builtin_clzll(v) ^ 63U;
-# 208 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 210 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 uint32_t FLAC__bitmath_silog2(FLAC__int64 v);

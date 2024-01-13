@@ -870,11 +870,16 @@ char *strupr (char *);
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys/string.h" 1 3
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 2 3
 # 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
+
+# 1 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h" 1
+# 100 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h"
+inline int xassert_msg(const char msg[]) { return 1; }
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h" 1
 # 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h"
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 1
 # 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 2
-# 41 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h" 1
 # 36 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/export.h" 1
@@ -1619,7 +1624,7 @@ extern const uint32_t FLAC__STREAM_METADATA_LENGTH_LEN;
          FLAC__bool FLAC__format_cuesheet_is_legal(const FLAC__StreamMetadata_CueSheet *cue_sheet, FLAC__bool check_cd_da_subset, const char **violation);
 # 1024 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h"
          FLAC__bool FLAC__format_picture_is_legal(const FLAC__StreamMetadata_Picture *picture, const char **violation);
-# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
+# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h" 1
 # 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\limits.h" 1 3
@@ -2058,7 +2063,7 @@ static inline void *safe_realloc_nofree_muladd2_(void *ptr, size_t size1, size_t
   return 0;
  return safe_realloc_nofree_mul_2op_(ptr, size1, size2);
 }
-# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
+# 45 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/format.h" 1
 # 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/format.h"
@@ -2067,10 +2072,10 @@ uint32_t FLAC__format_get_max_rice_partition_order_from_blocksize_limited_max_an
 void FLAC__format_entropy_coding_method_partitioned_rice_contents_init(FLAC__EntropyCodingMethod_PartitionedRiceContents *object);
 void FLAC__format_entropy_coding_method_partitioned_rice_contents_clear(FLAC__EntropyCodingMethod_PartitionedRiceContents *object);
 FLAC__bool FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_size(FLAC__EntropyCodingMethod_PartitionedRiceContents *object, uint32_t max_partition_order);
-# 45 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
+# 47 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/macros.h" 1
-# 46 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
-# 58 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c"
+# 48 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c" 2
+# 60 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c"
          const char *FLAC__VERSION_STRING = "012345";
          const char *FLAC__VENDOR_STRING = "reference libFLAC " "012345" " 20221022";
 
@@ -2262,7 +2267,7 @@ FLAC__bool FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_s
  FLAC__uint64 prev_sample_number = 0;
  FLAC__bool got_prev = 0;
 
- assert(0 != seek_table);
+ do { if (!(0 != seek_table)) __builtin_trap();} while(0);
 
  for(i = 0; i < seek_table->num_points; i++) {
   if(got_prev) {
@@ -2297,7 +2302,7 @@ static int seekpoint_compare_(const FLAC__StreamMetadata_SeekPoint *l, const FLA
  uint32_t i, j;
  FLAC__bool first;
 
- assert(0 != seek_table);
+ do { if (!(0 != seek_table)) __builtin_trap();} while(0);
 
  if (seek_table->num_points == 0)
   return 0;
@@ -2335,7 +2340,7 @@ static int seekpoint_compare_(const FLAC__StreamMetadata_SeekPoint *l, const FLA
 
 static uint32_t utf8len_(const FLAC__byte *utf8)
 {
- assert(0 != utf8);
+ do { if (!(0 != utf8)) __builtin_trap();} while(0);
  if ((utf8[0] & 0x80) == 0) {
   return 1;
  }
@@ -2535,7 +2540,7 @@ static uint32_t utf8len_(const FLAC__byte *utf8)
 
  return 1;
 }
-# 538 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c"
+# 540 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/format.c"
 uint32_t FLAC__format_get_max_rice_partition_order_from_blocksize(uint32_t blocksize)
 {
  uint32_t max_rice_partition_order = 0;
@@ -2553,7 +2558,7 @@ uint32_t FLAC__format_get_max_rice_partition_order_from_blocksize_limited_max_an
  while(max_rice_partition_order > 0 && (blocksize >> max_rice_partition_order) <= predictor_order)
   max_rice_partition_order--;
 
- assert((max_rice_partition_order == 0 && blocksize >= predictor_order) || (max_rice_partition_order > 0 && blocksize >> max_rice_partition_order > predictor_order));
+ do { if (!((max_rice_partition_order == 0 && blocksize >= predictor_order) || (max_rice_partition_order > 0 && blocksize >> max_rice_partition_order > predictor_order))) __builtin_trap();} while(0);
 
 
 
@@ -2563,7 +2568,7 @@ uint32_t FLAC__format_get_max_rice_partition_order_from_blocksize_limited_max_an
 
 void FLAC__format_entropy_coding_method_partitioned_rice_contents_init(FLAC__EntropyCodingMethod_PartitionedRiceContents *object)
 {
- assert(0 != object);
+ do { if (!(0 != object)) __builtin_trap();} while(0);
 
  object->parameters = 0;
  object->raw_bits = 0;
@@ -2572,7 +2577,7 @@ void FLAC__format_entropy_coding_method_partitioned_rice_contents_init(FLAC__Ent
 
 void FLAC__format_entropy_coding_method_partitioned_rice_contents_clear(FLAC__EntropyCodingMethod_PartitionedRiceContents *object)
 {
- assert(0 != object);
+ do { if (!(0 != object)) __builtin_trap();} while(0);
 
  if(0 != object->parameters)
   free(object->parameters);
@@ -2588,7 +2593,7 @@ void FLAC__format_entropy_coding_method_partitioned_rice_contents_clear(FLAC__En
 
 FLAC__bool FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_size(FLAC__EntropyCodingMethod_PartitionedRiceContents *object, uint32_t max_partition_order)
 {
- assert(0 != object);
+ do { if (!(0 != object)) __builtin_trap();} while(0);
 
  if(object->capacity_by_order < max_partition_order || object->parameters == ((void*)0) || object->raw_bits == ((void*)0)) {
   if(0 == (object->parameters = safe_realloc_(object->parameters, sizeof(uint32_t)*(1 << max_partition_order))))

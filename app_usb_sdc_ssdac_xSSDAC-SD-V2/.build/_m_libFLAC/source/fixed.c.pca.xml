@@ -1,7 +1,6 @@
 <preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/fixed.c">
   <fCall global="true" name="FLAC__fixed_compute_best_predictor"/>
   <fCall global="true" name="FLAC__fixed_compute_best_predictor.nstackwords"/>
-  <fCall global="true" name="assert.nstackwords"/>
   <fCall global="true" name="__muldf3.nstackwords"/>
   <fCall global="true" name="__floatunsidf.nstackwords"/>
   <fCall global="true" name="log.nstackwords"/>
@@ -60,7 +59,6 @@
   <fCall global="true" name="FLAC__fixed_restore_signal_wide_33bit.maxcores"/>
   <fCall global="true" name="FLAC__fixed_restore_signal_wide_33bit.maxtimers"/>
   <fCall global="true" name="FLAC__fixed_restore_signal_wide_33bit.maxchanends"/>
-  <fCall global="true" name="assert"/>
   <fCall global="true" name="log"/>
   <fCall global="true" name="__floatunsidf"/>
   <fCall global="true" name="__muldf3"/>

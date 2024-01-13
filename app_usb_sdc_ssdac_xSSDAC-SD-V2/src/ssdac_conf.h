@@ -8,9 +8,11 @@
 #ifndef SSDAC_CONF_H_
 #define SSDAC_CONF_H_
 
-#define _EXCLUDE_MODULE_SDC_AUDIO_MAIN  //added by sakurai for SSDAC
-#define _USB_AUDIO_USE_DISPLAY          //added by sakurai for SSDAC
-#define _SDC_AUDIO_USE_DISPLAY          //added by sakurai for SSDAC
+#define _EXCLUDE_MODULE_SDC_AUDIO_MAIN
+#define _USB_AUDIO_USE_DISPLAY
+#define _SDC_AUDIO_USE_DISPLAY
+
+//#define _SDCARD_PLAYER_HANDLES_CONTEXT_BOOKMARK
 
 #define NUM_SSDAC_CHAN    2     /* Number of channels from host to device */
 

@@ -60,13 +60,13 @@ FLAC__bitmath_silog2:
 	.loc	1 71 2
 	xor r1, r2, r1
 	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private\\bitmath.h"
-	.loc	2 178 9
+	.loc	2 180 9
 .Ltmp2:
 	bt r1, .LBB0_5
 .Ltmp3:
 	.loc	1 71 2
 	xor r0, r2, r0
-	.loc	2 178 9
+	.loc	2 180 9
 .Ltmp4:
 	{
 		clz r0, r0
@@ -152,14 +152,14 @@ FLAC__bitmath_silog2:
 	.byte	2
 	.long	.Linfo_string3
 	.byte	2
-	.byte	174
+	.byte	176
 	.byte	1
 	.long	56
 	.byte	1
 	.byte	3
 	.long	.Linfo_string6
 	.byte	2
-	.byte	174
+	.byte	176
 	.long	74
 	.byte	0
 	.byte	4

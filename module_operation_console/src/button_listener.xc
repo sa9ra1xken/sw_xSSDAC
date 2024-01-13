@@ -23,6 +23,7 @@
 #define TIME_500MS 50000000
 
 on tile[1] : in port p_key = PORT_HUMAN_INTERFACE;
+FUNCTION_SELECTOR _func;
 unsigned key_buff[3];
 unsigned scan_time;
 
@@ -122,7 +123,7 @@ void SwitchConsoleMode(CONSOLE_MODE mode){
     set_display_control_flag(BITMASK_SWITCH_CONSOLE);
 }
 
-inline void KeyEventInSDCMode(BUTTON_EVENT event){
+/*inline*/ void KeyEventInSDCMode(BUTTON_EVENT event){
     switch (event){
        case _BTN_1_LONG:
            play_command = _PLAY_CMD_PREV_FOLDER;
@@ -157,7 +158,7 @@ inline void KeyEventInSDCMode(BUTTON_EVENT event){
     }
 }
 
-inline void KeyEventInDacModeSelection(BUTTON_EVENT event){
+/*inline*/ void KeyEventInDacModeSelection(BUTTON_EVENT event){
 
     volatile INTERPOLATION_MODE * unsafe p_proposed_intpol_mode;
     volatile INTERPOLATION_MODE * unsafe p_fixed_intpol_mode;
@@ -197,7 +198,7 @@ inline void KeyEventInDacModeSelection(BUTTON_EVENT event){
     }
 }
 
-inline void KeyEventInFunctionSelection(BUTTON_EVENT event){
+/*inline*/ void KeyEventInFunctionSelection(BUTTON_EVENT event){
     volatile FUNCTION_SELECTOR * unsafe p_selected_function;
     unsafe {
         p_selected_function = &selected_function;
@@ -207,22 +208,24 @@ inline void KeyEventInFunctionSelection(BUTTON_EVENT event){
 
     case _BTN_1_DOWN:
         unsafe { *p_selected_function = _USB_DAC; }
-        set_display_control_flag(BITMASK_SHOW_SELECTED_FUNCTION);
+        set_display_control_flag(BITMASK_SET_SELECTED_FUNCTION);
         break;
 
     case _BTN_2_DOWN:
         unsafe { *p_selected_function = _SDC_PLAY; }
-        set_display_control_flag(BITMASK_SHOW_SELECTED_FUNCTION);
+        set_display_control_flag(BITMASK_SET_SELECTED_FUNCTION);
         break;
 
     case _BTN_7_DOWN:
-#ifdef _SDC_AUDIO_USE_DISPLAY
-            SwitchConsoleMode(_SDC_AUDIO);
-#endif
-#ifdef _USB_AUDIO_USE_DISPLAY
+        switch(_func){
+        case _USB_DAC:
             SwitchConsoleMode(_USB_AUDIO);
-#endif
             break;
+        case _SDC_PLAY:
+            SwitchConsoleMode(_SDC_AUDIO);
+            break;
+        }
+        break;
     }
 }
 
@@ -329,8 +332,13 @@ void KeyScan(){
     }
 }
 
-void button_listener_core(chanend ?c_track_control, chanend ?c_dac_control){
-
+void button_listener_core(
+        FUNCTION_SELECTOR func,
+        chanend ? c_play_control,
+        chanend ? c_dac_control
+)
+{
+    _func = func;
     unsafe {p_console_mode = &console_mode;}
     timer t;
 
@@ -340,24 +348,17 @@ void button_listener_core(chanend ?c_track_control, chanend ?c_dac_control){
 
     t :> scan_time;
 
-    //set_console_mode(_SDC_AUDIO);
-    //set_display_control_flag(BITMASK_SWITCH_CONSOLE);
+    DAC_COMMAND dac_command;
+    QUERY_TYPE query_type;
 
-    while (1){
-
-#ifdef TOGGLE_TP
-        Toggle();
-#endif
-
-        SendBackTrackControl(c_track_control);
-
-        DAC_COMMAND dac_command;
-        QUERY_TYPE query_type;
+    while (1)
+    {
+        SendBackTrackControl(c_play_control);
 
         select {
 
-        case c_track_control :> query_type:
-                HandlePlayCommand(c_track_control, query_type);
+        case c_play_control :> query_type:
+                HandlePlayCommand(c_play_control, query_type);
                 break;
 
 #if _DAC_MODE_SELECTOR == _DAC_MODE_SELECTOR_BTN_LSTN

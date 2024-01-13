@@ -21,6 +21,8 @@
 //#define _USB_AUDIO_USE_DISPLAY
 #define _SDC_AUDIO_USE_DISPLAY
 
+#define _SDCARD_PLAYER_HANDLES_CONTEXT_BOOKMARK
+
 // Interporation mode selector option
 #define _DAC_MODE_SELECTOR_NONE     1
 #define _DAC_MODE_SELECTOR_EXPLORER 2

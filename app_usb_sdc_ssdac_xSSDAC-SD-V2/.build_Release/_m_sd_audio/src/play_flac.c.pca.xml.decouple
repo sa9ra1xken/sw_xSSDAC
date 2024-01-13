@@ -1,30 +1,4 @@
 <preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c">
-  <fCall global="true" name="metadata_callback"/>
-  <fCall global="true" name="metadata_callback.nstackwords"/>
-  <fCall global="true" name="__udivdi3.nstackwords"/>
-  <fCall global="true" name="siprintf.nstackwords"/>
-  <fCall global="true" name="__floatunsisf.nstackwords"/>
-  <fCall global="true" name="__divsf3.nstackwords"/>
-  <fCall global="true" name="__extendsfdf2.nstackwords"/>
-  <fCall global="true" name="sprintf.nstackwords"/>
-  <fCall global="true" name="set_display_control_flag.nstackwords"/>
-  <fCall global="true" name="metadata_callback.maxcores"/>
-  <fCall global="true" name="set_display_control_flag.maxcores"/>
-  <fCall global="true" name="siprintf.maxcores"/>
-  <fCall global="true" name="sprintf.maxcores"/>
-  <fCall global="true" name="metadata_callback.maxtimers"/>
-  <fCall global="true" name="set_display_control_flag.maxtimers"/>
-  <fCall global="true" name="siprintf.maxtimers"/>
-  <fCall global="true" name="sprintf.maxtimers"/>
-  <fCall global="true" name="metadata_callback.maxchanends"/>
-  <fCall global="true" name="set_display_control_flag.maxchanends"/>
-  <fCall global="true" name="siprintf.maxchanends"/>
-  <fCall global="true" name="sprintf.maxchanends"/>
-  <fCall global="true" name="error_callback"/>
-  <fCall global="true" name="error_callback.nstackwords"/>
-  <fCall global="true" name="error_callback.maxcores"/>
-  <fCall global="true" name="error_callback.maxtimers"/>
-  <fCall global="true" name="error_callback.maxchanends"/>
   <fCall global="true" name="PlayFLAC"/>
   <fCall global="true" name="PlayFLAC.nstackwords"/>
   <fCall global="true" name="f_lseek.nstackwords"/>
@@ -66,6 +40,22 @@
   <fCall global="true" name="f_read.maxcores"/>
   <fCall global="true" name="f_read.maxtimers"/>
   <fCall global="true" name="f_read.maxchanends"/>
+  <fCall global="true" name="__udivdi3.nstackwords"/>
+  <fCall global="true" name="set_display_control_flag.nstackwords"/>
+  <fCall global="true" name="set_display_control_flag.maxcores"/>
+  <fCall global="true" name="set_display_control_flag.maxtimers"/>
+  <fCall global="true" name="set_display_control_flag.maxchanends"/>
+  <fCall global="true" name="siprintf.nstackwords"/>
+  <fCall global="true" name="__floatunsisf.nstackwords"/>
+  <fCall global="true" name="__divsf3.nstackwords"/>
+  <fCall global="true" name="__extendsfdf2.nstackwords"/>
+  <fCall global="true" name="sprintf.nstackwords"/>
+  <fCall global="true" name="siprintf.maxcores"/>
+  <fCall global="true" name="sprintf.maxcores"/>
+  <fCall global="true" name="siprintf.maxtimers"/>
+  <fCall global="true" name="sprintf.maxtimers"/>
+  <fCall global="true" name="siprintf.maxchanends"/>
+  <fCall global="true" name="sprintf.maxchanends"/>
   <fCall global="true" name="FLAC__stream_decoder_get_total_samples.nstackwords"/>
   <fCall global="true" name="FLAC__stream_decoder_seek_absolute.nstackwords"/>
   <fCall global="true" name="FLAC__stream_decoder_get_total_samples.maxcores"/>
@@ -74,10 +64,6 @@
   <fCall global="true" name="FLAC__stream_decoder_seek_absolute.maxtimers"/>
   <fCall global="true" name="FLAC__stream_decoder_get_total_samples.maxchanends"/>
   <fCall global="true" name="FLAC__stream_decoder_seek_absolute.maxchanends"/>
-  <fCall global="true" name="total_samples"/>
-  <fCall global="true" name="sample_rate"/>
-  <fCall global="true" name="channels"/>
-  <fCall global="true" name="bits_per_sample"/>
   <fCall global="true" name="ptr_file"/>
   <fCall global="true" name="chan_handshake"/>
   <fCall global="true" name="new_track"/>
@@ -86,10 +72,12 @@
   <fCall global="true" name="max_blocksize"/>
   <fCall global="true" name="min_framesize"/>
   <fCall global="true" name="max_framesize"/>
+  <fCall global="true" name="sample_rate"/>
+  <fCall global="true" name="channels"/>
+  <fCall global="true" name="bits_per_sample"/>
+  <fCall global="true" name="total_samples"/>
   <fCall global="true" name="md5sum.globound"/>
   <fCall global="true" name="md5sum"/>
-  <fCall global="true" name="sprintf"/>
-  <fCall global="true" name="set_display_control_flag"/>
   <fCall global="true" name="f_lseek"/>
   <fCall global="true" name="FLAC__stream_decoder_new"/>
   <fCall global="true" name="FLAC__stream_decoder_set_md5_checking"/>
@@ -100,10 +88,12 @@
   <fCall global="true" name="FLAC__stream_decoder_get_state"/>
   <fCall global="true" name="FLAC__stream_decoder_get_total_samples"/>
   <fCall global="true" name="FLAC__stream_decoder_seek_absolute"/>
+  <fCall global="true" name="sprintf"/>
+  <fCall global="true" name="set_display_control_flag"/>
   <fCall global="true" name="f_read"/>
-  <fCall global="true" name="TotalTimeString"/>
-  <fCall global="true" name="information_string"/>
   <fCall global="true" name="SecElapsed"/>
+  <fCall global="true" name="TotalTimeString"/>
+  <fCall global="true" name="audio_property_string"/>
   <fCall global="true" name="buff_id"/>
   <fCall global="true" name="audio_buffer"/>
   <fCall global="true" name="sm_sample_rate"/>

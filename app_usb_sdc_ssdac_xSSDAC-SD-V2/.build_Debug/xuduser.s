@@ -24,8 +24,11 @@ XUD_UserSuspend:
 	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/xuduser\\xuduser.c"
 	.loc	1 8 0
 	.cfi_startproc
-	.issue_mode single
-	ENTSP_lu6 2
+	.issue_mode dual
+	{
+		nop
+		dualentsp 2
+	}
 .Ltmp0:
 	.cfi_def_cfa_offset 8
 .Ltmp1:
@@ -33,11 +36,17 @@ XUD_UserSuspend:
 	.loc	1 9 5 prologue_end
 .Ltmp2:
 	bl UserAudioStreamStop
-	ldc r0, 0
+	{
+		ldc r0, 0
+		nop
+	}
 	.loc	1 10 5
 	bl UserHostActive
+	{
+		nop
+		retsp 2
+	}
 	.loc	1 11 1
-	retsp 2
 	# RETURN_REG_HOLDER
 .Ltmp3:
 	.cc_bottom XUD_UserSuspend.function
@@ -66,8 +75,11 @@ XUD_UserResume:
 .Lfunc_begin1:
 	.loc	1 15 0
 	.cfi_startproc
-	.issue_mode single
-	ENTSP_lu6 2
+	.issue_mode dual
+	{
+		nop
+		dualentsp 2
+	}
 .Ltmp5:
 	.cfi_def_cfa_offset 8
 .Ltmp6:
@@ -77,26 +89,30 @@ XUD_UserResume:
 	#APP
 	ldw r0, dp[g_currentConfig]
 	#NO_APP
-	.loc	1 18 5
-	stw r0, sp[1]
-	.loc	1 20 8
 .Ltmp8:
-	eq r0, r0, 1
-	bf r0, .LBB1_2
-	bu .LBB1_1
-.LBB1_1:
-	mkmsk r0, 1
-	.loc	1 22 9
+	.loc	1 20 8
+	{
+		eq r0, r0, 1
+		nop
+	}
 .Ltmp9:
-	bl UserHostActive
-	.loc	1 23 5
-	bu .LBB1_2
+	bf r0, .LBB1_2
+	{
+		mkmsk r0, 1
+		nop
+	}
+	.loc	1 22 9
 .Ltmp10:
-.LBB1_2:
-	.loc	1 24 1
-	retsp 2
-	# RETURN_REG_HOLDER
+	bl UserHostActive
 .Ltmp11:
+.LBB1_2:
+	{
+		nop
+		retsp 2
+	}
+	.loc	1 24 1
+	# RETURN_REG_HOLDER
+.Ltmp12:
 	.cc_bottom XUD_UserResume.function
 	.set	XUD_UserResume.nstackwords,(UserHostActive.nstackwords + 2)
 	.globl	XUD_UserResume.nstackwords
@@ -110,8 +126,8 @@ XUD_UserResume:
 	.set	XUD_UserResume.maxchanends,UserHostActive.maxchanends $M 0
 	.globl	XUD_UserResume.maxchanends
 	.weak	XUD_UserResume.maxchanends
-.Ltmp12:
-	.size	XUD_UserResume, .Ltmp12-XUD_UserResume
+.Ltmp13:
+	.size	XUD_UserResume, .Ltmp13-XUD_UserResume
 .Lfunc_end1:
 	.cfi_endproc
 
@@ -133,7 +149,7 @@ XUD_UserResume:
 .asciiz"unsigned int"
 	.section	.debug_info,"",@progbits
 .L.debug_info_begin0:
-	.long	81
+	.long	83
 	.short	3
 	.long	.Lsection_abbrev
 	.byte	4
@@ -143,6 +159,7 @@ XUD_UserResume:
 	.long	.Linfo_string1
 	.long	.Lline_table_start0
 	.long	.Linfo_string2
+	.byte	1
 	.byte	2
 	.long	.Ldebug_ranges0
 	.byte	1
@@ -164,13 +181,11 @@ XUD_UserResume:
 	.byte	1
 	.byte	1
 	.byte	4
-	.byte	2
-	.byte	145
-	.byte	4
+	.long	.Ldebug_loc0
 	.long	.Linfo_string5
 	.byte	1
 	.byte	16
-	.long	77
+	.long	79
 	.byte	0
 	.byte	5
 	.long	.Linfo_string6
@@ -192,6 +207,8 @@ XUD_UserResume:
 	.byte	6
 	.byte	27
 	.byte	14
+	.ascii	"\341\177"
+	.byte	12
 	.byte	0
 	.byte	0
 	.byte	2
@@ -240,7 +257,7 @@ XUD_UserResume:
 	.byte	52
 	.byte	0
 	.byte	2
-	.byte	10
+	.byte	6
 	.byte	3
 	.byte	14
 	.byte	58
@@ -275,29 +292,39 @@ XUD_UserResume:
 	.long	0
 	.long	0
 	.section	.debug_loc,"",@progbits
+.Ldebug_loc0:
+	.long	.Ltmp8
+	.long	.Ltmp9
+.Lset0 = .Ltmp15-.Ltmp14
+	.short	.Lset0
+.Ltmp14:
+	.byte	80
+.Ltmp15:
+	.long	0
+	.long	0
 	.section	.debug_pubnames,"",@progbits
-.Lset0 = .LpubNames_end0-.LpubNames_begin0
-	.long	.Lset0
+.Lset1 = .LpubNames_end0-.LpubNames_begin0
+	.long	.Lset1
 .LpubNames_begin0:
 	.short	2
 	.long	.L.debug_info_begin0
-.Lset1 = .L.debug_info_end0-.L.debug_info_begin0
-	.long	.Lset1
-	.long	46
+.Lset2 = .L.debug_info_end0-.L.debug_info_begin0
+	.long	.Lset2
+	.long	47
 .asciiz"XUD_UserResume"
-	.long	30
+	.long	31
 .asciiz"XUD_UserSuspend"
 	.long	0
 .LpubNames_end0:
 	.section	.debug_pubtypes,"",@progbits
-.Lset2 = .LpubTypes_end0-.LpubTypes_begin0
-	.long	.Lset2
+.Lset3 = .LpubTypes_end0-.LpubTypes_begin0
+	.long	.Lset3
 .LpubTypes_begin0:
 	.short	2
 	.long	.L.debug_info_begin0
-.Lset3 = .L.debug_info_end0-.L.debug_info_begin0
-	.long	.Lset3
-	.long	77
+.Lset4 = .L.debug_info_end0-.L.debug_info_begin0
+	.long	.Lset4
+	.long	79
 .asciiz"unsigned int"
 	.long	0
 .LpubTypes_end0:

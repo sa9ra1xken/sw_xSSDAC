@@ -28,45 +28,29 @@ array_to_xc_ptr:                        # @array_to_xc_ptr
 	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
 	.loc	1 11 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:11:0
 	.cfi_startproc
-	.issue_mode single
+	.issue_mode dual
 # BB#0:                                 # %allocas
-	ENTSP_lu6 8
-.Ltmp0:
-	.cfi_def_cfa_offset 32
-.Ltmp1:
-	.cfi_offset 15, 0
-	stw r1, sp[2]                   # 4-byte Folded Spill
-	stw r0, sp[1]                   # 4-byte Folded Spill
-	bu .LBB0_1
-.LBB0_1:                                # %late_allocas
-	ldw r0, sp[1]                   # 4-byte Folded Reload
-	stw r0, sp[6]
-	ldw r1, sp[2]                   # 4-byte Folded Reload
-	stw r1, sp[5]
-	bu .LBB0_2
-.LBB0_2:                                # %body
 .Lxtalabel0:
-.Ltmp2:
-	#DEBUG_VALUE: x <- [SP+12]
+	{
+		nop
+		dualentsp 0
+	}
+	#DEBUG_VALUE: array_to_xc_ptr:a <- R0
 	.loc	1 13 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
-	ldw r0, sp[6]
-	.loc	1 13 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
+.Ltmp0:
 	#APP
 	mov r0, r0
 	#NO_APP
-	.loc	1 13 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
-	stw r0, sp[3]
-	.loc	1 14 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:14:5
-	stw r0, sp[4]
-	.loc	1 14 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:14:5
-	bu .LBB0_3
-.Ltmp3:
-.LBB0_3:                                # %return
-	ldw r0, sp[4]
-	retsp 8
+.Ltmp1:
+	#DEBUG_VALUE: x <- R0
+	{
+		nop
+		retsp 0
+	}
 	# RETURN_REG_HOLDER
+.Ltmp2:
 	.cc_bottom array_to_xc_ptr.function
-	.set	array_to_xc_ptr.nstackwords,8
+	.set	array_to_xc_ptr.nstackwords,0
 	.globl	array_to_xc_ptr.nstackwords
 	.set	array_to_xc_ptr.maxcores,1
 	.globl	array_to_xc_ptr.maxcores
@@ -74,8 +58,8 @@ array_to_xc_ptr:                        # @array_to_xc_ptr
 	.globl	array_to_xc_ptr.maxtimers
 	.set	array_to_xc_ptr.maxchanends,0
 	.globl	array_to_xc_ptr.maxchanends
-.Ltmp4:
-	.size	array_to_xc_ptr, .Ltmp4-array_to_xc_ptr
+.Ltmp3:
+	.size	array_to_xc_ptr, .Ltmp3-array_to_xc_ptr
 .Lfunc_end0:
 	.cfi_endproc
 
@@ -99,17 +83,18 @@ array_to_xc_ptr:                        # @array_to_xc_ptr
 .asciiz"x"
 	.section	.debug_info,"",@progbits
 .L.debug_info_begin0:
-	.long	114                     # Length of Unit
+	.long	115                     # Length of Unit
 	.short	3                       # DWARF version number
 	.long	.Lsection_abbrev        # Offset Into Abbrev. Section
 	.byte	4                       # Address Size (in bytes)
-	.byte	1                       # Abbrev [1] 0xb:0x6b DW_TAG_compile_unit
+	.byte	1                       # Abbrev [1] 0xb:0x6c DW_TAG_compile_unit
 	.long	.Linfo_string0          # DW_AT_producer
 	.short	49152                   # DW_AT_language
 	.long	.Linfo_string1          # DW_AT_name
 	.long	.Lline_table_start0     # DW_AT_stmt_list
 	.long	.Linfo_string2          # DW_AT_comp_dir
-	.byte	2                       # Abbrev [2] 0x1e:0x3a DW_TAG_subprogram
+	.byte	1                       # DW_AT_APPLE_optimized
+	.byte	2                       # Abbrev [2] 0x1f:0x3a DW_TAG_subprogram
 	.long	.Ldebug_ranges0         # DW_AT_ranges
 	.byte	1                       # DW_AT_frame_base
 	.byte	94
@@ -118,39 +103,36 @@ array_to_xc_ptr:                        # @array_to_xc_ptr
 	.long	.Linfo_string3          # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	11                      # DW_AT_decl_line
-	.long	88                      # DW_AT_type
+	.long	89                      # DW_AT_type
 	.byte	1                       # DW_AT_external
-	.byte	3                       # Abbrev [3] 0x35:0xe DW_TAG_formal_parameter
-	.byte	2                       # DW_AT_location
-	.byte	145
-	.byte	24
+	.byte	3                       # Abbrev [3] 0x36:0xf DW_TAG_formal_parameter
+	.long	.Ldebug_loc0            # DW_AT_location
 	.long	.Linfo_string5          # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	10                      # DW_AT_decl_line
-	.long	95                      # DW_AT_type
-	.byte	4                       # Abbrev [4] 0x43:0x14 DW_TAG_lexical_block
+	.long	96                      # DW_AT_type
+	.byte	4                       # Abbrev [4] 0x45:0x13 DW_TAG_lexical_block
 	.long	.Ldebug_ranges1         # DW_AT_ranges
-	.byte	5                       # Abbrev [5] 0x48:0xe DW_TAG_variable
-	.byte	2                       # DW_AT_location
-	.byte	145
-	.byte	12
+	.byte	5                       # Abbrev [5] 0x4a:0xd DW_TAG_variable
+	.byte	1                       # DW_AT_location
+	.byte	80
 	.long	.Linfo_string7          # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	12                      # DW_AT_decl_line
-	.long	88                      # DW_AT_type
+	.long	89                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
-	.byte	6                       # Abbrev [6] 0x58:0x7 DW_TAG_base_type
+	.byte	6                       # Abbrev [6] 0x59:0x7 DW_TAG_base_type
 	.long	.Linfo_string4          # DW_AT_name
 	.byte	7                       # DW_AT_encoding
 	.byte	4                       # DW_AT_byte_size
-	.byte	7                       # Abbrev [7] 0x5f:0x5 DW_TAG_reference_type
-	.long	100                     # DW_AT_type
-	.byte	8                       # Abbrev [8] 0x64:0x5 DW_TAG_array_type
-	.long	105                     # DW_AT_type
-	.byte	9                       # Abbrev [9] 0x69:0x5 DW_TAG_const_type
-	.long	88                      # DW_AT_type
-	.byte	10                      # Abbrev [10] 0x6e:0x7 DW_TAG_base_type
+	.byte	7                       # Abbrev [7] 0x60:0x5 DW_TAG_reference_type
+	.long	101                     # DW_AT_type
+	.byte	8                       # Abbrev [8] 0x65:0x5 DW_TAG_array_type
+	.long	106                     # DW_AT_type
+	.byte	9                       # Abbrev [9] 0x6a:0x5 DW_TAG_const_type
+	.long	89                      # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x6f:0x7 DW_TAG_base_type
 	.long	.Linfo_string6          # DW_AT_name
 	.byte	8                       # DW_AT_byte_size
 	.byte	7                       # DW_AT_encoding
@@ -170,6 +152,8 @@ array_to_xc_ptr:                        # @array_to_xc_ptr
 	.byte	6                       # DW_FORM_data4
 	.byte	27                      # DW_AT_comp_dir
 	.byte	14                      # DW_FORM_strp
+	.ascii	"\341\177"              # DW_AT_APPLE_optimized
+	.byte	12                      # DW_FORM_flag
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
 	.byte	2                       # Abbreviation Code
@@ -199,7 +183,7 @@ array_to_xc_ptr:                        # @array_to_xc_ptr
 	.byte	5                       # DW_TAG_formal_parameter
 	.byte	0                       # DW_CHILDREN_no
 	.byte	2                       # DW_AT_location
-	.byte	10                      # DW_FORM_block1
+	.byte	6                       # DW_FORM_data4
 	.byte	3                       # DW_AT_name
 	.byte	14                      # DW_FORM_strp
 	.byte	58                      # DW_AT_decl_file
@@ -283,32 +267,42 @@ array_to_xc_ptr:                        # @array_to_xc_ptr
 	.long	0
 	.long	0
 .Ldebug_ranges1:
+	.long	.Ltmp0
 	.long	.Ltmp2
-	.long	.Ltmp3
 	.long	0
 	.long	0
 	.section	.debug_loc,"",@progbits
+.Ldebug_loc0:
+	.long	.Lfunc_begin0
+	.long	.Ltmp1
+.Lset0 = .Ltmp5-.Ltmp4                  # Loc expr size
+	.short	.Lset0
+.Ltmp4:
+	.byte	80                      # DW_OP_reg0
+.Ltmp5:
+	.long	0
+	.long	0
 	.section	.debug_pubnames,"",@progbits
-.Lset0 = .LpubNames_end0-.LpubNames_begin0 # Length of Public Names Info
-	.long	.Lset0
+.Lset1 = .LpubNames_end0-.LpubNames_begin0 # Length of Public Names Info
+	.long	.Lset1
 .LpubNames_begin0:
 	.short	2                       # DWARF Version
 	.long	.L.debug_info_begin0    # Offset of Compilation Unit Info
-.Lset1 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
-	.long	.Lset1
-	.long	30                      # DIE offset
+.Lset2 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
+	.long	.Lset2
+	.long	31                      # DIE offset
 .asciiz"array_to_xc_ptr"                # External Name
 	.long	0                       # End Mark
 .LpubNames_end0:
 	.section	.debug_pubtypes,"",@progbits
-.Lset2 = .LpubTypes_end0-.LpubTypes_begin0 # Length of Public Types Info
-	.long	.Lset2
+.Lset3 = .LpubTypes_end0-.LpubTypes_begin0 # Length of Public Types Info
+	.long	.Lset3
 .LpubTypes_begin0:
 	.short	2                       # DWARF Version
 	.long	.L.debug_info_begin0    # Offset of Compilation Unit Info
-.Lset3 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
-	.long	.Lset3
-	.long	88                      # DIE offset
+.Lset4 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
+	.long	.Lset4
+	.long	89                      # DIE offset
 .asciiz"unsigned int"                   # External Name
 	.long	0                       # End Mark
 .LpubTypes_end0:

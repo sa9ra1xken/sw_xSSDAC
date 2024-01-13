@@ -9,6 +9,59 @@
 	.inline_definition XUD_SetReady_OutPtr
 	.inline_definition XUD_SetReady_InPtr
 	.inline_definition XUD_SetReady_In
+	.weak _i.qspi_access.write.maxchanends.group
+	.max_reduce _i.qspi_access.write.max.maxchanends, _i.qspi_access.write.maxchanends.group, 0
+	.weak _i.qspi_access.write.maxcores.group
+	.max_reduce _i.qspi_access.write.max.maxcores, _i.qspi_access.write.maxcores.group, 0
+	.weak _i.qspi_access.write.maxtimers.group
+	.max_reduce _i.qspi_access.write.max.maxtimers, _i.qspi_access.write.maxtimers.group, 0
+	.weak _i.qspi_access.write.nstackwords.group
+	.globl _i.qspi_access.write.nstackwords.group
+	.weak _i.qspi_access.write.fns.group
+	.globl _i.qspi_access.write.fns.group
+	.max_reduce _i.qspi_access.write.max.nstackwords, _i.qspi_access.write.nstackwords.group, 0
+	.max_reduce _i.qspi_access.write.fns, _i.qspi_access.write.fns.group, 0
+	.weak _i.qspi_access.read.maxchanends.group
+	.max_reduce _i.qspi_access.read.max.maxchanends, _i.qspi_access.read.maxchanends.group, 0
+	.weak _i.qspi_access.read.maxcores.group
+	.max_reduce _i.qspi_access.read.max.maxcores, _i.qspi_access.read.maxcores.group, 0
+	.weak _i.qspi_access.read.maxtimers.group
+	.max_reduce _i.qspi_access.read.max.maxtimers, _i.qspi_access.read.maxtimers.group, 0
+	.weak _i.qspi_access.read.nstackwords.group
+	.globl _i.qspi_access.read.nstackwords.group
+	.weak _i.qspi_access.read.fns.group
+	.globl _i.qspi_access.read.fns.group
+	.max_reduce _i.qspi_access.read.max.nstackwords, _i.qspi_access.read.nstackwords.group, 0
+	.max_reduce _i.qspi_access.read.fns, _i.qspi_access.read.fns.group, 0
+	.weak _i.qspi_access.__interface_init.maxchanends.group
+	.max_reduce _i.qspi_access.__interface_init.max.maxchanends, _i.qspi_access.__interface_init.maxchanends.group, 0
+	.weak _i.qspi_access.__interface_init.maxcores.group
+	.max_reduce _i.qspi_access.__interface_init.max.maxcores, _i.qspi_access.__interface_init.maxcores.group, 0
+	.weak _i.qspi_access.__interface_init.maxtimers.group
+	.max_reduce _i.qspi_access.__interface_init.max.maxtimers, _i.qspi_access.__interface_init.maxtimers.group, 0
+	.weak _i.qspi_access.__interface_init.nstackwords.group
+	.globl _i.qspi_access.__interface_init.nstackwords.group
+	.weak _i.qspi_access.__interface_init.fns.group
+	.globl _i.qspi_access.__interface_init.fns.group
+	.max_reduce _i.qspi_access.__interface_init.max.nstackwords, _i.qspi_access.__interface_init.nstackwords.group, 0
+	.max_reduce _i.qspi_access.__interface_init.fns, _i.qspi_access.__interface_init.fns.group, 0
+	.weak _i.qspi_access._client_call_y.maxchanends.group
+	.add_to_set _i.qspi_access._client_call_y.maxchanends.group, (__interface_client_call_y_other.maxchanends + __interface_client_call_y_extra.maxchanends), __interface_client_call_y_other
+	.max_reduce _i.qspi_access._client_call_y.max.maxchanends, _i.qspi_access._client_call_y.maxchanends.group, 0
+	.weak _i.qspi_access._client_call_y.maxcores.group
+	.add_to_set _i.qspi_access._client_call_y.maxcores.group, (__interface_client_call_y_other.maxcores + __interface_client_call_y_extra.maxcores), __interface_client_call_y_other
+	.max_reduce _i.qspi_access._client_call_y.max.maxcores, _i.qspi_access._client_call_y.maxcores.group, 0
+	.weak _i.qspi_access._client_call_y.maxtimers.group
+	.add_to_set _i.qspi_access._client_call_y.maxtimers.group, (__interface_client_call_y_other.maxtimers + __interface_client_call_y_extra.maxtimers), __interface_client_call_y_other
+	.max_reduce _i.qspi_access._client_call_y.max.maxtimers, _i.qspi_access._client_call_y.maxtimers.group, 0
+	.weak _i.qspi_access._client_call_y.nstackwords.group
+	.globl _i.qspi_access._client_call_y.nstackwords.group
+	.weak _i.qspi_access._client_call_y.fns.group
+	.globl _i.qspi_access._client_call_y.fns.group
+	.add_to_set _i.qspi_access._client_call_y.nstackwords.group, (__interface_client_call_y_other.nstackwords + __interface_client_call_y_extra.nstackwords), __interface_client_call_y_other
+	.add_to_set _i.qspi_access._client_call_y.fns.group, __interface_client_call_y_other, __interface_client_call_y_other
+	.max_reduce _i.qspi_access._client_call_y.max.nstackwords, _i.qspi_access._client_call_y.nstackwords.group, 0
+	.max_reduce _i.qspi_access._client_call_y.fns, _i.qspi_access._client_call_y.fns.group, 0
 	.set usage.anon.0,0
 	.set usage.anon.1,0
 	.set usage.anon.2,0
@@ -79,7 +132,7 @@
 	.call decouple,usage.anon.5
 	.call decouple,usage.anon.3
 	.call decouple,usage.anon.10
-	.call decouple,update_samp_resolution
+	.call decouple,update_stream_format
 	.call decouple,update_samp_freq
 	.call usage.anon.10,usage.anon.6
 	.call usage.anon.10,GetADCCounts
@@ -118,42 +171,439 @@
 .Ldebug_range:
 	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\decouple.xc"
 	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
+	.text
+	.weak	_i.qspi_access._chan.read
+	.align	4
+	.type	_i.qspi_access._chan.read,@function
+	.cc_top _i.qspi_access._chan.read.function,_i.qspi_access._chan.read
+_i.qspi_access._chan.read:              # @_i.qspi_access._chan.read
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp0:
+	.cfi_def_cfa_offset 16
+.Ltmp1:
+	.cfi_offset 15, 0
+	{
+		nop
+		stw r4, sp[2]
+	}
+.Ltmp2:
+	.cfi_offset 4, -8
+	#DEBUG_VALUE: _i.qspi_access._chan.read:dest <- R0
+	#DEBUG_VALUE: _i.qspi_access._chan.read:param1 <- R1
+	#DEBUG_VALUE: _i.qspi_access._chan.read:param2 <- R2
+	#DEBUG_VALUE: _i.qspi_access._chan.read:param3 <- R3
+	{
+		getr r4, 2
+		ldw r11, sp[5]
+	}
+	{
+		setd res[r4], r0
+		add r0, r4, 1
+	}
+	{
+		out res[r4], r0
+		nop
+	}
+	{
+		outct res[r4], 2
+		nop
+	}
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		out res[r4], r1
+		nop
+	}
+	{
+		out res[r4], r2
+		nop
+	}
+	{
+		out res[r4], r11
+		stw r3, sp[1]
+	}
+	{
+		outct res[r4], 2
+		ldaw r1, sp[1]
+	}
+	{
+		mov r0, r4
+		nop
+	}
+	bl __interface_client_call
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		freer res[r4]
+		ldw r4, sp[2]
+	}
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+	.cc_bottom _i.qspi_access._chan.read.function
+	.set	_i.qspi_access._chan.read.nstackwords,(__interface_client_call.nstackwords + 4)
+	.globl	_i.qspi_access._chan.read.nstackwords
+	.weak	_i.qspi_access._chan.read.nstackwords
+	.set	_i.qspi_access._chan.read.maxcores,__interface_client_call.maxcores $M 1
+	.globl	_i.qspi_access._chan.read.maxcores
+	.weak	_i.qspi_access._chan.read.maxcores
+	.set	_i.qspi_access._chan.read.maxtimers,__interface_client_call.maxtimers $M 0
+	.globl	_i.qspi_access._chan.read.maxtimers
+	.weak	_i.qspi_access._chan.read.maxtimers
+	.set	_i.qspi_access._chan.read.maxchanends,(1 + __interface_client_call.maxchanends) $M 1
+	.globl	_i.qspi_access._chan.read.maxchanends
+	.weak	_i.qspi_access._chan.read.maxchanends
+.Ltmp3:
+	.size	_i.qspi_access._chan.read, .Ltmp3-_i.qspi_access._chan.read
+	.cfi_endproc
+
+	.weak	_i.qspi_access._chan.write
+	.align	4
+	.type	_i.qspi_access._chan.write,@function
+	.cc_top _i.qspi_access._chan.write.function,_i.qspi_access._chan.write
+_i.qspi_access._chan.write:             # @_i.qspi_access._chan.write
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp4:
+	.cfi_def_cfa_offset 16
+.Ltmp5:
+	.cfi_offset 15, 0
+	{
+		nop
+		stw r4, sp[2]
+	}
+.Ltmp6:
+	.cfi_offset 4, -8
+	#DEBUG_VALUE: _i.qspi_access._chan.write:dest <- R0
+	#DEBUG_VALUE: _i.qspi_access._chan.write:param1 <- R1
+	#DEBUG_VALUE: _i.qspi_access._chan.write:param2 <- R2
+	#DEBUG_VALUE: _i.qspi_access._chan.write:param3 <- R3
+	{
+		getr r4, 2
+		ldw r11, sp[5]
+	}
+	{
+		setd res[r4], r0
+		nop
+	}
+	{
+		out res[r4], r4
+		nop
+	}
+	{
+		outct res[r4], 2
+		nop
+	}
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		out res[r4], r1
+		nop
+	}
+	{
+		out res[r4], r2
+		nop
+	}
+	{
+		out res[r4], r11
+		stw r3, sp[1]
+	}
+	{
+		outct res[r4], 2
+		ldaw r1, sp[1]
+	}
+	{
+		mov r0, r4
+		nop
+	}
+	bl __interface_client_call
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		freer res[r4]
+		ldw r4, sp[2]
+	}
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+	.cc_bottom _i.qspi_access._chan.write.function
+	.set	_i.qspi_access._chan.write.nstackwords,(__interface_client_call.nstackwords + 4)
+	.globl	_i.qspi_access._chan.write.nstackwords
+	.weak	_i.qspi_access._chan.write.nstackwords
+	.set	_i.qspi_access._chan.write.maxcores,__interface_client_call.maxcores $M 1
+	.globl	_i.qspi_access._chan.write.maxcores
+	.weak	_i.qspi_access._chan.write.maxcores
+	.set	_i.qspi_access._chan.write.maxtimers,__interface_client_call.maxtimers $M 0
+	.globl	_i.qspi_access._chan.write.maxtimers
+	.weak	_i.qspi_access._chan.write.maxtimers
+	.set	_i.qspi_access._chan.write.maxchanends,(1 + __interface_client_call.maxchanends) $M 1
+	.globl	_i.qspi_access._chan.write.maxchanends
+	.weak	_i.qspi_access._chan.write.maxchanends
+.Ltmp7:
+	.size	_i.qspi_access._chan.write, .Ltmp7-_i.qspi_access._chan.write
+	.cfi_endproc
+
+	.weak	_i.qspi_access._chan_yield.read
+	.align	4
+	.type	_i.qspi_access._chan_yield.read,@function
+	.cc_top _i.qspi_access._chan_yield.read.function,_i.qspi_access._chan_yield.read
+_i.qspi_access._chan_yield.read:        # @_i.qspi_access._chan_yield.read
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp8:
+	.cfi_def_cfa_offset 16
+.Ltmp9:
+	.cfi_offset 15, 0
+	std r5, r4, sp[1]               # 4-byte Folded Spill
+.Ltmp10:
+	.cfi_offset 4, -8
+.Ltmp11:
+	.cfi_offset 5, -4
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.read:s <- R0
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.read:param1 <- R1
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.read:param2 <- R2
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.read:param3 <- R3
+	{
+		nop
+		ldw r11, sp[5]
+	}
+	{
+		getr r4, 2
+		ldw r5, r0[0]
+	}
+	{
+		setd res[r4], r5
+		add r5, r4, 1
+	}
+	{
+		out res[r4], r5
+		nop
+	}
+	{
+		outct res[r4], 2
+		nop
+	}
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		out res[r4], r1
+		nop
+	}
+	{
+		out res[r4], r2
+		nop
+	}
+	{
+		out res[r4], r11
+		stw r3, sp[1]
+	}
+	{
+		outct res[r4], 2
+		ldw r2, r0[1]
+	}
+	{
+		ldaw r1, sp[1]
+		mov r0, r4
+	}
+	bl __interface_client_call_y
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		freer res[r4]
+		nop
+	}
+	ldd r5, r4, sp[1]               # 4-byte Folded Reload
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+	.cc_bottom _i.qspi_access._chan_yield.read.function
+	.set	_i.qspi_access._chan_yield.read.nstackwords,((_i.qspi_access._client_call_y.max.nstackwords $M ($D __interface_client_call_y.nstackwords ? __interface_client_call_y.nstackwords $: _i.qspi_access._client_call_y.max.nstackwords)) + 4)
+	.globl	_i.qspi_access._chan_yield.read.nstackwords
+	.weak	_i.qspi_access._chan_yield.read.nstackwords
+	.set	_i.qspi_access._chan_yield.read.maxcores,($D __interface_client_call_y.maxcores ? __interface_client_call_y.maxcores $: _i.qspi_access._client_call_y.max.maxcores) $M 1
+	.globl	_i.qspi_access._chan_yield.read.maxcores
+	.weak	_i.qspi_access._chan_yield.read.maxcores
+	.set	_i.qspi_access._chan_yield.read.maxtimers,($D __interface_client_call_y.maxtimers ? __interface_client_call_y.maxtimers $: _i.qspi_access._client_call_y.max.maxtimers) $M 0
+	.globl	_i.qspi_access._chan_yield.read.maxtimers
+	.weak	_i.qspi_access._chan_yield.read.maxtimers
+	.set	_i.qspi_access._chan_yield.read.maxchanends,(1 + ($D __interface_client_call_y.maxchanends ? __interface_client_call_y.maxchanends $: _i.qspi_access._client_call_y.max.maxchanends)) $M 1
+	.globl	_i.qspi_access._chan_yield.read.maxchanends
+	.weak	_i.qspi_access._chan_yield.read.maxchanends
+.Ltmp12:
+	.size	_i.qspi_access._chan_yield.read, .Ltmp12-_i.qspi_access._chan_yield.read
+	.cfi_endproc
+
+	.weak	_i.qspi_access._chan_yield.write
+	.align	4
+	.type	_i.qspi_access._chan_yield.write,@function
+	.cc_top _i.qspi_access._chan_yield.write.function,_i.qspi_access._chan_yield.write
+_i.qspi_access._chan_yield.write:       # @_i.qspi_access._chan_yield.write
+	.cfi_startproc
+	.issue_mode dual
+# BB#0:                                 # %allocas
+	{
+		nop
+		dualentsp 4
+	}
+.Ltmp13:
+	.cfi_def_cfa_offset 16
+.Ltmp14:
+	.cfi_offset 15, 0
+	std r5, r4, sp[1]               # 4-byte Folded Spill
+.Ltmp15:
+	.cfi_offset 4, -8
+.Ltmp16:
+	.cfi_offset 5, -4
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.write:s <- R0
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.write:param1 <- R1
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.write:param2 <- R2
+	#DEBUG_VALUE: _i.qspi_access._chan_yield.write:param3 <- R3
+	{
+		nop
+		ldw r11, sp[5]
+	}
+	{
+		getr r4, 2
+		ldw r5, r0[0]
+	}
+	{
+		setd res[r4], r5
+		nop
+	}
+	{
+		out res[r4], r4
+		nop
+	}
+	{
+		outct res[r4], 2
+		nop
+	}
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		out res[r4], r1
+		nop
+	}
+	{
+		out res[r4], r2
+		nop
+	}
+	{
+		out res[r4], r11
+		stw r3, sp[1]
+	}
+	{
+		outct res[r4], 2
+		ldw r2, r0[1]
+	}
+	{
+		ldaw r1, sp[1]
+		mov r0, r4
+	}
+	bl __interface_client_call_y
+	{
+		chkct res[r4], 1
+		nop
+	}
+	{
+		freer res[r4]
+		nop
+	}
+	ldd r5, r4, sp[1]               # 4-byte Folded Reload
+	{
+		nop
+		retsp 4
+	}
+	# RETURN_REG_HOLDER
+	.cc_bottom _i.qspi_access._chan_yield.write.function
+	.set	_i.qspi_access._chan_yield.write.nstackwords,((_i.qspi_access._client_call_y.max.nstackwords $M ($D __interface_client_call_y.nstackwords ? __interface_client_call_y.nstackwords $: _i.qspi_access._client_call_y.max.nstackwords)) + 4)
+	.globl	_i.qspi_access._chan_yield.write.nstackwords
+	.weak	_i.qspi_access._chan_yield.write.nstackwords
+	.set	_i.qspi_access._chan_yield.write.maxcores,($D __interface_client_call_y.maxcores ? __interface_client_call_y.maxcores $: _i.qspi_access._client_call_y.max.maxcores) $M 1
+	.globl	_i.qspi_access._chan_yield.write.maxcores
+	.weak	_i.qspi_access._chan_yield.write.maxcores
+	.set	_i.qspi_access._chan_yield.write.maxtimers,($D __interface_client_call_y.maxtimers ? __interface_client_call_y.maxtimers $: _i.qspi_access._client_call_y.max.maxtimers) $M 0
+	.globl	_i.qspi_access._chan_yield.write.maxtimers
+	.weak	_i.qspi_access._chan_yield.write.maxtimers
+	.set	_i.qspi_access._chan_yield.write.maxchanends,(1 + ($D __interface_client_call_y.maxchanends ? __interface_client_call_y.maxchanends $: _i.qspi_access._client_call_y.max.maxchanends)) $M 1
+	.globl	_i.qspi_access._chan_yield.write.maxchanends
+	.weak	_i.qspi_access._chan_yield.write.maxchanends
+.Ltmp17:
+	.size	_i.qspi_access._chan_yield.write, .Ltmp17-_i.qspi_access._chan_yield.write
+	.cfi_endproc
+
 	.section	.cp.rodata.cst4,"aMc",@progbits,4
-	.cc_top .LCPI0_0.data,.LCPI0_0
+	.cc_top .LCPI4_0.data,.LCPI4_0
 	.align	4
-	.type	.LCPI0_0,@object
-	.size	.LCPI0_0, 4
-.LCPI0_0:
+	.type	.LCPI4_0,@object
+	.size	.LCPI4_0, 4
+.LCPI4_0:
 	.long	4294967040              # 0xffffff00
-	.cc_bottom .LCPI0_0.data
-	.cc_top .LCPI0_1.data,.LCPI0_1
+	.cc_bottom .LCPI4_0.data
+	.cc_top .LCPI4_1.data,.LCPI4_1
 	.align	4
-	.type	.LCPI0_1,@object
-	.size	.LCPI0_1, 4
-.LCPI0_1:
+	.type	.LCPI4_1,@object
+	.size	.LCPI4_1, 4
+.LCPI4_1:
 	.long	4294901760              # 0xffff0000
-	.cc_bottom .LCPI0_1.data
-	.cc_top .LCPI0_2.data,.LCPI0_2
+	.cc_bottom .LCPI4_1.data
+	.cc_top .LCPI4_2.data,.LCPI4_2
 	.align	4
-	.type	.LCPI0_2,@object
-	.size	.LCPI0_2, 4
-.LCPI0_2:
+	.type	.LCPI4_2,@object
+	.size	.LCPI4_2, 4
+.LCPI4_2:
 	.long	4278190080              # 0xff000000
-	.cc_bottom .LCPI0_2.data
-	.cc_top .LCPI0_3.data,.LCPI0_3
+	.cc_bottom .LCPI4_2.data
+	.cc_top .LCPI4_3.data,.LCPI4_3
 	.align	4
-	.type	.LCPI0_3,@object
-	.size	.LCPI0_3, 4
-.LCPI0_3:
+	.type	.LCPI4_3,@object
+	.size	.LCPI4_3, 4
+.LCPI4_3:
 	.long	4294967292              # 0xfffffffc
-	.cc_bottom .LCPI0_3.data
+	.cc_bottom .LCPI4_3.data
 	.text
 	.globl	handle_audio_request
 	.align	4
 	.type	handle_audio_request,@function
 	.cc_top handle_audio_request.function,handle_audio_request
 handle_audio_request:                   # @handle_audio_request
-.Lfunc_begin0:
+.Lfunc_begin4:
 	.loc	1 131 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:131:0
 	.cfi_startproc
 	.issue_mode dual
@@ -163,41 +613,41 @@ handle_audio_request:                   # @handle_audio_request
 		nop
 		dualentsp 12
 	}
-.Ltmp0:
+.Ltmp18:
 	.cfi_def_cfa_offset 48
-.Ltmp1:
+.Ltmp19:
 	.cfi_offset 15, 0
 	std r5, r4, sp[2]               # 4-byte Folded Spill
-.Ltmp2:
+.Ltmp20:
 	.cfi_offset 4, -32
-.Ltmp3:
+.Ltmp21:
 	.cfi_offset 5, -28
 	std r7, r6, sp[3]               # 4-byte Folded Spill
-.Ltmp4:
+.Ltmp22:
 	.cfi_offset 6, -24
-.Ltmp5:
+.Ltmp23:
 	.cfi_offset 7, -20
 	std r9, r8, sp[4]               # 4-byte Folded Spill
-.Ltmp6:
+.Ltmp24:
 	.cfi_offset 8, -16
-.Ltmp7:
+.Ltmp25:
 	.cfi_offset 9, -12
-.Ltmp8:
+.Ltmp26:
 	.cfi_offset 10, -8
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
-.Ltmp9:
+.Ltmp27:
 	#DEBUG_VALUE: underflowSample <- R1
 .Lxta.endpoint_labels0:
 	{
 		in r1, res[r0]
 		stw r10, sp[10]
 	}
-.Ltmp10:
+.Ltmp28:
 	.loc	1 141 5 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:141:5
 	ldw r9, dp[outUnderflow]
 	.loc	1 141 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:141:5
-	bf r9, .LBB0_7
-.Ltmp11:
+	bf r9, .LBB4_7
+.Ltmp29:
 # BB#1:                                 # %LoopBody.preheader
 .Lxtalabel1:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
@@ -215,10 +665,10 @@ handle_audio_request:                   # @handle_audio_request
 		out res[r0], r1
 		nop
 	}
-.Ltmp12:
+.Ltmp30:
 	.loc	1 151 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:151:0
 	ldw r1, dp[g_aud_from_host_wrptr]
-.Ltmp13:
+.Ltmp31:
 	.loc	1 151 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:151:0
 	ldw r2, dp[g_aud_from_host_rdptr]
 	.loc	1 151 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:151:0
@@ -226,12 +676,12 @@ handle_audio_request:                   # @handle_audio_request
 		sub r2, r1, r2
 		nop
 	}
-.Ltmp14:
+.Ltmp32:
 	#DEBUG_VALUE: outSamps <- R2
 	.loc	1 152 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:152:9
 	ashr r1, r2, 32
-	bf r1, .LBB0_3
-.Ltmp15:
+	bf r1, .LBB4_3
+.Ltmp33:
 # BB#2:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: outSamps <- R2
@@ -241,8 +691,8 @@ handle_audio_request:                   # @handle_audio_request
 		add r2, r2, r1
 		nop
 	}
-.Ltmp16:
-.LBB0_3:                                # %LoopBody.preheader
+.Ltmp34:
+.LBB4_3:                                # %LoopBody.preheader
 .Lxtalabel2:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	ldc r1, 597
@@ -251,8 +701,8 @@ handle_audio_request:                   # @handle_audio_request
 		lss r1, r1, r2
 		nop
 	}
-	bf r1, .LBB0_4
-.Ltmp17:
+	bf r1, .LBB4_4
+.Ltmp35:
 # BB#13:                                # %iftrue18
 .Lxtalabel3:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
@@ -262,9 +712,9 @@ handle_audio_request:                   # @handle_audio_request
 	}
 	.loc	1 160 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:160:0
 	stw r9, dp[outUnderflow]
-	bu .LBB0_4
-.Ltmp18:
-.LBB0_7:                                # %iffalse
+	bu .LBB4_4
+.Ltmp36:
+.LBB4_7:                                # %iffalse
 .Lxtalabel4:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	.loc	1 166 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:166:0
@@ -274,16 +724,16 @@ handle_audio_request:                   # @handle_audio_request
 		eq r2, r5, 3
 		nop
 	}
-	bf r2, .LBB0_8
-.Ltmp19:
+	bf r2, .LBB4_8
+.Ltmp37:
 # BB#31:                                # %switchcase58
 .Lxtalabel5:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
 	.loc	1 235 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:235:0
 	ldw r2, dp[g_numUsbChan_Out]
-	bf r2, .LBB0_10
-.Ltmp20:
+	bf r2, .LBB4_10
+.Ltmp38:
 # BB#32:                                # %LoopBody102.preheader
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
@@ -292,7 +742,7 @@ handle_audio_request:                   # @handle_audio_request
 		stw r5, sp[3]
 	}
 	.loc	1 270 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:270:0
-.Ltmp21:
+.Ltmp39:
 	ldw r11, dp[p_multOut]
 	.loc	1 267 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:267:0
 	ldw r3, dp[unpackState]
@@ -304,16 +754,16 @@ handle_audio_request:                   # @handle_audio_request
 		lsu r5, r4, r2
 		mov r1, r2
 	}
-	bt r5, .LBB0_34
-.Ltmp22:
+	bt r5, .LBB4_34
+.Ltmp40:
 # BB#33:                                # %LoopBody102.preheader
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	{
 		mov r1, r4
 		nop
 	}
-.Ltmp23:
-.LBB0_34:                               # %LoopBody102.preheader
+.Ltmp41:
+.LBB4_34:                               # %LoopBody102.preheader
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
 	{
@@ -330,8 +780,8 @@ handle_audio_request:                   # @handle_audio_request
 		add r7, r4, 2
 		mov r9, r1
 	}
-.Ltmp24:
-.LBB0_35:                               # %LoopBody102
+.Ltmp42:
+.LBB4_35:                               # %LoopBody102
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel6:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
@@ -351,10 +801,10 @@ handle_audio_request:                   # @handle_audio_request
 		lsu r8, r6, r4
 		nop
 	}
-	bt r8, .LBB0_38
-.Ltmp25:
+	bt r8, .LBB4_38
+.Ltmp43:
 # BB#36:                                # %LoopBody102
-                                        #   in Loop: Header=BB0_35 Depth=1
+                                        #   in Loop: Header=BB4_35 Depth=1
 .Lxtalabel7:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 
@@ -365,10 +815,10 @@ handle_audio_request:                   # @handle_audio_request
 		nop
 		bru r4
 	}
-	.jmptable32 .LBB0_37,.LBB0_40,.LBB0_41,.LBB0_42
-.Ltmp26:
-.LBB0_37:                               # %switchcase112
-                                        #   in Loop: Header=BB0_35 Depth=1
+	.jmptable32 .LBB4_37,.LBB4_40,.LBB4_41,.LBB4_42
+.Ltmp44:
+.LBB4_37:                               # %switchcase112
+                                        #   in Loop: Header=BB4_35 Depth=1
 .Lxtalabel8:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	.loc	1 247 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:247:0
@@ -391,12 +841,12 @@ handle_audio_request:                   # @handle_audio_request
 		shl r10, r5, 8
 		nop
 	}
-.Ltmp27:
+.Ltmp45:
 	#DEBUG_VALUE: sample <- R10
-	bu .LBB0_38
-.Ltmp28:
-.LBB0_40:                               # %switchcase113
-                                        #   in Loop: Header=BB0_35 Depth=1
+	bu .LBB4_38
+.Ltmp46:
+.LBB4_40:                               # %switchcase113
+                                        #   in Loop: Header=BB4_35 Depth=1
 .Lxtalabel9:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	{
@@ -433,12 +883,12 @@ handle_audio_request:                   # @handle_audio_request
 		or r10, r5, r4
 		nop
 	}
-.Ltmp29:
+.Ltmp47:
 	#DEBUG_VALUE: sample <- R10
-	bu .LBB0_38
-.Ltmp30:
-.LBB0_41:                               # %switchcase119
-                                        #   in Loop: Header=BB0_35 Depth=1
+	bu .LBB4_38
+.Ltmp48:
+.LBB4_41:                               # %switchcase119
+                                        #   in Loop: Header=BB4_35 Depth=1
 .Lxtalabel10:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	.loc	1 258 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:258:0
@@ -448,7 +898,7 @@ handle_audio_request:                   # @handle_audio_request
 		shr r4, r4, 8
 		nop
 	}
-.Ltmp31:
+.Ltmp49:
 	#DEBUG_VALUE: sample <- R4
 	.loc	1 259 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:259:0
 	ldw r5, dp[g_aud_from_host_rdptr]
@@ -475,26 +925,26 @@ handle_audio_request:                   # @handle_audio_request
 		or r10, r5, r4
 		nop
 	}
-.Ltmp32:
+.Ltmp50:
 	#DEBUG_VALUE: sample <- R10
-	bu .LBB0_38
-.Ltmp33:
-.LBB0_42:                               # %switchcase129
-                                        #   in Loop: Header=BB0_35 Depth=1
+	bu .LBB4_38
+.Ltmp51:
+.LBB4_42:                               # %switchcase129
+                                        #   in Loop: Header=BB4_35 Depth=1
 .Lxtalabel11:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	.loc	1 264 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:264:0
 	ldw r4, dp[unpackData]
-	ldw r5, cp[.LCPI0_0]
+	ldw r5, cp[.LCPI4_0]
 	.loc	1 264 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:264:0
 	{
 		and r10, r4, r5
 		nop
 	}
-.Ltmp34:
+.Ltmp52:
 	#DEBUG_VALUE: sample <- R10
-.LBB0_38:                               # %switchdone111
-                                        #   in Loop: Header=BB0_35 Depth=1
+.LBB4_38:                               # %switchdone111
+                                        #   in Loop: Header=BB4_35 Depth=1
 .Lxtalabel12:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
@@ -502,7 +952,7 @@ handle_audio_request:                   # @handle_audio_request
 	#APP
 	ldw r4, r11[r9]
 	#NO_APP
-.Ltmp35:
+.Ltmp53:
 	#DEBUG_VALUE: mult <- R4
 	.loc	1 271 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:271:0
 	{
@@ -517,7 +967,7 @@ handle_audio_request:                   # @handle_audio_request
 		shl r4, r5, 3
 		nop
 	}
-.Ltmp36:
+.Ltmp54:
 	#DEBUG_VALUE: h <- R4
 	#DEBUG_VALUE: i <- R9
 	.loc	1 273 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:273:0
@@ -526,17 +976,17 @@ handle_audio_request:                   # @handle_audio_request
 		out res[r0], r4
 		add r9, r9, 1
 	}
-.Ltmp37:
+.Ltmp55:
 	.loc	1 235 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:235:0
 	{
 		lsu r4, r9, r2
 		nop
 	}
-.Ltmp38:
+.Ltmp56:
 .Lxta.loop_labels0:
 	# LOOPMARKER 1
-	bt r4, .LBB0_35
-.Ltmp39:
+	bt r4, .LBB4_35
+.Ltmp57:
 # BB#39:                                # %switchdone.loopexit498
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	{
@@ -544,32 +994,32 @@ handle_audio_request:                   # @handle_audio_request
 		ldw r1, sp[2]
 	}
 	.loc	1 244 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:244:0
-.Ltmp40:
+.Ltmp58:
 	{
 		add r3, r3, r1
 		nop
 	}
 	.loc	1 267 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:267:0
 	stw r3, dp[unpackState]
-	bu .LBB0_15
-.Ltmp41:
-.LBB0_8:                                # %iffalse
+	bu .LBB4_15
+.Ltmp59:
+.LBB4_8:                                # %iffalse
 .Lxtalabel13:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	{
 		eq r2, r5, 4
 		nop
 	}
-	bf r2, .LBB0_9
-.Ltmp42:
+	bf r2, .LBB4_9
+.Ltmp60:
 # BB#25:                                # %switchcase31
 .Lxtalabel14:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
 	.loc	1 203 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:203:0
 	ldw r2, dp[g_numUsbChan_Out]
-	bf r2, .LBB0_10
-.Ltmp43:
+	bf r2, .LBB4_10
+.Ltmp61:
 # BB#26:                                # %LoopBody67.preheader
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
@@ -586,24 +1036,24 @@ handle_audio_request:                   # @handle_audio_request
 		nop
 	}
 	.loc	1 211 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:211:0
-	bt r4, .LBB0_27
-.Ltmp44:
+	bt r4, .LBB4_27
+.Ltmp62:
 # BB#28:                                # %LoopBody67.preheader
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	{
 		ldc r3, 4
 		stw r5, sp[3]
 	}
-	bu .LBB0_29
-.Ltmp45:
-.LBB0_9:                                # %switchcase
+	bu .LBB4_29
+.Ltmp63:
+.LBB4_9:                                # %switchcase
 .Lxtalabel15:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
 	.loc	1 174 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:174:0
 	ldw r2, dp[g_numUsbChan_Out]
-	bf r2, .LBB0_10
-.Ltmp46:
+	bf r2, .LBB4_10
+.Ltmp64:
 # BB#19:                                # %LoopBody39.preheader
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
@@ -621,32 +1071,32 @@ handle_audio_request:                   # @handle_audio_request
 		nop
 	}
 	.loc	1 182 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:182:0
-	bt r4, .LBB0_20
-.Ltmp47:
+	bt r4, .LBB4_20
+.Ltmp65:
 # BB#21:                                # %LoopBody39.preheader
 	{
 		ldc r4, 2
 		nop
 	}
-	bu .LBB0_22
-.LBB0_10:
-.Ltmp48:
+	bu .LBB4_22
+.LBB4_10:
+.Ltmp66:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	{
 		ldc r2, 0
 		nop
 	}
-	bu .LBB0_11
-.Ltmp49:
-.LBB0_27:
+	bu .LBB4_11
+.Ltmp67:
+.LBB4_27:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
 	{
 		shl r3, r2, 2
 		stw r5, sp[3]
 	}
-.Ltmp50:
-.LBB0_29:                               # %LoopBody67.preheader
+.Ltmp68:
+.LBB4_29:                               # %LoopBody67.preheader
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
 	{
@@ -661,8 +1111,8 @@ handle_audio_request:                   # @handle_audio_request
 		mov r8, r3
 		nop
 	}
-.Ltmp51:
-.LBB0_30:                               # %LoopBody67
+.Ltmp69:
+.LBB4_30:                               # %LoopBody67
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel16:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
@@ -671,7 +1121,7 @@ handle_audio_request:                   # @handle_audio_request
 	#APP
 	ldw r9, r7[0]
 	#NO_APP
-.Ltmp52:
+.Ltmp70:
 	#DEBUG_VALUE: sample <- R9
 	.loc	1 212 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:212:0
 	{
@@ -682,7 +1132,7 @@ handle_audio_request:                   # @handle_audio_request
 	#APP
 	ldw r10, r11[r8]
 	#NO_APP
-.Ltmp53:
+.Ltmp71:
 	#DEBUG_VALUE: mult <- R10
 	.loc	1 216 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:216:0
 	{
@@ -692,20 +1142,20 @@ handle_audio_request:                   # @handle_audio_request
 	#APP
 	maccs r4, r5, r10, r9
 	#NO_APP
-.Ltmp54:
+.Ltmp72:
 	#DEBUG_VALUE: h <- R4
 	.loc	1 217 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:217:0
 	{
 		shl r4, r4, 3
 		shr r5, r5, r6
 	}
-.Ltmp55:
+.Ltmp73:
 	.loc	1 219 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:219:0
 	{
 		or r4, r4, r5
 		nop
 	}
-.Ltmp56:
+.Ltmp74:
 	#DEBUG_VALUE: i <- R8
 	.loc	1 222 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:222:0
 .Lxta.endpoint_labels4:
@@ -713,7 +1163,7 @@ handle_audio_request:                   # @handle_audio_request
 		out res[r0], r4
 		add r8, r8, 1
 	}
-.Ltmp57:
+.Ltmp75:
 	.loc	1 203 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:203:0
 	{
 		lsu r4, r8, r2
@@ -722,8 +1172,8 @@ handle_audio_request:                   # @handle_audio_request
 .Lxta.loop_labels1:
 	# LOOPMARKER 0
 	.loc	1 203 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:203:0
-	bt r4, .LBB0_30
-.Ltmp58:
+	bt r4, .LBB4_30
+.Ltmp76:
 # BB#14:                                # %switchdone.loopexit499
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	{
@@ -731,30 +1181,30 @@ handle_audio_request:                   # @handle_audio_request
 		ldw r3, sp[2]
 	}
 	.loc	1 211 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:211:0
-.Ltmp59:
+.Ltmp77:
 	{
 		add r3, r1, r3
 		nop
 	}
 	.loc	1 212 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:212:0
 	stw r3, dp[g_aud_from_host_rdptr]
-.Ltmp60:
-.LBB0_15:                               # %switchdone
+.Ltmp78:
+.LBB4_15:                               # %switchdone
 .Lxtalabel17:
 	{
 		nop
 		ldw r5, sp[3]
 	}
-	bu .LBB0_16
-.LBB0_20:
+	bu .LBB4_16
+.LBB4_20:
 	.loc	1 182 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:182:0
-.Ltmp61:
+.Ltmp79:
 	{
 		shl r4, r2, 1
 		nop
 	}
-.LBB0_22:                               # %LoopBody39.preheader
-.Ltmp62:
+.LBB4_22:                               # %LoopBody39.preheader
+.Ltmp80:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
 	{
@@ -766,8 +1216,8 @@ handle_audio_request:                   # @handle_audio_request
 		mov r6, r3
 		mov r7, r4
 	}
-.Ltmp63:
-.LBB0_23:                               # %LoopBody39
+.Ltmp81:
+.LBB4_23:                               # %LoopBody39
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel18:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
@@ -776,19 +1226,19 @@ handle_audio_request:                   # @handle_audio_request
 	#APP
 	ld16s r8, r6[r4]
 	#NO_APP
-.Ltmp64:
+.Ltmp82:
 	#DEBUG_VALUE: sample <- R8
 	.loc	1 183 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:183:0
 	{
 		add r6, r6, 2
 		shl r8, r8, 16
 	}
-.Ltmp65:
+.Ltmp83:
 	.loc	1 187 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:187:0
 	#APP
 	ldw r9, r11[r7]
 	#NO_APP
-.Ltmp66:
+.Ltmp84:
 	#DEBUG_VALUE: mult <- R9
 	.loc	1 188 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:188:0
 	{
@@ -803,7 +1253,7 @@ handle_audio_request:                   # @handle_audio_request
 		shl r5, r10, 3
 		nop
 	}
-.Ltmp67:
+.Ltmp85:
 	#DEBUG_VALUE: h <- R5
 	#DEBUG_VALUE: i <- R7
 	.loc	1 191 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:191:0
@@ -812,17 +1262,17 @@ handle_audio_request:                   # @handle_audio_request
 		out res[r0], r5
 		add r7, r7, 1
 	}
-.Ltmp68:
+.Ltmp86:
 	.loc	1 174 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:174:0
 	{
 		lsu r5, r7, r2
 		nop
 	}
-.Ltmp69:
+.Ltmp87:
 .Lxta.loop_labels2:
 	# LOOPMARKER 2
-	bt r5, .LBB0_23
-.Ltmp70:
+	bt r5, .LBB4_23
+.Ltmp88:
 # BB#24:                                # %switchdone.loopexit
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	{
@@ -830,7 +1280,7 @@ handle_audio_request:                   # @handle_audio_request
 		ldw r11, sp[3]
 	}
 	.loc	1 182 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:182:0
-.Ltmp71:
+.Ltmp89:
 	{
 		add r3, r3, r11
 		nop
@@ -841,8 +1291,8 @@ handle_audio_request:                   # @handle_audio_request
 		mov r5, r1
 		nop
 	}
-.Ltmp72:
-.LBB0_16:                               # %switchdone
+.Ltmp90:
+.LBB4_16:                               # %switchdone
 .Lxtalabel19:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
@@ -851,17 +1301,17 @@ handle_audio_request:                   # @handle_audio_request
 		eq r3, r2, 2
 		nop
 	}
-	bf r3, .LBB0_11
-.Ltmp73:
+	bf r3, .LBB4_11
+.Ltmp91:
 # BB#17:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	{
 		ldc r2, 2
 		nop
 	}
-	bu .LBB0_18
-.Ltmp74:
-.LBB0_11:                               # %LoopBody169.preheader
+	bu .LBB4_18
+.Ltmp92:
+.LBB4_11:                               # %LoopBody169.preheader
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	{
 		ldc r3, 2
@@ -876,8 +1326,8 @@ handle_audio_request:                   # @handle_audio_request
 		mov r4, r11
 		nop
 	}
-.Ltmp75:
-.LBB0_12:                               # %LoopBody169
+.Ltmp93:
+.LBB4_12:                               # %LoopBody169
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel20:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
@@ -888,7 +1338,7 @@ handle_audio_request:                   # @handle_audio_request
 		out res[r0], r11
 		add r4, r4, 1
 	}
-.Ltmp76:
+.Ltmp94:
 	.loc	1 288 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:288:0
 	{
 		lsu r1, r4, r3
@@ -896,9 +1346,9 @@ handle_audio_request:                   # @handle_audio_request
 	}
 .Lxta.loop_labels3:
 	# LOOPMARKER 3
-	bt r1, .LBB0_12
-.Ltmp77:
-.LBB0_18:                               # %ifdone162
+	bt r1, .LBB4_12
+.Ltmp95:
+.LBB4_18:                               # %ifdone162
 .Lxtalabel21:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	.loc	1 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:294:0
@@ -916,8 +1366,8 @@ handle_audio_request:                   # @handle_audio_request
 		ldc r9, 0
 		nop
 	}
-.Ltmp78:
-.LBB0_4:                                # %ifdone
+.Ltmp96:
+.LBB4_4:                                # %ifdone
 .Lxtalabel22:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	.loc	1 301 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:301:0
@@ -928,20 +1378,20 @@ handle_audio_request:                   # @handle_audio_request
 		stw r1, sp[3]
 	}
 	.loc	1 301 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:301:0
-	bf r1, .LBB0_54
-.Ltmp79:
+	bf r1, .LBB4_54
+.Ltmp97:
 # BB#5:                                 # %switchcase188
 .Lxtalabel23:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	.loc	1 336 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:336:0
 	ldw r11, dp[g_aud_to_host_dptr]
-.Ltmp80:
+.Ltmp98:
 	#DEBUG_VALUE: i <- 0
 	#DEBUG_VALUE: ptr <- R11
 	.loc	1 338 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:338:0
 	ldw r3, dp[g_numUsbChan_In]
-	bf r3, .LBB0_6
-.Ltmp81:
+	bf r3, .LBB4_6
+.Ltmp99:
 # BB#47:                                # %LoopBody229.preheader
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: ptr <- R11
@@ -956,27 +1406,27 @@ handle_audio_request:                   # @handle_audio_request
 		lsu r1, r1, r3
 		nop
 	}
-.Ltmp82:
+.Ltmp100:
 	.loc	1 341 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:341:0
-	bt r1, .LBB0_48
-.Ltmp83:
+	bt r1, .LBB4_48
+.Ltmp101:
 # BB#49:                                # %LoopBody229.preheader
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	{
 		ldc r5, 4
 		stw r9, sp[1]
 	}
-	bu .LBB0_50
-.Ltmp84:
-.LBB0_54:                               # %switchcase219
+	bu .LBB4_50
+.Ltmp102:
+.LBB4_54:                               # %switchcase219
 .Lxtalabel24:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
 	.loc	1 373 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:373:0
 	ldw r3, dp[g_numUsbChan_In]
 	.loc	1 373 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:373:0
-	bf r3, .LBB0_55
-.Ltmp85:
+	bf r3, .LBB4_55
+.Ltmp103:
 # BB#71:                                # %LoopBody260.preheader
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
@@ -985,7 +1435,7 @@ handle_audio_request:                   # @handle_audio_request
 		stw r9, sp[1]
 	}
 	.loc	1 382 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:382:0
-.Ltmp86:
+.Ltmp104:
 	ldw r4, dp[p_multIn]
 	.loc	1 411 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:411:0
 	ldw r11, dp[packState]
@@ -997,16 +1447,16 @@ handle_audio_request:                   # @handle_audio_request
 		lsu r2, r1, r3
 		mov r5, r3
 	}
-	bt r2, .LBB0_73
-.Ltmp87:
+	bt r2, .LBB4_73
+.Ltmp105:
 # BB#72:                                # %LoopBody260.preheader
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	{
 		mov r5, r1
 		nop
 	}
-.Ltmp88:
-.LBB0_73:                               # %LoopBody260.preheader
+.Ltmp106:
+.LBB4_73:                               # %LoopBody260.preheader
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
 	{
@@ -1026,8 +1476,8 @@ handle_audio_request:                   # @handle_audio_request
 		mov r6, r5
 		stw r1, sp[2]
 	}
-.Ltmp89:
-.LBB0_74:                               # %LoopBody260
+.Ltmp107:
+.LBB4_74:                               # %LoopBody260
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel25:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
@@ -1038,13 +1488,13 @@ handle_audio_request:                   # @handle_audio_request
 		in r8, res[r0]
 		nop
 	}
-.Ltmp90:
+.Ltmp108:
 	#DEBUG_VALUE: sample <- R8
 	.loc	1 382 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:382:0
 	#APP
 	ldw r1, r4[r6]
 	#NO_APP
-.Ltmp91:
+.Ltmp109:
 	#DEBUG_VALUE: mult <- R1
 	.loc	1 387 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:387:0
 	{
@@ -1061,10 +1511,10 @@ handle_audio_request:                   # @handle_audio_request
 		lsu r9, r7, r2
 		nop
 	}
-	bt r9, .LBB0_80
-.Ltmp92:
+	bt r9, .LBB4_80
+.Ltmp110:
 # BB#75:                                # %LoopBody260
-                                        #   in Loop: Header=BB0_74 Depth=1
+                                        #   in Loop: Header=BB4_74 Depth=1
 .Lxtalabel26:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
@@ -1083,7 +1533,7 @@ handle_audio_request:                   # @handle_audio_request
 		shl r8, r9, 3
 		nop
 	}
-.Ltmp93:
+.Ltmp111:
 	#DEBUG_VALUE: sample <- R8
 
 	.xtabranch .Ljumptable1+4,.Ljumptable1+8,.Ljumptable1+12,.Ljumptable1+16
@@ -1093,20 +1543,20 @@ handle_audio_request:                   # @handle_audio_request
 		nop
 		bru r2
 	}
-	.jmptable32 .LBB0_76,.LBB0_77,.LBB0_78,.LBB0_79
-.Ltmp94:
-.LBB0_76:                               # %switchcase274
-                                        #   in Loop: Header=BB0_74 Depth=1
+	.jmptable32 .LBB4_76,.LBB4_77,.LBB4_78,.LBB4_79
+.Ltmp112:
+.LBB4_76:                               # %switchcase274
+                                        #   in Loop: Header=BB4_74 Depth=1
 .Lxtalabel27:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
 	#DEBUG_VALUE: sample <- R8
 	.loc	1 390 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:390:0
 	stw r8, dp[packData]
-	bu .LBB0_80
-.Ltmp95:
-.LBB0_77:                               # %switchcase275
-                                        #   in Loop: Header=BB0_74 Depth=1
+	bu .LBB4_80
+.Ltmp113:
+.LBB4_77:                               # %switchcase275
+                                        #   in Loop: Header=BB4_74 Depth=1
 .Lxtalabel28:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
@@ -1123,7 +1573,7 @@ handle_audio_request:                   # @handle_audio_request
 		shl r2, r9, r2
 		nop
 	}
-	ldw r9, cp[.LCPI0_2]
+	ldw r9, cp[.LCPI4_2]
 	.loc	1 393 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:393:0
 	{
 		and r2, r2, r9
@@ -1155,10 +1605,10 @@ handle_audio_request:                   # @handle_audio_request
 	#NO_APP
 	.loc	1 397 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:397:0
 	stw r8, dp[packData]
-	bu .LBB0_80
-.Ltmp96:
-.LBB0_78:                               # %switchcase278
-                                        #   in Loop: Header=BB0_74 Depth=1
+	bu .LBB4_80
+.Ltmp114:
+.LBB4_78:                               # %switchcase278
+                                        #   in Loop: Header=BB4_74 Depth=1
 .Lxtalabel29:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
@@ -1181,7 +1631,7 @@ handle_audio_request:                   # @handle_audio_request
 		shl r2, r9, r2
 		nop
 	}
-	ldw r9, cp[.LCPI0_1]
+	ldw r9, cp[.LCPI4_1]
 	.loc	1 400 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:400:0
 	{
 		and r2, r2, r9
@@ -1207,10 +1657,10 @@ handle_audio_request:                   # @handle_audio_request
 	stw r1, dp[g_aud_to_host_dptr]
 	.loc	1 403 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:403:0
 	stw r8, dp[packData]
-	bu .LBB0_80
-.Ltmp97:
-.LBB0_79:                               # %switchcase293
-                                        #   in Loop: Header=BB0_74 Depth=1
+	bu .LBB4_80
+.Ltmp115:
+.LBB4_79:                               # %switchcase293
+                                        #   in Loop: Header=BB4_74 Depth=1
 .Lxtalabel30:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
@@ -1220,7 +1670,7 @@ handle_audio_request:                   # @handle_audio_request
 		nop
 		ld8u r1, r1[r7]
 	}
-	ldw r2, cp[.LCPI0_0]
+	ldw r2, cp[.LCPI4_0]
 	.loc	1 406 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:406:0
 	{
 		and r2, r8, r2
@@ -1246,9 +1696,9 @@ handle_audio_request:                   # @handle_audio_request
 	}
 	.loc	1 408 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:408:0
 	stw r1, dp[g_aud_to_host_dptr]
-.Ltmp98:
-.LBB0_80:                               # %switchdone273
-                                        #   in Loop: Header=BB0_74 Depth=1
+.Ltmp116:
+.LBB4_80:                               # %switchdone273
+                                        #   in Loop: Header=BB4_74 Depth=1
 .Lxtalabel31:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
@@ -1257,7 +1707,7 @@ handle_audio_request:                   # @handle_audio_request
 		add r6, r6, 1
 		nop
 	}
-.Ltmp99:
+.Ltmp117:
 	#DEBUG_VALUE: i <- R6
 	.loc	1 373 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:373:0
 	{
@@ -1266,8 +1716,8 @@ handle_audio_request:                   # @handle_audio_request
 	}
 .Lxta.loop_labels4:
 	# LOOPMARKER 4
-	bt r1, .LBB0_74
-.Ltmp100:
+	bt r1, .LBB4_74
+.Ltmp118:
 # BB#43:                                # %switchdone186.loopexit
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	{
@@ -1275,23 +1725,23 @@ handle_audio_request:                   # @handle_audio_request
 		ldw r1, sp[0]
 	}
 	.loc	1 376 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:376:0
-.Ltmp101:
+.Ltmp119:
 	{
 		add r1, r11, r1
 		nop
 	}
 	.loc	1 411 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:411:0
-.Ltmp102:
+.Ltmp120:
 	stw r1, dp[packState]
-.Ltmp103:
+.Ltmp121:
 	.loc	1 421 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:421:0
 	{
 		mov r4, r3
 		ldw r9, sp[1]
 	}
-	bu .LBB0_44
-.Ltmp104:
-.LBB0_6:
+	bu .LBB4_44
+.Ltmp122:
+.LBB4_6:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	{
 		ldc r4, 0
@@ -1299,18 +1749,18 @@ handle_audio_request:                   # @handle_audio_request
 	}
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	.loc	1 364 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:364:0
-.Ltmp105:
+.Ltmp123:
 	stw r11, dp[g_aud_to_host_dptr]
-	bu .LBB0_44
-.Ltmp106:
-.LBB0_55:
+	bu .LBB4_44
+.Ltmp124:
+.LBB4_55:
 	{
 		ldc r3, 0
 		nop
 	}
-	bu .LBB0_56
-.LBB0_48:
-.Ltmp107:
+	bu .LBB4_56
+.LBB4_48:
+.Ltmp125:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: ptr <- R11
 	#DEBUG_VALUE: i <- 0
@@ -1318,8 +1768,8 @@ handle_audio_request:                   # @handle_audio_request
 		shl r5, r3, 2
 		stw r9, sp[1]
 	}
-.Ltmp108:
-.LBB0_50:                               # %LoopBody229.preheader
+.Ltmp126:
+.LBB4_50:                               # %LoopBody229.preheader
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: ptr <- R11
 	#DEBUG_VALUE: i <- 0
@@ -1331,8 +1781,8 @@ handle_audio_request:                   # @handle_audio_request
 		mov r7, r6
 		mov r8, r11
 	}
-.Ltmp109:
-.LBB0_51:                               # %LoopBody229
+.Ltmp127:
+.LBB4_51:                               # %LoopBody229
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel32:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
@@ -1344,13 +1794,13 @@ handle_audio_request:                   # @handle_audio_request
 		in r1, res[r0]
 		nop
 	}
-.Ltmp110:
+.Ltmp128:
 	#DEBUG_VALUE: sample <- R1
 	.loc	1 348 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:348:0
 	#APP
 	ldw r2, r4[r7]
 	#NO_APP
-.Ltmp111:
+.Ltmp129:
 	#DEBUG_VALUE: mult <- R2
 	.loc	1 349 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:349:0
 	{
@@ -1365,31 +1815,31 @@ handle_audio_request:                   # @handle_audio_request
 		shl r1, r9, 3
 		nop
 	}
-.Ltmp112:
+.Ltmp130:
 	#DEBUG_VALUE: sample <- R1
 	.loc	1 359 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:359:0
 	#APP
 	stw r1, r8[0]
 	#NO_APP
-.Ltmp113:
+.Ltmp131:
 	#DEBUG_VALUE: i <- R7
 	.loc	1 360 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:360:0
 	{
 		add r8, r8, 4
 		add r7, r7, 1
 	}
-.Ltmp114:
+.Ltmp132:
 	.loc	1 338 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:338:0
 	{
 		lsu r1, r7, r3
 		nop
 	}
-.Ltmp115:
+.Ltmp133:
 .Lxta.loop_labels5:
 	# LOOPMARKER 5
 	.loc	1 338 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:338:0
-	bt r1, .LBB0_51
-.Ltmp116:
+	bt r1, .LBB4_51
+.Ltmp134:
 # BB#52:                                # %ifdone223.loopexit
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: ptr <- R11
@@ -1398,22 +1848,22 @@ handle_audio_request:                   # @handle_audio_request
 		add r11, r11, r5
 		mov r4, r3
 	}
-.Ltmp117:
+.Ltmp135:
 	{
 		nop
 		ldw r9, sp[1]
 	}
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
-.Ltmp118:
+.Ltmp136:
 	.loc	1 364 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:364:0
 	stw r11, dp[g_aud_to_host_dptr]
-.Ltmp119:
-.LBB0_44:                               # %switchdone186
+.Ltmp137:
+.LBB4_44:                               # %switchdone186
 .Lxtalabel33:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
-	bf r4, .LBB0_56
-.Ltmp120:
+	bf r4, .LBB4_56
+.Ltmp138:
 # BB#45:                                # %LoopBody337.preheader
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
 	#DEBUG_VALUE: i <- 0
@@ -1422,8 +1872,8 @@ handle_audio_request:                   # @handle_audio_request
 		neg r11, r3
 		ldc r2, 0
 	}
-.Ltmp121:
-.LBB0_46:                               # %LoopBody337
+.Ltmp139:
+.LBB4_46:                               # %LoopBody337
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel34:
 	#DEBUG_VALUE: handle_audio_request:c_mix_out <- R0
@@ -1435,7 +1885,7 @@ handle_audio_request:                   # @handle_audio_request
 		in r1, res[r0]
 		add r2, r2, 1
 	}
-.Ltmp122:
+.Ltmp140:
 	.loc	1 421 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:421:0
 	{
 		lsu r1, r2, r11
@@ -1443,9 +1893,9 @@ handle_audio_request:                   # @handle_audio_request
 	}
 .Lxta.loop_labels6:
 	# LOOPMARKER 6
-	bt r1, .LBB0_46
-.Ltmp123:
-.LBB0_56:                               # %ifdone330
+	bt r1, .LBB4_46
+.Ltmp141:
+.LBB4_56:                               # %ifdone330
 .Lxtalabel35:
 	.loc	1 426 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:426:0
 	ldw r0, dp[sampsToWrite]
@@ -1465,7 +1915,7 @@ handle_audio_request:                   # @handle_audio_request
 		lss r0, r0, r4
 		nop
 	}
-	bf r0, .LBB0_67
+	bf r0, .LBB4_67
 # BB#57:                                # %iftrue349
 .Lxtalabel36:
 	{
@@ -1473,10 +1923,10 @@ handle_audio_request:                   # @handle_audio_request
 		nop
 	}
 	.loc	1 435 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:435:0
-.Ltmp124:
+.Ltmp142:
 	stw r0, dp[packState]
 	.loc	1 438 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:438:0
-.Ltmp125:
+.Ltmp143:
 	ldw r0, dp[totalSampsToWrite]
 	{
 		nop
@@ -1486,7 +1936,7 @@ handle_audio_request:                   # @handle_audio_request
 	mul r0, r1, r0
 	.loc	1 438 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:438:0
 	mul r0, r0, r3
-.Ltmp126:
+.Ltmp144:
 	#DEBUG_VALUE: datasize <- R0
 	.loc	1 440 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:440:0
 	ldw r1, dp[g_aud_to_host_wrptr]
@@ -1499,8 +1949,8 @@ handle_audio_request:                   # @handle_audio_request
 		add r2, r0, 7
 		nop
 	}
-	ldw r0, cp[.LCPI0_3]
-.Ltmp127:
+	ldw r0, cp[.LCPI4_3]
+.Ltmp145:
 	.loc	1 446 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:446:0
 	{
 		and r2, r2, r0
@@ -1521,7 +1971,7 @@ handle_audio_request:                   # @handle_audio_request
 		nop
 	}
 	ldw r8, dp[aud_to_host_fifo_start]
-	bt r1, .LBB0_59
+	bt r1, .LBB4_59
 # BB#58:                                # %iftrue349
 .Lxtalabel37:
 	.loc	1 449 13                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:449:13
@@ -1529,7 +1979,7 @@ handle_audio_request:                   # @handle_audio_request
 		mov r6, r8
 		nop
 	}
-.LBB0_59:                               # %iftrue349
+.LBB4_59:                               # %iftrue349
 .Lxtalabel38:
 	.loc	1 451 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:451:0
 	stw r6, dp[g_aud_to_host_wrptr]
@@ -1544,7 +1994,7 @@ handle_audio_request:                   # @handle_audio_request
 	#APP
 	ldw   r1, dp[g_speed]
 	#NO_APP
-.Ltmp128:
+.Ltmp146:
 	#DEBUG_VALUE: speed <- R1
 	.loc	1 463 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:463:0
 	ldw r2, dp[speedRem]
@@ -1553,7 +2003,7 @@ handle_audio_request:                   # @handle_audio_request
 		add r1, r2, r1
 		nop
 	}
-.Ltmp129:
+.Ltmp147:
 	.loc	1 464 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:464:0
 	ashr r5, r1, 16
 	.loc	1 464 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:464:0
@@ -1572,7 +2022,7 @@ handle_audio_request:                   # @handle_audio_request
 		sub r11, r1, r6
 		nop
 	}
-.Ltmp130:
+.Ltmp148:
 	#DEBUG_VALUE: space_left <- R11
 	.loc	1 478 13                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:478:13
 	{
@@ -1584,17 +2034,17 @@ handle_audio_request:                   # @handle_audio_request
 		and r1, r2, r1
 		nop
 	}
-	bf r1, .LBB0_61
-.Ltmp131:
+	bf r1, .LBB4_61
+.Ltmp149:
 # BB#60:
 	.loc	1 480 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:480:0
 	{
 		sub r11, r7, r6
 		nop
 	}
-.Ltmp132:
+.Ltmp150:
 	#DEBUG_VALUE: space_left <- R11
-.LBB0_61:                               # %iftrue349
+.LBB4_61:                               # %iftrue349
 .Lxtalabel39:
 	.loc	1 484 13                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:484:13
 	mul r1, r3, r5
@@ -1614,42 +2064,42 @@ handle_audio_request:                   # @handle_audio_request
 		lsu r1, r11, r1
 		nop
 	}
-	bf r1, .LBB0_66
-.LBB0_62:                               # %LoopBody411
+	bf r1, .LBB4_66
+.LBB4_62:                               # %LoopBody411
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel40:
 	.loc	1 497 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:497:0
-.Ltmp133:
+.Ltmp151:
 	#APP
 	ldw r2, dp[g_aud_to_host_rdptr]
 	#NO_APP
-.Ltmp134:
+.Ltmp152:
 	#DEBUG_VALUE: rdPtr <- R2
 	.loc	1 498 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:498:0
 	#APP
 	ldw r1, r2[0]
 	#NO_APP
-.Ltmp135:
+.Ltmp153:
 	#DEBUG_VALUE: datalength <- R1
 	.loc	1 501 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:501:0
 	{
 		add r1, r1, 7
 		nop
 	}
-.Ltmp136:
+.Ltmp154:
 	.loc	1 501 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:501:0
 	{
 		and r1, r1, r0
 		nop
 	}
-.Ltmp137:
+.Ltmp155:
 	#DEBUG_VALUE: datalength <- R1
 	.loc	1 504 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:504:0
 	{
 		add r2, r1, r2
 		nop
 	}
-.Ltmp138:
+.Ltmp156:
 	.loc	1 505 21                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:505:21
 	ldw r3, dp[aud_to_host_fifo_end]
 	.loc	1 505 21                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:505:21
@@ -1657,18 +2107,18 @@ handle_audio_request:                   # @handle_audio_request
 		lsu r3, r2, r3
 		nop
 	}
-	bt r3, .LBB0_64
-.Ltmp139:
+	bt r3, .LBB4_64
+.Ltmp157:
 # BB#63:                                # %LoopBody411
-                                        #   in Loop: Header=BB0_62 Depth=1
+                                        #   in Loop: Header=BB4_62 Depth=1
 .Lxtalabel41:
 	#DEBUG_VALUE: datalength <- R1
 	.loc	1 507 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:507:0
 	ldw r2, dp[aud_to_host_fifo_start]
-.Ltmp140:
+.Ltmp158:
 	#DEBUG_VALUE: rdPtr <- R2
-.LBB0_64:                               # %LoopBody411
-                                        #   in Loop: Header=BB0_62 Depth=1
+.LBB4_64:                               # %LoopBody411
+                                        #   in Loop: Header=BB4_62 Depth=1
 .Lxtalabel42:
 	#DEBUG_VALUE: datalength <- R1
 	.loc	1 510 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:510:0
@@ -1676,7 +2126,7 @@ handle_audio_request:                   # @handle_audio_request
 		add r11, r1, r11
 		nop
 	}
-.Ltmp141:
+.Ltmp159:
 	#DEBUG_VALUE: space_left <- R11
 	.loc	1 511 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:511:0
 	#APP
@@ -1684,27 +2134,27 @@ handle_audio_request:                   # @handle_audio_request
 	#NO_APP
 .Lxta.loop_labels7:
 	# LOOPMARKER 7
-.Ltmp142:
+.Ltmp160:
 	.loc	1 513 19                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:513:19
 	ashr r1, r11, 32
-.Ltmp143:
-	bt r1, .LBB0_62
-.Ltmp144:
+.Ltmp161:
+	bt r1, .LBB4_62
+.Ltmp162:
 # BB#65:                                # %ifdone399.loopexit
 	.loc	1 516 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:516:0
 	ldw r5, dp[totalSampsToWrite]
-.Ltmp145:
+.Ltmp163:
 	.loc	1 520 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:520:5
 	ldw r9, dp[outUnderflow]
-.LBB0_66:                               # %ifdone399
+.LBB4_66:                               # %ifdone399
 .Lxtalabel43:
 	.loc	1 516 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:516:0
-.Ltmp146:
+.Ltmp164:
 	stw r5, dp[sampsToWrite]
-.Ltmp147:
-.LBB0_67:                               # %ifdone350
+.Ltmp165:
+.LBB4_67:                               # %ifdone350
 .Lxtalabel44:
-	bt r9, .LBB0_86
+	bt r9, .LBB4_86
 # BB#68:                                # %lhsfalse450
 	.loc	1 520 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:520:5
 	ldw r0, dp[aud_data_remaining_to_device]
@@ -1719,10 +2169,10 @@ handle_audio_request:                   # @handle_audio_request
 		lsu r1, r0, r1
 		nop
 	}
-	bf r1, .LBB0_86
+	bf r1, .LBB4_86
 # BB#69:                                # %iftrue442
 .Lxtalabel45:
-	bf r0, .LBB0_70
+	bf r0, .LBB4_70
 # BB#81:                                # %iftrue461
 .Lxtalabel46:
 	.loc	1 526 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:526:0
@@ -1741,7 +2191,7 @@ handle_audio_request:                   # @handle_audio_request
 		add r0, r2, r0
 		nop
 	}
-	ldw r1, cp[.LCPI0_3]
+	ldw r1, cp[.LCPI4_3]
 	.loc	1 527 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:527:0
 	{
 		and r0, r0, r1
@@ -1762,11 +2212,11 @@ handle_audio_request:                   # @handle_audio_request
 	}
 	.loc	1 532 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:532:0
 	stw r1, dp[aud_data_remaining_to_device]
-	bu .LBB0_82
-.LBB0_70:                               # %iftrue442.ifdone462_crit_edge
+	bu .LBB4_82
+.LBB4_70:                               # %iftrue442.ifdone462_crit_edge
 	.loc	1 536 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:536:9
 	ldw r0, dp[g_aud_from_host_rdptr]
-.LBB0_82:                               # %ifdone462
+.LBB4_82:                               # %ifdone462
 .Lxtalabel47:
 	.loc	1 536 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:536:9
 	ldw r1, dp[aud_from_host_fifo_end]
@@ -1775,14 +2225,14 @@ handle_audio_request:                   # @handle_audio_request
 		lsu r1, r0, r1
 		nop
 	}
-	bt r1, .LBB0_84
+	bt r1, .LBB4_84
 # BB#83:                                # %iftrue475
 .Lxtalabel48:
 	.loc	1 538 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:538:0
 	ldw r0, dp[aud_from_host_fifo_start]
 	.loc	1 538 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:538:0
 	stw r0, dp[g_aud_from_host_rdptr]
-.LBB0_84:                               # %ifdone476
+.LBB4_84:                               # %ifdone476
 .Lxtalabel49:
 	.loc	1 541 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:541:0
 	ldw r1, dp[g_aud_from_host_wrptr]
@@ -1793,7 +2243,7 @@ handle_audio_request:                   # @handle_audio_request
 	}
 	.loc	1 541 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:541:0
 	stw r1, dp[outUnderflow]
-	bt r1, .LBB0_86
+	bt r1, .LBB4_86
 # BB#85:                                # %iftrue485
 .Lxtalabel50:
 	.loc	1 546 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:546:0
@@ -1815,8 +2265,8 @@ handle_audio_request:                   # @handle_audio_request
 	}
 	.loc	1 550 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:550:0
 	stw r0, dp[g_aud_from_host_rdptr]
-.Ltmp148:
-.LBB0_86:                               # %return
+.Ltmp166:
+.LBB4_86:                               # %return
 .Lxtalabel51:
 	{
 		nop
@@ -1839,33 +2289,33 @@ handle_audio_request:                   # @handle_audio_request
 	.globl	handle_audio_request.maxtimers
 	.set	handle_audio_request.maxchanends,0
 	.globl	handle_audio_request.maxchanends
-.Ltmp149:
-	.size	handle_audio_request, .Ltmp149-handle_audio_request
-.Lfunc_end0:
+.Ltmp167:
+	.size	handle_audio_request, .Ltmp167-handle_audio_request
+.Lfunc_end4:
 	.cfi_endproc
 
 	.section	.cp.rodata.cst4,"aMc",@progbits,4
-	.cc_top .LCPI1_0.data,.LCPI1_0
+	.cc_top .LCPI5_0.data,.LCPI5_0
 	.align	4
-	.type	.LCPI1_0,@object
-	.size	.LCPI1_0, 4
-.LCPI1_0:
+	.type	.LCPI5_0,@object
+	.size	.LCPI5_0, 4
+.LCPI5_0:
 	.long	536870912               # 0x20000000
-	.cc_bottom .LCPI1_0.data
-	.cc_top .LCPI1_1.data,.LCPI1_1
+	.cc_bottom .LCPI5_0.data
+	.cc_top .LCPI5_1.data,.LCPI5_1
 	.align	4
-	.type	.LCPI1_1,@object
-	.size	.LCPI1_1, 4
-.LCPI1_1:
+	.type	.LCPI5_1,@object
+	.size	.LCPI5_1, 4
+.LCPI5_1:
 	.long	4294967292              # 0xfffffffc
-	.cc_bottom .LCPI1_1.data
+	.cc_bottom .LCPI5_1.data
 	.text
 	.globl	decouple
 	.align	4
 	.type	decouple,@function
 	.cc_top decouple.function,decouple
 decouple:                               # @decouple
-.Lfunc_begin1:
+.Lfunc_begin5:
 	.loc	1 590 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:590:0
 	.cfi_startproc
 	.issue_mode dual
@@ -1875,46 +2325,46 @@ decouple:                               # @decouple
 		nop
 		dualentsp 12
 	}
-.Ltmp150:
+.Ltmp168:
 	.cfi_def_cfa_offset 48
-.Ltmp151:
+.Ltmp169:
 	.cfi_offset 15, 0
 	std r5, r4, sp[2]               # 4-byte Folded Spill
-.Ltmp152:
+.Ltmp170:
 	.cfi_offset 4, -32
-.Ltmp153:
+.Ltmp171:
 	.cfi_offset 5, -28
 	std r7, r6, sp[3]               # 4-byte Folded Spill
-.Ltmp154:
+.Ltmp172:
 	.cfi_offset 6, -24
-.Ltmp155:
+.Ltmp173:
 	.cfi_offset 7, -20
 	std r9, r8, sp[4]               # 4-byte Folded Spill
-.Ltmp156:
+.Ltmp174:
 	.cfi_offset 8, -16
-.Ltmp157:
+.Ltmp175:
 	.cfi_offset 9, -12
-.Ltmp158:
+.Ltmp176:
 	.cfi_offset 10, -8
 	#DEBUG_VALUE: decouple:c_mix_out <- R0
-.Ltmp159:
+.Ltmp177:
 	#DEBUG_VALUE: sampFreq <- 44100
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	{
 		mov r4, r0
 		stw r10, sp[10]
 	}
-.Ltmp160:
+.Ltmp178:
 	ldc r5, 44100
 	.loc	1 594 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:594:0
-.Ltmp161:
+.Ltmp179:
 	{
 		mov r0, r5
 		nop
 	}
 .Lxta.call_labels0:
 	bl update_samp_freq
-.Ltmp162:
+.Ltmp180:
 	#DEBUG_VALUE: aud_from_host_flag <- 0
 	.file	3 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
 	.loc	3 13 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
@@ -1922,7 +2372,7 @@ decouple:                               # @decouple
 	#APP
 	mov r2, r0
 	#NO_APP
-.Ltmp163:
+.Ltmp181:
 	#DEBUG_VALUE: t <- R2
 	#DEBUG_VALUE: x <- R2
 	.loc	3 13 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
@@ -1930,17 +2380,17 @@ decouple:                               # @decouple
 	#APP
 	mov r1, r0
 	#NO_APP
-.Ltmp164:
+.Ltmp182:
 	#DEBUG_VALUE: x <- R1
 	.loc	1 608 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:608:0
 	stw r1, dp[p_multOut]
 	.loc	3 13 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
-.Ltmp165:
+.Ltmp183:
 	ldaw r0, dp[multIn]
 	#APP
 	mov r0, r0
 	#NO_APP
-.Ltmp166:
+.Ltmp184:
 	#DEBUG_VALUE: x <- R0
 	.loc	1 611 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:611:0
 	stw r0, dp[p_multIn]
@@ -1959,13 +2409,13 @@ decouple:                               # @decouple
 	.loc	1 617 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:617:0
 	stw r2, dp[g_aud_from_host_rdptr]
 	.loc	3 13 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
-.Ltmp167:
+.Ltmp185:
 	ldaw r2, dp[audioBuffIn]
-.Ltmp168:
+.Ltmp186:
 	#APP
 	mov r2, r2
 	#NO_APP
-.Ltmp169:
+.Ltmp187:
 	#DEBUG_VALUE: x <- R2
 	#DEBUG_VALUE: t <- R2
 	.loc	1 621 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:621:0
@@ -1981,29 +2431,29 @@ decouple:                               # @decouple
 		add r2, r2, 4
 		nop
 	}
-.Ltmp170:
+.Ltmp188:
 	.loc	1 625 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:625:0
 	stw r2, dp[g_aud_to_host_dptr]
 	.loc	3 13 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
-.Ltmp171:
+.Ltmp189:
 	ldaw r2, dp[inZeroBuff]
 	#APP
 	mov r2, r2
 	#NO_APP
-.Ltmp172:
+.Ltmp190:
 	#DEBUG_VALUE: x <- R2
 	#DEBUG_VALUE: t <- R2
 	.loc	1 632 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:632:0
 	stw r2, dp[g_aud_to_host_zeros]
-	ldw r2, cp[.LCPI1_0]
-.Ltmp173:
+	ldw r2, cp[.LCPI5_0]
+.Ltmp191:
 	#DEBUG_VALUE: i <- 0
 	{
 		ldc r6, 0
 		nop
 	}
 	.loc	1 638 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:638:0
-.Ltmp174:
+.Ltmp192:
 	#APP
 	stw r2, r1[r6]
 	#NO_APP
@@ -2011,7 +2461,7 @@ decouple:                               # @decouple
 		mkmsk r7, 1
 		nop
 	}
-.Ltmp175:
+.Ltmp193:
 	#DEBUG_VALUE: i <- 1
 	.loc	1 638 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:638:0
 	#APP
@@ -2025,13 +2475,13 @@ decouple:                               # @decouple
 	#APP
 	stw r2, r1[r3]
 	#NO_APP
-.Ltmp176:
+.Ltmp194:
 	#DEBUG_VALUE: i <- 0
 	.loc	1 645 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:645:0
 	#APP
 	stw r2, r0[r6]
 	#NO_APP
-.Ltmp177:
+.Ltmp195:
 	#DEBUG_VALUE: i <- 1
 	.loc	1 649 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:649:0
 	#APP
@@ -2053,13 +2503,13 @@ decouple:                               # @decouple
 	#APP
 	setsr (((0) & ~(((1 << 0x1) - 1) << 0x1)) | (((1) << 0x1) & (((1 << 0x1) - 1) << 0x1)))
 	#NO_APP
-.Ltmp178:
+.Ltmp196:
 	#DEBUG_VALUE: array_to_xc_ptr:a <- R0
 	#DEBUG_VALUE: array_to_xc_ptr:a <- R0
 	#DEBUG_VALUE: array_to_xc_ptr:a <- R0
 	#DEBUG_VALUE: array_to_xc_ptr:a <- R2
 	#DEBUG_VALUE: array_to_xc_ptr:a <- R2
-.LBB1_1:                                # %LoopBody47
+.LBB5_1:                                # %LoopBody47
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel53:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -2069,13 +2519,13 @@ decouple:                               # @decouple
 	#APP
 	ldw r0, dp[g_aud_from_host_flag]
 	#NO_APP
-.Ltmp179:
+.Ltmp197:
 	#DEBUG_VALUE: aud_from_host_flag <- R0
 .Lxta.loop_labels8:
 	# LOOPMARKER 0
 	.loc	1 654 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:654:5
-	bf r0, .LBB1_1
-.Ltmp180:
+	bf r0, .LBB5_1
+.Ltmp198:
 # BB#2:                                 # %ifdone42
 .Lxtalabel54:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -2093,19 +2543,19 @@ decouple:                               # @decouple
 	#NO_APP
 	.loc	1 664 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:664:0
 	ldw r0, dp[aud_from_host_usb_ep]
-.Ltmp181:
+.Ltmp199:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:ep <- R0
 	.loc	1 664 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:664:0
 	ldw r1, dp[g_aud_from_host_wrptr]
 	.loc	2 432 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:432:0
-.Ltmp182:
+.Ltmp200:
 	#APP
 	ldw r2, r0[9]
 	#NO_APP
-.Ltmp183:
+.Ltmp201:
 	#DEBUG_VALUE: reset <- R2
-	bt r2, .LBB1_4
-.Ltmp184:
+	bt r2, .LBB5_4
+.Ltmp202:
 # BB#3:                                 # %ifdone.i
 .Lxtalabel55:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -2117,13 +2567,13 @@ decouple:                               # @decouple
 		add r1, r1, 4
 		nop
 	}
-.Ltmp185:
+.Ltmp203:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:addr <- R1
 	.loc	2 437 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:437:0
 	#APP
 	ldw r2, r0[0]
 	#NO_APP
-.Ltmp186:
+.Ltmp204:
 	#DEBUG_VALUE: chan_array_ptr <- R2
 	.loc	2 438 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:438:0
 	#APP
@@ -2133,8 +2583,8 @@ decouple:                               # @decouple
 	#APP
 	stw r0, r2[0]
 	#NO_APP
-.Ltmp187:
-.LBB1_4:                                # %LoopBody59.preheader
+.Ltmp205:
+.LBB5_4:                                # %LoopBody59.preheader
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
 	#DEBUG_VALUE: aud_from_host_flag <- 0
@@ -2142,17 +2592,17 @@ decouple:                               # @decouple
 		ldaw r8, sp[1]
 		nop
 	}
-	bu .LBB1_5
-.Ltmp188:
-.LBB1_38:                               # %iffalse202
-                                        #   in Loop: Header=BB1_5 Depth=1
+	bu .LBB5_5
+.Ltmp206:
+.LBB5_38:                               # %iffalse203
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel56:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
 	.loc	1 893 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:893:0
 	stw r7, dp[outOverflow]
-.Ltmp189:
-.LBB1_5:                                # %LoopBody59
+.Ltmp207:
+.LBB5_5:                                # %LoopBody59
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel57:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
@@ -2166,27 +2616,27 @@ decouple:                               # @decouple
 	#APP
 	ldw r0, dp[g_freqChange_flag]
 	#NO_APP
-.Ltmp190:
+.Ltmp208:
 	#DEBUG_VALUE: tmp <- R0
 	.loc	1 700 13                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:700:13
 	{
 		eq r1, r0, 9
 		nop
 	}
-	bt r1, .LBB1_15
-.Ltmp191:
+	bt r1, .LBB5_15
+.Ltmp209:
 # BB#6:                                 # %LoopBody59
-                                        #   in Loop: Header=BB1_5 Depth=1
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel58:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	{
 		eq r1, r0, 8
 		nop
 	}
-	bf r1, .LBB1_7
-.Ltmp192:
+	bf r1, .LBB5_7
+.Ltmp210:
 # BB#21:                                # %iftrue110
-                                        #   in Loop: Header=BB1_5 Depth=1
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel59:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: dsdMode <- 0
@@ -2214,22 +2664,24 @@ decouple:                               # @decouple
 	#APP
 	ldw r0, dp[g_formatChange_DataFormat]
 	#NO_APP
-.Ltmp193:
+.Ltmp211:
 	#DEBUG_VALUE: dataFormat <- R0
 	.loc	1 800 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:800:0
 	#APP
 	ldw r9, dp[g_formatChange_SampRes]
 	#NO_APP
-.Ltmp194:
+.Ltmp212:
 	#DEBUG_VALUE: sampRes <- R9
 	.loc	1 803 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:803:0
+	ldw r0, dp[g_numUsbChan_Out]
+.Ltmp213:
+	.loc	1 803 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:803:0
 	{
-		mov r0, r9
+		mov r1, r9
 		nop
 	}
-.Ltmp195:
 .Lxta.call_labels1:
-	bl update_samp_resolution
+	bl update_stream_format
 	.loc	1 807 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:807:0
 	ldw r0, dp[aud_from_host_fifo_start]
 	.loc	1 807 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:807:0
@@ -2248,31 +2700,31 @@ decouple:                               # @decouple
 	stw r7, dp[outUnderflow]
 	.loc	1 813 17                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:813:17
 	ldw r0, dp[outOverflow]
-	bf r0, .LBB1_25
-.Ltmp196:
+	bf r0, .LBB5_25
+.Ltmp214:
 # BB#22:                                # %iftrue119
-                                        #   in Loop: Header=BB1_5 Depth=1
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel60:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: dsdMode <- 0
 	#DEBUG_VALUE: sampRes <- R9
 	.loc	1 816 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:816:0
 	ldw r0, dp[aud_from_host_usb_ep]
-.Ltmp197:
+.Ltmp215:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:ep <- R0
 	.loc	1 816 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:816:0
 	ldw r1, dp[aud_from_host_fifo_start]
 	.loc	2 432 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:432:0
-.Ltmp198:
+.Ltmp216:
 	#APP
 	ldw r2, r0[9]
 	#NO_APP
-.Ltmp199:
+.Ltmp217:
 	#DEBUG_VALUE: reset <- R2
-	bt r2, .LBB1_24
-.Ltmp200:
-# BB#23:                                # %ifdone.i265
-                                        #   in Loop: Header=BB1_5 Depth=1
+	bt r2, .LBB5_24
+.Ltmp218:
+# BB#23:                                # %ifdone.i266
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel61:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: dsdMode <- 0
@@ -2283,13 +2735,13 @@ decouple:                               # @decouple
 		add r1, r1, 4
 		nop
 	}
-.Ltmp201:
+.Ltmp219:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:addr <- R1
 	.loc	2 437 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:437:0
 	#APP
 	ldw r2, r0[0]
 	#NO_APP
-.Ltmp202:
+.Ltmp220:
 	#DEBUG_VALUE: chan_array_ptr <- R2
 	.loc	2 438 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:438:0
 	#APP
@@ -2299,17 +2751,17 @@ decouple:                               # @decouple
 	#APP
 	stw r0, r2[0]
 	#NO_APP
-.Ltmp203:
-.LBB1_24:                               # %XUD_SetReady_OutPtr.exit267
-                                        #   in Loop: Header=BB1_5 Depth=1
+.Ltmp221:
+.LBB5_24:                               # %XUD_SetReady_OutPtr.exit268
+                                        #   in Loop: Header=BB5_5 Depth=1
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: dsdMode <- 0
 	#DEBUG_VALUE: sampRes <- R9
 	.loc	1 817 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:817:0
 	stw r6, dp[outOverflow]
-.Ltmp204:
-.LBB1_25:                               # %ifdone120
-                                        #   in Loop: Header=BB1_5 Depth=1
+.Ltmp222:
+.LBB5_25:                               # %ifdone120
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel62:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: dsdMode <- 0
@@ -2357,10 +2809,10 @@ decouple:                               # @decouple
 	#APP
 	setsr (((0) & ~(((1 << 0x1) - 1) << 0x1)) | (((1) << 0x1) & (((1 << 0x1) - 1) << 0x1)))
 	#NO_APP
-	bu .LBB1_26
-.Ltmp205:
-.LBB1_15:                               # %iftrue85
-                                        #   in Loop: Header=BB1_5 Depth=1
+	bu .LBB5_26
+.Ltmp223:
+.LBB5_15:                               # %iftrue85
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel63:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
@@ -2389,13 +2841,13 @@ decouple:                               # @decouple
 	#APP
 	ldw r0, dp[g_formatChange_DataFormat]
 	#NO_APP
-.Ltmp206:
+.Ltmp224:
 	#DEBUG_VALUE: dataFormat <- R0
 	.loc	1 763 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:763:0
 	stw r7, dp[inUnderflow]
 	.loc	1 764 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:764:0
 	ldw r0, dp[aud_to_host_fifo_start]
-.Ltmp207:
+.Ltmp225:
 	.loc	1 764 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:764:0
 	#APP
 	stw r0, dp[g_aud_to_host_rdptr]
@@ -2425,12 +2877,12 @@ decouple:                               # @decouple
 	#NO_APP
 	.loc	1 772 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:772:0
 	ldw r9, dp[aud_to_host_usb_ep]
-.Ltmp208:
+.Ltmp226:
 	#DEBUG_VALUE: SetupZerosSendBuffer:aud_to_host_usb_ep <- R9
 	#DEBUG_VALUE: XUD_SetReady_InPtr:ep <- R9
 	.loc	1 772 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:772:0
 	ldw r10, dp[g_curSubSlot_In]
-.Ltmp209:
+.Ltmp227:
 	#DEBUG_VALUE: SetupZerosSendBuffer:slotSize <- R10
 	#DEBUG_VALUE: max <- [R8+0]
 	#DEBUG_VALUE: mid <- undef
@@ -2465,7 +2917,7 @@ decouple:                               # @decouple
 	}
 	.loc	1 566 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:566:0
 	mul r0, r0, r1
-.Ltmp210:
+.Ltmp228:
 	#DEBUG_VALUE: mid <- R0
 	#DEBUG_VALUE: XUD_SetReady_InPtr:len <- R0
 	{
@@ -2482,18 +2934,18 @@ decouple:                               # @decouple
 	#APP
 	ldw r1, dp[g_aud_to_host_buffer]
 	#NO_APP
-.Ltmp211:
+.Ltmp229:
 	#DEBUG_VALUE: p <- R1
 	.loc	2 463 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:463:0
 	#APP
 	ldw r2, r9[9]
 	#NO_APP
-.Ltmp212:
+.Ltmp230:
 	#DEBUG_VALUE: reset <- R2
-	bt r2, .LBB1_17
-.Ltmp213:
-# BB#16:                                # %ifdone.i.i262
-                                        #   in Loop: Header=BB1_5 Depth=1
+	bt r2, .LBB5_17
+.Ltmp231:
+# BB#16:                                # %ifdone.i.i263
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel64:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
@@ -2512,44 +2964,44 @@ decouple:                               # @decouple
 		add r1, r1, 4
 		nop
 	}
-.Ltmp214:
+.Ltmp232:
 	.loc	2 470 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:470:0
 	ashr r2, r0, 2
-.Ltmp215:
+.Ltmp233:
 	#DEBUG_VALUE: wordlength <- R2
-	ldw r3, cp[.LCPI1_1]
-.Ltmp216:
+	ldw r3, cp[.LCPI5_1]
+.Ltmp234:
 	#DEBUG_VALUE: wordlength <- R3
 	.loc	2 471 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:471:0
 	{
 		and r3, r0, r3
 		shl r0, r0, 5
 	}
-.Ltmp217:
+.Ltmp235:
 	.loc	2 473 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:473:0
 	{
 		zext r0, 7
 		nop
 	}
-.Ltmp218:
+.Ltmp236:
 	#DEBUG_VALUE: taillength <- R0
 	.loc	2 475 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:475:0
 	#APP
 	ldw r11, r9[0]
 	#NO_APP
-.Ltmp219:
+.Ltmp237:
 	#DEBUG_VALUE: chan_array_ptr <- R11
 	.loc	2 478 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:478:0
 	#APP
 	add r1, r1, r3
 	#NO_APP
-.Ltmp220:
+.Ltmp238:
 	#DEBUG_VALUE: tmp <- R1
 	.loc	2 480 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:480:0
 	#APP
 	neg r2, r2
 	#NO_APP
-.Ltmp221:
+.Ltmp239:
 	#DEBUG_VALUE: tmp2 <- R2
 	.loc	2 483 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:483:0
 	#APP
@@ -2567,9 +3019,9 @@ decouple:                               # @decouple
 	#APP
 	stw r9, r11[0]
 	#NO_APP
-.Ltmp222:
-.LBB1_17:                               # %SetupZerosSendBuffer.exit263
-                                        #   in Loop: Header=BB1_5 Depth=1
+.Ltmp240:
+.LBB5_17:                               # %SetupZerosSendBuffer.exit264
+                                        #   in Loop: Header=BB5_5 Depth=1
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
 	#DEBUG_VALUE: aud_from_host_flag <- 0
@@ -2577,7 +3029,7 @@ decouple:                               # @decouple
 	#APP
 	ldw r0, dp[g_curUsbSpeed]
 	#NO_APP
-.Ltmp223:
+.Ltmp241:
 	#DEBUG_VALUE: usbSpeed <- R0
 	.loc	1 775 17                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:775:17
 	{
@@ -2586,31 +3038,31 @@ decouple:                               # @decouple
 	}
 	.loc	1 777 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:777:0
 	ldw r0, dp[g_numUsbChan_In]
-.Ltmp224:
+.Ltmp242:
 	.loc	1 775 17                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:775:17
-	bf r1, .LBB1_20
-.Ltmp225:
+	bf r1, .LBB5_20
+.Ltmp243:
 # BB#18:                                # %iftrue100
-                                        #   in Loop: Header=BB1_5 Depth=1
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel65:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
 	#DEBUG_VALUE: aud_from_host_flag <- 0
 	ldc r1, 100
-	bu .LBB1_19
-.Ltmp226:
-.LBB1_7:                                # %LoopBody59
-                                        #   in Loop: Header=BB1_5 Depth=1
+	bu .LBB5_19
+.Ltmp244:
+.LBB5_7:                                # %LoopBody59
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel66:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	{
 		eq r0, r0, 4
 		nop
 	}
-	bf r0, .LBB1_26
-.Ltmp227:
+	bf r0, .LBB5_26
+.Ltmp245:
 # BB#8:                                 # %iftrue61
-                                        #   in Loop: Header=BB1_5 Depth=1
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel67:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	.loc	1 702 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:702:0
@@ -2621,7 +3073,7 @@ decouple:                               # @decouple
 	#APP
 	ldw r5, dp[g_freqChange_sampFreq]
 	#NO_APP
-.Ltmp228:
+.Ltmp246:
 	#DEBUG_VALUE: SetupZerosSendBuffer:sampFreq <- R5
 	#DEBUG_VALUE: sampFreq <- R5
 	.loc	1 706 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:706:0
@@ -2686,12 +3138,12 @@ decouple:                               # @decouple
 	#NO_APP
 	.loc	1 724 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:724:0
 	ldw r9, dp[aud_to_host_usb_ep]
-.Ltmp229:
+.Ltmp247:
 	#DEBUG_VALUE: SetupZerosSendBuffer:aud_to_host_usb_ep <- R9
 	#DEBUG_VALUE: XUD_SetReady_InPtr:ep <- R9
 	.loc	1 724 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:724:0
 	ldw r10, dp[g_curSubSlot_In]
-.Ltmp230:
+.Ltmp248:
 	#DEBUG_VALUE: SetupZerosSendBuffer:slotSize <- R10
 	#DEBUG_VALUE: max <- [R8+0]
 	#DEBUG_VALUE: mid <- undef
@@ -2725,7 +3177,7 @@ decouple:                               # @decouple
 	}
 	.loc	1 566 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:566:0
 	mul r0, r0, r1
-.Ltmp231:
+.Ltmp249:
 	#DEBUG_VALUE: mid <- R0
 	#DEBUG_VALUE: XUD_SetReady_InPtr:len <- R0
 	{
@@ -2742,18 +3194,18 @@ decouple:                               # @decouple
 	#APP
 	ldw r1, dp[g_aud_to_host_buffer]
 	#NO_APP
-.Ltmp232:
+.Ltmp250:
 	#DEBUG_VALUE: p <- R1
 	.loc	2 463 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:463:0
 	#APP
 	ldw r2, r9[9]
 	#NO_APP
-.Ltmp233:
+.Ltmp251:
 	#DEBUG_VALUE: reset <- R2
-	bt r2, .LBB1_10
-.Ltmp234:
+	bt r2, .LBB5_10
+.Ltmp252:
 # BB#9:                                 # %ifdone.i.i
-                                        #   in Loop: Header=BB1_5 Depth=1
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel68:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- R5
@@ -2771,44 +3223,44 @@ decouple:                               # @decouple
 		add r1, r1, 4
 		nop
 	}
-.Ltmp235:
+.Ltmp253:
 	.loc	2 470 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:470:0
 	ashr r2, r0, 2
-.Ltmp236:
+.Ltmp254:
 	#DEBUG_VALUE: wordlength <- R2
-	ldw r3, cp[.LCPI1_1]
-.Ltmp237:
+	ldw r3, cp[.LCPI5_1]
+.Ltmp255:
 	#DEBUG_VALUE: wordlength <- R3
 	.loc	2 471 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:471:0
 	{
 		and r3, r0, r3
 		shl r0, r0, 5
 	}
-.Ltmp238:
+.Ltmp256:
 	.loc	2 473 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:473:0
 	{
 		zext r0, 7
 		nop
 	}
-.Ltmp239:
+.Ltmp257:
 	#DEBUG_VALUE: taillength <- R0
 	.loc	2 475 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:475:0
 	#APP
 	ldw r11, r9[0]
 	#NO_APP
-.Ltmp240:
+.Ltmp258:
 	#DEBUG_VALUE: chan_array_ptr <- R11
 	.loc	2 478 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:478:0
 	#APP
 	add r1, r1, r3
 	#NO_APP
-.Ltmp241:
+.Ltmp259:
 	#DEBUG_VALUE: tmp <- R1
 	.loc	2 480 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:480:0
 	#APP
 	neg r2, r2
 	#NO_APP
-.Ltmp242:
+.Ltmp260:
 	#DEBUG_VALUE: tmp2 <- R2
 	.loc	2 483 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:483:0
 	#APP
@@ -2826,9 +3278,9 @@ decouple:                               # @decouple
 	#APP
 	stw r9, r11[0]
 	#NO_APP
-.Ltmp243:
-.LBB1_10:                               # %SetupZerosSendBuffer.exit
-                                        #   in Loop: Header=BB1_5 Depth=1
+.Ltmp261:
+.LBB5_10:                               # %SetupZerosSendBuffer.exit
+                                        #   in Loop: Header=BB5_5 Depth=1
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- R5
 	.loc	1 727 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:727:0
@@ -2851,30 +3303,30 @@ decouple:                               # @decouple
 	#NO_APP
 	.loc	1 732 17                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:732:17
 	ldw r0, dp[outOverflow]
-	bf r0, .LBB1_14
-.Ltmp244:
+	bf r0, .LBB5_14
+.Ltmp262:
 # BB#11:                                # %iftrue78
-                                        #   in Loop: Header=BB1_5 Depth=1
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel69:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- R5
 	.loc	1 735 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:735:0
 	ldw r0, dp[aud_from_host_usb_ep]
-.Ltmp245:
+.Ltmp263:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:ep <- R0
 	.loc	1 735 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:735:0
 	ldw r1, dp[aud_from_host_fifo_start]
 	.loc	2 432 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:432:0
-.Ltmp246:
+.Ltmp264:
 	#APP
 	ldw r2, r0[9]
 	#NO_APP
-.Ltmp247:
+.Ltmp265:
 	#DEBUG_VALUE: reset <- R2
-	bt r2, .LBB1_13
-.Ltmp248:
-# BB#12:                                # %ifdone.i246
-                                        #   in Loop: Header=BB1_5 Depth=1
+	bt r2, .LBB5_13
+.Ltmp266:
+# BB#12:                                # %ifdone.i247
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel70:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- R5
@@ -2884,13 +3336,13 @@ decouple:                               # @decouple
 		add r1, r1, 4
 		nop
 	}
-.Ltmp249:
+.Ltmp267:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:addr <- R1
 	.loc	2 437 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:437:0
 	#APP
 	ldw r2, r0[0]
 	#NO_APP
-.Ltmp250:
+.Ltmp268:
 	#DEBUG_VALUE: chan_array_ptr <- R2
 	.loc	2 438 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:438:0
 	#APP
@@ -2900,16 +3352,16 @@ decouple:                               # @decouple
 	#APP
 	stw r0, r2[0]
 	#NO_APP
-.Ltmp251:
-.LBB1_13:                               # %XUD_SetReady_OutPtr.exit248
-                                        #   in Loop: Header=BB1_5 Depth=1
+.Ltmp269:
+.LBB5_13:                               # %XUD_SetReady_OutPtr.exit249
+                                        #   in Loop: Header=BB5_5 Depth=1
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- R5
 	.loc	1 736 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:736:0
 	stw r6, dp[outOverflow]
-.Ltmp252:
-.LBB1_14:                               # %ifdone79
-                                        #   in Loop: Header=BB1_5 Depth=1
+.Ltmp270:
+.LBB5_14:                               # %ifdone79
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel71:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- R5
@@ -2934,22 +3386,22 @@ decouple:                               # @decouple
 	#NO_APP
 	.loc	1 747 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:747:0
 	stw r6, dp[speedRem]
-	bu .LBB1_5
-.Ltmp253:
-.LBB1_20:                               # %iffalse105
-                                        #   in Loop: Header=BB1_5 Depth=1
+	bu .LBB5_5
+.Ltmp271:
+.LBB5_20:                               # %iffalse105
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel72:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
 	#DEBUG_VALUE: aud_from_host_flag <- 0
 	ldc r1, 388
-.Ltmp254:
-.LBB1_19:                               # %ifdone101
-                                        #   in Loop: Header=BB1_5 Depth=1
+.Ltmp272:
+.LBB5_19:                               # %ifdone101
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel73:
 	.loc	1 777 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:777:0
 	mul r0, r0, r1
-.Ltmp255:
+.Ltmp273:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
 	#DEBUG_VALUE: aud_from_host_flag <- 0
@@ -2969,9 +3421,9 @@ decouple:                               # @decouple
 	#APP
 	setsr (((0) & ~(((1 << 0x1) - 1) << 0x1)) | (((1) << 0x1) & (((1 << 0x1) - 1) << 0x1)))
 	#NO_APP
-.Ltmp256:
-.LBB1_26:                               # %ifdone86
-                                        #   in Loop: Header=BB1_5 Depth=1
+.Ltmp274:
+.LBB5_26:                               # %ifdone86
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel74:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
@@ -2980,13 +3432,13 @@ decouple:                               # @decouple
 	#APP
 	ldw r0, dp[g_aud_from_host_flag]
 	#NO_APP
-.Ltmp257:
+.Ltmp275:
 	#DEBUG_VALUE: aud_from_host_flag <- R0
 	.loc	1 844 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:844:9
-	bf r0, .LBB1_39
-.Ltmp258:
+	bf r0, .LBB5_39
+.Ltmp276:
 # BB#27:                                # %iftrue133
-                                        #   in Loop: Header=BB1_5 Depth=1
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel75:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
@@ -2994,13 +3446,13 @@ decouple:                               # @decouple
 	#APP
 	ldw r0, dp[g_aud_from_host_wrptr]
 	#NO_APP
-.Ltmp259:
+.Ltmp277:
 	#DEBUG_VALUE: aud_from_host_wrptr <- R0
 	.loc	1 852 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:852:0
 	#APP
 	ldw r1, dp[g_aud_from_host_rdptr]
 	#NO_APP
-.Ltmp260:
+.Ltmp278:
 	#DEBUG_VALUE: aud_from_host_rdptr <- R1
 	.loc	1 854 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:854:0
 	#APP
@@ -3010,13 +3462,13 @@ decouple:                               # @decouple
 	#APP
 	ldw r3, dp[g_aud_from_host_buffer]
 	#NO_APP
-.Ltmp261:
+.Ltmp279:
 	#DEBUG_VALUE: released_buffer <- R3
 	.loc	1 858 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:858:0
 	#APP
 	ldw r2, r3[0]
 	#NO_APP
-.Ltmp262:
+.Ltmp280:
 	#DEBUG_VALUE: datalength <- R2
 	.loc	1 861 13                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:861:13
 	ldw r11, dp[g_numUsbChan_Out]
@@ -3029,20 +3481,20 @@ decouple:                               # @decouple
 		lsu r11, r2, r11
 		nop
 	}
-	bt r11, .LBB1_32
-.Ltmp263:
+	bt r11, .LBB5_32
+.Ltmp281:
 # BB#28:                                # %iftrue133
-                                        #   in Loop: Header=BB1_5 Depth=1
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel76:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	{
 		eq r3, r3, r0
 		nop
 	}
-	bf r3, .LBB1_32
-.Ltmp264:
+	bf r3, .LBB5_32
+.Ltmp282:
 # BB#29:                                # %iftrue138
-                                        #   in Loop: Header=BB1_5 Depth=1
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel77:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	.loc	1 865 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:865:0
@@ -3050,7 +3502,7 @@ decouple:                               # @decouple
 		add r2, r2, 3
 		nop
 	}
-	ldw r3, cp[.LCPI1_1]
+	ldw r3, cp[.LCPI5_1]
 	.loc	1 865 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:865:0
 	{
 		and r2, r2, r3
@@ -3066,7 +3518,7 @@ decouple:                               # @decouple
 		add r0, r0, 4
 		nop
 	}
-.Ltmp265:
+.Ltmp283:
 	#DEBUG_VALUE: aud_from_host_wrptr <- R0
 	.loc	1 868 17                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:868:17
 	ldw r2, dp[aud_from_host_fifo_end]
@@ -3075,27 +3527,27 @@ decouple:                               # @decouple
 		lsu r2, r0, r2
 		nop
 	}
-	bt r2, .LBB1_31
-.Ltmp266:
+	bt r2, .LBB5_31
+.Ltmp284:
 # BB#30:                                # %iftrue138
-                                        #   in Loop: Header=BB1_5 Depth=1
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel78:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	.loc	1 870 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:870:0
 	ldw r0, dp[aud_from_host_fifo_start]
-.Ltmp267:
+.Ltmp285:
 	#DEBUG_VALUE: aud_from_host_wrptr <- R0
-.LBB1_31:                               # %iftrue138
-                                        #   in Loop: Header=BB1_5 Depth=1
+.LBB5_31:                               # %iftrue138
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel79:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	.loc	1 872 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:872:0
 	#APP
 	stw r0, dp[g_aud_from_host_wrptr]
 	#NO_APP
-.Ltmp268:
-.LBB1_32:                               # %ifdone139
-                                        #   in Loop: Header=BB1_5 Depth=1
+.Ltmp286:
+.LBB5_32:                               # %ifdone139
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel80:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
@@ -3105,17 +3557,17 @@ decouple:                               # @decouple
 		sub r1, r1, r0
 		nop
 	}
-.Ltmp269:
+.Ltmp287:
 	#DEBUG_VALUE: space_left <- R1
 	.loc	1 880 13                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:880:13
 	{
 		lss r2, r1, r7
 		nop
 	}
-	bf r2, .LBB1_35
-.Ltmp270:
-# BB#33:                                # %lhsfalse175
-                                        #   in Loop: Header=BB1_5 Depth=1
+	bf r2, .LBB5_35
+.Ltmp288:
+# BB#33:                                # %lhsfalse176
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel81:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
@@ -3128,10 +3580,10 @@ decouple:                               # @decouple
 		eq r1, r1, r2
 		nop
 	}
-	bf r1, .LBB1_36
-.Ltmp271:
-# BB#34:                                # %iftrue168
-                                        #   in Loop: Header=BB1_5 Depth=1
+	bf r1, .LBB5_36
+.Ltmp289:
+# BB#34:                                # %iftrue169
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel82:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
@@ -3144,10 +3596,10 @@ decouple:                               # @decouple
 		sub r1, r1, r2
 		nop
 	}
-.Ltmp272:
+.Ltmp290:
 	#DEBUG_VALUE: space_left <- R1
-.LBB1_35:                               # %ifdone169
-                                        #   in Loop: Header=BB1_5 Depth=1
+.LBB5_35:                               # %ifdone170
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel83:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
@@ -3162,10 +3614,10 @@ decouple:                               # @decouple
 		lsu r1, r2, r1
 		nop
 	}
-	bf r1, .LBB1_38
-.Ltmp273:
-.LBB1_36:                               # %exptrue195
-                                        #   in Loop: Header=BB1_5 Depth=1
+	bf r1, .LBB5_38
+.Ltmp291:
+.LBB5_36:                               # %exptrue196
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel84:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
@@ -3175,18 +3627,18 @@ decouple:                               # @decouple
 	#NO_APP
 	.loc	1 888 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:888:0
 	ldw r1, dp[aud_from_host_usb_ep]
-.Ltmp274:
+.Ltmp292:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:ep <- R1
 	.loc	2 432 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:432:0
 	#APP
 	ldw r2, r1[9]
 	#NO_APP
-.Ltmp275:
+.Ltmp293:
 	#DEBUG_VALUE: reset <- R2
-	bt r2, .LBB1_5
-.Ltmp276:
-# BB#37:                                # %ifdone.i269
-                                        #   in Loop: Header=BB1_5 Depth=1
+	bt r2, .LBB5_5
+.Ltmp294:
+# BB#37:                                # %ifdone.i270
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel85:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
@@ -3196,13 +3648,13 @@ decouple:                               # @decouple
 		add r0, r0, 4
 		nop
 	}
-.Ltmp277:
+.Ltmp295:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:addr <- R0
 	.loc	2 437 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:437:0
 	#APP
 	ldw r2, r1[0]
 	#NO_APP
-.Ltmp278:
+.Ltmp296:
 	#DEBUG_VALUE: chan_array_ptr <- R2
 	.loc	2 438 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:438:0
 	#APP
@@ -3212,19 +3664,19 @@ decouple:                               # @decouple
 	#APP
 	stw r1, r2[0]
 	#NO_APP
-	bu .LBB1_5
-.Ltmp279:
-.LBB1_39:                               # %iffalse137
-                                        #   in Loop: Header=BB1_5 Depth=1
+	bu .LBB5_5
+.Ltmp297:
+.LBB5_39:                               # %iffalse137
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel86:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
 	.loc	1 901 14                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:901:14
 	ldw r0, dp[outOverflow]
-	bf r0, .LBB1_5
-.Ltmp280:
-# BB#40:                                # %iftrue208
-                                        #   in Loop: Header=BB1_5 Depth=1
+	bf r0, .LBB5_5
+.Ltmp298:
+# BB#40:                                # %iftrue209
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel87:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
@@ -3232,29 +3684,29 @@ decouple:                               # @decouple
 	#APP
 	ldw r0, dp[g_aud_from_host_wrptr]
 	#NO_APP
-.Ltmp281:
+.Ltmp299:
 	#DEBUG_VALUE: aud_from_host_wrptr <- R0
 	.loc	1 907 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:907:0
 	#APP
 	ldw r1, dp[g_aud_from_host_rdptr]
 	#NO_APP
-.Ltmp282:
+.Ltmp300:
 	#DEBUG_VALUE: aud_from_host_rdptr <- R1
 	.loc	1 908 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:908:0
 	{
 		sub r1, r1, r0
 		nop
 	}
-.Ltmp283:
+.Ltmp301:
 	#DEBUG_VALUE: space_left <- R1
 	.loc	1 909 13                # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:909:13
 	{
 		lss r2, r1, r7
 		nop
 	}
-	bf r2, .LBB1_42
-.Ltmp284:
-# BB#41:                                #   in Loop: Header=BB1_5 Depth=1
+	bf r2, .LBB5_42
+.Ltmp302:
+# BB#41:                                #   in Loop: Header=BB5_5 Depth=1
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
 	#DEBUG_VALUE: aud_from_host_wrptr <- R0
@@ -3265,9 +3717,9 @@ decouple:                               # @decouple
 		add r1, r1, r2
 		nop
 	}
-.Ltmp285:
-.LBB1_42:                               # %iftrue208
-                                        #   in Loop: Header=BB1_5 Depth=1
+.Ltmp303:
+.LBB5_42:                               # %iftrue209
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel88:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
@@ -3278,10 +3730,10 @@ decouple:                               # @decouple
 		lss r1, r1, r2
 		nop
 	}
-	bt r1, .LBB1_5
-.Ltmp286:
-# BB#43:                                # %iftrue228
-                                        #   in Loop: Header=BB1_5 Depth=1
+	bt r1, .LBB5_5
+.Ltmp304:
+# BB#43:                                # %iftrue229
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel89:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
@@ -3294,18 +3746,18 @@ decouple:                               # @decouple
 	#NO_APP
 	.loc	1 916 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc:916:0
 	ldw r1, dp[aud_from_host_usb_ep]
-.Ltmp287:
+.Ltmp305:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:ep <- R1
 	.loc	2 432 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:432:0
 	#APP
 	ldw r2, r1[9]
 	#NO_APP
-.Ltmp288:
+.Ltmp306:
 	#DEBUG_VALUE: reset <- R2
-	bt r2, .LBB1_5
-.Ltmp289:
-# BB#44:                                # %ifdone.i273
-                                        #   in Loop: Header=BB1_5 Depth=1
+	bt r2, .LBB5_5
+.Ltmp307:
+# BB#44:                                # %ifdone.i274
+                                        #   in Loop: Header=BB5_5 Depth=1
 .Lxtalabel90:
 	#DEBUG_VALUE: decouple:c_mix_out <- R4
 	#DEBUG_VALUE: sampFreq <- 44100
@@ -3316,13 +3768,13 @@ decouple:                               # @decouple
 		add r0, r0, 4
 		nop
 	}
-.Ltmp290:
+.Ltmp308:
 	#DEBUG_VALUE: XUD_SetReady_OutPtr:addr <- R0
 	.loc	2 437 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:437:0
 	#APP
 	ldw r2, r1[0]
 	#NO_APP
-.Ltmp291:
+.Ltmp309:
 	#DEBUG_VALUE: chan_array_ptr <- R2
 	.loc	2 438 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\xud.h:438:0
 	#APP
@@ -3332,20 +3784,20 @@ decouple:                               # @decouple
 	#APP
 	stw r1, r2[0]
 	#NO_APP
-	bu .LBB1_5
-.Ltmp292:
+	bu .LBB5_5
+.Ltmp310:
 	.cc_bottom decouple.function
-	.set	decouple.nstackwords,((update_samp_resolution.nstackwords $M update_samp_freq.nstackwords $M GetADCCounts.nstackwords) + 12)
+	.set	decouple.nstackwords,((update_stream_format.nstackwords $M update_samp_freq.nstackwords $M GetADCCounts.nstackwords) + 12)
 	.globl	decouple.nstackwords
-	.set	decouple.maxcores,GetADCCounts.maxcores $M update_samp_freq.maxcores $M update_samp_resolution.maxcores $M 1
+	.set	decouple.maxcores,GetADCCounts.maxcores $M update_samp_freq.maxcores $M update_stream_format.maxcores $M 1
 	.globl	decouple.maxcores
-	.set	decouple.maxtimers,GetADCCounts.maxtimers $M update_samp_freq.maxtimers $M update_samp_resolution.maxtimers $M 0
+	.set	decouple.maxtimers,GetADCCounts.maxtimers $M update_samp_freq.maxtimers $M update_stream_format.maxtimers $M 0
 	.globl	decouple.maxtimers
-	.set	decouple.maxchanends,GetADCCounts.maxchanends $M update_samp_freq.maxchanends $M update_samp_resolution.maxchanends $M 0
+	.set	decouple.maxchanends,GetADCCounts.maxchanends $M update_samp_freq.maxchanends $M update_stream_format.maxchanends $M 0
 	.globl	decouple.maxchanends
-.Ltmp293:
-	.size	decouple, .Ltmp293-decouple
-.Lfunc_end1:
+.Ltmp311:
+	.size	decouple, .Ltmp311-decouple
+.Lfunc_end5:
 	.cfi_endproc
 
 	.section	.dp.bss,"awd",@nobits
@@ -3950,78 +4402,100 @@ tmpBuffer:
 .Linfo_string81:
 .asciiz"taillength"
 .Linfo_string82:
-.asciiz"delay_seconds"
+.asciiz"_i.qspi_access._chan.read"
 .Linfo_string83:
-.asciiz"delay_milliseconds"
+.asciiz"_i.qspi_access._chan.write"
 .Linfo_string84:
-.asciiz"delay_microseconds"
+.asciiz"_i.qspi_access._chan_yield.read"
 .Linfo_string85:
-.asciiz"XUD_SetReady_Out"
+.asciiz"_i.qspi_access._chan_yield.write"
 .Linfo_string86:
-.asciiz"XUD_SetReady_In"
+.asciiz"delay_seconds"
 .Linfo_string87:
-.asciiz"handle_audio_request"
+.asciiz"delay_milliseconds"
 .Linfo_string88:
-.asciiz"decouple"
+.asciiz"delay_microseconds"
 .Linfo_string89:
-.asciiz"c_mix_out"
+.asciiz"XUD_SetReady_Out"
 .Linfo_string90:
-.asciiz"chanend"
+.asciiz"XUD_SetReady_In"
 .Linfo_string91:
-.asciiz"underflowSample"
+.asciiz"handle_audio_request"
 .Linfo_string92:
-.asciiz"i"
+.asciiz"decouple"
 .Linfo_string93:
-.asciiz"outSamps"
+.asciiz"c_mix_out"
 .Linfo_string94:
-.asciiz"sample"
+.asciiz"chanend"
 .Linfo_string95:
-.asciiz"mult"
+.asciiz"underflowSample"
 .Linfo_string96:
-.asciiz"h"
+.asciiz"i"
 .Linfo_string97:
-.asciiz"ptr"
+.asciiz"outSamps"
 .Linfo_string98:
-.asciiz"datasize"
+.asciiz"sample"
 .Linfo_string99:
-.asciiz"speed"
+.asciiz"mult"
 .Linfo_string100:
-.asciiz"space_left"
+.asciiz"h"
 .Linfo_string101:
-.asciiz"rdPtr"
+.asciiz"ptr"
 .Linfo_string102:
-.asciiz"datalength"
+.asciiz"datasize"
 .Linfo_string103:
-.asciiz"l"
+.asciiz"speed"
 .Linfo_string104:
-.asciiz"aud_from_host_flag"
+.asciiz"space_left"
 .Linfo_string105:
-.asciiz"t"
+.asciiz"rdPtr"
 .Linfo_string106:
-.asciiz"dsdMode"
+.asciiz"datalength"
 .Linfo_string107:
-.asciiz"dataFormat"
+.asciiz"l"
 .Linfo_string108:
-.asciiz"sampRes"
+.asciiz"aud_from_host_flag"
 .Linfo_string109:
-.asciiz"usbSpeed"
+.asciiz"t"
 .Linfo_string110:
-.asciiz"aud_from_host_wrptr"
+.asciiz"dsdMode"
 .Linfo_string111:
-.asciiz"aud_from_host_rdptr"
+.asciiz"dataFormat"
 .Linfo_string112:
-.asciiz"released_buffer"
+.asciiz"sampRes"
 .Linfo_string113:
-.asciiz"delay"
+.asciiz"usbSpeed"
 .Linfo_string114:
+.asciiz"aud_from_host_wrptr"
+.Linfo_string115:
+.asciiz"aud_from_host_rdptr"
+.Linfo_string116:
+.asciiz"released_buffer"
+.Linfo_string117:
+.asciiz"dest"
+.Linfo_string118:
+.asciiz"param1"
+.Linfo_string119:
+.asciiz"param2"
+.Linfo_string120:
+.asciiz"param3"
+.Linfo_string121:
+.asciiz"s"
+.Linfo_string122:
+.asciiz"yield"
+.Linfo_string123:
+.asciiz"yieldArg"
+.Linfo_string124:
+.asciiz"delay"
+.Linfo_string125:
 .asciiz"buffer"
 	.section	.debug_info,"",@progbits
 .L.debug_info_begin0:
-	.long	3969                    # Length of Unit
+	.long	4189                    # Length of Unit
 	.short	3                       # DWARF version number
 	.long	.Lsection_abbrev        # Offset Into Abbrev. Section
 	.byte	4                       # Address Size (in bytes)
-	.byte	1                       # Abbrev [1] 0xb:0xf7a DW_TAG_compile_unit
+	.byte	1                       # Abbrev [1] 0xb:0x1056 DW_TAG_compile_unit
 	.long	.Linfo_string0          # DW_AT_producer
 	.short	49152                   # DW_AT_language
 	.long	.Linfo_string1          # DW_AT_name
@@ -4612,22 +5086,22 @@ tmpBuffer:
 	.byte	1                       # DW_AT_frame_base
 	.byte	94
 	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	.Linfo_string87         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string87         # DW_AT_name
+	.long	.Linfo_string91         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string91         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	131                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	13                      # Abbrev [13] 0x514:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc0            # DW_AT_location
-	.long	.Linfo_string89         # DW_AT_name
+	.long	.Linfo_string93         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	130                     # DW_AT_decl_line
-	.long	3955                    # DW_AT_type
+	.long	4143                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x523:0x2e6 DW_TAG_lexical_block
 	.long	.Ldebug_ranges36        # DW_AT_ranges
 	.byte	15                      # Abbrev [15] 0x528:0xf DW_TAG_variable
 	.long	.Ldebug_loc2            # DW_AT_location
-	.long	.Linfo_string93         # DW_AT_name
+	.long	.Linfo_string97         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	132                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4635,7 +5109,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges35        # DW_AT_ranges
 	.byte	15                      # Abbrev [15] 0x53c:0xf DW_TAG_variable
 	.long	.Ldebug_loc26           # DW_AT_location
-	.long	.Linfo_string100        # DW_AT_name
+	.long	.Linfo_string104        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	133                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4643,7 +5117,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges34        # DW_AT_ranges
 	.byte	15                      # Abbrev [15] 0x550:0xf DW_TAG_variable
 	.long	.Ldebug_loc1            # DW_AT_location
-	.long	.Linfo_string91         # DW_AT_name
+	.long	.Linfo_string95         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	136                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
@@ -4651,7 +5125,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges1         # DW_AT_ranges
 	.byte	16                      # Abbrev [16] 0x564:0xc DW_TAG_variable
 	.byte	1                       # DW_AT_const_value
-	.long	.Linfo_string92         # DW_AT_name
+	.long	.Linfo_string96         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	145                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4660,7 +5134,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges6         # DW_AT_ranges
 	.byte	15                      # Abbrev [15] 0x576:0xf DW_TAG_variable
 	.long	.Ldebug_loc3            # DW_AT_location
-	.long	.Linfo_string92         # DW_AT_name
+	.long	.Linfo_string96         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	235                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4668,7 +5142,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges5         # DW_AT_ranges
 	.byte	15                      # Abbrev [15] 0x58a:0xf DW_TAG_variable
 	.long	.Ldebug_loc4            # DW_AT_location
-	.long	.Linfo_string94         # DW_AT_name
+	.long	.Linfo_string98         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	238                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4676,7 +5150,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges4         # DW_AT_ranges
 	.byte	15                      # Abbrev [15] 0x59e:0xf DW_TAG_variable
 	.long	.Ldebug_loc5            # DW_AT_location
-	.long	.Linfo_string95         # DW_AT_name
+	.long	.Linfo_string99         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	239                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4684,14 +5158,14 @@ tmpBuffer:
 	.long	.Ldebug_ranges3         # DW_AT_ranges
 	.byte	15                      # Abbrev [15] 0x5b2:0xf DW_TAG_variable
 	.long	.Ldebug_loc6            # DW_AT_location
-	.long	.Linfo_string96         # DW_AT_name
+	.long	.Linfo_string100        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	240                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x5c1:0x11 DW_TAG_lexical_block
 	.long	.Ldebug_ranges2         # DW_AT_ranges
 	.byte	17                      # Abbrev [17] 0x5c6:0xb DW_TAG_variable
-	.long	.Linfo_string103        # DW_AT_name
+	.long	.Linfo_string107        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	241                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
@@ -4704,7 +5178,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges11        # DW_AT_ranges
 	.byte	15                      # Abbrev [15] 0x5db:0xf DW_TAG_variable
 	.long	.Ldebug_loc7            # DW_AT_location
-	.long	.Linfo_string92         # DW_AT_name
+	.long	.Linfo_string96         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	203                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4712,7 +5186,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges10        # DW_AT_ranges
 	.byte	15                      # Abbrev [15] 0x5ef:0xf DW_TAG_variable
 	.long	.Ldebug_loc9            # DW_AT_location
-	.long	.Linfo_string94         # DW_AT_name
+	.long	.Linfo_string98         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	206                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4720,7 +5194,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges9         # DW_AT_ranges
 	.byte	15                      # Abbrev [15] 0x603:0xf DW_TAG_variable
 	.long	.Ldebug_loc10           # DW_AT_location
-	.long	.Linfo_string95         # DW_AT_name
+	.long	.Linfo_string99         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	207                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4728,14 +5202,14 @@ tmpBuffer:
 	.long	.Ldebug_ranges8         # DW_AT_ranges
 	.byte	15                      # Abbrev [15] 0x617:0xf DW_TAG_variable
 	.long	.Ldebug_loc11           # DW_AT_location
-	.long	.Linfo_string96         # DW_AT_name
+	.long	.Linfo_string100        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	208                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x626:0x11 DW_TAG_lexical_block
 	.long	.Ldebug_ranges7         # DW_AT_ranges
 	.byte	17                      # Abbrev [17] 0x62b:0xb DW_TAG_variable
-	.long	.Linfo_string103        # DW_AT_name
+	.long	.Linfo_string107        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	209                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
@@ -4748,7 +5222,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges16        # DW_AT_ranges
 	.byte	15                      # Abbrev [15] 0x640:0xf DW_TAG_variable
 	.long	.Ldebug_loc8            # DW_AT_location
-	.long	.Linfo_string92         # DW_AT_name
+	.long	.Linfo_string96         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	174                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4756,7 +5230,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges15        # DW_AT_ranges
 	.byte	15                      # Abbrev [15] 0x654:0xf DW_TAG_variable
 	.long	.Ldebug_loc12           # DW_AT_location
-	.long	.Linfo_string94         # DW_AT_name
+	.long	.Linfo_string98         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	177                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4764,7 +5238,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges14        # DW_AT_ranges
 	.byte	15                      # Abbrev [15] 0x668:0xf DW_TAG_variable
 	.long	.Ldebug_loc13           # DW_AT_location
-	.long	.Linfo_string95         # DW_AT_name
+	.long	.Linfo_string99         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	178                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4772,14 +5246,14 @@ tmpBuffer:
 	.long	.Ldebug_ranges13        # DW_AT_ranges
 	.byte	15                      # Abbrev [15] 0x67c:0xf DW_TAG_variable
 	.long	.Ldebug_loc14           # DW_AT_location
-	.long	.Linfo_string96         # DW_AT_name
+	.long	.Linfo_string100        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	179                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x68b:0x11 DW_TAG_lexical_block
 	.long	.Ldebug_ranges12        # DW_AT_ranges
 	.byte	17                      # Abbrev [17] 0x690:0xb DW_TAG_variable
-	.long	.Linfo_string103        # DW_AT_name
+	.long	.Linfo_string107        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	180                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
@@ -4792,7 +5266,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges17        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x6a5:0x10 DW_TAG_variable
 	.long	.Ldebug_loc15           # DW_AT_location
-	.long	.Linfo_string92         # DW_AT_name
+	.long	.Linfo_string96         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	288                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4801,7 +5275,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges23        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x6bb:0x10 DW_TAG_variable
 	.long	.Ldebug_loc17           # DW_AT_location
-	.long	.Linfo_string97         # DW_AT_name
+	.long	.Linfo_string101        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	336                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
@@ -4809,7 +5283,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges22        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x6d0:0x10 DW_TAG_variable
 	.long	.Ldebug_loc16           # DW_AT_location
-	.long	.Linfo_string92         # DW_AT_name
+	.long	.Linfo_string96         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	338                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4817,7 +5291,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges21        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x6e5:0x10 DW_TAG_variable
 	.long	.Ldebug_loc21           # DW_AT_location
-	.long	.Linfo_string94         # DW_AT_name
+	.long	.Linfo_string98         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	341                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4825,21 +5299,21 @@ tmpBuffer:
 	.long	.Ldebug_ranges20        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x6fa:0x10 DW_TAG_variable
 	.long	.Ldebug_loc22           # DW_AT_location
-	.long	.Linfo_string95         # DW_AT_name
+	.long	.Linfo_string99         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	345                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x70a:0x24 DW_TAG_lexical_block
 	.long	.Ldebug_ranges19        # DW_AT_ranges
 	.byte	19                      # Abbrev [19] 0x70f:0xc DW_TAG_variable
-	.long	.Linfo_string96         # DW_AT_name
+	.long	.Linfo_string100        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	346                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x71b:0x12 DW_TAG_lexical_block
 	.long	.Ldebug_ranges18        # DW_AT_ranges
 	.byte	19                      # Abbrev [19] 0x720:0xc DW_TAG_variable
-	.long	.Linfo_string103        # DW_AT_name
+	.long	.Linfo_string107        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	347                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
@@ -4853,7 +5327,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges28        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x737:0x10 DW_TAG_variable
 	.long	.Ldebug_loc18           # DW_AT_location
-	.long	.Linfo_string92         # DW_AT_name
+	.long	.Linfo_string96         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	373                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4861,7 +5335,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges27        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x74c:0x10 DW_TAG_variable
 	.long	.Ldebug_loc19           # DW_AT_location
-	.long	.Linfo_string94         # DW_AT_name
+	.long	.Linfo_string98         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	376                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4869,21 +5343,21 @@ tmpBuffer:
 	.long	.Ldebug_ranges26        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x761:0x10 DW_TAG_variable
 	.long	.Ldebug_loc20           # DW_AT_location
-	.long	.Linfo_string95         # DW_AT_name
+	.long	.Linfo_string99         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	379                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x771:0x24 DW_TAG_lexical_block
 	.long	.Ldebug_ranges25        # DW_AT_ranges
 	.byte	19                      # Abbrev [19] 0x776:0xc DW_TAG_variable
-	.long	.Linfo_string96         # DW_AT_name
+	.long	.Linfo_string100        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	380                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x782:0x12 DW_TAG_lexical_block
 	.long	.Ldebug_ranges24        # DW_AT_ranges
 	.byte	19                      # Abbrev [19] 0x787:0xc DW_TAG_variable
-	.long	.Linfo_string103        # DW_AT_name
+	.long	.Linfo_string107        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	381                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
@@ -4896,7 +5370,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges29        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x79d:0x10 DW_TAG_variable
 	.long	.Ldebug_loc23           # DW_AT_location
-	.long	.Linfo_string92         # DW_AT_name
+	.long	.Linfo_string96         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	421                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4905,7 +5379,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges33        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x7b3:0x10 DW_TAG_variable
 	.long	.Ldebug_loc25           # DW_AT_location
-	.long	.Linfo_string99         # DW_AT_name
+	.long	.Linfo_string103        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	434                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -4913,7 +5387,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges32        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x7c8:0x10 DW_TAG_variable
 	.long	.Ldebug_loc24           # DW_AT_location
-	.long	.Linfo_string98         # DW_AT_name
+	.long	.Linfo_string102        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	438                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
@@ -4921,7 +5395,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges31        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x7dd:0x10 DW_TAG_variable
 	.long	.Ldebug_loc27           # DW_AT_location
-	.long	.Linfo_string101        # DW_AT_name
+	.long	.Linfo_string105        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	492                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
@@ -4929,7 +5403,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges30        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x7f2:0x10 DW_TAG_variable
 	.long	.Ldebug_loc28           # DW_AT_location
-	.long	.Linfo_string102        # DW_AT_name
+	.long	.Linfo_string106        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	495                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
@@ -5114,17 +5588,17 @@ tmpBuffer:
 	.byte	1                       # DW_AT_frame_base
 	.byte	94
 	.byte	1                       # DW_AT_APPLE_omit_frame_ptr
-	.long	.Linfo_string88         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string88         # DW_AT_name
+	.long	.Linfo_string92         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string92         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	590                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	30                      # Abbrev [30] 0x98b:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc29           # DW_AT_location
-	.long	.Linfo_string89         # DW_AT_name
+	.long	.Linfo_string93         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	585                     # DW_AT_decl_line
-	.long	3955                    # DW_AT_type
+	.long	4143                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x99b:0x50b DW_TAG_lexical_block
 	.long	.Ldebug_ranges95        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x9a0:0x10 DW_TAG_variable
@@ -5137,7 +5611,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges94        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x9b5:0x10 DW_TAG_variable
 	.long	.Ldebug_loc31           # DW_AT_location
-	.long	.Linfo_string104        # DW_AT_name
+	.long	.Linfo_string108        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	598                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -5145,7 +5619,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges93        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x9ca:0x10 DW_TAG_variable
 	.long	.Ldebug_loc92           # DW_AT_location
-	.long	.Linfo_string112        # DW_AT_name
+	.long	.Linfo_string116        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	599                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
@@ -5153,7 +5627,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges92        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x9df:0x10 DW_TAG_variable
 	.long	.Ldebug_loc32           # DW_AT_location
-	.long	.Linfo_string105        # DW_AT_name
+	.long	.Linfo_string109        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	605                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -5236,7 +5710,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges48        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0xaad:0x10 DW_TAG_variable
 	.long	.Ldebug_loc38           # DW_AT_location
-	.long	.Linfo_string92         # DW_AT_name
+	.long	.Linfo_string96         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	636                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -5245,7 +5719,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges49        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0xac3:0x10 DW_TAG_variable
 	.long	.Ldebug_loc39           # DW_AT_location
-	.long	.Linfo_string92         # DW_AT_name
+	.long	.Linfo_string96         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	643                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -5286,7 +5760,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges59        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0xb2b:0x10 DW_TAG_variable
 	.long	.Ldebug_loc93           # DW_AT_location
-	.long	.Linfo_string102        # DW_AT_name
+	.long	.Linfo_string106        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	847                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -5294,7 +5768,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges58        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0xb40:0x10 DW_TAG_variable
 	.long	.Ldebug_loc94           # DW_AT_location
-	.long	.Linfo_string100        # DW_AT_name
+	.long	.Linfo_string104        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	848                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -5302,7 +5776,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges57        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0xb55:0x10 DW_TAG_variable
 	.long	.Ldebug_loc90           # DW_AT_location
-	.long	.Linfo_string110        # DW_AT_name
+	.long	.Linfo_string114        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	849                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -5310,7 +5784,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges56        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0xb6a:0x10 DW_TAG_variable
 	.long	.Ldebug_loc91           # DW_AT_location
-	.long	.Linfo_string111        # DW_AT_name
+	.long	.Linfo_string115        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	850                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -5346,13 +5820,13 @@ tmpBuffer:
 	.long	.Ldebug_ranges64        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0xbc0:0x10 DW_TAG_variable
 	.long	.Ldebug_loc50           # DW_AT_location
-	.long	.Linfo_string107        # DW_AT_name
+	.long	.Linfo_string111        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	791                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
 	.byte	18                      # Abbrev [18] 0xbd0:0x10 DW_TAG_variable
 	.long	.Ldebug_loc51           # DW_AT_location
-	.long	.Linfo_string108        # DW_AT_name
+	.long	.Linfo_string112        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	791                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
@@ -5360,7 +5834,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges63        # DW_AT_ranges
 	.byte	34                      # Abbrev [34] 0xbe5:0xd DW_TAG_variable
 	.byte	0                       # DW_AT_const_value
-	.long	.Linfo_string106        # DW_AT_name
+	.long	.Linfo_string110        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	792                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
@@ -5394,13 +5868,13 @@ tmpBuffer:
 	.long	.Ldebug_ranges73        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0xc36:0x10 DW_TAG_variable
 	.long	.Ldebug_loc56           # DW_AT_location
-	.long	.Linfo_string107        # DW_AT_name
+	.long	.Linfo_string111        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	752                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
 	.byte	18                      # Abbrev [18] 0xc46:0x10 DW_TAG_variable
 	.long	.Ldebug_loc71           # DW_AT_location
-	.long	.Linfo_string109        # DW_AT_name
+	.long	.Linfo_string113        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	752                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
@@ -5589,7 +6063,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges90        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0xe2b:0x10 DW_TAG_variable
 	.long	.Ldebug_loc101          # DW_AT_location
-	.long	.Linfo_string100        # DW_AT_name
+	.long	.Linfo_string104        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	903                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -5597,7 +6071,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges89        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0xe40:0x10 DW_TAG_variable
 	.long	.Ldebug_loc99           # DW_AT_location
-	.long	.Linfo_string110        # DW_AT_name
+	.long	.Linfo_string114        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	904                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -5605,7 +6079,7 @@ tmpBuffer:
 	.long	.Ldebug_ranges88        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0xe55:0x10 DW_TAG_variable
 	.long	.Ldebug_loc100          # DW_AT_location
-	.long	.Linfo_string111        # DW_AT_name
+	.long	.Linfo_string115        # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.short	905                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
@@ -5644,106 +6118,188 @@ tmpBuffer:
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
-	.byte	37                      # Abbrev [37] 0xea7:0x18 DW_TAG_subprogram
+	.byte	37                      # Abbrev [37] 0xea7:0x2f DW_TAG_subprogram
 	.long	.Linfo_string82         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string82         # DW_AT_name
-	.byte	4                       # DW_AT_decl_file
-	.byte	46                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
-	.byte	21                      # Abbrev [21] 0xeb3:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string113        # DW_AT_name
-	.byte	4                       # DW_AT_decl_file
-	.byte	46                      # DW_AT_decl_line
-	.long	66                      # DW_AT_type
+	.byte	38                      # Abbrev [38] 0xeb1:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string117        # DW_AT_name
+	.long	4143                    # DW_AT_type
+	.byte	38                      # Abbrev [38] 0xeba:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string118        # DW_AT_name
+	.long	426                     # DW_AT_type
+	.byte	38                      # Abbrev [38] 0xec3:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string119        # DW_AT_name
+	.long	426                     # DW_AT_type
+	.byte	38                      # Abbrev [38] 0xecc:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string120        # DW_AT_name
+	.long	4150                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	37                      # Abbrev [37] 0xebf:0x18 DW_TAG_subprogram
+	.byte	37                      # Abbrev [37] 0xed6:0x2f DW_TAG_subprogram
 	.long	.Linfo_string83         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string83         # DW_AT_name
-	.byte	4                       # DW_AT_decl_file
-	.byte	54                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
-	.byte	21                      # Abbrev [21] 0xecb:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string113        # DW_AT_name
-	.byte	4                       # DW_AT_decl_file
-	.byte	54                      # DW_AT_decl_line
-	.long	66                      # DW_AT_type
+	.byte	38                      # Abbrev [38] 0xee0:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string117        # DW_AT_name
+	.long	4143                    # DW_AT_type
+	.byte	38                      # Abbrev [38] 0xee9:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string118        # DW_AT_name
+	.long	426                     # DW_AT_type
+	.byte	38                      # Abbrev [38] 0xef2:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string119        # DW_AT_name
+	.long	426                     # DW_AT_type
+	.byte	38                      # Abbrev [38] 0xefb:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string120        # DW_AT_name
+	.long	4150                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	37                      # Abbrev [37] 0xed7:0x18 DW_TAG_subprogram
+	.byte	37                      # Abbrev [37] 0xf05:0x2f DW_TAG_subprogram
 	.long	.Linfo_string84         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string84         # DW_AT_name
+	.byte	1                       # DW_AT_external
+	.byte	38                      # Abbrev [38] 0xf0f:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string121        # DW_AT_name
+	.long	4160                    # DW_AT_type
+	.byte	38                      # Abbrev [38] 0xf18:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string118        # DW_AT_name
+	.long	426                     # DW_AT_type
+	.byte	38                      # Abbrev [38] 0xf21:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string119        # DW_AT_name
+	.long	426                     # DW_AT_type
+	.byte	38                      # Abbrev [38] 0xf2a:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string120        # DW_AT_name
+	.long	4150                    # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	37                      # Abbrev [37] 0xf34:0x2f DW_TAG_subprogram
+	.long	.Linfo_string85         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string85         # DW_AT_name
+	.byte	1                       # DW_AT_external
+	.byte	38                      # Abbrev [38] 0xf3e:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string121        # DW_AT_name
+	.long	4160                    # DW_AT_type
+	.byte	38                      # Abbrev [38] 0xf47:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string118        # DW_AT_name
+	.long	426                     # DW_AT_type
+	.byte	38                      # Abbrev [38] 0xf50:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string119        # DW_AT_name
+	.long	426                     # DW_AT_type
+	.byte	38                      # Abbrev [38] 0xf59:0x9 DW_TAG_formal_parameter
+	.long	.Linfo_string120        # DW_AT_name
+	.long	4150                    # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	39                      # Abbrev [39] 0xf63:0x18 DW_TAG_subprogram
+	.long	.Linfo_string86         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string86         # DW_AT_name
+	.byte	4                       # DW_AT_decl_file
+	.byte	46                      # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	21                      # Abbrev [21] 0xf6f:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string124        # DW_AT_name
+	.byte	4                       # DW_AT_decl_file
+	.byte	46                      # DW_AT_decl_line
+	.long	66                      # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	39                      # Abbrev [39] 0xf7b:0x18 DW_TAG_subprogram
+	.long	.Linfo_string87         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string87         # DW_AT_name
+	.byte	4                       # DW_AT_decl_file
+	.byte	54                      # DW_AT_decl_line
+	.byte	1                       # DW_AT_external
+	.byte	21                      # Abbrev [21] 0xf87:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string124        # DW_AT_name
+	.byte	4                       # DW_AT_decl_file
+	.byte	54                      # DW_AT_decl_line
+	.long	66                      # DW_AT_type
+	.byte	0                       # End Of Children Mark
+	.byte	39                      # Abbrev [39] 0xf93:0x18 DW_TAG_subprogram
+	.long	.Linfo_string88         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string88         # DW_AT_name
 	.byte	4                       # DW_AT_decl_file
 	.byte	62                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
-	.byte	21                      # Abbrev [21] 0xee3:0xb DW_TAG_formal_parameter
-	.long	.Linfo_string113        # DW_AT_name
+	.byte	21                      # Abbrev [21] 0xf9f:0xb DW_TAG_formal_parameter
+	.long	.Linfo_string124        # DW_AT_name
 	.byte	4                       # DW_AT_decl_file
 	.byte	62                      # DW_AT_decl_line
 	.long	66                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xeef:0x42 DW_TAG_subprogram
-	.long	.Linfo_string85         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string85         # DW_AT_name
+	.byte	40                      # Abbrev [40] 0xfab:0x42 DW_TAG_subprogram
+	.long	.Linfo_string89         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string89         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
 	.short	401                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
 	.byte	1                       # DW_AT_external
-	.byte	27                      # Abbrev [27] 0xf00:0xc DW_TAG_formal_parameter
+	.byte	27                      # Abbrev [27] 0xfbc:0xc DW_TAG_formal_parameter
 	.long	.Linfo_string65         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
 	.short	400                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
-	.byte	27                      # Abbrev [27] 0xf0c:0xc DW_TAG_formal_parameter
-	.long	.Linfo_string114        # DW_AT_name
+	.byte	27                      # Abbrev [27] 0xfc8:0xc DW_TAG_formal_parameter
+	.long	.Linfo_string125        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
 	.short	400                     # DW_AT_decl_line
-	.long	3962                    # DW_AT_type
-	.byte	19                      # Abbrev [19] 0xf18:0xc DW_TAG_variable
+	.long	4150                    # DW_AT_type
+	.byte	19                      # Abbrev [19] 0xfd4:0xc DW_TAG_variable
 	.long	.Linfo_string67         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
 	.short	402                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
-	.byte	19                      # Abbrev [19] 0xf24:0xc DW_TAG_variable
+	.byte	19                      # Abbrev [19] 0xfe0:0xc DW_TAG_variable
 	.long	.Linfo_string68         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
 	.short	403                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	38                      # Abbrev [38] 0xf31:0x42 DW_TAG_subprogram
-	.long	.Linfo_string86         # DW_AT_MIPS_linkage_name
-	.long	.Linfo_string86         # DW_AT_name
+	.byte	40                      # Abbrev [40] 0xfed:0x42 DW_TAG_subprogram
+	.long	.Linfo_string90         # DW_AT_MIPS_linkage_name
+	.long	.Linfo_string90         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
 	.short	505                     # DW_AT_decl_line
 	.long	1253                    # DW_AT_type
 	.byte	1                       # DW_AT_external
-	.byte	27                      # Abbrev [27] 0xf42:0xc DW_TAG_formal_parameter
+	.byte	27                      # Abbrev [27] 0xffe:0xc DW_TAG_formal_parameter
 	.long	.Linfo_string65         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
 	.short	504                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
-	.byte	27                      # Abbrev [27] 0xf4e:0xc DW_TAG_formal_parameter
-	.long	.Linfo_string114        # DW_AT_name
+	.byte	27                      # Abbrev [27] 0x100a:0xc DW_TAG_formal_parameter
+	.long	.Linfo_string125        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
 	.short	504                     # DW_AT_decl_line
-	.long	3962                    # DW_AT_type
-	.byte	27                      # Abbrev [27] 0xf5a:0xc DW_TAG_formal_parameter
+	.long	4150                    # DW_AT_type
+	.byte	27                      # Abbrev [27] 0x1016:0xc DW_TAG_formal_parameter
 	.long	.Linfo_string77         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
 	.short	504                     # DW_AT_decl_line
 	.long	426                     # DW_AT_type
-	.byte	19                      # Abbrev [19] 0xf66:0xc DW_TAG_variable
+	.byte	19                      # Abbrev [19] 0x1022:0xc DW_TAG_variable
 	.long	.Linfo_string66         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
 	.short	506                     # DW_AT_decl_line
 	.long	66                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
-	.byte	5                       # Abbrev [5] 0xf73:0x7 DW_TAG_base_type
-	.long	.Linfo_string90         # DW_AT_name
+	.byte	5                       # Abbrev [5] 0x102f:0x7 DW_TAG_base_type
+	.long	.Linfo_string94         # DW_AT_name
 	.byte	7                       # DW_AT_encoding
 	.byte	4                       # DW_AT_byte_size
-	.byte	23                      # Abbrev [23] 0xf7a:0x5 DW_TAG_reference_type
-	.long	3967                    # DW_AT_type
-	.byte	24                      # Abbrev [24] 0xf7f:0x5 DW_TAG_array_type
+	.byte	23                      # Abbrev [23] 0x1036:0x5 DW_TAG_reference_type
+	.long	4155                    # DW_AT_type
+	.byte	24                      # Abbrev [24] 0x103b:0x5 DW_TAG_array_type
 	.long	1218                    # DW_AT_type
+	.byte	23                      # Abbrev [23] 0x1040:0x5 DW_TAG_reference_type
+	.long	4165                    # DW_AT_type
+	.byte	41                      # Abbrev [41] 0x1045:0x1b DW_TAG_structure_type
+	.long	.Linfo_string123        # DW_AT_name
+	.byte	8                       # DW_AT_byte_size
+	.byte	42                      # Abbrev [42] 0x104b:0xa DW_TAG_member
+	.long	.Linfo_string117        # DW_AT_name
+	.long	4143                    # DW_AT_type
+	.byte	0                       # DW_AT_data_member_location
+	.byte	42                      # Abbrev [42] 0x1055:0xa DW_TAG_member
+	.long	.Linfo_string122        # DW_AT_name
+	.long	66                      # DW_AT_type
+	.byte	4                       # DW_AT_data_member_location
+	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
 .L.debug_info_end0:
 	.section	.debug_abbrev,"",@progbits
@@ -6218,6 +6774,26 @@ tmpBuffer:
 	.byte	14                      # DW_FORM_strp
 	.byte	3                       # DW_AT_name
 	.byte	14                      # DW_FORM_strp
+	.byte	63                      # DW_AT_external
+	.byte	12                      # DW_FORM_flag
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	38                      # Abbreviation Code
+	.byte	5                       # DW_TAG_formal_parameter
+	.byte	0                       # DW_CHILDREN_no
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	73                      # DW_AT_type
+	.byte	19                      # DW_FORM_ref4
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	39                      # Abbreviation Code
+	.byte	46                      # DW_TAG_subprogram
+	.byte	1                       # DW_CHILDREN_yes
+	.ascii	"\207@"                 # DW_AT_MIPS_linkage_name
+	.byte	14                      # DW_FORM_strp
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
 	.byte	58                      # DW_AT_decl_file
 	.byte	11                      # DW_FORM_data1
 	.byte	59                      # DW_AT_decl_line
@@ -6226,7 +6802,7 @@ tmpBuffer:
 	.byte	12                      # DW_FORM_flag
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
-	.byte	38                      # Abbreviation Code
+	.byte	40                      # Abbreviation Code
 	.byte	46                      # DW_TAG_subprogram
 	.byte	1                       # DW_CHILDREN_yes
 	.ascii	"\207@"                 # DW_AT_MIPS_linkage_name
@@ -6243,1952 +6819,1972 @@ tmpBuffer:
 	.byte	12                      # DW_FORM_flag
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
+	.byte	41                      # Abbreviation Code
+	.byte	19                      # DW_TAG_structure_type
+	.byte	1                       # DW_CHILDREN_yes
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	11                      # DW_AT_byte_size
+	.byte	11                      # DW_FORM_data1
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
+	.byte	42                      # Abbreviation Code
+	.byte	13                      # DW_TAG_member
+	.byte	0                       # DW_CHILDREN_no
+	.byte	3                       # DW_AT_name
+	.byte	14                      # DW_FORM_strp
+	.byte	73                      # DW_AT_type
+	.byte	19                      # DW_FORM_ref4
+	.byte	56                      # DW_AT_data_member_location
+	.byte	11                      # DW_FORM_data1
+	.byte	0                       # EOM(1)
+	.byte	0                       # EOM(2)
 	.byte	0                       # EOM(3)
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.long	.Lfunc_begin0
-	.long	.Lfunc_end0
+	.long	.Lfunc_begin4
+	.long	.Lfunc_end4
 	.long	0
 	.long	0
 .Ldebug_ranges1:
-	.long	.Ltmp11
-	.long	.Ltmp12
+	.long	.Ltmp29
+	.long	.Ltmp30
 	.long	0
 	.long	0
 .Ldebug_ranges2:
-	.long	.Ltmp21
-	.long	.Ltmp37
-	.long	.Ltmp40
-	.long	.Ltmp41
+	.long	.Ltmp39
+	.long	.Ltmp55
+	.long	.Ltmp58
+	.long	.Ltmp59
 	.long	0
 	.long	0
 .Ldebug_ranges3:
-	.long	.Ltmp21
-	.long	.Ltmp37
-	.long	.Ltmp40
-	.long	.Ltmp41
+	.long	.Ltmp39
+	.long	.Ltmp55
+	.long	.Ltmp58
+	.long	.Ltmp59
 	.long	0
 	.long	0
 .Ldebug_ranges4:
-	.long	.Ltmp21
-	.long	.Ltmp37
-	.long	.Ltmp40
-	.long	.Ltmp41
+	.long	.Ltmp39
+	.long	.Ltmp55
+	.long	.Ltmp58
+	.long	.Ltmp59
 	.long	0
 	.long	0
 .Ldebug_ranges5:
-	.long	.Ltmp21
-	.long	.Ltmp37
-	.long	.Ltmp40
-	.long	.Ltmp41
+	.long	.Ltmp39
+	.long	.Ltmp55
+	.long	.Ltmp58
+	.long	.Ltmp59
 	.long	0
 	.long	0
 .Ldebug_ranges6:
-	.long	.Ltmp19
-	.long	.Ltmp41
+	.long	.Ltmp37
+	.long	.Ltmp59
 	.long	0
 	.long	0
 .Ldebug_ranges7:
-	.long	.Ltmp43
-	.long	.Ltmp44
-	.long	.Ltmp51
-	.long	.Ltmp57
-	.long	.Ltmp59
-	.long	.Ltmp60
+	.long	.Ltmp61
+	.long	.Ltmp62
+	.long	.Ltmp69
+	.long	.Ltmp75
+	.long	.Ltmp77
+	.long	.Ltmp78
 	.long	0
 	.long	0
 .Ldebug_ranges8:
-	.long	.Ltmp43
-	.long	.Ltmp44
-	.long	.Ltmp51
-	.long	.Ltmp57
-	.long	.Ltmp59
-	.long	.Ltmp60
+	.long	.Ltmp61
+	.long	.Ltmp62
+	.long	.Ltmp69
+	.long	.Ltmp75
+	.long	.Ltmp77
+	.long	.Ltmp78
 	.long	0
 	.long	0
 .Ldebug_ranges9:
-	.long	.Ltmp43
-	.long	.Ltmp44
-	.long	.Ltmp51
-	.long	.Ltmp57
-	.long	.Ltmp59
-	.long	.Ltmp60
+	.long	.Ltmp61
+	.long	.Ltmp62
+	.long	.Ltmp69
+	.long	.Ltmp75
+	.long	.Ltmp77
+	.long	.Ltmp78
 	.long	0
 	.long	0
 .Ldebug_ranges10:
-	.long	.Ltmp43
-	.long	.Ltmp44
-	.long	.Ltmp51
-	.long	.Ltmp57
-	.long	.Ltmp59
-	.long	.Ltmp60
+	.long	.Ltmp61
+	.long	.Ltmp62
+	.long	.Ltmp69
+	.long	.Ltmp75
+	.long	.Ltmp77
+	.long	.Ltmp78
 	.long	0
 	.long	0
 .Ldebug_ranges11:
-	.long	.Ltmp42
-	.long	.Ltmp44
-	.long	.Ltmp51
 	.long	.Ltmp60
+	.long	.Ltmp62
+	.long	.Ltmp69
+	.long	.Ltmp78
 	.long	0
 	.long	0
 .Ldebug_ranges12:
-	.long	.Ltmp46
-	.long	.Ltmp47
-	.long	.Ltmp61
-	.long	.Ltmp68
-	.long	.Ltmp71
-	.long	.Ltmp72
+	.long	.Ltmp64
+	.long	.Ltmp65
+	.long	.Ltmp79
+	.long	.Ltmp86
+	.long	.Ltmp89
+	.long	.Ltmp90
 	.long	0
 	.long	0
 .Ldebug_ranges13:
-	.long	.Ltmp46
-	.long	.Ltmp47
-	.long	.Ltmp61
-	.long	.Ltmp68
-	.long	.Ltmp71
-	.long	.Ltmp72
+	.long	.Ltmp64
+	.long	.Ltmp65
+	.long	.Ltmp79
+	.long	.Ltmp86
+	.long	.Ltmp89
+	.long	.Ltmp90
 	.long	0
 	.long	0
 .Ldebug_ranges14:
-	.long	.Ltmp46
-	.long	.Ltmp47
-	.long	.Ltmp61
-	.long	.Ltmp68
-	.long	.Ltmp71
-	.long	.Ltmp72
+	.long	.Ltmp64
+	.long	.Ltmp65
+	.long	.Ltmp79
+	.long	.Ltmp86
+	.long	.Ltmp89
+	.long	.Ltmp90
 	.long	0
 	.long	0
 .Ldebug_ranges15:
-	.long	.Ltmp46
-	.long	.Ltmp47
-	.long	.Ltmp61
-	.long	.Ltmp68
-	.long	.Ltmp71
-	.long	.Ltmp72
+	.long	.Ltmp64
+	.long	.Ltmp65
+	.long	.Ltmp79
+	.long	.Ltmp86
+	.long	.Ltmp89
+	.long	.Ltmp90
 	.long	0
 	.long	0
 .Ldebug_ranges16:
-	.long	.Ltmp45
-	.long	.Ltmp47
-	.long	.Ltmp61
-	.long	.Ltmp72
+	.long	.Ltmp63
+	.long	.Ltmp65
+	.long	.Ltmp79
+	.long	.Ltmp90
 	.long	0
 	.long	0
 .Ldebug_ranges17:
-	.long	.Ltmp72
-	.long	.Ltmp77
+	.long	.Ltmp90
+	.long	.Ltmp95
 	.long	0
 	.long	0
 .Ldebug_ranges18:
-	.long	.Ltmp81
-	.long	.Ltmp82
-	.long	.Ltmp110
-	.long	.Ltmp114
+	.long	.Ltmp99
+	.long	.Ltmp100
+	.long	.Ltmp128
+	.long	.Ltmp132
 	.long	0
 	.long	0
 .Ldebug_ranges19:
-	.long	.Ltmp81
-	.long	.Ltmp82
-	.long	.Ltmp110
-	.long	.Ltmp114
+	.long	.Ltmp99
+	.long	.Ltmp100
+	.long	.Ltmp128
+	.long	.Ltmp132
 	.long	0
 	.long	0
 .Ldebug_ranges20:
-	.long	.Ltmp81
-	.long	.Ltmp82
-	.long	.Ltmp110
-	.long	.Ltmp114
+	.long	.Ltmp99
+	.long	.Ltmp100
+	.long	.Ltmp128
+	.long	.Ltmp132
 	.long	0
 	.long	0
 .Ldebug_ranges21:
-	.long	.Ltmp81
-	.long	.Ltmp83
-	.long	.Ltmp109
-	.long	.Ltmp114
-	.long	.Ltmp116
-	.long	.Ltmp118
+	.long	.Ltmp99
+	.long	.Ltmp101
+	.long	.Ltmp127
+	.long	.Ltmp132
+	.long	.Ltmp134
+	.long	.Ltmp136
 	.long	0
 	.long	0
 .Ldebug_ranges22:
-	.long	.Ltmp80
-	.long	.Ltmp83
-	.long	.Ltmp109
-	.long	.Ltmp118
+	.long	.Ltmp98
+	.long	.Ltmp101
+	.long	.Ltmp127
+	.long	.Ltmp136
 	.long	0
 	.long	0
 .Ldebug_ranges23:
-	.long	.Ltmp79
-	.long	.Ltmp83
-	.long	.Ltmp105
-	.long	.Ltmp119
+	.long	.Ltmp97
+	.long	.Ltmp101
+	.long	.Ltmp123
+	.long	.Ltmp137
 	.long	0
 	.long	0
 .Ldebug_ranges24:
-	.long	.Ltmp86
-	.long	.Ltmp87
-	.long	.Ltmp90
-	.long	.Ltmp98
-	.long	.Ltmp102
-	.long	.Ltmp103
+	.long	.Ltmp104
+	.long	.Ltmp105
+	.long	.Ltmp108
+	.long	.Ltmp116
+	.long	.Ltmp120
+	.long	.Ltmp121
 	.long	0
 	.long	0
 .Ldebug_ranges25:
-	.long	.Ltmp86
-	.long	.Ltmp87
-	.long	.Ltmp90
-	.long	.Ltmp98
-	.long	.Ltmp102
-	.long	.Ltmp103
+	.long	.Ltmp104
+	.long	.Ltmp105
+	.long	.Ltmp108
+	.long	.Ltmp116
+	.long	.Ltmp120
+	.long	.Ltmp121
 	.long	0
 	.long	0
 .Ldebug_ranges26:
-	.long	.Ltmp86
-	.long	.Ltmp87
-	.long	.Ltmp90
-	.long	.Ltmp98
-	.long	.Ltmp102
-	.long	.Ltmp103
+	.long	.Ltmp104
+	.long	.Ltmp105
+	.long	.Ltmp108
+	.long	.Ltmp116
+	.long	.Ltmp120
+	.long	.Ltmp121
 	.long	0
 	.long	0
 .Ldebug_ranges27:
-	.long	.Ltmp86
-	.long	.Ltmp98
-	.long	.Ltmp101
-	.long	.Ltmp103
+	.long	.Ltmp104
+	.long	.Ltmp116
+	.long	.Ltmp119
+	.long	.Ltmp121
 	.long	0
 	.long	0
 .Ldebug_ranges28:
-	.long	.Ltmp84
-	.long	.Ltmp103
+	.long	.Ltmp102
+	.long	.Ltmp121
 	.long	0
 	.long	0
 .Ldebug_ranges29:
-	.long	.Ltmp103
-	.long	.Ltmp104
-	.long	.Ltmp120
-	.long	.Ltmp123
+	.long	.Ltmp121
+	.long	.Ltmp122
+	.long	.Ltmp138
+	.long	.Ltmp141
 	.long	0
 	.long	0
 .Ldebug_ranges30:
-	.long	.Ltmp133
-	.long	.Ltmp142
+	.long	.Ltmp151
+	.long	.Ltmp160
 	.long	0
 	.long	0
 .Ldebug_ranges31:
-	.long	.Ltmp133
-	.long	.Ltmp142
+	.long	.Ltmp151
+	.long	.Ltmp160
 	.long	0
 	.long	0
 .Ldebug_ranges32:
-	.long	.Ltmp125
-	.long	.Ltmp145
-	.long	.Ltmp146
-	.long	.Ltmp147
+	.long	.Ltmp143
+	.long	.Ltmp163
+	.long	.Ltmp164
+	.long	.Ltmp165
 	.long	0
 	.long	0
 .Ldebug_ranges33:
-	.long	.Ltmp124
-	.long	.Ltmp145
-	.long	.Ltmp146
-	.long	.Ltmp147
+	.long	.Ltmp142
+	.long	.Ltmp163
+	.long	.Ltmp164
+	.long	.Ltmp165
 	.long	0
 	.long	0
 .Ldebug_ranges34:
-	.long	.Ltmp10
-	.long	.Ltmp148
+	.long	.Ltmp28
+	.long	.Ltmp166
 	.long	0
 	.long	0
 .Ldebug_ranges35:
-	.long	.Ltmp10
-	.long	.Ltmp148
+	.long	.Ltmp28
+	.long	.Ltmp166
 	.long	0
 	.long	0
 .Ldebug_ranges36:
-	.long	.Ltmp10
-	.long	.Ltmp148
+	.long	.Ltmp28
+	.long	.Ltmp166
 	.long	0
 	.long	0
 .Ldebug_ranges37:
-	.long	.Lfunc_begin1
-	.long	.Lfunc_end1
+	.long	.Lfunc_begin5
+	.long	.Lfunc_end5
 	.long	0
 	.long	0
 .Ldebug_ranges38:
-	.long	.Ltmp162
-	.long	.Ltmp163
+	.long	.Ltmp180
+	.long	.Ltmp181
 	.long	0
 	.long	0
 .Ldebug_ranges39:
-	.long	.Ltmp162
-	.long	.Ltmp163
+	.long	.Ltmp180
+	.long	.Ltmp181
 	.long	0
 	.long	0
 .Ldebug_ranges40:
-	.long	.Ltmp163
-	.long	.Ltmp164
+	.long	.Ltmp181
+	.long	.Ltmp182
 	.long	0
 	.long	0
 .Ldebug_ranges41:
-	.long	.Ltmp163
-	.long	.Ltmp164
+	.long	.Ltmp181
+	.long	.Ltmp182
 	.long	0
 	.long	0
 .Ldebug_ranges42:
-	.long	.Ltmp165
-	.long	.Ltmp166
+	.long	.Ltmp183
+	.long	.Ltmp184
 	.long	0
 	.long	0
 .Ldebug_ranges43:
-	.long	.Ltmp165
-	.long	.Ltmp166
+	.long	.Ltmp183
+	.long	.Ltmp184
 	.long	0
 	.long	0
 .Ldebug_ranges44:
-	.long	.Ltmp167
-	.long	.Ltmp169
+	.long	.Ltmp185
+	.long	.Ltmp187
 	.long	0
 	.long	0
 .Ldebug_ranges45:
-	.long	.Ltmp167
-	.long	.Ltmp169
+	.long	.Ltmp185
+	.long	.Ltmp187
 	.long	0
 	.long	0
 .Ldebug_ranges46:
-	.long	.Ltmp171
-	.long	.Ltmp172
+	.long	.Ltmp189
+	.long	.Ltmp190
 	.long	0
 	.long	0
 .Ldebug_ranges47:
-	.long	.Ltmp171
-	.long	.Ltmp172
+	.long	.Ltmp189
+	.long	.Ltmp190
 	.long	0
 	.long	0
 .Ldebug_ranges48:
-	.long	.Ltmp174
-	.long	.Ltmp176
+	.long	.Ltmp192
+	.long	.Ltmp194
 	.long	0
 	.long	0
 .Ldebug_ranges49:
-	.long	.Ltmp176
-	.long	.Ltmp177
+	.long	.Ltmp194
+	.long	.Ltmp195
 	.long	0
 	.long	0
 .Ldebug_ranges50:
-	.long	.Ltmp182
-	.long	.Ltmp184
-	.long	.Ltmp185
-	.long	.Ltmp187
+	.long	.Ltmp200
+	.long	.Ltmp202
+	.long	.Ltmp203
+	.long	.Ltmp205
 	.long	0
 	.long	0
 .Ldebug_ranges51:
-	.long	.Ltmp182
-	.long	.Ltmp184
-	.long	.Ltmp185
-	.long	.Ltmp187
+	.long	.Ltmp200
+	.long	.Ltmp202
+	.long	.Ltmp203
+	.long	.Ltmp205
 	.long	0
 	.long	0
 .Ldebug_ranges52:
-	.long	.Ltmp182
-	.long	.Ltmp184
-	.long	.Ltmp185
-	.long	.Ltmp187
+	.long	.Ltmp200
+	.long	.Ltmp202
+	.long	.Ltmp203
+	.long	.Ltmp205
 	.long	0
 	.long	0
 .Ldebug_ranges53:
-	.long	.Ltmp274
-	.long	.Ltmp276
-	.long	.Ltmp277
-	.long	.Ltmp279
+	.long	.Ltmp292
+	.long	.Ltmp294
+	.long	.Ltmp295
+	.long	.Ltmp297
 	.long	0
 	.long	0
 .Ldebug_ranges54:
-	.long	.Ltmp274
-	.long	.Ltmp276
-	.long	.Ltmp277
-	.long	.Ltmp279
+	.long	.Ltmp292
+	.long	.Ltmp294
+	.long	.Ltmp295
+	.long	.Ltmp297
 	.long	0
 	.long	0
 .Ldebug_ranges55:
-	.long	.Ltmp274
-	.long	.Ltmp276
-	.long	.Ltmp277
-	.long	.Ltmp279
+	.long	.Ltmp292
+	.long	.Ltmp294
+	.long	.Ltmp295
+	.long	.Ltmp297
 	.long	0
 	.long	0
 .Ldebug_ranges56:
-	.long	.Ltmp188
-	.long	.Ltmp189
-	.long	.Ltmp258
-	.long	.Ltmp279
+	.long	.Ltmp206
+	.long	.Ltmp207
+	.long	.Ltmp276
+	.long	.Ltmp297
 	.long	0
 	.long	0
 .Ldebug_ranges57:
-	.long	.Ltmp188
-	.long	.Ltmp189
-	.long	.Ltmp258
-	.long	.Ltmp279
+	.long	.Ltmp206
+	.long	.Ltmp207
+	.long	.Ltmp276
+	.long	.Ltmp297
 	.long	0
 	.long	0
 .Ldebug_ranges58:
-	.long	.Ltmp188
-	.long	.Ltmp189
-	.long	.Ltmp258
-	.long	.Ltmp279
+	.long	.Ltmp206
+	.long	.Ltmp207
+	.long	.Ltmp276
+	.long	.Ltmp297
 	.long	0
 	.long	0
 .Ldebug_ranges59:
-	.long	.Ltmp188
-	.long	.Ltmp189
-	.long	.Ltmp258
-	.long	.Ltmp279
+	.long	.Ltmp206
+	.long	.Ltmp207
+	.long	.Ltmp276
+	.long	.Ltmp297
 	.long	0
 	.long	0
 .Ldebug_ranges60:
-	.long	.Ltmp198
-	.long	.Ltmp200
-	.long	.Ltmp201
-	.long	.Ltmp203
+	.long	.Ltmp216
+	.long	.Ltmp218
+	.long	.Ltmp219
+	.long	.Ltmp221
 	.long	0
 	.long	0
 .Ldebug_ranges61:
-	.long	.Ltmp198
-	.long	.Ltmp200
-	.long	.Ltmp201
-	.long	.Ltmp203
+	.long	.Ltmp216
+	.long	.Ltmp218
+	.long	.Ltmp219
+	.long	.Ltmp221
 	.long	0
 	.long	0
 .Ldebug_ranges62:
-	.long	.Ltmp198
-	.long	.Ltmp200
-	.long	.Ltmp201
-	.long	.Ltmp203
+	.long	.Ltmp216
+	.long	.Ltmp218
+	.long	.Ltmp219
+	.long	.Ltmp221
 	.long	0
 	.long	0
 .Ldebug_ranges63:
-	.long	.Ltmp192
-	.long	.Ltmp205
+	.long	.Ltmp210
+	.long	.Ltmp223
 	.long	0
 	.long	0
 .Ldebug_ranges64:
-	.long	.Ltmp192
-	.long	.Ltmp205
+	.long	.Ltmp210
+	.long	.Ltmp223
 	.long	0
 	.long	0
 .Ldebug_ranges65:
-	.long	.Ltmp209
-	.long	.Ltmp222
+	.long	.Ltmp227
+	.long	.Ltmp240
 	.long	0
 	.long	0
 .Ldebug_ranges66:
-	.long	.Ltmp211
-	.long	.Ltmp213
-	.long	.Ltmp214
-	.long	.Ltmp222
+	.long	.Ltmp229
+	.long	.Ltmp231
+	.long	.Ltmp232
+	.long	.Ltmp240
 	.long	0
 	.long	0
 .Ldebug_ranges67:
-	.long	.Ltmp211
-	.long	.Ltmp213
-	.long	.Ltmp214
-	.long	.Ltmp222
+	.long	.Ltmp229
+	.long	.Ltmp231
+	.long	.Ltmp232
+	.long	.Ltmp240
 	.long	0
 	.long	0
 .Ldebug_ranges68:
-	.long	.Ltmp211
-	.long	.Ltmp213
-	.long	.Ltmp214
-	.long	.Ltmp222
+	.long	.Ltmp229
+	.long	.Ltmp231
+	.long	.Ltmp232
+	.long	.Ltmp240
 	.long	0
 	.long	0
 .Ldebug_ranges69:
-	.long	.Ltmp211
-	.long	.Ltmp213
-	.long	.Ltmp214
-	.long	.Ltmp222
+	.long	.Ltmp229
+	.long	.Ltmp231
+	.long	.Ltmp232
+	.long	.Ltmp240
 	.long	0
 	.long	0
 .Ldebug_ranges70:
-	.long	.Ltmp211
-	.long	.Ltmp213
-	.long	.Ltmp214
-	.long	.Ltmp222
+	.long	.Ltmp229
+	.long	.Ltmp231
+	.long	.Ltmp232
+	.long	.Ltmp240
 	.long	0
 	.long	0
 .Ldebug_ranges71:
-	.long	.Ltmp211
-	.long	.Ltmp213
-	.long	.Ltmp214
-	.long	.Ltmp222
+	.long	.Ltmp229
+	.long	.Ltmp231
+	.long	.Ltmp232
+	.long	.Ltmp240
 	.long	0
 	.long	0
 .Ldebug_ranges72:
-	.long	.Ltmp209
-	.long	.Ltmp222
+	.long	.Ltmp227
+	.long	.Ltmp240
 	.long	0
 	.long	0
 .Ldebug_ranges73:
-	.long	.Ltmp205
-	.long	.Ltmp225
-	.long	.Ltmp254
-	.long	.Ltmp256
+	.long	.Ltmp223
+	.long	.Ltmp243
+	.long	.Ltmp272
+	.long	.Ltmp274
 	.long	0
 	.long	0
 .Ldebug_ranges74:
-	.long	.Ltmp230
-	.long	.Ltmp243
+	.long	.Ltmp248
+	.long	.Ltmp261
 	.long	0
 	.long	0
 .Ldebug_ranges75:
-	.long	.Ltmp232
-	.long	.Ltmp234
-	.long	.Ltmp235
-	.long	.Ltmp243
+	.long	.Ltmp250
+	.long	.Ltmp252
+	.long	.Ltmp253
+	.long	.Ltmp261
 	.long	0
 	.long	0
 .Ldebug_ranges76:
-	.long	.Ltmp232
-	.long	.Ltmp234
-	.long	.Ltmp235
-	.long	.Ltmp243
+	.long	.Ltmp250
+	.long	.Ltmp252
+	.long	.Ltmp253
+	.long	.Ltmp261
 	.long	0
 	.long	0
 .Ldebug_ranges77:
-	.long	.Ltmp232
-	.long	.Ltmp234
-	.long	.Ltmp235
-	.long	.Ltmp243
+	.long	.Ltmp250
+	.long	.Ltmp252
+	.long	.Ltmp253
+	.long	.Ltmp261
 	.long	0
 	.long	0
 .Ldebug_ranges78:
-	.long	.Ltmp232
-	.long	.Ltmp234
-	.long	.Ltmp235
-	.long	.Ltmp243
+	.long	.Ltmp250
+	.long	.Ltmp252
+	.long	.Ltmp253
+	.long	.Ltmp261
 	.long	0
 	.long	0
 .Ldebug_ranges79:
-	.long	.Ltmp232
-	.long	.Ltmp234
-	.long	.Ltmp235
-	.long	.Ltmp243
+	.long	.Ltmp250
+	.long	.Ltmp252
+	.long	.Ltmp253
+	.long	.Ltmp261
 	.long	0
 	.long	0
 .Ldebug_ranges80:
-	.long	.Ltmp232
-	.long	.Ltmp234
-	.long	.Ltmp235
-	.long	.Ltmp243
+	.long	.Ltmp250
+	.long	.Ltmp252
+	.long	.Ltmp253
+	.long	.Ltmp261
 	.long	0
 	.long	0
 .Ldebug_ranges81:
-	.long	.Ltmp230
-	.long	.Ltmp243
+	.long	.Ltmp248
+	.long	.Ltmp261
 	.long	0
 	.long	0
 .Ldebug_ranges82:
-	.long	.Ltmp246
-	.long	.Ltmp248
-	.long	.Ltmp249
-	.long	.Ltmp251
+	.long	.Ltmp264
+	.long	.Ltmp266
+	.long	.Ltmp267
+	.long	.Ltmp269
 	.long	0
 	.long	0
 .Ldebug_ranges83:
-	.long	.Ltmp246
-	.long	.Ltmp248
-	.long	.Ltmp249
-	.long	.Ltmp251
+	.long	.Ltmp264
+	.long	.Ltmp266
+	.long	.Ltmp267
+	.long	.Ltmp269
 	.long	0
 	.long	0
 .Ldebug_ranges84:
-	.long	.Ltmp246
-	.long	.Ltmp248
-	.long	.Ltmp249
-	.long	.Ltmp251
+	.long	.Ltmp264
+	.long	.Ltmp266
+	.long	.Ltmp267
+	.long	.Ltmp269
 	.long	0
 	.long	0
 .Ldebug_ranges85:
-	.long	.Ltmp287
-	.long	.Ltmp289
-	.long	.Ltmp290
-	.long	.Ltmp292
+	.long	.Ltmp305
+	.long	.Ltmp307
+	.long	.Ltmp308
+	.long	.Ltmp310
 	.long	0
 	.long	0
 .Ldebug_ranges86:
-	.long	.Ltmp287
-	.long	.Ltmp289
-	.long	.Ltmp290
-	.long	.Ltmp292
+	.long	.Ltmp305
+	.long	.Ltmp307
+	.long	.Ltmp308
+	.long	.Ltmp310
 	.long	0
 	.long	0
 .Ldebug_ranges87:
-	.long	.Ltmp287
-	.long	.Ltmp289
-	.long	.Ltmp290
-	.long	.Ltmp292
+	.long	.Ltmp305
+	.long	.Ltmp307
+	.long	.Ltmp308
+	.long	.Ltmp310
 	.long	0
 	.long	0
 .Ldebug_ranges88:
-	.long	.Ltmp280
-	.long	.Ltmp292
+	.long	.Ltmp298
+	.long	.Ltmp310
 	.long	0
 	.long	0
 .Ldebug_ranges89:
-	.long	.Ltmp280
-	.long	.Ltmp292
+	.long	.Ltmp298
+	.long	.Ltmp310
 	.long	0
 	.long	0
 .Ldebug_ranges90:
-	.long	.Ltmp280
-	.long	.Ltmp292
+	.long	.Ltmp298
+	.long	.Ltmp310
 	.long	0
 	.long	0
 .Ldebug_ranges91:
-	.long	.Ltmp188
-	.long	.Ltmp292
+	.long	.Ltmp206
+	.long	.Ltmp310
 	.long	0
 	.long	0
 .Ldebug_ranges92:
-	.long	.Ltmp162
-	.long	.Ltmp292
+	.long	.Ltmp180
+	.long	.Ltmp310
 	.long	0
 	.long	0
 .Ldebug_ranges93:
-	.long	.Ltmp162
-	.long	.Ltmp292
+	.long	.Ltmp180
+	.long	.Ltmp310
 	.long	0
 	.long	0
 .Ldebug_ranges94:
-	.long	.Ltmp162
-	.long	.Ltmp292
+	.long	.Ltmp180
+	.long	.Ltmp310
 	.long	0
 	.long	0
 .Ldebug_ranges95:
-	.long	.Ltmp161
-	.long	.Ltmp292
+	.long	.Ltmp179
+	.long	.Ltmp310
 	.long	0
 	.long	0
 	.section	.debug_loc,"",@progbits
 .Ldebug_loc0:
-	.long	.Lfunc_begin0
-	.long	.Ltmp47
-.Lset0 = .Ltmp295-.Ltmp294              # Loc expr size
+	.long	.Lfunc_begin4
+	.long	.Ltmp65
+.Lset0 = .Ltmp313-.Ltmp312              # Loc expr size
 	.short	.Lset0
-.Ltmp294:
+.Ltmp312:
 	.byte	80                      # DW_OP_reg0
-.Ltmp295:
-	.long	.Ltmp48
-	.long	.Ltmp60
-.Lset1 = .Ltmp297-.Ltmp296              # Loc expr size
+.Ltmp313:
+	.long	.Ltmp66
+	.long	.Ltmp78
+.Lset1 = .Ltmp315-.Ltmp314              # Loc expr size
 	.short	.Lset1
-.Ltmp296:
+.Ltmp314:
 	.byte	80                      # DW_OP_reg0
-.Ltmp297:
-	.long	.Ltmp62
-	.long	.Ltmp106
-.Lset2 = .Ltmp299-.Ltmp298              # Loc expr size
+.Ltmp315:
+	.long	.Ltmp80
+	.long	.Ltmp124
+.Lset2 = .Ltmp317-.Ltmp316              # Loc expr size
 	.short	.Lset2
-.Ltmp298:
+.Ltmp316:
 	.byte	80                      # DW_OP_reg0
-.Ltmp299:
-	.long	.Ltmp107
-	.long	.Ltmp123
-.Lset3 = .Ltmp301-.Ltmp300              # Loc expr size
+.Ltmp317:
+	.long	.Ltmp125
+	.long	.Ltmp141
+.Lset3 = .Ltmp319-.Ltmp318              # Loc expr size
 	.short	.Lset3
-.Ltmp300:
+.Ltmp318:
 	.byte	80                      # DW_OP_reg0
-.Ltmp301:
+.Ltmp319:
 	.long	0
 	.long	0
 .Ldebug_loc1:
-	.long	.Ltmp9
-	.long	.Ltmp10
-.Lset4 = .Ltmp303-.Ltmp302              # Loc expr size
-	.short	.Lset4
-.Ltmp302:
-	.byte	81                      # DW_OP_reg1
-.Ltmp303:
-	.long	.Ltmp11
-	.long	.Ltmp13
-.Lset5 = .Ltmp305-.Ltmp304              # Loc expr size
-	.short	.Lset5
-.Ltmp304:
-	.byte	81                      # DW_OP_reg1
-.Ltmp305:
-	.long	0
-	.long	0
-.Ldebug_loc2:
-	.long	.Ltmp14
-	.long	.Ltmp16
-.Lset6 = .Ltmp307-.Ltmp306              # Loc expr size
-	.short	.Lset6
-.Ltmp306:
-	.byte	82                      # DW_OP_reg2
-.Ltmp307:
-	.long	0
-	.long	0
-.Ldebug_loc3:
-	.long	.Ltmp19
-	.long	.Ltmp36
-.Lset7 = .Ltmp309-.Ltmp308              # Loc expr size
-	.short	.Lset7
-.Ltmp308:
-	.byte	17                      # DW_OP_consts
-	.byte	0                       # 
-.Ltmp309:
-	.long	.Ltmp36
-	.long	.Ltmp37
-.Lset8 = .Ltmp311-.Ltmp310              # Loc expr size
-	.short	.Lset8
-.Ltmp310:
-	.byte	89                      # DW_OP_reg9
-.Ltmp311:
-	.long	0
-	.long	0
-.Ldebug_loc4:
 	.long	.Ltmp27
 	.long	.Ltmp28
-.Lset9 = .Ltmp313-.Ltmp312              # Loc expr size
-	.short	.Lset9
-.Ltmp312:
-	.byte	90                      # DW_OP_reg10
-.Ltmp313:
-	.long	.Ltmp29
-	.long	.Ltmp30
-.Lset10 = .Ltmp315-.Ltmp314             # Loc expr size
-	.short	.Lset10
-.Ltmp314:
-	.byte	90                      # DW_OP_reg10
-.Ltmp315:
-	.long	.Ltmp31
-	.long	.Ltmp32
-.Lset11 = .Ltmp317-.Ltmp316             # Loc expr size
-	.short	.Lset11
-.Ltmp316:
-	.byte	84                      # DW_OP_reg4
-.Ltmp317:
-	.long	.Ltmp32
-	.long	.Ltmp33
-.Lset12 = .Ltmp319-.Ltmp318             # Loc expr size
-	.short	.Lset12
-.Ltmp318:
-	.byte	90                      # DW_OP_reg10
-.Ltmp319:
-	.long	.Ltmp34
-	.long	.Ltmp34
-.Lset13 = .Ltmp321-.Ltmp320             # Loc expr size
-	.short	.Lset13
+.Lset4 = .Ltmp321-.Ltmp320              # Loc expr size
+	.short	.Lset4
 .Ltmp320:
-	.byte	90                      # DW_OP_reg10
+	.byte	81                      # DW_OP_reg1
 .Ltmp321:
-	.long	0
-	.long	0
-.Ldebug_loc5:
-	.long	.Ltmp35
-	.long	.Ltmp36
-.Lset14 = .Ltmp323-.Ltmp322             # Loc expr size
-	.short	.Lset14
+	.long	.Ltmp29
+	.long	.Ltmp31
+.Lset5 = .Ltmp323-.Ltmp322              # Loc expr size
+	.short	.Lset5
 .Ltmp322:
-	.byte	84                      # DW_OP_reg4
+	.byte	81                      # DW_OP_reg1
 .Ltmp323:
 	.long	0
 	.long	0
-.Ldebug_loc6:
-	.long	.Ltmp36
-	.long	.Ltmp38
-.Lset15 = .Ltmp325-.Ltmp324             # Loc expr size
-	.short	.Lset15
+.Ldebug_loc2:
+	.long	.Ltmp32
+	.long	.Ltmp34
+.Lset6 = .Ltmp325-.Ltmp324              # Loc expr size
+	.short	.Lset6
 .Ltmp324:
-	.byte	84                      # DW_OP_reg4
+	.byte	82                      # DW_OP_reg2
 .Ltmp325:
 	.long	0
 	.long	0
-.Ldebug_loc7:
-	.long	.Ltmp42
-	.long	.Ltmp56
-.Lset16 = .Ltmp327-.Ltmp326             # Loc expr size
-	.short	.Lset16
+.Ldebug_loc3:
+	.long	.Ltmp37
+	.long	.Ltmp54
+.Lset7 = .Ltmp327-.Ltmp326              # Loc expr size
+	.short	.Lset7
 .Ltmp326:
 	.byte	17                      # DW_OP_consts
 	.byte	0                       # 
 .Ltmp327:
-	.long	.Ltmp56
-	.long	.Ltmp57
-.Lset17 = .Ltmp329-.Ltmp328             # Loc expr size
-	.short	.Lset17
+	.long	.Ltmp54
+	.long	.Ltmp55
+.Lset8 = .Ltmp329-.Ltmp328              # Loc expr size
+	.short	.Lset8
 .Ltmp328:
-	.byte	88                      # DW_OP_reg8
+	.byte	89                      # DW_OP_reg9
 .Ltmp329:
 	.long	0
 	.long	0
-.Ldebug_loc8:
+.Ldebug_loc4:
 	.long	.Ltmp45
-	.long	.Ltmp67
-.Lset18 = .Ltmp331-.Ltmp330             # Loc expr size
-	.short	.Lset18
+	.long	.Ltmp46
+.Lset9 = .Ltmp331-.Ltmp330              # Loc expr size
+	.short	.Lset9
 .Ltmp330:
-	.byte	17                      # DW_OP_consts
-	.byte	0                       # 
+	.byte	90                      # DW_OP_reg10
 .Ltmp331:
-	.long	.Ltmp67
-	.long	.Ltmp68
-.Lset19 = .Ltmp333-.Ltmp332             # Loc expr size
-	.short	.Lset19
+	.long	.Ltmp47
+	.long	.Ltmp48
+.Lset10 = .Ltmp333-.Ltmp332             # Loc expr size
+	.short	.Lset10
 .Ltmp332:
-	.byte	87                      # DW_OP_reg7
+	.byte	90                      # DW_OP_reg10
 .Ltmp333:
-	.long	0
-	.long	0
-.Ldebug_loc9:
-	.long	.Ltmp52
-	.long	.Ltmp58
-.Lset20 = .Ltmp335-.Ltmp334             # Loc expr size
-	.short	.Lset20
+	.long	.Ltmp49
+	.long	.Ltmp50
+.Lset11 = .Ltmp335-.Ltmp334             # Loc expr size
+	.short	.Lset11
 .Ltmp334:
-	.byte	89                      # DW_OP_reg9
+	.byte	84                      # DW_OP_reg4
 .Ltmp335:
-	.long	0
-	.long	0
-.Ldebug_loc10:
-	.long	.Ltmp53
-	.long	.Ltmp58
-.Lset21 = .Ltmp337-.Ltmp336             # Loc expr size
-	.short	.Lset21
+	.long	.Ltmp50
+	.long	.Ltmp51
+.Lset12 = .Ltmp337-.Ltmp336             # Loc expr size
+	.short	.Lset12
 .Ltmp336:
 	.byte	90                      # DW_OP_reg10
 .Ltmp337:
-	.long	0
-	.long	0
-.Ldebug_loc11:
-	.long	.Ltmp54
-	.long	.Ltmp55
-.Lset22 = .Ltmp339-.Ltmp338             # Loc expr size
-	.short	.Lset22
+	.long	.Ltmp52
+	.long	.Ltmp52
+.Lset13 = .Ltmp339-.Ltmp338             # Loc expr size
+	.short	.Lset13
 .Ltmp338:
-	.byte	84                      # DW_OP_reg4
+	.byte	90                      # DW_OP_reg10
 .Ltmp339:
 	.long	0
 	.long	0
-.Ldebug_loc12:
-	.long	.Ltmp64
-	.long	.Ltmp65
-.Lset23 = .Ltmp341-.Ltmp340             # Loc expr size
-	.short	.Lset23
+.Ldebug_loc5:
+	.long	.Ltmp53
+	.long	.Ltmp54
+.Lset14 = .Ltmp341-.Ltmp340             # Loc expr size
+	.short	.Lset14
 .Ltmp340:
-	.byte	88                      # DW_OP_reg8
+	.byte	84                      # DW_OP_reg4
 .Ltmp341:
 	.long	0
 	.long	0
-.Ldebug_loc13:
-	.long	.Ltmp66
-	.long	.Ltmp70
-.Lset24 = .Ltmp343-.Ltmp342             # Loc expr size
-	.short	.Lset24
+.Ldebug_loc6:
+	.long	.Ltmp54
+	.long	.Ltmp56
+.Lset15 = .Ltmp343-.Ltmp342             # Loc expr size
+	.short	.Lset15
 .Ltmp342:
-	.byte	89                      # DW_OP_reg9
+	.byte	84                      # DW_OP_reg4
 .Ltmp343:
 	.long	0
 	.long	0
-.Ldebug_loc14:
-	.long	.Ltmp67
-	.long	.Ltmp69
-.Lset25 = .Ltmp345-.Ltmp344             # Loc expr size
-	.short	.Lset25
+.Ldebug_loc7:
+	.long	.Ltmp60
+	.long	.Ltmp74
+.Lset16 = .Ltmp345-.Ltmp344             # Loc expr size
+	.short	.Lset16
 .Ltmp344:
-	.byte	85                      # DW_OP_reg5
+	.byte	17                      # DW_OP_consts
+	.byte	0                       # 
 .Ltmp345:
-	.long	0
-	.long	0
-.Ldebug_loc15:
-	.long	.Ltmp72
+	.long	.Ltmp74
 	.long	.Ltmp75
-.Lset26 = .Ltmp347-.Ltmp346             # Loc expr size
-	.short	.Lset26
+.Lset17 = .Ltmp347-.Ltmp346             # Loc expr size
+	.short	.Lset17
 .Ltmp346:
-	.byte	17                      # DW_OP_consts
-	.byte	0                       # 
+	.byte	88                      # DW_OP_reg8
 .Ltmp347:
-	.long	.Ltmp75
-	.long	.Ltmp76
-.Lset27 = .Ltmp349-.Ltmp348             # Loc expr size
-	.short	.Lset27
+	.long	0
+	.long	0
+.Ldebug_loc8:
+	.long	.Ltmp63
+	.long	.Ltmp85
+.Lset18 = .Ltmp349-.Ltmp348             # Loc expr size
+	.short	.Lset18
 .Ltmp348:
-	.byte	84                      # DW_OP_reg4
-.Ltmp349:
-	.long	0
-	.long	0
-.Ldebug_loc16:
-	.long	.Ltmp80
-	.long	.Ltmp113
-.Lset28 = .Ltmp351-.Ltmp350             # Loc expr size
-	.short	.Lset28
-.Ltmp350:
 	.byte	17                      # DW_OP_consts
 	.byte	0                       # 
-.Ltmp351:
-	.long	.Ltmp113
-	.long	.Ltmp114
-.Lset29 = .Ltmp353-.Ltmp352             # Loc expr size
-	.short	.Lset29
-.Ltmp352:
+.Ltmp349:
+	.long	.Ltmp85
+	.long	.Ltmp86
+.Lset19 = .Ltmp351-.Ltmp350             # Loc expr size
+	.short	.Lset19
+.Ltmp350:
 	.byte	87                      # DW_OP_reg7
+.Ltmp351:
+	.long	0
+	.long	0
+.Ldebug_loc9:
+	.long	.Ltmp70
+	.long	.Ltmp76
+.Lset20 = .Ltmp353-.Ltmp352             # Loc expr size
+	.short	.Lset20
+.Ltmp352:
+	.byte	89                      # DW_OP_reg9
 .Ltmp353:
 	.long	0
 	.long	0
-.Ldebug_loc17:
-	.long	.Ltmp80
-	.long	.Ltmp83
-.Lset30 = .Ltmp355-.Ltmp354             # Loc expr size
-	.short	.Lset30
+.Ldebug_loc10:
+	.long	.Ltmp71
+	.long	.Ltmp76
+.Lset21 = .Ltmp355-.Ltmp354             # Loc expr size
+	.short	.Lset21
 .Ltmp354:
-	.byte	91                      # DW_OP_reg11
+	.byte	90                      # DW_OP_reg10
 .Ltmp355:
-	.long	.Ltmp107
-	.long	.Ltmp117
-.Lset31 = .Ltmp357-.Ltmp356             # Loc expr size
-	.short	.Lset31
+	.long	0
+	.long	0
+.Ldebug_loc11:
+	.long	.Ltmp72
+	.long	.Ltmp73
+.Lset22 = .Ltmp357-.Ltmp356             # Loc expr size
+	.short	.Lset22
 .Ltmp356:
-	.byte	91                      # DW_OP_reg11
+	.byte	84                      # DW_OP_reg4
 .Ltmp357:
 	.long	0
 	.long	0
-.Ldebug_loc18:
-	.long	.Ltmp84
-	.long	.Ltmp99
-.Lset32 = .Ltmp359-.Ltmp358             # Loc expr size
-	.short	.Lset32
+.Ldebug_loc12:
+	.long	.Ltmp82
+	.long	.Ltmp83
+.Lset23 = .Ltmp359-.Ltmp358             # Loc expr size
+	.short	.Lset23
 .Ltmp358:
-	.byte	17                      # DW_OP_consts
-	.byte	0                       # 
+	.byte	88                      # DW_OP_reg8
 .Ltmp359:
-	.long	.Ltmp99
-	.long	.Ltmp100
-.Lset33 = .Ltmp361-.Ltmp360             # Loc expr size
-	.short	.Lset33
+	.long	0
+	.long	0
+.Ldebug_loc13:
+	.long	.Ltmp84
+	.long	.Ltmp88
+.Lset24 = .Ltmp361-.Ltmp360             # Loc expr size
+	.short	.Lset24
 .Ltmp360:
-	.byte	86                      # DW_OP_reg6
+	.byte	89                      # DW_OP_reg9
 .Ltmp361:
 	.long	0
 	.long	0
-.Ldebug_loc19:
-	.long	.Ltmp90
-	.long	.Ltmp98
-.Lset34 = .Ltmp363-.Ltmp362             # Loc expr size
-	.short	.Lset34
+.Ldebug_loc14:
+	.long	.Ltmp85
+	.long	.Ltmp87
+.Lset25 = .Ltmp363-.Ltmp362             # Loc expr size
+	.short	.Lset25
 .Ltmp362:
-	.byte	88                      # DW_OP_reg8
+	.byte	85                      # DW_OP_reg5
 .Ltmp363:
 	.long	0
 	.long	0
-.Ldebug_loc20:
-	.long	.Ltmp91
-	.long	.Ltmp94
-.Lset35 = .Ltmp365-.Ltmp364             # Loc expr size
-	.short	.Lset35
+.Ldebug_loc15:
+	.long	.Ltmp90
+	.long	.Ltmp93
+.Lset26 = .Ltmp365-.Ltmp364             # Loc expr size
+	.short	.Lset26
 .Ltmp364:
-	.byte	81                      # DW_OP_reg1
+	.byte	17                      # DW_OP_consts
+	.byte	0                       # 
 .Ltmp365:
-	.long	0
-	.long	0
-.Ldebug_loc21:
-	.long	.Ltmp110
-	.long	.Ltmp115
-.Lset36 = .Ltmp367-.Ltmp366             # Loc expr size
-	.short	.Lset36
+	.long	.Ltmp93
+	.long	.Ltmp94
+.Lset27 = .Ltmp367-.Ltmp366             # Loc expr size
+	.short	.Lset27
 .Ltmp366:
-	.byte	81                      # DW_OP_reg1
+	.byte	84                      # DW_OP_reg4
 .Ltmp367:
 	.long	0
 	.long	0
-.Ldebug_loc22:
-	.long	.Ltmp111
-	.long	.Ltmp116
-.Lset37 = .Ltmp369-.Ltmp368             # Loc expr size
-	.short	.Lset37
+.Ldebug_loc16:
+	.long	.Ltmp98
+	.long	.Ltmp131
+.Lset28 = .Ltmp369-.Ltmp368             # Loc expr size
+	.short	.Lset28
 .Ltmp368:
-	.byte	82                      # DW_OP_reg2
-.Ltmp369:
-	.long	0
-	.long	0
-.Ldebug_loc23:
-	.long	.Ltmp119
-	.long	.Ltmp121
-.Lset38 = .Ltmp371-.Ltmp370             # Loc expr size
-	.short	.Lset38
-.Ltmp370:
 	.byte	17                      # DW_OP_consts
 	.byte	0                       # 
+.Ltmp369:
+	.long	.Ltmp131
+	.long	.Ltmp132
+.Lset29 = .Ltmp371-.Ltmp370             # Loc expr size
+	.short	.Lset29
+.Ltmp370:
+	.byte	87                      # DW_OP_reg7
 .Ltmp371:
-	.long	.Ltmp121
-	.long	.Ltmp122
-.Lset39 = .Ltmp373-.Ltmp372             # Loc expr size
-	.short	.Lset39
+	.long	0
+	.long	0
+.Ldebug_loc17:
+	.long	.Ltmp98
+	.long	.Ltmp101
+.Lset30 = .Ltmp373-.Ltmp372             # Loc expr size
+	.short	.Lset30
 .Ltmp372:
-	.byte	82                      # DW_OP_reg2
+	.byte	91                      # DW_OP_reg11
 .Ltmp373:
-	.long	0
-	.long	0
-.Ldebug_loc24:
-	.long	.Ltmp126
-	.long	.Ltmp127
-.Lset40 = .Ltmp375-.Ltmp374             # Loc expr size
-	.short	.Lset40
+	.long	.Ltmp125
+	.long	.Ltmp135
+.Lset31 = .Ltmp375-.Ltmp374             # Loc expr size
+	.short	.Lset31
 .Ltmp374:
-	.byte	80                      # DW_OP_reg0
+	.byte	91                      # DW_OP_reg11
 .Ltmp375:
 	.long	0
 	.long	0
-.Ldebug_loc25:
-	.long	.Ltmp128
-	.long	.Ltmp129
-.Lset41 = .Ltmp377-.Ltmp376             # Loc expr size
-	.short	.Lset41
+.Ldebug_loc18:
+	.long	.Ltmp102
+	.long	.Ltmp117
+.Lset32 = .Ltmp377-.Ltmp376             # Loc expr size
+	.short	.Lset32
 .Ltmp376:
-	.byte	81                      # DW_OP_reg1
+	.byte	17                      # DW_OP_consts
+	.byte	0                       # 
 .Ltmp377:
-	.long	0
-	.long	0
-.Ldebug_loc26:
-	.long	.Ltmp130
-	.long	.Ltmp131
-.Lset42 = .Ltmp379-.Ltmp378             # Loc expr size
-	.short	.Lset42
+	.long	.Ltmp117
+	.long	.Ltmp118
+.Lset33 = .Ltmp379-.Ltmp378             # Loc expr size
+	.short	.Lset33
 .Ltmp378:
-	.byte	91                      # DW_OP_reg11
+	.byte	86                      # DW_OP_reg6
 .Ltmp379:
-	.long	.Ltmp132
-	.long	.Ltmp132
-.Lset43 = .Ltmp381-.Ltmp380             # Loc expr size
-	.short	.Lset43
+	.long	0
+	.long	0
+.Ldebug_loc19:
+	.long	.Ltmp108
+	.long	.Ltmp116
+.Lset34 = .Ltmp381-.Ltmp380             # Loc expr size
+	.short	.Lset34
 .Ltmp380:
-	.byte	91                      # DW_OP_reg11
+	.byte	88                      # DW_OP_reg8
 .Ltmp381:
-	.long	.Ltmp141
-	.long	.Ltmp144
-.Lset44 = .Ltmp383-.Ltmp382             # Loc expr size
-	.short	.Lset44
+	.long	0
+	.long	0
+.Ldebug_loc20:
+	.long	.Ltmp109
+	.long	.Ltmp112
+.Lset35 = .Ltmp383-.Ltmp382             # Loc expr size
+	.short	.Lset35
 .Ltmp382:
-	.byte	91                      # DW_OP_reg11
+	.byte	81                      # DW_OP_reg1
 .Ltmp383:
 	.long	0
 	.long	0
-.Ldebug_loc27:
-	.long	.Ltmp134
-	.long	.Ltmp138
-.Lset45 = .Ltmp385-.Ltmp384             # Loc expr size
-	.short	.Lset45
+.Ldebug_loc21:
+	.long	.Ltmp128
+	.long	.Ltmp133
+.Lset36 = .Ltmp385-.Ltmp384             # Loc expr size
+	.short	.Lset36
 .Ltmp384:
-	.byte	82                      # DW_OP_reg2
+	.byte	81                      # DW_OP_reg1
 .Ltmp385:
-	.long	.Ltmp140
-	.long	.Ltmp140
-.Lset46 = .Ltmp387-.Ltmp386             # Loc expr size
-	.short	.Lset46
+	.long	0
+	.long	0
+.Ldebug_loc22:
+	.long	.Ltmp129
+	.long	.Ltmp134
+.Lset37 = .Ltmp387-.Ltmp386             # Loc expr size
+	.short	.Lset37
 .Ltmp386:
 	.byte	82                      # DW_OP_reg2
 .Ltmp387:
 	.long	0
 	.long	0
-.Ldebug_loc28:
-	.long	.Ltmp135
-	.long	.Ltmp136
-.Lset47 = .Ltmp389-.Ltmp388             # Loc expr size
-	.short	.Lset47
-.Ltmp388:
-	.byte	81                      # DW_OP_reg1
-.Ltmp389:
+.Ldebug_loc23:
 	.long	.Ltmp137
-	.long	.Ltmp143
-.Lset48 = .Ltmp391-.Ltmp390             # Loc expr size
-	.short	.Lset48
+	.long	.Ltmp139
+.Lset38 = .Ltmp389-.Ltmp388             # Loc expr size
+	.short	.Lset38
+.Ltmp388:
+	.byte	17                      # DW_OP_consts
+	.byte	0                       # 
+.Ltmp389:
+	.long	.Ltmp139
+	.long	.Ltmp140
+.Lset39 = .Ltmp391-.Ltmp390             # Loc expr size
+	.short	.Lset39
 .Ltmp390:
-	.byte	81                      # DW_OP_reg1
+	.byte	82                      # DW_OP_reg2
 .Ltmp391:
 	.long	0
 	.long	0
-.Ldebug_loc29:
-	.long	.Lfunc_begin1
-	.long	.Ltmp159
-.Lset49 = .Ltmp393-.Ltmp392             # Loc expr size
-	.short	.Lset49
+.Ldebug_loc24:
+	.long	.Ltmp144
+	.long	.Ltmp145
+.Lset40 = .Ltmp393-.Ltmp392             # Loc expr size
+	.short	.Lset40
 .Ltmp392:
 	.byte	80                      # DW_OP_reg0
 .Ltmp393:
-	.long	.Ltmp159
-	.long	.Ltmp160
-.Lset50 = .Ltmp395-.Ltmp394             # Loc expr size
-	.short	.Lset50
+	.long	0
+	.long	0
+.Ldebug_loc25:
+	.long	.Ltmp146
+	.long	.Ltmp147
+.Lset41 = .Ltmp395-.Ltmp394             # Loc expr size
+	.short	.Lset41
 .Ltmp394:
-	.byte	84                      # DW_OP_reg4
+	.byte	81                      # DW_OP_reg1
 .Ltmp395:
-	.long	.Ltmp178
-	.long	.Ltmp254
-.Lset51 = .Ltmp397-.Ltmp396             # Loc expr size
-	.short	.Lset51
+	.long	0
+	.long	0
+.Ldebug_loc26:
+	.long	.Ltmp148
+	.long	.Ltmp149
+.Lset42 = .Ltmp397-.Ltmp396             # Loc expr size
+	.short	.Lset42
 .Ltmp396:
-	.byte	84                      # DW_OP_reg4
+	.byte	91                      # DW_OP_reg11
 .Ltmp397:
-	.long	.Ltmp255
-	.long	.Lfunc_end1
-.Lset52 = .Ltmp399-.Ltmp398             # Loc expr size
-	.short	.Lset52
+	.long	.Ltmp150
+	.long	.Ltmp150
+.Lset43 = .Ltmp399-.Ltmp398             # Loc expr size
+	.short	.Lset43
 .Ltmp398:
-	.byte	84                      # DW_OP_reg4
+	.byte	91                      # DW_OP_reg11
 .Ltmp399:
-	.long	0
-	.long	0
-.Ldebug_loc30:
 	.long	.Ltmp159
-	.long	.Ltmp228
-.Lset53 = .Ltmp401-.Ltmp400             # Loc expr size
-	.short	.Lset53
+	.long	.Ltmp162
+.Lset44 = .Ltmp401-.Ltmp400             # Loc expr size
+	.short	.Lset44
 .Ltmp400:
-	.byte	16                      # DW_OP_constu
-	.ascii	"\304\330\002"          # 
+	.byte	91                      # DW_OP_reg11
 .Ltmp401:
-	.long	.Ltmp228
-	.long	.Ltmp253
-.Lset54 = .Ltmp403-.Ltmp402             # Loc expr size
-	.short	.Lset54
+	.long	0
+	.long	0
+.Ldebug_loc27:
+	.long	.Ltmp152
+	.long	.Ltmp156
+.Lset45 = .Ltmp403-.Ltmp402             # Loc expr size
+	.short	.Lset45
 .Ltmp402:
-	.byte	85                      # DW_OP_reg5
+	.byte	82                      # DW_OP_reg2
 .Ltmp403:
-	.long	.Ltmp253
-	.long	.Lfunc_end1
-.Lset55 = .Ltmp405-.Ltmp404             # Loc expr size
-	.short	.Lset55
+	.long	.Ltmp158
+	.long	.Ltmp158
+.Lset46 = .Ltmp405-.Ltmp404             # Loc expr size
+	.short	.Lset46
 .Ltmp404:
-	.byte	16                      # DW_OP_constu
-	.ascii	"\304\330\002"          # 
+	.byte	82                      # DW_OP_reg2
 .Ltmp405:
 	.long	0
 	.long	0
-.Ldebug_loc31:
-	.long	.Ltmp162
-	.long	.Ltmp179
-.Lset56 = .Ltmp407-.Ltmp406             # Loc expr size
-	.short	.Lset56
+.Ldebug_loc28:
+	.long	.Ltmp153
+	.long	.Ltmp154
+.Lset47 = .Ltmp407-.Ltmp406             # Loc expr size
+	.short	.Lset47
 .Ltmp406:
-	.byte	17                      # DW_OP_consts
-	.byte	0                       # 
-.Ltmp407:
-	.long	.Ltmp179
-	.long	.Ltmp180
-.Lset57 = .Ltmp409-.Ltmp408             # Loc expr size
-	.short	.Lset57
-.Ltmp408:
-	.byte	80                      # DW_OP_reg0
-.Ltmp409:
-	.long	.Ltmp180
-	.long	.Ltmp257
-.Lset58 = .Ltmp411-.Ltmp410             # Loc expr size
-	.short	.Lset58
-.Ltmp410:
-	.byte	17                      # DW_OP_consts
-	.byte	0                       # 
-.Ltmp411:
-	.long	.Ltmp257
-	.long	.Ltmp258
-.Lset59 = .Ltmp413-.Ltmp412             # Loc expr size
-	.short	.Lset59
-.Ltmp412:
-	.byte	80                      # DW_OP_reg0
-.Ltmp413:
-	.long	0
-	.long	0
-.Ldebug_loc32:
-	.long	.Ltmp163
-	.long	.Ltmp168
-.Lset60 = .Ltmp415-.Ltmp414             # Loc expr size
-	.short	.Lset60
-.Ltmp414:
-	.byte	82                      # DW_OP_reg2
-.Ltmp415:
-	.long	.Ltmp169
-	.long	.Ltmp170
-.Lset61 = .Ltmp417-.Ltmp416             # Loc expr size
-	.short	.Lset61
-.Ltmp416:
-	.byte	82                      # DW_OP_reg2
-.Ltmp417:
-	.long	.Ltmp172
-	.long	.Ltmp173
-.Lset62 = .Ltmp419-.Ltmp418             # Loc expr size
-	.short	.Lset62
-.Ltmp418:
-	.byte	82                      # DW_OP_reg2
-.Ltmp419:
-	.long	0
-	.long	0
-.Ldebug_loc33:
-	.long	.Ltmp163
-	.long	.Ltmp168
-.Lset63 = .Ltmp421-.Ltmp420             # Loc expr size
-	.short	.Lset63
-.Ltmp420:
-	.byte	82                      # DW_OP_reg2
-.Ltmp421:
-	.long	0
-	.long	0
-.Ldebug_loc34:
-	.long	.Ltmp164
-	.long	.Ltmp178
-.Lset64 = .Ltmp423-.Ltmp422             # Loc expr size
-	.short	.Lset64
-.Ltmp422:
 	.byte	81                      # DW_OP_reg1
+.Ltmp407:
+	.long	.Ltmp155
+	.long	.Ltmp161
+.Lset48 = .Ltmp409-.Ltmp408             # Loc expr size
+	.short	.Lset48
+.Ltmp408:
+	.byte	81                      # DW_OP_reg1
+.Ltmp409:
+	.long	0
+	.long	0
+.Ldebug_loc29:
+	.long	.Lfunc_begin5
+	.long	.Ltmp177
+.Lset49 = .Ltmp411-.Ltmp410             # Loc expr size
+	.short	.Lset49
+.Ltmp410:
+	.byte	80                      # DW_OP_reg0
+.Ltmp411:
+	.long	.Ltmp177
+	.long	.Ltmp178
+.Lset50 = .Ltmp413-.Ltmp412             # Loc expr size
+	.short	.Lset50
+.Ltmp412:
+	.byte	84                      # DW_OP_reg4
+.Ltmp413:
+	.long	.Ltmp196
+	.long	.Ltmp272
+.Lset51 = .Ltmp415-.Ltmp414             # Loc expr size
+	.short	.Lset51
+.Ltmp414:
+	.byte	84                      # DW_OP_reg4
+.Ltmp415:
+	.long	.Ltmp273
+	.long	.Lfunc_end5
+.Lset52 = .Ltmp417-.Ltmp416             # Loc expr size
+	.short	.Lset52
+.Ltmp416:
+	.byte	84                      # DW_OP_reg4
+.Ltmp417:
+	.long	0
+	.long	0
+.Ldebug_loc30:
+	.long	.Ltmp177
+	.long	.Ltmp246
+.Lset53 = .Ltmp419-.Ltmp418             # Loc expr size
+	.short	.Lset53
+.Ltmp418:
+	.byte	16                      # DW_OP_constu
+	.ascii	"\304\330\002"          # 
+.Ltmp419:
+	.long	.Ltmp246
+	.long	.Ltmp271
+.Lset54 = .Ltmp421-.Ltmp420             # Loc expr size
+	.short	.Lset54
+.Ltmp420:
+	.byte	85                      # DW_OP_reg5
+.Ltmp421:
+	.long	.Ltmp271
+	.long	.Lfunc_end5
+.Lset55 = .Ltmp423-.Ltmp422             # Loc expr size
+	.short	.Lset55
+.Ltmp422:
+	.byte	16                      # DW_OP_constu
+	.ascii	"\304\330\002"          # 
 .Ltmp423:
 	.long	0
 	.long	0
-.Ldebug_loc35:
-	.long	.Ltmp166
-	.long	.Ltmp178
-.Lset65 = .Ltmp425-.Ltmp424             # Loc expr size
-	.short	.Lset65
+.Ldebug_loc31:
+	.long	.Ltmp180
+	.long	.Ltmp197
+.Lset56 = .Ltmp425-.Ltmp424             # Loc expr size
+	.short	.Lset56
 .Ltmp424:
-	.byte	80                      # DW_OP_reg0
+	.byte	17                      # DW_OP_consts
+	.byte	0                       # 
 .Ltmp425:
-	.long	0
-	.long	0
-.Ldebug_loc36:
-	.long	.Ltmp169
-	.long	.Ltmp170
-.Lset66 = .Ltmp427-.Ltmp426             # Loc expr size
-	.short	.Lset66
+	.long	.Ltmp197
+	.long	.Ltmp198
+.Lset57 = .Ltmp427-.Ltmp426             # Loc expr size
+	.short	.Lset57
 .Ltmp426:
-	.byte	82                      # DW_OP_reg2
+	.byte	80                      # DW_OP_reg0
 .Ltmp427:
-	.long	0
-	.long	0
-.Ldebug_loc37:
-	.long	.Ltmp172
-	.long	.Ltmp173
-.Lset67 = .Ltmp429-.Ltmp428             # Loc expr size
-	.short	.Lset67
+	.long	.Ltmp198
+	.long	.Ltmp275
+.Lset58 = .Ltmp429-.Ltmp428             # Loc expr size
+	.short	.Lset58
 .Ltmp428:
-	.byte	82                      # DW_OP_reg2
+	.byte	17                      # DW_OP_consts
+	.byte	0                       # 
 .Ltmp429:
-	.long	0
-	.long	0
-.Ldebug_loc38:
-	.long	.Ltmp173
-	.long	.Ltmp175
-.Lset68 = .Ltmp431-.Ltmp430             # Loc expr size
-	.short	.Lset68
+	.long	.Ltmp275
+	.long	.Ltmp276
+.Lset59 = .Ltmp431-.Ltmp430             # Loc expr size
+	.short	.Lset59
 .Ltmp430:
-	.byte	17                      # DW_OP_consts
-	.byte	0                       # 
+	.byte	80                      # DW_OP_reg0
 .Ltmp431:
-	.long	.Ltmp175
-	.long	.Lfunc_end1
-.Lset69 = .Ltmp433-.Ltmp432             # Loc expr size
-	.short	.Lset69
+	.long	0
+	.long	0
+.Ldebug_loc32:
+	.long	.Ltmp181
+	.long	.Ltmp186
+.Lset60 = .Ltmp433-.Ltmp432             # Loc expr size
+	.short	.Lset60
 .Ltmp432:
-	.byte	17                      # DW_OP_consts
-	.byte	1                       # 
+	.byte	82                      # DW_OP_reg2
 .Ltmp433:
-	.long	0
-	.long	0
-.Ldebug_loc39:
-	.long	.Ltmp176
-	.long	.Ltmp177
-.Lset70 = .Ltmp435-.Ltmp434             # Loc expr size
-	.short	.Lset70
+	.long	.Ltmp187
+	.long	.Ltmp188
+.Lset61 = .Ltmp435-.Ltmp434             # Loc expr size
+	.short	.Lset61
 .Ltmp434:
-	.byte	17                      # DW_OP_consts
-	.byte	0                       # 
+	.byte	82                      # DW_OP_reg2
 .Ltmp435:
-	.long	.Ltmp177
-	.long	.Lfunc_end1
-.Lset71 = .Ltmp437-.Ltmp436             # Loc expr size
-	.short	.Lset71
+	.long	.Ltmp190
+	.long	.Ltmp191
+.Lset62 = .Ltmp437-.Ltmp436             # Loc expr size
+	.short	.Lset62
 .Ltmp436:
-	.byte	17                      # DW_OP_consts
-	.byte	1                       # 
+	.byte	82                      # DW_OP_reg2
 .Ltmp437:
 	.long	0
 	.long	0
-.Ldebug_loc40:
-	.long	.Ltmp178
-	.long	.Ltmp178
-.Lset72 = .Ltmp439-.Ltmp438             # Loc expr size
-	.short	.Lset72
+.Ldebug_loc33:
+	.long	.Ltmp181
+	.long	.Ltmp186
+.Lset63 = .Ltmp439-.Ltmp438             # Loc expr size
+	.short	.Lset63
 .Ltmp438:
-	.byte	80                      # DW_OP_reg0
+	.byte	82                      # DW_OP_reg2
 .Ltmp439:
 	.long	0
 	.long	0
-.Ldebug_loc41:
-	.long	.Ltmp178
-	.long	.Ltmp178
-.Lset73 = .Ltmp441-.Ltmp440             # Loc expr size
-	.short	.Lset73
+.Ldebug_loc34:
+	.long	.Ltmp182
+	.long	.Ltmp196
+.Lset64 = .Ltmp441-.Ltmp440             # Loc expr size
+	.short	.Lset64
 .Ltmp440:
-	.byte	80                      # DW_OP_reg0
+	.byte	81                      # DW_OP_reg1
 .Ltmp441:
 	.long	0
 	.long	0
-.Ldebug_loc42:
-	.long	.Ltmp178
-	.long	.Ltmp178
-.Lset74 = .Ltmp443-.Ltmp442             # Loc expr size
-	.short	.Lset74
+.Ldebug_loc35:
+	.long	.Ltmp184
+	.long	.Ltmp196
+.Lset65 = .Ltmp443-.Ltmp442             # Loc expr size
+	.short	.Lset65
 .Ltmp442:
 	.byte	80                      # DW_OP_reg0
 .Ltmp443:
 	.long	0
 	.long	0
-.Ldebug_loc43:
-	.long	.Ltmp178
-	.long	.Ltmp178
-.Lset75 = .Ltmp445-.Ltmp444             # Loc expr size
-	.short	.Lset75
+.Ldebug_loc36:
+	.long	.Ltmp187
+	.long	.Ltmp188
+.Lset66 = .Ltmp445-.Ltmp444             # Loc expr size
+	.short	.Lset66
 .Ltmp444:
 	.byte	82                      # DW_OP_reg2
 .Ltmp445:
 	.long	0
 	.long	0
-.Ldebug_loc44:
-	.long	.Ltmp178
-	.long	.Ltmp178
-.Lset76 = .Ltmp447-.Ltmp446             # Loc expr size
-	.short	.Lset76
+.Ldebug_loc37:
+	.long	.Ltmp190
+	.long	.Ltmp191
+.Lset67 = .Ltmp447-.Ltmp446             # Loc expr size
+	.short	.Lset67
 .Ltmp446:
 	.byte	82                      # DW_OP_reg2
 .Ltmp447:
 	.long	0
 	.long	0
-.Ldebug_loc45:
-	.long	.Ltmp181
-	.long	.Ltmp187
-.Lset77 = .Ltmp449-.Ltmp448             # Loc expr size
-	.short	.Lset77
+.Ldebug_loc38:
+	.long	.Ltmp191
+	.long	.Ltmp193
+.Lset68 = .Ltmp449-.Ltmp448             # Loc expr size
+	.short	.Lset68
 .Ltmp448:
-	.byte	80                      # DW_OP_reg0
+	.byte	17                      # DW_OP_consts
+	.byte	0                       # 
 .Ltmp449:
-	.long	0
-	.long	0
-.Ldebug_loc46:
-	.long	.Ltmp183
-	.long	.Ltmp184
-.Lset78 = .Ltmp451-.Ltmp450             # Loc expr size
-	.short	.Lset78
+	.long	.Ltmp193
+	.long	.Lfunc_end5
+.Lset69 = .Ltmp451-.Ltmp450             # Loc expr size
+	.short	.Lset69
 .Ltmp450:
-	.byte	82                      # DW_OP_reg2
+	.byte	17                      # DW_OP_consts
+	.byte	1                       # 
 .Ltmp451:
 	.long	0
 	.long	0
-.Ldebug_loc47:
-	.long	.Ltmp185
-	.long	.Ltmp187
-.Lset79 = .Ltmp453-.Ltmp452             # Loc expr size
-	.short	.Lset79
+.Ldebug_loc39:
+	.long	.Ltmp194
+	.long	.Ltmp195
+.Lset70 = .Ltmp453-.Ltmp452             # Loc expr size
+	.short	.Lset70
 .Ltmp452:
-	.byte	81                      # DW_OP_reg1
+	.byte	17                      # DW_OP_consts
+	.byte	0                       # 
 .Ltmp453:
-	.long	0
-	.long	0
-.Ldebug_loc48:
-	.long	.Ltmp186
-	.long	.Ltmp187
-.Lset80 = .Ltmp455-.Ltmp454             # Loc expr size
-	.short	.Lset80
+	.long	.Ltmp195
+	.long	.Lfunc_end5
+.Lset71 = .Ltmp455-.Ltmp454             # Loc expr size
+	.short	.Lset71
 .Ltmp454:
-	.byte	82                      # DW_OP_reg2
+	.byte	17                      # DW_OP_consts
+	.byte	1                       # 
 .Ltmp455:
 	.long	0
 	.long	0
-.Ldebug_loc49:
-	.long	.Ltmp190
-	.long	.Ltmp191
-.Lset81 = .Ltmp457-.Ltmp456             # Loc expr size
-	.short	.Lset81
+.Ldebug_loc40:
+	.long	.Ltmp196
+	.long	.Ltmp196
+.Lset72 = .Ltmp457-.Ltmp456             # Loc expr size
+	.short	.Lset72
 .Ltmp456:
 	.byte	80                      # DW_OP_reg0
 .Ltmp457:
 	.long	0
 	.long	0
-.Ldebug_loc50:
-	.long	.Ltmp193
-	.long	.Ltmp195
-.Lset82 = .Ltmp459-.Ltmp458             # Loc expr size
-	.short	.Lset82
+.Ldebug_loc41:
+	.long	.Ltmp196
+	.long	.Ltmp196
+.Lset73 = .Ltmp459-.Ltmp458             # Loc expr size
+	.short	.Lset73
 .Ltmp458:
 	.byte	80                      # DW_OP_reg0
 .Ltmp459:
 	.long	0
 	.long	0
-.Ldebug_loc51:
-	.long	.Ltmp194
-	.long	.Ltmp205
-.Lset83 = .Ltmp461-.Ltmp460             # Loc expr size
-	.short	.Lset83
+.Ldebug_loc42:
+	.long	.Ltmp196
+	.long	.Ltmp196
+.Lset74 = .Ltmp461-.Ltmp460             # Loc expr size
+	.short	.Lset74
 .Ltmp460:
-	.byte	89                      # DW_OP_reg9
+	.byte	80                      # DW_OP_reg0
 .Ltmp461:
 	.long	0
 	.long	0
-.Ldebug_loc52:
-	.long	.Ltmp197
-	.long	.Ltmp203
-.Lset84 = .Ltmp463-.Ltmp462             # Loc expr size
-	.short	.Lset84
+.Ldebug_loc43:
+	.long	.Ltmp196
+	.long	.Ltmp196
+.Lset75 = .Ltmp463-.Ltmp462             # Loc expr size
+	.short	.Lset75
 .Ltmp462:
-	.byte	80                      # DW_OP_reg0
+	.byte	82                      # DW_OP_reg2
 .Ltmp463:
 	.long	0
 	.long	0
-.Ldebug_loc53:
-	.long	.Ltmp199
-	.long	.Ltmp200
-.Lset85 = .Ltmp465-.Ltmp464             # Loc expr size
-	.short	.Lset85
+.Ldebug_loc44:
+	.long	.Ltmp196
+	.long	.Ltmp196
+.Lset76 = .Ltmp465-.Ltmp464             # Loc expr size
+	.short	.Lset76
 .Ltmp464:
 	.byte	82                      # DW_OP_reg2
 .Ltmp465:
 	.long	0
 	.long	0
-.Ldebug_loc54:
-	.long	.Ltmp201
-	.long	.Ltmp203
-.Lset86 = .Ltmp467-.Ltmp466             # Loc expr size
-	.short	.Lset86
+.Ldebug_loc45:
+	.long	.Ltmp199
+	.long	.Ltmp205
+.Lset77 = .Ltmp467-.Ltmp466             # Loc expr size
+	.short	.Lset77
 .Ltmp466:
-	.byte	81                      # DW_OP_reg1
+	.byte	80                      # DW_OP_reg0
 .Ltmp467:
 	.long	0
 	.long	0
-.Ldebug_loc55:
+.Ldebug_loc46:
+	.long	.Ltmp201
 	.long	.Ltmp202
-	.long	.Ltmp203
-.Lset87 = .Ltmp469-.Ltmp468             # Loc expr size
-	.short	.Lset87
+.Lset78 = .Ltmp469-.Ltmp468             # Loc expr size
+	.short	.Lset78
 .Ltmp468:
 	.byte	82                      # DW_OP_reg2
 .Ltmp469:
 	.long	0
 	.long	0
-.Ldebug_loc56:
-	.long	.Ltmp206
-	.long	.Ltmp207
-.Lset88 = .Ltmp471-.Ltmp470             # Loc expr size
-	.short	.Lset88
+.Ldebug_loc47:
+	.long	.Ltmp203
+	.long	.Ltmp205
+.Lset79 = .Ltmp471-.Ltmp470             # Loc expr size
+	.short	.Lset79
 .Ltmp470:
-	.byte	80                      # DW_OP_reg0
+	.byte	81                      # DW_OP_reg1
 .Ltmp471:
 	.long	0
 	.long	0
-.Ldebug_loc57:
-	.long	.Ltmp208
-	.long	.Ltmp222
-.Lset89 = .Ltmp473-.Ltmp472             # Loc expr size
-	.short	.Lset89
+.Ldebug_loc48:
+	.long	.Ltmp204
+	.long	.Ltmp205
+.Lset80 = .Ltmp473-.Ltmp472             # Loc expr size
+	.short	.Lset80
 .Ltmp472:
-	.byte	89                      # DW_OP_reg9
+	.byte	82                      # DW_OP_reg2
 .Ltmp473:
 	.long	0
 	.long	0
-.Ldebug_loc58:
+.Ldebug_loc49:
 	.long	.Ltmp208
-	.long	.Ltmp222
-.Lset90 = .Ltmp475-.Ltmp474             # Loc expr size
-	.short	.Lset90
+	.long	.Ltmp209
+.Lset81 = .Ltmp475-.Ltmp474             # Loc expr size
+	.short	.Lset81
 .Ltmp474:
-	.byte	89                      # DW_OP_reg9
+	.byte	80                      # DW_OP_reg0
 .Ltmp475:
 	.long	0
 	.long	0
-.Ldebug_loc59:
-	.long	.Ltmp209
+.Ldebug_loc50:
+	.long	.Ltmp211
 	.long	.Ltmp213
-.Lset91 = .Ltmp477-.Ltmp476             # Loc expr size
-	.short	.Lset91
+.Lset82 = .Ltmp477-.Ltmp476             # Loc expr size
+	.short	.Lset82
 .Ltmp476:
-	.byte	90                      # DW_OP_reg10
+	.byte	80                      # DW_OP_reg0
 .Ltmp477:
 	.long	0
 	.long	0
-.Ldebug_loc60:
-	.long	.Ltmp209
-	.long	.Ltmp222
-.Lset92 = .Ltmp479-.Ltmp478             # Loc expr size
-	.short	.Lset92
+.Ldebug_loc51:
+	.long	.Ltmp212
+	.long	.Ltmp223
+.Lset83 = .Ltmp479-.Ltmp478             # Loc expr size
+	.short	.Lset83
 .Ltmp478:
-	.byte	120                     # DW_OP_breg8
-	.byte	0                       # 
+	.byte	89                      # DW_OP_reg9
 .Ltmp479:
 	.long	0
 	.long	0
-.Ldebug_loc61:
-	.long	.Ltmp210
-	.long	.Ltmp217
-.Lset93 = .Ltmp481-.Ltmp480             # Loc expr size
-	.short	.Lset93
+.Ldebug_loc52:
+	.long	.Ltmp215
+	.long	.Ltmp221
+.Lset84 = .Ltmp481-.Ltmp480             # Loc expr size
+	.short	.Lset84
 .Ltmp480:
 	.byte	80                      # DW_OP_reg0
 .Ltmp481:
 	.long	0
 	.long	0
-.Ldebug_loc62:
-	.long	.Ltmp209
-	.long	.Ltmp222
-.Lset94 = .Ltmp483-.Ltmp482             # Loc expr size
-	.short	.Lset94
+.Ldebug_loc53:
+	.long	.Ltmp217
+	.long	.Ltmp218
+.Lset85 = .Ltmp483-.Ltmp482             # Loc expr size
+	.short	.Lset85
 .Ltmp482:
-	.byte	85                      # DW_OP_reg5
+	.byte	82                      # DW_OP_reg2
 .Ltmp483:
 	.long	0
 	.long	0
-.Ldebug_loc63:
-	.long	.Ltmp210
-	.long	.Ltmp217
-.Lset95 = .Ltmp485-.Ltmp484             # Loc expr size
-	.short	.Lset95
+.Ldebug_loc54:
+	.long	.Ltmp219
+	.long	.Ltmp221
+.Lset86 = .Ltmp485-.Ltmp484             # Loc expr size
+	.short	.Lset86
 .Ltmp484:
-	.byte	80                      # DW_OP_reg0
+	.byte	81                      # DW_OP_reg1
 .Ltmp485:
 	.long	0
 	.long	0
-.Ldebug_loc64:
-	.long	.Ltmp211
-	.long	.Ltmp214
-.Lset96 = .Ltmp487-.Ltmp486             # Loc expr size
-	.short	.Lset96
+.Ldebug_loc55:
+	.long	.Ltmp220
+	.long	.Ltmp221
+.Lset87 = .Ltmp487-.Ltmp486             # Loc expr size
+	.short	.Lset87
 .Ltmp486:
-	.byte	81                      # DW_OP_reg1
+	.byte	82                      # DW_OP_reg2
 .Ltmp487:
 	.long	0
 	.long	0
-.Ldebug_loc65:
-	.long	.Ltmp212
-	.long	.Ltmp213
-.Lset97 = .Ltmp489-.Ltmp488             # Loc expr size
-	.short	.Lset97
+.Ldebug_loc56:
+	.long	.Ltmp224
+	.long	.Ltmp225
+.Lset88 = .Ltmp489-.Ltmp488             # Loc expr size
+	.short	.Lset88
 .Ltmp488:
-	.byte	82                      # DW_OP_reg2
+	.byte	80                      # DW_OP_reg0
 .Ltmp489:
 	.long	0
 	.long	0
-.Ldebug_loc66:
-	.long	.Ltmp215
-	.long	.Ltmp216
-.Lset98 = .Ltmp491-.Ltmp490             # Loc expr size
-	.short	.Lset98
+.Ldebug_loc57:
+	.long	.Ltmp226
+	.long	.Ltmp240
+.Lset89 = .Ltmp491-.Ltmp490             # Loc expr size
+	.short	.Lset89
 .Ltmp490:
-	.byte	82                      # DW_OP_reg2
+	.byte	89                      # DW_OP_reg9
 .Ltmp491:
-	.long	.Ltmp216
-	.long	.Ltmp217
-.Lset99 = .Ltmp493-.Ltmp492             # Loc expr size
-	.short	.Lset99
+	.long	0
+	.long	0
+.Ldebug_loc58:
+	.long	.Ltmp226
+	.long	.Ltmp240
+.Lset90 = .Ltmp493-.Ltmp492             # Loc expr size
+	.short	.Lset90
 .Ltmp492:
-	.byte	83                      # DW_OP_reg3
+	.byte	89                      # DW_OP_reg9
 .Ltmp493:
 	.long	0
 	.long	0
-.Ldebug_loc67:
-	.long	.Ltmp218
-	.long	.Ltmp222
-.Lset100 = .Ltmp495-.Ltmp494            # Loc expr size
-	.short	.Lset100
+.Ldebug_loc59:
+	.long	.Ltmp227
+	.long	.Ltmp231
+.Lset91 = .Ltmp495-.Ltmp494             # Loc expr size
+	.short	.Lset91
 .Ltmp494:
-	.byte	80                      # DW_OP_reg0
+	.byte	90                      # DW_OP_reg10
 .Ltmp495:
 	.long	0
 	.long	0
-.Ldebug_loc68:
-	.long	.Ltmp219
-	.long	.Ltmp222
-.Lset101 = .Ltmp497-.Ltmp496            # Loc expr size
-	.short	.Lset101
+.Ldebug_loc60:
+	.long	.Ltmp227
+	.long	.Ltmp240
+.Lset92 = .Ltmp497-.Ltmp496             # Loc expr size
+	.short	.Lset92
 .Ltmp496:
-	.byte	91                      # DW_OP_reg11
+	.byte	120                     # DW_OP_breg8
+	.byte	0                       # 
 .Ltmp497:
 	.long	0
 	.long	0
-.Ldebug_loc69:
-	.long	.Ltmp220
-	.long	.Ltmp222
-.Lset102 = .Ltmp499-.Ltmp498            # Loc expr size
-	.short	.Lset102
+.Ldebug_loc61:
+	.long	.Ltmp228
+	.long	.Ltmp235
+.Lset93 = .Ltmp499-.Ltmp498             # Loc expr size
+	.short	.Lset93
 .Ltmp498:
-	.byte	81                      # DW_OP_reg1
+	.byte	80                      # DW_OP_reg0
 .Ltmp499:
 	.long	0
 	.long	0
-.Ldebug_loc70:
-	.long	.Ltmp221
-	.long	.Ltmp222
-.Lset103 = .Ltmp501-.Ltmp500            # Loc expr size
-	.short	.Lset103
+.Ldebug_loc62:
+	.long	.Ltmp227
+	.long	.Ltmp240
+.Lset94 = .Ltmp501-.Ltmp500             # Loc expr size
+	.short	.Lset94
 .Ltmp500:
-	.byte	82                      # DW_OP_reg2
+	.byte	85                      # DW_OP_reg5
 .Ltmp501:
 	.long	0
 	.long	0
-.Ldebug_loc71:
-	.long	.Ltmp223
-	.long	.Ltmp224
-.Lset104 = .Ltmp503-.Ltmp502            # Loc expr size
-	.short	.Lset104
+.Ldebug_loc63:
+	.long	.Ltmp228
+	.long	.Ltmp235
+.Lset95 = .Ltmp503-.Ltmp502             # Loc expr size
+	.short	.Lset95
 .Ltmp502:
 	.byte	80                      # DW_OP_reg0
 .Ltmp503:
 	.long	0
 	.long	0
-.Ldebug_loc72:
-	.long	.Ltmp228
-	.long	.Ltmp243
-.Lset105 = .Ltmp505-.Ltmp504            # Loc expr size
-	.short	.Lset105
+.Ldebug_loc64:
+	.long	.Ltmp229
+	.long	.Ltmp232
+.Lset96 = .Ltmp505-.Ltmp504             # Loc expr size
+	.short	.Lset96
 .Ltmp504:
-	.byte	85                      # DW_OP_reg5
+	.byte	81                      # DW_OP_reg1
 .Ltmp505:
 	.long	0
 	.long	0
-.Ldebug_loc73:
-	.long	.Ltmp229
-	.long	.Ltmp243
-.Lset106 = .Ltmp507-.Ltmp506            # Loc expr size
-	.short	.Lset106
+.Ldebug_loc65:
+	.long	.Ltmp230
+	.long	.Ltmp231
+.Lset97 = .Ltmp507-.Ltmp506             # Loc expr size
+	.short	.Lset97
 .Ltmp506:
-	.byte	89                      # DW_OP_reg9
+	.byte	82                      # DW_OP_reg2
 .Ltmp507:
 	.long	0
 	.long	0
-.Ldebug_loc74:
-	.long	.Ltmp229
-	.long	.Ltmp243
-.Lset107 = .Ltmp509-.Ltmp508            # Loc expr size
-	.short	.Lset107
-.Ltmp508:
-	.byte	89                      # DW_OP_reg9
-.Ltmp509:
-	.long	0
-	.long	0
-.Ldebug_loc75:
-	.long	.Ltmp230
+.Ldebug_loc66:
+	.long	.Ltmp233
 	.long	.Ltmp234
-.Lset108 = .Ltmp511-.Ltmp510            # Loc expr size
-	.short	.Lset108
+.Lset98 = .Ltmp509-.Ltmp508             # Loc expr size
+	.short	.Lset98
+.Ltmp508:
+	.byte	82                      # DW_OP_reg2
+.Ltmp509:
+	.long	.Ltmp234
+	.long	.Ltmp235
+.Lset99 = .Ltmp511-.Ltmp510             # Loc expr size
+	.short	.Lset99
 .Ltmp510:
-	.byte	90                      # DW_OP_reg10
+	.byte	83                      # DW_OP_reg3
 .Ltmp511:
 	.long	0
 	.long	0
-.Ldebug_loc76:
-	.long	.Ltmp230
-	.long	.Ltmp243
-.Lset109 = .Ltmp513-.Ltmp512            # Loc expr size
-	.short	.Lset109
+.Ldebug_loc67:
+	.long	.Ltmp236
+	.long	.Ltmp240
+.Lset100 = .Ltmp513-.Ltmp512            # Loc expr size
+	.short	.Lset100
 .Ltmp512:
-	.byte	120                     # DW_OP_breg8
-	.byte	0                       # 
+	.byte	80                      # DW_OP_reg0
 .Ltmp513:
 	.long	0
 	.long	0
-.Ldebug_loc77:
-	.long	.Ltmp231
-	.long	.Ltmp238
-.Lset110 = .Ltmp515-.Ltmp514            # Loc expr size
-	.short	.Lset110
+.Ldebug_loc68:
+	.long	.Ltmp237
+	.long	.Ltmp240
+.Lset101 = .Ltmp515-.Ltmp514            # Loc expr size
+	.short	.Lset101
 .Ltmp514:
-	.byte	80                      # DW_OP_reg0
+	.byte	91                      # DW_OP_reg11
 .Ltmp515:
 	.long	0
 	.long	0
-.Ldebug_loc78:
-	.long	.Ltmp231
+.Ldebug_loc69:
 	.long	.Ltmp238
-.Lset111 = .Ltmp517-.Ltmp516            # Loc expr size
-	.short	.Lset111
+	.long	.Ltmp240
+.Lset102 = .Ltmp517-.Ltmp516            # Loc expr size
+	.short	.Lset102
 .Ltmp516:
-	.byte	80                      # DW_OP_reg0
+	.byte	81                      # DW_OP_reg1
 .Ltmp517:
 	.long	0
 	.long	0
-.Ldebug_loc79:
-	.long	.Ltmp232
-	.long	.Ltmp235
-.Lset112 = .Ltmp519-.Ltmp518            # Loc expr size
-	.short	.Lset112
+.Ldebug_loc70:
+	.long	.Ltmp239
+	.long	.Ltmp240
+.Lset103 = .Ltmp519-.Ltmp518            # Loc expr size
+	.short	.Lset103
 .Ltmp518:
-	.byte	81                      # DW_OP_reg1
+	.byte	82                      # DW_OP_reg2
 .Ltmp519:
 	.long	0
 	.long	0
-.Ldebug_loc80:
-	.long	.Ltmp233
-	.long	.Ltmp234
-.Lset113 = .Ltmp521-.Ltmp520            # Loc expr size
-	.short	.Lset113
+.Ldebug_loc71:
+	.long	.Ltmp241
+	.long	.Ltmp242
+.Lset104 = .Ltmp521-.Ltmp520            # Loc expr size
+	.short	.Lset104
 .Ltmp520:
-	.byte	82                      # DW_OP_reg2
+	.byte	80                      # DW_OP_reg0
 .Ltmp521:
 	.long	0
 	.long	0
-.Ldebug_loc81:
-	.long	.Ltmp236
-	.long	.Ltmp237
-.Lset114 = .Ltmp523-.Ltmp522            # Loc expr size
-	.short	.Lset114
+.Ldebug_loc72:
+	.long	.Ltmp246
+	.long	.Ltmp261
+.Lset105 = .Ltmp523-.Ltmp522            # Loc expr size
+	.short	.Lset105
 .Ltmp522:
-	.byte	82                      # DW_OP_reg2
+	.byte	85                      # DW_OP_reg5
 .Ltmp523:
-	.long	.Ltmp237
-	.long	.Ltmp238
-.Lset115 = .Ltmp525-.Ltmp524            # Loc expr size
-	.short	.Lset115
+	.long	0
+	.long	0
+.Ldebug_loc73:
+	.long	.Ltmp247
+	.long	.Ltmp261
+.Lset106 = .Ltmp525-.Ltmp524            # Loc expr size
+	.short	.Lset106
 .Ltmp524:
-	.byte	83                      # DW_OP_reg3
+	.byte	89                      # DW_OP_reg9
 .Ltmp525:
 	.long	0
 	.long	0
-.Ldebug_loc82:
-	.long	.Ltmp239
-	.long	.Ltmp243
-.Lset116 = .Ltmp527-.Ltmp526            # Loc expr size
-	.short	.Lset116
+.Ldebug_loc74:
+	.long	.Ltmp247
+	.long	.Ltmp261
+.Lset107 = .Ltmp527-.Ltmp526            # Loc expr size
+	.short	.Lset107
 .Ltmp526:
-	.byte	80                      # DW_OP_reg0
+	.byte	89                      # DW_OP_reg9
 .Ltmp527:
 	.long	0
 	.long	0
-.Ldebug_loc83:
-	.long	.Ltmp240
-	.long	.Ltmp243
-.Lset117 = .Ltmp529-.Ltmp528            # Loc expr size
-	.short	.Lset117
+.Ldebug_loc75:
+	.long	.Ltmp248
+	.long	.Ltmp252
+.Lset108 = .Ltmp529-.Ltmp528            # Loc expr size
+	.short	.Lset108
 .Ltmp528:
-	.byte	91                      # DW_OP_reg11
+	.byte	90                      # DW_OP_reg10
 .Ltmp529:
 	.long	0
 	.long	0
-.Ldebug_loc84:
-	.long	.Ltmp241
-	.long	.Ltmp243
-.Lset118 = .Ltmp531-.Ltmp530            # Loc expr size
-	.short	.Lset118
+.Ldebug_loc76:
+	.long	.Ltmp248
+	.long	.Ltmp261
+.Lset109 = .Ltmp531-.Ltmp530            # Loc expr size
+	.short	.Lset109
 .Ltmp530:
-	.byte	81                      # DW_OP_reg1
+	.byte	120                     # DW_OP_breg8
+	.byte	0                       # 
 .Ltmp531:
 	.long	0
 	.long	0
-.Ldebug_loc85:
-	.long	.Ltmp242
-	.long	.Ltmp243
-.Lset119 = .Ltmp533-.Ltmp532            # Loc expr size
-	.short	.Lset119
+.Ldebug_loc77:
+	.long	.Ltmp249
+	.long	.Ltmp256
+.Lset110 = .Ltmp533-.Ltmp532            # Loc expr size
+	.short	.Lset110
 .Ltmp532:
-	.byte	82                      # DW_OP_reg2
+	.byte	80                      # DW_OP_reg0
 .Ltmp533:
 	.long	0
 	.long	0
-.Ldebug_loc86:
-	.long	.Ltmp245
-	.long	.Ltmp251
-.Lset120 = .Ltmp535-.Ltmp534            # Loc expr size
-	.short	.Lset120
+.Ldebug_loc78:
+	.long	.Ltmp249
+	.long	.Ltmp256
+.Lset111 = .Ltmp535-.Ltmp534            # Loc expr size
+	.short	.Lset111
 .Ltmp534:
 	.byte	80                      # DW_OP_reg0
 .Ltmp535:
 	.long	0
 	.long	0
-.Ldebug_loc87:
-	.long	.Ltmp247
-	.long	.Ltmp248
-.Lset121 = .Ltmp537-.Ltmp536            # Loc expr size
-	.short	.Lset121
+.Ldebug_loc79:
+	.long	.Ltmp250
+	.long	.Ltmp253
+.Lset112 = .Ltmp537-.Ltmp536            # Loc expr size
+	.short	.Lset112
 .Ltmp536:
-	.byte	82                      # DW_OP_reg2
+	.byte	81                      # DW_OP_reg1
 .Ltmp537:
 	.long	0
 	.long	0
-.Ldebug_loc88:
-	.long	.Ltmp249
+.Ldebug_loc80:
 	.long	.Ltmp251
-.Lset122 = .Ltmp539-.Ltmp538            # Loc expr size
-	.short	.Lset122
+	.long	.Ltmp252
+.Lset113 = .Ltmp539-.Ltmp538            # Loc expr size
+	.short	.Lset113
 .Ltmp538:
-	.byte	81                      # DW_OP_reg1
+	.byte	82                      # DW_OP_reg2
 .Ltmp539:
 	.long	0
 	.long	0
-.Ldebug_loc89:
-	.long	.Ltmp250
-	.long	.Ltmp251
-.Lset123 = .Ltmp541-.Ltmp540            # Loc expr size
-	.short	.Lset123
+.Ldebug_loc81:
+	.long	.Ltmp254
+	.long	.Ltmp255
+.Lset114 = .Ltmp541-.Ltmp540            # Loc expr size
+	.short	.Lset114
 .Ltmp540:
 	.byte	82                      # DW_OP_reg2
 .Ltmp541:
-	.long	0
-	.long	0
-.Ldebug_loc90:
-	.long	.Ltmp259
-	.long	.Ltmp263
-.Lset124 = .Ltmp543-.Ltmp542            # Loc expr size
-	.short	.Lset124
+	.long	.Ltmp255
+	.long	.Ltmp256
+.Lset115 = .Ltmp543-.Ltmp542            # Loc expr size
+	.short	.Lset115
 .Ltmp542:
-	.byte	80                      # DW_OP_reg0
+	.byte	83                      # DW_OP_reg3
 .Ltmp543:
-	.long	.Ltmp265
-	.long	.Ltmp266
-.Lset125 = .Ltmp545-.Ltmp544            # Loc expr size
-	.short	.Lset125
+	.long	0
+	.long	0
+.Ldebug_loc82:
+	.long	.Ltmp257
+	.long	.Ltmp261
+.Lset116 = .Ltmp545-.Ltmp544            # Loc expr size
+	.short	.Lset116
 .Ltmp544:
 	.byte	80                      # DW_OP_reg0
 .Ltmp545:
-	.long	.Ltmp267
-	.long	.Ltmp267
-.Lset126 = .Ltmp547-.Ltmp546            # Loc expr size
-	.short	.Lset126
+	.long	0
+	.long	0
+.Ldebug_loc83:
+	.long	.Ltmp258
+	.long	.Ltmp261
+.Lset117 = .Ltmp547-.Ltmp546            # Loc expr size
+	.short	.Lset117
 .Ltmp546:
-	.byte	80                      # DW_OP_reg0
+	.byte	91                      # DW_OP_reg11
 .Ltmp547:
 	.long	0
 	.long	0
-.Ldebug_loc91:
-	.long	.Ltmp260
-	.long	.Ltmp263
-.Lset127 = .Ltmp549-.Ltmp548            # Loc expr size
-	.short	.Lset127
+.Ldebug_loc84:
+	.long	.Ltmp259
+	.long	.Ltmp261
+.Lset118 = .Ltmp549-.Ltmp548            # Loc expr size
+	.short	.Lset118
 .Ltmp548:
 	.byte	81                      # DW_OP_reg1
 .Ltmp549:
-	.long	.Ltmp268
-	.long	.Ltmp269
-.Lset128 = .Ltmp551-.Ltmp550            # Loc expr size
-	.short	.Lset128
+	.long	0
+	.long	0
+.Ldebug_loc85:
+	.long	.Ltmp260
+	.long	.Ltmp261
+.Lset119 = .Ltmp551-.Ltmp550            # Loc expr size
+	.short	.Lset119
 .Ltmp550:
-	.byte	81                      # DW_OP_reg1
+	.byte	82                      # DW_OP_reg2
 .Ltmp551:
 	.long	0
 	.long	0
-.Ldebug_loc92:
-	.long	.Ltmp261
+.Ldebug_loc86:
 	.long	.Ltmp263
-.Lset129 = .Ltmp553-.Ltmp552            # Loc expr size
-	.short	.Lset129
+	.long	.Ltmp269
+.Lset120 = .Ltmp553-.Ltmp552            # Loc expr size
+	.short	.Lset120
 .Ltmp552:
-	.byte	83                      # DW_OP_reg3
+	.byte	80                      # DW_OP_reg0
 .Ltmp553:
 	.long	0
 	.long	0
-.Ldebug_loc93:
-	.long	.Ltmp262
-	.long	.Ltmp263
-.Lset130 = .Ltmp555-.Ltmp554            # Loc expr size
-	.short	.Lset130
+.Ldebug_loc87:
+	.long	.Ltmp265
+	.long	.Ltmp266
+.Lset121 = .Ltmp555-.Ltmp554            # Loc expr size
+	.short	.Lset121
 .Ltmp554:
 	.byte	82                      # DW_OP_reg2
 .Ltmp555:
 	.long	0
 	.long	0
-.Ldebug_loc94:
+.Ldebug_loc88:
+	.long	.Ltmp267
 	.long	.Ltmp269
-	.long	.Ltmp270
-.Lset131 = .Ltmp557-.Ltmp556            # Loc expr size
-	.short	.Lset131
+.Lset122 = .Ltmp557-.Ltmp556            # Loc expr size
+	.short	.Lset122
 .Ltmp556:
 	.byte	81                      # DW_OP_reg1
 .Ltmp557:
-	.long	.Ltmp272
-	.long	.Ltmp272
-.Lset132 = .Ltmp559-.Ltmp558            # Loc expr size
-	.short	.Lset132
+	.long	0
+	.long	0
+.Ldebug_loc89:
+	.long	.Ltmp268
+	.long	.Ltmp269
+.Lset123 = .Ltmp559-.Ltmp558            # Loc expr size
+	.short	.Lset123
 .Ltmp558:
-	.byte	81                      # DW_OP_reg1
+	.byte	82                      # DW_OP_reg2
 .Ltmp559:
 	.long	0
 	.long	0
-.Ldebug_loc95:
-	.long	.Ltmp274
-	.long	.Ltmp279
-.Lset133 = .Ltmp561-.Ltmp560            # Loc expr size
-	.short	.Lset133
-.Ltmp560:
-	.byte	81                      # DW_OP_reg1
-.Ltmp561:
-	.long	0
-	.long	0
-.Ldebug_loc96:
-	.long	.Ltmp275
-	.long	.Ltmp276
-.Lset134 = .Ltmp563-.Ltmp562            # Loc expr size
-	.short	.Lset134
-.Ltmp562:
-	.byte	82                      # DW_OP_reg2
-.Ltmp563:
-	.long	0
-	.long	0
-.Ldebug_loc97:
+.Ldebug_loc90:
 	.long	.Ltmp277
-	.long	.Ltmp279
-.Lset135 = .Ltmp565-.Ltmp564            # Loc expr size
-	.short	.Lset135
+	.long	.Ltmp281
+.Lset124 = .Ltmp561-.Ltmp560            # Loc expr size
+	.short	.Lset124
+.Ltmp560:
+	.byte	80                      # DW_OP_reg0
+.Ltmp561:
+	.long	.Ltmp283
+	.long	.Ltmp284
+.Lset125 = .Ltmp563-.Ltmp562            # Loc expr size
+	.short	.Lset125
+.Ltmp562:
+	.byte	80                      # DW_OP_reg0
+.Ltmp563:
+	.long	.Ltmp285
+	.long	.Ltmp285
+.Lset126 = .Ltmp565-.Ltmp564            # Loc expr size
+	.short	.Lset126
 .Ltmp564:
 	.byte	80                      # DW_OP_reg0
 .Ltmp565:
 	.long	0
 	.long	0
-.Ldebug_loc98:
+.Ldebug_loc91:
 	.long	.Ltmp278
-	.long	.Ltmp279
-.Lset136 = .Ltmp567-.Ltmp566            # Loc expr size
-	.short	.Lset136
-.Ltmp566:
-	.byte	82                      # DW_OP_reg2
-.Ltmp567:
-	.long	0
-	.long	0
-.Ldebug_loc99:
 	.long	.Ltmp281
-	.long	.Ltmp290
-.Lset137 = .Ltmp569-.Ltmp568            # Loc expr size
-	.short	.Lset137
+.Lset127 = .Ltmp567-.Ltmp566            # Loc expr size
+	.short	.Lset127
+.Ltmp566:
+	.byte	81                      # DW_OP_reg1
+.Ltmp567:
+	.long	.Ltmp286
+	.long	.Ltmp287
+.Lset128 = .Ltmp569-.Ltmp568            # Loc expr size
+	.short	.Lset128
 .Ltmp568:
-	.byte	80                      # DW_OP_reg0
+	.byte	81                      # DW_OP_reg1
 .Ltmp569:
 	.long	0
 	.long	0
-.Ldebug_loc100:
-	.long	.Ltmp282
-	.long	.Ltmp283
-.Lset138 = .Ltmp571-.Ltmp570            # Loc expr size
-	.short	.Lset138
+.Ldebug_loc92:
+	.long	.Ltmp279
+	.long	.Ltmp281
+.Lset129 = .Ltmp571-.Ltmp570            # Loc expr size
+	.short	.Lset129
 .Ltmp570:
-	.byte	81                      # DW_OP_reg1
+	.byte	83                      # DW_OP_reg3
 .Ltmp571:
 	.long	0
 	.long	0
-.Ldebug_loc101:
-	.long	.Ltmp283
-	.long	.Ltmp285
-.Lset139 = .Ltmp573-.Ltmp572            # Loc expr size
-	.short	.Lset139
+.Ldebug_loc93:
+	.long	.Ltmp280
+	.long	.Ltmp281
+.Lset130 = .Ltmp573-.Ltmp572            # Loc expr size
+	.short	.Lset130
 .Ltmp572:
-	.byte	81                      # DW_OP_reg1
+	.byte	82                      # DW_OP_reg2
 .Ltmp573:
 	.long	0
 	.long	0
-.Ldebug_loc102:
+.Ldebug_loc94:
 	.long	.Ltmp287
-	.long	.Lfunc_end1
-.Lset140 = .Ltmp575-.Ltmp574            # Loc expr size
-	.short	.Lset140
+	.long	.Ltmp288
+.Lset131 = .Ltmp575-.Ltmp574            # Loc expr size
+	.short	.Lset131
 .Ltmp574:
 	.byte	81                      # DW_OP_reg1
 .Ltmp575:
+	.long	.Ltmp290
+	.long	.Ltmp290
+.Lset132 = .Ltmp577-.Ltmp576            # Loc expr size
+	.short	.Lset132
+.Ltmp576:
+	.byte	81                      # DW_OP_reg1
+.Ltmp577:
+	.long	0
+	.long	0
+.Ldebug_loc95:
+	.long	.Ltmp292
+	.long	.Ltmp297
+.Lset133 = .Ltmp579-.Ltmp578            # Loc expr size
+	.short	.Lset133
+.Ltmp578:
+	.byte	81                      # DW_OP_reg1
+.Ltmp579:
+	.long	0
+	.long	0
+.Ldebug_loc96:
+	.long	.Ltmp293
+	.long	.Ltmp294
+.Lset134 = .Ltmp581-.Ltmp580            # Loc expr size
+	.short	.Lset134
+.Ltmp580:
+	.byte	82                      # DW_OP_reg2
+.Ltmp581:
+	.long	0
+	.long	0
+.Ldebug_loc97:
+	.long	.Ltmp295
+	.long	.Ltmp297
+.Lset135 = .Ltmp583-.Ltmp582            # Loc expr size
+	.short	.Lset135
+.Ltmp582:
+	.byte	80                      # DW_OP_reg0
+.Ltmp583:
+	.long	0
+	.long	0
+.Ldebug_loc98:
+	.long	.Ltmp296
+	.long	.Ltmp297
+.Lset136 = .Ltmp585-.Ltmp584            # Loc expr size
+	.short	.Lset136
+.Ltmp584:
+	.byte	82                      # DW_OP_reg2
+.Ltmp585:
+	.long	0
+	.long	0
+.Ldebug_loc99:
+	.long	.Ltmp299
+	.long	.Ltmp308
+.Lset137 = .Ltmp587-.Ltmp586            # Loc expr size
+	.short	.Lset137
+.Ltmp586:
+	.byte	80                      # DW_OP_reg0
+.Ltmp587:
+	.long	0
+	.long	0
+.Ldebug_loc100:
+	.long	.Ltmp300
+	.long	.Ltmp301
+.Lset138 = .Ltmp589-.Ltmp588            # Loc expr size
+	.short	.Lset138
+.Ltmp588:
+	.byte	81                      # DW_OP_reg1
+.Ltmp589:
+	.long	0
+	.long	0
+.Ldebug_loc101:
+	.long	.Ltmp301
+	.long	.Ltmp303
+.Lset139 = .Ltmp591-.Ltmp590            # Loc expr size
+	.short	.Lset139
+.Ltmp590:
+	.byte	81                      # DW_OP_reg1
+.Ltmp591:
+	.long	0
+	.long	0
+.Ldebug_loc102:
+	.long	.Ltmp305
+	.long	.Lfunc_end5
+.Lset140 = .Ltmp593-.Ltmp592            # Loc expr size
+	.short	.Lset140
+.Ltmp592:
+	.byte	81                      # DW_OP_reg1
+.Ltmp593:
 	.long	0
 	.long	0
 .Ldebug_loc103:
-	.long	.Ltmp288
-	.long	.Ltmp289
-.Lset141 = .Ltmp577-.Ltmp576            # Loc expr size
+	.long	.Ltmp306
+	.long	.Ltmp307
+.Lset141 = .Ltmp595-.Ltmp594            # Loc expr size
 	.short	.Lset141
-.Ltmp576:
+.Ltmp594:
 	.byte	82                      # DW_OP_reg2
-.Ltmp577:
+.Ltmp595:
 	.long	0
 	.long	0
 	.section	.debug_pubnames,"",@progbits
@@ -8199,11 +8795,11 @@ tmpBuffer:
 	.long	.L.debug_info_begin0    # Offset of Compilation Unit Info
 .Lset143 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
 	.long	.Lset143
-	.long	3751                    # DIE offset
+	.long	3939                    # DIE offset
 .asciiz"delay_seconds"                  # External Name
 	.long	294                     # DIE offset
 .asciiz"aud_from_host_usb_ep"           # External Name
-	.long	3889                    # DIE offset
+	.long	4077                    # DIE offset
 .asciiz"XUD_SetReady_In"                # External Name
 	.long	338                     # DIE offset
 .asciiz"g_aud_from_host_buffer"         # External Name
@@ -8235,6 +8831,8 @@ tmpBuffer:
 .asciiz"g_aud_to_host_rdptr"            # External Name
 	.long	1181                    # DIE offset
 .asciiz"tmpBuffer"                      # External Name
+	.long	3845                    # DIE offset
+.asciiz"_i.qspi_access._chan_yield.read" # External Name
 	.long	157                     # DIE offset
 .asciiz"g_numUsbChan_Out"               # External Name
 	.long	1137                    # DIE offset
@@ -8261,9 +8859,13 @@ tmpBuffer:
 .asciiz"aud_req_out_count"              # External Name
 	.long	1027                    # DIE offset
 .asciiz"unpackState"                    # External Name
+	.long	3751                    # DIE offset
+.asciiz"_i.qspi_access._chan.read"      # External Name
+	.long	3798                    # DIE offset
+.asciiz"_i.qspi_access._chan.write"     # External Name
 	.long	136                     # DIE offset
 .asciiz"p_multIn"                       # External Name
-	.long	3823                    # DIE offset
+	.long	4011                    # DIE offset
 .asciiz"XUD_SetReady_Out"               # External Name
 	.long	179                     # DIE offset
 .asciiz"g_numUsbChan_In"                # External Name
@@ -8273,7 +8875,7 @@ tmpBuffer:
 .asciiz"decouple"                       # External Name
 	.long	1115                    # DIE offset
 .asciiz"g_curSubSlot_Out"               # External Name
-	.long	3775                    # DIE offset
+	.long	3963                    # DIE offset
 .asciiz"delay_milliseconds"             # External Name
 	.long	316                     # DIE offset
 .asciiz"aud_to_host_usb_ep"             # External Name
@@ -8305,12 +8907,14 @@ tmpBuffer:
 .asciiz"sampsToWrite"                   # External Name
 	.long	829                     # DIE offset
 .asciiz"g_aud_to_host_zeros"            # External Name
-	.long	3799                    # DIE offset
+	.long	3987                    # DIE offset
 .asciiz"delay_microseconds"             # External Name
 	.long	785                     # DIE offset
 .asciiz"g_aud_to_host_dptr"             # External Name
 	.long	1093                    # DIE offset
 .asciiz"packData"                       # External Name
+	.long	3892                    # DIE offset
+.asciiz"_i.qspi_access._chan_yield.write" # External Name
 	.long	455                     # DIE offset
 .asciiz"g_aud_from_host_info"           # External Name
 	.long	1049                    # DIE offset
@@ -8331,8 +8935,10 @@ tmpBuffer:
 	.long	.L.debug_info_begin0    # Offset of Compilation Unit Info
 .Lset145 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
 	.long	.Lset145
-	.long	3955                    # DIE offset
+	.long	4143                    # DIE offset
 .asciiz"chanend"                        # External Name
+	.long	4165                    # DIE offset
+.asciiz"yieldArg"                       # External Name
 	.long	66                      # DIE offset
 .asciiz"unsigned int"                   # External Name
 	.long	426                     # DIE offset
@@ -8345,8 +8951,14 @@ tmpBuffer:
 .LpubTypes_end0:
 	.cfi_sections .debug_frame
 
+	.typestring _i.qspi_access._chan.read, "f{0}(chd,si,si,&(a(:uc)))"
+	.typestring _i.qspi_access._chan.write, "f{0}(chd,si,si,&(a(:uc)))"
+	.typestring _i.qspi_access._chan_yield.read, "f{0}(&(s(yieldArg){m(dest){chd},m(yield){ui}}),si,si,&(a(:uc)))"
+	.overlay_reference _i.qspi_access._chan_yield.read,_i.qspi_access._client_call_y.fns
+	.typestring _i.qspi_access._chan_yield.write, "f{0}(&(s(yieldArg){m(dest){chd},m(yield){ui}}),si,si,&(a(:uc)))"
+	.overlay_reference _i.qspi_access._chan_yield.write,_i.qspi_access._client_call_y.fns
 	.typestring update_samp_freq, "f{0}(ui)"
-	.typestring update_samp_resolution, "f{0}(ui)"
+	.typestring update_stream_format, "f{0}(ui,ui)"
 	.typestring GetADCCounts, "f{0}(ui,&(si),&(si),&(si))"
 	.typestring handle_audio_request, "f{0}(chd)"
 	.typestring decouple, "f{0}(chd)"

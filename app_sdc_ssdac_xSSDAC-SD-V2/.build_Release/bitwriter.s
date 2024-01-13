@@ -24,7 +24,7 @@
 	.cc_top FLAC__bitwriter_new.function,FLAC__bitwriter_new
 FLAC__bitwriter_new:
 .Lfunc_begin0:
-	.loc	2 152 0
+	.loc	2 154 0
 	.cfi_startproc
 	.issue_mode dual
 .Ltmp0:
@@ -39,7 +39,7 @@ FLAC__bitwriter_new:
 		ldc r1, 20
 		nop
 	}
-	.loc	2 153 24 prologue_end
+	.loc	2 155 24 prologue_end
 .Ltmp2:
 	bl calloc
 .Ltmp3:
@@ -47,7 +47,7 @@ FLAC__bitwriter_new:
 		nop
 		retsp 2
 	}
-	.loc	2 155 2
+	.loc	2 157 2
 	# RETURN_REG_HOLDER
 .Ltmp4:
 	.cc_bottom FLAC__bitwriter_new.function
@@ -70,7 +70,7 @@ FLAC__bitwriter_new:
 	.cc_top FLAC__bitwriter_delete.function,FLAC__bitwriter_delete
 FLAC__bitwriter_delete:
 .Lfunc_begin1:
-	.loc	2 159 0
+	.loc	2 161 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -95,11 +95,11 @@ FLAC__bitwriter_delete:
 	}
 	bf r0, .LBB1_2
 .Ltmp11:
-	.loc	2 190 3 prologue_end
+	.loc	2 192 3 prologue_end
 	bl free
 .Ltmp12:
 .LBB1_2:
-	.loc	2 163 2
+	.loc	2 165 2
 	{
 		mov r0, r4
 		nop
@@ -114,7 +114,7 @@ FLAC__bitwriter_delete:
 		nop
 		retsp 4
 	}
-	.loc	2 164 1
+	.loc	2 166 1
 	# RETURN_REG_HOLDER
 .Ltmp14:
 	.cc_bottom FLAC__bitwriter_delete.function
@@ -138,7 +138,7 @@ FLAC__bitwriter_delete:
 	.cc_top FLAC__bitwriter_free.function,FLAC__bitwriter_free
 FLAC__bitwriter_free:
 .Lfunc_begin2:
-	.loc	2 186 0
+	.loc	2 188 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -163,7 +163,7 @@ FLAC__bitwriter_free:
 	}
 	bf r0, .LBB2_2
 .Ltmp21:
-	.loc	2 190 3 prologue_end
+	.loc	2 192 3 prologue_end
 	bl free
 .Ltmp22:
 .LBB2_2:
@@ -196,7 +196,7 @@ FLAC__bitwriter_free:
 		nop
 		retsp 4
 	}
-	.loc	2 194 1
+	.loc	2 196 1
 	# RETURN_REG_HOLDER
 .Ltmp24:
 	.cc_bottom FLAC__bitwriter_free.function
@@ -219,7 +219,7 @@ FLAC__bitwriter_free:
 	.cc_top FLAC__bitwriter_init.function,FLAC__bitwriter_init
 FLAC__bitwriter_init:
 .Lfunc_begin3:
-	.loc	2 173 0
+	.loc	2 175 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -256,15 +256,15 @@ FLAC__bitwriter_init:
 		stw r0, r4[2]
 	}
 	ldc r0, 32768
-	.loc	2 178 15 prologue_end
+	.loc	2 180 15 prologue_end
 .Ltmp31:
 	bl malloc
-	.loc	2 178 15
+	.loc	2 180 15
 	{
 		eq r0, r0, 0
 		stw r0, r4[0]
 	}
-	.loc	2 180 3
+	.loc	2 182 3
 .Ltmp32:
 	{
 		eq r0, r0, 0
@@ -275,7 +275,7 @@ FLAC__bitwriter_init:
 		retsp 4
 	}
 .Ltmp33:
-	.loc	2 183 1
+	.loc	2 185 1
 	# RETURN_REG_HOLDER
 .Ltmp34:
 	.cc_bottom FLAC__bitwriter_init.function
@@ -298,7 +298,7 @@ FLAC__bitwriter_init:
 	.cc_top FLAC__bitwriter_clear.function,FLAC__bitwriter_clear
 FLAC__bitwriter_clear:
 .Lfunc_begin4:
-	.loc	2 197 0
+	.loc	2 199 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -317,7 +317,7 @@ FLAC__bitwriter_clear:
 		nop
 		retsp 0
 	}
-	.loc	2 199 1 prologue_end
+	.loc	2 201 1 prologue_end
 .Ltmp36:
 	# RETURN_REG_HOLDER
 .Ltmp37:
@@ -341,7 +341,7 @@ FLAC__bitwriter_clear:
 	.cc_top FLAC__bitwriter_get_write_crc16.function,FLAC__bitwriter_get_write_crc16
 FLAC__bitwriter_get_write_crc16:
 .Lfunc_begin5:
-	.loc	2 202 0
+	.loc	2 204 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -365,10 +365,10 @@ FLAC__bitwriter_get_write_crc16:
 		ldaw r2, sp[2]
 	}
 .Ltmp44:
-	.loc	2 208 6 prologue_end
+	.loc	2 210 6 prologue_end
 	bl FLAC__bitwriter_get_buffer
 .Ltmp45:
-	.loc	2 208 6
+	.loc	2 210 6
 	bf r0, .LBB5_1
 .Ltmp46:
 	{
@@ -379,9 +379,9 @@ FLAC__bitwriter_get_write_crc16:
 		nop
 		ldw r1, sp[2]
 	}
-	.loc	2 211 23
+	.loc	2 213 23
 	bl FLAC__crc16
-	.loc	2 211 23
+	.loc	2 213 23
 	{
 		ldc r1, 0
 		nop
@@ -407,7 +407,7 @@ FLAC__bitwriter_get_write_crc16:
 		nop
 		retsp 6
 	}
-	.loc	2 214 1
+	.loc	2 216 1
 	# RETURN_REG_HOLDER
 .Ltmp48:
 	.cc_bottom FLAC__bitwriter_get_write_crc16.function
@@ -430,7 +430,7 @@ FLAC__bitwriter_get_write_crc16:
 	.cc_top FLAC__bitwriter_get_buffer.function,FLAC__bitwriter_get_buffer
 FLAC__bitwriter_get_buffer:
 .Lfunc_begin6:
-	.loc	2 242 0
+	.loc	2 244 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -468,7 +468,7 @@ FLAC__bitwriter_get_buffer:
 		nop
 		ldw r0, r6[4]
 	}
-	.loc	2 245 5 prologue_end
+	.loc	2 247 5 prologue_end
 .Ltmp60:
 	{
 		mov r1, r0
@@ -480,7 +480,7 @@ FLAC__bitwriter_get_buffer:
 	}
 	bt r1, .LBB6_16
 .Ltmp61:
-	.loc	2 248 5
+	.loc	2 250 5
 	bf r0, .LBB6_2
 .Ltmp62:
 	{
@@ -491,7 +491,7 @@ FLAC__bitwriter_get_buffer:
 		nop
 		ldw r2, r6[2]
 	}
-	.loc	2 250 6
+	.loc	2 252 6
 .Ltmp63:
 	{
 		eq r2, r1, r2
@@ -503,47 +503,47 @@ FLAC__bitwriter_get_buffer:
 		mkmsk r2, 6
 		nop
 	}
-	.loc	2 113 2
+	.loc	2 115 2
 .Ltmp65:
 	{
 		add r2, r0, r2
 		nop
 	}
-	.loc	2 113 2
+	.loc	2 115 2
 	{
 		shr r2, r2, 5
 		nop
 	}
-	.loc	2 113 2
+	.loc	2 115 2
 	{
 		add r8, r1, r2
 		nop
 	}
 .Ltmp66:
-	.loc	2 118 5
+	.loc	2 120 5
 	{
 		lsu r3, r1, r8
 		nop
 	}
 	bf r3, .LBB6_14
 .Ltmp67:
-	.loc	2 121 5
+	.loc	2 123 5
 	{
 		shl r0, r8, 2
 		nop
 	}
-	.loc	2 121 5
+	.loc	2 123 5
 	ldw r1, cp[FLAC__STREAM_METADATA_LENGTH_LEN]
 	{
 		mkmsk r3, 1
 		nop
 	}
-	.loc	2 121 5
+	.loc	2 123 5
 	{
 		shl r1, r3, r1
 		nop
 	}
-	.loc	2 121 5
+	.loc	2 123 5
 	{
 		lsu r0, r1, r0
 		nop
@@ -551,7 +551,7 @@ FLAC__bitwriter_get_buffer:
 	bt r0, .LBB6_16
 .Ltmp68:
 	ldc r0, 1023
-	.loc	2 129 5
+	.loc	2 131 5
 .Ltmp69:
 	{
 		and r0, r2, r0
@@ -560,12 +560,12 @@ FLAC__bitwriter_get_buffer:
 	bf r0, .LBB6_8
 .Ltmp70:
 	ldc r1, 1024
-	.loc	2 130 3
+	.loc	2 132 3
 	{
 		add r1, r8, r1
 		nop
 	}
-	.loc	2 130 3
+	.loc	2 132 3
 	{
 		sub r8, r1, r0
 		nop
@@ -611,7 +611,7 @@ FLAC__bitwriter_get_buffer:
 		nop
 		ldw r0, r6[0]
 	}
-	.loc	2 257 2
+	.loc	2 259 2
 	ldaw r2, r6[3]
 	{
 		ldc r1, 0
@@ -649,36 +649,36 @@ FLAC__bitwriter_get_buffer:
 	}
 .Ltmp81:
 .LBB6_14:
-	.loc	2 250 6
+	.loc	2 252 6
 	ldaw r2, r6[3]
 .Ltmp82:
-	.loc	2 253 3
+	.loc	2 255 3
 	{
 		ldc r11, 32
 		ldw r3, r6[1]
 	}
-	.loc	2 253 3
+	.loc	2 255 3
 	{
 		sub r0, r11, r0
 		nop
 	}
-	.loc	2 253 3
+	.loc	2 255 3
 	{
 		shl r0, r3, r0
 		nop
 	}
-	.loc	2 253 3
+	.loc	2 255 3
 	{
 		byterev r3, r0
 		ldw r0, r6[0]
 	}
-	.loc	2 253 3
+	.loc	2 255 3
 	stw r3, r0[r1]
 	{
 		nop
 		ldw r1, r6[4]
 	}
-	.loc	2 254 2
+	.loc	2 256 2
 	{
 		shr r1, r1, 3
 		nop
@@ -693,16 +693,16 @@ FLAC__bitwriter_get_buffer:
 		nop
 		ldw r0, r2[0]
 	}
-	.loc	2 257 2
+	.loc	2 259 2
 	ldaw r0, r1[r0]
-	.loc	2 257 2
+	.loc	2 259 2
 	{
 		mkmsk r7, 1
 		stw r0, r4[0]
 	}
 .Ltmp84:
 .LBB6_16:
-	.loc	2 259 1
+	.loc	2 261 1
 	{
 		mov r0, r7
 		ldw r8, sp[6]
@@ -736,7 +736,7 @@ FLAC__bitwriter_get_buffer:
 	.cc_top FLAC__bitwriter_release_buffer.function,FLAC__bitwriter_release_buffer
 FLAC__bitwriter_release_buffer:
 .Lfunc_begin7:
-	.loc	2 262 0
+	.loc	2 264 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -747,7 +747,7 @@ FLAC__bitwriter_release_buffer:
 		nop
 		retsp 0
 	}
-	.loc	2 267 1 prologue_end
+	.loc	2 269 1 prologue_end
 .Ltmp87:
 	# RETURN_REG_HOLDER
 .Ltmp88:
@@ -771,7 +771,7 @@ FLAC__bitwriter_release_buffer:
 	.cc_top FLAC__bitwriter_get_write_crc8.function,FLAC__bitwriter_get_write_crc8
 FLAC__bitwriter_get_write_crc8:
 .Lfunc_begin8:
-	.loc	2 217 0
+	.loc	2 219 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -795,10 +795,10 @@ FLAC__bitwriter_get_write_crc8:
 		ldaw r2, sp[2]
 	}
 .Ltmp95:
-	.loc	2 223 6 prologue_end
+	.loc	2 225 6 prologue_end
 	bl FLAC__bitwriter_get_buffer
 .Ltmp96:
-	.loc	2 223 6
+	.loc	2 225 6
 	bf r0, .LBB8_1
 .Ltmp97:
 	{
@@ -809,9 +809,9 @@ FLAC__bitwriter_get_write_crc8:
 		nop
 		ldw r1, sp[2]
 	}
-	.loc	2 226 9
+	.loc	2 228 9
 	bl FLAC__crc8
-	.loc	2 226 9
+	.loc	2 228 9
 	{
 		ldc r1, 0
 		nop
@@ -837,7 +837,7 @@ FLAC__bitwriter_get_write_crc8:
 		nop
 		retsp 6
 	}
-	.loc	2 229 1
+	.loc	2 231 1
 	# RETURN_REG_HOLDER
 .Ltmp99:
 	.cc_bottom FLAC__bitwriter_get_write_crc8.function
@@ -860,7 +860,7 @@ FLAC__bitwriter_get_write_crc8:
 	.cc_top FLAC__bitwriter_is_byte_aligned.function,FLAC__bitwriter_is_byte_aligned
 FLAC__bitwriter_is_byte_aligned:
 .Lfunc_begin9:
-	.loc	2 232 0
+	.loc	2 234 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -872,7 +872,7 @@ FLAC__bitwriter_is_byte_aligned:
 		ld8u r0, r0[r1]
 	}
 .Ltmp101:
-	.loc	2 233 2 prologue_end
+	.loc	2 235 2 prologue_end
 	{
 		zext r0, 3
 		nop
@@ -881,7 +881,7 @@ FLAC__bitwriter_is_byte_aligned:
 		eq r0, r0, 0
 		retsp 0
 	}
-	.loc	2 233 2
+	.loc	2 235 2
 	# RETURN_REG_HOLDER
 .Ltmp102:
 	.cc_bottom FLAC__bitwriter_is_byte_aligned.function
@@ -904,7 +904,7 @@ FLAC__bitwriter_is_byte_aligned:
 	.cc_top FLAC__bitwriter_get_input_bits_unconsumed.function,FLAC__bitwriter_get_input_bits_unconsumed
 FLAC__bitwriter_get_input_bits_unconsumed:
 .Lfunc_begin10:
-	.loc	2 237 0
+	.loc	2 239 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -915,19 +915,19 @@ FLAC__bitwriter_get_input_bits_unconsumed:
 		nop
 		ldw r1, r0[3]
 	}
-	.loc	2 238 2 prologue_end
+	.loc	2 240 2 prologue_end
 .Ltmp104:
 	{
 		shl r1, r1, 5
 		ldw r0, r0[4]
 	}
 .Ltmp105:
-	.loc	2 238 2
+	.loc	2 240 2
 	{
 		add r0, r1, r0
 		retsp 0
 	}
-	.loc	2 238 2
+	.loc	2 240 2
 	# RETURN_REG_HOLDER
 .Ltmp106:
 	.cc_bottom FLAC__bitwriter_get_input_bits_unconsumed.function
@@ -950,7 +950,7 @@ FLAC__bitwriter_get_input_bits_unconsumed:
 	.cc_top FLAC__bitwriter_write_zeroes.function,FLAC__bitwriter_write_zeroes
 FLAC__bitwriter_write_zeroes:
 .Lfunc_begin11:
-	.loc	2 270 0
+	.loc	2 272 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -994,13 +994,13 @@ FLAC__bitwriter_write_zeroes:
 		nop
 		ldw r1, r5[3]
 	}
-	.loc	2 279 5 prologue_end
+	.loc	2 281 5 prologue_end
 .Ltmp119:
 	{
 		add r2, r1, r4
 		nop
 	}
-	.loc	2 279 5
+	.loc	2 281 5
 	{
 		lsu r2, r2, r0
 		nop
@@ -1011,65 +1011,65 @@ FLAC__bitwriter_write_zeroes:
 		nop
 		ldw r2, r5[4]
 	}
-	.loc	2 113 2
+	.loc	2 115 2
 .Ltmp121:
 	{
 		add r2, r4, r2
 		mkmsk r3, 5
 	}
-	.loc	2 113 2
+	.loc	2 115 2
 	{
 		add r2, r2, r3
 		nop
 	}
-	.loc	2 113 2
+	.loc	2 115 2
 	{
 		shr r2, r2, 5
 		nop
 	}
-	.loc	2 113 2
+	.loc	2 115 2
 	{
 		add r8, r2, r1
 		nop
 	}
 .Ltmp122:
-	.loc	2 118 5
+	.loc	2 120 5
 	{
 		lsu r1, r0, r8
 		nop
 	}
 	bf r1, .LBB11_12
 .Ltmp123:
-	.loc	2 121 5
+	.loc	2 123 5
 	{
 		shl r1, r8, 2
 		nop
 	}
-	.loc	2 121 5
+	.loc	2 123 5
 	ldw r2, cp[FLAC__STREAM_METADATA_LENGTH_LEN]
 	{
 		mkmsk r3, 1
 		nop
 	}
-	.loc	2 121 5
+	.loc	2 123 5
 	{
 		shl r2, r3, r2
 		nop
 	}
-	.loc	2 121 5
+	.loc	2 123 5
 	{
 		lsu r1, r2, r1
 		ldc r6, 0
 	}
 	bt r1, .LBB11_24
 .Ltmp124:
-	.loc	2 129 5
+	.loc	2 131 5
 	{
 		sub r0, r8, r0
 		nop
 	}
 	ldc r1, 1023
-	.loc	2 129 5
+	.loc	2 131 5
 	{
 		and r0, r0, r1
 		nop
@@ -1077,12 +1077,12 @@ FLAC__bitwriter_write_zeroes:
 	bf r0, .LBB11_6
 .Ltmp125:
 	ldc r1, 1024
-	.loc	2 130 3
+	.loc	2 132 3
 	{
 		add r1, r8, r1
 		nop
 	}
-	.loc	2 130 3
+	.loc	2 132 3
 	{
 		sub r8, r1, r0
 		nop
@@ -1154,20 +1154,20 @@ FLAC__bitwriter_write_zeroes:
 		ldc r1, 32
 		nop
 	}
-	.loc	2 283 3
+	.loc	2 285 3
 .Ltmp137:
 	{
 		sub r3, r1, r0
 		nop
 	}
-	.loc	2 283 3
+	.loc	2 285 3
 	{
 		lsu r11, r4, r3
 		mov r2, r4
 	}
 	bt r11, .LBB11_15
 .Ltmp138:
-	.loc	2 283 3
+	.loc	2 285 3
 	{
 		mov r2, r3
 		nop
@@ -1178,24 +1178,24 @@ FLAC__bitwriter_write_zeroes:
 		nop
 		ldw r3, r5[1]
 	}
-	.loc	2 284 3
+	.loc	2 286 3
 	{
 		shl r3, r3, r2
 		nop
 	}
-	.loc	2 284 3
+	.loc	2 286 3
 	{
 		add r0, r0, r2
 		stw r3, r5[1]
 	}
-	.loc	2 286 3
+	.loc	2 288 3
 	{
 		eq r0, r0, r1
 		stw r0, r5[4]
 	}
 	bf r0, .LBB11_23
 .Ltmp140:
-	.loc	2 285 3
+	.loc	2 287 3
 	{
 		sub r4, r4, r2
 		byterev r0, r3
@@ -1205,7 +1205,7 @@ FLAC__bitwriter_write_zeroes:
 		nop
 		ldw r1, r5[3]
 	}
-	.loc	2 288 4
+	.loc	2 290 4
 .Ltmp142:
 	{
 		add r2, r1, 1
@@ -1220,7 +1220,7 @@ FLAC__bitwriter_write_zeroes:
 		nop
 		ldw r2, r5[0]
 	}
-	.loc	2 288 4
+	.loc	2 290 4
 	stw r0, r2[r1]
 	{
 		ldc r0, 0
@@ -1232,14 +1232,14 @@ FLAC__bitwriter_write_zeroes:
 	}
 .Ltmp144:
 .LBB11_17:
-	.loc	2 295 2
+	.loc	2 297 2
 	{
 		shr r0, r4, 5
 		nop
 	}
 	bf r0, .LBB11_21
 .Ltmp145:
-	.loc	2 296 3
+	.loc	2 298 3
 	{
 		ldc r1, 0
 		ldw r0, r5[0]
@@ -1254,7 +1254,7 @@ FLAC__bitwriter_write_zeroes:
 		nop
 		ldw r3, r5[3]
 	}
-	.loc	2 296 3
+	.loc	2 298 3
 	{
 		add r11, r3, 1
 		nop
@@ -1263,20 +1263,20 @@ FLAC__bitwriter_write_zeroes:
 		nop
 		stw r11, r5[3]
 	}
-	.loc	2 296 3
+	.loc	2 298 3
 	stw r1, r0[r3]
-	.loc	2 297 3
+	.loc	2 299 3
 	ldaw r2, r2[-8]
 .Ltmp147:
-	.loc	2 295 2
+	.loc	2 297 2
 	{
 		shr r3, r2, 5
 		nop
 	}
-	.loc	2 295 2
+	.loc	2 297 2
 	bt r3, .LBB11_19
 .Ltmp148:
-	.loc	2 295 2
+	.loc	2 297 2
 	{
 		zext r4, 5
 		nop
@@ -1304,7 +1304,7 @@ FLAC__bitwriter_write_zeroes:
 		nop
 	}
 .LBB11_24:
-	.loc	2 305 1
+	.loc	2 307 1
 	{
 		mov r0, r6
 		ldw r8, sp[6]
@@ -1337,7 +1337,7 @@ FLAC__bitwriter_write_zeroes:
 	.cc_top FLAC__bitwriter_write_raw_uint32.function,FLAC__bitwriter_write_raw_uint32
 FLAC__bitwriter_write_raw_uint32:
 .Lfunc_begin12:
-	.loc	2 349 0
+	.loc	2 351 0
 	.cfi_startproc
 	.issue_mode dual
 .Ltmp154:
@@ -1360,19 +1360,19 @@ FLAC__bitwriter_write_raw_uint32:
 		ldc r0, 0
 		retsp 2
 	}
-	.loc	2 355 1 prologue_end
+	.loc	2 357 1 prologue_end
 .Ltmp158:
 	# RETURN_REG_HOLDER
 .LBB12_3:
 .Ltmp159:
-	.loc	2 354 9
+	.loc	2 356 9
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
 .Ltmp160:
 	{
 		nop
 		retsp 2
 	}
-	.loc	2 355 1
+	.loc	2 357 1
 	# RETURN_REG_HOLDER
 .Ltmp161:
 	.cc_bottom FLAC__bitwriter_write_raw_uint32.function
@@ -1403,7 +1403,7 @@ FLAC__bitwriter_write_raw_uint32:
 	.cc_top FLAC__bitwriter_write_raw_uint32_nocheck.function,FLAC__bitwriter_write_raw_uint32_nocheck
 FLAC__bitwriter_write_raw_uint32_nocheck:
 .Lfunc_begin13:
-	.loc	2 308 0
+	.loc	2 310 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -1478,13 +1478,13 @@ FLAC__bitwriter_write_raw_uint32_nocheck:
 		nop
 		ldw r2, r4[3]
 	}
-	.loc	2 326 5 prologue_end
+	.loc	2 328 5 prologue_end
 .Ltmp179:
 	{
 		add r3, r2, r6
 		nop
 	}
-	.loc	2 326 5
+	.loc	2 328 5
 	{
 		lsu r3, r3, r1
 		nop
@@ -1495,65 +1495,65 @@ FLAC__bitwriter_write_raw_uint32_nocheck:
 		nop
 		ldw r3, r4[4]
 	}
-	.loc	2 113 2
+	.loc	2 115 2
 .Ltmp181:
 	{
 		add r3, r6, r3
 		mkmsk r11, 5
 	}
-	.loc	2 113 2
+	.loc	2 115 2
 	{
 		add r3, r3, r11
 		nop
 	}
-	.loc	2 113 2
+	.loc	2 115 2
 	{
 		shr r3, r3, 5
 		nop
 	}
-	.loc	2 113 2
+	.loc	2 115 2
 	{
 		add r10, r3, r2
 		nop
 	}
 .Ltmp182:
-	.loc	2 118 5
+	.loc	2 120 5
 	{
 		lsu r2, r1, r10
 		nop
 	}
 	bf r2, .LBB13_15
 .Ltmp183:
-	.loc	2 121 5
+	.loc	2 123 5
 	{
 		shl r2, r10, 2
 		nop
 	}
-	.loc	2 121 5
+	.loc	2 123 5
 	ldw r3, cp[FLAC__STREAM_METADATA_LENGTH_LEN]
 	{
 		mkmsk r11, 1
 		nop
 	}
-	.loc	2 121 5
+	.loc	2 123 5
 	{
 		shl r3, r11, r3
 		nop
 	}
-	.loc	2 121 5
+	.loc	2 123 5
 	{
 		lsu r2, r3, r2
 		nop
 	}
 	bt r2, .LBB13_21
 .Ltmp184:
-	.loc	2 129 5
+	.loc	2 131 5
 	{
 		sub r1, r10, r1
 		nop
 	}
 	ldc r2, 1023
-	.loc	2 129 5
+	.loc	2 131 5
 	{
 		and r1, r1, r2
 		nop
@@ -1561,12 +1561,12 @@ FLAC__bitwriter_write_raw_uint32_nocheck:
 	bf r1, .LBB13_9
 .Ltmp185:
 	ldc r2, 1024
-	.loc	2 130 3
+	.loc	2 132 3
 	{
 		add r2, r10, r2
 		nop
 	}
-	.loc	2 130 3
+	.loc	2 132 3
 	{
 		sub r10, r2, r1
 		nop
@@ -1627,13 +1627,13 @@ FLAC__bitwriter_write_raw_uint32_nocheck:
 		nop
 		ldw r1, r4[4]
 	}
-	.loc	2 329 2
+	.loc	2 331 2
 	{
 		sub r2, r9, r1
 		nop
 	}
 .Ltmp195:
-	.loc	2 330 5
+	.loc	2 332 5
 	{
 		lsu r3, r6, r2
 		nop
@@ -1644,18 +1644,18 @@ FLAC__bitwriter_write_raw_uint32_nocheck:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	2 331 3
+	.loc	2 333 3
 .Ltmp197:
 	{
 		shl r0, r0, r6
 		nop
 	}
-	.loc	2 332 3
+	.loc	2 334 3
 	{
 		or r0, r0, r5
 		nop
 	}
-	.loc	2 332 3
+	.loc	2 334 3
 	{
 		add r0, r1, r6
 		stw r0, r4[1]
@@ -1667,64 +1667,64 @@ FLAC__bitwriter_write_raw_uint32_nocheck:
 	bu .LBB13_20
 .Ltmp198:
 .LBB13_17:
-	.loc	2 335 10
+	.loc	2 337 10
 	bf r1, .LBB13_19
 .Ltmp199:
 	{
 		nop
 		ldw r1, r4[1]
 	}
-	.loc	2 336 3
+	.loc	2 338 3
 .Ltmp200:
 	{
 		shl r1, r1, r2
 		sub r2, r6, r2
 	}
 .Ltmp201:
-	.loc	2 337 3
+	.loc	2 339 3
 	{
 		shr r2, r5, r2
 		stw r2, r4[4]
 	}
-	.loc	2 337 3
+	.loc	2 339 3
 	{
 		or r1, r1, r2
 		nop
 	}
-	.loc	2 338 3
+	.loc	2 340 3
 	{
 		shr r2, r1, 24
 		shr r3, r1, 8
 	}
 	ldc r11, 65280
-	.loc	2 338 3
+	.loc	2 340 3
 	{
 		and r3, r3, r11
 		shl r11, r1, 8
 	}
 	ldw r6, cp[.LCPI13_0]
 .Ltmp202:
-	.loc	2 338 3
+	.loc	2 340 3
 	{
 		and r11, r11, r6
 		shl r1, r1, 24
 	}
-	.loc	2 338 3
+	.loc	2 340 3
 	{
 		or r1, r1, r2
 		nop
 	}
-	.loc	2 338 3
+	.loc	2 340 3
 	{
 		or r1, r1, r3
 		nop
 	}
-	.loc	2 338 3
+	.loc	2 340 3
 	{
 		or r1, r1, r11
 		ldw r2, r4[3]
 	}
-	.loc	2 338 3
+	.loc	2 340 3
 	{
 		add r3, r2, 1
 		nop
@@ -1733,7 +1733,7 @@ FLAC__bitwriter_write_raw_uint32_nocheck:
 		nop
 		stw r3, r4[3]
 	}
-	.loc	2 338 3
+	.loc	2 340 3
 	stw r1, r0[r2]
 	{
 		nop
@@ -1742,12 +1742,12 @@ FLAC__bitwriter_write_raw_uint32_nocheck:
 	bu .LBB13_20
 .Ltmp203:
 .LBB13_19:
-	.loc	2 342 3
+	.loc	2 344 3
 	{
 		byterev r1, r5
 		ldw r2, r4[3]
 	}
-	.loc	2 342 3
+	.loc	2 344 3
 	{
 		add r3, r2, 1
 		nop
@@ -1756,7 +1756,7 @@ FLAC__bitwriter_write_raw_uint32_nocheck:
 		nop
 		stw r3, r4[3]
 	}
-	.loc	2 342 3
+	.loc	2 344 3
 	stw r1, r0[r2]
 .Ltmp204:
 .LBB13_20:
@@ -1765,7 +1765,7 @@ FLAC__bitwriter_write_raw_uint32_nocheck:
 		nop
 	}
 .LBB13_21:
-	.loc	2 346 1
+	.loc	2 348 1
 	{
 		mov r0, r7
 		ldw r10, sp[8]
@@ -1795,7 +1795,7 @@ FLAC__bitwriter_write_raw_uint32_nocheck:
 	.cc_top FLAC__bitwriter_write_raw_int32.function,FLAC__bitwriter_write_raw_int32
 FLAC__bitwriter_write_raw_int32:
 .Lfunc_begin14:
-	.loc	2 358 0
+	.loc	2 360 0
 	.cfi_startproc
 	.issue_mode dual
 .Ltmp207:
@@ -1812,27 +1812,27 @@ FLAC__bitwriter_write_raw_int32:
 		mkmsk r3, 32
 		nop
 	}
-	.loc	2 361 3 prologue_end
+	.loc	2 363 3 prologue_end
 .Ltmp210:
 	{
 		shl r3, r3, r2
 		nop
 	}
-	.loc	2 361 3
+	.loc	2 363 3
 	{
 		andnot r1, r3
 		nop
 	}
 .Ltmp211:
 .LBB14_2:
-	.loc	2 363 9
+	.loc	2 365 9
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
 .Ltmp212:
 	{
 		nop
 		retsp 2
 	}
-	.loc	2 363 9
+	.loc	2 365 9
 	# RETURN_REG_HOLDER
 .Ltmp213:
 	.cc_bottom FLAC__bitwriter_write_raw_int32.function
@@ -1855,7 +1855,7 @@ FLAC__bitwriter_write_raw_int32:
 	.cc_top FLAC__bitwriter_write_raw_uint64.function,FLAC__bitwriter_write_raw_uint64
 FLAC__bitwriter_write_raw_uint64:
 .Lfunc_begin15:
-	.loc	2 367 0
+	.loc	2 369 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -1883,24 +1883,24 @@ FLAC__bitwriter_write_raw_uint64:
 		ldc r0, 33
 	}
 .Ltmp221:
-	.loc	2 369 5 prologue_end
+	.loc	2 371 5 prologue_end
 	{
 		lsu r0, r3, r0
 		nop
 	}
 	bt r0, .LBB15_5
 .Ltmp222:
-	.loc	2 371 4
+	.loc	2 373 4
 	ldaw r3, r3[-8]
 .Ltmp223:
-	.loc	2 351 5
+	.loc	2 353 5
 	{
 		shr r0, r3, 5
 		ldc r6, 0
 	}
 	bt r0, .LBB15_3
 .Ltmp224:
-	.loc	2 371 4
+	.loc	2 373 4
 	{
 		shr r0, r2, r3
 		nop
@@ -1908,7 +1908,7 @@ FLAC__bitwriter_write_raw_uint64:
 	bt r0, .LBB15_9
 .Ltmp225:
 .LBB15_3:
-	.loc	2 354 9
+	.loc	2 356 9
 	{
 		mov r0, r5
 		mov r1, r2
@@ -1925,13 +1925,13 @@ FLAC__bitwriter_write_raw_uint64:
 		ldc r2, 32
 		mov r0, r5
 	}
-	.loc	2 372 4
+	.loc	2 374 4
 	{
 		mov r1, r4
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 372 4
+	.loc	2 374 4
 	{
 		eq r0, r0, 0
 		nop
@@ -1943,14 +1943,14 @@ FLAC__bitwriter_write_raw_uint64:
 	bu .LBB15_9
 .Ltmp228:
 .LBB15_5:
-	.loc	2 351 5
+	.loc	2 353 5
 	{
 		shr r0, r3, 5
 		nop
 	}
 	bt r0, .LBB15_8
 .Ltmp229:
-	.loc	2 375 10
+	.loc	2 377 10
 	{
 		shr r0, r4, r3
 		nop
@@ -1964,7 +1964,7 @@ FLAC__bitwriter_write_raw_uint64:
 	bu .LBB15_9
 .LBB15_8:
 .Ltmp231:
-	.loc	2 354 9
+	.loc	2 356 9
 	{
 		mov r0, r5
 		mov r1, r4
@@ -1981,7 +1981,7 @@ FLAC__bitwriter_write_raw_uint64:
 	}
 .Ltmp233:
 .LBB15_9:
-	.loc	2 376 1
+	.loc	2 378 1
 	{
 		mov r0, r6
 		ldw r6, sp[4]
@@ -2013,7 +2013,7 @@ FLAC__bitwriter_write_raw_uint64:
 	.cc_top FLAC__bitwriter_write_raw_int64.function,FLAC__bitwriter_write_raw_int64
 FLAC__bitwriter_write_raw_int64:
 .Lfunc_begin16:
-	.loc	2 379 0
+	.loc	2 381 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2045,7 +2045,7 @@ FLAC__bitwriter_write_raw_int64:
 		mov r5, r0
 	}
 .Ltmp244:
-	.loc	2 382 5 prologue_end
+	.loc	2 384 5 prologue_end
 	{
 		shr r0, r6, 6
 		nop
@@ -2056,37 +2056,37 @@ FLAC__bitwriter_write_raw_int64:
 		mkmsk r0, 32
 		nop
 	}
-	.loc	2 383 3
+	.loc	2 385 3
 	{
 		mov r1, r0
 		mov r2, r6
 	}
 	bl __ashldi3
 .Ltmp246:
-	.loc	2 383 3
+	.loc	2 385 3
 	{
 		andnot r4, r0
 		ldc r0, 33
 	}
 .Ltmp247:
-	.loc	2 369 5
+	.loc	2 371 5
 	{
 		lsu r0, r6, r0
 		nop
 	}
 	bt r0, .LBB16_7
 .Ltmp248:
-	.loc	2 383 3
+	.loc	2 385 3
 	{
 		andnot r7, r1
 		nop
 	}
 .Ltmp249:
 .LBB16_3:
-	.loc	2 371 4
+	.loc	2 373 4
 	ldaw r2, r6[-8]
 .Ltmp250:
-	.loc	2 351 5
+	.loc	2 353 5
 	{
 		shr r0, r2, 5
 		ldc r6, 0
@@ -2094,7 +2094,7 @@ FLAC__bitwriter_write_raw_int64:
 .Ltmp251:
 	bt r0, .LBB16_5
 .Ltmp252:
-	.loc	2 371 4
+	.loc	2 373 4
 	{
 		shr r0, r7, r2
 		nop
@@ -2102,7 +2102,7 @@ FLAC__bitwriter_write_raw_int64:
 	bt r0, .LBB16_11
 .Ltmp253:
 .LBB16_5:
-	.loc	2 354 9
+	.loc	2 356 9
 	{
 		mov r0, r5
 		mov r1, r7
@@ -2115,13 +2115,13 @@ FLAC__bitwriter_write_raw_int64:
 		ldc r2, 32
 		mov r0, r5
 	}
-	.loc	2 372 4
+	.loc	2 374 4
 	{
 		mov r1, r4
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 372 4
+	.loc	2 374 4
 	{
 		eq r0, r0, 0
 		nop
@@ -2133,14 +2133,14 @@ FLAC__bitwriter_write_raw_int64:
 	bu .LBB16_11
 .Ltmp256:
 .LBB16_7:
-	.loc	2 351 5
+	.loc	2 353 5
 	{
 		shr r0, r6, 5
 		nop
 	}
 	bt r0, .LBB16_10
 .Ltmp257:
-	.loc	2 375 10
+	.loc	2 377 10
 	{
 		shr r0, r4, r6
 		nop
@@ -2154,7 +2154,7 @@ FLAC__bitwriter_write_raw_int64:
 	bu .LBB16_11
 .LBB16_10:
 .Ltmp259:
-	.loc	2 354 9
+	.loc	2 356 9
 	{
 		mov r0, r5
 		mov r1, r4
@@ -2170,7 +2170,7 @@ FLAC__bitwriter_write_raw_int64:
 	}
 .Ltmp260:
 .LBB16_11:
-	.loc	2 384 9
+	.loc	2 386 9
 	{
 		mov r0, r6
 		nop
@@ -2203,7 +2203,7 @@ FLAC__bitwriter_write_raw_int64:
 	.cc_top FLAC__bitwriter_write_raw_uint32_little_endian.function,FLAC__bitwriter_write_raw_uint32_little_endian
 FLAC__bitwriter_write_raw_uint32_little_endian:
 .Lfunc_begin17:
-	.loc	2 388 0
+	.loc	2 390 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2236,7 +2236,7 @@ FLAC__bitwriter_write_raw_uint32_little_endian:
 		ldc r2, 8
 		nop
 	}
-	.loc	2 391 6 prologue_end
+	.loc	2 393 6 prologue_end
 .Ltmp271:
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
 	{
@@ -2245,17 +2245,17 @@ FLAC__bitwriter_write_raw_uint32_little_endian:
 	}
 	bf r0, .LBB17_4
 .Ltmp272:
-	.loc	2 393 6
+	.loc	2 395 6
 	{
 		shr r1, r5, 8
 		nop
 	}
-	.loc	2 393 6
+	.loc	2 395 6
 	{
 		zext r1, 8
 		ldc r2, 8
 	}
-	.loc	2 393 6
+	.loc	2 395 6
 	{
 		mov r0, r4
 		nop
@@ -2263,17 +2263,17 @@ FLAC__bitwriter_write_raw_uint32_little_endian:
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
 	bf r0, .LBB17_4
 .Ltmp273:
-	.loc	2 395 6
+	.loc	2 397 6
 	{
 		shr r1, r5, 16
 		nop
 	}
-	.loc	2 395 6
+	.loc	2 397 6
 	{
 		zext r1, 8
 		ldc r2, 8
 	}
-	.loc	2 395 6
+	.loc	2 397 6
 	{
 		mov r0, r4
 		nop
@@ -2281,18 +2281,18 @@ FLAC__bitwriter_write_raw_uint32_little_endian:
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
 	bf r0, .LBB17_4
 .Ltmp274:
-	.loc	2 397 6
+	.loc	2 399 6
 	{
 		shr r1, r5, 24
 		ldc r2, 8
 	}
-	.loc	2 397 6
+	.loc	2 399 6
 	{
 		mov r0, r4
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 398 3
+	.loc	2 400 3
 	{
 		eq r0, r0, 0
 		nop
@@ -2303,7 +2303,7 @@ FLAC__bitwriter_write_raw_uint32_little_endian:
 	}
 .Ltmp275:
 .LBB17_4:
-	.loc	2 401 1
+	.loc	2 403 1
 	{
 		mov r0, r6
 		ldw r6, sp[4]
@@ -2335,7 +2335,7 @@ FLAC__bitwriter_write_raw_uint32_little_endian:
 	.cc_top FLAC__bitwriter_write_byte_block.function,FLAC__bitwriter_write_byte_block
 FLAC__bitwriter_write_byte_block:
 .Lfunc_begin18:
-	.loc	2 404 0
+	.loc	2 406 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2378,57 +2378,57 @@ FLAC__bitwriter_write_byte_block:
 		nop
 		ldw r0, r6[2]
 	}
-	.loc	2 408 5 prologue_end
+	.loc	2 410 5 prologue_end
 .Ltmp290:
 	{
 		shr r2, r4, 2
 		ldw r1, r6[3]
 	}
-	.loc	2 408 5
+	.loc	2 410 5
 	{
 		add r2, r2, r1
 		nop
 	}
-	.loc	2 408 5
+	.loc	2 410 5
 	{
 		add r2, r2, 1
 		nop
 	}
-	.loc	2 408 5
+	.loc	2 410 5
 	{
 		lsu r2, r2, r0
 		nop
 	}
 	bt r2, .LBB18_11
 .Ltmp291:
-	.loc	2 408 75
+	.loc	2 410 75
 	{
 		shl r2, r4, 3
 		ldw r3, r6[4]
 	}
 .Ltmp292:
-	.loc	2 113 2
+	.loc	2 115 2
 	{
 		add r2, r2, r3
 		mkmsk r3, 5
 	}
-	.loc	2 113 2
+	.loc	2 115 2
 	{
 		add r2, r2, r3
 		nop
 	}
-	.loc	2 113 2
+	.loc	2 115 2
 	{
 		shr r2, r2, 5
 		nop
 	}
-	.loc	2 113 2
+	.loc	2 115 2
 	{
 		add r8, r2, r1
 		nop
 	}
 .Ltmp293:
-	.loc	2 118 5
+	.loc	2 120 5
 	{
 		lsu r1, r0, r8
 		nop
@@ -2436,36 +2436,36 @@ FLAC__bitwriter_write_byte_block:
 .Ltmp294:
 	bf r1, .LBB18_11
 .Ltmp295:
-	.loc	2 121 5
+	.loc	2 123 5
 	{
 		shl r1, r8, 2
 		nop
 	}
-	.loc	2 121 5
+	.loc	2 123 5
 	ldw r2, cp[FLAC__STREAM_METADATA_LENGTH_LEN]
 	{
 		mkmsk r3, 1
 		nop
 	}
-	.loc	2 121 5
+	.loc	2 123 5
 	{
 		shl r2, r3, r2
 		nop
 	}
-	.loc	2 121 5
+	.loc	2 123 5
 	{
 		lsu r1, r2, r1
 		ldc r7, 0
 	}
 	bt r1, .LBB18_16
 .Ltmp296:
-	.loc	2 129 5
+	.loc	2 131 5
 	{
 		sub r0, r8, r0
 		nop
 	}
 	ldc r1, 1023
-	.loc	2 129 5
+	.loc	2 131 5
 	{
 		and r0, r0, r1
 		nop
@@ -2473,12 +2473,12 @@ FLAC__bitwriter_write_byte_block:
 	bf r0, .LBB18_5
 .Ltmp297:
 	ldc r1, 1024
-	.loc	2 130 3
+	.loc	2 132 3
 	{
 		add r1, r8, r1
 		nop
 	}
-	.loc	2 130 3
+	.loc	2 132 3
 	{
 		sub r8, r1, r0
 		nop
@@ -2556,27 +2556,27 @@ FLAC__bitwriter_write_byte_block:
 	}
 .Ltmp309:
 .LBB18_14:
-	.loc	2 413 7
+	.loc	2 415 7
 	{
 		mov r0, r6
 		ld8u r1, r5[r9]
 	}
-	.loc	2 413 7
+	.loc	2 415 7
 	{
 		mov r2, r8
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 413 7
+	.loc	2 415 7
 	bf r0, .LBB18_15
 .Ltmp310:
-	.loc	2 412 24
+	.loc	2 414 24
 	{
 		add r9, r9, 1
 		nop
 	}
 .Ltmp311:
-	.loc	2 412 2
+	.loc	2 414 2
 	{
 		lsu r0, r9, r4
 		nop
@@ -2590,7 +2590,7 @@ FLAC__bitwriter_write_byte_block:
 		nop
 	}
 .LBB18_16:
-	.loc	2 418 1
+	.loc	2 420 1
 	{
 		mov r0, r7
 		ldw r10, sp[8]
@@ -2624,7 +2624,7 @@ FLAC__bitwriter_write_byte_block:
 	.cc_top FLAC__bitwriter_write_unary_unsigned.function,FLAC__bitwriter_write_unary_unsigned
 FLAC__bitwriter_write_unary_unsigned:
 .Lfunc_begin19:
-	.loc	2 421 0
+	.loc	2 423 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2643,20 +2643,20 @@ FLAC__bitwriter_write_unary_unsigned:
 		stw r4, sp[2]
 	}
 .Ltmp319:
-	.loc	2 422 5 prologue_end
+	.loc	2 424 5 prologue_end
 	{
 		shr r0, r1, 5
 		nop
 	}
 	bt r0, .LBB19_2
 .Ltmp320:
-	.loc	2 423 10
+	.loc	2 425 10
 	{
 		add r2, r1, 1
 		mkmsk r1, 1
 	}
 .Ltmp321:
-	.loc	2 423 10
+	.loc	2 425 10
 	{
 		mov r0, r4
 		nop
@@ -2665,27 +2665,27 @@ FLAC__bitwriter_write_unary_unsigned:
 	bu .LBB19_5
 .Ltmp322:
 .LBB19_2:
-	.loc	2 426 4
+	.loc	2 428 4
 	{
 		mov r0, r4
 		nop
 	}
 	bl FLAC__bitwriter_write_zeroes
 .Ltmp323:
-	.loc	2 426 4
+	.loc	2 428 4
 	bf r0, .LBB19_3
 .Ltmp324:
 	{
 		mkmsk r1, 1
 		mov r0, r4
 	}
-	.loc	2 427 4
+	.loc	2 429 4
 	{
 		mov r2, r1
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 427 4
+	.loc	2 429 4
 	{
 		eq r0, r0, 0
 		nop
@@ -2710,7 +2710,7 @@ FLAC__bitwriter_write_unary_unsigned:
 		nop
 		retsp 4
 	}
-	.loc	2 428 1
+	.loc	2 430 1
 	# RETURN_REG_HOLDER
 .Ltmp326:
 	.cc_bottom FLAC__bitwriter_write_unary_unsigned.function
@@ -2742,7 +2742,7 @@ FLAC__bitwriter_write_unary_unsigned:
 	.cc_top FLAC__bitwriter_write_rice_signed_block.function,FLAC__bitwriter_write_rice_signed_block
 FLAC__bitwriter_write_rice_signed_block:
 .Lfunc_begin20:
-	.loc	2 537 0
+	.loc	2 539 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2791,7 +2791,7 @@ FLAC__bitwriter_write_rice_signed_block:
 		mkmsk r1, 32
 		nop
 	}
-	.loc	2 538 2 prologue_end
+	.loc	2 540 2 prologue_end
 .Ltmp341:
 	{
 		shl r0, r1, r3
@@ -2802,18 +2802,18 @@ FLAC__bitwriter_write_rice_signed_block:
 		mkmsk r0, 5
 		stw r0, sp[5]
 	}
-	.loc	2 539 2
+	.loc	2 541 2
 	{
 		sub r0, r0, r3
 		nop
 	}
-	.loc	2 539 2
+	.loc	2 541 2
 	{
 		shr r0, r1, r0
 		nop
 	}
 .Ltmp343:
-	.loc	2 542 2
+	.loc	2 544 2
 	{
 		add r10, r3, 1
 		stw r0, sp[4]
@@ -2823,14 +2823,14 @@ FLAC__bitwriter_write_rice_signed_block:
 		nop
 		stw r10, sp[2]
 	}
-	.loc	2 121 5
+	.loc	2 123 5
 .Ltmp345:
 	ldw r0, cp[FLAC__STREAM_METADATA_LENGTH_LEN]
 	{
 		mkmsk r1, 1
 		nop
 	}
-	.loc	2 121 5
+	.loc	2 123 5
 	{
 		shl r0, r1, r0
 		nop
@@ -2846,24 +2846,24 @@ FLAC__bitwriter_write_rice_signed_block:
 		ldw r0, r6[0]
 	}
 .Ltmp347:
-	.loc	2 554 3
+	.loc	2 556 3
 	{
 		shl r1, r0, 1
 		nop
 	}
 .Ltmp348:
-	.loc	2 555 3
+	.loc	2 557 3
 	ashr r0, r0, 32
-	.loc	2 555 3
+	.loc	2 557 3
 	xor r9, r1, r0
 .Ltmp349:
-	.loc	2 557 3
+	.loc	2 559 3
 	{
 		shr r4, r9, r3
 		nop
 	}
 .Ltmp350:
-	.loc	2 558 3
+	.loc	2 560 3
 	{
 		add r0, r4, r10
 		ldw r2, r7[4]
@@ -2871,12 +2871,12 @@ FLAC__bitwriter_write_rice_signed_block:
 .Ltmp351:
 	bf r2, .LBB20_5
 .Ltmp352:
-	.loc	2 560 6
+	.loc	2 562 6
 	{
 		add r1, r0, r2
 		nop
 	}
-	.loc	2 560 6
+	.loc	2 562 6
 	{
 		shr r11, r1, 5
 		nop
@@ -2892,24 +2892,24 @@ FLAC__bitwriter_write_rice_signed_block:
 		ldw r1, sp[5]
 	}
 .Ltmp354:
-	.loc	2 563 4
+	.loc	2 565 4
 	{
 		or r1, r9, r1
 		ldw r2, sp[4]
 	}
 .Ltmp355:
-	.loc	2 564 4
+	.loc	2 566 4
 	{
 		and r1, r1, r2
 		ldw r2, r7[1]
 	}
-	.loc	2 565 4
+	.loc	2 567 4
 	{
 		shl r0, r2, r0
 		nop
 	}
 .Ltmp356:
-	.loc	2 566 4
+	.loc	2 568 4
 	{
 		or r0, r0, r1
 		nop
@@ -2929,77 +2929,77 @@ FLAC__bitwriter_write_rice_signed_block:
 		nop
 		ldw r3, r7[3]
 	}
-	.loc	2 571 7
+	.loc	2 573 7
 .Ltmp358:
 	{
 		add r11, r4, r3
 		nop
 	}
-	.loc	2 571 7
+	.loc	2 573 7
 	{
 		add r11, r11, r2
 		nop
 	}
-	.loc	2 571 7
+	.loc	2 573 7
 	{
 		add r11, r11, 1
 		nop
 	}
-	.loc	2 571 7
+	.loc	2 573 7
 	{
 		lsu r11, r11, r1
 		nop
 	}
 	bt r11, .LBB20_16
 .Ltmp359:
-	.loc	2 113 2
+	.loc	2 115 2
 	{
 		add r0, r0, r2
 		mkmsk r2, 5
 	}
 .Ltmp360:
-	.loc	2 113 2
+	.loc	2 115 2
 	{
 		add r0, r0, r2
 		nop
 	}
-	.loc	2 113 2
+	.loc	2 115 2
 	{
 		shr r0, r0, 5
 		nop
 	}
-	.loc	2 113 2
+	.loc	2 115 2
 	{
 		add r10, r0, r3
 		nop
 	}
 .Ltmp361:
-	.loc	2 118 5
+	.loc	2 120 5
 	{
 		lsu r0, r1, r10
 		nop
 	}
 	bf r0, .LBB20_16
 .Ltmp362:
-	.loc	2 121 5
+	.loc	2 123 5
 	{
 		shl r0, r10, 2
 		ldw r2, sp[1]
 	}
-	.loc	2 121 5
+	.loc	2 123 5
 	{
 		lsu r0, r2, r0
 		nop
 	}
 	bt r0, .LBB20_33
 .Ltmp363:
-	.loc	2 129 5
+	.loc	2 131 5
 	{
 		sub r0, r10, r1
 		nop
 	}
 	ldc r1, 1023
-	.loc	2 129 5
+	.loc	2 131 5
 	{
 		and r0, r0, r1
 		nop
@@ -3007,12 +3007,12 @@ FLAC__bitwriter_write_rice_signed_block:
 	bf r0, .LBB20_10
 .Ltmp364:
 	ldc r1, 1024
-	.loc	2 130 3
+	.loc	2 132 3
 	{
 		add r1, r10, r1
 		nop
 	}
-	.loc	2 130 3
+	.loc	2 132 3
 	{
 		sub r10, r1, r0
 		nop
@@ -3093,25 +3093,25 @@ FLAC__bitwriter_write_rice_signed_block:
 		nop
 	}
 .Ltmp378:
-	.loc	2 577 6
+	.loc	2 579 6
 	{
 		sub r1, r1, r0
 		ldw r2, r7[1]
 	}
 .Ltmp379:
-	.loc	2 578 9
+	.loc	2 580 9
 	{
 		lsu r3, r4, r1
 		nop
 	}
 	bf r3, .LBB20_20
 .Ltmp380:
-	.loc	2 579 7
+	.loc	2 581 7
 	{
 		shl r1, r2, r4
 		nop
 	}
-	.loc	2 579 7
+	.loc	2 581 7
 	{
 		add r0, r0, r4
 		stw r1, r7[1]
@@ -3123,24 +3123,24 @@ FLAC__bitwriter_write_rice_signed_block:
 	bu .LBB20_27
 .Ltmp381:
 .LBB20_20:
-	.loc	2 584 7
+	.loc	2 586 7
 	{
 		shl r0, r2, r1
 		nop
 	}
-	.loc	2 584 7
+	.loc	2 586 7
 	{
 		sub r4, r4, r1
 		stw r0, r7[1]
 	}
 .Ltmp382:
-	.loc	2 586 7
+	.loc	2 588 7
 	{
 		byterev r0, r0
 		ldw r1, r7[3]
 	}
 .Ltmp383:
-	.loc	2 586 7
+	.loc	2 588 7
 	{
 		add r2, r1, 1
 		nop
@@ -3153,7 +3153,7 @@ FLAC__bitwriter_write_rice_signed_block:
 		nop
 		ldw r2, r7[0]
 	}
-	.loc	2 586 7
+	.loc	2 588 7
 	stw r0, r2[r1]
 	{
 		nop
@@ -3161,14 +3161,14 @@ FLAC__bitwriter_write_rice_signed_block:
 	}
 .Ltmp384:
 .LBB20_21:
-	.loc	2 591 5
+	.loc	2 593 5
 	{
 		shr r0, r4, 5
 		nop
 	}
 	bf r0, .LBB20_25
 .Ltmp385:
-	.loc	2 592 6
+	.loc	2 594 6
 	{
 		mov r1, r4
 		ldw r0, r7[0]
@@ -3179,7 +3179,7 @@ FLAC__bitwriter_write_rice_signed_block:
 		nop
 		ldw r2, r7[3]
 	}
-	.loc	2 592 6
+	.loc	2 594 6
 	{
 		add r3, r2, 1
 		nop
@@ -3188,20 +3188,20 @@ FLAC__bitwriter_write_rice_signed_block:
 		nop
 		stw r3, r7[3]
 	}
-	.loc	2 592 6
+	.loc	2 594 6
 	stw r8, r0[r2]
-	.loc	2 593 6
+	.loc	2 595 6
 	ldaw r1, r1[-8]
 .Ltmp387:
-	.loc	2 591 5
+	.loc	2 593 5
 	{
 		shr r2, r1, 5
 		nop
 	}
-	.loc	2 591 5
+	.loc	2 593 5
 	bt r2, .LBB20_23
 .Ltmp388:
-	.loc	2 591 5
+	.loc	2 593 5
 	{
 		zext r4, 5
 		nop
@@ -3225,13 +3225,13 @@ FLAC__bitwriter_write_rice_signed_block:
 		ldw r0, sp[5]
 	}
 .Ltmp392:
-	.loc	2 602 4
+	.loc	2 604 4
 	{
 		or r0, r9, r0
 		ldw r1, sp[4]
 	}
 .Ltmp393:
-	.loc	2 603 4
+	.loc	2 605 4
 	{
 		and r0, r0, r1
 		ldw r1, r7[4]
@@ -3241,31 +3241,31 @@ FLAC__bitwriter_write_rice_signed_block:
 		nop
 	}
 .Ltmp394:
-	.loc	2 605 4
+	.loc	2 607 4
 	{
 		sub r2, r2, r1
 		ldw r3, r7[1]
 	}
 .Ltmp395:
-	.loc	2 606 7
+	.loc	2 608 7
 	{
 		lsu r11, r10, r2
 		nop
 	}
 	bf r11, .LBB20_29
 .Ltmp396:
-	.loc	2 607 5
+	.loc	2 609 5
 	{
 		shl r2, r3, r10
 		nop
 	}
-	.loc	2 608 5
+	.loc	2 610 5
 	{
 		or r0, r2, r0
 		nop
 	}
 .Ltmp397:
-	.loc	2 608 5
+	.loc	2 610 5
 	{
 		add r0, r1, r10
 		stw r0, r7[1]
@@ -3277,55 +3277,55 @@ FLAC__bitwriter_write_rice_signed_block:
 	bu .LBB20_30
 .Ltmp398:
 .LBB20_29:
-	.loc	2 618 5
+	.loc	2 620 5
 	{
 		shl r1, r3, r2
 		sub r2, r10, r2
 	}
 .Ltmp399:
-	.loc	2 619 5
+	.loc	2 621 5
 	{
 		shr r2, r0, r2
 		stw r2, r7[4]
 	}
-	.loc	2 619 5
+	.loc	2 621 5
 	{
 		or r1, r1, r2
 		nop
 	}
-	.loc	2 620 5
+	.loc	2 622 5
 	{
 		shr r2, r1, 24
 		shr r3, r1, 8
 	}
 	ldc r11, 65280
-	.loc	2 620 5
+	.loc	2 622 5
 	{
 		and r3, r3, r11
 		shl r11, r1, 8
 	}
 	ldw r4, cp[.LCPI20_0]
-	.loc	2 620 5
+	.loc	2 622 5
 	{
 		and r11, r11, r4
 		shl r1, r1, 24
 	}
-	.loc	2 620 5
+	.loc	2 622 5
 	{
 		or r1, r1, r2
 		nop
 	}
-	.loc	2 620 5
+	.loc	2 622 5
 	{
 		or r1, r1, r3
 		nop
 	}
-	.loc	2 620 5
+	.loc	2 622 5
 	{
 		or r1, r1, r11
 		ldw r2, r7[3]
 	}
-	.loc	2 620 5
+	.loc	2 622 5
 	{
 		add r3, r2, 1
 		nop
@@ -3338,7 +3338,7 @@ FLAC__bitwriter_write_rice_signed_block:
 		nop
 		ldw r3, r7[0]
 	}
-	.loc	2 620 5
+	.loc	2 622 5
 	stw r1, r3[r2]
 	{
 		nop
@@ -3352,7 +3352,7 @@ FLAC__bitwriter_write_rice_signed_block:
 	}
 .Ltmp401:
 .LBB20_31:
-	.loc	2 624 3
+	.loc	2 626 3
 	{
 		add r6, r6, 4
 		sub r5, r5, 1
@@ -3366,7 +3366,7 @@ FLAC__bitwriter_write_rice_signed_block:
 		nop
 	}
 .LBB20_33:
-	.loc	2 628 1
+	.loc	2 630 1
 	{
 		mov r0, r8
 		ldw r10, sp[12]
@@ -3400,7 +3400,7 @@ FLAC__bitwriter_write_rice_signed_block:
 	.cc_top FLAC__bitwriter_write_utf8_uint32.function,FLAC__bitwriter_write_utf8_uint32
 FLAC__bitwriter_write_utf8_uint32:
 .Lfunc_begin21:
-	.loc	2 755 0
+	.loc	2 757 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -3434,11 +3434,11 @@ FLAC__bitwriter_write_utf8_uint32:
 		nop
 	}
 .Ltmp415:
-	.loc	2 761 5 prologue_end
+	.loc	2 763 5 prologue_end
 	ashr r0, r5, 32
 	bt r0, .LBB21_1
 .Ltmp416:
-	.loc	2 764 5
+	.loc	2 766 5
 	{
 		shr r0, r5, 7
 		nop
@@ -3449,7 +3449,7 @@ FLAC__bitwriter_write_utf8_uint32:
 		ldc r2, 8
 		mov r0, r4
 	}
-	.loc	2 765 10
+	.loc	2 767 10
 .Ltmp418:
 	{
 		mov r1, r5
@@ -3470,7 +3470,7 @@ FLAC__bitwriter_write_utf8_uint32:
 		ldc r0, 11
 		nop
 	}
-	.loc	2 767 10
+	.loc	2 769 10
 .Ltmp421:
 	{
 		shr r0, r5, r0
@@ -3478,18 +3478,18 @@ FLAC__bitwriter_write_utf8_uint32:
 	}
 	bt r0, .LBB21_6
 .Ltmp422:
-	.loc	2 768 9
+	.loc	2 770 9
 	{
 		shr r0, r5, 6
 		nop
 	}
 	ldc r1, 192
-	.loc	2 768 9
+	.loc	2 770 9
 	{
 		or r1, r0, r1
 		ldc r6, 8
 	}
-	.loc	2 768 9
+	.loc	2 770 9
 	{
 		mov r0, r4
 		mov r2, r6
@@ -3501,7 +3501,7 @@ FLAC__bitwriter_write_utf8_uint32:
 	}
 .Ltmp423:
 	ldc r0, 128
-	.loc	2 769 9
+	.loc	2 771 9
 	{
 		or r1, r5, r0
 		nop
@@ -3509,7 +3509,7 @@ FLAC__bitwriter_write_utf8_uint32:
 	bu .LBB21_16
 .Ltmp424:
 .LBB21_6:
-	.loc	2 771 10
+	.loc	2 773 10
 	{
 		shr r0, r5, 16
 		nop
@@ -3520,19 +3520,19 @@ FLAC__bitwriter_write_utf8_uint32:
 		ldc r0, 12
 		nop
 	}
-	.loc	2 772 9
+	.loc	2 774 9
 .Ltmp426:
 	{
 		shr r0, r5, r0
 		nop
 	}
 	ldc r1, 224
-	.loc	2 772 9
+	.loc	2 774 9
 	{
 		or r1, r0, r1
 		ldc r6, 8
 	}
-	.loc	2 772 9
+	.loc	2 774 9
 	{
 		mov r0, r4
 		mov r2, r6
@@ -3542,7 +3542,7 @@ FLAC__bitwriter_write_utf8_uint32:
 		mov r7, r0
 		shr r0, r5, 6
 	}
-	.loc	2 773 9
+	.loc	2 775 9
 	{
 		zext r0, 6
 		nop
@@ -3555,7 +3555,7 @@ FLAC__bitwriter_write_utf8_uint32:
 		ldc r0, 21
 		nop
 	}
-	.loc	2 776 10
+	.loc	2 778 10
 .Ltmp428:
 	{
 		shr r0, r5, r0
@@ -3567,19 +3567,19 @@ FLAC__bitwriter_write_utf8_uint32:
 		ldc r0, 18
 		nop
 	}
-	.loc	2 777 9
+	.loc	2 779 9
 .Ltmp430:
 	{
 		shr r0, r5, r0
 		nop
 	}
 	ldc r1, 240
-	.loc	2 777 9
+	.loc	2 779 9
 	{
 		or r1, r0, r1
 		ldc r6, 8
 	}
-	.loc	2 777 9
+	.loc	2 779 9
 	{
 		mov r0, r4
 		mov r2, r6
@@ -3589,12 +3589,12 @@ FLAC__bitwriter_write_utf8_uint32:
 		mov r7, r0
 		ldc r0, 12
 	}
-	.loc	2 778 9
+	.loc	2 780 9
 	{
 		shr r0, r5, r0
 		nop
 	}
-	.loc	2 778 9
+	.loc	2 780 9
 	{
 		zext r0, 6
 		nop
@@ -3607,7 +3607,7 @@ FLAC__bitwriter_write_utf8_uint32:
 		ldc r0, 26
 		nop
 	}
-	.loc	2 782 10
+	.loc	2 784 10
 .Ltmp432:
 	{
 		shr r0, r5, r0
@@ -3615,18 +3615,18 @@ FLAC__bitwriter_write_utf8_uint32:
 	}
 	bt r0, .LBB21_12
 .Ltmp433:
-	.loc	2 783 9
+	.loc	2 785 9
 	{
 		shr r0, r5, 24
 		nop
 	}
 	ldc r1, 248
-	.loc	2 783 9
+	.loc	2 785 9
 	{
 		or r1, r0, r1
 		ldc r6, 8
 	}
-	.loc	2 783 9
+	.loc	2 785 9
 	{
 		mov r0, r4
 		mov r2, r6
@@ -3636,12 +3636,12 @@ FLAC__bitwriter_write_utf8_uint32:
 		mov r7, r0
 		ldc r0, 18
 	}
-	.loc	2 784 9
+	.loc	2 786 9
 	{
 		shr r0, r5, r0
 		nop
 	}
-	.loc	2 784 9
+	.loc	2 786 9
 	{
 		zext r0, 6
 		nop
@@ -3654,19 +3654,19 @@ FLAC__bitwriter_write_utf8_uint32:
 		ldc r0, 30
 		nop
 	}
-	.loc	2 790 9
+	.loc	2 792 9
 .Ltmp435:
 	{
 		shr r0, r5, r0
 		nop
 	}
 	ldc r1, 252
-	.loc	2 790 9
+	.loc	2 792 9
 	{
 		or r1, r0, r1
 		ldc r6, 8
 	}
-	.loc	2 790 9
+	.loc	2 792 9
 	{
 		mov r0, r4
 		mov r2, r6
@@ -3676,123 +3676,123 @@ FLAC__bitwriter_write_utf8_uint32:
 		mov r7, r0
 		shr r0, r5, 24
 	}
-	.loc	2 791 9
+	.loc	2 793 9
 	{
 		zext r0, 6
 		nop
 	}
 	ldc r8, 128
-	.loc	2 791 9
+	.loc	2 793 9
 	{
 		or r1, r0, r8
 		mov r0, r4
 	}
-	.loc	2 791 9
+	.loc	2 793 9
 	{
 		mov r2, r6
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 790 9
+	.loc	2 792 9
 	{
 		and r7, r7, r0
 		ldc r0, 18
 	}
-	.loc	2 792 9
+	.loc	2 794 9
 	{
 		shr r0, r5, r0
 		nop
 	}
-	.loc	2 792 9
+	.loc	2 794 9
 	{
 		zext r0, 6
 		nop
 	}
 .Ltmp436:
 .LBB21_13:
-	.loc	2 792 9
+	.loc	2 794 9
 	{
 		or r1, r0, r8
 		mov r0, r4
 	}
-	.loc	2 792 9
+	.loc	2 794 9
 	{
 		mov r2, r6
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 791 9
+	.loc	2 793 9
 	{
 		and r7, r7, r0
 		ldc r0, 12
 	}
-	.loc	2 793 9
+	.loc	2 795 9
 	{
 		shr r0, r5, r0
 		nop
 	}
-	.loc	2 793 9
+	.loc	2 795 9
 	{
 		zext r0, 6
 		nop
 	}
 .LBB21_14:
-	.loc	2 793 9
+	.loc	2 795 9
 	{
 		or r1, r0, r8
 		mov r0, r4
 	}
-	.loc	2 793 9
+	.loc	2 795 9
 	{
 		mov r2, r6
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 792 9
+	.loc	2 794 9
 	{
 		and r7, r7, r0
 		shr r0, r5, 6
 	}
-	.loc	2 794 9
+	.loc	2 796 9
 	{
 		zext r0, 6
 		nop
 	}
 .LBB21_15:
-	.loc	2 794 9
+	.loc	2 796 9
 	{
 		or r1, r0, r8
 		mov r0, r4
 	}
-	.loc	2 794 9
+	.loc	2 796 9
 	{
 		mov r2, r6
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 793 9
+	.loc	2 795 9
 	{
 		and r7, r7, r0
 		zext r5, 6
 	}
-	.loc	2 795 9
+	.loc	2 797 9
 	{
 		or r1, r5, r8
 		nop
 	}
 .LBB21_16:
-	.loc	2 795 9
+	.loc	2 797 9
 	{
 		mov r0, r4
 		mov r2, r6
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 794 9
+	.loc	2 796 9
 	{
 		and r0, r7, r0
 		nop
 	}
-	.loc	2 795 9
+	.loc	2 797 9
 	{
 		zext r0, 1
 		nop
@@ -3803,7 +3803,7 @@ FLAC__bitwriter_write_utf8_uint32:
 		nop
 		ldw r8, sp[6]
 	}
-	.loc	2 799 1
+	.loc	2 801 1
 	ldd r7, r6, sp[2]
 	ldd r5, r4, sp[1]
 	{
@@ -3832,7 +3832,7 @@ FLAC__bitwriter_write_utf8_uint32:
 	.cc_top FLAC__bitwriter_write_utf8_uint64.function,FLAC__bitwriter_write_utf8_uint64
 FLAC__bitwriter_write_utf8_uint64:
 .Lfunc_begin22:
-	.loc	2 802 0
+	.loc	2 804 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -3865,12 +3865,12 @@ FLAC__bitwriter_write_utf8_uint64:
 		mov r4, r0
 	}
 .Ltmp448:
-	.loc	2 808 5 prologue_end
+	.loc	2 810 5 prologue_end
 	{
 		shr r0, r6, 4
 		nop
 	}
-	.loc	2 808 5
+	.loc	2 810 5
 	bf r0, .LBB22_2
 .Ltmp449:
 	{
@@ -3884,7 +3884,7 @@ FLAC__bitwriter_write_utf8_uint64:
 		ldc r0, 25
 		nop
 	}
-	.loc	2 811 5
+	.loc	2 813 5
 .Ltmp451:
 	{
 		shl r0, r6, r0
@@ -3904,7 +3904,7 @@ FLAC__bitwriter_write_utf8_uint64:
 		ldc r2, 8
 		mov r0, r4
 	}
-	.loc	2 812 10
+	.loc	2 814 10
 .Ltmp453:
 	{
 		mov r1, r5
@@ -3918,7 +3918,7 @@ FLAC__bitwriter_write_utf8_uint64:
 		ldc r0, 11
 		nop
 	}
-	.loc	2 814 10
+	.loc	2 816 10
 .Ltmp455:
 	{
 		shr r2, r5, r0
@@ -3942,7 +3942,7 @@ FLAC__bitwriter_write_utf8_uint64:
 		ldc r0, 26
 		nop
 	}
-	.loc	2 815 9
+	.loc	2 817 9
 .Ltmp457:
 	{
 		shl r0, r6, r0
@@ -3953,12 +3953,12 @@ FLAC__bitwriter_write_utf8_uint64:
 		nop
 	}
 	ldc r1, 192
-	.loc	2 815 9
+	.loc	2 817 9
 	{
 		or r1, r0, r1
 		ldc r6, 8
 	}
-	.loc	2 815 9
+	.loc	2 817 9
 	{
 		mov r0, r4
 		mov r2, r6
@@ -3969,7 +3969,7 @@ FLAC__bitwriter_write_utf8_uint64:
 		zext r5, 6
 	}
 	ldc r0, 128
-	.loc	2 816 9
+	.loc	2 818 9
 	{
 		or r1, r5, r0
 		nop
@@ -3977,7 +3977,7 @@ FLAC__bitwriter_write_utf8_uint64:
 	bu .LBB22_15
 .Ltmp458:
 .LBB22_6:
-	.loc	2 818 10
+	.loc	2 820 10
 	{
 		shr r2, r5, 16
 		shl r3, r6, 16
@@ -3996,7 +3996,7 @@ FLAC__bitwriter_write_utf8_uint64:
 		ldc r0, 12
 		nop
 	}
-	.loc	2 819 9
+	.loc	2 821 9
 .Ltmp460:
 	{
 		shr r0, r5, r0
@@ -4011,12 +4011,12 @@ FLAC__bitwriter_write_utf8_uint64:
 		nop
 	}
 	ldc r1, 224
-	.loc	2 819 9
+	.loc	2 821 9
 	{
 		or r1, r0, r1
 		ldc r6, 8
 	}
-	.loc	2 819 9
+	.loc	2 821 9
 	{
 		mov r0, r4
 		mov r2, r6
@@ -4026,7 +4026,7 @@ FLAC__bitwriter_write_utf8_uint64:
 		mov r7, r0
 		shr r0, r5, 6
 	}
-	.loc	2 820 9
+	.loc	2 822 9
 	{
 		zext r0, 6
 		nop
@@ -4035,7 +4035,7 @@ FLAC__bitwriter_write_utf8_uint64:
 	bu .LBB22_14
 .Ltmp461:
 .LBB22_8:
-	.loc	2 823 10
+	.loc	2 825 10
 	{
 		shr r2, r5, r1
 		shl r0, r6, r0
@@ -4054,7 +4054,7 @@ FLAC__bitwriter_write_utf8_uint64:
 		ldc r0, 18
 		nop
 	}
-	.loc	2 824 9
+	.loc	2 826 9
 .Ltmp463:
 	{
 		shr r0, r5, r0
@@ -4069,12 +4069,12 @@ FLAC__bitwriter_write_utf8_uint64:
 		nop
 	}
 	ldc r1, 240
-	.loc	2 824 9
+	.loc	2 826 9
 	{
 		or r1, r0, r1
 		ldc r6, 8
 	}
-	.loc	2 824 9
+	.loc	2 826 9
 	{
 		mov r0, r4
 		mov r2, r6
@@ -4084,12 +4084,12 @@ FLAC__bitwriter_write_utf8_uint64:
 		mov r7, r0
 		ldc r0, 12
 	}
-	.loc	2 825 9
+	.loc	2 827 9
 	{
 		shr r0, r5, r0
 		nop
 	}
-	.loc	2 825 9
+	.loc	2 827 9
 	{
 		zext r0, 6
 		nop
@@ -4102,7 +4102,7 @@ FLAC__bitwriter_write_utf8_uint64:
 		ldc r0, 26
 		nop
 	}
-	.loc	2 829 10
+	.loc	2 831 10
 .Ltmp465:
 	{
 		shr r1, r6, r0
@@ -4122,7 +4122,7 @@ FLAC__bitwriter_write_utf8_uint64:
 	}
 	bt r0, .LBB22_16
 .Ltmp466:
-	.loc	2 830 9
+	.loc	2 832 9
 	{
 		shr r0, r5, 24
 		shl r1, r6, 8
@@ -4132,12 +4132,12 @@ FLAC__bitwriter_write_utf8_uint64:
 		nop
 	}
 	ldc r1, 248
-	.loc	2 830 9
+	.loc	2 832 9
 	{
 		or r1, r0, r1
 		ldc r6, 8
 	}
-	.loc	2 830 9
+	.loc	2 832 9
 	{
 		mov r0, r4
 		mov r2, r6
@@ -4147,12 +4147,12 @@ FLAC__bitwriter_write_utf8_uint64:
 		mov r7, r0
 		ldc r0, 18
 	}
-	.loc	2 831 9
+	.loc	2 833 9
 	{
 		shr r0, r5, r0
 		nop
 	}
-	.loc	2 831 9
+	.loc	2 833 9
 	{
 		zext r0, 6
 		nop
@@ -4165,7 +4165,7 @@ FLAC__bitwriter_write_utf8_uint64:
 		mkmsk r0, 5
 		nop
 	}
-	.loc	2 836 10
+	.loc	2 838 10
 .Ltmp468:
 	{
 		shr r1, r6, r0
@@ -4189,7 +4189,7 @@ FLAC__bitwriter_write_utf8_uint64:
 		ldc r0, 30
 		nop
 	}
-	.loc	2 837 9
+	.loc	2 839 9
 .Ltmp470:
 	{
 		shr r0, r5, r0
@@ -4200,12 +4200,12 @@ FLAC__bitwriter_write_utf8_uint64:
 		nop
 	}
 	ldc r1, 252
-	.loc	2 837 9
+	.loc	2 839 9
 	{
 		or r1, r0, r1
 		ldc r6, 8
 	}
-	.loc	2 837 9
+	.loc	2 839 9
 	{
 		mov r0, r4
 		mov r2, r6
@@ -4215,125 +4215,125 @@ FLAC__bitwriter_write_utf8_uint64:
 		mov r7, r0
 		shr r0, r5, 24
 	}
-	.loc	2 838 9
+	.loc	2 840 9
 	{
 		zext r0, 6
 		nop
 	}
 	ldc r8, 128
-	.loc	2 838 9
+	.loc	2 840 9
 	{
 		or r1, r0, r8
 		mov r0, r4
 	}
-	.loc	2 838 9
+	.loc	2 840 9
 	{
 		mov r2, r6
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 837 9
+	.loc	2 839 9
 	{
 		and r7, r7, r0
 		ldc r0, 18
 	}
-	.loc	2 839 9
+	.loc	2 841 9
 	{
 		shr r0, r5, r0
 		nop
 	}
-	.loc	2 839 9
+	.loc	2 841 9
 	{
 		zext r0, 6
 		nop
 	}
 .Ltmp471:
 .LBB22_12:
-	.loc	2 831 9
+	.loc	2 833 9
 	{
 		or r1, r0, r8
 		mov r0, r4
 	}
-	.loc	2 831 9
+	.loc	2 833 9
 	{
 		mov r2, r6
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 830 9
+	.loc	2 832 9
 	{
 		and r7, r7, r0
 		ldc r0, 12
 	}
-	.loc	2 832 9
+	.loc	2 834 9
 	{
 		shr r0, r5, r0
 		nop
 	}
-	.loc	2 832 9
+	.loc	2 834 9
 	{
 		zext r0, 6
 		nop
 	}
 .LBB22_13:
-	.loc	2 832 9
+	.loc	2 834 9
 	{
 		or r1, r0, r8
 		mov r0, r4
 	}
-	.loc	2 832 9
+	.loc	2 834 9
 	{
 		mov r2, r6
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 831 9
+	.loc	2 833 9
 	{
 		and r7, r7, r0
 		shr r0, r5, 6
 	}
-	.loc	2 833 9
+	.loc	2 835 9
 	{
 		zext r0, 6
 		nop
 	}
 .LBB22_14:
-	.loc	2 833 9
+	.loc	2 835 9
 	{
 		or r1, r0, r8
 		mov r0, r4
 	}
-	.loc	2 833 9
+	.loc	2 835 9
 	{
 		mov r2, r6
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 832 9
+	.loc	2 834 9
 	{
 		and r7, r7, r0
 		zext r5, 6
 	}
-	.loc	2 834 9
+	.loc	2 836 9
 	{
 		or r1, r5, r8
 		nop
 	}
 .LBB22_15:
-	.loc	2 834 9
+	.loc	2 836 9
 	{
 		mov r0, r4
 		mov r2, r6
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 833 9
+	.loc	2 835 9
 	{
 		and r0, r7, r0
 		nop
 	}
 .Ltmp472:
 .LBB22_19:
-	.loc	2 851 9
+	.loc	2 853 9
 	{
 		zext r0, 1
 		nop
@@ -4344,7 +4344,7 @@ FLAC__bitwriter_write_utf8_uint64:
 		nop
 		ldw r8, sp[6]
 	}
-	.loc	2 855 1
+	.loc	2 857 1
 	ldd r7, r6, sp[2]
 	ldd r5, r4, sp[1]
 	{
@@ -4359,7 +4359,7 @@ FLAC__bitwriter_write_utf8_uint64:
 		ldc r7, 8
 		mov r0, r4
 	}
-	.loc	2 845 9
+	.loc	2 847 9
 .Ltmp475:
 	{
 		mov r2, r7
@@ -4370,7 +4370,7 @@ FLAC__bitwriter_write_utf8_uint64:
 		mov r8, r0
 		ldc r0, 30
 	}
-	.loc	2 846 9
+	.loc	2 848 9
 	{
 		shr r0, r5, r0
 		shl r1, r6, 2
@@ -4379,134 +4379,134 @@ FLAC__bitwriter_write_utf8_uint64:
 		or r0, r0, r1
 		nop
 	}
-	.loc	2 846 9
+	.loc	2 848 9
 	{
 		zext r0, 6
 		nop
 	}
 	ldc r6, 128
-	.loc	2 846 9
+	.loc	2 848 9
 	{
 		or r1, r0, r6
 		mov r0, r4
 	}
-	.loc	2 846 9
+	.loc	2 848 9
 	{
 		mov r2, r7
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 845 9
+	.loc	2 847 9
 	{
 		and r8, r8, r0
 		shr r0, r5, 24
 	}
-	.loc	2 847 9
+	.loc	2 849 9
 	{
 		zext r0, 6
 		nop
 	}
-	.loc	2 847 9
+	.loc	2 849 9
 	{
 		or r1, r0, r6
 		mov r0, r4
 	}
-	.loc	2 847 9
+	.loc	2 849 9
 	{
 		mov r2, r7
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 846 9
+	.loc	2 848 9
 	{
 		and r8, r8, r0
 		ldc r0, 18
 	}
-	.loc	2 848 9
+	.loc	2 850 9
 	{
 		shr r0, r5, r0
 		nop
 	}
-	.loc	2 848 9
+	.loc	2 850 9
 	{
 		zext r0, 6
 		nop
 	}
-	.loc	2 848 9
+	.loc	2 850 9
 	{
 		or r1, r0, r6
 		mov r0, r4
 	}
-	.loc	2 848 9
+	.loc	2 850 9
 	{
 		mov r2, r7
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 847 9
+	.loc	2 849 9
 	{
 		and r8, r8, r0
 		ldc r0, 12
 	}
-	.loc	2 849 9
+	.loc	2 851 9
 	{
 		shr r0, r5, r0
 		nop
 	}
-	.loc	2 849 9
+	.loc	2 851 9
 	{
 		zext r0, 6
 		nop
 	}
-	.loc	2 849 9
+	.loc	2 851 9
 	{
 		or r1, r0, r6
 		mov r0, r4
 	}
-	.loc	2 849 9
+	.loc	2 851 9
 	{
 		mov r2, r7
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 848 9
+	.loc	2 850 9
 	{
 		and r8, r8, r0
 		shr r0, r5, 6
 	}
-	.loc	2 850 9
+	.loc	2 852 9
 	{
 		zext r0, 6
 		nop
 	}
-	.loc	2 850 9
+	.loc	2 852 9
 	{
 		or r1, r0, r6
 		mov r0, r4
 	}
-	.loc	2 850 9
+	.loc	2 852 9
 	{
 		mov r2, r7
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 849 9
+	.loc	2 851 9
 	{
 		and r8, r8, r0
 		zext r5, 6
 	}
-	.loc	2 851 9
+	.loc	2 853 9
 	{
 		or r1, r5, r6
 		mov r0, r4
 	}
-	.loc	2 851 9
+	.loc	2 853 9
 	{
 		mov r2, r7
 		nop
 	}
 	bl FLAC__bitwriter_write_raw_uint32_nocheck
-	.loc	2 850 9
+	.loc	2 852 9
 	{
 		and r0, r8, r0
 		nop
@@ -4533,7 +4533,7 @@ FLAC__bitwriter_write_utf8_uint64:
 	.cc_top FLAC__bitwriter_zero_pad_to_byte_boundary.function,FLAC__bitwriter_zero_pad_to_byte_boundary
 FLAC__bitwriter_zero_pad_to_byte_boundary:
 .Lfunc_begin23:
-	.loc	2 858 0
+	.loc	2 860 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -4548,25 +4548,25 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 		nop
 		ldw r1, r0[4]
 	}
-	.loc	2 860 5 prologue_end
+	.loc	2 862 5 prologue_end
 .Ltmp480:
 	{
 		zext r1, 3
 		nop
 	}
-	.loc	2 860 5
+	.loc	2 862 5
 	bf r1, .LBB23_1
 .Ltmp481:
 	{
 		ldc r2, 8
 		nop
 	}
-	.loc	2 861 10
+	.loc	2 863 10
 	{
 		sub r1, r2, r1
 		nop
 	}
-	.loc	2 861 10
+	.loc	2 863 10
 	bl FLAC__bitwriter_write_zeroes
 .Ltmp482:
 	{
@@ -4574,7 +4574,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 		retsp 2
 	}
 .Ltmp483:
-	.loc	2 864 1
+	.loc	2 866 1
 	# RETURN_REG_HOLDER
 .LBB23_1:
 	{
@@ -4784,7 +4784,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Linfo_string3
 	.long	44
 	.byte	2
-	.byte	85
+	.byte	87
 	.ascii	"\200@"
 	.byte	3
 	.long	49
@@ -4801,7 +4801,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Linfo_string6
 	.long	44
 	.byte	2
-	.byte	87
+	.byte	89
 	.ascii	"\200\b"
 	.byte	4
 	.long	91
@@ -4847,7 +4847,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	154
 	.long	.Linfo_string15
 	.byte	2
-	.byte	55
+	.byte	57
 	.byte	7
 	.long	.Ldebug_ranges0
 	.byte	1
@@ -4855,7 +4855,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string42
 	.byte	2
-	.byte	151
+	.byte	153
 	.byte	1
 	.long	232
 	.byte	1
@@ -4864,20 +4864,20 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	80
 	.long	.Linfo_string17
 	.byte	2
-	.byte	153
+	.byte	155
 	.long	232
 	.byte	0
 	.byte	9
 	.long	.Linfo_string16
 	.byte	2
-	.byte	185
+	.byte	187
 	.byte	1
 	.byte	1
 	.byte	1
 	.byte	10
 	.long	.Linfo_string17
 	.byte	2
-	.byte	185
+	.byte	187
 	.long	232
 	.byte	0
 	.byte	6
@@ -4891,36 +4891,36 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Linfo_string23
 	.byte	20
 	.byte	2
-	.byte	92
+	.byte	94
 	.byte	12
 	.long	.Linfo_string18
 	.long	317
 	.byte	2
-	.byte	93
+	.byte	95
 	.byte	0
 	.byte	12
 	.long	.Linfo_string19
 	.long	165
 	.byte	2
-	.byte	94
+	.byte	96
 	.byte	4
 	.byte	12
 	.long	.Linfo_string20
 	.long	49
 	.byte	2
-	.byte	95
+	.byte	97
 	.byte	8
 	.byte	12
 	.long	.Linfo_string21
 	.long	49
 	.byte	2
-	.byte	96
+	.byte	98
 	.byte	12
 	.byte	12
 	.long	.Linfo_string22
 	.long	49
 	.byte	2
-	.byte	97
+	.byte	99
 	.byte	16
 	.byte	0
 	.byte	6
@@ -4932,20 +4932,20 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string43
 	.byte	2
-	.byte	158
+	.byte	160
 	.byte	1
 	.byte	1
 	.byte	14
 	.long	.Ldebug_loc0
 	.long	.Linfo_string17
 	.byte	2
-	.byte	158
+	.byte	160
 	.long	232
 	.byte	15
 	.long	210
 	.long	.Ldebug_ranges2
 	.byte	2
-	.byte	162
+	.byte	164
 	.byte	16
 	.long	.Ldebug_loc1
 	.long	220
@@ -4968,7 +4968,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string44
 	.byte	2
-	.byte	172
+	.byte	174
 	.byte	1
 	.long	602
 	.byte	1
@@ -4976,7 +4976,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Ldebug_loc3
 	.long	.Linfo_string17
 	.byte	2
-	.byte	172
+	.byte	174
 	.long	232
 	.byte	0
 	.byte	13
@@ -4986,7 +4986,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string45
 	.byte	2
-	.byte	196
+	.byte	198
 	.byte	1
 	.byte	1
 	.byte	18
@@ -4994,7 +4994,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	80
 	.long	.Linfo_string17
 	.byte	2
-	.byte	196
+	.byte	198
 	.long	232
 	.byte	0
 	.byte	7
@@ -5004,7 +5004,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string46
 	.byte	2
-	.byte	201
+	.byte	203
 	.byte	1
 	.long	602
 	.byte	1
@@ -5012,53 +5012,53 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Ldebug_loc4
 	.long	.Linfo_string17
 	.byte	2
-	.byte	201
+	.byte	203
 	.long	232
 	.byte	14
 	.long	.Ldebug_loc5
 	.long	.Linfo_string63
 	.byte	2
-	.byte	201
+	.byte	203
 	.long	2468
 	.byte	19
 	.long	.Ldebug_loc6
 	.long	.Linfo_string18
 	.byte	2
-	.byte	203
+	.byte	205
 	.long	2473
 	.byte	19
 	.long	.Ldebug_loc7
 	.long	.Linfo_string64
 	.byte	2
-	.byte	204
+	.byte	206
 	.long	672
 	.byte	0
 	.byte	20
 	.long	.Linfo_string24
 	.byte	2
-	.byte	104
+	.byte	106
 	.byte	1
 	.long	602
 	.byte	1
 	.byte	10
 	.long	.Linfo_string17
 	.byte	2
-	.byte	104
+	.byte	106
 	.long	232
 	.byte	10
 	.long	.Linfo_string27
 	.byte	2
-	.byte	104
+	.byte	106
 	.long	49
 	.byte	21
 	.long	.Linfo_string28
 	.byte	2
-	.byte	106
+	.byte	108
 	.long	49
 	.byte	21
 	.long	.Linfo_string29
 	.byte	2
-	.byte	107
+	.byte	109
 	.long	317
 	.byte	0
 	.byte	4
@@ -5110,7 +5110,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string50
 	.byte	2
-	.byte	241
+	.byte	243
 	.byte	1
 	.long	602
 	.byte	1
@@ -5118,25 +5118,25 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Ldebug_loc8
 	.long	.Linfo_string17
 	.byte	2
-	.byte	241
+	.byte	243
 	.long	232
 	.byte	14
 	.long	.Ldebug_loc9
 	.long	.Linfo_string18
 	.byte	2
-	.byte	241
+	.byte	243
 	.long	2483
 	.byte	14
 	.long	.Ldebug_loc10
 	.long	.Linfo_string64
 	.byte	2
-	.byte	241
+	.byte	243
 	.long	2488
 	.byte	15
 	.long	544
 	.long	.Ldebug_ranges8
 	.byte	2
-	.byte	250
+	.byte	252
 	.byte	16
 	.long	.Ldebug_loc12
 	.long	557
@@ -5150,7 +5150,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	620
 	.long	.Ldebug_ranges9
 	.byte	2
-	.byte	136
+	.byte	138
 	.byte	25
 	.byte	4
 	.long	646
@@ -5164,7 +5164,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string51
 	.byte	2
-	.short	261
+	.short	263
 	.byte	1
 	.byte	1
 	.byte	28
@@ -5172,7 +5172,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	80
 	.long	.Linfo_string17
 	.byte	2
-	.short	261
+	.short	263
 	.long	232
 	.byte	0
 	.byte	7
@@ -5182,7 +5182,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string47
 	.byte	2
-	.byte	216
+	.byte	218
 	.byte	1
 	.long	602
 	.byte	1
@@ -5190,25 +5190,25 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Ldebug_loc13
 	.long	.Linfo_string17
 	.byte	2
-	.byte	216
+	.byte	218
 	.long	232
 	.byte	14
 	.long	.Ldebug_loc14
 	.long	.Linfo_string63
 	.byte	2
-	.byte	216
+	.byte	218
 	.long	109
 	.byte	19
 	.long	.Ldebug_loc15
 	.long	.Linfo_string18
 	.byte	2
-	.byte	218
+	.byte	220
 	.long	2473
 	.byte	19
 	.long	.Ldebug_loc16
 	.long	.Linfo_string64
 	.byte	2
-	.byte	219
+	.byte	221
 	.long	672
 	.byte	0
 	.byte	7
@@ -5218,7 +5218,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string48
 	.byte	2
-	.byte	231
+	.byte	233
 	.byte	1
 	.long	602
 	.byte	1
@@ -5226,7 +5226,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Ldebug_loc17
 	.long	.Linfo_string17
 	.byte	2
-	.byte	231
+	.byte	233
 	.long	2493
 	.byte	0
 	.byte	7
@@ -5236,7 +5236,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string49
 	.byte	2
-	.byte	236
+	.byte	238
 	.byte	1
 	.long	49
 	.byte	1
@@ -5244,7 +5244,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Ldebug_loc18
 	.long	.Linfo_string17
 	.byte	2
-	.byte	236
+	.byte	238
 	.long	2493
 	.byte	0
 	.byte	29
@@ -5254,7 +5254,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string52
 	.byte	2
-	.short	269
+	.short	271
 	.byte	1
 	.long	602
 	.byte	1
@@ -5262,25 +5262,25 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Ldebug_loc19
 	.long	.Linfo_string17
 	.byte	2
-	.short	269
+	.short	271
 	.long	232
 	.byte	30
 	.long	.Ldebug_loc20
 	.long	.Linfo_string22
 	.byte	2
-	.short	269
+	.short	271
 	.long	49
 	.byte	31
 	.long	.Ldebug_loc24
 	.long	.Linfo_string65
 	.byte	2
-	.short	271
+	.short	273
 	.long	49
 	.byte	32
 	.long	544
 	.long	.Ldebug_ranges15
 	.byte	2
-	.short	279
+	.short	281
 	.byte	16
 	.long	.Ldebug_loc21
 	.long	557
@@ -5294,7 +5294,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	620
 	.long	.Ldebug_ranges16
 	.byte	2
-	.byte	136
+	.byte	138
 	.byte	25
 	.byte	4
 	.long	646
@@ -5324,38 +5324,38 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string62
 	.byte	2
-	.short	307
+	.short	309
 	.byte	1
 	.long	602
 	.byte	30
 	.long	.Ldebug_loc28
 	.long	.Linfo_string17
 	.byte	2
-	.short	307
+	.short	309
 	.long	232
 	.byte	30
 	.long	.Ldebug_loc29
 	.long	.Linfo_string37
 	.byte	2
-	.short	307
+	.short	309
 	.long	154
 	.byte	30
 	.long	.Ldebug_loc30
 	.long	.Linfo_string22
 	.byte	2
-	.short	307
+	.short	309
 	.long	49
 	.byte	31
 	.long	.Ldebug_loc34
 	.long	.Linfo_string66
 	.byte	2
-	.short	309
+	.short	311
 	.long	49
 	.byte	32
 	.long	544
 	.long	.Ldebug_ranges19
 	.byte	2
-	.short	326
+	.short	328
 	.byte	16
 	.long	.Ldebug_loc31
 	.long	557
@@ -5369,7 +5369,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	620
 	.long	.Ldebug_ranges20
 	.byte	2
-	.byte	136
+	.byte	138
 	.byte	25
 	.byte	4
 	.long	646
@@ -5383,7 +5383,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string53
 	.byte	2
-	.short	357
+	.short	359
 	.byte	1
 	.long	602
 	.byte	1
@@ -5391,25 +5391,25 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Ldebug_loc35
 	.long	.Linfo_string17
 	.byte	2
-	.short	357
+	.short	359
 	.long	232
 	.byte	30
 	.long	.Ldebug_loc36
 	.long	.Linfo_string37
 	.byte	2
-	.short	357
+	.short	359
 	.long	2503
 	.byte	30
 	.long	.Ldebug_loc37
 	.long	.Linfo_string22
 	.byte	2
-	.short	357
+	.short	359
 	.long	49
 	.byte	0
 	.byte	34
 	.long	.Linfo_string36
 	.byte	2
-	.short	348
+	.short	350
 	.byte	1
 	.long	602
 	.byte	1
@@ -5417,17 +5417,17 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	23
 	.long	.Linfo_string17
 	.byte	2
-	.short	348
+	.short	350
 	.long	232
 	.byte	23
 	.long	.Linfo_string37
 	.byte	2
-	.short	348
+	.short	350
 	.long	154
 	.byte	23
 	.long	.Linfo_string22
 	.byte	2
-	.short	348
+	.short	350
 	.long	49
 	.byte	0
 	.byte	17
@@ -5449,7 +5449,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	1376
 	.long	.Ldebug_ranges23
 	.byte	2
-	.short	371
+	.short	373
 	.byte	16
 	.long	.Ldebug_loc42
 	.long	1391
@@ -5461,7 +5461,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	1376
 	.long	.Ldebug_ranges24
 	.byte	2
-	.short	375
+	.short	377
 	.byte	16
 	.long	.Ldebug_loc44
 	.long	1391
@@ -5473,7 +5473,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	34
 	.long	.Linfo_string38
 	.byte	2
-	.short	366
+	.short	368
 	.byte	1
 	.long	602
 	.byte	1
@@ -5481,17 +5481,17 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	23
 	.long	.Linfo_string17
 	.byte	2
-	.short	366
+	.short	368
 	.long	232
 	.byte	23
 	.long	.Linfo_string37
 	.byte	2
-	.short	366
+	.short	368
 	.long	1582
 	.byte	23
 	.long	.Linfo_string22
 	.byte	2
-	.short	366
+	.short	368
 	.long	49
 	.byte	0
 	.byte	4
@@ -5515,7 +5515,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string54
 	.byte	2
-	.short	378
+	.short	380
 	.byte	1
 	.long	602
 	.byte	1
@@ -5523,29 +5523,29 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Ldebug_loc45
 	.long	.Linfo_string17
 	.byte	2
-	.short	378
+	.short	380
 	.long	232
 	.byte	23
 	.long	.Linfo_string37
 	.byte	2
-	.short	378
+	.short	380
 	.long	2532
 	.byte	30
 	.long	.Ldebug_loc46
 	.long	.Linfo_string22
 	.byte	2
-	.short	378
+	.short	380
 	.long	49
 	.byte	35
 	.long	.Linfo_string70
 	.byte	2
-	.short	380
+	.short	382
 	.long	1582
 	.byte	32
 	.long	1530
 	.long	.Ldebug_ranges26
 	.byte	2
-	.short	384
+	.short	386
 	.byte	16
 	.long	.Ldebug_loc47
 	.long	1569
@@ -5553,7 +5553,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	1376
 	.long	.Ldebug_ranges27
 	.byte	2
-	.short	371
+	.short	373
 	.byte	16
 	.long	.Ldebug_loc50
 	.long	1391
@@ -5568,7 +5568,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	1376
 	.long	.Ldebug_ranges28
 	.byte	2
-	.short	375
+	.short	377
 	.byte	16
 	.long	.Ldebug_loc52
 	.long	1391
@@ -5585,7 +5585,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string55
 	.byte	2
-	.short	387
+	.short	389
 	.byte	1
 	.long	602
 	.byte	1
@@ -5593,13 +5593,13 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Ldebug_loc53
 	.long	.Linfo_string17
 	.byte	2
-	.short	387
+	.short	389
 	.long	232
 	.byte	30
 	.long	.Ldebug_loc54
 	.long	.Linfo_string37
 	.byte	2
-	.short	387
+	.short	389
 	.long	154
 	.byte	0
 	.byte	29
@@ -5609,7 +5609,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string56
 	.byte	2
-	.short	403
+	.short	405
 	.byte	1
 	.long	602
 	.byte	1
@@ -5617,31 +5617,31 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Ldebug_loc55
 	.long	.Linfo_string17
 	.byte	2
-	.short	403
+	.short	405
 	.long	232
 	.byte	30
 	.long	.Ldebug_loc56
 	.long	.Linfo_string74
 	.byte	2
-	.short	403
+	.short	405
 	.long	2473
 	.byte	30
 	.long	.Ldebug_loc57
 	.long	.Linfo_string75
 	.byte	2
-	.short	403
+	.short	405
 	.long	49
 	.byte	31
 	.long	.Ldebug_loc61
 	.long	.Linfo_string76
 	.byte	2
-	.short	405
+	.short	407
 	.long	49
 	.byte	32
 	.long	544
 	.long	.Ldebug_ranges31
 	.byte	2
-	.short	408
+	.short	410
 	.byte	16
 	.long	.Ldebug_loc60
 	.long	557
@@ -5655,7 +5655,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	620
 	.long	.Ldebug_ranges32
 	.byte	2
-	.byte	136
+	.byte	138
 	.byte	25
 	.byte	4
 	.long	646
@@ -5669,7 +5669,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string57
 	.byte	2
-	.short	420
+	.short	422
 	.byte	1
 	.long	602
 	.byte	1
@@ -5677,13 +5677,13 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Ldebug_loc62
 	.long	.Linfo_string17
 	.byte	2
-	.short	420
+	.short	422
 	.long	232
 	.byte	30
 	.long	.Ldebug_loc63
 	.long	.Linfo_string37
 	.byte	2
-	.short	420
+	.short	422
 	.long	49
 	.byte	0
 	.byte	29
@@ -5693,7 +5693,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string58
 	.byte	2
-	.short	536
+	.short	538
 	.byte	1
 	.long	602
 	.byte	1
@@ -5701,73 +5701,73 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Ldebug_loc64
 	.long	.Linfo_string17
 	.byte	2
-	.short	536
+	.short	538
 	.long	232
 	.byte	30
 	.long	.Ldebug_loc65
 	.long	.Linfo_string74
 	.byte	2
-	.short	536
+	.short	538
 	.long	2561
 	.byte	30
 	.long	.Ldebug_loc66
 	.long	.Linfo_string75
 	.byte	2
-	.short	536
+	.short	538
 	.long	49
 	.byte	30
 	.long	.Ldebug_loc67
 	.long	.Linfo_string77
 	.byte	2
-	.short	536
+	.short	538
 	.long	49
 	.byte	31
 	.long	.Ldebug_loc68
 	.long	.Linfo_string78
 	.byte	2
-	.short	538
+	.short	540
 	.long	2571
 	.byte	31
 	.long	.Ldebug_loc69
 	.long	.Linfo_string79
 	.byte	2
-	.short	539
+	.short	541
 	.long	2571
 	.byte	31
 	.long	.Ldebug_loc70
 	.long	.Linfo_string80
 	.byte	2
-	.short	542
+	.short	544
 	.long	44
 	.byte	31
 	.long	.Ldebug_loc71
 	.long	.Linfo_string70
 	.byte	2
-	.short	540
+	.short	542
 	.long	154
 	.byte	31
 	.long	.Ldebug_loc72
 	.long	.Linfo_string81
 	.byte	2
-	.short	543
+	.short	545
 	.long	49
 	.byte	31
 	.long	.Ldebug_loc73
 	.long	.Linfo_string82
 	.byte	2
-	.short	543
+	.short	545
 	.long	49
 	.byte	31
 	.long	.Ldebug_loc77
 	.long	.Linfo_string66
 	.byte	2
-	.short	541
+	.short	543
 	.long	49
 	.byte	32
 	.long	544
 	.long	.Ldebug_ranges35
 	.byte	2
-	.short	571
+	.short	573
 	.byte	16
 	.long	.Ldebug_loc76
 	.long	557
@@ -5781,7 +5781,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	620
 	.long	.Ldebug_ranges36
 	.byte	2
-	.byte	136
+	.byte	138
 	.byte	25
 	.byte	4
 	.long	646
@@ -5795,7 +5795,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string59
 	.byte	2
-	.short	754
+	.short	756
 	.byte	1
 	.long	602
 	.byte	1
@@ -5803,19 +5803,19 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Ldebug_loc78
 	.long	.Linfo_string17
 	.byte	2
-	.short	754
+	.short	756
 	.long	232
 	.byte	30
 	.long	.Ldebug_loc79
 	.long	.Linfo_string37
 	.byte	2
-	.short	754
+	.short	756
 	.long	154
 	.byte	31
 	.long	.Ldebug_loc80
 	.long	.Linfo_string83
 	.byte	2
-	.short	756
+	.short	758
 	.long	602
 	.byte	0
 	.byte	29
@@ -5825,7 +5825,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string60
 	.byte	2
-	.short	801
+	.short	803
 	.byte	1
 	.long	602
 	.byte	1
@@ -5833,19 +5833,19 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Ldebug_loc81
 	.long	.Linfo_string17
 	.byte	2
-	.short	801
+	.short	803
 	.long	232
 	.byte	30
 	.long	.Ldebug_loc83
 	.long	.Linfo_string37
 	.byte	2
-	.short	801
+	.short	803
 	.long	1582
 	.byte	31
 	.long	.Ldebug_loc82
 	.long	.Linfo_string83
 	.byte	2
-	.short	803
+	.short	805
 	.long	602
 	.byte	0
 	.byte	29
@@ -5855,7 +5855,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.byte	1
 	.long	.Linfo_string61
 	.byte	2
-	.short	857
+	.short	859
 	.byte	1
 	.long	602
 	.byte	1
@@ -5863,7 +5863,7 @@ FLAC__bitwriter_zero_pad_to_byte_boundary:
 	.long	.Ldebug_loc84
 	.long	.Linfo_string17
 	.byte	2
-	.short	857
+	.short	859
 	.long	232
 	.byte	0
 	.byte	6

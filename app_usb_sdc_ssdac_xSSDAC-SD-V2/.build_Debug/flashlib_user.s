@@ -25,50 +25,31 @@ flash_cmd_enable_ports:
 .Lfunc_begin0:
 	.loc	2 55 0
 	.cfi_startproc
-	.issue_mode single
-	ENTSP_lu6 4
+	.issue_mode dual
+	{
+		nop
+		dualentsp 2
+	}
 .Ltmp0:
-	.cfi_def_cfa_offset 16
+	.cfi_def_cfa_offset 8
 .Ltmp1:
 	.cfi_offset 15, 0
-	ldc r0, 0
-	.loc	2 56 5 prologue_end
 .Ltmp2:
-	stw r0, sp[2]
-	.loc	2 90 14
+	.loc	2 90 14 prologue_end
 	ldaw r0, dp[p_qflash]
 	bl fl_connect
-	.loc	2 90 14
-	stw r0, sp[2]
-	.loc	2 95 9
 .Ltmp3:
-	bt r0, .LBB0_2
-	bu .LBB0_1
-.LBB0_1:
-	mkmsk r0, 1
-	.loc	2 98 9
+	.loc	2 95 9
+	{
+		eq r0, r0, 0
+		retsp 2
+	}
 .Ltmp4:
-	stw r0, sp[3]
-	.loc	2 98 9
-	bu .LBB0_3
-.Ltmp5:
-.LBB0_2:
-	ldc r0, 0
-	.loc	2 102 9
-.Ltmp6:
-	stw r0, sp[3]
-	.loc	2 102 9
-	bu .LBB0_3
-.Ltmp7:
-.LBB0_3:
 	.loc	2 104 1
-	ldw r0, sp[3]
-	.loc	2 104 1
-	retsp 4
 	# RETURN_REG_HOLDER
-.Ltmp8:
+.Ltmp5:
 	.cc_bottom flash_cmd_enable_ports.function
-	.set	flash_cmd_enable_ports.nstackwords,(fl_connect.nstackwords + 4)
+	.set	flash_cmd_enable_ports.nstackwords,(fl_connect.nstackwords + 2)
 	.globl	flash_cmd_enable_ports.nstackwords
 	.set	flash_cmd_enable_ports.maxcores,fl_connect.maxcores $M 1
 	.globl	flash_cmd_enable_ports.maxcores
@@ -76,8 +57,8 @@ flash_cmd_enable_ports:
 	.globl	flash_cmd_enable_ports.maxtimers
 	.set	flash_cmd_enable_ports.maxchanends,fl_connect.maxchanends $M 0
 	.globl	flash_cmd_enable_ports.maxchanends
-.Ltmp9:
-	.size	flash_cmd_enable_ports, .Ltmp9-flash_cmd_enable_ports
+.Ltmp6:
+	.size	flash_cmd_enable_ports, .Ltmp6-flash_cmd_enable_ports
 .Lfunc_end0:
 	.cfi_endproc
 
@@ -89,22 +70,25 @@ flash_cmd_disable_ports:
 .Lfunc_begin1:
 	.loc	2 107 0
 	.cfi_startproc
-	.issue_mode single
-	ENTSP_lu6 2
-.Ltmp10:
+	.issue_mode dual
+	{
+		nop
+		dualentsp 2
+	}
+.Ltmp7:
 	.cfi_def_cfa_offset 8
-.Ltmp11:
+.Ltmp8:
 	.cfi_offset 15, 0
 	.loc	2 108 5 prologue_end
-.Ltmp12:
+.Ltmp9:
 	bl fl_disconnect
-	mkmsk r1, 1
+	{
+		mkmsk r0, 1
+		retsp 2
+	}
 	.loc	2 117 5
-	stw r0, sp[1]
-	mov r0, r1
-	retsp 2
 	# RETURN_REG_HOLDER
-.Ltmp13:
+.Ltmp10:
 	.cc_bottom flash_cmd_disable_ports.function
 	.set	flash_cmd_disable_ports.nstackwords,(fl_disconnect.nstackwords + 2)
 	.globl	flash_cmd_disable_ports.nstackwords
@@ -114,8 +98,8 @@ flash_cmd_disable_ports:
 	.globl	flash_cmd_disable_ports.maxtimers
 	.set	flash_cmd_disable_ports.maxchanends,0
 	.globl	flash_cmd_disable_ports.maxchanends
-.Ltmp14:
-	.size	flash_cmd_disable_ports, .Ltmp14-flash_cmd_disable_ports
+.Ltmp11:
+	.size	flash_cmd_disable_ports, .Ltmp11-flash_cmd_disable_ports
 .Lfunc_end1:
 	.cfi_endproc
 
@@ -165,7 +149,7 @@ p_qflash:
 .asciiz"result"
 	.section	.debug_info,"",@progbits
 .L.debug_info_begin0:
-	.long	176
+	.long	178
 	.short	3
 	.long	.Lsection_abbrev
 	.byte	4
@@ -175,9 +159,10 @@ p_qflash:
 	.long	.Linfo_string1
 	.long	.Lline_table_start0
 	.long	.Linfo_string2
+	.byte	1
 	.byte	2
 	.long	.Linfo_string3
-	.long	48
+	.long	49
 	.byte	1
 	.byte	2
 	.byte	35
@@ -185,7 +170,7 @@ p_qflash:
 	.byte	3
 	.long	p_qflash
 	.byte	3
-	.long	59
+	.long	60
 	.long	.Linfo_string9
 	.byte	1
 	.byte	142
@@ -195,25 +180,25 @@ p_qflash:
 	.byte	130
 	.byte	5
 	.long	.Linfo_string4
-	.long	112
+	.long	113
 	.byte	1
 	.byte	137
 	.byte	0
 	.byte	5
 	.long	.Linfo_string6
-	.long	112
+	.long	113
 	.byte	1
 	.byte	138
 	.byte	4
 	.byte	5
 	.long	.Linfo_string7
-	.long	112
+	.long	113
 	.byte	1
 	.byte	139
 	.byte	8
 	.byte	5
 	.long	.Linfo_string8
-	.long	112
+	.long	113
 	.byte	1
 	.byte	140
 	.byte	12
@@ -230,16 +215,14 @@ p_qflash:
 	.long	.Linfo_string10
 	.byte	2
 	.byte	54
-	.long	172
+	.long	174
 	.byte	1
 	.byte	8
-	.byte	2
-	.byte	145
-	.byte	8
+	.long	.Ldebug_loc0
 	.long	.Linfo_string13
 	.byte	2
 	.byte	56
-	.long	172
+	.long	174
 	.byte	0
 	.byte	9
 	.long	.Ldebug_ranges1
@@ -249,7 +232,7 @@ p_qflash:
 	.long	.Linfo_string12
 	.byte	2
 	.byte	106
-	.long	172
+	.long	174
 	.byte	1
 	.byte	6
 	.long	.Linfo_string11
@@ -271,6 +254,8 @@ p_qflash:
 	.byte	6
 	.byte	27
 	.byte	14
+	.ascii	"\341\177"
+	.byte	12
 	.byte	0
 	.byte	0
 	.byte	2
@@ -365,7 +350,7 @@ p_qflash:
 	.byte	52
 	.byte	0
 	.byte	2
-	.byte	10
+	.byte	6
 	.byte	3
 	.byte	14
 	.byte	58
@@ -410,35 +395,53 @@ p_qflash:
 	.long	0
 	.long	0
 	.section	.debug_loc,"",@progbits
-	.section	.debug_pubnames,"",@progbits
-.Lset0 = .LpubNames_end0-.LpubNames_begin0
-	.long	.Lset0
-.LpubNames_begin0:
-	.short	2
-	.long	.L.debug_info_begin0
-.Lset1 = .L.debug_info_end0-.L.debug_info_begin0
-	.long	.Lset1
-	.long	153
-.asciiz"flash_cmd_disable_ports"
-	.long	30
-.asciiz"p_qflash"
-	.long	119
-.asciiz"flash_cmd_enable_ports"
+.Ldebug_loc0:
+	.long	.Ltmp2
+	.long	.Ltmp3
+.Lset0 = .Ltmp13-.Ltmp12
+	.short	.Lset0
+.Ltmp12:
+	.byte	17
+	.byte	0
+.Ltmp13:
+	.long	.Ltmp3
+	.long	.Ltmp4
+.Lset1 = .Ltmp15-.Ltmp14
+	.short	.Lset1
+.Ltmp14:
+	.byte	80
+.Ltmp15:
 	.long	0
-.LpubNames_end0:
-	.section	.debug_pubtypes,"",@progbits
-.Lset2 = .LpubTypes_end0-.LpubTypes_begin0
+	.long	0
+	.section	.debug_pubnames,"",@progbits
+.Lset2 = .LpubNames_end0-.LpubNames_begin0
 	.long	.Lset2
-.LpubTypes_begin0:
+.LpubNames_begin0:
 	.short	2
 	.long	.L.debug_info_begin0
 .Lset3 = .L.debug_info_end0-.L.debug_info_begin0
 	.long	.Lset3
-	.long	48
+	.long	155
+.asciiz"flash_cmd_disable_ports"
+	.long	31
+.asciiz"p_qflash"
+	.long	120
+.asciiz"flash_cmd_enable_ports"
+	.long	0
+.LpubNames_end0:
+	.section	.debug_pubtypes,"",@progbits
+.Lset4 = .LpubTypes_end0-.LpubTypes_begin0
+	.long	.Lset4
+.LpubTypes_begin0:
+	.short	2
+	.long	.L.debug_info_begin0
+.Lset5 = .L.debug_info_end0-.L.debug_info_begin0
+	.long	.Lset5
+	.long	49
 .asciiz"fl_QSPIPorts"
-	.long	112
+	.long	113
 .asciiz"unsigned int"
-	.long	172
+	.long	174
 .asciiz"int"
 	.long	0
 .LpubTypes_end0:

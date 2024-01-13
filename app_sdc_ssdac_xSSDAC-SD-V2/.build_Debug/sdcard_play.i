@@ -817,7 +817,7 @@ typedef unsigned long ULONG;
 typedef unsigned long DWORD;
 # 24 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h" 2
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src/ffconf.h" 1
+# 1 ".././src\\ffconf.h" 1
 # 25 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h" 2
 # 66 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h"
 typedef char TCHAR;
@@ -983,6 +983,8 @@ WCHAR ff_wtoupper (WCHAR);
 unsigned int get_time(void);
 # 14 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
+# 1 ".././src\\ssdac_conf.h" 1
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 1
 # 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
@@ -1042,13 +1044,16 @@ typedef enum {
 } PLAY_COMMAND;
 
 unsigned QueryChannel(chanend ch, unsigned command);
-void button_listener_core(chanend c_play_control, chanend c_dac_control);
+void button_listener_core(
+        FUNCTION_SELECTOR func,
+        chanend c_play_control,
+        chanend c_dac_control
+        );
 void KeyScan();
 void SendBackTrackControl(chanend c_track_control);
 void HandleDacCommand(chanend c_control, DAC_COMMAND command);
 void HandlePlayCommand(chanend c_control, QUERY_TYPE type);
 # 16 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
-
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.h" 1
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.h"
@@ -1061,19 +1066,417 @@ typedef enum {
     _RC_PREVIOUS_FOLDER,
     _RC_ERROR
 } PLAY_TRACK_RC;
-# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
-
+# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 1
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 1 3
+# 19 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 1 3
+# 18 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1_clock.h" 1 3
+# 18 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 2 3
+# 34 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+typedef enum {
+  PROT_TYPE_NONE=0,
+  PROT_TYPE_SR=1,
+  PROT_TYPE_SECS=2,
+  PROT_TYPE_SR_2X=3,
+} fl_ProtectionType;
+
+
+typedef enum {
+  SECTOR_LAYOUT_REGULAR=0,
+  SECTOR_LAYOUT_IRREGULAR
+} fl_SectorLayout;
+
+
+typedef struct {
+
+  unsigned flashId;
+
+  unsigned pageSize;
+
+  unsigned numPages;
+
+  unsigned char addrSize;
+
+  unsigned clockDiv;
+
+  unsigned char idCommand;
+
+
+
+
+  unsigned char idDummyBytes;
+
+  unsigned char idBytes;
+
+  unsigned idValue;
+
+  unsigned char sectorEraseCommand;
+
+
+
+
+  unsigned sectorEraseSize;
+
+  unsigned char writeEnableCommand;
+
+  unsigned char writeDisableCommand;
+
+  fl_ProtectionType protectionType;
+  struct {
+    struct {
+
+      unsigned char setProtectedValue;
+
+      unsigned char setUnprotectedValue;
+    } statusBits;
+    struct {
+
+      unsigned char sectorProtectCommand;
+
+      unsigned char sectorUnprotectCommand;
+    } commandValues;
+  } protection;
+
+  unsigned int programPageCommand;
+
+  unsigned char readCommand;
+
+
+
+
+  unsigned char readDummyBytes;
+
+  fl_SectorLayout sectorLayout;
+  struct {
+
+    unsigned regularSectorSize;
+    struct {
+
+      unsigned char sectorCount;
+
+
+
+
+      unsigned char sectorSizesLog2[32];
+    } irregularSectorSizes;
+  } sectorSizes;
+
+  unsigned char readSRCommand;
+
+  unsigned int writeSRCommand;
+
+  unsigned char wipBitMask;
+} fl_QuadDeviceSpec;
+
+
+typedef struct {
+
+
+
+
+
+
+  unsigned qspiCS;
+  unsigned qspiSCLK;
+  unsigned qspiSIO;
+  unsigned qspiClkblk;
+
+} fl_QSPIPorts;
+# 152 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_connect(fl_QSPIPorts* QSPI);
+# 169 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_connectToDevice(fl_QSPIPorts *QSPI, const fl_QuadDeviceSpec spec[], unsigned n);
+# 179 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_dividerOverride(int div);
+# 189 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_getFlashType();
+
+
+
+
+
+
+unsigned fl_getFlashSize();
+# 205 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+void fl_getSpiId(fl_QSPIPorts * QSPI, unsigned id_command, unsigned char destination[]);
+# 215 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+unsigned fl_getSpiStatus(fl_QSPIPorts * QSPI, unsigned status_command);
+
+
+
+
+
+
+int fl_disconnect();
+
+
+
+
+
+
+
+int fl_getFlashIdNum();
+# 239 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_getFlashIdStr( char buf[], int maxlen );
+
+
+
+
+
+typedef struct {
+  unsigned startAddress;
+  unsigned size;
+  unsigned version;
+  int factory;
+} fl_BootImageInfo;
+
+
+
+
+
+
+
+int fl_getFactoryImage(fl_BootImageInfo* bootImageInfo);
+# 272 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_getNextBootImage(fl_BootImageInfo* bootImageInfo);
+# 283 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+unsigned fl_getImageVersion(fl_BootImageInfo* bootImageInfo);
+# 302 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_startImageAdd(fl_BootImageInfo *bootImageInfo, unsigned maxsize,
+                     unsigned padding);
+# 322 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_startImageAddAt( unsigned offset, unsigned maxsize);
+# 340 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_startImageReplace(fl_BootImageInfo *bootImageInfo, unsigned maxsize);
+# 352 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_writeImagePage(const unsigned char page[]);
+
+
+
+
+
+int fl_endWriteImage(void);
+
+
+
+
+
+
+
+int fl_deleteImage(fl_BootImageInfo *bootImageInfo);
+# 378 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_startDeleteImage(fl_BootImageInfo *bootImageInfo);
+# 388 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_startImageRead(fl_BootImageInfo *bootImageInfo);
+# 398 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_readImagePage(unsigned char page[]);
+
+
+
+
+
+
+
+__attribute__((deprecated)) static inline int fl_readImageRead(unsigned char page[])
+{
+  return fl_readImagePage(page);
+}
+# 419 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+unsigned fl_getDataPartitionSize(void);
+# 429 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_readData(unsigned offset, unsigned size, unsigned char dst[]);
+# 438 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+unsigned fl_getWriteScratchSize(unsigned offset, unsigned size);
+# 450 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_writeData(unsigned offset, unsigned size, const unsigned char src[],
+                 unsigned char buffer[]);
+
+
+
+
+
+
+
+unsigned fl_getPageSize(void);
+
+
+
+
+
+unsigned fl_getNumDataPages(void);
+# 474 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_writeDataPage(unsigned n, const unsigned char src[]);
+
+
+
+
+
+
+
+int fl_readDataPage(unsigned n, unsigned char dst[]);
+
+
+
+
+
+
+
+unsigned fl_getNumDataSectors(void);
+
+
+
+
+
+
+unsigned fl_getDataSectorSize(unsigned n);
+
+
+
+
+
+
+int fl_eraseDataSector(unsigned n);
+
+
+
+
+
+int fl_eraseAllDataSectors(void);
+
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/QuadSpecEnum.h" 1 3
+
+
+
+typedef enum
+{
+  UNKNOWN = 0,
+  ISSI_IS25LP016D = 8,
+  ISSI_IS25LP032 = 9,
+  ISSI_IS25LP064 = 10,
+  ISSI_IS25LP080D = 7,
+  ISSI_IS25LP128 = 11,
+  ISSI_IS25LQ016B = 5,
+  ISSI_IS25LQ032B = 6,
+  ISSI_IS25LQ080B = 4,
+  SPANSION_S25FL116K = 1,
+  SPANSION_S25FL132K = 2,
+  SPANSION_S25FL164K = 3,
+  WINBOND_W25Q128JV = 15,
+  WINBOND_W25Q16JV = 12,
+  WINBOND_W25Q32JV = 13,
+  WINBOND_W25Q64JV = 14,
+} fl_QuadFlashId;
+# 516 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 2 3
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/QuadSpecMacros.h" 1 3
+# 521 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 2 3
+# 19 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 2 3
+
+
+
+
+
+
+
+typedef fl_QSPIPorts fl_PortHolderStruct;
+
+
+
+
+
+int fl_getBusyStatus();
+
+
+unsigned int fl_getFullStatus();
+
+
+
+
+
+
+int fl_quadEnable();
+
+
+int fl_eraseAll();
+
+
+int fl_setWritability(int enable);
+# 58 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
+fl_SectorLayout fl_getSectorLayoutType();
+
+
+int fl_getNumSectors();
+
+
+int fl_getSectorSize(int sectorNum);
+
+
+int fl_getSectorAddress(int sectorNum);
+
+
+int fl_eraseSector(int sectorNum);
+# 80 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
+unsigned fl_getNumPages();
+
+
+int fl_writePage(unsigned int address, const unsigned char data[]);
+
+
+int fl_readPage(unsigned int address, unsigned char data[]);
+# 96 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
+unsigned int fl_setBootPartitionSize( unsigned int s );
+unsigned int fl_getBootPartitionSize();
+
+
+unsigned fl_getDataPartitionBase();
+# 112 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
+int fl_eraseNextBootImage( fl_BootImageInfo* bootImageInfo );
+
+
+
+
+
+
+int fl_addBootImage( fl_BootImageInfo* bootImageInfo, unsigned int imageSize, unsigned int (*getData)(void*,unsigned int,unsigned char*), void* userPtr );
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 2
+
+
+
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h" 1
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h"
+int qspi_write(int offset, int size, char * buffer, char * scratch);
+
+int qspi_read(int offset, int size, char * buffer);
+# 41 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h"
+void qspi_if_write(unsigned i, int offset, int size, char buffer[]);
+
+void qspi_if_read(unsigned i, int offset, int size, char buffer[]);
+# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 2
+# 29 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
-void update_samp_resolution(unsigned res);
-void update_chan_count(unsigned ch);
+void update_stream_format(unsigned numUsbChan, unsigned sampRes);
 
-void display_control_core();
+
+
 void init_display_frame();
-void handle_display_frame();
+
+
+
 
 typedef enum {
     _SDC_AUDIO = 1,
@@ -1084,21 +1487,12 @@ typedef enum {
 
 CONSOLE_MODE get_console_mode();
 void set_console_mode(CONSOLE_MODE value);
-# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
+# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h" 1
-# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h"
-int qspi_write(int offset, int size, char * buffer, char * scratch);
+# 19 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
-int qspi_read(int offset, int size, char * buffer);
-# 34 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h"
-void qspi_if_write(unsigned i, int offset, int size, char buffer[]);
 
-void qspi_if_read(unsigned i, int offset, int size, char buffer[]);
-# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
-
-# 1 ".././src\\ssdac_conf.h" 1
-# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
 
 
@@ -1106,13 +1500,17 @@ PLAY_TRACK_RC PlayRIFF(FIL* file, chanend c_handshake, chanend c_control);
 PLAY_TRACK_RC PlayFLAC(FIL* file, chanend c_handshake, chanend c_control);
 
 const char * setting_file_name = "0:/CONTEXTSAVE.TXT";
-# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
-char track_string[(255 + 1)]="track";
+# 36 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
+# 1 ".././src\\flash_map.h" 1
+# 36 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
+
+
+char track_string[256]="track";
 
 
 
 
-char folder_string[(255 + 1)]="folder";
+char folder_string[256]="folder";
 
 char scratch[255 + 1];
 
@@ -1175,20 +1573,31 @@ FRESULT GetDirIndexOf(int *index, char *s1 ){
         }
         i++;
     }while(s2[0]!='\0');
+    return FR_NO_FILE;
 }
 
-int GoFolder(char * folder, unsigned i){
+int GoFolder(
+        char * folder
+
+        , unsigned i
+
+){
     f_chdir(folder);
-    f_getcwd (&folder_string, sizeof(folder_string));
+    f_getcwd (folder_string, sizeof(folder_string));
     set_display_control_flag(0x00000002);
-    qspi_if_write(i, ((0) + 255 + 1), (255 + 1), folder_string);
+
+    qspi_if_write(i, ((4) + 256), 256, folder_string);
 
     return 0;
 }
 
-int ClimbUp(unsigned i){
+int ClimbUp(
+
+        unsigned i
+
+){
     TCHAR str[255 + 1];
-    FRESULT rc = f_getcwd (&str, sizeof(str));
+    f_getcwd (str, sizeof(str));
     debug_printf("\ngoing up from %s", str);
     char *cur_item;
     cur_item = strrchr(str, '/')+1;
@@ -1199,21 +1608,32 @@ int ClimbUp(unsigned i){
 
     f_getcwd (&folder_string, sizeof(folder_string));
     set_display_control_flag(0x00000002);
-    qspi_if_write(i, ((0) + 255 + 1), (255 + 1), folder_string);
+
+    qspi_if_write(i, ((4) + 256), 256, folder_string);
 
     return index;
 }
 
-int GoPreviousFolder(unsigned i){
+int GoPreviousFolder(
+
+        unsigned i
+
+){
     int index;
 
     do{
-        index = ClimbUp(i)-1;
+        index = ClimbUp(
+
+                i
+
+        ) -1;
         f_getcwd (&folder_string, sizeof(folder_string));
     } while ((strcmp(folder_string,"0:/")!=0)&&(index<=2));
 
     set_display_control_flag(0x00000002);
-    qspi_if_write(i, ((0) + 255 + 1), (255 + 1), folder_string);
+
+    qspi_if_write(i, ((4) + 256), 256, folder_string);
+
     return index;
 }
 
@@ -1246,29 +1666,23 @@ PLAY_TRACK_RC PlayTrack(const TCHAR* fn, chanend c_handshake, chanend c_control)
     file_format_id[4]='\0';
 
     debug_printf("\nFile Format ID = %s (0x%02x%02x%02x%02x)", file_format_id, file_format_id[0], file_format_id[1], file_format_id[2], file_format_id[3]);
-
-
-
-
-
-
-
-    if (strncmp(&file_format_id, "RIFF", 4)==0){
+# 207 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
+    if (strncmp(file_format_id, "RIFF", 4)==0){
         rc = PlayRIFF(&file, c_handshake, c_control);
         res = f_close (&file);
         return rc;
     }
-    if (strncmp(&file_format_id, "fLaC", 4)==0){
+
+
+    if (strncmp(file_format_id, "fLaC", 4)==0){
         rc = PlayFLAC(&file, c_handshake, c_control);
         res = f_close (&file);
         return rc;
     }
-    else{
-        debug_printf(" - Unknown format");
-        fflush((__getstdout()));
-        res = f_close (&file);
-        return _RC_ERROR;
-    }
+
+    debug_printf(" - Unknown format");
+    res = f_close (&file);
+    return _RC_ERROR;
 }
 
 typedef enum {
@@ -1280,8 +1694,10 @@ CONTROL_STATE state = RUNNING;
 
 void sdcard_play(
         chanend c_handshake,
-        chanend c_play_control,
-                                             unsigned i
+        chanend c_play_control
+
+        , unsigned i
+
 )
 {
     debug_printf("\nsdcard_play started");
@@ -1298,19 +1714,18 @@ void sdcard_play(
     f_mount(0, &Fatfs);
     debug_printf("\nf_mount done");
 
+    int track = 0;
+
+
     if ( ( QueryChannel(c_play_control, _CURRENT_Q) & 0x1 ) == 0x1 ) {
 
         debug_printf("\nreading qspi");
 
-        qspi_if_read(i, ((0) + 255 + 1), (255 + 1), folder_string);
+        qspi_if_read(i, ((4) + 256), 256, folder_string);
         folder_string[sizeof(folder_string)-1]='\0';
-
-        qspi_if_read(i, (0), (255 + 1), track_string);
-
+        qspi_if_read(i, (4), 256, track_string);
         track_string[sizeof(track_string)-1]='\0';
-
         debug_printf("\qspi read done.");
-
     }
     else debug_printf("\nreading context skipped");
 
@@ -1319,15 +1734,15 @@ void sdcard_play(
     debug_printf("\ncurrent dir >%s<", folder_string);
     debug_printf("\nfinding index for >%s<", track_string);
 
-    int track = 0;
     GetDirIndexOf(&track, &track_string );
     debug_printf("\ncurrent index: %d", track);
+
 
     while(1){
 
         while (state == IDLE){
             debug_printf("\nIDLE");
-# 266 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
+# 291 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
             PLAY_COMMAND reply = QueryChannel(c_play_control, _INPUT_Q);
             switch (reply){
             case _PLAY_CMD_PREV_TRACK:
@@ -1335,7 +1750,11 @@ void sdcard_play(
                 debug_printf("\nTRACK-");
                 break;
             case _PLAY_CMD_PREV_FOLDER:
-                track = ClimbUp(i)-1;
+                track = ClimbUp(
+
+                        i
+
+                )-1;
                 debug_printf("\nFOLDER-");
                 break;
             case _PLAY_CMD_PAUSE:
@@ -1347,7 +1766,11 @@ void sdcard_play(
                 debug_printf("\nTRACK+");
                 break;
             case _PLAY_CMD_NEXT_FOLDER:
-                track = ClimbUp(i)+1;
+                track = ClimbUp(
+
+                        i
+
+                )+1;
                 debug_printf("\nFOLDER+");
                 break;
             }
@@ -1368,7 +1791,11 @@ void sdcard_play(
                 track = 0;
             }
             else{
-                track = ClimbUp(i)+1;
+                track = ClimbUp(
+
+                        i
+
+                        )+1;
             }
         }
         else if (attrib & 0x10)
@@ -1379,7 +1806,12 @@ void sdcard_play(
            }
            else {
                debug_printf("\ntrack = %d, going down to <dir> %s", track, fn);
-               track = GoFolder(fn, i);
+               track = GoFolder(
+                       fn
+
+                       ,i
+
+                       );
            }
         }
         else
@@ -1388,7 +1820,9 @@ void sdcard_play(
 
             debug_printf("\nplaying %s", track_string);
 
-            qspi_if_write(i, (0), (255 + 1), track_string);
+
+            qspi_if_write(i, (4), 256, track_string);
+
 
             set_display_control_flag(0x00000001);
 
@@ -1413,12 +1847,20 @@ void sdcard_play(
 
             case _RC_NEXT_FOLDER:
                 debug_printf("\nNEXT_FOLDER");
-                track = ClimbUp(i)+1;
+                track = ClimbUp(
+
+                        i
+
+                )+1;
                 break;
 
             case _RC_PREVIOUS_FOLDER:
                 debug_printf("\nPREVIOUS_FOLDER");
-                track = GoPreviousFolder(i);
+                track = GoPreviousFolder(
+
+                        i
+
+                );
                 break;
 
             case _RC_ERROR:

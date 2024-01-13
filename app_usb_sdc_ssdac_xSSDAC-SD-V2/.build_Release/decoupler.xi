@@ -399,8 +399,8 @@ unsigned get_logical_core_id(void);
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
-# 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xSSDAC-SD-V2.h" 1 3
-# 13 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xSSDAC-SD-V2.h" 3
+# 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xSSDAC-SD-V2.h" 1 3
+# 13 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xSSDAC-SD-V2.h" 3
 extern tileref tile[2];
 extern tileref usb_tile;
 
@@ -1048,11 +1048,9 @@ int _safe_rename(const char from[], const char to[]);
 void debug_printf(char fmt[], ...);
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
 
-# 1 ".././src\\customdefines.h" 1
-# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\decoupler.h" 1
-# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\decoupler.h"
+# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\decoupler.h"
 typedef enum {
     _FALSE = 0,
     _TRUE = 1
@@ -1087,7 +1085,7 @@ unsigned byte_ptr =0;
 unsigned underflowWord = 0;
 unsigned cur_freq = 44100 ;
 
-static unsigned samplesOut[(2)];
+static unsigned samplesOut[2];
 static unsigned ch = 0;
 static unsigned digit = 0;
 
@@ -1155,7 +1153,7 @@ void decoupler(
     tx_id = 0;
     rx_id = 0;
 
-    for (int i = 0 ; i < (2) ; i++ ){
+    for (int i = 0 ; i < 2 ; i++ ){
         samplesOut[i] = 0;
     }
     ch = 0;

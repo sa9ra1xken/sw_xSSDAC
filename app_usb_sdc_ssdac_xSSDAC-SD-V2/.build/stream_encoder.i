@@ -2730,7 +2730,12 @@ FLAC__bool FLAC__bitwriter_write_utf8_uint64(FLAC__BitWriter *bw, FLAC__uint64 v
 FLAC__bool FLAC__bitwriter_zero_pad_to_byte_boundary(FLAC__BitWriter *bw);
 # 51 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 1
-# 48 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 33 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 1 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h" 1
+# 100 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h"
+inline int xassert_msg(const char msg[]) { return 1; }
+# 34 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
+# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 static inline uint32_t FLAC__clz_soft_uint32(FLAC__uint32 word)
 {
  static const uint8_t byte_to_unary_table[] = {
@@ -2761,14 +2766,14 @@ static inline uint32_t FLAC__clz_soft_uint32(FLAC__uint32 word)
 static inline uint32_t FLAC__clz_uint32(FLAC__uint32 v)
 {
 
- assert(v > 0);
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
 
 
 
 
  return __builtin_clz(v);
-# 94 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 96 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -2781,10 +2786,10 @@ static inline uint32_t FLAC__clz_soft_uint64(FLAC__uint64 word)
 static inline uint32_t FLAC__clz_uint64(FLAC__uint64 v)
 {
 
- assert(v > 0);
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
  return __builtin_clzll(v);
-# 118 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 120 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -2801,21 +2806,21 @@ static inline uint32_t FLAC__clz2_uint64(FLAC__uint64 v)
   return 64;
  return FLAC__clz_uint64(v);
 }
-# 158 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 160 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 static inline uint32_t FLAC__bitmath_ilog2(FLAC__uint32 v)
 {
- assert(v > 0);
-# 170 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+ do { if (!(v > 0)) __builtin_trap();} while(0);
+# 172 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
  return FLAC__clz_uint32(v) ^ 31U;
 
 }
 
 static inline uint32_t FLAC__bitmath_ilog2_wide(FLAC__uint64 v)
 {
- assert(v > 0);
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
  return __builtin_clzll(v) ^ 63U;
-# 208 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 210 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 uint32_t FLAC__bitmath_silog2(FLAC__int64 v);
@@ -3632,7 +3637,7 @@ static const uint32_t OVERREAD_ = 1;
  FLAC__StreamEncoder *encoder;
  uint32_t i;
 
- assert(sizeof(int) >= 4);
+ do { if (!(sizeof(int) >= 4)) __builtin_trap();} while(0);
 
  encoder = calloc(1, sizeof(FLAC__StreamEncoder));
  if(encoder == 0) {
@@ -3706,9 +3711,9 @@ static const uint32_t OVERREAD_ = 1;
  if (encoder == ((void*)0))
   return ;
 
- assert(0 != encoder->protected_);
- assert(0 != encoder->private_);
- assert(0 != encoder->private_->frame);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_->frame)) __builtin_trap();} while(0);
 
  encoder->private_->is_being_deleted = 1;
 
@@ -3754,7 +3759,7 @@ static FLAC__StreamEncoderInitStatus init_stream_internal_(
  uint32_t i;
  FLAC__bool metadata_has_seektable, metadata_has_vorbis_comment, metadata_picture_has_type1, metadata_picture_has_type2;
 
- assert(0 != encoder);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
 
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return FLAC__STREAM_ENCODER_INIT_STATUS_ALREADY_INITIALIZED;
@@ -3827,7 +3832,7 @@ static FLAC__StreamEncoderInitStatus init_stream_internal_(
    else
     encoder->protected_->qlp_coeff_precision = (15u);
   }
-  assert(encoder->protected_->qlp_coeff_precision <= (15u));
+  do { if (!(encoder->protected_->qlp_coeff_precision <= (15u))) __builtin_trap();} while(0);
  }
  else if(encoder->protected_->qlp_coeff_precision < (5u) || encoder->protected_->qlp_coeff_precision > (15u))
   return FLAC__STREAM_ENCODER_INIT_STATUS_INVALID_QLP_COEFF_PRECISION;
@@ -4219,8 +4224,8 @@ static FLAC__StreamEncoderInitStatus init_FILE_internal_(
 {
  FLAC__StreamEncoderInitStatus init_status;
 
- assert(0 != encoder);
- assert(0 != file);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != file)) __builtin_trap();} while(0);
 
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return FLAC__STREAM_ENCODER_INIT_STATUS_ALREADY_INITIALIZED;
@@ -4264,7 +4269,7 @@ static FLAC__StreamEncoderInitStatus init_FILE_internal_(
  {
   uint32_t blocksize = FLAC__stream_encoder_get_blocksize(encoder);
 
-  assert(blocksize != 0);
+  do { if (!(blocksize != 0)) __builtin_trap();} while(0);
   encoder->private_->total_frames_estimate = (uint32_t)((FLAC__stream_encoder_get_total_samples_estimate(encoder) + blocksize - 1) / blocksize);
  }
 
@@ -4301,7 +4306,7 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 {
  FILE *file;
 
- assert(0 != encoder);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
 
 
 
@@ -4348,8 +4353,8 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
  if (encoder == ((void*)0))
   return 0;
 
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
 
  if(encoder->protected_->state == FLAC__STREAM_ENCODER_UNINITIALIZED){
   if(encoder->protected_->metadata){
@@ -4427,9 +4432,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_ogg_serial_number(FLAC__StreamEncoder *encoder, long value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
 
@@ -4444,9 +4449,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_verify(FLAC__StreamEncoder *encoder, FLAC__bool value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
 
@@ -4457,9 +4462,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_streamable_subset(FLAC__StreamEncoder *encoder, FLAC__bool value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->protected_->streamable_subset = value;
@@ -4468,9 +4473,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_do_md5(FLAC__StreamEncoder *encoder, FLAC__bool value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->protected_->do_md5 = value;
@@ -4479,9 +4484,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_channels(FLAC__StreamEncoder *encoder, uint32_t value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->protected_->channels = value;
@@ -4490,9 +4495,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_bits_per_sample(FLAC__StreamEncoder *encoder, uint32_t value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->protected_->bits_per_sample = value;
@@ -4501,9 +4506,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_sample_rate(FLAC__StreamEncoder *encoder, uint32_t value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->protected_->sample_rate = value;
@@ -4513,9 +4518,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
          FLAC__bool FLAC__stream_encoder_set_compression_level(FLAC__StreamEncoder *encoder, uint32_t value)
 {
  FLAC__bool ok = 1;
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  if(value >= sizeof(compression_levels_)/sizeof(compression_levels_[0]))
@@ -4545,9 +4550,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_blocksize(FLAC__StreamEncoder *encoder, uint32_t value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->protected_->blocksize = value;
@@ -4556,9 +4561,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_do_mid_side_stereo(FLAC__StreamEncoder *encoder, FLAC__bool value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->protected_->do_mid_side_stereo = value;
@@ -4567,9 +4572,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_loose_mid_side_stereo(FLAC__StreamEncoder *encoder, FLAC__bool value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->protected_->loose_mid_side_stereo = value;
@@ -4579,10 +4584,10 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_apodization(FLAC__StreamEncoder *encoder, const char *specification)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
- assert(0 != specification);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
+ do { if (!(0 != specification)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
 
@@ -4706,9 +4711,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_max_lpc_order(FLAC__StreamEncoder *encoder, uint32_t value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->protected_->max_lpc_order = value;
@@ -4717,9 +4722,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_qlp_coeff_precision(FLAC__StreamEncoder *encoder, uint32_t value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->protected_->qlp_coeff_precision = value;
@@ -4728,9 +4733,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_do_qlp_coeff_prec_search(FLAC__StreamEncoder *encoder, FLAC__bool value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->protected_->do_qlp_coeff_prec_search = value;
@@ -4739,9 +4744,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_do_escape_coding(FLAC__StreamEncoder *encoder, FLAC__bool value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
 
@@ -4757,9 +4762,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_do_exhaustive_model_search(FLAC__StreamEncoder *encoder, FLAC__bool value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->protected_->do_exhaustive_model_search = value;
@@ -4768,9 +4773,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_min_residual_partition_order(FLAC__StreamEncoder *encoder, uint32_t value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->protected_->min_residual_partition_order = value;
@@ -4779,9 +4784,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_max_residual_partition_order(FLAC__StreamEncoder *encoder, uint32_t value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->protected_->max_residual_partition_order = value;
@@ -4790,9 +4795,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_rice_parameter_search_dist(FLAC__StreamEncoder *encoder, uint32_t value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
 
@@ -4806,9 +4811,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_total_samples_estimate(FLAC__StreamEncoder *encoder, FLAC__uint64 value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  value = ((value) <= ((1ULL << FLAC__STREAM_METADATA_STREAMINFO_TOTAL_SAMPLES_LEN) - 1) ? (value) : ((1ULL << FLAC__STREAM_METADATA_STREAMINFO_TOTAL_SAMPLES_LEN) - 1));
@@ -4818,9 +4823,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_metadata(FLAC__StreamEncoder *encoder, FLAC__StreamMetadata **metadata, uint32_t num_blocks)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  if(0 == metadata)
@@ -4850,9 +4855,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_set_limit_min_bitrate(FLAC__StreamEncoder *encoder, FLAC__bool value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->protected_->limit_min_bitrate = value;
@@ -4865,9 +4870,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_disable_instruction_set(FLAC__StreamEncoder *encoder, FLAC__bool value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->private_->disable_mmx = value & 1;
@@ -4881,9 +4886,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_disable_constant_subframes(FLAC__StreamEncoder *encoder, FLAC__bool value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->private_->disable_constant_subframes = value;
@@ -4892,9 +4897,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_disable_fixed_subframes(FLAC__StreamEncoder *encoder, FLAC__bool value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->private_->disable_fixed_subframes = value;
@@ -4903,9 +4908,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_disable_verbatim_subframes(FLAC__StreamEncoder *encoder, FLAC__bool value)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_UNINITIALIZED)
   return 0;
  encoder->private_->disable_verbatim_subframes = value;
@@ -4914,17 +4919,17 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__StreamEncoderState FLAC__stream_encoder_get_state(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->state;
 }
 
          FLAC__StreamDecoderState FLAC__stream_encoder_get_verify_decoder_state(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->verify)
   return FLAC__stream_decoder_get_state(encoder->private_->verify.decoder);
  else
@@ -4933,9 +4938,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          const char *FLAC__stream_encoder_get_resolved_state_string(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_VERIFY_DECODER_ERROR)
   return FLAC__StreamEncoderStateString[encoder->protected_->state];
  else
@@ -4944,9 +4949,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          void FLAC__stream_encoder_get_verify_decoder_error_stats(const FLAC__StreamEncoder *encoder, FLAC__uint64 *absolute_sample, uint32_t *frame_number, uint32_t *channel, uint32_t *sample, FLAC__int32 *expected, FLAC__int32 *got)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  if(0 != absolute_sample)
   *absolute_sample = encoder->private_->verify.error_stats.absolute_sample;
  if(0 != frame_number)
@@ -4963,153 +4968,153 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
          FLAC__bool FLAC__stream_encoder_get_verify(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->verify;
 }
 
          FLAC__bool FLAC__stream_encoder_get_streamable_subset(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->streamable_subset;
 }
 
          FLAC__bool FLAC__stream_encoder_get_do_md5(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->do_md5;
 }
 
          uint32_t FLAC__stream_encoder_get_channels(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->channels;
 }
 
          uint32_t FLAC__stream_encoder_get_bits_per_sample(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->bits_per_sample;
 }
 
          uint32_t FLAC__stream_encoder_get_sample_rate(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->sample_rate;
 }
 
          uint32_t FLAC__stream_encoder_get_blocksize(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->blocksize;
 }
 
          FLAC__bool FLAC__stream_encoder_get_do_mid_side_stereo(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->do_mid_side_stereo;
 }
 
          FLAC__bool FLAC__stream_encoder_get_loose_mid_side_stereo(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->loose_mid_side_stereo;
 }
 
          uint32_t FLAC__stream_encoder_get_max_lpc_order(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->max_lpc_order;
 }
 
          uint32_t FLAC__stream_encoder_get_qlp_coeff_precision(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->qlp_coeff_precision;
 }
 
          FLAC__bool FLAC__stream_encoder_get_do_qlp_coeff_prec_search(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->do_qlp_coeff_prec_search;
 }
 
          FLAC__bool FLAC__stream_encoder_get_do_escape_coding(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->do_escape_coding;
 }
 
          FLAC__bool FLAC__stream_encoder_get_do_exhaustive_model_search(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->do_exhaustive_model_search;
 }
 
          uint32_t FLAC__stream_encoder_get_min_residual_partition_order(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->min_residual_partition_order;
 }
 
          uint32_t FLAC__stream_encoder_get_max_residual_partition_order(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->max_residual_partition_order;
 }
 
          uint32_t FLAC__stream_encoder_get_rice_parameter_search_dist(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->rice_parameter_search_dist;
 }
 
          FLAC__uint64 FLAC__stream_encoder_get_total_samples_estimate(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->total_samples_estimate;
 }
 
          FLAC__bool FLAC__stream_encoder_get_limit_min_bitrate(const FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
  return encoder->protected_->limit_min_bitrate;
 }
 
@@ -5120,9 +5125,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
  const FLAC__int32 sample_max = 2147483647 >> (32 - encoder->protected_->bits_per_sample);
  const FLAC__int32 sample_min = (-2147483647-1) >> (32 - encoder->protected_->bits_per_sample);
 
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
 
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_OK)
   return 0;
@@ -5147,7 +5152,7 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
   }
 
   if(encoder->protected_->do_mid_side_stereo) {
-   assert(channels == 2);
+   do { if (!(channels == 2)) __builtin_trap();} while(0);
 
    if(bps < 32)
     for(i = encoder->private_->current_sample_number; i <= blocksize && j < samples; i++, j++) {
@@ -5167,8 +5172,8 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
 
   if(encoder->private_->current_sample_number > blocksize) {
-   assert(encoder->private_->current_sample_number == blocksize+OVERREAD_);
-   assert(OVERREAD_ == 1);
+   do { if (!(encoder->private_->current_sample_number == blocksize+OVERREAD_)) __builtin_trap();} while(0);
+   do { if (!(OVERREAD_ == 1)) __builtin_trap();} while(0);
    if(!process_frame_(encoder, 0))
     return 0;
 
@@ -5195,9 +5200,9 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
  const FLAC__int32 sample_max = 2147483647 >> (32 - encoder->protected_->bits_per_sample);
  const FLAC__int32 sample_min = (-2147483647-1) >> (32 - encoder->protected_->bits_per_sample);
 
- assert(0 != encoder);
- assert(0 != encoder->private_);
- assert(0 != encoder->protected_);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->private_)) __builtin_trap();} while(0);
+ do { if (!(0 != encoder->protected_)) __builtin_trap();} while(0);
 
  if(encoder->protected_->state != FLAC__STREAM_ENCODER_OK)
   return 0;
@@ -5239,8 +5244,8 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
     if(!process_frame_(encoder, 0))
      return 0;
 
-    assert(i == blocksize+OVERREAD_);
-    assert(OVERREAD_ == 1);
+    do { if (!(i == blocksize+OVERREAD_)) __builtin_trap();} while(0);
+    do { if (!(OVERREAD_ == 1)) __builtin_trap();} while(0);
     encoder->private_->integer_signal[0][0] = encoder->private_->integer_signal[0][blocksize];
     encoder->private_->integer_signal[1][0] = encoder->private_->integer_signal[1][blocksize];
     encoder->private_->integer_signal_mid_side[0][0] = encoder->private_->integer_signal_mid_side[0][blocksize];
@@ -5276,8 +5281,8 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
     if(!process_frame_(encoder, 0))
      return 0;
 
-    assert(i == blocksize+OVERREAD_);
-    assert(OVERREAD_ == 1);
+    do { if (!(i == blocksize+OVERREAD_)) __builtin_trap();} while(0);
+    do { if (!(OVERREAD_ == 1)) __builtin_trap();} while(0);
     for(channel = 0; channel < channels; channel++)
      encoder->private_->integer_signal[channel][0] = encoder->private_->integer_signal[channel][blocksize];
     encoder->private_->current_sample_number = 1;
@@ -5296,7 +5301,7 @@ static FLAC__StreamEncoderInitStatus init_file_internal_(
 
 void set_defaults_(FLAC__StreamEncoder *encoder)
 {
- assert(0 != encoder);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
 
 
 
@@ -5358,7 +5363,7 @@ void free_(FLAC__StreamEncoder *encoder)
 {
  uint32_t i, channel;
 
- assert(0 != encoder);
+ do { if (!(0 != encoder)) __builtin_trap();} while(0);
  if(encoder->protected_->metadata) {
   free(encoder->protected_->metadata);
   encoder->protected_->metadata = 0;
@@ -5444,8 +5449,8 @@ FLAC__bool resize_buffers_(FLAC__StreamEncoder *encoder, uint32_t new_blocksize)
  FLAC__bool ok;
  uint32_t i, channel;
 
- assert(new_blocksize > 0);
- assert(encoder->protected_->state == FLAC__STREAM_ENCODER_OK);
+ do { if (!(new_blocksize > 0)) __builtin_trap();} while(0);
+ do { if (!(encoder->protected_->state == FLAC__STREAM_ENCODER_OK)) __builtin_trap();} while(0);
 
  ok = 1;
 
@@ -5585,7 +5590,7 @@ FLAC__bool resize_buffers_(FLAC__StreamEncoder *encoder, uint32_t new_blocksize)
      FLAC__window_welch(encoder->private_->window[i], new_blocksize);
      break;
     default:
-     assert(0);
+     do { if (!(0)) __builtin_trap();} while(0);
 
      FLAC__window_hann(encoder->private_->window[i], new_blocksize);
      break;
@@ -5607,7 +5612,7 @@ FLAC__bool write_bitbuffer_(FLAC__StreamEncoder *encoder, uint32_t samples, FLAC
  const FLAC__byte *buffer;
  size_t bytes;
 
- assert(FLAC__bitwriter_is_byte_aligned(encoder->private_->frame));
+ do { if (!(FLAC__bitwriter_is_byte_aligned(encoder->private_->frame))) __builtin_trap();} while(0);
 
  if(!FLAC__bitwriter_get_buffer(encoder->private_->frame, &buffer, &bytes)) {
   encoder->protected_->state = FLAC__STREAM_ENCODER_MEMORY_ALLOCATION_ERROR;
@@ -5740,7 +5745,7 @@ void update_metadata_(const FLAC__StreamEncoder *encoder)
  const uint32_t bps = metadata->data.stream_info.bits_per_sample;
  FLAC__StreamEncoderSeekStatus seek_status;
 
- assert(metadata->type == FLAC__METADATA_TYPE_STREAMINFO);
+ do { if (!(metadata->type == FLAC__METADATA_TYPE_STREAMINFO)) __builtin_trap();} while(0);
 # 2861 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c"
  {
   const uint32_t md5_offset =
@@ -5838,7 +5843,7 @@ void update_metadata_(const FLAC__StreamEncoder *encoder)
 
   FLAC__format_seektable_sort(encoder->private_->seek_table);
 
-  assert(FLAC__format_seektable_is_legal(encoder->private_->seek_table));
+  do { if (!(FLAC__format_seektable_is_legal(encoder->private_->seek_table))) __builtin_trap();} while(0);
 
   if((seek_status = encoder->private_->seek_callback(encoder, encoder->protected_->seektable_offset + (4u), encoder->private_->client_data)) != FLAC__STREAM_ENCODER_SEEK_STATUS_OK) {
    if(seek_status == FLAC__STREAM_ENCODER_SEEK_STATUS_ERROR)
@@ -5881,7 +5886,7 @@ void update_metadata_(const FLAC__StreamEncoder *encoder)
 FLAC__bool process_frame_(FLAC__StreamEncoder *encoder, FLAC__bool is_last_block)
 {
  FLAC__uint16 crc;
- assert(encoder->protected_->state == FLAC__STREAM_ENCODER_OK);
+ do { if (!(encoder->protected_->state == FLAC__STREAM_ENCODER_OK)) __builtin_trap();} while(0);
 
 
 
@@ -5910,7 +5915,7 @@ FLAC__bool process_frame_(FLAC__StreamEncoder *encoder, FLAC__bool is_last_block
 
 
 
- assert(FLAC__bitwriter_is_byte_aligned(encoder->private_->frame));
+ do { if (!(FLAC__bitwriter_is_byte_aligned(encoder->private_->frame))) __builtin_trap();} while(0);
  if(
   !FLAC__bitwriter_get_write_crc16(encoder->private_->frame, &crc) ||
   !FLAC__bitwriter_write_raw_uint32(encoder->private_->frame, crc, FLAC__FRAME_FOOTER_CRC_LEN)
@@ -5986,7 +5991,7 @@ FLAC__bool process_subframes_(FLAC__StreamEncoder *encoder)
   do_mid_side = 0;
  }
 
- assert(do_independent || do_mid_side);
+ do { if (!(do_independent || do_mid_side)) __builtin_trap();} while(0);
 
 
 
@@ -6002,7 +6007,7 @@ FLAC__bool process_subframes_(FLAC__StreamEncoder *encoder)
   }
  }
  if(do_mid_side) {
-  assert(encoder->protected_->channels == 2);
+  do { if (!(encoder->protected_->channels == 2)) __builtin_trap();} while(0);
   for(channel = 0; channel < 2; channel++) {
    uint32_t w;
    if(encoder->protected_->bits_per_sample < 32 || channel == 0)
@@ -6054,7 +6059,7 @@ FLAC__bool process_subframes_(FLAC__StreamEncoder *encoder)
 
 
  if(do_mid_side) {
-  assert(encoder->protected_->channels == 2);
+  do { if (!(encoder->protected_->channels == 2)) __builtin_trap();} while(0);
 
   for(channel = 0; channel < 2; channel++) {
    void *integer_signal_;
@@ -6089,7 +6094,7 @@ FLAC__bool process_subframes_(FLAC__StreamEncoder *encoder)
   FLAC__Subframe *left_subframe = 0, *right_subframe = 0;
   FLAC__ChannelAssignment channel_assignment;
 
-  assert(encoder->protected_->channels == 2);
+  do { if (!(encoder->protected_->channels == 2)) __builtin_trap();} while(0);
 
   if(encoder->protected_->loose_mid_side_stereo && encoder->private_->loose_mid_side_stereo_frame_count > 0) {
    channel_assignment = (encoder->private_->last_channel_assignment == FLAC__CHANNEL_ASSIGNMENT_INDEPENDENT? FLAC__CHANNEL_ASSIGNMENT_INDEPENDENT : FLAC__CHANNEL_ASSIGNMENT_MID_SIDE);
@@ -6099,11 +6104,11 @@ FLAC__bool process_subframes_(FLAC__StreamEncoder *encoder)
    uint32_t min_bits;
    int ca;
 
-   assert(FLAC__CHANNEL_ASSIGNMENT_INDEPENDENT == 0);
-   assert(FLAC__CHANNEL_ASSIGNMENT_LEFT_SIDE == 1);
-   assert(FLAC__CHANNEL_ASSIGNMENT_RIGHT_SIDE == 2);
-   assert(FLAC__CHANNEL_ASSIGNMENT_MID_SIDE == 3);
-   assert(do_independent && do_mid_side);
+   do { if (!(FLAC__CHANNEL_ASSIGNMENT_INDEPENDENT == 0)) __builtin_trap();} while(0);
+   do { if (!(FLAC__CHANNEL_ASSIGNMENT_LEFT_SIDE == 1)) __builtin_trap();} while(0);
+   do { if (!(FLAC__CHANNEL_ASSIGNMENT_RIGHT_SIDE == 2)) __builtin_trap();} while(0);
+   do { if (!(FLAC__CHANNEL_ASSIGNMENT_MID_SIDE == 3)) __builtin_trap();} while(0);
+   do { if (!(do_independent && do_mid_side)) __builtin_trap();} while(0);
 
 
    bits[FLAC__CHANNEL_ASSIGNMENT_INDEPENDENT] = encoder->private_->best_subframe_bits [0] + encoder->private_->best_subframe_bits [1];
@@ -6150,7 +6155,7 @@ FLAC__bool process_subframes_(FLAC__StreamEncoder *encoder)
     right_subframe = &encoder->private_->subframe_workspace_mid_side[1][encoder->private_->best_subframe_mid_side[1]];
     break;
    default:
-    assert(0);
+    do { if (!(0)) __builtin_trap();} while(0);
   }
 
   switch(channel_assignment) {
@@ -6171,7 +6176,7 @@ FLAC__bool process_subframes_(FLAC__StreamEncoder *encoder)
     right_bps = encoder->private_->subframe_bps_mid_side[1];
     break;
    default:
-    assert(0);
+    do { if (!(0)) __builtin_trap();} while(0);
   }
 
 
@@ -6264,7 +6269,7 @@ FLAC__bool process_subframe_(
 
  const uint32_t rice_parameter_limit = FLAC__stream_encoder_get_bits_per_sample(encoder) > 16? FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE2_ESCAPE_PARAMETER : FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE_ESCAPE_PARAMETER;
 
- assert(frame_header->blocksize > 0);
+ do { if (!(frame_header->blocksize > 0)) __builtin_trap();} while(0);
 
 
  _best_subframe = 0;
@@ -6510,7 +6515,7 @@ FLAC__bool process_subframe_(
 
 
  if(_best_bits == 4294967295U) {
-  assert(_best_subframe == 0);
+  do { if (!(_best_subframe == 0)) __builtin_trap();} while(0);
   _best_bits = evaluate_verbatim_subframe_(encoder, integer_signal, frame_header->blocksize, subframe_bps, subframe[_best_subframe]);
  }
 
@@ -6554,7 +6559,7 @@ FLAC__bool add_subframe_(
    }
    break;
   default:
-   assert(0);
+   do { if (!(0)) __builtin_trap();} while(0);
  }
 
  return 1;
@@ -6683,8 +6688,8 @@ uint32_t evaluate_lpc_subframe_(
 
 
  if(subframe_bps <= 17) {
-  assert(order > 0);
-  assert(order <= (32u));
+  do { if (!(order > 0)) __builtin_trap();} while(0);
+  do { if (!(order <= (32u))) __builtin_trap();} while(0);
   qlp_coeff_precision = ((qlp_coeff_precision) <= (32 - subframe_bps - FLAC__bitmath_ilog2(order)) ? (qlp_coeff_precision) : (32 - subframe_bps - FLAC__bitmath_ilog2(order)));
  }
 
@@ -6843,7 +6848,7 @@ uint32_t find_best_partition_order_(
     )
    )
    {
-    assert(best_residual_bits != 0);
+    do { if (!(best_residual_bits != 0)) __builtin_trap();} while(0);
     break;
    }
    sum += 1u << partition_order;
@@ -6898,7 +6903,7 @@ void precompute_partition_info_sums_(
  const uint32_t default_partition_samples = (residual_samples + predictor_order) >> max_partition_order;
  uint32_t partitions = 1u << max_partition_order;
 
- assert(default_partition_samples > predictor_order);
+ do { if (!(default_partition_samples > predictor_order)) __builtin_trap();} while(0);
 
 
  {
@@ -6963,7 +6968,7 @@ void precompute_partition_info_escapes_(
   const uint32_t partitions = 1u << partition_order;
   const uint32_t default_partition_samples = blocksize >> partition_order;
 
-  assert(default_partition_samples > predictor_order);
+  do { if (!(default_partition_samples > predictor_order)) __builtin_trap();} while(0);
 
   for(partition = residual_sample = 0; partition < partitions; partition++) {
    partition_samples = default_partition_samples;
@@ -7042,7 +7047,7 @@ FLAC__bool set_partitioned_rice_(
  (void)rice_parameter_search_dist;
 
 
- assert(rice_parameter_limit <= FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE2_ESCAPE_PARAMETER);
+ do { if (!(rice_parameter_limit <= FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE2_ESCAPE_PARAMETER)) __builtin_trap();} while(0);
 
  parameters = partitioned_rice_contents->parameters;
  raw_bits = partitioned_rice_contents->raw_bits;
@@ -7177,7 +7182,7 @@ void append_to_verify_fifo_(verify_input_fifo *fifo, const FLAC__int32 * const i
 
  fifo->tail += wide_samples;
 
- assert(fifo->tail <= fifo->size);
+ do { if (!(fifo->tail <= fifo->size)) __builtin_trap();} while(0);
 }
 
 void append_to_verify_fifo_interleaved_(verify_input_fifo *fifo, const FLAC__int32 input[], uint32_t input_offset, uint32_t channels, uint32_t wide_samples)
@@ -7194,7 +7199,7 @@ void append_to_verify_fifo_interleaved_(verify_input_fifo *fifo, const FLAC__int
  }
  fifo->tail = tail;
 
- assert(fifo->tail <= fifo->size);
+ do { if (!(fifo->tail <= fifo->size)) __builtin_trap();} while(0);
 }
 
 FLAC__StreamDecoderReadStatus verify_read_callback_(const FLAC__StreamDecoder *decoder, FLAC__byte buffer[], size_t *bytes, void *client_data)
@@ -7204,7 +7209,7 @@ FLAC__StreamDecoderReadStatus verify_read_callback_(const FLAC__StreamDecoder *d
  (void)decoder;
 
  if(encoder->private_->verify.needs_magic_hack) {
-  assert(*bytes >= (4u));
+  do { if (!(*bytes >= (4u))) __builtin_trap();} while(0);
   *bytes = (4u);
   memcpy(buffer, FLAC__STREAM_SYNC_STRING, *bytes);
   encoder->private_->verify.needs_magic_hack = 0;
@@ -7215,7 +7220,7 @@ FLAC__StreamDecoderReadStatus verify_read_callback_(const FLAC__StreamDecoder *d
 
 
 
-   assert(0);
+   do { if (!(0)) __builtin_trap();} while(0);
    return FLAC__STREAM_DECODER_READ_STATUS_ABORT;
   }
   else if(encoded_bytes < *bytes)
@@ -7256,8 +7261,8 @@ FLAC__StreamDecoderWriteStatus verify_write_callback_(const FLAC__StreamDecoder 
      break;
     }
    }
-   assert(i < blocksize);
-   assert(frame->header.number_type == FLAC__FRAME_NUMBER_TYPE_SAMPLE_NUMBER);
+   do { if (!(i < blocksize)) __builtin_trap();} while(0);
+   do { if (!(frame->header.number_type == FLAC__FRAME_NUMBER_TYPE_SAMPLE_NUMBER)) __builtin_trap();} while(0);
    encoder->private_->verify.error_stats.absolute_sample = frame->header.number.sample_number + sample;
    encoder->private_->verify.error_stats.frame_number = (uint32_t)(frame->header.number.sample_number / blocksize);
    encoder->private_->verify.error_stats.channel = channel;
@@ -7270,7 +7275,7 @@ FLAC__StreamDecoderWriteStatus verify_write_callback_(const FLAC__StreamDecoder 
  }
 
  encoder->private_->verify.input_fifo.tail -= blocksize;
- assert(encoder->private_->verify.input_fifo.tail <= OVERREAD_);
+ do { if (!(encoder->private_->verify.input_fifo.tail <= OVERREAD_)) __builtin_trap();} while(0);
  for(channel = 0; channel < channels; channel++)
   memmove(&encoder->private_->verify.input_fifo.data[channel][0], &encoder->private_->verify.input_fifo.data[channel][blocksize], encoder->private_->verify.input_fifo.tail * sizeof(encoder->private_->verify.input_fifo.data[0][0]));
  return FLAC__STREAM_DECODER_WRITE_STATUS_CONTINUE;

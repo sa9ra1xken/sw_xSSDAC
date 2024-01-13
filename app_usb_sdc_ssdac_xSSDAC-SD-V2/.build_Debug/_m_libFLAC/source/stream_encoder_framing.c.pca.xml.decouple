@@ -2,36 +2,45 @@
   <fCall global="true" name="FLAC__add_metadata_block"/>
   <fCall global="true" name="FLAC__add_metadata_block.nstackwords"/>
   <fCall global="true" name="FLAC__bitwriter_get_input_bits_unconsumed.nstackwords"/>
+  <fCall global="true" name="FLAC__bitwriter_is_byte_aligned.nstackwords"/>
+  <fCall global="true" name="FLAC__format_sample_rate_is_valid.nstackwords"/>
   <fCall global="true" name="__ashldi3.nstackwords"/>
   <fCall global="true" name="FLAC__bitwriter_write_raw_uint32_little_endian.nstackwords"/>
+  <fCall global="true" name="assert.nstackwords"/>
   <fCall global="true" name="FLAC__bitwriter_write_raw_uint64.nstackwords"/>
   <fCall global="true" name="FLAC__bitwriter_write_zeroes.nstackwords"/>
   <fCall global="true" name="strlen.nstackwords"/>
-  <fCall global="true" name="FLAC__bitwriter_write_byte_block.nstackwords"/>
   <fCall global="true" name="FLAC__bitwriter_write_raw_uint32.nstackwords"/>
+  <fCall global="true" name="FLAC__bitwriter_write_byte_block.nstackwords"/>
   <fCall global="true" name="FLAC__add_metadata_block.maxcores"/>
   <fCall global="true" name="FLAC__bitwriter_get_input_bits_unconsumed.maxcores"/>
+  <fCall global="true" name="FLAC__bitwriter_is_byte_aligned.maxcores"/>
   <fCall global="true" name="FLAC__bitwriter_write_byte_block.maxcores"/>
   <fCall global="true" name="FLAC__bitwriter_write_raw_uint32.maxcores"/>
   <fCall global="true" name="FLAC__bitwriter_write_raw_uint32_little_endian.maxcores"/>
   <fCall global="true" name="FLAC__bitwriter_write_raw_uint64.maxcores"/>
   <fCall global="true" name="FLAC__bitwriter_write_zeroes.maxcores"/>
+  <fCall global="true" name="FLAC__format_sample_rate_is_valid.maxcores"/>
   <fCall global="true" name="strlen.maxcores"/>
   <fCall global="true" name="FLAC__add_metadata_block.maxtimers"/>
   <fCall global="true" name="FLAC__bitwriter_get_input_bits_unconsumed.maxtimers"/>
+  <fCall global="true" name="FLAC__bitwriter_is_byte_aligned.maxtimers"/>
   <fCall global="true" name="FLAC__bitwriter_write_byte_block.maxtimers"/>
   <fCall global="true" name="FLAC__bitwriter_write_raw_uint32.maxtimers"/>
   <fCall global="true" name="FLAC__bitwriter_write_raw_uint32_little_endian.maxtimers"/>
   <fCall global="true" name="FLAC__bitwriter_write_raw_uint64.maxtimers"/>
   <fCall global="true" name="FLAC__bitwriter_write_zeroes.maxtimers"/>
+  <fCall global="true" name="FLAC__format_sample_rate_is_valid.maxtimers"/>
   <fCall global="true" name="strlen.maxtimers"/>
   <fCall global="true" name="FLAC__add_metadata_block.maxchanends"/>
   <fCall global="true" name="FLAC__bitwriter_get_input_bits_unconsumed.maxchanends"/>
+  <fCall global="true" name="FLAC__bitwriter_is_byte_aligned.maxchanends"/>
   <fCall global="true" name="FLAC__bitwriter_write_byte_block.maxchanends"/>
   <fCall global="true" name="FLAC__bitwriter_write_raw_uint32.maxchanends"/>
   <fCall global="true" name="FLAC__bitwriter_write_raw_uint32_little_endian.maxchanends"/>
   <fCall global="true" name="FLAC__bitwriter_write_raw_uint64.maxchanends"/>
   <fCall global="true" name="FLAC__bitwriter_write_zeroes.maxchanends"/>
+  <fCall global="true" name="FLAC__format_sample_rate_is_valid.maxchanends"/>
   <fCall global="true" name="strlen.maxchanends"/>
   <fCall global="true" name="FLAC__frame_add_header"/>
   <fCall global="true" name="FLAC__frame_add_header.nstackwords"/>
@@ -88,7 +97,10 @@
   <fCall global="true" name="FLAC__subframe_add_verbatim.maxchanends"/>
   <fCall global="true" name="strlen"/>
   <fCall global="true" name="FLAC__bitwriter_get_input_bits_unconsumed"/>
+  <fCall global="true" name="assert"/>
+  <fCall global="true" name="FLAC__bitwriter_is_byte_aligned"/>
   <fCall global="true" name="FLAC__bitwriter_write_raw_uint32"/>
+  <fCall global="true" name="FLAC__format_sample_rate_is_valid"/>
   <fCall global="true" name="FLAC__bitwriter_write_raw_uint64"/>
   <fCall global="true" name="FLAC__bitwriter_write_byte_block"/>
   <fCall global="true" name="FLAC__bitwriter_write_zeroes"/>

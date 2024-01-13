@@ -25,16 +25,17 @@
 .asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Debug"
 	.section	.debug_info,"",@progbits
 .L.debug_info_begin0:
-	.long	26                      # Length of Unit
+	.long	27                      # Length of Unit
 	.short	3                       # DWARF version number
 	.long	.Lsection_abbrev        # Offset Into Abbrev. Section
 	.byte	4                       # Address Size (in bytes)
-	.byte	1                       # Abbrev [1] 0xb:0x13 DW_TAG_compile_unit
+	.byte	1                       # Abbrev [1] 0xb:0x14 DW_TAG_compile_unit
 	.long	.Linfo_string0          # DW_AT_producer
 	.short	49152                   # DW_AT_language
 	.long	.Linfo_string1          # DW_AT_name
 	.long	.Lline_table_start0     # DW_AT_stmt_list
 	.long	.Linfo_string2          # DW_AT_comp_dir
+	.byte	1                       # DW_AT_APPLE_optimized
 .L.debug_info_end0:
 	.section	.debug_abbrev,"",@progbits
 	.byte	1                       # Abbreviation Code
@@ -50,6 +51,8 @@
 	.byte	6                       # DW_FORM_data4
 	.byte	27                      # DW_AT_comp_dir
 	.byte	14                      # DW_FORM_strp
+	.ascii	"\341\177"              # DW_AT_APPLE_optimized
+	.byte	12                      # DW_FORM_flag
 	.byte	0                       # EOM(1)
 	.byte	0                       # EOM(2)
 	.byte	0                       # EOM(3)

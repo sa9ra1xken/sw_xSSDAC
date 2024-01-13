@@ -12,32 +12,24 @@
 #include <debug_print.h>
 #include "ff.h"    /* file system routines */
 #include "timing.h"
-//#include "customdefines.h"
+#include "ssdac_conf.h"
 #include "button_listener.h"
-//#include "play_track.h"
 #include "sdcard_play.h"
-//#include "sdcard_test.h"
 #include "display_control.h"
 #include "qspi_access.h"
-#include "ssdac_conf.h"
 
+#define ENABLE_RIFF
+#define ENABLE_FLAC
 
 PLAY_TRACK_RC PlayRIFF(FIL* file, chanend c_handshake, chanend c_control);
 PLAY_TRACK_RC PlayFLAC(FIL* file, chanend c_handshake, chanend c_control);
 
 const char * setting_file_name = "0:/CONTEXTSAVE.TXT";
 
-#ifdef CONFIG_DATA_SIZE_IN_FLASH
-#define TRACK_STRING_OFFSET     (CONFIG_DATA_SIZE_IN_FLASH)
-#else
-#define TRACK_STRING_OFFSET     (0)
-#endif
-#define TRACK_STRING_SIZE       (_MAX_LFN + 1)
+#include "ffconf.h"
+#include "flash_map.h"
 
 char track_string[TRACK_STRING_SIZE]="track";
-
-#define FOLDER_STRING_OFFSET    (TRACK_STRING_OFFSET + _MAX_LFN + 1)
-#define FOLDER_STRING_SIZE      (_MAX_LFN + 1)
 
 char folder_string[FOLDER_STRING_SIZE]="folder";
 
@@ -102,20 +94,22 @@ FRESULT GetDirIndexOf(int *index, char *s1 ){
         }
         i++;
     }while(s2[0]!='\0');
+    return FR_NO_FILE;
 }
 
-int GoFolder(char * folder, unsigned i){
+int GoFolder(
+        char * folder
+){
     f_chdir(folder);
-    f_getcwd (&folder_string, sizeof(folder_string));
-    set_display_control_flag(BITMASK_UPDATE_FOLDER);
-    qspi_if_write(i, FOLDER_STRING_OFFSET, FOLDER_STRING_SIZE, folder_string);
-
+    f_getcwd (folder_string, sizeof(folder_string));
+    set_display_control_flag(BITMASK_SHOW_FOLDER);
     return 0;
 }
 
-int ClimbUp(unsigned i){
+int ClimbUp(
+){
     TCHAR str[_MAX_LFN + 1];
-    FRESULT rc = f_getcwd (&str, sizeof(str));  //get current directory
+    f_getcwd (str, sizeof(str));  //get current directory
     debug_printf("\ngoing up from %s", str);
     char *cur_item;
     cur_item = strrchr(str, '/')+1;             //extract current folder name
@@ -125,22 +119,21 @@ int ClimbUp(unsigned i){
     debug_printf("\ncurrent index %d", index);
 
     f_getcwd (&folder_string, sizeof(folder_string));
-    set_display_control_flag(BITMASK_UPDATE_FOLDER);
-    qspi_if_write(i, FOLDER_STRING_OFFSET, FOLDER_STRING_SIZE, folder_string);
-
+    set_display_control_flag(BITMASK_SHOW_FOLDER);
     return index;
 }
 
-int GoPreviousFolder(unsigned i){
+int GoPreviousFolder(
+){
     int index;
     //TCHAR str[_MAX_LFN + 1]; str[0]=0;
     do{
-        index = ClimbUp(i)-1;
+        index = ClimbUp(
+        ) -1;
         f_getcwd (&folder_string, sizeof(folder_string));           //get current directory
     } while ((strcmp(folder_string,"0:/")!=0)&&(index<=2));
 
-    set_display_control_flag(BITMASK_UPDATE_FOLDER);
-    qspi_if_write(i, FOLDER_STRING_OFFSET, FOLDER_STRING_SIZE, folder_string);
+    set_display_control_flag(BITMASK_SHOW_FOLDER);
     return index;
 }
 
@@ -180,22 +173,23 @@ PLAY_TRACK_RC PlayTrack(const TCHAR* fn, chanend c_handshake, chanend c_control)
             file_format_id[3]
     );
 
-    if (strncmp(&file_format_id, "RIFF", 4)==0){
+#ifdef ENABLE_RIFF
+    if (strncmp(file_format_id, "RIFF", 4)==0){
         rc = PlayRIFF(&file, c_handshake, c_control);
         res = f_close (&file);
         return rc;
     }
-    if (strncmp(&file_format_id, "fLaC", 4)==0){
+#endif
+#ifdef ENABLE_FLAC
+    if (strncmp(file_format_id, "fLaC", 4)==0){
         rc = PlayFLAC(&file, c_handshake, c_control);
         res = f_close (&file);
         return rc;
     }
-    else{
-        debug_printf(" - Unknown format");
-        fflush(stdout);
-        res = f_close (&file);
-        return _RC_ERROR;
-    }
+#endif
+    debug_printf(" - Unknown format");
+    res = f_close (&file);
+    return _RC_ERROR;
 }
 
 typedef enum {
@@ -207,16 +201,13 @@ CONTROL_STATE state = RUNNING;
 
 void sdcard_play(
         chanend c_handshake,
-        chanend c_play_control,
-        /*CLIENT_INTERFACE(qspi_access, i)*/ unsigned i
+        chanend c_play_control
+#ifdef _SDCARD_PLAYER_HANDLES_CONTEXT_BOOKMARK
+        , /*CLIENT_INTERFACE(qspi_access, i)*/ unsigned i
+#endif
 )
 {
-    debug_printf("\nsdcard_play started");
-
-    set_console_mode(_SDC_AUDIO);
-    set_display_control_flag(BITMASK_SWITCH_CONSOLE);
-    set_display_control_flag(BITMASK_UPDATE_FOLDER);
-    set_display_control_flag(BITMASK_UPDATE_TRACK);
+    debug_printf("\nsdcard_play started, folder[%s] track[%s]", folder_string, track_string);
 
     PLAY_TRACK_RC previous_rc;
     PLAY_TRACK_RC rc = _RC_STOP;
@@ -225,30 +216,35 @@ void sdcard_play(
     f_mount(0, &Fatfs);     // Register volume work area (never fails) for SD host interface #0
     debug_printf("\nf_mount done");
 
+    int track = 0;
+
+#ifdef _SDCARD_PLAYER_HANDLES_CONTEXT_BOOKMARK
     if ( ( QueryChannel(c_play_control, _CURRENT_Q) & 0x1 ) == 0x1 ) {
 
         debug_printf("\nreading qspi");
 
         qspi_if_read(i, FOLDER_STRING_OFFSET, FOLDER_STRING_SIZE, folder_string);
         folder_string[sizeof(folder_string)-1]='\0';
-
         qspi_if_read(i, TRACK_STRING_OFFSET, TRACK_STRING_SIZE, track_string);
-
         track_string[sizeof(track_string)-1]='\0';
-
         debug_printf("\qspi read done.");
-
     }
     else debug_printf("\nreading context skipped");
 
-    GoFolder(folder_string, i);
+#endif
+
+    GoFolder(folder_string);
 
     debug_printf("\ncurrent dir >%s<", folder_string);
     debug_printf("\nfinding index for >%s<", track_string);
 
-    int track = 0;
     GetDirIndexOf(&track, &track_string );
     debug_printf("\ncurrent index: %d", track);
+
+    set_console_mode(_SDC_AUDIO);
+    set_display_control_flag(BITMASK_SWITCH_CONSOLE);
+    set_display_control_flag(BITMASK_SHOW_FOLDER);
+    set_display_control_flag(BITMASK_SHOW_TRACK);
 
     while(1){
 
@@ -270,7 +266,8 @@ void sdcard_play(
                 debug_printf("\nTRACK-");
                 break;
             case _PLAY_CMD_PREV_FOLDER:
-                track = ClimbUp(i)-1;
+                track = ClimbUp(
+                )-1;
                 debug_printf("\nFOLDER-");
                 break;
             case _PLAY_CMD_PAUSE:
@@ -282,7 +279,8 @@ void sdcard_play(
                 debug_printf("\nTRACK+");
                 break;
             case _PLAY_CMD_NEXT_FOLDER:
-                track = ClimbUp(i)+1;
+                track = ClimbUp(
+                )+1;
                 debug_printf("\nFOLDER+");
                 break;
             }
@@ -303,7 +301,8 @@ void sdcard_play(
                 track = 0;  //repeat from the biginning
             }
             else{
-                track = ClimbUp(i)+1;
+                track = ClimbUp(
+                        )+1;
             }
         }
         else if (attrib & AM_DIR)
@@ -314,7 +313,9 @@ void sdcard_play(
            }
            else {
                debug_printf("\ntrack = %d, going down to <dir> %s", track, fn);
-               track = GoFolder(fn, i);
+               track = GoFolder(
+                       fn
+                       );
            }
         }
         else
@@ -323,9 +324,12 @@ void sdcard_play(
 
             debug_printf("\nplaying %s", track_string);
 
+#ifdef _SDCARD_PLAYER_HANDLES_CONTEXT_BOOKMARK
+            qspi_if_write(i, FOLDER_STRING_OFFSET, FOLDER_STRING_SIZE, folder_string);
             qspi_if_write(i, TRACK_STRING_OFFSET, TRACK_STRING_SIZE, track_string);
+#endif
 
-            set_display_control_flag(BITMASK_UPDATE_TRACK);
+            set_display_control_flag(BITMASK_SHOW_TRACK);
 
             previous_rc = rc;
             rc = PlayTrack(track_string, c_handshake, c_play_control);
@@ -348,12 +352,14 @@ void sdcard_play(
 
             case _RC_NEXT_FOLDER:
                 debug_printf("\nNEXT_FOLDER");
-                track = ClimbUp(i)+1;
+                track = ClimbUp(
+                )+1;
                 break;
 
             case _RC_PREVIOUS_FOLDER:
                 debug_printf("\nPREVIOUS_FOLDER");
-                track = GoPreviousFolder(i);
+                track = GoPreviousFolder(
+                );
                 break;
 
             case _RC_ERROR:

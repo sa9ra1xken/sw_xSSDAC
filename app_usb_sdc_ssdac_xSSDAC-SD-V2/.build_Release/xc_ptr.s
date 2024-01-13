@@ -1,5 +1,5 @@
 	.text
-	.file	"C:/Users/takaaki/git/sc_util/module_xc_ptr/src/xc_ptr.xc"
+	.file	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/xc_ptr.xc"
                                         # Start of file scope inline assembly
 	.set array_to_xc_ptr.locnoside, 0
 
@@ -25,8 +25,8 @@
 	.cc_top array_to_xc_ptr.function,array_to_xc_ptr
 array_to_xc_ptr:                        # @array_to_xc_ptr
 .Lfunc_begin0:
-	.file	1 "C:/Users/takaaki/git/sc_util/module_xc_ptr/src\\xc_ptr.h"
-	.loc	1 11 0                  # C:/Users/takaaki/git/sc_util/module_xc_ptr/src\xc_ptr.h:11:0
+	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
+	.loc	1 11 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:11:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -36,7 +36,7 @@ array_to_xc_ptr:                        # @array_to_xc_ptr
 		dualentsp 0
 	}
 	#DEBUG_VALUE: array_to_xc_ptr:a <- R0
-	.loc	1 13 0 prologue_end     # C:/Users/takaaki/git/sc_util/module_xc_ptr/src\xc_ptr.h:13:0
+	.loc	1 13 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\xc_ptr.h:13:0
 .Ltmp0:
 	#APP
 	mov r0, r0
@@ -68,9 +68,9 @@ array_to_xc_ptr:                        # @array_to_xc_ptr
 .Linfo_string0:
 .asciiz"XMOS 32-bit XC Compiler Community_14.4.1 (build 235-acbb966, Dec-01-2019)"
 .Linfo_string1:
-.asciiz"C:/Users/takaaki/git/sc_util/module_xc_ptr/src/xc_ptr.xc"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/xc_ptr.xc"
 .Linfo_string2:
-.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 .Linfo_string3:
 .asciiz"array_to_xc_ptr"
 .Linfo_string4:
@@ -78,18 +78,16 @@ array_to_xc_ptr:                        # @array_to_xc_ptr
 .Linfo_string5:
 .asciiz"a"
 .Linfo_string6:
-.asciiz"unsigned char"
-.Linfo_string7:
 .asciiz"sizetype"
-.Linfo_string8:
+.Linfo_string7:
 .asciiz"x"
 	.section	.debug_info,"",@progbits
 .L.debug_info_begin0:
-	.long	122                     # Length of Unit
+	.long	115                     # Length of Unit
 	.short	3                       # DWARF version number
 	.long	.Lsection_abbrev        # Offset Into Abbrev. Section
 	.byte	4                       # Address Size (in bytes)
-	.byte	1                       # Abbrev [1] 0xb:0x73 DW_TAG_compile_unit
+	.byte	1                       # Abbrev [1] 0xb:0x6c DW_TAG_compile_unit
 	.long	.Linfo_string0          # DW_AT_producer
 	.short	49152                   # DW_AT_language
 	.long	.Linfo_string1          # DW_AT_name
@@ -118,7 +116,7 @@ array_to_xc_ptr:                        # @array_to_xc_ptr
 	.byte	5                       # Abbrev [5] 0x4a:0xd DW_TAG_variable
 	.byte	1                       # DW_AT_location
 	.byte	80
-	.long	.Linfo_string8          # DW_AT_name
+	.long	.Linfo_string7          # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
 	.byte	12                      # DW_AT_decl_line
 	.long	89                      # DW_AT_type
@@ -133,13 +131,9 @@ array_to_xc_ptr:                        # @array_to_xc_ptr
 	.byte	8                       # Abbrev [8] 0x65:0x5 DW_TAG_array_type
 	.long	106                     # DW_AT_type
 	.byte	9                       # Abbrev [9] 0x6a:0x5 DW_TAG_const_type
-	.long	111                     # DW_AT_type
-	.byte	6                       # Abbrev [6] 0x6f:0x7 DW_TAG_base_type
+	.long	89                      # DW_AT_type
+	.byte	10                      # Abbrev [10] 0x6f:0x7 DW_TAG_base_type
 	.long	.Linfo_string6          # DW_AT_name
-	.byte	8                       # DW_AT_encoding
-	.byte	1                       # DW_AT_byte_size
-	.byte	10                      # Abbrev [10] 0x76:0x7 DW_TAG_base_type
-	.long	.Linfo_string7          # DW_AT_name
 	.byte	8                       # DW_AT_byte_size
 	.byte	7                       # DW_AT_encoding
 	.byte	0                       # End Of Children Mark
@@ -310,21 +304,19 @@ array_to_xc_ptr:                        # @array_to_xc_ptr
 	.long	.Lset4
 	.long	89                      # DIE offset
 .asciiz"unsigned int"                   # External Name
-	.long	111                     # DIE offset
-.asciiz"unsigned char"                  # External Name
 	.long	0                       # End Mark
 .LpubTypes_end0:
 	.cfi_sections .debug_frame
 
-	.typestring array_to_xc_ptr, "f{ui}(&(a(:c:uc)))"
+	.typestring array_to_xc_ptr, "f{ui}(&(a(:c:ui)))"
 	.section	.xtalabeltable,"",@progbits
 .Lentries_start0:
 	.long	.Lentries_end1-.Lentries_start0
 	.long	0
-	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
+	.ascii	"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 	.byte	0
 .cc_top cc_0,.Lxtalabel0
-	.ascii	"C:/Users/takaaki/git/sc_util/module_xc_ptr/src\\xc_ptr.h"
+	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer\\xc_ptr.h"
 	.byte	0
 	.long	11
 	.long	15

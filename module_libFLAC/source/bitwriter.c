@@ -41,6 +41,8 @@
 #include "private/format.h"
 #include "private/macros.h"
 #include "private/stream_encoder.h"
+
+#include "xassert.h"
 #include "FLAC/assert.h"
 #include "share/alloc.h"
 #include "share/compat.h"

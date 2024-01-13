@@ -50,7 +50,7 @@
 	.cc_top FLAC__stream_decoder_new.function,FLAC__stream_decoder_new
 FLAC__stream_decoder_new:
 .Lfunc_begin0:
-	.loc	1 239 0
+	.loc	1 241 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -80,7 +80,7 @@ FLAC__stream_decoder_new:
 		mkmsk r0, 1
 		ldc r1, 8
 	}
-	.loc	1 245 12 prologue_end
+	.loc	1 247 12 prologue_end
 .Ltmp8:
 	bl calloc
 	{
@@ -92,7 +92,7 @@ FLAC__stream_decoder_new:
 		mkmsk r0, 1
 		ldc r1, 32
 	}
-	.loc	1 250 24
+	.loc	1 252 24
 	bl calloc
 	{
 		mov r5, r0
@@ -102,7 +102,7 @@ FLAC__stream_decoder_new:
 		nop
 		stw r5, r4[0]
 	}
-	.loc	1 251 5
+	.loc	1 253 5
 .Ltmp9:
 	bf r5, .LBB0_2
 .Ltmp10:
@@ -111,7 +111,7 @@ FLAC__stream_decoder_new:
 		nop
 	}
 	ldc r1, 8344
-	.loc	1 256 22
+	.loc	1 258 22
 	{
 		mov r0, r7
 		nop
@@ -125,11 +125,11 @@ FLAC__stream_decoder_new:
 		nop
 		stw r6, r4[1]
 	}
-	.loc	1 257 5
+	.loc	1 259 5
 .Ltmp11:
 	bf r6, .LBB0_4
 .Ltmp12:
-	.loc	1 263 29
+	.loc	1 265 29
 	bl FLAC__bitreader_new
 	{
 		mov r9, r0
@@ -139,12 +139,12 @@ FLAC__stream_decoder_new:
 		nop
 		stw r9, r6[11]
 	}
-	.loc	1 264 5
+	.loc	1 266 5
 .Ltmp13:
 	bf r9, .LBB0_6
 .Ltmp14:
 	ldc r0, 1120
-	.loc	1 271 2
+	.loc	1 273 2
 	{
 		add r0, r6, r0
 		ldc r1, 16
@@ -153,24 +153,24 @@ FLAC__stream_decoder_new:
 		nop
 		stw r1, r0[0]
 	}
-	.loc	1 272 52
+	.loc	1 274 52
 .Ltmp15:
 	ldw r0, cp[FLAC__STREAM_METADATA_APPLICATION_ID_LEN]
-	.loc	1 272 52
+	.loc	1 274 52
 	{
 		shl r0, r0, 1
 		nop
 	}
 	ldw r1, cp[.LCPI0_0]
-	.loc	1 272 52
+	.loc	1 274 52
 	{
 		and r0, r0, r1
 		nop
 	}
-	.loc	1 272 52
+	.loc	1 274 52
 	bl malloc
 	ldc r1, 1112
-	.loc	1 272 52
+	.loc	1 274 52
 	{
 		add r1, r6, r1
 		nop
@@ -179,7 +179,7 @@ FLAC__stream_decoder_new:
 		nop
 		stw r0, r1[0]
 	}
-	.loc	1 272 52
+	.loc	1 274 52
 	bf r0, .LBB0_12
 .Ltmp16:
 	{
@@ -214,39 +214,29 @@ FLAC__stream_decoder_new:
 		nop
 		stw r8, r11[8]
 	}
-	.loc	1 282 3
+	.loc	1 284 3
 .Ltmp17:
 	{
 		add r11, r2, r3
 		stw r8, r1[0]
 	}
-	.loc	1 282 3
+	.loc	1 284 3
 	{
 		add r3, r3, 4
 		stw r8, r11[8]
 	}
 .Ltmp18:
-	.loc	1 280 2
+	.loc	1 282 2
 	{
 		add r1, r1, 4
 		nop
 	}
 .xtaloop 8
 	# LOOPMARKER 0
-	.loc	1 280 2
+	.loc	1 282 2
 	bt r3, .LBB0_9
 .Ltmp19:
 	ldc r0, 112
-	.loc	1 285 2
-	{
-		add r0, r6, r0
-		nop
-	}
-	{
-		nop
-		stw r8, r0[0]
-	}
-	ldc r0, 216
 	.loc	1 287 2
 	{
 		add r0, r6, r0
@@ -256,8 +246,18 @@ FLAC__stream_decoder_new:
 		nop
 		stw r8, r0[0]
 	}
+	ldc r0, 216
+	.loc	1 289 2
+	{
+		add r0, r6, r0
+		nop
+	}
+	{
+		nop
+		stw r8, r0[0]
+	}
 	ldc r0, 220
-	.loc	1 288 2
+	.loc	1 290 2
 	{
 		add r0, r6, r0
 		nop
@@ -267,7 +267,7 @@ FLAC__stream_decoder_new:
 		stw r8, r0[0]
 	}
 	ldc r0, 244
-	.loc	1 289 2
+	.loc	1 291 2
 	{
 		add r0, r6, r0
 		nop
@@ -278,79 +278,79 @@ FLAC__stream_decoder_new:
 	}
 	ldc r0, 120
 .Ltmp20:
-	.loc	1 292 3
+	.loc	1 294 3
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	1 292 3
+	.loc	1 294 3
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_init
 	ldc r0, 132
 .Ltmp21:
-	.loc	1 292 3
+	.loc	1 294 3
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	1 292 3
+	.loc	1 294 3
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_init
 	ldc r0, 144
-	.loc	1 292 3
+	.loc	1 294 3
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	1 292 3
+	.loc	1 294 3
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_init
 	ldc r0, 156
-	.loc	1 292 3
+	.loc	1 294 3
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	1 292 3
+	.loc	1 294 3
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_init
 	ldc r0, 168
-	.loc	1 292 3
+	.loc	1 294 3
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	1 292 3
+	.loc	1 294 3
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_init
 	ldc r0, 180
-	.loc	1 292 3
+	.loc	1 294 3
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	1 292 3
+	.loc	1 294 3
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_init
 	ldc r0, 192
-	.loc	1 292 3
+	.loc	1 294 3
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	1 292 3
+	.loc	1 294 3
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_init
 	ldc r0, 204
-	.loc	1 292 3
+	.loc	1 294 3
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	1 292 3
+	.loc	1 294 3
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_init
 	ldc r0, 600
 .Ltmp22:
-	.loc	1 1204 2
+	.loc	1 1207 2
 	{
 		add r9, r6, r0
 		nop
 	}
 	ldc r2, 512
-	.loc	1 1204 2
+	.loc	1 1207 2
 	{
 		mov r0, r9
 		mov r1, r8
@@ -360,7 +360,7 @@ FLAC__stream_decoder_new:
 		ldc r2, 44
 		mov r0, r6
 	}
-	.loc	1 1194 2
+	.loc	1 1197 2
 	{
 		mov r1, r8
 		nop
@@ -371,7 +371,7 @@ FLAC__stream_decoder_new:
 		stw r7, r9[0]
 	}
 	ldc r0, 1116
-	.loc	1 1206 2
+	.loc	1 1209 2
 	{
 		add r0, r6, r0
 		nop
@@ -380,20 +380,20 @@ FLAC__stream_decoder_new:
 		nop
 		stw r8, r0[0]
 	}
-	.loc	1 1208 2
+	.loc	1 1211 2
 	{
 		ldc r0, 9
 		stw r8, r5[7]
 	}
 .Ltmp23:
-	.loc	1 298 2
+	.loc	1 300 2
 	{
 		mov r8, r4
 		stw r0, r5[0]
 	}
 	bu .LBB0_11
 .LBB0_12:
-	.loc	1 273 3
+	.loc	1 275 3
 .Ltmp24:
 	{
 		mov r0, r9
@@ -402,7 +402,7 @@ FLAC__stream_decoder_new:
 	bl FLAC__bitreader_delete
 .Ltmp25:
 .LBB0_6:
-	.loc	1 265 3
+	.loc	1 267 3
 	{
 		mov r0, r6
 		nop
@@ -410,7 +410,7 @@ FLAC__stream_decoder_new:
 	bl free
 .Ltmp26:
 .LBB0_4:
-	.loc	1 258 3
+	.loc	1 260 3
 	{
 		mov r0, r5
 		nop
@@ -418,7 +418,7 @@ FLAC__stream_decoder_new:
 	bl free
 .Ltmp27:
 .LBB0_2:
-	.loc	1 252 3
+	.loc	1 254 3
 	{
 		mov r0, r4
 		nop
@@ -426,7 +426,7 @@ FLAC__stream_decoder_new:
 	bl free
 .Ltmp28:
 .LBB0_11:
-	.loc	1 301 1
+	.loc	1 303 1
 	{
 		mov r0, r8
 		nop
@@ -460,7 +460,7 @@ FLAC__stream_decoder_new:
 	.cc_top FLAC__stream_decoder_delete.function,FLAC__stream_decoder_delete
 FLAC__stream_decoder_delete:
 .Lfunc_begin1:
-	.loc	1 304 0
+	.loc	1 306 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -481,7 +481,7 @@ FLAC__stream_decoder_delete:
 .Ltmp35:
 	bf r4, .LBB1_4
 .Ltmp36:
-	.loc	1 314 8 prologue_end
+	.loc	1 316 8 prologue_end
 	{
 		mov r0, r4
 		nop
@@ -492,7 +492,7 @@ FLAC__stream_decoder_delete:
 		ldw r1, r4[1]
 	}
 	ldc r0, 1112
-	.loc	1 316 5
+	.loc	1 318 5
 .Ltmp37:
 	{
 		add r0, r1, r0
@@ -504,7 +504,7 @@ FLAC__stream_decoder_delete:
 	}
 	bf r0, .LBB1_3
 .Ltmp38:
-	.loc	1 317 3
+	.loc	1 319 3
 	bl free
 	{
 		nop
@@ -516,7 +516,7 @@ FLAC__stream_decoder_delete:
 		nop
 		ldw r0, r1[11]
 	}
-	.loc	1 319 2
+	.loc	1 321 2
 	bl FLAC__bitreader_delete
 .Ltmp40:
 	{
@@ -524,13 +524,13 @@ FLAC__stream_decoder_delete:
 		ldw r0, r4[1]
 	}
 	ldc r1, 120
-	.loc	1 322 3
+	.loc	1 324 3
 .Ltmp41:
 	{
 		add r0, r0, r1
 		nop
 	}
-	.loc	1 322 3
+	.loc	1 324 3
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_clear
 .Ltmp42:
 	{
@@ -538,99 +538,99 @@ FLAC__stream_decoder_delete:
 		ldw r0, r4[1]
 	}
 	ldc r1, 132
-	.loc	1 322 3
+	.loc	1 324 3
 	{
 		add r0, r0, r1
 		nop
 	}
-	.loc	1 322 3
+	.loc	1 324 3
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_clear
 	{
 		nop
 		ldw r0, r4[1]
 	}
 	ldc r1, 144
-	.loc	1 322 3
+	.loc	1 324 3
 	{
 		add r0, r0, r1
 		nop
 	}
-	.loc	1 322 3
+	.loc	1 324 3
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_clear
 	{
 		nop
 		ldw r0, r4[1]
 	}
 	ldc r1, 156
-	.loc	1 322 3
+	.loc	1 324 3
 	{
 		add r0, r0, r1
 		nop
 	}
-	.loc	1 322 3
+	.loc	1 324 3
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_clear
 	{
 		nop
 		ldw r0, r4[1]
 	}
 	ldc r1, 168
-	.loc	1 322 3
+	.loc	1 324 3
 	{
 		add r0, r0, r1
 		nop
 	}
-	.loc	1 322 3
+	.loc	1 324 3
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_clear
 	{
 		nop
 		ldw r0, r4[1]
 	}
 	ldc r1, 180
-	.loc	1 322 3
+	.loc	1 324 3
 	{
 		add r0, r0, r1
 		nop
 	}
-	.loc	1 322 3
+	.loc	1 324 3
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_clear
 	{
 		nop
 		ldw r0, r4[1]
 	}
 	ldc r1, 192
-	.loc	1 322 3
+	.loc	1 324 3
 	{
 		add r0, r0, r1
 		nop
 	}
-	.loc	1 322 3
+	.loc	1 324 3
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_clear
 	{
 		nop
 		ldw r0, r4[1]
 	}
 	ldc r1, 204
-	.loc	1 322 3
+	.loc	1 324 3
 	{
 		add r0, r0, r1
 		nop
 	}
-	.loc	1 322 3
+	.loc	1 324 3
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_clear
 	{
 		nop
 		ldw r0, r4[1]
 	}
 .Ltmp43:
-	.loc	1 324 2
+	.loc	1 326 2
 	bl free
 	{
 		nop
 		ldw r0, r4[0]
 	}
-	.loc	1 325 2
+	.loc	1 327 2
 	bl free
-	.loc	1 326 2
+	.loc	1 328 2
 	{
 		mov r0, r4
 		nop
@@ -646,7 +646,7 @@ FLAC__stream_decoder_delete:
 		nop
 		retsp 4
 	}
-	.loc	1 327 1
+	.loc	1 329 1
 	# RETURN_REG_HOLDER
 .Ltmp45:
 	.cc_bottom FLAC__stream_decoder_delete.function
@@ -678,7 +678,7 @@ FLAC__stream_decoder_delete:
 	.cc_top FLAC__stream_decoder_finish.function,FLAC__stream_decoder_finish
 FLAC__stream_decoder_finish:
 .Lfunc_begin2:
-	.loc	1 586 0
+	.loc	1 588 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -720,13 +720,13 @@ FLAC__stream_decoder_finish:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 594 5 prologue_end
+	.loc	1 596 5 prologue_end
 .Ltmp58:
 	{
 		eq r0, r0, 9
 		nop
 	}
-	.loc	1 594 5
+	.loc	1 596 5
 	bf r0, .LBB2_2
 .Ltmp59:
 	{
@@ -741,25 +741,25 @@ FLAC__stream_decoder_finish:
 		ldw r1, r4[1]
 	}
 	ldc r0, 4780
-	.loc	1 600 2
+	.loc	1 602 2
 	{
 		add r0, r1, r0
 		nop
 	}
 	ldc r2, 4684
-	.loc	1 600 2
+	.loc	1 602 2
 	{
 		add r1, r1, r2
 		nop
 	}
-	.loc	1 600 2
+	.loc	1 602 2
 	bl FLAC__MD5Final
 	{
 		nop
 		ldw r0, r4[1]
 	}
 	ldc r5, 444
-	.loc	1 602 2
+	.loc	1 604 2
 	{
 		add r0, r0, r5
 		nop
@@ -768,13 +768,13 @@ FLAC__stream_decoder_finish:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 602 2
+	.loc	1 604 2
 	bl free
 	{
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 603 2
+	.loc	1 605 2
 	{
 		add r1, r0, r5
 		ldc r5, 0
@@ -784,7 +784,7 @@ FLAC__stream_decoder_finish:
 		stw r5, r1[0]
 	}
 	ldc r1, 244
-	.loc	1 604 2
+	.loc	1 606 2
 	{
 		add r1, r0, r1
 		nop
@@ -797,7 +797,7 @@ FLAC__stream_decoder_finish:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 606 2
+	.loc	1 608 2
 	bl FLAC__bitreader_free
 .Ltmp61:
 	{
@@ -824,9 +824,9 @@ FLAC__stream_decoder_finish:
 	}
 	bf r0, .LBB2_5
 .Ltmp63:
-	.loc	1 615 4
+	.loc	1 617 4
 	ldaw r0, r0[-4]
-	.loc	1 615 4
+	.loc	1 617 4
 	bl free
 	{
 		nop
@@ -864,7 +864,7 @@ FLAC__stream_decoder_finish:
 	}
 	bf r0, .LBB2_7
 .Ltmp65:
-	.loc	1 619 4
+	.loc	1 621 4
 	bl free
 	{
 		nop
@@ -904,7 +904,7 @@ FLAC__stream_decoder_finish:
 	}
 .Ltmp66:
 .LBB2_7:
-	.loc	1 607 2
+	.loc	1 609 2
 	{
 		add r10, r10, 4
 		nop
@@ -913,7 +913,7 @@ FLAC__stream_decoder_finish:
 	# LOOPMARKER 0
 	bt r10, .LBB2_3
 .Ltmp67:
-	.loc	1 623 5
+	.loc	1 625 5
 	{
 		add r0, r6, r9
 		nop
@@ -924,13 +924,13 @@ FLAC__stream_decoder_finish:
 	}
 	bf r0, .LBB2_10
 .Ltmp68:
-	.loc	1 624 3
+	.loc	1 626 3
 	bl free
 	{
 		nop
 		ldw r6, r4[1]
 	}
-	.loc	1 625 3
+	.loc	1 627 3
 	{
 		add r0, r6, r9
 		nop
@@ -942,7 +942,7 @@ FLAC__stream_decoder_finish:
 .Ltmp69:
 .LBB2_10:
 	ldc r0, 216
-	.loc	1 627 2
+	.loc	1 629 2
 	{
 		add r0, r6, r0
 		nop
@@ -952,7 +952,7 @@ FLAC__stream_decoder_finish:
 		stw r5, r0[0]
 	}
 	ldc r0, 220
-	.loc	1 628 2
+	.loc	1 630 2
 	{
 		add r0, r6, r0
 		nop
@@ -967,9 +967,9 @@ FLAC__stream_decoder_finish:
 	}
 	bf r8, .LBB2_14
 .Ltmp70:
-	.loc	1 636 33
+	.loc	1 638 33
 	bl __getstdin
-	.loc	1 636 33
+	.loc	1 638 33
 	{
 		eq r0, r8, r0
 		nop
@@ -984,7 +984,7 @@ FLAC__stream_decoder_finish:
 		nop
 		ldw r0, r0[10]
 	}
-	.loc	1 637 4
+	.loc	1 639 4
 	bl fclose
 .Ltmp72:
 .LBB2_13:
@@ -998,12 +998,12 @@ FLAC__stream_decoder_finish:
 	}
 .Ltmp73:
 .LBB2_14:
-	.loc	1 641 5
+	.loc	1 643 5
 	{
 		add r0, r6, r7
 		nop
 	}
-	.loc	1 641 5
+	.loc	1 643 5
 	{
 		mkmsk r8, 1
 		ldw r0, r0[0]
@@ -1015,22 +1015,22 @@ FLAC__stream_decoder_finish:
 	bf r0, .LBB2_16
 .Ltmp74:
 	ldc r0, 304
-	.loc	1 642 6
+	.loc	1 644 6
 .Ltmp75:
 	{
 		add r0, r6, r0
 		nop
 	}
 	ldc r1, 4780
-	.loc	1 642 6
+	.loc	1 644 6
 	{
 		add r1, r6, r1
 		ldc r2, 16
 	}
-	.loc	1 642 6
+	.loc	1 644 6
 	bl memcmp
 .Ltmp76:
-	.loc	1 642 6
+	.loc	1 644 6
 	{
 		eq r7, r0, 0
 		nop
@@ -1038,7 +1038,7 @@ FLAC__stream_decoder_finish:
 .Ltmp77:
 .LBB2_16:
 	ldc r0, 4680
-	.loc	1 645 2
+	.loc	1 647 2
 	{
 		add r0, r6, r0
 		nop
@@ -1049,13 +1049,13 @@ FLAC__stream_decoder_finish:
 	}
 	ldc r9, 600
 .Ltmp78:
-	.loc	1 1204 2
+	.loc	1 1207 2
 	{
 		add r0, r6, r9
 		nop
 	}
 	ldc r2, 512
-	.loc	1 1204 2
+	.loc	1 1207 2
 	{
 		mov r1, r5
 		nop
@@ -1065,7 +1065,7 @@ FLAC__stream_decoder_finish:
 		ldc r2, 40
 		mov r0, r6
 	}
-	.loc	1 1194 2
+	.loc	1 1197 2
 	{
 		mov r1, r5
 		nop
@@ -1075,7 +1075,7 @@ FLAC__stream_decoder_finish:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1205 2
+	.loc	1 1208 2
 	{
 		add r1, r0, r9
 		nop
@@ -1085,7 +1085,7 @@ FLAC__stream_decoder_finish:
 		stw r8, r1[0]
 	}
 	ldc r1, 1116
-	.loc	1 1206 2
+	.loc	1 1209 2
 	{
 		add r0, r0, r1
 		nop
@@ -1098,7 +1098,7 @@ FLAC__stream_decoder_finish:
 		nop
 		ldw r0, r4[0]
 	}
-	.loc	1 1208 2
+	.loc	1 1211 2
 	{
 		ldc r1, 9
 		stw r5, r0[7]
@@ -1109,7 +1109,7 @@ FLAC__stream_decoder_finish:
 	}
 .Ltmp79:
 .LBB2_17:
-	.loc	1 652 1
+	.loc	1 654 1
 	{
 		mov r0, r7
 		ldw r10, sp[8]
@@ -1143,7 +1143,7 @@ FLAC__stream_decoder_finish:
 	.cc_top FLAC__stream_decoder_init_stream.function,FLAC__stream_decoder_init_stream
 FLAC__stream_decoder_init_stream:
 .Lfunc_begin3:
-	.loc	1 416 0
+	.loc	1 418 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -1193,7 +1193,7 @@ FLAC__stream_decoder_init_stream:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 351 5 prologue_end
+	.loc	1 353 5 prologue_end
 .Ltmp95:
 	{
 		eq r0, r0, 9
@@ -1248,7 +1248,7 @@ FLAC__stream_decoder_init_stream:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 373 6
+	.loc	1 375 6
 .Ltmp108:
 	ldap r11, read_callback_
 	{
@@ -1256,7 +1256,7 @@ FLAC__stream_decoder_init_stream:
 		mov r2, r4
 	}
 	bl FLAC__bitreader_init
-	.loc	1 373 6
+	.loc	1 375 6
 	bf r0, .LBB3_10
 .Ltmp109:
 	{
@@ -1318,24 +1318,24 @@ FLAC__stream_decoder_init_stream:
 	}
 	ldc r0, 224
 .Ltmp111:
-	.loc	1 387 2
+	.loc	1 389 2
 	{
 		add r0, r6, r0
 		nop
 	}
 	ldc r1, 4632
-	.loc	1 390 2
+	.loc	1 392 2
 	{
 		add r1, r6, r1
 		ldc r5, 0
 	}
 .Ltmp112:
-	.loc	1 390 2
+	.loc	1 392 2
 	{
 		ldc r2, 20
 		stw r5, r1[0]
 	}
-	.loc	1 387 2
+	.loc	1 389 2
 	{
 		mov r1, r5
 		nop
@@ -1350,7 +1350,7 @@ FLAC__stream_decoder_init_stream:
 		ldw r0, r0[7]
 	}
 	ldc r1, 4672
-	.loc	1 392 2
+	.loc	1 394 2
 	{
 		add r1, r6, r1
 		nop
@@ -1360,7 +1360,7 @@ FLAC__stream_decoder_init_stream:
 		stw r0, r1[0]
 	}
 	ldc r0, 4680
-	.loc	1 393 2
+	.loc	1 395 2
 	{
 		add r0, r6, r0
 		nop
@@ -1370,17 +1370,17 @@ FLAC__stream_decoder_init_stream:
 		stw r5, r0[0]
 	}
 	ldc r0, 4676
-	.loc	1 395 2
+	.loc	1 397 2
 	{
 		add r0, r6, r0
 		mkmsk r1, 1
 	}
-	.loc	1 395 2
+	.loc	1 397 2
 	{
 		mov r0, r4
 		stw r1, r0[0]
 	}
-	.loc	1 396 6
+	.loc	1 398 6
 .Ltmp113:
 	bl FLAC__stream_decoder_reset
 	bt r0, .LBB3_13
@@ -1394,7 +1394,7 @@ FLAC__stream_decoder_init_stream:
 	bu .LBB3_13
 .LBB3_10:
 .Ltmp115:
-	.loc	1 374 3
+	.loc	1 376 3
 	{
 		ldc r1, 8
 		ldw r0, r4[0]
@@ -1410,7 +1410,7 @@ FLAC__stream_decoder_init_stream:
 		nop
 	}
 .LBB3_13:
-	.loc	1 417 9
+	.loc	1 419 9
 	{
 		mov r0, r5
 		ldw r10, sp[10]
@@ -1444,7 +1444,7 @@ FLAC__stream_decoder_init_stream:
 	.cc_top FLAC__stream_decoder_init_ogg_stream.function,FLAC__stream_decoder_init_ogg_stream
 FLAC__stream_decoder_init_ogg_stream:
 .Lfunc_begin4:
-	.loc	1 444 0
+	.loc	1 446 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -1461,13 +1461,13 @@ FLAC__stream_decoder_init_ogg_stream:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 351 5 prologue_end
+	.loc	1 353 5 prologue_end
 .Ltmp121:
 	{
 		eq r0, r0, 9
 		nop
 	}
-	.loc	1 351 5
+	.loc	1 353 5
 	bt r0, .LBB4_1
 .Ltmp122:
 	{
@@ -1475,7 +1475,7 @@ FLAC__stream_decoder_init_ogg_stream:
 		retsp 0
 	}
 .Ltmp123:
-	.loc	1 445 9
+	.loc	1 447 9
 	# RETURN_REG_HOLDER
 .LBB4_1:
 .Ltmp124:
@@ -1506,7 +1506,7 @@ FLAC__stream_decoder_init_ogg_stream:
 	.cc_top FLAC__stream_decoder_init_FILE.function,FLAC__stream_decoder_init_FILE
 FLAC__stream_decoder_init_FILE:
 .Lfunc_begin5:
-	.loc	1 512 0
+	.loc	1 514 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -1530,7 +1530,7 @@ FLAC__stream_decoder_init_FILE:
 		ldc r5, 0
 		ldw r4, sp[8]
 	}
-	.loc	1 513 9 prologue_end
+	.loc	1 515 9 prologue_end
 .Ltmp132:
 	std r5, r4, sp[1]
 	{
@@ -1539,7 +1539,7 @@ FLAC__stream_decoder_init_FILE:
 	}
 	bl init_FILE_internal_
 .Ltmp133:
-	.loc	1 513 9
+	.loc	1 515 9
 	ldd r5, r4, sp[2]
 	{
 		nop
@@ -1567,7 +1567,7 @@ FLAC__stream_decoder_init_FILE:
 	.cc_top init_FILE_internal_.function,init_FILE_internal_
 init_FILE_internal_:
 .Lfunc_begin6:
-	.loc	1 469 0
+	.loc	1 471 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -1615,13 +1615,13 @@ init_FILE_internal_:
 		nop
 		ldw r1, r0[0]
 	}
-	.loc	1 473 5 prologue_end
+	.loc	1 475 5 prologue_end
 .Ltmp149:
 	{
 		eq r1, r1, 9
 		nop
 	}
-	.loc	1 473 5
+	.loc	1 475 5
 	bf r1, .LBB6_1
 .Ltmp150:
 	bf r6, .LBB6_4
@@ -1637,16 +1637,16 @@ init_FILE_internal_:
 		stw r3, sp[4]
 	}
 .Ltmp153:
-	.loc	1 484 13
+	.loc	1 486 13
 	bl __getstdin
-	.loc	1 484 13
+	.loc	1 486 13
 	{
 		eq r0, r0, r7
 		nop
 	}
 	bf r0, .LBB6_7
 .Ltmp154:
-	.loc	1 1230 9
+	.loc	1 1233 9
 	bl __getstdin
 	{
 		mov r7, r0
@@ -1662,14 +1662,14 @@ init_FILE_internal_:
 		nop
 		stw r7, r0[10]
 	}
-	.loc	1 492 30
+	.loc	1 494 30
 	bl __getstdin
-	.loc	1 492 30
+	.loc	1 494 30
 	{
 		eq r1, r7, r0
 		nop
 	}
-	.loc	1 492 30
+	.loc	1 494 30
 	ldap r11, file_seek_callback_
 	{
 		ldc r7, 0
@@ -1700,14 +1700,14 @@ init_FILE_internal_:
 		nop
 		ldw r9, r0[10]
 	}
-	.loc	1 493 30
+	.loc	1 495 30
 	bl __getstdin
-	.loc	1 493 30
+	.loc	1 495 30
 	{
 		eq r9, r9, r0
 		nop
 	}
-	.loc	1 493 30
+	.loc	1 495 30
 	ldap r11, file_tell_callback_
 	{
 		mov r0, r7
@@ -1734,14 +1734,14 @@ init_FILE_internal_:
 		nop
 		ldw r5, r0[10]
 	}
-	.loc	1 494 30
+	.loc	1 496 30
 	bl __getstdin
-	.loc	1 494 30
+	.loc	1 496 30
 	{
 		eq r0, r5, r0
 		nop
 	}
-	.loc	1 494 30
+	.loc	1 496 30
 	ldap r11, file_length_callback_
 	bt r0, .LBB6_13
 .Ltmp162:
@@ -1759,7 +1759,7 @@ init_FILE_internal_:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 351 5
+	.loc	1 353 5
 .Ltmp164:
 	{
 		eq r1, r1, 9
@@ -1767,7 +1767,7 @@ init_FILE_internal_:
 	}
 	bf r1, .LBB6_14
 .Ltmp165:
-	.loc	1 354 5
+	.loc	1 356 5
 	bf r10, .LBB6_17
 .Ltmp166:
 	{
@@ -1801,7 +1801,7 @@ init_FILE_internal_:
 		nop
 	}
 .LBB6_24:
-	.loc	1 502 1
+	.loc	1 504 1
 	{
 		mov r0, r5
 		ldw r10, sp[12]
@@ -1816,12 +1816,12 @@ init_FILE_internal_:
 	# RETURN_REG_HOLDER
 .LBB6_17:
 .Ltmp167:
-	.loc	1 358 3
+	.loc	1 360 3
 	{
 		or r0, r9, r0
 		nop
 	}
-	.loc	1 358 3
+	.loc	1 360 3
 	{
 		eq r0, r0, 1
 		nop
@@ -1832,7 +1832,7 @@ init_FILE_internal_:
 		nop
 		ldw r0, sp[5]
 	}
-	.loc	1 358 3
+	.loc	1 360 3
 	{
 		eq r0, r0, 0
 		nop
@@ -1854,7 +1854,7 @@ init_FILE_internal_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 373 6
+	.loc	1 375 6
 .Ltmp171:
 	ldap r11, read_callback_
 	{
@@ -1862,14 +1862,14 @@ init_FILE_internal_:
 		mov r2, r4
 	}
 	bl FLAC__bitreader_init
-	.loc	1 373 6
+	.loc	1 375 6
 	bf r0, .LBB6_21
 .Ltmp172:
 	{
 		nop
 		ldw r9, r4[1]
 	}
-	.loc	1 378 2
+	.loc	1 380 2
 	ldap r11, file_read_callback_
 	{
 		nop
@@ -1895,7 +1895,7 @@ init_FILE_internal_:
 		nop
 		stw r7, r9[4]
 	}
-	.loc	1 382 2
+	.loc	1 384 2
 	ldap r11, file_eof_callback_
 	{
 		nop
@@ -1926,24 +1926,24 @@ init_FILE_internal_:
 		stw r8, r9[9]
 	}
 	ldc r0, 224
-	.loc	1 387 2
+	.loc	1 389 2
 	{
 		add r0, r9, r0
 		nop
 	}
 	ldc r1, 4632
-	.loc	1 390 2
+	.loc	1 392 2
 	{
 		add r1, r9, r1
 		ldc r5, 0
 	}
 .Ltmp173:
-	.loc	1 390 2
+	.loc	1 392 2
 	{
 		ldc r2, 20
 		stw r5, r1[0]
 	}
-	.loc	1 387 2
+	.loc	1 389 2
 	{
 		mov r1, r5
 		nop
@@ -1959,7 +1959,7 @@ init_FILE_internal_:
 		ldw r0, r0[7]
 	}
 	ldc r1, 4672
-	.loc	1 392 2
+	.loc	1 394 2
 	{
 		add r1, r9, r1
 		nop
@@ -1969,7 +1969,7 @@ init_FILE_internal_:
 		stw r0, r1[0]
 	}
 	ldc r0, 4680
-	.loc	1 393 2
+	.loc	1 395 2
 	{
 		add r0, r9, r0
 		nop
@@ -1979,24 +1979,24 @@ init_FILE_internal_:
 		stw r5, r0[0]
 	}
 	ldc r0, 4676
-	.loc	1 395 2
+	.loc	1 397 2
 	{
 		add r0, r9, r0
 		mkmsk r1, 1
 	}
-	.loc	1 395 2
+	.loc	1 397 2
 	{
 		mov r0, r4
 		stw r1, r0[0]
 	}
-	.loc	1 396 6
+	.loc	1 398 6
 .Ltmp175:
 	bl FLAC__stream_decoder_reset
 	bt r0, .LBB6_24
 	bu .LBB6_23
 .Ltmp176:
 .LBB6_21:
-	.loc	1 374 3
+	.loc	1 376 3
 	{
 		ldc r1, 8
 		ldw r0, r4[0]
@@ -2028,7 +2028,7 @@ init_FILE_internal_:
 	.cc_top FLAC__stream_decoder_init_ogg_FILE.function,FLAC__stream_decoder_init_ogg_FILE
 FLAC__stream_decoder_init_ogg_FILE:
 .Lfunc_begin7:
-	.loc	1 524 0
+	.loc	1 526 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2058,13 +2058,13 @@ FLAC__stream_decoder_init_ogg_FILE:
 		nop
 		ldw r0, r1[0]
 	}
-	.loc	1 473 5 prologue_end
+	.loc	1 475 5 prologue_end
 .Ltmp185:
 	{
 		eq r0, r0, 9
 		nop
 	}
-	.loc	1 473 5
+	.loc	1 475 5
 	bf r0, .LBB7_1
 .Ltmp186:
 	bf r2, .LBB7_4
@@ -2076,16 +2076,16 @@ FLAC__stream_decoder_init_ogg_FILE:
 .Ltmp188:
 	bf r0, .LBB7_4
 .Ltmp189:
-	.loc	1 484 13
+	.loc	1 486 13
 	bl __getstdin
-	.loc	1 484 13
+	.loc	1 486 13
 	{
 		eq r0, r0, r5
 		nop
 	}
 	bf r0, .LBB7_7
 .Ltmp190:
-	.loc	1 1230 9
+	.loc	1 1233 9
 	bl __getstdin
 	{
 		mov r5, r0
@@ -2101,11 +2101,11 @@ FLAC__stream_decoder_init_ogg_FILE:
 		nop
 		stw r5, r0[10]
 	}
-	.loc	1 492 30
-	bl __getstdin
-	.loc	1 493 30
-	bl __getstdin
 	.loc	1 494 30
+	bl __getstdin
+	.loc	1 495 30
+	bl __getstdin
+	.loc	1 496 30
 	bl __getstdin
 .Ltmp192:
 	{
@@ -2116,13 +2116,13 @@ FLAC__stream_decoder_init_ogg_FILE:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 351 5
+	.loc	1 353 5
 .Ltmp193:
 	{
 		eq r0, r0, 9
 		nop
 	}
-	.loc	1 351 5
+	.loc	1 353 5
 	bt r0, .LBB7_8
 .Ltmp194:
 	{
@@ -2160,7 +2160,7 @@ FLAC__stream_decoder_init_ogg_FILE:
 	}
 .Ltmp198:
 .LBB7_10:
-	.loc	1 525 9
+	.loc	1 527 9
 	ldd r5, r4, sp[1]
 	{
 		nop
@@ -2189,7 +2189,7 @@ FLAC__stream_decoder_init_ogg_FILE:
 	.cc_top FLAC__stream_decoder_init_file.function,FLAC__stream_decoder_init_file
 FLAC__stream_decoder_init_file:
 .Lfunc_begin8:
-	.loc	1 569 0
+	.loc	1 571 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2231,13 +2231,13 @@ FLAC__stream_decoder_init_file:
 		nop
 		ldw r0, r2[0]
 	}
-	.loc	1 547 5 prologue_end
+	.loc	1 549 5 prologue_end
 .Ltmp212:
 	{
 		eq r0, r0, 9
 		nop
 	}
-	.loc	1 547 5
+	.loc	1 549 5
 	bf r0, .LBB8_1
 .Ltmp213:
 	bf r5, .LBB8_4
@@ -2254,10 +2254,10 @@ FLAC__stream_decoder_init_file:
 		ldw r8, sp[12]
 	}
 .Ltmp217:
-	.loc	1 553 2
+	.loc	1 555 2
 	bf r1, .LBB8_7
 .Ltmp218:
-	.loc	1 553 19
+	.loc	1 555 19
 	ldaw r11, cp[.L.str36]
 	{
 		mov r0, r1
@@ -2289,7 +2289,7 @@ FLAC__stream_decoder_init_file:
 	bu .LBB8_11
 .LBB8_7:
 .Ltmp221:
-	.loc	1 553 48
+	.loc	1 555 48
 	bl __getstdin
 .Ltmp222:
 .LBB8_8:
@@ -2298,14 +2298,14 @@ FLAC__stream_decoder_init_file:
 		nop
 	}
 .Ltmp223:
-	.loc	1 555 5
+	.loc	1 557 5
 	bf r1, .LBB8_9
 .Ltmp224:
 	{
 		ldc r0, 0
 		nop
 	}
-	.loc	1 558 9
+	.loc	1 560 9
 	std r0, r8, sp[1]
 	{
 		mov r0, r6
@@ -2329,7 +2329,7 @@ FLAC__stream_decoder_init_file:
 		nop
 		ldw r8, sp[8]
 	}
-	.loc	1 570 9
+	.loc	1 572 9
 	ldd r7, r6, sp[3]
 	ldd r5, r4, sp[2]
 	{
@@ -2358,7 +2358,7 @@ FLAC__stream_decoder_init_file:
 	.cc_top FLAC__stream_decoder_init_ogg_file.function,FLAC__stream_decoder_init_ogg_file
 FLAC__stream_decoder_init_ogg_file:
 .Lfunc_begin9:
-	.loc	1 581 0
+	.loc	1 583 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2387,13 +2387,13 @@ FLAC__stream_decoder_init_ogg_file:
 		nop
 		ldw r0, r3[0]
 	}
-	.loc	1 547 5 prologue_end
+	.loc	1 549 5 prologue_end
 .Ltmp234:
 	{
 		eq r0, r0, 9
 		nop
 	}
-	.loc	1 547 5
+	.loc	1 549 5
 	bf r0, .LBB9_1
 .Ltmp235:
 	bf r2, .LBB9_4
@@ -2405,10 +2405,10 @@ FLAC__stream_decoder_init_ogg_file:
 .Ltmp237:
 	bf r0, .LBB9_4
 .Ltmp238:
-	.loc	1 553 2
+	.loc	1 555 2
 	bf r1, .LBB9_7
 .Ltmp239:
-	.loc	1 553 19
+	.loc	1 555 19
 	ldaw r11, cp[.L.str36]
 	{
 		mov r0, r1
@@ -2441,7 +2441,7 @@ FLAC__stream_decoder_init_ogg_file:
 	bu .LBB9_17
 .Ltmp243:
 .LBB9_7:
-	.loc	1 553 48
+	.loc	1 555 48
 	bl __getstdin
 .Ltmp244:
 .LBB9_8:
@@ -2450,7 +2450,7 @@ FLAC__stream_decoder_init_ogg_file:
 		nop
 	}
 .Ltmp245:
-	.loc	1 555 5
+	.loc	1 557 5
 	bf r5, .LBB9_9
 .Ltmp246:
 	{
@@ -2461,25 +2461,25 @@ FLAC__stream_decoder_init_ogg_file:
 		nop
 		ldw r0, r1[0]
 	}
-	.loc	1 473 5
+	.loc	1 475 5
 .Ltmp247:
 	{
 		eq r0, r0, 9
 		nop
 	}
-	.loc	1 473 5
+	.loc	1 475 5
 	bf r0, .LBB9_11
 .Ltmp248:
-	.loc	1 484 13
+	.loc	1 486 13
 	bl __getstdin
-	.loc	1 484 13
+	.loc	1 486 13
 	{
 		eq r0, r0, r5
 		nop
 	}
 	bf r0, .LBB9_14
 .Ltmp249:
-	.loc	1 1230 9
+	.loc	1 1233 9
 	bl __getstdin
 	{
 		mov r5, r0
@@ -2495,11 +2495,11 @@ FLAC__stream_decoder_init_ogg_file:
 		nop
 		stw r5, r0[10]
 	}
-	.loc	1 492 30
-	bl __getstdin
-	.loc	1 493 30
-	bl __getstdin
 	.loc	1 494 30
+	bl __getstdin
+	.loc	1 495 30
+	bl __getstdin
+	.loc	1 496 30
 	bl __getstdin
 .Ltmp251:
 	{
@@ -2510,13 +2510,13 @@ FLAC__stream_decoder_init_ogg_file:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 351 5
+	.loc	1 353 5
 .Ltmp252:
 	{
 		eq r0, r0, 9
 		nop
 	}
-	.loc	1 351 5
+	.loc	1 353 5
 	bt r0, .LBB9_15
 .Ltmp253:
 	{
@@ -2550,7 +2550,7 @@ FLAC__stream_decoder_init_ogg_file:
 	}
 .Ltmp257:
 .LBB9_17:
-	.loc	1 582 9
+	.loc	1 584 9
 	ldd r5, r4, sp[1]
 	{
 		nop
@@ -2579,7 +2579,7 @@ FLAC__stream_decoder_init_ogg_file:
 	.cc_top FLAC__stream_decoder_set_ogg_serial_number.function,FLAC__stream_decoder_set_ogg_serial_number
 FLAC__stream_decoder_set_ogg_serial_number:
 .Lfunc_begin10:
-	.loc	1 655 0
+	.loc	1 657 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2591,7 +2591,7 @@ FLAC__stream_decoder_set_ogg_serial_number:
 		nop
 		retsp 0
 	}
-	.loc	1 669 1 prologue_end
+	.loc	1 671 1 prologue_end
 .Ltmp262:
 	# RETURN_REG_HOLDER
 .Ltmp263:
@@ -2615,7 +2615,7 @@ FLAC__stream_decoder_set_ogg_serial_number:
 	.cc_top FLAC__stream_decoder_set_md5_checking.function,FLAC__stream_decoder_set_md5_checking
 FLAC__stream_decoder_set_md5_checking:
 .Lfunc_begin11:
-	.loc	1 672 0
+	.loc	1 674 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2631,7 +2631,7 @@ FLAC__stream_decoder_set_md5_checking:
 		nop
 		ldw r2, r0[0]
 	}
-	.loc	1 675 5 prologue_end
+	.loc	1 677 5 prologue_end
 .Ltmp266:
 	{
 		eq r2, r2, 9
@@ -2639,7 +2639,7 @@ FLAC__stream_decoder_set_md5_checking:
 	}
 	bf r2, .LBB11_1
 .Ltmp267:
-	.loc	1 677 2
+	.loc	1 679 2
 	{
 		mkmsk r0, 1
 		stw r1, r0[7]
@@ -2648,7 +2648,7 @@ FLAC__stream_decoder_set_md5_checking:
 		nop
 		retsp 0
 	}
-	.loc	1 679 1
+	.loc	1 681 1
 	# RETURN_REG_HOLDER
 .LBB11_1:
 	{
@@ -2677,7 +2677,7 @@ FLAC__stream_decoder_set_md5_checking:
 	.cc_top FLAC__stream_decoder_set_metadata_respond.function,FLAC__stream_decoder_set_metadata_respond
 FLAC__stream_decoder_set_metadata_respond:
 .Lfunc_begin12:
-	.loc	1 682 0
+	.loc	1 684 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2686,7 +2686,7 @@ FLAC__stream_decoder_set_metadata_respond:
 	}
 .Ltmp270:
 	ldc r0, 126
-	.loc	1 688 5 prologue_end
+	.loc	1 690 5 prologue_end
 .Ltmp271:
 	{
 		lsu r3, r0, r1
@@ -2702,7 +2702,7 @@ FLAC__stream_decoder_set_metadata_respond:
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	1 690 5
+	.loc	1 692 5
 .Ltmp273:
 	{
 		eq r3, r3, 9
@@ -2715,14 +2715,14 @@ FLAC__stream_decoder_set_metadata_respond:
 		ldw r2, r2[1]
 	}
 .Ltmp275:
-	.loc	1 692 2
+	.loc	1 694 2
 	ldaw r0, r2[r1]
 	ldc r3, 600
 	{
 		add r3, r0, r3
 		mkmsk r0, 1
 	}
-	.loc	1 692 2
+	.loc	1 694 2
 	{
 		eq r1, r1, 2
 		stw r0, r3[0]
@@ -2730,7 +2730,7 @@ FLAC__stream_decoder_set_metadata_respond:
 .Ltmp276:
 	bf r1, .LBB12_4
 	ldc r1, 1116
-	.loc	1 694 3
+	.loc	1 696 3
 .Ltmp277:
 	{
 		add r1, r2, r1
@@ -2746,7 +2746,7 @@ FLAC__stream_decoder_set_metadata_respond:
 		nop
 		retsp 0
 	}
-	.loc	1 696 1
+	.loc	1 698 1
 	# RETURN_REG_HOLDER
 .Ltmp279:
 	.cc_bottom FLAC__stream_decoder_set_metadata_respond.function
@@ -2769,7 +2769,7 @@ FLAC__stream_decoder_set_metadata_respond:
 	.cc_top FLAC__stream_decoder_set_metadata_respond_application.function,FLAC__stream_decoder_set_metadata_respond_application
 FLAC__stream_decoder_set_metadata_respond_application:
 .Lfunc_begin13:
-	.loc	1 699 0
+	.loc	1 701 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -2812,13 +2812,13 @@ FLAC__stream_decoder_set_metadata_respond_application:
 		nop
 		ldw r0, r4[0]
 	}
-	.loc	1 704 5 prologue_end
+	.loc	1 706 5 prologue_end
 .Ltmp293:
 	{
 		ldc r5, 0
 		ldw r0, r0[0]
 	}
-	.loc	1 704 5
+	.loc	1 706 5
 	{
 		eq r0, r0, 9
 		nop
@@ -2830,13 +2830,13 @@ FLAC__stream_decoder_set_metadata_respond_application:
 		ldw r0, r4[1]
 	}
 	ldc r1, 608
-	.loc	1 707 5
+	.loc	1 709 5
 .Ltmp295:
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 707 5
+	.loc	1 709 5
 	{
 		mkmsk r9, 1
 		ldw r1, r1[0]
@@ -2844,7 +2844,7 @@ FLAC__stream_decoder_set_metadata_respond_application:
 	bt r1, .LBB13_9
 .Ltmp296:
 	ldc r8, 1116
-	.loc	1 712 5
+	.loc	1 714 5
 .Ltmp297:
 	{
 		add r1, r0, r8
@@ -2855,7 +2855,7 @@ FLAC__stream_decoder_set_metadata_respond_application:
 		ldw r1, r1[0]
 	}
 	ldc r2, 1120
-	.loc	1 712 5
+	.loc	1 714 5
 	{
 		add r2, r0, r2
 		nop
@@ -2866,20 +2866,20 @@ FLAC__stream_decoder_set_metadata_respond_application:
 	}
 .Ltmp298:
 	ldc r10, 1112
-	.loc	1 713 53
+	.loc	1 715 53
 .Ltmp299:
 	{
 		add r0, r0, r10
 		nop
 	}
 .Ltmp300:
-	.loc	1 713 53
+	.loc	1 715 53
 	{
 		eq r0, r1, r2
 		ldw r7, r0[0]
 	}
 .Ltmp301:
-	.loc	1 712 5
+	.loc	1 714 5
 	bf r0, .LBB13_3
 .Ltmp302:
 	.file	15 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share\\alloc.h"
@@ -2921,7 +2921,7 @@ FLAC__stream_decoder_set_metadata_respond_application:
 		ldw r0, r4[1]
 	}
 .Ltmp309:
-	.loc	1 713 53
+	.loc	1 715 53
 	{
 		add r0, r0, r10
 		ldc r1, 0
@@ -2957,7 +2957,7 @@ FLAC__stream_decoder_set_metadata_respond_application:
 		nop
 		ldw r1, r4[1]
 	}
-	.loc	1 713 53
+	.loc	1 715 53
 	{
 		add r2, r1, r10
 		nop
@@ -2969,7 +2969,7 @@ FLAC__stream_decoder_set_metadata_respond_application:
 	bf r0, .LBB13_15
 .Ltmp315:
 	ldc r2, 1120
-	.loc	1 717 3
+	.loc	1 719 3
 	{
 		add r2, r1, r2
 		nop
@@ -2978,12 +2978,12 @@ FLAC__stream_decoder_set_metadata_respond_application:
 		nop
 		ldw r3, r2[0]
 	}
-	.loc	1 717 3
+	.loc	1 719 3
 	{
 		shl r3, r3, 1
 		nop
 	}
-	.loc	1 717 3
+	.loc	1 719 3
 	{
 		add r1, r1, r8
 		stw r3, r2[0]
@@ -2994,27 +2994,27 @@ FLAC__stream_decoder_set_metadata_respond_application:
 	}
 .Ltmp316:
 .LBB13_8:
-	.loc	1 720 2
+	.loc	1 722 2
 	ldw r2, cp[FLAC__STREAM_METADATA_APPLICATION_ID_LEN]
-	.loc	1 720 2
+	.loc	1 722 2
 	{
 		shr r2, r2, 3
 		nop
 	}
-	.loc	1 720 2
+	.loc	1 722 2
 	mul r1, r2, r1
-	.loc	1 720 2
+	.loc	1 722 2
 	{
 		add r0, r0, r1
 		mov r1, r6
 	}
-	.loc	1 720 2
+	.loc	1 722 2
 	bl memcpy
 	{
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 721 2
+	.loc	1 723 2
 	{
 		add r0, r0, r8
 		nop
@@ -3023,7 +3023,7 @@ FLAC__stream_decoder_set_metadata_respond_application:
 		nop
 		ldw r1, r0[0]
 	}
-	.loc	1 721 2
+	.loc	1 723 2
 	{
 		add r1, r1, 1
 		nop
@@ -3039,7 +3039,7 @@ FLAC__stream_decoder_set_metadata_respond_application:
 		nop
 	}
 .LBB13_16:
-	.loc	1 724 1
+	.loc	1 726 1
 	{
 		mov r0, r5
 		ldw r10, sp[8]
@@ -3054,7 +3054,7 @@ FLAC__stream_decoder_set_metadata_respond_application:
 	# RETURN_REG_HOLDER
 .LBB13_15:
 .Ltmp318:
-	.loc	1 714 4
+	.loc	1 716 4
 	{
 		ldc r1, 8
 		ldw r0, r4[0]
@@ -3085,7 +3085,7 @@ FLAC__stream_decoder_set_metadata_respond_application:
 	.cc_top FLAC__stream_decoder_set_metadata_respond_all.function,FLAC__stream_decoder_set_metadata_respond_all
 FLAC__stream_decoder_set_metadata_respond_all:
 .Lfunc_begin14:
-	.loc	1 727 0
+	.loc	1 729 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -3100,7 +3100,7 @@ FLAC__stream_decoder_set_metadata_respond_all:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 732 5 prologue_end
+	.loc	1 734 5 prologue_end
 .Ltmp321:
 	{
 		eq r1, r1, 9
@@ -3124,24 +3124,24 @@ FLAC__stream_decoder_set_metadata_respond_all:
 		nop
 	}
 .LBB14_3:
-	.loc	1 735 3
+	.loc	1 737 3
 .Ltmp324:
 	{
 		sub r3, r3, 1
 		stw r0, r2[0]
 	}
-	.loc	1 734 2
+	.loc	1 736 2
 	{
 		add r2, r2, 4
 		nop
 	}
 .xtaloop 128
 	# LOOPMARKER 0
-	.loc	1 734 2
+	.loc	1 736 2
 	bt r3, .LBB14_3
 .Ltmp325:
 	ldc r2, 1116
-	.loc	1 736 2
+	.loc	1 738 2
 	{
 		add r1, r1, r2
 		ldc r2, 0
@@ -3154,7 +3154,7 @@ FLAC__stream_decoder_set_metadata_respond_all:
 		nop
 		retsp 0
 	}
-	.loc	1 738 1
+	.loc	1 740 1
 	# RETURN_REG_HOLDER
 .LBB14_1:
 	{
@@ -3183,7 +3183,7 @@ FLAC__stream_decoder_set_metadata_respond_all:
 	.cc_top FLAC__stream_decoder_set_metadata_ignore.function,FLAC__stream_decoder_set_metadata_ignore
 FLAC__stream_decoder_set_metadata_ignore:
 .Lfunc_begin15:
-	.loc	1 741 0
+	.loc	1 743 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -3192,7 +3192,7 @@ FLAC__stream_decoder_set_metadata_ignore:
 	}
 .Ltmp328:
 	ldc r0, 126
-	.loc	1 747 5 prologue_end
+	.loc	1 749 5 prologue_end
 .Ltmp329:
 	{
 		lsu r3, r0, r1
@@ -3208,7 +3208,7 @@ FLAC__stream_decoder_set_metadata_ignore:
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	1 749 5
+	.loc	1 751 5
 .Ltmp331:
 	{
 		eq r3, r3, 9
@@ -3221,19 +3221,19 @@ FLAC__stream_decoder_set_metadata_ignore:
 		ldw r2, r2[1]
 	}
 .Ltmp333:
-	.loc	1 751 2
+	.loc	1 753 2
 	ldaw r0, r2[r1]
 	ldc r3, 600
 	{
 		add r0, r0, r3
 		ldc r3, 0
 	}
-	.loc	1 751 2
+	.loc	1 753 2
 	{
 		mkmsk r0, 1
 		stw r3, r0[0]
 	}
-	.loc	1 752 5
+	.loc	1 754 5
 .Ltmp334:
 	{
 		eq r1, r1, 2
@@ -3242,7 +3242,7 @@ FLAC__stream_decoder_set_metadata_ignore:
 .Ltmp335:
 	bf r1, .LBB15_4
 	ldc r1, 1116
-	.loc	1 753 3
+	.loc	1 755 3
 	{
 		add r1, r2, r1
 		nop
@@ -3257,7 +3257,7 @@ FLAC__stream_decoder_set_metadata_ignore:
 		nop
 		retsp 0
 	}
-	.loc	1 755 1
+	.loc	1 757 1
 	# RETURN_REG_HOLDER
 .Ltmp337:
 	.cc_bottom FLAC__stream_decoder_set_metadata_ignore.function
@@ -3280,7 +3280,7 @@ FLAC__stream_decoder_set_metadata_ignore:
 	.cc_top FLAC__stream_decoder_set_metadata_ignore_application.function,FLAC__stream_decoder_set_metadata_ignore_application
 FLAC__stream_decoder_set_metadata_ignore_application:
 .Lfunc_begin16:
-	.loc	1 758 0
+	.loc	1 760 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -3323,13 +3323,13 @@ FLAC__stream_decoder_set_metadata_ignore_application:
 		nop
 		ldw r0, r4[0]
 	}
-	.loc	1 763 5 prologue_end
+	.loc	1 765 5 prologue_end
 .Ltmp351:
 	{
 		ldc r5, 0
 		ldw r0, r0[0]
 	}
-	.loc	1 763 5
+	.loc	1 765 5
 	{
 		eq r0, r0, 9
 		nop
@@ -3341,13 +3341,13 @@ FLAC__stream_decoder_set_metadata_ignore_application:
 		ldw r0, r4[1]
 	}
 	ldc r1, 608
-	.loc	1 766 5
+	.loc	1 768 5
 .Ltmp353:
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 766 5
+	.loc	1 768 5
 	{
 		mkmsk r8, 1
 		ldw r1, r1[0]
@@ -3355,7 +3355,7 @@ FLAC__stream_decoder_set_metadata_ignore_application:
 	bf r1, .LBB16_9
 .Ltmp354:
 	ldc r10, 1116
-	.loc	1 771 5
+	.loc	1 773 5
 .Ltmp355:
 	{
 		add r1, r0, r10
@@ -3366,7 +3366,7 @@ FLAC__stream_decoder_set_metadata_ignore_application:
 		ldw r1, r1[0]
 	}
 	ldc r3, 1120
-	.loc	1 771 5
+	.loc	1 773 5
 	{
 		add r2, r0, r3
 		nop
@@ -3377,20 +3377,20 @@ FLAC__stream_decoder_set_metadata_ignore_application:
 	}
 .Ltmp356:
 	ldc r9, 1112
-	.loc	1 772 53
+	.loc	1 774 53
 .Ltmp357:
 	{
 		add r0, r0, r9
 		nop
 	}
 .Ltmp358:
-	.loc	1 772 53
+	.loc	1 774 53
 	{
 		eq r0, r1, r2
 		ldw r7, r0[0]
 	}
 .Ltmp359:
-	.loc	1 771 5
+	.loc	1 773 5
 	bf r0, .LBB16_3
 .Ltmp360:
 	.loc	15 275 5
@@ -3435,7 +3435,7 @@ FLAC__stream_decoder_set_metadata_ignore_application:
 		ldw r0, r4[1]
 	}
 .Ltmp367:
-	.loc	1 772 53
+	.loc	1 774 53
 	{
 		add r0, r0, r9
 		ldc r1, 0
@@ -3483,7 +3483,7 @@ FLAC__stream_decoder_set_metadata_ignore_application:
 		nop
 		ldw r1, r4[1]
 	}
-	.loc	1 772 53
+	.loc	1 774 53
 	{
 		add r2, r1, r9
 		nop
@@ -3494,7 +3494,7 @@ FLAC__stream_decoder_set_metadata_ignore_application:
 	}
 	bf r0, .LBB16_15
 .Ltmp373:
-	.loc	1 776 3
+	.loc	1 778 3
 	{
 		add r2, r1, r3
 		nop
@@ -3503,12 +3503,12 @@ FLAC__stream_decoder_set_metadata_ignore_application:
 		nop
 		ldw r3, r2[0]
 	}
-	.loc	1 776 3
+	.loc	1 778 3
 	{
 		shl r3, r3, 1
 		nop
 	}
-	.loc	1 776 3
+	.loc	1 778 3
 	{
 		add r1, r1, r10
 		stw r3, r2[0]
@@ -3519,27 +3519,27 @@ FLAC__stream_decoder_set_metadata_ignore_application:
 	}
 .Ltmp374:
 .LBB16_8:
-	.loc	1 779 2
+	.loc	1 781 2
 	ldw r2, cp[FLAC__STREAM_METADATA_APPLICATION_ID_LEN]
-	.loc	1 779 2
+	.loc	1 781 2
 	{
 		shr r2, r2, 3
 		nop
 	}
-	.loc	1 779 2
+	.loc	1 781 2
 	mul r1, r2, r1
-	.loc	1 779 2
+	.loc	1 781 2
 	{
 		add r0, r0, r1
 		mov r1, r6
 	}
-	.loc	1 779 2
+	.loc	1 781 2
 	bl memcpy
 	{
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 780 2
+	.loc	1 782 2
 	{
 		add r0, r0, r10
 		nop
@@ -3548,7 +3548,7 @@ FLAC__stream_decoder_set_metadata_ignore_application:
 		nop
 		ldw r1, r0[0]
 	}
-	.loc	1 780 2
+	.loc	1 782 2
 	{
 		add r1, r1, 1
 		nop
@@ -3566,7 +3566,7 @@ FLAC__stream_decoder_set_metadata_ignore_application:
 	bu .LBB16_16
 .LBB16_15:
 .Ltmp376:
-	.loc	1 773 4
+	.loc	1 775 4
 	{
 		ldc r1, 8
 		ldw r0, r4[0]
@@ -3577,7 +3577,7 @@ FLAC__stream_decoder_set_metadata_ignore_application:
 	}
 .Ltmp377:
 .LBB16_16:
-	.loc	1 783 1
+	.loc	1 785 1
 	{
 		mov r0, r5
 		ldw r10, sp[8]
@@ -3611,7 +3611,7 @@ FLAC__stream_decoder_set_metadata_ignore_application:
 	.cc_top FLAC__stream_decoder_set_metadata_ignore_all.function,FLAC__stream_decoder_set_metadata_ignore_all
 FLAC__stream_decoder_set_metadata_ignore_all:
 .Lfunc_begin17:
-	.loc	1 786 0
+	.loc	1 788 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -3640,7 +3640,7 @@ FLAC__stream_decoder_set_metadata_ignore_all:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 790 5 prologue_end
+	.loc	1 792 5 prologue_end
 .Ltmp385:
 	{
 		eq r0, r0, 9
@@ -3653,13 +3653,13 @@ FLAC__stream_decoder_set_metadata_ignore_all:
 		ldw r0, r4[1]
 	}
 	ldc r1, 600
-	.loc	1 792 2
+	.loc	1 794 2
 	{
 		add r0, r0, r1
 		ldc r5, 0
 	}
 	ldc r2, 512
-	.loc	1 792 2
+	.loc	1 794 2
 	{
 		mov r1, r5
 		nop
@@ -3670,12 +3670,12 @@ FLAC__stream_decoder_set_metadata_ignore_all:
 		ldw r0, r4[1]
 	}
 	ldc r1, 1116
-	.loc	1 793 2
+	.loc	1 795 2
 	{
 		add r0, r0, r1
 		nop
 	}
-	.loc	1 793 2
+	.loc	1 795 2
 	{
 		mkmsk r0, 1
 		stw r5, r0[0]
@@ -3688,7 +3688,7 @@ FLAC__stream_decoder_set_metadata_ignore_all:
 		nop
 	}
 .LBB17_3:
-	.loc	1 795 1
+	.loc	1 797 1
 	ldd r5, r4, sp[1]
 	{
 		nop
@@ -3716,7 +3716,7 @@ FLAC__stream_decoder_set_metadata_ignore_all:
 	.cc_top FLAC__stream_decoder_get_state.function,FLAC__stream_decoder_get_state
 FLAC__stream_decoder_get_state:
 .Lfunc_begin18:
-	.loc	1 798 0
+	.loc	1 800 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -3736,7 +3736,7 @@ FLAC__stream_decoder_get_state:
 		nop
 		retsp 0
 	}
-	.loc	1 801 2 prologue_end
+	.loc	1 803 2 prologue_end
 .Ltmp391:
 	# RETURN_REG_HOLDER
 .Ltmp392:
@@ -3760,7 +3760,7 @@ FLAC__stream_decoder_get_state:
 	.cc_top FLAC__stream_decoder_get_resolved_state_string.function,FLAC__stream_decoder_get_resolved_state_string
 FLAC__stream_decoder_get_resolved_state_string:
 .Lfunc_begin19:
-	.loc	1 805 0
+	.loc	1 807 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -3776,7 +3776,7 @@ FLAC__stream_decoder_get_resolved_state_string:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 806 2 prologue_end
+	.loc	1 808 2 prologue_end
 .Ltmp395:
 	ldaw r11, cp[FLAC__StreamDecoderStateString]
 	{
@@ -3787,7 +3787,7 @@ FLAC__stream_decoder_get_resolved_state_string:
 		nop
 		retsp 0
 	}
-	.loc	1 806 2
+	.loc	1 808 2
 	# RETURN_REG_HOLDER
 .Ltmp396:
 	.cc_bottom FLAC__stream_decoder_get_resolved_state_string.function
@@ -3810,7 +3810,7 @@ FLAC__stream_decoder_get_resolved_state_string:
 	.cc_top FLAC__stream_decoder_get_md5_checking.function,FLAC__stream_decoder_get_md5_checking
 FLAC__stream_decoder_get_md5_checking:
 .Lfunc_begin20:
-	.loc	1 810 0
+	.loc	1 812 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -3830,7 +3830,7 @@ FLAC__stream_decoder_get_md5_checking:
 		nop
 		retsp 0
 	}
-	.loc	1 813 2 prologue_end
+	.loc	1 815 2 prologue_end
 .Ltmp399:
 	# RETURN_REG_HOLDER
 .Ltmp400:
@@ -3854,7 +3854,7 @@ FLAC__stream_decoder_get_md5_checking:
 	.cc_top FLAC__stream_decoder_get_total_samples.function,FLAC__stream_decoder_get_total_samples
 FLAC__stream_decoder_get_total_samples:
 .Lfunc_begin21:
-	.loc	1 817 0
+	.loc	1 819 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -3867,36 +3867,36 @@ FLAC__stream_decoder_get_total_samples:
 	}
 	ldc r0, 240
 .Ltmp402:
-	.loc	1 820 2 prologue_end
+	.loc	1 822 2 prologue_end
 	{
 		add r0, r2, r0
 		nop
 	}
-	.loc	1 820 2
+	.loc	1 822 2
 	{
 		ldc r0, 0
 		ldw r3, r0[0]
 	}
-	.loc	1 820 2
+	.loc	1 822 2
 	{
 		mov r1, r0
 		nop
 	}
 	bf r3, .LBB21_2
 	ldc r0, 296
-	.loc	1 820 2
+	.loc	1 822 2
 	{
 		add r0, r2, r0
 		nop
 	}
-	.loc	1 820 2
+	.loc	1 822 2
 	ldd r1, r0, r0[0]
 .LBB21_2:
 	{
 		nop
 		retsp 0
 	}
-	.loc	1 820 2
+	.loc	1 822 2
 	# RETURN_REG_HOLDER
 .Ltmp403:
 	.cc_bottom FLAC__stream_decoder_get_total_samples.function
@@ -3919,7 +3919,7 @@ FLAC__stream_decoder_get_total_samples:
 	.cc_top FLAC__stream_decoder_get_channels.function,FLAC__stream_decoder_get_channels
 FLAC__stream_decoder_get_channels:
 .Lfunc_begin22:
-	.loc	1 824 0
+	.loc	1 826 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -3939,7 +3939,7 @@ FLAC__stream_decoder_get_channels:
 		nop
 		retsp 0
 	}
-	.loc	1 827 2 prologue_end
+	.loc	1 829 2 prologue_end
 .Ltmp406:
 	# RETURN_REG_HOLDER
 .Ltmp407:
@@ -3963,7 +3963,7 @@ FLAC__stream_decoder_get_channels:
 	.cc_top FLAC__stream_decoder_get_channel_assignment.function,FLAC__stream_decoder_get_channel_assignment
 FLAC__stream_decoder_get_channel_assignment:
 .Lfunc_begin23:
-	.loc	1 831 0
+	.loc	1 833 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -3983,7 +3983,7 @@ FLAC__stream_decoder_get_channel_assignment:
 		nop
 		retsp 0
 	}
-	.loc	1 834 2 prologue_end
+	.loc	1 836 2 prologue_end
 .Ltmp410:
 	# RETURN_REG_HOLDER
 .Ltmp411:
@@ -4007,7 +4007,7 @@ FLAC__stream_decoder_get_channel_assignment:
 	.cc_top FLAC__stream_decoder_get_bits_per_sample.function,FLAC__stream_decoder_get_bits_per_sample
 FLAC__stream_decoder_get_bits_per_sample:
 .Lfunc_begin24:
-	.loc	1 838 0
+	.loc	1 840 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -4027,7 +4027,7 @@ FLAC__stream_decoder_get_bits_per_sample:
 		nop
 		retsp 0
 	}
-	.loc	1 841 2 prologue_end
+	.loc	1 843 2 prologue_end
 .Ltmp414:
 	# RETURN_REG_HOLDER
 .Ltmp415:
@@ -4051,7 +4051,7 @@ FLAC__stream_decoder_get_bits_per_sample:
 	.cc_top FLAC__stream_decoder_get_sample_rate.function,FLAC__stream_decoder_get_sample_rate
 FLAC__stream_decoder_get_sample_rate:
 .Lfunc_begin25:
-	.loc	1 845 0
+	.loc	1 847 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -4071,7 +4071,7 @@ FLAC__stream_decoder_get_sample_rate:
 		nop
 		retsp 0
 	}
-	.loc	1 848 2 prologue_end
+	.loc	1 850 2 prologue_end
 .Ltmp418:
 	# RETURN_REG_HOLDER
 .Ltmp419:
@@ -4095,7 +4095,7 @@ FLAC__stream_decoder_get_sample_rate:
 	.cc_top FLAC__stream_decoder_get_blocksize.function,FLAC__stream_decoder_get_blocksize
 FLAC__stream_decoder_get_blocksize:
 .Lfunc_begin26:
-	.loc	1 852 0
+	.loc	1 854 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -4115,7 +4115,7 @@ FLAC__stream_decoder_get_blocksize:
 		nop
 		retsp 0
 	}
-	.loc	1 855 2 prologue_end
+	.loc	1 857 2 prologue_end
 .Ltmp422:
 	# RETURN_REG_HOLDER
 .Ltmp423:
@@ -4139,7 +4139,7 @@ FLAC__stream_decoder_get_blocksize:
 	.cc_top FLAC__stream_decoder_get_decode_position.function,FLAC__stream_decoder_get_decode_position
 FLAC__stream_decoder_get_decode_position:
 .Lfunc_begin27:
-	.loc	1 859 0
+	.loc	1 861 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -4172,7 +4172,7 @@ FLAC__stream_decoder_get_decode_position:
 		nop
 		ldw r0, r6[1]
 	}
-	.loc	1 867 5 prologue_end
+	.loc	1 869 5 prologue_end
 .Ltmp433:
 	{
 		ldc r5, 0
@@ -4180,12 +4180,12 @@ FLAC__stream_decoder_get_decode_position:
 	}
 	bf r3, .LBB27_4
 .Ltmp434:
-	.loc	1 869 5
+	.loc	1 871 5
 	{
 		mov r0, r6
 		ldw r2, r0[9]
 	}
-	.loc	1 869 5
+	.loc	1 871 5
 	{
 		mov r1, r4
 		nop
@@ -4204,7 +4204,7 @@ FLAC__stream_decoder_get_decode_position:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 872 6
+	.loc	1 874 6
 .Ltmp436:
 	bl FLAC__bitreader_is_consumed_byte_aligned
 	bf r0, .LBB27_4
@@ -4217,28 +4217,28 @@ FLAC__stream_decoder_get_decode_position:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1182 9
+	.loc	1 1185 9
 .Ltmp438:
 	bl FLAC__bitreader_get_input_bits_unconsumed
-	.loc	1 1182 9
+	.loc	1 1185 9
 	{
 		shr r0, r0, 3
 		nop
 	}
 .Ltmp439:
-	.loc	1 875 15
+	.loc	1 877 15
 	ldd r2, r1, r4[0]
 	{
 		ldc r3, 0
 		nop
 	}
-	.loc	1 875 15
+	.loc	1 877 15
 	lsub r1, r0, r1, r0, r3
 	{
 		sub r1, r2, r1
 		nop
 	}
-	.loc	1 875 15
+	.loc	1 877 15
 	std r1, r0, r4[0]
 	{
 		mkmsk r5, 1
@@ -4246,7 +4246,7 @@ FLAC__stream_decoder_get_decode_position:
 	}
 .Ltmp440:
 .LBB27_4:
-	.loc	1 877 1
+	.loc	1 879 1
 	{
 		mov r0, r5
 		ldw r6, sp[4]
@@ -4276,7 +4276,7 @@ FLAC__stream_decoder_get_decode_position:
 	.cc_top FLAC__stream_decoder_get_input_bytes_unconsumed.function,FLAC__stream_decoder_get_input_bytes_unconsumed
 FLAC__stream_decoder_get_input_bytes_unconsumed:
 .Lfunc_begin28:
-	.loc	1 1178 0
+	.loc	1 1181 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -4296,15 +4296,15 @@ FLAC__stream_decoder_get_input_bytes_unconsumed:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1182 9 prologue_end
+	.loc	1 1185 9 prologue_end
 .Ltmp446:
 	bl FLAC__bitreader_get_input_bits_unconsumed
-	.loc	1 1182 9
+	.loc	1 1185 9
 	{
 		shr r0, r0, 3
 		retsp 2
 	}
-	.loc	1 1182 9
+	.loc	1 1185 9
 	# RETURN_REG_HOLDER
 .Ltmp447:
 	.cc_bottom FLAC__stream_decoder_get_input_bytes_unconsumed.function
@@ -4327,7 +4327,7 @@ FLAC__stream_decoder_get_input_bytes_unconsumed:
 	.cc_top FLAC__stream_decoder_get_client_data.function,FLAC__stream_decoder_get_client_data
 FLAC__stream_decoder_get_client_data:
 .Lfunc_begin29:
-	.loc	1 880 0
+	.loc	1 882 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -4347,7 +4347,7 @@ FLAC__stream_decoder_get_client_data:
 		nop
 		retsp 0
 	}
-	.loc	1 881 2 prologue_end
+	.loc	1 883 2 prologue_end
 .Ltmp450:
 	# RETURN_REG_HOLDER
 .Ltmp451:
@@ -4371,7 +4371,7 @@ FLAC__stream_decoder_get_client_data:
 	.cc_top FLAC__stream_decoder_flush.function,FLAC__stream_decoder_flush
 FLAC__stream_decoder_flush:
 .Lfunc_begin30:
-	.loc	1 885 0
+	.loc	1 887 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -4397,7 +4397,7 @@ FLAC__stream_decoder_flush:
 		ldw r0, r4[1]
 	}
 	ldc r1, 4676
-	.loc	1 890 5 prologue_end
+	.loc	1 892 5 prologue_end
 .Ltmp458:
 	{
 		add r1, r0, r1
@@ -4417,7 +4417,7 @@ FLAC__stream_decoder_flush:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 890 5
+	.loc	1 892 5
 	{
 		eq r1, r1, 9
 		nop
@@ -4432,15 +4432,15 @@ FLAC__stream_decoder_flush:
 .LBB30_3:
 .Ltmp461:
 	ldc r1, 232
-	.loc	1 893 2
+	.loc	1 895 2
 	{
 		add r1, r0, r1
 		ldc r5, 0
 	}
-	.loc	1 893 2
+	.loc	1 895 2
 	std r5, r5, r1[0]
 	ldc r1, 4672
-	.loc	1 894 2
+	.loc	1 896 2
 	{
 		add r1, r0, r1
 		nop
@@ -4450,15 +4450,15 @@ FLAC__stream_decoder_flush:
 		stw r5, r1[0]
 	}
 	ldc r1, 8320
-	.loc	1 895 2
+	.loc	1 897 2
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 895 2
+	.loc	1 897 2
 	std r5, r5, r1[0]
 	ldc r1, 8304
-	.loc	1 896 2
+	.loc	1 898 2
 	{
 		add r1, r0, r1
 		nop
@@ -4471,21 +4471,21 @@ FLAC__stream_decoder_flush:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 903 6
+	.loc	1 905 6
 .Ltmp462:
 	bl FLAC__bitreader_clear
 	{
 		nop
 		ldw r1, r4[0]
 	}
-	.loc	1 903 6
+	.loc	1 905 6
 	bf r0, .LBB30_4
 .Ltmp463:
 	{
 		ldc r0, 2
 		nop
 	}
-	.loc	1 907 2
+	.loc	1 909 2
 	{
 		mkmsk r5, 1
 		stw r0, r1[0]
@@ -4501,7 +4501,7 @@ FLAC__stream_decoder_flush:
 		stw r0, r1[0]
 	}
 .LBB30_6:
-	.loc	1 910 1
+	.loc	1 912 1
 	{
 		mov r0, r5
 		nop
@@ -4533,7 +4533,7 @@ FLAC__stream_decoder_flush:
 	.cc_top FLAC__stream_decoder_reset.function,FLAC__stream_decoder_reset
 FLAC__stream_decoder_reset:
 .Lfunc_begin31:
-	.loc	1 913 0
+	.loc	1 916 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -4572,7 +4572,7 @@ FLAC__stream_decoder_reset:
 		ldw r0, r4[1]
 	}
 	ldc r9, 4676
-	.loc	1 890 5 prologue_end
+	.loc	1 892 5 prologue_end
 .Ltmp477:
 	{
 		add r1, r0, r9
@@ -4592,7 +4592,7 @@ FLAC__stream_decoder_reset:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 890 5
+	.loc	1 892 5
 	{
 		eq r1, r1, 9
 		nop
@@ -4607,15 +4607,15 @@ FLAC__stream_decoder_reset:
 .LBB31_3:
 .Ltmp480:
 	ldc r1, 232
-	.loc	1 893 2
+	.loc	1 895 2
 	{
 		add r1, r0, r1
 		ldc r6, 0
 	}
-	.loc	1 893 2
+	.loc	1 895 2
 	std r6, r6, r1[0]
 	ldc r10, 4672
-	.loc	1 894 2
+	.loc	1 896 2
 	{
 		add r1, r0, r10
 		nop
@@ -4625,15 +4625,15 @@ FLAC__stream_decoder_reset:
 		stw r6, r1[0]
 	}
 	ldc r7, 8320
-	.loc	1 895 2
+	.loc	1 897 2
 	{
 		add r1, r0, r7
 		nop
 	}
-	.loc	1 895 2
+	.loc	1 897 2
 	std r6, r6, r1[0]
 	ldc r8, 8304
-	.loc	1 896 2
+	.loc	1 898 2
 	{
 		add r1, r0, r8
 		nop
@@ -4646,14 +4646,14 @@ FLAC__stream_decoder_reset:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 903 6
+	.loc	1 905 6
 .Ltmp481:
 	bl FLAC__bitreader_clear
 	{
 		nop
 		ldw r1, r4[0]
 	}
-	.loc	1 903 6
+	.loc	1 905 6
 	bf r0, .LBB31_4
 .Ltmp482:
 	{
@@ -4668,7 +4668,7 @@ FLAC__stream_decoder_reset:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 934 5
+	.loc	1 937 5
 .Ltmp483:
 	{
 		add r1, r0, r9
@@ -4684,15 +4684,15 @@ FLAC__stream_decoder_reset:
 		nop
 		ldw r5, r0[10]
 	}
-	.loc	1 935 33
+	.loc	1 938 33
 .Ltmp485:
 	bl __getstdin
-	.loc	1 935 33
+	.loc	1 938 33
 	{
 		eq r0, r5, r0
 		nop
 	}
-	.loc	1 935 33
+	.loc	1 938 33
 	bt r0, .LBB31_7
 .Ltmp486:
 	{
@@ -4705,12 +4705,12 @@ FLAC__stream_decoder_reset:
 	}
 	bf r7, .LBB31_11
 .Ltmp487:
-	.loc	1 937 42
+	.loc	1 940 42
 	{
 		ldc r5, 0
 		ldw r3, r0[9]
 	}
-	.loc	1 937 42
+	.loc	1 940 42
 	{
 		mov r0, r4
 		mov r1, r5
@@ -4723,7 +4723,7 @@ FLAC__stream_decoder_reset:
 		nop
 		bla r7
 	}
-	.loc	1 937 42
+	.loc	1 940 42
 	{
 		eq r0, r0, 1
 		nop
@@ -4748,7 +4748,7 @@ FLAC__stream_decoder_reset:
 		stw r6, r1[0]
 	}
 	ldc r1, 240
-	.loc	1 943 2
+	.loc	1 946 2
 	{
 		add r1, r0, r1
 		nop
@@ -4758,7 +4758,7 @@ FLAC__stream_decoder_reset:
 		stw r6, r1[0]
 	}
 	ldc r5, 444
-	.loc	1 945 2
+	.loc	1 948 2
 	{
 		add r0, r0, r5
 		nop
@@ -4767,13 +4767,13 @@ FLAC__stream_decoder_reset:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 945 2
+	.loc	1 948 2
 	bl free
 	{
 		nop
 		ldw r1, r4[1]
 	}
-	.loc	1 946 2
+	.loc	1 949 2
 	{
 		add r0, r1, r5
 		nop
@@ -4783,7 +4783,7 @@ FLAC__stream_decoder_reset:
 		stw r6, r0[0]
 	}
 	ldc r0, 244
-	.loc	1 947 2
+	.loc	1 950 2
 	{
 		add r0, r1, r0
 		nop
@@ -4796,7 +4796,7 @@ FLAC__stream_decoder_reset:
 		nop
 		ldw r0, r4[0]
 	}
-	.loc	1 949 2
+	.loc	1 952 2
 	{
 		add r2, r1, r10
 		ldw r0, r0[7]
@@ -4806,7 +4806,7 @@ FLAC__stream_decoder_reset:
 		stw r0, r2[0]
 	}
 	ldc r0, 228
-	.loc	1 954 2
+	.loc	1 957 2
 	{
 		add r0, r1, r0
 		nop
@@ -4816,12 +4816,12 @@ FLAC__stream_decoder_reset:
 		stw r6, r0[0]
 	}
 	ldc r0, 224
-	.loc	1 954 2
+	.loc	1 957 2
 	{
 		add r0, r1, r0
 		nop
 	}
-	.loc	1 954 2
+	.loc	1 957 2
 	{
 		add r0, r1, r9
 		stw r6, r0[0]
@@ -4830,7 +4830,7 @@ FLAC__stream_decoder_reset:
 		nop
 		ldw r2, r0[0]
 	}
-	.loc	1 962 5
+	.loc	1 965 5
 .Ltmp491:
 	bf r2, .LBB31_13
 .Ltmp492:
@@ -4845,7 +4845,7 @@ FLAC__stream_decoder_reset:
 		ldc r0, 8
 		nop
 	}
-	.loc	1 904 3
+	.loc	1 906 3
 .Ltmp494:
 	{
 		mov r5, r6
@@ -4855,19 +4855,19 @@ FLAC__stream_decoder_reset:
 .Ltmp495:
 .LBB31_13:
 	ldc r0, 4780
-	.loc	1 965 3
+	.loc	1 968 3
 .Ltmp496:
 	{
 		add r0, r1, r0
 		nop
 	}
 	ldc r2, 4684
-	.loc	1 965 3
+	.loc	1 968 3
 	{
 		add r1, r1, r2
 		nop
 	}
-	.loc	1 965 3
+	.loc	1 968 3
 	bl FLAC__MD5Final
 	{
 		nop
@@ -4876,30 +4876,30 @@ FLAC__stream_decoder_reset:
 .Ltmp497:
 .LBB31_15:
 	ldc r0, 4684
-	.loc	1 969 2
+	.loc	1 972 2
 	{
 		add r0, r1, r0
 		nop
 	}
-	.loc	1 969 2
+	.loc	1 972 2
 	bl FLAC__MD5Init
 	{
 		nop
 		ldw r0, r4[1]
 	}
 	ldc r1, 8312
-	.loc	1 971 2
+	.loc	1 974 2
 	{
 		add r1, r0, r1
 		nop
 	}
 	ldc r2, 8336
-	.loc	1 972 2
+	.loc	1 975 2
 	{
 		add r2, r0, r2
 		nop
 	}
-	.loc	1 972 2
+	.loc	1 975 2
 	{
 		add r2, r0, r8
 		stw r6, r2[0]
@@ -4909,7 +4909,7 @@ FLAC__stream_decoder_reset:
 		stw r6, r2[0]
 	}
 	ldc r2, 8324
-	.loc	1 973 2
+	.loc	1 976 2
 	{
 		add r2, r0, r2
 		nop
@@ -4937,7 +4937,7 @@ FLAC__stream_decoder_reset:
 	}
 .Ltmp498:
 .LBB31_16:
-	.loc	1 977 1
+	.loc	1 980 1
 	{
 		mov r0, r5
 		ldw r10, sp[8]
@@ -4958,6 +4958,10 @@ FLAC__stream_decoder_reset:
 	}
 	bu .LBB31_16
 	.cc_bottom FLAC__stream_decoder_reset.function
+	.set	FLAC__stream_decoder_reset.nstackwords.pragma,200
+	.globl	FLAC__stream_decoder_reset.nstackwords.pragma
+	.set	FLAC__stream_decoder_reset.nstackwords,FLAC__stream_decoder_reset.nstackwords
+	.globl	FLAC__stream_decoder_reset.nstackwords
 
 	.globl	FLAC__stream_decoder_reset.maxcores
 
@@ -4975,7 +4979,7 @@ FLAC__stream_decoder_reset:
 	.cc_top FLAC__stream_decoder_process_single.function,FLAC__stream_decoder_process_single
 FLAC__stream_decoder_process_single:
 .Lfunc_begin32:
-	.loc	1 980 0
+	.loc	1 983 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -5022,7 +5026,7 @@ FLAC__stream_decoder_process_single:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 986 3 prologue_end
+	.loc	1 989 3 prologue_end
 .Ltmp511:
 	{
 		lsu r1, r8, r0
@@ -5041,7 +5045,7 @@ FLAC__stream_decoder_process_single:
 	.jmptable32 .LBB32_3,.LBB32_5,.LBB32_6,.LBB32_7,.LBB32_10,.LBB32_11,.LBB32_11,.LBB32_10
 .Ltmp513:
 .LBB32_3:
-	.loc	1 988 9
+	.loc	1 991 9
 	{
 		mov r0, r6
 		nop
@@ -5051,7 +5055,7 @@ FLAC__stream_decoder_process_single:
 	bu .LBB32_4
 .Ltmp514:
 .LBB32_6:
-	.loc	1 997 9
+	.loc	1 1000 9
 	{
 		mov r0, r6
 		nop
@@ -5061,7 +5065,7 @@ FLAC__stream_decoder_process_single:
 	bu .LBB32_10
 .Ltmp515:
 .LBB32_7:
-	.loc	1 1001 9
+	.loc	1 1004 9
 	{
 		mov r0, r6
 		mov r1, r7
@@ -5071,7 +5075,7 @@ FLAC__stream_decoder_process_single:
 		nop
 	}
 	bl read_frame_
-	.loc	1 1001 9
+	.loc	1 1004 9
 	bf r0, .LBB32_8
 .Ltmp516:
 	{
@@ -5098,7 +5102,7 @@ FLAC__stream_decoder_process_single:
 		nop
 	}
 .LBB32_11:
-	.loc	1 1013 1
+	.loc	1 1016 1
 	{
 		mov r0, r5
 		ldw r8, sp[6]
@@ -5112,13 +5116,13 @@ FLAC__stream_decoder_process_single:
 	# RETURN_REG_HOLDER
 .LBB32_5:
 .Ltmp518:
-	.loc	1 992 9
+	.loc	1 995 9
 	{
 		mov r0, r6
 		nop
 	}
 	bl read_metadata_
-	.loc	1 993 6
+	.loc	1 996 6
 	{
 		eq r0, r0, 0
 		nop
@@ -5148,7 +5152,7 @@ FLAC__stream_decoder_process_single:
 	.cc_top find_metadata_.function,find_metadata_
 find_metadata_:
 .Lfunc_begin33:
-	.loc	1 1310 0
+	.loc	1 1314 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -5198,13 +5202,13 @@ find_metadata_:
 		nop
 		ldw r3, r1[8]
 	}
-	.loc	1 3235 3 prologue_end
+	.loc	1 3242 3 prologue_end
 .Ltmp533:
 	{
 		mov r0, r5
 		ldw r2, r1[9]
 	}
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r1, r6
 		nop
@@ -5235,7 +5239,7 @@ find_metadata_:
 		nop
 		ldw r0, r5[1]
 	}
-	.loc	1 1318 6
+	.loc	1 1322 6
 .Ltmp537:
 	{
 		add r1, r0, r9
@@ -5245,7 +5249,7 @@ find_metadata_:
 		nop
 		ldw r2, r1[0]
 	}
-	.loc	1 1318 6
+	.loc	1 1322 6
 	bf r2, .LBB33_5
 .Ltmp538:
 	ldc r2, 4638
@@ -5264,7 +5268,7 @@ find_metadata_:
 	bu .LBB33_7
 .Ltmp539:
 .LBB33_5:
-	.loc	1 1323 8
+	.loc	1 1327 8
 	{
 		mov r1, r7
 		ldw r0, r0[11]
@@ -5273,7 +5277,7 @@ find_metadata_:
 		ldc r2, 8
 		nop
 	}
-	.loc	1 1323 8
+	.loc	1 1327 8
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB33_27
 .Ltmp540:
@@ -5283,46 +5287,46 @@ find_metadata_:
 	}
 .Ltmp541:
 .LBB33_7:
-	.loc	1 1326 6
+	.loc	1 1330 6
 	ldaw r11, cp[FLAC__STREAM_SYNC_STRING]
 	{
 		nop
 		ld8u r1, r11[r10]
 	}
-	.loc	1 1326 6
+	.loc	1 1330 6
 	{
 		eq r1, r0, r1
 		nop
 	}
 	bt r1, .LBB33_8
 .Ltmp542:
-	.loc	1 1333 6
+	.loc	1 1337 6
 	{
 		lsu r1, r8, r4
 		nop
 	}
 	bt r1, .LBB33_27
 .Ltmp543:
-	.loc	1 1336 6
+	.loc	1 1340 6
 	ldaw r11, cp[ID3V2_TAG_]
 	{
 		nop
 		ld8u r1, r11[r4]
 	}
-	.loc	1 1336 6
+	.loc	1 1340 6
 	{
 		eq r1, r0, r1
 		nop
 	}
 	bf r1, .LBB33_18
 .Ltmp544:
-	.loc	1 1337 4
+	.loc	1 1341 4
 	{
 		add r4, r4, 1
 		nop
 	}
 .Ltmp545:
-	.loc	1 1339 7
+	.loc	1 1343 7
 	{
 		eq r0, r4, 3
 		mov r10, r6
@@ -5338,7 +5342,7 @@ find_metadata_:
 		ldw r0, r5[1]
 	}
 .Ltmp547:
-	.loc	1 1962 6
+	.loc	1 1967 6
 	{
 		ldaw r1, sp[5]
 		ldw r0, r0[11]
@@ -5347,7 +5351,7 @@ find_metadata_:
 		ldc r2, 24
 		nop
 	}
-	.loc	1 1962 6
+	.loc	1 1967 6
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB33_28
 .Ltmp548:
@@ -5355,14 +5359,14 @@ find_metadata_:
 		nop
 		ldw r0, r5[1]
 	}
-	.loc	1 1967 7
+	.loc	1 1972 7
 .Ltmp549:
 	{
 		mov r10, r9
 		ldw r0, r0[11]
 	}
 .Ltmp550:
-	.loc	1 1340 9
+	.loc	1 1344 9
 	{
 		mov r6, r9
 		nop
@@ -5373,24 +5377,24 @@ find_metadata_:
 		ldaw r1, sp[5]
 		ldc r2, 8
 	}
-	.loc	1 1967 7
+	.loc	1 1972 7
 .Ltmp552:
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB33_28
 .Ltmp553:
-	.loc	1 1969 3
+	.loc	1 1974 3
 	{
 		shl r0, r10, 7
 		ldw r1, sp[5]
 	}
 .Ltmp554:
-	.loc	1 1970 3
+	.loc	1 1975 3
 	{
 		zext r1, 7
 		nop
 	}
 .Ltmp555:
-	.loc	1 1970 3
+	.loc	1 1975 3
 	{
 		or r10, r1, r0
 		add r6, r6, 1
@@ -5400,21 +5404,21 @@ find_metadata_:
 		nop
 		ldw r0, r5[1]
 	}
-	.loc	1 1967 7
+	.loc	1 1972 7
 .Ltmp557:
 	{
 		ldc r1, 4
 		ldw r0, r0[11]
 	}
 .Ltmp558:
-	.loc	1 1966 2
+	.loc	1 1971 2
 	{
 		lsu r1, r6, r1
 		nop
 	}
 	bt r1, .LBB33_15
 .Ltmp559:
-	.loc	1 1973 6
+	.loc	1 1978 6
 	{
 		mov r1, r10
 		nop
@@ -5437,13 +5441,13 @@ find_metadata_:
 	bu .LBB33_27
 .Ltmp561:
 .LBB33_8:
-	.loc	1 1328 4
+	.loc	1 1332 4
 	{
 		add r10, r10, 1
 		ldc r0, 4
 	}
 .Ltmp562:
-	.loc	1 1317 2
+	.loc	1 1321 2
 	{
 		lsu r1, r10, r0
 		mkmsk r0, 1
@@ -5456,7 +5460,7 @@ find_metadata_:
 		mkmsk r4, 8
 		nop
 	}
-	.loc	1 1346 6
+	.loc	1 1350 6
 .Ltmp564:
 	{
 		eq r0, r0, r4
@@ -5469,7 +5473,7 @@ find_metadata_:
 		ldw r0, r5[1]
 	}
 	ldc r1, 4636
-	.loc	1 1347 4
+	.loc	1 1351 4
 .Ltmp566:
 	st8 r4, r0[r1]
 	{
@@ -5477,7 +5481,7 @@ find_metadata_:
 		ldw r0, r5[1]
 	}
 .Ltmp567:
-	.loc	1 1348 8
+	.loc	1 1352 8
 	{
 		mov r1, r7
 		ldw r0, r0[11]
@@ -5486,7 +5490,7 @@ find_metadata_:
 		ldc r2, 8
 		nop
 	}
-	.loc	1 1348 8
+	.loc	1 1352 8
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB33_27
 .Ltmp568:
@@ -5494,7 +5498,7 @@ find_metadata_:
 		nop
 		ldw r0, sp[4]
 	}
-	.loc	1 1353 7
+	.loc	1 1357 7
 .Ltmp569:
 	{
 		eq r1, r0, r4
@@ -5507,10 +5511,10 @@ find_metadata_:
 		ldw r0, r5[1]
 	}
 	ldc r1, 4638
-	.loc	1 1354 5
+	.loc	1 1358 5
 .Ltmp571:
 	st8 r4, r0[r1]
-	.loc	1 1355 5
+	.loc	1 1359 5
 	{
 		add r0, r0, r9
 		mkmsk r1, 1
@@ -5522,7 +5526,7 @@ find_metadata_:
 	bu .LBB33_22
 .Ltmp572:
 .LBB33_25:
-	.loc	1 1357 12
+	.loc	1 1361 12
 	{
 		shr r1, r0, 1
 		nop
@@ -5550,13 +5554,13 @@ find_metadata_:
 		ldw r1, r5[1]
 	}
 	ldc r0, 4680
-	.loc	1 3234 5
+	.loc	1 3241 5
 .Ltmp575:
 	{
 		add r0, r1, r0
 		nop
 	}
-	.loc	1 3234 5
+	.loc	1 3241 5
 	{
 		mov r0, r6
 		ldw r2, r0[0]
@@ -5574,7 +5578,7 @@ find_metadata_:
 		nop
 	}
 .LBB33_27:
-	.loc	1 1372 1
+	.loc	1 1376 1
 	{
 		mov r0, r6
 		ldw r10, sp[12]
@@ -5589,7 +5593,7 @@ find_metadata_:
 	# RETURN_REG_HOLDER
 .LBB33_9:
 .Ltmp577:
-	.loc	1 1370 2
+	.loc	1 1374 2
 	{
 		mkmsk r6, 1
 		ldw r0, r5[0]
@@ -5606,15 +5610,15 @@ find_metadata_:
 		ldw r1, r5[1]
 	}
 	ldc r2, 4637
-	.loc	1 1358 5
+	.loc	1 1362 5
 .Ltmp579:
 	st8 r0, r1[r2]
-	.loc	1 1359 5
+	.loc	1 1363 5
 	{
 		mkmsk r1, 2
 		ldw r0, r5[0]
 	}
-	.loc	1 1359 5
+	.loc	1 1363 5
 	{
 		mkmsk r6, 1
 		stw r1, r0[0]
@@ -5622,6 +5626,8 @@ find_metadata_:
 	bu .LBB33_27
 .Ltmp580:
 	.cc_bottom find_metadata_.function
+	.set	find_metadata_.nstackwords.pragma,400
+	.set	find_metadata_.nstackwords,find_metadata_.nstackwords
 
 
 
@@ -5658,7 +5664,7 @@ find_metadata_:
 	.cc_top read_metadata_.function,read_metadata_
 read_metadata_:
 .Lfunc_begin34:
-	.loc	1 1375 0
+	.loc	1 1380 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -5721,7 +5727,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1381 6 prologue_end
+	.loc	1 1386 6 prologue_end
 .Ltmp593:
 	ldw r2, cp[FLAC__STREAM_METADATA_IS_LAST_LEN]
 	{
@@ -5729,7 +5735,7 @@ read_metadata_:
 		nop
 	}
 .Ltmp594:
-	.loc	1 1381 6
+	.loc	1 1386 6
 	bl FLAC__bitreader_read_raw_uint32
 .Ltmp595:
 	{
@@ -5750,7 +5756,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1385 6
+	.loc	1 1390 6
 .Ltmp597:
 	ldw r2, cp[FLAC__STREAM_METADATA_TYPE_LEN]
 	{
@@ -5758,7 +5764,7 @@ read_metadata_:
 		nop
 	}
 .Ltmp598:
-	.loc	1 1385 6
+	.loc	1 1390 6
 	bl FLAC__bitreader_read_raw_uint32
 .Ltmp599:
 	bf r0, .LBB34_229
@@ -5771,7 +5777,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1388 6
+	.loc	1 1393 6
 .Ltmp601:
 	ldw r2, cp[FLAC__STREAM_METADATA_LENGTH_LEN]
 	{
@@ -5779,12 +5785,12 @@ read_metadata_:
 		nop
 	}
 .Ltmp602:
-	.loc	1 1388 6
+	.loc	1 1393 6
 	bl FLAC__bitreader_read_raw_uint32
 .Ltmp603:
 	bf r0, .LBB34_229
 .Ltmp604:
-	.loc	1 1383 2
+	.loc	1 1388 2
 	{
 		eq r0, r7, 0
 		nop
@@ -5793,7 +5799,7 @@ read_metadata_:
 		eq r8, r0, 0
 		ldw r9, sp[51]
 	}
-	.loc	1 1391 5
+	.loc	1 1396 5
 .Ltmp605:
 	{
 		eq r0, r9, 3
@@ -5806,7 +5812,7 @@ read_metadata_:
 		ldw r1, r4[1]
 	}
 	ldc r0, 244
-	.loc	1 1403 3
+	.loc	1 1408 3
 .Ltmp607:
 	{
 		add r0, r1, r0
@@ -5823,7 +5829,7 @@ read_metadata_:
 .Ltmp608:
 	ldc r2, 424
 .Ltmp609:
-	.loc	1 1643 2
+	.loc	1 1648 2
 	{
 		add r2, r1, r2
 		mkmsk r3, 2
@@ -5833,7 +5839,7 @@ read_metadata_:
 		stw r3, r2[0]
 	}
 	ldc r2, 428
-	.loc	1 1644 2
+	.loc	1 1649 2
 	{
 		add r2, r1, r2
 		nop
@@ -5843,7 +5849,7 @@ read_metadata_:
 		stw r8, r2[0]
 	}
 	ldc r2, 432
-	.loc	1 1645 2
+	.loc	1 1650 2
 	{
 		add r2, r1, r2
 		nop
@@ -5853,7 +5859,7 @@ read_metadata_:
 		stw r0, r2[0]
 	}
 	ldw r2, cp[.LCPI34_0]
-	.loc	1 1647 5
+	.loc	1 1652 5
 .Ltmp610:
 	lmul r3, r11, r0, r2, r5, r5
 	{
@@ -5865,14 +5871,14 @@ read_metadata_:
 		sub r3, r0, r3
 		nop
 	}
-	.loc	1 1647 5
+	.loc	1 1652 5
 	bf r3, .LBB34_24
 .Ltmp611:
 	{
 		nop
 		ldw r0, r1[11]
 	}
-	.loc	1 1648 3
+	.loc	1 1653 3
 .Ltmp612:
 	bl FLAC__bitreader_limit_invalidate
 	bu .LBB34_229
@@ -5894,7 +5900,7 @@ read_metadata_:
 		ldw r0, r4[1]
 	}
 	ldc r10, 248
-	.loc	1 1570 2
+	.loc	1 1575 2
 .Ltmp616:
 	{
 		add r1, r0, r10
@@ -5905,7 +5911,7 @@ read_metadata_:
 		stw r5, r1[0]
 	}
 	ldc r1, 252
-	.loc	1 1571 2
+	.loc	1 1576 2
 	{
 		add r1, r0, r1
 		nop
@@ -5915,7 +5921,7 @@ read_metadata_:
 		stw r8, r1[0]
 	}
 	ldc r1, 256
-	.loc	1 1572 2
+	.loc	1 1577 2
 	{
 		add r1, r0, r1
 		nop
@@ -5924,16 +5930,16 @@ read_metadata_:
 		nop
 		stw r9, r1[0]
 	}
-	.loc	1 1574 2
+	.loc	1 1579 2
 	ldw r6, cp[FLAC__STREAM_METADATA_STREAMINFO_MIN_BLOCK_SIZE_LEN]
 .Ltmp617:
-	.loc	1 1575 6
+	.loc	1 1580 6
 	{
 		ldaw r1, sp[6]
 		ldw r0, r0[11]
 	}
 .Ltmp618:
-	.loc	1 1575 6
+	.loc	1 1580 6
 	{
 		mov r2, r6
 		nop
@@ -5950,7 +5956,7 @@ read_metadata_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 264
-	.loc	1 1577 2
+	.loc	1 1582 2
 	{
 		add r2, r1, r2
 		nop
@@ -5959,16 +5965,16 @@ read_metadata_:
 		nop
 		stw r0, r2[0]
 	}
-	.loc	1 1580 2
+	.loc	1 1585 2
 	ldw r7, cp[FLAC__STREAM_METADATA_STREAMINFO_MAX_BLOCK_SIZE_LEN]
 .Ltmp620:
-	.loc	1 1581 6
+	.loc	1 1586 6
 	{
 		ldaw r1, sp[6]
 		ldw r0, r1[11]
 	}
 .Ltmp621:
-	.loc	1 1581 6
+	.loc	1 1586 6
 	{
 		mov r2, r7
 		nop
@@ -5985,7 +5991,7 @@ read_metadata_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 268
-	.loc	1 1583 2
+	.loc	1 1588 2
 	{
 		add r2, r1, r2
 		nop
@@ -5994,16 +6000,16 @@ read_metadata_:
 		nop
 		stw r0, r2[0]
 	}
-	.loc	1 1586 2
+	.loc	1 1591 2
 	ldw r8, cp[FLAC__STREAM_METADATA_STREAMINFO_MIN_FRAME_SIZE_LEN]
 .Ltmp623:
-	.loc	1 1587 6
+	.loc	1 1592 6
 	{
 		ldaw r1, sp[6]
 		ldw r0, r1[11]
 	}
 .Ltmp624:
-	.loc	1 1587 6
+	.loc	1 1592 6
 	{
 		mov r2, r8
 		nop
@@ -6020,7 +6026,7 @@ read_metadata_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 272
-	.loc	1 1589 2
+	.loc	1 1594 2
 	{
 		add r2, r1, r2
 		nop
@@ -6029,16 +6035,16 @@ read_metadata_:
 		nop
 		stw r0, r2[0]
 	}
-	.loc	1 1592 2
+	.loc	1 1597 2
 	ldw r2, cp[FLAC__STREAM_METADATA_STREAMINFO_MAX_FRAME_SIZE_LEN]
 .Ltmp626:
-	.loc	1 1593 6
+	.loc	1 1598 6
 	{
 		ldaw r1, sp[6]
 		ldw r0, r1[11]
 	}
 .Ltmp627:
-	.loc	1 1593 6
+	.loc	1 1598 6
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB34_229
 .Ltmp628:
@@ -6051,7 +6057,7 @@ read_metadata_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 276
-	.loc	1 1595 2
+	.loc	1 1600 2
 	{
 		add r2, r1, r2
 		nop
@@ -6060,16 +6066,16 @@ read_metadata_:
 		nop
 		stw r0, r2[0]
 	}
-	.loc	1 1598 2
+	.loc	1 1603 2
 	ldw r2, cp[FLAC__STREAM_METADATA_STREAMINFO_SAMPLE_RATE_LEN]
 .Ltmp629:
-	.loc	1 1599 6
+	.loc	1 1604 6
 	{
 		ldaw r1, sp[6]
 		ldw r0, r1[11]
 	}
 .Ltmp630:
-	.loc	1 1599 6
+	.loc	1 1604 6
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB34_229
 .Ltmp631:
@@ -6082,7 +6088,7 @@ read_metadata_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 280
-	.loc	1 1601 2
+	.loc	1 1606 2
 	{
 		add r2, r1, r2
 		nop
@@ -6091,16 +6097,16 @@ read_metadata_:
 		nop
 		stw r0, r2[0]
 	}
-	.loc	1 1604 2
+	.loc	1 1609 2
 	ldw r2, cp[FLAC__STREAM_METADATA_STREAMINFO_CHANNELS_LEN]
 .Ltmp632:
-	.loc	1 1605 6
+	.loc	1 1610 6
 	{
 		ldaw r1, sp[6]
 		ldw r0, r1[11]
 	}
 .Ltmp633:
-	.loc	1 1605 6
+	.loc	1 1610 6
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB34_229
 .Ltmp634:
@@ -6108,13 +6114,13 @@ read_metadata_:
 		nop
 		ldw r0, sp[6]
 	}
-	.loc	1 1607 2
+	.loc	1 1612 2
 	{
 		add r0, r0, 1
 		ldw r1, r4[1]
 	}
 	ldc r2, 284
-	.loc	1 1607 2
+	.loc	1 1612 2
 	{
 		add r2, r1, r2
 		nop
@@ -6123,16 +6129,16 @@ read_metadata_:
 		nop
 		stw r0, r2[0]
 	}
-	.loc	1 1610 2
+	.loc	1 1615 2
 	ldw r2, cp[FLAC__STREAM_METADATA_STREAMINFO_BITS_PER_SAMPLE_LEN]
 .Ltmp635:
-	.loc	1 1611 6
+	.loc	1 1616 6
 	{
 		ldaw r1, sp[6]
 		ldw r0, r1[11]
 	}
 .Ltmp636:
-	.loc	1 1611 6
+	.loc	1 1616 6
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB34_229
 .Ltmp637:
@@ -6140,13 +6146,13 @@ read_metadata_:
 		nop
 		ldw r0, sp[6]
 	}
-	.loc	1 1613 2
+	.loc	1 1618 2
 	{
 		add r0, r0, 1
 		ldw r1, r4[1]
 	}
 	ldc r2, 288
-	.loc	1 1613 2
+	.loc	1 1618 2
 	{
 		add r2, r1, r2
 		nop
@@ -6155,7 +6161,7 @@ read_metadata_:
 		nop
 		stw r0, r2[0]
 	}
-	.loc	1 1616 2
+	.loc	1 1621 2
 	ldw r2, cp[FLAC__STREAM_METADATA_STREAMINFO_TOTAL_SAMPLES_LEN]
 .Ltmp638:
 	{
@@ -6163,14 +6169,14 @@ read_metadata_:
 		ldw r0, r1[11]
 	}
 	ldc r3, 296
-	.loc	1 1617 6
+	.loc	1 1622 6
 .Ltmp639:
 	{
 		add r1, r1, r3
 		nop
 	}
 .Ltmp640:
-	.loc	1 1617 6
+	.loc	1 1622 6
 	bl FLAC__bitreader_read_raw_uint64
 	bf r0, .LBB34_229
 .Ltmp641:
@@ -6183,82 +6189,82 @@ read_metadata_:
 		ldw r0, r1[11]
 	}
 	ldc r2, 304
-	.loc	1 1621 6
+	.loc	1 1626 6
 .Ltmp642:
 	{
 		add r1, r1, r2
 		ldc r2, 16
 	}
-	.loc	1 1621 6
+	.loc	1 1626 6
 	bl FLAC__bitreader_read_byte_block_aligned_no_crc
 	bf r0, .LBB34_229
 .Ltmp643:
-	.loc	1 1584 2
+	.loc	1 1589 2
 	{
 		add r0, r6, r7
 		nop
 	}
-	.loc	1 1590 2
+	.loc	1 1595 2
 	{
 		add r0, r0, r8
 		nop
 	}
-	.loc	1 1592 2
+	.loc	1 1597 2
 	ldw r1, cp[FLAC__STREAM_METADATA_STREAMINFO_MAX_FRAME_SIZE_LEN]
-	.loc	1 1596 2
+	.loc	1 1601 2
 	{
 		add r0, r0, r1
 		nop
 	}
-	.loc	1 1598 2
+	.loc	1 1603 2
 	ldw r1, cp[FLAC__STREAM_METADATA_STREAMINFO_SAMPLE_RATE_LEN]
-	.loc	1 1602 2
+	.loc	1 1607 2
 	{
 		add r0, r0, r1
 		nop
 	}
-	.loc	1 1604 2
+	.loc	1 1609 2
 	ldw r1, cp[FLAC__STREAM_METADATA_STREAMINFO_CHANNELS_LEN]
-	.loc	1 1608 2
+	.loc	1 1613 2
 	{
 		add r0, r0, r1
 		nop
 	}
-	.loc	1 1610 2
+	.loc	1 1615 2
 	ldw r1, cp[FLAC__STREAM_METADATA_STREAMINFO_BITS_PER_SAMPLE_LEN]
-	.loc	1 1614 2
-	{
-		add r0, r0, r1
-		nop
-	}
-	.loc	1 1616 2
-	ldw r1, cp[FLAC__STREAM_METADATA_STREAMINFO_TOTAL_SAMPLES_LEN]
 	.loc	1 1619 2
 	{
 		add r0, r0, r1
 		nop
 	}
+	.loc	1 1621 2
+	ldw r1, cp[FLAC__STREAM_METADATA_STREAMINFO_TOTAL_SAMPLES_LEN]
+	.loc	1 1624 2
+	{
+		add r0, r0, r1
+		nop
+	}
 	ldc r1, 128
-	.loc	1 1623 2
+	.loc	1 1628 2
 	{
 		add r0, r0, r1
 		nop
 	}
 .Ltmp644:
-	.loc	1 1627 6
+	.loc	1 1632 6
 	{
 		shr r0, r0, 3
 		nop
 	}
 .Ltmp645:
-	.loc	1 1627 6
+	.loc	1 1632 6
 	{
 		lsu r1, r9, r0
 		nop
 	}
 	bt r1, .LBB34_229
 .Ltmp646:
-	.loc	1 1629 2
+	.loc	1 1634 2
 	{
 		sub r1, r9, r0
 		ldw r0, r4[1]
@@ -6268,7 +6274,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1630 6
+	.loc	1 1635 6
 .Ltmp648:
 	bl FLAC__bitreader_skip_byte_block_aligned_no_crc
 	{
@@ -6282,7 +6288,7 @@ read_metadata_:
 		ldw r5, r4[1]
 	}
 	ldc r0, 240
-	.loc	1 1395 3
+	.loc	1 1400 3
 	{
 		add r0, r5, r0
 		mkmsk r1, 1
@@ -6292,13 +6298,13 @@ read_metadata_:
 		stw r1, r0[0]
 	}
 	ldc r0, 304
-	.loc	1 1396 11
+	.loc	1 1401 11
 .Ltmp650:
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	1 1396 11
+	.loc	1 1401 11
 	ldaw r11, cp[.L.str35]
 	{
 		ldc r2, 16
@@ -6308,7 +6314,7 @@ read_metadata_:
 	bt r0, .LBB34_18
 .Ltmp651:
 	ldc r0, 4672
-	.loc	1 1397 4
+	.loc	1 1402 4
 	{
 		add r0, r5, r0
 		ldc r1, 0
@@ -6320,7 +6326,7 @@ read_metadata_:
 .Ltmp652:
 .LBB34_18:
 	ldc r0, 4680
-	.loc	1 1398 6
+	.loc	1 1403 6
 .Ltmp653:
 	{
 		add r0, r5, r0
@@ -6333,7 +6339,7 @@ read_metadata_:
 	bt r0, .LBB34_38
 .Ltmp654:
 	ldc r0, 600
-	.loc	1 1398 6
+	.loc	1 1403 6
 	{
 		add r0, r5, r0
 		nop
@@ -6350,7 +6356,7 @@ read_metadata_:
 	}
 	bf r3, .LBB34_38
 .Ltmp656:
-	.loc	1 1399 4
+	.loc	1 1404 4
 	{
 		add r1, r5, r10
 		ldw r2, r5[9]
@@ -6362,7 +6368,7 @@ read_metadata_:
 		nop
 		ldw r7, r4[1]
 	}
-	.loc	1 1413 3
+	.loc	1 1418 3
 .Ltmp658:
 	ldaw r0, r7[r9]
 	ldc r1, 600
@@ -6374,7 +6380,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 1413 3
+	.loc	1 1418 3
 	{
 		eq r0, r0, 0
 		nop
@@ -6384,7 +6390,7 @@ read_metadata_:
 		stw r0, sp[4]
 	}
 .Ltmp659:
-	.loc	1 1414 3
+	.loc	1 1419 3
 	{
 		ldaw r5, sp[6]
 		ldw r6, sp[50]
@@ -6395,7 +6401,7 @@ read_metadata_:
 		nop
 	}
 	ldc r2, 176
-	.loc	1 1417 3
+	.loc	1 1422 3
 	{
 		mov r0, r5
 		nop
@@ -6405,7 +6411,7 @@ read_metadata_:
 		ldc r10, 4
 		nop
 	}
-	.loc	1 1418 3
+	.loc	1 1423 3
 	{
 		or r0, r5, r10
 		nop
@@ -6418,12 +6424,12 @@ read_metadata_:
 		nop
 		stw r9, sp[6]
 	}
-	.loc	1 1420 3
+	.loc	1 1425 3
 	{
 		eq r0, r9, 2
 		stw r6, sp[8]
 	}
-	.loc	1 1422 6
+	.loc	1 1427 6
 .Ltmp661:
 	bf r0, .LBB34_50
 .Ltmp662:
@@ -6432,22 +6438,22 @@ read_metadata_:
 		ldw r0, r7[11]
 	}
 .Ltmp663:
-	.loc	1 1423 8
+	.loc	1 1428 8
 	{
 		ldaw r1, sp[10]
 		nop
 	}
 .Ltmp664:
-	.loc	1 1423 8
+	.loc	1 1428 8
 	ldw r2, cp[FLAC__STREAM_METADATA_APPLICATION_ID_LEN]
 .Ltmp665:
-	.loc	1 1423 8
+	.loc	1 1428 8
 	{
 		shr r8, r2, 3
 		mov r6, r1
 	}
 .Ltmp666:
-	.loc	1 1423 8
+	.loc	1 1428 8
 	{
 		mov r2, r8
 		nop
@@ -6455,19 +6461,19 @@ read_metadata_:
 	bl FLAC__bitreader_read_byte_block_aligned_no_crc
 	bf r0, .LBB34_226
 .Ltmp667:
-	.loc	1 1426 7
+	.loc	1 1431 7
 	{
 		lsu r0, r5, r8
 		nop
 	}
 	bf r0, .LBB34_54
 .Ltmp668:
-	.loc	1 1427 5
+	.loc	1 1432 5
 	{
 		ldc r1, 8
 		ldw r0, r4[0]
 	}
-	.loc	1 1427 5
+	.loc	1 1432 5
 	{
 		ldc r5, 0
 		stw r1, r0[0]
@@ -6479,7 +6485,7 @@ read_metadata_:
 		ldc r8, 0
 		nop
 	}
-	.loc	1 1652 2
+	.loc	1 1657 2
 .Ltmp670:
 	lmul r2, r3, r0, r2, r8, r8
 	{
@@ -6488,7 +6494,7 @@ read_metadata_:
 	}
 .Ltmp671:
 	ldc r3, 440
-	.loc	1 1652 2
+	.loc	1 1657 2
 	{
 		add r3, r1, r3
 		nop
@@ -6498,14 +6504,14 @@ read_metadata_:
 		stw r2, r3[0]
 	}
 	ldc r10, 444
-	.loc	1 1655 66
+	.loc	1 1660 66
 .Ltmp672:
 	{
 		add r1, r1, r10
 		nop
 	}
 .Ltmp673:
-	.loc	1 1655 66
+	.loc	1 1660 66
 	{
 		shr r1, r0, 1
 		ldw r6, r1[0]
@@ -6534,7 +6540,7 @@ read_metadata_:
 		nop
 		ldw r2, r4[1]
 	}
-	.loc	1 1655 66
+	.loc	1 1660 66
 	{
 		add r1, r2, r10
 		nop
@@ -6550,7 +6556,7 @@ read_metadata_:
 		stw r7, sp[5]
 	}
 	ldc r0, 440
-	.loc	1 1659 2
+	.loc	1 1664 2
 .Ltmp678:
 	{
 		add r0, r2, r0
@@ -6562,7 +6568,7 @@ read_metadata_:
 	}
 	bf r0, .LBB34_33
 .Ltmp679:
-	.loc	1 1660 7
+	.loc	1 1665 7
 	ldw r6, cp[FLAC__STREAM_METADATA_SEEKPOINT_SAMPLE_NUMBER_LEN]
 	{
 		ldc r7, 16
@@ -6570,12 +6576,12 @@ read_metadata_:
 	}
 .Ltmp680:
 .LBB34_29:
-	.loc	1 1660 7
+	.loc	1 1665 7
 	{
 		mov r1, r9
 		ldw r0, r2[11]
 	}
-	.loc	1 1660 7
+	.loc	1 1665 7
 	{
 		mov r2, r6
 		nop
@@ -6583,13 +6589,13 @@ read_metadata_:
 	bl FLAC__bitreader_read_raw_uint64
 	bf r0, .LBB34_229
 .Ltmp681:
-	.loc	1 1662 3
+	.loc	1 1667 3
 	ldd r1, r0, sp[3]
 	{
 		nop
 		ldw r2, r4[1]
 	}
-	.loc	1 1662 3
+	.loc	1 1667 3
 	{
 		add r3, r2, r10
 		nop
@@ -6603,27 +6609,27 @@ read_metadata_:
 		nop
 	}
 	ldaw r3, r3[-4]
-	.loc	1 1662 3
+	.loc	1 1667 3
 	std r1, r0, r3[0]
-	.loc	1 1664 7
+	.loc	1 1669 7
 .Ltmp682:
 	{
 		mov r1, r9
 		ldw r0, r2[11]
 	}
-	.loc	1 1664 7
+	.loc	1 1669 7
 	ldw r2, cp[FLAC__STREAM_METADATA_SEEKPOINT_STREAM_OFFSET_LEN]
-	.loc	1 1664 7
+	.loc	1 1669 7
 	bl FLAC__bitreader_read_raw_uint64
 	bf r0, .LBB34_229
 .Ltmp683:
-	.loc	1 1666 3
+	.loc	1 1671 3
 	ldd r1, r0, sp[3]
 	{
 		nop
 		ldw r2, r4[1]
 	}
-	.loc	1 1666 3
+	.loc	1 1671 3
 	{
 		add r3, r2, r10
 		nop
@@ -6640,17 +6646,17 @@ read_metadata_:
 		sub r3, r3, 8
 		nop
 	}
-	.loc	1 1666 3
+	.loc	1 1671 3
 	std r1, r0, r3[0]
 .Ltmp684:
-	.loc	1 1668 7
+	.loc	1 1673 7
 	{
 		ldaw r1, sp[53]
 		ldw r0, r2[11]
 	}
-	.loc	1 1668 7
+	.loc	1 1673 7
 	ldw r2, cp[FLAC__STREAM_METADATA_SEEKPOINT_FRAME_SAMPLES_LEN]
-	.loc	1 1668 7
+	.loc	1 1673 7
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB34_229
 .Ltmp685:
@@ -6663,7 +6669,7 @@ read_metadata_:
 		ldw r2, r4[1]
 	}
 	ldc r1, 440
-	.loc	1 1670 3
+	.loc	1 1675 3
 	{
 		add r1, r2, r1
 		add r3, r2, r10
@@ -6677,7 +6683,7 @@ read_metadata_:
 		nop
 	}
 .Ltmp686:
-	.loc	1 1670 3
+	.loc	1 1675 3
 	{
 		add r8, r8, 1
 		stw r0, r3[0]
@@ -6688,9 +6694,9 @@ read_metadata_:
 		ldw r0, r1[0]
 	}
 .Ltmp688:
-	.loc	1 1659 2
+	.loc	1 1664 2
 	ldaw r7, r7[6]
-	.loc	1 1659 2
+	.loc	1 1664 2
 	{
 		lsu r0, r8, r0
 		nop
@@ -6699,7 +6705,7 @@ read_metadata_:
 .Ltmp689:
 .LBB34_33:
 	ldc r0, 244
-	.loc	1 1408 3
+	.loc	1 1413 3
 	{
 		add r0, r2, r0
 		mkmsk r1, 1
@@ -6709,7 +6715,7 @@ read_metadata_:
 		stw r1, r0[0]
 	}
 	ldc r0, 4680
-	.loc	1 1409 6
+	.loc	1 1414 6
 .Ltmp690:
 	{
 		add r0, r2, r0
@@ -6726,7 +6732,7 @@ read_metadata_:
 	bt r0, .LBB34_38
 .Ltmp691:
 	ldc r0, 612
-	.loc	1 1409 6
+	.loc	1 1414 6
 	{
 		add r0, r2, r0
 		nop
@@ -6744,14 +6750,14 @@ read_metadata_:
 	bf r3, .LBB34_38
 .Ltmp693:
 	ldc r0, 424
-	.loc	1 1410 4
+	.loc	1 1415 4
 	{
 		add r1, r2, r0
 		ldw r2, r2[9]
 	}
 .Ltmp694:
 .LBB34_37:
-	.loc	1 1410 4
+	.loc	1 1415 4
 	{
 		mov r0, r4
 		nop
@@ -6816,7 +6822,7 @@ read_metadata_:
 		ldw r0, r4[1]
 	}
 .Ltmp705:
-	.loc	1 1655 66
+	.loc	1 1660 66
 	{
 		add r0, r0, r10
 		nop
@@ -6838,7 +6844,7 @@ read_metadata_:
 	bu .LBB34_229
 .Ltmp707:
 .LBB34_54:
-	.loc	1 1431 4
+	.loc	1 1436 4
 	{
 		sub r5, r5, r8
 		nop
@@ -6854,7 +6860,7 @@ read_metadata_:
 		ldw r7, r4[1]
 	}
 	ldc r0, 1116
-	.loc	1 1433 7
+	.loc	1 1438 7
 .Ltmp710:
 	{
 		add r0, r7, r0
@@ -6864,14 +6870,14 @@ read_metadata_:
 		nop
 		ldw r10, r0[0]
 	}
-	.loc	1 1433 7
+	.loc	1 1438 7
 	bf r10, .LBB34_55
 .Ltmp711:
 	{
 		nop
 		ldw r0, sp[4]
 	}
-	.loc	1 1413 3
+	.loc	1 1418 3
 	{
 		eq r0, r0, 0
 		nop
@@ -6882,13 +6888,13 @@ read_metadata_:
 		stw r0, sp[2]
 	}
 	ldc r0, 1112
-	.loc	1 1433 59
+	.loc	1 1438 59
 .Ltmp713:
 	{
 		add r0, r7, r0
 		nop
 	}
-	.loc	1 1303 11
+	.loc	1 1306 11
 .Ltmp714:
 	{
 		ldc r5, 0
@@ -6896,7 +6902,7 @@ read_metadata_:
 	}
 .Ltmp715:
 .LBB34_58:
-	.loc	1 1303 11
+	.loc	1 1306 11
 	{
 		mov r0, r9
 		mov r1, r6
@@ -6906,16 +6912,16 @@ read_metadata_:
 		nop
 	}
 	bl memcmp
-	.loc	1 1303 11
+	.loc	1 1306 11
 	bf r0, .LBB34_59
 .Ltmp716:
-	.loc	1 1302 63
+	.loc	1 1305 63
 	{
 		add r5, r5, 1
 		add r9, r9, r8
 	}
 .Ltmp717:
-	.loc	1 1302 2
+	.loc	1 1305 2
 	{
 		lsu r0, r5, r10
 		nop
@@ -6946,11 +6952,11 @@ read_metadata_:
 		nop
 		ldw r0, r7[11]
 	}
-	.loc	1 1437 6
+	.loc	1 1442 6
 .Ltmp722:
 	bf r1, .LBB34_64
 .Ltmp723:
-	.loc	1 1438 8
+	.loc	1 1443 8
 	{
 		mov r1, r6
 		nop
@@ -6960,12 +6966,12 @@ read_metadata_:
 	bu .LBB34_226
 .Ltmp724:
 .LBB34_64:
-	.loc	1 1443 4
+	.loc	1 1448 4
 	{
 		shl r1, r6, 3
 		nop
 	}
-	.loc	1 1443 4
+	.loc	1 1448 4
 	bl FLAC__bitreader_set_limit
 	{
 		mkmsk r5, 1
@@ -6975,17 +6981,17 @@ read_metadata_:
 		ldc r1, 6
 		nop
 	}
-	.loc	1 1444 4
+	.loc	1 1449 4
 	{
 		lsu r1, r1, r0
 		nop
 	}
 	bf r1, .LBB34_65
 .Ltmp725:
-	.loc	1 1480 9
+	.loc	1 1485 9
 	bf r6, .LBB34_189
 .Ltmp726:
-	.loc	1 1481 42
+	.loc	1 1486 42
 	{
 		mov r0, r6
 		nop
@@ -7018,13 +7024,13 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1447 10
+	.loc	1 1452 10
 .Ltmp729:
 	{
 		mov r1, r6
 		ldw r0, r0[11]
 	}
-	.loc	1 1447 10
+	.loc	1 1452 10
 	bl FLAC__bitreader_skip_byte_block_aligned_no_crc
 	bu .LBB34_67
 .Ltmp730:
@@ -7047,10 +7053,10 @@ read_metadata_:
 	bu .LBB34_190
 .Ltmp732:
 .LBB34_68:
-	.loc	1 1452 9
+	.loc	1 1457 9
 	bf r6, .LBB34_71
 .Ltmp733:
-	.loc	1 1453 46
+	.loc	1 1458 46
 	{
 		mov r0, r6
 		nop
@@ -7071,17 +7077,17 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1457 16
+	.loc	1 1462 16
 .Ltmp735:
 	{
 		mov r2, r6
 		ldw r0, r0[11]
 	}
-	.loc	1 1457 16
+	.loc	1 1462 16
 	bl FLAC__bitreader_read_byte_block_aligned_no_crc
 .Ltmp736:
 .LBB34_67:
-	.loc	1 1447 10
+	.loc	1 1452 10
 	{
 		eq r0, r0, 0
 		nop
@@ -7093,12 +7099,12 @@ read_metadata_:
 	bu .LBB34_190
 .Ltmp737:
 .LBB34_70:
-	.loc	1 1454 8
+	.loc	1 1459 8
 	{
 		ldc r1, 8
 		ldw r0, r4[0]
 	}
-	.loc	1 1454 8
+	.loc	1 1459 8
 	{
 		ldc r5, 0
 		stw r1, r0[0]
@@ -7110,7 +7116,7 @@ read_metadata_:
 		ldc r7, 8
 		nop
 	}
-	.loc	1 1686 6
+	.loc	1 1691 6
 .Ltmp739:
 	{
 		lsu r0, r6, r7
@@ -7118,7 +7124,7 @@ read_metadata_:
 	}
 	bt r0, .LBB34_81
 .Ltmp740:
-	.loc	1 1464 10
+	.loc	1 1469 10
 	{
 		ldaw r1, sp[10]
 		ldw r0, r4[1]
@@ -7127,26 +7133,26 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1689 8
+	.loc	1 1694 8
 .Ltmp741:
 	bl FLAC__bitreader_read_uint32_little_endian
 	{
 		ldc r8, 0
 		nop
 	}
-	.loc	1 1689 8
+	.loc	1 1694 8
 	bf r0, .LBB34_74
 .Ltmp742:
-	.loc	1 1687 3
+	.loc	1 1692 3
 	{
 		sub r9, r6, 8
 		ldw r6, sp[10]
 	}
 .Ltmp743:
-	.loc	1 1691 7
+	.loc	1 1696 7
 	bf r6, .LBB34_89
 .Ltmp744:
-	.loc	1 1692 8
+	.loc	1 1697 8
 	{
 		lsu r0, r9, r6
 		nop
@@ -7179,7 +7185,7 @@ read_metadata_:
 		nop
 		ldw r0, sp[13]
 	}
-	.loc	1 1780 4
+	.loc	1 1785 4
 .Ltmp749:
 	bl free
 	{
@@ -7200,7 +7206,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1772 3
+	.loc	1 1777 3
 .Ltmp751:
 	bl FLAC__bitreader_limit_invalidate
 	{
@@ -7210,13 +7216,13 @@ read_metadata_:
 	bu .LBB34_190
 .Ltmp752:
 .LBB34_120:
-	.loc	1 1796 2
+	.loc	1 1801 2
 	{
 		ldaw r6, sp[10]
 		ldc r5, 0
 	}
 	ldc r2, 160
-	.loc	1 1796 2
+	.loc	1 1801 2
 	{
 		mov r0, r6
 		mov r1, r5
@@ -7230,15 +7236,15 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1799 6
+	.loc	1 1804 6
 .Ltmp753:
 	ldw r1, cp[FLAC__STREAM_METADATA_CUESHEET_MEDIA_CATALOG_NUMBER_LEN]
-	.loc	1 1799 6
+	.loc	1 1804 6
 	{
 		shr r2, r1, 3
 		mov r1, r6
 	}
-	.loc	1 1799 6
+	.loc	1 1804 6
 	bl FLAC__bitreader_read_byte_block_aligned_no_crc
 	bf r0, .LBB34_190
 .Ltmp754:
@@ -7246,15 +7252,15 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1802 6
+	.loc	1 1807 6
 .Ltmp755:
 	{
 		ldaw r1, sp[44]
 		ldw r0, r0[11]
 	}
-	.loc	1 1802 6
+	.loc	1 1807 6
 	ldw r2, cp[FLAC__STREAM_METADATA_CUESHEET_LEAD_IN_LEN]
-	.loc	1 1802 6
+	.loc	1 1807 6
 	bl FLAC__bitreader_read_raw_uint64
 	bf r0, .LBB34_190
 .Ltmp756:
@@ -7266,7 +7272,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1805 6
+	.loc	1 1810 6
 .Ltmp757:
 	ldw r2, cp[FLAC__STREAM_METADATA_CUESHEET_IS_CD_LEN]
 	{
@@ -7274,7 +7280,7 @@ read_metadata_:
 		nop
 	}
 .Ltmp758:
-	.loc	1 1805 6
+	.loc	1 1810 6
 	bl FLAC__bitreader_read_raw_uint32
 .Ltmp759:
 	bf r0, .LBB34_190
@@ -7283,7 +7289,7 @@ read_metadata_:
 		nop
 		ldw r0, sp[53]
 	}
-	.loc	1 1807 2
+	.loc	1 1812 2
 	{
 		eq r0, r0, 0
 		nop
@@ -7304,10 +7310,10 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1809 6
+	.loc	1 1814 6
 .Ltmp761:
 	ldw r1, cp[FLAC__STREAM_METADATA_CUESHEET_RESERVED_LEN]
-	.loc	1 1809 6
+	.loc	1 1814 6
 	bl FLAC__bitreader_skip_bits_no_crc
 	bf r0, .LBB34_190
 .Ltmp762:
@@ -7319,7 +7325,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1812 6
+	.loc	1 1817 6
 .Ltmp763:
 	ldw r2, cp[FLAC__STREAM_METADATA_CUESHEET_NUM_TRACKS_LEN]
 	{
@@ -7327,7 +7333,7 @@ read_metadata_:
 		nop
 	}
 .Ltmp764:
-	.loc	1 1812 6
+	.loc	1 1817 6
 	bl FLAC__bitreader_read_raw_uint32
 .Ltmp765:
 	bf r0, .LBB34_190
@@ -7337,12 +7343,12 @@ read_metadata_:
 		ldw r0, sp[53]
 	}
 .Ltmp767:
-	.loc	1 1814 2
+	.loc	1 1819 2
 	{
 		mkmsk r1, 1
 		stw r0, sp[47]
 	}
-	.loc	1 1816 5
+	.loc	1 1821 5
 .Ltmp768:
 	bf r0, .LBB34_126
 .Ltmp769:
@@ -7364,18 +7370,18 @@ read_metadata_:
 	}
 	bf r9, .LBB34_142
 .Ltmp772:
-	.loc	1 1823 8
+	.loc	1 1828 8
 	ldw r2, cp[FLAC__STREAM_METADATA_CUESHEET_TRACK_OFFSET_LEN]
 	{
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1823 8
+	.loc	1 1828 8
 	{
 		mov r1, r9
 		ldw r0, r0[11]
 	}
-	.loc	1 1823 8
+	.loc	1 1828 8
 	bl FLAC__bitreader_read_raw_uint64
 	{
 		ldc r1, 0
@@ -7385,18 +7391,18 @@ read_metadata_:
 		nop
 		stw r1, sp[4]
 	}
-	.loc	1 1823 8
+	.loc	1 1828 8
 	bf r0, .LBB34_129
 .Ltmp773:
-	.loc	1 1831 8
+	.loc	1 1836 8
 	ldw r0, cp[FLAC__STREAM_METADATA_CUESHEET_TRACK_ISRC_LEN]
-	.loc	1 1831 8
+	.loc	1 1836 8
 	{
 		shr r0, r0, 3
 		nop
 	}
 .Ltmp774:
-	.loc	1 1834 8
+	.loc	1 1839 8
 	{
 		ldc r5, 0
 		stw r0, sp[2]
@@ -7407,15 +7413,15 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1826 8
+	.loc	1 1831 8
 .Ltmp776:
 	{
 		ldaw r1, sp[53]
 		ldw r0, r0[11]
 	}
-	.loc	1 1826 8
+	.loc	1 1831 8
 	ldw r2, cp[FLAC__STREAM_METADATA_CUESHEET_TRACK_NUMBER_LEN]
-	.loc	1 1826 8
+	.loc	1 1831 8
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB34_150
 .Ltmp777:
@@ -7427,7 +7433,7 @@ read_metadata_:
 		nop
 		ldw r1, sp[4]
 	}
-	.loc	1 1828 4
+	.loc	1 1833 4
 	{
 		shl r1, r1, 5
 		nop
@@ -7436,13 +7442,13 @@ read_metadata_:
 		add r7, r9, r1
 		ldc r1, 8
 	}
-	.loc	1 1828 4
+	.loc	1 1833 4
 	st8 r0, r7[r1]
 	{
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1831 8
+	.loc	1 1836 8
 .Ltmp778:
 	{
 		add r1, r7, 9
@@ -7452,7 +7458,7 @@ read_metadata_:
 		nop
 		ldw r2, sp[2]
 	}
-	.loc	1 1831 8
+	.loc	1 1836 8
 	bl FLAC__bitreader_read_byte_block_aligned_no_crc
 	bf r0, .LBB34_150
 .Ltmp779:
@@ -7460,15 +7466,15 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1834 8
+	.loc	1 1839 8
 .Ltmp780:
 	{
 		ldaw r1, sp[53]
 		ldw r0, r0[11]
 	}
-	.loc	1 1834 8
+	.loc	1 1839 8
 	ldw r2, cp[FLAC__STREAM_METADATA_CUESHEET_TRACK_TYPE_LEN]
-	.loc	1 1834 8
+	.loc	1 1839 8
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB34_150
 .Ltmp781:
@@ -7477,7 +7483,7 @@ read_metadata_:
 		nop
 	}
 .Ltmp782:
-	.loc	1 1836 4
+	.loc	1 1841 4
 	{
 		ldc r2, 22
 		ld8u r0, r1[r5]
@@ -7486,23 +7492,23 @@ read_metadata_:
 		mov r3, r2
 		nop
 	}
-	.loc	1 1836 4
+	.loc	1 1841 4
 	{
 		zext r0, 1
 		ld8u r2, r7[r3]
 	}
 	ldc r11, 254
-	.loc	1 1836 4
+	.loc	1 1841 4
 	{
 		and r2, r2, r11
 		nop
 	}
-	.loc	1 1836 4
+	.loc	1 1841 4
 	{
 		or r0, r2, r0
 		nop
 	}
-	.loc	1 1836 4
+	.loc	1 1841 4
 	st8 r0, r7[r3]
 	{
 		nop
@@ -7512,11 +7518,11 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1838 8
+	.loc	1 1843 8
 .Ltmp783:
 	ldw r2, cp[FLAC__STREAM_METADATA_CUESHEET_TRACK_PRE_EMPHASIS_LEN]
 .Ltmp784:
-	.loc	1 1838 8
+	.loc	1 1843 8
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB34_150
 .Ltmp785:
@@ -7524,7 +7530,7 @@ read_metadata_:
 		ldc r0, 22
 		nop
 	}
-	.loc	1 1836 4
+	.loc	1 1841 4
 	{
 		add r0, r7, r0
 		ldaw r1, sp[53]
@@ -7533,7 +7539,7 @@ read_metadata_:
 		nop
 		ld8u r1, r1[r5]
 	}
-	.loc	1 1840 4
+	.loc	1 1845 4
 	{
 		shl r1, r1, 1
 		ld8u r2, r0[r5]
@@ -7542,23 +7548,23 @@ read_metadata_:
 		ldc r3, 2
 		nop
 	}
-	.loc	1 1840 4
+	.loc	1 1845 4
 	{
 		and r1, r1, r3
 		nop
 	}
 	ldc r3, 253
-	.loc	1 1840 4
+	.loc	1 1845 4
 	{
 		and r2, r2, r3
 		nop
 	}
-	.loc	1 1840 4
+	.loc	1 1845 4
 	{
 		or r1, r1, r2
 		nop
 	}
-	.loc	1 1840 4
+	.loc	1 1845 4
 	st8 r1, r0[r5]
 	{
 		nop
@@ -7568,10 +7574,10 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1842 8
+	.loc	1 1847 8
 .Ltmp786:
 	ldw r1, cp[FLAC__STREAM_METADATA_CUESHEET_TRACK_RESERVED_LEN]
-	.loc	1 1842 8
+	.loc	1 1847 8
 	bl FLAC__bitreader_skip_bits_no_crc
 	bf r0, .LBB34_150
 .Ltmp787:
@@ -7579,26 +7585,26 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1845 8
+	.loc	1 1850 8
 .Ltmp788:
 	{
 		ldaw r1, sp[53]
 		ldw r0, r0[11]
 	}
-	.loc	1 1845 8
+	.loc	1 1850 8
 	ldw r2, cp[FLAC__STREAM_METADATA_CUESHEET_TRACK_NUM_INDICES_LEN]
-	.loc	1 1845 8
+	.loc	1 1850 8
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB34_150
 .Ltmp789:
-	.loc	1 1847 4
+	.loc	1 1852 4
 	{
 		ldc r1, 23
 		ldw r0, sp[53]
 	}
-	.loc	1 1847 4
+	.loc	1 1852 4
 	st8 r0, r7[r1]
-	.loc	1 1849 7
+	.loc	1 1854 7
 .Ltmp790:
 	{
 		zext r0, 8
@@ -7629,7 +7635,7 @@ read_metadata_:
 		ldc r0, 23
 		nop
 	}
-	.loc	1 1847 4
+	.loc	1 1852 4
 	{
 		add r10, r7, r0
 		nop
@@ -7644,19 +7650,19 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1856 10
+	.loc	1 1861 10
 .Ltmp797:
 	{
 		mov r1, r9
 		ldw r0, r0[11]
 	}
-	.loc	1 1856 10
+	.loc	1 1861 10
 	ldw r2, cp[FLAC__STREAM_METADATA_CUESHEET_INDEX_OFFSET_LEN]
-	.loc	1 1856 10
+	.loc	1 1861 10
 	bl FLAC__bitreader_read_raw_uint64
 	bf r0, .LBB34_150
 .Ltmp798:
-	.loc	1 1850 31
+	.loc	1 1855 31
 	ldaw r0, r7[6]
 	{
 		ldc r8, 8
@@ -7672,15 +7678,15 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1859 10
+	.loc	1 1864 10
 .Ltmp800:
 	{
 		ldaw r1, sp[53]
 		ldw r0, r0[11]
 	}
-	.loc	1 1859 10
+	.loc	1 1864 10
 	ldw r2, cp[FLAC__STREAM_METADATA_CUESHEET_INDEX_NUMBER_LEN]
-	.loc	1 1859 10
+	.loc	1 1864 10
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB34_150
 .Ltmp801:
@@ -7688,7 +7694,7 @@ read_metadata_:
 		nop
 		ldw r0, sp[53]
 	}
-	.loc	1 1861 6
+	.loc	1 1866 6
 	st8 r0, r9[r8]
 	{
 		nop
@@ -7698,27 +7704,27 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1863 10
+	.loc	1 1868 10
 .Ltmp802:
 	ldw r1, cp[FLAC__STREAM_METADATA_CUESHEET_INDEX_RESERVED_LEN]
-	.loc	1 1863 10
+	.loc	1 1868 10
 	bl FLAC__bitreader_skip_bits_no_crc
 	bf r0, .LBB34_150
 .Ltmp803:
-	.loc	1 1854 40
+	.loc	1 1859 40
 	{
 		add r6, r6, 1
 		ld8u r0, r10[r5]
 	}
 .Ltmp804:
-	.loc	1 1854 5
+	.loc	1 1859 5
 	{
 		lsu r0, r6, r0
 		nop
 	}
 	bf r0, .LBB34_147
 .Ltmp805:
-	.loc	1 1854 5
+	.loc	1 1859 5
 	ldaw r7, r8[4]
 	{
 		nop
@@ -7732,7 +7738,7 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1856 10
+	.loc	1 1861 10
 .Ltmp806:
 	{
 		add r1, r9, r8
@@ -7742,9 +7748,9 @@ read_metadata_:
 		add r1, r1, 8
 		nop
 	}
-	.loc	1 1856 10
+	.loc	1 1861 10
 	ldw r2, cp[FLAC__STREAM_METADATA_CUESHEET_INDEX_OFFSET_LEN]
-	.loc	1 1856 10
+	.loc	1 1861 10
 	bl FLAC__bitreader_read_raw_uint64
 	{
 		mov r8, r7
@@ -7758,13 +7764,13 @@ read_metadata_:
 		nop
 		ldw r1, sp[4]
 	}
-	.loc	1 1821 35
+	.loc	1 1826 35
 	{
 		add r1, r1, 1
 		nop
 	}
 .Ltmp808:
-	.loc	1 1821 3
+	.loc	1 1826 3
 	{
 		ldaw r0, sp[47]
 		stw r1, sp[4]
@@ -7773,7 +7779,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 1821 3
+	.loc	1 1826 3
 	{
 		lsu r0, r1, r0
 		nop
@@ -7781,7 +7787,7 @@ read_metadata_:
 .Ltmp809:
 	bf r0, .LBB34_148
 .Ltmp810:
-	.loc	1 1817 26
+	.loc	1 1822 26
 	{
 		ldaw r0, sp[48]
 		nop
@@ -7803,7 +7809,7 @@ read_metadata_:
 		ldw r1, sp[4]
 	}
 .Ltmp811:
-	.loc	1 1823 8
+	.loc	1 1828 8
 	{
 		shl r1, r1, 5
 		nop
@@ -7812,9 +7818,9 @@ read_metadata_:
 		add r1, r9, r1
 		nop
 	}
-	.loc	1 1823 8
+	.loc	1 1828 8
 	ldw r2, cp[FLAC__STREAM_METADATA_CUESHEET_TRACK_OFFSET_LEN]
-	.loc	1 1823 8
+	.loc	1 1828 8
 	bl FLAC__bitreader_read_raw_uint64
 	bt r0, .LBB34_131
 .Ltmp812:
@@ -7834,7 +7840,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1880 6
+	.loc	1 1885 6
 .Ltmp814:
 	ldw r2, cp[FLAC__STREAM_METADATA_PICTURE_TYPE_LEN]
 	{
@@ -7842,7 +7848,7 @@ read_metadata_:
 		nop
 	}
 .Ltmp815:
-	.loc	1 1880 6
+	.loc	1 1885 6
 	bl FLAC__bitreader_read_raw_uint32
 .Ltmp816:
 	{
@@ -7851,19 +7857,19 @@ read_metadata_:
 	}
 	bf r0, .LBB34_190
 .Ltmp817:
-	.loc	1 1882 5
+	.loc	1 1887 5
 	{
 		ldc r1, 21
 		ldw r0, sp[53]
 	}
-	.loc	1 1882 5
+	.loc	1 1887 5
 	{
 		lsu r1, r0, r1
 		ldc r5, 0
 	}
 	bt r1, .LBB34_154
 .Ltmp818:
-	.loc	1 1883 3
+	.loc	1 1888 3
 	{
 		mov r0, r5
 		nop
@@ -7882,7 +7888,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1888 6
+	.loc	1 1893 6
 .Ltmp820:
 	ldw r2, cp[FLAC__STREAM_METADATA_PICTURE_MIME_TYPE_LENGTH_LEN]
 	{
@@ -7890,7 +7896,7 @@ read_metadata_:
 		nop
 	}
 .Ltmp821:
-	.loc	1 1888 6
+	.loc	1 1893 6
 	bl FLAC__bitreader_read_raw_uint32
 .Ltmp822:
 	bf r0, .LBB34_190
@@ -7903,14 +7909,14 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1890 5
+	.loc	1 1895 5
 .Ltmp824:
 	bl FLAC__bitreader_limit_remaining
 	{
 		nop
 		ldw r6, sp[53]
 	}
-	.loc	1 1890 5
+	.loc	1 1895 5
 	{
 		lsu r0, r0, r6
 		nop
@@ -7973,15 +7979,15 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1712 8
+	.loc	1 1717 8
 .Ltmp832:
 	{
 		ldaw r1, sp[12]
 		ldw r0, r0[11]
 	}
-	.loc	1 1712 8
+	.loc	1 1717 8
 	bl FLAC__bitreader_read_uint32_little_endian
-	.loc	1 1712 8
+	.loc	1 1717 8
 	bf r0, .LBB34_91
 .Ltmp833:
 	{
@@ -7989,7 +7995,7 @@ read_metadata_:
 		ldw r0, sp[12]
 	}
 	ldw r1, cp[.LCPI34_2]
-	.loc	1 1716 7
+	.loc	1 1721 7
 .Ltmp834:
 	{
 		lsu r1, r0, r1
@@ -8059,7 +8065,7 @@ read_metadata_:
 		ldc r5, 0
 		nop
 	}
-	.loc	1 1898 5
+	.loc	1 1903 5
 .Ltmp842:
 	bf r6, .LBB34_162
 .Ltmp843:
@@ -8067,15 +8073,15 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1899 7
+	.loc	1 1904 7
 .Ltmp844:
 	{
 		mov r2, r6
 		ldw r0, r0[11]
 	}
-	.loc	1 1899 7
+	.loc	1 1904 7
 	bl FLAC__bitreader_read_byte_block_aligned_no_crc
-	.loc	1 1899 7
+	.loc	1 1904 7
 	bf r0, .LBB34_164
 .Ltmp845:
 	{
@@ -8123,29 +8129,29 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1703 9
+	.loc	1 1708 9
 .Ltmp850:
 	{
 		mov r2, r6
 		ldw r0, r0[11]
 	}
-	.loc	1 1703 9
+	.loc	1 1708 9
 	bl FLAC__bitreader_read_byte_block_aligned_no_crc
-	.loc	1 1703 9
+	.loc	1 1708 9
 	bf r0, .LBB34_87
 .Ltmp851:
-	.loc	1 1698 5
+	.loc	1 1703 5
 	{
 		sub r9, r9, r6
 		ldw r0, sp[10]
 	}
 .Ltmp852:
-	.loc	1 1705 4
+	.loc	1 1710 4
 	{
 		ldc r2, 0
 		ldw r1, sp[11]
 	}
-	.loc	1 1705 4
+	.loc	1 1710 4
 	st8 r2, r1[r0]
 	bu .LBB34_90
 .Ltmp853:
@@ -8154,7 +8160,7 @@ read_metadata_:
 		nop
 		ldw r0, r4[0]
 	}
-	.loc	1 1700 5
+	.loc	1 1705 5
 .Ltmp854:
 	{
 		mov r5, r8
@@ -8163,14 +8169,14 @@ read_metadata_:
 	bu .LBB34_190
 .Ltmp855:
 .LBB34_94:
-	.loc	1 1721 7
+	.loc	1 1726 7
 	bf r0, .LBB34_95
 .Ltmp856:
 	{
 		ldc r1, 8
 		nop
 	}
-	.loc	1 1722 30
+	.loc	1 1727 30
 .Ltmp857:
 	bl safe_malloc_mul_2op_p
 	{
@@ -8181,14 +8187,14 @@ read_metadata_:
 		nop
 		stw r1, sp[13]
 	}
-	.loc	1 1722 30
+	.loc	1 1727 30
 	bf r1, .LBB34_230
 .Ltmp858:
 	{
 		nop
 		ldw r0, sp[12]
 	}
-	.loc	1 1727 4
+	.loc	1 1732 4
 .Ltmp859:
 	bf r0, .LBB34_98
 .Ltmp860:
@@ -8200,19 +8206,19 @@ read_metadata_:
 		nop
 		stw r6, r1[0]
 	}
-	.loc	1 1730 5
+	.loc	1 1735 5
 .Ltmp861:
 	{
 		ldc r0, 4
 		stw r6, r1[1]
 	}
-	.loc	1 1733 9
+	.loc	1 1738 9
 .Ltmp862:
 	{
 		lsu r0, r9, r0
 		nop
 	}
-	.loc	1 1733 9
+	.loc	1 1738 9
 	bf r0, .LBB34_102
 .Ltmp863:
 	{
@@ -8221,7 +8227,7 @@ read_metadata_:
 	}
 .Ltmp864:
 .LBB34_101:
-	.loc	1 1734 6
+	.loc	1 1739 6
 	{
 		ldc r10, 4
 		stw r7, sp[12]
@@ -8236,12 +8242,12 @@ read_metadata_:
 	bu .LBB34_190
 .Ltmp866:
 .LBB34_142:
-	.loc	1 1818 4
+	.loc	1 1823 4
 	{
 		ldc r1, 8
 		ldw r0, r4[0]
 	}
-	.loc	1 1818 4
+	.loc	1 1823 4
 	{
 		ldc r10, 4
 		stw r1, r0[0]
@@ -8249,14 +8255,14 @@ read_metadata_:
 	bu .LBB34_190
 .Ltmp867:
 .LBB34_162:
-	.loc	1 1472 10
+	.loc	1 1477 10
 	{
 		mov r0, r5
 		nop
 	}
 .Ltmp868:
 .LBB34_166:
-	.loc	1 1902 2
+	.loc	1 1907 2
 	st8 r5, r1[r0]
 	{
 		nop
@@ -8266,7 +8272,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1905 6
+	.loc	1 1910 6
 .Ltmp869:
 	ldw r2, cp[FLAC__STREAM_METADATA_PICTURE_DESCRIPTION_LENGTH_LEN]
 	{
@@ -8274,7 +8280,7 @@ read_metadata_:
 		nop
 	}
 .Ltmp870:
-	.loc	1 1905 6
+	.loc	1 1910 6
 	bl FLAC__bitreader_read_raw_uint32
 .Ltmp871:
 	bf r0, .LBB34_190
@@ -8287,14 +8293,14 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1907 5
+	.loc	1 1912 5
 .Ltmp873:
 	bl FLAC__bitreader_limit_remaining
 	{
 		nop
 		ldw r6, sp[53]
 	}
-	.loc	1 1907 5
+	.loc	1 1912 5
 	{
 		lsu r0, r0, r6
 		nop
@@ -8361,13 +8367,13 @@ read_metadata_:
 		nop
 		stw r5, sp[12]
 	}
-	.loc	1 1724 5
+	.loc	1 1729 5
 .Ltmp882:
 	{
 		ldc r1, 8
 		ldw r0, r4[0]
 	}
-	.loc	1 1724 5
+	.loc	1 1729 5
 	{
 		ldc r10, 4
 		stw r1, r0[0]
@@ -8402,7 +8408,7 @@ read_metadata_:
 		ldc r5, 0
 		nop
 	}
-	.loc	1 1915 5
+	.loc	1 1920 5
 .Ltmp886:
 	bf r6, .LBB34_172
 .Ltmp887:
@@ -8410,15 +8416,15 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1916 7
+	.loc	1 1921 7
 .Ltmp888:
 	{
 		mov r2, r6
 		ldw r0, r0[11]
 	}
-	.loc	1 1916 7
+	.loc	1 1921 7
 	bl FLAC__bitreader_read_byte_block_aligned_no_crc
-	.loc	1 1916 7
+	.loc	1 1921 7
 	bf r0, .LBB34_174
 .Ltmp889:
 	{
@@ -8453,13 +8459,13 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1739 10
+	.loc	1 1744 10
 .Ltmp893:
 	bl FLAC__bitreader_read_uint32_little_endian
-	.loc	1 1739 10
+	.loc	1 1744 10
 	bf r0, .LBB34_104
 .Ltmp894:
-	.loc	1 1738 6
+	.loc	1 1743 6
 	{
 		sub r9, r9, 4
 		ldw r0, sp[13]
@@ -8474,10 +8480,10 @@ read_metadata_:
 		ldw r8, r10[0]
 	}
 .Ltmp896:
-	.loc	1 1743 9
+	.loc	1 1748 9
 	bf r8, .LBB34_116
 .Ltmp897:
-	.loc	1 1744 10
+	.loc	1 1749 10
 	{
 		lsu r1, r9, r8
 		nop
@@ -8516,7 +8522,7 @@ read_metadata_:
 	}
 	bf r0, .LBB34_112
 .Ltmp902:
-	.loc	1 1750 7
+	.loc	1 1755 7
 	{
 		sub r9, r9, r8
 		ldw r2, r10[0]
@@ -8527,7 +8533,7 @@ read_metadata_:
 		nop
 	}
 .Ltmp904:
-	.loc	1 1756 6
+	.loc	1 1761 6
 	bl memset
 	{
 		nop
@@ -8545,14 +8551,14 @@ read_metadata_:
 		nop
 		ldw r2, r10[0]
 	}
-	.loc	1 1757 11
+	.loc	1 1762 11
 .Ltmp905:
 	bl FLAC__bitreader_read_byte_block_aligned_no_crc
 	{
 		nop
 		ldw r1, sp[13]
 	}
-	.loc	1 1757 11
+	.loc	1 1762 11
 	bf r0, .LBB34_114
 .Ltmp906:
 	{
@@ -8563,12 +8569,12 @@ read_metadata_:
 		nop
 		ldw r1, r0[0]
 	}
-	.loc	1 1764 6
+	.loc	1 1769 6
 	{
 		ldc r2, 0
 		ldw r0, r0[1]
 	}
-	.loc	1 1764 6
+	.loc	1 1769 6
 	st8 r2, r0[r1]
 	bu .LBB34_117
 .Ltmp907:
@@ -8583,24 +8589,24 @@ read_metadata_:
 	}
 .Ltmp908:
 .LBB34_117:
-	.loc	1 1727 39
+	.loc	1 1732 39
 	{
 		add r7, r7, 1
 		ldw r0, sp[12]
 	}
-	.loc	1 1727 4
+	.loc	1 1732 4
 	{
 		lsu r0, r7, r0
 		nop
 	}
 	bf r0, .LBB34_118
 .Ltmp909:
-	.loc	1 1729 5
+	.loc	1 1734 5
 	{
 		shl r1, r7, 3
 		ldw r0, sp[13]
 	}
-	.loc	1 1729 5
+	.loc	1 1734 5
 	{
 		add r1, r0, r1
 		add r0, r0, r6
@@ -8613,12 +8619,12 @@ read_metadata_:
 		nop
 		stw r2, r0[2]
 	}
-	.loc	1 1730 5
+	.loc	1 1735 5
 	{
 		ldc r0, 4
 		stw r2, r0[3]
 	}
-	.loc	1 1733 9
+	.loc	1 1738 9
 .Ltmp910:
 	{
 		lsu r0, r9, r0
@@ -8628,28 +8634,28 @@ read_metadata_:
 	bu .LBB34_101
 .Ltmp911:
 .LBB34_172:
-	.loc	1 1472 10
+	.loc	1 1477 10
 	{
 		mov r0, r5
 		nop
 	}
 .Ltmp912:
 .LBB34_176:
-	.loc	1 1919 2
+	.loc	1 1924 2
 	st8 r5, r1[r0]
 	{
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1922 6
+	.loc	1 1927 6
 .Ltmp913:
 	{
 		ldaw r1, sp[13]
 		ldw r0, r0[11]
 	}
-	.loc	1 1922 6
+	.loc	1 1927 6
 	ldw r2, cp[FLAC__STREAM_METADATA_PICTURE_WIDTH_LEN]
-	.loc	1 1922 6
+	.loc	1 1927 6
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB34_190
 .Ltmp914:
@@ -8657,15 +8663,15 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1926 6
+	.loc	1 1931 6
 .Ltmp915:
 	{
 		ldaw r1, sp[14]
 		ldw r0, r0[11]
 	}
-	.loc	1 1926 6
+	.loc	1 1931 6
 	ldw r2, cp[FLAC__STREAM_METADATA_PICTURE_HEIGHT_LEN]
-	.loc	1 1926 6
+	.loc	1 1931 6
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB34_190
 .Ltmp916:
@@ -8673,15 +8679,15 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1930 6
+	.loc	1 1935 6
 .Ltmp917:
 	{
 		ldaw r1, sp[15]
 		ldw r0, r0[11]
 	}
-	.loc	1 1930 6
+	.loc	1 1935 6
 	ldw r2, cp[FLAC__STREAM_METADATA_PICTURE_DEPTH_LEN]
-	.loc	1 1930 6
+	.loc	1 1935 6
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB34_190
 .Ltmp918:
@@ -8689,15 +8695,15 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1934 6
+	.loc	1 1939 6
 .Ltmp919:
 	{
 		ldaw r1, sp[16]
 		ldw r0, r0[11]
 	}
-	.loc	1 1934 6
+	.loc	1 1939 6
 	ldw r2, cp[FLAC__STREAM_METADATA_PICTURE_COLORS_LEN]
-	.loc	1 1934 6
+	.loc	1 1939 6
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB34_190
 .Ltmp920:
@@ -8705,15 +8711,15 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1938 6
+	.loc	1 1943 6
 .Ltmp921:
 	{
 		ldaw r1, sp[17]
 		ldw r0, r0[11]
 	}
-	.loc	1 1938 6
+	.loc	1 1943 6
 	ldw r2, cp[FLAC__STREAM_METADATA_PICTURE_DATA_LENGTH_LEN]
-	.loc	1 1938 6
+	.loc	1 1943 6
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB34_190
 .Ltmp922:
@@ -8725,7 +8731,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1940 5
+	.loc	1 1945 5
 .Ltmp923:
 	bl FLAC__bitreader_limit_remaining
 	{
@@ -8733,7 +8739,7 @@ read_metadata_:
 		ldw r6, sp[17]
 	}
 .Ltmp924:
-	.loc	1 1940 5
+	.loc	1 1945 5
 	{
 		lsu r0, r0, r6
 		nop
@@ -8749,7 +8755,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1891 3
+	.loc	1 1896 3
 .Ltmp926:
 	bl FLAC__bitreader_limit_invalidate
 	bu .LBB34_190
@@ -8788,13 +8794,13 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1746 7
+	.loc	1 1751 7
 .Ltmp931:
 	bl FLAC__bitreader_limit_invalidate
 	bu .LBB34_105
 .Ltmp932:
 .LBB34_110:
-	.loc	1 1751 41
+	.loc	1 1756 41
 	{
 		shl r1, r7, 3
 		nop
@@ -8809,7 +8815,7 @@ read_metadata_:
 	}
 .Ltmp933:
 .LBB34_112:
-	.loc	1 1752 7
+	.loc	1 1757 7
 	{
 		ldc r1, 8
 		ldw r0, r4[0]
@@ -8833,7 +8839,7 @@ read_metadata_:
 	bu .LBB34_190
 .LBB34_114:
 .Ltmp936:
-	.loc	1 1759 7
+	.loc	1 1764 7
 	{
 		shl r6, r7, 3
 		nop
@@ -8846,13 +8852,13 @@ read_metadata_:
 		nop
 		ldw r0, r0[1]
 	}
-	.loc	1 1759 7
+	.loc	1 1764 7
 	bl free
 	{
 		nop
 		ldw r0, sp[13]
 	}
-	.loc	1 1760 7
+	.loc	1 1765 7
 	{
 		add r0, r0, r6
 		ldc r1, 0
@@ -8893,13 +8899,13 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1949 7
+	.loc	1 1954 7
 .Ltmp941:
 	{
 		mov r2, r6
 		ldw r0, r0[11]
 	}
-	.loc	1 1949 7
+	.loc	1 1954 7
 	bl FLAC__bitreader_read_byte_block_aligned_no_crc
 	bf r0, .LBB34_190
 .Ltmp942:
@@ -8911,7 +8917,7 @@ read_metadata_:
 	bu .LBB34_190
 .Ltmp943:
 .LBB34_160:
-	.loc	1 1895 3
+	.loc	1 1900 3
 	{
 		ldc r1, 8
 		ldw r0, r4[0]
@@ -8930,7 +8936,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1492 7
+	.loc	1 1497 7
 .Ltmp945:
 	bl FLAC__bitreader_limit_remaining
 	bf r0, .LBB34_195
@@ -8940,7 +8946,7 @@ read_metadata_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 4680
-	.loc	1 3234 5
+	.loc	1 3241 5
 .Ltmp947:
 	{
 		add r1, r0, r1
@@ -8956,12 +8962,12 @@ read_metadata_:
 		nop
 		ldw r3, r0[8]
 	}
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		ldc r1, 4
 		ldw r2, r0[9]
 	}
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r0, r4
 		nop
@@ -8976,13 +8982,13 @@ read_metadata_:
 		nop
 		ldw r0, r4[0]
 	}
-	.loc	1 1497 8
+	.loc	1 1502 8
 .Ltmp950:
 	{
 		ldc r5, 0
 		ldw r1, r0[0]
 	}
-	.loc	1 1497 8
+	.loc	1 1502 8
 	{
 		eq r1, r1, 1
 		nop
@@ -9007,7 +9013,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1501 4
+	.loc	1 1506 4
 	bl FLAC__bitreader_remove_limit
 	bf r5, .LBB34_199
 .Ltmp953:
@@ -9016,7 +9022,7 @@ read_metadata_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 4680
-	.loc	1 1502 7
+	.loc	1 1507 7
 .Ltmp954:
 	{
 		add r1, r0, r1
@@ -9034,13 +9040,13 @@ read_metadata_:
 	}
 	bf r3, .LBB34_199
 .Ltmp956:
-	.loc	1 1503 5
+	.loc	1 1508 5
 	{
 		ldaw r1, sp[6]
 		ldw r2, r0[9]
 	}
 .Ltmp957:
-	.loc	1 1503 5
+	.loc	1 1508 5
 	{
 		mov r0, r4
 		nop
@@ -9055,7 +9061,7 @@ read_metadata_:
 		nop
 		ldw r0, sp[51]
 	}
-	.loc	1 1506 4
+	.loc	1 1511 4
 	{
 		sub r0, r0, 1
 		ldc r1, 5
@@ -9099,7 +9105,7 @@ read_metadata_:
 	}
 	bf r0, .LBB34_204
 .Ltmp963:
-	.loc	1 1515 7
+	.loc	1 1520 7
 	bl free
 .Ltmp964:
 .LBB34_204:
@@ -9129,7 +9135,7 @@ read_metadata_:
 	}
 	bf r0, .LBB34_208
 .Ltmp967:
-	.loc	1 1519 9
+	.loc	1 1524 9
 	bl free
 	{
 		nop
@@ -9137,13 +9143,13 @@ read_metadata_:
 	}
 .Ltmp968:
 .LBB34_208:
-	.loc	1 1517 62
+	.loc	1 1522 62
 	{
 		add r6, r6, 1
 		add r10, r10, 8
 	}
 .Ltmp969:
-	.loc	1 1517 7
+	.loc	1 1522 7
 	{
 		lsu r0, r6, r1
 		nop
@@ -9159,7 +9165,7 @@ read_metadata_:
 	bu .LBB34_225
 .Ltmp971:
 .LBB34_210:
-	.loc	1 1524 9
+	.loc	1 1529 9
 	{
 		ldaw r6, sp[48]
 		ldw r1, sp[47]
@@ -9172,7 +9178,7 @@ read_metadata_:
 	}
 	bf r0, .LBB34_217
 .Ltmp973:
-	.loc	1 1524 9
+	.loc	1 1529 9
 	{
 		ldaw r7, sp[47]
 		ldc r8, 0
@@ -9184,7 +9190,7 @@ read_metadata_:
 	bu .LBB34_213
 .Ltmp974:
 .LBB34_216:
-	.loc	1 1525 7
+	.loc	1 1530 7
 	ldaw r9, r9[8]
 	{
 		nop
@@ -9202,7 +9208,7 @@ read_metadata_:
 	}
 	bf r0, .LBB34_215
 .Ltmp976:
-	.loc	1 1527 9
+	.loc	1 1532 9
 	bl free
 	{
 		nop
@@ -9210,13 +9216,13 @@ read_metadata_:
 	}
 .Ltmp977:
 .LBB34_215:
-	.loc	1 1525 55
+	.loc	1 1530 55
 	{
 		add r8, r8, 1
 		nop
 	}
 .Ltmp978:
-	.loc	1 1525 7
+	.loc	1 1530 7
 	{
 		lsu r0, r8, r1
 		nop
@@ -9238,7 +9244,7 @@ read_metadata_:
 	}
 	bf r0, .LBB34_220
 .Ltmp981:
-	.loc	1 1533 7
+	.loc	1 1538 7
 	bl free
 .Ltmp982:
 .LBB34_220:
@@ -9248,7 +9254,7 @@ read_metadata_:
 	}
 	bf r0, .LBB34_222
 .Ltmp983:
-	.loc	1 1535 7
+	.loc	1 1540 7
 	bl free
 .Ltmp984:
 .LBB34_222:
@@ -9259,7 +9265,7 @@ read_metadata_:
 	bf r0, .LBB34_225
 .Ltmp985:
 .LBB34_224:
-	.loc	1 1544 7
+	.loc	1 1549 7
 	bl free
 .Ltmp986:
 .LBB34_225:
@@ -9290,13 +9296,13 @@ read_metadata_:
 	}
 	bf r3, .LBB34_227
 .Ltmp991:
-	.loc	1 1555 7
+	.loc	1 1560 7
 	{
 		add r6, r0, r7
 		ldw r2, r0[9]
 	}
 .Ltmp992:
-	.loc	1 869 5
+	.loc	1 871 5
 	{
 		mov r0, r4
 		mov r1, r6
@@ -9315,7 +9321,7 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 872 6
+	.loc	1 874 6
 .Ltmp994:
 	bl FLAC__bitreader_is_consumed_byte_aligned
 	bf r0, .LBB34_227
@@ -9328,28 +9334,28 @@ read_metadata_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1182 9
+	.loc	1 1185 9
 .Ltmp996:
 	bl FLAC__bitreader_get_input_bits_unconsumed
-	.loc	1 1182 9
+	.loc	1 1185 9
 	{
 		shr r0, r0, 3
 		nop
 	}
 .Ltmp997:
-	.loc	1 875 15
+	.loc	1 877 15
 	ldd r2, r1, r6[0]
 	{
 		ldc r3, 0
 		nop
 	}
-	.loc	1 875 15
+	.loc	1 877 15
 	lsub r1, r0, r1, r0, r3
 	{
 		sub r1, r2, r1
 		nop
 	}
-	.loc	1 875 15
+	.loc	1 877 15
 	std r1, r0, r6[0]
 	bu .LBB34_228
 .Ltmp998:
@@ -9365,16 +9371,16 @@ read_metadata_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1556 4
+	.loc	1 1561 4
 	{
 		add r0, r0, r7
 		ldc r1, 0
 	}
-	.loc	1 1556 4
+	.loc	1 1561 4
 	std r1, r1, r0[0]
 .Ltmp1000:
 .LBB34_228:
-	.loc	1 1557 3
+	.loc	1 1562 3
 	{
 		ldc r1, 2
 		ldw r0, r4[0]
@@ -9385,7 +9391,7 @@ read_metadata_:
 	}
 .Ltmp1001:
 .LBB34_229:
-	.loc	1 1561 1
+	.loc	1 1566 1
 	{
 		mov r0, r5
 		ldw r10, sp[60]
@@ -9421,6 +9427,8 @@ read_metadata_:
 	# RETURN_REG_HOLDER
 .Ltmp1002:
 	.cc_bottom read_metadata_.function
+	.set	read_metadata_.nstackwords.pragma,400
+	.set	read_metadata_.nstackwords,read_metadata_.nstackwords
 
 
 
@@ -9434,7 +9442,7 @@ read_metadata_:
 	.cc_top frame_sync_.function,frame_sync_
 frame_sync_:
 .Lfunc_begin35:
-	.loc	1 1979 0
+	.loc	1 1985 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -9468,7 +9476,7 @@ frame_sync_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1984 6 prologue_end
+	.loc	1 1990 6 prologue_end
 .Ltmp1011:
 	bl FLAC__bitreader_is_consumed_byte_aligned
 	{
@@ -9485,7 +9493,7 @@ frame_sync_:
 		nop
 		ldw r6, r0[11]
 	}
-	.loc	1 1985 69
+	.loc	1 1991 69
 .Ltmp1013:
 	{
 		mov r0, r6
@@ -9498,7 +9506,7 @@ frame_sync_:
 		ldaw r1, sp[1]
 	}
 .Ltmp1015:
-	.loc	1 1985 7
+	.loc	1 1991 7
 	{
 		mov r0, r6
 		nop
@@ -9517,13 +9525,13 @@ frame_sync_:
 		nop
 		ldw r3, r0[8]
 	}
-	.loc	1 3235 3
+	.loc	1 3242 3
 .Ltmp1018:
 	{
 		ldc r5, 0
 		ldw r2, r0[9]
 	}
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r0, r4
 		mov r1, r5
@@ -9539,7 +9547,7 @@ frame_sync_:
 		ldw r0, r4[1]
 	}
 	ldc r5, 4632
-	.loc	1 1990 6
+	.loc	1 1996 6
 .Ltmp1020:
 	{
 		add r1, r0, r5
@@ -9549,7 +9557,7 @@ frame_sync_:
 		nop
 		ldw r2, r1[0]
 	}
-	.loc	1 1990 6
+	.loc	1 1996 6
 	bf r2, .LBB35_5
 .Ltmp1021:
 	ldc r2, 4638
@@ -9557,7 +9565,7 @@ frame_sync_:
 		nop
 		ld8u r0, r0[r2]
 	}
-	.loc	1 1991 4
+	.loc	1 1997 4
 .Ltmp1022:
 	{
 		ldc r2, 0
@@ -9570,7 +9578,7 @@ frame_sync_:
 	bu .LBB35_8
 .Ltmp1023:
 .LBB35_5:
-	.loc	1 1995 8
+	.loc	1 2001 8
 	{
 		ldaw r1, sp[1]
 		ldw r0, r0[11]
@@ -9580,9 +9588,9 @@ frame_sync_:
 		ldc r2, 8
 		nop
 	}
-	.loc	1 1995 8
+	.loc	1 2001 8
 	bl FLAC__bitreader_read_raw_uint32
-	.loc	1 1995 8
+	.loc	1 2001 8
 	bf r0, .LBB35_6
 .Ltmp1025:
 	{
@@ -9595,7 +9603,7 @@ frame_sync_:
 		mkmsk r7, 8
 		nop
 	}
-	.loc	1 1998 6
+	.loc	1 2004 6
 .Ltmp1027:
 	{
 		eq r0, r0, r7
@@ -9608,7 +9616,7 @@ frame_sync_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 4636
-	.loc	1 1999 4
+	.loc	1 2005 4
 .Ltmp1029:
 	st8 r7, r0[r1]
 	{
@@ -9616,7 +9624,7 @@ frame_sync_:
 		ldw r0, r4[1]
 	}
 .Ltmp1030:
-	.loc	1 2000 8
+	.loc	1 2006 8
 	{
 		ldaw r1, sp[1]
 		ldw r0, r0[11]
@@ -9626,16 +9634,16 @@ frame_sync_:
 		ldc r2, 8
 		nop
 	}
-	.loc	1 2000 8
+	.loc	1 2006 8
 	bl FLAC__bitreader_read_raw_uint32
-	.loc	1 2000 8
+	.loc	1 2006 8
 	bf r0, .LBB35_10
 .Ltmp1032:
 	{
 		nop
 		ldw r0, sp[1]
 	}
-	.loc	1 2005 7
+	.loc	1 2011 7
 .Ltmp1033:
 	{
 		eq r1, r0, r7
@@ -9648,10 +9656,10 @@ frame_sync_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 4638
-	.loc	1 2006 5
+	.loc	1 2012 5
 .Ltmp1035:
 	st8 r7, r0[r1]
-	.loc	1 2007 5
+	.loc	1 2013 5
 	{
 		add r0, r0, r5
 		mkmsk r1, 1
@@ -9663,7 +9671,7 @@ frame_sync_:
 	bu .LBB35_13
 .Ltmp1036:
 .LBB35_16:
-	.loc	1 2009 12
+	.loc	1 2015 12
 	{
 		shr r1, r0, 1
 		nop
@@ -9687,7 +9695,7 @@ frame_sync_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 4680
-	.loc	1 3234 5
+	.loc	1 3241 5
 .Ltmp1039:
 	{
 		add r1, r0, r1
@@ -9719,10 +9727,10 @@ frame_sync_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 4637
-	.loc	1 2010 5
+	.loc	1 2016 5
 .Ltmp1042:
 	st8 r0, r1[r2]
-	.loc	1 2011 5
+	.loc	1 2017 5
 	{
 		mkmsk r1, 2
 		ldw r0, r4[0]
@@ -9739,7 +9747,7 @@ frame_sync_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 2015 5
+	.loc	1 2021 5
 	bl FLAC__bitreader_set_framesync_location
 	{
 		nop
@@ -9753,13 +9761,13 @@ frame_sync_:
 	}
 	bf r3, .LBB35_21
 .Ltmp1044:
-	.loc	1 2016 9
+	.loc	1 2022 9
 	{
 		add r5, r0, r6
 		ldw r2, r0[9]
 	}
 .Ltmp1045:
-	.loc	1 869 5
+	.loc	1 871 5
 	{
 		mov r0, r4
 		mov r1, r5
@@ -9778,7 +9786,7 @@ frame_sync_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 872 6
+	.loc	1 874 6
 .Ltmp1047:
 	bl FLAC__bitreader_is_consumed_byte_aligned
 	bf r0, .LBB35_21
@@ -9791,28 +9799,28 @@ frame_sync_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1182 9
+	.loc	1 1185 9
 .Ltmp1049:
 	bl FLAC__bitreader_get_input_bits_unconsumed
-	.loc	1 1182 9
+	.loc	1 1185 9
 	{
 		shr r0, r0, 3
 		nop
 	}
 .Ltmp1050:
-	.loc	1 875 15
+	.loc	1 877 15
 	ldd r2, r1, r5[0]
 	{
 		ldc r3, 0
 		nop
 	}
-	.loc	1 875 15
+	.loc	1 877 15
 	lsub r1, r0, r1, r0, r3
 	{
 		sub r1, r2, r1
 		nop
 	}
-	.loc	1 875 15
+	.loc	1 877 15
 	std r1, r0, r5[0]
 	bu .LBB35_22
 .Ltmp1051:
@@ -9821,12 +9829,12 @@ frame_sync_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 2017 6
+	.loc	1 2023 6
 	{
 		add r0, r0, r6
 		ldc r1, 0
 	}
-	.loc	1 2017 6
+	.loc	1 2023 6
 	std r1, r1, r0[0]
 .Ltmp1052:
 .LBB35_22:
@@ -9835,7 +9843,7 @@ frame_sync_:
 		nop
 	}
 .LBB35_23:
-	.loc	1 2028 1
+	.loc	1 2034 1
 	ldd r7, r6, sp[2]
 	ldd r5, r4, sp[1]
 	{
@@ -9845,6 +9853,8 @@ frame_sync_:
 	# RETURN_REG_HOLDER
 .Ltmp1053:
 	.cc_bottom frame_sync_.function
+	.set	frame_sync_.nstackwords.pragma,400
+	.set	frame_sync_.nstackwords,frame_sync_.nstackwords
 
 
 
@@ -9902,7 +9912,7 @@ frame_sync_:
 	.cc_top read_frame_.function,read_frame_
 read_frame_:
 .Lfunc_begin36:
-	.loc	1 2031 0
+	.loc	1 2038 0
 	.cfi_startproc
 	.issue_mode dual
 	DUALENTSP_lu6 906
@@ -9941,7 +9951,7 @@ read_frame_:
 		stw r1, sp[12]
 	}
 .Ltmp1065:
-	.loc	1 2265 2 prologue_end
+	.loc	1 2272 2 prologue_end
 	{
 		ldc r7, 0
 		nop
@@ -9957,7 +9967,7 @@ read_frame_:
 	}
 	ldc r1, 116
 .Ltmp1067:
-	.loc	1 2038 2
+	.loc	1 2045 2
 	{
 		add r1, r0, r1
 		nop
@@ -9972,18 +9982,18 @@ read_frame_:
 		nop
 		ld8u r1, r0[r5]
 	}
-	.loc	1 2042 2
+	.loc	1 2049 2
 	ldaw r11, cp[FLAC__crc16_table]
 	{
 		nop
 		ld16s r1, r11[r1]
 	}
-	.loc	1 2042 2
+	.loc	1 2049 2
 	{
 		zext r1, 16
 		nop
 	}
-	.loc	1 2043 2
+	.loc	1 2050 2
 	{
 		shl r2, r1, 8
 		shr r1, r1, 8
@@ -9993,22 +10003,22 @@ read_frame_:
 		nop
 		ld8u r3, r0[r6]
 	}
-	.loc	1 2043 2
+	.loc	1 2050 2
 	xor r1, r1, r3
 	{
 		nop
 		ld16s r1, r11[r1]
 	}
-	.loc	1 2043 2
+	.loc	1 2050 2
 	xor r1, r2, r1
 .Ltmp1069:
-	.loc	1 2044 2
+	.loc	1 2051 2
 	{
 		zext r1, 16
 		ldw r0, r0[11]
 	}
 .Ltmp1070:
-	.loc	1 2044 2
+	.loc	1 2051 2
 	bl FLAC__bitreader_reset_read_crc16
 .Ltmp1071:
 	{
@@ -10016,33 +10026,33 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 .Ltmp1072:
-	.loc	1 2264 2
+	.loc	1 2271 2
 	{
 		ldaw r2, sp[14]
 		ld8u r1, r0[r5]
 	}
 .Ltmp1073:
-	.loc	1 2264 2
+	.loc	1 2271 2
 	st8 r1, r2[r7]
-	.loc	1 2265 2
+	.loc	1 2272 2
 	{
 		mkmsk r6, 1
 		ld8u r5, r0[r6]
 	}
-	.loc	1 2265 2
+	.loc	1 2272 2
 	{
 		or r1, r2, r6
 		nop
 	}
 .Ltmp1074:
-	.loc	1 2265 2
+	.loc	1 2272 2
 	st8 r5, r1[r7]
 	{
 		ldc r9, 2
 		nop
 	}
 .Ltmp1075:
-	.loc	1 2266 2
+	.loc	1 2273 2
 	stw r9, sp[896]
 .Ltmp1076:
 	{
@@ -10055,18 +10065,18 @@ read_frame_:
 		ldc r2, 8
 		nop
 	}
-	.loc	1 2295 7
+	.loc	1 2302 7
 .Ltmp1078:
 	bl FLAC__bitreader_read_raw_uint32
 .Ltmp1079:
 	bf r0, .LBB36_320
 .Ltmp1080:
-	.loc	1 2269 5
+	.loc	1 2276 5
 	{
 		shr r8, r5, 1
 		nop
 	}
-	.loc	1 2269 5
+	.loc	1 2276 5
 	{
 		zext r8, 1
 		mkmsk r10, 8
@@ -10074,39 +10084,39 @@ read_frame_:
 	ldaw r5, sp[897]
 .Ltmp1081:
 .LBB36_2:
-	.loc	1 2297 6
+	.loc	1 2304 6
 	ldw r1, sp[897]
-	.loc	1 2297 6
+	.loc	1 2304 6
 	{
 		eq r0, r1, r10
 		nop
 	}
 	bt r0, .LBB36_3
 .Ltmp1082:
-	.loc	1 2305 3
+	.loc	1 2312 3
 	ldw r0, sp[896]
-	.loc	1 2305 3
+	.loc	1 2312 3
 	{
 		add r2, r0, 1
 		nop
 	}
 .Ltmp1083:
-	.loc	1 2305 3
+	.loc	1 2312 3
 	stw r2, sp[896]
 	{
 		ldaw r2, sp[14]
 		nop
 	}
 .Ltmp1084:
-	.loc	1 2305 3
+	.loc	1 2312 3
 	st8 r1, r2[r0]
 .Ltmp1085:
-	.loc	1 2294 2
+	.loc	1 2301 2
 	{
 		add r7, r7, 1
 		nop
 	}
-	.loc	1 2294 2
+	.loc	1 2301 2
 	{
 		lsu r0, r6, r7
 		nop
@@ -10118,7 +10128,7 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 .Ltmp1087:
-	.loc	1 2295 7
+	.loc	1 2302 7
 	{
 		mov r1, r5
 		ldw r0, r0[11]
@@ -10127,7 +10137,7 @@ read_frame_:
 		ldc r2, 8
 		nop
 	}
-	.loc	1 2295 7
+	.loc	1 2302 7
 	bl FLAC__bitreader_read_raw_uint32
 	bt r0, .LBB36_2
 	bu .LBB36_320
@@ -10137,7 +10147,7 @@ read_frame_:
 		ldaw r0, sp[14]
 		nop
 	}
-	.loc	1 2308 2
+	.loc	1 2315 2
 	{
 		or r1, r0, r9
 		ldc r0, 0
@@ -10146,13 +10156,13 @@ read_frame_:
 		nop
 		ld8u r2, r1[r0]
 	}
-	.loc	1 2308 2
+	.loc	1 2315 2
 	{
 		shr r7, r2, 4
 		nop
 	}
 .Ltmp1089:
-	.loc	1 2308 2
+	.loc	1 2315 2
 	stw r7, sp[897]
 	bt r0, .LBB36_17
 .Ltmp1090:
@@ -10167,7 +10177,7 @@ read_frame_:
 	.jmptable32 .LBB36_12,.LBB36_13,.LBB36_14,.LBB36_14,.LBB36_14,.LBB36_14,.LBB36_18,.LBB36_18,.LBB36_15,.LBB36_15,.LBB36_15,.LBB36_15,.LBB36_15,.LBB36_15,.LBB36_15,.LBB36_15
 .Ltmp1091:
 .LBB36_15:
-	.loc	1 2333 4
+	.loc	1 2340 4
 	{
 		sub r2, r7, 8
 		nop
@@ -10176,7 +10186,7 @@ read_frame_:
 	bu .LBB36_16
 .Ltmp1092:
 .LBB36_14:
-	.loc	1 2319 4
+	.loc	1 2326 4
 	{
 		sub r2, r7, 2
 		nop
@@ -10184,13 +10194,13 @@ read_frame_:
 	ldc r3, 576
 .Ltmp1093:
 .LBB36_16:
-	.loc	1 2333 4
+	.loc	1 2340 4
 	{
 		shl r2, r3, r2
 		ldw r3, r4[1]
 	}
 	ldc r11, 1128
-	.loc	1 2333 4
+	.loc	1 2340 4
 	{
 		add r3, r3, r11
 		nop
@@ -10201,7 +10211,7 @@ read_frame_:
 	}
 .Ltmp1094:
 .LBB36_17:
-	.loc	1 2046 6
+	.loc	1 2053 6
 	{
 		mov r7, r0
 		nop
@@ -10217,14 +10227,14 @@ read_frame_:
 		nop
 		ld8u r10, r1[r0]
 	}
-	.loc	1 2340 2
+	.loc	1 2347 2
 .Ltmp1096:
 	{
 		zext r10, 4
 		nop
 	}
 .Ltmp1097:
-	.loc	1 2340 2
+	.loc	1 2347 2
 	stw r10, sp[897]
 	bt r0, .LBB36_23
 .Ltmp1098:
@@ -10244,7 +10254,7 @@ read_frame_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 240
-	.loc	1 2342 7
+	.loc	1 2349 7
 .Ltmp1100:
 	{
 		add r2, r1, r2
@@ -10254,11 +10264,11 @@ read_frame_:
 		nop
 		ldw r2, r2[0]
 	}
-	.loc	1 2342 7
+	.loc	1 2349 7
 	bf r2, .LBB36_22
 .Ltmp1101:
 	ldc r2, 280
-	.loc	1 2343 5
+	.loc	1 2350 5
 	{
 		add r2, r1, r2
 		nop
@@ -10268,7 +10278,7 @@ read_frame_:
 		ldw r2, r2[0]
 	}
 	ldc r3, 1132
-	.loc	1 2343 5
+	.loc	1 2350 5
 	{
 		add r1, r1, r3
 		nop
@@ -10280,7 +10290,7 @@ read_frame_:
 	bu .LBB36_23
 .Ltmp1102:
 .LBB36_12:
-	.loc	1 2046 6
+	.loc	1 2053 6
 	{
 		mov r7, r0
 		nop
@@ -10293,7 +10303,7 @@ read_frame_:
 		ldw r2, r4[1]
 	}
 	ldc r3, 1128
-	.loc	1 2313 4
+	.loc	1 2320 4
 .Ltmp1104:
 	{
 		add r2, r2, r3
@@ -10312,7 +10322,7 @@ read_frame_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 1132
-	.loc	1 2348 4
+	.loc	1 2355 4
 .Ltmp1106:
 	{
 		add r1, r1, r2
@@ -10331,7 +10341,7 @@ read_frame_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 1132
-	.loc	1 2351 4
+	.loc	1 2358 4
 	{
 		add r1, r1, r2
 		nop
@@ -10349,7 +10359,7 @@ read_frame_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 1132
-	.loc	1 2354 4
+	.loc	1 2361 4
 	{
 		add r1, r1, r2
 		nop
@@ -10367,7 +10377,7 @@ read_frame_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 1132
-	.loc	1 2357 4
+	.loc	1 2364 4
 	{
 		add r1, r1, r2
 		nop
@@ -10385,7 +10395,7 @@ read_frame_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 1132
-	.loc	1 2360 4
+	.loc	1 2367 4
 	{
 		add r1, r1, r2
 		nop
@@ -10403,7 +10413,7 @@ read_frame_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 1132
-	.loc	1 2363 4
+	.loc	1 2370 4
 	{
 		add r1, r1, r2
 		nop
@@ -10421,7 +10431,7 @@ read_frame_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 1132
-	.loc	1 2366 4
+	.loc	1 2373 4
 	{
 		add r1, r1, r2
 		nop
@@ -10439,7 +10449,7 @@ read_frame_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 1132
-	.loc	1 2369 4
+	.loc	1 2376 4
 	{
 		add r1, r1, r2
 		nop
@@ -10457,7 +10467,7 @@ read_frame_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 1132
-	.loc	1 2372 4
+	.loc	1 2379 4
 	{
 		add r1, r1, r2
 		nop
@@ -10475,7 +10485,7 @@ read_frame_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 1132
-	.loc	1 2375 4
+	.loc	1 2382 4
 	{
 		add r1, r1, r2
 		nop
@@ -10493,7 +10503,7 @@ read_frame_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 1132
-	.loc	1 2378 4
+	.loc	1 2385 4
 	{
 		add r1, r1, r2
 		nop
@@ -10519,7 +10529,7 @@ read_frame_:
 	}
 .Ltmp1119:
 .LBB36_23:
-	.loc	1 2046 6
+	.loc	1 2053 6
 	{
 		mov r10, r0
 		nop
@@ -10530,7 +10540,7 @@ read_frame_:
 		mkmsk r2, 2
 		ldaw r1, sp[14]
 	}
-	.loc	1 2393 2
+	.loc	1 2400 2
 .Ltmp1121:
 	{
 		or r1, r1, r2
@@ -10540,19 +10550,19 @@ read_frame_:
 		nop
 		ld8u r0, r1[r0]
 	}
-	.loc	1 2393 2
+	.loc	1 2400 2
 	{
 		shr r0, r0, 4
 		nop
 	}
 .Ltmp1122:
-	.loc	1 2393 2
+	.loc	1 2400 2
 	stw r0, sp[897]
 	{
 		ldc r3, 8
 		nop
 	}
-	.loc	1 2394 5
+	.loc	1 2401 5
 .Ltmp1123:
 	{
 		and r3, r0, r3
@@ -10565,7 +10575,7 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r3, 1136
-	.loc	1 2395 3
+	.loc	1 2402 3
 .Ltmp1125:
 	{
 		add r3, r0, r3
@@ -10575,14 +10585,14 @@ read_frame_:
 		nop
 		stw r9, r3[0]
 	}
-	.loc	1 2396 3
+	.loc	1 2403 3
 	ldw r3, sp[897]
-	.loc	1 2396 3
+	.loc	1 2403 3
 	{
 		zext r3, 3
 		nop
 	}
-	.loc	1 2396 3
+	.loc	1 2403 3
 	{
 		eq r11, r3, 2
 		nop
@@ -10596,7 +10606,7 @@ read_frame_:
 	bf r2, .LBB36_27
 .Ltmp1127:
 	ldc r2, 1140
-	.loc	1 2401 5
+	.loc	1 2408 5
 .Ltmp1128:
 	{
 		add r2, r0, r2
@@ -10609,14 +10619,14 @@ read_frame_:
 	bu .LBB36_48
 .Ltmp1129:
 .LBB36_46:
-	.loc	1 2412 3
+	.loc	1 2419 3
 	{
 		add r2, r0, 1
 		ldw r0, r4[1]
 	}
 .Ltmp1130:
 	ldc r3, 1136
-	.loc	1 2412 3
+	.loc	1 2419 3
 	{
 		add r3, r0, r3
 		nop
@@ -10626,7 +10636,7 @@ read_frame_:
 		stw r2, r3[0]
 	}
 	ldc r2, 1140
-	.loc	1 2413 3
+	.loc	1 2420 3
 	{
 		add r2, r0, r2
 		ldc r3, 0
@@ -10635,7 +10645,7 @@ read_frame_:
 .Ltmp1131:
 .LBB36_45:
 	ldc r3, 1140
-	.loc	1 2404 5
+	.loc	1 2411 5
 .Ltmp1132:
 	{
 		add r3, r0, r3
@@ -10651,7 +10661,7 @@ read_frame_:
 	bt r3, .LBB36_28
 .Ltmp1134:
 	ldc r2, 1140
-	.loc	1 2398 5
+	.loc	1 2405 5
 	{
 		add r2, r0, r2
 		mkmsk r3, 1
@@ -10671,7 +10681,7 @@ read_frame_:
 	}
 .Ltmp1137:
 .LBB36_48:
-	.loc	1 2416 2
+	.loc	1 2423 2
 	{
 		ldc r11, 0
 		nop
@@ -10680,24 +10690,24 @@ read_frame_:
 		nop
 		ld8u r2, r1[r11]
 	}
-	.loc	1 2416 2
+	.loc	1 2423 2
 	{
 		shr r2, r2, 1
 		nop
 	}
-	.loc	1 2416 2
+	.loc	1 2423 2
 	{
 		zext r2, 3
 		nop
 	}
 .Ltmp1138:
-	.loc	1 2416 2
+	.loc	1 2423 2
 	stw r2, sp[897]
 	{
 		mkmsk r3, 3
 		nop
 	}
-	.loc	1 2416 2
+	.loc	1 2423 2
 	{
 		lsu r3, r3, r2
 		nop
@@ -10716,7 +10726,7 @@ read_frame_:
 .Ltmp1140:
 .LBB36_50:
 	ldc r2, 240
-	.loc	1 2418 7
+	.loc	1 2425 7
 .Ltmp1141:
 	{
 		add r2, r0, r2
@@ -10726,11 +10736,11 @@ read_frame_:
 		nop
 		ldw r2, r2[0]
 	}
-	.loc	1 2418 7
+	.loc	1 2425 7
 	bf r2, .LBB36_51
 .Ltmp1142:
 	ldc r2, 288
-	.loc	1 2419 5
+	.loc	1 2426 5
 	{
 		add r2, r0, r2
 		nop
@@ -10740,7 +10750,7 @@ read_frame_:
 		ldw r2, r2[0]
 	}
 	ldc r3, 1144
-	.loc	1 2419 5
+	.loc	1 2426 5
 	{
 		add r3, r0, r3
 		nop
@@ -10753,7 +10763,7 @@ read_frame_:
 .Ltmp1143:
 .LBB36_53:
 	ldc r2, 1144
-	.loc	1 2424 4
+	.loc	1 2431 4
 	{
 		add r2, r0, r2
 		ldc r3, 8
@@ -10762,7 +10772,7 @@ read_frame_:
 .Ltmp1144:
 .LBB36_54:
 	ldc r2, 1144
-	.loc	1 2427 4
+	.loc	1 2434 4
 	{
 		add r2, r0, r2
 		ldc r3, 12
@@ -10778,7 +10788,7 @@ read_frame_:
 .Ltmp1146:
 .LBB36_56:
 	ldc r2, 1144
-	.loc	1 2433 4
+	.loc	1 2440 4
 	{
 		add r2, r0, r2
 		ldc r3, 16
@@ -10787,7 +10797,7 @@ read_frame_:
 .Ltmp1147:
 .LBB36_57:
 	ldc r2, 1144
-	.loc	1 2436 4
+	.loc	1 2443 4
 	{
 		add r2, r0, r2
 		ldc r3, 20
@@ -10796,7 +10806,7 @@ read_frame_:
 .Ltmp1148:
 .LBB36_58:
 	ldc r2, 1144
-	.loc	1 2439 4
+	.loc	1 2446 4
 	{
 		add r2, r0, r2
 		ldc r3, 24
@@ -10805,7 +10815,7 @@ read_frame_:
 .Ltmp1149:
 .LBB36_59:
 	ldc r2, 1144
-	.loc	1 2442 4
+	.loc	1 2449 4
 	{
 		add r2, r0, r2
 		ldc r3, 32
@@ -10822,7 +10832,7 @@ read_frame_:
 		nop
 		ld8u r8, r1[r11]
 	}
-	.loc	1 2451 5
+	.loc	1 2458 5
 .Ltmp1152:
 	{
 		zext r8, 1
@@ -10833,7 +10843,7 @@ read_frame_:
 		nop
 	}
 .Ltmp1153:
-	.loc	1 2457 3
+	.loc	1 2464 3
 	{
 		or r1, r1, r2
 		nop
@@ -10842,7 +10852,7 @@ read_frame_:
 		nop
 		ld8u r1, r1[r11]
 	}
-	.loc	1 2457 3
+	.loc	1 2464 3
 	{
 		zext r1, 1
 		nop
@@ -10850,7 +10860,7 @@ read_frame_:
 	bt r1, .LBB36_64
 .Ltmp1154:
 	ldc r1, 240
-	.loc	1 2457 3
+	.loc	1 2464 3
 	{
 		add r1, r0, r1
 		nop
@@ -10862,7 +10872,7 @@ read_frame_:
 	bf r1, .LBB36_68
 .Ltmp1155:
 	ldc r1, 264
-	.loc	1 2457 3
+	.loc	1 2464 3
 	{
 		add r1, r0, r1
 		nop
@@ -10872,7 +10882,7 @@ read_frame_:
 		ldw r1, r1[0]
 	}
 	ldc r2, 268
-	.loc	1 2457 3
+	.loc	1 2464 3
 	{
 		add r2, r0, r2
 		nop
@@ -10881,7 +10891,7 @@ read_frame_:
 		nop
 		ldw r2, r2[0]
 	}
-	.loc	1 2457 3
+	.loc	1 2464 3
 	{
 		eq r1, r1, r2
 		nop
@@ -10901,7 +10911,7 @@ read_frame_:
 	}
 	ldaw r3, sp[896]
 .Ltmp1158:
-	.loc	1 2474 7
+	.loc	1 2481 7
 	{
 		mov r2, r5
 		nop
@@ -10910,13 +10920,13 @@ read_frame_:
 .Ltmp1159:
 	bf r0, .LBB36_320
 .Ltmp1160:
-	.loc	1 2476 6
+	.loc	1 2483 6
 	ldw r1, sp[897]
 	{
 		mkmsk r0, 32
 		nop
 	}
-	.loc	1 2476 6
+	.loc	1 2483 6
 	{
 		eq r2, r1, r0
 		nop
@@ -10928,7 +10938,7 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r2, 1148
-	.loc	1 2483 3
+	.loc	1 2490 3
 	{
 		add r2, r0, r2
 		ldc r3, 0
@@ -10938,7 +10948,7 @@ read_frame_:
 		stw r3, r2[0]
 	}
 	ldc r2, 1152
-	.loc	1 2484 3
+	.loc	1 2491 3
 	{
 		add r2, r0, r2
 		nop
@@ -10962,7 +10972,7 @@ read_frame_:
 	}
 	ldaw r3, sp[896]
 .Ltmp1164:
-	.loc	1 2461 7
+	.loc	1 2468 7
 	{
 		mov r2, r5
 		nop
@@ -10971,10 +10981,10 @@ read_frame_:
 .Ltmp1165:
 	bf r0, .LBB36_320
 .Ltmp1166:
-	.loc	1 2463 6
+	.loc	1 2470 6
 	ldw r1, sp[892]
 	ldw r2, sp[893]
-	.loc	1 2463 6
+	.loc	1 2470 6
 	{
 		and r3, r1, r2
 		mkmsk r0, 32
@@ -10990,7 +11000,7 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r3, 1148
-	.loc	1 2470 3
+	.loc	1 2477 3
 	{
 		add r3, r0, r3
 		mkmsk r11, 1
@@ -11000,12 +11010,12 @@ read_frame_:
 		stw r11, r3[0]
 	}
 	ldc r3, 1152
-	.loc	1 2471 3
+	.loc	1 2478 3
 	{
 		add r3, r0, r3
 		nop
 	}
-	.loc	1 2471 3
+	.loc	1 2478 3
 	std r2, r1, r3[0]
 .Ltmp1168:
 .LBB36_71:
@@ -11021,32 +11031,32 @@ read_frame_:
 		ldc r2, 8
 		nop
 	}
-	.loc	1 2488 7
+	.loc	1 2495 7
 .Ltmp1171:
 	bl FLAC__bitreader_read_raw_uint32
 .Ltmp1172:
 	bf r0, .LBB36_320
 .Ltmp1173:
-	.loc	1 2490 3
+	.loc	1 2497 3
 	ldw r0, sp[897]
-	.loc	1 2490 3
+	.loc	1 2497 3
 	ldw r1, sp[896]
-	.loc	1 2490 3
+	.loc	1 2497 3
 	{
 		add r2, r1, 1
 		nop
 	}
 .Ltmp1174:
-	.loc	1 2490 3
+	.loc	1 2497 3
 	stw r2, sp[896]
 	{
 		ldaw r2, sp[14]
 		nop
 	}
 .Ltmp1175:
-	.loc	1 2490 3
+	.loc	1 2497 3
 	st8 r0, r2[r1]
-	.loc	1 2491 6
+	.loc	1 2498 6
 .Ltmp1176:
 	{
 		eq r1, r7, 7
@@ -11068,55 +11078,55 @@ read_frame_:
 		ldc r2, 8
 		nop
 	}
-	.loc	1 2493 8
+	.loc	1 2500 8
 .Ltmp1179:
 	bl FLAC__bitreader_read_raw_uint32
 .Ltmp1180:
 	bf r0, .LBB36_320
 .Ltmp1181:
-	.loc	1 2495 4
+	.loc	1 2502 4
 	ldw r0, sp[895]
-	.loc	1 2495 4
+	.loc	1 2502 4
 	ldw r1, sp[896]
-	.loc	1 2495 4
+	.loc	1 2502 4
 	{
 		add r2, r1, 1
 		nop
 	}
 .Ltmp1182:
-	.loc	1 2495 4
+	.loc	1 2502 4
 	stw r2, sp[896]
 	{
 		ldaw r2, sp[14]
 		nop
 	}
 .Ltmp1183:
-	.loc	1 2495 4
+	.loc	1 2502 4
 	st8 r0, r2[r1]
-	.loc	1 2496 4
+	.loc	1 2503 4
 	ldw r1, sp[897]
-	.loc	1 2496 4
+	.loc	1 2503 4
 	{
 		shl r1, r1, 8
 		nop
 	}
-	.loc	1 2496 4
+	.loc	1 2503 4
 	{
 		or r0, r1, r0
 		nop
 	}
 .Ltmp1184:
-	.loc	1 2496 4
+	.loc	1 2503 4
 	stw r0, sp[897]
 .Ltmp1185:
 .LBB36_76:
-	.loc	1 2498 3
+	.loc	1 2505 3
 	{
 		add r1, r0, 1
 		ldw r0, r4[1]
 	}
 	ldc r2, 1128
-	.loc	1 2498 3
+	.loc	1 2505 3
 	{
 		add r2, r0, r2
 		nop
@@ -11139,52 +11149,52 @@ read_frame_:
 		ldc r2, 8
 		nop
 	}
-	.loc	1 2502 7
+	.loc	1 2509 7
 .Ltmp1189:
 	bl FLAC__bitreader_read_raw_uint32
 .Ltmp1190:
 	bf r0, .LBB36_320
 .Ltmp1191:
-	.loc	1 2504 3
+	.loc	1 2511 3
 	ldw r0, sp[897]
-	.loc	1 2504 3
+	.loc	1 2511 3
 	ldw r1, sp[896]
-	.loc	1 2504 3
+	.loc	1 2511 3
 	{
 		add r2, r1, 1
 		nop
 	}
 .Ltmp1192:
-	.loc	1 2504 3
+	.loc	1 2511 3
 	stw r2, sp[896]
 	{
 		ldaw r2, sp[14]
 		nop
 	}
 .Ltmp1193:
-	.loc	1 2504 3
+	.loc	1 2511 3
 	st8 r0, r2[r1]
 	{
 		ldc r1, 12
 		nop
 	}
-	.loc	1 2505 6
+	.loc	1 2512 6
 .Ltmp1194:
 	{
 		eq r1, r10, r1
 		nop
 	}
-	.loc	1 2505 6
+	.loc	1 2512 6
 	bf r1, .LBB36_80
 .Ltmp1195:
 	ldc r1, 1000
-	.loc	1 2513 4
+	.loc	1 2520 4
 .Ltmp1196:
 	mul r1, r0, r1
 	bu .LBB36_83
 .Ltmp1197:
 .LBB36_66:
-	.loc	1 2464 4
+	.loc	1 2471 4
 	ldw r1, sp[896]
 	{
 		add r1, r1, r5
@@ -11201,11 +11211,11 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r2, 4638
-	.loc	1 2299 4
+	.loc	1 2306 4
 .Ltmp1199:
 	st8 r1, r0[r2]
 	ldc r1, 4632
-	.loc	1 2300 4
+	.loc	1 2307 4
 	{
 		add r1, r0, r1
 		mkmsk r2, 1
@@ -11218,7 +11228,7 @@ read_frame_:
 .LBB36_4:
 	ldc r1, 4680
 .Ltmp1201:
-	.loc	1 3234 5
+	.loc	1 3241 5
 	{
 		add r1, r0, r1
 		nop
@@ -11233,14 +11243,14 @@ read_frame_:
 		nop
 		ldw r3, r0[8]
 	}
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mkmsk r1, 1
 		ldw r2, r0[9]
 	}
 .Ltmp1203:
 .LBB36_6:
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r0, r4
 		nop
@@ -11265,7 +11275,7 @@ read_frame_:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 2048 5
+	.loc	1 2055 5
 .Ltmp1206:
 	{
 		eq r1, r0, 2
@@ -11278,7 +11288,7 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 1128
-	.loc	1 2050 6
+	.loc	1 2057 6
 .Ltmp1208:
 	{
 		add r1, r0, r1
@@ -11289,7 +11299,7 @@ read_frame_:
 		ldw r1, r1[0]
 	}
 	ldc r5, 1136
-	.loc	1 2050 6
+	.loc	1 2057 6
 	{
 		add r2, r0, r5
 		nop
@@ -11299,30 +11309,30 @@ read_frame_:
 		ldw r2, r2[0]
 	}
 	ldc r10, 1144
-	.loc	1 2050 6
+	.loc	1 2057 6
 	{
 		add r0, r0, r10
 		nop
 	}
-	.loc	1 2050 6
+	.loc	1 2057 6
 	{
 		mov r0, r4
 		ldw r3, r0[0]
 	}
-	.loc	1 2050 6
+	.loc	1 2057 6
 	bl allocate_output_
 	{
 		ldc r1, 0
 		nop
 	}
-	.loc	1 2050 6
+	.loc	1 2057 6
 	bf r0, .LBB36_104
 .Ltmp1209:
 	{
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 2052 2
+	.loc	1 2059 2
 .Ltmp1210:
 	{
 		add r1, r0, r5
@@ -11334,10 +11344,10 @@ read_frame_:
 	}
 	bf r1, .LBB36_122
 .Ltmp1211:
-	.loc	1 2794 6
+	.loc	1 2801 6
 	ldw r1, cp[FLAC__SUBFRAME_LPC_QLP_COEFF_PRECISION_LEN]
 .Ltmp1212:
-	.loc	1 2796 5
+	.loc	1 2803 5
 	{
 		mkmsk r1, r1
 		nop
@@ -11349,24 +11359,24 @@ read_frame_:
 	bu .LBB36_107
 .Ltmp1213:
 .LBB36_114:
-	.loc	1 2576 2
+	.loc	1 2583 2
 	ldw r5, sp[896]
 .Ltmp1214:
 	ldc r0, 254
 .Ltmp1215:
-	.loc	1 2577 2
+	.loc	1 2584 2
 	{
 		and r0, r5, r0
 		zext r5, 1
 	}
 .Ltmp1216:
-	.loc	1 2577 2
+	.loc	1 2584 2
 	stw r0, sp[896]
 	{
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 2579 5
+	.loc	1 2586 5
 .Ltmp1217:
 	bf r5, .LBB36_127
 .Ltmp1218:
@@ -11376,21 +11386,21 @@ read_frame_:
 	}
 .Ltmp1219:
 	ldaw r1, sp[895]
-	.loc	1 2581 7
+	.loc	1 2588 7
 .Ltmp1220:
 	bl FLAC__bitreader_read_unary_unsigned
 	bf r0, .LBB36_241
 .Ltmp1221:
-	.loc	1 2583 3
+	.loc	1 2590 3
 	ldw r0, sp[895]
 .Ltmp1222:
-	.loc	1 2583 3
+	.loc	1 2590 3
 	{
 		add r1, r0, 1
 		ldw r0, r4[1]
 	}
 	ldc r2, 432
-	.loc	1 2583 3
+	.loc	1 2590 3
 	mul r2, r7, r2
 	{
 		add r2, r0, r2
@@ -11401,16 +11411,16 @@ read_frame_:
 		add r2, r2, r3
 		nop
 	}
-	.loc	1 2583 3
+	.loc	1 2590 3
 	{
 		lsu r2, r1, r6
 		stw r1, r2[0]
 	}
-	.loc	1 2584 7
+	.loc	1 2591 7
 .Ltmp1223:
 	bf r2, .LBB36_117
 .Ltmp1224:
-	.loc	1 2589 3
+	.loc	1 2596 3
 	{
 		sub r6, r6, r1
 		nop
@@ -11420,7 +11430,7 @@ read_frame_:
 .Ltmp1226:
 .LBB36_127:
 	ldc r1, 432
-	.loc	1 2592 3
+	.loc	1 2599 3
 	mul r1, r7, r1
 	{
 		add r1, r0, r1
@@ -11437,17 +11447,17 @@ read_frame_:
 	}
 .Ltmp1227:
 .LBB36_128:
-	.loc	1 2597 5
+	.loc	1 2604 5
 	ldw r1, sp[896]
 	ldc r2, 128
-	.loc	1 2597 5
+	.loc	1 2604 5
 	{
 		and r2, r1, r2
 		nop
 	}
 	bt r2, .LBB36_117
 .Ltmp1228:
-	.loc	1 2602 10
+	.loc	1 2609 10
 	{
 		eq r2, r1, 2
 		nop
@@ -11455,7 +11465,7 @@ read_frame_:
 	bf r2, .LBB36_130
 .Ltmp1229:
 	ldc r1, 432
-	.loc	1 2879 2
+	.loc	1 2886 2
 .Ltmp1230:
 	mul r1, r7, r1
 	{
@@ -11472,12 +11482,12 @@ read_frame_:
 		add r2, r1, r2
 		mkmsk r3, 1
 	}
-	.loc	1 2882 2
+	.loc	1 2889 2
 	{
 		ldc r2, 32
 		stw r3, r2[0]
 	}
-	.loc	1 2884 5
+	.loc	1 2891 5
 .Ltmp1231:
 	{
 		lsu r2, r2, r6
@@ -11485,7 +11495,7 @@ read_frame_:
 	}
 	bt r2, .LBB36_146
 .Ltmp1232:
-	.loc	1 2885 3
+	.loc	1 2892 3
 	ldaw r0, r0[r7]
 	ldc r2, 80
 	{
@@ -11498,7 +11508,7 @@ read_frame_:
 	}
 .Ltmp1233:
 	ldc r0, 1180
-	.loc	1 2887 3
+	.loc	1 2894 3
 	{
 		add r0, r1, r0
 		ldc r1, 0
@@ -11521,13 +11531,13 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 1128
-	.loc	1 2890 3
+	.loc	1 2897 3
 .Ltmp1235:
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 2890 3
+	.loc	1 2897 3
 	{
 		mov r9, r2
 		ldw r1, r1[0]
@@ -11541,7 +11551,7 @@ read_frame_:
 	}
 .Ltmp1237:
 	ldaw r1, sp[892]
-	.loc	1 2891 8
+	.loc	1 2898 8
 .Ltmp1238:
 	{
 		mov r2, r6
@@ -11550,19 +11560,19 @@ read_frame_:
 	bl FLAC__bitreader_read_raw_int32
 	bf r0, .LBB36_240
 .Ltmp1239:
-	.loc	1 2893 4
+	.loc	1 2900 4
 	ldw r0, sp[892]
-	.loc	1 2893 4
+	.loc	1 2900 4
 	stw r0, r10[r9]
 .Ltmp1240:
-	.loc	1 2890 61
+	.loc	1 2897 61
 	{
 		add r9, r9, 1
 		ldw r0, r4[1]
 	}
 .Ltmp1241:
 	ldc r1, 1128
-	.loc	1 2890 3
+	.loc	1 2897 3
 	{
 		add r1, r0, r1
 		nop
@@ -11571,14 +11581,14 @@ read_frame_:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 2890 3
+	.loc	1 2897 3
 	{
 		lsu r2, r9, r1
 		nop
 	}
 	bt r2, .LBB36_141
 .Ltmp1242:
-	.loc	1 2890 3
+	.loc	1 2897 3
 	{
 		shl r2, r1, 2
 		nop
@@ -11591,7 +11601,7 @@ read_frame_:
 	}
 	bf r1, .LBB36_149
 .Ltmp1244:
-	.loc	1 2898 4
+	.loc	1 2905 4
 	ldaw r0, r0[r7]
 	{
 		ldc r1, 48
@@ -11609,7 +11619,7 @@ read_frame_:
 		nop
 		ldw r1, r8[0]
 	}
-	.loc	1 2898 4
+	.loc	1 2905 4
 	bl memcpy
 	bu .LBB36_149
 .Ltmp1245:
@@ -11617,7 +11627,7 @@ read_frame_:
 	bt r1, .LBB36_151
 .Ltmp1246:
 	ldc r1, 432
-	.loc	1 2674 2
+	.loc	1 2681 2
 .Ltmp1247:
 	mul r1, r7, r1
 	{
@@ -11634,12 +11644,12 @@ read_frame_:
 		stw r2, r1[0]
 	}
 .Ltmp1248:
-	.loc	1 2676 6
+	.loc	1 2683 6
 	{
 		ldaw r1, sp[14]
 		ldw r0, r0[11]
 	}
-	.loc	1 2676 6
+	.loc	1 2683 6
 	{
 		mov r2, r6
 		nop
@@ -11648,15 +11658,15 @@ read_frame_:
 	bf r0, .LBB36_241
 .Ltmp1249:
 	ldc r0, 1176
-	.loc	1 2670 2
+	.loc	1 2677 2
 	{
 		add r0, r8, r0
 		nop
 	}
-	.loc	1 2679 2
+	.loc	1 2686 2
 	ldd r2, r1, sp[7]
 .Ltmp1250:
-	.loc	1 2679 2
+	.loc	1 2686 2
 	std r2, r1, r0[0]
 	{
 		nop
@@ -11664,13 +11674,13 @@ read_frame_:
 	}
 	bf r0, .LBB36_150
 .Ltmp1251:
-	.loc	1 2684 4
+	.loc	1 2691 4
 	{
 		ldc r0, 32
 		ldw r1, r4[1]
 	}
 .Ltmp1252:
-	.loc	1 2683 6
+	.loc	1 2690 6
 	{
 		lsu r0, r0, r6
 		nop
@@ -11678,7 +11688,7 @@ read_frame_:
 	bt r0, .LBB36_137
 .Ltmp1253:
 	ldc r0, 1128
-	.loc	1 2685 4
+	.loc	1 2692 4
 .Ltmp1254:
 	{
 		add r0, r1, r0
@@ -11690,7 +11700,7 @@ read_frame_:
 	}
 	bf r2, .LBB36_150
 .Ltmp1255:
-	.loc	1 2684 4
+	.loc	1 2691 4
 	ldaw r1, r1[r7]
 	{
 		ldc r2, 48
@@ -11705,23 +11715,23 @@ read_frame_:
 		ldw r1, r1[0]
 	}
 .Ltmp1256:
-	.loc	1 2686 5
+	.loc	1 2693 5
 	{
 		ldc r3, 0
 		ldw r2, sp[14]
 	}
 .Ltmp1257:
 .LBB36_136:
-	.loc	1 2686 5
+	.loc	1 2693 5
 	stw r2, r1[r3]
 .Ltmp1258:
-	.loc	1 2685 62
+	.loc	1 2692 62
 	{
 		add r3, r3, 1
 		ldw r11, r0[0]
 	}
 .Ltmp1259:
-	.loc	1 2685 4
+	.loc	1 2692 4
 	{
 		lsu r11, r3, r11
 		nop
@@ -11731,7 +11741,7 @@ read_frame_:
 .Ltmp1260:
 .LBB36_146:
 	ldc r2, 112
-	.loc	1 2901 3
+	.loc	1 2908 3
 .Ltmp1261:
 	{
 		add r0, r0, r2
@@ -11743,7 +11753,7 @@ read_frame_:
 	}
 .Ltmp1262:
 	ldc r0, 1180
-	.loc	1 2903 3
+	.loc	1 2910 3
 	{
 		add r0, r1, r0
 		nop
@@ -11762,7 +11772,7 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 116
-	.loc	1 2905 3
+	.loc	1 2912 3
 	{
 		add r1, r0, r1
 		nop
@@ -11772,13 +11782,13 @@ read_frame_:
 		stw r3, r1[0]
 	}
 	ldc r1, 1128
-	.loc	1 2907 3
+	.loc	1 2914 3
 .Ltmp1264:
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 2907 3
+	.loc	1 2914 3
 	{
 		ldc r8, 0
 		ldw r1, r1[0]
@@ -11786,12 +11796,12 @@ read_frame_:
 	bf r1, .LBB36_149
 .Ltmp1265:
 .LBB36_147:
-	.loc	1 2908 8
+	.loc	1 2915 8
 	{
 		ldaw r1, sp[14]
 		ldw r0, r0[11]
 	}
-	.loc	1 2908 8
+	.loc	1 2915 8
 	{
 		mov r2, r6
 		nop
@@ -11799,29 +11809,29 @@ read_frame_:
 	bl FLAC__bitreader_read_raw_int64
 	bf r0, .LBB36_240
 .Ltmp1266:
-	.loc	1 2910 4
+	.loc	1 2917 4
 	ldd r1, r0, sp[7]
-	.loc	1 2910 4
+	.loc	1 2917 4
 	std r1, r0, r10[0]
 .Ltmp1267:
-	.loc	1 2907 61
+	.loc	1 2914 61
 	{
 		add r8, r8, 1
 		ldw r0, r4[1]
 	}
 .Ltmp1268:
 	ldc r1, 1128
-	.loc	1 2907 3
+	.loc	1 2914 3
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 2907 3
+	.loc	1 2914 3
 	{
 		add r10, r10, 8
 		ldw r1, r1[0]
 	}
-	.loc	1 2907 3
+	.loc	1 2914 3
 	{
 		lsu r1, r8, r1
 		nop
@@ -11836,7 +11846,7 @@ read_frame_:
 	bu .LBB36_121
 .Ltmp1271:
 .LBB36_151:
-	.loc	1 2610 10
+	.loc	1 2617 10
 	{
 		shr r2, r1, 4
 		nop
@@ -11847,7 +11857,7 @@ read_frame_:
 		ldc r2, 24
 		nop
 	}
-	.loc	1 2615 10
+	.loc	1 2622 10
 .Ltmp1273:
 	{
 		lsu r2, r2, r1
@@ -11855,19 +11865,19 @@ read_frame_:
 	}
 	bt r2, .LBB36_188
 .Ltmp1274:
-	.loc	1 2616 3
+	.loc	1 2623 3
 	{
 		shr r8, r1, 1
 		nop
 	}
-	.loc	1 2616 3
+	.loc	1 2623 3
 	{
 		zext r8, 3
 		nop
 	}
 .Ltmp1275:
 	ldc r1, 1128
-	.loc	1 2617 6
+	.loc	1 2624 6
 .Ltmp1276:
 	{
 		add r1, r0, r1
@@ -11877,7 +11887,7 @@ read_frame_:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 2617 6
+	.loc	1 2624 6
 	{
 		lsu r1, r8, r1
 		nop
@@ -11885,7 +11895,7 @@ read_frame_:
 	bf r1, .LBB36_117
 .Ltmp1277:
 	ldc r1, 432
-	.loc	1 2705 2
+	.loc	1 2712 2
 .Ltmp1278:
 	mul r1, r7, r1
 	{
@@ -11901,7 +11911,7 @@ read_frame_:
 		nop
 		stw r9, r1[0]
 	}
-	.loc	1 2707 2
+	.loc	1 2714 2
 	ldaw r1, r0[r7]
 	ldc r2, 80
 	{
@@ -11913,7 +11923,7 @@ read_frame_:
 		ldw r1, r1[0]
 	}
 	ldc r2, 1224
-	.loc	1 2707 2
+	.loc	1 2714 2
 	{
 		add r2, r3, r2
 		nop
@@ -11923,7 +11933,7 @@ read_frame_:
 		stw r1, r2[0]
 	}
 	ldc r1, 1188
-	.loc	1 2708 2
+	.loc	1 2715 2
 	{
 		add r1, r3, r1
 		nop
@@ -11937,7 +11947,7 @@ read_frame_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 2711 2
+	.loc	1 2718 2
 .Ltmp1280:
 	bf r8, .LBB36_157
 .Ltmp1281:
@@ -11956,29 +11966,29 @@ read_frame_:
 		ldaw r1, sp[14]
 		mov r2, r6
 	}
-	.loc	1 2712 7
+	.loc	1 2719 7
 .Ltmp1283:
 	bl FLAC__bitreader_read_raw_int64
 	bf r0, .LBB36_240
 .Ltmp1284:
-	.loc	1 2714 3
+	.loc	1 2721 3
 	ldd r1, r0, sp[7]
-	.loc	1 2714 3
+	.loc	1 2721 3
 	std r1, r0, r9[0]
 .Ltmp1285:
-	.loc	1 2711 24
+	.loc	1 2718 24
 	{
 		add r10, r10, 1
 		ldw r0, r4[1]
 	}
 .Ltmp1286:
-	.loc	1 2712 7
+	.loc	1 2719 7
 	{
 		add r9, r9, 8
 		ldw r0, r0[11]
 	}
 .Ltmp1287:
-	.loc	1 2711 2
+	.loc	1 2718 2
 	{
 		lsu r1, r10, r8
 		nop
@@ -11989,7 +11999,7 @@ read_frame_:
 .Ltmp1289:
 .LBB36_137:
 	ldc r0, 112
-	.loc	1 2688 4
+	.loc	1 2695 4
 .Ltmp1290:
 	{
 		add r0, r1, r0
@@ -12001,7 +12011,7 @@ read_frame_:
 	}
 .Ltmp1291:
 	ldc r2, 116
-	.loc	1 2689 4
+	.loc	1 2696 4
 	{
 		add r2, r1, r2
 		mkmsk r3, 1
@@ -12012,7 +12022,7 @@ read_frame_:
 	}
 .Ltmp1292:
 	ldc r2, 1128
-	.loc	1 2690 4
+	.loc	1 2697 4
 .Ltmp1293:
 	{
 		add r1, r1, r2
@@ -12025,11 +12035,11 @@ read_frame_:
 	bf r1, .LBB36_150
 .Ltmp1294:
 .LBB36_138:
-	.loc	1 2691 5
+	.loc	1 2698 5
 	ldd r3, r2, sp[7]
-	.loc	1 2691 5
+	.loc	1 2698 5
 	std r3, r2, r0[0]
-	.loc	1 2690 4
+	.loc	1 2697 4
 	{
 		sub r1, r1, 1
 		add r0, r0, 8
@@ -12038,7 +12048,7 @@ read_frame_:
 	bu .LBB36_150
 .Ltmp1295:
 .LBB36_188:
-	.loc	1 2627 10
+	.loc	1 2634 10
 	{
 		shr r2, r1, 6
 		nop
@@ -12047,7 +12057,7 @@ read_frame_:
 .Ltmp1296:
 .LBB36_152:
 	ldc r1, 4680
-	.loc	1 3234 5
+	.loc	1 3241 5
 .Ltmp1297:
 	{
 		add r1, r0, r1
@@ -12060,7 +12070,7 @@ read_frame_:
 	bf r1, .LBB36_153
 .Ltmp1298:
 	ldc r1, 8336
-	.loc	1 3237 3
+	.loc	1 3244 3
 .Ltmp1299:
 	{
 		add r0, r0, r1
@@ -12070,7 +12080,7 @@ read_frame_:
 		nop
 		ldw r1, r0[0]
 	}
-	.loc	1 3237 3
+	.loc	1 3244 3
 	{
 		add r1, r1, 1
 		nop
@@ -12087,7 +12097,7 @@ read_frame_:
 		ldw r3, r0[8]
 	}
 .Ltmp1301:
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r0, r4
 		ldw r2, r0[9]
@@ -12099,24 +12109,24 @@ read_frame_:
 	bu .LBB36_119
 .Ltmp1302:
 .LBB36_189:
-	.loc	1 2633 3
+	.loc	1 2640 3
 	{
 		shr r1, r1, 1
 		nop
 	}
-	.loc	1 2633 3
+	.loc	1 2640 3
 	{
 		zext r1, 5
 		nop
 	}
-	.loc	1 2633 3
+	.loc	1 2640 3
 	{
 		add r8, r1, 1
 		nop
 	}
 .Ltmp1303:
 	ldc r1, 1128
-	.loc	1 2634 6
+	.loc	1 2641 6
 .Ltmp1304:
 	{
 		add r1, r0, r1
@@ -12126,7 +12136,7 @@ read_frame_:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 2634 6
+	.loc	1 2641 6
 	{
 		lsu r1, r8, r1
 		nop
@@ -12134,7 +12144,7 @@ read_frame_:
 	bf r1, .LBB36_117
 .Ltmp1305:
 	ldc r1, 432
-	.loc	1 2781 2
+	.loc	1 2788 2
 .Ltmp1306:
 	mul r1, r7, r1
 	{
@@ -12154,7 +12164,7 @@ read_frame_:
 		nop
 		stw r2, r1[0]
 	}
-	.loc	1 2783 2
+	.loc	1 2790 2
 	ldaw r1, r0[r7]
 	ldc r2, 80
 	{
@@ -12166,7 +12176,7 @@ read_frame_:
 		ldw r1, r1[0]
 	}
 	ldc r2, 1584
-	.loc	1 2783 2
+	.loc	1 2790 2
 	{
 		add r2, r3, r2
 		nop
@@ -12176,7 +12186,7 @@ read_frame_:
 		stw r1, r2[0]
 	}
 	ldc r1, 1188
-	.loc	1 2784 2
+	.loc	1 2791 2
 	{
 		add r1, r3, r1
 		nop
@@ -12201,29 +12211,29 @@ read_frame_:
 		ldaw r1, sp[14]
 		mov r2, r6
 	}
-	.loc	1 2788 7
+	.loc	1 2795 7
 .Ltmp1309:
 	bl FLAC__bitreader_read_raw_int64
 	bf r0, .LBB36_240
 .Ltmp1310:
-	.loc	1 2790 3
+	.loc	1 2797 3
 	ldd r1, r0, sp[7]
-	.loc	1 2790 3
+	.loc	1 2797 3
 	std r1, r0, r9[0]
 .Ltmp1311:
-	.loc	1 2787 24
+	.loc	1 2794 24
 	{
 		add r10, r10, 1
 		ldw r0, r4[1]
 	}
 .Ltmp1312:
-	.loc	1 2788 7
+	.loc	1 2795 7
 	{
 		add r9, r9, 8
 		ldw r0, r0[11]
 	}
 .Ltmp1313:
-	.loc	1 2787 2
+	.loc	1 2794 2
 	{
 		lsu r1, r10, r8
 		nop
@@ -12231,10 +12241,10 @@ read_frame_:
 	bt r1, .LBB36_191
 .Ltmp1314:
 	ldaw r1, sp[897]
-	.loc	1 2794 6
+	.loc	1 2801 6
 .Ltmp1315:
 	ldw r2, cp[FLAC__SUBFRAME_LPC_QLP_COEFF_PRECISION_LEN]
-	.loc	1 2794 6
+	.loc	1 2801 6
 	bl FLAC__bitreader_read_raw_uint32
 	{
 		ldc r9, 2
@@ -12242,13 +12252,13 @@ read_frame_:
 	}
 	bf r0, .LBB36_241
 .Ltmp1316:
-	.loc	1 2796 5
+	.loc	1 2803 5
 	ldw r0, sp[897]
 	{
 		nop
 		ldw r1, sp[11]
 	}
-	.loc	1 2796 5
+	.loc	1 2803 5
 	{
 		eq r1, r0, r1
 		nop
@@ -12260,7 +12270,7 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 4680
-	.loc	1 3234 5
+	.loc	1 3241 5
 .Ltmp1318:
 	{
 		add r1, r0, r1
@@ -12277,7 +12287,7 @@ read_frame_:
 		nop
 		ldw r3, r0[8]
 	}
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r0, r4
 		ldw r2, r0[9]
@@ -12304,7 +12314,7 @@ read_frame_:
 .Ltmp1321:
 .LBB36_117:
 	ldc r1, 4680
-	.loc	1 3234 5
+	.loc	1 3241 5
 .Ltmp1322:
 	{
 		add r1, r0, r1
@@ -12321,7 +12331,7 @@ read_frame_:
 		ldw r3, r0[8]
 	}
 .Ltmp1324:
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r0, r4
 		ldw r2, r0[9]
@@ -12348,14 +12358,14 @@ read_frame_:
 	}
 .Ltmp1327:
 .LBB36_121:
-	.loc	1 2052 71
+	.loc	1 2059 71
 	{
 		add r7, r7, 1
 		ldw r0, r4[1]
 	}
 .Ltmp1328:
 	ldc r1, 1136
-	.loc	1 2052 2
+	.loc	1 2059 2
 	{
 		add r1, r0, r1
 		nop
@@ -12364,7 +12374,7 @@ read_frame_:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 2052 2
+	.loc	1 2059 2
 	{
 		lsu r1, r7, r1
 		nop
@@ -12380,21 +12390,21 @@ read_frame_:
 .Ltmp1330:
 .LBB36_161:
 	ldaw r1, sp[892]
-	.loc	1 2718 6
+	.loc	1 2725 6
 .Ltmp1331:
 	ldw r2, cp[FLAC__ENTROPY_CODING_METHOD_TYPE_LEN]
-	.loc	1 2718 6
+	.loc	1 2725 6
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB36_240
 .Ltmp1332:
-	.loc	1 2720 2
+	.loc	1 2727 2
 	ldw r1, sp[892]
 	ldc r0, 1176
 	{
 		nop
 		ldw r3, sp[10]
 	}
-	.loc	1 2720 2
+	.loc	1 2727 2
 	{
 		add r10, r3, r0
 		nop
@@ -12403,14 +12413,14 @@ read_frame_:
 		nop
 		stw r1, r10[0]
 	}
-	.loc	1 2724 8
+	.loc	1 2731 8
 .Ltmp1333:
 	{
 		mkmsk r2, 1
 		ldw r0, r4[1]
 	}
 .Ltmp1334:
-	.loc	1 2721 2
+	.loc	1 2728 2
 	{
 		lsu r1, r2, r1
 		nop
@@ -12422,10 +12432,10 @@ read_frame_:
 		ldw r0, r0[11]
 	}
 	ldaw r1, sp[892]
-	.loc	1 2724 8
+	.loc	1 2731 8
 .Ltmp1336:
 	ldw r2, cp[FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE_ORDER_LEN]
-	.loc	1 2724 8
+	.loc	1 2731 8
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB36_240
 .Ltmp1337:
@@ -12434,7 +12444,7 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 1128
-	.loc	1 2726 7
+	.loc	1 2733 7
 .Ltmp1338:
 	{
 		add r1, r0, r1
@@ -12444,26 +12454,26 @@ read_frame_:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 2726 7
+	.loc	1 2733 7
 	ldw r2, sp[892]
-	.loc	1 2726 7
+	.loc	1 2733 7
 	{
 		shr r3, r1, r2
 		nop
 	}
-	.loc	1 2726 7
+	.loc	1 2733 7
 	{
 		lsu r3, r3, r8
 		nop
 	}
 	bt r3, .LBB36_166
 .Ltmp1339:
-	.loc	1 2726 7
+	.loc	1 2733 7
 	{
 		mkmsk r3, r2
 		nop
 	}
-	.loc	1 2726 7
+	.loc	1 2733 7
 	{
 		and r1, r3, r1
 		nop
@@ -12472,13 +12482,13 @@ read_frame_:
 .Ltmp1340:
 .LBB36_166:
 	ldc r1, 4680
-	.loc	1 3234 5
+	.loc	1 3241 5
 .Ltmp1341:
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 3234 5
+	.loc	1 3241 5
 	{
 		ldc r8, 2
 		ldw r1, r1[0]
@@ -12491,7 +12501,7 @@ read_frame_:
 		ldw r3, r0[8]
 	}
 .Ltmp1343:
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r0, r4
 		ldw r2, r0[9]
@@ -12518,7 +12528,7 @@ read_frame_:
 .Ltmp1345:
 .LBB36_169:
 	ldc r1, 4680
-	.loc	1 3234 5
+	.loc	1 3241 5
 .Ltmp1346:
 	{
 		add r1, r0, r1
@@ -12529,11 +12539,11 @@ read_frame_:
 		ldw r1, r1[0]
 	}
 	ldc r10, 1144
-	.loc	1 3234 5
+	.loc	1 3241 5
 	bf r1, .LBB36_170
 .Ltmp1347:
 	ldc r1, 8336
-	.loc	1 3237 3
+	.loc	1 3244 3
 .Ltmp1348:
 	{
 		add r0, r0, r1
@@ -12543,7 +12553,7 @@ read_frame_:
 		nop
 		ldw r1, r0[0]
 	}
-	.loc	1 3237 3
+	.loc	1 3244 3
 	{
 		add r1, r1, 1
 		nop
@@ -12560,7 +12570,7 @@ read_frame_:
 		ldw r3, r0[8]
 	}
 .Ltmp1350:
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r0, r4
 		ldw r2, r0[9]
@@ -12593,7 +12603,7 @@ read_frame_:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 2624 6
+	.loc	1 2631 6
 .Ltmp1353:
 	{
 		eq r0, r0, 2
@@ -12605,7 +12615,7 @@ read_frame_:
 	bu .LBB36_121
 .Ltmp1355:
 .LBB36_198:
-	.loc	1 2801 2
+	.loc	1 2808 2
 	{
 		add r0, r0, 1
 		nop
@@ -12615,7 +12625,7 @@ read_frame_:
 		nop
 		ldw r2, sp[9]
 	}
-	.loc	1 2801 2
+	.loc	1 2808 2
 	{
 		add r10, r2, r1
 		nop
@@ -12634,16 +12644,16 @@ read_frame_:
 	}
 .Ltmp1356:
 	ldaw r1, sp[892]
-	.loc	1 2804 6
+	.loc	1 2811 6
 .Ltmp1357:
 	ldw r2, cp[FLAC__SUBFRAME_LPC_QLP_SHIFT_LEN]
-	.loc	1 2804 6
+	.loc	1 2811 6
 	bl FLAC__bitreader_read_raw_int32
 	bf r0, .LBB36_241
 .Ltmp1358:
-	.loc	1 2806 5
+	.loc	1 2813 5
 	ldw r0, sp[892]
-	.loc	1 2806 5
+	.loc	1 2813 5
 	ashr r1, r0, 32
 	bt r1, .LBB36_200
 .Ltmp1359:
@@ -12652,7 +12662,7 @@ read_frame_:
 		nop
 		ldw r2, sp[9]
 	}
-	.loc	1 2811 2
+	.loc	1 2818 2
 	{
 		add r1, r2, r1
 		nop
@@ -12690,27 +12700,27 @@ read_frame_:
 		ldw r2, r10[0]
 	}
 	ldaw r1, sp[892]
-	.loc	1 2815 7
+	.loc	1 2822 7
 .Ltmp1362:
 	bl FLAC__bitreader_read_raw_int32
 	bf r0, .LBB36_240
 .Ltmp1363:
-	.loc	1 2817 3
+	.loc	1 2824 3
 	ldw r0, sp[892]
 	{
 		nop
 		ldw r1, sp[10]
 	}
-	.loc	1 2817 3
+	.loc	1 2824 3
 	stw r0, r1[r9]
 .Ltmp1364:
-	.loc	1 2814 24
+	.loc	1 2821 24
 	{
 		add r9, r9, 1
 		ldw r0, r4[1]
 	}
 .Ltmp1365:
-	.loc	1 2815 7
+	.loc	1 2822 7
 	{
 		lsu r1, r9, r8
 		ldw r0, r0[11]
@@ -12718,22 +12728,22 @@ read_frame_:
 	bt r1, .LBB36_204
 .Ltmp1366:
 	ldaw r1, sp[897]
-	.loc	1 2718 6
+	.loc	1 2725 6
 .Ltmp1367:
 	ldw r2, cp[FLAC__ENTROPY_CODING_METHOD_TYPE_LEN]
 .Ltmp1368:
-	.loc	1 2821 6
+	.loc	1 2828 6
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB36_240
 .Ltmp1369:
-	.loc	1 2823 2
+	.loc	1 2830 2
 	ldw r1, sp[897]
 	ldc r0, 1176
 	{
 		nop
 		ldw r2, sp[9]
 	}
-	.loc	1 2823 2
+	.loc	1 2830 2
 	{
 		add r10, r2, r0
 		nop
@@ -12742,14 +12752,14 @@ read_frame_:
 		nop
 		stw r1, r10[0]
 	}
-	.loc	1 2827 8
+	.loc	1 2834 8
 .Ltmp1370:
 	{
 		mkmsk r2, 1
 		ldw r0, r4[1]
 	}
 .Ltmp1371:
-	.loc	1 2824 2
+	.loc	1 2831 2
 	{
 		lsu r1, r2, r1
 		nop
@@ -12761,11 +12771,11 @@ read_frame_:
 		ldw r0, r0[11]
 	}
 	ldaw r1, sp[897]
-	.loc	1 2724 8
+	.loc	1 2731 8
 .Ltmp1373:
 	ldw r2, cp[FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE_ORDER_LEN]
 .Ltmp1374:
-	.loc	1 2827 8
+	.loc	1 2834 8
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB36_240
 .Ltmp1375:
@@ -12774,7 +12784,7 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 1128
-	.loc	1 2829 7
+	.loc	1 2836 7
 .Ltmp1376:
 	{
 		add r1, r0, r1
@@ -12784,26 +12794,26 @@ read_frame_:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 2829 7
+	.loc	1 2836 7
 	ldw r2, sp[897]
-	.loc	1 2829 7
+	.loc	1 2836 7
 	{
 		shr r3, r1, r2
 		nop
 	}
-	.loc	1 2829 7
+	.loc	1 2836 7
 	{
 		lsu r3, r3, r8
 		nop
 	}
 	bt r3, .LBB36_211
 .Ltmp1377:
-	.loc	1 2829 7
+	.loc	1 2836 7
 	{
 		mkmsk r3, r2
 		nop
 	}
-	.loc	1 2829 7
+	.loc	1 2836 7
 	{
 		and r1, r3, r1
 		nop
@@ -12812,7 +12822,7 @@ read_frame_:
 .Ltmp1378:
 .LBB36_211:
 	ldc r1, 4680
-	.loc	1 3234 5
+	.loc	1 3241 5
 .Ltmp1379:
 	{
 		add r1, r0, r1
@@ -12829,7 +12839,7 @@ read_frame_:
 		ldw r3, r0[8]
 	}
 .Ltmp1381:
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r0, r4
 		ldw r2, r0[9]
@@ -12842,18 +12852,18 @@ read_frame_:
 .Ltmp1382:
 .LBB36_173:
 	ldc r1, 1180
-	.loc	1 2732 4
+	.loc	1 2739 4
 .Ltmp1383:
 	{
 		add r1, r9, r1
 		nop
 	}
-	.loc	1 2732 4
+	.loc	1 2739 4
 	{
 		ldc r1, 12
 		stw r2, r1[0]
 	}
-	.loc	1 2733 4
+	.loc	1 2740 4
 	mul r1, r7, r1
 	{
 		add r1, r0, r1
@@ -12865,7 +12875,7 @@ read_frame_:
 		nop
 	}
 	ldc r1, 1184
-	.loc	1 2733 4
+	.loc	1 2740 4
 	{
 		add r1, r9, r1
 		nop
@@ -12875,26 +12885,26 @@ read_frame_:
 		stw r3, r1[0]
 	}
 .Ltmp1384:
-	.loc	1 2742 2
+	.loc	1 2749 2
 	{
 		ldc r11, 2
 		ldw r1, r10[0]
 	}
-	.loc	1 2742 2
+	.loc	1 2749 2
 	{
 		lsu r11, r1, r11
 		nop
 	}
 	bf r11, .LBB36_175
 .Ltmp1385:
-	.loc	1 2745 8
+	.loc	1 2752 8
 	ldaw r0, r0[r7]
 	ldc r11, 80
 	{
 		add r0, r0, r11
 		nop
 	}
-	.loc	1 2745 8
+	.loc	1 2752 8
 	{
 		eq r1, r1, 1
 		ldw r0, r0[0]
@@ -12903,7 +12913,7 @@ read_frame_:
 		nop
 		stw r0, sp[1]
 	}
-	.loc	1 2745 8
+	.loc	1 2752 8
 	{
 		mov r0, r4
 		stw r1, sp[2]
@@ -12928,7 +12938,7 @@ read_frame_:
 		nop
 	}
 .Ltmp1388:
-	.loc	1 2754 6
+	.loc	1 2761 6
 	{
 		lsu r0, r0, r6
 		mov r3, r8
@@ -12941,14 +12951,14 @@ read_frame_:
 		nop
 	}
 .Ltmp1391:
-	.loc	1 2756 4
+	.loc	1 2763 4
 	bf r3, .LBB36_178
 .Ltmp1392:
 	{
 		nop
 		ldw r1, r4[1]
 	}
-	.loc	1 2757 5
+	.loc	1 2764 5
 	ldaw r0, r1[r7]
 	{
 		ldc r2, 48
@@ -12981,16 +12991,16 @@ read_frame_:
 		nop
 		ldw r11, r0[0]
 	}
-	.loc	1 2757 5
+	.loc	1 2764 5
 	stw r11, r2[r3]
 .Ltmp1394:
-	.loc	1 2756 26
+	.loc	1 2763 26
 	{
 		add r3, r3, 1
 		add r0, r0, 8
 	}
 .Ltmp1395:
-	.loc	1 2756 4
+	.loc	1 2763 4
 	{
 		eq r11, r8, r3
 		nop
@@ -13009,7 +13019,7 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 4680
-	.loc	1 3234 5
+	.loc	1 3241 5
 .Ltmp1398:
 	{
 		add r1, r0, r1
@@ -13025,7 +13035,7 @@ read_frame_:
 		nop
 		ldw r3, r0[8]
 	}
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r0, r4
 		ldw r2, r0[9]
@@ -13056,7 +13066,7 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 116
-	.loc	1 2764 4
+	.loc	1 2771 4
 .Ltmp1402:
 	{
 		add r1, r0, r1
@@ -13071,7 +13081,7 @@ read_frame_:
 		mov r9, r1
 		nop
 	}
-	.loc	1 2765 4
+	.loc	1 2772 4
 	{
 		add r0, r0, r9
 		nop
@@ -13085,13 +13095,13 @@ read_frame_:
 		nop
 		ldw r2, sp[10]
 	}
-	.loc	1 2765 4
+	.loc	1 2772 4
 	{
 		add r1, r2, r1
 		shl r2, r3, 3
 	}
 .Ltmp1403:
-	.loc	1 2765 4
+	.loc	1 2772 4
 	{
 		mov r8, r3
 		stw r2, sp[10]
@@ -13102,7 +13112,7 @@ read_frame_:
 		nop
 		ldw r2, r4[1]
 	}
-	.loc	1 2766 4
+	.loc	1 2773 4
 	ldaw r0, r2[r7]
 	ldc r1, 80
 	{
@@ -13114,7 +13124,7 @@ read_frame_:
 		ldw r0, r0[0]
 	}
 	ldc r1, 1128
-	.loc	1 2766 4
+	.loc	1 2773 4
 	{
 		add r1, r2, r1
 		nop
@@ -13123,7 +13133,7 @@ read_frame_:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 2766 4
+	.loc	1 2773 4
 	{
 		sub r1, r1, r8
 		add r2, r2, r9
@@ -13136,18 +13146,18 @@ read_frame_:
 		nop
 		ldw r3, sp[10]
 	}
-	.loc	1 2766 4
+	.loc	1 2773 4
 	{
 		add r3, r2, r3
 		mov r2, r8
 	}
-	.loc	1 2766 4
+	.loc	1 2773 4
 	bl FLAC__fixed_restore_signal_wide_33bit
 	bu .LBB36_186
 .Ltmp1405:
 .LBB36_215:
 	ldc r1, 4680
-	.loc	1 3234 5
+	.loc	1 3241 5
 .Ltmp1406:
 	{
 		add r1, r0, r1
@@ -13157,11 +13167,11 @@ read_frame_:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 3234 5
+	.loc	1 3241 5
 	bf r1, .LBB36_216
 .Ltmp1407:
 	ldc r1, 8336
-	.loc	1 3237 3
+	.loc	1 3244 3
 .Ltmp1408:
 	{
 		add r0, r0, r1
@@ -13171,7 +13181,7 @@ read_frame_:
 		nop
 		ldw r1, r0[0]
 	}
-	.loc	1 3237 3
+	.loc	1 3244 3
 	{
 		add r1, r1, 1
 		nop
@@ -13187,7 +13197,7 @@ read_frame_:
 		nop
 		ldw r1, r4[1]
 	}
-	.loc	1 2622 7
+	.loc	1 2629 7
 .Ltmp1410:
 	ldaw r0, r1[r7]
 	{
@@ -13209,12 +13219,12 @@ read_frame_:
 		nop
 	}
 .Ltmp1412:
-	.loc	1 2758 7
+	.loc	1 2765 7
 	{
 		add r11, r8, r6
 		nop
 	}
-	.loc	1 2759 5
+	.loc	1 2766 5
 	ldaw r0, r1[r7]
 	ldc r3, 80
 	{
@@ -13226,7 +13236,7 @@ read_frame_:
 		ldw r0, r0[0]
 	}
 	ldc r3, 1128
-	.loc	1 2759 5
+	.loc	1 2766 5
 	{
 		add r1, r1, r3
 		nop
@@ -13235,25 +13245,25 @@ read_frame_:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 2759 5
+	.loc	1 2766 5
 	{
 		sub r1, r1, r8
 		nop
 	}
-	.loc	1 2759 5
+	.loc	1 2766 5
 	ldaw r3, r2[r8]
 	{
 		ldc r2, 32
 		nop
 	}
-	.loc	1 2758 7
+	.loc	1 2765 7
 	{
 		lsu r2, r2, r11
 		nop
 	}
 	bt r2, .LBB36_185
 .Ltmp1413:
-	.loc	1 2759 5
+	.loc	1 2766 5
 	{
 		mov r2, r8
 		nop
@@ -13262,7 +13272,7 @@ read_frame_:
 	bu .LBB36_186
 .Ltmp1414:
 .LBB36_185:
-	.loc	1 2761 5
+	.loc	1 2768 5
 	{
 		mov r2, r8
 		nop
@@ -13276,7 +13286,7 @@ read_frame_:
 		ldw r3, r0[8]
 	}
 .Ltmp1416:
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r0, r4
 		ldw r2, r0[9]
@@ -13293,7 +13303,7 @@ read_frame_:
 	}
 .LBB36_214:
 .Ltmp1418:
-	.loc	1 2832 5
+	.loc	1 2839 5
 	{
 		ldc r1, 2
 		ldw r0, r4[0]
@@ -13315,7 +13325,7 @@ read_frame_:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 2641 6
+	.loc	1 2648 6
 .Ltmp1421:
 	{
 		eq r0, r0, 2
@@ -13337,7 +13347,7 @@ read_frame_:
 		ldw r1, r4[1]
 	}
 	ldc r0, 432
-	.loc	1 2646 3
+	.loc	1 2653 3
 .Ltmp1425:
 	mul r0, r7, r0
 	{
@@ -13354,15 +13364,15 @@ read_frame_:
 		ldw r5, r0[0]
 	}
 .Ltmp1426:
-	.loc	1 2646 3
+	.loc	1 2653 3
 	stw r5, sp[896]
-	.loc	1 2647 6
+	.loc	1 2654 6
 .Ltmp1427:
 	{
 		add r0, r5, r6
 		ldc r2, 32
 	}
-	.loc	1 2647 6
+	.loc	1 2654 6
 	{
 		lsu r0, r2, r0
 		nop
@@ -13370,7 +13380,7 @@ read_frame_:
 	bt r0, .LBB36_237
 .Ltmp1428:
 	ldc r0, 1128
-	.loc	1 2648 4
+	.loc	1 2655 4
 .Ltmp1429:
 	{
 		add r0, r1, r0
@@ -13382,7 +13392,7 @@ read_frame_:
 	}
 	bf r2, .LBB36_121
 .Ltmp1430:
-	.loc	1 2082 7
+	.loc	1 2089 7
 	ldaw r1, r1[r7]
 	{
 		ldc r2, 48
@@ -13401,7 +13411,7 @@ read_frame_:
 		ldw r2, r1[0]
 	}
 .Ltmp1431:
-	.loc	1 2650 5
+	.loc	1 2657 5
 	{
 		shl r2, r2, r5
 		nop
@@ -13412,12 +13422,12 @@ read_frame_:
 		stw r2, r1[0]
 	}
 .Ltmp1433:
-	.loc	1 2648 4
+	.loc	1 2655 4
 	{
 		ldc r3, 2
 		ldw r2, r0[0]
 	}
-	.loc	1 2648 4
+	.loc	1 2655 4
 	{
 		lsu r3, r2, r3
 		mkmsk r2, 1
@@ -13425,27 +13435,27 @@ read_frame_:
 	bt r3, .LBB36_121
 .Ltmp1434:
 .LBB36_236:
-	.loc	1 2650 5
+	.loc	1 2657 5
 	ldw r3, sp[896]
 	{
 		nop
 		ldw r11, r1[r2]
 	}
 .Ltmp1435:
-	.loc	1 2650 5
+	.loc	1 2657 5
 	{
 		shl r3, r11, r3
 		nop
 	}
-	.loc	1 2650 5
+	.loc	1 2657 5
 	stw r3, r1[r2]
 .Ltmp1436:
-	.loc	1 2648 62
+	.loc	1 2655 62
 	{
 		add r2, r2, 1
 		ldw r3, r0[0]
 	}
-	.loc	1 2648 4
+	.loc	1 2655 4
 	{
 		lsu r3, r2, r3
 		nop
@@ -13456,7 +13466,7 @@ read_frame_:
 .Ltmp1438:
 .LBB36_237:
 	ldc r0, 116
-	.loc	1 2657 4
+	.loc	1 2664 4
 .Ltmp1439:
 	{
 		add r0, r1, r0
@@ -13468,7 +13478,7 @@ read_frame_:
 	}
 .Ltmp1440:
 	ldc r0, 1128
-	.loc	1 2658 4
+	.loc	1 2665 4
 .Ltmp1441:
 	{
 		add r0, r1, r0
@@ -13480,7 +13490,7 @@ read_frame_:
 	}
 	bf r6, .LBB36_121
 .Ltmp1442:
-	.loc	1 2082 7
+	.loc	1 2089 7
 	ldaw r0, r1[r7]
 	{
 		ldc r2, 48
@@ -13495,7 +13505,7 @@ read_frame_:
 		ldw r8, r0[0]
 	}
 	ldc r0, 112
-	.loc	1 2082 7
+	.loc	1 2089 7
 	{
 		add r0, r1, r0
 		nop
@@ -13510,24 +13520,24 @@ read_frame_:
 		nop
 		ldw r0, r8[0]
 	}
-	.loc	1 2659 5
+	.loc	1 2666 5
 .Ltmp1444:
 	ashr r1, r0, 32
-	.loc	1 2660 5
+	.loc	1 2667 5
 	{
 		mov r2, r5
 		nop
 	}
 	bl __ashldi3
-	.loc	1 2660 5
+	.loc	1 2667 5
 	std r1, r0, r9[0]
 .Ltmp1445:
-	.loc	1 2658 4
+	.loc	1 2665 4
 	{
 		sub r6, r6, 1
 		add r9, r9, 8
 	}
-	.loc	1 2658 4
+	.loc	1 2665 4
 	{
 		add r8, r8, 4
 		nop
@@ -13541,18 +13551,18 @@ read_frame_:
 		nop
 		ldw r11, sp[9]
 	}
-	.loc	1 2835 4
+	.loc	1 2842 4
 .Ltmp1447:
 	{
 		add r1, r11, r1
 		nop
 	}
-	.loc	1 2835 4
+	.loc	1 2842 4
 	{
 		ldc r1, 12
 		stw r2, r1[0]
 	}
-	.loc	1 2836 4
+	.loc	1 2843 4
 	mul r1, r7, r1
 	{
 		add r1, r0, r1
@@ -13564,7 +13574,7 @@ read_frame_:
 		nop
 	}
 	ldc r1, 1184
-	.loc	1 2836 4
+	.loc	1 2843 4
 	{
 		add r1, r11, r1
 		nop
@@ -13574,26 +13584,26 @@ read_frame_:
 		stw r3, r1[0]
 	}
 .Ltmp1448:
-	.loc	1 2845 2
+	.loc	1 2852 2
 	{
 		ldc r11, 2
 		ldw r1, r10[0]
 	}
-	.loc	1 2845 2
+	.loc	1 2852 2
 	{
 		lsu r11, r1, r11
 		nop
 	}
 	bf r11, .LBB36_220
 .Ltmp1449:
-	.loc	1 2848 8
+	.loc	1 2855 8
 	ldaw r0, r0[r7]
 	ldc r11, 80
 	{
 		add r0, r0, r11
 		nop
 	}
-	.loc	1 2848 8
+	.loc	1 2855 8
 	{
 		eq r1, r1, 1
 		ldw r0, r0[0]
@@ -13602,7 +13612,7 @@ read_frame_:
 		nop
 		stw r0, sp[1]
 	}
-	.loc	1 2848 8
+	.loc	1 2855 8
 	{
 		mov r0, r4
 		stw r1, sp[2]
@@ -13621,20 +13631,20 @@ read_frame_:
 	}
 	bf r0, .LBB36_229
 .Ltmp1451:
-	.loc	1 2860 5
+	.loc	1 2867 5
 	{
 		ldc r1, 32
 		ldw r0, r4[1]
 	}
 .Ltmp1452:
-	.loc	1 2857 6
+	.loc	1 2864 6
 	{
 		lsu r1, r1, r6
 		nop
 	}
 	bt r1, .LBB36_227
 .Ltmp1453:
-	.loc	1 2860 5
+	.loc	1 2867 5
 	ldaw r0, r0[r7]
 	{
 		ldc r1, 48
@@ -13663,30 +13673,30 @@ read_frame_:
 		nop
 		ldw r3, r1[0]
 	}
-	.loc	1 2860 5
+	.loc	1 2867 5
 	{
 		sub r2, r2, 1
 		stw r3, r0[0]
 	}
-	.loc	1 2859 4
+	.loc	1 2866 4
 	{
 		add r0, r0, 4
 		add r1, r1, 8
 	}
-	.loc	1 2859 4
+	.loc	1 2866 4
 	bt r2, .LBB36_223
 .Ltmp1455:
 	{
 		nop
 		ldw r0, sp[8]
 	}
-	.loc	1 2861 7
+	.loc	1 2868 7
 .Ltmp1456:
 	{
 		mov r0, r6
 		ldw r3, r0[0]
 	}
-	.loc	1 2861 7
+	.loc	1 2868 7
 	{
 		mov r2, r8
 		ldw r1, sp[10]
@@ -13696,14 +13706,14 @@ read_frame_:
 		ldc r1, 32
 		nop
 	}
-	.loc	1 2861 7
+	.loc	1 2868 7
 	{
 		lsu r0, r1, r0
 		nop
 	}
 	bt r0, .LBB36_228
 .Ltmp1457:
-	.loc	1 2862 7
+	.loc	1 2869 7
 	{
 		mov r0, r6
 		ldw r1, sp[10]
@@ -13717,7 +13727,7 @@ read_frame_:
 		ldc r1, 32
 		nop
 	}
-	.loc	1 2862 7
+	.loc	1 2869 7
 	{
 		lsu r0, r1, r0
 		nop
@@ -13728,10 +13738,10 @@ read_frame_:
 		nop
 		ldw r1, r4[1]
 	}
-	.loc	1 2863 5
+	.loc	1 2870 5
 	ldaw r2, r1[r7]
 	ldc r0, 80
-	.loc	1 2863 5
+	.loc	1 2870 5
 	{
 		add r0, r2, r0
 		nop
@@ -13741,29 +13751,29 @@ read_frame_:
 		ldw r0, r0[0]
 	}
 	ldc r3, 1128
-	.loc	1 2863 5
+	.loc	1 2870 5
 	{
 		add r1, r1, r3
 		nop
 	}
 .Ltmp1459:
-	.loc	1 2863 5
+	.loc	1 2870 5
 	{
 		mov r3, r8
 		ldw r1, r1[0]
 	}
 .Ltmp1460:
-	.loc	1 2863 5
+	.loc	1 2870 5
 	{
 		sub r1, r1, r3
 		ldw r11, sp[8]
 	}
-	.loc	1 2863 5
+	.loc	1 2870 5
 	{
 		ldc r11, 48
 		ldw r8, r11[0]
 	}
-	.loc	1 2863 5
+	.loc	1 2870 5
 	{
 		add r2, r2, r11
 		nop
@@ -13772,7 +13782,7 @@ read_frame_:
 		nop
 		ldw r2, r2[0]
 	}
-	.loc	1 2863 5
+	.loc	1 2870 5
 	ldaw r2, r2[r3]
 	{
 		nop
@@ -13786,13 +13796,13 @@ read_frame_:
 		nop
 		ldw r2, sp[10]
 	}
-	.loc	1 2863 5
+	.loc	1 2870 5
 	bl FLAC__lpc_restore_signal
 	bu .LBB36_229
 .Ltmp1461:
 .LBB36_227:
 	ldc r1, 116
-	.loc	1 2868 4
+	.loc	1 2875 4
 .Ltmp1462:
 	{
 		add r1, r0, r1
@@ -13807,7 +13817,7 @@ read_frame_:
 		mov r9, r1
 		nop
 	}
-	.loc	1 2869 4
+	.loc	1 2876 4
 	{
 		add r0, r0, r9
 		nop
@@ -13821,12 +13831,12 @@ read_frame_:
 		nop
 		ldw r2, sp[9]
 	}
-	.loc	1 2869 4
+	.loc	1 2876 4
 	{
 		add r1, r2, r1
 		shl r10, r8, 3
 	}
-	.loc	1 2869 4
+	.loc	1 2876 4
 	{
 		mov r2, r10
 		nop
@@ -13836,7 +13846,7 @@ read_frame_:
 		nop
 		ldw r2, r4[1]
 	}
-	.loc	1 2870 4
+	.loc	1 2877 4
 	ldaw r0, r2[r7]
 	ldc r1, 80
 	{
@@ -13848,7 +13858,7 @@ read_frame_:
 		ldw r0, r0[0]
 	}
 	ldc r1, 1128
-	.loc	1 2870 4
+	.loc	1 2877 4
 	{
 		add r1, r2, r1
 		nop
@@ -13857,12 +13867,12 @@ read_frame_:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 2870 4
+	.loc	1 2877 4
 	{
 		sub r1, r1, r8
 		ldw r3, sp[8]
 	}
-	.loc	1 2870 4
+	.loc	1 2877 4
 	{
 		add r2, r2, r9
 		ldw r3, r3[0]
@@ -13871,7 +13881,7 @@ read_frame_:
 		nop
 		ldw r2, r2[0]
 	}
-	.loc	1 2870 4
+	.loc	1 2877 4
 	{
 		add r2, r2, r10
 		nop
@@ -13884,7 +13894,7 @@ read_frame_:
 		nop
 		stw r3, sp[1]
 	}
-	.loc	1 2870 4
+	.loc	1 2877 4
 	{
 		mov r3, r8
 		ldw r2, sp[10]
@@ -13897,11 +13907,11 @@ read_frame_:
 		nop
 		ldw r1, r4[1]
 	}
-	.loc	1 2865 5
+	.loc	1 2872 5
 .Ltmp1464:
 	ldaw r2, r1[r7]
 	ldc r0, 80
-	.loc	1 2865 5
+	.loc	1 2872 5
 	{
 		add r0, r2, r0
 		nop
@@ -13911,29 +13921,29 @@ read_frame_:
 		ldw r0, r0[0]
 	}
 	ldc r3, 1128
-	.loc	1 2865 5
+	.loc	1 2872 5
 	{
 		add r1, r1, r3
 		nop
 	}
 .Ltmp1465:
-	.loc	1 2865 5
+	.loc	1 2872 5
 	{
 		mov r3, r8
 		ldw r1, r1[0]
 	}
 .Ltmp1466:
-	.loc	1 2865 5
+	.loc	1 2872 5
 	{
 		sub r1, r1, r3
 		ldw r11, sp[8]
 	}
-	.loc	1 2865 5
+	.loc	1 2872 5
 	{
 		ldc r11, 48
 		ldw r8, r11[0]
 	}
-	.loc	1 2865 5
+	.loc	1 2872 5
 	{
 		add r2, r2, r11
 		nop
@@ -13942,7 +13952,7 @@ read_frame_:
 		nop
 		ldw r2, r2[0]
 	}
-	.loc	1 2865 5
+	.loc	1 2872 5
 	ldaw r2, r2[r3]
 	{
 		nop
@@ -13956,12 +13966,12 @@ read_frame_:
 		nop
 		ldw r2, sp[10]
 	}
-	.loc	1 2865 5
+	.loc	1 2872 5
 	bl FLAC__lpc_restore_signal_wide
 	bu .LBB36_229
 .Ltmp1467:
 .LBB36_107:
-	.loc	1 2056 3
+	.loc	1 2063 3
 	{
 		add r1, r0, r10
 		nop
@@ -13972,7 +13982,7 @@ read_frame_:
 	}
 .Ltmp1468:
 	ldc r1, 1140
-	.loc	1 2057 3
+	.loc	1 2064 3
 	{
 		add r1, r0, r1
 		nop
@@ -13981,7 +13991,7 @@ read_frame_:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 2057 3
+	.loc	1 2064 3
 	{
 		eq r2, r1, 3
 		nop
@@ -13994,12 +14004,12 @@ read_frame_:
 	}
 	bf r2, .LBB36_109
 .Ltmp1470:
-	.loc	1 2068 8
+	.loc	1 2075 8
 	{
 		eq r1, r7, 0
 		nop
 	}
-	.loc	1 2068 8
+	.loc	1 2075 8
 	{
 		add r6, r6, r1
 		nop
@@ -14008,12 +14018,12 @@ read_frame_:
 	bu .LBB36_113
 .Ltmp1472:
 .LBB36_112:
-	.loc	1 2073 8
+	.loc	1 2080 8
 	{
 		eq r1, r7, 1
 		nop
 	}
-	.loc	1 2073 8
+	.loc	1 2080 8
 	{
 		add r6, r6, r1
 		ldc r9, 2
@@ -14028,12 +14038,12 @@ read_frame_:
 	}
 	bf r1, .LBB36_113
 .Ltmp1475:
-	.loc	1 2063 8
+	.loc	1 2070 8
 	{
 		eq r1, r7, 1
 		nop
 	}
-	.loc	1 2063 8
+	.loc	1 2070 8
 	{
 		add r6, r6, r1
 		nop
@@ -14050,7 +14060,7 @@ read_frame_:
 		ldc r2, 8
 		nop
 	}
-	.loc	1 2573 6
+	.loc	1 2580 6
 .Ltmp1478:
 	bl FLAC__bitreader_read_raw_uint32
 	bt r0, .LBB36_114
@@ -14086,7 +14096,7 @@ read_frame_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 2979 6
+	.loc	1 2986 6
 .Ltmp1482:
 	bl FLAC__bitreader_is_consumed_byte_aligned
 	bt r0, .LBB36_246
@@ -14107,7 +14117,7 @@ read_frame_:
 		nop
 		ldw r5, r0[11]
 	}
-	.loc	1 2981 72
+	.loc	1 2988 72
 .Ltmp1484:
 	{
 		mov r0, r5
@@ -14120,7 +14130,7 @@ read_frame_:
 		ldaw r1, sp[14]
 	}
 .Ltmp1486:
-	.loc	1 2981 7
+	.loc	1 2988 7
 	{
 		mov r0, r5
 		nop
@@ -14139,7 +14149,7 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 4680
-	.loc	1 3234 5
+	.loc	1 3241 5
 .Ltmp1489:
 	{
 		add r1, r0, r1
@@ -14155,12 +14165,12 @@ read_frame_:
 		nop
 		ldw r3, r0[8]
 	}
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		ldc r1, 0
 		ldw r2, r0[9]
 	}
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r0, r4
 		nop
@@ -14189,7 +14199,7 @@ read_frame_:
 		nop
 		ldw r0, r11[0]
 	}
-	.loc	1 2098 5
+	.loc	1 2105 5
 .Ltmp1493:
 	{
 		eq r0, r0, 3
@@ -14205,7 +14215,7 @@ read_frame_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 2099 15
+	.loc	1 2106 15
 .Ltmp1495:
 	bl FLAC__bitreader_get_read_crc16
 	{
@@ -14216,12 +14226,12 @@ read_frame_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 2100 7
+	.loc	1 2107 7
 .Ltmp1496:
 	ldw r2, cp[FLAC__FRAME_FOOTER_CRC_LEN]
 	ldaw r1, sp[890]
 .Ltmp1497:
-	.loc	1 2100 7
+	.loc	1 2107 7
 	bl FLAC__bitreader_read_raw_uint32
 .Ltmp1498:
 	{
@@ -14232,10 +14242,10 @@ read_frame_:
 		nop
 		ldw r1, r11[0]
 	}
-	.loc	1 2100 7
+	.loc	1 2107 7
 	bf r0, .LBB36_248
 .Ltmp1499:
-	.loc	1 2107 5
+	.loc	1 2114 5
 	{
 		eq r0, r1, 3
 		nop
@@ -14260,7 +14270,7 @@ read_frame_:
 		ldw r2, r4[1]
 	}
 	ldc r0, 1140
-	.loc	1 3083 2
+	.loc	1 3090 2
 .Ltmp1503:
 	{
 		add r0, r2, r0
@@ -14270,7 +14280,7 @@ read_frame_:
 		nop
 		ldw r1, r0[0]
 	}
-	.loc	1 3083 2
+	.loc	1 3090 2
 	{
 		eq r0, r1, 1
 		nop
@@ -14284,7 +14294,7 @@ read_frame_:
 	bf r0, .LBB36_254
 .Ltmp1505:
 	ldc r0, 1128
-	.loc	1 3108 3
+	.loc	1 3115 3
 .Ltmp1506:
 	{
 		add r1, r2, r0
@@ -14309,18 +14319,18 @@ read_frame_:
 		nop
 		ldw r6, sp[10]
 	}
-	.loc	1 3109 7
+	.loc	1 3116 7
 .Ltmp1508:
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	1 3109 7
+	.loc	1 3116 7
 	{
 		ldc r3, 48
 		ldw r0, r0[0]
 	}
-	.loc	1 3120 5
+	.loc	1 3127 5
 .Ltmp1509:
 	{
 		add r3, r6, r3
@@ -14335,17 +14345,17 @@ read_frame_:
 		stw r10, sp[8]
 	}
 .Ltmp1510:
-	.loc	1 3112 5
+	.loc	1 3119 5
 	{
 		add r5, r6, r11
 		nop
 	}
 .Ltmp1511:
-	.loc	1 2111 4
+	.loc	1 2118 4
 	bf r0, .LBB36_271
 .Ltmp1512:
 	ldc r0, 112
-	.loc	1 3121 5
+	.loc	1 3128 5
 .Ltmp1513:
 	{
 		add r0, r6, r0
@@ -14377,13 +14387,13 @@ read_frame_:
 		nop
 		ldw r0, r10[r8]
 	}
-	.loc	1 3120 5
+	.loc	1 3127 5
 	ashr r9, r0, 32
 	{
 		mov r3, r2
 		nop
 	}
-	.loc	1 3120 5
+	.loc	1 3127 5
 	{
 		shr r10, r0, r3
 		shl r9, r9, 1
@@ -14392,9 +14402,9 @@ read_frame_:
 		or r9, r9, r10
 		shl r0, r0, 1
 	}
-	.loc	1 3121 5
+	.loc	1 3128 5
 	ldd r5, r6, r11[0]
-	.loc	1 3121 5
+	.loc	1 3128 5
 	{
 		mov r10, r6
 		nop
@@ -14403,15 +14413,15 @@ read_frame_:
 		zext r10, 1
 		nop
 	}
-	.loc	1 3121 5
+	.loc	1 3128 5
 	{
 		or r0, r10, r0
 		mov r2, r7
 	}
-	.loc	1 3122 5
+	.loc	1 3129 5
 	ladd r1, r10, r0, r6, r2
 	ladd r7, r1, r9, r5, r1
-	.loc	1 3122 5
+	.loc	1 3129 5
 	{
 		shl r1, r1, r3
 		shr r7, r10, 1
@@ -14420,16 +14430,16 @@ read_frame_:
 		or r1, r7, r1
 		ldw r10, sp[8]
 	}
-	.loc	1 3122 5
+	.loc	1 3129 5
 	stw r1, r10[r8]
-	.loc	1 3123 5
+	.loc	1 3130 5
 	lsub r1, r0, r0, r6, r2
 	{
 		mov r7, r2
 		nop
 	}
 	lsub r5, r1, r9, r5, r1
-	.loc	1 3123 5
+	.loc	1 3130 5
 	{
 		shl r1, r1, r3
 		mov r2, r3
@@ -14446,16 +14456,16 @@ read_frame_:
 		nop
 		ldw r3, sp[7]
 	}
-	.loc	1 3123 5
+	.loc	1 3130 5
 	stw r0, r3[r8]
 .Ltmp1515:
-	.loc	1 3108 3
+	.loc	1 3115 3
 	{
 		add r8, r8, 1
 		ldw r0, r1[0]
 	}
 .Ltmp1516:
-	.loc	1 3108 3
+	.loc	1 3115 3
 	{
 		add r11, r11, 8
 		lsu r0, r8, r0
@@ -14478,7 +14488,7 @@ read_frame_:
 		nop
 		ldw r0, r11[0]
 	}
-	.loc	1 2084 7
+	.loc	1 2091 7
 .Ltmp1519:
 	{
 		eq r0, r0, 4
@@ -14502,52 +14512,52 @@ read_frame_:
 		ldc r2, 8
 		nop
 	}
-	.loc	1 2507 8
+	.loc	1 2514 8
 .Ltmp1522:
 	bl FLAC__bitreader_read_raw_uint32
 .Ltmp1523:
 	bf r0, .LBB36_320
 .Ltmp1524:
-	.loc	1 2509 4
+	.loc	1 2516 4
 	ldw r0, sp[891]
-	.loc	1 2509 4
+	.loc	1 2516 4
 	ldw r1, sp[896]
-	.loc	1 2509 4
+	.loc	1 2516 4
 	{
 		add r2, r1, 1
 		nop
 	}
 .Ltmp1525:
-	.loc	1 2509 4
+	.loc	1 2516 4
 	stw r2, sp[896]
 	{
 		ldaw r2, sp[14]
 		nop
 	}
 .Ltmp1526:
-	.loc	1 2509 4
+	.loc	1 2516 4
 	st8 r0, r2[r1]
-	.loc	1 2510 4
+	.loc	1 2517 4
 	ldw r1, sp[897]
-	.loc	1 2510 4
+	.loc	1 2517 4
 	{
 		shl r1, r1, 8
 		nop
 	}
-	.loc	1 2510 4
+	.loc	1 2517 4
 	{
 		or r1, r1, r0
 		nop
 	}
 .Ltmp1527:
-	.loc	1 2510 4
+	.loc	1 2517 4
 	stw r1, sp[897]
 	{
 		ldc r0, 13
 		nop
 	}
 .Ltmp1528:
-	.loc	1 2514 11
+	.loc	1 2521 11
 	{
 		eq r0, r10, r0
 		nop
@@ -14558,7 +14568,7 @@ read_frame_:
 		ldc r0, 10
 		nop
 	}
-	.loc	1 2517 4
+	.loc	1 2524 4
 	mul r1, r1, r0
 .Ltmp1530:
 .LBB36_83:
@@ -14567,7 +14577,7 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r2, 1132
-	.loc	1 2517 4
+	.loc	1 2524 4
 	{
 		add r2, r0, r2
 		nop
@@ -14588,12 +14598,12 @@ read_frame_:
 		ldc r2, 8
 		mov r1, r5
 	}
-	.loc	1 2521 6
+	.loc	1 2528 6
 .Ltmp1533:
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB36_320
 .Ltmp1534:
-	.loc	1 2523 2
+	.loc	1 2530 2
 	{
 		ldc r7, 0
 		nop
@@ -14603,15 +14613,15 @@ read_frame_:
 		ld8u r5, r5[r7]
 	}
 .Ltmp1535:
-	.loc	1 2526 5
+	.loc	1 2533 5
 	ldw r1, sp[896]
 	{
 		ldaw r0, sp[14]
 		nop
 	}
-	.loc	1 2526 5
+	.loc	1 2533 5
 	bl FLAC__crc8
-	.loc	1 2526 5
+	.loc	1 2533 5
 	{
 		eq r1, r0, r5
 		ldw r0, r4[1]
@@ -14619,7 +14629,7 @@ read_frame_:
 	bf r1, .LBB36_4
 .Ltmp1536:
 	ldc r1, 228
-	.loc	1 2534 2
+	.loc	1 2541 2
 	{
 		add r1, r0, r1
 		nop
@@ -14629,7 +14639,7 @@ read_frame_:
 		stw r7, r1[0]
 	}
 	ldc r2, 1148
-	.loc	1 2535 5
+	.loc	1 2542 5
 .Ltmp1537:
 	{
 		add r11, r0, r2
@@ -14642,7 +14652,7 @@ read_frame_:
 	bt r2, .LBB36_96
 .Ltmp1538:
 	ldc r2, 1152
-	.loc	1 2536 3
+	.loc	1 2543 3
 .Ltmp1539:
 	{
 		add r2, r0, r2
@@ -14653,7 +14663,7 @@ read_frame_:
 		ldw r3, r2[0]
 	}
 .Ltmp1540:
-	.loc	1 2536 3
+	.loc	1 2543 3
 	stw r3, sp[897]
 	{
 		mkmsk r5, 1
@@ -14664,7 +14674,7 @@ read_frame_:
 		stw r5, r11[0]
 	}
 	ldc r11, 224
-	.loc	1 2538 6
+	.loc	1 2545 6
 .Ltmp1541:
 	{
 		add r11, r0, r11
@@ -14674,14 +14684,14 @@ read_frame_:
 		nop
 		ldw r11, r11[0]
 	}
-	.loc	1 2538 6
+	.loc	1 2545 6
 	bf r11, .LBB36_89
 .Ltmp1542:
-	.loc	1 2539 4
+	.loc	1 2546 4
 	lmul r1, r3, r11, r3, r7, r7
 .Ltmp1543:
 .LBB36_95:
-	.loc	1 2554 4
+	.loc	1 2561 4
 	std r1, r3, r2[0]
 .Ltmp1544:
 .LBB36_96:
@@ -14703,7 +14713,7 @@ read_frame_:
 	bu .LBB36_61
 .Ltmp1548:
 .LBB36_248:
-	.loc	1 2102 7
+	.loc	1 2109 7
 	{
 		eq r0, r1, 4
 		nop
@@ -14726,7 +14736,7 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 4680
-	.loc	1 3234 5
+	.loc	1 3241 5
 .Ltmp1552:
 	{
 		add r1, r0, r1
@@ -14742,12 +14752,12 @@ read_frame_:
 		nop
 		ldw r3, r0[8]
 	}
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		ldc r1, 2
 		ldw r2, r0[9]
 	}
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r0, r4
 		nop
@@ -14770,7 +14780,7 @@ read_frame_:
 .Ltmp1555:
 .LBB36_89:
 	ldc r11, 240
-	.loc	1 2540 11
+	.loc	1 2547 11
 .Ltmp1556:
 	{
 		add r11, r0, r11
@@ -14780,11 +14790,11 @@ read_frame_:
 		nop
 		ldw r11, r11[0]
 	}
-	.loc	1 2540 11
+	.loc	1 2547 11
 	bf r11, .LBB36_92
 .Ltmp1557:
 	ldc r11, 264
-	.loc	1 2541 7
+	.loc	1 2548 7
 .Ltmp1558:
 	{
 		add r11, r0, r11
@@ -14795,7 +14805,7 @@ read_frame_:
 		ldw r11, r11[0]
 	}
 	ldc r5, 268
-	.loc	1 2541 7
+	.loc	1 2548 7
 	{
 		add r5, r0, r5
 		nop
@@ -14804,17 +14814,17 @@ read_frame_:
 		nop
 		ldw r5, r5[0]
 	}
-	.loc	1 2541 7
+	.loc	1 2548 7
 	{
 		eq r5, r11, r5
 		nop
 	}
 	bf r5, .LBB36_98
 .Ltmp1559:
-	.loc	1 2542 5
+	.loc	1 2549 5
 	lmul r3, r5, r11, r3, r7, r7
 .Ltmp1560:
-	.loc	1 2542 5
+	.loc	1 2549 5
 	std r3, r5, r2[0]
 	{
 		nop
@@ -14824,7 +14834,7 @@ read_frame_:
 .Ltmp1561:
 .LBB36_98:
 	ldc r1, 4680
-	.loc	1 3234 5
+	.loc	1 3241 5
 .Ltmp1562:
 	{
 		add r1, r0, r1
@@ -14834,11 +14844,11 @@ read_frame_:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 3234 5
+	.loc	1 3241 5
 	bf r1, .LBB36_99
 .Ltmp1563:
 	ldc r1, 8336
-	.loc	1 3237 3
+	.loc	1 3244 3
 .Ltmp1564:
 	{
 		add r0, r0, r1
@@ -14848,7 +14858,7 @@ read_frame_:
 		nop
 		ldw r1, r0[0]
 	}
-	.loc	1 3237 3
+	.loc	1 3244 3
 	{
 		add r1, r1, 1
 		nop
@@ -14865,7 +14875,7 @@ read_frame_:
 		ldw r3, r0[8]
 	}
 .Ltmp1566:
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mkmsk r1, 2
 		ldw r2, r0[9]
@@ -14878,7 +14888,7 @@ read_frame_:
 		stw r11, sp[11]
 	}
 	ldc r0, 1128
-	.loc	1 3090 3
+	.loc	1 3097 3
 .Ltmp1568:
 	{
 		add r1, r2, r0
@@ -14895,38 +14905,38 @@ read_frame_:
 		nop
 		ldw r2, sp[10]
 	}
-	.loc	1 3091 7
+	.loc	1 3098 7
 .Ltmp1570:
 	{
 		add r0, r2, r0
 		nop
 	}
-	.loc	1 3091 7
+	.loc	1 3098 7
 	{
 		ldc r3, 48
 		ldw r0, r0[0]
 	}
-	.loc	1 3092 5
+	.loc	1 3099 5
 	{
 		add r3, r2, r3
 		nop
 	}
-	.loc	1 3092 5
+	.loc	1 3099 5
 	{
 		ldc r11, 52
 		ldw r3, r3[0]
 	}
-	.loc	1 3094 5
+	.loc	1 3101 5
 	{
 		add r5, r2, r11
 		nop
 	}
 .Ltmp1571:
-	.loc	1 2111 4
+	.loc	1 2118 4
 	bf r0, .LBB36_265
 .Ltmp1572:
 	ldc r0, 112
-	.loc	1 3092 5
+	.loc	1 3099 5
 .Ltmp1573:
 	{
 		add r0, r2, r0
@@ -14936,13 +14946,13 @@ read_frame_:
 		nop
 		ldw r11, r0[0]
 	}
-	.loc	1 3092 5
+	.loc	1 3099 5
 	{
 		ldc r6, 0
 		ldw r5, r5[0]
 	}
 .Ltmp1574:
-	.loc	1 2111 4
+	.loc	1 2118 4
 	{
 		mov r7, r6
 		nop
@@ -14953,21 +14963,21 @@ read_frame_:
 		nop
 		ldw r0, r3[r7]
 	}
-	.loc	1 3092 5
+	.loc	1 3099 5
 .Ltmp1576:
 	ldd r9, r8, r11[0]
-	.loc	1 3092 5
+	.loc	1 3099 5
 	lsub r8, r0, r0, r8, r6
-	.loc	1 3092 5
+	.loc	1 3099 5
 	stw r0, r5[r7]
 .Ltmp1577:
-	.loc	1 3090 3
+	.loc	1 3097 3
 	{
 		add r7, r7, 1
 		ldw r0, r1[0]
 	}
 .Ltmp1578:
-	.loc	1 3090 3
+	.loc	1 3097 3
 	{
 		add r11, r11, 8
 		lsu r0, r7, r0
@@ -14987,7 +14997,7 @@ read_frame_:
 		nop
 		ldw r1, sp[10]
 	}
-	.loc	1 3099 3
+	.loc	1 3106 3
 .Ltmp1581:
 	{
 		add r1, r1, r0
@@ -15004,18 +15014,18 @@ read_frame_:
 		nop
 		ldw r2, sp[10]
 	}
-	.loc	1 3100 7
+	.loc	1 3107 7
 .Ltmp1583:
 	{
 		add r0, r2, r0
 		nop
 	}
-	.loc	1 3100 7
+	.loc	1 3107 7
 	{
 		ldc r3, 48
 		ldw r0, r0[0]
 	}
-	.loc	1 3101 5
+	.loc	1 3108 5
 	{
 		add r5, r2, r3
 		ldc r3, 52
@@ -15029,11 +15039,11 @@ read_frame_:
 		ldw r3, r3[0]
 	}
 .Ltmp1584:
-	.loc	1 2111 4
+	.loc	1 2118 4
 	bf r0, .LBB36_259
 .Ltmp1585:
 	ldc r0, 112
-	.loc	1 3101 5
+	.loc	1 3108 5
 .Ltmp1586:
 	{
 		add r0, r2, r0
@@ -15043,13 +15053,13 @@ read_frame_:
 		nop
 		ldw r11, r0[0]
 	}
-	.loc	1 3101 5
+	.loc	1 3108 5
 	{
 		ldc r6, 0
 		ldw r5, r5[0]
 	}
 .Ltmp1587:
-	.loc	1 2111 4
+	.loc	1 2118 4
 	{
 		mov r7, r6
 		nop
@@ -15060,21 +15070,21 @@ read_frame_:
 		nop
 		ldw r0, r3[r7]
 	}
-	.loc	1 3101 5
+	.loc	1 3108 5
 .Ltmp1589:
 	ldd r9, r8, r11[0]
-	.loc	1 3101 5
+	.loc	1 3108 5
 	ladd r8, r0, r8, r0, r6
-	.loc	1 3101 5
+	.loc	1 3108 5
 	stw r0, r5[r7]
 .Ltmp1590:
-	.loc	1 3099 3
+	.loc	1 3106 3
 	{
 		add r7, r7, 1
 		ldw r0, r1[0]
 	}
 .Ltmp1591:
-	.loc	1 3099 3
+	.loc	1 3106 3
 	{
 		add r11, r11, 8
 		lsu r0, r7, r0
@@ -15083,11 +15093,11 @@ read_frame_:
 	bu .LBB36_273
 .Ltmp1592:
 .LBB36_92:
-	.loc	1 2548 11
+	.loc	1 2555 11
 	bf r3, .LBB36_93
 .Ltmp1593:
 	ldc r1, 1128
-	.loc	1 2554 4
+	.loc	1 2561 4
 .Ltmp1594:
 	{
 		add r1, r0, r1
@@ -15097,20 +15107,20 @@ read_frame_:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 2554 4
+	.loc	1 2561 4
 	lmul r1, r3, r1, r3, r7, r7
 .Ltmp1595:
 	bu .LBB36_95
 .Ltmp1596:
 .LBB36_93:
 	ldc r3, 1128
-	.loc	1 2549 4
+	.loc	1 2556 4
 .Ltmp1597:
 	{
 		add r3, r0, r3
 		nop
 	}
-	.loc	1 2549 4
+	.loc	1 2556 4
 	std r7, r7, r2[0]
 	{
 		nop
@@ -15123,7 +15133,7 @@ read_frame_:
 	bu .LBB36_96
 .Ltmp1598:
 .LBB36_271:
-	.loc	1 3112 5
+	.loc	1 3119 5
 	{
 		ldc r5, 0
 		ldw r11, r5[0]
@@ -15135,13 +15145,13 @@ read_frame_:
 		ldw r0, r10[r5]
 	}
 .Ltmp1600:
-	.loc	1 3112 5
+	.loc	1 3119 5
 	{
 		shl r0, r0, 1
 		ldw r6, r11[r5]
 	}
 .Ltmp1601:
-	.loc	1 3114 5
+	.loc	1 3121 5
 	{
 		mov r7, r6
 		nop
@@ -15150,37 +15160,37 @@ read_frame_:
 		zext r7, 1
 		nop
 	}
-	.loc	1 3114 5
+	.loc	1 3121 5
 	{
 		or r0, r7, r0
 		nop
 	}
-	.loc	1 3115 5
+	.loc	1 3122 5
 	{
 		add r7, r0, r6
 		nop
 	}
-	.loc	1 3115 5
+	.loc	1 3122 5
 	ashr r7, r7, 1
-	.loc	1 3115 5
+	.loc	1 3122 5
 	stw r7, r10[r5]
-	.loc	1 3116 5
+	.loc	1 3123 5
 	{
 		sub r0, r0, r6
 		nop
 	}
-	.loc	1 3116 5
+	.loc	1 3123 5
 	ashr r0, r0, 1
-	.loc	1 3116 5
+	.loc	1 3123 5
 	stw r0, r11[r5]
 .Ltmp1602:
-	.loc	1 3108 3
+	.loc	1 3115 3
 	{
 		add r5, r5, 1
 		ldw r0, r1[0]
 	}
 .Ltmp1603:
-	.loc	1 3108 3
+	.loc	1 3115 3
 	{
 		lsu r0, r5, r0
 		nop
@@ -15189,7 +15199,7 @@ read_frame_:
 	bu .LBB36_273
 .Ltmp1604:
 .LBB36_265:
-	.loc	1 3094 5
+	.loc	1 3101 5
 	{
 		ldc r5, 0
 		ldw r11, r5[0]
@@ -15204,21 +15214,21 @@ read_frame_:
 		nop
 		ldw r6, r11[r5]
 	}
-	.loc	1 3094 5
+	.loc	1 3101 5
 	{
 		sub r0, r0, r6
 		nop
 	}
-	.loc	1 3094 5
+	.loc	1 3101 5
 	stw r0, r11[r5]
 .Ltmp1606:
-	.loc	1 3090 3
+	.loc	1 3097 3
 	{
 		add r5, r5, 1
 		ldw r0, r1[0]
 	}
 .Ltmp1607:
-	.loc	1 3090 3
+	.loc	1 3097 3
 	{
 		lsu r0, r5, r0
 		nop
@@ -15227,7 +15237,7 @@ read_frame_:
 	bu .LBB36_273
 .Ltmp1608:
 .LBB36_259:
-	.loc	1 3103 5
+	.loc	1 3110 5
 	{
 		ldc r5, 0
 		ldw r11, r5[0]
@@ -15242,21 +15252,21 @@ read_frame_:
 		nop
 		ldw r6, r11[r5]
 	}
-	.loc	1 3103 5
+	.loc	1 3110 5
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	1 3103 5
+	.loc	1 3110 5
 	stw r0, r11[r5]
 .Ltmp1610:
-	.loc	1 3099 3
+	.loc	1 3106 3
 	{
 		add r5, r5, 1
 		ldw r0, r1[0]
 	}
 .Ltmp1611:
-	.loc	1 3099 3
+	.loc	1 3106 3
 	{
 		lsu r0, r5, r0
 		nop
@@ -15269,7 +15279,7 @@ read_frame_:
 		nop
 		ldw r2, sp[10]
 	}
-	.loc	1 2113 4
+	.loc	1 2120 4
 .Ltmp1613:
 	{
 		add r0, r2, r0
@@ -15279,7 +15289,7 @@ read_frame_:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 2113 4
+	.loc	1 2120 4
 	bf r0, .LBB36_274
 .Ltmp1614:
 	{
@@ -15295,7 +15305,7 @@ read_frame_:
 .Ltmp1615:
 .LBB36_276:
 	ldc r0, 1128
-	.loc	1 2114 5
+	.loc	1 2121 5
 .Ltmp1616:
 	{
 		add r0, r2, r0
@@ -15329,7 +15339,7 @@ read_frame_:
 		add r0, r0, r2
 		nop
 	}
-	.loc	1 2117 9
+	.loc	1 2124 9
 .Ltmp1618:
 	{
 		ldc r9, 0
@@ -15337,15 +15347,15 @@ read_frame_:
 	}
 .Ltmp1619:
 .LBB36_278:
-	.loc	1 2115 6
+	.loc	1 2122 6
 	{
 		sub r0, r8, r3
 		ldw r7, r11[r9]
 	}
 .Ltmp1620:
-	.loc	1 2117 9
+	.loc	1 2124 9
 	ashr r2, r10, r0
-	.loc	1 2117 9
+	.loc	1 2124 9
 	{
 		lss r2, r7, r2
 		nop
@@ -15362,13 +15372,13 @@ read_frame_:
 	}
 	bt r0, .LBB36_282
 .Ltmp1622:
-	.loc	1 2114 63
+	.loc	1 2121 63
 	{
 		add r9, r9, 1
 		nop
 	}
 .Ltmp1623:
-	.loc	1 2114 5
+	.loc	1 2121 5
 	{
 		lsu r0, r9, r1
 		nop
@@ -15391,7 +15401,7 @@ read_frame_:
 		ldw r2, sp[10]
 	}
 	ldc r0, 4680
-	.loc	1 3234 5
+	.loc	1 3241 5
 .Ltmp1626:
 	{
 		add r0, r2, r0
@@ -15401,7 +15411,7 @@ read_frame_:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 3234 5
+	.loc	1 3241 5
 	bf r0, .LBB36_284
 .Ltmp1627:
 	{
@@ -15415,7 +15425,7 @@ read_frame_:
 		nop
 		ldw r3, r2[8]
 	}
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r0, r4
 		ldw r2, r2[9]
@@ -15424,7 +15434,7 @@ read_frame_:
 		ldc r9, 2
 		nop
 	}
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r1, r9
 		nop
@@ -15449,14 +15459,14 @@ read_frame_:
 	}
 .Ltmp1630:
 .LBB36_286:
-	.loc	1 2113 73
+	.loc	1 2120 73
 	{
 		add r5, r5, 1
 		nop
 	}
 .Ltmp1631:
 	ldc r0, 1136
-	.loc	1 2113 4
+	.loc	1 2120 4
 	{
 		add r0, r2, r0
 		nop
@@ -15465,7 +15475,7 @@ read_frame_:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 2113 4
+	.loc	1 2120 4
 	{
 		lsu r0, r5, r0
 		nop
@@ -15485,7 +15495,7 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 8304
-	.loc	1 2137 5
+	.loc	1 2144 5
 .Ltmp1634:
 	{
 		add r1, r0, r1
@@ -15501,7 +15511,7 @@ read_frame_:
 		nop
 		ldw r1, r11[0]
 	}
-	.loc	1 2137 5
+	.loc	1 2144 5
 	{
 		eq r1, r1, 3
 		nop
@@ -15509,7 +15519,7 @@ read_frame_:
 	bf r1, .LBB36_322
 .Ltmp1636:
 	ldc r1, 4680
-	.loc	1 2137 5
+	.loc	1 2144 5
 	{
 		add r1, r0, r1
 		nop
@@ -15532,7 +15542,7 @@ read_frame_:
 		stw r11, sp[11]
 	}
 	ldc r1, 4800
-	.loc	1 2140 6
+	.loc	1 2147 6
 .Ltmp1639:
 	{
 		add r1, r0, r1
@@ -15543,28 +15553,28 @@ read_frame_:
 		add r2, r0, r2
 		nop
 	}
-	.loc	1 2140 6
+	.loc	1 2147 6
 	ldd r6, r2, r2[0]
-	.loc	1 2140 6
+	.loc	1 2147 6
 	{
 		ldc r5, 0
 		ldw r3, r1[0]
 	}
-	.loc	1 2140 6
+	.loc	1 2147 6
 	ladd r2, r11, r3, r2, r5
 	{
 		add r7, r6, r2
 		nop
 	}
 	ldc r2, 1152
-	.loc	1 2140 6
+	.loc	1 2147 6
 	{
 		add r2, r0, r2
 		nop
 	}
-	.loc	1 2140 6
+	.loc	1 2147 6
 	ldd r8, r6, r2[0]
-	.loc	1 2140 6
+	.loc	1 2147 6
 	{
 		eq r2, r8, r7
 		nop
@@ -15591,10 +15601,10 @@ read_frame_:
 .Ltmp1643:
 	bt r7, .LBB36_299
 .Ltmp1644:
-	.loc	1 2141 4
+	.loc	1 2148 4
 	lsub r2, r6, r6, r11, r5
 	ldc r2, 4804
-	.loc	1 2147 7
+	.loc	1 2154 7
 .Ltmp1645:
 	{
 		add r2, r0, r2
@@ -15605,7 +15615,7 @@ read_frame_:
 		ldw r2, r2[0]
 	}
 	ldc r11, 1132
-	.loc	1 2147 7
+	.loc	1 2154 7
 	{
 		add r11, r0, r11
 		nop
@@ -15614,7 +15624,7 @@ read_frame_:
 		nop
 		ldw r11, r11[0]
 	}
-	.loc	1 2147 7
+	.loc	1 2154 7
 	{
 		eq r2, r2, r11
 		nop
@@ -15622,7 +15632,7 @@ read_frame_:
 	bf r2, .LBB36_301
 .Ltmp1646:
 	ldc r2, 4808
-	.loc	1 2147 7
+	.loc	1 2154 7
 	{
 		add r2, r0, r2
 		nop
@@ -15632,7 +15642,7 @@ read_frame_:
 		ldw r2, r2[0]
 	}
 	ldc r11, 1136
-	.loc	1 2147 7
+	.loc	1 2154 7
 	{
 		add r11, r0, r11
 		nop
@@ -15641,7 +15651,7 @@ read_frame_:
 		nop
 		ldw r11, r11[0]
 	}
-	.loc	1 2147 7
+	.loc	1 2154 7
 	{
 		eq r2, r2, r11
 		nop
@@ -15649,12 +15659,12 @@ read_frame_:
 	bf r2, .LBB36_303
 .Ltmp1647:
 	ldc r2, 4816
-	.loc	1 2147 7
+	.loc	1 2154 7
 	{
 		add r2, r0, r2
 		nop
 	}
-	.loc	1 2147 7
+	.loc	1 2154 7
 	{
 		add r0, r0, r10
 		ldw r2, r2[0]
@@ -15663,7 +15673,7 @@ read_frame_:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 2147 7
+	.loc	1 2154 7
 	{
 		eq r0, r2, r0
 		ldw r11, sp[11]
@@ -15680,22 +15690,22 @@ read_frame_:
 		ldc r2, 40
 		ldaw r7, sp[14]
 	}
-	.loc	1 2153 5
+	.loc	1 2160 5
 .Ltmp1650:
 	{
 		mov r0, r7
 		nop
 	}
 	bl __memcpy_4
-	.loc	1 2154 5
+	.loc	1 2161 5
 	ldaw r0, sp[888]
-	.loc	1 2154 5
+	.loc	1 2161 5
 	st16 r5, r0[r5]
 	{
 		ldc r0, 4
 		nop
 	}
-	.loc	1 2158 8
+	.loc	1 2165 8
 .Ltmp1651:
 	{
 		or r0, r7, r0
@@ -15705,39 +15715,39 @@ read_frame_:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 2158 8
+	.loc	1 2165 8
 	ldaw r0, r0[r0]
 .Ltmp1652:
-	.loc	1 2158 8
+	.loc	1 2165 8
 	{
 		lsu r1, r0, r6
 		nop
 	}
 	bt r1, .LBB36_308
 .Ltmp1653:
-	.loc	1 2158 8
+	.loc	1 2165 8
 	{
 		mov r0, r6
 		nop
 	}
 .Ltmp1654:
 .LBB36_308:
-	.loc	1 2160 8
+	.loc	1 2167 8
 	{
 		ldc r2, 50
 		ldw r1, sp[14]
 	}
-	.loc	1 2160 8
+	.loc	1 2167 8
 	mul r6, r1, r2
 .Ltmp1655:
-	.loc	1 2160 8
+	.loc	1 2167 8
 	{
 		lsu r1, r6, r0
 		nop
 	}
 	bt r1, .LBB36_310
 .Ltmp1656:
-	.loc	1 2160 8
+	.loc	1 2167 8
 	{
 		mov r6, r0
 		nop
@@ -15752,25 +15762,25 @@ read_frame_:
 	ldc r7, 432
 .Ltmp1658:
 .LBB36_311:
-	.loc	1 2162 5
+	.loc	1 2169 5
 	bf r6, .LBB36_321
 .Ltmp1659:
 	{
 		nop
 		ldw r9, sp[14]
 	}
-	.loc	1 2163 6
+	.loc	1 2170 6
 .Ltmp1660:
 	ldd r1, r0, sp[10]
-	.loc	1 2163 6
+	.loc	1 2170 6
 	ladd r2, r0, r0, r9, r5
 	{
 		add r1, r1, r2
 		nop
 	}
-	.loc	1 2163 6
+	.loc	1 2170 6
 	std r1, r0, sp[10]
-	.loc	1 2164 9
+	.loc	1 2171 9
 .Ltmp1661:
 	{
 		lsu r2, r6, r9
@@ -15778,7 +15788,7 @@ read_frame_:
 	}
 	bf r2, .LBB36_314
 .Ltmp1662:
-	.loc	1 2165 7
+	.loc	1 2172 7
 	{
 		mov r9, r6
 		stw r6, sp[14]
@@ -15797,31 +15807,31 @@ read_frame_:
 		nop
 		stw r9, r2[6]
 	}
-	.loc	1 2170 6
+	.loc	1 2177 6
 	ladd r2, r0, r9, r0, r5
 	{
 		add r1, r1, r2
 		ldw r2, r4[1]
 	}
 	ldc r3, 232
-	.loc	1 2170 6
+	.loc	1 2177 6
 	{
 		add r2, r2, r3
 		nop
 	}
-	.loc	1 2170 6
+	.loc	1 2177 6
 	std r1, r0, r2[0]
 	{
 		nop
 		ldw r2, sp[16]
 	}
-	.loc	1 2172 10
+	.loc	1 2179 10
 .Ltmp1664:
 	{
 		mov r0, r4
 		ldw r3, sp[18]
 	}
-	.loc	1 2172 10
+	.loc	1 2179 10
 	{
 		mov r1, r9
 		nop
@@ -15833,7 +15843,7 @@ read_frame_:
 		nop
 		stw r9, sp[10]
 	}
-	.loc	1 2175 6
+	.loc	1 2182 6
 .Ltmp1666:
 	{
 		ldaw r9, sp[14]
@@ -15846,12 +15856,12 @@ read_frame_:
 	bf r0, .LBB36_317
 .Ltmp1667:
 .LBB36_316:
-	.loc	1 2176 7
+	.loc	1 2183 7
 	{
 		add r0, r9, r10
 		stw r5, r9[10]
 	}
-	.loc	1 2177 7
+	.loc	1 2184 7
 	std r5, r5, r0[0]
 	{
 		add r0, r9, r8
@@ -15878,21 +15888,21 @@ read_frame_:
 		nop
 		ldw r1, sp[14]
 	}
-	.loc	1 2179 7
+	.loc	1 2186 7
 	{
 		shl r2, r1, 2
 		mov r1, r5
 	}
-	.loc	1 2179 7
+	.loc	1 2186 7
 	bl memset
 .Ltmp1668:
-	.loc	1 2175 62
+	.loc	1 2182 62
 	{
 		add r6, r6, 1
 		ldw r0, sp[16]
 	}
 .Ltmp1669:
-	.loc	1 2175 6
+	.loc	1 2182 6
 	{
 		add r9, r9, r7
 		lsu r0, r6, r0
@@ -15909,13 +15919,13 @@ read_frame_:
 		ldw r0, sp[10]
 	}
 .Ltmp1671:
-	.loc	1 2166 6
+	.loc	1 2173 6
 	{
 		sub r6, r6, r0
 		ldw r0, r4[1]
 	}
 .Ltmp1672:
-	.loc	1 2182 9
+	.loc	1 2189 9
 	{
 		add r2, r0, r10
 		mov r0, r4
@@ -15924,7 +15934,7 @@ read_frame_:
 		ldaw r1, sp[14]
 		nop
 	}
-	.loc	1 2182 9
+	.loc	1 2189 9
 	bl write_audio_frame_to_client_
 	{
 		ldc r9, 2
@@ -15932,7 +15942,7 @@ read_frame_:
 	}
 	bf r0, .LBB36_311
 .Ltmp1673:
-	.loc	1 2183 7
+	.loc	1 2190 7
 	{
 		mkmsk r1, 3
 		ldw r0, r4[0]
@@ -15974,7 +15984,7 @@ read_frame_:
 		nop
 		ldw r0, r11[0]
 	}
-	.loc	1 2191 5
+	.loc	1 2198 5
 .Ltmp1680:
 	{
 		eq r1, r0, 2
@@ -15997,7 +16007,7 @@ read_frame_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 2194 7
+	.loc	1 2201 7
 .Ltmp1683:
 	bl FLAC__bitreader_rewind_to_after_last_seen_framesync
 	bt r0, .LBB36_337
@@ -16013,22 +16023,22 @@ read_frame_:
 	bf r11, .LBB36_337
 .Ltmp1685:
 	ldc r1, 8320
-	.loc	1 2198 7
+	.loc	1 2205 7
 .Ltmp1686:
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 2198 7
+	.loc	1 2205 7
 	ldd r2, r1, r1[0]
-	.loc	1 2198 7
+	.loc	1 2205 7
 	{
 		or r3, r1, r2
 		nop
 	}
 	bf r3, .LBB36_337
 .Ltmp1687:
-	.loc	1 2206 8
+	.loc	1 2213 8
 	{
 		mov r0, r4
 		ldw r3, r0[9]
@@ -16037,14 +16047,14 @@ read_frame_:
 		nop
 		bla r11
 	}
-	.loc	1 2206 8
+	.loc	1 2213 8
 	{
 		eq r0, r0, 1
 		nop
 	}
 	bf r0, .LBB36_330
 .Ltmp1688:
-	.loc	1 2207 6
+	.loc	1 2214 6
 	{
 		ldc r1, 6
 		ldw r0, r4[0]
@@ -16065,7 +16075,7 @@ read_frame_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 228
-	.loc	1 2226 6
+	.loc	1 2233 6
 .Ltmp1690:
 	{
 		add r1, r0, r1
@@ -16078,7 +16088,7 @@ read_frame_:
 	bf r1, .LBB36_334
 .Ltmp1691:
 	ldc r2, 224
-	.loc	1 2227 4
+	.loc	1 2234 4
 	{
 		add r2, r0, r2
 		nop
@@ -16090,7 +16100,7 @@ read_frame_:
 .Ltmp1692:
 .LBB36_334:
 	ldc r1, 1128
-	.loc	1 2230 3
+	.loc	1 2237 3
 	{
 		add r1, r0, r1
 		nop
@@ -16109,7 +16119,7 @@ read_frame_:
 		stw r2, r11[2]
 	}
 	ldc r2, 1140
-	.loc	1 2231 3
+	.loc	1 2238 3
 	{
 		add r2, r0, r2
 		nop
@@ -16118,7 +16128,7 @@ read_frame_:
 		nop
 		ldw r2, r2[0]
 	}
-	.loc	1 2231 3
+	.loc	1 2238 3
 	{
 		add r2, r0, r10
 		stw r2, r11[3]
@@ -16132,7 +16142,7 @@ read_frame_:
 		stw r2, r11[4]
 	}
 	ldc r2, 1132
-	.loc	1 2233 3
+	.loc	1 2240 3
 	{
 		add r2, r0, r2
 		nop
@@ -16154,30 +16164,30 @@ read_frame_:
 		stw r2, r11[6]
 	}
 	ldc r3, 1152
-	.loc	1 2237 3
+	.loc	1 2244 3
 	{
 		add r3, r0, r3
 		nop
 	}
-	.loc	1 2237 3
+	.loc	1 2244 3
 	ldd r11, r3, r3[0]
 	{
 		ldc r5, 0
 		nop
 	}
-	.loc	1 2237 3
+	.loc	1 2244 3
 	ladd r3, r2, r2, r3, r5
 	{
 		add r3, r11, r3
 		nop
 	}
 	ldc r11, 232
-	.loc	1 2237 3
+	.loc	1 2244 3
 	{
 		add r11, r0, r11
 		nop
 	}
-	.loc	1 2237 3
+	.loc	1 2244 3
 	std r3, r2, r11[0]
 	{
 		nop
@@ -16189,22 +16199,22 @@ read_frame_:
 		ldc r2, 48
 		nop
 	}
-	.loc	1 2241 7
+	.loc	1 2248 7
 .Ltmp1694:
 	{
 		add r2, r0, r2
 		mov r0, r4
 	}
-	.loc	1 2241 7
+	.loc	1 2248 7
 	bl write_audio_frame_to_client_
 	bf r0, .LBB36_337
 .Ltmp1695:
-	.loc	1 2242 5
+	.loc	1 2249 5
 	{
 		mkmsk r1, 3
 		ldw r0, r4[0]
 	}
-	.loc	1 2242 5
+	.loc	1 2249 5
 	{
 		mov r0, r5
 		stw r1, r0[0]
@@ -16220,7 +16230,7 @@ read_frame_:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 2210 9
+	.loc	1 2217 9
 .Ltmp1697:
 	bl FLAC__bitreader_clear
 	bf r0, .LBB36_331
@@ -16230,7 +16240,7 @@ read_frame_:
 		nop
 		ldw r0, r4[0]
 	}
-	.loc	1 2248 2
+	.loc	1 2255 2
 	{
 		mkmsk r0, 1
 		stw r9, r0[0]
@@ -16238,7 +16248,7 @@ read_frame_:
 	bu .LBB36_338
 .Ltmp1699:
 .LBB36_331:
-	.loc	1 2211 6
+	.loc	1 2218 6
 	{
 		ldc r1, 8
 		ldw r0, r4[0]
@@ -16250,7 +16260,7 @@ read_frame_:
 		stw r1, r0[0]
 	}
 .LBB36_320:
-	.loc	1 2416 2
+	.loc	1 2423 2
 .Ltmp1701:
 	{
 		ldc r0, 0
@@ -16258,7 +16268,7 @@ read_frame_:
 	}
 .Ltmp1702:
 .LBB36_338:
-	.loc	1 2250 1
+	.loc	1 2257 1
 	ldw r10, sp[904]
 	ldw r8, sp[902]
 	ldw r9, sp[903]
@@ -16270,6 +16280,8 @@ read_frame_:
 	# RETURN_REG_HOLDER
 .Ltmp1703:
 	.cc_bottom read_frame_.function
+	.set	read_frame_.nstackwords.pragma,400
+	.set	read_frame_.nstackwords,read_frame_.nstackwords
 
 
 
@@ -16284,7 +16296,7 @@ read_frame_:
 	.cc_top FLAC__stream_decoder_process_until_end_of_metadata.function,FLAC__stream_decoder_process_until_end_of_metadata
 FLAC__stream_decoder_process_until_end_of_metadata:
 .Lfunc_begin37:
-	.loc	1 1016 0
+	.loc	1 1019 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -16325,7 +16337,7 @@ FLAC__stream_decoder_process_until_end_of_metadata:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 1021 3 prologue_end
+	.loc	1 1024 3 prologue_end
 .Ltmp1714:
 	{
 		lsu r1, r7, r0
@@ -16344,7 +16356,7 @@ FLAC__stream_decoder_process_until_end_of_metadata:
 	.jmptable32 .LBB37_3,.LBB37_4,.LBB37_6,.LBB37_6,.LBB37_6,.LBB37_7,.LBB37_7,.LBB37_6
 .Ltmp1716:
 .LBB37_3:
-	.loc	1 1023 9
+	.loc	1 1026 9
 	{
 		mov r0, r5
 		nop
@@ -16354,7 +16366,7 @@ FLAC__stream_decoder_process_until_end_of_metadata:
 	bu .LBB37_5
 .Ltmp1717:
 .LBB37_4:
-	.loc	1 1027 9
+	.loc	1 1030 9
 	{
 		mov r0, r5
 		nop
@@ -16373,7 +16385,7 @@ FLAC__stream_decoder_process_until_end_of_metadata:
 		nop
 	}
 .LBB37_7:
-	.loc	1 1039 1
+	.loc	1 1042 1
 	{
 		mov r0, r4
 		nop
@@ -16406,7 +16418,7 @@ FLAC__stream_decoder_process_until_end_of_metadata:
 	.cc_top FLAC__stream_decoder_process_until_end_of_stream.function,FLAC__stream_decoder_process_until_end_of_stream
 FLAC__stream_decoder_process_until_end_of_stream:
 .Lfunc_begin38:
-	.loc	1 1042 0
+	.loc	1 1045 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -16453,7 +16465,7 @@ FLAC__stream_decoder_process_until_end_of_stream:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 1048 3 prologue_end
+	.loc	1 1051 3 prologue_end
 .Ltmp1731:
 	{
 		lsu r1, r8, r0
@@ -16472,7 +16484,7 @@ FLAC__stream_decoder_process_until_end_of_stream:
 	.jmptable32 .LBB38_3,.LBB38_4,.LBB38_5,.LBB38_6,.LBB38_8,.LBB38_9,.LBB38_9,.LBB38_8
 .Ltmp1733:
 .LBB38_3:
-	.loc	1 1050 9
+	.loc	1 1053 9
 	{
 		mov r0, r6
 		nop
@@ -16482,7 +16494,7 @@ FLAC__stream_decoder_process_until_end_of_stream:
 	bu .LBB38_7
 .Ltmp1734:
 .LBB38_4:
-	.loc	1 1054 9
+	.loc	1 1057 9
 	{
 		mov r0, r6
 		nop
@@ -16492,7 +16504,7 @@ FLAC__stream_decoder_process_until_end_of_stream:
 	bu .LBB38_7
 .Ltmp1735:
 .LBB38_5:
-	.loc	1 1058 9
+	.loc	1 1061 9
 	{
 		mov r0, r6
 		nop
@@ -16502,7 +16514,7 @@ FLAC__stream_decoder_process_until_end_of_stream:
 	bu .LBB38_8
 .Ltmp1736:
 .LBB38_6:
-	.loc	1 1062 9
+	.loc	1 1065 9
 	{
 		mov r0, r6
 		mov r1, r7
@@ -16525,7 +16537,7 @@ FLAC__stream_decoder_process_until_end_of_stream:
 		nop
 	}
 .LBB38_9:
-	.loc	1 1072 1
+	.loc	1 1075 1
 	{
 		mov r0, r5
 		ldw r8, sp[6]
@@ -16558,7 +16570,7 @@ FLAC__stream_decoder_process_until_end_of_stream:
 	.cc_top FLAC__stream_decoder_skip_single_frame.function,FLAC__stream_decoder_skip_single_frame
 FLAC__stream_decoder_skip_single_frame:
 .Lfunc_begin39:
-	.loc	1 1075 0
+	.loc	1 1078 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -16605,7 +16617,7 @@ FLAC__stream_decoder_skip_single_frame:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 1081 3 prologue_end
+	.loc	1 1084 3 prologue_end
 .Ltmp1750:
 	{
 		sub r0, r0, 2
@@ -16628,7 +16640,7 @@ FLAC__stream_decoder_skip_single_frame:
 	.jmptable32 .LBB39_3,.LBB39_4,.LBB39_8,.LBB39_7,.LBB39_7,.LBB39_8
 .Ltmp1752:
 .LBB39_3:
-	.loc	1 1086 9
+	.loc	1 1089 9
 	{
 		mov r0, r6
 		nop
@@ -16638,7 +16650,7 @@ FLAC__stream_decoder_skip_single_frame:
 	bu .LBB39_6
 .Ltmp1753:
 .LBB39_4:
-	.loc	1 1090 9
+	.loc	1 1093 9
 	{
 		mov r0, r6
 		mov r1, r7
@@ -16667,7 +16679,7 @@ FLAC__stream_decoder_skip_single_frame:
 		nop
 	}
 .LBB39_8:
-	.loc	1 1102 1
+	.loc	1 1105 1
 	{
 		mov r0, r5
 		ldw r8, sp[6]
@@ -16709,7 +16721,7 @@ FLAC__stream_decoder_skip_single_frame:
 	.cc_top FLAC__stream_decoder_seek_absolute.function,FLAC__stream_decoder_seek_absolute
 FLAC__stream_decoder_seek_absolute:
 .Lfunc_begin40:
-	.loc	1 1105 0
+	.loc	1 1108 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -16771,7 +16783,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r0, r4[0]
 	}
-	.loc	1 1111 3 prologue_end
+	.loc	1 1114 3 prologue_end
 .Ltmp1768:
 	{
 		ldc r9, 0
@@ -16781,7 +16793,7 @@ FLAC__stream_decoder_seek_absolute:
 		ldc r2, 4
 		nop
 	}
-	.loc	1 1111 3
+	.loc	1 1114 3
 	{
 		lsu r0, r2, r0
 		nop
@@ -16799,7 +16811,7 @@ FLAC__stream_decoder_seek_absolute:
 	bf r2, .LBB40_190
 .Ltmp1770:
 	ldc r6, 240
-	.loc	1 820 2
+	.loc	1 822 2
 .Ltmp1771:
 	{
 		add r2, r0, r6
@@ -16812,22 +16824,22 @@ FLAC__stream_decoder_seek_absolute:
 	bf r2, .LBB40_7
 .Ltmp1772:
 	ldc r2, 296
-	.loc	1 820 2
+	.loc	1 822 2
 	{
 		add r2, r0, r2
 		nop
 	}
-	.loc	1 820 2
+	.loc	1 822 2
 	ldd r2, r11, r2[0]
 	{
 		ldc r9, 0
 		mkmsk r3, 32
 	}
 .Ltmp1773:
-	.loc	1 1127 5
+	.loc	1 1130 5
 	ladd r11, r5, r11, r3, r9
 	ladd r3, r2, r2, r3, r11
-	.loc	1 1127 5
+	.loc	1 1130 5
 	{
 		eq r3, r2, r10
 		nop
@@ -16855,7 +16867,7 @@ FLAC__stream_decoder_seek_absolute:
 		stw r1, sp[16]
 	}
 	ldc r8, 4680
-	.loc	1 1130 2
+	.loc	1 1133 2
 	{
 		add r1, r0, r8
 		mkmsk r2, 1
@@ -16865,7 +16877,7 @@ FLAC__stream_decoder_seek_absolute:
 		stw r2, r1[0]
 	}
 	ldc r1, 4672
-	.loc	1 1133 2
+	.loc	1 1136 2
 	{
 		add r1, r0, r1
 		ldc r9, 0
@@ -16879,13 +16891,13 @@ FLAC__stream_decoder_seek_absolute:
 		ldw r3, r0[4]
 	}
 .Ltmp1778:
-	.loc	1 1136 5
+	.loc	1 1139 5
 	{
 		ldaw r1, sp[18]
 		ldw r2, r0[9]
 	}
 .Ltmp1779:
-	.loc	1 1136 5
+	.loc	1 1139 5
 	{
 		mov r0, r4
 		nop
@@ -16894,7 +16906,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		bla r3
 	}
-	.loc	1 1136 5
+	.loc	1 1139 5
 	bf r0, .LBB40_9
 .Ltmp1780:
 	{
@@ -16903,7 +16915,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 .Ltmp1781:
 .LBB40_23:
-	.loc	1 1153 4
+	.loc	1 1156 4
 	{
 		add r0, r0, r8
 		nop
@@ -16919,17 +16931,17 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r2, r4[0]
 	}
-	.loc	1 1143 3
+	.loc	1 1146 3
 	{
 		ldc r0, 2
 		ldw r1, r2[0]
 	}
-	.loc	1 1143 3
+	.loc	1 1146 3
 	{
 		lsu r0, r1, r0
 		nop
 	}
-	.loc	1 1143 3
+	.loc	1 1146 3
 	bf r0, .LBB40_24
 .Ltmp1783:
 	{
@@ -16949,7 +16961,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 .Ltmp1785:
 .LBB40_11:
-	.loc	1 1021 3
+	.loc	1 1024 3
 	{
 		lsu r0, r5, r1
 		nop
@@ -16967,7 +16979,7 @@ FLAC__stream_decoder_seek_absolute:
 	.jmptable32 .LBB40_13,.LBB40_15,.LBB40_17,.LBB40_17,.LBB40_17,.LBB40_16,.LBB40_16,.LBB40_17
 .Ltmp1787:
 .LBB40_13:
-	.loc	1 1023 9
+	.loc	1 1026 9
 	{
 		mov r0, r4
 		nop
@@ -16977,7 +16989,7 @@ FLAC__stream_decoder_seek_absolute:
 	bu .LBB40_16
 .Ltmp1788:
 .LBB40_15:
-	.loc	1 1027 9
+	.loc	1 1030 9
 	{
 		mov r0, r4
 		nop
@@ -16990,7 +17002,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 1148 4
+	.loc	1 1151 4
 .Ltmp1790:
 	{
 		add r0, r0, r8
@@ -17021,7 +17033,7 @@ FLAC__stream_decoder_seek_absolute:
 		mov r3, r10
 		nop
 	}
-	.loc	1 1164 4
+	.loc	1 1167 4
 .Ltmp1793:
 	ldd r6, r11, sp[9]
 	{
@@ -17033,13 +17045,13 @@ FLAC__stream_decoder_seek_absolute:
 		stw r11, sp[17]
 	}
 	ldc r6, 8312
-	.loc	1 3242 2
+	.loc	1 3249 2
 .Ltmp1794:
 	{
 		add r6, r0, r6
 		nop
 	}
-	.loc	1 3242 2
+	.loc	1 3249 2
 	ldd r6, r7, r6[0]
 .Ltmp1795:
 	{
@@ -17050,7 +17062,7 @@ FLAC__stream_decoder_seek_absolute:
 		ldc r6, 0
 		stw r6, sp[6]
 	}
-	.loc	1 820 2
+	.loc	1 822 2
 .Ltmp1796:
 	{
 		mov r7, r6
@@ -17063,12 +17075,12 @@ FLAC__stream_decoder_seek_absolute:
 	bf r5, .LBB40_27
 .Ltmp1797:
 	ldc r5, 296
-	.loc	1 820 2
+	.loc	1 822 2
 	{
 		add r5, r0, r5
 		nop
 	}
-	.loc	1 820 2
+	.loc	1 822 2
 	ldd r11, r7, r5[0]
 	{
 		nop
@@ -17081,7 +17093,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 	}
 	ldc r5, 264
-	.loc	1 3248 2
+	.loc	1 3255 2
 	{
 		add r5, r0, r5
 		nop
@@ -17092,7 +17104,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 .Ltmp1799:
 	ldc r6, 268
-	.loc	1 3249 2
+	.loc	1 3256 2
 	{
 		add r6, r0, r6
 		nop
@@ -17103,7 +17115,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 .Ltmp1800:
 	ldc r7, 276
-	.loc	1 3250 2
+	.loc	1 3257 2
 	{
 		add r7, r0, r7
 		nop
@@ -17114,7 +17126,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 .Ltmp1801:
 	ldc r7, 272
-	.loc	1 3251 2
+	.loc	1 3258 2
 	{
 		add r7, r0, r7
 		nop
@@ -17135,7 +17147,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 .Ltmp1804:
 	ldc r9, 244
-	.loc	1 3255 2
+	.loc	1 3262 2
 	{
 		add r9, r0, r9
 		nop
@@ -17147,7 +17159,7 @@ FLAC__stream_decoder_seek_absolute:
 	bf r9, .LBB40_29
 .Ltmp1805:
 	ldc r9, 440
-	.loc	1 3255 2
+	.loc	1 3262 2
 	{
 		add r9, r0, r9
 		nop
@@ -17161,7 +17173,7 @@ FLAC__stream_decoder_seek_absolute:
 	bt r7, .LBB40_31
 .Ltmp1807:
 	ldc r7, 284
-	.loc	1 3259 3
+	.loc	1 3266 3
 .Ltmp1808:
 	{
 		add r7, r0, r7
@@ -17176,7 +17188,7 @@ FLAC__stream_decoder_seek_absolute:
 	bt r2, .LBB40_33
 .Ltmp1810:
 	ldc r2, 288
-	.loc	1 3261 3
+	.loc	1 3268 3
 .Ltmp1811:
 	{
 		add r2, r0, r2
@@ -17188,20 +17200,20 @@ FLAC__stream_decoder_seek_absolute:
 	}
 .Ltmp1812:
 .LBB40_33:
-	.loc	1 3264 5
+	.loc	1 3271 5
 	bf r10, .LBB40_35
 .Ltmp1813:
-	.loc	1 3265 3
+	.loc	1 3272 3
 	{
 		add r2, r8, r10
 		nop
 	}
-	.loc	1 3265 3
+	.loc	1 3272 3
 	{
 		shr r2, r2, 1
 		nop
 	}
-	.loc	1 3265 3
+	.loc	1 3272 3
 	{
 		add r2, r2, 1
 		nop
@@ -17219,7 +17231,7 @@ FLAC__stream_decoder_seek_absolute:
 	bu .LBB40_40
 .Ltmp1816:
 .LBB40_35:
-	.loc	1 3272 10
+	.loc	1 3279 10
 	{
 		eq r6, r5, r6
 		mov r9, r3
@@ -17234,17 +17246,17 @@ FLAC__stream_decoder_seek_absolute:
 .Ltmp1819:
 	bf r5, .LBB40_38
 .Ltmp1820:
-	.loc	1 3274 3
+	.loc	1 3281 3
 	mul r5, r7, r5
-	.loc	1 3274 3
+	.loc	1 3281 3
 	mul r2, r5, r2
-	.loc	1 3274 3
+	.loc	1 3281 3
 	{
 		shr r2, r2, 3
 		nop
 	}
 	ldc r5, 64
-	.loc	1 3274 3
+	.loc	1 3281 3
 	{
 		add r2, r2, r5
 		nop
@@ -17256,7 +17268,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 820 2
+	.loc	1 822 2
 .Ltmp1822:
 	{
 		add r3, r0, r6
@@ -17266,26 +17278,26 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r5, r3[0]
 	}
-	.loc	1 820 2
+	.loc	1 822 2
 	bf r5, .LBB40_18
 .Ltmp1823:
 	ldc r3, 296
-	.loc	1 820 2
+	.loc	1 822 2
 	{
 		add r3, r0, r3
 		nop
 	}
-	.loc	1 820 2
+	.loc	1 822 2
 	ldd r11, r3, r3[0]
 	{
 		ldc r9, 0
 		mkmsk r6, 32
 	}
 .Ltmp1824:
-	.loc	1 1152 6
+	.loc	1 1155 6
 	ladd r7, r3, r3, r6, r9
 	ladd r6, r11, r11, r6, r7
-	.loc	1 1152 6
+	.loc	1 1155 6
 	{
 		eq r6, r11, r10
 		nop
@@ -17299,7 +17311,7 @@ FLAC__stream_decoder_seek_absolute:
 	bu .LBB40_22
 .Ltmp1826:
 .LBB40_38:
-	.loc	1 3277 3
+	.loc	1 3284 3
 	mul r2, r7, r2
 	{
 		ldc r5, 12
@@ -17309,13 +17321,13 @@ FLAC__stream_decoder_seek_absolute:
 		shl r2, r2, r5
 		nop
 	}
-	.loc	1 3277 3
+	.loc	1 3284 3
 	{
 		shr r2, r2, 3
 		nop
 	}
 	ldc r5, 64
-	.loc	1 3277 3
+	.loc	1 3284 3
 	{
 		or r2, r2, r5
 		nop
@@ -17336,7 +17348,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r3, sp[5]
 	}
-	.loc	1 3286 2
+	.loc	1 3293 2
 	std r2, r3, sp[11]
 	{
 		nop
@@ -17346,20 +17358,20 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r3, sp[15]
 	}
-	.loc	1 3288 2
+	.loc	1 3295 2
 	std r3, r2, sp[10]
 	{
 		nop
 		ldw r3, sp[13]
 	}
-	.loc	1 3289 2
+	.loc	1 3296 2
 	{
 		or r2, r11, r3
 		mkmsk r7, 1
 	}
 	bt r2, .LBB40_42
 .Ltmp1829:
-	.loc	1 3289 2
+	.loc	1 3296 2
 	{
 		mov r3, r9
 		nop
@@ -17386,33 +17398,33 @@ FLAC__stream_decoder_seek_absolute:
 		ldc r10, 0
 		eq r1, r1, 2
 	}
-	.loc	1 3291 5
+	.loc	1 3298 5
 .Ltmp1833:
 	bf r1, .LBB40_45
 .Ltmp1834:
 	ldc r1, 232
-	.loc	1 3291 5
+	.loc	1 3298 5
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 3291 5
+	.loc	1 3298 5
 	ldd r2, r1, r1[0]
-	.loc	1 3291 5
+	.loc	1 3298 5
 	{
 		or r3, r1, r2
 		ldc r10, 0
 	}
-	.loc	1 3291 5
+	.loc	1 3298 5
 	bf r3, .LBB40_47
 .Ltmp1835:
-	.loc	1 867 5
+	.loc	1 869 5
 	{
 		eq r3, r2, r9
 		ldw r5, r0[3]
 	}
 .Ltmp1836:
-	.loc	1 3293 6
+	.loc	1 3300 6
 	bt r3, .LBB40_49
 .Ltmp1837:
 	{
@@ -17422,7 +17434,7 @@ FLAC__stream_decoder_seek_absolute:
 	bu .LBB40_51
 .Ltmp1838:
 .LBB40_45:
-	.loc	1 1164 4
+	.loc	1 1167 4
 	{
 		mov r5, r10
 		nop
@@ -17437,7 +17449,7 @@ FLAC__stream_decoder_seek_absolute:
 	bu .LBB40_65
 .Ltmp1840:
 .LBB40_49:
-	.loc	1 3293 6
+	.loc	1 3300 6
 	{
 		lsu r1, r8, r1
 		nop
@@ -17450,16 +17462,16 @@ FLAC__stream_decoder_seek_absolute:
 	}
 	bt r1, .LBB40_58
 .Ltmp1842:
-	.loc	1 867 5
+	.loc	1 869 5
 	bf r5, .LBB40_53
 .Ltmp1843:
-	.loc	1 869 5
+	.loc	1 871 5
 	{
 		ldaw r1, sp[20]
 		ldw r2, r0[9]
 	}
 .Ltmp1844:
-	.loc	1 869 5
+	.loc	1 871 5
 	{
 		mov r0, r4
 		nop
@@ -17472,10 +17484,10 @@ FLAC__stream_decoder_seek_absolute:
 		ldc r10, 0
 		nop
 	}
-	.loc	1 869 5
+	.loc	1 871 5
 	bf r0, .LBB40_56
 .Ltmp1845:
-	.loc	1 1164 4
+	.loc	1 1167 4
 	{
 		mov r5, r10
 		nop
@@ -17483,16 +17495,16 @@ FLAC__stream_decoder_seek_absolute:
 	bu .LBB40_65
 .Ltmp1846:
 .LBB40_58:
-	.loc	1 867 5
+	.loc	1 869 5
 	bf r5, .LBB40_59
 .Ltmp1847:
-	.loc	1 869 5
+	.loc	1 871 5
 	{
 		ldaw r1, sp[22]
 		ldw r2, r0[9]
 	}
 .Ltmp1848:
-	.loc	1 869 5
+	.loc	1 871 5
 	{
 		mov r0, r4
 		nop
@@ -17505,10 +17517,10 @@ FLAC__stream_decoder_seek_absolute:
 		ldc r10, 0
 		nop
 	}
-	.loc	1 869 5
+	.loc	1 871 5
 	bf r0, .LBB40_62
 .Ltmp1849:
-	.loc	1 1164 4
+	.loc	1 1167 4
 	{
 		mov r5, r10
 		nop
@@ -17527,7 +17539,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r11, sp[16]
 	}
-	.loc	1 1152 6
+	.loc	1 1155 6
 .Ltmp1852:
 	{
 		lsu r3, r3, r11
@@ -17544,7 +17556,7 @@ FLAC__stream_decoder_seek_absolute:
 	bu .LBB40_23
 .Ltmp1855:
 .LBB40_53:
-	.loc	1 1164 4
+	.loc	1 1167 4
 	{
 		mov r5, r10
 		nop
@@ -17567,7 +17579,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 872 6
+	.loc	1 874 6
 .Ltmp1858:
 	bl FLAC__bitreader_is_consumed_byte_aligned
 	{
@@ -17575,7 +17587,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 	}
 .Ltmp1859:
-	.loc	1 1164 4
+	.loc	1 1167 4
 	{
 		mov r5, r10
 		nop
@@ -17590,28 +17602,28 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1182 9
+	.loc	1 1185 9
 .Ltmp1861:
 	bl FLAC__bitreader_get_input_bits_unconsumed
-	.loc	1 1182 9
+	.loc	1 1185 9
 	{
 		shr r0, r0, 3
 		nop
 	}
 .Ltmp1862:
-	.loc	1 875 15
+	.loc	1 877 15
 	ldd r2, r1, sp[10]
 	{
 		ldc r10, 0
 		nop
 	}
-	.loc	1 875 15
+	.loc	1 877 15
 	lsub r1, r0, r1, r0, r10
 	{
 		sub r1, r2, r1
 		nop
 	}
-	.loc	1 875 15
+	.loc	1 877 15
 	std r1, r0, sp[10]
 	{
 		nop
@@ -17619,19 +17631,19 @@ FLAC__stream_decoder_seek_absolute:
 	}
 	ldc r1, 232
 .Ltmp1863:
-	.loc	1 3295 5
+	.loc	1 3302 5
 	{
 		add r0, r0, r1
 		nop
 	}
-	.loc	1 3295 5
+	.loc	1 3302 5
 	ldd r0, r1, r0[0]
 	{
 		nop
 		stw r1, sp[15]
 	}
 .Ltmp1864:
-	.loc	1 1164 4
+	.loc	1 1167 4
 	{
 		mov r5, r10
 		stw r0, sp[7]
@@ -17647,14 +17659,14 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 872 6
+	.loc	1 874 6
 .Ltmp1866:
 	bl FLAC__bitreader_is_consumed_byte_aligned
 	{
 		ldc r10, 0
 		nop
 	}
-	.loc	1 872 6
+	.loc	1 874 6
 	bf r0, .LBB40_63
 .Ltmp1867:
 	{
@@ -17665,28 +17677,28 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1182 9
+	.loc	1 1185 9
 .Ltmp1868:
 	bl FLAC__bitreader_get_input_bits_unconsumed
-	.loc	1 1182 9
+	.loc	1 1185 9
 	{
 		shr r0, r0, 3
 		nop
 	}
 .Ltmp1869:
-	.loc	1 875 15
+	.loc	1 877 15
 	ldd r2, r1, sp[11]
 	{
 		ldc r3, 0
 		nop
 	}
-	.loc	1 875 15
+	.loc	1 877 15
 	lsub r1, r0, r1, r0, r3
 	{
 		sub r1, r2, r1
 		nop
 	}
-	.loc	1 875 15
+	.loc	1 877 15
 	std r1, r0, sp[11]
 	{
 		nop
@@ -17694,17 +17706,17 @@ FLAC__stream_decoder_seek_absolute:
 	}
 	ldc r1, 232
 .Ltmp1870:
-	.loc	1 3298 5
+	.loc	1 3305 5
 	{
 		add r0, r0, r1
 		nop
 	}
-	.loc	1 3298 5
+	.loc	1 3305 5
 	ldd r5, r10, r0[0]
 	bu .LBB40_65
 .Ltmp1871:
 .LBB40_63:
-	.loc	1 1164 4
+	.loc	1 1167 4
 	{
 		mov r5, r10
 		nop
@@ -17716,7 +17728,7 @@ FLAC__stream_decoder_seek_absolute:
 		ldw r1, sp[9]
 	}
 .Ltmp1873:
-	.loc	1 3312 5
+	.loc	1 3319 5
 	bf r1, .LBB40_66
 .Ltmp1874:
 	{
@@ -17727,14 +17739,14 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		stw r9, sp[11]
 	}
-	.loc	1 3313 3
+	.loc	1 3320 3
 .Ltmp1875:
 	ldd r2, r0, sp[11]
 	{
 		nop
 		stw r0, sp[3]
 	}
-	.loc	1 3314 3
+	.loc	1 3321 3
 	ldd r9, r0, sp[10]
 	{
 		nop
@@ -17744,7 +17756,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r3, r1[0]
 	}
-	.loc	1 3319 3
+	.loc	1 3326 3
 .Ltmp1876:
 	{
 		lss r0, r3, r7
@@ -17765,21 +17777,21 @@ FLAC__stream_decoder_seek_absolute:
 		stw r5, sp[12]
 	}
 .Ltmp1878:
-	.loc	1 3321 5
+	.loc	1 3328 5
 	{
 		ldc r0, 24
 		ldw r1, r1[1]
 	}
 .Ltmp1879:
-	.loc	1 3319 3
+	.loc	1 3326 3
 	mul r0, r3, r0
-	.loc	1 3321 5
+	.loc	1 3328 5
 .Ltmp1880:
 	{
 		add r0, r0, r1
 		nop
 	}
-	.loc	1 3321 5
+	.loc	1 3328 5
 	ldaw r11, cp[FLAC__STREAM_METADATA_SEEKPOINT_PLACEHOLDER]
 	{
 		mov r8, r3
@@ -17794,7 +17806,7 @@ FLAC__stream_decoder_seek_absolute:
 		ldc r2, 0
 		mkmsk r11, 32
 	}
-	.loc	1 3321 5
+	.loc	1 3328 5
 	ladd r5, r6, r6, r11, r2
 	{
 		nop
@@ -17807,22 +17819,22 @@ FLAC__stream_decoder_seek_absolute:
 	ladd r11, r10, r6, r11, r5
 	ldaw r5, r0[-6]
 .Ltmp1881:
-	.loc	1 1164 4
+	.loc	1 1167 4
 	{
 		mov r0, r8
 		nop
 	}
 .Ltmp1882:
 .LBB40_70:
-	.loc	1 3319 7
+	.loc	1 3326 7
 	{
 		sub r0, r0, 1
 		nop
 	}
-	.loc	1 3321 5
+	.loc	1 3328 5
 .Ltmp1883:
 	ldd r6, r11, r5[0]
-	.loc	1 3321 5
+	.loc	1 3328 5
 	xor r9, r6, r7
 	xor r8, r11, r3
 	{
@@ -17837,7 +17849,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 	bf r8, .LBB40_72
 .Ltmp1885:
-	.loc	1 3321 5
+	.loc	1 3328 5
 	{
 		eq r8, r10, r6
 		nop
@@ -17893,9 +17905,9 @@ FLAC__stream_decoder_seek_absolute:
 	bf r9, .LBB40_82
 .Ltmp1893:
 .LBB40_72:
-	.loc	1 3319 3
+	.loc	1 3326 3
 	ldaw r5, r5[-6]
-	.loc	1 3319 3
+	.loc	1 3326 3
 	{
 		lss r11, r2, r0
 		nop
@@ -17929,7 +17941,7 @@ FLAC__stream_decoder_seek_absolute:
 		ldc r2, 0
 		stw r2, sp[2]
 	}
-	.loc	1 1164 4
+	.loc	1 1167 4
 	{
 		mov r6, r5
 		ldw r11, sp[10]
@@ -17941,7 +17953,7 @@ FLAC__stream_decoder_seek_absolute:
 		ldc r5, 24
 		nop
 	}
-	.loc	1 3329 4
+	.loc	1 3336 4
 .Ltmp1899:
 	mul r0, r0, r5
 	{
@@ -17952,13 +17964,13 @@ FLAC__stream_decoder_seek_absolute:
 		add r0, r0, 8
 		nop
 	}
-	.loc	1 3329 4
+	.loc	1 3336 4
 	ldd r5, r0, r0[0]
 	{
 		nop
 		ldw r8, sp[5]
 	}
-	.loc	1 3329 4
+	.loc	1 3336 4
 	ladd r0, r8, r0, r8, r2
 	{
 		nop
@@ -17975,9 +17987,9 @@ FLAC__stream_decoder_seek_absolute:
 	}
 .Ltmp1900:
 .LBB40_83:
-	.loc	1 3336 5
+	.loc	1 3343 5
 	ldd r5, r0, r1[0]
-	.loc	1 3336 5
+	.loc	1 3343 5
 	xor r8, r5, r7
 	xor r9, r0, r3
 	{
@@ -17992,7 +18004,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 	bf r8, .LBB40_93
 .Ltmp1902:
-	.loc	1 3336 5
+	.loc	1 3343 5
 	{
 		eq r8, r10, r5
 		nop
@@ -18048,19 +18060,19 @@ FLAC__stream_decoder_seek_absolute:
 	bt r0, .LBB40_94
 .Ltmp1910:
 .LBB40_93:
-	.loc	1 3334 47
+	.loc	1 3341 47
 	{
 		add r2, r2, 1
 		nop
 	}
 .Ltmp1911:
-	.loc	1 3334 3
+	.loc	1 3341 3
 	ldaw r1, r1[6]
 	{
 		nop
 		ldw r0, sp[17]
 	}
-	.loc	1 3334 3
+	.loc	1 3341 3
 	{
 		lss r0, r2, r0
 		nop
@@ -18087,7 +18099,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 .Ltmp1914:
 .LBB40_95:
-	.loc	1 3343 6
+	.loc	1 3350 6
 	{
 		lss r3, r2, r3
 		ldw r0, sp[15]
@@ -18102,13 +18114,13 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r0, sp[9]
 	}
-	.loc	1 3344 4
+	.loc	1 3351 4
 .Ltmp1916:
 	{
 		ldc r1, 24
 		ldw r0, r0[1]
 	}
-	.loc	1 3344 4
+	.loc	1 3351 4
 	mul r1, r2, r1
 	{
 		add r0, r0, r1
@@ -18118,13 +18130,13 @@ FLAC__stream_decoder_seek_absolute:
 		add r1, r0, 8
 		nop
 	}
-	.loc	1 3344 4
+	.loc	1 3351 4
 	ldd r2, r1, r1[0]
 	{
 		ldc r3, 0
 		ldw r9, sp[5]
 	}
-	.loc	1 3344 4
+	.loc	1 3351 4
 	ladd r1, r3, r1, r9, r3
 	{
 		nop
@@ -18135,7 +18147,7 @@ FLAC__stream_decoder_seek_absolute:
 		ldw r3, sp[6]
 	}
 	ladd r1, r9, r2, r3, r1
-	.loc	1 3345 4
+	.loc	1 3352 4
 	ldd r1, r0, r0[0]
 .Ltmp1917:
 .LBB40_97:
@@ -18151,7 +18163,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r3, sp[2]
 	}
-	.loc	1 3348 6
+	.loc	1 3355 6
 .Ltmp1918:
 	{
 		eq r2, r9, r3
@@ -18211,14 +18223,14 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r2, sp[3]
 	}
-	.loc	1 3349 4
+	.loc	1 3356 4
 .Ltmp1924:
 	std r0, r2, sp[11]
 	{
 		nop
 		ldw r0, sp[4]
 	}
-	.loc	1 3350 4
+	.loc	1 3357 4
 	std r1, r0, sp[10]
 	{
 		nop
@@ -18229,7 +18241,7 @@ FLAC__stream_decoder_seek_absolute:
 		stw r0, sp[15]
 	}
 .Ltmp1925:
-	.loc	1 1164 4
+	.loc	1 1167 4
 	{
 		mov r10, r11
 		ldw r3, sp[14]
@@ -18244,7 +18256,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r2, sp[15]
 	}
-	.loc	1 3366 5
+	.loc	1 3373 5
 .Ltmp1927:
 	xor r0, r2, r10
 	xor r1, r3, r8
@@ -18256,7 +18268,7 @@ FLAC__stream_decoder_seek_absolute:
 		eq r0, r0, 0
 		ldc r5, 0
 	}
-	.loc	1 3366 5
+	.loc	1 3373 5
 	ladd r0, r1, r0, r2, r5
 	{
 		add r0, r3, r0
@@ -18272,7 +18284,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 	ldc r1, 8328
 .Ltmp1928:
-	.loc	1 3369 2
+	.loc	1 3376 2
 	{
 		add r0, r0, r1
 		ldw r1, sp[16]
@@ -18281,7 +18293,7 @@ FLAC__stream_decoder_seek_absolute:
 		mov r2, r9
 		nop
 	}
-	.loc	1 3369 2
+	.loc	1 3376 2
 	std r2, r1, r0[0]
 	{
 		ldaw r6, sp[25]
@@ -18298,38 +18310,38 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1182 9
+	.loc	1 1185 9
 .Ltmp1930:
 	bl FLAC__bitreader_get_input_bits_unconsumed
-	.loc	1 1182 9
+	.loc	1 1185 9
 	{
 		shr r0, r0, 3
 		nop
 	}
 .Ltmp1931:
-	.loc	1 875 15
+	.loc	1 877 15
 	ldd r2, r1, sp[11]
 	{
 		mov r5, r8
 		nop
 	}
-	.loc	1 875 15
+	.loc	1 877 15
 	lsub r1, r0, r1, r0, r5
 	{
 		sub r1, r2, r1
 		nop
 	}
-	.loc	1 875 15
+	.loc	1 877 15
 	std r1, r0, sp[11]
 	{
 		nop
 		ldw r2, sp[17]
 	}
 .Ltmp1932:
-	.loc	1 3478 4
+	.loc	1 3485 4
 	lsub r2, r0, r0, r2, r5
 	lsub r2, r1, r1, r7, r2
-	.loc	1 3478 4
+	.loc	1 3485 4
 	{
 		shl r1, r1, 1
 		mkmsk r2, 5
@@ -18346,13 +18358,13 @@ FLAC__stream_decoder_seek_absolute:
 		mkmsk r2, 2
 		mov r3, r5
 	}
-	.loc	1 3478 4
+	.loc	1 3485 4
 	bl __udivdi3
 	{
 		ldc r1, 16
 		nop
 	}
-	.loc	1 3478 4
+	.loc	1 3485 4
 	ladd r0, r1, r0, r1, r5
 	{
 		nop
@@ -18363,7 +18375,7 @@ FLAC__stream_decoder_seek_absolute:
 		stw r5, sp[5]
 	}
 .Ltmp1933:
-	.loc	1 1164 4
+	.loc	1 1167 4
 	{
 		mov r8, r9
 		ldw r10, sp[4]
@@ -18390,11 +18402,11 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r0, sp[16]
 	}
-	.loc	1 3388 4
+	.loc	1 3395 4
 .Ltmp1935:
 	lsub r1, r0, r0, r10, r5
 	lsub r2, r1, r2, r8, r1
-	.loc	1 3388 4
+	.loc	1 3395 4
 	bl __floatundidf
 	{
 		mov r9, r0
@@ -18404,20 +18416,20 @@ FLAC__stream_decoder_seek_absolute:
 		mov r10, r1
 		ldw r1, sp[9]
 	}
-	.loc	1 3388 4
+	.loc	1 3395 4
 	lsub r1, r0, r1, r0, r5
 	{
 		nop
 		ldw r2, sp[13]
 	}
 	lsub r2, r1, r2, r8, r1
-	.loc	1 3388 4
+	.loc	1 3395 4
 	bl __floatundidf
 	{
 		mov r2, r0
 		mov r3, r1
 	}
-	.loc	1 3388 4
+	.loc	1 3395 4
 	{
 		mov r0, r9
 		mov r1, r10
@@ -18434,7 +18446,7 @@ FLAC__stream_decoder_seek_absolute:
 	bu .LBB40_104
 .Ltmp1936:
 .LBB40_167:
-	.loc	1 3450 4
+	.loc	1 3457 4
 	{
 		shl r0, r0, 1
 		nop
@@ -18445,7 +18457,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 .Ltmp1937:
 .LBB40_104:
-	.loc	1 1164 4
+	.loc	1 1167 4
 	{
 		mov r0, r5
 		nop
@@ -18460,13 +18472,13 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r1, r0[0]
 	}
-	.loc	1 3373 6
+	.loc	1 3380 6
 .Ltmp1939:
 	{
 		sub r1, r1, 7
 		ldc r2, 2
 	}
-	.loc	1 3373 6
+	.loc	1 3380 6
 	{
 		lsu r1, r1, r2
 		nop
@@ -18477,7 +18489,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r2, sp[13]
 	}
-	.loc	1 3377 7
+	.loc	1 3384 7
 .Ltmp1941:
 	{
 		eq r1, r2, r8
@@ -18514,11 +18526,11 @@ FLAC__stream_decoder_seek_absolute:
 .Ltmp1945:
 	bt r1, .LBB40_118
 .Ltmp1946:
-	.loc	1 3377 7
+	.loc	1 3384 7
 	ldd r9, r11, sp[11]
-	.loc	1 3377 7
+	.loc	1 3384 7
 	ldd r5, r7, sp[10]
-	.loc	1 3377 7
+	.loc	1 3384 7
 	{
 		eq r1, r5, r9
 		nop
@@ -18573,7 +18585,7 @@ FLAC__stream_decoder_seek_absolute:
 		mov r0, r11
 		stw r4, sp[15]
 	}
-	.loc	1 1164 4
+	.loc	1 1167 4
 	{
 		mov r1, r9
 		nop
@@ -18584,7 +18596,7 @@ FLAC__stream_decoder_seek_absolute:
 		ldc r4, 0
 		nop
 	}
-	.loc	1 3388 4
+	.loc	1 3395 4
 .Ltmp1956:
 	lsub r1, r0, r7, r11, r4
 	lsub r2, r1, r5, r9, r1
@@ -18592,7 +18604,7 @@ FLAC__stream_decoder_seek_absolute:
 		mov r8, r11
 		mov r6, r3
 	}
-	.loc	1 3388 4
+	.loc	1 3395 4
 	bl __floatundidf
 	{
 		mov r2, r0
@@ -18606,21 +18618,21 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r1, sp[6]
 	}
-	.loc	1 3388 4
+	.loc	1 3395 4
 	bl __muldf3
-	.loc	1 3388 4
+	.loc	1 3395 4
 	bl __fixdfdi
 	{
 		mov r11, r8
 		ldw r2, sp[8]
 	}
-	.loc	1 3388 4
+	.loc	1 3395 4
 	lsub r3, r2, r11, r2, r4
 	{
 		sub r3, r9, r3
 		nop
 	}
-	.loc	1 3388 4
+	.loc	1 3395 4
 	ladd r2, r0, r2, r0, r4
 	ladd r2, r1, r3, r1, r2
 	{
@@ -18633,7 +18645,7 @@ FLAC__stream_decoder_seek_absolute:
 		mov r8, r6
 		eq r2, r1, r5
 	}
-	.loc	1 3399 6
+	.loc	1 3406 6
 .Ltmp1958:
 	bt r2, .LBB40_122
 .Ltmp1959:
@@ -18666,12 +18678,12 @@ FLAC__stream_decoder_seek_absolute:
 		mov r10, r3
 		ldc r3, 0
 	}
-	.loc	1 3400 4
+	.loc	1 3407 4
 	ladd r3, r11, r7, r10, r3
 	ladd r5, r3, r5, r10, r3
 	bt r2, .LBB40_126
 .Ltmp1962:
-	.loc	1 3399 6
+	.loc	1 3406 6
 	{
 		mov r0, r11
 		nop
@@ -18694,7 +18706,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 .Ltmp1965:
 .LBB40_128:
-	.loc	1 3401 6
+	.loc	1 3408 6
 	{
 		eq r2, r1, r9
 		ldc r5, 0
@@ -18729,7 +18741,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 	bt r2, .LBB40_133
 .Ltmp1970:
-	.loc	1 3401 6
+	.loc	1 3408 6
 	{
 		mov r9, r1
 		nop
@@ -18752,13 +18764,13 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r11, r0[2]
 	}
-	.loc	1 3403 6
+	.loc	1 3410 6
 .Ltmp1974:
 	{
 		mov r0, r4
 		ldw r3, r0[9]
 	}
-	.loc	1 3403 6
+	.loc	1 3410 6
 	{
 		mov r2, r9
 		ldw r1, sp[17]
@@ -18774,7 +18786,7 @@ FLAC__stream_decoder_seek_absolute:
 		ldw r0, r4[1]
 	}
 	ldc r1, 4676
-	.loc	1 890 5
+	.loc	1 892 5
 .Ltmp1976:
 	{
 		add r1, r0, r1
@@ -18794,7 +18806,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r1, r1[0]
 	}
-	.loc	1 890 5
+	.loc	1 892 5
 	{
 		eq r1, r1, 9
 		nop
@@ -18803,15 +18815,15 @@ FLAC__stream_decoder_seek_absolute:
 .Ltmp1978:
 .LBB40_138:
 	ldc r1, 232
-	.loc	1 893 2
+	.loc	1 895 2
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 893 2
+	.loc	1 895 2
 	std r5, r5, r1[0]
 	ldc r1, 4672
-	.loc	1 894 2
+	.loc	1 896 2
 	{
 		add r1, r0, r1
 		nop
@@ -18821,15 +18833,15 @@ FLAC__stream_decoder_seek_absolute:
 		stw r5, r1[0]
 	}
 	ldc r1, 8320
-	.loc	1 895 2
+	.loc	1 897 2
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 895 2
+	.loc	1 897 2
 	std r5, r5, r1[0]
 	ldc r1, 8304
-	.loc	1 896 2
+	.loc	1 898 2
 	{
 		add r1, r0, r1
 		nop
@@ -18842,14 +18854,14 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 903 6
+	.loc	1 905 6
 .Ltmp1979:
 	bl FLAC__bitreader_clear
 	{
 		nop
 		ldw r1, r4[0]
 	}
-	.loc	1 903 6
+	.loc	1 905 6
 	bf r0, .LBB40_139
 .Ltmp1980:
 	{
@@ -18869,13 +18881,13 @@ FLAC__stream_decoder_seek_absolute:
 		ldw r0, r4[1]
 	}
 	ldc r1, 8336
-	.loc	1 3417 3
+	.loc	1 3424 3
 	{
 		add r0, r0, r1
 		nop
 	}
 .Ltmp1981:
-	.loc	1 3417 3
+	.loc	1 3424 3
 	{
 		mov r0, r2
 		stw r5, r0[0]
@@ -18893,7 +18905,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 .Ltmp1983:
 .LBB40_141:
-	.loc	1 986 3
+	.loc	1 989 3
 	{
 		lsu r1, r10, r0
 		nop
@@ -18911,7 +18923,7 @@ FLAC__stream_decoder_seek_absolute:
 	.jmptable32 .LBB40_143,.LBB40_148,.LBB40_145,.LBB40_146,.LBB40_149,.LBB40_151,.LBB40_151,.LBB40_149
 .Ltmp1985:
 .LBB40_143:
-	.loc	1 988 9
+	.loc	1 991 9
 	{
 		mov r0, r4
 		nop
@@ -18921,7 +18933,7 @@ FLAC__stream_decoder_seek_absolute:
 	bu .LBB40_151
 .Ltmp1986:
 .LBB40_145:
-	.loc	1 997 9
+	.loc	1 1000 9
 	{
 		mov r0, r4
 		nop
@@ -18931,7 +18943,7 @@ FLAC__stream_decoder_seek_absolute:
 	bu .LBB40_149
 .Ltmp1987:
 .LBB40_146:
-	.loc	1 1001 9
+	.loc	1 1004 9
 	{
 		mov r0, r4
 		mov r1, r6
@@ -18951,7 +18963,7 @@ FLAC__stream_decoder_seek_absolute:
 	bu .LBB40_149
 .Ltmp1989:
 .LBB40_148:
-	.loc	1 992 9
+	.loc	1 995 9
 	{
 		mov r0, r4
 		nop
@@ -18968,7 +18980,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r0, r1[0]
 	}
-	.loc	1 3418 7
+	.loc	1 3425 7
 	{
 		eq r0, r0, 7
 		nop
@@ -18980,14 +18992,14 @@ FLAC__stream_decoder_seek_absolute:
 		ldw r0, r4[1]
 	}
 	ldc r2, 232
-	.loc	1 3418 7
+	.loc	1 3425 7
 	{
 		add r2, r0, r2
 		nop
 	}
-	.loc	1 3418 7
+	.loc	1 3425 7
 	ldd r3, r2, r2[0]
-	.loc	1 3418 7
+	.loc	1 3425 7
 	{
 		or r2, r2, r3
 		nop
@@ -19003,7 +19015,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r1, r0[0]
 	}
-	.loc	1 3420 7
+	.loc	1 3427 7
 .Ltmp1993:
 	{
 		eq r1, r1, 7
@@ -19019,7 +19031,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r2, r0[5]
 	}
-	.loc	1 3420 69
+	.loc	1 3427 69
 	{
 		mov r0, r4
 		ldw r1, r0[9]
@@ -19030,7 +19042,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 	bf r0, .LBB40_154
 .Ltmp1995:
-	.loc	1 1164 4
+	.loc	1 1167 4
 	{
 		mov r0, r7
 		ldw r1, sp[14]
@@ -19044,7 +19056,7 @@ FLAC__stream_decoder_seek_absolute:
 		stw r4, sp[15]
 	}
 	ldc r2, 4680
-	.loc	1 3437 6
+	.loc	1 3444 6
 .Ltmp1997:
 	{
 		add r2, r0, r2
@@ -19054,11 +19066,11 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r2, r2[0]
 	}
-	.loc	1 3437 6
+	.loc	1 3444 6
 	bf r2, .LBB40_157
 .Ltmp1998:
 	ldc r2, 4800
-	.loc	1 3441 3
+	.loc	1 3448 3
 	{
 		add r11, r0, r2
 		nop
@@ -19068,7 +19080,7 @@ FLAC__stream_decoder_seek_absolute:
 		add r2, r0, r2
 		nop
 	}
-	.loc	1 3441 3
+	.loc	1 3448 3
 	ldd r3, r2, r2[0]
 	{
 		nop
@@ -19078,14 +19090,14 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r11, r11[0]
 	}
-	.loc	1 3443 6
+	.loc	1 3450 6
 .Ltmp1999:
 	ladd r11, r7, r11, r2, r5
 	{
 		add r2, r3, r11
 		ldw r9, sp[13]
 	}
-	.loc	1 3443 6
+	.loc	1 3450 6
 	{
 		eq r11, r2, r9
 		nop
@@ -19121,13 +19133,13 @@ FLAC__stream_decoder_seek_absolute:
 	}
 	bt r11, .LBB40_170
 .Ltmp2004:
-	.loc	1 3444 8
+	.loc	1 3451 8
 	ldd r2, r0, sp[11]
 	{
 		nop
 		ldw r3, sp[17]
 	}
-	.loc	1 3444 8
+	.loc	1 3451 8
 	xor r0, r3, r0
 	xor r2, r4, r2
 	{
@@ -19145,7 +19157,7 @@ FLAC__stream_decoder_seek_absolute:
 		ldw r4, sp[15]
 	}
 .Ltmp2006:
-	.loc	1 3450 4
+	.loc	1 3457 4
 	bt r0, .LBB40_167
 .Ltmp2007:
 	{
@@ -19168,7 +19180,7 @@ FLAC__stream_decoder_seek_absolute:
 		mov r8, r5
 		eq r11, r3, r11
 	}
-	.loc	1 3457 7
+	.loc	1 3464 7
 .Ltmp2010:
 	bt r11, .LBB40_171
 .Ltmp2011:
@@ -19212,7 +19224,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r1, sp[11]
 	}
-	.loc	1 3463 6
+	.loc	1 3470 6
 .Ltmp2016:
 	{
 		eq r1, r3, r1
@@ -19259,7 +19271,7 @@ FLAC__stream_decoder_seek_absolute:
 .Ltmp2022:
 	bf r11, .LBB40_187
 .Ltmp2023:
-	.loc	1 869 5
+	.loc	1 871 5
 	{
 		mov r0, r4
 		ldw r2, r0[9]
@@ -19282,7 +19294,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 872 6
+	.loc	1 874 6
 .Ltmp2025:
 	bl FLAC__bitreader_is_consumed_byte_aligned
 	bt r0, .LBB40_191
@@ -19296,7 +19308,7 @@ FLAC__stream_decoder_seek_absolute:
 		ldw r2, r0[9]
 	}
 .Ltmp2028:
-	.loc	1 869 5
+	.loc	1 871 5
 	{
 		ldaw r1, sp[20]
 		ldw r0, sp[15]
@@ -19319,7 +19331,7 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 872 6
+	.loc	1 874 6
 .Ltmp2030:
 	bl FLAC__bitreader_is_consumed_byte_aligned
 	bf r0, .LBB40_182
@@ -19337,38 +19349,38 @@ FLAC__stream_decoder_seek_absolute:
 		nop
 		ldw r0, r0[11]
 	}
-	.loc	1 1182 9
+	.loc	1 1185 9
 .Ltmp2033:
 	bl FLAC__bitreader_get_input_bits_unconsumed
-	.loc	1 1182 9
+	.loc	1 1185 9
 	{
 		shr r0, r0, 3
 		nop
 	}
 .Ltmp2034:
-	.loc	1 875 15
+	.loc	1 877 15
 	ldd r2, r1, sp[10]
 	{
 		mov r5, r8
 		nop
 	}
-	.loc	1 875 15
+	.loc	1 877 15
 	lsub r1, r0, r1, r0, r5
 	{
 		sub r1, r2, r1
 		nop
 	}
-	.loc	1 875 15
+	.loc	1 877 15
 	std r1, r0, sp[10]
 	{
 		nop
 		ldw r2, sp[17]
 	}
 .Ltmp2035:
-	.loc	1 3470 4
+	.loc	1 3477 4
 	lsub r2, r0, r0, r2, r5
 	lsub r2, r1, r1, r7, r2
-	.loc	1 3470 4
+	.loc	1 3477 4
 	{
 		shl r1, r1, 1
 		mkmsk r2, 5
@@ -19385,13 +19397,13 @@ FLAC__stream_decoder_seek_absolute:
 		mkmsk r2, 2
 		mov r3, r5
 	}
-	.loc	1 3470 4
+	.loc	1 3477 4
 	bl __udivdi3
 	{
 		ldc r1, 16
 		nop
 	}
-	.loc	1 3470 4
+	.loc	1 3477 4
 	ladd r0, r1, r0, r1, r5
 	{
 		nop
@@ -19432,7 +19444,7 @@ FLAC__stream_decoder_seek_absolute:
 		ldc r1, 6
 		nop
 	}
-	.loc	1 3380 4
+	.loc	1 3387 4
 .Ltmp2037:
 	{
 		ldc r5, 0
@@ -19468,7 +19480,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 .Ltmp2041:
 .LBB40_188:
-	.loc	1 1164 4
+	.loc	1 1167 4
 	{
 		mov r9, r5
 		nop
@@ -19480,7 +19492,7 @@ FLAC__stream_decoder_seek_absolute:
 		ldw r0, r4[1]
 	}
 	ldc r1, 4680
-	.loc	1 1166 3
+	.loc	1 1169 3
 	{
 		add r0, r0, r1
 		nop
@@ -19491,7 +19503,7 @@ FLAC__stream_decoder_seek_absolute:
 	}
 .Ltmp2043:
 .LBB40_190:
-	.loc	1 1169 1
+	.loc	1 1172 1
 	{
 		mov r0, r9
 		ldw r10, sp[32]
@@ -19527,7 +19539,7 @@ FLAC__stream_decoder_seek_absolute:
 	# RETURN_REG_HOLDER
 .LBB40_157:
 .Ltmp2044:
-	.loc	1 1164 4
+	.loc	1 1167 4
 	{
 		mov r9, r7
 		ldw r4, sp[15]
@@ -19558,7 +19570,7 @@ FLAC__stream_decoder_seek_absolute:
 		ldc r0, 6
 		nop
 	}
-	.loc	1 3458 4
+	.loc	1 3465 4
 .Ltmp2050:
 	{
 		mov r5, r8
@@ -19573,12 +19585,12 @@ FLAC__stream_decoder_seek_absolute:
 	}
 .Ltmp2052:
 .LBB40_187:
-	.loc	1 3475 5
+	.loc	1 3482 5
 	{
 		ldc r1, 6
 		ldw r0, r4[0]
 	}
-	.loc	1 3475 5
+	.loc	1 3482 5
 	{
 		mov r5, r8
 		stw r1, r0[0]
@@ -19618,7 +19630,7 @@ FLAC__stream_decoder_seek_absolute:
 	.cc_top allocate_output_.function,allocate_output_
 allocate_output_:
 .Lfunc_begin41:
-	.loc	1 1234 0
+	.loc	1 1237 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -19662,7 +19674,7 @@ allocate_output_:
 		ldw r2, r6[1]
 	}
 	ldc r0, 216
-	.loc	1 1238 5 prologue_end
+	.loc	1 1241 5 prologue_end
 .Ltmp2067:
 	{
 		add r0, r2, r0
@@ -19672,13 +19684,13 @@ allocate_output_:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 1238 5
+	.loc	1 1241 5
 	{
 		lsu r0, r0, r1
 		nop
 	}
 	ldw r7, cp[.LCPI41_0]
-	.loc	1 1238 5
+	.loc	1 1241 5
 	bf r0, .LBB41_2
 .Ltmp2068:
 	{
@@ -19690,7 +19702,7 @@ allocate_output_:
 .Ltmp2070:
 .LBB41_2:
 	ldc r0, 220
-	.loc	1 1238 5
+	.loc	1 1241 5
 	{
 		add r0, r2, r0
 		nop
@@ -19699,12 +19711,12 @@ allocate_output_:
 		nop
 		ldw r0, r0[0]
 	}
-	.loc	1 1238 5
+	.loc	1 1241 5
 	{
 		lsu r0, r0, r5
 		nop
 	}
-	.loc	1 1238 5
+	.loc	1 1241 5
 	bf r0, .LBB41_4
 .Ltmp2071:
 	{
@@ -19715,7 +19727,7 @@ allocate_output_:
 	bu .LBB41_6
 .Ltmp2073:
 .LBB41_4:
-	.loc	1 1238 5
+	.loc	1 1241 5
 	{
 		shr r0, r9, 5
 		mkmsk r8, 1
@@ -19728,7 +19740,7 @@ allocate_output_:
 	}
 .Ltmp2075:
 	ldc r0, 112
-	.loc	1 1238 5
+	.loc	1 1241 5
 	{
 		add r0, r2, r0
 		nop
@@ -19755,9 +19767,9 @@ allocate_output_:
 	}
 	bf r0, .LBB41_8
 .Ltmp2077:
-	.loc	1 1246 4
+	.loc	1 1249 4
 	ldaw r0, r0[-4]
-	.loc	1 1246 4
+	.loc	1 1249 4
 	bl free
 	{
 		nop
@@ -19796,7 +19808,7 @@ allocate_output_:
 	}
 	bf r0, .LBB41_10
 .Ltmp2079:
-	.loc	1 1250 4
+	.loc	1 1253 4
 	bl free
 	{
 		nop
@@ -19837,7 +19849,7 @@ allocate_output_:
 	}
 .Ltmp2080:
 .LBB41_10:
-	.loc	1 1244 2
+	.loc	1 1247 2
 	{
 		add r7, r7, 4
 		nop
@@ -19852,7 +19864,7 @@ allocate_output_:
 	}
 .Ltmp2082:
 	ldc r4, 112
-	.loc	1 1255 5
+	.loc	1 1258 5
 .Ltmp2083:
 	{
 		add r0, r2, r4
@@ -19864,13 +19876,13 @@ allocate_output_:
 	}
 	bf r0, .LBB41_13
 .Ltmp2084:
-	.loc	1 1256 3
+	.loc	1 1259 3
 	bl free
 	{
 		nop
 		ldw r0, r6[1]
 	}
-	.loc	1 1257 3
+	.loc	1 1260 3
 	{
 		add r0, r0, r4
 		ldc r1, 0
@@ -19969,13 +19981,13 @@ allocate_output_:
 		nop
 		stw r8, r0[0]
 	}
-	.loc	1 1273 3
+	.loc	1 1276 3
 	ldaw r0, r0[4]
 	{
 		nop
 		ldw r1, r6[1]
 	}
-	.loc	1 1273 3
+	.loc	1 1276 3
 	stw r0, r1[r5]
 	{
 		nop
@@ -19989,23 +20001,23 @@ allocate_output_:
 		nop
 		ldw r0, sp[3]
 	}
-	.loc	1 1275 7
+	.loc	1 1278 7
 .Ltmp2095:
 	bl FLAC__memory_alloc_aligned_int32_array
-	.loc	1 1275 7
+	.loc	1 1278 7
 	bf r0, .LBB41_21
 .Ltmp2096:
-	.loc	1 1260 2
+	.loc	1 1263 2
 	{
 		add r0, r5, 1
 		sub r1, r5, 11
 	}
-	.loc	1 1260 2
+	.loc	1 1263 2
 	{
 		add r4, r4, 4
 		add r10, r10, 4
 	}
-	.loc	1 1260 2
+	.loc	1 1263 2
 	{
 		lsu r1, r1, r9
 		mov r5, r0
@@ -20017,13 +20029,13 @@ allocate_output_:
 		ldc r0, 32
 		ldw r1, sp[1]
 	}
-	.loc	1 1281 5
+	.loc	1 1284 5
 .Ltmp2098:
 	{
 		eq r0, r1, r0
 		nop
 	}
-	.loc	1 1281 5
+	.loc	1 1284 5
 	bf r0, .LBB41_23
 .Ltmp2099:
 	{
@@ -20031,7 +20043,7 @@ allocate_output_:
 		nop
 	}
 .Ltmp2100:
-	.loc	1 1282 38
+	.loc	1 1285 38
 	{
 		mov r0, r8
 		ldw r4, sp[3]
@@ -20047,7 +20059,7 @@ allocate_output_:
 		ldw r1, r6[1]
 	}
 	ldc r2, 112
-	.loc	1 1282 38
+	.loc	1 1285 38
 	{
 		add r2, r1, r2
 		nop
@@ -20069,7 +20081,7 @@ allocate_output_:
 	bu .LBB41_27
 .Ltmp2103:
 .LBB41_19:
-	.loc	1 1269 4
+	.loc	1 1272 4
 	{
 		ldc r1, 8
 		ldw r0, r6[0]
@@ -20098,7 +20110,7 @@ allocate_output_:
 .Ltmp2106:
 .LBB41_24:
 	ldc r0, 216
-	.loc	1 1289 2
+	.loc	1 1292 2
 	{
 		add r0, r1, r0
 		nop
@@ -20108,12 +20120,12 @@ allocate_output_:
 		stw r4, r0[0]
 	}
 	ldc r0, 220
-	.loc	1 1290 2
+	.loc	1 1293 2
 	{
 		add r0, r1, r0
 		nop
 	}
-	.loc	1 1290 2
+	.loc	1 1293 2
 	{
 		mkmsk r8, 1
 		stw r9, r0[0]
@@ -20121,7 +20133,7 @@ allocate_output_:
 	bu .LBB41_28
 .Ltmp2107:
 .LBB41_21:
-	.loc	1 1276 4
+	.loc	1 1279 4
 	{
 		ldc r1, 8
 		ldw r0, r6[0]
@@ -20132,7 +20144,7 @@ allocate_output_:
 	}
 .Ltmp2108:
 .LBB41_28:
-	.loc	1 1293 1
+	.loc	1 1296 1
 	{
 		mov r0, r8
 		ldw r10, sp[10]
@@ -20161,7 +20173,7 @@ allocate_output_:
 	.cc_top write_audio_frame_to_client_.function,write_audio_frame_to_client_
 write_audio_frame_to_client_:
 .Lfunc_begin42:
-	.loc	1 3180 0
+	.loc	1 3187 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -20205,14 +20217,14 @@ write_audio_frame_to_client_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 4800
-	.loc	1 3181 2 prologue_end
+	.loc	1 3188 2 prologue_end
 .Ltmp2123:
 	{
 		add r0, r0, r1
 		nop
 	}
 	ldc r2, 3504
-	.loc	1 3181 2
+	.loc	1 3188 2
 	{
 		mov r1, r6
 		nop
@@ -20223,7 +20235,7 @@ write_audio_frame_to_client_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 8304
-	.loc	1 3182 2
+	.loc	1 3189 2
 	{
 		add r1, r0, r1
 		mkmsk r7, 1
@@ -20233,7 +20245,7 @@ write_audio_frame_to_client_:
 		stw r7, r1[0]
 	}
 	ldc r1, 4680
-	.loc	1 3183 5
+	.loc	1 3190 5
 .Ltmp2124:
 	{
 		add r1, r0, r1
@@ -20243,22 +20255,22 @@ write_audio_frame_to_client_:
 		nop
 		ldw r2, r1[0]
 	}
-	.loc	1 3183 5
+	.loc	1 3190 5
 	bf r2, .LBB42_15
 .Ltmp2125:
-	.loc	1 3184 3
+	.loc	1 3191 3
 	ldaw r2, r6[6]
-	.loc	1 3184 3
+	.loc	1 3191 3
 	ldd r2, r3, r2[0]
 	ldc r11, 8328
-	.loc	1 3186 3
+	.loc	1 3193 3
 	{
 		add r11, r0, r11
 		nop
 	}
-	.loc	1 3186 3
+	.loc	1 3193 3
 	ldd r11, r9, r11[0]
-	.loc	1 3193 6
+	.loc	1 3200 6
 .Ltmp2126:
 	{
 		eq r7, r11, r2
@@ -20274,7 +20286,7 @@ write_audio_frame_to_client_:
 .Ltmp2128:
 .LBB42_15:
 	ldc r1, 240
-	.loc	1 3222 6
+	.loc	1 3229 6
 .Ltmp2129:
 	{
 		add r1, r0, r1
@@ -20285,12 +20297,12 @@ write_audio_frame_to_client_:
 		ldw r2, r1[0]
 	}
 	ldc r1, 4672
-	.loc	1 3223 4
+	.loc	1 3230 4
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 3222 6
+	.loc	1 3229 6
 	bf r2, .LBB42_16
 .Ltmp2130:
 	{
@@ -20300,7 +20312,7 @@ write_audio_frame_to_client_:
 	bf r1, .LBB42_20
 .Ltmp2131:
 	ldc r1, 4684
-	.loc	1 3225 8
+	.loc	1 3232 8
 .Ltmp2132:
 	{
 		add r0, r0, r1
@@ -20314,17 +20326,17 @@ write_audio_frame_to_client_:
 		nop
 		ldw r1, r6[4]
 	}
-	.loc	1 3225 8
+	.loc	1 3232 8
 	{
 		add r1, r1, 7
 		nop
 	}
-	.loc	1 3225 8
+	.loc	1 3232 8
 	{
 		shr r1, r1, 3
 		nop
 	}
-	.loc	1 3225 8
+	.loc	1 3232 8
 	{
 		mov r1, r5
 		stw r1, sp[1]
@@ -20339,14 +20351,14 @@ write_audio_frame_to_client_:
 	bu .LBB42_20
 .Ltmp2134:
 .LBB42_2:
-	.loc	1 3193 6
+	.loc	1 3200 6
 	{
 		lsu r7, r9, r3
 		nop
 	}
 .Ltmp2135:
 .LBB42_4:
-	.loc	1 3193 6
+	.loc	1 3200 6
 	bf r7, .LBB42_6
 .Ltmp2136:
 	{
@@ -20356,18 +20368,18 @@ write_audio_frame_to_client_:
 	bu .LBB42_22
 .LBB42_6:
 .Ltmp2137:
-	.loc	1 3185 3
+	.loc	1 3192 3
 	{
 		ldc r7, 0
 		ldw r8, r6[0]
 	}
-	.loc	1 3185 3
+	.loc	1 3192 3
 	ladd r8, r10, r8, r3, r7
 	{
 		add r8, r2, r8
 		stw r10, sp[3]
 	}
-	.loc	1 3193 6
+	.loc	1 3200 6
 .Ltmp2138:
 	{
 		eq r10, r11, r8
@@ -20403,7 +20415,7 @@ write_audio_frame_to_client_:
 		ldc r7, 0
 		nop
 	}
-	.loc	1 3194 4
+	.loc	1 3201 4
 .Ltmp2144:
 	lsub r8, r3, r9, r3, r7
 	lsub r11, r2, r11, r2, r8
@@ -20429,18 +20441,18 @@ write_audio_frame_to_client_:
 		nop
 		ldw r11, r5[r7]
 	}
-	.loc	1 3202 6
+	.loc	1 3209 6
 .Ltmp2148:
 	ldaw r11, r11[r3]
-	.loc	1 3202 6
+	.loc	1 3209 6
 	stw r11, r2[r7]
-	.loc	1 3201 56
+	.loc	1 3208 56
 	{
 		add r7, r7, 1
 		nop
 	}
 .Ltmp2149:
-	.loc	1 3201 5
+	.loc	1 3208 5
 	{
 		lsu r11, r7, r1
 		nop
@@ -20449,7 +20461,7 @@ write_audio_frame_to_client_:
 .Ltmp2150:
 .LBB42_14:
 	ldc r1, 4800
-	.loc	1 3203 5
+	.loc	1 3210 5
 	{
 		add r1, r0, r1
 		nop
@@ -20458,7 +20470,7 @@ write_audio_frame_to_client_:
 		nop
 		ldw r2, r1[0]
 	}
-	.loc	1 3203 5
+	.loc	1 3210 5
 	{
 		sub r2, r2, r3
 		nop
@@ -20468,35 +20480,35 @@ write_audio_frame_to_client_:
 		stw r2, r1[0]
 	}
 	ldc r2, 4824
-	.loc	1 3204 5
+	.loc	1 3211 5
 	{
 		add r2, r0, r2
 		nop
 	}
-	.loc	1 3204 5
+	.loc	1 3211 5
 	ldd r5, r11, r2[0]
 	{
 		ldc r6, 0
 		nop
 	}
-	.loc	1 3204 5
+	.loc	1 3211 5
 	ladd r11, r3, r11, r3, r6
 	{
 		add r11, r5, r11
 		nop
 	}
-	.loc	1 3204 5
+	.loc	1 3211 5
 	std r11, r3, r2[0]
 	{
 		nop
 		ldw r11, r0[6]
 	}
-	.loc	1 3206 12
+	.loc	1 3213 12
 	{
 		ldaw r2, sp[4]
 		ldw r3, r0[9]
 	}
-	.loc	1 3206 12
+	.loc	1 3213 12
 	{
 		mov r0, r4
 		nop
@@ -20518,13 +20530,13 @@ write_audio_frame_to_client_:
 		nop
 		ldw r11, r0[6]
 	}
-	.loc	1 3228 10
+	.loc	1 3235 10
 .Ltmp2153:
 	{
 		mov r0, r4
 		ldw r3, r0[9]
 	}
-	.loc	1 3228 10
+	.loc	1 3235 10
 	{
 		mov r1, r6
 		mov r2, r5
@@ -20541,7 +20553,7 @@ write_audio_frame_to_client_:
 	}
 .Ltmp2155:
 .LBB42_22:
-	.loc	1 3230 1
+	.loc	1 3237 1
 	{
 		mov r0, r7
 		ldw r10, sp[18]
@@ -20569,7 +20581,7 @@ write_audio_frame_to_client_:
 	.cc_top read_residual_partitioned_rice_.function,read_residual_partitioned_rice_
 read_residual_partitioned_rice_:
 .Lfunc_begin43:
-	.loc	1 2918 0
+	.loc	1 2925 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -20618,7 +20630,7 @@ read_residual_partitioned_rice_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 1128
-	.loc	1 2923 2 prologue_end
+	.loc	1 2930 2 prologue_end
 .Ltmp2171:
 	{
 		add r1, r1, r2
@@ -20628,34 +20640,34 @@ read_residual_partitioned_rice_:
 		nop
 		ldw r6, r1[0]
 	}
-	.loc	1 2924 2
+	.loc	1 2931 2
 	ldaw r11, cp[FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE2_PARAMETER_LEN]
 	{
 		mov r8, r11
 		nop
 	}
-	.loc	1 2924 2
+	.loc	1 2931 2
 	ldaw r11, cp[FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE_PARAMETER_LEN]
 	bt r0, .LBB43_2
 .Ltmp2172:
-	.loc	1 2924 2
+	.loc	1 2931 2
 	{
 		mov r8, r11
 		nop
 	}
 .Ltmp2173:
 .LBB43_2:
-	.loc	1 2925 2
+	.loc	1 2932 2
 	ldaw r11, cp[FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE2_ESCAPE_PARAMETER]
 	{
 		mov r9, r11
 		nop
 	}
-	.loc	1 2925 2
+	.loc	1 2932 2
 	ldaw r11, cp[FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE_ESCAPE_PARAMETER]
 	bt r0, .LBB43_4
 .Ltmp2174:
-	.loc	1 2925 2
+	.loc	1 2932 2
 	{
 		mov r9, r11
 		nop
@@ -20666,7 +20678,7 @@ read_residual_partitioned_rice_:
 		ldc r0, 6
 		nop
 	}
-	.loc	1 2930 6
+	.loc	1 2937 6
 .Ltmp2176:
 	{
 		lsu r2, r0, r7
@@ -20674,33 +20686,33 @@ read_residual_partitioned_rice_:
 	}
 	bt r2, .LBB43_6
 .Ltmp2177:
-	.loc	1 2930 6
+	.loc	1 2937 6
 	{
 		mov r1, r0
 		nop
 	}
 .Ltmp2178:
 .LBB43_6:
-	.loc	1 2930 6
+	.loc	1 2937 6
 	{
 		mov r0, r5
 		nop
 	}
 	bl FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_size
-	.loc	1 2930 6
+	.loc	1 2937 6
 	bf r0, .LBB43_31
 .Ltmp2179:
 	{
 		mkmsk r0, 1
 		nop
 	}
-	.loc	1 2922 2
+	.loc	1 2929 2
 	{
 		shl r0, r0, r7
 		nop
 	}
 .Ltmp2180:
-	.loc	1 2923 2
+	.loc	1 2930 2
 	{
 		shr r10, r6, r7
 		stw r0, sp[3]
@@ -20733,7 +20745,7 @@ read_residual_partitioned_rice_:
 		ldw r0, r4[1]
 	}
 .Ltmp2183:
-	.loc	1 2937 7
+	.loc	1 2944 7
 	{
 		ldaw r1, sp[7]
 		ldw r0, r0[11]
@@ -20742,7 +20754,7 @@ read_residual_partitioned_rice_:
 		nop
 		ldw r2, sp[5]
 	}
-	.loc	1 2937 7
+	.loc	1 2944 7
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB43_30
 .Ltmp2184:
@@ -20754,7 +20766,7 @@ read_residual_partitioned_rice_:
 		nop
 		ldw r1, r5[0]
 	}
-	.loc	1 2939 3
+	.loc	1 2946 3
 	stw r0, r1[r7]
 	{
 		nop
@@ -20764,7 +20776,7 @@ read_residual_partitioned_rice_:
 		nop
 		ldw r1, sp[4]
 	}
-	.loc	1 2940 6
+	.loc	1 2947 6
 .Ltmp2185:
 	{
 		lsu r0, r0, r1
@@ -20776,10 +20788,10 @@ read_residual_partitioned_rice_:
 		nop
 		ldw r0, r5[1]
 	}
-	.loc	1 2941 4
+	.loc	1 2948 4
 .Ltmp2187:
 	stw r9, r0[r7]
-	.loc	1 2942 4
+	.loc	1 2949 4
 	{
 		mov r0, r9
 		nop
@@ -20792,7 +20804,7 @@ read_residual_partitioned_rice_:
 	}
 .Ltmp2189:
 .LBB43_12:
-	.loc	1 2942 4
+	.loc	1 2949 4
 	{
 		sub r6, r10, r0
 		ldw r0, r4[1]
@@ -20806,20 +20818,20 @@ read_residual_partitioned_rice_:
 		nop
 		ldw r1, sp[17]
 	}
-	.loc	1 2943 8
+	.loc	1 2950 8
 .Ltmp2191:
 	ldaw r1, r1[r8]
-	.loc	1 2943 8
+	.loc	1 2950 8
 	{
 		mov r2, r6
 		ldw r3, sp[7]
 	}
-	.loc	1 2943 8
+	.loc	1 2950 8
 	bl FLAC__bitreader_read_rice_signed_block
-	.loc	1 2943 8
+	.loc	1 2950 8
 	bf r0, .LBB43_13
 .Ltmp2192:
-	.loc	1 2954 4
+	.loc	1 2961 4
 	{
 		add r8, r6, r8
 		nop
@@ -20832,15 +20844,15 @@ read_residual_partitioned_rice_:
 		nop
 		ldw r0, r4[1]
 	}
-	.loc	1 2957 8
+	.loc	1 2964 8
 .Ltmp2195:
 	{
 		ldaw r1, sp[7]
 		ldw r0, r0[11]
 	}
-	.loc	1 2957 8
+	.loc	1 2964 8
 	ldw r2, cp[FLAC__ENTROPY_CODING_METHOD_PARTITIONED_RICE_RAW_LEN]
-	.loc	1 2957 8
+	.loc	1 2964 8
 	bl FLAC__bitreader_read_raw_uint32
 	bf r0, .LBB43_30
 .Ltmp2196:
@@ -20852,9 +20864,9 @@ read_residual_partitioned_rice_:
 		nop
 		ldw r1, r5[1]
 	}
-	.loc	1 2959 4
+	.loc	1 2966 4
 	stw r0, r1[r7]
-	.loc	1 2960 7
+	.loc	1 2967 7
 .Ltmp2197:
 	{
 		mov r6, r9
@@ -20868,13 +20880,13 @@ read_residual_partitioned_rice_:
 	}
 .Ltmp2199:
 .LBB43_20:
-	.loc	1 2961 5
+	.loc	1 2968 5
 	{
 		lsu r0, r6, r10
 		nop
 	}
 .Ltmp2200:
-	.loc	1 2960 7
+	.loc	1 2967 7
 	bf r2, .LBB43_25
 .Ltmp2201:
 	bf r0, .LBB43_28
@@ -20887,18 +20899,18 @@ read_residual_partitioned_rice_:
 	}
 .Ltmp2203:
 .LBB43_22:
-	.loc	1 2966 10
+	.loc	1 2973 10
 	{
 		add r6, r6, 1
 		ldw r0, r4[1]
 	}
 .Ltmp2204:
-	.loc	1 2966 10
+	.loc	1 2973 10
 	{
 		ldaw r1, sp[6]
 		ldw r0, r0[11]
 	}
-	.loc	1 2966 10
+	.loc	1 2973 10
 	bl FLAC__bitreader_read_raw_int32
 	bf r0, .LBB43_30
 .Ltmp2205:
@@ -20910,10 +20922,10 @@ read_residual_partitioned_rice_:
 		nop
 		ldw r1, sp[17]
 	}
-	.loc	1 2968 6
+	.loc	1 2975 6
 	stw r0, r1[r8]
 .Ltmp2206:
-	.loc	1 2965 75
+	.loc	1 2972 75
 	{
 		add r8, r8, 1
 		lsu r0, r6, r10
@@ -20924,7 +20936,7 @@ read_residual_partitioned_rice_:
 .LBB43_25:
 	bf r0, .LBB43_28
 .Ltmp2208:
-	.loc	1 2961 5
+	.loc	1 2968 5
 	{
 		add r0, r10, r8
 		nop
@@ -20938,36 +20950,36 @@ read_residual_partitioned_rice_:
 		ldw r0, sp[17]
 	}
 	ldaw r0, r0[r8]
-	.loc	1 2961 5
+	.loc	1 2968 5
 	{
 		sub r1, r10, r6
 		nop
 	}
-	.loc	1 2961 5
+	.loc	1 2968 5
 	{
 		shl r2, r1, 2
 		mov r1, r9
 	}
-	.loc	1 2962 6
+	.loc	1 2969 6
 	bl memset
 	{
 		nop
 		ldw r0, sp[1]
 	}
-	.loc	1 2961 5
+	.loc	1 2968 5
 	{
 		sub r8, r0, r6
 		nop
 	}
 .Ltmp2209:
 .LBB43_28:
-	.loc	1 2936 45
+	.loc	1 2943 45
 	{
 		add r7, r7, 1
 		ldw r0, sp[3]
 	}
 .Ltmp2210:
-	.loc	1 2936 2
+	.loc	1 2943 2
 	{
 		lsu r0, r7, r0
 		nop
@@ -20976,12 +20988,12 @@ read_residual_partitioned_rice_:
 	bu .LBB43_29
 .Ltmp2211:
 .LBB43_31:
-	.loc	1 2931 3
+	.loc	1 2938 3
 	{
 		ldc r1, 8
 		ldw r0, r4[0]
 	}
-	.loc	1 2931 3
+	.loc	1 2938 3
 	{
 		ldc r9, 0
 		stw r1, r0[0]
@@ -20997,7 +21009,7 @@ read_residual_partitioned_rice_:
 		nop
 		ldw r1, r0[0]
 	}
-	.loc	1 2944 8
+	.loc	1 2951 8
 .Ltmp2213:
 	{
 		eq r1, r1, 3
@@ -21010,7 +21022,7 @@ read_residual_partitioned_rice_:
 		ldw r1, r4[1]
 	}
 	ldc r2, 4680
-	.loc	1 3234 5
+	.loc	1 3241 5
 .Ltmp2215:
 	{
 		add r2, r1, r2
@@ -21026,12 +21038,12 @@ read_residual_partitioned_rice_:
 		nop
 		ldw r3, r1[8]
 	}
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		ldc r1, 0
 		ldw r2, r1[9]
 	}
-	.loc	1 3235 3
+	.loc	1 3242 3
 	{
 		mov r0, r4
 		nop
@@ -21062,7 +21074,7 @@ read_residual_partitioned_rice_:
 	}
 .Ltmp2219:
 .LBB43_30:
-	.loc	1 2975 1
+	.loc	1 2982 1
 	{
 		mov r0, r9
 		ldw r10, sp[14]
@@ -21091,7 +21103,7 @@ read_residual_partitioned_rice_:
 	.cc_top file_read_callback_.function,file_read_callback_
 file_read_callback_:
 .Lfunc_begin44:
-	.loc	1 3625 0
+	.loc	1 3632 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -21130,14 +21142,14 @@ file_read_callback_:
 		nop
 		ldw r0, r6[1]
 	}
-	.loc	1 3629 12 prologue_end
+	.loc	1 3636 12 prologue_end
 .Ltmp2232:
 	{
 		mkmsk r11, 1
 		ldw r3, r0[10]
 	}
 .Ltmp2233:
-	.loc	1 3629 12
+	.loc	1 3636 12
 	{
 		mov r0, r1
 		mov r1, r11
@@ -21152,7 +21164,7 @@ file_read_callback_:
 		nop
 		ldw r1, r6[1]
 	}
-	.loc	1 3630 6
+	.loc	1 3637 6
 .Ltmp2235:
 	{
 		ldc r2, 12
@@ -21163,21 +21175,21 @@ file_read_callback_:
 		ld8u r1, r1[r2]
 	}
 	ldc r2, 64
-	.loc	1 3630 6
+	.loc	1 3637 6
 	{
 		and r1, r1, r2
 		nop
 	}
 	bt r1, .LBB44_3
 .Ltmp2236:
-	.loc	1 3632 11
+	.loc	1 3639 11
 	{
 		eq r4, r0, 0
 		nop
 	}
 .Ltmp2237:
 .LBB44_3:
-	.loc	1 3639 1
+	.loc	1 3646 1
 	{
 		mov r0, r4
 		ldw r6, sp[4]
@@ -21204,7 +21216,7 @@ file_read_callback_:
 	.cc_top file_seek_callback_.function,file_seek_callback_
 file_seek_callback_:
 .Lfunc_begin45:
-	.loc	1 3642 0
+	.loc	1 3649 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -21239,29 +21251,29 @@ file_seek_callback_:
 		nop
 		ldw r6, r0[10]
 	}
-	.loc	1 3645 32 prologue_end
+	.loc	1 3652 32 prologue_end
 .Ltmp2246:
 	bl __getstdin
 .Ltmp2247:
-	.loc	1 3645 32
+	.loc	1 3652 32
 	{
 		eq r0, r6, r0
 		nop
 	}
-	.loc	1 3645 32
+	.loc	1 3652 32
 	bt r0, .LBB45_1
 .Ltmp2248:
 	{
 		nop
 		ldw r0, r5[1]
 	}
-	.loc	1 3647 10
+	.loc	1 3654 10
 .Ltmp2249:
 	{
 		ldc r2, 0
 		ldw r0, r0[10]
 	}
-	.loc	1 3647 10
+	.loc	1 3654 10
 	{
 		mov r1, r4
 		nop
@@ -21272,7 +21284,7 @@ file_seek_callback_:
 		mkmsk r1, 5
 		nop
 	}
-	.loc	1 3648 3
+	.loc	1 3655 3
 	{
 		shr r0, r0, r1
 		nop
@@ -21290,7 +21302,7 @@ file_seek_callback_:
 		nop
 		ldw r6, sp[4]
 	}
-	.loc	1 3651 1
+	.loc	1 3658 1
 	ldd r5, r4, sp[1]
 	{
 		nop
@@ -21313,7 +21325,7 @@ file_seek_callback_:
 	.cc_top file_tell_callback_.function,file_tell_callback_
 file_tell_callback_:
 .Lfunc_begin46:
-	.loc	1 3654 0
+	.loc	1 3661 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -21350,16 +21362,16 @@ file_tell_callback_:
 		nop
 		ldw r6, r0[10]
 	}
-	.loc	1 3658 32 prologue_end
+	.loc	1 3665 32 prologue_end
 .Ltmp2263:
 	bl __getstdin
 .Ltmp2264:
-	.loc	1 3658 32
+	.loc	1 3665 32
 	{
 		eq r0, r6, r0
 		nop
 	}
-	.loc	1 3658 32
+	.loc	1 3665 32
 	bt r0, .LBB46_1
 .Ltmp2265:
 	{
@@ -21370,15 +21382,15 @@ file_tell_callback_:
 		nop
 		ldw r0, r0[10]
 	}
-	.loc	1 3660 17
+	.loc	1 3667 17
 .Ltmp2266:
 	bl ftello
 .Ltmp2267:
-	.loc	1 3660 17
+	.loc	1 3667 17
 	ashr r1, r0, 32
 	bt r1, .LBB46_3
 .Ltmp2268:
-	.loc	1 3663 3
+	.loc	1 3670 3
 	std r1, r0, r4[0]
 	{
 		ldc r0, 0
@@ -21405,7 +21417,7 @@ file_tell_callback_:
 		nop
 		ldw r6, sp[4]
 	}
-	.loc	1 3666 1
+	.loc	1 3673 1
 	ldd r5, r4, sp[1]
 	{
 		nop
@@ -21428,7 +21440,7 @@ file_tell_callback_:
 	.cc_top file_length_callback_.function,file_length_callback_
 file_length_callback_:
 .Lfunc_begin47:
-	.loc	1 3669 0
+	.loc	1 3676 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -21465,16 +21477,16 @@ file_length_callback_:
 		nop
 		ldw r6, r0[10]
 	}
-	.loc	1 3673 32 prologue_end
+	.loc	1 3680 32 prologue_end
 .Ltmp2283:
 	bl __getstdin
 .Ltmp2284:
-	.loc	1 3673 32
+	.loc	1 3680 32
 	{
 		eq r0, r6, r0
 		nop
 	}
-	.loc	1 3673 32
+	.loc	1 3680 32
 	bt r0, .LBB47_1
 .Ltmp2285:
 	{
@@ -21485,7 +21497,7 @@ file_length_callback_:
 		nop
 		ldw r0, r0[10]
 	}
-	.loc	1 3677 16
+	.loc	1 3684 16
 .Ltmp2286:
 	bl fileno
 .Ltmp2287:
@@ -21494,10 +21506,10 @@ file_length_callback_:
 		nop
 	}
 .Ltmp2288:
-	.loc	1 3677 5
+	.loc	1 3684 5
 	bl fstat
 .Ltmp2289:
-	.loc	1 3677 5
+	.loc	1 3684 5
 	bf r0, .LBB47_4
 .Ltmp2290:
 	{
@@ -21518,10 +21530,10 @@ file_length_callback_:
 		nop
 		ldw r0, sp[5]
 	}
-	.loc	1 3684 3
+	.loc	1 3691 3
 .Ltmp2293:
 	ashr r1, r0, 32
-	.loc	1 3684 3
+	.loc	1 3691 3
 	std r1, r0, r4[0]
 	{
 		ldc r0, 0
@@ -21533,7 +21545,7 @@ file_length_callback_:
 		nop
 		ldw r6, sp[18]
 	}
-	.loc	1 3687 1
+	.loc	1 3694 1
 	ldd r5, r4, sp[8]
 	{
 		nop
@@ -21556,7 +21568,7 @@ file_length_callback_:
 	.cc_top file_eof_callback_.function,file_eof_callback_
 file_eof_callback_:
 .Lfunc_begin48:
-	.loc	1 3690 0
+	.loc	1 3697 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -21572,10 +21584,10 @@ file_eof_callback_:
 		nop
 		ldw r0, r0[10]
 	}
-	.loc	1 3693 2 prologue_end
+	.loc	1 3700 2 prologue_end
 .Ltmp2298:
 	ldaw r0, r0[3]
-	.loc	1 3693 2
+	.loc	1 3700 2
 	{
 		ldc r1, 0
 		nop
@@ -21585,17 +21597,17 @@ file_eof_callback_:
 		nop
 		ld16s r0, r0[r1]
 	}
-	.loc	1 3693 2
+	.loc	1 3700 2
 	{
 		shr r0, r0, 5
 		nop
 	}
-	.loc	1 3693 2
+	.loc	1 3700 2
 	{
 		zext r0, 1
 		retsp 0
 	}
-	.loc	1 3693 2
+	.loc	1 3700 2
 	# RETURN_REG_HOLDER
 .Ltmp2300:
 	.cc_bottom file_eof_callback_.function
@@ -21613,7 +21625,7 @@ file_eof_callback_:
 	.cc_top read_callback_.function,read_callback_
 read_callback_:
 .Lfunc_begin49:
-	.loc	1 2994 0
+	.loc	1 3001 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -21652,7 +21664,7 @@ read_callback_:
 	}
 	bf r2, .LBB49_3
 .Ltmp2310:
-	.loc	1 3002 38 prologue_end
+	.loc	1 3009 38 prologue_end
 	{
 		mov r0, r4
 		ldw r1, r0[9]
@@ -21671,7 +21683,7 @@ read_callback_:
 		nop
 		stw r6, r5[0]
 	}
-	.loc	1 3005 3
+	.loc	1 3012 3
 .Ltmp2312:
 	{
 		ldc r1, 4
@@ -21695,7 +21707,7 @@ read_callback_:
 		ldw r0, r4[1]
 	}
 	ldc r1, 4680
-	.loc	1 3019 6
+	.loc	1 3026 6
 .Ltmp2315:
 	{
 		add r1, r0, r1
@@ -21708,17 +21720,17 @@ read_callback_:
 	bf r1, .LBB49_6
 .Ltmp2316:
 	ldc r1, 8336
-	.loc	1 3019 6
+	.loc	1 3026 6
 	{
 		add r1, r0, r1
 		nop
 	}
-	.loc	1 3019 6
+	.loc	1 3026 6
 	{
 		ldc r2, 21
 		ldw r1, r1[0]
 	}
-	.loc	1 3019 6
+	.loc	1 3026 6
 	{
 		lsu r1, r1, r2
 		nop
@@ -21730,13 +21742,13 @@ read_callback_:
 		nop
 		ldw r11, r0[1]
 	}
-	.loc	1 3029 5
+	.loc	1 3036 5
 .Ltmp2318:
 	{
 		mov r0, r4
 		ldw r3, r0[9]
 	}
-	.loc	1 3029 5
+	.loc	1 3036 5
 	{
 		mov r1, r6
 		mov r2, r5
@@ -21746,7 +21758,7 @@ read_callback_:
 		bla r11
 	}
 .Ltmp2319:
-	.loc	1 3031 7
+	.loc	1 3038 7
 	{
 		eq r1, r0, 2
 		nop
@@ -21754,21 +21766,21 @@ read_callback_:
 	bf r1, .LBB49_7
 .Ltmp2320:
 .LBB49_12:
-	.loc	1 3058 3
+	.loc	1 3065 3
 	{
 		mkmsk r1, 3
 		ldw r0, r4[0]
 	}
 .Ltmp2321:
 .LBB49_13:
-	.loc	1 3058 3
+	.loc	1 3065 3
 	{
 		ldc r6, 0
 		stw r1, r0[0]
 	}
 .Ltmp2322:
 .LBB49_14:
-	.loc	1 3071 1
+	.loc	1 3078 1
 	{
 		mov r0, r6
 		ldw r6, sp[4]
@@ -21781,14 +21793,14 @@ read_callback_:
 	# RETURN_REG_HOLDER
 .LBB49_7:
 .Ltmp2323:
-	.loc	1 3035 12
+	.loc	1 3042 12
 	{
 		mkmsk r6, 1
 		ldw r1, r5[0]
 	}
 	bt r1, .LBB49_14
 .Ltmp2324:
-	.loc	1 3037 6
+	.loc	1 3044 6
 	{
 		eq r0, r0, 1
 		nop
@@ -21806,7 +21818,7 @@ read_callback_:
 	}
 	bf r5, .LBB49_14
 .Ltmp2327:
-	.loc	1 3043 42
+	.loc	1 3050 42
 	{
 		mov r0, r4
 		ldw r1, r0[9]
@@ -21818,7 +21830,7 @@ read_callback_:
 	bf r0, .LBB49_14
 .Ltmp2328:
 .LBB49_11:
-	.loc	1 3046 6
+	.loc	1 3053 6
 	{
 		ldc r1, 4
 		ldw r0, r4[0]
@@ -23330,7 +23342,7 @@ ID3V2_TAG_:
 	.long	49
 	.byte	1
 	.byte	1
-	.byte	57
+	.byte	59
 	.byte	5
 	.byte	3
 	.long	FLAC_API_SUPPORTS_OGG_FLAC
@@ -23343,7 +23355,7 @@ ID3V2_TAG_:
 	.long	74
 	.byte	1
 	.byte	1
-	.byte	174
+	.byte	176
 	.byte	5
 	.byte	3
 	.long	FLAC__StreamDecoderStateString
@@ -23372,7 +23384,7 @@ ID3V2_TAG_:
 	.long	133
 	.byte	1
 	.byte	1
-	.byte	187
+	.byte	189
 	.byte	5
 	.byte	3
 	.long	FLAC__StreamDecoderInitStatusString
@@ -23387,7 +23399,7 @@ ID3V2_TAG_:
 	.long	163
 	.byte	1
 	.byte	1
-	.byte	196
+	.byte	198
 	.byte	5
 	.byte	3
 	.long	FLAC__StreamDecoderReadStatusString
@@ -23402,7 +23414,7 @@ ID3V2_TAG_:
 	.long	163
 	.byte	1
 	.byte	1
-	.byte	202
+	.byte	204
 	.byte	5
 	.byte	3
 	.long	FLAC__StreamDecoderSeekStatusString
@@ -23411,7 +23423,7 @@ ID3V2_TAG_:
 	.long	163
 	.byte	1
 	.byte	1
-	.byte	208
+	.byte	210
 	.byte	5
 	.byte	3
 	.long	FLAC__StreamDecoderTellStatusString
@@ -23420,7 +23432,7 @@ ID3V2_TAG_:
 	.long	163
 	.byte	1
 	.byte	1
-	.byte	214
+	.byte	216
 	.byte	5
 	.byte	3
 	.long	FLAC__StreamDecoderLengthStatusString
@@ -23429,7 +23441,7 @@ ID3V2_TAG_:
 	.long	247
 	.byte	1
 	.byte	1
-	.byte	220
+	.byte	222
 	.byte	5
 	.byte	3
 	.long	FLAC__StreamDecoderWriteStatusString
@@ -23444,7 +23456,7 @@ ID3V2_TAG_:
 	.long	277
 	.byte	1
 	.byte	1
-	.byte	225
+	.byte	227
 	.byte	5
 	.byte	3
 	.long	FLAC__StreamDecoderErrorStatusString
@@ -23458,7 +23470,7 @@ ID3V2_TAG_:
 	.long	.Linfo_string15
 	.long	306
 	.byte	1
-	.byte	66
+	.byte	68
 	.byte	5
 	.byte	3
 	.long	ID3V2_TAG_
@@ -24015,288 +24027,288 @@ ID3V2_TAG_:
 	.long	.Linfo_string344
 	.short	8344
 	.byte	1
-	.byte	120
+	.byte	122
 	.byte	19
 	.long	.Linfo_string135
 	.long	1349
 	.byte	1
-	.byte	121
+	.byte	123
 	.byte	0
 	.byte	19
 	.long	.Linfo_string136
 	.long	1961
 	.byte	1
-	.byte	122
+	.byte	124
 	.byte	4
 	.byte	19
 	.long	.Linfo_string141
 	.long	2050
 	.byte	1
-	.byte	123
+	.byte	125
 	.byte	8
 	.byte	19
 	.long	.Linfo_string144
 	.long	2101
 	.byte	1
-	.byte	124
+	.byte	126
 	.byte	12
 	.byte	19
 	.long	.Linfo_string147
 	.long	2157
 	.byte	1
-	.byte	125
+	.byte	127
 	.byte	16
 	.byte	19
 	.long	.Linfo_string150
 	.long	2208
 	.byte	1
-	.byte	126
+	.byte	128
 	.byte	20
 	.byte	19
 	.long	.Linfo_string152
 	.long	2242
 	.byte	1
-	.byte	127
+	.byte	129
 	.byte	24
 	.byte	19
 	.long	.Linfo_string200
 	.long	3218
 	.byte	1
-	.byte	128
+	.byte	130
 	.byte	28
 	.byte	19
 	.long	.Linfo_string259
 	.long	4352
 	.byte	1
-	.byte	129
+	.byte	131
 	.byte	32
 	.byte	19
 	.long	.Linfo_string262
 	.long	932
 	.byte	1
-	.byte	130
+	.byte	132
 	.byte	36
 	.byte	19
 	.long	.Linfo_string263
 	.long	4399
 	.byte	1
-	.byte	131
+	.byte	133
 	.byte	40
 	.byte	19
 	.long	.Linfo_string298
 	.long	4947
 	.byte	1
-	.byte	132
+	.byte	134
 	.byte	44
 	.byte	19
 	.long	.Linfo_string300
 	.long	4969
 	.byte	1
-	.byte	133
+	.byte	135
 	.byte	48
 	.byte	19
 	.long	.Linfo_string181
 	.long	4969
 	.byte	1
-	.byte	134
+	.byte	136
 	.byte	80
 	.byte	19
 	.long	.Linfo_string301
 	.long	4986
 	.byte	1
-	.byte	135
+	.byte	137
 	.byte	112
 	.byte	19
 	.long	.Linfo_string302
 	.long	1349
 	.byte	1
-	.byte	136
+	.byte	138
 	.byte	116
 	.byte	19
 	.long	.Linfo_string303
 	.long	4991
 	.byte	1
-	.byte	137
+	.byte	139
 	.byte	120
 	.byte	19
 	.long	.Linfo_string304
 	.long	933
 	.byte	1
-	.byte	138
+	.byte	140
 	.byte	216
 	.byte	19
 	.long	.Linfo_string305
 	.long	933
 	.byte	1
-	.byte	138
+	.byte	140
 	.byte	220
 	.byte	19
 	.long	.Linfo_string306
 	.long	1105
 	.byte	1
-	.byte	139
+	.byte	141
 	.byte	224
 	.byte	19
 	.long	.Linfo_string307
 	.long	1105
 	.byte	1
-	.byte	139
+	.byte	141
 	.byte	228
 	.byte	19
 	.long	.Linfo_string308
 	.long	987
 	.byte	1
-	.byte	140
+	.byte	142
 	.byte	232
 	.byte	19
 	.long	.Linfo_string309
 	.long	1349
 	.byte	1
-	.byte	141
+	.byte	143
 	.byte	240
 	.byte	19
 	.long	.Linfo_string310
 	.long	1349
 	.byte	1
-	.byte	141
+	.byte	143
 	.byte	244
 	.byte	19
 	.long	.Linfo_string203
 	.long	3263
 	.byte	1
-	.byte	142
+	.byte	144
 	.byte	248
 	.byte	21
 	.long	.Linfo_string217
 	.long	3263
 	.byte	1
-	.byte	143
+	.byte	145
 	.short	424
 	.byte	21
 	.long	.Linfo_string311
 	.long	5003
 	.byte	1
-	.byte	144
+	.byte	146
 	.short	600
 	.byte	21
 	.long	.Linfo_string312
 	.long	1128
 	.byte	1
-	.byte	145
+	.byte	147
 	.short	1112
 	.byte	21
 	.long	.Linfo_string313
 	.long	2032
 	.byte	1
-	.byte	146
+	.byte	148
 	.short	1116
 	.byte	21
 	.long	.Linfo_string314
 	.long	2032
 	.byte	1
-	.byte	146
+	.byte	148
 	.short	1120
 	.byte	21
 	.long	.Linfo_string315
 	.long	2308
 	.byte	1
-	.byte	147
+	.byte	149
 	.short	1128
 	.byte	21
 	.long	.Linfo_string316
 	.long	1349
 	.byte	1
-	.byte	148
+	.byte	150
 	.short	4632
 	.byte	21
 	.long	.Linfo_string317
 	.long	5015
 	.byte	1
-	.byte	149
+	.byte	151
 	.short	4636
 	.byte	21
 	.long	.Linfo_string318
 	.long	323
 	.byte	1
-	.byte	150
+	.byte	152
 	.short	4638
 	.byte	21
 	.long	.Linfo_string319
 	.long	4969
 	.byte	1
-	.byte	152
+	.byte	154
 	.short	4640
 	.byte	21
 	.long	.Linfo_string320
 	.long	1349
 	.byte	1
-	.byte	153
+	.byte	155
 	.short	4672
 	.byte	21
 	.long	.Linfo_string321
 	.long	1349
 	.byte	1
-	.byte	154
+	.byte	156
 	.short	4676
 	.byte	21
 	.long	.Linfo_string322
 	.long	1349
 	.byte	1
-	.byte	155
+	.byte	157
 	.short	4680
 	.byte	21
 	.long	.Linfo_string323
 	.long	5027
 	.byte	1
-	.byte	156
+	.byte	158
 	.short	4684
 	.byte	21
 	.long	.Linfo_string336
 	.long	3582
 	.byte	1
-	.byte	157
+	.byte	159
 	.short	4780
 	.byte	21
 	.long	.Linfo_string337
 	.long	2308
 	.byte	1
-	.byte	159
+	.byte	161
 	.short	4800
 	.byte	21
 	.long	.Linfo_string338
 	.long	1349
 	.byte	1
-	.byte	160
+	.byte	162
 	.short	8304
 	.byte	21
 	.long	.Linfo_string339
 	.long	987
 	.byte	1
-	.byte	161
+	.byte	163
 	.short	8312
 	.byte	21
 	.long	.Linfo_string340
 	.long	987
 	.byte	1
-	.byte	162
+	.byte	164
 	.short	8320
 	.byte	21
 	.long	.Linfo_string341
 	.long	987
 	.byte	1
-	.byte	163
+	.byte	165
 	.short	8328
 	.byte	21
 	.long	.Linfo_string342
 	.long	933
 	.byte	1
-	.byte	164
+	.byte	166
 	.short	8336
 	.byte	21
 	.long	.Linfo_string343
 	.long	1349
 	.byte	1
-	.byte	165
+	.byte	167
 	.short	8340
 	.byte	0
 	.byte	15
@@ -25876,13 +25888,13 @@ ID3V2_TAG_:
 	.byte	34
 	.long	.Linfo_string346
 	.byte	1
-	.short	1191
+	.short	1194
 	.byte	1
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	1191
+	.short	1194
 	.long	1155
 	.byte	0
 	.byte	36
@@ -25892,7 +25904,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string436
 	.byte	1
-	.byte	238
+	.byte	240
 	.byte	1
 	.long	1155
 	.byte	1
@@ -25900,18 +25912,18 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc0
 	.long	.Linfo_string368
 	.byte	1
-	.byte	241
+	.byte	243
 	.long	933
 	.byte	38
 	.long	.Linfo_string347
 	.byte	1
-	.byte	240
+	.byte	242
 	.long	1155
 	.byte	39
 	.long	5218
 	.long	.Ldebug_ranges1
 	.byte	1
-	.short	296
+	.short	298
 	.byte	0
 	.byte	40
 	.long	.Ldebug_ranges2
@@ -25920,20 +25932,20 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string437
 	.byte	1
-	.short	303
+	.short	305
 	.byte	1
 	.byte	1
 	.byte	41
 	.long	.Ldebug_loc1
 	.long	.Linfo_string347
 	.byte	1
-	.short	303
+	.short	305
 	.long	1155
 	.byte	42
 	.long	.Ldebug_loc2
 	.long	.Linfo_string368
 	.byte	1
-	.short	305
+	.short	307
 	.long	933
 	.byte	0
 	.byte	43
@@ -25943,7 +25955,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string444
 	.byte	1
-	.short	585
+	.short	587
 	.byte	1
 	.long	1349
 	.byte	1
@@ -25951,25 +25963,25 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc3
 	.long	.Linfo_string347
 	.byte	1
-	.short	585
+	.short	587
 	.long	1155
 	.byte	42
 	.long	.Ldebug_loc4
 	.long	.Linfo_string479
 	.byte	1
-	.short	587
+	.short	589
 	.long	1349
 	.byte	44
 	.byte	0
 	.long	.Linfo_string368
 	.byte	1
-	.short	588
+	.short	590
 	.long	933
 	.byte	45
 	.long	5218
 	.long	.Ldebug_ranges4
 	.byte	1
-	.short	647
+	.short	649
 	.byte	46
 	.long	.Ldebug_loc5
 	.long	5228
@@ -25978,64 +25990,64 @@ ID3V2_TAG_:
 	.byte	47
 	.long	.Linfo_string348
 	.byte	1
-	.short	335
+	.short	337
 	.byte	1
 	.long	1325
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	336
+	.short	338
 	.long	1155
 	.byte	35
 	.long	.Linfo_string136
 	.byte	1
-	.short	337
+	.short	339
 	.long	1961
 	.byte	35
 	.long	.Linfo_string141
 	.byte	1
-	.short	338
+	.short	340
 	.long	2050
 	.byte	35
 	.long	.Linfo_string144
 	.byte	1
-	.short	339
+	.short	341
 	.long	2101
 	.byte	35
 	.long	.Linfo_string147
 	.byte	1
-	.short	340
+	.short	342
 	.long	2157
 	.byte	35
 	.long	.Linfo_string150
 	.byte	1
-	.short	341
+	.short	343
 	.long	2208
 	.byte	35
 	.long	.Linfo_string152
 	.byte	1
-	.short	342
+	.short	344
 	.long	2242
 	.byte	35
 	.long	.Linfo_string200
 	.byte	1
-	.short	343
+	.short	345
 	.long	3218
 	.byte	35
 	.long	.Linfo_string259
 	.byte	1
-	.short	344
+	.short	346
 	.long	4352
 	.byte	35
 	.long	.Linfo_string262
 	.byte	1
-	.short	345
+	.short	347
 	.long	932
 	.byte	35
 	.long	.Linfo_string135
 	.byte	1
-	.short	346
+	.short	348
 	.long	1349
 	.byte	0
 	.byte	43
@@ -26045,7 +26057,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string438
 	.byte	1
-	.short	404
+	.short	406
 	.byte	1
 	.long	1325
 	.byte	1
@@ -26053,67 +26065,67 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc6
 	.long	.Linfo_string347
 	.byte	1
-	.short	405
+	.short	407
 	.long	1155
 	.byte	41
 	.long	.Ldebug_loc7
 	.long	.Linfo_string136
 	.byte	1
-	.short	406
+	.short	408
 	.long	1961
 	.byte	41
 	.long	.Ldebug_loc8
 	.long	.Linfo_string141
 	.byte	1
-	.short	407
+	.short	409
 	.long	2050
 	.byte	41
 	.long	.Ldebug_loc9
 	.long	.Linfo_string144
 	.byte	1
-	.short	408
+	.short	410
 	.long	2101
 	.byte	41
 	.long	.Ldebug_loc19
 	.long	.Linfo_string147
 	.byte	1
-	.short	409
+	.short	411
 	.long	2157
 	.byte	41
 	.long	.Ldebug_loc17
 	.long	.Linfo_string150
 	.byte	1
-	.short	410
+	.short	412
 	.long	2208
 	.byte	41
 	.long	.Ldebug_loc16
 	.long	.Linfo_string152
 	.byte	1
-	.short	411
+	.short	413
 	.long	2242
 	.byte	41
 	.long	.Ldebug_loc13
 	.long	.Linfo_string200
 	.byte	1
-	.short	412
+	.short	414
 	.long	3218
 	.byte	41
 	.long	.Ldebug_loc12
 	.long	.Linfo_string259
 	.byte	1
-	.short	413
+	.short	415
 	.long	4352
 	.byte	41
 	.long	.Ldebug_loc21
 	.long	.Linfo_string262
 	.byte	1
-	.short	414
+	.short	416
 	.long	932
 	.byte	45
 	.long	5439
 	.long	.Ldebug_ranges6
 	.byte	1
-	.short	417
+	.short	419
 	.byte	46
 	.long	.Ldebug_loc14
 	.long	5453
@@ -26144,7 +26156,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string439
 	.byte	1
-	.short	432
+	.short	434
 	.byte	1
 	.long	1325
 	.byte	1
@@ -26152,60 +26164,60 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc22
 	.long	.Linfo_string347
 	.byte	1
-	.short	433
+	.short	435
 	.long	1155
 	.byte	35
 	.long	.Linfo_string136
 	.byte	1
-	.short	434
+	.short	436
 	.long	1961
 	.byte	35
 	.long	.Linfo_string141
 	.byte	1
-	.short	435
+	.short	437
 	.long	2050
 	.byte	35
 	.long	.Linfo_string144
 	.byte	1
-	.short	436
+	.short	438
 	.long	2101
 	.byte	41
 	.long	.Ldebug_loc23
 	.long	.Linfo_string147
 	.byte	1
-	.short	437
+	.short	439
 	.long	2157
 	.byte	35
 	.long	.Linfo_string150
 	.byte	1
-	.short	438
+	.short	440
 	.long	2208
 	.byte	35
 	.long	.Linfo_string152
 	.byte	1
-	.short	439
+	.short	441
 	.long	2242
 	.byte	35
 	.long	.Linfo_string200
 	.byte	1
-	.short	440
+	.short	442
 	.long	3218
 	.byte	35
 	.long	.Linfo_string259
 	.byte	1
-	.short	441
+	.short	443
 	.long	4352
 	.byte	41
 	.long	.Ldebug_loc24
 	.long	.Linfo_string262
 	.byte	1
-	.short	442
+	.short	444
 	.long	932
 	.byte	45
 	.long	5439
 	.long	.Ldebug_ranges8
 	.byte	1
-	.short	445
+	.short	447
 	.byte	46
 	.long	.Ldebug_loc25
 	.long	5453
@@ -26221,7 +26233,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string440
 	.byte	1
-	.short	504
+	.short	506
 	.byte	1
 	.long	1325
 	.byte	1
@@ -26229,43 +26241,43 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc26
 	.long	.Linfo_string347
 	.byte	1
-	.short	505
+	.short	507
 	.long	1155
 	.byte	41
 	.long	.Ldebug_loc27
 	.long	.Linfo_string263
 	.byte	1
-	.short	506
+	.short	508
 	.long	4399
 	.byte	41
 	.long	.Ldebug_loc28
 	.long	.Linfo_string152
 	.byte	1
-	.short	507
+	.short	509
 	.long	2242
 	.byte	41
 	.long	.Ldebug_loc29
 	.long	.Linfo_string200
 	.byte	1
-	.short	508
+	.short	510
 	.long	3218
 	.byte	41
 	.long	.Ldebug_loc30
 	.long	.Linfo_string259
 	.byte	1
-	.short	509
+	.short	511
 	.long	4352
 	.byte	41
 	.long	.Ldebug_loc31
 	.long	.Linfo_string262
 	.byte	1
-	.short	510
+	.short	512
 	.long	932
 	.byte	0
 	.byte	49
 	.long	.Linfo_string349
 	.byte	1
-	.short	1218
+	.short	1221
 	.byte	1
 	.long	4399
 	.byte	1
@@ -26300,12 +26312,12 @@ ID3V2_TAG_:
 	.long	6141
 	.long	.Ldebug_ranges11
 	.byte	1
-	.short	485
+	.short	487
 	.byte	45
 	.long	5439
 	.long	.Ldebug_ranges12
 	.byte	1
-	.short	489
+	.short	491
 	.byte	46
 	.long	.Ldebug_loc41
 	.long	5453
@@ -26332,44 +26344,44 @@ ID3V2_TAG_:
 	.byte	47
 	.long	.Linfo_string350
 	.byte	1
-	.short	460
+	.short	462
 	.byte	1
 	.long	1325
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	461
+	.short	463
 	.long	1155
 	.byte	35
 	.long	.Linfo_string263
 	.byte	1
-	.short	462
+	.short	464
 	.long	4399
 	.byte	35
 	.long	.Linfo_string152
 	.byte	1
-	.short	463
+	.short	465
 	.long	2242
 	.byte	35
 	.long	.Linfo_string200
 	.byte	1
-	.short	464
+	.short	466
 	.long	3218
 	.byte	35
 	.long	.Linfo_string259
 	.byte	1
-	.short	465
+	.short	467
 	.long	4352
 	.byte	35
 	.long	.Linfo_string262
 	.byte	1
-	.short	466
+	.short	468
 	.long	932
 	.byte	35
 	.long	.Linfo_string135
 	.byte	1
-	.short	467
+	.short	469
 	.long	1349
 	.byte	0
 	.byte	43
@@ -26379,7 +26391,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string441
 	.byte	1
-	.short	516
+	.short	518
 	.byte	1
 	.long	1325
 	.byte	1
@@ -26387,42 +26399,42 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc46
 	.long	.Linfo_string347
 	.byte	1
-	.short	517
+	.short	519
 	.long	1155
 	.byte	41
 	.long	.Ldebug_loc47
 	.long	.Linfo_string263
 	.byte	1
-	.short	518
+	.short	520
 	.long	4399
 	.byte	41
 	.long	.Ldebug_loc48
 	.long	.Linfo_string152
 	.byte	1
-	.short	519
+	.short	521
 	.long	2242
 	.byte	35
 	.long	.Linfo_string200
 	.byte	1
-	.short	520
+	.short	522
 	.long	3218
 	.byte	41
 	.long	.Ldebug_loc54
 	.long	.Linfo_string259
 	.byte	1
-	.short	521
+	.short	523
 	.long	4352
 	.byte	41
 	.long	.Ldebug_loc49
 	.long	.Linfo_string262
 	.byte	1
-	.short	522
+	.short	524
 	.long	932
 	.byte	45
 	.long	6319
 	.long	.Ldebug_ranges14
 	.byte	1
-	.short	525
+	.short	527
 	.byte	46
 	.long	.Ldebug_loc50
 	.long	6333
@@ -26442,12 +26454,12 @@ ID3V2_TAG_:
 	.long	6141
 	.long	.Ldebug_ranges15
 	.byte	1
-	.short	485
+	.short	487
 	.byte	45
 	.long	5439
 	.long	.Ldebug_ranges16
 	.byte	1
-	.short	489
+	.short	491
 	.byte	46
 	.long	.Ldebug_loc55
 	.long	5453
@@ -26460,49 +26472,49 @@ ID3V2_TAG_:
 	.byte	47
 	.long	.Linfo_string351
 	.byte	1
-	.short	528
+	.short	530
 	.byte	1
 	.long	1325
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	529
+	.short	531
 	.long	1155
 	.byte	35
 	.long	.Linfo_string352
 	.byte	1
-	.short	530
+	.short	532
 	.long	91
 	.byte	35
 	.long	.Linfo_string152
 	.byte	1
-	.short	531
+	.short	533
 	.long	2242
 	.byte	35
 	.long	.Linfo_string200
 	.byte	1
-	.short	532
+	.short	534
 	.long	3218
 	.byte	35
 	.long	.Linfo_string259
 	.byte	1
-	.short	533
+	.short	535
 	.long	4352
 	.byte	35
 	.long	.Linfo_string262
 	.byte	1
-	.short	534
+	.short	536
 	.long	932
 	.byte	35
 	.long	.Linfo_string135
 	.byte	1
-	.short	535
+	.short	537
 	.long	1349
 	.byte	51
 	.long	.Linfo_string263
 	.byte	1
-	.short	538
+	.short	540
 	.long	4399
 	.byte	0
 	.byte	43
@@ -26512,7 +26524,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string442
 	.byte	1
-	.short	561
+	.short	563
 	.byte	1
 	.long	1325
 	.byte	1
@@ -26520,43 +26532,43 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc56
 	.long	.Linfo_string347
 	.byte	1
-	.short	562
+	.short	564
 	.long	1155
 	.byte	41
 	.long	.Ldebug_loc57
 	.long	.Linfo_string352
 	.byte	1
-	.short	563
+	.short	565
 	.long	91
 	.byte	41
 	.long	.Ldebug_loc58
 	.long	.Linfo_string152
 	.byte	1
-	.short	564
+	.short	566
 	.long	2242
 	.byte	41
 	.long	.Ldebug_loc59
 	.long	.Linfo_string200
 	.byte	1
-	.short	565
+	.short	567
 	.long	3218
 	.byte	41
 	.long	.Ldebug_loc65
 	.long	.Linfo_string259
 	.byte	1
-	.short	566
+	.short	568
 	.long	4352
 	.byte	41
 	.long	.Ldebug_loc67
 	.long	.Linfo_string262
 	.byte	1
-	.short	567
+	.short	569
 	.long	932
 	.byte	45
 	.long	6627
 	.long	.Ldebug_ranges18
 	.byte	1
-	.short	570
+	.short	572
 	.byte	46
 	.long	.Ldebug_loc60
 	.long	6641
@@ -26590,7 +26602,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string443
 	.byte	1
-	.short	573
+	.short	575
 	.byte	1
 	.long	1325
 	.byte	1
@@ -26598,42 +26610,42 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc69
 	.long	.Linfo_string347
 	.byte	1
-	.short	574
+	.short	576
 	.long	1155
 	.byte	41
 	.long	.Ldebug_loc70
 	.long	.Linfo_string352
 	.byte	1
-	.short	575
+	.short	577
 	.long	91
 	.byte	41
 	.long	.Ldebug_loc71
 	.long	.Linfo_string152
 	.byte	1
-	.short	576
+	.short	578
 	.long	2242
 	.byte	35
 	.long	.Linfo_string200
 	.byte	1
-	.short	577
+	.short	579
 	.long	3218
 	.byte	41
 	.long	.Ldebug_loc77
 	.long	.Linfo_string259
 	.byte	1
-	.short	578
+	.short	580
 	.long	4352
 	.byte	41
 	.long	.Ldebug_loc72
 	.long	.Linfo_string262
 	.byte	1
-	.short	579
+	.short	581
 	.long	932
 	.byte	45
 	.long	6627
 	.long	.Ldebug_ranges20
 	.byte	1
-	.short	582
+	.short	584
 	.byte	46
 	.long	.Ldebug_loc73
 	.long	6641
@@ -26656,7 +26668,7 @@ ID3V2_TAG_:
 	.long	6319
 	.long	.Ldebug_ranges21
 	.byte	1
-	.short	558
+	.short	560
 	.byte	46
 	.long	.Ldebug_loc79
 	.long	6333
@@ -26670,12 +26682,12 @@ ID3V2_TAG_:
 	.long	6141
 	.long	.Ldebug_ranges22
 	.byte	1
-	.short	485
+	.short	487
 	.byte	45
 	.long	5439
 	.long	.Ldebug_ranges23
 	.byte	1
-	.short	489
+	.short	491
 	.byte	46
 	.long	.Ldebug_loc81
 	.long	5453
@@ -26693,7 +26705,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string445
 	.byte	1
-	.short	654
+	.short	656
 	.byte	1
 	.long	1349
 	.byte	1
@@ -26701,14 +26713,14 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc82
 	.long	.Linfo_string347
 	.byte	1
-	.short	654
+	.short	656
 	.long	1155
 	.byte	53
 	.byte	1
 	.byte	81
 	.long	.Linfo_string167
 	.byte	1
-	.short	654
+	.short	656
 	.long	1087
 	.byte	0
 	.byte	43
@@ -26718,7 +26730,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string446
 	.byte	1
-	.short	671
+	.short	673
 	.byte	1
 	.long	1349
 	.byte	1
@@ -26726,14 +26738,14 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc83
 	.long	.Linfo_string347
 	.byte	1
-	.short	671
+	.short	673
 	.long	1155
 	.byte	53
 	.byte	1
 	.byte	81
 	.long	.Linfo_string167
 	.byte	1
-	.short	671
+	.short	673
 	.long	1349
 	.byte	0
 	.byte	43
@@ -26743,7 +26755,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string447
 	.byte	1
-	.short	681
+	.short	683
 	.byte	1
 	.long	1349
 	.byte	1
@@ -26751,13 +26763,13 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc84
 	.long	.Linfo_string347
 	.byte	1
-	.short	681
+	.short	683
 	.long	1155
 	.byte	41
 	.long	.Ldebug_loc85
 	.long	.Linfo_string163
 	.byte	1
-	.short	681
+	.short	683
 	.long	1116
 	.byte	0
 	.byte	47
@@ -26818,7 +26830,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string448
 	.byte	1
-	.short	698
+	.short	700
 	.byte	1
 	.long	1349
 	.byte	1
@@ -26826,19 +26838,19 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc86
 	.long	.Linfo_string347
 	.byte	1
-	.short	698
+	.short	700
 	.long	1155
 	.byte	41
 	.long	.Ldebug_loc87
 	.long	.Linfo_string215
 	.byte	1
-	.short	698
+	.short	700
 	.long	14841
 	.byte	45
 	.long	7351
 	.long	.Ldebug_ranges28
 	.byte	1
-	.short	713
+	.short	715
 	.byte	46
 	.long	.Ldebug_loc89
 	.long	7365
@@ -26875,7 +26887,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string449
 	.byte	1
-	.short	726
+	.short	728
 	.byte	1
 	.long	1349
 	.byte	1
@@ -26883,12 +26895,12 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc94
 	.long	.Linfo_string347
 	.byte	1
-	.short	726
+	.short	728
 	.long	1155
 	.byte	51
 	.long	.Linfo_string368
 	.byte	1
-	.short	728
+	.short	730
 	.long	933
 	.byte	0
 	.byte	43
@@ -26898,7 +26910,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string450
 	.byte	1
-	.short	740
+	.short	742
 	.byte	1
 	.long	1349
 	.byte	1
@@ -26906,13 +26918,13 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc95
 	.long	.Linfo_string347
 	.byte	1
-	.short	740
+	.short	742
 	.long	1155
 	.byte	41
 	.long	.Ldebug_loc96
 	.long	.Linfo_string163
 	.byte	1
-	.short	740
+	.short	742
 	.long	1116
 	.byte	0
 	.byte	43
@@ -26922,7 +26934,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string451
 	.byte	1
-	.short	757
+	.short	759
 	.byte	1
 	.long	1349
 	.byte	1
@@ -26930,19 +26942,19 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc97
 	.long	.Linfo_string347
 	.byte	1
-	.short	757
+	.short	759
 	.long	1155
 	.byte	41
 	.long	.Ldebug_loc98
 	.long	.Linfo_string215
 	.byte	1
-	.short	757
+	.short	759
 	.long	14841
 	.byte	45
 	.long	7351
 	.long	.Ldebug_ranges33
 	.byte	1
-	.short	772
+	.short	774
 	.byte	46
 	.long	.Ldebug_loc100
 	.long	7365
@@ -26979,7 +26991,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string452
 	.byte	1
-	.short	785
+	.short	787
 	.byte	1
 	.long	1349
 	.byte	1
@@ -26987,7 +26999,7 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc105
 	.long	.Linfo_string347
 	.byte	1
-	.short	785
+	.short	787
 	.long	1155
 	.byte	0
 	.byte	43
@@ -26997,7 +27009,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string453
 	.byte	1
-	.short	797
+	.short	799
 	.byte	1
 	.long	1314
 	.byte	1
@@ -27005,7 +27017,7 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc106
 	.long	.Linfo_string347
 	.byte	1
-	.short	797
+	.short	799
 	.long	2017
 	.byte	0
 	.byte	43
@@ -27015,7 +27027,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string454
 	.byte	1
-	.short	804
+	.short	806
 	.byte	1
 	.long	91
 	.byte	1
@@ -27023,7 +27035,7 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc107
 	.long	.Linfo_string347
 	.byte	1
-	.short	804
+	.short	806
 	.long	2017
 	.byte	0
 	.byte	43
@@ -27033,7 +27045,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string455
 	.byte	1
-	.short	809
+	.short	811
 	.byte	1
 	.long	1349
 	.byte	1
@@ -27041,7 +27053,7 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc108
 	.long	.Linfo_string347
 	.byte	1
-	.short	809
+	.short	811
 	.long	2017
 	.byte	0
 	.byte	50
@@ -27061,7 +27073,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string456
 	.byte	1
-	.short	823
+	.short	825
 	.byte	1
 	.long	933
 	.byte	1
@@ -27069,7 +27081,7 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc110
 	.long	.Linfo_string347
 	.byte	1
-	.short	823
+	.short	825
 	.long	2017
 	.byte	0
 	.byte	43
@@ -27079,7 +27091,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string457
 	.byte	1
-	.short	830
+	.short	832
 	.byte	1
 	.long	1337
 	.byte	1
@@ -27087,7 +27099,7 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc111
 	.long	.Linfo_string347
 	.byte	1
-	.short	830
+	.short	832
 	.long	2017
 	.byte	0
 	.byte	43
@@ -27097,7 +27109,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string458
 	.byte	1
-	.short	837
+	.short	839
 	.byte	1
 	.long	933
 	.byte	1
@@ -27105,7 +27117,7 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc112
 	.long	.Linfo_string347
 	.byte	1
-	.short	837
+	.short	839
 	.long	2017
 	.byte	0
 	.byte	43
@@ -27115,7 +27127,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string459
 	.byte	1
-	.short	844
+	.short	846
 	.byte	1
 	.long	933
 	.byte	1
@@ -27123,7 +27135,7 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc113
 	.long	.Linfo_string347
 	.byte	1
-	.short	844
+	.short	846
 	.long	2017
 	.byte	0
 	.byte	43
@@ -27133,7 +27145,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string460
 	.byte	1
-	.short	851
+	.short	853
 	.byte	1
 	.long	933
 	.byte	1
@@ -27141,13 +27153,13 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc114
 	.long	.Linfo_string347
 	.byte	1
-	.short	851
+	.short	853
 	.long	2017
 	.byte	0
 	.byte	57
 	.long	.Linfo_string361
 	.byte	1
-	.short	1177
+	.short	1180
 	.byte	1
 	.long	933
 	.byte	1
@@ -27155,7 +27167,7 @@ ID3V2_TAG_:
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	1177
+	.short	1180
 	.long	2017
 	.byte	0
 	.byte	50
@@ -27174,7 +27186,7 @@ ID3V2_TAG_:
 	.long	8208
 	.long	.Ldebug_ranges46
 	.byte	1
-	.short	875
+	.short	877
 	.byte	46
 	.long	.Ldebug_loc117
 	.long	8223
@@ -27197,7 +27209,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string461
 	.byte	1
-	.short	879
+	.short	881
 	.byte	1
 	.long	14835
 	.byte	1
@@ -27205,7 +27217,7 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc119
 	.long	.Linfo_string347
 	.byte	1
-	.short	879
+	.short	881
 	.long	1155
 	.byte	0
 	.byte	50
@@ -27221,7 +27233,7 @@ ID3V2_TAG_:
 	.byte	57
 	.long	.Linfo_string362
 	.byte	1
-	.short	884
+	.short	886
 	.byte	1
 	.long	1349
 	.byte	1
@@ -27229,7 +27241,7 @@ ID3V2_TAG_:
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	884
+	.short	886
 	.long	1155
 	.byte	0
 	.byte	43
@@ -27239,7 +27251,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string462
 	.byte	1
-	.short	912
+	.short	915
 	.byte	1
 	.long	1349
 	.byte	1
@@ -27247,13 +27259,13 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc121
 	.long	.Linfo_string347
 	.byte	1
-	.short	912
+	.short	915
 	.long	1155
 	.byte	45
 	.long	8371
 	.long	.Ldebug_ranges51
 	.byte	1
-	.short	918
+	.short	921
 	.byte	46
 	.long	.Ldebug_loc122
 	.long	8386
@@ -27275,46 +27287,46 @@ ID3V2_TAG_:
 	.byte	34
 	.long	.Linfo_string363
 	.byte	1
-	.short	3232
+	.short	3239
 	.byte	1
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	3232
+	.short	3239
 	.long	2017
 	.byte	35
 	.long	.Linfo_string364
 	.byte	1
-	.short	3232
+	.short	3239
 	.long	4387
 	.byte	0
 	.byte	47
 	.long	.Linfo_string365
 	.byte	1
-	.short	1956
+	.short	1961
 	.byte	1
 	.long	1349
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	1956
+	.short	1961
 	.long	1155
 	.byte	51
 	.long	.Linfo_string366
 	.byte	1
-	.short	1958
+	.short	1963
 	.long	1105
 	.byte	51
 	.long	.Linfo_string367
 	.byte	1
-	.short	1959
+	.short	1964
 	.long	933
 	.byte	51
 	.long	.Linfo_string368
 	.byte	1
-	.short	1959
+	.short	1964
 	.long	933
 	.byte	0
 	.byte	58
@@ -27324,44 +27336,44 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string472
 	.byte	1
-	.short	1309
+	.short	1313
 	.byte	1
 	.long	1349
 	.byte	41
 	.long	.Ldebug_loc125
 	.long	.Linfo_string347
 	.byte	1
-	.short	1309
+	.short	1313
 	.long	1155
 	.byte	42
 	.long	.Ldebug_loc126
 	.long	.Linfo_string215
 	.byte	1
-	.short	1312
+	.short	1316
 	.long	933
 	.byte	59
 	.byte	1
 	.long	.Linfo_string480
 	.byte	1
-	.short	1313
+	.short	1317
 	.long	1349
 	.byte	42
 	.long	.Ldebug_loc127
 	.long	.Linfo_string368
 	.byte	1
-	.short	1312
+	.short	1316
 	.long	933
 	.byte	42
 	.long	.Ldebug_loc129
 	.long	.Linfo_string366
 	.byte	1
-	.short	1311
+	.short	1315
 	.long	1105
 	.byte	45
 	.long	8490
 	.long	.Ldebug_ranges54
 	.byte	1
-	.short	1365
+	.short	1369
 	.byte	46
 	.long	.Ldebug_loc128
 	.long	8500
@@ -27373,7 +27385,7 @@ ID3V2_TAG_:
 	.long	8525
 	.long	.Ldebug_ranges55
 	.byte	1
-	.short	1340
+	.short	1344
 	.byte	46
 	.long	.Ldebug_loc130
 	.long	8539
@@ -27394,128 +27406,128 @@ ID3V2_TAG_:
 	.byte	47
 	.long	.Linfo_string369
 	.byte	1
-	.short	1636
+	.short	1641
 	.byte	1
 	.long	1349
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	1636
+	.short	1641
 	.long	1155
 	.byte	35
 	.long	.Linfo_string201
 	.byte	1
-	.short	1636
+	.short	1641
 	.long	1349
 	.byte	35
 	.long	.Linfo_string202
 	.byte	1
-	.short	1636
+	.short	1641
 	.long	933
 	.byte	51
 	.long	.Linfo_string370
 	.byte	1
-	.short	1639
+	.short	1644
 	.long	987
 	.byte	51
 	.long	.Linfo_string366
 	.byte	1
-	.short	1638
+	.short	1643
 	.long	1105
 	.byte	51
 	.long	.Linfo_string368
 	.byte	1
-	.short	1638
+	.short	1643
 	.long	1105
 	.byte	0
 	.byte	47
 	.long	.Linfo_string371
 	.byte	1
-	.short	1563
+	.short	1568
 	.byte	1
 	.long	1349
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	1563
+	.short	1568
 	.long	1155
 	.byte	35
 	.long	.Linfo_string201
 	.byte	1
-	.short	1563
+	.short	1568
 	.long	1349
 	.byte	35
 	.long	.Linfo_string202
 	.byte	1
-	.short	1563
+	.short	1568
 	.long	933
 	.byte	51
 	.long	.Linfo_string372
 	.byte	1
-	.short	1566
+	.short	1571
 	.long	933
 	.byte	51
 	.long	.Linfo_string373
 	.byte	1
-	.short	1566
+	.short	1571
 	.long	933
 	.byte	51
 	.long	.Linfo_string366
 	.byte	1
-	.short	1565
+	.short	1570
 	.long	1105
 	.byte	0
 	.byte	47
 	.long	.Linfo_string374
 	.byte	1
-	.short	1295
+	.short	1298
 	.byte	1
 	.long	1349
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	1295
+	.short	1298
 	.long	1155
 	.byte	35
 	.long	.Linfo_string215
 	.byte	1
-	.short	1295
+	.short	1298
 	.long	1128
 	.byte	51
 	.long	.Linfo_string368
 	.byte	1
-	.short	1297
+	.short	1300
 	.long	2032
 	.byte	0
 	.byte	47
 	.long	.Linfo_string375
 	.byte	1
-	.short	1679
+	.short	1684
 	.byte	1
 	.long	1349
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	1679
+	.short	1684
 	.long	1155
 	.byte	35
 	.long	.Linfo_string376
 	.byte	1
-	.short	1679
+	.short	1684
 	.long	9055
 	.byte	35
 	.long	.Linfo_string202
 	.byte	1
-	.short	1679
+	.short	1684
 	.long	933
 	.byte	51
 	.long	.Linfo_string368
 	.byte	1
-	.short	1681
+	.short	1686
 	.long	1105
 	.byte	0
 	.byte	7
@@ -27523,46 +27535,46 @@ ID3V2_TAG_:
 	.byte	47
 	.long	.Linfo_string377
 	.byte	1
-	.short	1790
+	.short	1795
 	.byte	1
 	.long	1349
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	1790
+	.short	1795
 	.long	1155
 	.byte	35
 	.long	.Linfo_string376
 	.byte	1
-	.short	1790
+	.short	1795
 	.long	9163
 	.byte	51
 	.long	.Linfo_string366
 	.byte	1
-	.short	1792
+	.short	1797
 	.long	1105
 	.byte	51
 	.long	.Linfo_string378
 	.byte	1
-	.short	1792
+	.short	1797
 	.long	1105
 	.byte	51
 	.long	.Linfo_string368
 	.byte	1
-	.short	1792
+	.short	1797
 	.long	1105
 	.byte	61
 	.byte	51
 	.long	.Linfo_string379
 	.byte	1
-	.short	1822
+	.short	1827
 	.long	3988
 	.byte	61
 	.byte	51
 	.long	.Linfo_string380
 	.byte	1
-	.short	1855
+	.short	1860
 	.long	4120
 	.byte	0
 	.byte	0
@@ -27590,24 +27602,24 @@ ID3V2_TAG_:
 	.byte	47
 	.long	.Linfo_string383
 	.byte	1
-	.short	1873
+	.short	1878
 	.byte	1
 	.long	1349
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	1873
+	.short	1878
 	.long	1155
 	.byte	35
 	.long	.Linfo_string376
 	.byte	1
-	.short	1873
+	.short	1878
 	.long	9255
 	.byte	51
 	.long	.Linfo_string366
 	.byte	1
-	.short	1875
+	.short	1880
 	.long	1105
 	.byte	0
 	.byte	7
@@ -27646,7 +27658,7 @@ ID3V2_TAG_:
 	.byte	57
 	.long	.Linfo_string386
 	.byte	1
-	.short	858
+	.short	860
 	.byte	1
 	.long	1349
 	.byte	1
@@ -27654,12 +27666,12 @@ ID3V2_TAG_:
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	858
+	.short	860
 	.long	2017
 	.byte	35
 	.long	.Linfo_string387
 	.byte	1
-	.short	858
+	.short	860
 	.long	2152
 	.byte	0
 	.byte	58
@@ -27669,49 +27681,49 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string471
 	.byte	1
-	.short	1374
+	.short	1379
 	.byte	1
 	.long	1349
 	.byte	41
 	.long	.Ldebug_loc133
 	.long	.Linfo_string347
 	.byte	1
-	.short	1374
+	.short	1379
 	.long	1155
 	.byte	42
 	.long	.Ldebug_loc134
 	.long	.Linfo_string366
 	.byte	1
-	.short	1377
+	.short	1382
 	.long	1105
 	.byte	42
 	.long	.Ldebug_loc135
 	.long	.Linfo_string163
 	.byte	1
-	.short	1377
+	.short	1382
 	.long	1105
 	.byte	42
 	.long	.Ldebug_loc136
 	.long	.Linfo_string202
 	.byte	1
-	.short	1377
+	.short	1382
 	.long	1105
 	.byte	42
 	.long	.Ldebug_loc166
 	.long	.Linfo_string368
 	.byte	1
-	.short	1377
+	.short	1382
 	.long	1105
 	.byte	51
 	.long	.Linfo_string201
 	.byte	1
-	.short	1376
+	.short	1381
 	.long	1349
 	.byte	45
 	.long	8767
 	.long	.Ldebug_ranges57
 	.byte	1
-	.short	1405
+	.short	1410
 	.byte	46
 	.long	.Ldebug_loc138
 	.long	8781
@@ -27734,7 +27746,7 @@ ID3V2_TAG_:
 	.long	7351
 	.long	.Ldebug_ranges58
 	.byte	1
-	.short	1655
+	.short	1660
 	.byte	46
 	.long	.Ldebug_loc146
 	.long	7377
@@ -27761,24 +27773,24 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc144
 	.long	.Linfo_string481
 	.byte	1
-	.short	1414
+	.short	1419
 	.long	933
 	.byte	42
 	.long	.Ldebug_loc165
 	.long	.Linfo_string483
 	.byte	1
-	.short	1415
+	.short	1420
 	.long	3263
 	.byte	51
 	.long	.Linfo_string484
 	.byte	1
-	.short	1413
+	.short	1418
 	.long	1349
 	.byte	45
 	.long	8941
 	.long	.Ldebug_ranges60
 	.byte	1
-	.short	1433
+	.short	1438
 	.byte	46
 	.long	.Ldebug_loc145
 	.long	8967
@@ -27792,13 +27804,13 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc153
 	.long	.Linfo_string482
 	.byte	1
-	.short	1442
+	.short	1447
 	.long	1349
 	.byte	45
 	.long	8992
 	.long	.Ldebug_ranges61
 	.byte	1
-	.short	1464
+	.short	1469
 	.byte	46
 	.long	.Ldebug_loc154
 	.long	9006
@@ -27809,7 +27821,7 @@ ID3V2_TAG_:
 	.long	9260
 	.long	.Ldebug_ranges62
 	.byte	1
-	.short	1699
+	.short	1704
 	.byte	56
 	.byte	1
 	.long	9284
@@ -27823,7 +27835,7 @@ ID3V2_TAG_:
 	.long	9260
 	.long	.Ldebug_ranges64
 	.byte	1
-	.short	1751
+	.short	1756
 	.byte	56
 	.byte	1
 	.long	9284
@@ -27838,7 +27850,7 @@ ID3V2_TAG_:
 	.long	9060
 	.long	.Ldebug_ranges66
 	.byte	1
-	.short	1468
+	.short	1473
 	.byte	46
 	.long	.Ldebug_loc155
 	.long	9074
@@ -27855,7 +27867,7 @@ ID3V2_TAG_:
 	.long	9168
 	.long	.Ldebug_ranges67
 	.byte	1
-	.short	1817
+	.short	1822
 	.byte	46
 	.long	.Ldebug_loc157
 	.long	9181
@@ -27867,7 +27879,7 @@ ID3V2_TAG_:
 	.long	9168
 	.long	.Ldebug_ranges68
 	.byte	1
-	.short	1850
+	.short	1855
 	.byte	46
 	.long	.Ldebug_loc158
 	.long	9181
@@ -27880,7 +27892,7 @@ ID3V2_TAG_:
 	.long	9204
 	.long	.Ldebug_ranges69
 	.byte	1
-	.short	1472
+	.short	1477
 	.byte	46
 	.long	.Ldebug_loc161
 	.long	9218
@@ -27891,7 +27903,7 @@ ID3V2_TAG_:
 	.long	9260
 	.long	.Ldebug_ranges70
 	.byte	1
-	.short	1894
+	.short	1899
 	.byte	56
 	.byte	1
 	.long	9284
@@ -27905,7 +27917,7 @@ ID3V2_TAG_:
 	.long	9260
 	.long	.Ldebug_ranges72
 	.byte	1
-	.short	1911
+	.short	1916
 	.byte	56
 	.byte	1
 	.long	9284
@@ -27919,7 +27931,7 @@ ID3V2_TAG_:
 	.long	9296
 	.long	.Ldebug_ranges74
 	.byte	1
-	.short	1944
+	.short	1949
 	.byte	46
 	.long	.Ldebug_loc163
 	.long	9309
@@ -27929,7 +27941,7 @@ ID3V2_TAG_:
 	.long	8490
 	.long	.Ldebug_ranges75
 	.byte	1
-	.short	1496
+	.short	1501
 	.byte	46
 	.long	.Ldebug_loc164
 	.long	8500
@@ -27943,7 +27955,7 @@ ID3V2_TAG_:
 	.long	8854
 	.long	.Ldebug_ranges78
 	.byte	1
-	.short	1392
+	.short	1397
 	.byte	46
 	.long	.Ldebug_loc139
 	.long	8868
@@ -27964,7 +27976,7 @@ ID3V2_TAG_:
 	.long	9321
 	.long	.Ldebug_ranges79
 	.byte	1
-	.short	1555
+	.short	1560
 	.byte	46
 	.long	.Ldebug_loc167
 	.long	9336
@@ -27975,7 +27987,7 @@ ID3V2_TAG_:
 	.long	8208
 	.long	.Ldebug_ranges80
 	.byte	1
-	.short	875
+	.short	877
 	.byte	46
 	.long	.Ldebug_loc169
 	.long	8223
@@ -27989,32 +28001,32 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string470
 	.byte	1
-	.short	1978
+	.short	1984
 	.byte	1
 	.long	1349
 	.byte	41
 	.long	.Ldebug_loc170
 	.long	.Linfo_string347
 	.byte	1
-	.short	1978
+	.short	1984
 	.long	1155
 	.byte	59
 	.byte	1
 	.long	.Linfo_string480
 	.byte	1
-	.short	1981
+	.short	1987
 	.long	1349
 	.byte	42
 	.long	.Ldebug_loc171
 	.long	.Linfo_string366
 	.byte	1
-	.short	1980
+	.short	1986
 	.long	1105
 	.byte	45
 	.long	8490
 	.long	.Ldebug_ranges82
 	.byte	1
-	.short	2022
+	.short	2028
 	.byte	46
 	.long	.Ldebug_loc172
 	.long	8500
@@ -28026,7 +28038,7 @@ ID3V2_TAG_:
 	.long	9321
 	.long	.Ldebug_ranges83
 	.byte	1
-	.short	2016
+	.short	2022
 	.byte	46
 	.long	.Ldebug_loc173
 	.long	9336
@@ -28037,7 +28049,7 @@ ID3V2_TAG_:
 	.long	8208
 	.long	.Ldebug_ranges84
 	.byte	1
-	.short	875
+	.short	877
 	.byte	46
 	.long	.Ldebug_loc175
 	.long	8223
@@ -28047,137 +28059,137 @@ ID3V2_TAG_:
 	.byte	47
 	.long	.Linfo_string388
 	.byte	1
-	.short	2252
+	.short	2259
 	.byte	1
 	.long	1349
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	2252
+	.short	2259
 	.long	1155
 	.byte	51
 	.long	.Linfo_string389
 	.byte	1
-	.short	2257
+	.short	2264
 	.long	3582
 	.byte	51
 	.long	.Linfo_string390
 	.byte	1
-	.short	2259
+	.short	2266
 	.long	1349
 	.byte	51
 	.long	.Linfo_string391
 	.byte	1
-	.short	2256
+	.short	2263
 	.long	933
 	.byte	51
 	.long	.Linfo_string392
 	.byte	1
-	.short	2256
+	.short	2263
 	.long	933
 	.byte	51
 	.long	.Linfo_string393
 	.byte	1
-	.short	2258
+	.short	2265
 	.long	933
 	.byte	51
 	.long	.Linfo_string368
 	.byte	1
-	.short	2256
+	.short	2263
 	.long	933
 	.byte	51
 	.long	.Linfo_string366
 	.byte	1
-	.short	2254
+	.short	2261
 	.long	1105
 	.byte	51
 	.long	.Linfo_string370
 	.byte	1
-	.short	2255
+	.short	2262
 	.long	987
 	.byte	51
 	.long	.Linfo_string394
 	.byte	1
-	.short	2257
+	.short	2264
 	.long	323
 	.byte	61
 	.byte	51
 	.long	.Linfo_string395
 	.byte	1
-	.short	2492
+	.short	2499
 	.long	1105
 	.byte	0
 	.byte	61
 	.byte	51
 	.long	.Linfo_string395
 	.byte	1
-	.short	2506
+	.short	2513
 	.long	1105
 	.byte	0
 	.byte	0
 	.byte	47
 	.long	.Linfo_string396
 	.byte	1
-	.short	2773
+	.short	2780
 	.byte	1
 	.long	1349
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	2773
+	.short	2780
 	.long	1155
 	.byte	35
 	.long	.Linfo_string397
 	.byte	1
-	.short	2773
+	.short	2780
 	.long	933
 	.byte	35
 	.long	.Linfo_string398
 	.byte	1
-	.short	2773
+	.short	2780
 	.long	933
 	.byte	35
 	.long	.Linfo_string172
 	.byte	1
-	.short	2773
+	.short	2780
 	.long	10605
 	.byte	35
 	.long	.Linfo_string399
 	.byte	1
-	.short	2773
+	.short	2780
 	.long	1349
 	.byte	51
 	.long	.Linfo_string400
 	.byte	1
-	.short	2779
+	.short	2786
 	.long	933
 	.byte	51
 	.long	.Linfo_string401
 	.byte	1
-	.short	2777
+	.short	2784
 	.long	951
 	.byte	51
 	.long	.Linfo_string402
 	.byte	1
-	.short	2778
+	.short	2785
 	.long	1105
 	.byte	51
 	.long	.Linfo_string403
 	.byte	1
-	.short	2776
+	.short	2783
 	.long	1065
 	.byte	51
 	.long	.Linfo_string404
 	.byte	1
-	.short	2775
+	.short	2782
 	.long	10610
 	.byte	61
 	.byte	51
 	.long	.Linfo_string368
 	.byte	1
-	.short	2858
+	.short	2865
 	.long	933
 	.byte	0
 	.byte	0
@@ -28188,140 +28200,140 @@ ID3V2_TAG_:
 	.byte	47
 	.long	.Linfo_string405
 	.byte	1
-	.short	2567
+	.short	2574
 	.byte	1
 	.long	1349
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	2567
+	.short	2574
 	.long	1155
 	.byte	35
 	.long	.Linfo_string397
 	.byte	1
-	.short	2567
+	.short	2574
 	.long	933
 	.byte	35
 	.long	.Linfo_string398
 	.byte	1
-	.short	2567
+	.short	2574
 	.long	933
 	.byte	35
 	.long	.Linfo_string399
 	.byte	1
-	.short	2567
+	.short	2574
 	.long	1349
 	.byte	51
 	.long	.Linfo_string366
 	.byte	1
-	.short	2569
+	.short	2576
 	.long	1105
 	.byte	51
 	.long	.Linfo_string194
 	.byte	1
-	.short	2570
+	.short	2577
 	.long	1349
 	.byte	51
 	.long	.Linfo_string368
 	.byte	1
-	.short	2571
+	.short	2578
 	.long	933
 	.byte	61
 	.byte	51
 	.long	.Linfo_string406
 	.byte	1
-	.short	2633
+	.short	2640
 	.long	933
 	.byte	0
 	.byte	61
 	.byte	51
 	.long	.Linfo_string406
 	.byte	1
-	.short	2616
+	.short	2623
 	.long	933
 	.byte	0
 	.byte	61
 	.byte	51
 	.long	.Linfo_string400
 	.byte	1
-	.short	2580
+	.short	2587
 	.long	933
 	.byte	0
 	.byte	61
 	.byte	51
 	.long	.Linfo_string407
 	.byte	1
-	.short	2649
+	.short	2656
 	.long	933
 	.byte	0
 	.byte	61
 	.byte	51
 	.long	.Linfo_string407
 	.byte	1
-	.short	2659
+	.short	2666
 	.long	998
 	.byte	0
 	.byte	0
 	.byte	47
 	.long	.Linfo_string408
 	.byte	1
-	.short	2877
+	.short	2884
 	.byte	1
 	.long	1349
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	2877
+	.short	2884
 	.long	1155
 	.byte	35
 	.long	.Linfo_string397
 	.byte	1
-	.short	2877
+	.short	2884
 	.long	933
 	.byte	35
 	.long	.Linfo_string398
 	.byte	1
-	.short	2877
+	.short	2884
 	.long	933
 	.byte	35
 	.long	.Linfo_string399
 	.byte	1
-	.short	2877
+	.short	2884
 	.long	1349
 	.byte	51
 	.long	.Linfo_string368
 	.byte	1
-	.short	2880
+	.short	2887
 	.long	933
 	.byte	51
 	.long	.Linfo_string404
 	.byte	1
-	.short	2879
+	.short	2886
 	.long	10923
 	.byte	61
 	.byte	51
 	.long	.Linfo_string181
 	.byte	1
-	.short	2885
+	.short	2892
 	.long	4981
 	.byte	51
 	.long	.Linfo_string366
 	.byte	1
-	.short	2885
+	.short	2892
 	.long	1065
 	.byte	0
 	.byte	61
 	.byte	51
 	.long	.Linfo_string409
 	.byte	1
-	.short	2901
+	.short	2908
 	.long	4986
 	.byte	51
 	.long	.Linfo_string366
 	.byte	1
-	.short	2901
+	.short	2908
 	.long	951
 	.byte	0
 	.byte	0
@@ -28330,57 +28342,57 @@ ID3V2_TAG_:
 	.byte	47
 	.long	.Linfo_string410
 	.byte	1
-	.short	2668
+	.short	2675
 	.byte	1
 	.long	1349
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	2668
+	.short	2675
 	.long	1155
 	.byte	35
 	.long	.Linfo_string397
 	.byte	1
-	.short	2668
+	.short	2675
 	.long	933
 	.byte	35
 	.long	.Linfo_string398
 	.byte	1
-	.short	2668
+	.short	2675
 	.long	933
 	.byte	35
 	.long	.Linfo_string399
 	.byte	1
-	.short	2668
+	.short	2675
 	.long	1349
 	.byte	51
 	.long	.Linfo_string366
 	.byte	1
-	.short	2671
+	.short	2678
 	.long	951
 	.byte	51
 	.long	.Linfo_string368
 	.byte	1
-	.short	2672
+	.short	2679
 	.long	933
 	.byte	51
 	.long	.Linfo_string404
 	.byte	1
-	.short	2670
+	.short	2677
 	.long	11055
 	.byte	61
 	.byte	51
 	.long	.Linfo_string300
 	.byte	1
-	.short	2684
+	.short	2691
 	.long	4981
 	.byte	0
 	.byte	61
 	.byte	51
 	.long	.Linfo_string300
 	.byte	1
-	.short	2688
+	.short	2695
 	.long	4986
 	.byte	0
 	.byte	0
@@ -28389,60 +28401,60 @@ ID3V2_TAG_:
 	.byte	47
 	.long	.Linfo_string411
 	.byte	1
-	.short	2698
+	.short	2705
 	.byte	1
 	.long	1349
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	2698
+	.short	2705
 	.long	1155
 	.byte	35
 	.long	.Linfo_string397
 	.byte	1
-	.short	2698
+	.short	2705
 	.long	933
 	.byte	35
 	.long	.Linfo_string398
 	.byte	1
-	.short	2698
+	.short	2705
 	.long	933
 	.byte	35
 	.long	.Linfo_string172
 	.byte	1
-	.short	2698
+	.short	2705
 	.long	10605
 	.byte	35
 	.long	.Linfo_string399
 	.byte	1
-	.short	2698
+	.short	2705
 	.long	1349
 	.byte	51
 	.long	.Linfo_string400
 	.byte	1
-	.short	2703
+	.short	2710
 	.long	933
 	.byte	51
 	.long	.Linfo_string401
 	.byte	1
-	.short	2701
+	.short	2708
 	.long	951
 	.byte	51
 	.long	.Linfo_string402
 	.byte	1
-	.short	2702
+	.short	2709
 	.long	1105
 	.byte	51
 	.long	.Linfo_string404
 	.byte	1
-	.short	2700
+	.short	2707
 	.long	11197
 	.byte	61
 	.byte	51
 	.long	.Linfo_string368
 	.byte	1
-	.short	2755
+	.short	2762
 	.long	933
 	.byte	0
 	.byte	0
@@ -28451,56 +28463,56 @@ ID3V2_TAG_:
 	.byte	47
 	.long	.Linfo_string412
 	.byte	1
-	.short	2977
+	.short	2984
 	.byte	1
 	.long	1349
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	2977
+	.short	2984
 	.long	1155
 	.byte	61
 	.byte	51
 	.long	.Linfo_string413
 	.byte	1
-	.short	2980
+	.short	2987
 	.long	1105
 	.byte	0
 	.byte	0
 	.byte	34
 	.long	.Linfo_string414
 	.byte	1
-	.short	3081
+	.short	3088
 	.byte	1
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	3081
+	.short	3088
 	.long	1155
 	.byte	51
 	.long	.Linfo_string368
 	.byte	1
-	.short	3082
+	.short	3089
 	.long	933
 	.byte	61
 	.byte	51
 	.long	.Linfo_string415
 	.byte	1
-	.short	3119
+	.short	3126
 	.long	951
 	.byte	0
 	.byte	61
 	.byte	51
 	.long	.Linfo_string415
 	.byte	1
-	.short	3110
+	.short	3117
 	.long	1065
 	.byte	51
 	.long	.Linfo_string409
 	.byte	1
-	.short	3110
+	.short	3117
 	.long	1065
 	.byte	0
 	.byte	0
@@ -28511,56 +28523,56 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string466
 	.byte	1
-	.short	2030
+	.short	2037
 	.byte	1
 	.long	1349
 	.byte	41
 	.long	.Ldebug_loc176
 	.long	.Linfo_string347
 	.byte	1
-	.short	2030
+	.short	2037
 	.long	1155
 	.byte	41
 	.long	.Ldebug_loc177
 	.long	.Linfo_string343
 	.byte	1
-	.short	2030
+	.short	2037
 	.long	14846
 	.byte	41
 	.long	.Ldebug_loc178
 	.long	.Linfo_string399
 	.byte	1
-	.short	2030
+	.short	2037
 	.long	1349
 	.byte	42
 	.long	.Ldebug_loc180
 	.long	.Linfo_string485
 	.byte	1
-	.short	2034
+	.short	2041
 	.long	933
 	.byte	42
 	.long	.Ldebug_loc215
 	.long	.Linfo_string397
 	.byte	1
-	.short	2032
+	.short	2039
 	.long	933
 	.byte	42
 	.long	.Ldebug_loc231
 	.long	.Linfo_string366
 	.byte	1
-	.short	2035
+	.short	2042
 	.long	1105
 	.byte	42
 	.long	.Ldebug_loc239
 	.long	.Linfo_string368
 	.byte	1
-	.short	2033
+	.short	2040
 	.long	933
 	.byte	45
 	.long	10293
 	.long	.Ldebug_ranges86
 	.byte	1
-	.short	2046
+	.short	2053
 	.byte	46
 	.long	.Ldebug_loc179
 	.long	10307
@@ -28594,7 +28606,7 @@ ID3V2_TAG_:
 	.long	8490
 	.long	.Ldebug_ranges87
 	.byte	1
-	.short	2301
+	.short	2308
 	.byte	46
 	.long	.Ldebug_loc188
 	.long	8500
@@ -28618,7 +28630,7 @@ ID3V2_TAG_:
 	.long	8490
 	.long	.Ldebug_ranges90
 	.byte	1
-	.short	2559
+	.short	2566
 	.byte	46
 	.long	.Ldebug_loc235
 	.long	8500
@@ -28633,13 +28645,13 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc226
 	.long	.Linfo_string398
 	.byte	1
-	.short	2056
+	.short	2063
 	.long	933
 	.byte	45
 	.long	10615
 	.long	.Ldebug_ranges91
 	.byte	1
-	.short	2082
+	.short	2089
 	.byte	46
 	.long	.Ldebug_loc191
 	.long	10629
@@ -28667,7 +28679,7 @@ ID3V2_TAG_:
 	.long	10456
 	.long	.Ldebug_ranges92
 	.byte	1
-	.short	2639
+	.short	2646
 	.byte	46
 	.long	.Ldebug_loc212
 	.long	10470
@@ -28702,7 +28714,7 @@ ID3V2_TAG_:
 	.long	8490
 	.long	.Ldebug_ranges93
 	.byte	1
-	.short	2797
+	.short	2804
 	.byte	46
 	.long	.Ldebug_loc213
 	.long	8500
@@ -28714,7 +28726,7 @@ ID3V2_TAG_:
 	.long	8490
 	.long	.Ldebug_ranges94
 	.byte	1
-	.short	2807
+	.short	2814
 	.byte	46
 	.long	.Ldebug_loc221
 	.long	8500
@@ -28726,7 +28738,7 @@ ID3V2_TAG_:
 	.long	8490
 	.long	.Ldebug_ranges95
 	.byte	1
-	.short	2831
+	.short	2838
 	.byte	46
 	.long	.Ldebug_loc218
 	.long	8500
@@ -28738,7 +28750,7 @@ ID3V2_TAG_:
 	.long	8490
 	.long	.Ldebug_ranges96
 	.byte	1
-	.short	2839
+	.short	2846
 	.byte	46
 	.long	.Ldebug_loc222
 	.long	8500
@@ -28757,7 +28769,7 @@ ID3V2_TAG_:
 	.long	11060
 	.long	.Ldebug_ranges98
 	.byte	1
-	.short	2622
+	.short	2629
 	.byte	46
 	.long	.Ldebug_loc206
 	.long	11074
@@ -28786,7 +28798,7 @@ ID3V2_TAG_:
 	.long	8490
 	.long	.Ldebug_ranges99
 	.byte	1
-	.short	2728
+	.short	2735
 	.byte	46
 	.long	.Ldebug_loc216
 	.long	8500
@@ -28798,7 +28810,7 @@ ID3V2_TAG_:
 	.long	8490
 	.long	.Ldebug_ranges100
 	.byte	1
-	.short	2736
+	.short	2743
 	.byte	46
 	.long	.Ldebug_loc217
 	.long	8500
@@ -28818,7 +28830,7 @@ ID3V2_TAG_:
 	.long	8490
 	.long	.Ldebug_ranges103
 	.byte	1
-	.short	2611
+	.short	2618
 	.byte	46
 	.long	.Ldebug_loc208
 	.long	8500
@@ -28830,7 +28842,7 @@ ID3V2_TAG_:
 	.long	10784
 	.long	.Ldebug_ranges104
 	.byte	1
-	.short	2607
+	.short	2614
 	.byte	46
 	.long	.Ldebug_loc202
 	.long	10798
@@ -28869,7 +28881,7 @@ ID3V2_TAG_:
 	.long	10928
 	.long	.Ldebug_ranges107
 	.byte	1
-	.short	2603
+	.short	2610
 	.byte	46
 	.long	.Ldebug_loc198
 	.long	10942
@@ -28913,7 +28925,7 @@ ID3V2_TAG_:
 	.long	8490
 	.long	.Ldebug_ranges110
 	.byte	1
-	.short	2585
+	.short	2592
 	.byte	46
 	.long	.Ldebug_loc214
 	.long	8500
@@ -28934,7 +28946,7 @@ ID3V2_TAG_:
 	.long	11202
 	.long	.Ldebug_ranges114
 	.byte	1
-	.short	2092
+	.short	2099
 	.byte	46
 	.long	.Ldebug_loc228
 	.long	11216
@@ -28947,7 +28959,7 @@ ID3V2_TAG_:
 	.long	8490
 	.long	.Ldebug_ranges115
 	.byte	1
-	.short	2985
+	.short	2992
 	.byte	46
 	.long	.Ldebug_loc230
 	.long	8500
@@ -28961,7 +28973,7 @@ ID3V2_TAG_:
 	.long	11243
 	.long	.Ldebug_ranges117
 	.byte	1
-	.short	2111
+	.short	2118
 	.byte	52
 	.long	.Ldebug_loc232
 	.long	11265
@@ -28981,13 +28993,13 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc238
 	.long	.Linfo_string486
 	.byte	1
-	.short	2115
+	.short	2122
 	.long	49
 	.byte	45
 	.long	8490
 	.long	.Ldebug_ranges119
 	.byte	1
-	.short	2120
+	.short	2127
 	.byte	46
 	.long	.Ldebug_loc240
 	.long	8500
@@ -29000,7 +29012,7 @@ ID3V2_TAG_:
 	.long	8490
 	.long	.Ldebug_ranges121
 	.byte	1
-	.short	2131
+	.short	2138
 	.byte	46
 	.long	.Ldebug_loc234
 	.long	8500
@@ -29014,7 +29026,7 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc241
 	.long	.Linfo_string487
 	.byte	1
-	.short	2141
+	.short	2148
 	.long	933
 	.byte	62
 	.long	.Ldebug_ranges122
@@ -29025,7 +29037,7 @@ ID3V2_TAG_:
 	.byte	0
 	.long	.Linfo_string488
 	.byte	1
-	.short	2152
+	.short	2159
 	.long	2308
 	.byte	0
 	.byte	0
@@ -29047,7 +29059,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string463
 	.byte	1
-	.short	1041
+	.short	1044
 	.byte	1
 	.long	1349
 	.byte	1
@@ -29055,13 +29067,13 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc243
 	.long	.Linfo_string347
 	.byte	1
-	.short	1041
+	.short	1044
 	.long	1155
 	.byte	42
 	.long	.Ldebug_loc244
 	.long	.Linfo_string212
 	.byte	1
-	.short	1043
+	.short	1046
 	.long	1349
 	.byte	0
 	.byte	43
@@ -29071,7 +29083,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string464
 	.byte	1
-	.short	1074
+	.short	1077
 	.byte	1
 	.long	1349
 	.byte	1
@@ -29079,19 +29091,19 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc245
 	.long	.Linfo_string347
 	.byte	1
-	.short	1074
+	.short	1077
 	.long	1155
 	.byte	42
 	.long	.Ldebug_loc246
 	.long	.Linfo_string343
 	.byte	1
-	.short	1076
+	.short	1079
 	.long	1349
 	.byte	0
 	.byte	57
 	.long	.Linfo_string416
 	.byte	1
-	.short	816
+	.short	818
 	.byte	1
 	.long	987
 	.byte	1
@@ -29099,13 +29111,13 @@ ID3V2_TAG_:
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	816
+	.short	818
 	.long	2017
 	.byte	0
 	.byte	57
 	.long	.Linfo_string417
 	.byte	1
-	.short	1015
+	.short	1018
 	.byte	1
 	.long	1349
 	.byte	1
@@ -29113,146 +29125,146 @@ ID3V2_TAG_:
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	1015
+	.short	1018
 	.long	1155
 	.byte	0
 	.byte	47
 	.long	.Linfo_string418
 	.byte	1
-	.short	3240
+	.short	3247
 	.byte	1
 	.long	1349
 	.byte	1
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	3240
+	.short	3247
 	.long	1155
 	.byte	35
 	.long	.Linfo_string419
 	.byte	1
-	.short	3240
+	.short	3247
 	.long	987
 	.byte	35
 	.long	.Linfo_string341
 	.byte	1
-	.short	3240
+	.short	3247
 	.long	987
 	.byte	51
 	.long	.Linfo_string420
 	.byte	1
-	.short	3246
+	.short	3253
 	.long	1349
 	.byte	51
 	.long	.Linfo_string421
 	.byte	1
-	.short	3246
+	.short	3253
 	.long	1349
 	.byte	51
 	.long	.Linfo_string422
 	.byte	1
-	.short	3243
+	.short	3250
 	.long	951
 	.byte	51
 	.long	.Linfo_string204
 	.byte	1
-	.short	3248
+	.short	3255
 	.long	10605
 	.byte	51
 	.long	.Linfo_string205
 	.byte	1
-	.short	3249
+	.short	3256
 	.long	10605
 	.byte	51
 	.long	.Linfo_string207
 	.byte	1
-	.short	3250
+	.short	3257
 	.long	10605
 	.byte	51
 	.long	.Linfo_string206
 	.byte	1
-	.short	3251
+	.short	3258
 	.long	10605
 	.byte	51
 	.long	.Linfo_string125
 	.byte	1
-	.short	3253
+	.short	3260
 	.long	933
 	.byte	51
 	.long	.Linfo_string398
 	.byte	1
-	.short	3254
+	.short	3261
 	.long	933
 	.byte	51
 	.long	.Linfo_string423
 	.byte	1
-	.short	3245
+	.short	3252
 	.long	933
 	.byte	51
 	.long	.Linfo_string424
 	.byte	1
-	.short	3242
+	.short	3249
 	.long	987
 	.byte	51
 	.long	.Linfo_string217
 	.byte	1
-	.short	3255
+	.short	3262
 	.long	13122
 	.byte	51
 	.long	.Linfo_string368
 	.byte	1
-	.short	3244
+	.short	3251
 	.long	49
 	.byte	51
 	.long	.Linfo_string339
 	.byte	1
-	.short	3242
+	.short	3249
 	.long	987
 	.byte	51
 	.long	.Linfo_string425
 	.byte	1
-	.short	3242
+	.short	3249
 	.long	987
 	.byte	51
 	.long	.Linfo_string426
 	.byte	1
-	.short	3242
+	.short	3249
 	.long	987
 	.byte	51
 	.long	.Linfo_string427
 	.byte	1
-	.short	3242
+	.short	3249
 	.long	987
 	.byte	51
 	.long	.Linfo_string428
 	.byte	1
-	.short	3242
+	.short	3249
 	.long	987
 	.byte	51
 	.long	.Linfo_string208
 	.byte	1
-	.short	3247
+	.short	3254
 	.long	13132
 	.byte	61
 	.byte	51
 	.long	.Linfo_string429
 	.byte	1
-	.short	3313
+	.short	3320
 	.long	987
 	.byte	51
 	.long	.Linfo_string430
 	.byte	1
-	.short	3314
+	.short	3321
 	.long	987
 	.byte	51
 	.long	.Linfo_string431
 	.byte	1
-	.short	3315
+	.short	3322
 	.long	987
 	.byte	51
 	.long	.Linfo_string432
 	.byte	1
-	.short	3316
+	.short	3323
 	.long	987
 	.byte	0
 	.byte	0
@@ -29265,7 +29277,7 @@ ID3V2_TAG_:
 	.byte	57
 	.long	.Linfo_string433
 	.byte	1
-	.short	979
+	.short	982
 	.byte	1
 	.long	1349
 	.byte	1
@@ -29273,12 +29285,12 @@ ID3V2_TAG_:
 	.byte	35
 	.long	.Linfo_string347
 	.byte	1
-	.short	979
+	.short	982
 	.long	1155
 	.byte	51
 	.long	.Linfo_string343
 	.byte	1
-	.short	981
+	.short	984
 	.long	1349
 	.byte	0
 	.byte	43
@@ -29288,7 +29300,7 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string465
 	.byte	1
-	.short	1104
+	.short	1107
 	.byte	1
 	.long	1349
 	.byte	1
@@ -29296,30 +29308,30 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc247
 	.long	.Linfo_string347
 	.byte	1
-	.short	1104
+	.short	1107
 	.long	1155
 	.byte	41
 	.long	.Ldebug_loc249
 	.long	.Linfo_string489
 	.byte	1
-	.short	1104
+	.short	1107
 	.long	987
 	.byte	42
 	.long	.Ldebug_loc248
 	.long	.Linfo_string202
 	.byte	1
-	.short	1106
+	.short	1109
 	.long	987
 	.byte	39
 	.long	12737
 	.long	.Ldebug_ranges128
 	.byte	1
-	.short	1127
+	.short	1130
 	.byte	45
 	.long	12737
 	.long	.Ldebug_ranges129
 	.byte	1
-	.short	1152
+	.short	1155
 	.byte	46
 	.long	.Ldebug_loc258
 	.long	12752
@@ -29328,19 +29340,19 @@ ID3V2_TAG_:
 	.long	12765
 	.long	.Ldebug_ranges130
 	.byte	1
-	.short	1146
+	.short	1149
 	.byte	62
 	.long	.Ldebug_ranges143
 	.byte	51
 	.long	.Linfo_string482
 	.byte	1
-	.short	1159
+	.short	1162
 	.long	14851
 	.byte	45
 	.long	12793
 	.long	.Ldebug_ranges131
 	.byte	1
-	.short	1164
+	.short	1167
 	.byte	66
 	.byte	0
 	.long	12843
@@ -29384,12 +29396,12 @@ ID3V2_TAG_:
 	.long	12737
 	.long	.Ldebug_ranges132
 	.byte	1
-	.short	3247
+	.short	3254
 	.byte	45
 	.long	9321
 	.long	.Ldebug_ranges133
 	.byte	1
-	.short	3294
+	.short	3301
 	.byte	46
 	.long	.Ldebug_loc259
 	.long	9336
@@ -29400,7 +29412,7 @@ ID3V2_TAG_:
 	.long	8208
 	.long	.Ldebug_ranges134
 	.byte	1
-	.short	875
+	.short	877
 	.byte	46
 	.long	.Ldebug_loc263
 	.long	8223
@@ -29410,7 +29422,7 @@ ID3V2_TAG_:
 	.long	9321
 	.long	.Ldebug_ranges135
 	.byte	1
-	.short	3297
+	.short	3304
 	.byte	46
 	.long	.Ldebug_loc261
 	.long	9336
@@ -29421,7 +29433,7 @@ ID3V2_TAG_:
 	.long	8208
 	.long	.Ldebug_ranges136
 	.byte	1
-	.short	875
+	.short	877
 	.byte	46
 	.long	.Ldebug_loc264
 	.long	8223
@@ -29431,7 +29443,7 @@ ID3V2_TAG_:
 	.long	9321
 	.long	.Ldebug_ranges137
 	.byte	1
-	.short	3474
+	.short	3481
 	.byte	46
 	.long	.Ldebug_loc267
 	.long	9336
@@ -29445,7 +29457,7 @@ ID3V2_TAG_:
 	.long	8208
 	.long	.Ldebug_ranges138
 	.byte	1
-	.short	875
+	.short	877
 	.byte	46
 	.long	.Ldebug_loc268
 	.long	8223
@@ -29455,7 +29467,7 @@ ID3V2_TAG_:
 	.long	9321
 	.long	.Ldebug_ranges139
 	.byte	1
-	.short	3466
+	.short	3473
 	.byte	46
 	.long	.Ldebug_loc272
 	.long	9336
@@ -29469,7 +29481,7 @@ ID3V2_TAG_:
 	.long	8208
 	.long	.Ldebug_ranges140
 	.byte	1
-	.short	875
+	.short	877
 	.byte	46
 	.long	.Ldebug_loc273
 	.long	8223
@@ -29479,7 +29491,7 @@ ID3V2_TAG_:
 	.long	8371
 	.long	.Ldebug_ranges141
 	.byte	1
-	.short	3407
+	.short	3414
 	.byte	46
 	.long	.Ldebug_loc269
 	.long	8386
@@ -29488,7 +29500,7 @@ ID3V2_TAG_:
 	.long	13137
 	.long	.Ldebug_ranges142
 	.byte	1
-	.short	3418
+	.short	3425
 	.byte	46
 	.long	.Ldebug_loc270
 	.long	13152
@@ -29529,48 +29541,48 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string469
 	.byte	1
-	.short	1233
+	.short	1236
 	.byte	1
 	.long	1349
 	.byte	41
 	.long	.Ldebug_loc274
 	.long	.Linfo_string347
 	.byte	1
-	.short	1233
+	.short	1236
 	.long	1155
 	.byte	41
 	.long	.Ldebug_loc275
 	.long	.Linfo_string358
 	.byte	1
-	.short	1233
+	.short	1236
 	.long	933
 	.byte	41
 	.long	.Ldebug_loc276
 	.long	.Linfo_string125
 	.byte	1
-	.short	1233
+	.short	1236
 	.long	933
 	.byte	41
 	.long	.Ldebug_loc277
 	.long	.Linfo_string398
 	.byte	1
-	.short	1233
+	.short	1236
 	.long	933
 	.byte	51
 	.long	.Linfo_string368
 	.byte	1
-	.short	1235
+	.short	1238
 	.long	933
 	.byte	51
 	.long	.Linfo_string490
 	.byte	1
-	.short	1236
+	.short	1239
 	.long	4981
 	.byte	45
 	.long	13717
 	.long	.Ldebug_ranges145
 	.byte	1
-	.short	1267
+	.short	1270
 	.byte	56
 	.byte	4
 	.long	13730
@@ -29589,50 +29601,50 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string467
 	.byte	1
-	.short	3179
+	.short	3186
 	.byte	1
 	.long	2286
 	.byte	41
 	.long	.Ldebug_loc279
 	.long	.Linfo_string347
 	.byte	1
-	.short	3179
+	.short	3186
 	.long	1155
 	.byte	41
 	.long	.Ldebug_loc280
 	.long	.Linfo_string315
 	.byte	1
-	.short	3179
+	.short	3186
 	.long	2298
 	.byte	41
 	.long	.Ldebug_loc281
 	.long	.Linfo_string491
 	.byte	1
-	.short	3179
+	.short	3186
 	.long	1045
 	.byte	62
 	.long	.Ldebug_ranges149
 	.byte	51
 	.long	.Linfo_string428
 	.byte	1
-	.short	3184
+	.short	3191
 	.long	987
 	.byte	51
 	.long	.Linfo_string492
 	.byte	1
-	.short	3185
+	.short	3192
 	.long	987
 	.byte	51
 	.long	.Linfo_string341
 	.byte	1
-	.short	3186
+	.short	3193
 	.long	987
 	.byte	62
 	.long	.Ldebug_ranges148
 	.byte	51
 	.long	.Linfo_string493
 	.byte	1
-	.short	3194
+	.short	3201
 	.long	933
 	.byte	62
 	.long	.Ldebug_ranges147
@@ -29640,12 +29652,12 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc282
 	.long	.Linfo_string397
 	.byte	1
-	.short	3199
+	.short	3206
 	.long	933
 	.byte	51
 	.long	.Linfo_string494
 	.byte	1
-	.short	3200
+	.short	3207
 	.long	14856
 	.byte	0
 	.byte	0
@@ -29658,55 +29670,55 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string468
 	.byte	1
-	.short	2917
+	.short	2924
 	.byte	1
 	.long	1349
 	.byte	41
 	.long	.Ldebug_loc283
 	.long	.Linfo_string347
 	.byte	1
-	.short	2917
+	.short	2924
 	.long	1155
 	.byte	41
 	.long	.Ldebug_loc284
 	.long	.Linfo_string406
 	.byte	1
-	.short	2917
+	.short	2924
 	.long	933
 	.byte	41
 	.long	.Ldebug_loc285
 	.long	.Linfo_string495
 	.byte	1
-	.short	2917
+	.short	2924
 	.long	933
 	.byte	41
 	.long	.Ldebug_loc286
 	.long	.Linfo_string303
 	.byte	1
-	.short	2917
+	.short	2924
 	.long	14868
 	.byte	35
 	.long	.Linfo_string181
 	.byte	1
-	.short	2917
+	.short	2924
 	.long	4981
 	.byte	41
 	.long	.Ldebug_loc287
 	.long	.Linfo_string496
 	.byte	1
-	.short	2917
+	.short	2924
 	.long	1349
 	.byte	42
 	.long	.Ldebug_loc288
 	.long	.Linfo_string497
 	.byte	1
-	.short	2922
+	.short	2929
 	.long	10605
 	.byte	42
 	.long	.Ldebug_loc289
 	.long	.Linfo_string498
 	.byte	1
-	.short	2923
+	.short	2930
 	.long	10605
 	.byte	65
 	.byte	7
@@ -29715,19 +29727,19 @@ ID3V2_TAG_:
 	.byte	0
 	.long	.Linfo_string499
 	.byte	1
-	.short	2919
+	.short	2926
 	.long	1105
 	.byte	42
 	.long	.Ldebug_loc290
 	.long	.Linfo_string400
 	.byte	1
-	.short	2921
+	.short	2928
 	.long	933
 	.byte	42
 	.long	.Ldebug_loc291
 	.long	.Linfo_string489
 	.byte	1
-	.short	2921
+	.short	2928
 	.long	933
 	.byte	65
 	.byte	7
@@ -29736,29 +29748,29 @@ ID3V2_TAG_:
 	.byte	0
 	.long	.Linfo_string368
 	.byte	1
-	.short	2920
+	.short	2927
 	.long	49
 	.byte	42
 	.long	.Ldebug_loc292
 	.long	.Linfo_string500
 	.byte	1
-	.short	2921
+	.short	2928
 	.long	933
 	.byte	51
 	.long	.Linfo_string501
 	.byte	1
-	.short	2924
+	.short	2931
 	.long	10605
 	.byte	51
 	.long	.Linfo_string502
 	.byte	1
-	.short	2925
+	.short	2932
 	.long	10605
 	.byte	45
 	.long	8490
 	.long	.Ldebug_ranges151
 	.byte	1
-	.short	2947
+	.short	2954
 	.byte	46
 	.long	.Ldebug_loc293
 	.long	8500
@@ -29774,32 +29786,32 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string477
 	.byte	1
-	.short	3624
+	.short	3631
 	.byte	1
 	.long	2005
 	.byte	41
 	.long	.Ldebug_loc294
 	.long	.Linfo_string347
 	.byte	1
-	.short	3624
+	.short	3631
 	.long	2017
 	.byte	41
 	.long	.Ldebug_loc295
 	.long	.Linfo_string491
 	.byte	1
-	.short	3624
+	.short	3631
 	.long	1128
 	.byte	41
 	.long	.Ldebug_loc296
 	.long	.Linfo_string326
 	.byte	1
-	.short	3624
+	.short	3631
 	.long	2027
 	.byte	41
 	.long	.Ldebug_loc297
 	.long	.Linfo_string262
 	.byte	1
-	.short	3624
+	.short	3631
 	.long	932
 	.byte	0
 	.byte	58
@@ -29809,26 +29821,26 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string476
 	.byte	1
-	.short	3641
+	.short	3648
 	.byte	1
 	.long	2089
 	.byte	41
 	.long	.Ldebug_loc298
 	.long	.Linfo_string347
 	.byte	1
-	.short	3641
+	.short	3648
 	.long	2017
 	.byte	41
 	.long	.Ldebug_loc300
 	.long	.Linfo_string503
 	.byte	1
-	.short	3641
+	.short	3648
 	.long	987
 	.byte	41
 	.long	.Ldebug_loc299
 	.long	.Linfo_string262
 	.byte	1
-	.short	3641
+	.short	3648
 	.long	932
 	.byte	0
 	.byte	58
@@ -29838,32 +29850,32 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string475
 	.byte	1
-	.short	3653
+	.short	3660
 	.byte	1
 	.long	2140
 	.byte	41
 	.long	.Ldebug_loc301
 	.long	.Linfo_string347
 	.byte	1
-	.short	3653
+	.short	3660
 	.long	2017
 	.byte	41
 	.long	.Ldebug_loc302
 	.long	.Linfo_string503
 	.byte	1
-	.short	3653
+	.short	3660
 	.long	2152
 	.byte	41
 	.long	.Ldebug_loc303
 	.long	.Linfo_string262
 	.byte	1
-	.short	3653
+	.short	3660
 	.long	932
 	.byte	42
 	.long	.Ldebug_loc304
 	.long	.Linfo_string422
 	.byte	1
-	.short	3655
+	.short	3662
 	.long	1133
 	.byte	0
 	.byte	58
@@ -29873,32 +29885,32 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string474
 	.byte	1
-	.short	3668
+	.short	3675
 	.byte	1
 	.long	2196
 	.byte	41
 	.long	.Ldebug_loc305
 	.long	.Linfo_string347
 	.byte	1
-	.short	3668
+	.short	3675
 	.long	2017
 	.byte	41
 	.long	.Ldebug_loc306
 	.long	.Linfo_string419
 	.byte	1
-	.short	3668
+	.short	3675
 	.long	2152
 	.byte	41
 	.long	.Ldebug_loc307
 	.long	.Linfo_string262
 	.byte	1
-	.short	3668
+	.short	3675
 	.long	932
 	.byte	42
 	.long	.Ldebug_loc308
 	.long	.Linfo_string504
 	.byte	1
-	.short	3670
+	.short	3677
 	.long	14873
 	.byte	0
 	.byte	58
@@ -29908,20 +29920,20 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string473
 	.byte	1
-	.short	3689
+	.short	3696
 	.byte	1
 	.long	1349
 	.byte	41
 	.long	.Ldebug_loc309
 	.long	.Linfo_string347
 	.byte	1
-	.short	3689
+	.short	3696
 	.long	2017
 	.byte	41
 	.long	.Ldebug_loc310
 	.long	.Linfo_string262
 	.byte	1
-	.short	3689
+	.short	3696
 	.long	932
 	.byte	0
 	.byte	58
@@ -29931,31 +29943,31 @@ ID3V2_TAG_:
 	.byte	1
 	.long	.Linfo_string478
 	.byte	1
-	.short	2993
+	.short	3000
 	.byte	1
 	.long	1349
 	.byte	41
 	.long	.Ldebug_loc311
 	.long	.Linfo_string491
 	.byte	1
-	.short	2993
+	.short	3000
 	.long	1128
 	.byte	41
 	.long	.Ldebug_loc312
 	.long	.Linfo_string326
 	.byte	1
-	.short	2993
+	.short	3000
 	.long	2027
 	.byte	41
 	.long	.Ldebug_loc313
 	.long	.Linfo_string262
 	.byte	1
-	.short	2993
+	.short	3000
 	.long	932
 	.byte	51
 	.long	.Linfo_string347
 	.byte	1
-	.short	2995
+	.short	3002
 	.long	1155
 	.byte	62
 	.long	.Ldebug_ranges158
@@ -29963,7 +29975,7 @@ ID3V2_TAG_:
 	.long	.Ldebug_loc314
 	.long	.Linfo_string364
 	.byte	1
-	.short	3024
+	.short	3031
 	.long	15208
 	.byte	0
 	.byte	0

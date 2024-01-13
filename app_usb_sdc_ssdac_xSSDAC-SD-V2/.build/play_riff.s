@@ -88,35 +88,47 @@ PlayRIFF:
 		stw r10, sp[22]
 	}
 .Ltmp10:
-	.loc	3 109 5 prologue_end
-	stw r0, dp[p_file]
-	.loc	3 110 5
-	stw r1, dp[c_handshake]
+	{
+		mov r5, r1
+		mov r6, r0
+	}
 .Ltmp11:
-	ldw r1, cp[.LCPI0_0]
+	.loc	3 108 5 prologue_end
+	ldaw r11, cp[.L.str]
+	{
+		mov r0, r11
+		nop
+	}
+	bl debug_printf
+	.loc	3 109 5
+	stw r6, dp[p_file]
+	.loc	3 110 5
+	stw r5, dp[c_handshake]
 .Ltmp12:
+	ldw r0, cp[.LCPI0_0]
 	.file	12 "C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src\\xcore_c_port_impl.h"
 	.loc	12 35 3
-	#APP
-	setc res[r1], 0x8
-	#NO_APP
 .Ltmp13:
+	#APP
+	setc res[r0], 0x8
+	#NO_APP
+.Ltmp14:
 	.loc	6 79 3
-	stw r1, dp[tp_file_access]
+	stw r0, dp[tp_file_access]
 	{
 		ldc r9, 0
 		nop
 	}
-.Ltmp14:
+.Ltmp15:
 	.loc	3 117 5
 	{
 		ldaw r1, sp[13]
 		stw r9, sp[14]
 	}
-.Ltmp15:
+.Ltmp16:
 	{
 		ldc r5, 4
-		nop
+		mov r0, r6
 	}
 	.loc	3 119 11
 	{
@@ -124,7 +136,6 @@ PlayRIFF:
 		nop
 	}
 	bl ReadUnsigned
-.Ltmp16:
 	.loc	3 122 11
 	ldw r0, dp[p_file]
 .Ltmp17:
@@ -141,7 +152,7 @@ PlayRIFF:
 	bl f_read
 	.loc	3 123 9
 .Ltmp19:
-	ldaw r11, cp[.L.str]
+	ldaw r11, cp[.L.str1]
 	{
 		mov r0, r6
 		mov r1, r11
@@ -154,13 +165,20 @@ PlayRIFF:
 	.loc	3 123 9
 	bf r0, .LBB0_3
 .Ltmp20:
+	.loc	3 124 9
+	ldaw r11, cp[.L.str2]
+	{
+		mov r0, r11
+		nop
+	}
+	bl debug_printf
 	{
 		ldaw r0, sp[12]
 		nop
 	}
 	bu .LBB0_2
-.LBB0_3:
 .Ltmp21:
+.LBB0_3:
 	.loc	3 129 11
 	ldw r0, dp[p_file]
 	{
@@ -181,7 +199,7 @@ PlayRIFF:
 	bl f_read
 	.loc	3 130 9
 .Ltmp24:
-	ldaw r11, cp[.L.str1]
+	ldaw r11, cp[.L.str3]
 	{
 		mov r0, r5
 		mov r1, r11
@@ -194,6 +212,13 @@ PlayRIFF:
 	.loc	3 130 9
 	bf r0, .LBB0_5
 .Ltmp25:
+	.loc	3 131 9
+	ldaw r11, cp[.L.str4]
+	{
+		mov r0, r11
+		nop
+	}
+	bl debug_printf
 	{
 		ldaw r0, sp[11]
 		nop
@@ -208,14 +233,14 @@ PlayRIFF:
 .Ltmp27:
 	bl WriteHexString
 	{
-		ldc r5, 6
+		ldc r6, 6
 		nop
 	}
 .Ltmp28:
-.LBB0_22:
+.LBB0_23:
 	.loc	3 256 1
 	{
-		mov r0, r5
+		mov r0, r6
 		ldw r10, sp[22]
 	}
 	ldd r9, r8, sp[10]
@@ -248,29 +273,29 @@ PlayRIFF:
 .Ltmp33:
 	.loc	3 145 5
 	bl ReadUnsigned
+	{
+		nop
+		ldw r1, sp[9]
+	}
 	.loc	3 146 9
 .Ltmp34:
 	{
-		ldc r5, 6
-		ldw r0, sp[9]
-	}
-	.loc	3 146 9
-	{
-		eq r0, r0, 1
+		eq r0, r1, 1
 		nop
 	}
-	bf r0, .LBB0_22
+	.loc	3 146 9
+	bf r0, .LBB0_6
 .Ltmp35:
 	.loc	3 155 5
 	ldw r0, dp[p_file]
 	.loc	3 155 5
 	ldaw r1, dp[ChannelCount]
 	{
-		ldc r7, 2
+		ldc r6, 2
 		nop
 	}
 	{
-		mov r2, r7
+		mov r2, r6
 		nop
 	}
 	bl ReadUnsigned
@@ -279,11 +304,11 @@ PlayRIFF:
 	.loc	3 161 5
 	ldaw r1, dp[SampleRate]
 	{
-		ldc r6, 4
+		ldc r5, 4
 		nop
 	}
 	{
-		mov r2, r6
+		mov r2, r5
 		nop
 	}
 	bl ReadUnsigned
@@ -292,7 +317,7 @@ PlayRIFF:
 .Ltmp36:
 	{
 		ldaw r1, sp[8]
-		mov r2, r6
+		mov r2, r5
 	}
 .Ltmp37:
 	.loc	3 167 5
@@ -302,7 +327,7 @@ PlayRIFF:
 .Ltmp38:
 	{
 		ldaw r1, sp[7]
-		mov r2, r7
+		mov r2, r6
 	}
 .Ltmp39:
 	.loc	3 173 5
@@ -312,7 +337,7 @@ PlayRIFF:
 .Ltmp40:
 	{
 		ldaw r1, sp[6]
-		mov r2, r7
+		mov r2, r6
 	}
 .Ltmp41:
 	.loc	3 179 5
@@ -333,51 +358,69 @@ PlayRIFF:
 	ldw r0, dp[p_file]
 .Ltmp43:
 	{
-		ldaw r7, sp[5]
+		ldaw r6, sp[5]
 		ldaw r3, sp[14]
 	}
 .Ltmp44:
 	.loc	3 187 11
 	{
-		mov r1, r7
-		mov r2, r6
+		mov r1, r6
+		mov r2, r5
 	}
 	bl f_read
 	.loc	3 188 9
 .Ltmp45:
-	ldaw r11, cp[.L.str2]
+	ldaw r11, cp[.L.str6]
 	{
-		mov r0, r7
+		mov r0, r6
 		mov r1, r11
 	}
 	{
-		mov r2, r6
+		mov r2, r5
 		nop
 	}
 	bl strncmp
 	.loc	3 188 9
-	bf r0, .LBB0_8
+	bf r0, .LBB0_9
 .Ltmp46:
+	.loc	3 189 9
+	ldaw r11, cp[.L.str7]
+	{
+		mov r0, r11
+		nop
+	}
+	bl debug_printf
 	{
 		ldaw r0, sp[5]
-		ldc r1, 4
+		nop
 	}
-	.loc	3 189 54
+	bu .LBB0_2
 .Ltmp47:
-	bl WriteHexString
-	bu .LBB0_22
+.LBB0_6:
+	.loc	3 147 9
+	ldaw r11, cp[.L.str5]
+	{
+		mov r0, r11
+		nop
+	}
+	bl debug_printf
+	{
+		ldc r6, 6
+		nop
+	}
+	bu .LBB0_23
 .Ltmp48:
-.LBB0_8:
+.LBB0_9:
 	.loc	3 197 5
 	ldw r0, dp[p_file]
 	.loc	3 197 5
 	ldaw r1, dp[DataSize]
 	{
-		ldc r6, 4
+		ldc r5, 4
 		nop
 	}
 	{
-		mov r2, r6
+		mov r2, r5
 		nop
 	}
 	bl ReadUnsigned
@@ -412,10 +455,10 @@ PlayRIFF:
 	}
 .Ltmp51:
 	.loc	3 214 5
-	ldaw r5, dp[TotalTimeString]
-	ldaw r11, cp[.L.str3]
+	ldaw r6, dp[TotalTimeString]
+	ldaw r11, cp[.L.str8]
 	{
-		mov r0, r5
+		mov r0, r6
 		mov r1, r11
 	}
 .Ltmp52:
@@ -437,16 +480,20 @@ PlayRIFF:
 		ldw r0, sp[6]
 	}
 	.loc	3 216 5
-	std r5, r0, sp[1]
+	std r6, r0, sp[1]
 	{
 		nop
 		stw r1, sp[1]
 	}
-	ldaw r0, dp[audio_property_string]
-	ldaw r11, cp[.L.str4]
+	ldaw r6, dp[audio_property_string]
+	ldaw r11, cp[.L.str9]
 	{
+		mov r0, r6
 		mov r1, r11
+	}
+	{
 		mov r2, r7
+		nop
 	}
 	bl sprintf
 	{
@@ -455,6 +502,13 @@ PlayRIFF:
 	}
 	.loc	3 217 5
 	bl set_display_control_flag
+	.loc	3 219 5
+	ldaw r11, cp[.L.str10]
+	{
+		mov r0, r11
+		mov r1, r6
+	}
+	bl debug_printf
 	.loc	3 220 12
 	bl __getstdout
 	.loc	3 220 5
@@ -465,23 +519,23 @@ PlayRIFF:
 	stw r9, dp[CurrentPosition]
 	.loc	3 226 5
 	{
-		mov r0, r6
+		mov r0, r5
 		nop
 	}
 	bl set_display_control_flag
-	ldaw r6, dp[InitialRun]
+	ldaw r5, dp[InitialRun]
 	{
-		mkmsk r5, 1
+		mkmsk r6, 1
 		nop
 	}
-	st8 r5, r6[r9]
+	st8 r6, r5[r9]
 	ldc r8, 2048
 	{
 		mkmsk r7, 3
 		nop
 	}
 .Ltmp54:
-.LBB0_9:
+.LBB0_10:
 	.loc	3 239 13
 	ldap r11, Skip
 .Ltmp55:
@@ -499,7 +553,7 @@ PlayRIFF:
 		eq r0, r0, 1
 		nop
 	}
-	bt r0, .LBB0_10
+	bt r0, .LBB0_11
 .Ltmp56:
 	.loc	3 59 9
 	ldw r0, dp[CurrentPosition]
@@ -516,28 +570,28 @@ PlayRIFF:
 		nop
 	}
 	.loc	3 59 9
-	bt r2, .LBB0_12
+	bt r2, .LBB0_13
 .Ltmp57:
 	{
 		mov r2, r8
 		nop
 	}
-	bu .LBB0_14
+	bu .LBB0_15
 .Ltmp58:
-.LBB0_12:
+.LBB0_13:
 	.loc	3 59 48
 	{
 		sub r2, r1, r0
 		nop
 	}
 .Ltmp59:
-.LBB0_14:
+.LBB0_15:
 	.loc	3 63 5
 	ldw r0, dp[tp_file_access]
 .Ltmp60:
 	.loc	12 168 3
 	#APP
-	out res[r0], r5
+	out res[r0], r6
 	#NO_APP
 .Ltmp61:
 	.loc	3 66 5
@@ -602,18 +656,18 @@ PlayRIFF:
 	stw r0, r2[r1]
 	{
 		nop
-		ld8u r2, r6[r9]
+		ld8u r2, r5[r9]
 	}
-	bf r2, .LBB0_16
+	bf r2, .LBB0_17
 .Ltmp68:
 	.loc	3 77 21
 	ldaw r2, dp[sm_new_track]
 	.loc	3 77 21
-	stw r5, r2[r1]
+	stw r6, r2[r1]
 .Ltmp69:
-.LBB0_16:
+.LBB0_17:
 	.loc	3 243 9
-	st8 r9, r6[r9]
+	st8 r9, r5[r9]
 	.loc	3 80 5
 .Ltmp70:
 	ldw r2, dp[CurrentPosition]
@@ -665,7 +719,7 @@ PlayRIFF:
 		mov r2, r9
 	}
 .Ltmp78:
-	bt r3, .LBB0_18
+	bt r3, .LBB0_19
 .Ltmp79:
 	.loc	3 84 9
 	{
@@ -673,7 +727,7 @@ PlayRIFF:
 		nop
 	}
 .Ltmp80:
-.LBB0_18:
+.LBB0_19:
 	.loc	3 84 29
 	stw r2, dp[buff_id]
 .Ltmp81:
@@ -687,7 +741,7 @@ PlayRIFF:
 		eq r2, r1, r2
 		nop
 	}
-	bt r2, .LBB0_20
+	bt r2, .LBB0_21
 .Ltmp83:
 	.loc	3 247 13
 	stw r1, dp[SecElapsed]
@@ -701,7 +755,7 @@ PlayRIFF:
 	.loc	3 251 13
 	ldw r0, dp[CurrentPosition]
 .Ltmp85:
-.LBB0_20:
+.LBB0_21:
 	.loc	3 251 13
 	ldw r1, dp[DataSize]
 	.loc	3 251 13
@@ -709,28 +763,35 @@ PlayRIFF:
 		lsu r0, r0, r1
 		nop
 	}
-	bt r0, .LBB0_9
+	bt r0, .LBB0_10
 .Ltmp86:
+	.loc	3 252 13
+	ldaw r11, cp[.L.str11]
+	{
+		mov r0, r11
+		nop
+	}
+	bl debug_printf
 	.loc	3 252 51
 	bl __getstdout
 	.loc	3 252 44
 	bl fflush
-	bu .LBB0_22
+	bu .LBB0_23
 .Ltmp87:
-.LBB0_10:
+.LBB0_11:
 	{
 		nop
-		ldw r5, sp[4]
+		ldw r6, sp[4]
 	}
-	bu .LBB0_22
+	bu .LBB0_23
 	.cc_bottom PlayRIFF.function
-	.set	PlayRIFF.nstackwords,((strncmp.nstackwords $M ReadUnsigned.nstackwords $M siprintf.nstackwords $M __floatunsisf.nstackwords $M __divsf3.nstackwords $M __extendsfdf2.nstackwords $M sprintf.nstackwords $M TestUserControl.nstackwords $M f_read.nstackwords $M __getstdout.nstackwords $M fflush.nstackwords $M set_display_control_flag.nstackwords $M WriteHexString.nstackwords) + 24)
+	.set	PlayRIFF.nstackwords,((strncmp.nstackwords $M ReadUnsigned.nstackwords $M siprintf.nstackwords $M __floatunsisf.nstackwords $M __divsf3.nstackwords $M __extendsfdf2.nstackwords $M sprintf.nstackwords $M TestUserControl.nstackwords $M f_read.nstackwords $M __getstdout.nstackwords $M fflush.nstackwords $M set_display_control_flag.nstackwords $M WriteHexString.nstackwords $M debug_printf.nstackwords) + 24)
 	.globl	PlayRIFF.nstackwords
-	.set	PlayRIFF.maxcores,ReadUnsigned.maxcores $M TestUserControl.maxcores $M WriteHexString.maxcores $M __getstdout.maxcores $M f_read.maxcores $M fflush.maxcores $M set_display_control_flag.maxcores $M siprintf.maxcores $M sprintf.maxcores $M strncmp.maxcores $M 1
+	.set	PlayRIFF.maxcores,ReadUnsigned.maxcores $M TestUserControl.maxcores $M WriteHexString.maxcores $M __getstdout.maxcores $M debug_printf.maxcores $M f_read.maxcores $M fflush.maxcores $M set_display_control_flag.maxcores $M siprintf.maxcores $M sprintf.maxcores $M strncmp.maxcores $M 1
 	.globl	PlayRIFF.maxcores
-	.set	PlayRIFF.maxtimers,ReadUnsigned.maxtimers $M TestUserControl.maxtimers $M WriteHexString.maxtimers $M __getstdout.maxtimers $M f_read.maxtimers $M fflush.maxtimers $M set_display_control_flag.maxtimers $M siprintf.maxtimers $M sprintf.maxtimers $M strncmp.maxtimers $M 0
+	.set	PlayRIFF.maxtimers,ReadUnsigned.maxtimers $M TestUserControl.maxtimers $M WriteHexString.maxtimers $M __getstdout.maxtimers $M debug_printf.maxtimers $M f_read.maxtimers $M fflush.maxtimers $M set_display_control_flag.maxtimers $M siprintf.maxtimers $M sprintf.maxtimers $M strncmp.maxtimers $M 0
 	.globl	PlayRIFF.maxtimers
-	.set	PlayRIFF.maxchanends,ReadUnsigned.maxchanends $M TestUserControl.maxchanends $M WriteHexString.maxchanends $M __getstdout.maxchanends $M f_read.maxchanends $M fflush.maxchanends $M set_display_control_flag.maxchanends $M siprintf.maxchanends $M sprintf.maxchanends $M strncmp.maxchanends $M 0
+	.set	PlayRIFF.maxchanends,ReadUnsigned.maxchanends $M TestUserControl.maxchanends $M WriteHexString.maxchanends $M __getstdout.maxchanends $M debug_printf.maxchanends $M f_read.maxchanends $M fflush.maxchanends $M set_display_control_flag.maxchanends $M siprintf.maxchanends $M sprintf.maxchanends $M strncmp.maxchanends $M 0
 	.globl	PlayRIFF.maxchanends
 .Ltmp88:
 	.size	PlayRIFF, .Ltmp88-PlayRIFF
@@ -754,26 +815,33 @@ Skip:
 	.cfi_def_cfa_offset 16
 .Ltmp90:
 	.cfi_offset 15, 0
-	{
-		nop
-		stw r4, sp[2]
-	}
 .Ltmp91:
 	.cfi_offset 4, -8
-	.loc	3 96 5 prologue_end
 .Ltmp92:
-	ldw r1, dp[SampleRate]
-	.loc	3 96 5
-	ldw r2, dp[BytePerWord]
-	.loc	3 96 5
-	ldw r3, dp[ChannelCount]
-	.loc	3 96 5
-	mul r0, r1, r0
+	{
+		mov r4, r0
+		stw r4, sp[2]
+	}
 .Ltmp93:
+	.loc	3 95 5 prologue_end
+	ldaw r11, cp[.L.str12]
+	{
+		mov r0, r11
+		mov r1, r4
+	}
+	bl debug_printf
 	.loc	3 96 5
-	mul r0, r0, r2
+	ldw r0, dp[SampleRate]
 	.loc	3 96 5
-	mul r1, r0, r3
+	ldw r1, dp[BytePerWord]
+	.loc	3 96 5
+	ldw r2, dp[ChannelCount]
+	.loc	3 96 5
+	mul r0, r0, r4
+	.loc	3 96 5
+	mul r0, r0, r1
+	.loc	3 96 5
+	mul r1, r0, r2
 .Ltmp94:
 	.loc	3 98 10
 	{
@@ -837,15 +905,23 @@ Skip:
 	# RETURN_REG_HOLDER
 .Ltmp98:
 	.cc_bottom Skip.function
-	.set	Skip.nstackwords,(f_lseek.nstackwords + 4)
-	.set	Skip.maxcores,f_lseek.maxcores $M 1
-	.set	Skip.maxtimers,f_lseek.maxtimers $M 0
-	.set	Skip.maxchanends,f_lseek.maxchanends $M 0
+	.set	Skip.nstackwords,((debug_printf.nstackwords $M f_lseek.nstackwords) + 4)
+	.set	Skip.maxcores,debug_printf.maxcores $M f_lseek.maxcores $M 1
+	.set	Skip.maxtimers,debug_printf.maxtimers $M f_lseek.maxtimers $M 0
+	.set	Skip.maxchanends,debug_printf.maxchanends $M f_lseek.maxchanends $M 0
 .Ltmp99:
 	.size	Skip, .Ltmp99-Skip
 .Lfunc_end1:
 	.cfi_endproc
 
+	.section	.cp.rodata.string,"aMSc",@progbits
+	.cc_top .L.str.data,.L.str
+	.align	4
+	.type	.L.str,@object
+	.size	.L.str, 14
+.L.str:
+.asciiz"\nPlaying RIFF"
+	.cc_bottom .L.str.data
 	.section	.dp.bss.4,"awd",@nobits
 	.cc_top p_file.data,p_file
 	.globl	p_file
@@ -871,20 +947,41 @@ tp_file_access:
 	.long	0
 	.cc_bottom tp_file_access.data
 	.section	.cp.rodata.string,"aMSc",@progbits
-	.cc_top .L.str.data,.L.str
-	.align	4
-	.type	.L.str,@object
-	.size	.L.str, 5
-.L.str:
-.asciiz"WAVE"
-	.cc_bottom .L.str.data
 	.cc_top .L.str1.data,.L.str1
 	.align	4
 	.type	.L.str1,@object
 	.size	.L.str1, 5
 .L.str1:
-.asciiz"fmt "
+.asciiz"WAVE"
 	.cc_bottom .L.str1.data
+	.cc_top .L.str2.data,.L.str2
+	.align	4
+	.type	.L.str2,@object
+	.size	.L.str2, 29
+.L.str2:
+.asciiz" - header is not 'WAVE' but "
+	.cc_bottom .L.str2.data
+	.cc_top .L.str3.data,.L.str3
+	.align	4
+	.type	.L.str3,@object
+	.size	.L.str3, 5
+.L.str3:
+.asciiz"fmt "
+	.cc_bottom .L.str3.data
+	.cc_top .L.str4.data,.L.str4
+	.align	4
+	.type	.L.str4,@object
+	.size	.L.str4, 29
+.L.str4:
+.asciiz" - header is not 'fmt ' but "
+	.cc_bottom .L.str4.data
+	.cc_top .L.str5.data,.L.str5
+	.align	4
+	.type	.L.str5,@object
+	.size	.L.str5, 32
+.L.str5:
+.asciiz" - format is %d, not Linear PCM"
+	.cc_bottom .L.str5.data
 	.section	.dp.bss.4,"awd",@nobits
 	.cc_top ChannelCount.data,ChannelCount
 	.align	4
@@ -908,13 +1005,20 @@ BytePerWord:
 	.long	0
 	.cc_bottom BytePerWord.data
 	.section	.cp.rodata.string,"aMSc",@progbits
-	.cc_top .L.str2.data,.L.str2
+	.cc_top .L.str6.data,.L.str6
 	.align	4
-	.type	.L.str2,@object
-	.size	.L.str2, 5
-.L.str2:
+	.type	.L.str6,@object
+	.size	.L.str6, 5
+.L.str6:
 .asciiz"data"
-	.cc_bottom .L.str2.data
+	.cc_bottom .L.str6.data
+	.cc_top .L.str7.data,.L.str7
+	.align	4
+	.type	.L.str7,@object
+	.size	.L.str7, 29
+.L.str7:
+.asciiz" - header is not 'data' but "
+	.cc_bottom .L.str7.data
 	.section	.dp.bss.4,"awd",@nobits
 	.cc_top DataSize.data,DataSize
 	.align	4
@@ -924,20 +1028,27 @@ DataSize:
 	.long	0
 	.cc_bottom DataSize.data
 	.section	.cp.rodata.string,"aMSc",@progbits
-	.cc_top .L.str3.data,.L.str3
+	.cc_top .L.str8.data,.L.str8
 	.align	4
-	.type	.L.str3,@object
-	.size	.L.str3, 10
-.L.str3:
+	.type	.L.str8,@object
+	.size	.L.str8, 10
+.L.str8:
 .asciiz"%02d:%02d"
-	.cc_bottom .L.str3.data
-	.cc_top .L.str4.data,.L.str4
+	.cc_bottom .L.str8.data
+	.cc_top .L.str9.data,.L.str9
 	.align	4
-	.type	.L.str4,@object
-	.size	.L.str4, 37
-.L.str4:
+	.type	.L.str9,@object
+	.size	.L.str9, 37
+.L.str9:
 .asciiz"LINEAR PCM %1dch %4.1fksps %2dbit %s"
-	.cc_bottom .L.str4.data
+	.cc_bottom .L.str9.data
+	.cc_top .L.str10.data,.L.str10
+	.align	4
+	.type	.L.str10,@object
+	.size	.L.str10, 4
+.L.str10:
+.asciiz"\n%s"
+	.cc_bottom .L.str10.data
 	.section	.dp.bss.4,"awd",@nobits
 	.cc_top CurrentPosition.data,CurrentPosition
 	.align	4
@@ -954,6 +1065,22 @@ InitialRun:
 	.byte	0
 	.space	3
 	.cc_bottom InitialRun.data
+	.section	.cp.rodata.string,"aMSc",@progbits
+	.cc_top .L.str11.data,.L.str11
+	.align	4
+	.type	.L.str11,@object
+	.size	.L.str11, 14
+.L.str11:
+.asciiz"\nEND OF TRACK"
+	.cc_bottom .L.str11.data
+	.cc_top .L.str12.data,.L.str12
+	.align	4
+	.type	.L.str12,@object
+	.size	.L.str12, 13
+.L.str12:
+.asciiz"\nSkip %d sec"
+	.cc_bottom .L.str12.data
+	.section	.dp.bss.4,"awd",@nobits
 .Ldebug_end0:
 	.text
 .Ldebug_end1:
@@ -2924,13 +3051,13 @@ InitialRun:
 	.long	0
 	.long	0
 .Ldebug_ranges1:
-	.long	.Ltmp12
-	.long	.Ltmp14
+	.long	.Ltmp13
+	.long	.Ltmp15
 	.long	0
 	.long	0
 .Ldebug_ranges2:
-	.long	.Ltmp12
 	.long	.Ltmp13
+	.long	.Ltmp14
 	.long	0
 	.long	0
 .Ldebug_ranges3:
@@ -2997,146 +3124,138 @@ InitialRun:
 	.section	.debug_loc,"",@progbits
 .Ldebug_loc0:
 	.long	.Lfunc_begin0
-	.long	.Ltmp16
+	.long	.Ltmp10
 .Lset0 = .Ltmp101-.Ltmp100
 	.short	.Lset0
 .Ltmp100:
 	.byte	80
 .Ltmp101:
+	.long	.Ltmp10
+	.long	.Ltmp11
+.Lset1 = .Ltmp103-.Ltmp102
+	.short	.Lset1
+.Ltmp102:
+	.byte	86
+.Ltmp103:
 	.long	0
 	.long	0
 .Ldebug_loc1:
 	.long	.Lfunc_begin0
-	.long	.Ltmp12
-.Lset1 = .Ltmp103-.Ltmp102
-	.short	.Lset1
-.Ltmp102:
+	.long	.Ltmp10
+.Lset2 = .Ltmp105-.Ltmp104
+	.short	.Lset2
+.Ltmp104:
 	.byte	81
-.Ltmp103:
+.Ltmp105:
+	.long	.Ltmp10
+	.long	.Ltmp11
+.Lset3 = .Ltmp107-.Ltmp106
+	.short	.Lset3
+.Ltmp106:
+	.byte	85
+.Ltmp107:
 	.long	0
 	.long	0
 .Ldebug_loc2:
 	.long	.Lfunc_begin0
 	.long	.Ltmp9
-.Lset2 = .Ltmp105-.Ltmp104
-	.short	.Lset2
-.Ltmp104:
-	.byte	82
-.Ltmp105:
-	.long	.Ltmp9
-	.long	.Ltmp10
-.Lset3 = .Ltmp107-.Ltmp106
-	.short	.Lset3
-.Ltmp106:
-	.byte	84
-.Ltmp107:
-	.long	.Ltmp21
-	.long	.Ltmp25
 .Lset4 = .Ltmp109-.Ltmp108
 	.short	.Lset4
 .Ltmp108:
-	.byte	84
+	.byte	82
 .Ltmp109:
-	.long	.Ltmp29
-	.long	.Ltmp46
+	.long	.Ltmp9
+	.long	.Ltmp10
 .Lset5 = .Ltmp111-.Ltmp110
 	.short	.Lset5
 .Ltmp110:
 	.byte	84
 .Ltmp111:
-	.long	.Ltmp48
-	.long	.Ltmp86
+	.long	.Ltmp21
+	.long	.Ltmp25
 .Lset6 = .Ltmp113-.Ltmp112
 	.short	.Lset6
 .Ltmp112:
 	.byte	84
 .Ltmp113:
-	.long	0
-	.long	0
-.Ldebug_loc3:
-	.long	.Ltmp14
-	.long	.Ltmp17
+	.long	.Ltmp29
+	.long	.Ltmp46
 .Lset7 = .Ltmp115-.Ltmp114
 	.short	.Lset7
 .Ltmp114:
-	.byte	16
-	.byte	0
+	.byte	84
 .Ltmp115:
-	.long	.Ltmp17
-	.long	.Ltmp18
+	.long	.Ltmp48
+	.long	.Ltmp86
 .Lset8 = .Ltmp117-.Ltmp116
 	.short	.Lset8
 .Ltmp116:
-	.byte	115
-	.byte	0
+	.byte	84
 .Ltmp117:
-	.long	.Ltmp20
-	.long	.Ltmp22
+	.long	0
+	.long	0
+.Ldebug_loc3:
+	.long	.Ltmp15
+	.long	.Ltmp17
 .Lset9 = .Ltmp119-.Ltmp118
 	.short	.Lset9
 .Ltmp118:
 	.byte	16
 	.byte	0
 .Ltmp119:
-	.long	.Ltmp22
-	.long	.Ltmp23
+	.long	.Ltmp17
+	.long	.Ltmp18
 .Lset10 = .Ltmp121-.Ltmp120
 	.short	.Lset10
 .Ltmp120:
 	.byte	115
 	.byte	0
 .Ltmp121:
-	.long	.Ltmp25
-	.long	.Ltmp43
+	.long	.Ltmp20
+	.long	.Ltmp22
 .Lset11 = .Ltmp123-.Ltmp122
 	.short	.Lset11
 .Ltmp122:
 	.byte	16
 	.byte	0
 .Ltmp123:
-	.long	.Ltmp43
-	.long	.Ltmp44
+	.long	.Ltmp22
+	.long	.Ltmp23
 .Lset12 = .Ltmp125-.Ltmp124
 	.short	.Lset12
 .Ltmp124:
 	.byte	115
 	.byte	0
 .Ltmp125:
-	.long	.Ltmp46
-	.long	.Lfunc_end0
+	.long	.Ltmp25
+	.long	.Ltmp43
 .Lset13 = .Ltmp127-.Ltmp126
 	.short	.Lset13
 .Ltmp126:
 	.byte	16
 	.byte	0
 .Ltmp127:
-	.long	0
-	.long	0
-.Ldebug_loc4:
-	.long	.Ltmp14
-	.long	.Ltmp15
+	.long	.Ltmp43
+	.long	.Ltmp44
 .Lset14 = .Ltmp129-.Ltmp128
 	.short	.Lset14
 .Ltmp128:
-	.byte	113
+	.byte	115
 	.byte	0
 .Ltmp129:
-	.long	0
-	.long	0
-.Ldebug_loc5:
-	.long	.Ltmp30
-	.long	.Ltmp31
+	.long	.Ltmp46
+	.long	.Lfunc_end0
 .Lset15 = .Ltmp131-.Ltmp130
 	.short	.Lset15
 .Ltmp130:
-	.byte	113
+	.byte	16
 	.byte	0
 .Ltmp131:
 	.long	0
 	.long	0
-.Ldebug_loc6:
-	.long	.Ltmp32
-	.long	.Ltmp33
+.Ldebug_loc4:
+	.long	.Ltmp15
+	.long	.Ltmp16
 .Lset16 = .Ltmp133-.Ltmp132
 	.short	.Lset16
 .Ltmp132:
@@ -3145,9 +3264,9 @@ InitialRun:
 .Ltmp133:
 	.long	0
 	.long	0
-.Ldebug_loc7:
-	.long	.Ltmp36
-	.long	.Ltmp37
+.Ldebug_loc5:
+	.long	.Ltmp30
+	.long	.Ltmp31
 .Lset17 = .Ltmp135-.Ltmp134
 	.short	.Lset17
 .Ltmp134:
@@ -3156,9 +3275,9 @@ InitialRun:
 .Ltmp135:
 	.long	0
 	.long	0
-.Ldebug_loc8:
-	.long	.Ltmp38
-	.long	.Ltmp39
+.Ldebug_loc6:
+	.long	.Ltmp32
+	.long	.Ltmp33
 .Lset18 = .Ltmp137-.Ltmp136
 	.short	.Lset18
 .Ltmp136:
@@ -3167,9 +3286,9 @@ InitialRun:
 .Ltmp137:
 	.long	0
 	.long	0
-.Ldebug_loc9:
-	.long	.Ltmp40
-	.long	.Ltmp41
+.Ldebug_loc7:
+	.long	.Ltmp36
+	.long	.Ltmp37
 .Lset19 = .Ltmp139-.Ltmp138
 	.short	.Lset19
 .Ltmp138:
@@ -3178,69 +3297,71 @@ InitialRun:
 .Ltmp139:
 	.long	0
 	.long	0
-.Ldebug_loc10:
-	.long	.Ltmp49
-	.long	.Ltmp86
+.Ldebug_loc8:
+	.long	.Ltmp38
+	.long	.Ltmp39
 .Lset20 = .Ltmp141-.Ltmp140
 	.short	.Lset20
 .Ltmp140:
-	.byte	90
+	.byte	113
+	.byte	0
 .Ltmp141:
+	.long	0
+	.long	0
+.Ldebug_loc9:
+	.long	.Ltmp40
+	.long	.Ltmp41
+.Lset21 = .Ltmp143-.Ltmp142
+	.short	.Lset21
+.Ltmp142:
+	.byte	113
+	.byte	0
+.Ltmp143:
+	.long	0
+	.long	0
+.Ldebug_loc10:
+	.long	.Ltmp49
+	.long	.Ltmp86
+.Lset22 = .Ltmp145-.Ltmp144
+	.short	.Lset22
+.Ltmp144:
+	.byte	90
+.Ltmp145:
 	.long	0
 	.long	0
 .Ldebug_loc11:
 	.long	.Ltmp50
 	.long	.Ltmp52
-.Lset21 = .Ltmp143-.Ltmp142
-	.short	.Lset21
-.Ltmp142:
+.Lset23 = .Ltmp147-.Ltmp146
+	.short	.Lset23
+.Ltmp146:
 	.byte	80
-.Ltmp143:
+.Ltmp147:
 	.long	0
 	.long	0
 .Ldebug_loc12:
 	.long	.Ltmp51
 	.long	.Ltmp53
-.Lset22 = .Ltmp145-.Ltmp144
-	.short	.Lset22
-.Ltmp144:
+.Lset24 = .Ltmp149-.Ltmp148
+	.short	.Lset24
+.Ltmp148:
 	.byte	83
-.Ltmp145:
+.Ltmp149:
 	.long	0
 	.long	0
 .Ldebug_loc13:
 	.long	.Ltmp59
 	.long	.Ltmp59
-.Lset23 = .Ltmp147-.Ltmp146
-	.short	.Lset23
-.Ltmp146:
+.Lset25 = .Ltmp151-.Ltmp150
+	.short	.Lset25
+.Ltmp150:
 	.byte	82
-.Ltmp147:
+.Ltmp151:
 	.long	0
 	.long	0
 .Ldebug_loc14:
 	.long	.Ltmp60
 	.long	.Ltmp62
-.Lset24 = .Ltmp149-.Ltmp148
-	.short	.Lset24
-.Ltmp148:
-	.byte	80
-.Ltmp149:
-	.long	0
-	.long	0
-.Ldebug_loc15:
-	.long	.Ltmp60
-	.long	.Ltmp62
-.Lset25 = .Ltmp151-.Ltmp150
-	.short	.Lset25
-.Ltmp150:
-	.byte	80
-.Ltmp151:
-	.long	0
-	.long	0
-.Ldebug_loc16:
-	.long	.Ltmp64
-	.long	.Ltmp66
 .Lset26 = .Ltmp153-.Ltmp152
 	.short	.Lset26
 .Ltmp152:
@@ -3248,9 +3369,9 @@ InitialRun:
 .Ltmp153:
 	.long	0
 	.long	0
-.Ldebug_loc17:
-	.long	.Ltmp64
-	.long	.Ltmp66
+.Ldebug_loc15:
+	.long	.Ltmp60
+	.long	.Ltmp62
 .Lset27 = .Ltmp155-.Ltmp154
 	.short	.Lset27
 .Ltmp154:
@@ -3258,24 +3379,27 @@ InitialRun:
 .Ltmp155:
 	.long	0
 	.long	0
-.Ldebug_loc18:
-	.long	.Ltmp67
-	.long	.Ltmp68
+.Ldebug_loc16:
+	.long	.Ltmp64
+	.long	.Ltmp66
 .Lset28 = .Ltmp157-.Ltmp156
 	.short	.Lset28
 .Ltmp156:
-	.byte	81
+	.byte	80
 .Ltmp157:
-	.long	.Ltmp69
-	.long	.Ltmp77
+	.long	0
+	.long	0
+.Ldebug_loc17:
+	.long	.Ltmp64
+	.long	.Ltmp66
 .Lset29 = .Ltmp159-.Ltmp158
 	.short	.Lset29
 .Ltmp158:
-	.byte	81
+	.byte	80
 .Ltmp159:
 	.long	0
 	.long	0
-.Ldebug_loc19:
+.Ldebug_loc18:
 	.long	.Ltmp67
 	.long	.Ltmp68
 .Lset30 = .Ltmp161-.Ltmp160
@@ -3292,27 +3416,24 @@ InitialRun:
 .Ltmp163:
 	.long	0
 	.long	0
-.Ldebug_loc20:
-	.long	.Ltmp71
-	.long	.Ltmp78
+.Ldebug_loc19:
+	.long	.Ltmp67
+	.long	.Ltmp68
 .Lset32 = .Ltmp165-.Ltmp164
 	.short	.Lset32
 .Ltmp164:
-	.byte	82
+	.byte	81
 .Ltmp165:
-	.long	0
-	.long	0
-.Ldebug_loc21:
-	.long	.Ltmp71
-	.long	.Ltmp78
+	.long	.Ltmp69
+	.long	.Ltmp77
 .Lset33 = .Ltmp167-.Ltmp166
 	.short	.Lset33
 .Ltmp166:
-	.byte	82
+	.byte	81
 .Ltmp167:
 	.long	0
 	.long	0
-.Ldebug_loc22:
+.Ldebug_loc20:
 	.long	.Ltmp71
 	.long	.Ltmp78
 .Lset34 = .Ltmp169-.Ltmp168
@@ -3322,7 +3443,7 @@ InitialRun:
 .Ltmp169:
 	.long	0
 	.long	0
-.Ldebug_loc23:
+.Ldebug_loc21:
 	.long	.Ltmp71
 	.long	.Ltmp78
 .Lset35 = .Ltmp171-.Ltmp170
@@ -3332,29 +3453,29 @@ InitialRun:
 .Ltmp171:
 	.long	0
 	.long	0
-.Ldebug_loc24:
-	.long	.Ltmp82
-	.long	.Ltmp84
+.Ldebug_loc22:
+	.long	.Ltmp71
+	.long	.Ltmp78
 .Lset36 = .Ltmp173-.Ltmp172
 	.short	.Lset36
 .Ltmp172:
-	.byte	81
+	.byte	82
 .Ltmp173:
 	.long	0
 	.long	0
-.Ldebug_loc25:
-	.long	.Lfunc_begin1
-	.long	.Ltmp93
+.Ldebug_loc23:
+	.long	.Ltmp71
+	.long	.Ltmp78
 .Lset37 = .Ltmp175-.Ltmp174
 	.short	.Lset37
 .Ltmp174:
-	.byte	80
+	.byte	82
 .Ltmp175:
 	.long	0
 	.long	0
-.Ldebug_loc26:
-	.long	.Ltmp94
-	.long	.Ltmp96
+.Ldebug_loc24:
+	.long	.Ltmp82
+	.long	.Ltmp84
 .Lset38 = .Ltmp177-.Ltmp176
 	.short	.Lset38
 .Ltmp176:
@@ -3362,24 +3483,51 @@ InitialRun:
 .Ltmp177:
 	.long	0
 	.long	0
-.Ldebug_loc27:
-	.long	.Ltmp96
-	.long	.Ltmp96
+.Ldebug_loc25:
+	.long	.Lfunc_begin1
+	.long	.Ltmp92
 .Lset39 = .Ltmp179-.Ltmp178
 	.short	.Lset39
 .Ltmp178:
-	.byte	84
+	.byte	80
 .Ltmp179:
+	.long	.Ltmp92
+	.long	.Ltmp93
+.Lset40 = .Ltmp181-.Ltmp180
+	.short	.Lset40
+.Ltmp180:
+	.byte	84
+.Ltmp181:
+	.long	0
+	.long	0
+.Ldebug_loc26:
+	.long	.Ltmp94
+	.long	.Ltmp96
+.Lset41 = .Ltmp183-.Ltmp182
+	.short	.Lset41
+.Ltmp182:
+	.byte	81
+.Ltmp183:
+	.long	0
+	.long	0
+.Ldebug_loc27:
+	.long	.Ltmp96
+	.long	.Ltmp96
+.Lset42 = .Ltmp185-.Ltmp184
+	.short	.Lset42
+.Ltmp184:
+	.byte	84
+.Ltmp185:
 	.long	0
 	.long	0
 	.section	.debug_pubnames,"",@progbits
-.Lset40 = .LpubNames_end0-.LpubNames_begin0
-	.long	.Lset40
+.Lset43 = .LpubNames_end0-.LpubNames_begin0
+	.long	.Lset43
 .LpubNames_begin0:
 	.short	2
 	.long	.L.debug_info_begin0
-.Lset41 = .L.debug_info_end0-.L.debug_info_begin0
-	.long	.Lset41
+.Lset44 = .L.debug_info_end0-.L.debug_info_begin0
+	.long	.Lset44
 	.long	1625
 .asciiz"PlayRIFF"
 	.long	2242
@@ -3425,13 +3573,13 @@ InitialRun:
 	.long	0
 .LpubNames_end0:
 	.section	.debug_pubtypes,"",@progbits
-.Lset42 = .LpubTypes_end0-.LpubTypes_begin0
-	.long	.Lset42
+.Lset45 = .LpubTypes_end0-.LpubTypes_begin0
+	.long	.Lset45
 .LpubTypes_begin0:
 	.short	2
 	.long	.L.debug_info_begin0
-.Lset43 = .L.debug_info_end0-.L.debug_info_begin0
-	.long	.Lset43
+.Lset46 = .L.debug_info_end0-.L.debug_info_begin0
+	.long	.Lset46
 	.long	584
 .asciiz"port"
 	.long	2359
@@ -3488,6 +3636,7 @@ InitialRun:
 
 	.ident	"XMOS-235-acbb966-Dec-01-2019 clang version 3.6.0  (based on LLVM 3.6.0svn)"
 	.typestring PlayRIFF, "f{e(){m(_RC_ERROR){6},m(_RC_NEXT_FOLDER){4},m(_RC_NEXT_TRACK){1},m(_RC_PREVIOUS_FOLDER){5},m(_RC_PREVIOUS_TRACK){2},m(_RC_REWIND){0},m(_RC_STOP){3}}}(p(s(){m(fs){p(s(){m(fs_type){uc},m(drv){uc},m(csize){uc},m(n_fats){uc},m(wflag){uc},m(fsi_flag){uc},m(id){us},m(n_rootdir){us},m(last_clust){ul},m(free_clust){ul},m(fsi_sector){ul},m(cdir){ul},m(n_fatent){ul},m(fsize){ul},m(fatbase){ul},m(dirbase){ul},m(database){ul},m(winsect){ul},m(win){a(512:uc)}})},m(id){us},m(flag){uc},m(pad1){uc},m(fptr){ul},m(fsize){ul},m(sclust){ul},m(clust){ul},m(dsect){ul},m(dir_sect){ul},m(dir_ptr){p(uc)}}),ui,ui)"
+	.typestring debug_printf, "f{0}(p(uc),va)"
 	.typestring ReadUnsigned, "f{b}(p(s(){m(fs){p(s(){m(fs_type){uc},m(drv){uc},m(csize){uc},m(n_fats){uc},m(wflag){uc},m(fsi_flag){uc},m(id){us},m(n_rootdir){us},m(last_clust){ul},m(free_clust){ul},m(fsi_sector){ul},m(cdir){ul},m(n_fatent){ul},m(fsize){ul},m(fatbase){ul},m(dirbase){ul},m(database){ul},m(winsect){ul},m(win){a(512:uc)}})},m(id){us},m(flag){uc},m(pad1){uc},m(fptr){ul},m(fsize){ul},m(sclust){ul},m(clust){ul},m(dsect){ul},m(dir_sect){ul},m(dir_ptr){p(uc)}}),p(ui),ui)"
 	.typestring f_read, "f{e(){m(FR_DENIED){7},m(FR_DISK_ERR){1},m(FR_EXIST){8},m(FR_INT_ERR){2},m(FR_INVALID_DRIVE){11},m(FR_INVALID_NAME){6},m(FR_INVALID_OBJECT){9},m(FR_INVALID_PARAMETER){19},m(FR_LOCKED){16},m(FR_MKFS_ABORTED){14},m(FR_NOT_ENABLED){12},m(FR_NOT_ENOUGH_CORE){17},m(FR_NOT_READY){3},m(FR_NO_FILE){4},m(FR_NO_FILESYSTEM){13},m(FR_NO_PATH){5},m(FR_OK){0},m(FR_TIMEOUT){15},m(FR_TOO_MANY_OPEN_FILES){18},m(FR_WRITE_PROTECTED){10}}}(p(s(){m(fs){p(s(){m(fs_type){uc},m(drv){uc},m(csize){uc},m(n_fats){uc},m(wflag){uc},m(fsi_flag){uc},m(id){us},m(n_rootdir){us},m(last_clust){ul},m(free_clust){ul},m(fsi_sector){ul},m(cdir){ul},m(n_fatent){ul},m(fsize){ul},m(fatbase){ul},m(dirbase){ul},m(database){ul},m(winsect){ul},m(win){a(512:uc)}})},m(id){us},m(flag){uc},m(pad1){uc},m(fptr){ul},m(fsize){ul},m(sclust){ul},m(clust){ul},m(dsect){ul},m(dir_sect){ul},m(dir_ptr){p(uc)}}),p(0),ui,p(ui))"
 	.typestring strncmp, "f{si}(p(c:uc),p(c:uc),ui)"

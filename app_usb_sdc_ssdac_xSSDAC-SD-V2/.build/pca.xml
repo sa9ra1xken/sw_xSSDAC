@@ -712,6 +712,12 @@
     </values>
   </arg>
 </fInfo>
+<fInfo name="GetStreamFormatString" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
 <fInfo name="HandleDacCommand" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="2">
   <arg num="0" specialize="false">
     <values>
@@ -931,20 +937,71 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="ShowAudioAttribute" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
+<fInfo name="ShowAudioProperty" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="1">
+  <arg num="0" specialize="true">
+    <values>
+      <value type="intval"><intval isSigned="true" val="2"/></value>
+    </values>
+  </arg>
+ <specializations>
+   <specialization id="0">
+    <arg num="0"><values><value type="intval"><intval isSigned="true" val="2"/></value></values></arg>
+   </specialization>
+ </specializations>
 </fInfo>
-<fInfo name="ShowFolder" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
+<fInfo name="ShowFolder" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="1">
+  <arg num="0" specialize="true">
+    <values>
+      <value type="intval"><intval isSigned="true" val="0"/></value>
+    </values>
+  </arg>
+ <specializations>
+   <specialization id="0">
+    <arg num="0"><values><value type="intval"><intval isSigned="true" val="0"/></value></values></arg>
+   </specialization>
+ </specializations>
 </fInfo>
-<fInfo name="ShowInterpolationMode" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
-  <arg num="0" specialize="false">
+<fInfo name="ShowInterpolationMode" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="2">
+  <arg num="0" specialize="true">
+    <values>
+      <value type="intval"><intval isSigned="true" val="3"/></value>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
     <values>
       <value type="unknown"/>
     </values>
   </arg>
+ <specializations>
+   <specialization id="0">
+    <arg num="0"><values><value type="intval"><intval isSigned="true" val="3"/></value></values></arg>
+    <arg num="1"><values><value type="unknown"/></values></arg>
+   </specialization>
+ </specializations>
 </fInfo>
-<fInfo name="ShowTrack" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
+<fInfo name="ShowStreamFormat" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="1">
+  <arg num="0" specialize="true">
+    <values>
+      <value type="intval"><intval isSigned="true" val="2"/></value>
+    </values>
+  </arg>
+ <specializations>
+   <specialization id="0">
+    <arg num="0"><values><value type="intval"><intval isSigned="true" val="2"/></value></values></arg>
+   </specialization>
+ </specializations>
 </fInfo>
-<fInfo name="ShowUsbAudioStatus" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
+<fInfo name="ShowTrack" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="1">
+  <arg num="0" specialize="true">
+    <values>
+      <value type="intval"><intval isSigned="true" val="1"/></value>
+    </values>
+  </arg>
+ <specializations>
+   <specialization id="0">
+    <arg num="0"><values><value type="intval"><intval isSigned="true" val="1"/></value></values></arg>
+   </specialization>
+ </specializations>
 </fInfo>
 <fInfo name="SwitchConsoleMode" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
@@ -1073,7 +1130,17 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="UpdateTime" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
+<fInfo name="UpdateTime" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="1">
+  <arg num="0" specialize="true">
+    <values>
+      <value type="intval"><intval isSigned="true" val="3"/></value>
+    </values>
+  </arg>
+ <specializations>
+   <specialization id="0">
+    <arg num="0"><values><value type="intval"><intval isSigned="true" val="3"/></value></values></arg>
+   </specialization>
+ </specializations>
 </fInfo>
 <fInfo name="XUD_ClearStall" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
@@ -1412,13 +1479,18 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="button_listener_core" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="2">
+<fInfo name="button_listener_core" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="3">
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
     </values>
   </arg>
   <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
     <values>
       <value type="unknown"/>
     </values>
@@ -1432,8 +1504,7 @@
       <value type="intval"><intval isSigned="true" val="4"/></value>
       <value type="intval"><intval isSigned="true" val="8"/></value>
       <value type="intval"><intval isSigned="true" val="16"/></value>
-      <value type="intval"><intval isSigned="true" val="32"/></value>
-      <value type="intval"><intval isSigned="true" val="64"/></value>
+      <value type="intval"><intval isSigned="true" val="128"/></value>
       <value type="intval"><intval isSigned="true" val="256"/></value>
       <value type="intval"><intval isSigned="true" val="512"/></value>
       <value type="intval"><intval isSigned="true" val="1024"/></value>
@@ -1484,10 +1555,10 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="config_audio_source" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="2">
+<fInfo name="config_audio_source" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="3">
   <arg num="0" specialize="true">
     <values>
-      <value type="null"/>
+      <value type="interface"><interfaceInfo index="0" type="chan" isYielding="false"/></value>
     </values>
   </arg>
   <arg num="1" specialize="false">
@@ -1495,10 +1566,16 @@
       <value type="unknown"/>
     </values>
   </arg>
+  <arg num="2" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
  <specializations>
    <specialization id="0">
-    <arg num="0"><values><value type="null"/></values></arg>
+    <arg num="0"><values><value type="interface"><interfaceInfo index="0" type="chan" isYielding="false"/></value></values></arg>
     <arg num="1"><values><value type="unknown"/></values></arg>
+    <arg num="2"><values><value type="unknown"/></values></arg>
    </specialization>
  </specializations>
 </fInfo>
@@ -1521,16 +1598,6 @@
   <arg num="3" specialize="false">
     <values>
       <value type="unknown"/>
-    </values>
-  </arg>
-</fInfo>
-<fInfo name="console_core" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="2">
-  <arg num="0" specialize="false">
-    <values>
-    </values>
-  </arg>
-  <arg num="1" specialize="false">
-    <values>
     </values>
   </arg>
 </fInfo>
@@ -1568,10 +1635,12 @@
 <fInfo name="decoupler" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="2">
   <arg num="0" specialize="false">
     <values>
+      <value type="unknown"/>
     </values>
   </arg>
   <arg num="1" specialize="false">
     <values>
+      <value type="unknown"/>
     </values>
   </arg>
 </fInfo>
@@ -1677,7 +1746,17 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="display_control_core" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="0">
+<fInfo name="display_control_core" global="true" specialize="true" noreturn="true" doNotSpecialize="false" numParams="1">
+  <arg num="0" specialize="true">
+    <values>
+      <value type="interface"><interfaceInfo index="0" type="chan" isYielding="false"/></value>
+    </values>
+  </arg>
+ <specializations>
+   <specialization id="0">
+    <arg num="0"><values><value type="interface"><interfaceInfo index="0" type="chan" isYielding="false"/></value></values></arg>
+   </specialization>
+ </specializations>
 </fInfo>
 <fInfo name="dump_midi_in_parse_state" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
@@ -1745,7 +1824,17 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="handle_display_frame" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
+<fInfo name="handle_display_frame" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="1">
+  <arg num="0" specialize="true">
+    <values>
+      <value type="interface"><interfaceInfo index="0" type="chan" isYielding="false"/></value>
+    </values>
+  </arg>
+ <specializations>
+   <specialization id="0">
+    <arg num="0"><values><value type="interface"><interfaceInfo index="0" type="chan" isYielding="false"/></value></values></arg>
+   </specialization>
+ </specializations>
 </fInfo>
 <fInfo name="i2c_master_init" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
@@ -1979,52 +2068,50 @@
 <fInfo name="qspi_if_read" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="4">
   <arg num="0" specialize="false">
     <values>
-      <value type="unknown"/>
     </values>
   </arg>
   <arg num="1" specialize="false">
     <values>
-      <value type="unknown"/>
     </values>
   </arg>
   <arg num="2" specialize="false">
     <values>
-      <value type="unknown"/>
     </values>
   </arg>
   <arg num="3" specialize="false">
     <values>
-      <value type="unknown"/>
     </values>
   </arg>
 </fInfo>
 <fInfo name="qspi_if_write" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="4">
   <arg num="0" specialize="false">
     <values>
-      <value type="unknown"/>
     </values>
   </arg>
   <arg num="1" specialize="false">
     <values>
-      <value type="unknown"/>
     </values>
   </arg>
   <arg num="2" specialize="false">
     <values>
-      <value type="unknown"/>
     </values>
   </arg>
   <arg num="3" specialize="false">
     <values>
-      <value type="unknown"/>
     </values>
   </arg>
 </fInfo>
-<fInfo name="qspi_server" global="true" specialize="false" noreturn="true" doNotSpecialize="false" numParams="1">
-  <arg num="0" specialize="false">
+<fInfo name="qspi_server" global="true" specialize="true" noreturn="true" doNotSpecialize="false" numParams="1">
+  <arg num="0" specialize="true">
     <values>
+      <value type="interface"><interfaceInfo index="0" type="chan" isYielding="false"/></value>
     </values>
   </arg>
+ <specializations>
+   <specialization id="0">
+    <arg num="0"><values><value type="interface"><interfaceInfo index="0" type="chan" isYielding="false"/></value></values></arg>
+   </specialization>
+ </specializations>
 </fInfo>
 <fInfo name="queue_init" global="true" specialize="false" noreturn="false" doNotSpecialize="true" numParams="2">
   <arg num="0" specialize="false">
@@ -2120,6 +2207,31 @@
     </values>
   </arg>
 </fInfo>
+<fInfo name="read" global="true" interface="qspi_access" specialize="true" noreturn="false" doNotSpecialize="false" numParams="3">
+  <arg num="0" specialize="true">
+    <values>
+      <value type="intval"><intval isSigned="true" val="0"/></value>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="1"/></value>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+ <specializations>
+   <specialization id="0">
+    <arg num="0"><values><value type="intval"><intval isSigned="true" val="0"/></value></values></arg>
+    <arg num="1"><values><value type="unknown"/></values></arg>
+    <arg num="2"><values><value type="unknown"/></values></arg>
+   </specialization>
+ </specializations>
+</fInfo>
 <fInfo name="reset_midi_state" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
     <values>
@@ -2152,6 +2264,7 @@
 <fInfo name="send_sample" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
     <values>
+      <value type="unknown"/>
     </values>
   </arg>
 </fInfo>
@@ -2184,7 +2297,6 @@
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
-      <value type="intval"><intval isSigned="true" val="1"/></value>
       <value type="intval"><intval isSigned="true" val="2"/></value>
     </values>
   </arg>
@@ -2203,6 +2315,7 @@
 <fInfo name="set_frequency" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
     <values>
+      <value type="unknown"/>
     </values>
   </arg>
 </fInfo>
@@ -2269,8 +2382,7 @@
       <value type="intval"><intval isSigned="true" val="4"/></value>
       <value type="intval"><intval isSigned="true" val="8"/></value>
       <value type="intval"><intval isSigned="true" val="16"/></value>
-      <value type="intval"><intval isSigned="true" val="32"/></value>
-      <value type="intval"><intval isSigned="true" val="64"/></value>
+      <value type="intval"><intval isSigned="true" val="128"/></value>
       <value type="intval"><intval isSigned="true" val="256"/></value>
       <value type="intval"><intval isSigned="true" val="512"/></value>
       <value type="intval"><intval isSigned="true" val="1024"/></value>
@@ -2289,12 +2401,6 @@
 </fInfo>
 <fInfo name="thread_speed" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
-<fInfo name="update_chan_count" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
-  <arg num="0" specialize="false">
-    <values>
-    </values>
-  </arg>
-</fInfo>
 <fInfo name="update_samp_freq" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
     <values>
@@ -2302,8 +2408,13 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="update_samp_resolution" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
+<fInfo name="update_stream_format" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="2">
   <arg num="0" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
     <values>
       <value type="unknown"/>
     </values>
@@ -2366,6 +2477,30 @@
    </specialization>
  </specializations>
 </fInfo>
+<fInfo name="write" global="true" interface="qspi_access" specialize="true" noreturn="false" doNotSpecialize="false" numParams="3">
+  <arg num="0" specialize="true">
+    <values>
+      <value type="intval"><intval isSigned="true" val="0"/></value>
+    </values>
+  </arg>
+  <arg num="1" specialize="true">
+    <values>
+      <value type="intval"><intval isSigned="false" val="4"/></value>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+ <specializations>
+   <specialization id="0">
+    <arg num="0"><values><value type="intval"><intval isSigned="true" val="0"/></value></values></arg>
+    <arg num="1"><values><value type="intval"><intval isSigned="false" val="4"/></value></values></arg>
+    <arg num="2"><values><value type="unknown"/></values></arg>
+   </specialization>
+ </specializations>
+</fInfo>
 <fInfo name="xassert_msg" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
     <values>
@@ -2374,6 +2509,12 @@
 </fInfo>
 <fInfo name="xscope_user_init" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
-<fCall name="config_audio_source" global="true" callerUnit="../src/main.xc" numArgs="2" impId="2" specializationId="0">
+<fCall name="display_control_core" global="true" callerUnit="../src/main.xc" numArgs="1" impId="3" specializationId="0">
+</fCall>
+<fCall name="display_control_core" global="true" callerUnit="../src/main.xc" numArgs="1" impId="4" specializationId="0">
+</fCall>
+<fCall name="qspi_server" global="true" callerUnit="../src/main.xc" numArgs="1" impId="8" specializationId="0">
+</fCall>
+<fCall name="config_audio_source" global="true" callerUnit="../src/main.xc" numArgs="3" impId="9" specializationId="0">
 </fCall>
 </preCompilationAnalysis>

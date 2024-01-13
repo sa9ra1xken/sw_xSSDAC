@@ -8,6 +8,7 @@
   C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/export.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/macros.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/stream_encoder.h \
+  C:/Users/takaaki/git/lib_xassert/lib_xassert/api\xassert.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\assert.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h \

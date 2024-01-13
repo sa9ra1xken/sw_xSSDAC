@@ -10,9 +10,9 @@
   <fCall global="true" name="UserAudioStreamStop.nstackwords"/>
   <fCall global="true" name="UserAudioStreamStart.nstackwords"/>
   <fCall global="true" name="DFUDeviceRequests.nstackwords"/>
+  <fCall global="true" name="AudioClassRequests_2.nstackwords"/>
   <fCall global="true" name="DFUDelay.nstackwords"/>
   <fCall global="true" name="device_reboot.nstackwords"/>
-  <fCall global="true" name="AudioClassRequests_2.nstackwords"/>
   <fCall global="true" name="Endpoint0.maxcores"/>
   <fCall global="true" name="AudioClassRequests_2.maxcores"/>
   <fCall global="true" name="DFUDelay.maxcores"/>

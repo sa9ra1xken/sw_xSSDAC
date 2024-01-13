@@ -1093,7 +1093,7 @@ void set_frequency(chanend c){
     unsigned temp;
     temp = __builtin_in_uint(c);
     cur_freq = sm_sample_rate[tx_id];
-                                                 ;
+    debug_printf("\nSET_SAMPLE_FREQ %d",cur_freq);
     __builtin_outct(c, 4);
     __builtin_out_uint(c, cur_freq);
     temp = __builtin_inct(c);

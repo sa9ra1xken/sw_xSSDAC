@@ -423,7 +423,7 @@ inline int XUD_SetReady_Out(XUD_ep ep, unsigned char buffer[])
  *                         The buffer is assumed to be word aligned.
  * \return     XUD_RES_OKAY on success, for errors see `Status Reporting`.
  */
-inline int XUD_SetReady_OutPtr(XUD_ep ep, unsigned addr)
+static /*static added by sakurai*/ inline int XUD_SetReady_OutPtr(XUD_ep ep, unsigned addr)
 {
     int chan_array_ptr;
     int reset;
@@ -450,7 +450,7 @@ inline int XUD_SetReady_OutPtr(XUD_ep ep, unsigned addr)
  * \param      len         The length of the data to transmit.
  * \return     XUD_RES_OKAY on success, for errors see `Status Reporting`.
  */
-inline XUD_Result_t XUD_SetReady_InPtr(XUD_ep ep, unsigned addr, int len)
+static /*static added by sakurai*/ inline XUD_Result_t XUD_SetReady_InPtr(XUD_ep ep, unsigned addr, int len)
 {
     int chan_array_ptr;
     int tmp, tmp2;
@@ -501,7 +501,7 @@ inline XUD_Result_t XUD_SetReady_InPtr(XUD_ep ep, unsigned addr, int len)
  * \param   len         The length of the data to transmit.
  * \return  XUD_RES_OKAY on success, for errors see `Status Reporting`.
  */
-inline XUD_Result_t XUD_SetReady_In(XUD_ep ep, unsigned char buffer[], int len)
+static /*static added by sakurai*/ inline XUD_Result_t XUD_SetReady_In(XUD_ep ep, unsigned char buffer[], int len)
 {
     unsigned addr;
 

@@ -22,7 +22,7 @@
 FLAC__memory_alloc_aligned:
 .Lfunc_begin0:
 	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\memory.c"
-	.loc	1 47 0
+	.loc	1 49 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -69,7 +69,7 @@ FLAC__memory_alloc_aligned:
 		retsp 4
 	}
 .Ltmp7:
-	.loc	1 60 2
+	.loc	1 62 2
 	# RETURN_REG_HOLDER
 .Ltmp8:
 	.cc_bottom FLAC__memory_alloc_aligned.function
@@ -93,7 +93,7 @@ FLAC__memory_alloc_aligned:
 	.cc_top FLAC__memory_alloc_aligned_int32_array.function,FLAC__memory_alloc_aligned_int32_array
 FLAC__memory_alloc_aligned_int32_array:
 .Lfunc_begin1:
-	.loc	1 64 0
+	.loc	1 66 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -124,7 +124,7 @@ FLAC__memory_alloc_aligned_int32_array:
 		ldc r1, 30
 		nop
 	}
-	.loc	1 76 5 prologue_end
+	.loc	1 78 5 prologue_end
 .Ltmp18:
 	{
 		shr r1, r0, r1
@@ -132,7 +132,7 @@ FLAC__memory_alloc_aligned_int32_array:
 	}
 	bt r1, .LBB1_5
 .Ltmp19:
-	.loc	1 79 7
+	.loc	1 81 7
 	{
 		shl r0, r0, 2
 		nop
@@ -164,7 +164,7 @@ FLAC__memory_alloc_aligned_int32_array:
 	}
 	bf r0, .LBB1_4
 .Ltmp24:
-	.loc	1 85 4
+	.loc	1 87 4
 	bl free
 .Ltmp25:
 .LBB1_4:
@@ -172,14 +172,14 @@ FLAC__memory_alloc_aligned_int32_array:
 		nop
 		stw r7, r5[0]
 	}
-	.loc	1 87 3
+	.loc	1 89 3
 	{
 		mkmsk r6, 1
 		stw r7, r4[0]
 	}
 .Ltmp26:
 .LBB1_5:
-	.loc	1 90 1
+	.loc	1 92 1
 	{
 		mov r0, r6
 		nop
@@ -212,7 +212,7 @@ FLAC__memory_alloc_aligned_int32_array:
 	.cc_top FLAC__memory_alloc_aligned_uint32_array.function,FLAC__memory_alloc_aligned_uint32_array
 FLAC__memory_alloc_aligned_uint32_array:
 .Lfunc_begin2:
-	.loc	1 93 0
+	.loc	1 95 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -243,7 +243,7 @@ FLAC__memory_alloc_aligned_uint32_array:
 		ldc r1, 30
 		nop
 	}
-	.loc	1 105 5 prologue_end
+	.loc	1 107 5 prologue_end
 .Ltmp37:
 	{
 		shr r1, r0, r1
@@ -251,7 +251,7 @@ FLAC__memory_alloc_aligned_uint32_array:
 	}
 	bt r1, .LBB2_5
 .Ltmp38:
-	.loc	1 108 7
+	.loc	1 110 7
 	{
 		shl r0, r0, 2
 		nop
@@ -283,7 +283,7 @@ FLAC__memory_alloc_aligned_uint32_array:
 	}
 	bf r0, .LBB2_4
 .Ltmp43:
-	.loc	1 114 4
+	.loc	1 116 4
 	bl free
 .Ltmp44:
 .LBB2_4:
@@ -291,14 +291,14 @@ FLAC__memory_alloc_aligned_uint32_array:
 		nop
 		stw r7, r5[0]
 	}
-	.loc	1 116 3
+	.loc	1 118 3
 	{
 		mkmsk r6, 1
 		stw r7, r4[0]
 	}
 .Ltmp45:
 .LBB2_5:
-	.loc	1 119 1
+	.loc	1 121 1
 	{
 		mov r0, r6
 		nop
@@ -331,7 +331,7 @@ FLAC__memory_alloc_aligned_uint32_array:
 	.cc_top FLAC__memory_alloc_aligned_int64_array.function,FLAC__memory_alloc_aligned_int64_array
 FLAC__memory_alloc_aligned_int64_array:
 .Lfunc_begin3:
-	.loc	1 122 0
+	.loc	1 124 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -362,7 +362,7 @@ FLAC__memory_alloc_aligned_int64_array:
 		ldc r1, 29
 		nop
 	}
-	.loc	1 134 5 prologue_end
+	.loc	1 136 5 prologue_end
 .Ltmp56:
 	{
 		shr r1, r0, r1
@@ -370,7 +370,7 @@ FLAC__memory_alloc_aligned_int64_array:
 	}
 	bt r1, .LBB3_5
 .Ltmp57:
-	.loc	1 137 7
+	.loc	1 139 7
 	{
 		shl r0, r0, 3
 		nop
@@ -402,7 +402,7 @@ FLAC__memory_alloc_aligned_int64_array:
 	}
 	bf r0, .LBB3_4
 .Ltmp62:
-	.loc	1 143 4
+	.loc	1 145 4
 	bl free
 .Ltmp63:
 .LBB3_4:
@@ -410,14 +410,14 @@ FLAC__memory_alloc_aligned_int64_array:
 		nop
 		stw r7, r5[0]
 	}
-	.loc	1 145 3
+	.loc	1 147 3
 	{
 		mkmsk r6, 1
 		stw r7, r4[0]
 	}
 .Ltmp64:
 .LBB3_5:
-	.loc	1 148 1
+	.loc	1 150 1
 	{
 		mov r0, r6
 		nop
@@ -450,7 +450,7 @@ FLAC__memory_alloc_aligned_int64_array:
 	.cc_top FLAC__memory_alloc_aligned_uint64_array.function,FLAC__memory_alloc_aligned_uint64_array
 FLAC__memory_alloc_aligned_uint64_array:
 .Lfunc_begin4:
-	.loc	1 151 0
+	.loc	1 153 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -481,7 +481,7 @@ FLAC__memory_alloc_aligned_uint64_array:
 		ldc r1, 29
 		nop
 	}
-	.loc	1 163 5 prologue_end
+	.loc	1 165 5 prologue_end
 .Ltmp75:
 	{
 		shr r1, r0, r1
@@ -489,7 +489,7 @@ FLAC__memory_alloc_aligned_uint64_array:
 	}
 	bt r1, .LBB4_5
 .Ltmp76:
-	.loc	1 166 7
+	.loc	1 168 7
 	{
 		shl r0, r0, 3
 		nop
@@ -521,7 +521,7 @@ FLAC__memory_alloc_aligned_uint64_array:
 	}
 	bf r0, .LBB4_4
 .Ltmp81:
-	.loc	1 172 4
+	.loc	1 174 4
 	bl free
 .Ltmp82:
 .LBB4_4:
@@ -529,14 +529,14 @@ FLAC__memory_alloc_aligned_uint64_array:
 		nop
 		stw r7, r5[0]
 	}
-	.loc	1 174 3
+	.loc	1 176 3
 	{
 		mkmsk r6, 1
 		stw r7, r4[0]
 	}
 .Ltmp83:
 .LBB4_5:
-	.loc	1 177 1
+	.loc	1 179 1
 	{
 		mov r0, r6
 		nop
@@ -569,7 +569,7 @@ FLAC__memory_alloc_aligned_uint64_array:
 	.cc_top FLAC__memory_alloc_aligned_real_array.function,FLAC__memory_alloc_aligned_real_array
 FLAC__memory_alloc_aligned_real_array:
 .Lfunc_begin5:
-	.loc	1 182 0
+	.loc	1 184 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -600,7 +600,7 @@ FLAC__memory_alloc_aligned_real_array:
 		ldc r1, 30
 		nop
 	}
-	.loc	1 194 5 prologue_end
+	.loc	1 196 5 prologue_end
 .Ltmp94:
 	{
 		shr r1, r0, r1
@@ -608,7 +608,7 @@ FLAC__memory_alloc_aligned_real_array:
 	}
 	bt r1, .LBB5_5
 .Ltmp95:
-	.loc	1 197 7
+	.loc	1 199 7
 	{
 		shl r0, r0, 2
 		nop
@@ -640,7 +640,7 @@ FLAC__memory_alloc_aligned_real_array:
 	}
 	bf r0, .LBB5_4
 .Ltmp100:
-	.loc	1 203 4
+	.loc	1 205 4
 	bl free
 .Ltmp101:
 .LBB5_4:
@@ -648,14 +648,14 @@ FLAC__memory_alloc_aligned_real_array:
 		nop
 		stw r7, r5[0]
 	}
-	.loc	1 205 3
+	.loc	1 207 3
 	{
 		mkmsk r6, 1
 		stw r7, r4[0]
 	}
 .Ltmp102:
 .LBB5_5:
-	.loc	1 208 1
+	.loc	1 210 1
 	{
 		mov r0, r6
 		nop
@@ -688,7 +688,7 @@ FLAC__memory_alloc_aligned_real_array:
 	.cc_top safe_malloc_mul_2op_p.function,safe_malloc_mul_2op_p
 safe_malloc_mul_2op_p:
 .Lfunc_begin6:
-	.loc	1 213 0
+	.loc	1 215 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -707,22 +707,22 @@ safe_malloc_mul_2op_p:
 		mkmsk r2, 32
 		nop
 	}
-	.loc	1 216 5 prologue_end
+	.loc	1 218 5 prologue_end
 .Ltmp109:
 	divu r2, r2, r1
-	.loc	1 216 5
+	.loc	1 218 5
 	{
 		lsu r2, r2, r0
 		nop
 	}
-	.loc	1 216 5
+	.loc	1 218 5
 	bf r2, .LBB6_5
 .Ltmp110:
 	{
 		ldc r0, 0
 		retsp 2
 	}
-	.loc	1 219 1
+	.loc	1 221 1
 	# RETURN_REG_HOLDER
 .LBB6_2:
 	{
@@ -732,17 +732,17 @@ safe_malloc_mul_2op_p:
 	bu .LBB6_6
 .LBB6_5:
 .Ltmp111:
-	.loc	1 218 9
+	.loc	1 220 9
 	mul r0, r1, r0
 .Ltmp112:
 .LBB6_6:
-	.loc	1 218 9
+	.loc	1 220 9
 	bl malloc
 	{
 		nop
 		retsp 2
 	}
-	.loc	1 219 1
+	.loc	1 221 1
 	# RETURN_REG_HOLDER
 .Ltmp113:
 	.cc_bottom safe_malloc_mul_2op_p.function
@@ -904,7 +904,7 @@ safe_malloc_mul_2op_p:
 	.long	31
 	.long	.Ldebug_ranges1
 	.byte	1
-	.byte	57
+	.byte	59
 	.byte	8
 	.long	.Ldebug_loc2
 	.long	44
@@ -913,7 +913,7 @@ safe_malloc_mul_2op_p:
 	.byte	11
 	.long	.Linfo_string7
 	.byte	1
-	.byte	46
+	.byte	48
 	.byte	1
 	.long	56
 	.byte	1
@@ -921,17 +921,17 @@ safe_malloc_mul_2op_p:
 	.byte	3
 	.long	.Linfo_string8
 	.byte	1
-	.byte	46
+	.byte	48
 	.long	57
 	.byte	3
 	.long	.Linfo_string9
 	.byte	1
-	.byte	46
+	.byte	48
 	.long	182
 	.byte	12
 	.long	.Linfo_string10
 	.byte	1
-	.byte	48
+	.byte	50
 	.long	56
 	.byte	0
 	.byte	13
@@ -943,7 +943,7 @@ safe_malloc_mul_2op_p:
 	.byte	1
 	.long	.Linfo_string11
 	.byte	1
-	.byte	63
+	.byte	65
 	.byte	1
 	.long	1078
 	.byte	1
@@ -951,35 +951,35 @@ safe_malloc_mul_2op_p:
 	.long	.Ldebug_loc3
 	.long	.Linfo_string19
 	.byte	1
-	.byte	63
+	.byte	65
 	.long	57
 	.byte	15
 	.long	.Ldebug_loc4
 	.long	.Linfo_string20
 	.byte	1
-	.byte	63
+	.byte	65
 	.long	1096
 	.byte	15
 	.long	.Ldebug_loc5
 	.long	.Linfo_string24
 	.byte	1
-	.byte	63
+	.byte	65
 	.long	1096
 	.byte	12
 	.long	.Linfo_string25
 	.byte	1
-	.byte	65
+	.byte	67
 	.long	1101
 	.byte	12
 	.long	.Linfo_string26
 	.byte	1
-	.byte	69
+	.byte	71
 	.long	325
 	.byte	10
 	.long	134
 	.long	.Ldebug_ranges3
 	.byte	1
-	.byte	79
+	.byte	81
 	.byte	8
 	.long	.Ldebug_loc7
 	.long	148
@@ -990,7 +990,7 @@ safe_malloc_mul_2op_p:
 	.long	31
 	.long	.Ldebug_ranges4
 	.byte	1
-	.byte	57
+	.byte	59
 	.byte	8
 	.long	.Ldebug_loc6
 	.long	44
@@ -999,18 +999,18 @@ safe_malloc_mul_2op_p:
 	.byte	17
 	.byte	4
 	.byte	1
-	.byte	66
+	.byte	68
 	.byte	18
 	.long	.Linfo_string27
 	.long	1101
 	.byte	1
-	.byte	67
+	.byte	69
 	.byte	0
 	.byte	18
 	.long	.Linfo_string28
 	.long	56
 	.byte	1
-	.byte	68
+	.byte	70
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1021,7 +1021,7 @@ safe_malloc_mul_2op_p:
 	.byte	1
 	.long	.Linfo_string14
 	.byte	1
-	.byte	92
+	.byte	94
 	.byte	1
 	.long	1078
 	.byte	1
@@ -1029,35 +1029,35 @@ safe_malloc_mul_2op_p:
 	.long	.Ldebug_loc9
 	.long	.Linfo_string19
 	.byte	1
-	.byte	92
+	.byte	94
 	.long	57
 	.byte	15
 	.long	.Ldebug_loc10
 	.long	.Linfo_string20
 	.byte	1
-	.byte	92
+	.byte	94
 	.long	1135
 	.byte	15
 	.long	.Ldebug_loc11
 	.long	.Linfo_string24
 	.byte	1
-	.byte	92
+	.byte	94
 	.long	1135
 	.byte	12
 	.long	.Linfo_string25
 	.byte	1
-	.byte	94
+	.byte	96
 	.long	1140
 	.byte	12
 	.long	.Linfo_string26
 	.byte	1
-	.byte	98
+	.byte	100
 	.long	493
 	.byte	10
 	.long	134
 	.long	.Ldebug_ranges6
 	.byte	1
-	.byte	108
+	.byte	110
 	.byte	8
 	.long	.Ldebug_loc13
 	.long	148
@@ -1068,7 +1068,7 @@ safe_malloc_mul_2op_p:
 	.long	31
 	.long	.Ldebug_ranges7
 	.byte	1
-	.byte	57
+	.byte	59
 	.byte	8
 	.long	.Ldebug_loc12
 	.long	44
@@ -1077,18 +1077,18 @@ safe_malloc_mul_2op_p:
 	.byte	17
 	.byte	4
 	.byte	1
-	.byte	95
+	.byte	97
 	.byte	18
 	.long	.Linfo_string27
 	.long	1140
 	.byte	1
-	.byte	96
+	.byte	98
 	.byte	0
 	.byte	18
 	.long	.Linfo_string28
 	.long	56
 	.byte	1
-	.byte	97
+	.byte	99
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1099,7 +1099,7 @@ safe_malloc_mul_2op_p:
 	.byte	1
 	.long	.Linfo_string15
 	.byte	1
-	.byte	121
+	.byte	123
 	.byte	1
 	.long	1078
 	.byte	1
@@ -1107,35 +1107,35 @@ safe_malloc_mul_2op_p:
 	.long	.Ldebug_loc15
 	.long	.Linfo_string19
 	.byte	1
-	.byte	121
+	.byte	123
 	.long	57
 	.byte	15
 	.long	.Ldebug_loc16
 	.long	.Linfo_string20
 	.byte	1
-	.byte	121
+	.byte	123
 	.long	1174
 	.byte	15
 	.long	.Ldebug_loc17
 	.long	.Linfo_string24
 	.byte	1
-	.byte	121
+	.byte	123
 	.long	1174
 	.byte	12
 	.long	.Linfo_string25
 	.byte	1
-	.byte	123
+	.byte	125
 	.long	1179
 	.byte	12
 	.long	.Linfo_string26
 	.byte	1
-	.byte	127
+	.byte	129
 	.long	661
 	.byte	10
 	.long	134
 	.long	.Ldebug_ranges9
 	.byte	1
-	.byte	137
+	.byte	139
 	.byte	8
 	.long	.Ldebug_loc19
 	.long	148
@@ -1146,7 +1146,7 @@ safe_malloc_mul_2op_p:
 	.long	31
 	.long	.Ldebug_ranges10
 	.byte	1
-	.byte	57
+	.byte	59
 	.byte	8
 	.long	.Ldebug_loc18
 	.long	44
@@ -1155,18 +1155,18 @@ safe_malloc_mul_2op_p:
 	.byte	17
 	.byte	4
 	.byte	1
-	.byte	124
+	.byte	126
 	.byte	18
 	.long	.Linfo_string27
 	.long	1179
 	.byte	1
-	.byte	125
+	.byte	127
 	.byte	0
 	.byte	18
 	.long	.Linfo_string28
 	.long	56
 	.byte	1
-	.byte	126
+	.byte	128
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1177,7 +1177,7 @@ safe_malloc_mul_2op_p:
 	.byte	1
 	.long	.Linfo_string16
 	.byte	1
-	.byte	150
+	.byte	152
 	.byte	1
 	.long	1078
 	.byte	1
@@ -1185,35 +1185,35 @@ safe_malloc_mul_2op_p:
 	.long	.Ldebug_loc21
 	.long	.Linfo_string19
 	.byte	1
-	.byte	150
+	.byte	152
 	.long	57
 	.byte	15
 	.long	.Ldebug_loc22
 	.long	.Linfo_string20
 	.byte	1
-	.byte	150
+	.byte	152
 	.long	1213
 	.byte	15
 	.long	.Ldebug_loc23
 	.long	.Linfo_string24
 	.byte	1
-	.byte	150
+	.byte	152
 	.long	1213
 	.byte	12
 	.long	.Linfo_string25
 	.byte	1
-	.byte	152
+	.byte	154
 	.long	1218
 	.byte	12
 	.long	.Linfo_string26
 	.byte	1
-	.byte	156
+	.byte	158
 	.long	829
 	.byte	10
 	.long	134
 	.long	.Ldebug_ranges12
 	.byte	1
-	.byte	166
+	.byte	168
 	.byte	8
 	.long	.Ldebug_loc25
 	.long	148
@@ -1224,7 +1224,7 @@ safe_malloc_mul_2op_p:
 	.long	31
 	.long	.Ldebug_ranges13
 	.byte	1
-	.byte	57
+	.byte	59
 	.byte	8
 	.long	.Ldebug_loc24
 	.long	44
@@ -1233,18 +1233,18 @@ safe_malloc_mul_2op_p:
 	.byte	17
 	.byte	4
 	.byte	1
-	.byte	153
+	.byte	155
 	.byte	18
 	.long	.Linfo_string27
 	.long	1218
 	.byte	1
-	.byte	154
+	.byte	156
 	.byte	0
 	.byte	18
 	.long	.Linfo_string28
 	.long	56
 	.byte	1
-	.byte	155
+	.byte	157
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1255,7 +1255,7 @@ safe_malloc_mul_2op_p:
 	.byte	1
 	.long	.Linfo_string17
 	.byte	1
-	.byte	181
+	.byte	183
 	.byte	1
 	.long	1078
 	.byte	1
@@ -1263,35 +1263,35 @@ safe_malloc_mul_2op_p:
 	.long	.Ldebug_loc27
 	.long	.Linfo_string19
 	.byte	1
-	.byte	181
+	.byte	183
 	.long	57
 	.byte	15
 	.long	.Ldebug_loc28
 	.long	.Linfo_string20
 	.byte	1
-	.byte	181
+	.byte	183
 	.long	1252
 	.byte	15
 	.long	.Ldebug_loc29
 	.long	.Linfo_string24
 	.byte	1
-	.byte	181
+	.byte	183
 	.long	1252
 	.byte	12
 	.long	.Linfo_string25
 	.byte	1
-	.byte	183
+	.byte	185
 	.long	1257
 	.byte	12
 	.long	.Linfo_string26
 	.byte	1
-	.byte	187
+	.byte	189
 	.long	997
 	.byte	10
 	.long	134
 	.long	.Ldebug_ranges15
 	.byte	1
-	.byte	197
+	.byte	199
 	.byte	8
 	.long	.Ldebug_loc31
 	.long	148
@@ -1302,7 +1302,7 @@ safe_malloc_mul_2op_p:
 	.long	31
 	.long	.Ldebug_ranges16
 	.byte	1
-	.byte	57
+	.byte	59
 	.byte	8
 	.long	.Ldebug_loc30
 	.long	44
@@ -1311,18 +1311,18 @@ safe_malloc_mul_2op_p:
 	.byte	17
 	.byte	4
 	.byte	1
-	.byte	184
+	.byte	186
 	.byte	18
 	.long	.Linfo_string27
 	.long	1257
 	.byte	1
-	.byte	185
+	.byte	187
 	.byte	0
 	.byte	18
 	.long	.Linfo_string28
 	.long	56
 	.byte	1
-	.byte	186
+	.byte	188
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1333,7 +1333,7 @@ safe_malloc_mul_2op_p:
 	.byte	1
 	.long	.Linfo_string18
 	.byte	1
-	.byte	212
+	.byte	214
 	.byte	1
 	.long	56
 	.byte	1
@@ -1341,13 +1341,13 @@ safe_malloc_mul_2op_p:
 	.long	.Ldebug_loc33
 	.long	.Linfo_string40
 	.byte	1
-	.byte	212
+	.byte	214
 	.long	57
 	.byte	15
 	.long	.Ldebug_loc34
 	.long	.Linfo_string41
 	.byte	1
-	.byte	212
+	.byte	214
 	.long	57
 	.byte	0
 	.byte	5

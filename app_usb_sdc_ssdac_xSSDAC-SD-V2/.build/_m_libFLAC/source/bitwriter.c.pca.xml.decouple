@@ -10,7 +10,6 @@
   <fCall global="true" name="calloc.maxchanends"/>
   <fCall global="true" name="FLAC__bitwriter_delete"/>
   <fCall global="true" name="FLAC__bitwriter_delete.nstackwords"/>
-  <fCall global="true" name="assert.nstackwords"/>
   <fCall global="true" name="free.nstackwords"/>
   <fCall global="true" name="FLAC__bitwriter_delete.maxcores"/>
   <fCall global="true" name="free.maxcores"/>
@@ -141,7 +140,6 @@
   <fCall global="true" name="FLAC__bitwriter_zero_pad_to_byte_boundary.maxtimers"/>
   <fCall global="true" name="FLAC__bitwriter_zero_pad_to_byte_boundary.maxchanends"/>
   <fCall global="true" name="calloc"/>
-  <fCall global="true" name="assert"/>
   <fCall global="true" name="free"/>
   <fCall global="true" name="malloc"/>
   <fCall global="true" name="FLAC__crc16"/>

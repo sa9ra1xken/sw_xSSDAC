@@ -521,8 +521,13 @@ FLAC__bool FLAC__memory_alloc_aligned_real_array(size_t elements, FLAC__real **u
 
 void *safe_malloc_mul_2op_p(size_t size1, size_t size2);
 # 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/memory.c" 2
+
+# 1 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h" 1
+# 100 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h"
+inline int xassert_msg(const char msg[]) { return 1; }
+# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/memory.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h" 1
-# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/memory.c" 2
+# 45 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/memory.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 1
 # 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
@@ -861,7 +866,7 @@ struct utimbuf
 # 230 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h"
 int flac_snprintf(char *str, size_t size, const char *fmt, ...);
 int flac_vsnprintf(char *str, size_t size, const char *fmt, va_list va);
-# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/memory.c" 2
+# 46 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/memory.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h" 1
 # 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\limits.h" 1 3
@@ -1074,7 +1079,7 @@ static inline void *safe_realloc_nofree_muladd2_(void *ptr, size_t size1, size_t
   return 0;
  return safe_realloc_nofree_mul_2op_(ptr, size1, size2);
 }
-# 45 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/memory.c" 2
+# 47 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/memory.c" 2
 
 void *FLAC__memory_alloc_aligned(size_t bytes, void **aligned_address)
 {

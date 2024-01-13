@@ -799,9 +799,9 @@ void decouple(chanend c_mix_out
                 GET_SHARED_GLOBAL(dataFormat, g_formatChange_DataFormat);
                 GET_SHARED_GLOBAL(sampRes, g_formatChange_SampRes);
 
-#ifdef _USB_AUDIO_USE_DISPLAY                       //added by sakurai
-                update_samp_resolution(sampRes);    //added by sakurai
-#endif                                              //added by sakurai
+#ifdef _USB_AUDIO_USE_DISPLAY                                       //added by sakurai
+                update_stream_format(g_numUsbChan_Out, sampRes);    //added by sakurai
+#endif                                                              //added by sakurai
 
                 /* Reset OUT buffer state */
                 SET_SHARED_GLOBAL(g_aud_from_host_rdptr, aud_from_host_fifo_start);

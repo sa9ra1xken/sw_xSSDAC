@@ -1254,23 +1254,6 @@ void add_sample(int left, int right);
 {int, int} sample_at(int offset);
 # 23 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\audiohw.h" 1
-
-
-
-
-
-
-void AudioHwInit( );
-
-
-void AudioHwConfig(unsigned samFreq, unsigned mClk, unsigned dsdMode,
-        unsigned sampRes_DAC, unsigned sampRes_ADC);
-
-void ReleaseMute();
-
-void ClipIndicator(unsigned state);
-# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 
 # 1 ".././src\\ssdac_conf.h" 1
@@ -1303,7 +1286,21 @@ static inline unsigned DoSampleTransfer(chanend c_out, const unsigned underflowW
     return 0;
 }
 # 27 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
-# 45 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+
+
+
+
+
+void AudioHwInit( );
+
+
+void AudioHwConfig(unsigned samFreq, unsigned mClk, unsigned dsdMode,
+        unsigned sampRes_DAC, unsigned sampRes_ADC);
+
+void ReleaseMute();
+
+void ClipIndicator(unsigned state);
+# 57 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 on tile[0]: port tp5 = on tile[0]: 0x10200;
 on tile[0]: port tp23_solver = on tile[0]: 0x10c00;
 on tile[0]: port tp24_interpolator = on tile[0]: 0x10d00;
@@ -1338,7 +1335,7 @@ void ConfigureSerialDacPorts(){
 
 
     configure_clock_src(clk_spi, p_spidac_mclk_in);
-# 89 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+# 101 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
     configure_out_port_strobed_master(p_data_left, p_cs_n_0, clk_spi, 0x00);
     configure_out_port_strobed_master(p_data_right, p_cs_n_1, clk_spi,0x00);
 
@@ -1425,7 +1422,7 @@ void serial_dac_driver_preserve(streaming chanend c_in, unsigned space_count ){
     unsigned data_left, data_right;
     unsigned left, right;
     timer t;
-# 189 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+# 201 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
     time = __builtin_partout_timestamped(p_data_left, 16, __builtin_bitrev(0x80000000));
     time = __builtin_partout_timestamped(p_data_right, 16, __builtin_bitrev(0x80000000));
 
@@ -1456,7 +1453,7 @@ void serial_dac_driver_preserve(streaming chanend c_in, unsigned space_count ){
 
         data_left = __builtin_bitrev(left + 0x80000000);
         data_right = __builtin_bitrev(right + 0x80000000);
-# 227 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+# 239 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
         time += space_count;
 
 

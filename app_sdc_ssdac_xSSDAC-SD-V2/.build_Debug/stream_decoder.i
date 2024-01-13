@@ -5,7 +5,7 @@
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
-# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 39 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 1 3
 # 29 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/_ansi.h" 1 3
@@ -627,7 +627,7 @@ typedef struct
   cookie_close_function_t *close;
 } cookie_io_functions_t;
 FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __functions);
-# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdlib.h" 1 3
 # 14 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdlib.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
@@ -797,7 +797,7 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-# 39 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 41 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 1 3
 # 15 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
@@ -869,7 +869,7 @@ char *strupr (char *);
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys/string.h" 1 3
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 2 3
-# 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\sys/stat.h" 1 3
 
@@ -985,7 +985,7 @@ int mkdir ( const char *_path, mode_t __mode );
 int mkfifo ( const char *__path, mode_t __mode );
 int stat ( const char *__path, struct stat *__sbuf );
 mode_t umask ( mode_t __mask );
-# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h" 1
 # 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h" 1 3
@@ -1206,9 +1206,9 @@ struct utimbuf
 # 230 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/compat.h"
 int flac_snprintf(char *str, size_t size, const char *fmt, ...);
 int flac_vsnprintf(char *str, size_t size, const char *fmt, va_list va);
-# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 45 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h" 1
-# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 46 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h" 1
 # 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\limits.h" 1 3
@@ -1421,7 +1421,7 @@ static inline void *safe_realloc_nofree_muladd2_(void *ptr, size_t size1, size_t
   return 0;
  return safe_realloc_nofree_mul_2op_(ptr, size1, size2);
 }
-# 45 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 47 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/stream_decoder.h" 1
 # 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/stream_decoder.h"
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/../FLAC/stream_decoder.h" 1
@@ -2573,7 +2573,7 @@ typedef struct FLAC__StreamDecoderProtected {
 
 
 uint32_t FLAC__stream_decoder_get_input_bytes_unconsumed(const FLAC__StreamDecoder *decoder);
-# 46 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 48 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitreader.h" 1
 # 39 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitreader.h"
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/cpu.h" 1
@@ -2678,9 +2678,14 @@ FLAC__bool FLAC__bitreader_read_rice_signed_block(FLAC__BitReader *br, int vals[
 
 FLAC__bool FLAC__bitreader_read_utf8_uint32(FLAC__BitReader *br, FLAC__uint32 *val, FLAC__byte *raw, uint32_t *rawlen);
 FLAC__bool FLAC__bitreader_read_utf8_uint64(FLAC__BitReader *br, FLAC__uint64 *val, FLAC__byte *raw, uint32_t *rawlen);
-# 47 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 49 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 1
-# 48 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 33 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 1 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h" 1
+# 100 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h"
+inline int xassert_msg(const char msg[]) { return 1; }
+# 34 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
+# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 static inline uint32_t FLAC__clz_soft_uint32(FLAC__uint32 word)
 {
  static const uint8_t byte_to_unary_table[] = {
@@ -2718,7 +2723,7 @@ static inline uint32_t FLAC__clz_uint32(FLAC__uint32 v)
 
 
  return __builtin_clz(v);
-# 94 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 96 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -2734,7 +2739,7 @@ static inline uint32_t FLAC__clz_uint64(FLAC__uint64 v)
                     ;
 
  return __builtin_clzll(v);
-# 118 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 120 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -2751,11 +2756,11 @@ static inline uint32_t FLAC__clz2_uint64(FLAC__uint64 v)
   return 64;
  return FLAC__clz_uint64(v);
 }
-# 158 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 160 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 static inline uint32_t FLAC__bitmath_ilog2(FLAC__uint32 v)
 {
                     ;
-# 170 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 172 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
  return FLAC__clz_uint32(v) ^ 31U;
 
 }
@@ -2765,11 +2770,11 @@ static inline uint32_t FLAC__bitmath_ilog2_wide(FLAC__uint64 v)
                     ;
 
  return __builtin_clzll(v) ^ 63U;
-# 208 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 210 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 uint32_t FLAC__bitmath_silog2(FLAC__int64 v);
-# 48 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/crc.h" 1
 # 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/crc.h"
 FLAC__uint8 FLAC__crc8(const FLAC__byte *data, uint32_t len);
@@ -2789,7 +2794,7 @@ extern FLAC__uint16 const FLAC__crc16_table[8][256];
 FLAC__uint16 FLAC__crc16(const FLAC__byte *data, uint32_t len);
 FLAC__uint16 FLAC__crc16_update_words32(const FLAC__uint32 *words, uint32_t len, FLAC__uint16 crc);
 FLAC__uint16 FLAC__crc16_update_words64(const FLAC__uint64 *words, uint32_t len, FLAC__uint16 crc);
-# 49 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 51 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/fixed.h" 1
 # 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/fixed.h"
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/float.h" 1
@@ -2809,7 +2814,7 @@ void FLAC__fixed_compute_residual_wide_33bit(const FLAC__int64 data[], uint32_t 
 void FLAC__fixed_restore_signal(const FLAC__int32 residual[], uint32_t data_len, uint32_t order, FLAC__int32 data[]);
 void FLAC__fixed_restore_signal_wide(const FLAC__int32 residual[], uint32_t data_len, uint32_t order, FLAC__int32 data[]);
 void FLAC__fixed_restore_signal_wide_33bit(const FLAC__int32 residual[], uint32_t data_len, uint32_t order, FLAC__int64 data[]);
-# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 52 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/format.h" 1
 # 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/format.h"
 uint32_t FLAC__format_get_max_rice_partition_order_from_blocksize(uint32_t blocksize);
@@ -2817,7 +2822,7 @@ uint32_t FLAC__format_get_max_rice_partition_order_from_blocksize_limited_max_an
 void FLAC__format_entropy_coding_method_partitioned_rice_contents_init(FLAC__EntropyCodingMethod_PartitionedRiceContents *object);
 void FLAC__format_entropy_coding_method_partitioned_rice_contents_clear(FLAC__EntropyCodingMethod_PartitionedRiceContents *object);
 FLAC__bool FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_size(FLAC__EntropyCodingMethod_PartitionedRiceContents *object, uint32_t max_partition_order);
-# 51 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 53 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/lpc.h" 1
 # 60 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/lpc.h"
 void FLAC__lpc_window_data(const FLAC__int32 in[], const FLAC__real window[], FLAC__real out[], uint32_t data_len);
@@ -2847,7 +2852,7 @@ double FLAC__lpc_compute_expected_bits_per_residual_sample(double lpc_error, uin
 double FLAC__lpc_compute_expected_bits_per_residual_sample_with_error_scale(double lpc_error, double error_scale);
 # 249 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/lpc.h"
 uint32_t FLAC__lpc_compute_best_order(const double lpc_error[], uint32_t max_order, uint32_t total_samples, uint32_t overhead_bits_per_order);
-# 52 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 54 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/md5.h" 1
 # 32 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/md5.h"
 typedef union {
@@ -2868,7 +2873,7 @@ void FLAC__MD5Init(FLAC__MD5Context *context);
 void FLAC__MD5Final(FLAC__byte digest[16], FLAC__MD5Context *context);
 
 FLAC__bool FLAC__MD5Accumulate(FLAC__MD5Context *ctx, const FLAC__int32 * const signal[], uint32_t channels, uint32_t samples, uint32_t bytes_per_sample);
-# 53 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 55 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/memory.h" 1
 # 50 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/memory.h"
 void *FLAC__memory_alloc_aligned(size_t bytes, void **aligned_address);
@@ -2880,13 +2885,13 @@ FLAC__bool FLAC__memory_alloc_aligned_uint64_array(size_t elements, FLAC__uint64
 FLAC__bool FLAC__memory_alloc_aligned_real_array(size_t elements, FLAC__real **unaligned_pointer, FLAC__real **aligned_pointer);
 
 void *safe_malloc_mul_2op_p(size_t size1, size_t size2);
-# 54 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 56 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/macros.h" 1
-# 55 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
+# 57 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c" 2
 
 
          int FLAC_API_SUPPORTS_OGG_FLAC = 0;
-# 66 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 68 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
 static const FLAC__byte ID3V2_TAG_[3] = { 'I', 'D', '3' };
 
 
@@ -3185,7 +3190,7 @@ static FLAC__StreamDecoderInitStatus init_stream_internal_(
   (seek_callback && (0 == tell_callback || 0 == length_callback || 0 == eof_callback))
  )
   return FLAC__STREAM_DECODER_INIT_STATUS_INVALID_CALLBACKS;
-# 373 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 375 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
  if(!FLAC__bitreader_init(decoder->private_->input, read_callback_, decoder)) {
   decoder->protected_->state = FLAC__STREAM_DECODER_MEMORY_ALLOCATION_ERROR;
   return FLAC__STREAM_DECODER_INIT_STATUS_MEMORY_ALLOCATION_ERROR;
@@ -3725,7 +3730,8 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
  return 1;
 }
 
-         FLAC__bool FLAC__stream_decoder_reset(FLAC__StreamDecoder *decoder)
+#pragma stackfunction 200
+ FLAC__bool FLAC__stream_decoder_reset(FLAC__StreamDecoder *decoder)
 {
                            ;
                                      ;
@@ -3735,7 +3741,7 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
 
   return 0;
  }
-# 934 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 937 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
  if(!decoder->private_->internal_reset_hack) {
   if(decoder->private_->file == (__getstdin()))
    return 0;
@@ -4022,7 +4028,7 @@ void set_defaults_(FLAC__StreamDecoder *decoder)
 
 FILE *get_binary_stdin_(void)
 {
-# 1230 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 1233 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
  return (__getstdin());
 }
 
@@ -4102,6 +4108,7 @@ FLAC__bool has_id_filtered_(FLAC__StreamDecoder *decoder, FLAC__byte *id)
  return 0;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE
 FLAC__bool find_metadata_(FLAC__StreamDecoder *decoder)
 {
  FLAC__uint32 x;
@@ -4167,6 +4174,7 @@ FLAC__bool find_metadata_(FLAC__StreamDecoder *decoder)
  return 1;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE
 FLAC__bool read_metadata_(FLAC__StreamDecoder *decoder)
 {
  FLAC__bool is_last;
@@ -4771,6 +4779,7 @@ FLAC__bool skip_id3v2_tag_(FLAC__StreamDecoder *decoder)
  return 1;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE
 FLAC__bool frame_sync_(FLAC__StreamDecoder *decoder)
 {
  FLAC__uint32 x;
@@ -4823,6 +4832,7 @@ FLAC__bool frame_sync_(FLAC__StreamDecoder *decoder)
  return 1;
 }
 
+#pragma stackfunction 1000
 FLAC__bool read_frame_(FLAC__StreamDecoder *decoder, FLAC__bool *got_a_frame, FLAC__bool do_full_decode)
 {
  uint32_t channel;
@@ -5064,7 +5074,7 @@ FLAC__bool read_frame_header_(FLAC__StreamDecoder *decoder)
 
  if(raw_header[1] & 0x02)
   is_unparseable = 1;
-# 2294 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 2301 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
  for(i = 0; i < 2; i++) {
   if(!FLAC__bitreader_read_raw_uint32(decoder->private_->input, &x, 8))
    return 0;
@@ -5780,7 +5790,7 @@ FLAC__bool read_callback_(FLAC__byte buffer[], size_t *bytes, void *client_data)
   return 0;
  }
  else if(*bytes > 0) {
-# 3019 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3026 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
   if(decoder->private_->is_seeking && decoder->private_->unparseable_frame_count > 20) {
    decoder->protected_->state = FLAC__STREAM_DECODER_ABORTED;
    return 0;
@@ -5823,9 +5833,9 @@ FLAC__bool read_callback_(FLAC__byte buffer[], size_t *bytes, void *client_data)
   decoder->protected_->state = FLAC__STREAM_DECODER_ABORTED;
   return 0;
  }
-# 3071 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3078 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
 }
-# 3081 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3088 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
 void undo_channel_coding(FLAC__StreamDecoder *decoder) {
  uint32_t i;
  switch(decoder->private_->frame.header.channel_assignment) {
@@ -5877,7 +5887,7 @@ void undo_channel_coding(FLAC__StreamDecoder *decoder) {
   break;
  }
 }
-# 3179 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3186 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
 FLAC__StreamDecoderWriteStatus write_audio_frame_to_client_(FLAC__StreamDecoder *decoder, const FLAC__Frame *frame, const FLAC__int32 * const buffer[])
 {
  decoder->private_->last_frame = *frame;
@@ -5977,7 +5987,7 @@ FLAC__bool seek_to_absolute_sample_(FLAC__StreamDecoder *decoder, FLAC__uint64 s
  }
  else
   approx_bytes_per_frame = 4096 * channels * bps/8 + 64;
-# 3286 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3293 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
  lower_bound = first_frame_offset;
  lower_bound_sample = 0;
  upper_bound = stream_length;
@@ -5993,7 +6003,7 @@ FLAC__bool seek_to_absolute_sample_(FLAC__StreamDecoder *decoder, FLAC__uint64 s
     lower_bound_sample = decoder->private_->samples_decoded;
   }
  }
-# 3312 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3319 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
  if(seek_table) {
   FLAC__uint64 new_lower_bound = lower_bound;
   FLAC__uint64 new_upper_bound = upper_bound;
@@ -6039,7 +6049,7 @@ FLAC__bool seek_to_absolute_sample_(FLAC__StreamDecoder *decoder, FLAC__uint64 s
  }
 
                                                        ;
-# 3366 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3373 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
  if(upper_bound_sample == lower_bound_sample)
   upper_bound_sample++;
 
@@ -6063,7 +6073,7 @@ FLAC__bool seek_to_absolute_sample_(FLAC__StreamDecoder *decoder, FLAC__uint64 s
   else {
 
    pos = (FLAC__int64)lower_bound + (FLAC__int64)((double)(target_sample - lower_bound_sample) / (double)(upper_bound_sample - lower_bound_sample) * (double)(upper_bound - lower_bound)) - approx_bytes_per_frame;
-# 3398 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3405 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
   }
   if(pos >= (FLAC__int64)upper_bound)
    pos = (FLAC__int64)upper_bound - 1;
@@ -6150,7 +6160,7 @@ FLAC__bool seek_to_absolute_sample_(FLAC__StreamDecoder *decoder, FLAC__uint64 s
 
  return 1;
 }
-# 3624 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3631 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
 FLAC__StreamDecoderReadStatus file_read_callback_(const FLAC__StreamDecoder *decoder, FLAC__byte buffer[], size_t *bytes, void *client_data)
 {
  (void)client_data;

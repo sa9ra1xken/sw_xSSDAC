@@ -405,7 +405,7 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 .Ltmp39:
 	{
 		nop
-		stw r1, sp[8]
+		stw r1, sp[7]
 	}
 .Ltmp40:
 	{
@@ -452,18 +452,18 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 		stw r1, sp[29]
 	}
 	ldc r0, 388
-	.loc	3 140 6
 .Ltmp44:
+	.loc	3 140 6
 	{
 		add r9, r7, r0
-		nop
+		stw r7, sp[8]
 	}
 	{
 		nop
 		ldw r0, r9[0]
 	}
 	.loc	3 140 6
-	bf r0, .LBB5_4
+	bf r0, .LBB5_5
 .Ltmp45:
 	{
 		ldc r0, 38
@@ -475,7 +475,8 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 		eq r0, r1, r0
 		nop
 	}
-	bf r0, .LBB5_17
+	.loc	3 142 7
+	bf r0, .LBB5_3
 .Ltmp47:
 	.loc	3 151 4
 	ldaw r11, cp[FLAC__OGG_MAPPING_FIRST_HEADER_PACKET_TYPE]
@@ -484,50 +485,50 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 		nop
 	}
 	{
-		ldaw r1, sp[11]
+		ldaw r7, sp[11]
 		ld8u r0, r11[r8]
 	}
 	.loc	3 151 4
-	st8 r0, r1[r8]
+	st8 r0, r7[r8]
 	{
-		mkmsk r0, 1
-		nop
-	}
-	.loc	3 152 4
-	{
-		or r0, r1, r0
+		mkmsk r1, 1
 		nop
 	}
 .Ltmp48:
+	.loc	3 152 4
+	{
+		or r0, r7, r1
+		mov r8, r1
+	}
+.Ltmp49:
 	.loc	3 154 4
 	ldw r1, cp[FLAC__OGG_MAPPING_MAGIC]
-.Ltmp49:
+.Ltmp50:
 	{
 		ldc r2, 4
-		stw r3, sp[7]
+		stw r3, sp[6]
 	}
 	.loc	3 154 4
 	bl memmove
-.Ltmp50:
 	{
 		ldc r0, 5
-		mkmsk r1, 1
-	}
-	{
-		ldaw r3, sp[11]
 		nop
 	}
 	.loc	3 157 4
-	st8 r1, r3[r0]
+	st8 r8, r7[r0]
 	{
 		ldc r0, 6
-		nop
+		ldc r1, 0
 	}
 	.loc	3 160 4
-	st8 r8, r3[r0]
+	st8 r1, r7[r0]
 	{
 		nop
-		ldw r0, r7[1]
+		ldw r0, sp[8]
+	}
+	{
+		nop
+		ldw r0, r0[1]
 	}
 	.loc	3 163 4
 	{
@@ -535,24 +536,24 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 		mkmsk r2, 3
 	}
 	.loc	3 163 4
-	st8 r1, r3[r2]
+	st8 r1, r7[r2]
 	{
 		ldc r1, 8
 		nop
 	}
 	.loc	3 165 4
-	st8 r0, r3[r1]
-.Ltmp51:
+	st8 r0, r7[r1]
 	.loc	3 166 4
 	{
-		add r0, r3, 9
-		mov r8, r3
+		add r0, r7, 9
+		nop
 	}
-.Ltmp52:
+.Ltmp51:
 	.loc	3 168 4
 	ldw r1, cp[FLAC__STREAM_SYNC_STRING]
 	.loc	3 168 4
 	bl __misaligned_store
+.Ltmp52:
 	{
 		ldc r0, 13
 		nop
@@ -560,19 +561,29 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 .Ltmp53:
 	.loc	3 169 4
 	{
-		add r0, r8, r0
-		ldc r2, 38
+		add r0, r7, r0
+		mov r8, r7
 	}
 .Ltmp54:
 	{
-		nop
-		ldw r1, sp[8]
+		ldc r2, 38
+		ldw r1, sp[7]
 	}
 	.loc	3 171 4
 	bl memcpy
 	{
+		mkmsk r7, 1
 		nop
-		ldw r3, sp[7]
+	}
+	.loc	3 172 4
+	{
+		mov r0, r7
+		nop
+	}
+	bl assert
+	{
+		nop
+		ldw r3, sp[6]
 	}
 .Ltmp55:
 	.loc	3 173 4
@@ -589,75 +600,74 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 		or r0, r0, r1
 		ldc r1, 51
 	}
-	.loc	3 174 4
 	{
-		mkmsk r0, 1
+		nop
 		stw r1, r0[0]
 	}
 	.loc	3 176 4
 	{
 		ldc r0, 0
-		stw r0, sp[26]
+		stw r7, sp[26]
 	}
 	{
 		nop
 		stw r0, r9[0]
 	}
-	bu .LBB5_5
+	bu .LBB5_6
 .Ltmp56:
 .LBB5_19:
 	.loc	3 213 10
 	{
 		or r0, r4, r3
-		mkmsk r6, 1
+		nop
 	}
-	bt r0, .LBB5_24
+	bt r0, .LBB5_3
 .Ltmp57:
 	{
 		eq r0, r2, 4
 		nop
 	}
-	bf r0, .LBB5_24
+	bf r0, .LBB5_3
 .Ltmp58:
+	.loc	3 213 82
 	{
-		mov r4, r3
 		mov r0, r1
+		mov r4, r3
 	}
 .Ltmp59:
-	.loc	3 213 82
 	bl __misaligned_load
 .Ltmp60:
+	{
+		mov r3, r4
+		nop
+	}
+.Ltmp61:
 	ldw r1, cp[FLAC__STREAM_SYNC_STRING]
 	.loc	3 213 82
 	{
 		eq r0, r0, r1
 		nop
 	}
-	bf r0, .LBB5_24
-.Ltmp61:
+	bt r0, .LBB5_22
+.Ltmp62:
+.LBB5_3:
+	{
+		ldc r0, 0
+		nop
+	}
+	.loc	3 147 5
+.Ltmp63:
+	bl assert
 	{
 		mkmsk r0, 1
 		nop
 	}
-	.loc	3 214 3
-.Ltmp62:
-	{
-		ldc r3, 0
-		stw r0, r9[0]
-	}
-	ldc r0, 392
-.Ltmp63:
-	.loc	3 225 2
-	{
-		add r11, r7, r0
-		nop
-	}
-	bu .LBB5_23
+	bu .LBB5_25
 .Ltmp64:
-.LBB5_4:
+.LBB5_5:
 	{
 		nop
-		ldw r0, sp[8]
+		ldw r0, sp[7]
 	}
 	.loc	3 180 4
 .Ltmp65:
@@ -679,7 +689,7 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 		stw r1, r0[0]
 	}
 .Ltmp66:
-.LBB5_5:
+.LBB5_6:
 	{
 		nop
 		ldw r0, sp[9]
@@ -687,10 +697,10 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 .Ltmp67:
 	{
 		nop
-		stw r3, sp[7]
+		stw r3, sp[6]
 	}
 .Ltmp68:
-	bf r0, .LBB5_7
+	bf r0, .LBB5_8
 .Ltmp69:
 	{
 		mkmsk r0, 1
@@ -701,31 +711,36 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 		stw r0, sp[27]
 	}
 .Ltmp70:
-.LBB5_7:
+.LBB5_8:
+	{
+		nop
+		ldw r7, sp[8]
+	}
+.Ltmp71:
 	.loc	3 192 6
 	{
 		add r8, r7, 8
 		ldaw r1, sp[24]
 	}
-.Ltmp71:
+.Ltmp72:
 	.loc	3 192 6
 	{
 		mov r0, r8
 		nop
 	}
 	bl ogg_stream_packetin
-	bt r0, .LBB5_17
-.Ltmp72:
+	bt r0, .LBB5_18
+.Ltmp73:
 	ldc r0, 368
 	.loc	3 197 10
-.Ltmp73:
+.Ltmp74:
 	{
 		add r9, r7, r0
 		nop
 	}
 	ldc r0, 372
 	.loc	3 198 8
-.Ltmp74:
+.Ltmp75:
 	{
 		add r0, r7, r0
 		nop
@@ -735,7 +750,7 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 		stw r0, sp[10]
 	}
 	ldc r0, 376
-.Ltmp75:
+.Ltmp76:
 	.loc	3 200 8
 	{
 		add r0, r7, r0
@@ -757,26 +772,26 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 	}
 	{
 		nop
-		ldw r0, sp[7]
+		ldw r0, sp[6]
 	}
-.Ltmp76:
-	.loc	3 196 6
-	bf r0, .LBB5_9
 .Ltmp77:
+	.loc	3 196 6
+	bf r0, .LBB5_10
+.Ltmp78:
 	{
 		ldc r7, 0
 		nop
 	}
-.Ltmp78:
-.LBB5_14:
+.Ltmp79:
+.LBB5_15:
 	.loc	3 205 10
 	{
 		mov r0, r8
 		mov r1, r9
 	}
 	bl ogg_stream_pageout
-	bf r0, .LBB5_18
-.Ltmp79:
+	bf r0, .LBB5_23
+.Ltmp80:
 	{
 		nop
 		ldw r1, r9[0]
@@ -794,7 +809,7 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 		stw r5, sp[2]
 	}
 	.loc	3 206 8
-.Ltmp80:
+.Ltmp81:
 	{
 		mov r0, r10
 		stw r4, sp[1]
@@ -807,8 +822,8 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 		nop
 		bla r6
 	}
-	bt r0, .LBB5_17
-.Ltmp81:
+	bt r0, .LBB5_18
+.Ltmp82:
 	{
 		nop
 		ldw r0, sp[9]
@@ -830,7 +845,7 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 		stw r5, sp[2]
 	}
 	.loc	3 208 8
-.Ltmp82:
+.Ltmp83:
 	{
 		mov r0, r10
 		stw r4, sp[1]
@@ -843,24 +858,44 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 		nop
 		bla r6
 	}
-	bf r0, .LBB5_14
-	bu .LBB5_17
-.Ltmp83:
-.LBB5_9:
+	bf r0, .LBB5_15
+	bu .LBB5_18
+.Ltmp84:
+.LBB5_22:
+	{
+		mkmsk r0, 1
+		nop
+	}
+	.loc	3 214 3
+.Ltmp85:
+	{
+		ldc r11, 0
+		stw r0, r9[0]
+	}
+	ldc r0, 392
+.Ltmp86:
+	.loc	3 225 2
+	{
+		add r4, r7, r0
+		nop
+	}
+	bu .LBB5_24
+.Ltmp87:
+.LBB5_10:
 	{
 		ldc r8, 0
-		stw r8, sp[6]
+		stw r8, sp[7]
 	}
-.Ltmp84:
-.LBB5_10:
+.Ltmp88:
+.LBB5_11:
 	.loc	3 197 10
 	{
 		mov r1, r9
-		ldw r0, sp[6]
+		ldw r0, sp[7]
 	}
 	bl ogg_stream_flush
-	bf r0, .LBB5_18
-.Ltmp85:
+	bf r0, .LBB5_23
+.Ltmp89:
 	{
 		nop
 		ldw r1, r9[0]
@@ -877,13 +912,13 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 		nop
 		stw r5, sp[2]
 	}
-.Ltmp86:
+.Ltmp90:
 	.loc	3 198 8
 	{
 		mov r7, r10
 		stw r4, sp[1]
 	}
-.Ltmp87:
+.Ltmp91:
 	{
 		mov r0, r7
 		mov r10, r8
@@ -896,8 +931,8 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 		nop
 		bla r6
 	}
-	bt r0, .LBB5_17
-.Ltmp88:
+	bt r0, .LBB5_18
+.Ltmp92:
 	{
 		nop
 		ldw r0, sp[9]
@@ -919,56 +954,55 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 		stw r5, sp[2]
 	}
 	.loc	3 200 8
-.Ltmp89:
+.Ltmp93:
 	{
 		mov r0, r7
 		stw r4, sp[1]
 	}
-.Ltmp90:
+.Ltmp94:
 	{
 		mov r3, r10
 		mov r10, r7
 	}
-.Ltmp91:
+.Ltmp95:
 	{
 		mov r8, r3
 		bla r6
 	}
-	bf r0, .LBB5_10
-.Ltmp92:
-.LBB5_17:
-	{
-		mkmsk r6, 1
-		nop
-	}
-	bu .LBB5_24
+	bf r0, .LBB5_11
+.Ltmp96:
 .LBB5_18:
-.Ltmp93:
 	{
-		ldc r3, 0
-		ldw r4, sp[7]
-	}
-.Ltmp94:
-	{
+		mkmsk r0, 1
 		nop
-		ldw r11, sp[5]
 	}
+	bu .LBB5_25
 .LBB5_23:
-	.loc	3 225 2
-	ldd r1, r0, r11[0]
+.Ltmp97:
 	{
-		ldc r6, 0
+		ldc r11, 0
+		ldw r3, sp[6]
+	}
+.Ltmp98:
+	{
+		nop
+		ldw r4, sp[5]
+	}
+.LBB5_24:
+	.loc	3 225 2
+	ldd r2, r1, r4[0]
+	{
+		ldc r0, 0
 		nop
 	}
 	.loc	3 225 2
-	ladd r2, r0, r0, r4, r6
-	ladd r2, r1, r1, r3, r2
+	ladd r3, r1, r1, r3, r0
+	ladd r3, r2, r2, r11, r3
 	.loc	3 225 2
-	std r1, r0, r11[0]
-.LBB5_24:
-	.loc	3 228 1
+	std r2, r1, r4[0]
+.LBB5_25:
 	{
-		mov r0, r6
+		nop
 		ldw r10, sp[38]
 	}
 	{
@@ -999,8 +1033,9 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 		nop
 		retsp 40
 	}
+	.loc	3 228 1
 	# RETURN_REG_HOLDER
-.Ltmp95:
+.Ltmp99:
 	.cc_bottom FLAC__ogg_encoder_aspect_write_callback_wrapper.function
 
 	.globl	FLAC__ogg_encoder_aspect_write_callback_wrapper.maxcores
@@ -1008,8 +1043,8 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 	.globl	FLAC__ogg_encoder_aspect_write_callback_wrapper.maxtimers
 
 	.globl	FLAC__ogg_encoder_aspect_write_callback_wrapper.maxchanends
-.Ltmp96:
-	.size	FLAC__ogg_encoder_aspect_write_callback_wrapper, .Ltmp96-FLAC__ogg_encoder_aspect_write_callback_wrapper
+.Ltmp100:
+	.size	FLAC__ogg_encoder_aspect_write_callback_wrapper, .Ltmp100-FLAC__ogg_encoder_aspect_write_callback_wrapper
 .Lfunc_end5:
 	.cfi_endproc
 
@@ -2189,484 +2224,561 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 .Ldebug_ranges6:
 	.long	.Ltmp46
 	.long	.Ltmp56
+	.long	.Ltmp63
+	.long	.Ltmp64
 	.long	0
 	.long	0
 .Ldebug_ranges7:
 	.long	.Ltmp41
 	.long	.Ltmp56
-	.long	.Ltmp65
-	.long	.Ltmp92
+	.long	.Ltmp63
+	.long	.Ltmp84
+	.long	.Ltmp88
+	.long	.Ltmp96
 	.long	0
 	.long	0
 	.section	.debug_loc,"",@progbits
 .Ldebug_loc0:
 	.long	.Lfunc_begin0
 	.long	.Ltmp3
-.Lset0 = .Ltmp98-.Ltmp97
+.Lset0 = .Ltmp102-.Ltmp101
 	.short	.Lset0
-.Ltmp97:
+.Ltmp101:
 	.byte	80
-.Ltmp98:
+.Ltmp102:
 	.long	.Ltmp3
 	.long	.Ltmp4
-.Lset1 = .Ltmp100-.Ltmp99
+.Lset1 = .Ltmp104-.Ltmp103
 	.short	.Lset1
-.Ltmp99:
+.Ltmp103:
 	.byte	84
-.Ltmp100:
+.Ltmp104:
 	.long	.Ltmp6
 	.long	.Ltmp7
-.Lset2 = .Ltmp102-.Ltmp101
+.Lset2 = .Ltmp106-.Ltmp105
 	.short	.Lset2
-.Ltmp101:
+.Ltmp105:
 	.byte	84
-.Ltmp102:
+.Ltmp106:
 	.long	0
 	.long	0
 .Ldebug_loc1:
 	.long	.Lfunc_begin1
 	.long	.Ltmp12
-.Lset3 = .Ltmp104-.Ltmp103
+.Lset3 = .Ltmp108-.Ltmp107
 	.short	.Lset3
-.Ltmp103:
+.Ltmp107:
 	.byte	80
-.Ltmp104:
+.Ltmp108:
 	.long	0
 	.long	0
 .Ldebug_loc2:
 	.long	.Lfunc_begin3
 	.long	.Lfunc_begin3
-.Lset4 = .Ltmp106-.Ltmp105
+.Lset4 = .Ltmp110-.Ltmp109
 	.short	.Lset4
-.Ltmp105:
+.Ltmp109:
 	.byte	80
-.Ltmp106:
+.Ltmp110:
 	.long	.Lfunc_begin3
 	.long	.Ltmp18
-.Lset5 = .Ltmp108-.Ltmp107
+.Lset5 = .Ltmp112-.Ltmp111
 	.short	.Lset5
-.Ltmp107:
+.Ltmp111:
 	.byte	82
-.Ltmp108:
+.Ltmp112:
 	.long	.Ltmp19
 	.long	.Ltmp20
-.Lset6 = .Ltmp110-.Ltmp109
+.Lset6 = .Ltmp114-.Ltmp113
 	.short	.Lset6
-.Ltmp109:
+.Ltmp113:
 	.byte	82
-.Ltmp110:
+.Ltmp114:
 	.long	0
 	.long	0
 .Ldebug_loc3:
 	.long	.Lfunc_begin5
 	.long	.Ltmp35
-.Lset7 = .Ltmp112-.Ltmp111
+.Lset7 = .Ltmp116-.Ltmp115
 	.short	.Lset7
-.Ltmp111:
+.Ltmp115:
 	.byte	80
-.Ltmp112:
+.Ltmp116:
 	.long	.Ltmp35
 	.long	.Ltmp36
-.Lset8 = .Ltmp114-.Ltmp113
+.Lset8 = .Ltmp118-.Ltmp117
 	.short	.Lset8
-.Ltmp113:
-	.byte	87
-.Ltmp114:
-	.long	.Ltmp38
-	.long	.Ltmp66
-.Lset9 = .Ltmp116-.Ltmp115
-	.short	.Lset9
-.Ltmp115:
-	.byte	87
-.Ltmp116:
-	.long	.Ltmp67
-	.long	.Ltmp77
-.Lset10 = .Ltmp118-.Ltmp117
-	.short	.Lset10
 .Ltmp117:
 	.byte	87
 .Ltmp118:
-	.long	0
-	.long	0
-.Ldebug_loc4:
-	.long	.Lfunc_begin5
-	.long	.Ltmp40
-.Lset11 = .Ltmp120-.Ltmp119
-	.short	.Lset11
+	.long	.Ltmp38
+	.long	.Ltmp44
+.Lset9 = .Ltmp120-.Ltmp119
+	.short	.Lset9
 .Ltmp119:
-	.byte	81
+	.byte	87
 .Ltmp120:
-	.long	.Ltmp40
+	.long	.Ltmp44
 	.long	.Ltmp56
-.Lset12 = .Ltmp122-.Ltmp121
-	.short	.Lset12
+.Lset10 = .Ltmp122-.Ltmp121
+	.short	.Lset10
 .Ltmp121:
 	.byte	126
 	.byte	32
 .Ltmp122:
 	.long	.Ltmp56
-	.long	.Ltmp60
-.Lset13 = .Ltmp124-.Ltmp123
-	.short	.Lset13
+	.long	.Ltmp62
+.Lset11 = .Ltmp124-.Ltmp123
+	.short	.Lset11
 .Ltmp123:
-	.byte	81
+	.byte	87
 .Ltmp124:
 	.long	.Ltmp64
 	.long	.Ltmp66
-.Lset14 = .Ltmp126-.Ltmp125
-	.short	.Lset14
+.Lset12 = .Ltmp126-.Ltmp125
+	.short	.Lset12
 .Ltmp125:
 	.byte	126
 	.byte	32
 .Ltmp126:
+	.long	.Ltmp67
+	.long	.Ltmp71
+.Lset13 = .Ltmp128-.Ltmp127
+	.short	.Lset13
+.Ltmp127:
+	.byte	126
+	.byte	32
+.Ltmp128:
+	.long	.Ltmp71
+	.long	.Ltmp78
+.Lset14 = .Ltmp130-.Ltmp129
+	.short	.Lset14
+.Ltmp129:
+	.byte	87
+.Ltmp130:
+	.long	.Ltmp84
+	.long	.Ltmp87
+.Lset15 = .Ltmp132-.Ltmp131
+	.short	.Lset15
+.Ltmp131:
+	.byte	87
+.Ltmp132:
+	.long	0
+	.long	0
+.Ldebug_loc4:
+	.long	.Lfunc_begin5
+	.long	.Ltmp40
+.Lset16 = .Ltmp134-.Ltmp133
+	.short	.Lset16
+.Ltmp133:
+	.byte	81
+.Ltmp134:
+	.long	.Ltmp40
+	.long	.Ltmp56
+.Lset17 = .Ltmp136-.Ltmp135
+	.short	.Lset17
+.Ltmp135:
+	.byte	126
+	.byte	28
+.Ltmp136:
+	.long	.Ltmp56
+	.long	.Ltmp60
+.Lset18 = .Ltmp138-.Ltmp137
+	.short	.Lset18
+.Ltmp137:
+	.byte	81
+.Ltmp138:
+	.long	.Ltmp64
+	.long	.Ltmp66
+.Lset19 = .Ltmp140-.Ltmp139
+	.short	.Lset19
+.Ltmp139:
+	.byte	126
+	.byte	28
+.Ltmp140:
 	.long	0
 	.long	0
 .Ldebug_loc5:
 	.long	.Lfunc_begin5
 	.long	.Ltmp39
-.Lset15 = .Ltmp128-.Ltmp127
-	.short	.Lset15
-.Ltmp127:
+.Lset20 = .Ltmp142-.Ltmp141
+	.short	.Lset20
+.Ltmp141:
 	.byte	82
-.Ltmp128:
+.Ltmp142:
 	.long	.Ltmp39
 	.long	.Ltmp47
-.Lset16 = .Ltmp130-.Ltmp129
-	.short	.Lset16
-.Ltmp129:
+.Lset21 = .Ltmp144-.Ltmp143
+	.short	.Lset21
+.Ltmp143:
 	.byte	126
 	.byte	40
-.Ltmp130:
+.Ltmp144:
 	.long	.Ltmp56
 	.long	.Ltmp58
-.Lset17 = .Ltmp132-.Ltmp131
-	.short	.Lset17
-.Ltmp131:
+.Lset22 = .Ltmp146-.Ltmp145
+	.short	.Lset22
+.Ltmp145:
 	.byte	82
-.Ltmp132:
+.Ltmp146:
 	.long	.Ltmp64
 	.long	.Ltmp66
-.Lset18 = .Ltmp134-.Ltmp133
-	.short	.Lset18
-.Ltmp133:
+.Lset23 = .Ltmp148-.Ltmp147
+	.short	.Lset23
+.Ltmp147:
 	.byte	126
 	.byte	40
-.Ltmp134:
+.Ltmp148:
 	.long	0
 	.long	0
 .Ldebug_loc6:
 	.long	.Lfunc_begin5
 	.long	.Ltmp41
-.Lset19 = .Ltmp136-.Ltmp135
-	.short	.Lset19
-.Ltmp135:
-	.byte	83
-.Ltmp136:
-	.long	.Ltmp41
-	.long	.Ltmp42
-.Lset20 = .Ltmp138-.Ltmp137
-	.short	.Lset20
-.Ltmp137:
-	.byte	89
-.Ltmp138:
-	.long	.Ltmp43
-	.long	.Ltmp49
-.Lset21 = .Ltmp140-.Ltmp139
-	.short	.Lset21
-.Ltmp139:
-	.byte	83
-.Ltmp140:
-	.long	.Ltmp49
-	.long	.Ltmp55
-.Lset22 = .Ltmp142-.Ltmp141
-	.short	.Lset22
-.Ltmp141:
-	.byte	126
-	.byte	28
-.Ltmp142:
-	.long	.Ltmp55
-	.long	.Ltmp58
-.Lset23 = .Ltmp144-.Ltmp143
-	.short	.Lset23
-.Ltmp143:
-	.byte	83
-.Ltmp144:
-	.long	.Ltmp58
-	.long	.Ltmp59
-.Lset24 = .Ltmp146-.Ltmp145
+.Lset24 = .Ltmp150-.Ltmp149
 	.short	.Lset24
-.Ltmp145:
-	.byte	84
-.Ltmp146:
-	.long	.Ltmp61
-	.long	.Ltmp64
-.Lset25 = .Ltmp148-.Ltmp147
-	.short	.Lset25
-.Ltmp147:
-	.byte	84
-.Ltmp148:
-	.long	.Ltmp64
-	.long	.Ltmp66
-.Lset26 = .Ltmp150-.Ltmp149
-	.short	.Lset26
 .Ltmp149:
 	.byte	83
 .Ltmp150:
+	.long	.Ltmp41
+	.long	.Ltmp42
+.Lset25 = .Ltmp152-.Ltmp151
+	.short	.Lset25
+.Ltmp151:
+	.byte	89
+.Ltmp152:
+	.long	.Ltmp43
+	.long	.Ltmp50
+.Lset26 = .Ltmp154-.Ltmp153
+	.short	.Lset26
+.Ltmp153:
+	.byte	83
+.Ltmp154:
+	.long	.Ltmp50
+	.long	.Ltmp55
+.Lset27 = .Ltmp156-.Ltmp155
+	.short	.Lset27
+.Ltmp155:
+	.byte	126
+	.byte	24
+.Ltmp156:
+	.long	.Ltmp55
+	.long	.Ltmp58
+.Lset28 = .Ltmp158-.Ltmp157
+	.short	.Lset28
+.Ltmp157:
+	.byte	83
+.Ltmp158:
+	.long	.Ltmp58
+	.long	.Ltmp59
+.Lset29 = .Ltmp160-.Ltmp159
+	.short	.Lset29
+.Ltmp159:
+	.byte	84
+.Ltmp160:
+	.long	.Ltmp61
+	.long	.Ltmp62
+.Lset30 = .Ltmp162-.Ltmp161
+	.short	.Lset30
+.Ltmp161:
+	.byte	83
+.Ltmp162:
+	.long	.Ltmp64
+	.long	.Ltmp66
+.Lset31 = .Ltmp164-.Ltmp163
+	.short	.Lset31
+.Ltmp163:
+	.byte	83
+.Ltmp164:
 	.long	.Ltmp67
 	.long	.Ltmp68
-.Lset27 = .Ltmp152-.Ltmp151
-	.short	.Lset27
-.Ltmp151:
-	.byte	83
-.Ltmp152:
-	.long	.Ltmp68
-	.long	.Ltmp76
-.Lset28 = .Ltmp154-.Ltmp153
-	.short	.Lset28
-.Ltmp153:
-	.byte	126
-	.byte	28
-.Ltmp154:
-	.long	.Ltmp76
-	.long	.Ltmp77
-.Lset29 = .Ltmp156-.Ltmp155
-	.short	.Lset29
-.Ltmp155:
-	.byte	80
-.Ltmp156:
-	.long	.Ltmp77
-	.long	.Ltmp83
-.Lset30 = .Ltmp158-.Ltmp157
-	.short	.Lset30
-.Ltmp157:
-	.byte	126
-	.byte	28
-.Ltmp158:
-	.long	.Ltmp83
-	.long	.Ltmp83
-.Lset31 = .Ltmp160-.Ltmp159
-	.short	.Lset31
-.Ltmp159:
-	.byte	80
-.Ltmp160:
-	.long	.Ltmp83
-	.long	.Ltmp92
-.Lset32 = .Ltmp162-.Ltmp161
+.Lset32 = .Ltmp166-.Ltmp165
 	.short	.Lset32
-.Ltmp161:
-	.byte	126
-	.byte	28
-.Ltmp162:
-	.long	.Ltmp93
-	.long	.Ltmp93
-.Lset33 = .Ltmp164-.Ltmp163
-	.short	.Lset33
-.Ltmp163:
-	.byte	126
-	.byte	28
-.Ltmp164:
-	.long	.Ltmp93
-	.long	.Ltmp94
-.Lset34 = .Ltmp166-.Ltmp165
-	.short	.Lset34
 .Ltmp165:
-	.byte	84
+	.byte	83
 .Ltmp166:
+	.long	.Ltmp68
+	.long	.Ltmp77
+.Lset33 = .Ltmp168-.Ltmp167
+	.short	.Lset33
+.Ltmp167:
+	.byte	126
+	.byte	24
+.Ltmp168:
+	.long	.Ltmp77
+	.long	.Ltmp78
+.Lset34 = .Ltmp170-.Ltmp169
+	.short	.Lset34
+.Ltmp169:
+	.byte	80
+.Ltmp170:
+	.long	.Ltmp78
+	.long	.Ltmp84
+.Lset35 = .Ltmp172-.Ltmp171
+	.short	.Lset35
+.Ltmp171:
+	.byte	126
+	.byte	24
+.Ltmp172:
+	.long	.Ltmp84
+	.long	.Ltmp87
+.Lset36 = .Ltmp174-.Ltmp173
+	.short	.Lset36
+.Ltmp173:
+	.byte	83
+.Ltmp174:
+	.long	.Ltmp87
+	.long	.Ltmp87
+.Lset37 = .Ltmp176-.Ltmp175
+	.short	.Lset37
+.Ltmp175:
+	.byte	80
+.Ltmp176:
+	.long	.Ltmp87
+	.long	.Ltmp96
+.Lset38 = .Ltmp178-.Ltmp177
+	.short	.Lset38
+.Ltmp177:
+	.byte	126
+	.byte	24
+.Ltmp178:
+	.long	.Ltmp97
+	.long	.Ltmp97
+.Lset39 = .Ltmp180-.Ltmp179
+	.short	.Lset39
+.Ltmp179:
+	.byte	126
+	.byte	24
+.Ltmp180:
+	.long	.Ltmp97
+	.long	.Ltmp98
+.Lset40 = .Ltmp182-.Ltmp181
+	.short	.Lset40
+.Ltmp181:
+	.byte	83
+.Ltmp182:
 	.long	0
 	.long	0
 .Ldebug_loc7:
 	.long	.Lfunc_begin5
 	.long	.Ltmp56
-.Lset35 = .Ltmp168-.Ltmp167
-	.short	.Lset35
-.Ltmp167:
+.Lset41 = .Ltmp184-.Ltmp183
+	.short	.Lset41
+.Ltmp183:
 	.byte	85
-.Ltmp168:
+.Ltmp184:
 	.long	.Ltmp64
 	.long	.Ltmp66
-.Lset36 = .Ltmp170-.Ltmp169
-	.short	.Lset36
-.Ltmp169:
+.Lset42 = .Ltmp186-.Ltmp185
+	.short	.Lset42
+.Ltmp185:
 	.byte	85
-.Ltmp170:
+.Ltmp186:
 	.long	.Ltmp67
-	.long	.Ltmp92
-.Lset37 = .Ltmp172-.Ltmp171
-	.short	.Lset37
-.Ltmp171:
+	.long	.Ltmp84
+.Lset43 = .Ltmp188-.Ltmp187
+	.short	.Lset43
+.Ltmp187:
 	.byte	85
-.Ltmp172:
+.Ltmp188:
+	.long	.Ltmp87
+	.long	.Ltmp96
+.Lset44 = .Ltmp190-.Ltmp189
+	.short	.Lset44
+.Ltmp189:
+	.byte	85
+.Ltmp190:
 	.long	0
 	.long	0
 .Ldebug_loc8:
 	.long	.Lfunc_begin5
 	.long	.Ltmp56
-.Lset38 = .Ltmp174-.Ltmp173
-	.short	.Lset38
-.Ltmp173:
+.Lset45 = .Ltmp192-.Ltmp191
+	.short	.Lset45
+.Ltmp191:
 	.byte	90
-.Ltmp174:
+.Ltmp192:
 	.long	.Ltmp64
 	.long	.Ltmp66
-.Lset39 = .Ltmp176-.Ltmp175
-	.short	.Lset39
-.Ltmp175:
+.Lset46 = .Ltmp194-.Ltmp193
+	.short	.Lset46
+.Ltmp193:
 	.byte	90
-.Ltmp176:
+.Ltmp194:
 	.long	.Ltmp67
-	.long	.Ltmp86
-.Lset40 = .Ltmp178-.Ltmp177
-	.short	.Lset40
-.Ltmp177:
+	.long	.Ltmp84
+.Lset47 = .Ltmp196-.Ltmp195
+	.short	.Lset47
+.Ltmp195:
 	.byte	90
-.Ltmp178:
-	.long	.Ltmp86
+.Ltmp196:
 	.long	.Ltmp87
-.Lset41 = .Ltmp180-.Ltmp179
-	.short	.Lset41
-.Ltmp179:
-	.byte	87
-.Ltmp180:
-	.long	.Ltmp88
 	.long	.Ltmp90
-.Lset42 = .Ltmp182-.Ltmp181
-	.short	.Lset42
-.Ltmp181:
-	.byte	87
-.Ltmp182:
+.Lset48 = .Ltmp198-.Ltmp197
+	.short	.Lset48
+.Ltmp197:
+	.byte	90
+.Ltmp198:
 	.long	.Ltmp90
 	.long	.Ltmp91
-.Lset43 = .Ltmp184-.Ltmp183
-	.short	.Lset43
-.Ltmp183:
+.Lset49 = .Ltmp200-.Ltmp199
+	.short	.Lset49
+.Ltmp199:
+	.byte	87
+.Ltmp200:
+	.long	.Ltmp92
+	.long	.Ltmp94
+.Lset50 = .Ltmp202-.Ltmp201
+	.short	.Lset50
+.Ltmp201:
+	.byte	87
+.Ltmp202:
+	.long	.Ltmp94
+	.long	.Ltmp95
+.Lset51 = .Ltmp204-.Ltmp203
+	.short	.Lset51
+.Ltmp203:
 	.byte	90
-.Ltmp184:
+.Ltmp204:
 	.long	0
 	.long	0
 .Ldebug_loc9:
 	.long	.Lfunc_begin5
 	.long	.Ltmp56
-.Lset44 = .Ltmp186-.Ltmp185
-	.short	.Lset44
-.Ltmp185:
+.Lset52 = .Ltmp206-.Ltmp205
+	.short	.Lset52
+.Ltmp205:
 	.byte	86
-.Ltmp186:
+.Ltmp206:
 	.long	.Ltmp64
 	.long	.Ltmp66
-.Lset45 = .Ltmp188-.Ltmp187
-	.short	.Lset45
-.Ltmp187:
+.Lset53 = .Ltmp208-.Ltmp207
+	.short	.Lset53
+.Ltmp207:
 	.byte	86
-.Ltmp188:
+.Ltmp208:
 	.long	.Ltmp67
-	.long	.Ltmp92
-.Lset46 = .Ltmp190-.Ltmp189
-	.short	.Lset46
-.Ltmp189:
+	.long	.Ltmp84
+.Lset54 = .Ltmp210-.Ltmp209
+	.short	.Lset54
+.Ltmp209:
 	.byte	86
-.Ltmp190:
+.Ltmp210:
+	.long	.Ltmp87
+	.long	.Ltmp96
+.Lset55 = .Ltmp212-.Ltmp211
+	.short	.Lset55
+.Ltmp211:
+	.byte	86
+.Ltmp212:
 	.long	0
 	.long	0
 .Ldebug_loc10:
 	.long	.Lfunc_begin5
 	.long	.Ltmp40
-.Lset47 = .Ltmp192-.Ltmp191
-	.short	.Lset47
-.Ltmp191:
+.Lset56 = .Ltmp214-.Ltmp213
+	.short	.Lset56
+.Ltmp213:
 	.byte	91
-.Ltmp192:
+.Ltmp214:
 	.long	.Ltmp40
 	.long	.Ltmp56
-.Lset48 = .Ltmp194-.Ltmp193
-	.short	.Lset48
-.Ltmp193:
+.Lset57 = .Ltmp216-.Ltmp215
+	.short	.Lset57
+.Ltmp215:
 	.byte	126
 	.byte	36
-.Ltmp194:
+.Ltmp216:
 	.long	.Ltmp64
 	.long	.Ltmp66
-.Lset49 = .Ltmp196-.Ltmp195
-	.short	.Lset49
-.Ltmp195:
+.Lset58 = .Ltmp218-.Ltmp217
+	.short	.Lset58
+.Ltmp217:
 	.byte	126
 	.byte	36
-.Ltmp196:
+.Ltmp218:
 	.long	.Ltmp67
 	.long	.Ltmp69
-.Lset50 = .Ltmp198-.Ltmp197
-	.short	.Lset50
-.Ltmp197:
+.Lset59 = .Ltmp220-.Ltmp219
+	.short	.Lset59
+.Ltmp219:
 	.byte	80
-.Ltmp198:
+.Ltmp220:
 	.long	0
 	.long	0
 .Ldebug_loc11:
 	.long	.Lfunc_begin5
 	.long	.Ltmp57
-.Lset51 = .Ltmp200-.Ltmp199
-	.short	.Lset51
-.Ltmp199:
+.Lset60 = .Ltmp222-.Ltmp221
+	.short	.Lset60
+.Ltmp221:
 	.byte	84
-.Ltmp200:
+.Ltmp222:
 	.long	.Ltmp64
 	.long	.Ltmp66
-.Lset52 = .Ltmp202-.Ltmp201
-	.short	.Lset52
-.Ltmp201:
+.Lset61 = .Ltmp224-.Ltmp223
+	.short	.Lset61
+.Ltmp223:
 	.byte	84
-.Ltmp202:
+.Ltmp224:
 	.long	.Ltmp67
-	.long	.Ltmp92
-.Lset53 = .Ltmp204-.Ltmp203
-	.short	.Lset53
-.Ltmp203:
+	.long	.Ltmp84
+.Lset62 = .Ltmp226-.Ltmp225
+	.short	.Lset62
+.Ltmp225:
 	.byte	84
-.Ltmp204:
+.Ltmp226:
+	.long	.Ltmp87
+	.long	.Ltmp96
+.Lset63 = .Ltmp228-.Ltmp227
+	.short	.Lset63
+.Ltmp227:
+	.byte	84
+.Ltmp228:
 	.long	0
 	.long	0
 .Ldebug_loc12:
 	.long	.Ltmp48
-	.long	.Ltmp50
-.Lset54 = .Ltmp206-.Ltmp205
-	.short	.Lset54
-.Ltmp205:
+	.long	.Ltmp49
+.Lset64 = .Ltmp230-.Ltmp229
+	.short	.Lset64
+.Ltmp229:
 	.byte	80
-.Ltmp206:
+.Ltmp230:
 	.long	.Ltmp51
 	.long	.Ltmp52
-.Lset55 = .Ltmp208-.Ltmp207
-	.short	.Lset55
-.Ltmp207:
+.Lset65 = .Ltmp232-.Ltmp231
+	.short	.Lset65
+.Ltmp231:
 	.byte	80
-.Ltmp208:
+.Ltmp232:
 	.long	.Ltmp53
 	.long	.Ltmp54
-.Lset56 = .Ltmp210-.Ltmp209
-	.short	.Lset56
-.Ltmp209:
+.Lset66 = .Ltmp234-.Ltmp233
+	.short	.Lset66
+.Ltmp233:
 	.byte	80
-.Ltmp210:
+.Ltmp234:
 	.long	0
 	.long	0
 .Ldebug_loc13:
-	.long	.Ltmp70
 	.long	.Ltmp71
-.Lset57 = .Ltmp212-.Ltmp211
-	.short	.Lset57
-.Ltmp211:
+	.long	.Ltmp72
+.Lset67 = .Ltmp236-.Ltmp235
+	.short	.Lset67
+.Ltmp235:
 	.byte	113
 	.byte	0
-.Ltmp212:
+.Ltmp236:
 	.long	0
 	.long	0
 	.section	.debug_pubnames,"",@progbits
-.Lset58 = .LpubNames_end0-.LpubNames_begin0
-	.long	.Lset58
+.Lset68 = .LpubNames_end0-.LpubNames_begin0
+	.long	.Lset68
 .LpubNames_begin0:
 	.short	2
 	.long	.L.debug_info_begin0
-.Lset59 = .L.debug_info_end0-.L.debug_info_begin0
-	.long	.Lset59
+.Lset69 = .L.debug_info_end0-.L.debug_info_begin0
+	.long	.Lset69
 	.long	189
 .asciiz"FLAC__ogg_encoder_aspect_set_serial_number"
 	.long	121
@@ -2686,13 +2798,13 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 	.long	0
 .LpubNames_end0:
 	.section	.debug_pubtypes,"",@progbits
-.Lset60 = .LpubTypes_end0-.LpubTypes_begin0
-	.long	.Lset60
+.Lset70 = .LpubTypes_end0-.LpubTypes_begin0
+	.long	.Lset70
 .LpubTypes_begin0:
 	.short	2
 	.long	.L.debug_info_begin0
-.Lset61 = .L.debug_info_end0-.L.debug_info_begin0
-	.long	.Lset61
+.Lset71 = .L.debug_info_end0-.L.debug_info_begin0
+	.long	.Lset71
 	.long	534
 .asciiz"FLAC__bool"
 	.long	1189
@@ -2750,6 +2862,7 @@ FLAC__ogg_encoder_aspect_write_callback_wrapper:
 	.typestring FLAC__ogg_encoder_aspect_set_num_metadata, "f{si}(p(s(FLAC__OggEncoderAspect){m(serial_number){sl},m(num_metadata){ul},m(stream_state){s(){m(body_data){p(uc)},m(body_storage){sl},m(body_fill){sl},m(body_returned){sl},m(lacing_vals){p(si)},m(granule_vals){p(sll)},m(lacing_storage){sl},m(lacing_fill){sl},m(lacing_packet){sl},m(lacing_returned){sl},m(header){a(282:uc)},m(header_fill){si},m(e_o_s){si},m(b_o_s){si},m(serialno){sl},m(pageno){sl},m(packetno){sll},m(granulepos){sll}}},m(page){s(){m(header){p(uc)},m(header_len){sl},m(body){p(uc)},m(body_len){sl}}},m(seen_magic){si},m(is_first_packet){si},m(samples_written){ull}}),ul)"
 	.typestring FLAC__ogg_encoder_aspect_set_defaults, "f{0}(p(s(FLAC__OggEncoderAspect){m(serial_number){sl},m(num_metadata){ul},m(stream_state){s(){m(body_data){p(uc)},m(body_storage){sl},m(body_fill){sl},m(body_returned){sl},m(lacing_vals){p(si)},m(granule_vals){p(sll)},m(lacing_storage){sl},m(lacing_fill){sl},m(lacing_packet){sl},m(lacing_returned){sl},m(header){a(282:uc)},m(header_fill){si},m(e_o_s){si},m(b_o_s){si},m(serialno){sl},m(pageno){sl},m(packetno){sll},m(granulepos){sll}}},m(page){s(){m(header){p(uc)},m(header_len){sl},m(body){p(uc)},m(body_len){sl}}},m(seen_magic){si},m(is_first_packet){si},m(samples_written){ull}}))"
 	.typestring FLAC__ogg_encoder_aspect_write_callback_wrapper, "f{e(){m(FLAC__STREAM_ENCODER_WRITE_STATUS_FATAL_ERROR){1},m(FLAC__STREAM_ENCODER_WRITE_STATUS_OK){0}}}(p(s(FLAC__OggEncoderAspect){m(serial_number){sl},m(num_metadata){ul},m(stream_state){s(){m(body_data){p(uc)},m(body_storage){sl},m(body_fill){sl},m(body_returned){sl},m(lacing_vals){p(si)},m(granule_vals){p(sll)},m(lacing_storage){sl},m(lacing_fill){sl},m(lacing_packet){sl},m(lacing_returned){sl},m(header){a(282:uc)},m(header_fill){si},m(e_o_s){si},m(b_o_s){si},m(serialno){sl},m(pageno){sl},m(packetno){sll},m(granulepos){sll}}},m(page){s(){m(header){p(uc)},m(header_len){sl},m(body){p(uc)},m(body_len){sl}}},m(seen_magic){si},m(is_first_packet){si},m(samples_written){ull}}),p(c:uc),ui,ul,ul,si,p(f{e(){m(FLAC__STREAM_ENCODER_WRITE_STATUS_FATAL_ERROR){1},m(FLAC__STREAM_ENCODER_WRITE_STATUS_OK){0}}}(p(c:0),p(c:uc),ui,ul,ul,p(0))),p(0),p(0))"
+	.typestring assert, "f{si}()"
 	.typestring ogg_stream_packetin, "f{si}(p(s(){m(body_data){p(uc)},m(body_storage){sl},m(body_fill){sl},m(body_returned){sl},m(lacing_vals){p(si)},m(granule_vals){p(sll)},m(lacing_storage){sl},m(lacing_fill){sl},m(lacing_packet){sl},m(lacing_returned){sl},m(header){a(282:uc)},m(header_fill){si},m(e_o_s){si},m(b_o_s){si},m(serialno){sl},m(pageno){sl},m(packetno){sll},m(granulepos){sll}}),p(s(){m(packet){p(uc)},m(bytes){sl},m(b_o_s){sl},m(e_o_s){sl},m(granulepos){sll},m(packetno){sll}}))"
 	.typestring ogg_stream_flush, "f{si}(p(s(){m(body_data){p(uc)},m(body_storage){sl},m(body_fill){sl},m(body_returned){sl},m(lacing_vals){p(si)},m(granule_vals){p(sll)},m(lacing_storage){sl},m(lacing_fill){sl},m(lacing_packet){sl},m(lacing_returned){sl},m(header){a(282:uc)},m(header_fill){si},m(e_o_s){si},m(b_o_s){si},m(serialno){sl},m(pageno){sl},m(packetno){sll},m(granulepos){sll}}),p(s(){m(header){p(uc)},m(header_len){sl},m(body){p(uc)},m(body_len){sl}}))"
 	.typestring ogg_stream_pageout, "f{si}(p(s(){m(body_data){p(uc)},m(body_storage){sl},m(body_fill){sl},m(body_returned){sl},m(lacing_vals){p(si)},m(granule_vals){p(sll)},m(lacing_storage){sl},m(lacing_fill){sl},m(lacing_packet){sl},m(lacing_returned){sl},m(header){a(282:uc)},m(header_fill){si},m(e_o_s){si},m(b_o_s){si},m(serialno){sl},m(pageno){sl},m(packetno){sll},m(granulepos){sll}}),p(s(){m(header){p(uc)},m(header_len){sl},m(body){p(uc)},m(body_len){sl}}))"

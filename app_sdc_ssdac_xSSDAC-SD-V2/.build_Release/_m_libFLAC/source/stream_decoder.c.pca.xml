@@ -220,12 +220,9 @@
   <fCall global="true" name="FLAC__stream_decoder_flush.maxchanends"/>
   <fCall global="true" name="FLAC__bitreader_clear.maxchanends"/>
   <fCall global="true" name="FLAC__stream_decoder_reset"/>
+  <fCall global="true" name="FLAC__stream_decoder_reset.nstackwords.pragma"/>
   <fCall global="true" name="FLAC__stream_decoder_process_single"/>
   <fCall global="true" name="FLAC__stream_decoder_process_single.nstackwords"/>
-  <fCall global="true" name="find_metadata_.nstackwords"/>
-  <fCall global="true" name="read_metadata_.nstackwords"/>
-  <fCall global="true" name="frame_sync_.nstackwords"/>
-  <fCall global="true" name="read_frame_.nstackwords"/>
   <fCall global="true" name="FLAC__stream_decoder_process_single.maxcores"/>
   <fCall global="true" name="find_metadata_.maxcores"/>
   <fCall global="true" name="frame_sync_.maxcores"/>

@@ -34,6 +34,8 @@
 #  include <config.h>
 #endif
 
+#define STACKFUNCTIONSIZE 400
+
 #include <stdio.h>
 #include <stdlib.h> /* for malloc() */
 #include <string.h> /* for memset/memcpy() */
@@ -331,7 +333,7 @@ FLAC_API void FLAC__stream_decoder_delete(FLAC__StreamDecoder *decoder)
  * Public class methods
  *
  ***********************************************************************/
-
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 static FLAC__StreamDecoderInitStatus init_stream_internal_(
 	FLAC__StreamDecoder *decoder,
 	FLAC__StreamDecoderReadCallback read_callback,
@@ -401,6 +403,7 @@ static FLAC__StreamDecoderInitStatus init_stream_internal_(
 	return FLAC__STREAM_DECODER_INIT_STATUS_OK;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_stream(
 	FLAC__StreamDecoder *decoder,
 	FLAC__StreamDecoderReadCallback read_callback,
@@ -429,6 +432,7 @@ FLAC_API FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_stream(
 	);
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_ogg_stream(
 	FLAC__StreamDecoder *decoder,
 	FLAC__StreamDecoderReadCallback read_callback,
@@ -457,6 +461,7 @@ FLAC_API FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_ogg_stream(
 	);
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 static FLAC__StreamDecoderInitStatus init_FILE_internal_(
 	FLAC__StreamDecoder *decoder,
 	FILE *file,
@@ -501,6 +506,7 @@ static FLAC__StreamDecoderInitStatus init_FILE_internal_(
 	);
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_FILE(
 	FLAC__StreamDecoder *decoder,
 	FILE *file,
@@ -513,6 +519,7 @@ FLAC_API FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_FILE(
 	return init_FILE_internal_(decoder, file, write_callback, metadata_callback, error_callback, client_data, /*is_ogg=*/false);
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_ogg_FILE(
 	FLAC__StreamDecoder *decoder,
 	FILE *file,
@@ -525,6 +532,7 @@ FLAC_API FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_ogg_FILE(
 	return init_FILE_internal_(decoder, file, write_callback, metadata_callback, error_callback, client_data, /*is_ogg=*/true);
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 static FLAC__StreamDecoderInitStatus init_file_internal_(
 	FLAC__StreamDecoder *decoder,
 	const char *filename,
@@ -558,6 +566,7 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
 	return init_FILE_internal_(decoder, file, write_callback, metadata_callback, error_callback, client_data, is_ogg);
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_file(
 	FLAC__StreamDecoder *decoder,
 	const char *filename,
@@ -570,6 +579,7 @@ FLAC_API FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_file(
 	return init_file_internal_(decoder, filename, write_callback, metadata_callback, error_callback, client_data, /*is_ogg=*/false);
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_ogg_file(
 	FLAC__StreamDecoder *decoder,
 	const char *filename,
@@ -582,6 +592,7 @@ FLAC_API FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_ogg_file(
 	return init_file_internal_(decoder, filename, write_callback, metadata_callback, error_callback, client_data, /*is_ogg=*/true);
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__bool FLAC__stream_decoder_finish(FLAC__StreamDecoder *decoder)
 {
 	FLAC__bool md5_failed = false;
@@ -651,6 +662,7 @@ FLAC_API FLAC__bool FLAC__stream_decoder_finish(FLAC__StreamDecoder *decoder)
 	return !md5_failed;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__bool FLAC__stream_decoder_set_ogg_serial_number(FLAC__StreamDecoder *decoder, long value)
 {
 	FLAC__ASSERT(0 != decoder);
@@ -668,6 +680,7 @@ FLAC_API FLAC__bool FLAC__stream_decoder_set_ogg_serial_number(FLAC__StreamDecod
 #endif
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__bool FLAC__stream_decoder_set_md5_checking(FLAC__StreamDecoder *decoder, FLAC__bool value)
 {
 	FLAC__ASSERT(0 != decoder);
@@ -678,6 +691,7 @@ FLAC_API FLAC__bool FLAC__stream_decoder_set_md5_checking(FLAC__StreamDecoder *d
 	return true;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__bool FLAC__stream_decoder_set_metadata_respond(FLAC__StreamDecoder *decoder, FLAC__MetadataType type)
 {
 	FLAC__ASSERT(0 != decoder);
@@ -695,6 +709,7 @@ FLAC_API FLAC__bool FLAC__stream_decoder_set_metadata_respond(FLAC__StreamDecode
 	return true;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__bool FLAC__stream_decoder_set_metadata_respond_application(FLAC__StreamDecoder *decoder, const FLAC__byte id[4])
 {
 	FLAC__ASSERT(0 != decoder);
@@ -723,6 +738,7 @@ FLAC_API FLAC__bool FLAC__stream_decoder_set_metadata_respond_application(FLAC__
 	return true;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__bool FLAC__stream_decoder_set_metadata_respond_all(FLAC__StreamDecoder *decoder)
 {
 	uint32_t i;
@@ -737,6 +753,7 @@ FLAC_API FLAC__bool FLAC__stream_decoder_set_metadata_respond_all(FLAC__StreamDe
 	return true;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__bool FLAC__stream_decoder_set_metadata_ignore(FLAC__StreamDecoder *decoder, FLAC__MetadataType type)
 {
 	FLAC__ASSERT(0 != decoder);
@@ -754,6 +771,7 @@ FLAC_API FLAC__bool FLAC__stream_decoder_set_metadata_ignore(FLAC__StreamDecoder
 	return true;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__bool FLAC__stream_decoder_set_metadata_ignore_application(FLAC__StreamDecoder *decoder, const FLAC__byte id[4])
 {
 	FLAC__ASSERT(0 != decoder);
@@ -782,6 +800,7 @@ FLAC_API FLAC__bool FLAC__stream_decoder_set_metadata_ignore_application(FLAC__S
 	return true;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__bool FLAC__stream_decoder_set_metadata_ignore_all(FLAC__StreamDecoder *decoder)
 {
 	FLAC__ASSERT(0 != decoder);
@@ -794,6 +813,7 @@ FLAC_API FLAC__bool FLAC__stream_decoder_set_metadata_ignore_all(FLAC__StreamDec
 	return true;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__StreamDecoderState FLAC__stream_decoder_get_state(const FLAC__StreamDecoder *decoder)
 {
 	FLAC__ASSERT(0 != decoder);
@@ -801,11 +821,13 @@ FLAC_API FLAC__StreamDecoderState FLAC__stream_decoder_get_state(const FLAC__Str
 	return decoder->protected_->state;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API const char *FLAC__stream_decoder_get_resolved_state_string(const FLAC__StreamDecoder *decoder)
 {
 	return FLAC__StreamDecoderStateString[decoder->protected_->state];
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__bool FLAC__stream_decoder_get_md5_checking(const FLAC__StreamDecoder *decoder)
 {
 	FLAC__ASSERT(0 != decoder);
@@ -813,6 +835,7 @@ FLAC_API FLAC__bool FLAC__stream_decoder_get_md5_checking(const FLAC__StreamDeco
 	return decoder->protected_->md5_checking;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__uint64 FLAC__stream_decoder_get_total_samples(const FLAC__StreamDecoder *decoder)
 {
 	FLAC__ASSERT(0 != decoder);
@@ -820,6 +843,7 @@ FLAC_API FLAC__uint64 FLAC__stream_decoder_get_total_samples(const FLAC__StreamD
 	return decoder->private_->has_stream_info? decoder->private_->stream_info.data.stream_info.total_samples : 0;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API uint32_t FLAC__stream_decoder_get_channels(const FLAC__StreamDecoder *decoder)
 {
 	FLAC__ASSERT(0 != decoder);
@@ -827,6 +851,7 @@ FLAC_API uint32_t FLAC__stream_decoder_get_channels(const FLAC__StreamDecoder *d
 	return decoder->protected_->channels;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__ChannelAssignment FLAC__stream_decoder_get_channel_assignment(const FLAC__StreamDecoder *decoder)
 {
 	FLAC__ASSERT(0 != decoder);
@@ -855,6 +880,7 @@ FLAC_API uint32_t FLAC__stream_decoder_get_blocksize(const FLAC__StreamDecoder *
 	return decoder->protected_->blocksize;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE /*sakurai*/
 FLAC_API FLAC__bool FLAC__stream_decoder_get_decode_position(const FLAC__StreamDecoder *decoder, FLAC__uint64 *position)
 {
 	FLAC__ASSERT(0 != decoder);
@@ -909,6 +935,7 @@ FLAC_API FLAC__bool FLAC__stream_decoder_flush(FLAC__StreamDecoder *decoder)
 	return true;
 }
 
+#pragma stackfunction 200
 FLAC_API FLAC__bool FLAC__stream_decoder_reset(FLAC__StreamDecoder *decoder)
 {
 	FLAC__ASSERT(0 != decoder);
@@ -1306,6 +1333,7 @@ FLAC__bool has_id_filtered_(FLAC__StreamDecoder *decoder, FLAC__byte *id)
 	return false;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE
 FLAC__bool find_metadata_(FLAC__StreamDecoder *decoder)
 {
 	FLAC__uint32 x;
@@ -1371,6 +1399,7 @@ FLAC__bool find_metadata_(FLAC__StreamDecoder *decoder)
 	return true;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE
 FLAC__bool read_metadata_(FLAC__StreamDecoder *decoder)
 {
 	FLAC__bool is_last;
@@ -1975,6 +2004,7 @@ FLAC__bool skip_id3v2_tag_(FLAC__StreamDecoder *decoder)
 	return true;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE
 FLAC__bool frame_sync_(FLAC__StreamDecoder *decoder)
 {
 	FLAC__uint32 x;
@@ -2027,6 +2057,7 @@ FLAC__bool frame_sync_(FLAC__StreamDecoder *decoder)
 	return true;
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE
 FLAC__bool read_frame_(FLAC__StreamDecoder *decoder, FLAC__bool *got_a_frame, FLAC__bool do_full_decode)
 {
 	uint32_t channel;

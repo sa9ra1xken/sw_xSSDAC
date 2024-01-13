@@ -1,10 +1,10 @@
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 141 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 
 
@@ -58,11 +58,11 @@ int _get_cmdline(void *buf, unsigned size);
 }
 # 98 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\syscall.h" 3
 void _plugins(int type, unsigned arg1, unsigned arg2);
-# 8 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 8 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
-# 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xSSDAC-SD-V2.h" 1 3
+# 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xSSDAC-SD-V2.h" 1 3
 
 
 
@@ -450,7 +450,7 @@ unsigned get_local_tile_id(void);
 unsigned get_tile_id(tileref t);
 # 2136 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 3
 unsigned get_logical_core_id(void);
-# 5 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xSSDAC-SD-V2.h" 2 3
+# 5 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xSSDAC-SD-V2.h" 2 3
 
 
 
@@ -467,7 +467,7 @@ extern tileref usb_tile;
 
 service xscope_host_data(chanend c);;
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 1 3
@@ -477,7 +477,7 @@ unsigned bitrev(unsigned x);
 unsigned byterev(unsigned x);
 # 59 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 int clz(unsigned x);
-# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 1 3
 # 201 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 3
@@ -494,7 +494,7 @@ typedef out buffered port:4 out_buffered_port_4_t;
 typedef out buffered port:8 out_buffered_port_8_t;
 typedef out buffered port:16 out_buffered_port_16_t;
 typedef out buffered port:32 out_buffered_port_32_t;
-# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 1 3
 # 34 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 3
@@ -602,10 +602,8 @@ int printbinln(unsigned value);
 int printstr(const char (& alias s)[]);
 # 145 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\print.h" 3
 int printstrln(const char (& alias s)[]);
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
-# 1 ".././src\\customdefines.h" 1
-# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 
@@ -1236,13 +1234,13 @@ int _safe_fclose(FILE * movable fp);
 int _safe_remove(const char file[]);
 int _safe_rename(const char from[], const char to[]);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 2 3
-# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 
 # 1 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h" 1
 # 77 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h"
 void debug_printf(char fmt[], ...);
-# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h" 1 3
 
@@ -1358,13 +1356,13 @@ char * alias _safe_strstr(const char * alias s1, const char s2[]);
 
 size_t _safe_strnlen(const char s[], size_t n);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h" 2 3
-# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 # 1 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h" 1
 # 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h"
 # 1 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 1
 # 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\i2c_conf.h" 1
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\i2c_conf.h" 1
 # 12 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 2
 # 92 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
 struct r_i2c {
@@ -1424,7 +1422,7 @@ int i2c_shared_master_write_part(
         int end,
         int offset
         );
-# 19 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 19 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src\\OLED_SSD1306.h" 1
 # 80 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src\\OLED_SSD1306.h"
@@ -1438,55 +1436,423 @@ typedef enum {
 } RC_SCROLL;
 
 RC_SCROLL OLED_SSD1306_shift_left(int str_row);
-# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\DISPLAY_CONTROL.h" 1
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\DISPLAY_CONTROL.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\DISPLAY_CONTROL.h" 1
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\DISPLAY_CONTROL.h"
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 1 3
+# 19 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 1 3
+# 34 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+typedef enum {
+  PROT_TYPE_NONE=0,
+  PROT_TYPE_SR=1,
+  PROT_TYPE_SECS=2,
+  PROT_TYPE_SR_2X=3,
+} fl_ProtectionType;
+
+
+typedef enum {
+  SECTOR_LAYOUT_REGULAR=0,
+  SECTOR_LAYOUT_IRREGULAR
+} fl_SectorLayout;
+
+
+typedef struct {
+
+  unsigned flashId;
+
+  unsigned pageSize;
+
+  unsigned numPages;
+
+  unsigned char addrSize;
+
+  unsigned clockDiv;
+
+  unsigned char idCommand;
+
+
+
+
+  unsigned char idDummyBytes;
+
+  unsigned char idBytes;
+
+  unsigned idValue;
+
+  unsigned char sectorEraseCommand;
+
+
+
+
+  unsigned sectorEraseSize;
+
+  unsigned char writeEnableCommand;
+
+  unsigned char writeDisableCommand;
+
+  fl_ProtectionType protectionType;
+  struct {
+    struct {
+
+      unsigned char setProtectedValue;
+
+      unsigned char setUnprotectedValue;
+    } statusBits;
+    struct {
+
+      unsigned char sectorProtectCommand;
+
+      unsigned char sectorUnprotectCommand;
+    } commandValues;
+  } protection;
+
+  unsigned int programPageCommand;
+
+  unsigned char readCommand;
+
+
+
+
+  unsigned char readDummyBytes;
+
+  fl_SectorLayout sectorLayout;
+  struct {
+
+    unsigned regularSectorSize;
+    struct {
+
+      unsigned char sectorCount;
+
+
+
+
+      unsigned char sectorSizesLog2[32];
+    } irregularSectorSizes;
+  } sectorSizes;
+
+  unsigned char readSRCommand;
+
+  unsigned int writeSRCommand;
+
+  unsigned char wipBitMask;
+} fl_QuadDeviceSpec;
+
+
+typedef struct {
+
+  out port qspiCS;
+  out port qspiSCLK;
+  [[bidirectional]]buffered port:32 qspiSIO;
+  __clock_t qspiClkblk;
+
+
+
+
+
+
+} fl_QSPIPorts;
+
+
+
+
+
+
+
+int fl_connect(fl_QSPIPorts& QSPI);
+# 167 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_connectToDevice(fl_QSPIPorts &QSPI, const fl_QuadDeviceSpec spec[], unsigned n);
+# 179 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_dividerOverride(int div);
+# 189 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_getFlashType();
+
+
+
+
+
+
+unsigned fl_getFlashSize();
+
+
+
+
+
+
+void fl_getSpiId(fl_QSPIPorts & QSPI, unsigned id_command, unsigned char destination[]);
+# 213 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+unsigned fl_getSpiStatus(fl_QSPIPorts & QSPI, unsigned status_command);
+# 222 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_disconnect();
+
+
+
+
+
+
+
+int fl_getFlashIdNum();
+# 239 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_getFlashIdStr( char buf[], int maxlen );
+
+
+
+
+
+typedef struct {
+  unsigned startAddress;
+  unsigned size;
+  unsigned version;
+  int factory;
+} fl_BootImageInfo;
+# 260 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_getFactoryImage(fl_BootImageInfo& bootImageInfo);
+# 274 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_getNextBootImage(fl_BootImageInfo& bootImageInfo);
+# 285 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+unsigned fl_getImageVersion(fl_BootImageInfo& bootImageInfo);
+# 305 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_startImageAdd(fl_BootImageInfo &bootImageInfo, unsigned maxsize,
+                     unsigned padding);
+# 324 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_startImageAddAt( unsigned offset, unsigned maxsize);
+# 342 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_startImageReplace(fl_BootImageInfo &bootImageInfo, unsigned maxsize);
+# 352 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_writeImagePage(const unsigned char page[]);
+
+
+
+
+
+int fl_endWriteImage(void);
+# 368 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_deleteImage(fl_BootImageInfo &bootImageInfo);
+# 380 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_startDeleteImage(fl_BootImageInfo &bootImageInfo);
+# 390 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_startImageRead(fl_BootImageInfo &bootImageInfo);
+
+
+
+
+
+
+
+int fl_readImagePage(unsigned char page[]);
+# 419 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+unsigned fl_getDataPartitionSize(void);
+# 429 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_readData(unsigned offset, unsigned size, unsigned char dst[]);
+# 438 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+unsigned fl_getWriteScratchSize(unsigned offset, unsigned size);
+# 450 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_writeData(unsigned offset, unsigned size, const unsigned char src[],
+                 unsigned char buffer[]);
+
+
+
+
+
+
+
+unsigned fl_getPageSize(void);
+
+
+
+
+
+unsigned fl_getNumDataPages(void);
+# 474 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 3
+int fl_writeDataPage(unsigned n, const unsigned char src[]);
+
+
+
+
+
+
+
+int fl_readDataPage(unsigned n, unsigned char dst[]);
+
+
+
+
+
+
+
+unsigned fl_getNumDataSectors(void);
+
+
+
+
+
+
+unsigned fl_getDataSectorSize(unsigned n);
+
+
+
+
+
+
+int fl_eraseDataSector(unsigned n);
+
+
+
+
+
+int fl_eraseAllDataSectors(void);
+
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/QuadSpecEnum.h" 1 3
+
+
+
+typedef enum
+{
+  UNKNOWN = 0,
+  ISSI_IS25LP016D = 8,
+  ISSI_IS25LP032 = 9,
+  ISSI_IS25LP064 = 10,
+  ISSI_IS25LP080D = 7,
+  ISSI_IS25LP128 = 11,
+  ISSI_IS25LQ016B = 5,
+  ISSI_IS25LQ032B = 6,
+  ISSI_IS25LQ080B = 4,
+  SPANSION_S25FL116K = 1,
+  SPANSION_S25FL132K = 2,
+  SPANSION_S25FL164K = 3,
+  WINBOND_W25Q128JV = 15,
+  WINBOND_W25Q16JV = 12,
+  WINBOND_W25Q32JV = 13,
+  WINBOND_W25Q64JV = 14,
+} fl_QuadFlashId;
+# 516 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 2 3
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/QuadSpecMacros.h" 1 3
+# 521 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflash.h" 2 3
+# 19 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 2 3
+
+
+
+
+
+
+
+typedef fl_QSPIPorts fl_PortHolderStruct;
+
+
+
+
+
+int fl_getBusyStatus();
+
+
+unsigned int fl_getFullStatus();
+
+
+
+
+
+
+int fl_quadEnable();
+
+
+int fl_eraseAll();
+
+
+int fl_setWritability(int enable);
+# 58 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
+fl_SectorLayout fl_getSectorLayoutType();
+
+
+int fl_getNumSectors();
+
+
+int fl_getSectorSize(int sectorNum);
+
+
+int fl_getSectorAddress(int sectorNum);
+
+
+int fl_eraseSector(int sectorNum);
+# 80 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
+unsigned fl_getNumPages();
+
+
+int fl_writePage(unsigned int address, const unsigned char data[]);
+
+
+int fl_readPage(unsigned int address, unsigned char data[]);
+# 96 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
+unsigned int fl_setBootPartitionSize( unsigned int s );
+unsigned int fl_getBootPartitionSize();
+
+
+unsigned fl_getDataPartitionBase();
+# 114 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
+int fl_eraseNextBootImage( fl_BootImageInfo& bootImageInfo );
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\DISPLAY_CONTROL.h" 2
+
+
+
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h" 1
+# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h"
+int qspi_write(int offset, int size, char * buffer, char * scratch);
+
+int qspi_read(int offset, int size, char * buffer);
+
+
+
+interface qspi_access{
+
+    void write(int offset, int size, char buffer[]);
+
+    void read(int offset, int size, char buffer[]);
+};
+
+void qspi_server(server interface qspi_access i);
+# 41 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h"
+void qspi_if_write(client interface qspi_access i, int offset, int size, char buffer[]);
+
+void qspi_if_read(client interface qspi_access i, int offset, int size, char buffer[]);
+# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\DISPLAY_CONTROL.h" 2
+# 29 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\DISPLAY_CONTROL.h"
 void set_display_control_flag(unsigned bitmask);
 void update_samp_freq(unsigned freq);
-void update_samp_resolution(unsigned res);
-void update_chan_count(unsigned ch);
+void update_stream_format(unsigned numUsbChan, unsigned sampRes);
 
-void display_control();
+
+
+void init_display_frame();
+
+
+
 
 typedef enum {
     _SDC_AUDIO = 1,
     _USB_AUDIO = 2,
-    _DAC_MENU = 3
+    _DAC_MODE_SELECTION = 3,
+    _FUNCTION_SELECTION = 4
 } CONSOLE_MODE;
 
 CONSOLE_MODE get_console_mode();
 void set_console_mode(CONSOLE_MODE value);
-# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h" 1
-# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src\\button_listener.h"
-typedef enum {
-    _PENDING_Q = 0,
-    _INPUT_Q = 1,
-    _CURRENT_Q = 2
-} QUERY_TYPE;
-
-typedef enum {
-    _PLAY_CMD_EMPTY,
-    _PLAY_CMD_PREV_FOLDER,
-    _PLAY_CMD_NEXT_FOLDER,
-    _PLAY_CMD_PREV_TRACK,
-    _PLAY_CMD_NEXT_TRACK,
-    _PLAY_CMD_REWIND,
-    _PLAY_CMD_REVERSE_SKIP,
-    _PLAY_CMD_FORWARD_SKIP,
-    _PLAY_CMD_PAUSE,
-    _PLAY_CMD_STOP
-} PLAY_COMMAND;
-
-unsigned QueryChannel(chanend ch, unsigned command);
-
-void button_listener(chanend ?c_play_control, chanend ?c_dac_control);
-# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC.h" 1
-# 31 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 1
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h" 1
+# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h"
 typedef enum {
     _GET_INTERPOLATION_MODE =1,
     _SET_INTERPOLATION_MODE =2
@@ -1508,18 +1874,52 @@ typedef enum {
 
 
 
-
-
 typedef enum {
     _AUDIO_FORMAT_CHANGE = 0,
     _INTERPOLATION_MODE_CHANGE = 1
 } DAC_RETURN_CODE;
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 2
 
 
 
+typedef enum {
+    _USB_DAC = 0,
+    _SDC_PLAY = 1,
+} FUNCTION_SELECTOR;
 
+typedef enum {
+    _PENDING_Q = 0,
+    _INPUT_Q = 1,
+    _CURRENT_Q = 2
+} QUERY_TYPE;
 
+typedef enum {
+    _PLAY_CMD_EMPTY,
+    _PLAY_CMD_PREV_FOLDER,
+    _PLAY_CMD_NEXT_FOLDER,
+    _PLAY_CMD_PREV_TRACK,
+    _PLAY_CMD_NEXT_TRACK,
+    _PLAY_CMD_REWIND,
+    _PLAY_CMD_REVERSE_SKIP,
+    _PLAY_CMD_FORWARD_SKIP,
+    _PLAY_CMD_PAUSE,
+    _PLAY_CMD_STOP
+} PLAY_COMMAND;
 
+unsigned QueryChannel(chanend ch, unsigned command);
+void button_listener_core(
+        FUNCTION_SELECTOR func,
+        chanend ?c_play_control,
+        chanend ?c_dac_control
+        );
+void KeyScan();
+void SendBackTrackControl(chanend c_track_control);
+void HandleDacCommand(chanend c_control, DAC_COMMAND command);
+void HandlePlayCommand(chanend c_control, QUERY_TYPE type);
+# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC.h" 1
+# 29 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC.h"
 void ConfigureSerialDacPorts();
 
 void InitDebugOut(out port txd);
@@ -1535,55 +1935,38 @@ unsigned start_fir(chanend c_in, unsigned sample_rate);
 
 unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
 
-void audio_xss(chanend c_in, chanend ?c_control);
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
+void ssdac_core(chanend c_in, chanend ?c_control);
+# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
+
+# 1 ".././src\\SSDAC_CONF.h" 1
+# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h" 1
+# 25 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
+
+
+# 1 ".././src\\flash_map.h" 1
+# 27 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
+# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+typedef enum {
+    _PAUSING,
+    _SCROLLING
+} SCROLLING_STATE;
+
+static SCROLLING_STATE state;
+
+unsigned pause_counter;
+unsigned scrolling_row;
+
+
+
 
 
 
 on tile [1] : struct r_i2c r_i2c2 = {on tile[1]: 0x40500};
 
 
-
-
-
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ffconf.h" 1
-# 31 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc" 2
-
-char track_string[255 + 1]="track";
-char folder_string[255 + 1]="folder";
-char information_string[100];
-
-
 unsigned display_control_flag = 0;
-unsigned NumChan = 2;
-unsigned SampFreq = 44100;
-unsigned SampRes = 16;
-
-void update_samp_freq(unsigned freq){
-    volatile unsigned * unsafe ptr ;
-    unsafe {
-        ptr = &SampFreq; *ptr = freq;
-        ptr = &display_control_flag; *ptr |= 0x00000020;
-    }
-}
-
-void update_samp_resolution(unsigned res){
-    volatile unsigned * unsafe ptr ;
-    unsafe {
-        ptr = &SampRes; *ptr = res;
-        ptr = &display_control_flag; *ptr |= 0x00000040;
-    }
-}
-
-void update_chan_count(unsigned ch){
-    volatile unsigned * unsafe ptr ;
-    unsafe {
-        ptr = &NumChan; *ptr = ch;
-        ptr = &display_control_flag; *ptr |= 0x00000080;
-    }
-}
-
-CONSOLE_MODE console_mode;
 
 void set_display_control_flag(unsigned bitmask){
     volatile unsigned * unsafe ptr ;
@@ -1609,6 +1992,8 @@ void clear_display_control_flag(unsigned bitmask){
     }
 }
 
+CONSOLE_MODE console_mode;
+
 CONSOLE_MODE get_console_mode(){
     volatile CONSOLE_MODE * unsafe ptr ;
     unsafe {
@@ -1625,54 +2010,87 @@ void set_console_mode(CONSOLE_MODE value){
     }
 }
 
-char TotalTimeString[6];
+unsigned NumChan = 2;
+unsigned SampFreq = 44100;
+unsigned SampRes = 16;
+char stream_format_string[100];
+
+void update_samp_freq(unsigned freq){
+    volatile unsigned * unsafe ptr ;
+    unsafe {
+        ptr = &SampFreq; *ptr = freq;
+        ptr = &display_control_flag; *ptr |= 0x00000080;
+    }
+}
+
+void update_stream_format(unsigned num_chan, unsigned samp_res){
+
+    volatile unsigned * unsafe ptr ;
+    unsafe {
+        ptr = &NumChan; *ptr = num_chan;
+        ptr = &SampRes; *ptr = samp_res;
+        ptr = &display_control_flag; *ptr |= 0x00000080;
+    }
+}
+
+void ShowStreamFormat(int row){
+    int freq = SampFreq / 1000;
+    int freq_p = (SampFreq % 1000) /100;
+    sprintf(stream_format_string,"%dch %d.%dksps %dbit\0", NumChan, freq, freq_p, SampRes);
+    printf("\n%s", stream_format_string);
+    OLED_SSD1306_put_string(row, stream_format_string);
+    pause_counter = 100000000 / 2000000;
+    state = _PAUSING;
+    scrolling_row = row;
+}
+
+void GetStreamFormatString(char str[]){
+    int freq = SampFreq / 1000;
+    int freq_p = (SampFreq % 1000) /100;
+    sprintf(str,"%dch %d.%dksps %dbit\0", NumChan, freq, freq_p, SampRes);
+    return;
+}
+
+extern char track_string[];
+extern char folder_string[];
+char audio_property_string[100];
 unsigned SecElapsed;
-# 125 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
-typedef enum {
-    _PAUSING,
-    _SCROLLING
-} SCROLLING_STATE;
+char TotalTimeString[6];
 
-static SCROLLING_STATE state;
-unsigned pause_counter;
-unsigned scrolling_row;
-
-
-
-void UpdateTime(){
+void UpdateTime(int row){
     char s[12];
     unsigned min = SecElapsed / 60;
     unsigned sec = SecElapsed % 60;
-
     sprintf(s, "%02d:%02d", min, sec);
-    OLED_SSD1306_put_string(3, s);
-    clear_display_control_flag(0x00000004);
+    OLED_SSD1306_put_string(row, s);
 }
 
-void ShowFolder(){
-    OLED_SSD1306_put_string(0, folder_string);
+void ShowFolder(int row, client interface qspi_access ? i){
+    OLED_SSD1306_put_string(row, folder_string);
     pause_counter = 100000000 / 2000000;
     state = _PAUSING;
-    scrolling_row = 0;
-    clear_display_control_flag(0x00000002);
+    scrolling_row = row;
+
+    i.write((4), (256), folder_string);
 }
 
-void ShowTrack(){
-    OLED_SSD1306_put_string(1, track_string);
+void ShowTrack(int row, client interface qspi_access ? i){
+    OLED_SSD1306_put_string(row, track_string);
     pause_counter = 100000000 / 2000000;
     state = _PAUSING;
-    scrolling_row = 1;
-    clear_display_control_flag(0x00000001);
+    scrolling_row = row;
+
+    i.write(((4) + (256)), (256), track_string);
 }
 
-void ShowAudioAttribute(){
-    OLED_SSD1306_put_string(2, information_string);
+void ShowAudioProperty(int row){
+    OLED_SSD1306_put_string(row, audio_property_string);
     pause_counter = 100000000 / 2000000;
     state = _PAUSING;
-    scrolling_row = 2;
-    clear_display_control_flag(0x00000008);
+    scrolling_row = row;
 }
-# 181 "C:/Users/takaaki/git/sw_xSSDAC/module_human_interface/src/display_control.xc"
+
+
 extern INTERPOLATION_MODE proposed_intpol_mode;
 
 INTERPOLATION_MODE ProposedInterpolationMode(){
@@ -1691,164 +2109,205 @@ INTERPOLATION_MODE FixedInterpolationMode(){
     return temp;
 }
 
-void ShowInterpolationMode(INTERPOLATION_MODE mode){
+
+void ShowInterpolationMode(int row, INTERPOLATION_MODE mode){
     switch(mode){
     case _STEP:
-        OLED_SSD1306_put_string(1, "Step            ");
+        OLED_SSD1306_put_string(row, "Step            ");
         break;
     case _LINEAR:
-        OLED_SSD1306_put_string(1, "Linear          ");
+        OLED_SSD1306_put_string(row, "Linear          ");
         break;
     case _QUAD:
-        OLED_SSD1306_put_string(1, "Quad            ");
+        OLED_SSD1306_put_string(row, "Quad            ");
         break;
     case _CUBIC:
-        OLED_SSD1306_put_string(1, "Cubic           ");
+        OLED_SSD1306_put_string(row, "Cubic           ");
         break;
     case _SINC4:
-        OLED_SSD1306_put_string(1, "Sinc4           ");
+        OLED_SSD1306_put_string(row, "Sinc4           ");
         break;
     case _SINC8:
-        OLED_SSD1306_put_string(1, "Sinc8           ");
+        OLED_SSD1306_put_string(row, "Sinc8           ");
         break;
     default:
-        OLED_SSD1306_put_string(1, "Unknown         ");
+        OLED_SSD1306_put_string(row, "Unknown         ");
         break;
     }
 }
 
-char UsbAudioStatus[100];
+extern FUNCTION_SELECTOR selected_function;
 
-void ShowUsbAudioStatus(){
-
-    sprintf(UsbAudioStatus,"%d sps %d bit\0", SampFreq, SampRes);
-    printf("\n%s", UsbAudioStatus);
-
-    OLED_SSD1306_put_string(1, UsbAudioStatus);
-    pause_counter = 100000000 / 2000000;
-    state = _PAUSING;
-    scrolling_row = 0;
+FUNCTION_SELECTOR SelectedFunction(){
+    volatile FUNCTION_SELECTOR * unsafe p;
+    FUNCTION_SELECTOR temp;
+    unsafe {p = & selected_function; temp = * p; }
+    return temp;
 }
 
-void display_control(){
+char * alias GetFunctionString(FUNCTION_SELECTOR func){
+    switch(func){
+    case _USB_DAC:
+        return "USB_DAC";
+    case _SDC_PLAY:
+        return "SDC_PLAY";
+    default:
+        return "UNKNOWN";
+    }
+}
+
+
+
+void init_display_frame(){
+
+    OLED_SSD1306_begin();
+    OLED_SSD1306_put_string(0, "OLED_SSD1306");
+    for (int row = 1 ; row < 4 ; row++){
+        OLED_SSD1306_put_string(row, " ");
+    }
+    state = _PAUSING;
+    pause_counter = 100000000 / 2000000;
+    scrolling_row = 0;
+
+}
+
+typedef union {
+    unsigned int value;
+    unsigned char byte[sizeof(int)];
+} unsigned_byte ;
+
+void handle_display_frame(client interface qspi_access ? i){
+
+    if (test_display_control_flag(0x00000010)){
+        clear_display_control_flag(0x00000010);
+
+        switch (get_console_mode()){
+
+        case _SDC_AUDIO:
+            ShowFolder(0, i);
+            ShowTrack(1, i);
+            ShowAudioProperty(2);
+            UpdateTime(3);
+            break;
+
+        case _USB_AUDIO:
+            OLED_SSD1306_put_string(0, "USB Audio");
+            OLED_SSD1306_put_string(1, " ");
+            ShowStreamFormat(2);
+            OLED_SSD1306_put_string(3, " ");
+            break;
+
+        case _DAC_MODE_SELECTION:
+            OLED_SSD1306_put_string(0, "Interpolation");
+            OLED_SSD1306_put_string(1, "Selected desired interpolation mode.");
+            OLED_SSD1306_put_string(2, "Press SW1 for STEP, SW2 for LINER, SW3 for CUBIC, SW4 for SINC4, SW5 for SINC8.");
+            ShowInterpolationMode(3, FixedInterpolationMode());
+            break;
+
+        case _FUNCTION_SELECTION:
+            OLED_SSD1306_put_string(0, "Function selector");
+            OLED_SSD1306_put_string(1, "Selected function takes effect after reset.");
+            OLED_SSD1306_put_string(2, "Press SW1 for USB audio. Press SW2 for SD player.");
+            OLED_SSD1306_put_string(3, " ");
+            break;
+        }
+    }
+
+    switch (get_console_mode()){
+
+    case _SDC_AUDIO:
+        if (test_display_control_flag(0x00000002)){
+            clear_display_control_flag(0x00000002);
+            ShowFolder(0, i);
+        }
+        if (test_display_control_flag(0x00000001)){
+            clear_display_control_flag(0x00000001);
+            ShowTrack(1, i);
+        }
+        if (test_display_control_flag(0x00000008)){
+            clear_display_control_flag(0x00000008);
+            ShowAudioProperty(2);
+        }
+        if (test_display_control_flag(0x00000004)){
+            clear_display_control_flag(0x00000004);
+            UpdateTime(3);
+        }
+        break;
+
+    case _USB_AUDIO:
+        if (test_display_control_flag(0x00000080)){
+            clear_display_control_flag(0x00000080);
+            ShowStreamFormat(2);
+        }
+        break;
+
+    case _DAC_MODE_SELECTION:
+        if (test_display_control_flag(0x00000100)){
+            clear_display_control_flag(0x00000100);
+            ShowInterpolationMode(3, ProposedInterpolationMode());
+        }
+        if (test_display_control_flag(0x00000200)){
+            clear_display_control_flag(0x00000200);
+            ShowInterpolationMode(3, FixedInterpolationMode());
+        }
+        break;
+    case _FUNCTION_SELECTION:
+        if (test_display_control_flag(0x00000400)){
+            clear_display_control_flag(0x00000400);
+            OLED_SSD1306_put_string(3, GetFunctionString(SelectedFunction()));
+            unsigned_byte temp;
+            temp.value = SelectedFunction();
+                                                                                                 ;
+            i.write(0, sizeof(temp), temp.byte);
+        }
+        break;
+    }
+
+    switch (state){
+
+        case _PAUSING:
+            pause_counter--;
+            if (pause_counter <= 0){
+                state = _SCROLLING;
+            }
+            break;
+        case _SCROLLING:
+            if (OLED_SSD1306_shift_left(scrolling_row) == _END_OF_LINE){
+                scrolling_row++;
+                if (scrolling_row > 2) scrolling_row = 0;
+                OLED_SSD1306_put_string(scrolling_row, "");
+                pause_counter = 100000000 / 2000000;
+                state = _PAUSING;
+            }
+            break;
+    }
+}
+
+
+
+void display_control_core(client interface qspi_access ? i){
+                                                  ;
+
+    if (!isnull(i)){
+
+
+
+
+    }
+    else ;
 
     timer t;
     unsigned time;
 
-    OLED_SSD1306_begin();
-
-    for (int row = 0 ; row < 4 ; row++){
-        char s[17];
-        sprintf(s, "                ", row);
-        OLED_SSD1306_put_string(row, s);
-    }
-
-    sprintf(TotalTimeString,"00:00");
-
-    state = _PAUSING;
-    pause_counter = 100000000 / 2000000;
-    scrolling_row = 0;
+    init_display_frame();
 
     while(1){
 
         t :> time;
         time += 2000000;
 
-        if (test_display_control_flag(0x00000010)){
-            clear_display_control_flag(0x00000010);
+        handle_display_frame(i);
 
-            switch (get_console_mode()){
-
-
-            case _SDC_AUDIO:
-                ShowFolder();
-                ShowTrack();
-                ShowAudioAttribute();
-                UpdateTime();
-                break;
-
-
-            case _USB_AUDIO:
-                OLED_SSD1306_put_string(0, "XMOS USB Audio");
-                ShowUsbAudioStatus();
-                OLED_SSD1306_put_string(2, "");
-                OLED_SSD1306_put_string(3, "");
-                break;
-            case _DAC_MENU:
-                OLED_SSD1306_put_string(0, "Interpolation");
-                ShowInterpolationMode(FixedInterpolationMode());
-                OLED_SSD1306_put_string(2, "");
-                OLED_SSD1306_put_string(3, "");
-                break;
-            }
-        }
-
-        switch (get_console_mode()){
-
-
-        case _SDC_AUDIO:
-        if (test_display_control_flag(0x00000004)){
-            clear_display_control_flag(0x00000004);
-            UpdateTime();
-        }
-
-        if (test_display_control_flag(0x00000002)){
-            clear_display_control_flag(0x00000002);
-            ShowFolder();
-        }
-
-        if (test_display_control_flag(0x00000001)){
-            clear_display_control_flag(0x00000001);
-            ShowTrack();
-        }
-
-        if (test_display_control_flag(0x00000008)){
-            clear_display_control_flag(0x00000008);
-            ShowAudioAttribute();
-        }
-            break;
-
-
-        case _USB_AUDIO:
-            if (test_display_control_flag(0x00000020)){
-                clear_display_control_flag(0x00000020);
-                ShowUsbAudioStatus();
-            }
-            if (test_display_control_flag(0x00000040)){
-                clear_display_control_flag(0x00000040);
-                ShowUsbAudioStatus();
-            }
-            break;
-        case _DAC_MENU:
-            if (test_display_control_flag(0x00000100)){
-                clear_display_control_flag(0x00000100);
-                ShowInterpolationMode(ProposedInterpolationMode());
-            }
-            if (test_display_control_flag(0x00000200)){
-                clear_display_control_flag(0x00000200);
-                ShowInterpolationMode(FixedInterpolationMode());
-            }
-            break;
-        }
-
-        switch (state){
-
-            case _PAUSING:
-                pause_counter--;
-                if (pause_counter <= 0){
-                    state = _SCROLLING;
-                }
-                break;
-            case _SCROLLING:
-                if (OLED_SSD1306_shift_left(scrolling_row) == _END_OF_LINE){
-                    scrolling_row++;
-                    if (scrolling_row > 2) scrolling_row = 0;
-                    OLED_SSD1306_put_string(scrolling_row, "");
-                    pause_counter = 100000000 / 2000000;
-                    state = _PAUSING;
-                }
-                break;
-        }
         t when __builtin_timer_after(time) :> void;
     }
 }

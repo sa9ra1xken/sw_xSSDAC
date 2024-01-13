@@ -22,7 +22,7 @@
 FLAC__memory_alloc_aligned:
 .Lfunc_begin0:
 	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\memory.c"
-	.loc	1 47 0
+	.loc	1 49 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -41,8 +41,14 @@ FLAC__memory_alloc_aligned:
 		stw r4, sp[2]
 	}
 .Ltmp4:
+	.loc	1 52 2 prologue_end
+	{
+		ecallf r4
+		nop
+	}
+.Ltmp5:
 	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share\\alloc.h"
-	.loc	2 93 5 prologue_end
+	.loc	2 93 5
 	{
 		eq r1, r0, 0
 		nop
@@ -52,10 +58,10 @@ FLAC__memory_alloc_aligned:
 		add r0, r1, r0
 		nop
 	}
-.Ltmp5:
+.Ltmp6:
 	.loc	2 95 9
 	bl malloc
-.Ltmp6:
+.Ltmp7:
 	{
 		nop
 		stw r0, r4[0]
@@ -64,14 +70,15 @@ FLAC__memory_alloc_aligned:
 		nop
 		ldw r4, sp[2]
 	}
+.Ltmp8:
 	{
 		nop
 		retsp 4
 	}
-.Ltmp7:
-	.loc	1 60 2
+.Ltmp9:
+	.loc	1 62 2
 	# RETURN_REG_HOLDER
-.Ltmp8:
+.Ltmp10:
 	.cc_bottom FLAC__memory_alloc_aligned.function
 	.set	FLAC__memory_alloc_aligned.nstackwords,(malloc.nstackwords + 4)
 	.globl	FLAC__memory_alloc_aligned.nstackwords
@@ -81,8 +88,8 @@ FLAC__memory_alloc_aligned:
 	.globl	FLAC__memory_alloc_aligned.maxtimers
 	.set	FLAC__memory_alloc_aligned.maxchanends,malloc.maxchanends $M 0
 	.globl	FLAC__memory_alloc_aligned.maxchanends
-.Ltmp9:
-	.size	FLAC__memory_alloc_aligned, .Ltmp9-FLAC__memory_alloc_aligned
+.Ltmp11:
+	.size	FLAC__memory_alloc_aligned, .Ltmp11-FLAC__memory_alloc_aligned
 .Lfunc_end0:
 	.file	3 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/clang\\stddef.h"
 	.cfi_endproc
@@ -93,51 +100,79 @@ FLAC__memory_alloc_aligned:
 	.cc_top FLAC__memory_alloc_aligned_int32_array.function,FLAC__memory_alloc_aligned_int32_array
 FLAC__memory_alloc_aligned_int32_array:
 .Lfunc_begin1:
-	.loc	1 64 0
+	.loc	1 66 0
 	.cfi_startproc
 	.issue_mode dual
 	{
 		nop
 		dualentsp 6
 	}
-.Ltmp10:
+.Ltmp12:
 	.cfi_def_cfa_offset 24
-.Ltmp11:
+.Ltmp13:
 	.cfi_offset 15, 0
 	std r5, r4, sp[1]
-.Ltmp12:
+.Ltmp14:
 	.cfi_offset 4, -16
-.Ltmp13:
+.Ltmp15:
 	.cfi_offset 5, -12
 	std r7, r6, sp[2]
-.Ltmp14:
-	.cfi_offset 6, -8
-.Ltmp15:
-	.cfi_offset 7, -4
 .Ltmp16:
+	.cfi_offset 6, -8
+.Ltmp17:
+	.cfi_offset 7, -4
+.Ltmp18:
 	{
 		mov r4, r2
 		mov r5, r1
 	}
-.Ltmp17:
+.Ltmp19:
+	.loc	1 73 2 prologue_end
+	{
+		ecallf r0
+		nop
+	}
+.Ltmp20:
+	.loc	1 74 2
+	{
+		ecallf r5
+		nop
+	}
+.Ltmp21:
+	.loc	1 75 2
+	{
+		ecallf r4
+		nop
+	}
+.Ltmp22:
+	.loc	1 76 2
+	{
+		eq r1, r5, r4
+		nop
+	}
+	.loc	1 76 2
+	{
+		ecallt r1
+		nop
+	}
 	{
 		ldc r1, 30
 		nop
 	}
-	.loc	1 76 5 prologue_end
-.Ltmp18:
+.Ltmp23:
+	.loc	1 78 5
 	{
 		shr r1, r0, r1
 		ldc r6, 0
 	}
 	bt r1, .LBB1_5
-.Ltmp19:
-	.loc	1 79 7
+.Ltmp24:
+	.loc	1 81 7
 	{
 		shl r0, r0, 2
 		nop
 	}
-.Ltmp20:
+.Ltmp25:
 	.loc	2 93 5
 	{
 		eq r1, r0, 0
@@ -148,38 +183,38 @@ FLAC__memory_alloc_aligned_int32_array:
 		or r0, r1, r0
 		nop
 	}
-.Ltmp21:
+.Ltmp26:
 	.loc	2 95 9
 	bl malloc
 	{
 		mov r7, r0
 		nop
 	}
-.Ltmp22:
+.Ltmp27:
 	bf r7, .LBB1_5
-.Ltmp23:
+.Ltmp28:
 	{
 		nop
 		ldw r0, r5[0]
 	}
 	bf r0, .LBB1_4
-.Ltmp24:
-	.loc	1 85 4
+.Ltmp29:
+	.loc	1 87 4
 	bl free
-.Ltmp25:
+.Ltmp30:
 .LBB1_4:
 	{
 		nop
 		stw r7, r5[0]
 	}
-	.loc	1 87 3
+	.loc	1 89 3
 	{
 		mkmsk r6, 1
 		stw r7, r4[0]
 	}
-.Ltmp26:
+.Ltmp31:
 .LBB1_5:
-	.loc	1 90 1
+	.loc	1 92 1
 	{
 		mov r0, r6
 		nop
@@ -191,7 +226,7 @@ FLAC__memory_alloc_aligned_int32_array:
 		retsp 6
 	}
 	# RETURN_REG_HOLDER
-.Ltmp27:
+.Ltmp32:
 	.cc_bottom FLAC__memory_alloc_aligned_int32_array.function
 	.set	FLAC__memory_alloc_aligned_int32_array.nstackwords,((malloc.nstackwords $M free.nstackwords) + 6)
 	.globl	FLAC__memory_alloc_aligned_int32_array.nstackwords
@@ -201,8 +236,8 @@ FLAC__memory_alloc_aligned_int32_array:
 	.globl	FLAC__memory_alloc_aligned_int32_array.maxtimers
 	.set	FLAC__memory_alloc_aligned_int32_array.maxchanends,free.maxchanends $M malloc.maxchanends $M 0
 	.globl	FLAC__memory_alloc_aligned_int32_array.maxchanends
-.Ltmp28:
-	.size	FLAC__memory_alloc_aligned_int32_array, .Ltmp28-FLAC__memory_alloc_aligned_int32_array
+.Ltmp33:
+	.size	FLAC__memory_alloc_aligned_int32_array, .Ltmp33-FLAC__memory_alloc_aligned_int32_array
 .Lfunc_end1:
 	.cfi_endproc
 
@@ -212,51 +247,79 @@ FLAC__memory_alloc_aligned_int32_array:
 	.cc_top FLAC__memory_alloc_aligned_uint32_array.function,FLAC__memory_alloc_aligned_uint32_array
 FLAC__memory_alloc_aligned_uint32_array:
 .Lfunc_begin2:
-	.loc	1 93 0
+	.loc	1 95 0
 	.cfi_startproc
 	.issue_mode dual
 	{
 		nop
 		dualentsp 6
 	}
-.Ltmp29:
+.Ltmp34:
 	.cfi_def_cfa_offset 24
-.Ltmp30:
+.Ltmp35:
 	.cfi_offset 15, 0
 	std r5, r4, sp[1]
-.Ltmp31:
+.Ltmp36:
 	.cfi_offset 4, -16
-.Ltmp32:
+.Ltmp37:
 	.cfi_offset 5, -12
 	std r7, r6, sp[2]
-.Ltmp33:
+.Ltmp38:
 	.cfi_offset 6, -8
-.Ltmp34:
+.Ltmp39:
 	.cfi_offset 7, -4
-.Ltmp35:
+.Ltmp40:
 	{
 		mov r4, r2
 		mov r5, r1
 	}
-.Ltmp36:
+.Ltmp41:
+	.loc	1 102 2 prologue_end
+	{
+		ecallf r0
+		nop
+	}
+.Ltmp42:
+	.loc	1 103 2
+	{
+		ecallf r5
+		nop
+	}
+.Ltmp43:
+	.loc	1 104 2
+	{
+		ecallf r4
+		nop
+	}
+.Ltmp44:
+	.loc	1 105 2
+	{
+		eq r1, r5, r4
+		nop
+	}
+	.loc	1 105 2
+	{
+		ecallt r1
+		nop
+	}
 	{
 		ldc r1, 30
 		nop
 	}
-	.loc	1 105 5 prologue_end
-.Ltmp37:
+.Ltmp45:
+	.loc	1 107 5
 	{
 		shr r1, r0, r1
 		ldc r6, 0
 	}
 	bt r1, .LBB2_5
-.Ltmp38:
-	.loc	1 108 7
+.Ltmp46:
+	.loc	1 110 7
 	{
 		shl r0, r0, 2
 		nop
 	}
-.Ltmp39:
+.Ltmp47:
 	.loc	2 93 5
 	{
 		eq r1, r0, 0
@@ -267,38 +330,38 @@ FLAC__memory_alloc_aligned_uint32_array:
 		or r0, r1, r0
 		nop
 	}
-.Ltmp40:
+.Ltmp48:
 	.loc	2 95 9
 	bl malloc
 	{
 		mov r7, r0
 		nop
 	}
-.Ltmp41:
+.Ltmp49:
 	bf r7, .LBB2_5
-.Ltmp42:
+.Ltmp50:
 	{
 		nop
 		ldw r0, r5[0]
 	}
 	bf r0, .LBB2_4
-.Ltmp43:
-	.loc	1 114 4
+.Ltmp51:
+	.loc	1 116 4
 	bl free
-.Ltmp44:
+.Ltmp52:
 .LBB2_4:
 	{
 		nop
 		stw r7, r5[0]
 	}
-	.loc	1 116 3
+	.loc	1 118 3
 	{
 		mkmsk r6, 1
 		stw r7, r4[0]
 	}
-.Ltmp45:
+.Ltmp53:
 .LBB2_5:
-	.loc	1 119 1
+	.loc	1 121 1
 	{
 		mov r0, r6
 		nop
@@ -310,7 +373,7 @@ FLAC__memory_alloc_aligned_uint32_array:
 		retsp 6
 	}
 	# RETURN_REG_HOLDER
-.Ltmp46:
+.Ltmp54:
 	.cc_bottom FLAC__memory_alloc_aligned_uint32_array.function
 	.set	FLAC__memory_alloc_aligned_uint32_array.nstackwords,((malloc.nstackwords $M free.nstackwords) + 6)
 	.globl	FLAC__memory_alloc_aligned_uint32_array.nstackwords
@@ -320,8 +383,8 @@ FLAC__memory_alloc_aligned_uint32_array:
 	.globl	FLAC__memory_alloc_aligned_uint32_array.maxtimers
 	.set	FLAC__memory_alloc_aligned_uint32_array.maxchanends,free.maxchanends $M malloc.maxchanends $M 0
 	.globl	FLAC__memory_alloc_aligned_uint32_array.maxchanends
-.Ltmp47:
-	.size	FLAC__memory_alloc_aligned_uint32_array, .Ltmp47-FLAC__memory_alloc_aligned_uint32_array
+.Ltmp55:
+	.size	FLAC__memory_alloc_aligned_uint32_array, .Ltmp55-FLAC__memory_alloc_aligned_uint32_array
 .Lfunc_end2:
 	.cfi_endproc
 
@@ -331,51 +394,79 @@ FLAC__memory_alloc_aligned_uint32_array:
 	.cc_top FLAC__memory_alloc_aligned_int64_array.function,FLAC__memory_alloc_aligned_int64_array
 FLAC__memory_alloc_aligned_int64_array:
 .Lfunc_begin3:
-	.loc	1 122 0
+	.loc	1 124 0
 	.cfi_startproc
 	.issue_mode dual
 	{
 		nop
 		dualentsp 6
 	}
-.Ltmp48:
+.Ltmp56:
 	.cfi_def_cfa_offset 24
-.Ltmp49:
+.Ltmp57:
 	.cfi_offset 15, 0
 	std r5, r4, sp[1]
-.Ltmp50:
+.Ltmp58:
 	.cfi_offset 4, -16
-.Ltmp51:
+.Ltmp59:
 	.cfi_offset 5, -12
 	std r7, r6, sp[2]
-.Ltmp52:
+.Ltmp60:
 	.cfi_offset 6, -8
-.Ltmp53:
+.Ltmp61:
 	.cfi_offset 7, -4
-.Ltmp54:
+.Ltmp62:
 	{
 		mov r4, r2
 		mov r5, r1
 	}
-.Ltmp55:
+.Ltmp63:
+	.loc	1 131 2 prologue_end
+	{
+		ecallf r0
+		nop
+	}
+.Ltmp64:
+	.loc	1 132 2
+	{
+		ecallf r5
+		nop
+	}
+.Ltmp65:
+	.loc	1 133 2
+	{
+		ecallf r4
+		nop
+	}
+.Ltmp66:
+	.loc	1 134 2
+	{
+		eq r1, r5, r4
+		nop
+	}
+	.loc	1 134 2
+	{
+		ecallt r1
+		nop
+	}
 	{
 		ldc r1, 29
 		nop
 	}
-	.loc	1 134 5 prologue_end
-.Ltmp56:
+.Ltmp67:
+	.loc	1 136 5
 	{
 		shr r1, r0, r1
 		ldc r6, 0
 	}
 	bt r1, .LBB3_5
-.Ltmp57:
-	.loc	1 137 7
+.Ltmp68:
+	.loc	1 139 7
 	{
 		shl r0, r0, 3
 		nop
 	}
-.Ltmp58:
+.Ltmp69:
 	.loc	2 93 5
 	{
 		eq r1, r0, 0
@@ -386,38 +477,38 @@ FLAC__memory_alloc_aligned_int64_array:
 		or r0, r1, r0
 		nop
 	}
-.Ltmp59:
+.Ltmp70:
 	.loc	2 95 9
 	bl malloc
 	{
 		mov r7, r0
 		nop
 	}
-.Ltmp60:
+.Ltmp71:
 	bf r7, .LBB3_5
-.Ltmp61:
+.Ltmp72:
 	{
 		nop
 		ldw r0, r5[0]
 	}
 	bf r0, .LBB3_4
-.Ltmp62:
-	.loc	1 143 4
+.Ltmp73:
+	.loc	1 145 4
 	bl free
-.Ltmp63:
+.Ltmp74:
 .LBB3_4:
 	{
 		nop
 		stw r7, r5[0]
 	}
-	.loc	1 145 3
+	.loc	1 147 3
 	{
 		mkmsk r6, 1
 		stw r7, r4[0]
 	}
-.Ltmp64:
+.Ltmp75:
 .LBB3_5:
-	.loc	1 148 1
+	.loc	1 150 1
 	{
 		mov r0, r6
 		nop
@@ -429,7 +520,7 @@ FLAC__memory_alloc_aligned_int64_array:
 		retsp 6
 	}
 	# RETURN_REG_HOLDER
-.Ltmp65:
+.Ltmp76:
 	.cc_bottom FLAC__memory_alloc_aligned_int64_array.function
 	.set	FLAC__memory_alloc_aligned_int64_array.nstackwords,((malloc.nstackwords $M free.nstackwords) + 6)
 	.globl	FLAC__memory_alloc_aligned_int64_array.nstackwords
@@ -439,8 +530,8 @@ FLAC__memory_alloc_aligned_int64_array:
 	.globl	FLAC__memory_alloc_aligned_int64_array.maxtimers
 	.set	FLAC__memory_alloc_aligned_int64_array.maxchanends,free.maxchanends $M malloc.maxchanends $M 0
 	.globl	FLAC__memory_alloc_aligned_int64_array.maxchanends
-.Ltmp66:
-	.size	FLAC__memory_alloc_aligned_int64_array, .Ltmp66-FLAC__memory_alloc_aligned_int64_array
+.Ltmp77:
+	.size	FLAC__memory_alloc_aligned_int64_array, .Ltmp77-FLAC__memory_alloc_aligned_int64_array
 .Lfunc_end3:
 	.cfi_endproc
 
@@ -450,51 +541,79 @@ FLAC__memory_alloc_aligned_int64_array:
 	.cc_top FLAC__memory_alloc_aligned_uint64_array.function,FLAC__memory_alloc_aligned_uint64_array
 FLAC__memory_alloc_aligned_uint64_array:
 .Lfunc_begin4:
-	.loc	1 151 0
+	.loc	1 153 0
 	.cfi_startproc
 	.issue_mode dual
 	{
 		nop
 		dualentsp 6
 	}
-.Ltmp67:
+.Ltmp78:
 	.cfi_def_cfa_offset 24
-.Ltmp68:
+.Ltmp79:
 	.cfi_offset 15, 0
 	std r5, r4, sp[1]
-.Ltmp69:
+.Ltmp80:
 	.cfi_offset 4, -16
-.Ltmp70:
+.Ltmp81:
 	.cfi_offset 5, -12
 	std r7, r6, sp[2]
-.Ltmp71:
+.Ltmp82:
 	.cfi_offset 6, -8
-.Ltmp72:
+.Ltmp83:
 	.cfi_offset 7, -4
-.Ltmp73:
+.Ltmp84:
 	{
 		mov r4, r2
 		mov r5, r1
 	}
-.Ltmp74:
+.Ltmp85:
+	.loc	1 160 2 prologue_end
+	{
+		ecallf r0
+		nop
+	}
+.Ltmp86:
+	.loc	1 161 2
+	{
+		ecallf r5
+		nop
+	}
+.Ltmp87:
+	.loc	1 162 2
+	{
+		ecallf r4
+		nop
+	}
+.Ltmp88:
+	.loc	1 163 2
+	{
+		eq r1, r5, r4
+		nop
+	}
+	.loc	1 163 2
+	{
+		ecallt r1
+		nop
+	}
 	{
 		ldc r1, 29
 		nop
 	}
-	.loc	1 163 5 prologue_end
-.Ltmp75:
+.Ltmp89:
+	.loc	1 165 5
 	{
 		shr r1, r0, r1
 		ldc r6, 0
 	}
 	bt r1, .LBB4_5
-.Ltmp76:
-	.loc	1 166 7
+.Ltmp90:
+	.loc	1 168 7
 	{
 		shl r0, r0, 3
 		nop
 	}
-.Ltmp77:
+.Ltmp91:
 	.loc	2 93 5
 	{
 		eq r1, r0, 0
@@ -505,38 +624,38 @@ FLAC__memory_alloc_aligned_uint64_array:
 		or r0, r1, r0
 		nop
 	}
-.Ltmp78:
+.Ltmp92:
 	.loc	2 95 9
 	bl malloc
 	{
 		mov r7, r0
 		nop
 	}
-.Ltmp79:
+.Ltmp93:
 	bf r7, .LBB4_5
-.Ltmp80:
+.Ltmp94:
 	{
 		nop
 		ldw r0, r5[0]
 	}
 	bf r0, .LBB4_4
-.Ltmp81:
-	.loc	1 172 4
+.Ltmp95:
+	.loc	1 174 4
 	bl free
-.Ltmp82:
+.Ltmp96:
 .LBB4_4:
 	{
 		nop
 		stw r7, r5[0]
 	}
-	.loc	1 174 3
+	.loc	1 176 3
 	{
 		mkmsk r6, 1
 		stw r7, r4[0]
 	}
-.Ltmp83:
+.Ltmp97:
 .LBB4_5:
-	.loc	1 177 1
+	.loc	1 179 1
 	{
 		mov r0, r6
 		nop
@@ -548,7 +667,7 @@ FLAC__memory_alloc_aligned_uint64_array:
 		retsp 6
 	}
 	# RETURN_REG_HOLDER
-.Ltmp84:
+.Ltmp98:
 	.cc_bottom FLAC__memory_alloc_aligned_uint64_array.function
 	.set	FLAC__memory_alloc_aligned_uint64_array.nstackwords,((malloc.nstackwords $M free.nstackwords) + 6)
 	.globl	FLAC__memory_alloc_aligned_uint64_array.nstackwords
@@ -558,8 +677,8 @@ FLAC__memory_alloc_aligned_uint64_array:
 	.globl	FLAC__memory_alloc_aligned_uint64_array.maxtimers
 	.set	FLAC__memory_alloc_aligned_uint64_array.maxchanends,free.maxchanends $M malloc.maxchanends $M 0
 	.globl	FLAC__memory_alloc_aligned_uint64_array.maxchanends
-.Ltmp85:
-	.size	FLAC__memory_alloc_aligned_uint64_array, .Ltmp85-FLAC__memory_alloc_aligned_uint64_array
+.Ltmp99:
+	.size	FLAC__memory_alloc_aligned_uint64_array, .Ltmp99-FLAC__memory_alloc_aligned_uint64_array
 .Lfunc_end4:
 	.cfi_endproc
 
@@ -569,51 +688,79 @@ FLAC__memory_alloc_aligned_uint64_array:
 	.cc_top FLAC__memory_alloc_aligned_real_array.function,FLAC__memory_alloc_aligned_real_array
 FLAC__memory_alloc_aligned_real_array:
 .Lfunc_begin5:
-	.loc	1 182 0
+	.loc	1 184 0
 	.cfi_startproc
 	.issue_mode dual
 	{
 		nop
 		dualentsp 6
 	}
-.Ltmp86:
+.Ltmp100:
 	.cfi_def_cfa_offset 24
-.Ltmp87:
+.Ltmp101:
 	.cfi_offset 15, 0
 	std r5, r4, sp[1]
-.Ltmp88:
+.Ltmp102:
 	.cfi_offset 4, -16
-.Ltmp89:
+.Ltmp103:
 	.cfi_offset 5, -12
 	std r7, r6, sp[2]
-.Ltmp90:
+.Ltmp104:
 	.cfi_offset 6, -8
-.Ltmp91:
+.Ltmp105:
 	.cfi_offset 7, -4
-.Ltmp92:
+.Ltmp106:
 	{
 		mov r4, r2
 		mov r5, r1
 	}
-.Ltmp93:
+.Ltmp107:
+	.loc	1 191 2 prologue_end
+	{
+		ecallf r0
+		nop
+	}
+.Ltmp108:
+	.loc	1 192 2
+	{
+		ecallf r5
+		nop
+	}
+.Ltmp109:
+	.loc	1 193 2
+	{
+		ecallf r4
+		nop
+	}
+.Ltmp110:
+	.loc	1 194 2
+	{
+		eq r1, r5, r4
+		nop
+	}
+	.loc	1 194 2
+	{
+		ecallt r1
+		nop
+	}
 	{
 		ldc r1, 30
 		nop
 	}
-	.loc	1 194 5 prologue_end
-.Ltmp94:
+.Ltmp111:
+	.loc	1 196 5
 	{
 		shr r1, r0, r1
 		ldc r6, 0
 	}
 	bt r1, .LBB5_5
-.Ltmp95:
-	.loc	1 197 7
+.Ltmp112:
+	.loc	1 199 7
 	{
 		shl r0, r0, 2
 		nop
 	}
-.Ltmp96:
+.Ltmp113:
 	.loc	2 93 5
 	{
 		eq r1, r0, 0
@@ -624,38 +771,38 @@ FLAC__memory_alloc_aligned_real_array:
 		or r0, r1, r0
 		nop
 	}
-.Ltmp97:
+.Ltmp114:
 	.loc	2 95 9
 	bl malloc
 	{
 		mov r7, r0
 		nop
 	}
-.Ltmp98:
+.Ltmp115:
 	bf r7, .LBB5_5
-.Ltmp99:
+.Ltmp116:
 	{
 		nop
 		ldw r0, r5[0]
 	}
 	bf r0, .LBB5_4
-.Ltmp100:
-	.loc	1 203 4
+.Ltmp117:
+	.loc	1 205 4
 	bl free
-.Ltmp101:
+.Ltmp118:
 .LBB5_4:
 	{
 		nop
 		stw r7, r5[0]
 	}
-	.loc	1 205 3
+	.loc	1 207 3
 	{
 		mkmsk r6, 1
 		stw r7, r4[0]
 	}
-.Ltmp102:
+.Ltmp119:
 .LBB5_5:
-	.loc	1 208 1
+	.loc	1 210 1
 	{
 		mov r0, r6
 		nop
@@ -667,7 +814,7 @@ FLAC__memory_alloc_aligned_real_array:
 		retsp 6
 	}
 	# RETURN_REG_HOLDER
-.Ltmp103:
+.Ltmp120:
 	.cc_bottom FLAC__memory_alloc_aligned_real_array.function
 	.set	FLAC__memory_alloc_aligned_real_array.nstackwords,((malloc.nstackwords $M free.nstackwords) + 6)
 	.globl	FLAC__memory_alloc_aligned_real_array.nstackwords
@@ -677,8 +824,8 @@ FLAC__memory_alloc_aligned_real_array:
 	.globl	FLAC__memory_alloc_aligned_real_array.maxtimers
 	.set	FLAC__memory_alloc_aligned_real_array.maxchanends,free.maxchanends $M malloc.maxchanends $M 0
 	.globl	FLAC__memory_alloc_aligned_real_array.maxchanends
-.Ltmp104:
-	.size	FLAC__memory_alloc_aligned_real_array, .Ltmp104-FLAC__memory_alloc_aligned_real_array
+.Ltmp121:
+	.size	FLAC__memory_alloc_aligned_real_array, .Ltmp121-FLAC__memory_alloc_aligned_real_array
 .Lfunc_end5:
 	.cfi_endproc
 
@@ -688,41 +835,41 @@ FLAC__memory_alloc_aligned_real_array:
 	.cc_top safe_malloc_mul_2op_p.function,safe_malloc_mul_2op_p
 safe_malloc_mul_2op_p:
 .Lfunc_begin6:
-	.loc	1 213 0
+	.loc	1 215 0
 	.cfi_startproc
 	.issue_mode dual
 	{
 		nop
 		dualentsp 2
 	}
-.Ltmp105:
+.Ltmp122:
 	.cfi_def_cfa_offset 8
-.Ltmp106:
+.Ltmp123:
 	.cfi_offset 15, 0
 	bf r0, .LBB6_2
-.Ltmp107:
+.Ltmp124:
 	bf r1, .LBB6_2
-.Ltmp108:
+.Ltmp125:
 	{
 		mkmsk r2, 32
 		nop
 	}
-	.loc	1 216 5 prologue_end
-.Ltmp109:
+	.loc	1 218 5 prologue_end
+.Ltmp126:
 	divu r2, r2, r1
-	.loc	1 216 5
+	.loc	1 218 5
 	{
 		lsu r2, r2, r0
 		nop
 	}
-	.loc	1 216 5
+	.loc	1 218 5
 	bf r2, .LBB6_5
-.Ltmp110:
+.Ltmp127:
 	{
 		ldc r0, 0
 		retsp 2
 	}
-	.loc	1 219 1
+	.loc	1 221 1
 	# RETURN_REG_HOLDER
 .LBB6_2:
 	{
@@ -731,20 +878,20 @@ safe_malloc_mul_2op_p:
 	}
 	bu .LBB6_6
 .LBB6_5:
-.Ltmp111:
-	.loc	1 218 9
+.Ltmp128:
+	.loc	1 220 9
 	mul r0, r1, r0
-.Ltmp112:
+.Ltmp129:
 .LBB6_6:
-	.loc	1 218 9
+	.loc	1 220 9
 	bl malloc
 	{
 		nop
 		retsp 2
 	}
-	.loc	1 219 1
+	.loc	1 221 1
 	# RETURN_REG_HOLDER
-.Ltmp113:
+.Ltmp130:
 	.cc_bottom safe_malloc_mul_2op_p.function
 	.set	safe_malloc_mul_2op_p.nstackwords,(malloc.nstackwords + 2)
 	.globl	safe_malloc_mul_2op_p.nstackwords
@@ -754,8 +901,8 @@ safe_malloc_mul_2op_p:
 	.globl	safe_malloc_mul_2op_p.maxtimers
 	.set	safe_malloc_mul_2op_p.maxchanends,malloc.maxchanends $M 0
 	.globl	safe_malloc_mul_2op_p.maxchanends
-.Ltmp114:
-	.size	safe_malloc_mul_2op_p, .Ltmp114-safe_malloc_mul_2op_p
+.Ltmp131:
+	.size	safe_malloc_mul_2op_p, .Ltmp131-safe_malloc_mul_2op_p
 .Lfunc_end6:
 	.cfi_endproc
 
@@ -769,7 +916,7 @@ safe_malloc_mul_2op_p:
 .Linfo_string1:
 .asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\memory.c"
 .Linfo_string2:
-.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 .Linfo_string3:
 .asciiz"safe_malloc_"
 .Linfo_string4:
@@ -904,7 +1051,7 @@ safe_malloc_mul_2op_p:
 	.long	31
 	.long	.Ldebug_ranges1
 	.byte	1
-	.byte	57
+	.byte	59
 	.byte	8
 	.long	.Ldebug_loc2
 	.long	44
@@ -913,7 +1060,7 @@ safe_malloc_mul_2op_p:
 	.byte	11
 	.long	.Linfo_string7
 	.byte	1
-	.byte	46
+	.byte	48
 	.byte	1
 	.long	56
 	.byte	1
@@ -921,17 +1068,17 @@ safe_malloc_mul_2op_p:
 	.byte	3
 	.long	.Linfo_string8
 	.byte	1
-	.byte	46
+	.byte	48
 	.long	57
 	.byte	3
 	.long	.Linfo_string9
 	.byte	1
-	.byte	46
+	.byte	48
 	.long	182
 	.byte	12
 	.long	.Linfo_string10
 	.byte	1
-	.byte	48
+	.byte	50
 	.long	56
 	.byte	0
 	.byte	13
@@ -943,7 +1090,7 @@ safe_malloc_mul_2op_p:
 	.byte	1
 	.long	.Linfo_string11
 	.byte	1
-	.byte	63
+	.byte	65
 	.byte	1
 	.long	1078
 	.byte	1
@@ -951,35 +1098,35 @@ safe_malloc_mul_2op_p:
 	.long	.Ldebug_loc3
 	.long	.Linfo_string19
 	.byte	1
-	.byte	63
+	.byte	65
 	.long	57
 	.byte	15
 	.long	.Ldebug_loc4
 	.long	.Linfo_string20
 	.byte	1
-	.byte	63
+	.byte	65
 	.long	1096
 	.byte	15
 	.long	.Ldebug_loc5
 	.long	.Linfo_string24
 	.byte	1
-	.byte	63
+	.byte	65
 	.long	1096
 	.byte	12
 	.long	.Linfo_string25
 	.byte	1
-	.byte	65
+	.byte	67
 	.long	1101
 	.byte	12
 	.long	.Linfo_string26
 	.byte	1
-	.byte	69
+	.byte	71
 	.long	325
 	.byte	10
 	.long	134
 	.long	.Ldebug_ranges3
 	.byte	1
-	.byte	79
+	.byte	81
 	.byte	8
 	.long	.Ldebug_loc7
 	.long	148
@@ -990,7 +1137,7 @@ safe_malloc_mul_2op_p:
 	.long	31
 	.long	.Ldebug_ranges4
 	.byte	1
-	.byte	57
+	.byte	59
 	.byte	8
 	.long	.Ldebug_loc6
 	.long	44
@@ -999,18 +1146,18 @@ safe_malloc_mul_2op_p:
 	.byte	17
 	.byte	4
 	.byte	1
-	.byte	66
+	.byte	68
 	.byte	18
 	.long	.Linfo_string27
 	.long	1101
 	.byte	1
-	.byte	67
+	.byte	69
 	.byte	0
 	.byte	18
 	.long	.Linfo_string28
 	.long	56
 	.byte	1
-	.byte	68
+	.byte	70
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1021,7 +1168,7 @@ safe_malloc_mul_2op_p:
 	.byte	1
 	.long	.Linfo_string14
 	.byte	1
-	.byte	92
+	.byte	94
 	.byte	1
 	.long	1078
 	.byte	1
@@ -1029,35 +1176,35 @@ safe_malloc_mul_2op_p:
 	.long	.Ldebug_loc9
 	.long	.Linfo_string19
 	.byte	1
-	.byte	92
+	.byte	94
 	.long	57
 	.byte	15
 	.long	.Ldebug_loc10
 	.long	.Linfo_string20
 	.byte	1
-	.byte	92
+	.byte	94
 	.long	1135
 	.byte	15
 	.long	.Ldebug_loc11
 	.long	.Linfo_string24
 	.byte	1
-	.byte	92
+	.byte	94
 	.long	1135
 	.byte	12
 	.long	.Linfo_string25
 	.byte	1
-	.byte	94
+	.byte	96
 	.long	1140
 	.byte	12
 	.long	.Linfo_string26
 	.byte	1
-	.byte	98
+	.byte	100
 	.long	493
 	.byte	10
 	.long	134
 	.long	.Ldebug_ranges6
 	.byte	1
-	.byte	108
+	.byte	110
 	.byte	8
 	.long	.Ldebug_loc13
 	.long	148
@@ -1068,7 +1215,7 @@ safe_malloc_mul_2op_p:
 	.long	31
 	.long	.Ldebug_ranges7
 	.byte	1
-	.byte	57
+	.byte	59
 	.byte	8
 	.long	.Ldebug_loc12
 	.long	44
@@ -1077,18 +1224,18 @@ safe_malloc_mul_2op_p:
 	.byte	17
 	.byte	4
 	.byte	1
-	.byte	95
+	.byte	97
 	.byte	18
 	.long	.Linfo_string27
 	.long	1140
 	.byte	1
-	.byte	96
+	.byte	98
 	.byte	0
 	.byte	18
 	.long	.Linfo_string28
 	.long	56
 	.byte	1
-	.byte	97
+	.byte	99
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1099,7 +1246,7 @@ safe_malloc_mul_2op_p:
 	.byte	1
 	.long	.Linfo_string15
 	.byte	1
-	.byte	121
+	.byte	123
 	.byte	1
 	.long	1078
 	.byte	1
@@ -1107,35 +1254,35 @@ safe_malloc_mul_2op_p:
 	.long	.Ldebug_loc15
 	.long	.Linfo_string19
 	.byte	1
-	.byte	121
+	.byte	123
 	.long	57
 	.byte	15
 	.long	.Ldebug_loc16
 	.long	.Linfo_string20
 	.byte	1
-	.byte	121
+	.byte	123
 	.long	1174
 	.byte	15
 	.long	.Ldebug_loc17
 	.long	.Linfo_string24
 	.byte	1
-	.byte	121
+	.byte	123
 	.long	1174
 	.byte	12
 	.long	.Linfo_string25
 	.byte	1
-	.byte	123
+	.byte	125
 	.long	1179
 	.byte	12
 	.long	.Linfo_string26
 	.byte	1
-	.byte	127
+	.byte	129
 	.long	661
 	.byte	10
 	.long	134
 	.long	.Ldebug_ranges9
 	.byte	1
-	.byte	137
+	.byte	139
 	.byte	8
 	.long	.Ldebug_loc19
 	.long	148
@@ -1146,7 +1293,7 @@ safe_malloc_mul_2op_p:
 	.long	31
 	.long	.Ldebug_ranges10
 	.byte	1
-	.byte	57
+	.byte	59
 	.byte	8
 	.long	.Ldebug_loc18
 	.long	44
@@ -1155,18 +1302,18 @@ safe_malloc_mul_2op_p:
 	.byte	17
 	.byte	4
 	.byte	1
-	.byte	124
+	.byte	126
 	.byte	18
 	.long	.Linfo_string27
 	.long	1179
 	.byte	1
-	.byte	125
+	.byte	127
 	.byte	0
 	.byte	18
 	.long	.Linfo_string28
 	.long	56
 	.byte	1
-	.byte	126
+	.byte	128
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1177,7 +1324,7 @@ safe_malloc_mul_2op_p:
 	.byte	1
 	.long	.Linfo_string16
 	.byte	1
-	.byte	150
+	.byte	152
 	.byte	1
 	.long	1078
 	.byte	1
@@ -1185,35 +1332,35 @@ safe_malloc_mul_2op_p:
 	.long	.Ldebug_loc21
 	.long	.Linfo_string19
 	.byte	1
-	.byte	150
+	.byte	152
 	.long	57
 	.byte	15
 	.long	.Ldebug_loc22
 	.long	.Linfo_string20
 	.byte	1
-	.byte	150
+	.byte	152
 	.long	1213
 	.byte	15
 	.long	.Ldebug_loc23
 	.long	.Linfo_string24
 	.byte	1
-	.byte	150
+	.byte	152
 	.long	1213
 	.byte	12
 	.long	.Linfo_string25
 	.byte	1
-	.byte	152
+	.byte	154
 	.long	1218
 	.byte	12
 	.long	.Linfo_string26
 	.byte	1
-	.byte	156
+	.byte	158
 	.long	829
 	.byte	10
 	.long	134
 	.long	.Ldebug_ranges12
 	.byte	1
-	.byte	166
+	.byte	168
 	.byte	8
 	.long	.Ldebug_loc25
 	.long	148
@@ -1224,7 +1371,7 @@ safe_malloc_mul_2op_p:
 	.long	31
 	.long	.Ldebug_ranges13
 	.byte	1
-	.byte	57
+	.byte	59
 	.byte	8
 	.long	.Ldebug_loc24
 	.long	44
@@ -1233,18 +1380,18 @@ safe_malloc_mul_2op_p:
 	.byte	17
 	.byte	4
 	.byte	1
-	.byte	153
+	.byte	155
 	.byte	18
 	.long	.Linfo_string27
 	.long	1218
 	.byte	1
-	.byte	154
+	.byte	156
 	.byte	0
 	.byte	18
 	.long	.Linfo_string28
 	.long	56
 	.byte	1
-	.byte	155
+	.byte	157
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1255,7 +1402,7 @@ safe_malloc_mul_2op_p:
 	.byte	1
 	.long	.Linfo_string17
 	.byte	1
-	.byte	181
+	.byte	183
 	.byte	1
 	.long	1078
 	.byte	1
@@ -1263,35 +1410,35 @@ safe_malloc_mul_2op_p:
 	.long	.Ldebug_loc27
 	.long	.Linfo_string19
 	.byte	1
-	.byte	181
+	.byte	183
 	.long	57
 	.byte	15
 	.long	.Ldebug_loc28
 	.long	.Linfo_string20
 	.byte	1
-	.byte	181
+	.byte	183
 	.long	1252
 	.byte	15
 	.long	.Ldebug_loc29
 	.long	.Linfo_string24
 	.byte	1
-	.byte	181
+	.byte	183
 	.long	1252
 	.byte	12
 	.long	.Linfo_string25
 	.byte	1
-	.byte	183
+	.byte	185
 	.long	1257
 	.byte	12
 	.long	.Linfo_string26
 	.byte	1
-	.byte	187
+	.byte	189
 	.long	997
 	.byte	10
 	.long	134
 	.long	.Ldebug_ranges15
 	.byte	1
-	.byte	197
+	.byte	199
 	.byte	8
 	.long	.Ldebug_loc31
 	.long	148
@@ -1302,7 +1449,7 @@ safe_malloc_mul_2op_p:
 	.long	31
 	.long	.Ldebug_ranges16
 	.byte	1
-	.byte	57
+	.byte	59
 	.byte	8
 	.long	.Ldebug_loc30
 	.long	44
@@ -1311,18 +1458,18 @@ safe_malloc_mul_2op_p:
 	.byte	17
 	.byte	4
 	.byte	1
-	.byte	184
+	.byte	186
 	.byte	18
 	.long	.Linfo_string27
 	.long	1257
 	.byte	1
-	.byte	185
+	.byte	187
 	.byte	0
 	.byte	18
 	.long	.Linfo_string28
 	.long	56
 	.byte	1
-	.byte	186
+	.byte	188
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1333,7 +1480,7 @@ safe_malloc_mul_2op_p:
 	.byte	1
 	.long	.Linfo_string18
 	.byte	1
-	.byte	212
+	.byte	214
 	.byte	1
 	.long	56
 	.byte	1
@@ -1341,13 +1488,13 @@ safe_malloc_mul_2op_p:
 	.long	.Ldebug_loc33
 	.long	.Linfo_string40
 	.byte	1
-	.byte	212
+	.byte	214
 	.long	57
 	.byte	15
 	.long	.Ldebug_loc34
 	.long	.Linfo_string41
 	.byte	1
-	.byte	212
+	.byte	214
 	.long	57
 	.byte	0
 	.byte	5
@@ -1687,8 +1834,8 @@ safe_malloc_mul_2op_p:
 	.long	0
 	.long	0
 .Ldebug_ranges1:
-	.long	.Ltmp4
-	.long	.Ltmp7
+	.long	.Ltmp5
+	.long	.Ltmp9
 	.long	0
 	.long	0
 .Ldebug_ranges2:
@@ -1697,13 +1844,13 @@ safe_malloc_mul_2op_p:
 	.long	0
 	.long	0
 .Ldebug_ranges3:
-	.long	.Ltmp20
-	.long	.Ltmp23
+	.long	.Ltmp25
+	.long	.Ltmp28
 	.long	0
 	.long	0
 .Ldebug_ranges4:
-	.long	.Ltmp20
-	.long	.Ltmp23
+	.long	.Ltmp25
+	.long	.Ltmp28
 	.long	0
 	.long	0
 .Ldebug_ranges5:
@@ -1712,13 +1859,13 @@ safe_malloc_mul_2op_p:
 	.long	0
 	.long	0
 .Ldebug_ranges6:
-	.long	.Ltmp39
-	.long	.Ltmp42
+	.long	.Ltmp47
+	.long	.Ltmp50
 	.long	0
 	.long	0
 .Ldebug_ranges7:
-	.long	.Ltmp39
-	.long	.Ltmp42
+	.long	.Ltmp47
+	.long	.Ltmp50
 	.long	0
 	.long	0
 .Ldebug_ranges8:
@@ -1727,13 +1874,13 @@ safe_malloc_mul_2op_p:
 	.long	0
 	.long	0
 .Ldebug_ranges9:
-	.long	.Ltmp58
-	.long	.Ltmp61
+	.long	.Ltmp69
+	.long	.Ltmp72
 	.long	0
 	.long	0
 .Ldebug_ranges10:
-	.long	.Ltmp58
-	.long	.Ltmp61
+	.long	.Ltmp69
+	.long	.Ltmp72
 	.long	0
 	.long	0
 .Ldebug_ranges11:
@@ -1742,13 +1889,13 @@ safe_malloc_mul_2op_p:
 	.long	0
 	.long	0
 .Ldebug_ranges12:
-	.long	.Ltmp77
-	.long	.Ltmp80
+	.long	.Ltmp91
+	.long	.Ltmp94
 	.long	0
 	.long	0
 .Ldebug_ranges13:
-	.long	.Ltmp77
-	.long	.Ltmp80
+	.long	.Ltmp91
+	.long	.Ltmp94
 	.long	0
 	.long	0
 .Ldebug_ranges14:
@@ -1757,13 +1904,13 @@ safe_malloc_mul_2op_p:
 	.long	0
 	.long	0
 .Ldebug_ranges15:
-	.long	.Ltmp96
-	.long	.Ltmp99
+	.long	.Ltmp113
+	.long	.Ltmp116
 	.long	0
 	.long	0
 .Ldebug_ranges16:
-	.long	.Ltmp96
-	.long	.Ltmp99
+	.long	.Ltmp113
+	.long	.Ltmp116
 	.long	0
 	.long	0
 .Ldebug_ranges17:
@@ -1774,523 +1921,530 @@ safe_malloc_mul_2op_p:
 	.section	.debug_loc,"",@progbits
 .Ldebug_loc0:
 	.long	.Lfunc_begin0
-	.long	.Ltmp5
-.Lset0 = .Ltmp116-.Ltmp115
+	.long	.Ltmp6
+.Lset0 = .Ltmp133-.Ltmp132
 	.short	.Lset0
-.Ltmp115:
+.Ltmp132:
 	.byte	80
-.Ltmp116:
+.Ltmp133:
 	.long	0
 	.long	0
 .Ldebug_loc1:
 	.long	.Lfunc_begin0
 	.long	.Ltmp3
-.Lset1 = .Ltmp118-.Ltmp117
+.Lset1 = .Ltmp135-.Ltmp134
 	.short	.Lset1
-.Ltmp117:
+.Ltmp134:
 	.byte	81
-.Ltmp118:
+.Ltmp135:
 	.long	.Ltmp3
 	.long	.Ltmp4
-.Lset2 = .Ltmp120-.Ltmp119
+.Lset2 = .Ltmp137-.Ltmp136
 	.short	.Lset2
-.Ltmp119:
+.Ltmp136:
 	.byte	84
-.Ltmp120:
+.Ltmp137:
+	.long	.Ltmp5
+	.long	.Ltmp8
+.Lset3 = .Ltmp139-.Ltmp138
+	.short	.Lset3
+.Ltmp138:
+	.byte	84
+.Ltmp139:
 	.long	0
 	.long	0
 .Ldebug_loc2:
-	.long	.Ltmp3
 	.long	.Ltmp5
-.Lset3 = .Ltmp122-.Ltmp121
-	.short	.Lset3
-.Ltmp121:
+	.long	.Ltmp6
+.Lset4 = .Ltmp141-.Ltmp140
+	.short	.Lset4
+.Ltmp140:
 	.byte	80
-.Ltmp122:
+.Ltmp141:
 	.long	0
 	.long	0
 .Ldebug_loc3:
 	.long	.Lfunc_begin1
-	.long	.Ltmp20
-.Lset4 = .Ltmp124-.Ltmp123
-	.short	.Lset4
-.Ltmp123:
+	.long	.Ltmp25
+.Lset5 = .Ltmp143-.Ltmp142
+	.short	.Lset5
+.Ltmp142:
 	.byte	80
-.Ltmp124:
+.Ltmp143:
 	.long	0
 	.long	0
 .Ldebug_loc4:
 	.long	.Lfunc_begin1
-	.long	.Ltmp16
-.Lset5 = .Ltmp126-.Ltmp125
-	.short	.Lset5
-.Ltmp125:
-	.byte	81
-.Ltmp126:
-	.long	.Ltmp16
-	.long	.Ltmp17
-.Lset6 = .Ltmp128-.Ltmp127
+	.long	.Ltmp18
+.Lset6 = .Ltmp145-.Ltmp144
 	.short	.Lset6
-.Ltmp127:
-	.byte	85
-.Ltmp128:
+.Ltmp144:
+	.byte	81
+.Ltmp145:
+	.long	.Ltmp18
 	.long	.Ltmp19
-	.long	.Ltmp26
-.Lset7 = .Ltmp130-.Ltmp129
+.Lset7 = .Ltmp147-.Ltmp146
 	.short	.Lset7
-.Ltmp129:
+.Ltmp146:
 	.byte	85
-.Ltmp130:
+.Ltmp147:
+	.long	.Ltmp20
+	.long	.Ltmp31
+.Lset8 = .Ltmp149-.Ltmp148
+	.short	.Lset8
+.Ltmp148:
+	.byte	85
+.Ltmp149:
 	.long	0
 	.long	0
 .Ldebug_loc5:
 	.long	.Lfunc_begin1
-	.long	.Ltmp16
-.Lset8 = .Ltmp132-.Ltmp131
-	.short	.Lset8
-.Ltmp131:
-	.byte	82
-.Ltmp132:
-	.long	.Ltmp16
-	.long	.Ltmp17
-.Lset9 = .Ltmp134-.Ltmp133
+	.long	.Ltmp18
+.Lset9 = .Ltmp151-.Ltmp150
 	.short	.Lset9
-.Ltmp133:
-	.byte	84
-.Ltmp134:
+.Ltmp150:
+	.byte	82
+.Ltmp151:
+	.long	.Ltmp18
 	.long	.Ltmp19
-	.long	.Ltmp26
-.Lset10 = .Ltmp136-.Ltmp135
+.Lset10 = .Ltmp153-.Ltmp152
 	.short	.Lset10
-.Ltmp135:
+.Ltmp152:
 	.byte	84
-.Ltmp136:
+.Ltmp153:
+	.long	.Ltmp20
+	.long	.Ltmp31
+.Lset11 = .Ltmp155-.Ltmp154
+	.short	.Lset11
+.Ltmp154:
+	.byte	84
+.Ltmp155:
 	.long	0
 	.long	0
 .Ldebug_loc6:
-	.long	.Ltmp20
-	.long	.Ltmp21
-.Lset11 = .Ltmp138-.Ltmp137
-	.short	.Lset11
-.Ltmp137:
+	.long	.Ltmp25
+	.long	.Ltmp26
+.Lset12 = .Ltmp157-.Ltmp156
+	.short	.Lset12
+.Ltmp156:
 	.byte	80
-.Ltmp138:
+.Ltmp157:
 	.long	0
 	.long	0
 .Ldebug_loc7:
-	.long	.Ltmp20
-	.long	.Ltmp21
-.Lset12 = .Ltmp140-.Ltmp139
-	.short	.Lset12
-.Ltmp139:
+	.long	.Ltmp25
+	.long	.Ltmp26
+.Lset13 = .Ltmp159-.Ltmp158
+	.short	.Lset13
+.Ltmp158:
 	.byte	80
-.Ltmp140:
+.Ltmp159:
 	.long	0
 	.long	0
 .Ldebug_loc8:
-	.long	.Ltmp22
-	.long	.Ltmp23
-.Lset13 = .Ltmp142-.Ltmp141
-	.short	.Lset13
-.Ltmp141:
+	.long	.Ltmp27
+	.long	.Ltmp28
+.Lset14 = .Ltmp161-.Ltmp160
+	.short	.Lset14
+.Ltmp160:
 	.byte	87
-.Ltmp142:
+.Ltmp161:
 	.long	0
 	.long	0
 .Ldebug_loc9:
 	.long	.Lfunc_begin2
-	.long	.Ltmp39
-.Lset14 = .Ltmp144-.Ltmp143
-	.short	.Lset14
-.Ltmp143:
+	.long	.Ltmp47
+.Lset15 = .Ltmp163-.Ltmp162
+	.short	.Lset15
+.Ltmp162:
 	.byte	80
-.Ltmp144:
+.Ltmp163:
 	.long	0
 	.long	0
 .Ldebug_loc10:
 	.long	.Lfunc_begin2
-	.long	.Ltmp35
-.Lset15 = .Ltmp146-.Ltmp145
-	.short	.Lset15
-.Ltmp145:
-	.byte	81
-.Ltmp146:
-	.long	.Ltmp35
-	.long	.Ltmp36
-.Lset16 = .Ltmp148-.Ltmp147
+	.long	.Ltmp40
+.Lset16 = .Ltmp165-.Ltmp164
 	.short	.Lset16
-.Ltmp147:
-	.byte	85
-.Ltmp148:
-	.long	.Ltmp38
-	.long	.Ltmp45
-.Lset17 = .Ltmp150-.Ltmp149
+.Ltmp164:
+	.byte	81
+.Ltmp165:
+	.long	.Ltmp40
+	.long	.Ltmp41
+.Lset17 = .Ltmp167-.Ltmp166
 	.short	.Lset17
-.Ltmp149:
+.Ltmp166:
 	.byte	85
-.Ltmp150:
+.Ltmp167:
+	.long	.Ltmp42
+	.long	.Ltmp53
+.Lset18 = .Ltmp169-.Ltmp168
+	.short	.Lset18
+.Ltmp168:
+	.byte	85
+.Ltmp169:
 	.long	0
 	.long	0
 .Ldebug_loc11:
 	.long	.Lfunc_begin2
-	.long	.Ltmp35
-.Lset18 = .Ltmp152-.Ltmp151
-	.short	.Lset18
-.Ltmp151:
-	.byte	82
-.Ltmp152:
-	.long	.Ltmp35
-	.long	.Ltmp36
-.Lset19 = .Ltmp154-.Ltmp153
+	.long	.Ltmp40
+.Lset19 = .Ltmp171-.Ltmp170
 	.short	.Lset19
-.Ltmp153:
-	.byte	84
-.Ltmp154:
-	.long	.Ltmp38
-	.long	.Ltmp45
-.Lset20 = .Ltmp156-.Ltmp155
+.Ltmp170:
+	.byte	82
+.Ltmp171:
+	.long	.Ltmp40
+	.long	.Ltmp41
+.Lset20 = .Ltmp173-.Ltmp172
 	.short	.Lset20
-.Ltmp155:
+.Ltmp172:
 	.byte	84
-.Ltmp156:
+.Ltmp173:
+	.long	.Ltmp42
+	.long	.Ltmp53
+.Lset21 = .Ltmp175-.Ltmp174
+	.short	.Lset21
+.Ltmp174:
+	.byte	84
+.Ltmp175:
 	.long	0
 	.long	0
 .Ldebug_loc12:
-	.long	.Ltmp39
-	.long	.Ltmp40
-.Lset21 = .Ltmp158-.Ltmp157
-	.short	.Lset21
-.Ltmp157:
+	.long	.Ltmp47
+	.long	.Ltmp48
+.Lset22 = .Ltmp177-.Ltmp176
+	.short	.Lset22
+.Ltmp176:
 	.byte	80
-.Ltmp158:
+.Ltmp177:
 	.long	0
 	.long	0
 .Ldebug_loc13:
-	.long	.Ltmp39
-	.long	.Ltmp40
-.Lset22 = .Ltmp160-.Ltmp159
-	.short	.Lset22
-.Ltmp159:
+	.long	.Ltmp47
+	.long	.Ltmp48
+.Lset23 = .Ltmp179-.Ltmp178
+	.short	.Lset23
+.Ltmp178:
 	.byte	80
-.Ltmp160:
+.Ltmp179:
 	.long	0
 	.long	0
 .Ldebug_loc14:
-	.long	.Ltmp41
-	.long	.Ltmp42
-.Lset23 = .Ltmp162-.Ltmp161
-	.short	.Lset23
-.Ltmp161:
+	.long	.Ltmp49
+	.long	.Ltmp50
+.Lset24 = .Ltmp181-.Ltmp180
+	.short	.Lset24
+.Ltmp180:
 	.byte	87
-.Ltmp162:
+.Ltmp181:
 	.long	0
 	.long	0
 .Ldebug_loc15:
 	.long	.Lfunc_begin3
-	.long	.Ltmp58
-.Lset24 = .Ltmp164-.Ltmp163
-	.short	.Lset24
-.Ltmp163:
+	.long	.Ltmp69
+.Lset25 = .Ltmp183-.Ltmp182
+	.short	.Lset25
+.Ltmp182:
 	.byte	80
-.Ltmp164:
+.Ltmp183:
 	.long	0
 	.long	0
 .Ldebug_loc16:
 	.long	.Lfunc_begin3
-	.long	.Ltmp54
-.Lset25 = .Ltmp166-.Ltmp165
-	.short	.Lset25
-.Ltmp165:
-	.byte	81
-.Ltmp166:
-	.long	.Ltmp54
-	.long	.Ltmp55
-.Lset26 = .Ltmp168-.Ltmp167
+	.long	.Ltmp62
+.Lset26 = .Ltmp185-.Ltmp184
 	.short	.Lset26
-.Ltmp167:
-	.byte	85
-.Ltmp168:
-	.long	.Ltmp57
-	.long	.Ltmp64
-.Lset27 = .Ltmp170-.Ltmp169
+.Ltmp184:
+	.byte	81
+.Ltmp185:
+	.long	.Ltmp62
+	.long	.Ltmp63
+.Lset27 = .Ltmp187-.Ltmp186
 	.short	.Lset27
-.Ltmp169:
+.Ltmp186:
 	.byte	85
-.Ltmp170:
+.Ltmp187:
+	.long	.Ltmp64
+	.long	.Ltmp75
+.Lset28 = .Ltmp189-.Ltmp188
+	.short	.Lset28
+.Ltmp188:
+	.byte	85
+.Ltmp189:
 	.long	0
 	.long	0
 .Ldebug_loc17:
 	.long	.Lfunc_begin3
-	.long	.Ltmp54
-.Lset28 = .Ltmp172-.Ltmp171
-	.short	.Lset28
-.Ltmp171:
-	.byte	82
-.Ltmp172:
-	.long	.Ltmp54
-	.long	.Ltmp55
-.Lset29 = .Ltmp174-.Ltmp173
+	.long	.Ltmp62
+.Lset29 = .Ltmp191-.Ltmp190
 	.short	.Lset29
-.Ltmp173:
-	.byte	84
-.Ltmp174:
-	.long	.Ltmp57
-	.long	.Ltmp64
-.Lset30 = .Ltmp176-.Ltmp175
+.Ltmp190:
+	.byte	82
+.Ltmp191:
+	.long	.Ltmp62
+	.long	.Ltmp63
+.Lset30 = .Ltmp193-.Ltmp192
 	.short	.Lset30
-.Ltmp175:
+.Ltmp192:
 	.byte	84
-.Ltmp176:
+.Ltmp193:
+	.long	.Ltmp64
+	.long	.Ltmp75
+.Lset31 = .Ltmp195-.Ltmp194
+	.short	.Lset31
+.Ltmp194:
+	.byte	84
+.Ltmp195:
 	.long	0
 	.long	0
 .Ldebug_loc18:
-	.long	.Ltmp58
-	.long	.Ltmp59
-.Lset31 = .Ltmp178-.Ltmp177
-	.short	.Lset31
-.Ltmp177:
+	.long	.Ltmp69
+	.long	.Ltmp70
+.Lset32 = .Ltmp197-.Ltmp196
+	.short	.Lset32
+.Ltmp196:
 	.byte	80
-.Ltmp178:
+.Ltmp197:
 	.long	0
 	.long	0
 .Ldebug_loc19:
-	.long	.Ltmp58
-	.long	.Ltmp59
-.Lset32 = .Ltmp180-.Ltmp179
-	.short	.Lset32
-.Ltmp179:
+	.long	.Ltmp69
+	.long	.Ltmp70
+.Lset33 = .Ltmp199-.Ltmp198
+	.short	.Lset33
+.Ltmp198:
 	.byte	80
-.Ltmp180:
+.Ltmp199:
 	.long	0
 	.long	0
 .Ldebug_loc20:
-	.long	.Ltmp60
-	.long	.Ltmp61
-.Lset33 = .Ltmp182-.Ltmp181
-	.short	.Lset33
-.Ltmp181:
+	.long	.Ltmp71
+	.long	.Ltmp72
+.Lset34 = .Ltmp201-.Ltmp200
+	.short	.Lset34
+.Ltmp200:
 	.byte	87
-.Ltmp182:
+.Ltmp201:
 	.long	0
 	.long	0
 .Ldebug_loc21:
 	.long	.Lfunc_begin4
-	.long	.Ltmp77
-.Lset34 = .Ltmp184-.Ltmp183
-	.short	.Lset34
-.Ltmp183:
+	.long	.Ltmp91
+.Lset35 = .Ltmp203-.Ltmp202
+	.short	.Lset35
+.Ltmp202:
 	.byte	80
-.Ltmp184:
+.Ltmp203:
 	.long	0
 	.long	0
 .Ldebug_loc22:
 	.long	.Lfunc_begin4
-	.long	.Ltmp73
-.Lset35 = .Ltmp186-.Ltmp185
-	.short	.Lset35
-.Ltmp185:
-	.byte	81
-.Ltmp186:
-	.long	.Ltmp73
-	.long	.Ltmp74
-.Lset36 = .Ltmp188-.Ltmp187
+	.long	.Ltmp84
+.Lset36 = .Ltmp205-.Ltmp204
 	.short	.Lset36
-.Ltmp187:
-	.byte	85
-.Ltmp188:
-	.long	.Ltmp76
-	.long	.Ltmp83
-.Lset37 = .Ltmp190-.Ltmp189
+.Ltmp204:
+	.byte	81
+.Ltmp205:
+	.long	.Ltmp84
+	.long	.Ltmp85
+.Lset37 = .Ltmp207-.Ltmp206
 	.short	.Lset37
-.Ltmp189:
+.Ltmp206:
 	.byte	85
-.Ltmp190:
+.Ltmp207:
+	.long	.Ltmp86
+	.long	.Ltmp97
+.Lset38 = .Ltmp209-.Ltmp208
+	.short	.Lset38
+.Ltmp208:
+	.byte	85
+.Ltmp209:
 	.long	0
 	.long	0
 .Ldebug_loc23:
 	.long	.Lfunc_begin4
-	.long	.Ltmp73
-.Lset38 = .Ltmp192-.Ltmp191
-	.short	.Lset38
-.Ltmp191:
-	.byte	82
-.Ltmp192:
-	.long	.Ltmp73
-	.long	.Ltmp74
-.Lset39 = .Ltmp194-.Ltmp193
+	.long	.Ltmp84
+.Lset39 = .Ltmp211-.Ltmp210
 	.short	.Lset39
-.Ltmp193:
-	.byte	84
-.Ltmp194:
-	.long	.Ltmp76
-	.long	.Ltmp83
-.Lset40 = .Ltmp196-.Ltmp195
+.Ltmp210:
+	.byte	82
+.Ltmp211:
+	.long	.Ltmp84
+	.long	.Ltmp85
+.Lset40 = .Ltmp213-.Ltmp212
 	.short	.Lset40
-.Ltmp195:
+.Ltmp212:
 	.byte	84
-.Ltmp196:
+.Ltmp213:
+	.long	.Ltmp86
+	.long	.Ltmp97
+.Lset41 = .Ltmp215-.Ltmp214
+	.short	.Lset41
+.Ltmp214:
+	.byte	84
+.Ltmp215:
 	.long	0
 	.long	0
 .Ldebug_loc24:
-	.long	.Ltmp77
-	.long	.Ltmp78
-.Lset41 = .Ltmp198-.Ltmp197
-	.short	.Lset41
-.Ltmp197:
+	.long	.Ltmp91
+	.long	.Ltmp92
+.Lset42 = .Ltmp217-.Ltmp216
+	.short	.Lset42
+.Ltmp216:
 	.byte	80
-.Ltmp198:
+.Ltmp217:
 	.long	0
 	.long	0
 .Ldebug_loc25:
-	.long	.Ltmp77
-	.long	.Ltmp78
-.Lset42 = .Ltmp200-.Ltmp199
-	.short	.Lset42
-.Ltmp199:
+	.long	.Ltmp91
+	.long	.Ltmp92
+.Lset43 = .Ltmp219-.Ltmp218
+	.short	.Lset43
+.Ltmp218:
 	.byte	80
-.Ltmp200:
+.Ltmp219:
 	.long	0
 	.long	0
 .Ldebug_loc26:
-	.long	.Ltmp79
-	.long	.Ltmp80
-.Lset43 = .Ltmp202-.Ltmp201
-	.short	.Lset43
-.Ltmp201:
+	.long	.Ltmp93
+	.long	.Ltmp94
+.Lset44 = .Ltmp221-.Ltmp220
+	.short	.Lset44
+.Ltmp220:
 	.byte	87
-.Ltmp202:
+.Ltmp221:
 	.long	0
 	.long	0
 .Ldebug_loc27:
 	.long	.Lfunc_begin5
-	.long	.Ltmp96
-.Lset44 = .Ltmp204-.Ltmp203
-	.short	.Lset44
-.Ltmp203:
+	.long	.Ltmp113
+.Lset45 = .Ltmp223-.Ltmp222
+	.short	.Lset45
+.Ltmp222:
 	.byte	80
-.Ltmp204:
+.Ltmp223:
 	.long	0
 	.long	0
 .Ldebug_loc28:
 	.long	.Lfunc_begin5
-	.long	.Ltmp92
-.Lset45 = .Ltmp206-.Ltmp205
-	.short	.Lset45
-.Ltmp205:
-	.byte	81
-.Ltmp206:
-	.long	.Ltmp92
-	.long	.Ltmp93
-.Lset46 = .Ltmp208-.Ltmp207
+	.long	.Ltmp106
+.Lset46 = .Ltmp225-.Ltmp224
 	.short	.Lset46
-.Ltmp207:
-	.byte	85
-.Ltmp208:
-	.long	.Ltmp95
-	.long	.Ltmp102
-.Lset47 = .Ltmp210-.Ltmp209
+.Ltmp224:
+	.byte	81
+.Ltmp225:
+	.long	.Ltmp106
+	.long	.Ltmp107
+.Lset47 = .Ltmp227-.Ltmp226
 	.short	.Lset47
-.Ltmp209:
+.Ltmp226:
 	.byte	85
-.Ltmp210:
+.Ltmp227:
+	.long	.Ltmp108
+	.long	.Ltmp119
+.Lset48 = .Ltmp229-.Ltmp228
+	.short	.Lset48
+.Ltmp228:
+	.byte	85
+.Ltmp229:
 	.long	0
 	.long	0
 .Ldebug_loc29:
 	.long	.Lfunc_begin5
-	.long	.Ltmp92
-.Lset48 = .Ltmp212-.Ltmp211
-	.short	.Lset48
-.Ltmp211:
-	.byte	82
-.Ltmp212:
-	.long	.Ltmp92
-	.long	.Ltmp93
-.Lset49 = .Ltmp214-.Ltmp213
+	.long	.Ltmp106
+.Lset49 = .Ltmp231-.Ltmp230
 	.short	.Lset49
-.Ltmp213:
-	.byte	84
-.Ltmp214:
-	.long	.Ltmp95
-	.long	.Ltmp102
-.Lset50 = .Ltmp216-.Ltmp215
+.Ltmp230:
+	.byte	82
+.Ltmp231:
+	.long	.Ltmp106
+	.long	.Ltmp107
+.Lset50 = .Ltmp233-.Ltmp232
 	.short	.Lset50
-.Ltmp215:
+.Ltmp232:
 	.byte	84
-.Ltmp216:
+.Ltmp233:
+	.long	.Ltmp108
+	.long	.Ltmp119
+.Lset51 = .Ltmp235-.Ltmp234
+	.short	.Lset51
+.Ltmp234:
+	.byte	84
+.Ltmp235:
 	.long	0
 	.long	0
 .Ldebug_loc30:
-	.long	.Ltmp96
-	.long	.Ltmp97
-.Lset51 = .Ltmp218-.Ltmp217
-	.short	.Lset51
-.Ltmp217:
+	.long	.Ltmp113
+	.long	.Ltmp114
+.Lset52 = .Ltmp237-.Ltmp236
+	.short	.Lset52
+.Ltmp236:
 	.byte	80
-.Ltmp218:
+.Ltmp237:
 	.long	0
 	.long	0
 .Ldebug_loc31:
-	.long	.Ltmp96
-	.long	.Ltmp97
-.Lset52 = .Ltmp220-.Ltmp219
-	.short	.Lset52
-.Ltmp219:
+	.long	.Ltmp113
+	.long	.Ltmp114
+.Lset53 = .Ltmp239-.Ltmp238
+	.short	.Lset53
+.Ltmp238:
 	.byte	80
-.Ltmp220:
+.Ltmp239:
 	.long	0
 	.long	0
 .Ldebug_loc32:
-	.long	.Ltmp98
-	.long	.Ltmp99
-.Lset53 = .Ltmp222-.Ltmp221
-	.short	.Lset53
-.Ltmp221:
+	.long	.Ltmp115
+	.long	.Ltmp116
+.Lset54 = .Ltmp241-.Ltmp240
+	.short	.Lset54
+.Ltmp240:
 	.byte	87
-.Ltmp222:
+.Ltmp241:
 	.long	0
 	.long	0
 .Ldebug_loc33:
 	.long	.Lfunc_begin6
-	.long	.Ltmp110
-.Lset54 = .Ltmp224-.Ltmp223
-	.short	.Lset54
-.Ltmp223:
-	.byte	80
-.Ltmp224:
-	.long	.Ltmp111
-	.long	.Ltmp112
-.Lset55 = .Ltmp226-.Ltmp225
+	.long	.Ltmp127
+.Lset55 = .Ltmp243-.Ltmp242
 	.short	.Lset55
-.Ltmp225:
+.Ltmp242:
 	.byte	80
-.Ltmp226:
+.Ltmp243:
+	.long	.Ltmp128
+	.long	.Ltmp129
+.Lset56 = .Ltmp245-.Ltmp244
+	.short	.Lset56
+.Ltmp244:
+	.byte	80
+.Ltmp245:
 	.long	0
 	.long	0
 .Ldebug_loc34:
 	.long	.Lfunc_begin6
-	.long	.Ltmp110
-.Lset56 = .Ltmp228-.Ltmp227
-	.short	.Lset56
-.Ltmp227:
-	.byte	81
-.Ltmp228:
-	.long	.Ltmp111
-	.long	.Ltmp112
-.Lset57 = .Ltmp230-.Ltmp229
+	.long	.Ltmp127
+.Lset57 = .Ltmp247-.Ltmp246
 	.short	.Lset57
-.Ltmp229:
+.Ltmp246:
 	.byte	81
-.Ltmp230:
+.Ltmp247:
+	.long	.Ltmp128
+	.long	.Ltmp129
+.Lset58 = .Ltmp249-.Ltmp248
+	.short	.Lset58
+.Ltmp248:
+	.byte	81
+.Ltmp249:
 	.long	0
 	.long	0
 	.section	.debug_pubnames,"",@progbits
-.Lset58 = .LpubNames_end0-.LpubNames_begin0
-	.long	.Lset58
+.Lset59 = .LpubNames_end0-.LpubNames_begin0
+	.long	.Lset59
 .LpubNames_begin0:
 	.short	2
 	.long	.L.debug_info_begin0
-.Lset59 = .L.debug_info_end0-.L.debug_info_begin0
-	.long	.Lset59
+.Lset60 = .L.debug_info_end0-.L.debug_info_begin0
+	.long	.Lset60
 	.long	691
 .asciiz"FLAC__memory_alloc_aligned_uint64_array"
 	.long	1027
@@ -2310,13 +2464,13 @@ safe_malloc_mul_2op_p:
 	.long	0
 .LpubNames_end0:
 	.section	.debug_pubtypes,"",@progbits
-.Lset60 = .LpubTypes_end0-.LpubTypes_begin0
-	.long	.Lset60
+.Lset61 = .LpubTypes_end0-.LpubTypes_begin0
+	.long	.Lset61
 .LpubTypes_begin0:
 	.short	2
 	.long	.L.debug_info_begin0
-.Lset61 = .L.debug_info_end0-.L.debug_info_begin0
-	.long	.Lset61
+.Lset62 = .L.debug_info_end0-.L.debug_info_begin0
+	.long	.Lset62
 	.long	1078
 .asciiz"FLAC__bool"
 	.long	1262

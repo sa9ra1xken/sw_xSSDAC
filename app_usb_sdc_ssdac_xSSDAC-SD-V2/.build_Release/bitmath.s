@@ -57,17 +57,23 @@ FLAC__bitmath_silog2:
 .LBB0_4:
 	.loc	1 71 2
 	ashr r2, r1, 32
-	.loc	1 71 2
-	xor r1, r2, r1
 	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private\\bitmath.h"
-	.loc	2 178 9
+	.loc	2 178 2
 .Ltmp2:
-	bt r1, .LBB0_5
-.Ltmp3:
-	.loc	1 71 2
+	xor r1, r2, r1
 	xor r0, r2, r0
-	.loc	2 178 9
-.Ltmp4:
+	{
+		or r2, r0, r1
+		nop
+	}
+	.loc	2 178 2
+	{
+		ecallf r2
+		nop
+	}
+.Ltmp3:
+	.loc	2 180 9
+	bt r1, .LBB0_5
 	{
 		clz r0, r0
 		nop
@@ -79,7 +85,7 @@ FLAC__bitmath_silog2:
 		clz r0, r1
 		nop
 	}
-.Ltmp5:
+.Ltmp4:
 .LBB0_7:
 	ldc r1, 65
 	.loc	1 72 9
@@ -89,7 +95,7 @@ FLAC__bitmath_silog2:
 	}
 	.loc	1 73 1
 	# RETURN_REG_HOLDER
-.Ltmp6:
+.Ltmp5:
 	.cc_bottom FLAC__bitmath_silog2.function
 	.set	FLAC__bitmath_silog2.nstackwords,0
 	.globl	FLAC__bitmath_silog2.nstackwords
@@ -99,8 +105,8 @@ FLAC__bitmath_silog2:
 	.globl	FLAC__bitmath_silog2.maxtimers
 	.set	FLAC__bitmath_silog2.maxchanends,0
 	.globl	FLAC__bitmath_silog2.maxchanends
-.Ltmp7:
-	.size	FLAC__bitmath_silog2, .Ltmp7-FLAC__bitmath_silog2
+.Ltmp6:
+	.size	FLAC__bitmath_silog2, .Ltmp6-FLAC__bitmath_silog2
 .Lfunc_end0:
 	.file	3 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h"
 	.file	4 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC\\ordinals.h"
@@ -113,7 +119,7 @@ FLAC__bitmath_silog2:
 .Linfo_string1:
 .asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source\\bitmath.c"
 .Linfo_string2:
-.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 .Linfo_string3:
 .asciiz"FLAC__bitmath_ilog2_wide"
 .Linfo_string4:
@@ -152,14 +158,14 @@ FLAC__bitmath_silog2:
 	.byte	2
 	.long	.Linfo_string3
 	.byte	2
-	.byte	174
+	.byte	176
 	.byte	1
 	.long	56
 	.byte	1
 	.byte	3
 	.long	.Linfo_string6
 	.byte	2
-	.byte	174
+	.byte	176
 	.long	74
 	.byte	0
 	.byte	4
@@ -340,9 +346,7 @@ FLAC__bitmath_silog2:
 	.long	0
 .Ldebug_ranges1:
 	.long	.Ltmp2
-	.long	.Ltmp3
 	.long	.Ltmp4
-	.long	.Ltmp5
 	.long	0
 	.long	0
 	.section	.debug_loc,"",@progbits

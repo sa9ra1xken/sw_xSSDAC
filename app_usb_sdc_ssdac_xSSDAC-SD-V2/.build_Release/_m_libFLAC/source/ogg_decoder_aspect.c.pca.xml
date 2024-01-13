@@ -65,6 +65,7 @@
   <fCall global="true" name="ogg_page_serialno"/>
   <fCall global="true" name="ogg_stream_pagein"/>
   <fCall global="true" name="ogg_sync_buffer"/>
+  <fCall global="true" name="assert"/>
   <fCall global="true" name="ogg_sync_wrote"/>
   <fCall global="true" name="FLAC__OGG_MAPPING_FIRST_HEADER_PACKET_TYPE"/>
   <fCall global="true" name="FLAC__OGG_MAPPING_MAGIC"/>

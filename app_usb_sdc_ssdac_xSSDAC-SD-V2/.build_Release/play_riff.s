@@ -442,7 +442,7 @@ PlayRIFF:
 		nop
 		stw r1, sp[1]
 	}
-	ldaw r0, dp[information_string]
+	ldaw r0, dp[audio_property_string]
 	ldaw r11, cp[.L.str4]
 	{
 		mov r1, r11
@@ -964,7 +964,7 @@ InitialRun:
 .Linfo_string1:
 .asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\play_riff.c"
 .Linfo_string2:
-.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
+.asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release"
 .Linfo_string3:
 .asciiz"p_file"
 .Linfo_string4:
@@ -1872,7 +1872,7 @@ InitialRun:
 	.byte	14
 	.byte	4
 	.byte	7
-	.byte	21
+	.byte	22
 	.byte	15
 	.long	.Linfo_string114
 	.byte	0
@@ -3501,7 +3501,7 @@ InitialRun:
 	.typestring p_file, "p(s(){m(fs){p(s(){m(fs_type){uc},m(drv){uc},m(csize){uc},m(n_fats){uc},m(wflag){uc},m(fsi_flag){uc},m(id){us},m(n_rootdir){us},m(last_clust){ul},m(free_clust){ul},m(fsi_sector){ul},m(cdir){ul},m(n_fatent){ul},m(fsize){ul},m(fatbase){ul},m(dirbase){ul},m(database){ul},m(winsect){ul},m(win){a(512:uc)}})},m(id){us},m(flag){uc},m(pad1){uc},m(fptr){ul},m(fsize){ul},m(sclust){ul},m(clust){ul},m(dsect){ul},m(dir_sect){ul},m(dir_ptr){p(uc)}})"
 	.typestring c_handshake, "ui"
 	.typestring TotalTimeString, "a(*:uc)"
-	.typestring information_string, "a(*:uc)"
+	.typestring audio_property_string, "a(*:uc)"
 	.typestring SecElapsed, "ui"
 	.typestring buff_id, "ui"
 	.typestring audio_buffer, "a(8:a(2048:uc))"

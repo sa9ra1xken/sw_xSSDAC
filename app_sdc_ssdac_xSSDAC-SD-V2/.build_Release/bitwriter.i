@@ -1702,8 +1702,13 @@ FLAC__bool FLAC__format_entropy_coding_method_partitioned_rice_contents_ensure_s
 # 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/stream_encoder.h" 1
 # 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
+
+# 1 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h" 1
+# 100 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h"
+inline int xassert_msg(const char msg[]) { return 1; }
+# 46 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h" 1
-# 45 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
+# 47 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h" 1
 # 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/alloc.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\limits.h" 1 3
@@ -2142,10 +2147,10 @@ static inline void *safe_realloc_nofree_muladd2_(void *ptr, size_t size1, size_t
   return 0;
  return safe_realloc_nofree_mul_2op_(ptr, size1, size2);
 }
-# 46 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
+# 48 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/endswap.h" 1
-# 48 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
+# 50 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c" 2
 
 
 
@@ -2154,7 +2159,7 @@ static inline void *safe_realloc_nofree_muladd2_(void *ptr, size_t size1, size_t
 
 
 typedef FLAC__uint32 bwword;
-# 85 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
+# 87 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
 static const uint32_t FLAC__BITWRITER_DEFAULT_CAPACITY = 32768u / sizeof(bwword);
 
 static const uint32_t FLAC__BITWRITER_DEFAULT_INCREMENT = 4096u / sizeof(bwword);
@@ -2213,7 +2218,7 @@ FLAC__bool bitwriter_grow_(FLAC__BitWriter *bw, uint32_t bits_to_add)
  bw->capacity = new_capacity;
  return 1;
 }
-# 151 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
+# 153 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
 FLAC__BitWriter *FLAC__bitwriter_new(void)
 {
  FLAC__BitWriter *bw = calloc(1, sizeof(FLAC__BitWriter));
@@ -2492,7 +2497,7 @@ FLAC__bool FLAC__bitwriter_write_unary_unsigned(FLAC__BitWriter *bw, uint32_t va
    FLAC__bitwriter_write_zeroes(bw, val) &&
    FLAC__bitwriter_write_raw_uint32_nocheck(bw, 1, 1);
 }
-# 536 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
+# 538 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
 FLAC__bool FLAC__bitwriter_write_rice_signed_block(FLAC__BitWriter *bw, const FLAC__int32 *vals, uint32_t nvals, uint32_t parameter)
 {
  const FLAC__uint32 mask1 = (FLAC__uint32)0xffffffff << parameter;
@@ -2586,7 +2591,7 @@ break1:
  }
  return 1;
 }
-# 754 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
+# 756 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
 FLAC__bool FLAC__bitwriter_write_utf8_uint32(FLAC__BitWriter *bw, FLAC__uint32 val)
 {
  FLAC__bool ok = 1;
@@ -2698,7 +2703,7 @@ FLAC__bool FLAC__bitwriter_zero_pad_to_byte_boundary(FLAC__BitWriter *bw)
  else
   return 1;
 }
-# 874 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
+# 876 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitwriter.c"
 extern FLAC__bool FLAC__bitwriter_write_zeroes(FLAC__BitWriter *bw, uint32_t bits);
 extern FLAC__bool FLAC__bitwriter_write_raw_uint32(FLAC__BitWriter *bw, FLAC__uint32 val, uint32_t bits);
 extern FLAC__bool FLAC__bitwriter_write_raw_int32(FLAC__BitWriter *bw, FLAC__int32 val, uint32_t bits);

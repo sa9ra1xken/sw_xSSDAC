@@ -16,7 +16,7 @@
 #define DEBUG_UNIT SD_AUDIO
 #include <debug_print.h>
 
-
+#pragma stackfunction 400
 USER_CONTROL_TYPE TestUserControl(
         chanend c_control,
         PLAY_TRACK_RC *rc,

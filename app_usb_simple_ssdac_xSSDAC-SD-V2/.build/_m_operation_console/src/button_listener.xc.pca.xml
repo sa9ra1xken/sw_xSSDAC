@@ -1,12 +1,13 @@
 <preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc">
-<fDef name="ExamineKeyInput" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
 <fDef name="HandleDacCommand" global="true" noreturn="false" doNotSpecialize="false" numParams="2"/>
 <fDef name="HandlePlayCommand" global="true" noreturn="false" doNotSpecialize="false" numParams="2"/>
 <fDef name="KeyEvent" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
 <fDef name="KeyEventInDacModeSelection" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="KeyEventInFunctionSelection" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="KeyEventInSDCMode" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
+<fDef name="KeyScan" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
 <fDef name="QueryChannel" global="true" noreturn="false" doNotSpecialize="false" numParams="2"/>
+<fDef name="SendBackTrackControl" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
 <fDef name="SwitchConsoleMode" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
 <fDef name="button_listener_core" global="true" noreturn="true" doNotSpecialize="false" numParams="2"/>
 <fDef name="delay_microseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
@@ -119,13 +120,6 @@
   <arg num="0">
     <values>
       <value type="intval"><intval isSigned="true" val="1024"/></value>
-    </values>
-  </arg>
-</fCall>
-<fCall name="printf" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="unknown"/>
     </values>
   </arg>
 </fCall>
@@ -328,17 +322,22 @@
     </values>
   </arg>
 </fCall>
-<fCall name="set_console_mode" global="true" numArgs="1">
+<fCall name="SendBackTrackControl" global="true" numArgs="1">
   <arg num="0">
     <values>
-      <value type="intval"><intval isSigned="true" val="2"/></value>
+      <value type="unknown"/>
     </values>
   </arg>
 </fCall>
-<fCall name="set_display_control_flag" global="true" numArgs="1">
+<fCall name="HandlePlayCommand" global="true" numArgs="2">
   <arg num="0">
     <values>
-      <value type="intval"><intval isSigned="true" val="16"/></value>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1">
+    <values>
+      <value type="unknown"/>
     </values>
   </arg>
 </fCall>
@@ -366,6 +365,6 @@
     </values>
   </arg>
 </fCall>
-<fCall name="ExamineKeyInput" global="true" numArgs="0">
+<fCall name="KeyScan" global="true" numArgs="0">
 </fCall>
 </preCompilationAnalysis>

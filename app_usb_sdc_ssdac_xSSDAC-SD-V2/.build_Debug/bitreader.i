@@ -487,7 +487,16 @@ char *strupr (char *);
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 2 3
 # 39 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitreader.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 1
-# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 33 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 1 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h" 1
+# 100 "C:/Users/takaaki/git/lib_xassert/lib_xassert/api\\xassert.h"
+inline int xassert_msg(const char msg[]) { return 1; }
+# 34 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
+
+
+
+
+
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/ordinals.h" 1
 # 55 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/ordinals.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdint.h" 1 3
@@ -569,10 +578,13 @@ typedef uint64_t FLAC__uint64;
 typedef int FLAC__bool;
 
 typedef FLAC__uint8 FLAC__byte;
-# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
+# 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/assert.h" 1
-# 40 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../FLAC/assert.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 1
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 2
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../share/compat.h" 1
 # 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../share/compat.h"
@@ -912,7 +924,7 @@ struct utimbuf
 # 230 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/../share/compat.h"
 int flac_snprintf(char *str, size_t size, const char *fmt, ...);
 int flac_vsnprintf(char *str, size_t size, const char *fmt, va_list va);
-# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
+# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h" 2
 
 
 
@@ -949,14 +961,14 @@ static inline uint32_t FLAC__clz_soft_uint32(FLAC__uint32 word)
 static inline uint32_t FLAC__clz_uint32(FLAC__uint32 v)
 {
 
-                    ;
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
 
 
 
 
  return __builtin_clz(v);
-# 94 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 96 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -969,10 +981,10 @@ static inline uint32_t FLAC__clz_soft_uint64(FLAC__uint64 word)
 static inline uint32_t FLAC__clz_uint64(FLAC__uint64 v)
 {
 
-                    ;
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
  return __builtin_clzll(v);
-# 118 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 120 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 
@@ -989,21 +1001,21 @@ static inline uint32_t FLAC__clz2_uint64(FLAC__uint64 v)
   return 64;
  return FLAC__clz_uint64(v);
 }
-# 158 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 160 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 static inline uint32_t FLAC__bitmath_ilog2(FLAC__uint32 v)
 {
-                    ;
-# 170 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+ do { if (!(v > 0)) __builtin_trap();} while(0);
+# 172 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
  return FLAC__clz_uint32(v) ^ 31U;
 
 }
 
 static inline uint32_t FLAC__bitmath_ilog2_wide(FLAC__uint64 v)
 {
-                    ;
+ do { if (!(v > 0)) __builtin_trap();} while(0);
 
  return __builtin_clzll(v) ^ 63U;
-# 208 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
+# 210 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitmath.h"
 }
 
 uint32_t FLAC__bitmath_silog2(FLAC__int64 v);
@@ -1536,7 +1548,7 @@ FLAC__BitReader *FLAC__bitreader_new(void)
 
 void FLAC__bitreader_delete(FLAC__BitReader *br)
 {
-                      ;
+ do { if (!(0 != br)) __builtin_trap();} while(0);
 
  FLAC__bitreader_free(br);
  free(br);
@@ -1550,7 +1562,7 @@ void FLAC__bitreader_delete(FLAC__BitReader *br)
 
 FLAC__bool FLAC__bitreader_init(FLAC__BitReader *br, FLAC__BitReaderReadCallback rcb, void *cd)
 {
-                      ;
+ do { if (!(0 != br)) __builtin_trap();} while(0);
 
  br->words = br->bytes = 0;
  br->consumed_words = br->consumed_bits = 0;
@@ -1569,7 +1581,7 @@ FLAC__bool FLAC__bitreader_init(FLAC__BitReader *br, FLAC__BitReaderReadCallback
 
 void FLAC__bitreader_free(FLAC__BitReader *br)
 {
-                      ;
+ do { if (!(0 != br)) __builtin_trap();} while(0);
 
  if(0 != br->buffer)
   free(br->buffer);
@@ -1614,9 +1626,9 @@ FLAC__bool FLAC__bitreader_rewind_to_after_last_seen_framesync(FLAC__BitReader *
 
 void FLAC__bitreader_reset_read_crc16(FLAC__BitReader *br, FLAC__uint16 seed)
 {
-                      ;
-                              ;
-                                           ;
+ do { if (!(0 != br)) __builtin_trap();} while(0);
+ do { if (!(0 != br->buffer)) __builtin_trap();} while(0);
+ do { if (!((br->consumed_bits & 7) == 0)) __builtin_trap();} while(0);
 
  br->read_crc16 = (uint32_t)seed;
  br->crc16_offset = br->consumed_words;
@@ -1625,14 +1637,14 @@ void FLAC__bitreader_reset_read_crc16(FLAC__BitReader *br, FLAC__uint16 seed)
 
 FLAC__uint16 FLAC__bitreader_get_read_crc16(FLAC__BitReader *br)
 {
-                      ;
-                              ;
+ do { if (!(0 != br)) __builtin_trap();} while(0);
+ do { if (!(0 != br->buffer)) __builtin_trap();} while(0);
 
 
  crc16_update_block_(br);
 
-                                           ;
-                                                   ;
+ do { if (!((br->consumed_bits & 7) == 0)) __builtin_trap();} while(0);
+ do { if (!(br->crc16_align <= br->consumed_bits)) __builtin_trap();} while(0);
 
 
  if(br->consumed_bits) {
@@ -1672,7 +1684,7 @@ void FLAC__bitreader_remove_limit(FLAC__BitReader *br)
 
 uint32_t FLAC__bitreader_limit_remaining(FLAC__BitReader *br)
 {
-                                 ;
+ do { if (!(br->read_limit_set)) __builtin_trap();} while(0);
  return br->read_limit;
 }
 void FLAC__bitreader_limit_invalidate(FLAC__BitReader *br)
@@ -1682,15 +1694,15 @@ void FLAC__bitreader_limit_invalidate(FLAC__BitReader *br)
 
 FLAC__bool FLAC__bitreader_read_raw_uint32(FLAC__BitReader *br, FLAC__uint32 *val, uint32_t bits)
 {
-                      ;
-                              ;
+ do { if (!(0 != br)) __builtin_trap();} while(0);
+ do { if (!(0 != br->buffer)) __builtin_trap();} while(0);
 
-                         ;
-                                                             ;
-                                              ;
+ do { if (!(bits <= 32)) __builtin_trap();} while(0);
+ do { if (!((br->capacity*32) * 2 >= bits)) __builtin_trap();} while(0);
+ do { if (!(br->consumed_words <= br->words)) __builtin_trap();} while(0);
 
 
-                                        ;
+ do { if (!(32 >= 32)) __builtin_trap();} while(0);
 
  if(bits == 0) {
   *val = 0;
@@ -1757,7 +1769,7 @@ FLAC__bool FLAC__bitreader_read_raw_uint32(FLAC__BitReader *br, FLAC__uint32 *va
 
   if(br->consumed_bits) {
 
-                                                        ;
+   do { if (!(br->consumed_bits + bits <= br->bytes*8)) __builtin_trap();} while(0);
    *val = (FLAC__uint32)((br->buffer[br->consumed_words] & (((FLAC__uint32)0xffffffff) >> br->consumed_bits)) >> (32 -br->consumed_bits-bits));
    br->consumed_bits += bits;
    return 1;
@@ -1848,8 +1860,8 @@ FLAC__bool FLAC__bitreader_skip_bits_no_crc(FLAC__BitReader *br, uint32_t bits)
 
 
 
-                      ;
-                              ;
+ do { if (!(0 != br)) __builtin_trap();} while(0);
+ do { if (!(0 != br->buffer)) __builtin_trap();} while(0);
 
  if(bits > 0) {
   const uint32_t n = br->consumed_bits & 7;
@@ -1881,9 +1893,9 @@ FLAC__bool FLAC__bitreader_skip_byte_block_aligned_no_crc(FLAC__BitReader *br, u
 {
  FLAC__uint32 x;
 
-                      ;
-                              ;
-                                                           ;
+ do { if (!(0 != br)) __builtin_trap();} while(0);
+ do { if (!(0 != br->buffer)) __builtin_trap();} while(0);
+ do { if (!(FLAC__bitreader_is_consumed_byte_aligned(br))) __builtin_trap();} while(0);
 
  if(br->read_limit_set && br->read_limit < (uint32_t)-1){
   if(br->read_limit < nvals*8){
@@ -1926,9 +1938,9 @@ FLAC__bool FLAC__bitreader_read_byte_block_aligned_no_crc(FLAC__BitReader *br, F
 {
  FLAC__uint32 x;
 
-                      ;
-                              ;
-                                                           ;
+ do { if (!(0 != br)) __builtin_trap();} while(0);
+ do { if (!(0 != br->buffer)) __builtin_trap();} while(0);
+ do { if (!(FLAC__bitreader_is_consumed_byte_aligned(br))) __builtin_trap();} while(0);
 
  if(br->read_limit_set && br->read_limit < (uint32_t)-1){
   if(br->read_limit < nvals*8){
@@ -1980,8 +1992,8 @@ FLAC__bool FLAC__bitreader_read_unary_unsigned(FLAC__BitReader *br, uint32_t *va
 {
  uint32_t i;
 
-                      ;
-                              ;
+ do { if (!(0 != br)) __builtin_trap();} while(0);
+ do { if (!(0 != br->buffer)) __builtin_trap();} while(0);
 
  *val = 0;
  while(1) {
@@ -2020,13 +2032,13 @@ FLAC__bool FLAC__bitreader_read_unary_unsigned(FLAC__BitReader *br, uint32_t *va
     *val += i;
     i++;
     br->consumed_bits += i;
-                                                         ;
+    do { if (!(br->consumed_bits < 32)) __builtin_trap();} while(0);
     return 1;
    }
    else {
     *val += end - br->consumed_bits;
     br->consumed_bits = end;
-                                                         ;
+    do { if (!(br->consumed_bits < 32)) __builtin_trap();} while(0);
 
    }
   }
@@ -2045,11 +2057,11 @@ FLAC__bool FLAC__bitreader_read_rice_signed_block(FLAC__BitReader *br, int vals[
  brword b;
  int *val, *end;
 
-                      ;
-                              ;
+ do { if (!(0 != br)) __builtin_trap();} while(0);
+ do { if (!(0 != br->buffer)) __builtin_trap();} while(0);
 
-                                        ;
-                             ;
+ do { if (!(32 >= 32)) __builtin_trap();} while(0);
+ do { if (!(parameter < 32)) __builtin_trap();} while(0);
 
 
  limit = 4294967295U >> parameter;
@@ -2070,7 +2082,7 @@ FLAC__bool FLAC__bitreader_read_rice_signed_block(FLAC__BitReader *br, int vals[
   return 1;
  }
 
-                            ;
+ do { if (!(parameter > 0)) __builtin_trap();} while(0);
 
  cwords = br->consumed_words;
  words = br->words;

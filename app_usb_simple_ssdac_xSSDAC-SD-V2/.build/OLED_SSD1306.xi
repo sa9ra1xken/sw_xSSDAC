@@ -1199,7 +1199,7 @@ size_t _safe_strnlen(const char s[], size_t n);
 # 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h"
 # 1 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 1
 # 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
-# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD-V1/src\\i2c_conf.h" 1
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\i2c_conf.h" 1
 # 12 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 2
 # 92 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
 struct r_i2c {
@@ -1491,9 +1491,11 @@ void send_page(int page, int offset){
 
 void OLED_SSD1306_put_string(int row, char string[]){
 
-    if (string[0]!='\0'){
-        unsafe {string_ptr[row] = string;}
+    if (string[0]!='\0') {
+        unsafe {string_ptr[row] = string;
     }
+}
+
     display_offset[row] = 0;
     rendering_x[row] = 0;
 

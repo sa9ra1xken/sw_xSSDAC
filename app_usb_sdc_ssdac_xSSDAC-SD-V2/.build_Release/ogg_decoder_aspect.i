@@ -316,6 +316,9 @@ char *strupr (char *);
 # 102 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\string.h" 2 3
 # 38 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_decoder_aspect.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h" 1
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/assert.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 1
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\assert.h" 2
 # 39 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_decoder_aspect.c" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/ogg_decoder_aspect.h" 1
 # 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/ogg_decoder_aspect.h"
@@ -2244,12 +2247,12 @@ FLAC__OggDecoderAspectReadStatus FLAC__ogg_decoder_aspect_read_callback_wrapper(
       case FLAC__OGG_DECODER_ASPECT_READ_STATUS_ABORT:
        return FLAC__OGG_DECODER_ASPECT_READ_STATUS_ABORT;
       default:
-                      ;
+       assert(0);
      }
 
      if(ogg_sync_wrote(&aspect->sync_state, ogg_bytes_read) < 0) {
 
-                     ;
+      assert(0);
       return FLAC__OGG_DECODER_ASPECT_READ_STATUS_ERROR;
      }
     }
