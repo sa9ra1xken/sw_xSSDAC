@@ -181,8 +181,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/extensions}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/extensions/mfi}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.xc.compiler.input.203424012" name="XC" superClass="com.xmos.cdt.xc.compiler.input"/>
 							</tool>
@@ -492,8 +490,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/extensions}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/extensions/mfi}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.c.compiler.input.c.1598803431" name="C" superClass="com.xmos.cdt.c.compiler.input.c"/>
 							</tool>
@@ -808,8 +804,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/extensions}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/extensions/mfi}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.cxx.compiler.input.cpp.540114528" name="C++" superClass="com.xmos.cdt.cxx.compiler.input.cpp"/>
 							</tool>

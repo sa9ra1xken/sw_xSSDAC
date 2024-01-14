@@ -1922,11 +1922,13 @@ int main(){
 
 
     par{
-        on tile[1]: sdcard_play(c_handshake, c_play_control
+        on tile[1]: sdcard_play(
+                c_handshake,
+                c_play_control
 
                 ,i
 
-        );
+                );
         on tile[1]: decoupler(c_handshake, c_audio);
         on tile[1]: button_listener_core(
                 _SDC_PLAY

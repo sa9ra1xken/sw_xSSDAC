@@ -1,4 +1,43 @@
 <preCompilationAnalysis>
+<fInfo name="XUD_SetReady_In" global="false" unit="../src/core/main.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_InPtr" global="false" unit="../src/core/main.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_OutPtr" global="false" unit="../src/core/main.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="2">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
 <fInfo name="highPulseDrive" global="false" unit="C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="2">
   <arg num="0" specialize="false">
     <values>
@@ -226,6 +265,84 @@
     </values>
   </arg>
 </fInfo>
+<fInfo name="XUD_SetReady_In" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_dfu/src/dfu.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_InPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_dfu/src/dfu.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_OutPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_dfu/src/dfu.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="2">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_In" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\button_listener.h" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_InPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\button_listener.h" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_OutPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\button_listener.h" specialize="false" noreturn="false" doNotSpecialize="true" numParams="2">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
 <fInfo name="parity32" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_spdif_tx/src/SpdifTransmit.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="1">
   <arg num="0" specialize="false">
     <values>
@@ -266,6 +383,45 @@
   <arg num="1" specialize="false">
     <values>
       <value type="unknown"/>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_In" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_InPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_OutPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="2">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
     </values>
   </arg>
 </fInfo>
@@ -381,6 +537,45 @@
     </values>
   </arg>
 </fInfo>
+<fInfo name="XUD_SetReady_In" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/reboot.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_InPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/reboot.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_OutPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/reboot.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="2">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
 <fInfo name="SetupZerosSendBuffer" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
   <arg num="0" specialize="false">
     <values>
@@ -398,6 +593,95 @@
     </values>
   </arg>
 </fInfo>
+<fInfo name="XUD_SetReady_In" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_InPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_OutPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/decouple.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="2">
+  <arg num="0" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_In" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/usb_buffer.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+      <value type="intval"><intval isSigned="true" val="3"/></value>
+      <value type="intval"><intval isSigned="true" val="4"/></value>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_InPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/usb_buffer.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+      <value type="intval"><intval isSigned="true" val="3"/></value>
+      <value type="intval"><intval isSigned="true" val="4"/></value>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_OutPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/usb_buffer.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="2">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
 <fInfo name="testct_byref" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/usb_buffer.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="2">
   <arg num="0" specialize="false">
     <values>
@@ -407,6 +691,45 @@
   <arg num="1" specialize="false">
     <values>
       <value type="unknown"/>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_In" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_device/src/usb_device.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_InPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_device/src/usb_device.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_OutPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_device/src/usb_device.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="2">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
     </values>
   </arg>
 </fInfo>
@@ -453,6 +776,48 @@
     </values>
   </arg>
 </fInfo>
+<fInfo name="XUD_SetReady_In" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_xud/src/XUD_EpFunctions.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_InPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_xud/src/XUD_EpFunctions.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_OutPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_xud/src/XUD_EpFunctions.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="2">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
 <fInfo name="min" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_xud/src/XUD_EpFunctions.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="2">
   <arg num="0" specialize="false">
     <values>
@@ -462,6 +827,45 @@
   <arg num="1" specialize="false">
     <values>
       <value type="unknown"/>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_In" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_xud/src/XUD_Ports.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_InPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_xud/src/XUD_Ports.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="2" specialize="false">
+    <values>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="XUD_SetReady_OutPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_xud/src/XUD_Ports.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="2">
+  <arg num="0" specialize="false">
+    <values>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
     </values>
   </arg>
 </fInfo>
@@ -721,7 +1125,7 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="KeyEventInDacModeSelection" global="true" specialize="false" noreturn="false" doNotSpecialize="true" numParams="1">
+<fInfo name="KeyEventInDacModeSelection" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
     <values>
       <value type="intval"><intval isSigned="true" val="1"/></value>
@@ -748,7 +1152,7 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="KeyEventInFunctionSelection" global="true" specialize="false" noreturn="false" doNotSpecialize="true" numParams="1">
+<fInfo name="KeyEventInFunctionSelection" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
     <values>
       <value type="intval"><intval isSigned="true" val="1"/></value>
@@ -775,7 +1179,7 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="KeyEventInSDCMode" global="true" specialize="false" noreturn="false" doNotSpecialize="true" numParams="1">
+<fInfo name="KeyEventInSDCMode" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
     <values>
       <value type="intval"><intval isSigned="true" val="1"/></value>
@@ -877,15 +1281,21 @@
    </specialization>
  </specializations>
 </fInfo>
-<fInfo name="ShowFolder" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="1">
+<fInfo name="ShowFolder" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="2">
   <arg num="0" specialize="true">
     <values>
       <value type="intval"><intval isSigned="true" val="0"/></value>
     </values>
   </arg>
+  <arg num="1" specialize="true">
+    <values>
+      <value type="null"/>
+    </values>
+  </arg>
  <specializations>
    <specialization id="0">
     <arg num="0"><values><value type="intval"><intval isSigned="true" val="0"/></value></values></arg>
+    <arg num="1"><values><value type="null"/></values></arg>
    </specialization>
  </specializations>
 </fInfo>
@@ -919,15 +1329,21 @@
    </specialization>
  </specializations>
 </fInfo>
-<fInfo name="ShowTrack" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="1">
+<fInfo name="ShowTrack" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="2">
   <arg num="0" specialize="true">
     <values>
       <value type="intval"><intval isSigned="true" val="1"/></value>
     </values>
   </arg>
+  <arg num="1" specialize="true">
+    <values>
+      <value type="null"/>
+    </values>
+  </arg>
  <specializations>
    <specialization id="0">
     <arg num="0"><values><value type="intval"><intval isSigned="true" val="1"/></value></values></arg>
+    <arg num="1"><values><value type="null"/></values></arg>
    </specialization>
  </specializations>
 </fInfo>
@@ -1027,7 +1443,6 @@
       <value type="intval"><intval isSigned="true" val="1"/></value>
       <value type="intval"><intval isSigned="true" val="2"/></value>
       <value type="intval"><intval isSigned="true" val="3"/></value>
-      <value type="intval"><intval isSigned="true" val="4"/></value>
     </values>
   </arg>
 </fInfo>
@@ -1341,59 +1756,9 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="XUD_SetReady_In" global="true" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
-  <arg num="0" specialize="false">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="1" specialize="false">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="2" specialize="false">
-    <values>
-      <value type="unknown"/>
-      <value type="intval"><intval isSigned="true" val="3"/></value>
-      <value type="intval"><intval isSigned="true" val="4"/></value>
-    </values>
-  </arg>
-</fInfo>
-<fInfo name="XUD_SetReady_InPtr" global="true" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
-  <arg num="0" specialize="false">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="1" specialize="false">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="2" specialize="false">
-    <values>
-      <value type="unknown"/>
-      <value type="intval"><intval isSigned="true" val="3"/></value>
-      <value type="intval"><intval isSigned="true" val="4"/></value>
-    </values>
-  </arg>
-</fInfo>
 <fInfo name="XUD_SetReady_Out" global="true" specialize="false" noreturn="false" doNotSpecialize="true" numParams="2">
   <arg num="0" specialize="false">
     <values>
-    </values>
-  </arg>
-  <arg num="1" specialize="false">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fInfo>
-<fInfo name="XUD_SetReady_OutPtr" global="true" specialize="false" noreturn="false" doNotSpecialize="true" numParams="2">
-  <arg num="0" specialize="false">
-    <values>
-      <value type="unknown"/>
     </values>
   </arg>
   <arg num="1" specialize="false">
@@ -2241,15 +2606,13 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="read" global="true" interface="qspi_access" specialize="true" noreturn="false" doNotSpecialize="false" numParams="3">
-  <arg num="0" specialize="true">
+<fInfo name="read" global="true" interface="qspi_access" specialize="false" noreturn="false" doNotSpecialize="false" numParams="3">
+  <arg num="0" specialize="false">
     <values>
-      <value type="intval"><intval isSigned="true" val="0"/></value>
     </values>
   </arg>
-  <arg num="1" specialize="true">
+  <arg num="1" specialize="false">
     <values>
-      <value type="intval"><intval isSigned="true" val="1"/></value>
     </values>
   </arg>
   <arg num="2" specialize="false">
@@ -2257,13 +2620,6 @@
       <value type="unknown"/>
     </values>
   </arg>
- <specializations>
-   <specialization id="0">
-    <arg num="0"><values><value type="intval"><intval isSigned="true" val="0"/></value></values></arg>
-    <arg num="1"><values><value type="intval"><intval isSigned="true" val="1"/></value></values></arg>
-    <arg num="2"><values><value type="unknown"/></values></arg>
-   </specialization>
- </specializations>
 </fInfo>
 <fInfo name="reset_midi_state" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
@@ -2499,15 +2855,18 @@
    </specialization>
  </specializations>
 </fInfo>
-<fInfo name="write" global="true" interface="qspi_access" specialize="true" noreturn="false" doNotSpecialize="false" numParams="3">
-  <arg num="0" specialize="true">
+<fInfo name="write" global="true" interface="qspi_access" specialize="false" noreturn="false" doNotSpecialize="false" numParams="3">
+  <arg num="0" specialize="false">
     <values>
       <value type="intval"><intval isSigned="true" val="0"/></value>
+      <value type="intval"><intval isSigned="true" val="4"/></value>
+      <value type="intval"><intval isSigned="true" val="260"/></value>
     </values>
   </arg>
-  <arg num="1" specialize="true">
+  <arg num="1" specialize="false">
     <values>
       <value type="intval"><intval isSigned="false" val="4"/></value>
+      <value type="intval"><intval isSigned="true" val="256"/></value>
     </values>
   </arg>
   <arg num="2" specialize="false">
@@ -2515,13 +2874,6 @@
       <value type="unknown"/>
     </values>
   </arg>
- <specializations>
-   <specialization id="0">
-    <arg num="0"><values><value type="intval"><intval isSigned="true" val="0"/></value></values></arg>
-    <arg num="1"><values><value type="intval"><intval isSigned="false" val="4"/></value></values></arg>
-    <arg num="2"><values><value type="unknown"/></values></arg>
-   </specialization>
- </specializations>
 </fInfo>
 <fInfo name="xscope_user_init" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>

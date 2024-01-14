@@ -2,9 +2,9 @@
 <fDef name="HandleDacCommand" global="true" noreturn="false" doNotSpecialize="false" numParams="2"/>
 <fDef name="HandlePlayCommand" global="true" noreturn="false" doNotSpecialize="false" numParams="2"/>
 <fDef name="KeyEvent" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
-<fDef name="KeyEventInDacModeSelection" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
-<fDef name="KeyEventInFunctionSelection" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
-<fDef name="KeyEventInSDCMode" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
+<fDef name="KeyEventInDacModeSelection" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
+<fDef name="KeyEventInFunctionSelection" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
+<fDef name="KeyEventInSDCMode" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
 <fDef name="KeyScan" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
 <fDef name="QueryChannel" global="true" noreturn="false" doNotSpecialize="false" numParams="2"/>
 <fDef name="SendBackTrackControl" global="true" noreturn="false" doNotSpecialize="false" numParams="1"/>
@@ -105,7 +105,14 @@
 <fCall name="SwitchConsoleMode" global="true" numArgs="1">
   <arg num="0">
     <values>
-      <value type="intval"><intval isSigned="true" val="4"/></value>
+      <value type="intval"><intval isSigned="true" val="2"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="SwitchConsoleMode" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="1"/></value>
     </values>
   </arg>
 </fCall>

@@ -115,130 +115,6 @@
     </values>
   </arg>
 </fCall>
-<fCall name="printf" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="fflush" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="__getstdout" global="true" numArgs="0">
-</fCall>
-<fCall name="printf" global="true" numArgs="2">
-  <arg num="0">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="1">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="fl_getFlashType" global="true" numArgs="0">
-</fCall>
-<fCall name="printf" global="true" numArgs="2">
-  <arg num="0">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="1">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="fl_getFlashSize" global="true" numArgs="0">
-</fCall>
-<fCall name="printf" global="true" numArgs="2">
-  <arg num="0">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="1">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="fl_getDataPartitionSize" global="true" numArgs="0">
-</fCall>
-<fCall name="printf" global="true" numArgs="2">
-  <arg num="0">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="1">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="fl_getNumDataSectors" global="true" numArgs="0">
-</fCall>
-<fCall name="printf" global="true" numArgs="2">
-  <arg num="0">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="1">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="fl_getDataSectorSize" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="intval"><intval isSigned="true" val="0"/></value>
-    </values>
-  </arg>
-</fCall>
-<fCall name="printf" global="true" numArgs="2">
-  <arg num="0">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="1">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="fl_getWriteScratchSize" global="true" numArgs="2">
-  <arg num="0">
-    <values>
-      <value type="intval"><intval isSigned="true" val="0"/></value>
-    </values>
-  </arg>
-  <arg num="1">
-    <values>
-      <value type="intval"><intval isSigned="true" val="64"/></value>
-    </values>
-  </arg>
-</fCall>
-<fCall name="fflush" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="__getstdout" global="true" numArgs="0">
-</fCall>
 <fCall name="fl_getWriteScratchSize" global="true" numArgs="2">
   <arg num="0">
     <values>
@@ -252,13 +128,6 @@
   </arg>
 </fCall>
 <fCall name="_safe_malloc" global="true" numArgs="1">
-  <arg num="0">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="printf" global="true" numArgs="1">
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -282,13 +151,6 @@
     </values>
   </arg>
   <arg num="3">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fCall>
-<fCall name="printf" global="true" numArgs="1">
-  <arg num="0">
     <values>
       <value type="unknown"/>
     </values>

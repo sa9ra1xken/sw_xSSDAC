@@ -447,15 +447,21 @@
    </specialization>
  </specializations>
 </fInfo>
-<fInfo name="ShowFolder" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="1">
+<fInfo name="ShowFolder" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="2">
   <arg num="0" specialize="true">
     <values>
       <value type="intval"><intval isSigned="true" val="0"/></value>
     </values>
   </arg>
+  <arg num="1" specialize="true">
+    <values>
+      <value type="null"/>
+    </values>
+  </arg>
  <specializations>
    <specialization id="0">
     <arg num="0"><values><value type="intval"><intval isSigned="true" val="0"/></value></values></arg>
+    <arg num="1"><values><value type="null"/></values></arg>
    </specialization>
  </specializations>
 </fInfo>
@@ -489,15 +495,21 @@
    </specialization>
  </specializations>
 </fInfo>
-<fInfo name="ShowTrack" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="1">
+<fInfo name="ShowTrack" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="2">
   <arg num="0" specialize="true">
     <values>
       <value type="intval"><intval isSigned="true" val="1"/></value>
     </values>
   </arg>
+  <arg num="1" specialize="true">
+    <values>
+      <value type="null"/>
+    </values>
+  </arg>
  <specializations>
    <specialization id="0">
     <arg num="0"><values><value type="intval"><intval isSigned="true" val="1"/></value></values></arg>
+    <arg num="1"><values><value type="null"/></values></arg>
    </specialization>
  </specializations>
 </fInfo>
@@ -1070,13 +1082,11 @@
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
-      <value type="intval"><intval isSigned="true" val="0"/></value>
     </values>
   </arg>
   <arg num="1" specialize="false">
     <values>
       <value type="unknown"/>
-      <value type="intval"><intval isSigned="true" val="1"/></value>
     </values>
   </arg>
   <arg num="2" specialize="false">
@@ -1269,12 +1279,15 @@
     <values>
       <value type="unknown"/>
       <value type="intval"><intval isSigned="true" val="0"/></value>
+      <value type="intval"><intval isSigned="true" val="4"/></value>
+      <value type="intval"><intval isSigned="true" val="260"/></value>
     </values>
   </arg>
   <arg num="1" specialize="false">
     <values>
       <value type="unknown"/>
       <value type="intval"><intval isSigned="false" val="4"/></value>
+      <value type="intval"><intval isSigned="true" val="256"/></value>
     </values>
   </arg>
   <arg num="2" specialize="false">

@@ -1500,17 +1500,17 @@ PLAY_TRACK_RC PlayRIFF(FIL* file, chanend c_handshake, chanend c_control);
 PLAY_TRACK_RC PlayFLAC(FIL* file, chanend c_handshake, chanend c_control);
 
 const char * setting_file_name = "0:/CONTEXTSAVE.TXT";
-# 36 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
-# 1 ".././src\\flash_map.h" 1
-# 36 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
-
-
-char track_string[256]="track";
 
 
 
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\persistent_storage_map.h" 1
+# 30 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c" 2
 
-char folder_string[256]="folder";
+
+
+
+extern char track_string[];
+extern char folder_string[];
 
 char scratch[255 + 1];
 
@@ -1578,23 +1578,14 @@ FRESULT GetDirIndexOf(int *index, char *s1 ){
 
 int GoFolder(
         char * folder
-
-        , unsigned i
-
 ){
     f_chdir(folder);
-    f_getcwd (folder_string, sizeof(folder_string));
+    f_getcwd (folder_string, (256));
     set_display_control_flag(0x00000002);
-
-    qspi_if_write(i, ((4) + 256), 256, folder_string);
-
     return 0;
 }
 
 int ClimbUp(
-
-        unsigned i
-
 ){
     TCHAR str[255 + 1];
     f_getcwd (str, sizeof(str));
@@ -1606,34 +1597,22 @@ int ClimbUp(
     GetDirIndexOf(&index, cur_item );
                                              ;
 
-    f_getcwd (&folder_string, sizeof(folder_string));
+    f_getcwd (&folder_string, (256));
     set_display_control_flag(0x00000002);
-
-    qspi_if_write(i, ((4) + 256), 256, folder_string);
-
     return index;
 }
 
 int GoPreviousFolder(
-
-        unsigned i
-
 ){
     int index;
 
     do{
         index = ClimbUp(
-
-                i
-
         ) -1;
-        f_getcwd (&folder_string, sizeof(folder_string));
+        f_getcwd (&folder_string, (256));
     } while ((strcmp(folder_string,"0:/")!=0)&&(index<=2));
 
     set_display_control_flag(0x00000002);
-
-    qspi_if_write(i, ((4) + 256), 256, folder_string);
-
     return index;
 }
 
@@ -1707,12 +1686,7 @@ void sdcard_play(
 
 )
 {
-                                         ;
-
-    set_console_mode(_SDC_AUDIO);
-    set_display_control_flag(0x00000010);
-    set_display_control_flag(0x00000002);
-    set_display_control_flag(0x00000001);
+                                                                                            ;
 
     PLAY_TRACK_RC previous_rc;
     PLAY_TRACK_RC rc = _RC_STOP;
@@ -1728,15 +1702,17 @@ void sdcard_play(
 
                                       ;
 
-        qspi_if_read(i, ((4) + 256), 256, folder_string);
-        folder_string[sizeof(folder_string)-1]='\0';
-        qspi_if_read(i, (4), 256, track_string);
-        track_string[sizeof(track_string)-1]='\0';
+        qspi_if_read(i, (4), (256), folder_string);
+        folder_string[(256)-1]='\0';
+        qspi_if_read(i, ((4) + (256)), (256), track_string);
+        track_string[(256)-1]='\0';
                                         ;
     }
     else ;
 
-    GoFolder(folder_string, i);
+
+
+    GoFolder(folder_string);
 
                                                      ;
                                                           ;
@@ -1744,12 +1720,16 @@ void sdcard_play(
     GetDirIndexOf(&track, &track_string );
                                               ;
 
+    set_console_mode(_SDC_AUDIO);
+    set_display_control_flag(0x00000010);
+    set_display_control_flag(0x00000002);
+    set_display_control_flag(0x00000001);
 
     while(1){
 
         while (state == IDLE){
                                   ;
-# 291 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
+# 263 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c"
             PLAY_COMMAND reply = QueryChannel(c_play_control, _INPUT_Q);
             switch (reply){
             case _PLAY_CMD_PREV_TRACK:
@@ -1758,9 +1738,6 @@ void sdcard_play(
                 break;
             case _PLAY_CMD_PREV_FOLDER:
                 track = ClimbUp(
-
-                        i
-
                 )-1;
                                          ;
                 break;
@@ -1774,9 +1751,6 @@ void sdcard_play(
                 break;
             case _PLAY_CMD_NEXT_FOLDER:
                 track = ClimbUp(
-
-                        i
-
                 )+1;
                                          ;
                 break;
@@ -1799,9 +1773,6 @@ void sdcard_play(
             }
             else{
                 track = ClimbUp(
-
-                        i
-
                         )+1;
             }
         }
@@ -1815,20 +1786,18 @@ void sdcard_play(
                                                                               ;
                track = GoFolder(
                        fn
-
-                       ,i
-
                        );
            }
         }
         else
         {
-            strncpy(track_string, fn, sizeof(track_string));
+            strncpy(track_string, fn, (256));
 
                                                       ;
 
 
-            qspi_if_write(i, (4), 256, track_string);
+            qspi_if_write(i, (4), (256), folder_string);
+            qspi_if_write(i, ((4) + (256)), (256), track_string);
 
 
             set_display_control_flag(0x00000001);
@@ -1855,18 +1824,12 @@ void sdcard_play(
             case _RC_NEXT_FOLDER:
                                              ;
                 track = ClimbUp(
-
-                        i
-
                 )+1;
                 break;
 
             case _RC_PREVIOUS_FOLDER:
                                                  ;
                 track = GoPreviousFolder(
-
-                        i
-
                 );
                 break;
 

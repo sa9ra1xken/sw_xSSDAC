@@ -1199,7 +1199,7 @@ rendering_x:
 	.long	53                      # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	21                      # DW_AT_decl_line
+	.byte	20                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	FONT8X16MIN_TOFU
@@ -1226,7 +1226,7 @@ rendering_x:
 	.long	107                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	29                      # DW_AT_decl_line
+	.byte	28                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	FONT8X16MIN_CHARBITMAP

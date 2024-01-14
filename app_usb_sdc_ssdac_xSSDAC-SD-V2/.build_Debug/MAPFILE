@@ -1086,23 +1086,23 @@ Symbols:
   00050b08 00000070 .text                send_page
   00050b08 00000000 .text                $s.428
   00050b78 0000002c .text                QueryChannel
-  00050b78 00000000 .text                $d.945
+  00050b78 00000000 .text                $d.946
   00050ba4 00000114 .text                button_listener_core
-  00050ba4 00000000 .text                $d.946
+  00050ba4 00000000 .text                $d.947
   00050cb8 00000244 .text                KeyScan
-  00050cb8 00000000 .text                $d.947
+  00050cb8 00000000 .text                $d.948
   00050efc 0000005c .text                HandleDacCommand
-  00050efc 00000000 .text                $d.949
+  00050efc 00000000 .text                $d.950
   00050f58 00000070 .text                HandlePlayCommand
-  00050f58 00000000 .text                $d.950
+  00050f58 00000000 .text                $d.951
   00050fc8 000000ec .text                KeyEventInSDCMode
-  00050fc8 00000000 .text                $d.952
+  00050fc8 00000000 .text                $d.953
   000510b4 00000078 .text                KeyEventInDacModeSelection
-  000510b4 00000000 .text                $d.953
+  000510b4 00000000 .text                $d.954
   0005112c 00000060 .text                KeyEventInFunctionSelection
-  0005112c 00000000 .text                $d.954
+  0005112c 00000000 .text                $d.955
   0005118c 00000084 .text                KeyEvent
-  0005118c 00000000 .text                $d.955
+  0005118c 00000000 .text                $d.956
   00051210 00000014 .text                set_display_control_flag
   00051210 00000000 .text                $d.2190
   00051224 0000001c .text                update_samp_freq

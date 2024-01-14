@@ -1570,6 +1570,9 @@ int _safe_rename(const char from[], const char to[]);
 void debug_printf(char fmt[], ...);
 # 18 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
 
+# 1 ".././src\\console_conf.h" 1
+# 19 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
+
 
 
 
@@ -1743,7 +1746,9 @@ void SwitchConsoleMode(CONSOLE_MODE mode){
         set_display_control_flag(0x00000100);
         break;
     case _BTN_7_DOWN:
+
         SwitchConsoleMode(_FUNCTION_SELECTION);
+# 205 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc"
         break;
     default:
 

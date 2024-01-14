@@ -46,7 +46,7 @@
 
 #include "ffconf.h"
 
-#include "flash_map.h"
+#include "persistent_storage_map.h"
 
 #define FAST_MODE
 

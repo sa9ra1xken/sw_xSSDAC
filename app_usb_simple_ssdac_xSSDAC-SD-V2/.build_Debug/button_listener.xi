@@ -1573,6 +1573,9 @@ int _safe_rename(const char from[], const char to[]);
 void debug_printf(char fmt[], ...);
 # 18 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
 
+# 1 ".././src/core\\console_conf.h" 1
+# 19 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.xc" 2
+
 
 
 
@@ -1680,7 +1683,7 @@ void SwitchConsoleMode(CONSOLE_MODE mode){
     set_display_control_flag(0x00000010);
 }
 
-inline void KeyEventInSDCMode(BUTTON_EVENT event){
+           void KeyEventInSDCMode(BUTTON_EVENT event){
     switch (event){
        case _BTN_1_LONG:
            play_command = _PLAY_CMD_PREV_FOLDER;
@@ -1715,7 +1718,7 @@ inline void KeyEventInSDCMode(BUTTON_EVENT event){
     }
 }
 
-inline void KeyEventInDacModeSelection(BUTTON_EVENT event){
+           void KeyEventInDacModeSelection(BUTTON_EVENT event){
 
     volatile INTERPOLATION_MODE * unsafe p_proposed_intpol_mode;
     volatile INTERPOLATION_MODE * unsafe p_fixed_intpol_mode;
@@ -1746,7 +1749,18 @@ inline void KeyEventInDacModeSelection(BUTTON_EVENT event){
         set_display_control_flag(0x00000100);
         break;
     case _BTN_7_DOWN:
-        SwitchConsoleMode(_FUNCTION_SELECTION);
+
+
+
+        switch(_func){
+        case _USB_DAC:
+            SwitchConsoleMode(_USB_AUDIO);
+            break;
+        case _SDC_PLAY:
+            SwitchConsoleMode(_SDC_AUDIO);
+            break;
+        }
+
         break;
     default:
 
@@ -1755,7 +1769,7 @@ inline void KeyEventInDacModeSelection(BUTTON_EVENT event){
     }
 }
 
-inline void KeyEventInFunctionSelection(BUTTON_EVENT event){
+           void KeyEventInFunctionSelection(BUTTON_EVENT event){
     volatile FUNCTION_SELECTOR * unsafe p_selected_function;
     unsafe {
         p_selected_function = &selected_function;

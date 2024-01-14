@@ -16,6 +16,7 @@
 //#include <customdefines.h>
 #define DEBUG_UNIT HUMAN_INTERFACE
 #include <debug_print.h>
+#include "console_conf.h"
 
 //#include "memory_sharing.h"
 
@@ -189,7 +190,18 @@ void SwitchConsoleMode(CONSOLE_MODE mode){
         set_display_control_flag(BITMASK_SHOW_PROPOSED_INTPOL);
         break;
     case _BTN_7_DOWN:
+#ifdef ENABLE_FUNCTION_SELECTOR
         SwitchConsoleMode(_FUNCTION_SELECTION);
+#else
+        switch(_func){
+        case _USB_DAC:
+            SwitchConsoleMode(_USB_AUDIO);
+            break;
+        case _SDC_PLAY:
+            SwitchConsoleMode(_SDC_AUDIO);
+            break;
+        }
+#endif
         break;
     default:
         /* transfer prosed mode into fixed mode when release button */

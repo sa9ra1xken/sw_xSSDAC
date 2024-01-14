@@ -1484,7 +1484,7 @@ inline int XUD_SetReady_Out(XUD_ep ep, unsigned char buffer[])
     return 0;
 }
 # 426 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-inline int XUD_SetReady_OutPtr(XUD_ep ep, unsigned addr)
+static inline int XUD_SetReady_OutPtr(XUD_ep ep, unsigned addr)
 {
     int chan_array_ptr;
     int reset;
@@ -1502,7 +1502,7 @@ inline int XUD_SetReady_OutPtr(XUD_ep ep, unsigned addr)
     return XUD_RES_OKAY;
 }
 # 453 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-inline XUD_Result_t XUD_SetReady_InPtr(XUD_ep ep, unsigned addr, int len)
+static inline XUD_Result_t XUD_SetReady_InPtr(XUD_ep ep, unsigned addr, int len)
 {
     int chan_array_ptr;
     int tmp, tmp2;
@@ -1545,7 +1545,7 @@ inline XUD_Result_t XUD_SetReady_InPtr(XUD_ep ep, unsigned addr, int len)
     return XUD_RES_OKAY;
 }
 # 504 "C:/Users/takaaki/git/sw_xSSDAC/module_xud/include\\xud.h"
-inline XUD_Result_t XUD_SetReady_In(XUD_ep ep, unsigned char buffer[], int len)
+static inline XUD_Result_t XUD_SetReady_In(XUD_ep ep, unsigned char buffer[], int len)
 {
     unsigned addr;
 

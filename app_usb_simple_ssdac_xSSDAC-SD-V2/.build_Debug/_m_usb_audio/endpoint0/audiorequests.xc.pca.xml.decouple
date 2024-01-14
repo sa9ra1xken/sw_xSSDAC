@@ -1,4 +1,7 @@
 <preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc">
+<fDef name="XUD_SetReady_In" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc" noreturn="false" doNotSpecialize="true" numParams="3"/>
+<fDef name="XUD_SetReady_InPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc" noreturn="false" doNotSpecialize="true" numParams="3"/>
+<fDef name="XUD_SetReady_OutPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc" noreturn="false" doNotSpecialize="true" numParams="2"/>
 <fDef name="longMul" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc" noreturn="false" doNotSpecialize="false" numParams="3"/>
 <fDef name="storeFreq" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc" noreturn="false" doNotSpecialize="false" numParams="3"/>
 <fDef name="storeInt" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc" noreturn="false" doNotSpecialize="false" numParams="3"/>
@@ -7,10 +10,7 @@
 <fDef name="updateVol" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc" noreturn="false" doNotSpecialize="false" numParams="3"/>
 <fDef name="AudioClassRequests_2" global="true" noreturn="false" doNotSpecialize="false" numParams="6"/>
 <fDef name="FeedbackStabilityDelay" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
-<fDef name="XUD_SetReady_In" global="true" noreturn="false" doNotSpecialize="true" numParams="3"/>
-<fDef name="XUD_SetReady_InPtr" global="true" noreturn="false" doNotSpecialize="true" numParams="3"/>
 <fDef name="XUD_SetReady_Out" global="true" noreturn="false" doNotSpecialize="true" numParams="2"/>
-<fDef name="XUD_SetReady_OutPtr" global="true" noreturn="false" doNotSpecialize="true" numParams="2"/>
 <fDef name="array_to_xc_ptr" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="delay_microseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
 <fDef name="delay_milliseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
@@ -48,9 +48,9 @@
     </values>
   </arg>
 </fCall>
-<fCall name="XUD_SetReady_InPtr" global="true" numArgs="3">
+<fCall name="XUD_SetReady_InPtr" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc" numArgs="3">
   <arg num="0">
-    <passThroughArg param="0" caller="XUD_SetReady_In" global="true"/>
+    <passThroughArg param="0" caller="XUD_SetReady_In" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"/>
     <values>
     </values>
   </arg>
@@ -60,7 +60,7 @@
     </values>
   </arg>
   <arg num="2">
-    <passThroughArg param="2" caller="XUD_SetReady_In" global="true"/>
+    <passThroughArg param="2" caller="XUD_SetReady_In" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc"/>
     <values>
     </values>
   </arg>

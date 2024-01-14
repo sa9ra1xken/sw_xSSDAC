@@ -1943,11 +1943,21 @@ void ssdac_core(chanend c_in, chanend ?c_control);
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h" 1
 # 25 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
-# 36 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
+
+
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\persistent_storage_map.h" 1
+# 27 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
+# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc"
 typedef enum {
     _PAUSING,
     _SCROLLING
 } SCROLLING_STATE;
+
+char track_string[(256)]="track";
+char folder_string[(256)]="folder";
+
+
+char audio_property_string[100];
 
 static SCROLLING_STATE state;
 
@@ -2006,8 +2016,6 @@ void set_console_mode(CONSOLE_MODE value){
     }
 }
 
-
-
 unsigned NumChan = 2;
 unsigned SampFreq = 44100;
 unsigned SampRes = 16;
@@ -2047,21 +2055,8 @@ void GetStreamFormatString(char str[]){
     int freq_p = (SampFreq % 1000) /100;
     sprintf(str,"%dch %d.%dksps %dbit\0", NumChan, freq, freq_p, SampRes);
     return;
-
-
-
-
-
 }
 
-
-
-
-
-
-extern char track_string[];
-extern char folder_string[];
-char audio_property_string[100];
 unsigned SecElapsed;
 char TotalTimeString[6];
 
@@ -2073,18 +2068,22 @@ void UpdateTime(int row){
     OLED_SSD1306_put_string(row, s);
 }
 
-void ShowFolder(int row){
+void ShowFolder(int row, client interface qspi_access ? i){
     OLED_SSD1306_put_string(row, folder_string);
     pause_counter = 100000000 / 2000000;
     state = _PAUSING;
     scrolling_row = row;
+
+    i.write((4), (256), folder_string);
 }
 
-void ShowTrack(int row){
+void ShowTrack(int row, client interface qspi_access ? i){
     OLED_SSD1306_put_string(row, track_string);
     pause_counter = 100000000 / 2000000;
     state = _PAUSING;
     scrolling_row = row;
+
+    i.write(((4) + (256)), (256), track_string);
 }
 
 void ShowAudioProperty(int row){
@@ -2093,7 +2092,6 @@ void ShowAudioProperty(int row){
     state = _PAUSING;
     scrolling_row = row;
 }
-
 
 
 extern INTERPOLATION_MODE proposed_intpol_mode;
@@ -2188,15 +2186,12 @@ void handle_display_frame(client interface qspi_access ? i){
 
         switch (get_console_mode()){
 
-
         case _SDC_AUDIO:
-            ShowFolder(0);
-            ShowTrack(1);
+            ShowFolder(0, i);
+            ShowTrack(1, i);
             ShowAudioProperty(2);
             UpdateTime(3);
             break;
-
-
 
         case _USB_AUDIO:
             OLED_SSD1306_put_string(0, "USB Audio");
@@ -2211,6 +2206,7 @@ void handle_display_frame(client interface qspi_access ? i){
             OLED_SSD1306_put_string(2, "Press SW1 for STEP, SW2 for LINER, SW3 for CUBIC, SW4 for SINC4, SW5 for SINC8.");
             ShowInterpolationMode(3, FixedInterpolationMode());
             break;
+
         case _FUNCTION_SELECTION:
             OLED_SSD1306_put_string(0, "Function selector");
             OLED_SSD1306_put_string(1, "Selected function takes effect after reset.");
@@ -2222,15 +2218,14 @@ void handle_display_frame(client interface qspi_access ? i){
 
     switch (get_console_mode()){
 
-
     case _SDC_AUDIO:
         if (test_display_control_flag(0x00000002)){
             clear_display_control_flag(0x00000002);
-            ShowFolder(0);
+            ShowFolder(0, i);
         }
         if (test_display_control_flag(0x00000001)){
             clear_display_control_flag(0x00000001);
-            ShowTrack(1);
+            ShowTrack(1, i);
         }
         if (test_display_control_flag(0x00000008)){
             clear_display_control_flag(0x00000008);
@@ -2241,8 +2236,6 @@ void handle_display_frame(client interface qspi_access ? i){
             UpdateTime(3);
         }
         break;
-
-
 
     case _USB_AUDIO:
         if (test_display_control_flag(0x00000080)){
@@ -2270,6 +2263,7 @@ void handle_display_frame(client interface qspi_access ? i){
             debug_printf("\n%d %d %d %d", temp.byte[0], temp.byte[1], temp.byte[2], temp.byte[3]);
             i.write(0, sizeof(temp), temp.byte);
         }
+        break;
     }
 
     switch (state){
@@ -2296,10 +2290,12 @@ void handle_display_frame(client interface qspi_access ? i){
 
 void display_control_core(client interface qspi_access ? i){
     debug_printf("\ndisplay_control_core started");
-    char temp[1];
+
     if (!isnull(i)){
-        i.read(0, 1, temp);
-        debug_printf("\ndisplay controller detected config data:%d", temp[0]);
+
+
+
+
     }
     else debug_printf("\nqspi_access is not available");
 

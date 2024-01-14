@@ -30,21 +30,17 @@
   <fCall global="true" name="f_chdir.nstackwords"/>
   <fCall global="true" name="f_getcwd.nstackwords"/>
   <fCall global="true" name="set_display_control_flag.nstackwords"/>
-  <fCall global="true" name="qspi_if_write.nstackwords"/>
   <fCall global="true" name="GoFolder.maxcores"/>
   <fCall global="true" name="f_chdir.maxcores"/>
   <fCall global="true" name="f_getcwd.maxcores"/>
-  <fCall global="true" name="qspi_if_write.maxcores"/>
   <fCall global="true" name="set_display_control_flag.maxcores"/>
   <fCall global="true" name="GoFolder.maxtimers"/>
   <fCall global="true" name="f_chdir.maxtimers"/>
   <fCall global="true" name="f_getcwd.maxtimers"/>
-  <fCall global="true" name="qspi_if_write.maxtimers"/>
   <fCall global="true" name="set_display_control_flag.maxtimers"/>
   <fCall global="true" name="GoFolder.maxchanends"/>
   <fCall global="true" name="f_chdir.maxchanends"/>
   <fCall global="true" name="f_getcwd.maxchanends"/>
-  <fCall global="true" name="qspi_if_write.maxchanends"/>
   <fCall global="true" name="set_display_control_flag.maxchanends"/>
   <fCall global="true" name="ClimbUp"/>
   <fCall global="true" name="ClimbUp.nstackwords"/>
@@ -91,34 +87,34 @@
   <fCall global="true" name="strncmp.maxchanends"/>
   <fCall global="true" name="sdcard_play"/>
   <fCall global="true" name="sdcard_play.nstackwords"/>
-  <fCall global="true" name="set_console_mode.nstackwords"/>
   <fCall global="true" name="f_mount.nstackwords"/>
+  <fCall global="true" name="set_console_mode.nstackwords"/>
   <fCall global="true" name="QueryChannel.nstackwords"/>
   <fCall global="true" name="strncpy.nstackwords"/>
+  <fCall global="true" name="qspi_if_write.nstackwords"/>
   <fCall global="true" name="qspi_if_read.nstackwords"/>
   <fCall global="true" name="sdcard_play.maxcores"/>
   <fCall global="true" name="QueryChannel.maxcores"/>
   <fCall global="true" name="f_mount.maxcores"/>
   <fCall global="true" name="qspi_if_read.maxcores"/>
+  <fCall global="true" name="qspi_if_write.maxcores"/>
   <fCall global="true" name="set_console_mode.maxcores"/>
   <fCall global="true" name="strncpy.maxcores"/>
   <fCall global="true" name="sdcard_play.maxtimers"/>
   <fCall global="true" name="QueryChannel.maxtimers"/>
   <fCall global="true" name="f_mount.maxtimers"/>
   <fCall global="true" name="qspi_if_read.maxtimers"/>
+  <fCall global="true" name="qspi_if_write.maxtimers"/>
   <fCall global="true" name="set_console_mode.maxtimers"/>
   <fCall global="true" name="strncpy.maxtimers"/>
   <fCall global="true" name="sdcard_play.maxchanends"/>
   <fCall global="true" name="QueryChannel.maxchanends"/>
   <fCall global="true" name="f_mount.maxchanends"/>
   <fCall global="true" name="qspi_if_read.maxchanends"/>
+  <fCall global="true" name="qspi_if_write.maxchanends"/>
   <fCall global="true" name="set_console_mode.maxchanends"/>
   <fCall global="true" name="strncpy.maxchanends"/>
   <fCall global="true" name="setting_file_name"/>
-  <fCall global="true" name="track_string.globound"/>
-  <fCall global="true" name="track_string"/>
-  <fCall global="true" name="folder_string.globound"/>
-  <fCall global="true" name="folder_string"/>
   <fCall global="true" name="state"/>
   <fCall global="true" name="scratch.globound"/>
   <fCall global="true" name="scratch"/>
@@ -129,7 +125,6 @@
   <fCall global="true" name="f_chdir"/>
   <fCall global="true" name="f_getcwd"/>
   <fCall global="true" name="set_display_control_flag"/>
-  <fCall global="true" name="qspi_if_write"/>
   <fCall global="true" name="strrchr"/>
   <fCall global="true" name="f_open"/>
   <fCall global="true" name="f_read"/>
@@ -137,9 +132,12 @@
   <fCall global="true" name="strncmp"/>
   <fCall global="true" name="PlayRIFF"/>
   <fCall global="true" name="PlayFLAC"/>
-  <fCall global="true" name="set_console_mode"/>
   <fCall global="true" name="f_mount"/>
   <fCall global="true" name="QueryChannel"/>
   <fCall global="true" name="qspi_if_read"/>
+  <fCall global="true" name="set_console_mode"/>
   <fCall global="true" name="strncpy"/>
+  <fCall global="true" name="qspi_if_write"/>
+  <fCall global="true" name="folder_string"/>
+  <fCall global="true" name="track_string"/>
 </preCompilationAnalysis>

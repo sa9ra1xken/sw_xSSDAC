@@ -27,11 +27,12 @@ PLAY_TRACK_RC PlayFLAC(FIL* file, chanend c_handshake, chanend c_control);
 const char * setting_file_name = "0:/CONTEXTSAVE.TXT";
 
 #include "ffconf.h"
-#include "flash_map.h"
+#include "persistent_storage_map.h"
 
-char track_string[TRACK_STRING_SIZE]="track";
-
-char folder_string[FOLDER_STRING_SIZE]="folder";
+//char track_string[TRACK_STRING_SIZE]="track";
+//char folder_string[FOLDER_STRING_SIZE]="folder";
+extern char track_string[];
+extern char folder_string[];
 
 char scratch[_MAX_LFN + 1];
 
@@ -101,7 +102,7 @@ int GoFolder(
         char * folder
 ){
     f_chdir(folder);
-    f_getcwd (folder_string, sizeof(folder_string));
+    f_getcwd (folder_string, FOLDER_STRING_SIZE);
     set_display_control_flag(BITMASK_SHOW_FOLDER);
     return 0;
 }
@@ -118,7 +119,7 @@ int ClimbUp(
     GetDirIndexOf(&index, cur_item );           //find index of previous folder
     debug_printf("\ncurrent index %d", index);
 
-    f_getcwd (&folder_string, sizeof(folder_string));
+    f_getcwd (&folder_string, FOLDER_STRING_SIZE);
     set_display_control_flag(BITMASK_SHOW_FOLDER);
     return index;
 }
@@ -130,7 +131,7 @@ int GoPreviousFolder(
     do{
         index = ClimbUp(
         ) -1;
-        f_getcwd (&folder_string, sizeof(folder_string));           //get current directory
+        f_getcwd (&folder_string, FOLDER_STRING_SIZE);           //get current directory
     } while ((strcmp(folder_string,"0:/")!=0)&&(index<=2));
 
     set_display_control_flag(BITMASK_SHOW_FOLDER);
@@ -224,9 +225,9 @@ void sdcard_play(
         debug_printf("\nreading qspi");
 
         qspi_if_read(i, FOLDER_STRING_OFFSET, FOLDER_STRING_SIZE, folder_string);
-        folder_string[sizeof(folder_string)-1]='\0';
+        folder_string[FOLDER_STRING_SIZE-1]='\0';
         qspi_if_read(i, TRACK_STRING_OFFSET, TRACK_STRING_SIZE, track_string);
-        track_string[sizeof(track_string)-1]='\0';
+        track_string[FOLDER_STRING_SIZE-1]='\0';
         debug_printf("\qspi read done.");
     }
     else debug_printf("\nreading context skipped");
@@ -320,7 +321,7 @@ void sdcard_play(
         }
         else
         {
-            strncpy(track_string, fn, sizeof(track_string));
+            strncpy(track_string, fn, TRACK_STRING_SIZE);
 
             debug_printf("\nplaying %s", track_string);
 

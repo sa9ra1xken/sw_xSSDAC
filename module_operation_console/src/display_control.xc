@@ -24,7 +24,7 @@
 #include "SSDAC_CONF.h"
 #include "qspi_access.h"
 
-#include "flash_map.h"
+#include "persistent_storage_map.h"
 
 #define TIME_10MS 1000000
 #define TIME_20MS 2000000
@@ -39,6 +39,12 @@ typedef enum {
     _PAUSING,
     _SCROLLING
 } SCROLLING_STATE;
+
+char track_string[TRACK_STRING_SIZE]="track";
+char folder_string[FOLDER_STRING_SIZE]="folder";
+//extern char track_string[];
+//extern char folder_string[];
+char audio_property_string[100];
 
 static SCROLLING_STATE state;
 
@@ -138,9 +144,6 @@ void GetStreamFormatString(char str[]){
     return;
 }
 
-extern char track_string[];
-extern char folder_string[];
-char audio_property_string[100];
 unsigned SecElapsed;
 char TotalTimeString[6];
 
