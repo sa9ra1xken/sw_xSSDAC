@@ -3160,7 +3160,7 @@ typedef struct FLAC__StreamDecoderPrivate {
 
 
 
-
+#pragma stackfunction STACKFUNCTIONSIZE
 static FLAC__StreamDecoderInitStatus init_stream_internal_(
  FLAC__StreamDecoder *decoder,
  FLAC__StreamDecoderReadCallback read_callback,
@@ -3222,7 +3222,8 @@ static FLAC__StreamDecoderInitStatus init_stream_internal_(
  return FLAC__STREAM_DECODER_INIT_STATUS_OK;
 }
 
-         FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_stream(
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_stream(
  FLAC__StreamDecoder *decoder,
  FLAC__StreamDecoderReadCallback read_callback,
  FLAC__StreamDecoderSeekCallback seek_callback,
@@ -3250,7 +3251,8 @@ static FLAC__StreamDecoderInitStatus init_stream_internal_(
  );
 }
 
-         FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_ogg_stream(
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_ogg_stream(
  FLAC__StreamDecoder *decoder,
  FLAC__StreamDecoderReadCallback read_callback,
  FLAC__StreamDecoderSeekCallback seek_callback,
@@ -3278,6 +3280,7 @@ static FLAC__StreamDecoderInitStatus init_stream_internal_(
  );
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE
 static FLAC__StreamDecoderInitStatus init_FILE_internal_(
  FLAC__StreamDecoder *decoder,
  FILE *file,
@@ -3322,7 +3325,8 @@ static FLAC__StreamDecoderInitStatus init_FILE_internal_(
  );
 }
 
-         FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_FILE(
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_FILE(
  FLAC__StreamDecoder *decoder,
  FILE *file,
  FLAC__StreamDecoderWriteCallback write_callback,
@@ -3334,7 +3338,8 @@ static FLAC__StreamDecoderInitStatus init_FILE_internal_(
  return init_FILE_internal_(decoder, file, write_callback, metadata_callback, error_callback, client_data, 0);
 }
 
-         FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_ogg_FILE(
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_ogg_FILE(
  FLAC__StreamDecoder *decoder,
  FILE *file,
  FLAC__StreamDecoderWriteCallback write_callback,
@@ -3346,6 +3351,7 @@ static FLAC__StreamDecoderInitStatus init_FILE_internal_(
  return init_FILE_internal_(decoder, file, write_callback, metadata_callback, error_callback, client_data, 1);
 }
 
+#pragma stackfunction STACKFUNCTIONSIZE
 static FLAC__StreamDecoderInitStatus init_file_internal_(
  FLAC__StreamDecoder *decoder,
  const char *filename,
@@ -3379,7 +3385,8 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
  return init_FILE_internal_(decoder, file, write_callback, metadata_callback, error_callback, client_data, is_ogg);
 }
 
-         FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_file(
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_file(
  FLAC__StreamDecoder *decoder,
  const char *filename,
  FLAC__StreamDecoderWriteCallback write_callback,
@@ -3391,7 +3398,8 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
  return init_file_internal_(decoder, filename, write_callback, metadata_callback, error_callback, client_data, 0);
 }
 
-         FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_ogg_file(
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__StreamDecoderInitStatus FLAC__stream_decoder_init_ogg_file(
  FLAC__StreamDecoder *decoder,
  const char *filename,
  FLAC__StreamDecoderWriteCallback write_callback,
@@ -3403,7 +3411,8 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
  return init_file_internal_(decoder, filename, write_callback, metadata_callback, error_callback, client_data, 1);
 }
 
-         FLAC__bool FLAC__stream_decoder_finish(FLAC__StreamDecoder *decoder)
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__bool FLAC__stream_decoder_finish(FLAC__StreamDecoder *decoder)
 {
  FLAC__bool md5_failed = 0;
  uint32_t i;
@@ -3472,7 +3481,8 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
  return !md5_failed;
 }
 
-         FLAC__bool FLAC__stream_decoder_set_ogg_serial_number(FLAC__StreamDecoder *decoder, long value)
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__bool FLAC__stream_decoder_set_ogg_serial_number(FLAC__StreamDecoder *decoder, long value)
 {
                            ;
                                      ;
@@ -3489,7 +3499,8 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
 
 }
 
-         FLAC__bool FLAC__stream_decoder_set_md5_checking(FLAC__StreamDecoder *decoder, FLAC__bool value)
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__bool FLAC__stream_decoder_set_md5_checking(FLAC__StreamDecoder *decoder, FLAC__bool value)
 {
                            ;
                                        ;
@@ -3499,7 +3510,8 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
  return 1;
 }
 
-         FLAC__bool FLAC__stream_decoder_set_metadata_respond(FLAC__StreamDecoder *decoder, FLAC__MetadataType type)
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__bool FLAC__stream_decoder_set_metadata_respond(FLAC__StreamDecoder *decoder, FLAC__MetadataType type)
 {
                            ;
                                      ;
@@ -3516,7 +3528,8 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
  return 1;
 }
 
-         FLAC__bool FLAC__stream_decoder_set_metadata_respond_application(FLAC__StreamDecoder *decoder, const FLAC__byte id[4])
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__bool FLAC__stream_decoder_set_metadata_respond_application(FLAC__StreamDecoder *decoder, const FLAC__byte id[4])
 {
                            ;
                                      ;
@@ -3544,7 +3557,8 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
  return 1;
 }
 
-         FLAC__bool FLAC__stream_decoder_set_metadata_respond_all(FLAC__StreamDecoder *decoder)
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__bool FLAC__stream_decoder_set_metadata_respond_all(FLAC__StreamDecoder *decoder)
 {
  uint32_t i;
                            ;
@@ -3558,7 +3572,8 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
  return 1;
 }
 
-         FLAC__bool FLAC__stream_decoder_set_metadata_ignore(FLAC__StreamDecoder *decoder, FLAC__MetadataType type)
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__bool FLAC__stream_decoder_set_metadata_ignore(FLAC__StreamDecoder *decoder, FLAC__MetadataType type)
 {
                            ;
                                      ;
@@ -3575,7 +3590,8 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
  return 1;
 }
 
-         FLAC__bool FLAC__stream_decoder_set_metadata_ignore_application(FLAC__StreamDecoder *decoder, const FLAC__byte id[4])
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__bool FLAC__stream_decoder_set_metadata_ignore_application(FLAC__StreamDecoder *decoder, const FLAC__byte id[4])
 {
                            ;
                                      ;
@@ -3603,7 +3619,8 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
  return 1;
 }
 
-         FLAC__bool FLAC__stream_decoder_set_metadata_ignore_all(FLAC__StreamDecoder *decoder)
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__bool FLAC__stream_decoder_set_metadata_ignore_all(FLAC__StreamDecoder *decoder)
 {
                            ;
                                      ;
@@ -3615,40 +3632,46 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
  return 1;
 }
 
-         FLAC__StreamDecoderState FLAC__stream_decoder_get_state(const FLAC__StreamDecoder *decoder)
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__StreamDecoderState FLAC__stream_decoder_get_state(const FLAC__StreamDecoder *decoder)
 {
                            ;
                                        ;
  return decoder->protected_->state;
 }
 
-         const char *FLAC__stream_decoder_get_resolved_state_string(const FLAC__StreamDecoder *decoder)
+#pragma stackfunction STACKFUNCTIONSIZE
+ const char *FLAC__stream_decoder_get_resolved_state_string(const FLAC__StreamDecoder *decoder)
 {
  return FLAC__StreamDecoderStateString[decoder->protected_->state];
 }
 
-         FLAC__bool FLAC__stream_decoder_get_md5_checking(const FLAC__StreamDecoder *decoder)
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__bool FLAC__stream_decoder_get_md5_checking(const FLAC__StreamDecoder *decoder)
 {
                            ;
                                        ;
  return decoder->protected_->md5_checking;
 }
 
-         FLAC__uint64 FLAC__stream_decoder_get_total_samples(const FLAC__StreamDecoder *decoder)
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__uint64 FLAC__stream_decoder_get_total_samples(const FLAC__StreamDecoder *decoder)
 {
                            ;
                                        ;
  return decoder->private_->has_stream_info? decoder->private_->stream_info.data.stream_info.total_samples : 0;
 }
 
-         uint32_t FLAC__stream_decoder_get_channels(const FLAC__StreamDecoder *decoder)
+#pragma stackfunction STACKFUNCTIONSIZE
+ uint32_t FLAC__stream_decoder_get_channels(const FLAC__StreamDecoder *decoder)
 {
                            ;
                                        ;
  return decoder->protected_->channels;
 }
 
-         FLAC__ChannelAssignment FLAC__stream_decoder_get_channel_assignment(const FLAC__StreamDecoder *decoder)
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__ChannelAssignment FLAC__stream_decoder_get_channel_assignment(const FLAC__StreamDecoder *decoder)
 {
                            ;
                                        ;
@@ -3676,7 +3699,8 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
  return decoder->protected_->blocksize;
 }
 
-         FLAC__bool FLAC__stream_decoder_get_decode_position(const FLAC__StreamDecoder *decoder, FLAC__uint64 *position)
+#pragma stackfunction STACKFUNCTIONSIZE
+ FLAC__bool FLAC__stream_decoder_get_decode_position(const FLAC__StreamDecoder *decoder, FLAC__uint64 *position)
 {
                            ;
                                      ;
@@ -3741,7 +3765,7 @@ static FLAC__StreamDecoderInitStatus init_file_internal_(
 
   return 0;
  }
-# 937 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 961 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
  if(!decoder->private_->internal_reset_hack) {
   if(decoder->private_->file == (__getstdin()))
    return 0;
@@ -4028,7 +4052,7 @@ void set_defaults_(FLAC__StreamDecoder *decoder)
 
 FILE *get_binary_stdin_(void)
 {
-# 1233 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 1257 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
  return (__getstdin());
 }
 
@@ -5074,7 +5098,7 @@ FLAC__bool read_frame_header_(FLAC__StreamDecoder *decoder)
 
  if(raw_header[1] & 0x02)
   is_unparseable = 1;
-# 2301 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 2325 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
  for(i = 0; i < 2; i++) {
   if(!FLAC__bitreader_read_raw_uint32(decoder->private_->input, &x, 8))
    return 0;
@@ -5790,7 +5814,7 @@ FLAC__bool read_callback_(FLAC__byte buffer[], size_t *bytes, void *client_data)
   return 0;
  }
  else if(*bytes > 0) {
-# 3026 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3050 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
   if(decoder->private_->is_seeking && decoder->private_->unparseable_frame_count > 20) {
    decoder->protected_->state = FLAC__STREAM_DECODER_ABORTED;
    return 0;
@@ -5833,9 +5857,9 @@ FLAC__bool read_callback_(FLAC__byte buffer[], size_t *bytes, void *client_data)
   decoder->protected_->state = FLAC__STREAM_DECODER_ABORTED;
   return 0;
  }
-# 3078 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3102 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
 }
-# 3088 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3112 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
 void undo_channel_coding(FLAC__StreamDecoder *decoder) {
  uint32_t i;
  switch(decoder->private_->frame.header.channel_assignment) {
@@ -5887,7 +5911,7 @@ void undo_channel_coding(FLAC__StreamDecoder *decoder) {
   break;
  }
 }
-# 3186 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3210 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
 FLAC__StreamDecoderWriteStatus write_audio_frame_to_client_(FLAC__StreamDecoder *decoder, const FLAC__Frame *frame, const FLAC__int32 * const buffer[])
 {
  decoder->private_->last_frame = *frame;
@@ -5987,7 +6011,7 @@ FLAC__bool seek_to_absolute_sample_(FLAC__StreamDecoder *decoder, FLAC__uint64 s
  }
  else
   approx_bytes_per_frame = 4096 * channels * bps/8 + 64;
-# 3293 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3317 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
  lower_bound = first_frame_offset;
  lower_bound_sample = 0;
  upper_bound = stream_length;
@@ -6003,7 +6027,7 @@ FLAC__bool seek_to_absolute_sample_(FLAC__StreamDecoder *decoder, FLAC__uint64 s
     lower_bound_sample = decoder->private_->samples_decoded;
   }
  }
-# 3319 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3343 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
  if(seek_table) {
   FLAC__uint64 new_lower_bound = lower_bound;
   FLAC__uint64 new_upper_bound = upper_bound;
@@ -6049,7 +6073,7 @@ FLAC__bool seek_to_absolute_sample_(FLAC__StreamDecoder *decoder, FLAC__uint64 s
  }
 
                                                        ;
-# 3373 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3397 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
  if(upper_bound_sample == lower_bound_sample)
   upper_bound_sample++;
 
@@ -6073,7 +6097,7 @@ FLAC__bool seek_to_absolute_sample_(FLAC__StreamDecoder *decoder, FLAC__uint64 s
   else {
 
    pos = (FLAC__int64)lower_bound + (FLAC__int64)((double)(target_sample - lower_bound_sample) / (double)(upper_bound_sample - lower_bound_sample) * (double)(upper_bound - lower_bound)) - approx_bytes_per_frame;
-# 3405 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3429 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
   }
   if(pos >= (FLAC__int64)upper_bound)
    pos = (FLAC__int64)upper_bound - 1;
@@ -6160,7 +6184,7 @@ FLAC__bool seek_to_absolute_sample_(FLAC__StreamDecoder *decoder, FLAC__uint64 s
 
  return 1;
 }
-# 3631 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
+# 3655 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c"
 FLAC__StreamDecoderReadStatus file_read_callback_(const FLAC__StreamDecoder *decoder, FLAC__byte buffer[], size_t *bytes, void *client_data)
 {
  (void)client_data;

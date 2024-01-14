@@ -102,6 +102,20 @@
     </values>
   </arg>
 </fCall>
+<fCall name="SwitchConsoleMode" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="2"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="SwitchConsoleMode" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="1"/></value>
+    </values>
+  </arg>
+</fCall>
 <fCall name="set_display_control_flag" global="true" numArgs="1">
   <arg num="0">
     <values>

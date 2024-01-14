@@ -175,11 +175,8 @@
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include/xc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include/clang&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/core}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/extensions}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/extensions/mfi}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.xc.compiler.input.403564540" name="XC" superClass="com.xmos.cdt.xc.compiler.input"/>
 							</tool>
@@ -483,11 +480,8 @@
 								<option id="com.xmos.c.compiler.option.include.paths.380969473" name="com.xmos.c.compiler.option.include.paths" superClass="com.xmos.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include/clang&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/core}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/extensions}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/extensions/mfi}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.c.compiler.input.c.1672508415" name="C" superClass="com.xmos.cdt.c.compiler.input.c"/>
 							</tool>
@@ -796,11 +790,8 @@
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include/clang&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}\target/include/c++/v1&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/core}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/extensions}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_simple_ssdac_xSSDAC-SD-V2/src/extensions/mfi}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.cxx.compiler.input.cpp.128206491" name="C++" superClass="com.xmos.cdt.cxx.compiler.input.cpp"/>
 							</tool>

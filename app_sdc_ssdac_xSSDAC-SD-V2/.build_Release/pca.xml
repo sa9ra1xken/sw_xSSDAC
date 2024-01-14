@@ -302,7 +302,7 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="KeyEventInDacModeSelection" global="true" specialize="false" noreturn="false" doNotSpecialize="true" numParams="1">
+<fInfo name="KeyEventInDacModeSelection" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
     <values>
       <value type="intval"><intval isSigned="true" val="1"/></value>
@@ -329,7 +329,7 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="KeyEventInFunctionSelection" global="true" specialize="false" noreturn="false" doNotSpecialize="true" numParams="1">
+<fInfo name="KeyEventInFunctionSelection" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
     <values>
       <value type="intval"><intval isSigned="true" val="1"/></value>
@@ -356,7 +356,7 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="KeyEventInSDCMode" global="true" specialize="false" noreturn="false" doNotSpecialize="true" numParams="1">
+<fInfo name="KeyEventInSDCMode" global="true" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
     <values>
       <value type="intval"><intval isSigned="true" val="1"/></value>
@@ -519,7 +519,6 @@
       <value type="intval"><intval isSigned="true" val="1"/></value>
       <value type="intval"><intval isSigned="true" val="2"/></value>
       <value type="intval"><intval isSigned="true" val="3"/></value>
-      <value type="intval"><intval isSigned="true" val="4"/></value>
     </values>
   </arg>
 </fInfo>

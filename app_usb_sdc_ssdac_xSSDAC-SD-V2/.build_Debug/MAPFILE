@@ -1104,23 +1104,23 @@ Symbols:
   0005118c 00000084 .text                KeyEvent
   0005118c 00000000 .text                $d.956
   00051210 00000014 .text                set_display_control_flag
-  00051210 00000000 .text                $d.2190
+  00051210 00000000 .text                $d.2148
   00051224 0000001c .text                update_samp_freq
-  00051224 00000000 .text                $d.2191
+  00051224 00000000 .text                $d.2149
   00051240 00000020 .text                update_stream_format
-  00051240 00000000 .text                $d.2192
+  00051240 00000000 .text                $d.2150
   00051260 0000006c .text                init_display_frame
-  00051260 00000000 .text                $d.2193
+  00051260 00000000 .text                $d.2151
   000512cc 0000000c .text                set_console_mode
-  000512cc 00000000 .text                $d.2195
+  000512cc 00000000 .text                $d.2153
   000512d8 00000094 .text                _SShowStreamFormat_0
-  000512d8 00000000 .text                $d.2199
+  000512d8 00000000 .text                $d.2157
   0005136c 00000070 .text                _SShowInterpolationMode_0
-  0005136c 00000000 .text                $d.2212
+  0005136c 00000000 .text                $d.2170
   000513dc 000004f8 .text                _Shandle_display_frame_0
-  000513dc 00000000 .text                $d.2216
+  000513dc 00000000 .text                $d.2174
   000518d4 0000004c .text                _Sdisplay_control_core_0
-  000518d4 00000000 .text                $d.2218
+  000518d4 00000000 .text                $d.2176
   00051920 00000048 .text                set_frequency
   00051920 00000000 .text                $d.344
   00051968 00000134 .text                send_sample

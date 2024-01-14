@@ -1745,9 +1745,18 @@ void SwitchConsoleMode(CONSOLE_MODE mode){
         unsafe { *p_proposed_intpol_mode = _SINC8; }
         set_display_control_flag(0x00000100);
         break;
+    case _BTN_7_DOWN:
 
 
 
+        switch(_func){
+        case _USB_DAC:
+            SwitchConsoleMode(_USB_AUDIO);
+            break;
+        case _SDC_PLAY:
+            SwitchConsoleMode(_SDC_AUDIO);
+            break;
+        }
 
         break;
     default:

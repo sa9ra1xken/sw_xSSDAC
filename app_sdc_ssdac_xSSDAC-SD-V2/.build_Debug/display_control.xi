@@ -2074,7 +2074,7 @@ void ShowFolder(int row, client interface qspi_access ? i){
     state = _PAUSING;
     scrolling_row = row;
 
-    i.write((4), (256), folder_string);
+    if (!isnull(i)) i.write((4), (256), folder_string);
 }
 
 void ShowTrack(int row, client interface qspi_access ? i){
@@ -2083,7 +2083,7 @@ void ShowTrack(int row, client interface qspi_access ? i){
     state = _PAUSING;
     scrolling_row = row;
 
-    i.write(((4) + (256)), (256), track_string);
+    if (!isnull(i)) i.write(((4) + (256)), (256), track_string);
 }
 
 void ShowAudioProperty(int row){
@@ -2291,13 +2291,9 @@ void handle_display_frame(client interface qspi_access ? i){
 void display_control_core(client interface qspi_access ? i){
     debug_printf("\ndisplay_control_core started");
 
-    if (!isnull(i)){
-
-
-
-
+    if (isnull(i)){
+        debug_printf("\nqspi_access is not available");
     }
-    else debug_printf("\nqspi_access is not available");
 
     timer t;
     unsigned time;

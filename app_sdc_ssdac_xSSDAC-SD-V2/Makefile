@@ -17,7 +17,7 @@ USED_MODULES = lib_logging lib_trycatch lib_xcore_c module_FatFs module_flash_me
 # If the variable XCC_MAP_FLAGS is set it overrides the flags passed to
 # xcc for the final link (mapping) stage.
 
-XCC_FLAGS_Debug = $(BUILD_FLAGS) $(LOGGING_FLAGS) -g -O0
+XCC_FLAGS_Debug = $(BUILD_FLAGS) $(LOGGING_FLAGS) -g -O3
 XCC_XC_FLAGS_Debug = $(BUILD_FLAGS) $(LOGGING_FLAGS)
 XCC_C_FLAGS_Debug = $(BUILD_FLAGS) $(LOGGING_FLAGS)
 XCC_FLAGS_Release = $(BUILD_FLAGS) -g -O3
