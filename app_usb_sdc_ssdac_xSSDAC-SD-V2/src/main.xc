@@ -4,7 +4,8 @@
  * @author  Ross Owen, XMOS Semiconductor Ltd
  *
  * @author  Takaaki Sakurai
- * Modified by Sakurai for supporting SSDAC function. 	
+ * Modified by Sakurai for supporting SSDAC function.
+ *
  *
  */
 #include <syscall.h>
