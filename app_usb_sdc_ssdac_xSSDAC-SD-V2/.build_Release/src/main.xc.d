@@ -22,6 +22,6 @@
   C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/button_listener.h \
   C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/SSDAC_MODE.h \
   C:/Users/takaaki/git/sw_xSSDAC/app_usb_sdc_ssdac_xSSDAC-SD-V2/src/ffconf.h \
-  C:/Users/takaaki/git/sw_xSSDAC/app_usb_sdc_ssdac_xSSDAC-SD-V2/src/flash_map.h
+  C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/persistent_storage_map.h
 
 

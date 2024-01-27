@@ -1043,8 +1043,8 @@ int _safe_rename(const char from[], const char to[]);
 # 30 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\gpio_access.h"
 void set_gpio(unsigned bit, unsigned value);
 # 7 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src/audiohw.xc" 2
-# 1 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h" 1
-# 10 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_shared/src\\i2c_shared.h" 1
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_shared/src\\i2c_shared.h"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 1 3
 # 201 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 3
 typedef streaming chanend streaming_chanend_t;
@@ -1060,12 +1060,12 @@ typedef out buffered port:4 out_buffered_port_4_t;
 typedef out buffered port:8 out_buffered_port_8_t;
 typedef out buffered port:16 out_buffered_port_16_t;
 typedef out buffered port:32 out_buffered_port_32_t;
-# 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h" 2
-# 1 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 1
-# 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_shared/src\\i2c_shared.h" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src\\i2c.h" 1
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src\\i2c.h"
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\i2c_conf.h" 1
-# 12 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 2
-# 92 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src\\i2c.h" 2
+# 92 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src\\i2c.h"
 struct r_i2c {
     port p_i2c;
 };
@@ -1075,12 +1075,12 @@ struct r_i2c {
 
 
 void i2c_master_init(struct r_i2c &i2cPorts);
-# 120 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
+# 120 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src\\i2c.h"
 int i2c_master_write_reg(int device, int reg_addr,
                          const unsigned char data[],
                          int nbytes,
                          struct r_i2c &i2cPorts);
-# 150 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
+# 150 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src\\i2c.h"
 int i2c_master_write_part(
         int device,
         int addr,
@@ -1089,7 +1089,7 @@ int i2c_master_write_part(
         int end,
         int offset,
         struct r_i2c &i2cPorts);
-# 175 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
+# 175 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src\\i2c.h"
 int i2c_master_read_reg(int device, int addr,
                         unsigned char data[],
                         int nbytes,
@@ -1098,22 +1098,22 @@ int i2c_master_read_reg(int device, int addr,
 
 int i2c_master_rx(int device, unsigned char data[], int nbytes,
         struct r_i2c &i2cPorts);
-# 12 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h" 2
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_shared/src\\i2c_shared.h" 2
 
 
 
 
 void i2c_shared_master_init(struct r_i2c &i2cPorts);
-# 28 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h"
+# 28 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_shared/src\\i2c_shared.h"
 int i2c_shared_master_rx(struct r_i2c &i2cPorts, int device, unsigned char data[],
     int nbytes);
-# 41 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h"
+# 41 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_shared/src\\i2c_shared.h"
 int i2c_shared_master_read_reg(struct r_i2c &i2cPorts, int device, int reg_addr,
     unsigned char data[], int nbytes);
-# 58 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h"
+# 58 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_shared/src\\i2c_shared.h"
 int i2c_shared_master_write_reg(struct r_i2c &i2cPorts, int device, int reg_addr,
     const unsigned char data[], int nbytes);
-# 78 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.h"
+# 78 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_shared/src\\i2c_shared.h"
 int i2c_shared_master_write_part(
         struct r_i2c &i2cPorts,
         int device,

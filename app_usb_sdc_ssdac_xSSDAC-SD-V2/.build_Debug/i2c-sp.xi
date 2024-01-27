@@ -1,10 +1,10 @@
-# 1 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src/i2c-sp.xc"
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src/i2c-sp.xc"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 141 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src/i2c-sp.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src/i2c-sp.xc" 2
 
 
 
@@ -396,7 +396,7 @@ unsigned get_local_tile_id(void);
 unsigned get_tile_id(tileref t);
 # 2136 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 3
 unsigned get_logical_core_id(void);
-# 9 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src/i2c-sp.xc" 2
+# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src/i2c-sp.xc" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 1 3
 # 35 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 unsigned bitrev(unsigned x);
@@ -404,7 +404,7 @@ unsigned bitrev(unsigned x);
 unsigned byterev(unsigned x);
 # 59 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 int clz(unsigned x);
-# 10 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src/i2c-sp.xc" 2
+# 10 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src/i2c-sp.xc" 2
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 
 
@@ -1034,11 +1034,11 @@ int _safe_fclose(FILE * movable fp);
 int _safe_remove(const char file[]);
 int _safe_rename(const char from[], const char to[]);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 2 3
-# 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src/i2c-sp.xc" 2
-# 1 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 1
-# 11 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src/i2c-sp.xc" 2
+# 1 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src\\i2c.h" 1
+# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src\\i2c.h"
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_hw_support_xSSDAC-SD/src\\i2c_conf.h" 1
-# 12 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 2
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src\\i2c.h" 2
 
 
 
@@ -1057,8 +1057,8 @@ typedef out buffered port:4 out_buffered_port_4_t;
 typedef out buffered port:8 out_buffered_port_8_t;
 typedef out buffered port:16 out_buffered_port_16_t;
 typedef out buffered port:32 out_buffered_port_32_t;
-# 16 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h" 2
-# 92 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
+# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src\\i2c.h" 2
+# 92 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src\\i2c.h"
 struct r_i2c {
     port p_i2c;
 };
@@ -1068,12 +1068,12 @@ struct r_i2c {
 
 
 void i2c_master_init(struct r_i2c &i2cPorts);
-# 120 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
+# 120 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src\\i2c.h"
 int i2c_master_write_reg(int device, int reg_addr,
                          const unsigned char data[],
                          int nbytes,
                          struct r_i2c &i2cPorts);
-# 150 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
+# 150 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src\\i2c.h"
 int i2c_master_write_part(
         int device,
         int addr,
@@ -1082,7 +1082,7 @@ int i2c_master_write_part(
         int end,
         int offset,
         struct r_i2c &i2cPorts);
-# 175 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
+# 175 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src\\i2c.h"
 int i2c_master_read_reg(int device, int addr,
                         unsigned char data[],
                         int nbytes,
@@ -1091,7 +1091,7 @@ int i2c_master_read_reg(int device, int addr,
 
 int i2c_master_rx(int device, unsigned char data[], int nbytes,
         struct r_i2c &i2cPorts);
-# 12 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src/i2c-sp.xc" 2
+# 12 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src/i2c-sp.xc" 2
 
 
 

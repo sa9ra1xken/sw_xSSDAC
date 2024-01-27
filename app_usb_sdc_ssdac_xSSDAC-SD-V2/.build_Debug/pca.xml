@@ -38,69 +38,6 @@
     </values>
   </arg>
 </fInfo>
-<fInfo name="highPulseDrive" global="false" unit="C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="2">
-  <arg num="0" specialize="false">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="1" specialize="false">
-    <values>
-      <value type="unknown"/>
-      <value type="intval"><intval isSigned="true" val="0"/></value>
-    </values>
-  </arg>
-</fInfo>
-<fInfo name="highPulseSample" global="false" unit="C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="2">
-  <arg num="0" specialize="false">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="1" specialize="false">
-    <values>
-      <value type="unknown"/>
-      <value type="intval"><intval isSigned="true" val="0"/></value>
-    </values>
-  </arg>
-</fInfo>
-<fInfo name="startBit" global="false" unit="C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
-  <arg num="0" specialize="false">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fInfo>
-<fInfo name="stopBit" global="false" unit="C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
-  <arg num="0" specialize="false">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fInfo>
-<fInfo name="tx8" global="false" unit="C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="2">
-  <arg num="0" specialize="false">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-  <arg num="1" specialize="false">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fInfo>
-<fInfo name="waitAfterNACK" global="false" unit="C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
-  <arg num="0" specialize="false">
-    <values>
-      <value type="unknown"/>
-    </values>
-  </arg>
-</fInfo>
-<fInfo name="waitHalf" global="false" unit="C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
-</fInfo>
-<fInfo name="waitQuarter" global="false" unit="C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
-</fInfo>
 <fInfo name="DFU_Abort" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_dfu/src/dfu.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
   <arg num="0" specialize="false">
     <values>
@@ -303,6 +240,69 @@
     <values>
     </values>
   </arg>
+</fInfo>
+<fInfo name="highPulseDrive" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="2">
+  <arg num="0" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="0"/></value>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="highPulseSample" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="2">
+  <arg num="0" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+      <value type="intval"><intval isSigned="true" val="0"/></value>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="startBit" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
+  <arg num="0" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="stopBit" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
+  <arg num="0" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="tx8" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="2">
+  <arg num="0" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+  <arg num="1" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="waitAfterNACK" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="1">
+  <arg num="0" specialize="false">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fInfo>
+<fInfo name="waitHalf" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
+</fInfo>
+<fInfo name="waitQuarter" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src/i2c-sp.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="0">
 </fInfo>
 <fInfo name="XUD_SetReady_In" global="false" unit="C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\button_listener.h" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
   <arg num="0" specialize="false">

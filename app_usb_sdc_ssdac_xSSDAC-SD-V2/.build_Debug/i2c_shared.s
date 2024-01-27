@@ -15,7 +15,7 @@
 	.section	.debug_ranges,"",@progbits
 .Ldebug_range:
 	.file	1 "C:/Users/takaaki/git/sc_util/module_locks/src\\swlock.h"
-	.file	2 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.c"
+	.file	2 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_shared/src\\i2c_shared.c"
 	.text
 	.globl	i2c_shared_master_init
 	.align	4
@@ -533,12 +533,12 @@ i2c_swlock:
 	.text
 .Ldebug_end1:
 	.file	3 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h"
-	.file	4 "C:/Users/takaaki/git/sc_i2c_xken/module_i2c_single_port/src\\i2c.h"
+	.file	4 "C:/Users/takaaki/git/sw_xSSDAC/module_i2c_single_port/src\\i2c.h"
 	.section	.debug_str,"MS",@progbits,1
 .Linfo_string0:
 .asciiz"XMOS-235-acbb966-Dec-01-2019 clang version 3.6.0  (based on LLVM 3.6.0svn)"
 .Linfo_string1:
-.asciiz"C:/Users/takaaki/git/sc_i2c_xken/module_i2c_shared/src\\i2c_shared.c"
+.asciiz"C:/Users/takaaki/git/sw_xSSDAC/module_i2c_shared/src\\i2c_shared.c"
 .Linfo_string2:
 .asciiz"C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Debug"
 .Linfo_string3:

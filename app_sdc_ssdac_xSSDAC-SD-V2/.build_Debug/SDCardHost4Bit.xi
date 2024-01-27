@@ -521,37 +521,37 @@ static DRESULT SendCmd(BYTE IfNum, BYTE Cmd, DWORD Arg, RESP_TYPE RespType, int 
   i = __builtin_bitrev(Cmd | 0b01000000) >> 24;
   __builtin_crc8shr(Crc0, i, (0x91 >> 1));
 
-  SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> i; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void;
+  SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> i; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void;
   Arg = __builtin_bitrev(Arg);
-  SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> i; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void;
+  SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> i; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void;
   __builtin_crc32(Crc0, Arg, (0x91 >> 1));
-  SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> i; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void;
+  SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> i; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void;
   __builtin_crc32(Crc0, 0, (0x91 >> 1));
-  SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> i; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void;
+  SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> i; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void;
   Crc0 |= 0x80;
-  SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> i; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void;
+  SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> i; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void;
   RespStat = ((R0 == RespType) ? 0 : 1);
-  SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> i; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void;
+  SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> i; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void;
   RespBitLen = (R2 == RespType) ? 136 : 48;
-  SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> i; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void;
+  SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> i; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void;
   RespBitCount = 0;
-  SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> i; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void;
-  for(i = 32; i; i--) { SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Arg; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void; }
-  SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Crc0; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void;
+  SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> i; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void;
+  for(i = 32; i; i--) { SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Arg; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void; }
+  SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Crc0; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void;
   RespByteCount = 0;
-  SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Crc0; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void;
+  SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Crc0; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void;
   Dat = 0xFFFFFFFF;
-  SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Crc0; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void;
+  SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Crc0; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void;
   R = 0xFF;
-  SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Crc0; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void;
+  SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Crc0; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void;
   DatStat = (0 < DataBlocks) ? 1 : 0;
-  SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Crc0; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void;
+  SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Crc0; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void;
   DatBytesLen = DataBlocks * 512;
-  SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Crc0; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void;
+  SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Crc0; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void;
   DatByteCount = 0;
-  SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Crc0; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void;
+  SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Crc0; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void;
   i = 0;
-  SDif[IfNum].Clk <: 0; t :> time; time += 20; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Crc0; SDif[IfNum].Clk <: 1; time += 20; t when __builtin_timer_after(time) :> void;
+  SDif[IfNum].Clk <: 0; t :> time; time += 5; t when __builtin_timer_after(time) :> void; SDif[IfNum].Cmd <: >> Crc0; SDif[IfNum].Clk <: 1; time += 5; t when __builtin_timer_after(time) :> void;
 
   if(Is_XS1_G_Core)
     set_port_pull_up(SDif[IfNum].Cmd);
@@ -560,10 +560,10 @@ static DRESULT SendCmd(BYTE IfNum, BYTE Cmd, DWORD Arg, RESP_TYPE RespType, int 
   {
     SDif[IfNum].Clk <: 0;
     t :> time;
-    time += 20;
+    time += 5;
     t when __builtin_timer_after(time) :> void;
     SDif[IfNum].Clk <: 1;
-    time += 20;
+    time += 5;
     t when __builtin_timer_after(time) :> void;
 
     i++;
@@ -611,20 +611,20 @@ static DRESULT SendCmd(BYTE IfNum, BYTE Cmd, DWORD Arg, RESP_TYPE RespType, int 
 
               SDif[IfNum].Clk <: 0;
               t :> time;
-              time += 20;
+              time += 5;
               t when __builtin_timer_after(time) :> void;
               SDif[IfNum].Clk <: 1;
-              time += 20;
+              time += 5;
               t when __builtin_timer_after(time) :> void;
 
               SDif[IfNum].Dat :> >> Dat;
 
               SDif[IfNum].Clk <: 0;
               t :> time;
-              time += 20;
+              time += 5;
               t when __builtin_timer_after(time) :> void;
               SDif[IfNum].Clk <: 1;
-              time += 20;
+              time += 5;
               t when __builtin_timer_after(time) :> void;
 
               SDif[IfNum].Dat :> >> Dat;
@@ -688,10 +688,10 @@ static DRESULT SendCmd(BYTE IfNum, BYTE Cmd, DWORD Arg, RESP_TYPE RespType, int 
   {
       SDif[IfNum].Clk <: 0;
       t :> time;
-      time += 20;
+      time += 5;
       t when __builtin_timer_after(time) :> void;
       SDif[IfNum].Clk <: 1;
-      time += 20;
+      time += 5;
       t when __builtin_timer_after(time) :> void;
   }
 
@@ -709,13 +709,13 @@ static DRESULT SendCmd(BYTE IfNum, BYTE Cmd, DWORD Arg, RESP_TYPE RespType, int 
 
       SDif[IfNum].Clk <: 0;
       t :> time;
-      time += 20;
+      time += 5;
       t when __builtin_timer_after(time) :> void;
       SDif[IfNum].Dat <: 0;
-      time += 20;
+      time += 5;
       t when __builtin_timer_after(time) :> void;
       SDif[IfNum].Clk <: 1;
-      time += 20;
+      time += 5;
       t when __builtin_timer_after(time) :> void;
 
       for(j = 512/4; j; j--)
@@ -746,13 +746,13 @@ static DRESULT SendCmd(BYTE IfNum, BYTE Cmd, DWORD Arg, RESP_TYPE RespType, int 
 
             SDif[IfNum].Clk <: 0;
             t :> time;
-            time += 20;
+            time += 5;
             t when __builtin_timer_after(time) :> void;
             SDif[IfNum].Dat <: >> Dat;
-            time += 20;
+            time += 5;
             t when __builtin_timer_after(time) :> void;
             SDif[IfNum].Clk <: 1; }
-            time += 20;
+            time += 5;
             t when __builtin_timer_after(time) :> void;
 
         }
@@ -771,13 +771,13 @@ static DRESULT SendCmd(BYTE IfNum, BYTE Cmd, DWORD Arg, RESP_TYPE RespType, int 
 
         SDif[IfNum].Clk <: 0;
         t :> time;
-        time += 20;
+        time += 5;
         t when __builtin_timer_after(time) :> void;
         SDif[IfNum].Dat <: Dat;
-        time += 20;
+        time += 5;
         t when __builtin_timer_after(time) :> void;
         SDif[IfNum].Clk <: 1;
-        time += 20;
+        time += 5;
         t when __builtin_timer_after(time) :> void;
 
         Crc3 >>= 1; Crc2 >>= 1; Crc1 >>= 1; Crc0 >>= 1;
@@ -788,13 +788,13 @@ static DRESULT SendCmd(BYTE IfNum, BYTE Cmd, DWORD Arg, RESP_TYPE RespType, int 
 
       SDif[IfNum].Clk <: 0;
       t :> time;
-      time += 20;
+      time += 5;
       t when __builtin_timer_after(time) :> void;
       SDif[IfNum].Dat <: 0xF;
-      time += 20;
+      time += 5;
       t when __builtin_timer_after(time) :> void;
       SDif[IfNum].Clk <: 1;
-      time += 20;
+      time += 5;
       t when __builtin_timer_after(time) :> void;
 
       if(Is_XS1_G_Core)
@@ -807,10 +807,10 @@ static DRESULT SendCmd(BYTE IfNum, BYTE Cmd, DWORD Arg, RESP_TYPE RespType, int 
 
           SDif[IfNum].Clk <: 0;
           t :> time;
-          time += 20;
+          time += 5;
           t when __builtin_timer_after(time) :> void;
           SDif[IfNum].Clk <: 1;
-          time += 20;
+          time += 5;
           t when __builtin_timer_after(time) :> void;
       }
 
@@ -822,10 +822,10 @@ static DRESULT SendCmd(BYTE IfNum, BYTE Cmd, DWORD Arg, RESP_TYPE RespType, int 
 
           SDif[IfNum].Clk <: 0;
           t :> time;
-          time += 20;
+          time += 5;
           t when __builtin_timer_after(time) :> void;
           SDif[IfNum].Clk <: 1;
-          time += 20;
+          time += 5;
           t when __builtin_timer_after(time) :> void;
 
           SDif[IfNum].Dat :> Dat;
@@ -846,10 +846,10 @@ static DRESULT SendCmd(BYTE IfNum, BYTE Cmd, DWORD Arg, RESP_TYPE RespType, int 
 
       SDif[IfNum].Clk <: 0;
       t :> time;
-      time += 20;
+      time += 5;
       t when __builtin_timer_after(time) :> void;
       SDif[IfNum].Clk <: 1;
-      time += 20;
+      time += 5;
       t when __builtin_timer_after(time) :> void;
 
       SDif[IfNum].Dat :> Dat;

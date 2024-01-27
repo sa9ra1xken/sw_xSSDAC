@@ -83,7 +83,7 @@ static DRESULT SendCmd(BYTE IfNum, BYTE Cmd, DWORD Arg, RESP_TYPE RespType, int 
 
   timer t;              //added by sakurai
   unsigned time;        //added by sakurai
-  #define CLK_DELAY 20  //added by sakurai
+  #define CLK_DELAY 5  //added by sakurai
 
   set_port_drive(SDif[IfNum].Cmd);
   i = bitrev(Cmd | 0b01000000) >> 24; // build first byte of command: start bit, host sending bit, Cmd

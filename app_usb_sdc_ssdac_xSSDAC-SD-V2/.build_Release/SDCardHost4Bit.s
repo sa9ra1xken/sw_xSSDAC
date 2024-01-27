@@ -1862,15 +1862,13 @@ SendCmd:                                # @SendCmd
 		gettime r7
 	}
 .Ltmp105:
-	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
-	ldaw r8, r7[5]
-.Ltmp106:
 	#DEBUG_VALUE: time <- R8
 	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
 	{
+		add r8, r7, 5
 		get r11, id
-		nop
 	}
+.Ltmp106:
 	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
 	ldaw r3, dp[__timers]
 	{
@@ -1899,15 +1897,13 @@ SendCmd:                                # @SendCmd
 		mkmsk r8, 1
 	}
 .Ltmp108:
+	#DEBUG_VALUE: time <- R11
 	.loc	1 92 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:3
 	{
 		out res[r6], r8
-		nop
+		add r11, r7, 10
 	}
-	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
-	ldaw r11, r7[10]
 .Ltmp109:
-	#DEBUG_VALUE: time <- R11
 	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
 	{
 		setd res[r3], r11
@@ -1919,7 +1915,6 @@ SendCmd:                                # @SendCmd
 		in r11, res[r3]
 		nop
 	}
-.Ltmp111:
 	#DEBUG_VALUE: SendCmd:Arg <- R11
 	.loc	1 93 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:93:0
 .Lxta.endpoint_labels6:
@@ -1927,17 +1922,20 @@ SendCmd:                                # @SendCmd
 		out res[r6], r0
 		bitrev r11, r2
 	}
-.Ltmp112:
+.Ltmp111:
 	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:94:0
 	{
 		gettime r2
 		nop
 	}
-.Ltmp113:
+.Ltmp112:
 	#DEBUG_VALUE: time <- R2
 	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:94:0
-	ldaw r7, r2[5]
-.Ltmp114:
+	{
+		add r7, r2, 5
+		nop
+	}
+.Ltmp113:
 	#DEBUG_VALUE: time <- R7
 	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:94:0
 	{
@@ -1945,26 +1943,25 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:94:0
-.Ltmp115:
+.Ltmp114:
 	{
 		in r7, res[r3]
 		nop
 	}
-.Ltmp116:
+.Ltmp115:
 	.loc	1 94 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:94:3
 	{
 		outshr res[r1], r5
 		nop
 	}
+.Ltmp116:
+	#DEBUG_VALUE: time <- R2
 	.loc	1 94 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:94:3
 	{
 		out res[r6], r8
-		nop
+		add r2, r2, 10
 	}
-	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:94:0
-	ldaw r2, r2[10]
 .Ltmp117:
-	#DEBUG_VALUE: time <- R2
 	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:94:0
 	{
 		setd res[r3], r2
@@ -1986,7 +1983,10 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp120:
 	.loc	1 96 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:96:0
-	ldaw r7, r2[5]
+	{
+		add r7, r2, 5
+		nop
+	}
 .Ltmp121:
 	#DEBUG_VALUE: time <- R7
 	.loc	1 96 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:96:0
@@ -2006,27 +2006,26 @@ SendCmd:                                # @SendCmd
 		outshr res[r1], r5
 		nop
 	}
+.Ltmp124:
+	#DEBUG_VALUE: time <- R2
 	.loc	1 96 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:96:3
 	{
 		out res[r6], r8
-		nop
+		add r2, r2, 10
 	}
-	.loc	1 96 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:96:0
-	ldaw r2, r2[10]
-.Ltmp124:
-	#DEBUG_VALUE: time <- R2
+.Ltmp125:
 	.loc	1 96 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:96:0
 	{
 		setd res[r3], r2
 		nop
 	}
 	.loc	1 96 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:96:0
-.Ltmp125:
+.Ltmp126:
 	{
 		in r2, res[r3]
 		nop
 	}
-.Ltmp126:
+.Ltmp127:
 	#DEBUG_VALUE: time <- R2
 	.loc	1 98 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:3
 .Lxta.endpoint_labels8:
@@ -2034,10 +2033,13 @@ SendCmd:                                # @SendCmd
 		out res[r6], r0
 		gettime r2
 	}
-.Ltmp127:
-	.loc	1 98 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:0
-	ldaw r7, r2[5]
 .Ltmp128:
+	.loc	1 98 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:0
+	{
+		add r7, r2, 5
+		nop
+	}
+.Ltmp129:
 	#DEBUG_VALUE: time <- R7
 	.loc	1 98 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:0
 	{
@@ -2045,38 +2047,37 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 98 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:0
-.Ltmp129:
+.Ltmp130:
 	{
 		in r7, res[r3]
 		nop
 	}
-.Ltmp130:
+.Ltmp131:
 	.loc	1 98 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:3
 	{
 		outshr res[r1], r5
 		nop
 	}
+.Ltmp132:
+	#DEBUG_VALUE: time <- R2
 	.loc	1 98 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:3
 	{
 		out res[r6], r8
-		nop
+		add r2, r2, 10
 	}
-	.loc	1 98 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:0
-	ldaw r2, r2[10]
-.Ltmp131:
-	#DEBUG_VALUE: time <- R2
+.Ltmp133:
 	.loc	1 98 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:0
 	{
 		setd res[r3], r2
 		nop
 	}
 	.loc	1 98 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:0
-.Ltmp132:
+.Ltmp134:
 	{
 		in r2, res[r3]
 		nop
 	}
-.Ltmp133:
+.Ltmp135:
 	#DEBUG_VALUE: time <- R2
 	.loc	1 100 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:3
 .Lxta.endpoint_labels9:
@@ -2084,10 +2085,13 @@ SendCmd:                                # @SendCmd
 		out res[r6], r0
 		gettime r2
 	}
-.Ltmp134:
+.Ltmp136:
 	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:0
-	ldaw r7, r2[5]
-.Ltmp135:
+	{
+		add r7, r2, 5
+		nop
+	}
+.Ltmp137:
 	#DEBUG_VALUE: time <- R7
 	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:0
 	{
@@ -2095,38 +2099,37 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:0
-.Ltmp136:
+.Ltmp138:
 	{
 		in r7, res[r3]
 		nop
 	}
-.Ltmp137:
+.Ltmp139:
 	.loc	1 100 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:3
 	{
 		outshr res[r1], r5
 		nop
 	}
+.Ltmp140:
+	#DEBUG_VALUE: time <- R2
 	.loc	1 100 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:3
 	{
 		out res[r6], r8
-		nop
+		add r2, r2, 10
 	}
-	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:0
-	ldaw r2, r2[10]
-.Ltmp138:
-	#DEBUG_VALUE: time <- R2
+.Ltmp141:
 	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:0
 	{
 		setd res[r3], r2
 		nop
 	}
 	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:0
-.Ltmp139:
+.Ltmp142:
 	{
 		in r2, res[r3]
 		nop
 	}
-.Ltmp140:
+.Ltmp143:
 	#DEBUG_VALUE: time <- R2
 	.loc	1 102 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:3
 .Lxta.endpoint_labels10:
@@ -2134,10 +2137,13 @@ SendCmd:                                # @SendCmd
 		out res[r6], r0
 		gettime r2
 	}
-.Ltmp141:
+.Ltmp144:
 	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:0
-	ldaw r7, r2[5]
-.Ltmp142:
+	{
+		add r7, r2, 5
+		nop
+	}
+.Ltmp145:
 	#DEBUG_VALUE: time <- R7
 	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:0
 	{
@@ -2145,38 +2151,37 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:0
-.Ltmp143:
+.Ltmp146:
 	{
 		in r7, res[r3]
 		nop
 	}
-.Ltmp144:
+.Ltmp147:
 	.loc	1 102 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:3
 	{
 		outshr res[r1], r5
 		nop
 	}
+.Ltmp148:
+	#DEBUG_VALUE: time <- R2
 	.loc	1 102 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:3
 	{
 		out res[r6], r8
-		nop
+		add r2, r2, 10
 	}
-	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:0
-	ldaw r2, r2[10]
-.Ltmp145:
-	#DEBUG_VALUE: time <- R2
+.Ltmp149:
 	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:0
 	{
 		setd res[r3], r2
 		nop
 	}
 	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:0
-.Ltmp146:
+.Ltmp150:
 	{
 		in r2, res[r3]
 		nop
 	}
-.Ltmp147:
+.Ltmp151:
 	#DEBUG_VALUE: time <- R2
 	.loc	1 104 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:3
 .Lxta.endpoint_labels11:
@@ -2184,10 +2189,13 @@ SendCmd:                                # @SendCmd
 		out res[r6], r0
 		gettime r2
 	}
-.Ltmp148:
+.Ltmp152:
 	.loc	1 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:0
-	ldaw r7, r2[5]
-.Ltmp149:
+	{
+		add r7, r2, 5
+		nop
+	}
+.Ltmp153:
 	#DEBUG_VALUE: time <- R7
 	.loc	1 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:0
 	{
@@ -2195,38 +2203,37 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:0
-.Ltmp150:
+.Ltmp154:
 	{
 		in r7, res[r3]
 		nop
 	}
-.Ltmp151:
+.Ltmp155:
 	.loc	1 104 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:3
 	{
 		outshr res[r1], r5
 		nop
 	}
+.Ltmp156:
+	#DEBUG_VALUE: time <- R1
 	.loc	1 104 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:3
 	{
 		out res[r6], r8
-		nop
+		add r1, r2, 10
 	}
-	.loc	1 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:0
-	ldaw r1, r2[10]
-.Ltmp152:
-	#DEBUG_VALUE: time <- R1
+.Ltmp157:
 	.loc	1 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:0
 	{
 		setd res[r3], r1
 		nop
 	}
 	.loc	1 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:0
-.Ltmp153:
+.Ltmp158:
 	{
 		in r1, res[r3]
 		nop
 	}
-.Ltmp154:
+.Ltmp159:
 	#DEBUG_VALUE: RespBitCount <- 0
 	#DEBUG_VALUE: time <- R2
 	.loc	1 106 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:106:3
@@ -2235,10 +2242,13 @@ SendCmd:                                # @SendCmd
 		out res[r6], r0
 		gettime r2
 	}
-.Ltmp155:
+.Ltmp160:
 	.loc	1 106 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:106:0
-	ldaw r1, r2[5]
-.Ltmp156:
+	{
+		add r1, r2, 5
+		nop
+	}
+.Ltmp161:
 	#DEBUG_VALUE: time <- R1
 	.loc	1 106 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:106:0
 	{
@@ -2246,12 +2256,12 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 106 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:106:0
-.Ltmp157:
+.Ltmp162:
 	{
 		in r1, res[r3]
 		nop
 	}
-.Ltmp158:
+.Ltmp163:
 	{
 		nop
 		ldw r1, r10[1]
@@ -2261,27 +2271,26 @@ SendCmd:                                # @SendCmd
 		outshr res[r1], r5
 		nop
 	}
+.Ltmp164:
+	#DEBUG_VALUE: time <- R2
 	.loc	1 106 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:106:3
 	{
 		out res[r6], r8
-		nop
+		add r2, r2, 10
 	}
-	.loc	1 106 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:106:0
-	ldaw r2, r2[10]
-.Ltmp159:
-	#DEBUG_VALUE: time <- R2
+.Ltmp165:
 	.loc	1 106 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:106:0
 	{
 		setd res[r3], r2
 		nop
 	}
 	.loc	1 106 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:106:0
-.Ltmp160:
+.Ltmp166:
 	{
 		in r2, res[r3]
 		nop
 	}
-.Ltmp161:
+.Ltmp167:
 	#DEBUG_VALUE: i <- 32
 	{
 		nop
@@ -2296,7 +2305,7 @@ SendCmd:                                # @SendCmd
                                         # =>This Inner Loop Header: Depth=1
 	#DEBUG_VALUE: Crc0 <- 0
 	#DEBUG_VALUE: i <- 32
-.Ltmp162:
+.Ltmp168:
 	#DEBUG_VALUE: SendCmd:Arg <- R11
 	#DEBUG_VALUE: RespBitCount <- 0
 	#DEBUG_VALUE: time <- R7
@@ -2306,43 +2315,38 @@ SendCmd:                                # @SendCmd
 		out res[r2], r0
 		gettime r7
 	}
-.Ltmp163:
+.Ltmp169:
+	#DEBUG_VALUE: time <- R8
 	{
 		mov r4, r8
-		nop
+		add r8, r7, 5
 	}
-	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:0
-.Ltmp164:
-	ldaw r8, r7[5]
-.Ltmp165:
-	#DEBUG_VALUE: time <- R8
+.Ltmp170:
 	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:0
 	{
 		setd res[r3], r8
 		nop
 	}
 	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:0
-.Ltmp166:
+.Ltmp171:
 	{
 		in r8, res[r3]
 		nop
 	}
-.Ltmp167:
+.Ltmp172:
 	#DEBUG_VALUE: SendCmd:Arg <- R6
 	{
 		outshr res[r1], r6
 		mov r8, r4
 	}
-.Ltmp168:
+.Ltmp173:
+	#DEBUG_VALUE: time <- R7
 	.loc	1 107 25                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:25
 	{
 		out res[r2], r8
-		nop
+		add r7, r7, 10
 	}
-	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:0
-	ldaw r7, r7[10]
-.Ltmp169:
-	#DEBUG_VALUE: time <- R7
+.Ltmp174:
 	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:0
 	{
 		setd res[r3], r7
@@ -2354,17 +2358,16 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:0
-.Ltmp170:
+.Ltmp175:
 	{
 		in r7, res[r3]
 		add r5, r5, 1
 	}
-.Ltmp171:
 .xtaloop 32
 	# LOOPMARKER 0
 	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:0
 	bt r5, .LBB5_1
-.Ltmp172:
+.Ltmp176:
 # BB#2:                                 # %ifdone
 .Lxtalabel46:
 	#DEBUG_VALUE: Crc0 <- 0
@@ -2385,26 +2388,26 @@ SendCmd:                                # @SendCmd
 	ldc r3, 72
 	.loc	1 95 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:95:0
 	crc32 r9, r11, r3
-.Ltmp173:
+.Ltmp177:
 	#DEBUG_VALUE: Crc0 <- R9
 	.loc	1 97 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:97:0
 	crc32 r9, r0, r3
-.Ltmp174:
+.Ltmp178:
 	ldc r3, 128
-.Ltmp175:
+.Ltmp179:
 	#DEBUG_VALUE: Crc0 <- R3
 	.loc	1 99 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:99:0
 	{
 		or r3, r9, r3
 		mov r11, r0
 	}
-.Ltmp176:
+.Ltmp180:
 	{
 		nop
 		stw r4, sp[5]
 	}
 	.loc	1 103 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:103:0
-.Ltmp177:
+.Ltmp181:
 	bt r4, .LBB5_3
 # BB#4:                                 # %ifdone
 .Lxtalabel47:
@@ -2417,7 +2420,7 @@ SendCmd:                                # @SendCmd
 	ldc r0, 136
 .LBB5_5:                                # %ifdone
 .Lxtalabel48:
-.Ltmp178:
+.Ltmp182:
 	#DEBUG_VALUE: Crc0 <- R3
 	#DEBUG_VALUE: i <- 32
 	#DEBUG_VALUE: RespBitCount <- 0
@@ -2427,24 +2430,21 @@ SendCmd:                                # @SendCmd
 		out res[r2], r11
 		stw r0, sp[7]
 	}
-.Ltmp179:
+.Ltmp183:
 	#DEBUG_VALUE: time <- R0
 	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:0
 	{
 		gettime r0
 		mov r4, r11
 	}
-.Ltmp180:
-	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:0
-	ldaw r6, r0[5]
-.Ltmp181:
+.Ltmp184:
 	#DEBUG_VALUE: time <- R6
 	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:0
 	{
+		add r6, r0, 5
 		get r11, id
-		nop
 	}
-.Ltmp182:
+.Ltmp185:
 	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
 	ldaw r7, dp[__timers]
 	{
@@ -2452,7 +2452,7 @@ SendCmd:                                # @SendCmd
 		ldw r11, r7[r11]
 	}
 	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:0
-.Ltmp183:
+.Ltmp186:
 	{
 		setd res[r11], r6
 		nop
@@ -2463,39 +2463,36 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:0
-.Ltmp184:
+.Ltmp187:
 	{
 		in r6, res[r11]
 		nop
 	}
-.Ltmp185:
 	.loc	1 108 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:3
 	{
 		outshr res[r1], r3
 		nop
 	}
-.Ltmp186:
+.Ltmp188:
+	#DEBUG_VALUE: time <- R0
 	.loc	1 108 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:3
 	{
 		out res[r2], r8
-		nop
+		add r0, r0, 10
 	}
-	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:0
-	ldaw r0, r0[10]
-.Ltmp187:
-	#DEBUG_VALUE: time <- R0
+.Ltmp189:
 	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:0
 	{
 		setd res[r11], r0
 		nop
 	}
 	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:0
-.Ltmp188:
+.Ltmp190:
 	{
 		in r0, res[r11]
 		nop
 	}
-.Ltmp189:
+.Ltmp191:
 	#DEBUG_VALUE: RespByteCount <- 0
 	#DEBUG_VALUE: time <- R0
 	.loc	1 110 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:3
@@ -2504,10 +2501,13 @@ SendCmd:                                # @SendCmd
 		out res[r2], r4
 		gettime r0
 	}
-.Ltmp190:
+.Ltmp192:
 	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:0
-	ldaw r6, r0[5]
-.Ltmp191:
+	{
+		add r6, r0, 5
+		nop
+	}
+.Ltmp193:
 	#DEBUG_VALUE: time <- R6
 	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:0
 	{
@@ -2515,38 +2515,37 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:0
-.Ltmp192:
+.Ltmp194:
 	{
 		in r6, res[r11]
 		nop
 	}
-.Ltmp193:
+.Ltmp195:
 	.loc	1 110 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:3
 	{
 		outshr res[r1], r3
 		nop
 	}
+.Ltmp196:
+	#DEBUG_VALUE: time <- R0
 	.loc	1 110 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:3
 	{
 		out res[r2], r8
-		nop
+		add r0, r0, 10
 	}
-	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:0
-	ldaw r0, r0[10]
-.Ltmp194:
-	#DEBUG_VALUE: time <- R0
+.Ltmp197:
 	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:0
 	{
 		setd res[r11], r0
 		nop
 	}
 	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:0
-.Ltmp195:
+.Ltmp198:
 	{
 		in r0, res[r11]
 		nop
 	}
-.Ltmp196:
+.Ltmp199:
 	#DEBUG_VALUE: Dat <- -1
 	#DEBUG_VALUE: time <- R0
 	.loc	1 112 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:3
@@ -2555,10 +2554,13 @@ SendCmd:                                # @SendCmd
 		out res[r2], r4
 		gettime r0
 	}
-.Ltmp197:
+.Ltmp200:
 	.loc	1 112 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:0
-	ldaw r6, r0[5]
-.Ltmp198:
+	{
+		add r6, r0, 5
+		nop
+	}
+.Ltmp201:
 	#DEBUG_VALUE: time <- R6
 	.loc	1 112 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:0
 	{
@@ -2566,38 +2568,37 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 112 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:0
-.Ltmp199:
+.Ltmp202:
 	{
 		in r6, res[r11]
 		nop
 	}
-.Ltmp200:
+.Ltmp203:
 	.loc	1 112 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:3
 	{
 		outshr res[r1], r3
 		nop
 	}
+.Ltmp204:
+	#DEBUG_VALUE: time <- R0
 	.loc	1 112 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:3
 	{
 		out res[r2], r8
-		nop
+		add r0, r0, 10
 	}
-	.loc	1 112 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:0
-	ldaw r0, r0[10]
-.Ltmp201:
-	#DEBUG_VALUE: time <- R0
+.Ltmp205:
 	.loc	1 112 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:0
 	{
 		setd res[r11], r0
 		nop
 	}
 	.loc	1 112 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:0
-.Ltmp202:
+.Ltmp206:
 	{
 		in r0, res[r11]
 		nop
 	}
-.Ltmp203:
+.Ltmp207:
 	#DEBUG_VALUE: R <- -1
 	#DEBUG_VALUE: time <- R0
 	.loc	1 114 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:3
@@ -2606,10 +2607,13 @@ SendCmd:                                # @SendCmd
 		out res[r2], r4
 		gettime r0
 	}
-.Ltmp204:
+.Ltmp208:
 	.loc	1 114 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:0
-	ldaw r6, r0[5]
-.Ltmp205:
+	{
+		add r6, r0, 5
+		nop
+	}
+.Ltmp209:
 	#DEBUG_VALUE: time <- R6
 	.loc	1 114 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:0
 	{
@@ -2617,38 +2621,37 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 114 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:0
-.Ltmp206:
+.Ltmp210:
 	{
 		in r6, res[r11]
 		nop
 	}
-.Ltmp207:
+.Ltmp211:
 	.loc	1 114 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:3
 	{
 		outshr res[r1], r3
 		nop
 	}
+.Ltmp212:
+	#DEBUG_VALUE: time <- R0
 	.loc	1 114 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:3
 	{
 		out res[r2], r8
-		nop
+		add r0, r0, 10
 	}
-	.loc	1 114 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:0
-	ldaw r0, r0[10]
-.Ltmp208:
-	#DEBUG_VALUE: time <- R0
+.Ltmp213:
 	.loc	1 114 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:0
 	{
 		setd res[r11], r0
 		nop
 	}
 	.loc	1 114 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:0
-.Ltmp209:
+.Ltmp214:
 	{
 		in r0, res[r11]
 		nop
 	}
-.Ltmp210:
+.Ltmp215:
 	#DEBUG_VALUE: time <- R0
 	.loc	1 116 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:3
 .Lxta.endpoint_labels18:
@@ -2656,10 +2659,13 @@ SendCmd:                                # @SendCmd
 		out res[r2], r4
 		gettime r0
 	}
-.Ltmp211:
+.Ltmp216:
 	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:0
-	ldaw r6, r0[5]
-.Ltmp212:
+	{
+		add r6, r0, 5
+		nop
+	}
+.Ltmp217:
 	#DEBUG_VALUE: time <- R6
 	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:0
 	{
@@ -2667,38 +2673,37 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:0
-.Ltmp213:
+.Ltmp218:
 	{
 		in r6, res[r11]
 		nop
 	}
-.Ltmp214:
+.Ltmp219:
 	.loc	1 116 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:3
 	{
 		outshr res[r1], r3
 		nop
 	}
+.Ltmp220:
+	#DEBUG_VALUE: time <- R0
 	.loc	1 116 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:3
 	{
 		out res[r2], r8
-		nop
+		add r0, r0, 10
 	}
-	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:0
-	ldaw r0, r0[10]
-.Ltmp215:
-	#DEBUG_VALUE: time <- R0
+.Ltmp221:
 	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:0
 	{
 		setd res[r11], r0
 		nop
 	}
 	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:0
-.Ltmp216:
+.Ltmp222:
 	{
 		in r0, res[r11]
 		nop
 	}
-.Ltmp217:
+.Ltmp223:
 	#DEBUG_VALUE: time <- R0
 	.loc	1 118 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:3
 .Lxta.endpoint_labels19:
@@ -2706,10 +2711,13 @@ SendCmd:                                # @SendCmd
 		out res[r2], r4
 		gettime r0
 	}
-.Ltmp218:
+.Ltmp224:
 	.loc	1 118 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:0
-	ldaw r6, r0[5]
-.Ltmp219:
+	{
+		add r6, r0, 5
+		nop
+	}
+.Ltmp225:
 	#DEBUG_VALUE: time <- R6
 	.loc	1 118 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:0
 	{
@@ -2717,38 +2725,37 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 118 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:0
-.Ltmp220:
+.Ltmp226:
 	{
 		in r6, res[r11]
 		nop
 	}
-.Ltmp221:
+.Ltmp227:
 	.loc	1 118 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:3
 	{
 		outshr res[r1], r3
 		nop
 	}
+.Ltmp228:
+	#DEBUG_VALUE: time <- R0
 	.loc	1 118 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:3
 	{
 		out res[r2], r8
-		nop
+		add r0, r0, 10
 	}
-	.loc	1 118 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:0
-	ldaw r0, r0[10]
-.Ltmp222:
-	#DEBUG_VALUE: time <- R0
+.Ltmp229:
 	.loc	1 118 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:0
 	{
 		setd res[r11], r0
 		nop
 	}
 	.loc	1 118 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:0
-.Ltmp223:
+.Ltmp230:
 	{
 		in r0, res[r11]
 		nop
 	}
-.Ltmp224:
+.Ltmp231:
 	#DEBUG_VALUE: DatByteCount <- 0
 	#DEBUG_VALUE: time <- R0
 	.loc	1 120 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:3
@@ -2757,10 +2764,13 @@ SendCmd:                                # @SendCmd
 		out res[r2], r4
 		gettime r0
 	}
-.Ltmp225:
+.Ltmp232:
 	.loc	1 120 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:0
-	ldaw r6, r0[5]
-.Ltmp226:
+	{
+		add r6, r0, 5
+		nop
+	}
+.Ltmp233:
 	#DEBUG_VALUE: time <- R6
 	.loc	1 120 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:0
 	{
@@ -2768,38 +2778,37 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 120 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:0
-.Ltmp227:
+.Ltmp234:
 	{
 		in r6, res[r11]
 		nop
 	}
-.Ltmp228:
+.Ltmp235:
 	.loc	1 120 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:3
 	{
 		outshr res[r1], r3
 		nop
 	}
+.Ltmp236:
+	#DEBUG_VALUE: time <- R0
 	.loc	1 120 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:3
 	{
 		out res[r2], r8
-		nop
+		add r0, r0, 10
 	}
-	.loc	1 120 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:0
-	ldaw r0, r0[10]
-.Ltmp229:
-	#DEBUG_VALUE: time <- R0
+.Ltmp237:
 	.loc	1 120 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:0
 	{
 		setd res[r11], r0
 		nop
 	}
 	.loc	1 120 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:0
-.Ltmp230:
+.Ltmp238:
 	{
 		in r0, res[r11]
 		nop
 	}
-.Ltmp231:
+.Ltmp239:
 	#DEBUG_VALUE: i <- 0
 	#DEBUG_VALUE: time <- R1
 	.loc	1 122 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:3
@@ -2808,10 +2817,13 @@ SendCmd:                                # @SendCmd
 		out res[r2], r4
 		gettime r1
 	}
-.Ltmp232:
+.Ltmp240:
 	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
-	ldaw r0, r1[5]
-.Ltmp233:
+	{
+		add r0, r1, 5
+		nop
+	}
+.Ltmp241:
 	#DEBUG_VALUE: time <- R0
 	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
 	{
@@ -2819,46 +2831,44 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
-.Ltmp234:
+.Ltmp242:
 	{
 		in r0, res[r11]
-		ldw r7, sp[19]
+		ldw r6, sp[19]
 	}
-.Ltmp235:
+.Ltmp243:
 	{
 		nop
-		ldw r6, r7[0]
+		ldw r7, r6[0]
 	}
 	.loc	1 122 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:3
 	{
-		outshr res[r6], r3
+		outshr res[r7], r3
 		ldw r2, r10[0]
 	}
+.Ltmp244:
+	#DEBUG_VALUE: time <- R1
 	.loc	1 122 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:3
 	{
 		out res[r2], r8
-		nop
+		add r1, r1, 10
 	}
-	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
-	ldaw r1, r1[10]
-.Ltmp236:
-	#DEBUG_VALUE: time <- R1
+.Ltmp245:
 	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
 	{
 		setd res[r11], r1
 		nop
 	}
 	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
-.Ltmp237:
+.Ltmp246:
 	{
 		in r1, res[r11]
 		nop
 	}
-.Ltmp238:
 	.loc	1 124 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:124:3
 	ldw r1, dp[Is_XS1_G_Core]
 	bf r1, .LBB5_7
-.Ltmp239:
+.Ltmp247:
 # BB#6:                                 # %iftrue484
 .Lxtalabel49:
 	#DEBUG_VALUE: i <- 0
@@ -2870,16 +2880,16 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: DatByteCount <- 0
 	.loc	1 125 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:125:0
 	{
-		mov r0, r6
+		mov r0, r7
 		nop
 	}
 .Lxta.call_labels18:
 	bl set_port_pull_up
 	{
 		nop
-		ldw r6, r7[0]
+		ldw r7, r6[0]
 	}
-.Ltmp240:
+.Ltmp248:
 .LBB5_7:                                # %ifdone485
 .Lxtalabel50:
 	{
@@ -2888,25 +2898,29 @@ SendCmd:                                # @SendCmd
 	}
 	#DEBUG_VALUE: i <- 0
 	#DEBUG_VALUE: RespBitCount <- 0
-.Ltmp241:
+.Ltmp249:
 	#DEBUG_VALUE: RespBitLen <- [SP+28]
 	#DEBUG_VALUE: RespByteCount <- 0
 	#DEBUG_VALUE: Dat <- -1
 	#DEBUG_VALUE: R <- -1
 	#DEBUG_VALUE: DatByteCount <- 0
 	{
-		setc res[r6], 1
+		nop
+		stw r7, sp[14]
+	}
+	{
+		setc res[r7], 1
 		stw r4, sp[13]
 	}
 	.loc	1 126 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:126:0
-.Ltmp242:
+.Ltmp250:
 .Lxta.endpoint_labels22:
 	{
-		in r1, res[r6]
+		in r1, res[r7]
 		nop
 	}
 	bt r5, .LBB5_16
-.Ltmp243:
+.Ltmp251:
 # BB#8:                                 # %ifdone485
 .Lxtalabel51:
 	{
@@ -2923,7 +2937,7 @@ SendCmd:                                # @SendCmd
 .LBB5_16:                               # %LoopBody505.preheader
 	#DEBUG_VALUE: i <- 0
 	#DEBUG_VALUE: RespBitCount <- 0
-.Ltmp244:
+.Ltmp252:
 	#DEBUG_VALUE: RespBitLen <- [SP+28]
 	#DEBUG_VALUE: RespByteCount <- 0
 	#DEBUG_VALUE: Dat <- -1
@@ -2937,7 +2951,7 @@ SendCmd:                                # @SendCmd
 		eq r4, r2, 0
 		ldc r2, 0
 	}
-.Ltmp245:
+.Ltmp253:
 	#DEBUG_VALUE: DatBytesLen <- [SP+16]
 	.loc	1 115 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:115:0
 	{
@@ -2949,16 +2963,16 @@ SendCmd:                                # @SendCmd
 		stw r0, sp[4]
 	}
 	.loc	1 129 25                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:129:25
-.Ltmp246:
+.Ltmp254:
 	{
 		get r11, id
 		ldw r2, r10[0]
 	}
-.Ltmp247:
+.Ltmp255:
 	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
 	ldaw r0, dp[__timers]
 	.loc	1 132 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:132:0
-.Ltmp248:
+.Ltmp256:
 	{
 		add r0, r10, 8
 		ldw r3, r0[r11]
@@ -2972,11 +2986,11 @@ SendCmd:                                # @SendCmd
 		stw r10, sp[8]
 	}
 	{
-		mkmsk r5, 32
+		mkmsk r8, 32
 		mkmsk r1, 8
 	}
 	{
-		mkmsk r7, 1
+		mkmsk r5, 1
 		mov r11, r1
 	}
 	{
@@ -2997,14 +3011,10 @@ SendCmd:                                # @SendCmd
 		stw r1, sp[16]
 	}
 	{
-		mov r8, r6
+		nop
 		stw r0, sp[19]
 	}
-	{
-		nop
-		stw r8, sp[14]
-	}
-.Ltmp249:
+.Ltmp257:
 .LBB5_17:                               # %LoopBody505
                                         # =>This Loop Header: Depth=1
                                         #     Child Loop BB5_47 Depth 2
@@ -3024,10 +3034,13 @@ SendCmd:                                # @SendCmd
 		out res[r2], r0
 		gettime r6
 	}
-.Ltmp250:
+.Ltmp258:
 	.loc	1 131 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:131:0
-	ldaw r10, r6[5]
-.Ltmp251:
+	{
+		add r10, r6, 5
+		nop
+	}
+.Ltmp259:
 	#DEBUG_VALUE: time <- R10
 	.loc	1 132 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:132:0
 	{
@@ -3040,50 +3053,48 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 132 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:132:0
-.Ltmp252:
+.Ltmp260:
 .Lxta.endpoint_labels24:
 	{
 		in r10, res[r3]
 		nop
 	}
-.Ltmp253:
+.Ltmp261:
+	#DEBUG_VALUE: time <- R6
 	.loc	1 133 25                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:133:25
 .Lxta.endpoint_labels25:
 	{
-		out res[r2], r7
-		nop
+		out res[r2], r5
+		add r6, r6, 10
 	}
-	.loc	1 134 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:134:0
-	ldaw r6, r6[10]
-.Ltmp254:
-	#DEBUG_VALUE: time <- R6
+.Ltmp262:
 	.loc	1 135 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:135:0
 	{
 		setd res[r3], r6
 		nop
 	}
 	.loc	1 135 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:135:0
-.Ltmp255:
+.Ltmp263:
 .Lxta.endpoint_labels26:
 	{
 		in r6, res[r3]
 		ldw r10, sp[19]
 	}
-.Ltmp256:
+.Ltmp264:
 	#DEBUG_VALUE: i <- R10
 	.loc	1 137 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:137:0
 	{
 		add r10, r10, 1
 		eq r6, r4, 1
 	}
-.Ltmp257:
+.Ltmp265:
 	{
 		nop
 		ldw r1, sp[15]
 	}
 	.loc	1 138 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:138:0
 	bf r6, .LBB5_18
-.Ltmp258:
+.Ltmp266:
 # BB#22:                                # %switchcase
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel53:
@@ -3097,13 +3108,13 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: DatBytesLen <- [SP+16]
 	.loc	1 141 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:141:0
 	{
-		setc res[r8], 1
+		setc res[r7], 1
 		shl r4, r11, 24
 	}
 	.loc	1 141 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:141:0
 .Lxta.endpoint_labels27:
 	{
-		inshr r4, res[r8]
+		inshr r4, res[r7]
 		nop
 	}
 	.loc	1 141 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:141:0
@@ -3118,7 +3129,7 @@ SendCmd:                                # @SendCmd
 	}
 	.loc	1 142 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:142:9
 	bf r4, .LBB5_23
-.Ltmp259:
+.Ltmp267:
 # BB#26:                                # %iftrue538
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel54:
@@ -3138,10 +3149,10 @@ SendCmd:                                # @SendCmd
 	}
 	.loc	1 144 11                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:144:11
 	bt r4, .LBB5_27
-.Ltmp260:
+.Ltmp268:
 # BB#28:                                #   in Loop: Header=BB5_17 Depth=1
 	{
-		mov r4, r7
+		mov r4, r5
 		stw r10, sp[19]
 	}
 	bu .LBB5_20
@@ -3158,13 +3169,13 @@ SendCmd:                                # @SendCmd
 .Lxtalabel56:
 	.loc	1 151 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:151:0
 	{
-		setc res[r8], 1
+		setc res[r7], 1
 		shl r4, r11, 24
 	}
 	.loc	1 151 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:151:0
 .Lxta.endpoint_labels28:
 	{
-		inshr r4, res[r8]
+		inshr r4, res[r7]
 		nop
 	}
 	.loc	1 151 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:151:0
@@ -3177,7 +3188,7 @@ SendCmd:                                # @SendCmd
 		add r6, r6, 1
 		nop
 	}
-.Ltmp261:
+.Ltmp269:
 	#DEBUG_VALUE: RespBitCount <- R6
 	.loc	1 153 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:153:9
 	{
@@ -3190,7 +3201,7 @@ SendCmd:                                # @SendCmd
 	}
 	.loc	1 153 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:153:9
 	bf r4, .LBB5_29
-.Ltmp262:
+.Ltmp270:
 # BB#25:                                #   in Loop: Header=BB5_17 Depth=1
 	{
 		nop
@@ -3208,7 +3219,7 @@ SendCmd:                                # @SendCmd
 	}
 	{
 		ldc r4, 2
-		stw r7, sp[18]
+		stw r5, sp[18]
 	}
 	bu .LBB5_20
 .LBB5_19:                               #   in Loop: Header=BB5_17 Depth=1
@@ -3220,7 +3231,7 @@ SendCmd:                                # @SendCmd
 .LBB5_29:                               # %ifdone560
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel57:
-.Ltmp263:
+.Ltmp271:
 	#DEBUG_VALUE: RespBitCount <- R6
 	{
 		nop
@@ -3230,7 +3241,7 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r4, sp[7]
 	}
-.Ltmp264:
+.Ltmp272:
 	#DEBUG_VALUE: RespStat <- 0
 	#DEBUG_VALUE: RespBitCount <- [SP+72]
 	.loc	1 154 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:154:9
@@ -3244,7 +3255,7 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	bt r6, .LBB5_31
-.Ltmp265:
+.Ltmp273:
 # BB#30:                                # %ifdone560
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel58:
@@ -3254,7 +3265,7 @@ SendCmd:                                # @SendCmd
 		ldc r4, 2
 		nop
 	}
-.Ltmp266:
+.Ltmp274:
 .LBB5_31:                               # %ifdone560
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel59:
@@ -3264,27 +3275,27 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r10, sp[10]
 	}
-.Ltmp267:
+.Ltmp275:
 	#DEBUG_VALUE: RespByteCount <- R6
 	.loc	1 156 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:156:0
 	{
 		add r6, r10, 1
-		ldw r8, sp[9]
+		ldw r7, sp[9]
 	}
-.Ltmp268:
+.Ltmp276:
 	.loc	1 156 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:156:0
-	st8 r11, r8[r10]
+	st8 r11, r7[r10]
 	{
 		nop
 		stw r6, sp[10]
 	}
-.Ltmp269:
+.Ltmp277:
 	#DEBUG_VALUE: RespByteCount <- [SP+40]
 	{
 		nop
-		ldw r8, sp[14]
+		ldw r7, sp[14]
 	}
-.Ltmp270:
+.Ltmp278:
 .LBB5_20:                               # %switchdone
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel60:
@@ -3306,7 +3317,7 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	bt r10, .LBB5_55
-.Ltmp271:
+.Ltmp279:
 # BB#21:                                # %switchdone
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel61:
@@ -3338,23 +3349,23 @@ SendCmd:                                # @SendCmd
 	.loc	1 163 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:163:0
 .Lxta.endpoint_labels29:
 	{
-		inshr r5, res[r6]
+		inshr r8, res[r6]
 		nop
 	}
-.Ltmp272:
-	#DEBUG_VALUE: Dat <- R5
+.Ltmp280:
+	#DEBUG_VALUE: Dat <- R8
 	ldw r1, cp[.LCPI5_2]
 	.loc	1 164 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:164:9
 	{
-		eq r6, r5, r1
+		eq r6, r8, r1
 		nop
 	}
 	.loc	1 164 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:164:9
 	bf r6, .LBB5_35
-.Ltmp273:
+.Ltmp281:
 # BB#33:                                #   in Loop: Header=BB5_17 Depth=1
 	{
-		mov r5, r1
+		mov r8, r1
 		ldc r9, 2
 	}
 	bu .LBB5_55
@@ -3374,16 +3385,16 @@ SendCmd:                                # @SendCmd
 		setc res[r6], 1
 		nop
 	}
-.Ltmp274:
+.Ltmp282:
 	#DEBUG_VALUE: DatStat <- 3
-	#DEBUG_VALUE: Dat <- R5
+	#DEBUG_VALUE: Dat <- R8
 	.loc	1 168 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:168:0
 .Lxta.endpoint_labels30:
 	{
-		inshr r5, res[r6]
+		inshr r8, res[r6]
 		mkmsk r9, 2
 	}
-.Ltmp275:
+.Ltmp283:
 	bu .LBB5_55
 .LBB5_39:                               # %switchcase598
                                         #   in Loop: Header=BB5_17 Depth=1
@@ -3405,24 +3416,24 @@ SendCmd:                                # @SendCmd
 		setc res[r9], 1
 		nop
 	}
-.Ltmp276:
-	#DEBUG_VALUE: Dat <- R5
+.Ltmp284:
+	#DEBUG_VALUE: Dat <- R8
 	.loc	1 172 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:172:0
 .Lxta.endpoint_labels31:
 	{
-		inshr r5, res[r9]
-		ldw r8, sp[13]
+		inshr r8, res[r9]
+		ldw r7, sp[13]
 	}
-.Ltmp277:
+.Ltmp285:
 	#DEBUG_VALUE: DatByteCount <- R10
 	.loc	1 173 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:173:0
 	{
-		add r10, r8, 1
-		bitrev r6, r5
+		add r10, r7, 1
+		bitrev r6, r8
 	}
-.Ltmp278:
+.Ltmp286:
 	.loc	1 173 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:173:0
-	st8 r6, r1[r8]
+	st8 r6, r1[r7]
 	ldc r11, 511
 	.loc	1 176 11                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:176:11
 	{
@@ -3434,40 +3445,40 @@ SendCmd:                                # @SendCmd
 # BB#42:                                # %ifdone616
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel65:
-.Ltmp279:
-	#DEBUG_VALUE: Dat <- R5
+.Ltmp287:
+	#DEBUG_VALUE: Dat <- R8
 	#DEBUG_VALUE: DatByteCount <- R10
 	{
 		ldc r9, 2
-		ldw r8, sp[14]
+		ldw r7, sp[14]
 	}
 	{
 		nop
 		ldw r11, sp[11]
 	}
 	bt r6, .LBB5_44
-.Ltmp280:
+.Ltmp288:
 # BB#43:                                # %ifdone616
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel66:
-	#DEBUG_VALUE: Dat <- R5
+	#DEBUG_VALUE: Dat <- R8
 	#DEBUG_VALUE: DatByteCount <- R10
 	{
 		ldc r9, 4
 		nop
 	}
-.Ltmp281:
+.Ltmp289:
 .LBB5_44:                               # %ifdone616
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel67:
-	#DEBUG_VALUE: Dat <- R5
+	#DEBUG_VALUE: Dat <- R8
 	#DEBUG_VALUE: DatByteCount <- R10
 	bt r6, .LBB5_46
-.Ltmp282:
+.Ltmp290:
 # BB#45:                                # %ifdone616
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel68:
-	#DEBUG_VALUE: Dat <- R5
+	#DEBUG_VALUE: Dat <- R8
 	#DEBUG_VALUE: DatByteCount <- R10
 	{
 		ldc r1, 17
@@ -3477,20 +3488,20 @@ SendCmd:                                # @SendCmd
 		nop
 		stw r1, sp[16]
 	}
-.Ltmp283:
+.Ltmp291:
 .LBB5_46:                               # %ifdone616
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel69:
-	#DEBUG_VALUE: Dat <- R5
+	#DEBUG_VALUE: Dat <- R8
 	#DEBUG_VALUE: DatByteCount <- R10
 	{
 		nop
 		stw r10, sp[13]
 	}
-.Ltmp284:
+.Ltmp292:
 	#DEBUG_VALUE: DatByteCount <- [SP+52]
 	bu .LBB5_55
-.Ltmp285:
+.Ltmp293:
 .LBB5_37:                               # %switchcase605
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel70:
@@ -3499,16 +3510,16 @@ SendCmd:                                # @SendCmd
 		ldw r1, sp[16]
 	}
 	.loc	1 209 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:209:9
-.Ltmp286:
+.Ltmp294:
 	{
 		sub r1, r1, 1
 		nop
 	}
-.Ltmp287:
+.Ltmp295:
 	#DEBUG_VALUE: j <- R1
 	.loc	1 209 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:209:9
 	bf r1, .LBB5_50
-.Ltmp288:
+.Ltmp296:
 # BB#38:                                #   in Loop: Header=BB5_17 Depth=1
 	{
 		ldc r9, 4
@@ -3518,8 +3529,8 @@ SendCmd:                                # @SendCmd
 .LBB5_35:                               # %iffalse
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel71:
-.Ltmp289:
-	#DEBUG_VALUE: Dat <- R5
+.Ltmp297:
+	#DEBUG_VALUE: Dat <- R8
 	ldw r1, cp[.LCPI5_3]
 	{
 		nop
@@ -3528,23 +3539,23 @@ SendCmd:                                # @SendCmd
 	.loc	1 165 14                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:165:14
 	{
 		eq r6, r6, r1
-		mov r9, r7
+		mov r9, r5
 	}
 	bf r6, .LBB5_55
 	bu .LBB5_36
-.Ltmp290:
+.Ltmp298:
 .LBB5_40:                               # %iftrue615
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel72:
-	#DEBUG_VALUE: Dat <- R5
+	#DEBUG_VALUE: Dat <- R8
 	#DEBUG_VALUE: DatByteCount <- R10
 	{
-		mov r8, r1
+		mov r7, r1
 		nop
 	}
 	ldc r11, 511
 	bf r6, .LBB5_41
-.Ltmp291:
+.Ltmp299:
 .LBB5_47:                               # %LoopBody627
                                         #   Parent Loop BB5_17 Depth=1
                                         # =>  This Inner Loop Header: Depth=2
@@ -3556,10 +3567,13 @@ SendCmd:                                # @SendCmd
 		out res[r2], r0
 		gettime r6
 	}
-.Ltmp292:
+.Ltmp300:
 	.loc	1 182 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:182:0
-	ldaw r1, r6[5]
-.Ltmp293:
+	{
+		add r1, r6, 5
+		nop
+	}
+.Ltmp301:
 	#DEBUG_VALUE: time <- R1
 	.loc	1 183 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:183:0
 	{
@@ -3572,36 +3586,33 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 183 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:183:0
-.Ltmp294:
+.Ltmp302:
 .Lxta.endpoint_labels33:
 	{
 		in r1, res[r3]
 		nop
 	}
-.Ltmp295:
+.Ltmp303:
+	#DEBUG_VALUE: time <- R1
 	.loc	1 184 35                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:184:35
 .Lxta.endpoint_labels34:
 	{
-		out res[r2], r7
-		nop
+		out res[r2], r5
+		add r1, r6, 10
 	}
-	.loc	1 185 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:185:0
-	ldaw r1, r6[10]
-.Ltmp296:
-	#DEBUG_VALUE: time <- R1
+.Ltmp304:
 	.loc	1 186 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:186:0
 	{
 		setd res[r3], r1
 		nop
 	}
 	.loc	1 186 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:186:0
-.Ltmp297:
+.Ltmp305:
 .Lxta.endpoint_labels35:
 	{
 		in r1, res[r3]
 		nop
 	}
-.Ltmp298:
 	.loc	1 188 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:188:0
 	{
 		setc res[r9], 1
@@ -3610,11 +3621,11 @@ SendCmd:                                # @SendCmd
 	.loc	1 188 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:188:0
 .Lxta.endpoint_labels36:
 	{
-		inshr r5, res[r9]
+		inshr r8, res[r9]
 		nop
 	}
-.Ltmp299:
-	#DEBUG_VALUE: Dat <- R5
+.Ltmp306:
+	#DEBUG_VALUE: Dat <- R8
 	#DEBUG_VALUE: time <- R1
 	.loc	1 190 35                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:190:35
 .Lxta.endpoint_labels37:
@@ -3622,10 +3633,13 @@ SendCmd:                                # @SendCmd
 		out res[r2], r0
 		gettime r1
 	}
-.Ltmp300:
+.Ltmp307:
 	.loc	1 192 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:192:0
-	ldaw r6, r1[5]
-.Ltmp301:
+	{
+		add r6, r1, 5
+		nop
+	}
+.Ltmp308:
 	#DEBUG_VALUE: time <- R6
 	.loc	1 193 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:193:0
 	{
@@ -3638,36 +3652,33 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 193 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:193:0
-.Ltmp302:
+.Ltmp309:
 .Lxta.endpoint_labels38:
 	{
 		in r6, res[r3]
 		nop
 	}
-.Ltmp303:
+.Ltmp310:
+	#DEBUG_VALUE: time <- R1
 	.loc	1 194 35                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:194:35
 .Lxta.endpoint_labels39:
 	{
-		out res[r2], r7
-		nop
+		out res[r2], r5
+		add r1, r1, 10
 	}
-	.loc	1 195 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:195:0
-	ldaw r1, r1[10]
-.Ltmp304:
-	#DEBUG_VALUE: time <- R1
+.Ltmp311:
 	.loc	1 196 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:196:0
 	{
 		setd res[r3], r1
 		nop
 	}
 	.loc	1 196 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:196:0
-.Ltmp305:
+.Ltmp312:
 .Lxta.endpoint_labels40:
 	{
 		in r1, res[r3]
 		nop
 	}
-.Ltmp306:
 	.loc	1 198 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:198:0
 	{
 		setc res[r9], 1
@@ -3676,17 +3687,17 @@ SendCmd:                                # @SendCmd
 	.loc	1 198 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:198:0
 .Lxta.endpoint_labels41:
 	{
-		inshr r5, res[r9]
+		inshr r8, res[r9]
 		add r6, r10, 1
 	}
-.Ltmp307:
+.Ltmp313:
 	.loc	1 199 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:199:0
 	{
-		bitrev r1, r5
+		bitrev r1, r8
 		nop
 	}
 	.loc	1 199 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:199:0
-	st8 r1, r8[r10]
+	st8 r1, r7[r10]
 	.loc	1 176 11                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:176:11
 	{
 		and r1, r6, r11
@@ -3728,7 +3739,7 @@ SendCmd:                                # @SendCmd
 .Lxtalabel75:
 	.loc	1 213 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:213:0
 	{
-		mov r6, r5
+		mov r6, r8
 		nop
 	}
 .LBB5_52:                               # %ifdone701
@@ -3751,7 +3762,7 @@ SendCmd:                                # @SendCmd
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel78:
 	{
-		mov r5, r6
+		mov r8, r6
 		stw r0, sp[16]
 	}
 	{
@@ -3777,7 +3788,7 @@ SendCmd:                                # @SendCmd
 	}
 	{
 		nop
-		ldw r8, sp[14]
+		ldw r7, sp[14]
 	}
 	{
 		nop
@@ -3787,7 +3798,7 @@ SendCmd:                                # @SendCmd
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel80:
 	#DEBUG_VALUE: RespBitCount <- 0
-.Ltmp308:
+.Ltmp314:
 	#DEBUG_VALUE: RespBitLen <- [SP+28]
 	#DEBUG_VALUE: RespByteCount <- 0
 	#DEBUG_VALUE: Dat <- -1
@@ -3802,7 +3813,7 @@ SendCmd:                                # @SendCmd
 .Lxta.loop_labels3:
 	# LOOPMARKER 2
 	bt r1, .LBB5_17
-.Ltmp309:
+.Ltmp315:
 .LBB5_10:                               # %ifdone497
 .Lxtalabel81:
 	#DEBUG_VALUE: i <- 0
@@ -3839,7 +3850,7 @@ SendCmd:                                # @SendCmd
 	bf r0, .LBB5_12
 # BB#58:                                # %switchcase731
 .Lxtalabel83:
-.Ltmp310:
+.Ltmp316:
 	#DEBUG_VALUE: Crc0 <- 0
 	.loc	1 228 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:228:0
 	{
@@ -3855,14 +3866,14 @@ SendCmd:                                # @SendCmd
 		bitrev r2, r1
 		nop
 	}
-.Ltmp311:
+.Ltmp317:
 	#DEBUG_VALUE: i <- R2
 	.loc	1 229 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:229:0
 	{
 		shr r2, r2, 24
 		ldw r3, sp[6]
 	}
-.Ltmp312:
+.Ltmp318:
 	.loc	1 230 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:230:7
 	{
 		eq r2, r2, r3
@@ -3933,15 +3944,15 @@ SendCmd:                                # @SendCmd
 		or r1, r1, r3
 		nop
 	}
-.Ltmp313:
+.Ltmp319:
 	#DEBUG_VALUE: SendCmd:Arg <- R1
 	.loc	1 233 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:233:0
 	crc32 r2, r1, r5
-.Ltmp314:
+.Ltmp320:
 	#DEBUG_VALUE: Crc0 <- R2
 	.loc	1 235 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:235:0
 	crc32 r2, r0, r5
-.Ltmp315:
+.Ltmp321:
 	{
 		ldc r0, 5
 		nop
@@ -3955,7 +3966,7 @@ SendCmd:                                # @SendCmd
 		mov r1, r0
 		nop
 	}
-.Ltmp316:
+.Ltmp322:
 	{
 		zext r1, 7
 		nop
@@ -4021,7 +4032,7 @@ SendCmd:                                # @SendCmd
 	bu .LBB5_61
 .LBB5_27:
 	{
-		mov r8, r7
+		mov r8, r5
 		nop
 	}
 	bu .LBB5_86
@@ -4068,7 +4079,7 @@ SendCmd:                                # @SendCmd
 	}
 	bf r0, .LBB5_86
 .LBB5_61:                               # %LoopBody836.preheader
-.Ltmp317:
+.Ltmp323:
 	#DEBUG_VALUE: i <- 0
 	#DEBUG_VALUE: RespBitCount <- 0
 	#DEBUG_VALUE: RespByteCount <- 0
@@ -4080,7 +4091,7 @@ SendCmd:                                # @SendCmd
 		get r11, id
 		ldw r1, r10[0]
 	}
-.Ltmp318:
+.Ltmp324:
 	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
 	ldaw r0, dp[__timers]
 	{
@@ -4088,7 +4099,7 @@ SendCmd:                                # @SendCmd
 		ldw r6, r0[r11]
 	}
 	.loc	1 260 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:260:0
-.Ltmp319:
+.Ltmp325:
 	{
 		setc res[r6], 9
 		nop
@@ -4098,7 +4109,7 @@ SendCmd:                                # @SendCmd
 		ldc r8, 0
 		mkmsk r9, 1
 	}
-.Ltmp320:
+.Ltmp326:
 .LBB5_62:                               # %LoopBody836
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel92:
@@ -4115,10 +4126,13 @@ SendCmd:                                # @SendCmd
 		out res[r1], r8
 		gettime r2
 	}
-.Ltmp321:
+.Ltmp327:
 	.loc	1 259 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:259:0
-	ldaw r3, r2[5]
-.Ltmp322:
+	{
+		add r3, r2, 5
+		nop
+	}
+.Ltmp328:
 	#DEBUG_VALUE: time <- R3
 	.loc	1 260 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:260:0
 	{
@@ -4126,23 +4140,21 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 260 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:260:0
-.Ltmp323:
+.Ltmp329:
 .Lxta.endpoint_labels43:
 	{
 		in r3, res[r6]
 		nop
 	}
-.Ltmp324:
+.Ltmp330:
+	#DEBUG_VALUE: time <- R2
 	.loc	1 261 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:261:27
 .Lxta.endpoint_labels44:
 	{
 		out res[r1], r9
-		nop
+		add r2, r2, 10
 	}
-	.loc	1 262 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:262:0
-	ldaw r2, r2[10]
-.Ltmp325:
-	#DEBUG_VALUE: time <- R2
+.Ltmp331:
 	.loc	1 263 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:263:0
 	{
 		setd res[r6], r2
@@ -4154,13 +4166,12 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 263 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:263:0
-.Ltmp326:
+.Ltmp332:
 .Lxta.endpoint_labels45:
 	{
 		in r2, res[r6]
 		add r0, r0, 1
 	}
-.Ltmp327:
 .xtaloop 8
 	# LOOPMARKER 4
 .Lxta.loop_labels4:
@@ -4205,7 +4216,7 @@ SendCmd:                                # @SendCmd
 	}
 	{
 		mkmsk r5, 1
-		ldc r11, 60
+		mkmsk r11, 4
 	}
 .LBB5_65:                               # %LoopBody872
                                         # =>This Loop Header: Depth=1
@@ -4215,7 +4226,7 @@ SendCmd:                                # @SendCmd
                                         #     Child Loop BB5_79 Depth 2
                                         #     Child Loop BB5_81 Depth 2
 .Lxtalabel94:
-.Ltmp328:
+.Ltmp333:
 	#DEBUG_VALUE: Crc0 <- 0
 	#DEBUG_VALUE: i <- 0
 	#DEBUG_VALUE: RespBitCount <- 0
@@ -4230,7 +4241,7 @@ SendCmd:                                # @SendCmd
 		setc res[r0], 3
 		stw r2, sp[11]
 	}
-.Ltmp329:
+.Ltmp334:
 	#DEBUG_VALUE: time <- R2
 	.loc	1 278 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:278:27
 .Lxta.endpoint_labels46:
@@ -4238,10 +4249,13 @@ SendCmd:                                # @SendCmd
 		out res[r1], r7
 		gettime r2
 	}
-.Ltmp330:
+.Ltmp335:
 	.loc	1 280 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:280:0
-	ldaw r3, r2[5]
-.Ltmp331:
+	{
+		add r3, r2, 5
+		nop
+	}
+.Ltmp336:
 	#DEBUG_VALUE: time <- R3
 	.loc	1 281 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:281:0
 	{
@@ -4254,36 +4268,34 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 281 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:281:0
-.Ltmp332:
+.Ltmp337:
 .Lxta.endpoint_labels47:
 	{
 		in r3, res[r6]
 		nop
 	}
-.Ltmp333:
+.Ltmp338:
+	#DEBUG_VALUE: time <- R3
 	.loc	1 282 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:282:27
 .Lxta.endpoint_labels48:
 	{
 		out res[r0], r7
-		nop
+		add r3, r2, 10
 	}
-	.loc	1 283 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:283:0
-	ldaw r3, r2[10]
-.Ltmp334:
-	#DEBUG_VALUE: time <- R3
+.Ltmp339:
 	.loc	1 284 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:284:0
 	{
 		setd res[r6], r3
 		nop
 	}
 	.loc	1 284 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:284:0
-.Ltmp335:
+.Ltmp340:
 .Lxta.endpoint_labels49:
 	{
 		in r3, res[r6]
 		nop
 	}
-.Ltmp336:
+.Ltmp341:
 	#DEBUG_VALUE: time <- R2
 	.loc	1 285 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:285:27
 .Lxta.endpoint_labels50:
@@ -4291,13 +4303,13 @@ SendCmd:                                # @SendCmd
 		out res[r1], r5
 		add r2, r2, r11
 	}
-.Ltmp337:
+.Ltmp342:
 	.loc	1 287 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:287:0
 	{
 		setd res[r6], r2
 		nop
 	}
-.Ltmp338:
+.Ltmp343:
 	#DEBUG_VALUE: j <- 128
 	.loc	1 287 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:287:0
 .Lxta.endpoint_labels51:
@@ -4360,7 +4372,7 @@ SendCmd:                                # @SendCmd
 		byterev r9, r2
 		nop
 	}
-.Ltmp339:
+.Ltmp344:
 	#DEBUG_VALUE: Dat <- R9
 	ldw r11, cp[.LCPI5_5]
 	.loc	1 293 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:293:0
@@ -4368,7 +4380,7 @@ SendCmd:                                # @SendCmd
 		and r2, r9, r11
 		nop
 	}
-.Ltmp340:
+.Ltmp345:
 	#DEBUG_VALUE: D3 <- R2
 	.loc	1 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:294:0
 	{
@@ -4380,7 +4392,7 @@ SendCmd:                                # @SendCmd
 		or r2, r3, r2
 		nop
 	}
-.Ltmp341:
+.Ltmp346:
 	ldw r8, cp[.LCPI5_6]
 	.loc	1 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:294:0
 	{
@@ -4424,7 +4436,7 @@ SendCmd:                                # @SendCmd
 		and r2, r2, r11
 		nop
 	}
-.Ltmp342:
+.Ltmp347:
 	#DEBUG_VALUE: D2 <- R2
 	.loc	1 298 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:298:0
 	{
@@ -4436,7 +4448,7 @@ SendCmd:                                # @SendCmd
 		or r2, r3, r2
 		nop
 	}
-.Ltmp343:
+.Ltmp348:
 	.loc	1 298 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:298:0
 	{
 		and r2, r2, r8
@@ -4474,7 +4486,7 @@ SendCmd:                                # @SendCmd
 		and r2, r2, r11
 		nop
 	}
-.Ltmp344:
+.Ltmp349:
 	#DEBUG_VALUE: D1 <- R2
 	.loc	1 302 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:302:0
 	{
@@ -4486,7 +4498,7 @@ SendCmd:                                # @SendCmd
 		or r2, r3, r2
 		nop
 	}
-.Ltmp345:
+.Ltmp350:
 	.loc	1 302 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:302:0
 	{
 		and r2, r2, r8
@@ -4524,7 +4536,7 @@ SendCmd:                                # @SendCmd
 		and r2, r2, r11
 		nop
 	}
-.Ltmp346:
+.Ltmp351:
 	#DEBUG_VALUE: D0 <- R2
 	.loc	1 306 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:306:0
 	{
@@ -4536,7 +4548,7 @@ SendCmd:                                # @SendCmd
 		or r2, r3, r2
 		nop
 	}
-.Ltmp347:
+.Ltmp352:
 	.loc	1 306 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:306:0
 	{
 		and r2, r2, r8
@@ -4564,14 +4576,14 @@ SendCmd:                                # @SendCmd
 	}
 	.loc	1 307 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:307:0
 	crc8 r3, r2, r2, r5
-.Ltmp348:
+.Ltmp353:
 	#DEBUG_VALUE: i <- 8
 	{
 		mkmsk r5, 1
 		stw r3, sp[16]
 	}
 	ldw r2, cp[.LCPI5_4]
-.Ltmp349:
+.Ltmp354:
 .LBB5_67:                               # %LoopBody994
                                         #   Parent Loop BB5_65 Depth=1
                                         #     Parent Loop BB5_66 Depth=2
@@ -4594,9 +4606,12 @@ SendCmd:                                # @SendCmd
 		gettime r3
 	}
 	.loc	1 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:317:0
-.Ltmp350:
-	ldaw r11, r3[5]
-.Ltmp351:
+.Ltmp355:
+	{
+		add r11, r3, 5
+		nop
+	}
+.Ltmp356:
 	#DEBUG_VALUE: time <- R11
 	.loc	1 318 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:318:0
 	{
@@ -4604,25 +4619,22 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 318 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:318:0
-.Ltmp352:
+.Ltmp357:
 .Lxta.endpoint_labels53:
 	{
 		in r11, res[r6]
 		nop
 	}
-.Ltmp353:
+.Ltmp358:
+	#DEBUG_VALUE: Dat <- R9
+	#DEBUG_VALUE: time <- R11
 	.loc	1 319 38                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:319:38
 .Lxta.endpoint_labels54:
 	{
 		outshr res[r0], r9
-		nop
+		add r11, r3, 10
 	}
-.Ltmp354:
-	#DEBUG_VALUE: Dat <- R9
-	.loc	1 320 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:320:0
-	ldaw r11, r3[10]
-.Ltmp355:
-	#DEBUG_VALUE: time <- R11
+.Ltmp359:
 	.loc	1 321 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:321:0
 	{
 		setd res[r6], r11
@@ -4634,13 +4646,12 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 321 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:321:0
-.Ltmp356:
+.Ltmp360:
 .Lxta.endpoint_labels55:
 	{
 		in r11, res[r6]
 		nop
 	}
-.Ltmp357:
 	.loc	1 322 33                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:322:33
 .Lxta.endpoint_labels56:
 	{
@@ -4653,7 +4664,7 @@ SendCmd:                                # @SendCmd
 	# LOOPMARKER 5
 	.loc	1 309 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:309:0
 	bt r2, .LBB5_67
-.Ltmp358:
+.Ltmp361:
 # BB#68:                                # %ifdone990
                                         #   in Loop: Header=BB5_66 Depth=2
 .Lxtalabel97:
@@ -4675,15 +4686,15 @@ SendCmd:                                # @SendCmd
 	.loc	1 291 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:291:0
 	{
 		add r8, r8, 1
-		ldc r11, 60
+		mkmsk r11, 4
 	}
 	.loc	1 323 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:323:0
-.Ltmp359:
+.Ltmp362:
 	{
 		add r2, r3, r11
 		nop
 	}
-.Ltmp360:
+.Ltmp363:
 	#DEBUG_VALUE: time <- R2
 	.loc	1 324 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:324:0
 	{
@@ -4695,7 +4706,7 @@ SendCmd:                                # @SendCmd
 		setc res[r6], 9
 		nop
 	}
-.Ltmp361:
+.Ltmp364:
 	#DEBUG_VALUE: j <- R4
 	.loc	1 324 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:324:0
 .Lxta.endpoint_labels57:
@@ -4703,7 +4714,7 @@ SendCmd:                                # @SendCmd
 		in r2, res[r6]
 		sub r4, r4, 1
 	}
-.Ltmp362:
+.Ltmp365:
 .xtaloop 128
 	# LOOPMARKER 8
 .Lxta.loop_labels6:
@@ -4712,7 +4723,7 @@ SendCmd:                                # @SendCmd
 # BB#69:                                # %ifdone911
                                         #   in Loop: Header=BB5_65 Depth=1
 .Lxtalabel98:
-.Ltmp363:
+.Ltmp366:
 	#DEBUG_VALUE: Crc0 <- undef
 	#DEBUG_VALUE: i <- 8
 	#DEBUG_VALUE: RespBitCount <- 0
@@ -4729,7 +4740,7 @@ SendCmd:                                # @SendCmd
 	}
 	.loc	1 329 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:329:0
 	crc32 r10, r7, r2
-.Ltmp364:
+.Ltmp367:
 	#DEBUG_VALUE: Crc0 <- R10
 	{
 		mov r4, r7
@@ -4737,7 +4748,7 @@ SendCmd:                                # @SendCmd
 	}
 	.loc	1 330 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:330:0
 	crc32 r7, r4, r2
-.Ltmp365:
+.Ltmp368:
 	#DEBUG_VALUE: Crc1 <- R7
 	{
 		nop
@@ -4745,7 +4756,7 @@ SendCmd:                                # @SendCmd
 	}
 	.loc	1 331 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:331:0
 	crc32 r9, r4, r2
-.Ltmp366:
+.Ltmp369:
 	#DEBUG_VALUE: Crc2 <- R9
 	{
 		nop
@@ -4753,7 +4764,7 @@ SendCmd:                                # @SendCmd
 	}
 	.loc	1 332 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:332:0
 	crc32 r3, r4, r2
-.Ltmp367:
+.Ltmp370:
 	#DEBUG_VALUE: Crc3 <- R3
 	#DEBUG_VALUE: Crc3 <- R2
 	#DEBUG_VALUE: Crc1 <- undef
@@ -4765,13 +4776,13 @@ SendCmd:                                # @SendCmd
 		mov r2, r3
 	}
 	ldw r4, cp[.LCPI5_7]
-.Ltmp368:
+.Ltmp371:
 	#DEBUG_VALUE: Crc0 <- R7
 	{
 		mov r8, r7
 		mov r7, r10
 	}
-.Ltmp369:
+.Ltmp372:
 .LBB5_70:                               # %LoopBody1043
                                         #   Parent Loop BB5_65 Depth=1
                                         # =>  This Inner Loop Header: Depth=2
@@ -4834,14 +4845,14 @@ SendCmd:                                # @SendCmd
 		and r3, r3, r10
 		nop
 	}
-.Ltmp370:
+.Ltmp373:
 	#DEBUG_VALUE: Dat <- R10
 	.loc	1 335 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:335:0
 	{
 		or r10, r2, r3
 		ldc r2, 0
 	}
-.Ltmp371:
+.Ltmp374:
 	#DEBUG_VALUE: time <- R3
 	.loc	1 340 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:340:29
 .Lxta.endpoint_labels58:
@@ -4849,7 +4860,7 @@ SendCmd:                                # @SendCmd
 		out res[r1], r2
 		gettime r3
 	}
-.Ltmp372:
+.Ltmp375:
 	{
 		mov r2, r7
 		mov r7, r8
@@ -4859,9 +4870,12 @@ SendCmd:                                # @SendCmd
 		mov r9, r11
 	}
 	.loc	1 342 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:342:0
-.Ltmp373:
-	ldaw r11, r3[5]
-.Ltmp374:
+.Ltmp376:
+	{
+		add r11, r3, 5
+		nop
+	}
+.Ltmp377:
 	#DEBUG_VALUE: time <- R11
 	.loc	1 343 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:343:0
 	{
@@ -4869,13 +4883,13 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 343 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:343:0
-.Ltmp375:
+.Ltmp378:
 .Lxta.endpoint_labels59:
 	{
 		in r11, res[r6]
 		nop
 	}
-.Ltmp376:
+.Ltmp379:
 	{
 		mov r11, r9
 		mov r9, r8
@@ -4884,16 +4898,15 @@ SendCmd:                                # @SendCmd
 		mov r8, r7
 		mov r7, r2
 	}
+.Ltmp380:
+	#DEBUG_VALUE: time <- R2
 	.loc	1 344 31                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:344:31
 .Lxta.endpoint_labels60:
 	{
 		out res[r0], r10
-		nop
+		add r2, r3, 10
 	}
-	.loc	1 345 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:345:0
-	ldaw r2, r3[10]
-.Ltmp377:
-	#DEBUG_VALUE: time <- R2
+.Ltmp381:
 	.loc	1 346 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:346:0
 	{
 		setd res[r6], r2
@@ -4905,13 +4918,13 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 346 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:346:0
-.Ltmp378:
+.Ltmp382:
 .Lxta.endpoint_labels61:
 	{
 		in r2, res[r6]
 		nop
 	}
-.Ltmp379:
+.Ltmp383:
 	#DEBUG_VALUE: time <- R2
 	.loc	1 347 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:347:29
 .Lxta.endpoint_labels62:
@@ -4919,14 +4932,14 @@ SendCmd:                                # @SendCmd
 		out res[r1], r5
 		add r2, r3, r11
 	}
-.Ltmp380:
+.Ltmp384:
 	.loc	1 349 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:349:0
 	{
 		setd res[r6], r2
 		nop
 	}
 	.loc	1 349 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:349:0
-.Ltmp381:
+.Ltmp385:
 .Lxta.endpoint_labels63:
 	{
 		in r2, res[r6]
@@ -4936,7 +4949,7 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r2, sp[19]
 	}
-.Ltmp382:
+.Ltmp386:
 	#DEBUG_VALUE: Crc3 <- R2
 	#DEBUG_VALUE: Crc2 <- R9
 	.loc	1 351 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:351:0
@@ -4944,7 +4957,7 @@ SendCmd:                                # @SendCmd
 		shr r2, r2, 1
 		shr r9, r9, 1
 	}
-.Ltmp383:
+.Ltmp387:
 	#DEBUG_VALUE: Crc1 <- R8
 	#DEBUG_VALUE: Crc0 <- R7
 	.loc	1 351 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:351:0
@@ -4952,7 +4965,7 @@ SendCmd:                                # @SendCmd
 		shr r8, r8, 1
 		shr r7, r7, 1
 	}
-.Ltmp384:
+.Ltmp388:
 	.loc	1 333 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:333:0
 	{
 		add r4, r4, 1
@@ -4979,7 +4992,7 @@ SendCmd:                                # @SendCmd
 		mov r4, r2
 		nop
 	}
-.Ltmp385:
+.Ltmp389:
 	#DEBUG_VALUE: time <- R2
 	.loc	1 357 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:357:27
 .Lxta.endpoint_labels64:
@@ -4987,10 +5000,13 @@ SendCmd:                                # @SendCmd
 		out res[r1], r4
 		gettime r2
 	}
-.Ltmp386:
+.Ltmp390:
 	.loc	1 359 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:359:0
-	ldaw r3, r2[5]
-.Ltmp387:
+	{
+		add r3, r2, 5
+		nop
+	}
+.Ltmp391:
 	#DEBUG_VALUE: time <- R3
 	.loc	1 360 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:360:0
 	{
@@ -5003,40 +5019,34 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 360 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:360:0
-.Ltmp388:
+.Ltmp392:
 .Lxta.endpoint_labels65:
 	{
 		in r3, res[r6]
 		nop
 	}
-.Ltmp389:
-	{
-		mkmsk r3, 4
-		nop
-	}
+.Ltmp393:
+	#DEBUG_VALUE: time <- R3
 	.loc	1 361 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:361:29
 .Lxta.endpoint_labels66:
 	{
-		out res[r0], r3
-		nop
+		out res[r0], r11
+		add r3, r2, 10
 	}
-	.loc	1 362 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:362:0
-	ldaw r3, r2[10]
-.Ltmp390:
-	#DEBUG_VALUE: time <- R3
+.Ltmp394:
 	.loc	1 363 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:363:0
 	{
 		setd res[r6], r3
 		nop
 	}
 	.loc	1 363 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:363:0
-.Ltmp391:
+.Ltmp395:
 .Lxta.endpoint_labels67:
 	{
 		in r3, res[r6]
 		nop
 	}
-.Ltmp392:
+.Ltmp396:
 	#DEBUG_VALUE: time <- R2
 	.loc	1 364 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:364:27
 .Lxta.endpoint_labels68:
@@ -5044,14 +5054,14 @@ SendCmd:                                # @SendCmd
 		out res[r1], r5
 		add r2, r2, r11
 	}
-.Ltmp393:
+.Ltmp397:
 	.loc	1 366 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:366:0
 	{
 		setd res[r6], r2
 		nop
 	}
 	.loc	1 366 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:366:0
-.Ltmp394:
+.Ltmp398:
 .Lxta.endpoint_labels69:
 	{
 		in r2, res[r6]
@@ -5096,7 +5106,7 @@ SendCmd:                                # @SendCmd
 		ldw r4, sp[12]
 	}
 	bu .LBB5_78
-.Ltmp395:
+.Ltmp399:
 .LBB5_72:                               #   in Loop: Header=BB5_65 Depth=1
 	{
 		ldc r8, 0
@@ -5124,7 +5134,7 @@ SendCmd:                                # @SendCmd
 		add r2, r2, r3
 		nop
 	}
-.Ltmp396:
+.Ltmp400:
 	#DEBUG_VALUE: DatByteCount <- [SP+52]
 	#DEBUG_VALUE: i <- 8
 	.loc	1 370 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:370:0
@@ -5133,20 +5143,20 @@ SendCmd:                                # @SendCmd
 		stw r2, sp[13]
 	}
 	.loc	1 370 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:370:0
-.Ltmp397:
+.Ltmp401:
 .Lxta.endpoint_labels70:
 	{
 		in r2, res[r0]
 		nop
 	}
 	.loc	1 379 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:379:0
-.Ltmp398:
+.Ltmp402:
 	{
 		setc res[r6], 9
 		nop
 	}
 	ldw r2, cp[.LCPI5_4]
-.Ltmp399:
+.Ltmp403:
 .LBB5_79:                               # %LoopBody1152
                                         #   Parent Loop BB5_65 Depth=1
                                         # =>  This Inner Loop Header: Depth=2
@@ -5163,10 +5173,13 @@ SendCmd:                                # @SendCmd
 		out res[r1], r7
 		gettime r3
 	}
-.Ltmp400:
+.Ltmp404:
 	.loc	1 378 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:378:0
-	ldaw r11, r3[5]
-.Ltmp401:
+	{
+		add r11, r3, 5
+		nop
+	}
+.Ltmp405:
 	#DEBUG_VALUE: time <- R11
 	.loc	1 379 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:379:0
 	{
@@ -5174,23 +5187,21 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 379 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:379:0
-.Ltmp402:
+.Ltmp406:
 .Lxta.endpoint_labels72:
 	{
 		in r11, res[r6]
 		nop
 	}
-.Ltmp403:
+.Ltmp407:
+	#DEBUG_VALUE: time <- R3
 	.loc	1 380 31                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:380:31
 .Lxta.endpoint_labels73:
 	{
 		out res[r1], r5
-		nop
+		add r3, r3, 10
 	}
-	.loc	1 381 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:381:0
-	ldaw r3, r3[10]
-.Ltmp404:
-	#DEBUG_VALUE: time <- R3
+.Ltmp408:
 	.loc	1 382 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:382:0
 	{
 		setd res[r6], r3
@@ -5202,27 +5213,26 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 382 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:382:0
-.Ltmp405:
+.Ltmp409:
 .Lxta.endpoint_labels74:
 	{
 		in r3, res[r6]
 		add r2, r2, 1
 	}
-.Ltmp406:
 .xtaloop 8
 	# LOOPMARKER 12
 .Lxta.loop_labels8:
 	# LOOPMARKER 11
 	.loc	1 371 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:371:0
 	bt r2, .LBB5_79
-.Ltmp407:
+.Ltmp410:
 # BB#80:                                #   in Loop: Header=BB5_65 Depth=1
 	ldw r2, cp[.LCPI5_8]
 .LBB5_81:                               # %LoopBody1182
                                         #   Parent Loop BB5_65 Depth=1
                                         # =>  This Inner Loop Header: Depth=2
 .Lxtalabel104:
-.Ltmp408:
+.Ltmp411:
 	#DEBUG_VALUE: time <- R3
 	.loc	1 391 31                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:391:31
 .Lxta.endpoint_labels75:
@@ -5230,10 +5240,13 @@ SendCmd:                                # @SendCmd
 		out res[r1], r7
 		gettime r3
 	}
-.Ltmp409:
+.Ltmp412:
 	.loc	1 393 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:393:0
-	ldaw r11, r3[5]
-.Ltmp410:
+	{
+		add r11, r3, 5
+		nop
+	}
+.Ltmp413:
 	#DEBUG_VALUE: time <- R11
 	.loc	1 394 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:394:0
 	{
@@ -5246,42 +5259,39 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 394 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:394:0
-.Ltmp411:
+.Ltmp414:
 .Lxta.endpoint_labels76:
 	{
 		in r11, res[r6]
 		nop
 	}
-.Ltmp412:
+.Ltmp415:
+	#DEBUG_VALUE: time <- R3
 	.loc	1 395 31                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:395:31
 .Lxta.endpoint_labels77:
 	{
 		out res[r1], r5
-		nop
+		add r3, r3, 10
 	}
-	.loc	1 396 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:396:0
-	ldaw r3, r3[10]
-.Ltmp413:
-	#DEBUG_VALUE: time <- R3
+.Ltmp416:
 	.loc	1 397 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:397:0
 	{
 		setd res[r6], r3
 		nop
 	}
 	.loc	1 397 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:397:0
-.Ltmp414:
+.Ltmp417:
 .Lxta.endpoint_labels78:
 	{
 		in r3, res[r6]
 		nop
 	}
-.Ltmp415:
 	.loc	1 399 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:399:0
 	{
 		setc res[r0], 1
 		nop
 	}
-.Ltmp416:
+.Ltmp418:
 	#DEBUG_VALUE: Dat <- R3
 	.loc	1 399 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:399:0
 .Lxta.endpoint_labels79:
@@ -5289,20 +5299,20 @@ SendCmd:                                # @SendCmd
 		in r3, res[r0]
 		add r2, r2, 1
 	}
-.Ltmp417:
+.Ltmp419:
 	.loc	1 400 11                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:400:11
 	bf r2, .LBB5_82
 # BB#83:                                # %LoopTest1181
                                         #   in Loop: Header=BB5_81 Depth=2
 .Lxtalabel105:
-.Ltmp418:
+.Ltmp420:
 	#DEBUG_VALUE: Dat <- R3
 	.loc	1 402 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:402:7
 	{
 		and r3, r3, r9
 		nop
 	}
-.Ltmp419:
+.Ltmp421:
 .Lxta.loop_labels9:
 	# LOOPMARKER 13
 	bf r3, .LBB5_81
@@ -5322,11 +5332,11 @@ SendCmd:                                # @SendCmd
 .Lxta.loop_labels10:
 	# LOOPMARKER 14
 	{
-		ldc r11, 60
+		mkmsk r11, 4
 		mkmsk r9, 1
 	}
 	bt r2, .LBB5_65
-.Ltmp420:
+.Ltmp422:
 .LBB5_73:                               # %ifdone866
 .Lxtalabel107:
 	#DEBUG_VALUE: i <- 0
@@ -5366,7 +5376,7 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: Dat <- -1
 	#DEBUG_VALUE: R <- -1
 	#DEBUG_VALUE: DatByteCount <- 0
-.Ltmp421:
+.Ltmp423:
 	#DEBUG_VALUE: time <- R11
 	.loc	1 415 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:415:27
 .Lxta.endpoint_labels80:
@@ -5374,10 +5384,13 @@ SendCmd:                                # @SendCmd
 		out res[r1], r8
 		gettime r11
 	}
-.Ltmp422:
+.Ltmp424:
 	.loc	1 417 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:417:0
-	ldaw r4, r11[5]
-.Ltmp423:
+	{
+		add r4, r11, 5
+		nop
+	}
+.Ltmp425:
 	#DEBUG_VALUE: time <- R4
 	.loc	1 418 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:418:0
 	{
@@ -5390,42 +5403,39 @@ SendCmd:                                # @SendCmd
 		nop
 	}
 	.loc	1 418 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:418:0
-.Ltmp424:
+.Ltmp426:
 .Lxta.endpoint_labels81:
 	{
 		in r4, res[r6]
 		nop
 	}
-.Ltmp425:
+.Ltmp427:
+	#DEBUG_VALUE: time <- R11
 	.loc	1 419 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:419:27
 .Lxta.endpoint_labels82:
 	{
 		out res[r1], r9
-		nop
+		add r11, r11, 10
 	}
-	.loc	1 420 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:420:0
-	ldaw r11, r11[10]
-.Ltmp426:
-	#DEBUG_VALUE: time <- R11
+.Ltmp428:
 	.loc	1 421 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:421:0
 	{
 		setd res[r6], r11
 		nop
 	}
 	.loc	1 421 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:421:0
-.Ltmp427:
+.Ltmp429:
 .Lxta.endpoint_labels83:
 	{
 		in r11, res[r6]
 		nop
 	}
-.Ltmp428:
 	.loc	1 423 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:423:0
 	{
 		setc res[r0], 1
 		nop
 	}
-.Ltmp429:
+.Ltmp430:
 	#DEBUG_VALUE: Dat <- R11
 	.loc	1 423 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:423:0
 .Lxta.endpoint_labels84:
@@ -5433,7 +5443,7 @@ SendCmd:                                # @SendCmd
 		in r11, res[r0]
 		add r2, r2, 1
 	}
-.Ltmp430:
+.Ltmp431:
 	bf r2, .LBB5_76
 # BB#85:                                # %LoopTest1232
                                         #   in Loop: Header=BB5_75 Depth=1
@@ -5441,7 +5451,7 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: i <- 0
 	#DEBUG_VALUE: RespBitCount <- 0
 	#DEBUG_VALUE: RespByteCount <- 0
-.Ltmp431:
+.Ltmp432:
 	#DEBUG_VALUE: Dat <- R11
 	#DEBUG_VALUE: R <- -1
 	#DEBUG_VALUE: DatByteCount <- 0
@@ -5450,12 +5460,12 @@ SendCmd:                                # @SendCmd
 		and r11, r11, r3
 		nop
 	}
-.Ltmp432:
+.Ltmp433:
 .Lxta.loop_labels11:
 	# LOOPMARKER 15
 	bf r11, .LBB5_75
 	bu .LBB5_86
-.Ltmp433:
+.Ltmp434:
 .LBB5_82:
 	{
 		mov r8, r5
@@ -5470,7 +5480,7 @@ SendCmd:                                # @SendCmd
 	bu .LBB5_86
 .LBB5_36:
 	{
-		mov r8, r7
+		mov r8, r5
 		nop
 	}
 .LBB5_86:                               # %return
@@ -5498,8 +5508,8 @@ SendCmd:                                # @SendCmd
 	.set	SendCmd.maxcores,set_port_pull_up.maxcores $M 1
 	.set	SendCmd.maxtimers,set_port_pull_up.maxtimers $M 0
 	.set	SendCmd.maxchanends,set_port_pull_up.maxchanends $M 0
-.Ltmp434:
-	.size	SendCmd, .Ltmp434-SendCmd
+.Ltmp435:
+	.size	SendCmd, .Ltmp435-SendCmd
 .Lfunc_end5:
 	.cfi_endproc
 
@@ -5540,8 +5550,8 @@ get_fattime:                            # @get_fattime
 	.globl	get_fattime.maxtimers
 	.set	get_fattime.maxchanends,0
 	.globl	get_fattime.maxchanends
-.Ltmp435:
-	.size	get_fattime, .Ltmp435-get_fattime
+.Ltmp436:
+	.size	get_fattime, .Ltmp436-get_fattime
 	.cfi_endproc
 
 	.section	.dp.data.4,"awd",@progbits
@@ -7034,1583 +7044,1639 @@ __xcc1_internal_3:
 	.long	0
 .Ldebug_ranges18:
 	.long	.Ltmp102
-	.long	.Ltmp433
+	.long	.Ltmp434
 	.long	0
 	.long	0
 .Ldebug_ranges19:
 	.long	.Ltmp102
-	.long	.Ltmp433
+	.long	.Ltmp434
 	.long	0
 	.long	0
 .Ldebug_ranges20:
 	.long	.Ltmp102
-	.long	.Ltmp433
+	.long	.Ltmp434
 	.long	0
 	.long	0
 .Ldebug_ranges21:
 	.long	.Ltmp102
-	.long	.Ltmp433
+	.long	.Ltmp434
 	.long	0
 	.long	0
 .Ldebug_ranges22:
 	.long	.Ltmp102
-	.long	.Ltmp433
+	.long	.Ltmp434
 	.long	0
 	.long	0
 .Ldebug_ranges23:
 	.long	.Ltmp102
-	.long	.Ltmp433
+	.long	.Ltmp434
 	.long	0
 	.long	0
 .Ldebug_ranges24:
 	.long	.Ltmp102
-	.long	.Ltmp433
+	.long	.Ltmp434
 	.long	0
 	.long	0
 	.section	.debug_loc,"",@progbits
 .Ldebug_loc0:
 	.long	.Lfunc_begin0
 	.long	.Ltmp9
-.Lset0 = .Ltmp437-.Ltmp436              # Loc expr size
+.Lset0 = .Ltmp438-.Ltmp437              # Loc expr size
 	.short	.Lset0
-.Ltmp436:
-	.byte	80                      # DW_OP_reg0
 .Ltmp437:
+	.byte	80                      # DW_OP_reg0
+.Ltmp438:
 	.long	.Ltmp9
 	.long	.Ltmp10
-.Lset1 = .Ltmp439-.Ltmp438              # Loc expr size
+.Lset1 = .Ltmp440-.Ltmp439              # Loc expr size
 	.short	.Lset1
-.Ltmp438:
-	.byte	85                      # DW_OP_reg5
 .Ltmp439:
+	.byte	85                      # DW_OP_reg5
+.Ltmp440:
 	.long	.Ltmp11
 	.long	.Ltmp14
-.Lset2 = .Ltmp441-.Ltmp440              # Loc expr size
+.Lset2 = .Ltmp442-.Ltmp441              # Loc expr size
 	.short	.Lset2
-.Ltmp440:
-	.byte	85                      # DW_OP_reg5
 .Ltmp441:
+	.byte	85                      # DW_OP_reg5
+.Ltmp442:
 	.long	0
 	.long	0
 .Ldebug_loc1:
 	.long	.Ltmp12
 	.long	.Ltmp13
-.Lset3 = .Ltmp443-.Ltmp442              # Loc expr size
+.Lset3 = .Ltmp444-.Ltmp443              # Loc expr size
 	.short	.Lset3
-.Ltmp442:
+.Ltmp443:
 	.byte	118                     # DW_OP_breg6
 	.byte	0                       # 
-.Ltmp443:
+.Ltmp444:
 	.long	.Ltmp15
 	.long	.Ltmp19
-.Lset4 = .Ltmp445-.Ltmp444              # Loc expr size
+.Lset4 = .Ltmp446-.Ltmp445              # Loc expr size
 	.short	.Lset4
-.Ltmp444:
-	.byte	86                      # DW_OP_reg6
 .Ltmp445:
+	.byte	86                      # DW_OP_reg6
+.Ltmp446:
 	.long	.Ltmp19
 	.long	.Ltmp20
-.Lset5 = .Ltmp447-.Ltmp446              # Loc expr size
+.Lset5 = .Ltmp448-.Ltmp447              # Loc expr size
 	.short	.Lset5
-.Ltmp446:
-	.byte	80                      # DW_OP_reg0
 .Ltmp447:
+	.byte	80                      # DW_OP_reg0
+.Ltmp448:
 	.long	.Ltmp29
 	.long	.Ltmp30
-.Lset6 = .Ltmp449-.Ltmp448              # Loc expr size
+.Lset6 = .Ltmp450-.Ltmp449              # Loc expr size
 	.short	.Lset6
-.Ltmp448:
-	.byte	81                      # DW_OP_reg1
 .Ltmp449:
+	.byte	81                      # DW_OP_reg1
+.Ltmp450:
 	.long	0
 	.long	0
 .Ldebug_loc2:
 	.long	.Ltmp16
 	.long	.Ltmp21
-.Lset7 = .Ltmp451-.Ltmp450              # Loc expr size
+.Lset7 = .Ltmp452-.Ltmp451              # Loc expr size
 	.short	.Lset7
-.Ltmp450:
+.Ltmp451:
 	.byte	16                      # DW_OP_constu
 	.byte	74                      # 
-.Ltmp451:
+.Ltmp452:
 	.long	.Ltmp21
 	.long	.Ltmp26
-.Lset8 = .Ltmp453-.Ltmp452              # Loc expr size
+.Lset8 = .Ltmp454-.Ltmp453              # Loc expr size
 	.short	.Lset8
-.Ltmp452:
-	.byte	89                      # DW_OP_reg9
 .Ltmp453:
+	.byte	89                      # DW_OP_reg9
+.Ltmp454:
 	.long	.Ltmp27
 	.long	.Ltmp28
-.Lset9 = .Ltmp455-.Ltmp454              # Loc expr size
+.Lset9 = .Ltmp456-.Ltmp455              # Loc expr size
 	.short	.Lset9
-.Ltmp454:
-	.byte	80                      # DW_OP_reg0
 .Ltmp455:
+	.byte	80                      # DW_OP_reg0
+.Ltmp456:
 	.long	0
 	.long	0
 .Ldebug_loc3:
 	.long	.Lfunc_begin1
 	.long	.Ltmp35
-.Lset10 = .Ltmp457-.Ltmp456             # Loc expr size
+.Lset10 = .Ltmp458-.Ltmp457             # Loc expr size
 	.short	.Lset10
-.Ltmp456:
-	.byte	80                      # DW_OP_reg0
 .Ltmp457:
+	.byte	80                      # DW_OP_reg0
+.Ltmp458:
 	.long	.Ltmp35
 	.long	.Ltmp36
-.Lset11 = .Ltmp459-.Ltmp458             # Loc expr size
+.Lset11 = .Ltmp460-.Ltmp459             # Loc expr size
 	.short	.Lset11
-.Ltmp458:
-	.byte	81                      # DW_OP_reg1
 .Ltmp459:
+	.byte	81                      # DW_OP_reg1
+.Ltmp460:
 	.long	0
 	.long	0
 .Ldebug_loc4:
 	.long	.Lfunc_begin2
 	.long	.Ltmp46
-.Lset12 = .Ltmp461-.Ltmp460             # Loc expr size
+.Lset12 = .Ltmp462-.Ltmp461             # Loc expr size
 	.short	.Lset12
-.Ltmp460:
-	.byte	80                      # DW_OP_reg0
 .Ltmp461:
+	.byte	80                      # DW_OP_reg0
+.Ltmp462:
 	.long	0
 	.long	0
 .Ldebug_loc5:
 	.long	.Lfunc_begin2
 	.long	.Ltmp46
-.Lset13 = .Ltmp463-.Ltmp462             # Loc expr size
+.Lset13 = .Ltmp464-.Ltmp463             # Loc expr size
 	.short	.Lset13
-.Ltmp462:
-	.byte	81                      # DW_OP_reg1
 .Ltmp463:
+	.byte	81                      # DW_OP_reg1
+.Ltmp464:
 	.long	.Ltmp47
 	.long	.Ltmp51
-.Lset14 = .Ltmp465-.Ltmp464             # Loc expr size
+.Lset14 = .Ltmp466-.Ltmp465             # Loc expr size
 	.short	.Lset14
-.Ltmp464:
-	.byte	81                      # DW_OP_reg1
 .Ltmp465:
+	.byte	81                      # DW_OP_reg1
+.Ltmp466:
 	.long	.Ltmp53
 	.long	.Ltmp54
-.Lset15 = .Ltmp467-.Ltmp466             # Loc expr size
+.Lset15 = .Ltmp468-.Ltmp467             # Loc expr size
 	.short	.Lset15
-.Ltmp466:
-	.byte	81                      # DW_OP_reg1
 .Ltmp467:
+	.byte	81                      # DW_OP_reg1
+.Ltmp468:
 	.long	0
 	.long	0
 .Ldebug_loc6:
 	.long	.Lfunc_begin2
 	.long	.Ltmp46
-.Lset16 = .Ltmp469-.Ltmp468             # Loc expr size
+.Lset16 = .Ltmp470-.Ltmp469             # Loc expr size
 	.short	.Lset16
-.Ltmp468:
-	.byte	82                      # DW_OP_reg2
 .Ltmp469:
+	.byte	82                      # DW_OP_reg2
+.Ltmp470:
 	.long	.Ltmp47
 	.long	.Ltmp49
-.Lset17 = .Ltmp471-.Ltmp470             # Loc expr size
+.Lset17 = .Ltmp472-.Ltmp471             # Loc expr size
 	.short	.Lset17
-.Ltmp470:
-	.byte	82                      # DW_OP_reg2
 .Ltmp471:
+	.byte	82                      # DW_OP_reg2
+.Ltmp472:
 	.long	0
 	.long	0
 .Ldebug_loc7:
 	.long	.Lfunc_begin2
 	.long	.Ltmp46
-.Lset18 = .Ltmp473-.Ltmp472             # Loc expr size
+.Lset18 = .Ltmp474-.Ltmp473             # Loc expr size
 	.short	.Lset18
-.Ltmp472:
-	.byte	83                      # DW_OP_reg3
 .Ltmp473:
+	.byte	83                      # DW_OP_reg3
+.Ltmp474:
 	.long	.Ltmp47
 	.long	.Ltmp52
-.Lset19 = .Ltmp475-.Ltmp474             # Loc expr size
+.Lset19 = .Ltmp476-.Ltmp475             # Loc expr size
 	.short	.Lset19
-.Ltmp474:
-	.byte	83                      # DW_OP_reg3
 .Ltmp475:
+	.byte	83                      # DW_OP_reg3
+.Ltmp476:
 	.long	0
 	.long	0
 .Ldebug_loc8:
 	.long	.Lfunc_begin3
 	.long	.Ltmp63
-.Lset20 = .Ltmp477-.Ltmp476             # Loc expr size
+.Lset20 = .Ltmp478-.Ltmp477             # Loc expr size
 	.short	.Lset20
-.Ltmp476:
-	.byte	80                      # DW_OP_reg0
 .Ltmp477:
+	.byte	80                      # DW_OP_reg0
+.Ltmp478:
 	.long	0
 	.long	0
 .Ldebug_loc9:
 	.long	.Lfunc_begin3
 	.long	.Ltmp63
-.Lset21 = .Ltmp479-.Ltmp478             # Loc expr size
+.Lset21 = .Ltmp480-.Ltmp479             # Loc expr size
 	.short	.Lset21
-.Ltmp478:
-	.byte	81                      # DW_OP_reg1
 .Ltmp479:
+	.byte	81                      # DW_OP_reg1
+.Ltmp480:
 	.long	.Ltmp64
 	.long	.Ltmp68
-.Lset22 = .Ltmp481-.Ltmp480             # Loc expr size
+.Lset22 = .Ltmp482-.Ltmp481             # Loc expr size
 	.short	.Lset22
-.Ltmp480:
-	.byte	81                      # DW_OP_reg1
 .Ltmp481:
+	.byte	81                      # DW_OP_reg1
+.Ltmp482:
 	.long	.Ltmp69
 	.long	.Ltmp70
-.Lset23 = .Ltmp483-.Ltmp482             # Loc expr size
+.Lset23 = .Ltmp484-.Ltmp483             # Loc expr size
 	.short	.Lset23
-.Ltmp482:
-	.byte	81                      # DW_OP_reg1
 .Ltmp483:
+	.byte	81                      # DW_OP_reg1
+.Ltmp484:
 	.long	0
 	.long	0
 .Ldebug_loc10:
 	.long	.Lfunc_begin3
 	.long	.Ltmp63
-.Lset24 = .Ltmp485-.Ltmp484             # Loc expr size
+.Lset24 = .Ltmp486-.Ltmp485             # Loc expr size
 	.short	.Lset24
-.Ltmp484:
-	.byte	82                      # DW_OP_reg2
 .Ltmp485:
+	.byte	82                      # DW_OP_reg2
+.Ltmp486:
 	.long	.Ltmp64
 	.long	.Ltmp66
-.Lset25 = .Ltmp487-.Ltmp486             # Loc expr size
+.Lset25 = .Ltmp488-.Ltmp487             # Loc expr size
 	.short	.Lset25
-.Ltmp486:
-	.byte	82                      # DW_OP_reg2
 .Ltmp487:
+	.byte	82                      # DW_OP_reg2
+.Ltmp488:
 	.long	0
 	.long	0
 .Ldebug_loc11:
 	.long	.Lfunc_begin3
 	.long	.Ltmp62
-.Lset26 = .Ltmp489-.Ltmp488             # Loc expr size
+.Lset26 = .Ltmp490-.Ltmp489             # Loc expr size
 	.short	.Lset26
-.Ltmp488:
-	.byte	83                      # DW_OP_reg3
 .Ltmp489:
+	.byte	83                      # DW_OP_reg3
+.Ltmp490:
 	.long	0
 	.long	0
 .Ldebug_loc12:
 	.long	.Lfunc_begin4
 	.long	.Ltmp81
-.Lset27 = .Ltmp491-.Ltmp490             # Loc expr size
+.Lset27 = .Ltmp492-.Ltmp491             # Loc expr size
 	.short	.Lset27
-.Ltmp490:
-	.byte	80                      # DW_OP_reg0
 .Ltmp491:
+	.byte	80                      # DW_OP_reg0
+.Ltmp492:
 	.long	0
 	.long	0
 .Ldebug_loc13:
 	.long	.Lfunc_begin4
 	.long	.Ltmp79
-.Lset28 = .Ltmp493-.Ltmp492             # Loc expr size
+.Lset28 = .Ltmp494-.Ltmp493             # Loc expr size
 	.short	.Lset28
-.Ltmp492:
-	.byte	81                      # DW_OP_reg1
 .Ltmp493:
+	.byte	81                      # DW_OP_reg1
+.Ltmp494:
 	.long	.Ltmp79
 	.long	.Ltmp80
-.Lset29 = .Ltmp495-.Ltmp494             # Loc expr size
+.Lset29 = .Ltmp496-.Ltmp495             # Loc expr size
 	.short	.Lset29
-.Ltmp494:
-	.byte	87                      # DW_OP_reg7
 .Ltmp495:
+	.byte	87                      # DW_OP_reg7
+.Ltmp496:
 	.long	.Ltmp81
 	.long	.Ltmp83
-.Lset30 = .Ltmp497-.Ltmp496             # Loc expr size
+.Lset30 = .Ltmp498-.Ltmp497             # Loc expr size
 	.short	.Lset30
-.Ltmp496:
-	.byte	87                      # DW_OP_reg7
 .Ltmp497:
+	.byte	87                      # DW_OP_reg7
+.Ltmp498:
 	.long	.Ltmp84
 	.long	.Ltmp86
-.Lset31 = .Ltmp499-.Ltmp498             # Loc expr size
+.Lset31 = .Ltmp500-.Ltmp499             # Loc expr size
 	.short	.Lset31
-.Ltmp498:
-	.byte	87                      # DW_OP_reg7
 .Ltmp499:
+	.byte	87                      # DW_OP_reg7
+.Ltmp500:
 	.long	.Ltmp87
 	.long	.Ltmp88
-.Lset32 = .Ltmp501-.Ltmp500             # Loc expr size
+.Lset32 = .Ltmp502-.Ltmp501             # Loc expr size
 	.short	.Lset32
-.Ltmp500:
-	.byte	87                      # DW_OP_reg7
 .Ltmp501:
+	.byte	87                      # DW_OP_reg7
+.Ltmp502:
 	.long	0
 	.long	0
 .Ldebug_loc14:
 	.long	.Lfunc_begin4
 	.long	.Ltmp79
-.Lset33 = .Ltmp503-.Ltmp502             # Loc expr size
+.Lset33 = .Ltmp504-.Ltmp503             # Loc expr size
 	.short	.Lset33
-.Ltmp502:
-	.byte	82                      # DW_OP_reg2
 .Ltmp503:
+	.byte	82                      # DW_OP_reg2
+.Ltmp504:
 	.long	.Ltmp79
 	.long	.Ltmp80
-.Lset34 = .Ltmp505-.Ltmp504             # Loc expr size
+.Lset34 = .Ltmp506-.Ltmp505             # Loc expr size
 	.short	.Lset34
-.Ltmp504:
-	.byte	86                      # DW_OP_reg6
 .Ltmp505:
+	.byte	86                      # DW_OP_reg6
+.Ltmp506:
 	.long	.Ltmp81
 	.long	.Ltmp83
-.Lset35 = .Ltmp507-.Ltmp506             # Loc expr size
+.Lset35 = .Ltmp508-.Ltmp507             # Loc expr size
 	.short	.Lset35
-.Ltmp506:
-	.byte	86                      # DW_OP_reg6
 .Ltmp507:
+	.byte	86                      # DW_OP_reg6
+.Ltmp508:
 	.long	.Ltmp84
 	.long	.Ltmp89
-.Lset36 = .Ltmp509-.Ltmp508             # Loc expr size
+.Lset36 = .Ltmp510-.Ltmp509             # Loc expr size
 	.short	.Lset36
-.Ltmp508:
-	.byte	86                      # DW_OP_reg6
 .Ltmp509:
+	.byte	86                      # DW_OP_reg6
+.Ltmp510:
 	.long	0
 	.long	0
 .Ldebug_loc15:
 	.long	.Ltmp101
-	.long	.Ltmp173
-.Lset37 = .Ltmp511-.Ltmp510             # Loc expr size
+	.long	.Ltmp177
+.Lset37 = .Ltmp512-.Ltmp511             # Loc expr size
 	.short	.Lset37
-.Ltmp510:
-	.byte	16                      # DW_OP_constu
-	.byte	0                       # 
 .Ltmp511:
-	.long	.Ltmp173
-	.long	.Ltmp174
-.Lset38 = .Ltmp513-.Ltmp512             # Loc expr size
-	.short	.Lset38
+	.byte	16                      # DW_OP_constu
+	.byte	0                       # 
 .Ltmp512:
-	.byte	89                      # DW_OP_reg9
-.Ltmp513:
-	.long	.Ltmp175
-	.long	.Ltmp176
-.Lset39 = .Ltmp515-.Ltmp514             # Loc expr size
-	.short	.Lset39
-.Ltmp514:
-	.byte	83                      # DW_OP_reg3
-.Ltmp515:
+	.long	.Ltmp177
 	.long	.Ltmp178
-	.long	.Ltmp186
-.Lset40 = .Ltmp517-.Ltmp516             # Loc expr size
-	.short	.Lset40
-.Ltmp516:
+.Lset38 = .Ltmp514-.Ltmp513             # Loc expr size
+	.short	.Lset38
+.Ltmp513:
+	.byte	89                      # DW_OP_reg9
+.Ltmp514:
+	.long	.Ltmp179
+	.long	.Ltmp180
+.Lset39 = .Ltmp516-.Ltmp515             # Loc expr size
+	.short	.Lset39
+.Ltmp515:
 	.byte	83                      # DW_OP_reg3
+.Ltmp516:
+	.long	.Ltmp182
+	.long	.Ltmp188
+.Lset40 = .Ltmp518-.Ltmp517             # Loc expr size
+	.short	.Lset40
 .Ltmp517:
-	.long	.Ltmp310
-	.long	.Ltmp314
-.Lset41 = .Ltmp519-.Ltmp518             # Loc expr size
-	.short	.Lset41
+	.byte	83                      # DW_OP_reg3
 .Ltmp518:
-	.byte	16                      # DW_OP_constu
-	.byte	0                       # 
+	.long	.Ltmp316
+	.long	.Ltmp320
+.Lset41 = .Ltmp520-.Ltmp519             # Loc expr size
+	.short	.Lset41
 .Ltmp519:
-	.long	.Ltmp314
-	.long	.Ltmp315
-.Lset42 = .Ltmp521-.Ltmp520             # Loc expr size
-	.short	.Lset42
-.Ltmp520:
-	.byte	82                      # DW_OP_reg2
-.Ltmp521:
-	.long	.Ltmp328
-	.long	.Ltmp363
-.Lset43 = .Ltmp523-.Ltmp522             # Loc expr size
-	.short	.Lset43
-.Ltmp522:
 	.byte	16                      # DW_OP_constu
 	.byte	0                       # 
+.Ltmp520:
+	.long	.Ltmp320
+	.long	.Ltmp321
+.Lset42 = .Ltmp522-.Ltmp521             # Loc expr size
+	.short	.Lset42
+.Ltmp521:
+	.byte	82                      # DW_OP_reg2
+.Ltmp522:
+	.long	.Ltmp333
+	.long	.Ltmp366
+.Lset43 = .Ltmp524-.Ltmp523             # Loc expr size
+	.short	.Lset43
 .Ltmp523:
-	.long	.Ltmp364
-	.long	.Ltmp368
-.Lset44 = .Ltmp525-.Ltmp524             # Loc expr size
-	.short	.Lset44
+	.byte	16                      # DW_OP_constu
+	.byte	0                       # 
 .Ltmp524:
-	.byte	90                      # DW_OP_reg10
+	.long	.Ltmp367
+	.long	.Ltmp371
+.Lset44 = .Ltmp526-.Ltmp525             # Loc expr size
+	.short	.Lset44
 .Ltmp525:
-	.long	.Ltmp368
-	.long	.Ltmp369
-.Lset45 = .Ltmp527-.Ltmp526             # Loc expr size
-	.short	.Lset45
+	.byte	90                      # DW_OP_reg10
 .Ltmp526:
-	.byte	87                      # DW_OP_reg7
+	.long	.Ltmp371
+	.long	.Ltmp372
+.Lset45 = .Ltmp528-.Ltmp527             # Loc expr size
+	.short	.Lset45
 .Ltmp527:
-	.long	.Ltmp383
-	.long	.Ltmp384
-.Lset46 = .Ltmp529-.Ltmp528             # Loc expr size
-	.short	.Lset46
-.Ltmp528:
 	.byte	87                      # DW_OP_reg7
+.Ltmp528:
+	.long	.Ltmp387
+	.long	.Ltmp388
+.Lset46 = .Ltmp530-.Ltmp529             # Loc expr size
+	.short	.Lset46
 .Ltmp529:
+	.byte	87                      # DW_OP_reg7
+.Ltmp530:
 	.long	0
 	.long	0
 .Ldebug_loc16:
 	.long	.Ltmp103
 	.long	.Ltmp108
-.Lset47 = .Ltmp531-.Ltmp530             # Loc expr size
+.Lset47 = .Ltmp532-.Ltmp531             # Loc expr size
 	.short	.Lset47
-.Ltmp530:
-	.byte	85                      # DW_OP_reg5
 .Ltmp531:
-	.long	.Ltmp161
-	.long	.Ltmp231
-.Lset48 = .Ltmp533-.Ltmp532             # Loc expr size
-	.short	.Lset48
+	.byte	85                      # DW_OP_reg5
 .Ltmp532:
+	.long	.Ltmp167
+	.long	.Ltmp239
+.Lset48 = .Ltmp534-.Ltmp533             # Loc expr size
+	.short	.Lset48
+.Ltmp533:
 	.byte	16                      # DW_OP_constu
 	.byte	32                      # 
-.Ltmp533:
-	.long	.Ltmp231
-	.long	.Ltmp256
-.Lset49 = .Ltmp535-.Ltmp534             # Loc expr size
-	.short	.Lset49
 .Ltmp534:
+	.long	.Ltmp239
+	.long	.Ltmp264
+.Lset49 = .Ltmp536-.Ltmp535             # Loc expr size
+	.short	.Lset49
+.Ltmp535:
 	.byte	16                      # DW_OP_constu
 	.byte	0                       # 
-.Ltmp535:
-	.long	.Ltmp256
-	.long	.Ltmp257
-.Lset50 = .Ltmp537-.Ltmp536             # Loc expr size
-	.short	.Lset50
 .Ltmp536:
-	.byte	90                      # DW_OP_reg10
+	.long	.Ltmp264
+	.long	.Ltmp265
+.Lset50 = .Ltmp538-.Ltmp537             # Loc expr size
+	.short	.Lset50
 .Ltmp537:
-	.long	.Ltmp258
-	.long	.Ltmp260
-.Lset51 = .Ltmp539-.Ltmp538             # Loc expr size
-	.short	.Lset51
-.Ltmp538:
 	.byte	90                      # DW_OP_reg10
+.Ltmp538:
+	.long	.Ltmp266
+	.long	.Ltmp268
+.Lset51 = .Ltmp540-.Ltmp539             # Loc expr size
+	.short	.Lset51
 .Ltmp539:
-	.long	.Ltmp270
-	.long	.Ltmp271
-.Lset52 = .Ltmp541-.Ltmp540             # Loc expr size
-	.short	.Lset52
+	.byte	90                      # DW_OP_reg10
 .Ltmp540:
+	.long	.Ltmp278
+	.long	.Ltmp279
+.Lset52 = .Ltmp542-.Ltmp541             # Loc expr size
+	.short	.Lset52
+.Ltmp541:
 	.byte	126                     # DW_OP_breg14
 .asciiz"\314"                           # 
-.Ltmp541:
-	.long	.Ltmp309
-	.long	.Ltmp311
-.Lset53 = .Ltmp543-.Ltmp542             # Loc expr size
-	.short	.Lset53
 .Ltmp542:
-	.byte	16                      # DW_OP_constu
-	.byte	0                       # 
-.Ltmp543:
-	.long	.Ltmp311
-	.long	.Ltmp312
-.Lset54 = .Ltmp545-.Ltmp544             # Loc expr size
-	.short	.Lset54
-.Ltmp544:
-	.byte	82                      # DW_OP_reg2
-.Ltmp545:
+	.long	.Ltmp315
 	.long	.Ltmp317
-	.long	.Ltmp348
-.Lset55 = .Ltmp547-.Ltmp546             # Loc expr size
-	.short	.Lset55
-.Ltmp546:
+.Lset53 = .Ltmp544-.Ltmp543             # Loc expr size
+	.short	.Lset53
+.Ltmp543:
 	.byte	16                      # DW_OP_constu
 	.byte	0                       # 
+.Ltmp544:
+	.long	.Ltmp317
+	.long	.Ltmp318
+.Lset54 = .Ltmp546-.Ltmp545             # Loc expr size
+	.short	.Lset54
+.Ltmp545:
+	.byte	82                      # DW_OP_reg2
+.Ltmp546:
+	.long	.Ltmp323
+	.long	.Ltmp353
+.Lset55 = .Ltmp548-.Ltmp547             # Loc expr size
+	.short	.Lset55
 .Ltmp547:
-	.long	.Ltmp348
-	.long	.Ltmp367
-.Lset56 = .Ltmp549-.Ltmp548             # Loc expr size
-	.short	.Lset56
+	.byte	16                      # DW_OP_constu
+	.byte	0                       # 
 .Ltmp548:
+	.long	.Ltmp353
+	.long	.Ltmp370
+.Lset56 = .Ltmp550-.Ltmp549             # Loc expr size
+	.short	.Lset56
+.Ltmp549:
 	.byte	16                      # DW_OP_constu
 	.byte	8                       # 
-.Ltmp549:
-	.long	.Ltmp367
-	.long	.Ltmp396
-.Lset57 = .Ltmp551-.Ltmp550             # Loc expr size
-	.short	.Lset57
 .Ltmp550:
+	.long	.Ltmp370
+	.long	.Ltmp400
+.Lset57 = .Ltmp552-.Ltmp551             # Loc expr size
+	.short	.Lset57
+.Ltmp551:
 	.byte	16                      # DW_OP_constu
 	.byte	16                      # 
-.Ltmp551:
-	.long	.Ltmp396
-	.long	.Ltmp420
-.Lset58 = .Ltmp553-.Ltmp552             # Loc expr size
-	.short	.Lset58
 .Ltmp552:
+	.long	.Ltmp400
+	.long	.Ltmp422
+.Lset58 = .Ltmp554-.Ltmp553             # Loc expr size
+	.short	.Lset58
+.Ltmp553:
 	.byte	16                      # DW_OP_constu
 	.byte	8                       # 
-.Ltmp553:
-	.long	.Ltmp420
-	.long	.Lfunc_end5
-.Lset59 = .Ltmp555-.Ltmp554             # Loc expr size
-	.short	.Lset59
 .Ltmp554:
+	.long	.Ltmp422
+	.long	.Lfunc_end5
+.Lset59 = .Ltmp556-.Ltmp555             # Loc expr size
+	.short	.Lset59
+.Ltmp555:
 	.byte	16                      # DW_OP_constu
 	.byte	0                       # 
-.Ltmp555:
+.Ltmp556:
 	.long	0
 	.long	0
 .Ldebug_loc17:
 	.long	.Ltmp104
 	.long	.Ltmp105
-.Lset60 = .Ltmp557-.Ltmp556             # Loc expr size
+.Lset60 = .Ltmp558-.Ltmp557             # Loc expr size
 	.short	.Lset60
-.Ltmp556:
-	.byte	87                      # DW_OP_reg7
 .Ltmp557:
-	.long	.Ltmp106
-	.long	.Ltmp108
-.Lset61 = .Ltmp559-.Ltmp558             # Loc expr size
-	.short	.Lset61
-.Ltmp558:
-	.byte	88                      # DW_OP_reg8
-.Ltmp559:
-	.long	.Ltmp109
-	.long	.Ltmp111
-.Lset62 = .Ltmp561-.Ltmp560             # Loc expr size
-	.short	.Lset62
-.Ltmp560:
-	.byte	91                      # DW_OP_reg11
-.Ltmp561:
-	.long	.Ltmp113
-	.long	.Ltmp114
-.Lset63 = .Ltmp563-.Ltmp562             # Loc expr size
-	.short	.Lset63
-.Ltmp562:
-	.byte	82                      # DW_OP_reg2
-.Ltmp563:
-	.long	.Ltmp114
-	.long	.Ltmp116
-.Lset64 = .Ltmp565-.Ltmp564             # Loc expr size
-	.short	.Lset64
-.Ltmp564:
 	.byte	87                      # DW_OP_reg7
-.Ltmp565:
-	.long	.Ltmp117
-	.long	.Ltmp120
-.Lset65 = .Ltmp567-.Ltmp566             # Loc expr size
-	.short	.Lset65
-.Ltmp566:
+.Ltmp558:
+	.long	.Ltmp105
+	.long	.Ltmp106
+.Lset61 = .Ltmp560-.Ltmp559             # Loc expr size
+	.short	.Lset61
+.Ltmp559:
+	.byte	88                      # DW_OP_reg8
+.Ltmp560:
+	.long	.Ltmp108
+	.long	.Ltmp109
+.Lset62 = .Ltmp562-.Ltmp561             # Loc expr size
+	.short	.Lset62
+.Ltmp561:
+	.byte	91                      # DW_OP_reg11
+.Ltmp562:
+	.long	.Ltmp112
+	.long	.Ltmp113
+.Lset63 = .Ltmp564-.Ltmp563             # Loc expr size
+	.short	.Lset63
+.Ltmp563:
 	.byte	82                      # DW_OP_reg2
+.Ltmp564:
+	.long	.Ltmp113
+	.long	.Ltmp115
+.Lset64 = .Ltmp566-.Ltmp565             # Loc expr size
+	.short	.Lset64
+.Ltmp565:
+	.byte	87                      # DW_OP_reg7
+.Ltmp566:
+	.long	.Ltmp116
+	.long	.Ltmp117
+.Lset65 = .Ltmp568-.Ltmp567             # Loc expr size
+	.short	.Lset65
 .Ltmp567:
+	.byte	82                      # DW_OP_reg2
+.Ltmp568:
+	.long	.Ltmp119
+	.long	.Ltmp120
+.Lset66 = .Ltmp570-.Ltmp569             # Loc expr size
+	.short	.Lset66
+.Ltmp569:
+	.byte	82                      # DW_OP_reg2
+.Ltmp570:
 	.long	.Ltmp121
 	.long	.Ltmp123
-.Lset66 = .Ltmp569-.Ltmp568             # Loc expr size
-	.short	.Lset66
-.Ltmp568:
-	.byte	87                      # DW_OP_reg7
-.Ltmp569:
-	.long	.Ltmp124
-	.long	.Ltmp127
-.Lset67 = .Ltmp571-.Ltmp570             # Loc expr size
+.Lset67 = .Ltmp572-.Ltmp571             # Loc expr size
 	.short	.Lset67
-.Ltmp570:
-	.byte	82                      # DW_OP_reg2
 .Ltmp571:
-	.long	.Ltmp128
-	.long	.Ltmp130
-.Lset68 = .Ltmp573-.Ltmp572             # Loc expr size
-	.short	.Lset68
+	.byte	87                      # DW_OP_reg7
 .Ltmp572:
-	.byte	87                      # DW_OP_reg7
+	.long	.Ltmp124
+	.long	.Ltmp125
+.Lset68 = .Ltmp574-.Ltmp573             # Loc expr size
+	.short	.Lset68
 .Ltmp573:
-	.long	.Ltmp131
-	.long	.Ltmp134
-.Lset69 = .Ltmp575-.Ltmp574             # Loc expr size
-	.short	.Lset69
+	.byte	82                      # DW_OP_reg2
 .Ltmp574:
-	.byte	82                      # DW_OP_reg2
+	.long	.Ltmp127
+	.long	.Ltmp128
+.Lset69 = .Ltmp576-.Ltmp575             # Loc expr size
+	.short	.Lset69
 .Ltmp575:
-	.long	.Ltmp135
-	.long	.Ltmp137
-.Lset70 = .Ltmp577-.Ltmp576             # Loc expr size
-	.short	.Lset70
+	.byte	82                      # DW_OP_reg2
 .Ltmp576:
-	.byte	87                      # DW_OP_reg7
+	.long	.Ltmp129
+	.long	.Ltmp131
+.Lset70 = .Ltmp578-.Ltmp577             # Loc expr size
+	.short	.Lset70
 .Ltmp577:
-	.long	.Ltmp138
-	.long	.Ltmp141
-.Lset71 = .Ltmp579-.Ltmp578             # Loc expr size
-	.short	.Lset71
+	.byte	87                      # DW_OP_reg7
 .Ltmp578:
-	.byte	82                      # DW_OP_reg2
+	.long	.Ltmp132
+	.long	.Ltmp133
+.Lset71 = .Ltmp580-.Ltmp579             # Loc expr size
+	.short	.Lset71
 .Ltmp579:
-	.long	.Ltmp142
-	.long	.Ltmp144
-.Lset72 = .Ltmp581-.Ltmp580             # Loc expr size
-	.short	.Lset72
+	.byte	82                      # DW_OP_reg2
 .Ltmp580:
-	.byte	87                      # DW_OP_reg7
+	.long	.Ltmp135
+	.long	.Ltmp136
+.Lset72 = .Ltmp582-.Ltmp581             # Loc expr size
+	.short	.Lset72
 .Ltmp581:
-	.long	.Ltmp145
-	.long	.Ltmp148
-.Lset73 = .Ltmp583-.Ltmp582             # Loc expr size
-	.short	.Lset73
+	.byte	82                      # DW_OP_reg2
 .Ltmp582:
-	.byte	82                      # DW_OP_reg2
+	.long	.Ltmp137
+	.long	.Ltmp139
+.Lset73 = .Ltmp584-.Ltmp583             # Loc expr size
+	.short	.Lset73
 .Ltmp583:
-	.long	.Ltmp149
-	.long	.Ltmp151
-.Lset74 = .Ltmp585-.Ltmp584             # Loc expr size
-	.short	.Lset74
+	.byte	87                      # DW_OP_reg7
 .Ltmp584:
-	.byte	87                      # DW_OP_reg7
+	.long	.Ltmp140
+	.long	.Ltmp141
+.Lset74 = .Ltmp586-.Ltmp585             # Loc expr size
+	.short	.Lset74
 .Ltmp585:
-	.long	.Ltmp152
-	.long	.Ltmp154
-.Lset75 = .Ltmp587-.Ltmp586             # Loc expr size
-	.short	.Lset75
+	.byte	82                      # DW_OP_reg2
 .Ltmp586:
-	.byte	81                      # DW_OP_reg1
+	.long	.Ltmp143
+	.long	.Ltmp144
+.Lset75 = .Ltmp588-.Ltmp587             # Loc expr size
+	.short	.Lset75
 .Ltmp587:
-	.long	.Ltmp154
-	.long	.Ltmp155
-.Lset76 = .Ltmp589-.Ltmp588             # Loc expr size
-	.short	.Lset76
+	.byte	82                      # DW_OP_reg2
 .Ltmp588:
-	.byte	82                      # DW_OP_reg2
+	.long	.Ltmp145
+	.long	.Ltmp147
+.Lset76 = .Ltmp590-.Ltmp589             # Loc expr size
+	.short	.Lset76
 .Ltmp589:
-	.long	.Ltmp156
-	.long	.Ltmp158
-.Lset77 = .Ltmp591-.Ltmp590             # Loc expr size
-	.short	.Lset77
+	.byte	87                      # DW_OP_reg7
 .Ltmp590:
-	.byte	81                      # DW_OP_reg1
+	.long	.Ltmp148
+	.long	.Ltmp149
+.Lset77 = .Ltmp592-.Ltmp591             # Loc expr size
+	.short	.Lset77
 .Ltmp591:
-	.long	.Ltmp159
-	.long	.Ltmp161
-.Lset78 = .Ltmp593-.Ltmp592             # Loc expr size
-	.short	.Lset78
-.Ltmp592:
 	.byte	82                      # DW_OP_reg2
+.Ltmp592:
+	.long	.Ltmp151
+	.long	.Ltmp152
+.Lset78 = .Ltmp594-.Ltmp593             # Loc expr size
+	.short	.Lset78
 .Ltmp593:
-	.long	.Ltmp162
-	.long	.Ltmp163
-.Lset79 = .Ltmp595-.Ltmp594             # Loc expr size
-	.short	.Lset79
+	.byte	82                      # DW_OP_reg2
 .Ltmp594:
-	.byte	87                      # DW_OP_reg7
+	.long	.Ltmp153
+	.long	.Ltmp155
+.Lset79 = .Ltmp596-.Ltmp595             # Loc expr size
+	.short	.Lset79
 .Ltmp595:
-	.long	.Ltmp165
-	.long	.Ltmp167
-.Lset80 = .Ltmp597-.Ltmp596             # Loc expr size
-	.short	.Lset80
-.Ltmp596:
-	.byte	88                      # DW_OP_reg8
-.Ltmp597:
-	.long	.Ltmp169
-	.long	.Ltmp171
-.Lset81 = .Ltmp599-.Ltmp598             # Loc expr size
-	.short	.Lset81
-.Ltmp598:
 	.byte	87                      # DW_OP_reg7
+.Ltmp596:
+	.long	.Ltmp156
+	.long	.Ltmp157
+.Lset80 = .Ltmp598-.Ltmp597             # Loc expr size
+	.short	.Lset80
+.Ltmp597:
+	.byte	81                      # DW_OP_reg1
+.Ltmp598:
+	.long	.Ltmp159
+	.long	.Ltmp160
+.Lset81 = .Ltmp600-.Ltmp599             # Loc expr size
+	.short	.Lset81
 .Ltmp599:
-	.long	.Ltmp179
-	.long	.Ltmp180
-.Lset82 = .Ltmp601-.Ltmp600             # Loc expr size
-	.short	.Lset82
+	.byte	82                      # DW_OP_reg2
 .Ltmp600:
-	.byte	80                      # DW_OP_reg0
+	.long	.Ltmp161
+	.long	.Ltmp163
+.Lset82 = .Ltmp602-.Ltmp601             # Loc expr size
+	.short	.Lset82
 .Ltmp601:
-	.long	.Ltmp181
-	.long	.Ltmp185
-.Lset83 = .Ltmp603-.Ltmp602             # Loc expr size
-	.short	.Lset83
+	.byte	81                      # DW_OP_reg1
 .Ltmp602:
-	.byte	86                      # DW_OP_reg6
+	.long	.Ltmp164
+	.long	.Ltmp165
+.Lset83 = .Ltmp604-.Ltmp603             # Loc expr size
+	.short	.Lset83
 .Ltmp603:
-	.long	.Ltmp187
-	.long	.Ltmp190
-.Lset84 = .Ltmp605-.Ltmp604             # Loc expr size
-	.short	.Lset84
+	.byte	82                      # DW_OP_reg2
 .Ltmp604:
-	.byte	80                      # DW_OP_reg0
+	.long	.Ltmp168
+	.long	.Ltmp169
+.Lset84 = .Ltmp606-.Ltmp605             # Loc expr size
+	.short	.Lset84
 .Ltmp605:
-	.long	.Ltmp191
-	.long	.Ltmp193
-.Lset85 = .Ltmp607-.Ltmp606             # Loc expr size
-	.short	.Lset85
+	.byte	87                      # DW_OP_reg7
 .Ltmp606:
-	.byte	86                      # DW_OP_reg6
+	.long	.Ltmp169
+	.long	.Ltmp170
+.Lset85 = .Ltmp608-.Ltmp607             # Loc expr size
+	.short	.Lset85
 .Ltmp607:
-	.long	.Ltmp194
-	.long	.Ltmp197
-.Lset86 = .Ltmp609-.Ltmp608             # Loc expr size
-	.short	.Lset86
+	.byte	88                      # DW_OP_reg8
 .Ltmp608:
-	.byte	80                      # DW_OP_reg0
+	.long	.Ltmp173
+	.long	.Ltmp174
+.Lset86 = .Ltmp610-.Ltmp609             # Loc expr size
+	.short	.Lset86
 .Ltmp609:
-	.long	.Ltmp198
-	.long	.Ltmp200
-.Lset87 = .Ltmp611-.Ltmp610             # Loc expr size
-	.short	.Lset87
+	.byte	87                      # DW_OP_reg7
 .Ltmp610:
-	.byte	86                      # DW_OP_reg6
+	.long	.Ltmp183
+	.long	.Ltmp184
+.Lset87 = .Ltmp612-.Ltmp611             # Loc expr size
+	.short	.Lset87
 .Ltmp611:
-	.long	.Ltmp201
-	.long	.Ltmp204
-.Lset88 = .Ltmp613-.Ltmp612             # Loc expr size
-	.short	.Lset88
+	.byte	80                      # DW_OP_reg0
 .Ltmp612:
-	.byte	80                      # DW_OP_reg0
+	.long	.Ltmp184
+	.long	.Ltmp185
+.Lset88 = .Ltmp614-.Ltmp613             # Loc expr size
+	.short	.Lset88
 .Ltmp613:
-	.long	.Ltmp205
-	.long	.Ltmp207
-.Lset89 = .Ltmp615-.Ltmp614             # Loc expr size
-	.short	.Lset89
+	.byte	86                      # DW_OP_reg6
 .Ltmp614:
-	.byte	86                      # DW_OP_reg6
+	.long	.Ltmp188
+	.long	.Ltmp189
+.Lset89 = .Ltmp616-.Ltmp615             # Loc expr size
+	.short	.Lset89
 .Ltmp615:
-	.long	.Ltmp208
-	.long	.Ltmp211
-.Lset90 = .Ltmp617-.Ltmp616             # Loc expr size
-	.short	.Lset90
+	.byte	80                      # DW_OP_reg0
 .Ltmp616:
-	.byte	80                      # DW_OP_reg0
+	.long	.Ltmp191
+	.long	.Ltmp192
+.Lset90 = .Ltmp618-.Ltmp617             # Loc expr size
+	.short	.Lset90
 .Ltmp617:
-	.long	.Ltmp212
-	.long	.Ltmp214
-.Lset91 = .Ltmp619-.Ltmp618             # Loc expr size
-	.short	.Lset91
+	.byte	80                      # DW_OP_reg0
 .Ltmp618:
-	.byte	86                      # DW_OP_reg6
+	.long	.Ltmp193
+	.long	.Ltmp195
+.Lset91 = .Ltmp620-.Ltmp619             # Loc expr size
+	.short	.Lset91
 .Ltmp619:
-	.long	.Ltmp215
-	.long	.Ltmp218
-.Lset92 = .Ltmp621-.Ltmp620             # Loc expr size
-	.short	.Lset92
+	.byte	86                      # DW_OP_reg6
 .Ltmp620:
-	.byte	80                      # DW_OP_reg0
+	.long	.Ltmp196
+	.long	.Ltmp197
+.Lset92 = .Ltmp622-.Ltmp621             # Loc expr size
+	.short	.Lset92
 .Ltmp621:
-	.long	.Ltmp219
-	.long	.Ltmp221
-.Lset93 = .Ltmp623-.Ltmp622             # Loc expr size
-	.short	.Lset93
+	.byte	80                      # DW_OP_reg0
 .Ltmp622:
-	.byte	86                      # DW_OP_reg6
+	.long	.Ltmp199
+	.long	.Ltmp200
+.Lset93 = .Ltmp624-.Ltmp623             # Loc expr size
+	.short	.Lset93
 .Ltmp623:
-	.long	.Ltmp222
-	.long	.Ltmp225
-.Lset94 = .Ltmp625-.Ltmp624             # Loc expr size
-	.short	.Lset94
+	.byte	80                      # DW_OP_reg0
 .Ltmp624:
-	.byte	80                      # DW_OP_reg0
+	.long	.Ltmp201
+	.long	.Ltmp203
+.Lset94 = .Ltmp626-.Ltmp625             # Loc expr size
+	.short	.Lset94
 .Ltmp625:
-	.long	.Ltmp226
-	.long	.Ltmp228
-.Lset95 = .Ltmp627-.Ltmp626             # Loc expr size
-	.short	.Lset95
-.Ltmp626:
 	.byte	86                      # DW_OP_reg6
+.Ltmp626:
+	.long	.Ltmp204
+	.long	.Ltmp205
+.Lset95 = .Ltmp628-.Ltmp627             # Loc expr size
+	.short	.Lset95
 .Ltmp627:
-	.long	.Ltmp229
-	.long	.Ltmp231
-.Lset96 = .Ltmp629-.Ltmp628             # Loc expr size
-	.short	.Lset96
-.Ltmp628:
 	.byte	80                      # DW_OP_reg0
+.Ltmp628:
+	.long	.Ltmp207
+	.long	.Ltmp208
+.Lset96 = .Ltmp630-.Ltmp629             # Loc expr size
+	.short	.Lset96
 .Ltmp629:
+	.byte	80                      # DW_OP_reg0
+.Ltmp630:
+	.long	.Ltmp209
+	.long	.Ltmp211
+.Lset97 = .Ltmp632-.Ltmp631             # Loc expr size
+	.short	.Lset97
+.Ltmp631:
+	.byte	86                      # DW_OP_reg6
+.Ltmp632:
+	.long	.Ltmp212
+	.long	.Ltmp213
+.Lset98 = .Ltmp634-.Ltmp633             # Loc expr size
+	.short	.Lset98
+.Ltmp633:
+	.byte	80                      # DW_OP_reg0
+.Ltmp634:
+	.long	.Ltmp215
+	.long	.Ltmp216
+.Lset99 = .Ltmp636-.Ltmp635             # Loc expr size
+	.short	.Lset99
+.Ltmp635:
+	.byte	80                      # DW_OP_reg0
+.Ltmp636:
+	.long	.Ltmp217
+	.long	.Ltmp219
+.Lset100 = .Ltmp638-.Ltmp637            # Loc expr size
+	.short	.Lset100
+.Ltmp637:
+	.byte	86                      # DW_OP_reg6
+.Ltmp638:
+	.long	.Ltmp220
+	.long	.Ltmp221
+.Lset101 = .Ltmp640-.Ltmp639            # Loc expr size
+	.short	.Lset101
+.Ltmp639:
+	.byte	80                      # DW_OP_reg0
+.Ltmp640:
+	.long	.Ltmp223
+	.long	.Ltmp224
+.Lset102 = .Ltmp642-.Ltmp641            # Loc expr size
+	.short	.Lset102
+.Ltmp641:
+	.byte	80                      # DW_OP_reg0
+.Ltmp642:
+	.long	.Ltmp225
+	.long	.Ltmp227
+.Lset103 = .Ltmp644-.Ltmp643            # Loc expr size
+	.short	.Lset103
+.Ltmp643:
+	.byte	86                      # DW_OP_reg6
+.Ltmp644:
+	.long	.Ltmp228
+	.long	.Ltmp229
+.Lset104 = .Ltmp646-.Ltmp645            # Loc expr size
+	.short	.Lset104
+.Ltmp645:
+	.byte	80                      # DW_OP_reg0
+.Ltmp646:
 	.long	.Ltmp231
 	.long	.Ltmp232
-.Lset97 = .Ltmp631-.Ltmp630             # Loc expr size
-	.short	.Lset97
-.Ltmp630:
-	.byte	81                      # DW_OP_reg1
-.Ltmp631:
+.Lset105 = .Ltmp648-.Ltmp647            # Loc expr size
+	.short	.Lset105
+.Ltmp647:
+	.byte	80                      # DW_OP_reg0
+.Ltmp648:
 	.long	.Ltmp233
 	.long	.Ltmp235
-.Lset98 = .Ltmp633-.Ltmp632             # Loc expr size
-	.short	.Lset98
-.Ltmp632:
-	.byte	80                      # DW_OP_reg0
-.Ltmp633:
+.Lset106 = .Ltmp650-.Ltmp649            # Loc expr size
+	.short	.Lset106
+.Ltmp649:
+	.byte	86                      # DW_OP_reg6
+.Ltmp650:
 	.long	.Ltmp236
-	.long	.Ltmp238
-.Lset99 = .Ltmp635-.Ltmp634             # Loc expr size
-	.short	.Lset99
-.Ltmp634:
+	.long	.Ltmp237
+.Lset107 = .Ltmp652-.Ltmp651            # Loc expr size
+	.short	.Lset107
+.Ltmp651:
+	.byte	80                      # DW_OP_reg0
+.Ltmp652:
+	.long	.Ltmp239
+	.long	.Ltmp240
+.Lset108 = .Ltmp654-.Ltmp653            # Loc expr size
+	.short	.Lset108
+.Ltmp653:
 	.byte	81                      # DW_OP_reg1
-.Ltmp635:
-	.long	.Ltmp249
-	.long	.Ltmp250
-.Lset100 = .Ltmp637-.Ltmp636            # Loc expr size
-	.short	.Lset100
-.Ltmp636:
+.Ltmp654:
+	.long	.Ltmp241
+	.long	.Ltmp243
+.Lset109 = .Ltmp656-.Ltmp655            # Loc expr size
+	.short	.Lset109
+.Ltmp655:
+	.byte	80                      # DW_OP_reg0
+.Ltmp656:
+	.long	.Ltmp244
+	.long	.Ltmp245
+.Lset110 = .Ltmp658-.Ltmp657            # Loc expr size
+	.short	.Lset110
+.Ltmp657:
+	.byte	81                      # DW_OP_reg1
+.Ltmp658:
+	.long	.Ltmp257
+	.long	.Ltmp258
+.Lset111 = .Ltmp660-.Ltmp659            # Loc expr size
+	.short	.Lset111
+.Ltmp659:
 	.byte	86                      # DW_OP_reg6
-.Ltmp637:
-	.long	.Ltmp251
-	.long	.Ltmp253
-.Lset101 = .Ltmp639-.Ltmp638            # Loc expr size
-	.short	.Lset101
-.Ltmp638:
+.Ltmp660:
+	.long	.Ltmp259
+	.long	.Ltmp261
+.Lset112 = .Ltmp662-.Ltmp661            # Loc expr size
+	.short	.Lset112
+.Ltmp661:
 	.byte	90                      # DW_OP_reg10
-.Ltmp639:
-	.long	.Ltmp254
-	.long	.Ltmp256
-.Lset102 = .Ltmp641-.Ltmp640            # Loc expr size
-	.short	.Lset102
-.Ltmp640:
+.Ltmp662:
+	.long	.Ltmp261
+	.long	.Ltmp262
+.Lset113 = .Ltmp664-.Ltmp663            # Loc expr size
+	.short	.Lset113
+.Ltmp663:
 	.byte	86                      # DW_OP_reg6
-.Ltmp641:
-	.long	.Ltmp291
-	.long	.Ltmp292
-.Lset103 = .Ltmp643-.Ltmp642            # Loc expr size
-	.short	.Lset103
-.Ltmp642:
-	.byte	86                      # DW_OP_reg6
-.Ltmp643:
-	.long	.Ltmp293
-	.long	.Ltmp295
-.Lset104 = .Ltmp645-.Ltmp644            # Loc expr size
-	.short	.Lset104
-.Ltmp644:
-	.byte	81                      # DW_OP_reg1
-.Ltmp645:
-	.long	.Ltmp296
-	.long	.Ltmp298
-.Lset105 = .Ltmp647-.Ltmp646            # Loc expr size
-	.short	.Lset105
-.Ltmp646:
-	.byte	81                      # DW_OP_reg1
-.Ltmp647:
+.Ltmp664:
 	.long	.Ltmp299
 	.long	.Ltmp300
-.Lset106 = .Ltmp649-.Ltmp648            # Loc expr size
-	.short	.Lset106
-.Ltmp648:
-	.byte	81                      # DW_OP_reg1
-.Ltmp649:
-	.long	.Ltmp301
-	.long	.Ltmp303
-.Lset107 = .Ltmp651-.Ltmp650            # Loc expr size
-	.short	.Lset107
-.Ltmp650:
-	.byte	86                      # DW_OP_reg6
-.Ltmp651:
-	.long	.Ltmp304
-	.long	.Ltmp306
-.Lset108 = .Ltmp653-.Ltmp652            # Loc expr size
-	.short	.Lset108
-.Ltmp652:
-	.byte	81                      # DW_OP_reg1
-.Ltmp653:
-	.long	.Ltmp320
-	.long	.Ltmp321
-.Lset109 = .Ltmp655-.Ltmp654            # Loc expr size
-	.short	.Lset109
-.Ltmp654:
-	.byte	82                      # DW_OP_reg2
-.Ltmp655:
-	.long	.Ltmp322
-	.long	.Ltmp324
-.Lset110 = .Ltmp657-.Ltmp656            # Loc expr size
-	.short	.Lset110
-.Ltmp656:
-	.byte	83                      # DW_OP_reg3
-.Ltmp657:
-	.long	.Ltmp325
-	.long	.Ltmp327
-.Lset111 = .Ltmp659-.Ltmp658            # Loc expr size
-	.short	.Lset111
-.Ltmp658:
-	.byte	82                      # DW_OP_reg2
-.Ltmp659:
-	.long	.Ltmp329
-	.long	.Ltmp330
-.Lset112 = .Ltmp661-.Ltmp660            # Loc expr size
-	.short	.Lset112
-.Ltmp660:
-	.byte	82                      # DW_OP_reg2
-.Ltmp661:
-	.long	.Ltmp331
-	.long	.Ltmp333
-.Lset113 = .Ltmp663-.Ltmp662            # Loc expr size
-	.short	.Lset113
-.Ltmp662:
-	.byte	83                      # DW_OP_reg3
-.Ltmp663:
-	.long	.Ltmp334
-	.long	.Ltmp336
-.Lset114 = .Ltmp665-.Ltmp664            # Loc expr size
+.Lset114 = .Ltmp666-.Ltmp665            # Loc expr size
 	.short	.Lset114
-.Ltmp664:
-	.byte	83                      # DW_OP_reg3
 .Ltmp665:
-	.long	.Ltmp336
-	.long	.Ltmp337
-.Lset115 = .Ltmp667-.Ltmp666            # Loc expr size
-	.short	.Lset115
+	.byte	86                      # DW_OP_reg6
 .Ltmp666:
-	.byte	82                      # DW_OP_reg2
+	.long	.Ltmp301
+	.long	.Ltmp304
+.Lset115 = .Ltmp668-.Ltmp667            # Loc expr size
+	.short	.Lset115
 .Ltmp667:
-	.long	.Ltmp351
-	.long	.Ltmp353
-.Lset116 = .Ltmp669-.Ltmp668            # Loc expr size
-	.short	.Lset116
+	.byte	81                      # DW_OP_reg1
 .Ltmp668:
-	.byte	91                      # DW_OP_reg11
+	.long	.Ltmp306
+	.long	.Ltmp307
+.Lset116 = .Ltmp670-.Ltmp669            # Loc expr size
+	.short	.Lset116
 .Ltmp669:
-	.long	.Ltmp355
-	.long	.Ltmp357
-.Lset117 = .Ltmp671-.Ltmp670            # Loc expr size
-	.short	.Lset117
+	.byte	81                      # DW_OP_reg1
 .Ltmp670:
-	.byte	91                      # DW_OP_reg11
+	.long	.Ltmp308
+	.long	.Ltmp310
+.Lset117 = .Ltmp672-.Ltmp671            # Loc expr size
+	.short	.Lset117
 .Ltmp671:
-	.long	.Ltmp358
-	.long	.Ltmp360
-.Lset118 = .Ltmp673-.Ltmp672            # Loc expr size
-	.short	.Lset118
+	.byte	86                      # DW_OP_reg6
 .Ltmp672:
-	.byte	83                      # DW_OP_reg3
+	.long	.Ltmp310
+	.long	.Ltmp311
+.Lset118 = .Ltmp674-.Ltmp673            # Loc expr size
+	.short	.Lset118
 .Ltmp673:
-	.long	.Ltmp360
-	.long	.Ltmp362
-.Lset119 = .Ltmp675-.Ltmp674            # Loc expr size
-	.short	.Lset119
+	.byte	81                      # DW_OP_reg1
 .Ltmp674:
-	.byte	82                      # DW_OP_reg2
+	.long	.Ltmp326
+	.long	.Ltmp327
+.Lset119 = .Ltmp676-.Ltmp675            # Loc expr size
+	.short	.Lset119
 .Ltmp675:
-	.long	.Ltmp371
-	.long	.Ltmp372
-.Lset120 = .Ltmp677-.Ltmp676            # Loc expr size
-	.short	.Lset120
+	.byte	82                      # DW_OP_reg2
 .Ltmp676:
-	.byte	83                      # DW_OP_reg3
+	.long	.Ltmp328
+	.long	.Ltmp330
+.Lset120 = .Ltmp678-.Ltmp677            # Loc expr size
+	.short	.Lset120
 .Ltmp677:
-	.long	.Ltmp374
-	.long	.Ltmp376
-.Lset121 = .Ltmp679-.Ltmp678            # Loc expr size
-	.short	.Lset121
+	.byte	83                      # DW_OP_reg3
 .Ltmp678:
-	.byte	91                      # DW_OP_reg11
+	.long	.Ltmp330
+	.long	.Ltmp331
+.Lset121 = .Ltmp680-.Ltmp679            # Loc expr size
+	.short	.Lset121
 .Ltmp679:
-	.long	.Ltmp377
-	.long	.Ltmp380
-.Lset122 = .Ltmp681-.Ltmp680            # Loc expr size
-	.short	.Lset122
+	.byte	82                      # DW_OP_reg2
 .Ltmp680:
-	.byte	82                      # DW_OP_reg2
+	.long	.Ltmp334
+	.long	.Ltmp335
+.Lset122 = .Ltmp682-.Ltmp681            # Loc expr size
+	.short	.Lset122
 .Ltmp681:
-	.long	.Ltmp385
-	.long	.Ltmp386
-.Lset123 = .Ltmp683-.Ltmp682            # Loc expr size
-	.short	.Lset123
+	.byte	82                      # DW_OP_reg2
 .Ltmp682:
-	.byte	82                      # DW_OP_reg2
+	.long	.Ltmp336
+	.long	.Ltmp339
+.Lset123 = .Ltmp684-.Ltmp683            # Loc expr size
+	.short	.Lset123
 .Ltmp683:
-	.long	.Ltmp387
-	.long	.Ltmp389
-.Lset124 = .Ltmp685-.Ltmp684            # Loc expr size
-	.short	.Lset124
+	.byte	83                      # DW_OP_reg3
 .Ltmp684:
-	.byte	83                      # DW_OP_reg3
+	.long	.Ltmp341
+	.long	.Ltmp342
+.Lset124 = .Ltmp686-.Ltmp685            # Loc expr size
+	.short	.Lset124
 .Ltmp685:
-	.long	.Ltmp390
-	.long	.Ltmp392
-.Lset125 = .Ltmp687-.Ltmp686            # Loc expr size
-	.short	.Lset125
-.Ltmp686:
-	.byte	83                      # DW_OP_reg3
-.Ltmp687:
-	.long	.Ltmp392
-	.long	.Ltmp393
-.Lset126 = .Ltmp689-.Ltmp688            # Loc expr size
-	.short	.Lset126
-.Ltmp688:
 	.byte	82                      # DW_OP_reg2
+.Ltmp686:
+	.long	.Ltmp356
+	.long	.Ltmp359
+.Lset125 = .Ltmp688-.Ltmp687            # Loc expr size
+	.short	.Lset125
+.Ltmp687:
+	.byte	91                      # DW_OP_reg11
+.Ltmp688:
+	.long	.Ltmp361
+	.long	.Ltmp363
+.Lset126 = .Ltmp690-.Ltmp689            # Loc expr size
+	.short	.Lset126
 .Ltmp689:
-	.long	.Ltmp399
-	.long	.Ltmp400
-.Lset127 = .Ltmp691-.Ltmp690            # Loc expr size
-	.short	.Lset127
+	.byte	83                      # DW_OP_reg3
 .Ltmp690:
-	.byte	83                      # DW_OP_reg3
+	.long	.Ltmp363
+	.long	.Ltmp365
+.Lset127 = .Ltmp692-.Ltmp691            # Loc expr size
+	.short	.Lset127
 .Ltmp691:
-	.long	.Ltmp401
-	.long	.Ltmp403
-.Lset128 = .Ltmp693-.Ltmp692            # Loc expr size
-	.short	.Lset128
+	.byte	82                      # DW_OP_reg2
 .Ltmp692:
-	.byte	91                      # DW_OP_reg11
+	.long	.Ltmp374
+	.long	.Ltmp375
+.Lset128 = .Ltmp694-.Ltmp693            # Loc expr size
+	.short	.Lset128
 .Ltmp693:
-	.long	.Ltmp404
-	.long	.Ltmp406
-.Lset129 = .Ltmp695-.Ltmp694            # Loc expr size
-	.short	.Lset129
+	.byte	83                      # DW_OP_reg3
 .Ltmp694:
-	.byte	83                      # DW_OP_reg3
+	.long	.Ltmp377
+	.long	.Ltmp379
+.Lset129 = .Ltmp696-.Ltmp695            # Loc expr size
+	.short	.Lset129
 .Ltmp695:
-	.long	.Ltmp408
-	.long	.Ltmp409
-.Lset130 = .Ltmp697-.Ltmp696            # Loc expr size
-	.short	.Lset130
-.Ltmp696:
-	.byte	83                      # DW_OP_reg3
-.Ltmp697:
-	.long	.Ltmp410
-	.long	.Ltmp412
-.Lset131 = .Ltmp699-.Ltmp698            # Loc expr size
-	.short	.Lset131
-.Ltmp698:
 	.byte	91                      # DW_OP_reg11
+.Ltmp696:
+	.long	.Ltmp380
+	.long	.Ltmp381
+.Lset130 = .Ltmp698-.Ltmp697            # Loc expr size
+	.short	.Lset130
+.Ltmp697:
+	.byte	82                      # DW_OP_reg2
+.Ltmp698:
+	.long	.Ltmp383
+	.long	.Ltmp384
+.Lset131 = .Ltmp700-.Ltmp699            # Loc expr size
+	.short	.Lset131
 .Ltmp699:
+	.byte	82                      # DW_OP_reg2
+.Ltmp700:
+	.long	.Ltmp389
+	.long	.Ltmp390
+.Lset132 = .Ltmp702-.Ltmp701            # Loc expr size
+	.short	.Lset132
+.Ltmp701:
+	.byte	82                      # DW_OP_reg2
+.Ltmp702:
+	.long	.Ltmp391
+	.long	.Ltmp394
+.Lset133 = .Ltmp704-.Ltmp703            # Loc expr size
+	.short	.Lset133
+.Ltmp703:
+	.byte	83                      # DW_OP_reg3
+.Ltmp704:
+	.long	.Ltmp396
+	.long	.Ltmp397
+.Lset134 = .Ltmp706-.Ltmp705            # Loc expr size
+	.short	.Lset134
+.Ltmp705:
+	.byte	82                      # DW_OP_reg2
+.Ltmp706:
+	.long	.Ltmp403
+	.long	.Ltmp404
+.Lset135 = .Ltmp708-.Ltmp707            # Loc expr size
+	.short	.Lset135
+.Ltmp707:
+	.byte	83                      # DW_OP_reg3
+.Ltmp708:
+	.long	.Ltmp405
+	.long	.Ltmp407
+.Lset136 = .Ltmp710-.Ltmp709            # Loc expr size
+	.short	.Lset136
+.Ltmp709:
+	.byte	91                      # DW_OP_reg11
+.Ltmp710:
+	.long	.Ltmp407
+	.long	.Ltmp408
+.Lset137 = .Ltmp712-.Ltmp711            # Loc expr size
+	.short	.Lset137
+.Ltmp711:
+	.byte	83                      # DW_OP_reg3
+.Ltmp712:
+	.long	.Ltmp411
+	.long	.Ltmp412
+.Lset138 = .Ltmp714-.Ltmp713            # Loc expr size
+	.short	.Lset138
+.Ltmp713:
+	.byte	83                      # DW_OP_reg3
+.Ltmp714:
 	.long	.Ltmp413
 	.long	.Ltmp415
-.Lset132 = .Ltmp701-.Ltmp700            # Loc expr size
-	.short	.Lset132
-.Ltmp700:
+.Lset139 = .Ltmp716-.Ltmp715            # Loc expr size
+	.short	.Lset139
+.Ltmp715:
+	.byte	91                      # DW_OP_reg11
+.Ltmp716:
+	.long	.Ltmp415
+	.long	.Ltmp416
+.Lset140 = .Ltmp718-.Ltmp717            # Loc expr size
+	.short	.Lset140
+.Ltmp717:
 	.byte	83                      # DW_OP_reg3
-.Ltmp701:
-	.long	.Ltmp421
-	.long	.Ltmp422
-.Lset133 = .Ltmp703-.Ltmp702            # Loc expr size
-	.short	.Lset133
-.Ltmp702:
-	.byte	91                      # DW_OP_reg11
-.Ltmp703:
+.Ltmp718:
 	.long	.Ltmp423
-	.long	.Ltmp425
-.Lset134 = .Ltmp705-.Ltmp704            # Loc expr size
-	.short	.Lset134
-.Ltmp704:
-	.byte	84                      # DW_OP_reg4
-.Ltmp705:
-	.long	.Ltmp426
-	.long	.Ltmp428
-.Lset135 = .Ltmp707-.Ltmp706            # Loc expr size
-	.short	.Lset135
-.Ltmp706:
+	.long	.Ltmp424
+.Lset141 = .Ltmp720-.Ltmp719            # Loc expr size
+	.short	.Lset141
+.Ltmp719:
 	.byte	91                      # DW_OP_reg11
-.Ltmp707:
+.Ltmp720:
+	.long	.Ltmp425
+	.long	.Ltmp427
+.Lset142 = .Ltmp722-.Ltmp721            # Loc expr size
+	.short	.Lset142
+.Ltmp721:
+	.byte	84                      # DW_OP_reg4
+.Ltmp722:
+	.long	.Ltmp427
+	.long	.Ltmp428
+.Lset143 = .Ltmp724-.Ltmp723            # Loc expr size
+	.short	.Lset143
+.Ltmp723:
+	.byte	91                      # DW_OP_reg11
+.Ltmp724:
 	.long	0
 	.long	0
 .Ldebug_loc18:
 	.long	.Lfunc_begin5
-	.long	.Ltmp112
-.Lset136 = .Ltmp709-.Ltmp708            # Loc expr size
-	.short	.Lset136
-.Ltmp708:
+	.long	.Ltmp111
+.Lset144 = .Ltmp726-.Ltmp725            # Loc expr size
+	.short	.Lset144
+.Ltmp725:
 	.byte	91                      # DW_OP_reg11
-.Ltmp709:
-	.long	.Ltmp162
-	.long	.Ltmp167
-.Lset137 = .Ltmp711-.Ltmp710            # Loc expr size
-	.short	.Lset137
-.Ltmp710:
-	.byte	91                      # DW_OP_reg11
-.Ltmp711:
-	.long	.Ltmp167
+.Ltmp726:
 	.long	.Ltmp168
-.Lset138 = .Ltmp713-.Ltmp712            # Loc expr size
-	.short	.Lset138
-.Ltmp712:
+	.long	.Ltmp172
+.Lset145 = .Ltmp728-.Ltmp727            # Loc expr size
+	.short	.Lset145
+.Ltmp727:
+	.byte	91                      # DW_OP_reg11
+.Ltmp728:
+	.long	.Ltmp172
+	.long	.Ltmp173
+.Lset146 = .Ltmp730-.Ltmp729            # Loc expr size
+	.short	.Lset146
+.Ltmp729:
 	.byte	86                      # DW_OP_reg6
-.Ltmp713:
-	.long	.Ltmp313
-	.long	.Ltmp316
-.Lset139 = .Ltmp715-.Ltmp714            # Loc expr size
-	.short	.Lset139
-.Ltmp714:
+.Ltmp730:
+	.long	.Ltmp319
+	.long	.Ltmp322
+.Lset147 = .Ltmp732-.Ltmp731            # Loc expr size
+	.short	.Lset147
+.Ltmp731:
 	.byte	81                      # DW_OP_reg1
-.Ltmp715:
+.Ltmp732:
 	.long	0
 	.long	0
 .Ldebug_loc19:
-	.long	.Ltmp154
-	.long	.Ltmp261
-.Lset140 = .Ltmp717-.Ltmp716            # Loc expr size
-	.short	.Lset140
-.Ltmp716:
+	.long	.Ltmp159
+	.long	.Ltmp269
+.Lset148 = .Ltmp734-.Ltmp733            # Loc expr size
+	.short	.Lset148
+.Ltmp733:
 	.byte	16                      # DW_OP_constu
 	.byte	0                       # 
-.Ltmp717:
-	.long	.Ltmp261
-	.long	.Ltmp262
-.Lset141 = .Ltmp719-.Ltmp718            # Loc expr size
-	.short	.Lset141
-.Ltmp718:
-	.byte	86                      # DW_OP_reg6
-.Ltmp719:
-	.long	.Ltmp263
-	.long	.Ltmp264
-.Lset142 = .Ltmp721-.Ltmp720            # Loc expr size
-	.short	.Lset142
-.Ltmp720:
-	.byte	86                      # DW_OP_reg6
-.Ltmp721:
-	.long	.Ltmp264
+.Ltmp734:
+	.long	.Ltmp269
 	.long	.Ltmp270
-.Lset143 = .Ltmp723-.Ltmp722            # Loc expr size
-	.short	.Lset143
-.Ltmp722:
+.Lset149 = .Ltmp736-.Ltmp735            # Loc expr size
+	.short	.Lset149
+.Ltmp735:
+	.byte	86                      # DW_OP_reg6
+.Ltmp736:
+	.long	.Ltmp271
+	.long	.Ltmp272
+.Lset150 = .Ltmp738-.Ltmp737            # Loc expr size
+	.short	.Lset150
+.Ltmp737:
+	.byte	86                      # DW_OP_reg6
+.Ltmp738:
+	.long	.Ltmp272
+	.long	.Ltmp278
+.Lset151 = .Ltmp740-.Ltmp739            # Loc expr size
+	.short	.Lset151
+.Ltmp739:
 	.byte	126                     # DW_OP_breg14
 .asciiz"\310"                           # 
-.Ltmp723:
-	.long	.Ltmp270
+.Ltmp740:
+	.long	.Ltmp278
 	.long	.Lfunc_end5
-.Lset144 = .Ltmp725-.Ltmp724            # Loc expr size
-	.short	.Lset144
-.Ltmp724:
+.Lset152 = .Ltmp742-.Ltmp741            # Loc expr size
+	.short	.Lset152
+.Ltmp741:
 	.byte	16                      # DW_OP_constu
 	.byte	0                       # 
-.Ltmp725:
+.Ltmp742:
 	.long	0
 	.long	0
 .Ldebug_loc20:
-	.long	.Ltmp178
-	.long	.Ltmp240
-.Lset145 = .Ltmp727-.Ltmp726            # Loc expr size
-	.short	.Lset145
-.Ltmp726:
+	.long	.Ltmp182
+	.long	.Ltmp248
+.Lset153 = .Ltmp744-.Ltmp743            # Loc expr size
+	.short	.Lset153
+.Ltmp743:
 	.byte	126                     # DW_OP_breg14
 	.byte	28                      # 
-.Ltmp727:
-	.long	.Ltmp241
-	.long	.Ltmp243
-.Lset146 = .Ltmp729-.Ltmp728            # Loc expr size
-	.short	.Lset146
-.Ltmp728:
+.Ltmp744:
+	.long	.Ltmp249
+	.long	.Ltmp251
+.Lset154 = .Ltmp746-.Ltmp745            # Loc expr size
+	.short	.Lset154
+.Ltmp745:
 	.byte	126                     # DW_OP_breg14
 	.byte	28                      # 
-.Ltmp729:
-	.long	.Ltmp244
-	.long	.Ltmp260
-.Lset147 = .Ltmp731-.Ltmp730            # Loc expr size
-	.short	.Lset147
-.Ltmp730:
+.Ltmp746:
+	.long	.Ltmp252
+	.long	.Ltmp268
+.Lset155 = .Ltmp748-.Ltmp747            # Loc expr size
+	.short	.Lset155
+.Ltmp747:
 	.byte	126                     # DW_OP_breg14
 	.byte	28                      # 
-.Ltmp731:
-	.long	.Ltmp270
-	.long	.Ltmp271
-.Lset148 = .Ltmp733-.Ltmp732            # Loc expr size
-	.short	.Lset148
-.Ltmp732:
+.Ltmp748:
+	.long	.Ltmp278
+	.long	.Ltmp279
+.Lset156 = .Ltmp750-.Ltmp749            # Loc expr size
+	.short	.Lset156
+.Ltmp749:
 	.byte	126                     # DW_OP_breg14
 	.byte	28                      # 
-.Ltmp733:
-	.long	.Ltmp308
-	.long	.Ltmp309
-.Lset149 = .Ltmp735-.Ltmp734            # Loc expr size
-	.short	.Lset149
-.Ltmp734:
+.Ltmp750:
+	.long	.Ltmp314
+	.long	.Ltmp315
+.Lset157 = .Ltmp752-.Ltmp751            # Loc expr size
+	.short	.Lset157
+.Ltmp751:
 	.byte	126                     # DW_OP_breg14
 	.byte	28                      # 
-.Ltmp735:
+.Ltmp752:
 	.long	0
 	.long	0
 .Ldebug_loc21:
-	.long	.Ltmp189
-	.long	.Ltmp267
-.Lset150 = .Ltmp737-.Ltmp736            # Loc expr size
-	.short	.Lset150
-.Ltmp736:
+	.long	.Ltmp191
+	.long	.Ltmp275
+.Lset158 = .Ltmp754-.Ltmp753            # Loc expr size
+	.short	.Lset158
+.Ltmp753:
 	.byte	16                      # DW_OP_constu
 	.byte	0                       # 
-.Ltmp737:
-	.long	.Ltmp267
-	.long	.Ltmp268
-.Lset151 = .Ltmp739-.Ltmp738            # Loc expr size
-	.short	.Lset151
-.Ltmp738:
+.Ltmp754:
+	.long	.Ltmp275
+	.long	.Ltmp276
+.Lset159 = .Ltmp756-.Ltmp755            # Loc expr size
+	.short	.Lset159
+.Ltmp755:
 	.byte	86                      # DW_OP_reg6
-.Ltmp739:
-	.long	.Ltmp269
-	.long	.Ltmp270
-.Lset152 = .Ltmp741-.Ltmp740            # Loc expr size
-	.short	.Lset152
-.Ltmp740:
+.Ltmp756:
+	.long	.Ltmp277
+	.long	.Ltmp278
+.Lset160 = .Ltmp758-.Ltmp757            # Loc expr size
+	.short	.Lset160
+.Ltmp757:
 	.byte	126                     # DW_OP_breg14
 	.byte	40                      # 
-.Ltmp741:
-	.long	.Ltmp270
+.Ltmp758:
+	.long	.Ltmp278
 	.long	.Lfunc_end5
-.Lset153 = .Ltmp743-.Ltmp742            # Loc expr size
-	.short	.Lset153
-.Ltmp742:
+.Lset161 = .Ltmp760-.Ltmp759            # Loc expr size
+	.short	.Lset161
+.Ltmp759:
 	.byte	16                      # DW_OP_constu
 	.byte	0                       # 
-.Ltmp743:
+.Ltmp760:
 	.long	0
 	.long	0
 .Ldebug_loc22:
-	.long	.Ltmp196
-	.long	.Ltmp272
-.Lset154 = .Ltmp745-.Ltmp744            # Loc expr size
-	.short	.Lset154
-.Ltmp744:
-	.byte	16                      # DW_OP_constu
-	.ascii	"\377\377\377\377\377\377\377\377\377\001" # 
-.Ltmp745:
-	.long	.Ltmp272
-	.long	.Ltmp273
-.Lset155 = .Ltmp747-.Ltmp746            # Loc expr size
-	.short	.Lset155
-.Ltmp746:
-	.byte	85                      # DW_OP_reg5
-.Ltmp747:
-	.long	.Ltmp274
-	.long	.Ltmp275
-.Lset156 = .Ltmp749-.Ltmp748            # Loc expr size
-	.short	.Lset156
-.Ltmp748:
-	.byte	85                      # DW_OP_reg5
-.Ltmp749:
-	.long	.Ltmp276
-	.long	.Ltmp277
-.Lset157 = .Ltmp751-.Ltmp750            # Loc expr size
-	.short	.Lset157
-.Ltmp750:
-	.byte	85                      # DW_OP_reg5
-.Ltmp751:
-	.long	.Ltmp279
-	.long	.Ltmp285
-.Lset158 = .Ltmp753-.Ltmp752            # Loc expr size
-	.short	.Lset158
-.Ltmp752:
-	.byte	85                      # DW_OP_reg5
-.Ltmp753:
-	.long	.Ltmp289
-	.long	.Ltmp291
-.Lset159 = .Ltmp755-.Ltmp754            # Loc expr size
-	.short	.Lset159
-.Ltmp754:
-	.byte	85                      # DW_OP_reg5
-.Ltmp755:
-	.long	.Ltmp299
-	.long	.Ltmp307
-.Lset160 = .Ltmp757-.Ltmp756            # Loc expr size
-	.short	.Lset160
-.Ltmp756:
-	.byte	85                      # DW_OP_reg5
-.Ltmp757:
-	.long	.Ltmp308
-	.long	.Ltmp339
-.Lset161 = .Ltmp759-.Ltmp758            # Loc expr size
-	.short	.Lset161
-.Ltmp758:
-	.byte	16                      # DW_OP_constu
-	.ascii	"\377\377\377\377\377\377\377\377\377\001" # 
-.Ltmp759:
-	.long	.Ltmp339
-	.long	.Ltmp349
-.Lset162 = .Ltmp761-.Ltmp760            # Loc expr size
+	.long	.Ltmp199
+	.long	.Ltmp280
+.Lset162 = .Ltmp762-.Ltmp761            # Loc expr size
 	.short	.Lset162
-.Ltmp760:
-	.byte	89                      # DW_OP_reg9
 .Ltmp761:
-	.long	.Ltmp354
-	.long	.Ltmp358
-.Lset163 = .Ltmp763-.Ltmp762            # Loc expr size
-	.short	.Lset163
+	.byte	16                      # DW_OP_constu
+	.ascii	"\377\377\377\377\377\377\377\377\377\001" # 
 .Ltmp762:
-	.byte	89                      # DW_OP_reg9
+	.long	.Ltmp280
+	.long	.Ltmp281
+.Lset163 = .Ltmp764-.Ltmp763            # Loc expr size
+	.short	.Lset163
 .Ltmp763:
-	.long	.Ltmp370
-	.long	.Ltmp371
-.Lset164 = .Ltmp765-.Ltmp764            # Loc expr size
-	.short	.Lset164
+	.byte	88                      # DW_OP_reg8
 .Ltmp764:
-	.byte	90                      # DW_OP_reg10
+	.long	.Ltmp282
+	.long	.Ltmp283
+.Lset164 = .Ltmp766-.Ltmp765            # Loc expr size
+	.short	.Lset164
 .Ltmp765:
-	.long	.Ltmp416
-	.long	.Ltmp417
-.Lset165 = .Ltmp767-.Ltmp766            # Loc expr size
-	.short	.Lset165
+	.byte	88                      # DW_OP_reg8
 .Ltmp766:
-	.byte	83                      # DW_OP_reg3
+	.long	.Ltmp284
+	.long	.Ltmp285
+.Lset165 = .Ltmp768-.Ltmp767            # Loc expr size
+	.short	.Lset165
 .Ltmp767:
+	.byte	88                      # DW_OP_reg8
+.Ltmp768:
+	.long	.Ltmp287
+	.long	.Ltmp293
+.Lset166 = .Ltmp770-.Ltmp769            # Loc expr size
+	.short	.Lset166
+.Ltmp769:
+	.byte	88                      # DW_OP_reg8
+.Ltmp770:
+	.long	.Ltmp297
+	.long	.Ltmp299
+.Lset167 = .Ltmp772-.Ltmp771            # Loc expr size
+	.short	.Lset167
+.Ltmp771:
+	.byte	88                      # DW_OP_reg8
+.Ltmp772:
+	.long	.Ltmp306
+	.long	.Ltmp313
+.Lset168 = .Ltmp774-.Ltmp773            # Loc expr size
+	.short	.Lset168
+.Ltmp773:
+	.byte	88                      # DW_OP_reg8
+.Ltmp774:
+	.long	.Ltmp314
+	.long	.Ltmp344
+.Lset169 = .Ltmp776-.Ltmp775            # Loc expr size
+	.short	.Lset169
+.Ltmp775:
+	.byte	16                      # DW_OP_constu
+	.ascii	"\377\377\377\377\377\377\377\377\377\001" # 
+.Ltmp776:
+	.long	.Ltmp344
+	.long	.Ltmp354
+.Lset170 = .Ltmp778-.Ltmp777            # Loc expr size
+	.short	.Lset170
+.Ltmp777:
+	.byte	89                      # DW_OP_reg9
+.Ltmp778:
+	.long	.Ltmp358
+	.long	.Ltmp359
+.Lset171 = .Ltmp780-.Ltmp779            # Loc expr size
+	.short	.Lset171
+.Ltmp779:
+	.byte	89                      # DW_OP_reg9
+.Ltmp780:
+	.long	.Ltmp373
+	.long	.Ltmp374
+.Lset172 = .Ltmp782-.Ltmp781            # Loc expr size
+	.short	.Lset172
+.Ltmp781:
+	.byte	90                      # DW_OP_reg10
+.Ltmp782:
 	.long	.Ltmp418
 	.long	.Ltmp419
-.Lset166 = .Ltmp769-.Ltmp768            # Loc expr size
-	.short	.Lset166
-.Ltmp768:
+.Lset173 = .Ltmp784-.Ltmp783            # Loc expr size
+	.short	.Lset173
+.Ltmp783:
 	.byte	83                      # DW_OP_reg3
-.Ltmp769:
+.Ltmp784:
 	.long	.Ltmp420
-	.long	.Ltmp429
-.Lset167 = .Ltmp771-.Ltmp770            # Loc expr size
-	.short	.Lset167
-.Ltmp770:
+	.long	.Ltmp421
+.Lset174 = .Ltmp786-.Ltmp785            # Loc expr size
+	.short	.Lset174
+.Ltmp785:
+	.byte	83                      # DW_OP_reg3
+.Ltmp786:
+	.long	.Ltmp422
+	.long	.Ltmp430
+.Lset175 = .Ltmp788-.Ltmp787            # Loc expr size
+	.short	.Lset175
+.Ltmp787:
 	.byte	16                      # DW_OP_constu
 	.ascii	"\377\377\377\377\377\377\377\377\377\001" # 
-.Ltmp771:
-	.long	.Ltmp429
+.Ltmp788:
 	.long	.Ltmp430
-.Lset168 = .Ltmp773-.Ltmp772            # Loc expr size
-	.short	.Lset168
-.Ltmp772:
-	.byte	91                      # DW_OP_reg11
-.Ltmp773:
 	.long	.Ltmp431
-	.long	.Ltmp432
-.Lset169 = .Ltmp775-.Ltmp774            # Loc expr size
-	.short	.Lset169
-.Ltmp774:
+.Lset176 = .Ltmp790-.Ltmp789            # Loc expr size
+	.short	.Lset176
+.Ltmp789:
 	.byte	91                      # DW_OP_reg11
-.Ltmp775:
+.Ltmp790:
+	.long	.Ltmp432
+	.long	.Ltmp433
+.Lset177 = .Ltmp792-.Ltmp791            # Loc expr size
+	.short	.Lset177
+.Ltmp791:
+	.byte	91                      # DW_OP_reg11
+.Ltmp792:
 	.long	0
 	.long	0
 .Ldebug_loc23:
-	.long	.Ltmp224
-	.long	.Ltmp277
-.Lset170 = .Ltmp777-.Ltmp776            # Loc expr size
-	.short	.Lset170
-.Ltmp776:
-	.byte	16                      # DW_OP_constu
-	.byte	0                       # 
-.Ltmp777:
-	.long	.Ltmp277
-	.long	.Ltmp278
-.Lset171 = .Ltmp779-.Ltmp778            # Loc expr size
-	.short	.Lset171
-.Ltmp778:
-	.byte	90                      # DW_OP_reg10
-.Ltmp779:
-	.long	.Ltmp279
-	.long	.Ltmp284
-.Lset172 = .Ltmp781-.Ltmp780            # Loc expr size
-	.short	.Lset172
-.Ltmp780:
-	.byte	90                      # DW_OP_reg10
-.Ltmp781:
-	.long	.Ltmp284
+	.long	.Ltmp231
 	.long	.Ltmp285
-.Lset173 = .Ltmp783-.Ltmp782            # Loc expr size
-	.short	.Lset173
-.Ltmp782:
-	.byte	126                     # DW_OP_breg14
-	.byte	52                      # 
-.Ltmp783:
-	.long	.Ltmp290
-	.long	.Ltmp291
-.Lset174 = .Ltmp785-.Ltmp784            # Loc expr size
-	.short	.Lset174
-.Ltmp784:
+.Lset178 = .Ltmp794-.Ltmp793            # Loc expr size
+	.short	.Lset178
+.Ltmp793:
+	.byte	16                      # DW_OP_constu
+	.byte	0                       # 
+.Ltmp794:
+	.long	.Ltmp285
+	.long	.Ltmp286
+.Lset179 = .Ltmp796-.Ltmp795            # Loc expr size
+	.short	.Lset179
+.Ltmp795:
 	.byte	90                      # DW_OP_reg10
-.Ltmp785:
-	.long	.Ltmp308
-	.long	.Ltmp396
-.Lset175 = .Ltmp787-.Ltmp786            # Loc expr size
-	.short	.Lset175
-.Ltmp786:
-	.byte	16                      # DW_OP_constu
-	.byte	0                       # 
-.Ltmp787:
-	.long	.Ltmp396
-	.long	.Ltmp407
-.Lset176 = .Ltmp789-.Ltmp788            # Loc expr size
-	.short	.Lset176
-.Ltmp788:
+.Ltmp796:
+	.long	.Ltmp287
+	.long	.Ltmp292
+.Lset180 = .Ltmp798-.Ltmp797            # Loc expr size
+	.short	.Lset180
+.Ltmp797:
+	.byte	90                      # DW_OP_reg10
+.Ltmp798:
+	.long	.Ltmp292
+	.long	.Ltmp293
+.Lset181 = .Ltmp800-.Ltmp799            # Loc expr size
+	.short	.Lset181
+.Ltmp799:
 	.byte	126                     # DW_OP_breg14
 	.byte	52                      # 
-.Ltmp789:
-	.long	.Ltmp420
-	.long	.Lfunc_end5
-.Lset177 = .Ltmp791-.Ltmp790            # Loc expr size
-	.short	.Lset177
-.Ltmp790:
+.Ltmp800:
+	.long	.Ltmp298
+	.long	.Ltmp299
+.Lset182 = .Ltmp802-.Ltmp801            # Loc expr size
+	.short	.Lset182
+.Ltmp801:
+	.byte	90                      # DW_OP_reg10
+.Ltmp802:
+	.long	.Ltmp314
+	.long	.Ltmp400
+.Lset183 = .Ltmp804-.Ltmp803            # Loc expr size
+	.short	.Lset183
+.Ltmp803:
 	.byte	16                      # DW_OP_constu
 	.byte	0                       # 
-.Ltmp791:
+.Ltmp804:
+	.long	.Ltmp400
+	.long	.Ltmp410
+.Lset184 = .Ltmp806-.Ltmp805            # Loc expr size
+	.short	.Lset184
+.Ltmp805:
+	.byte	126                     # DW_OP_breg14
+	.byte	52                      # 
+.Ltmp806:
+	.long	.Ltmp422
+	.long	.Lfunc_end5
+.Lset185 = .Ltmp808-.Ltmp807            # Loc expr size
+	.short	.Lset185
+.Ltmp807:
+	.byte	16                      # DW_OP_constu
+	.byte	0                       # 
+.Ltmp808:
 	.long	0
 	.long	0
 .Ldebug_loc24:
-	.long	.Ltmp245
-	.long	.Ltmp260
-.Lset178 = .Ltmp793-.Ltmp792            # Loc expr size
-	.short	.Lset178
-.Ltmp792:
+	.long	.Ltmp253
+	.long	.Ltmp268
+.Lset186 = .Ltmp810-.Ltmp809            # Loc expr size
+	.short	.Lset186
+.Ltmp809:
 	.byte	126                     # DW_OP_breg14
 	.byte	16                      # 
-.Ltmp793:
-	.long	.Ltmp270
-	.long	.Ltmp271
-.Lset179 = .Ltmp795-.Ltmp794            # Loc expr size
-	.short	.Lset179
-.Ltmp794:
+.Ltmp810:
+	.long	.Ltmp278
+	.long	.Ltmp279
+.Lset187 = .Ltmp812-.Ltmp811            # Loc expr size
+	.short	.Lset187
+.Ltmp811:
 	.byte	126                     # DW_OP_breg14
 	.byte	16                      # 
-.Ltmp795:
-	.long	.Ltmp308
-	.long	.Ltmp309
-.Lset180 = .Ltmp797-.Ltmp796            # Loc expr size
-	.short	.Lset180
-.Ltmp796:
+.Ltmp812:
+	.long	.Ltmp314
+	.long	.Ltmp315
+.Lset188 = .Ltmp814-.Ltmp813            # Loc expr size
+	.short	.Lset188
+.Ltmp813:
 	.byte	126                     # DW_OP_breg14
 	.byte	16                      # 
-.Ltmp797:
+.Ltmp814:
 	.long	0
 	.long	0
 .Ldebug_loc25:
-	.long	.Ltmp287
-	.long	.Ltmp288
-.Lset181 = .Ltmp799-.Ltmp798            # Loc expr size
-	.short	.Lset181
-.Ltmp798:
+	.long	.Ltmp295
+	.long	.Ltmp296
+.Lset189 = .Ltmp816-.Ltmp815            # Loc expr size
+	.short	.Lset189
+.Ltmp815:
 	.byte	81                      # DW_OP_reg1
-.Ltmp799:
-	.long	.Ltmp338
-	.long	.Ltmp361
-.Lset182 = .Ltmp801-.Ltmp800            # Loc expr size
-	.short	.Lset182
-.Ltmp800:
+.Ltmp816:
+	.long	.Ltmp343
+	.long	.Ltmp364
+.Lset190 = .Ltmp818-.Ltmp817            # Loc expr size
+	.short	.Lset190
+.Ltmp817:
 	.byte	16                      # DW_OP_constu
 	.ascii	"\200\001"              # 
-.Ltmp801:
-	.long	.Ltmp361
-	.long	.Ltmp362
-.Lset183 = .Ltmp803-.Ltmp802            # Loc expr size
-	.short	.Lset183
-.Ltmp802:
+.Ltmp818:
+	.long	.Ltmp364
+	.long	.Ltmp365
+.Lset191 = .Ltmp820-.Ltmp819            # Loc expr size
+	.short	.Lset191
+.Ltmp819:
 	.byte	84                      # DW_OP_reg4
-.Ltmp803:
+.Ltmp820:
 	.long	0
 	.long	0
 .Ldebug_loc26:
-	.long	.Ltmp328
-	.long	.Ltmp367
-.Lset184 = .Ltmp805-.Ltmp804            # Loc expr size
-	.short	.Lset184
-.Ltmp804:
+	.long	.Ltmp333
+	.long	.Ltmp370
+.Lset192 = .Ltmp822-.Ltmp821            # Loc expr size
+	.short	.Lset192
+.Ltmp821:
 	.byte	16                      # DW_OP_constu
 	.byte	0                       # 
-.Ltmp805:
-	.long	.Ltmp367
-	.long	.Ltmp367
-.Lset185 = .Ltmp807-.Ltmp806            # Loc expr size
-	.short	.Lset185
-.Ltmp806:
+.Ltmp822:
+	.long	.Ltmp370
+	.long	.Ltmp370
+.Lset193 = .Ltmp824-.Ltmp823            # Loc expr size
+	.short	.Lset193
+.Ltmp823:
 	.byte	83                      # DW_OP_reg3
-.Ltmp807:
-	.long	.Ltmp367
-	.long	.Ltmp367
-.Lset186 = .Ltmp809-.Ltmp808            # Loc expr size
-	.short	.Lset186
-.Ltmp808:
+.Ltmp824:
+	.long	.Ltmp370
+	.long	.Ltmp370
+.Lset194 = .Ltmp826-.Ltmp825            # Loc expr size
+	.short	.Lset194
+.Ltmp825:
 	.byte	82                      # DW_OP_reg2
-.Ltmp809:
-	.long	.Ltmp382
-	.long	.Ltmp383
-.Lset187 = .Ltmp811-.Ltmp810            # Loc expr size
-	.short	.Lset187
-.Ltmp810:
+.Ltmp826:
+	.long	.Ltmp386
+	.long	.Ltmp387
+.Lset195 = .Ltmp828-.Ltmp827            # Loc expr size
+	.short	.Lset195
+.Ltmp827:
 	.byte	82                      # DW_OP_reg2
-.Ltmp811:
+.Ltmp828:
 	.long	0
 	.long	0
 .Ldebug_loc27:
-	.long	.Ltmp328
-	.long	.Ltmp366
-.Lset188 = .Ltmp813-.Ltmp812            # Loc expr size
-	.short	.Lset188
-.Ltmp812:
+	.long	.Ltmp333
+	.long	.Ltmp369
+.Lset196 = .Ltmp830-.Ltmp829            # Loc expr size
+	.short	.Lset196
+.Ltmp829:
 	.byte	16                      # DW_OP_constu
 	.byte	0                       # 
-.Ltmp813:
-	.long	.Ltmp366
-	.long	.Ltmp367
-.Lset189 = .Ltmp815-.Ltmp814            # Loc expr size
-	.short	.Lset189
-.Ltmp814:
+.Ltmp830:
+	.long	.Ltmp369
+	.long	.Ltmp370
+.Lset197 = .Ltmp832-.Ltmp831            # Loc expr size
+	.short	.Lset197
+.Ltmp831:
 	.byte	89                      # DW_OP_reg9
-.Ltmp815:
-	.long	.Ltmp382
-	.long	.Ltmp383
-.Lset190 = .Ltmp817-.Ltmp816            # Loc expr size
-	.short	.Lset190
-.Ltmp816:
+.Ltmp832:
+	.long	.Ltmp386
+	.long	.Ltmp387
+.Lset198 = .Ltmp834-.Ltmp833            # Loc expr size
+	.short	.Lset198
+.Ltmp833:
 	.byte	89                      # DW_OP_reg9
-.Ltmp817:
+.Ltmp834:
 	.long	0
 	.long	0
 .Ldebug_loc28:
-	.long	.Ltmp328
-	.long	.Ltmp365
-.Lset191 = .Ltmp819-.Ltmp818            # Loc expr size
-	.short	.Lset191
-.Ltmp818:
+	.long	.Ltmp333
+	.long	.Ltmp368
+.Lset199 = .Ltmp836-.Ltmp835            # Loc expr size
+	.short	.Lset199
+.Ltmp835:
 	.byte	16                      # DW_OP_constu
 	.byte	0                       # 
-.Ltmp819:
-	.long	.Ltmp365
-	.long	.Ltmp367
-.Lset192 = .Ltmp821-.Ltmp820            # Loc expr size
-	.short	.Lset192
-.Ltmp820:
+.Ltmp836:
+	.long	.Ltmp368
+	.long	.Ltmp370
+.Lset200 = .Ltmp838-.Ltmp837            # Loc expr size
+	.short	.Lset200
+.Ltmp837:
 	.byte	87                      # DW_OP_reg7
-.Ltmp821:
-	.long	.Ltmp383
-	.long	.Ltmp384
-.Lset193 = .Ltmp823-.Ltmp822            # Loc expr size
-	.short	.Lset193
-.Ltmp822:
+.Ltmp838:
+	.long	.Ltmp387
+	.long	.Ltmp388
+.Lset201 = .Ltmp840-.Ltmp839            # Loc expr size
+	.short	.Lset201
+.Ltmp839:
 	.byte	88                      # DW_OP_reg8
-.Ltmp823:
+.Ltmp840:
 	.long	0
 	.long	0
 .Ldebug_loc29:
-	.long	.Ltmp340
-	.long	.Ltmp341
-.Lset194 = .Ltmp825-.Ltmp824            # Loc expr size
-	.short	.Lset194
-.Ltmp824:
+	.long	.Ltmp345
+	.long	.Ltmp346
+.Lset202 = .Ltmp842-.Ltmp841            # Loc expr size
+	.short	.Lset202
+.Ltmp841:
 	.byte	82                      # DW_OP_reg2
-.Ltmp825:
+.Ltmp842:
 	.long	0
 	.long	0
 .Ldebug_loc30:
-	.long	.Ltmp342
-	.long	.Ltmp343
-.Lset195 = .Ltmp827-.Ltmp826            # Loc expr size
-	.short	.Lset195
-.Ltmp826:
+	.long	.Ltmp347
+	.long	.Ltmp348
+.Lset203 = .Ltmp844-.Ltmp843            # Loc expr size
+	.short	.Lset203
+.Ltmp843:
 	.byte	82                      # DW_OP_reg2
-.Ltmp827:
+.Ltmp844:
 	.long	0
 	.long	0
 .Ldebug_loc31:
-	.long	.Ltmp344
-	.long	.Ltmp345
-.Lset196 = .Ltmp829-.Ltmp828            # Loc expr size
-	.short	.Lset196
-.Ltmp828:
+	.long	.Ltmp349
+	.long	.Ltmp350
+.Lset204 = .Ltmp846-.Ltmp845            # Loc expr size
+	.short	.Lset204
+.Ltmp845:
 	.byte	82                      # DW_OP_reg2
-.Ltmp829:
+.Ltmp846:
 	.long	0
 	.long	0
 .Ldebug_loc32:
-	.long	.Ltmp346
-	.long	.Ltmp347
-.Lset197 = .Ltmp831-.Ltmp830            # Loc expr size
-	.short	.Lset197
-.Ltmp830:
+	.long	.Ltmp351
+	.long	.Ltmp352
+.Lset205 = .Ltmp848-.Ltmp847            # Loc expr size
+	.short	.Lset205
+.Ltmp847:
 	.byte	82                      # DW_OP_reg2
-.Ltmp831:
+.Ltmp848:
 	.long	0
 	.long	0
 .Ldebug_loc33:
 	.long	.Lfunc_begin5
-	.long	.Ltmp420
-.Lset198 = .Ltmp833-.Ltmp832            # Loc expr size
-	.short	.Lset198
-.Ltmp832:
+	.long	.Ltmp422
+.Lset206 = .Ltmp850-.Ltmp849            # Loc expr size
+	.short	.Lset206
+.Ltmp849:
 	.byte	82                      # DW_OP_reg2
-.Ltmp833:
+.Ltmp850:
 	.long	0
 	.long	0
 	.section	.debug_pubnames,"",@progbits
-.Lset199 = .LpubNames_end0-.LpubNames_begin0 # Length of Public Names Info
-	.long	.Lset199
+.Lset207 = .LpubNames_end0-.LpubNames_begin0 # Length of Public Names Info
+	.long	.Lset207
 .LpubNames_begin0:
 	.short	2                       # DWARF Version
 	.long	.L.debug_info_begin0    # Offset of Compilation Unit Info
-.Lset200 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
-	.long	.Lset200
+.Lset208 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
+	.long	.Lset208
 	.long	1557                    # DIE offset
 .asciiz"delay_milliseconds"             # External Name
 	.long	174                     # DIE offset
@@ -8638,13 +8704,13 @@ __xcc1_internal_3:
 	.long	0                       # End Mark
 .LpubNames_end0:
 	.section	.debug_pubtypes,"",@progbits
-.Lset201 = .LpubTypes_end0-.LpubTypes_begin0 # Length of Public Types Info
-	.long	.Lset201
+.Lset209 = .LpubTypes_end0-.LpubTypes_begin0 # Length of Public Types Info
+	.long	.Lset209
 .LpubTypes_begin0:
 	.short	2                       # DWARF Version
 	.long	.L.debug_info_begin0    # Offset of Compilation Unit Info
-.Lset202 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
-	.long	.Lset202
+.Lset210 = .L.debug_info_end0-.L.debug_info_begin0 # Compilation Unit Length
+	.long	.Lset210
 	.long	1685                    # DIE offset
 .asciiz"timer"                          # External Name
 	.long	293                     # DIE offset
