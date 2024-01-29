@@ -1,11 +1,9 @@
 /**
  * @file    main.xc
- * @brief   Top level for XMOS USB 2.0 Audio 2.0 Reference Designs.
- * @author  Ross Owen, XMOS Semiconductor Ltd
+ * @brief   Top level for USB/SDC/SSDAC application
+ * Based on XMOS USB 2.0 Audio 2.0 Reference Designs.
  *
  * @author  Takaaki Sakurai
- * Modified by Sakurai for supporting SSDAC function.
- *
  *
  */
 #include <syscall.h>
