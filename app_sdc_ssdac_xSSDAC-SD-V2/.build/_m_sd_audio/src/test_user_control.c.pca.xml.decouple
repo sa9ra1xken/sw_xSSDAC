@@ -1,4 +1,0 @@
-<preCompilationAnalysis file="C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c">
-  <fCall global="true" name="TestUserControl"/>
-  <fCall global="true" name="QueryChannel"/>
-</preCompilationAnalysis>
