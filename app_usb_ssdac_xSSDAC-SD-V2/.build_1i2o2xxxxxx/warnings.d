@@ -1,4 +1,0 @@
-warnings.o: \
-  C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc \
-  C:/Users/takaaki/git/sw_xSSDAC/app_usb_ssdac_xSSDAC-SD-V2/src/core/customdefines.h
-
