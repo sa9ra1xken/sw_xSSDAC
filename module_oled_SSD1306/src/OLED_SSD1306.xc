@@ -16,13 +16,16 @@
 #include <stdio.h>
 #include <string.h>
 #include "i2c_shared.h"
-#include <FONT8X16MIN.h>
+//#include <FONT8X16MIN.h>
+#include <ISO88591-8x16.font.h>
 #include <xccompat.h>
 
 #define PAGE_COUNT 8
 #define PAGE_LENGTH 128
 #define CHAR_COUNT_PAR_LINE 16
 #define SH1106
+
+#define FONT8X16MIN_CHARBITMAP ISO88591_CHARBITMAP
 
 const unsigned char OLED_SSD1306_DISPLAY_INIT[] = {
     //SSD1306_CONTROL_CMD_STREAM,       // control byte, Co bit = 0 (continue), D/C# = 0 (command)

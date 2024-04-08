@@ -1,7 +1,6 @@
 /**
  * @file    main.xc
- * @brief   Top level for USB/SDC/SSDAC application
- * Based on XMOS USB 2.0 Audio 2.0 Reference Designs.
+ * @brief   Top level for USB Audio and SD Player application with SSDAC
  *
  * @author  Takaaki Sakurai
  *
