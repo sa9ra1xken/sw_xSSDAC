@@ -45,7 +45,7 @@
 
 #include "persistent_storage_map.h"
 
-#define FAST_MODE
+//#define FAST_MODE
 
 [[distributable]]
 void DFUHandler(server interface i_dfu i, chanend ?c_user_cmd);
