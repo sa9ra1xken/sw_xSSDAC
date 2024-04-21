@@ -3,6 +3,7 @@
  * @brief      Defines relating to device configuration and customisation.
  *             For xCORE-200 Audio MC Board
  * @author     Ross Owen, XMOS Limited
+ * @author     modefied by Takaaki Sakurai for xSSDAC application
  */
 #ifndef _CUSTOMDEFINES_H_
 #define _CUSTOMDEFINES_H_

@@ -1,8 +1,8 @@
 /*
- * ssdac_conf.h
- *
- *  Created on: 2023/11/26
- *      Author: takaaki
+ * @file    ssdac_conf.h
+ * @brief   Configuration for module_ssdac
+ * @author  Takaaki Sakurai
+ * Created on: 2023/11/26
  */
 
 #ifndef SSDAC_CONF_H_

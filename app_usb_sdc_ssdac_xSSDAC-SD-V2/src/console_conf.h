@@ -1,8 +1,8 @@
 /*
- * console_conf.h
- *
- *  Created on: 2024/01/14
- *      Author: takaaki
+ * @file    console_conf.h
+ * @brief   Configuration for module_opertion_console
+ * @author  Takaaki Sakurai
+ * Created on: 2024/01/14
  */
 
 #ifndef CONSOLE_CONF_H_
