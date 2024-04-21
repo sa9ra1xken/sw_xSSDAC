@@ -11,21 +11,30 @@
 #include <xs1.h>
 
 #include <assert.h>
-//#include "devicedefines.h"
 #include <platform.h>
 #include <stdio.h>
 #include <string.h>
 #include "i2c_shared.h"
-//#include <FONT8X16MIN.h>
-#include <ISO88591-8x16.font.h>
-#include <xccompat.h>
 
+//#include <FONT8X16MIN.h>
+//#include "../font/BigRoman-8x16.font.h"//ok
+//#include "../font/bold-8x16.font.h"
+//#include "../font/deco-8x16.font.h"
+//#include "../font/ISO88591-8x16.font.h" //good
+#include "../font/iso-8x16.font.h" //very good
+//#include "../font/fancy-8x16.font.h"
+//#include "../font/leggibile-8x16.font.h" //good
+//#include "../font/roman-8x16.font.h" //ok
+//#include "../font/simple-8x16.font.h" //good
+//#include "../font/tremolo2-8x16.font.h" //free handed
+//#include "../font/tremolo-8x16.font.h" //free handed
+//#include "../font/VGA-8x16.font.h" //good
+
+#include <xccompat.h>
 #define PAGE_COUNT 8
 #define PAGE_LENGTH 128
 #define CHAR_COUNT_PAR_LINE 16
 #define SH1106
-
-#define FONT8X16MIN_CHARBITMAP ISO88591_CHARBITMAP
 
 const unsigned char OLED_SSD1306_DISPLAY_INIT[] = {
     //SSD1306_CONTROL_CMD_STREAM,       // control byte, Co bit = 0 (continue), D/C# = 0 (command)
@@ -166,13 +175,15 @@ void OLED_SSD1306_put_string(int row, char string[]){
         if (terminator_found_before_eol[row] == 1) code = ' ';
 
         unsigned int char_index = 0;
-        if (code > 0x20 && code < 0x80) char_index = (code - 0x20) << 4;
+        if (code > STARTING_CHARACTER_CODE && code < 0x80)
+            char_index = (code - STARTING_CHARACTER_CODE) << 4;
+        //char_index = code <<4;
 
         for (int part = 0 ; part < 2 ; part++ ){
 
             for (int cx = 0 ; cx < 8 ; cx++ ){
                 int p = (row * 2 + part) * PAGE_LENGTH + ( rendering_col[row] * 8 + cx);
-                raster_buffer[p] = FONT8X16MIN_CHARBITMAP[char_index + part * 8 + cx];
+                raster_buffer[p] = CHARBITMAP[char_index + part * 8 + cx];
             }
         }
     }
@@ -195,11 +206,13 @@ RC_SCROLL OLED_SSD1306_shift_left(const int row){
         return _END_OF_LINE;
     }
     unsigned int char_index = 0;
-    if (code > 0x20 && code < 0x80) char_index = (code - 0x20) << 4;
+    if (code > STARTING_CHARACTER_CODE && code < 0x80)
+        char_index = (code - STARTING_CHARACTER_CODE) << 4;
+    //char_index = code << 4;
 
     for (int part = 0 ; part < 2 ; part++ ){
         int p = (row * 2 + part) * PAGE_LENGTH + display_offset[row];
-        raster_buffer[p] = FONT8X16MIN_CHARBITMAP[char_index + part * 8 + rendering_x[row]];
+        raster_buffer[p] = CHARBITMAP[char_index + part * 8 + rendering_x[row]];
     }
 
     display_offset[row]++;

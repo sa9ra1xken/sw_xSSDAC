@@ -197,8 +197,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_ssdac_xSSDAC-SD/src/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_ssdac_xSSDAC-SD/src/extensions}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_ssdac_xSSDAC-SD/src/extensions/mfi}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
@@ -525,8 +523,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_ssdac_xSSDAC-SD/src/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_ssdac_xSSDAC-SD/src/extensions}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_ssdac_xSSDAC-SD/src/extensions/mfi}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
@@ -862,8 +858,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_ssdac_xSSDAC-SD/src/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_ssdac_xSSDAC-SD/src/extensions}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_ssdac_xSSDAC-SD/src/extensions/mfi}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>

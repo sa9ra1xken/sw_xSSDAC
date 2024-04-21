@@ -1255,6 +1255,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_xud/lib}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_ssdac/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_operation_console/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_oled_SSD1306/font}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.xc.compiler.input.2086503881" name="XC" superClass="com.xmos.cdt.xc.compiler.input"/>
 							</tool>
@@ -1628,6 +1629,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_xud/lib}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_ssdac/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_operation_console/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_oled_SSD1306/font}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.c.compiler.input.c.1316134989" name="C" superClass="com.xmos.cdt.c.compiler.input.c"/>
 							</tool>
@@ -2006,6 +2008,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_xud/lib}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_ssdac/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_operation_console/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_oled_SSD1306/font}&quot;"/>
 								</option>
 								<inputType id="com.xmos.cdt.cxx.compiler.input.cpp.670601048" name="C++" superClass="com.xmos.cdt.cxx.compiler.input.cpp"/>
 							</tool>

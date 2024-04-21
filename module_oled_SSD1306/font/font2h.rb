@@ -1,7 +1,12 @@
-﻿f = open(ARGV[0], "r")
-g = open(ARGV[1], "w")
+﻿source = ARGV[0]
+dest = ARGV[1]
+puts source + " " + dest
+f = open(source, "r")
+g = open(dest, "w")
+start_ch = nil;
 item_counter = 0
 row = nil
+width = 8
 while line = f.gets
 	if row.nil?
 		token = line.split(" ")
@@ -18,6 +23,9 @@ while line = f.gets
 			code = token[1].to_i
 			row = 0
 			array =Array.new
+			if start_ch == nil then
+				start_ch = code
+			end
 		end
 	else
 		array[row] = line
@@ -34,8 +42,8 @@ while line = f.gets
 				g.puts "extern \"C\" {"
 				g.puts "#endif"
 
-				g.puts sprintf("const unsigned char %s_CHARBITMAP[] = {", name)
-			
+				#g.puts sprintf("const unsigned char %s_CHARBITMAP[] = {", name)
+				g.puts "const unsigned char CHARBITMAP[] = {"
 			else
 				#g.print ",\n"
 			end
@@ -67,6 +75,10 @@ while line = f.gets
 end
 
 g.puts "};"
+
+g.puts sprintf("#define STARTING_CHARACTER_CODE 0x%02X", start_ch)
+g.puts sprintf("#define NUMBER_OF_CHARACTERS %d", max)
+
 g.puts "#ifdef __cplusplus"
 g.puts "}"
 g.puts "#endif"
