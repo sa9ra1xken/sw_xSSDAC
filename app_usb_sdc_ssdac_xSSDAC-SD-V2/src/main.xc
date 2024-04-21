@@ -2,6 +2,7 @@
  * @file    main.xc
  * @brief   Top level for USB Audio and SD Player application with software SSDAC
  * @author  Takaaki Sakurai
+ *
  */
 #include <syscall.h>
 #include <platform.h>

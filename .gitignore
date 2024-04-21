@@ -1,1 +1,9 @@
-.build_*/
+*/.build_*/*
+*/bin/*
+*.o
+*.xe
+*.vcd
+*.s
+*.xi
+*.i
+*.a
