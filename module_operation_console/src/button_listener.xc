@@ -23,7 +23,25 @@
 #define TIME_10MS   1000000
 #define TIME_500MS 50000000
 
+#ifdef USE_4BIT_PORT
+on tile[1] : in port p_key_LSB = PORT_HUMAN_INTERFACE_LSB;
+on tile[1] : in port p_key_MSB = PORT_HUMAN_INTERFACE_MSB;
+#else
 on tile[1] : in port p_key = PORT_HUMAN_INTERFACE;
+#endif
+
+int ReadKey(){
+    int temp;
+#ifdef USE_4BIT_PORT
+    p_key_MSB :> temp;
+    temp = temp << 4;
+    p_key_LSB :> temp;
+#else
+    p_key :> temp;
+#endif
+    return temp;
+}
+
 FUNCTION_SELECTOR _func;
 unsigned key_buff[3];
 unsigned scan_time;
@@ -87,8 +105,7 @@ void HandlePlayCommand(chanend c_control, QUERY_TYPE type){
 
     case _CURRENT_Q :
         unsigned temp;
-        p_key :> temp;
-        c_control <: temp;
+        c_control <: ReadKey();
         break;
     }
 }
@@ -278,7 +295,7 @@ void KeyScan(){
     unsigned now;
     key_buff[2] = key_buff[1];
     key_buff[1] = key_buff[0];
-    p_key :> key_buff[0];
+    key_buff[0] = ReadKey();
 
     if ((key_buff[0] == key_buff[1])&& (key_buff[0] != key_buff[2])){
 
@@ -354,7 +371,7 @@ void button_listener_core(
     unsafe {p_console_mode = &console_mode;}
     timer t;
 
-    p_key :> key_buff[0];
+    key_buff[0] = ReadKey();
     key_buff[1] = key_buff[0];
     key_buff[2] = key_buff[1];
 

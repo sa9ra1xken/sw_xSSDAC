@@ -10,4 +10,6 @@
 
 #define ENABLE_FUNCTION_SELECTOR
 
+#define USE_4BIT_PORT
+
 #endif /* CONSOLE_CONF_H_ */

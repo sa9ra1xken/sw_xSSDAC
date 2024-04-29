@@ -183,6 +183,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src/extensions}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src/extensions/mfi}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_logging/api}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
@@ -496,6 +497,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src/extensions}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src/extensions/mfi}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_logging/api}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
@@ -814,6 +816,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src/extensions}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src/extensions/mfi}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_logging/api}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/src}&quot;"/>
 								</option>
@@ -836,5 +839,9 @@
 		<project id="module_ssdac.null.1034035239" name="module_ssdac"/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Default">
+			<resource resourceType="PROJECT" workspacePath="/module_ssdac"/>
+		</configuration>
+	</storageModule>
 </cproject>

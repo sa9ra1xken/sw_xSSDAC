@@ -2,7 +2,7 @@
 # compiled for. It either refers to an XN file in the source directories
 # or a valid argument for the --target option when compiling.
 
-TARGET = xSSDAC-SD-V2.xn
+TARGET = xSSDAC-SD-V3.xn
 APP_NAME = 
 
 # The USED_MODULES variable lists other module used by the application. These
