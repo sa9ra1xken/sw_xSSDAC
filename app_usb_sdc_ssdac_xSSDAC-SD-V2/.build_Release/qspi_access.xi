@@ -5,7 +5,7 @@
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
+# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 1 3
 # 23 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/timer.h" 1 3
@@ -390,7 +390,7 @@ unsigned get_local_tile_id(void);
 unsigned get_tile_id(tileref t);
 # 2136 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h" 3
 unsigned get_logical_core_id(void);
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
+# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
@@ -404,7 +404,7 @@ extern tileref usb_tile;
 
 service xscope_host_data(chanend c);;
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
+# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 1 3
 # 19 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
@@ -766,7 +766,7 @@ unsigned int fl_getBootPartitionSize();
 unsigned fl_getDataPartitionBase();
 # 114 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\quadflashlib.h" 3
 int fl_eraseNextBootImage( fl_BootImageInfo& bootImageInfo );
-# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
+# 39 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
 
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdlib.h" 1 3
@@ -1179,7 +1179,7 @@ long long _safe_strtoll(const char n[], char * unsafe (&?endptr)[1], int base);
 unsigned long long _safe_strtoull(const char n[], char * unsafe (&?endptr)[1], int base);
 int _safe_system(const char (&?string)[]);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdlib.h" 2 3
-# 17 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
+# 41 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 
@@ -1569,7 +1569,7 @@ int _safe_fclose(FILE * movable fp);
 int _safe_remove(const char file[]);
 int _safe_rename(const char from[], const char to[]);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 2 3
-# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h" 1 3
 
@@ -1685,7 +1685,7 @@ char * alias _safe_strstr(const char * alias s1, const char s2[]);
 
 size_t _safe_strnlen(const char s[], size_t n);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\string.h" 2 3
-# 19 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 1 3
 # 201 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xccompat.h" 3
@@ -1702,7 +1702,7 @@ typedef out buffered port:4 out_buffered_port_4_t;
 typedef out buffered port:8 out_buffered_port_8_t;
 typedef out buffered port:16 out_buffered_port_16_t;
 typedef out buffered port:32 out_buffered_port_32_t;
-# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
+# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h" 1
 # 15 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src\\qspi_access.h"
@@ -1724,13 +1724,13 @@ void qspi_server(server interface qspi_access i);
 void qspi_if_write(client interface qspi_access i, int offset, int size, char buffer[]);
 
 void qspi_if_read(client interface qspi_access i, int offset, int size, char buffer[]);
-# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
+# 45 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
 
 
 # 1 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h" 1
 # 77 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h"
 void debug_printf(char fmt[], ...);
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
+# 47 "C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc" 2
 
 
 

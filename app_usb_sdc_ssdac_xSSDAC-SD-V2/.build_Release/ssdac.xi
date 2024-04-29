@@ -5,7 +5,7 @@
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+# 29 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
 # 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xSSDAC-SD-V2.h" 1 3
@@ -413,7 +413,7 @@ extern tileref usb_tile;
 
 service xscope_host_data(chanend c);;
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+# 29 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 1 3
 # 35 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
@@ -422,7 +422,7 @@ unsigned bitrev(unsigned x);
 unsigned byterev(unsigned x);
 # 59 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 int clz(unsigned x);
-# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+# 30 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
@@ -1054,13 +1054,13 @@ int _safe_fclose(FILE * movable fp);
 int _safe_remove(const char file[]);
 int _safe_rename(const char from[], const char to[]);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 2 3
-# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+# 32 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 
 # 1 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h" 1
 # 77 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h"
 void debug_printf(char fmt[], ...);
-# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+# 34 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xscope.h" 1 3
 # 38 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xscope.h" 3
@@ -1181,7 +1181,7 @@ void xscope_connect_data_from_host(chanend from_host);
 # 420 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xscope.h" 3
 # 1 "C:\\\\Users\\\\takaaki\\\\git\\\\sw_xSSDAC\\\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\\\.build_Release\\\\xscope_probes.h" 1 3
 # 420 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xscope.h" 2 3
-# 19 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+# 35 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h" 1
 # 29 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ssdac.h"
@@ -1201,7 +1201,7 @@ unsigned start_fir(chanend c_in, unsigned sample_rate);
 unsigned start_dac(chanend c_in, chanend ?c_control, unsigned sample_rate);
 
 void ssdac_core(chanend c_in, chanend ?c_control);
-# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+# 36 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h" 1
 # 14 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\SSDAC_MODE.h"
@@ -1230,7 +1230,7 @@ typedef enum {
     _AUDIO_FORMAT_CHANGE = 0,
     _INTERPOLATION_MODE_CHANGE = 1
 } DAC_RETURN_CODE;
-# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h" 1
 # 15 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h"
@@ -1245,22 +1245,22 @@ extern port tp24_interpolator;
 {DAC_RETURN_CODE, unsigned} fir_sinc8(chanend c_in, streaming chanend c_out, chanend ?c_control, unsigned sample_rate);
 
 {DAC_RETURN_CODE, unsigned} fir_sinc4(chanend c_in, streaming chanend c_out, chanend ?c_control, unsigned sample_rate);
-# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ring_buffer.h" 1
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\ring_buffer.h"
 void init_ring_buff();
 void add_sample(int left, int right);
 {int, int} sample_at(int offset);
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+# 39 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 
 
 # 1 ".././src\\ssdac_conf.h" 1
-# 26 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h" 1
-# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
+# 34 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 static int samplesOut[2];
 
 #pragma unsafe arrays
@@ -1285,7 +1285,7 @@ static inline unsigned DoSampleTransfer(chanend c_out, const unsigned underflowW
     }
     return 0;
 }
-# 27 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc" 2
 
 
 
@@ -1300,7 +1300,7 @@ void AudioHwConfig(unsigned samFreq, unsigned mClk, unsigned dsdMode,
 void ReleaseMute();
 
 void ClipIndicator(unsigned state);
-# 57 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+# 73 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 on tile[0]: port tp5 = on tile[0]: 0x10200;
 on tile[0]: port tp23_solver = on tile[0]: 0x10c00;
 on tile[0]: port tp24_interpolator = on tile[0]: 0x10d00;
@@ -1335,7 +1335,7 @@ void ConfigureSerialDacPorts(){
 
 
     configure_clock_src(clk_spi, p_spidac_mclk_in);
-# 101 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+# 117 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
     configure_out_port_strobed_master(p_data_left, p_cs_n_0, clk_spi, 0x00);
     configure_out_port_strobed_master(p_data_right, p_cs_n_1, clk_spi,0x00);
 
@@ -1422,7 +1422,7 @@ void serial_dac_driver_preserve(streaming chanend c_in, unsigned space_count ){
     unsigned data_left, data_right;
     unsigned left, right;
     timer t;
-# 201 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+# 217 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
     time = __builtin_partout_timestamped(p_data_left, 16, __builtin_bitrev(0x80000000));
     time = __builtin_partout_timestamped(p_data_right, 16, __builtin_bitrev(0x80000000));
 
@@ -1453,7 +1453,7 @@ void serial_dac_driver_preserve(streaming chanend c_in, unsigned space_count ){
 
         data_left = __builtin_bitrev(left + 0x80000000);
         data_right = __builtin_bitrev(right + 0x80000000);
-# 239 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
+# 255 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
         time += space_count;
 
 

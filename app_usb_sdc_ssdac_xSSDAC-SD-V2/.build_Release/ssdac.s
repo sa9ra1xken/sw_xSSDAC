@@ -81,54 +81,54 @@ p_cs_n_1.info:
 	.set usage.anon.20,0
 	.set usage.anon.21,0
 	.set usage.anon.22,0
-	.globread configure_audio_process,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:746:12: note: object used here\n    return audio_cmd;\n           ^~~~~~~~~"
-	.globread configure_audio_process,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:745:15: note: object used here\n    } while ( rc == _INTERPOLATION_MODE_CHANGE);\n              ^~"
-	.globread usage.anon.21,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:734:26: note: object used here\n                    {rc, audio_cmd} = spline_solver(\n                         ^~~~~~~~~"
-	.globread usage.anon.20,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:734:22: note: object used here\n                    {rc, audio_cmd} = spline_solver(\n                     ^~"
-	.globread usage.anon.18,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:723:26: note: object used here\n                    {rc, audio_cmd} = passthrough(\n                         ^~~~~~~~~"
-	.globread usage.anon.17,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:723:22: note: object used here\n                    {rc, audio_cmd} = passthrough(\n                     ^~"
-	.globread usage.anon.15,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:687:26: note: object used here\n                    {rc, audio_cmd} = fir_sinc4(\n                         ^~~~~~~~~"
-	.globread usage.anon.14,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:687:22: note: object used here\n                    {rc, audio_cmd} = fir_sinc4(\n                     ^~"
-	.globread usage.anon.12,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:675:26: note: object used here\n                    {rc, audio_cmd} = fir_sinc8(\n                         ^~~~~~~~~"
-	.globread usage.anon.11,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:675:22: note: object used here\n                    {rc, audio_cmd} = fir_sinc8(\n                     ^~"
-	.globread start_fir,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:606:12: note: object used here\n    return audio_cmd;\n           ^~~~~~~~~"
-	.globread usage.anon.9,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:602:14: note: object used here\n        {rc, audio_cmd} = fir_sinc8(c_in, c_super_sample, null, sample_rate);            //FIR Filter\n             ^~~~~~~~~"
-	.globread usage.anon.8,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:602:10: note: object used here\n        {rc, audio_cmd} = fir_sinc8(c_in, c_super_sample, null, sample_rate);            //FIR Filter\n         ^~"
-	.globread start_ssdac,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:587:12: note: object used here\n    return audio_cmd;\n           ^~~~~~~~~"
-	.globread usage.anon.6,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:581:14: note: object used here\n        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, null, sample_rate);\n             ^~~~~~~~~"
-	.globread usage.anon.5,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:581:10: note: object used here\n        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, null, sample_rate);\n         ^~"
-	.globread passthrough,usage.anon.4,4,4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:559:23: note: object used here (bytes 4..8)\n        c_dac_data <: samplesOut[1];\n                      ^~~~~~~~~~~~~"
-	.globread passthrough,usage.anon.4,0,4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:558:23: note: object used here (bytes 0..4)\n        c_dac_data <: samplesOut[0];\n                      ^~~~~~~~~~~~~"
-	.globread spline_solver,usage.anon.4,4,4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:457:39: note: object used here (bytes 4..8)\n        add_sample(samplesOut[0] >> 4,samplesOut[1] >> 4);\n                                      ^~~~~~~~~~~~~"
-	.globread spline_solver,usage.anon.4,0,4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:457:20: note: object used here (bytes 0..4)\n        add_sample(samplesOut[0] >> 4,samplesOut[1] >> 4);\n                   ^~~~~~~~~~~~~"
-	.globwrite usage.anon.22,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:734:26: note: object used here\n                    {rc, audio_cmd} = spline_solver(\n                         ^~~~~~~~~"
-	.globwrite usage.anon.22,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:734:22: note: object used here\n                    {rc, audio_cmd} = spline_solver(\n                     ^~"
-	.globwrite usage.anon.19,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:723:26: note: object used here\n                    {rc, audio_cmd} = passthrough(\n                         ^~~~~~~~~"
-	.globwrite usage.anon.19,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:723:22: note: object used here\n                    {rc, audio_cmd} = passthrough(\n                     ^~"
-	.globwrite usage.anon.16,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:687:26: note: object used here\n                    {rc, audio_cmd} = fir_sinc4(\n                         ^~~~~~~~~"
-	.globwrite usage.anon.16,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:687:22: note: object used here\n                    {rc, audio_cmd} = fir_sinc4(\n                     ^~"
-	.globwrite usage.anon.13,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:675:26: note: object used here\n                    {rc, audio_cmd} = fir_sinc8(\n                         ^~~~~~~~~"
-	.globwrite usage.anon.13,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:675:22: note: object used here\n                    {rc, audio_cmd} = fir_sinc8(\n                     ^~"
-	.globwrite usage.anon.10,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:602:14: note: object used here\n        {rc, audio_cmd} = fir_sinc8(c_in, c_super_sample, null, sample_rate);            //FIR Filter\n             ^~~~~~~~~"
-	.globwrite usage.anon.10,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:602:10: note: object used here\n        {rc, audio_cmd} = fir_sinc8(c_in, c_super_sample, null, sample_rate);            //FIR Filter\n         ^~"
-	.globwrite usage.anon.7,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:581:14: note: object used here\n        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, null, sample_rate);\n             ^~~~~~~~~"
-	.globwrite usage.anon.7,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:581:10: note: object used here\n        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, null, sample_rate);\n         ^~"
-	.globwrite passthrough,tp24_interpolator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:557:9: note: object used here\n        tp24_interpolator <: 1;\n        ^~~~~~~~~~~~~~~~~"
-	.globwrite passthrough,tp23_solver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:540:9: note: object used here\n        tp23_solver <: 1;\n        ^~~~~~~~~~~"
-	.globwrite spline_solver,tp23_solver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:449:9: note: object used here\n        tp23_solver <: 1;\n        ^~~~~~~~~~~"
-	.globwrite interpolator,tp24_interpolator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:402:13: note: object used here\n            tp24_interpolator <: 1;\n            ^~~~~~~~~~~~~~~~~"
-	.globwrite serial_dac_driver_preserve,p_data_right,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:202:32: note: object used here\n    time = partout_timestamped(p_data_right, DAC_BITS, bitrev(0x80000000));\n                               ^~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1173:92: note: expanded from macro \'partout_timestamped\'\n#define partout_timestamped(p, n, val)                       __builtin_partout_timestamped(p, n, val)\n                                                                                           ^"
-	.globwrite serial_dac_driver_preserve,p_data_left,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:201:32: note: object used here\n    time = partout_timestamped(p_data_left, DAC_BITS, bitrev(0x80000000));\n                               ^~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1173:92: note: expanded from macro \'partout_timestamped\'\n#define partout_timestamped(p, n, val)                       __builtin_partout_timestamped(p, n, val)\n                                                                                           ^"
-	.globwrite serial_dac_driver_preserve,tp5,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:211:5: note: object used here\n    tp5 <: 1;\n    ^~~"
-	.globwrite serial_dac_driver,p_data_right,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:147:32: note: object used here\n    time = partout_timestamped(p_data_right, DAC_BITS, bitrev(0x80000000));\n                               ^~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1173:92: note: expanded from macro \'partout_timestamped\'\n#define partout_timestamped(p, n, val)                       __builtin_partout_timestamped(p, n, val)\n                                                                                           ^"
-	.globwrite serial_dac_driver,p_data_left,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:146:32: note: object used here\n    time = partout_timestamped(p_data_left, DAC_BITS, bitrev(0x80000000));\n                               ^~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1173:92: note: expanded from macro \'partout_timestamped\'\n#define partout_timestamped(p, n, val)                       __builtin_partout_timestamped(p, n, val)\n                                                                                           ^"
-	.globwrite ConfigureSerialDacPorts,p_cs_n_1,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:84:18: note: object used here\n    set_port_inv(p_cs_n_1);\n                 ^~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:829:67: note: expanded from macro \'set_port_inv\'\n#define set_port_inv(p)                   __builtin_set_port_inv (p, XS1_SETC_INV_INVERT)\n                                                                  ^"
-	.globwrite ConfigureSerialDacPorts,p_cs_n_0,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:83:18: note: object used here\n    set_port_inv(p_cs_n_0);\n                 ^~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:829:67: note: expanded from macro \'set_port_inv\'\n#define set_port_inv(p)                   __builtin_set_port_inv (p, XS1_SETC_INV_INVERT)\n                                                                  ^"
-	.globwrite ConfigureSerialDacPorts,p_data_right,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:102:39: note: object used here\n    configure_out_port_strobed_master(p_data_right, p_cs_n_1, clk_spi,0x00);\n                                      ^~~~~~~~~~~~"
-	.globwrite ConfigureSerialDacPorts,p_data_left,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:101:39: note: object used here\n    configure_out_port_strobed_master(p_data_left, p_cs_n_0, clk_spi, 0x00);\n                                      ^~~~~~~~~~~"
-	.globwrite ConfigureSerialDacPorts,clk_spi,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:90:25: note: object used here\n    configure_clock_src(clk_spi, p_spidac_mclk_in);\n                        ^~~~~~~"
-	.globwrite ConfigureSerialDacPorts,p_spidac_mclk_in,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:87:18: note: object used here\n    set_port_inv(p_spidac_mclk_in);\n                 ^~~~~~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:829:67: note: expanded from macro \'set_port_inv\'\n#define set_port_inv(p)                   __builtin_set_port_inv (p, XS1_SETC_INV_INVERT)\n                                                                  ^"
-	.globwrite usage.anon.3,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h:30:13: note: object used here\n            samplesOut[i] = tmp;\n            ^~~~~~~~~~~~~"
+	.globread configure_audio_process,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:762:12: note: object used here\n    return audio_cmd;\n           ^~~~~~~~~"
+	.globread configure_audio_process,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:761:15: note: object used here\n    } while ( rc == _INTERPOLATION_MODE_CHANGE);\n              ^~"
+	.globread usage.anon.21,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:750:26: note: object used here\n                    {rc, audio_cmd} = spline_solver(\n                         ^~~~~~~~~"
+	.globread usage.anon.20,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:750:22: note: object used here\n                    {rc, audio_cmd} = spline_solver(\n                     ^~"
+	.globread usage.anon.18,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:739:26: note: object used here\n                    {rc, audio_cmd} = passthrough(\n                         ^~~~~~~~~"
+	.globread usage.anon.17,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:739:22: note: object used here\n                    {rc, audio_cmd} = passthrough(\n                     ^~"
+	.globread usage.anon.15,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:703:26: note: object used here\n                    {rc, audio_cmd} = fir_sinc4(\n                         ^~~~~~~~~"
+	.globread usage.anon.14,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:703:22: note: object used here\n                    {rc, audio_cmd} = fir_sinc4(\n                     ^~"
+	.globread usage.anon.12,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:691:26: note: object used here\n                    {rc, audio_cmd} = fir_sinc8(\n                         ^~~~~~~~~"
+	.globread usage.anon.11,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:691:22: note: object used here\n                    {rc, audio_cmd} = fir_sinc8(\n                     ^~"
+	.globread start_fir,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:622:12: note: object used here\n    return audio_cmd;\n           ^~~~~~~~~"
+	.globread usage.anon.9,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:618:14: note: object used here\n        {rc, audio_cmd} = fir_sinc8(c_in, c_super_sample, null, sample_rate);            //FIR Filter\n             ^~~~~~~~~"
+	.globread usage.anon.8,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:618:10: note: object used here\n        {rc, audio_cmd} = fir_sinc8(c_in, c_super_sample, null, sample_rate);            //FIR Filter\n         ^~"
+	.globread start_ssdac,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:603:12: note: object used here\n    return audio_cmd;\n           ^~~~~~~~~"
+	.globread usage.anon.6,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:597:14: note: object used here\n        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, null, sample_rate);\n             ^~~~~~~~~"
+	.globread usage.anon.5,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:597:10: note: object used here\n        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, null, sample_rate);\n         ^~"
+	.globread passthrough,usage.anon.4,4,4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:575:23: note: object used here (bytes 4..8)\n        c_dac_data <: samplesOut[1];\n                      ^~~~~~~~~~~~~"
+	.globread passthrough,usage.anon.4,0,4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:574:23: note: object used here (bytes 0..4)\n        c_dac_data <: samplesOut[0];\n                      ^~~~~~~~~~~~~"
+	.globread spline_solver,usage.anon.4,4,4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:473:39: note: object used here (bytes 4..8)\n        add_sample(samplesOut[0] >> 4,samplesOut[1] >> 4);\n                                      ^~~~~~~~~~~~~"
+	.globread spline_solver,usage.anon.4,0,4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:473:20: note: object used here (bytes 0..4)\n        add_sample(samplesOut[0] >> 4,samplesOut[1] >> 4);\n                   ^~~~~~~~~~~~~"
+	.globwrite usage.anon.22,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:750:26: note: object used here\n                    {rc, audio_cmd} = spline_solver(\n                         ^~~~~~~~~"
+	.globwrite usage.anon.22,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:750:22: note: object used here\n                    {rc, audio_cmd} = spline_solver(\n                     ^~"
+	.globwrite usage.anon.19,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:739:26: note: object used here\n                    {rc, audio_cmd} = passthrough(\n                         ^~~~~~~~~"
+	.globwrite usage.anon.19,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:739:22: note: object used here\n                    {rc, audio_cmd} = passthrough(\n                     ^~"
+	.globwrite usage.anon.16,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:703:26: note: object used here\n                    {rc, audio_cmd} = fir_sinc4(\n                         ^~~~~~~~~"
+	.globwrite usage.anon.16,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:703:22: note: object used here\n                    {rc, audio_cmd} = fir_sinc4(\n                     ^~"
+	.globwrite usage.anon.13,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:691:26: note: object used here\n                    {rc, audio_cmd} = fir_sinc8(\n                         ^~~~~~~~~"
+	.globwrite usage.anon.13,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:691:22: note: object used here\n                    {rc, audio_cmd} = fir_sinc8(\n                     ^~"
+	.globwrite usage.anon.10,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:618:14: note: object used here\n        {rc, audio_cmd} = fir_sinc8(c_in, c_super_sample, null, sample_rate);            //FIR Filter\n             ^~~~~~~~~"
+	.globwrite usage.anon.10,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:618:10: note: object used here\n        {rc, audio_cmd} = fir_sinc8(c_in, c_super_sample, null, sample_rate);            //FIR Filter\n         ^~"
+	.globwrite usage.anon.7,audio_cmd,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:597:14: note: object used here\n        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, null, sample_rate);\n             ^~~~~~~~~"
+	.globwrite usage.anon.7,rc,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:597:10: note: object used here\n        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, null, sample_rate);\n         ^~"
+	.globwrite passthrough,tp24_interpolator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:573:9: note: object used here\n        tp24_interpolator <: 1;\n        ^~~~~~~~~~~~~~~~~"
+	.globwrite passthrough,tp23_solver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:556:9: note: object used here\n        tp23_solver <: 1;\n        ^~~~~~~~~~~"
+	.globwrite spline_solver,tp23_solver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:465:9: note: object used here\n        tp23_solver <: 1;\n        ^~~~~~~~~~~"
+	.globwrite interpolator,tp24_interpolator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:418:13: note: object used here\n            tp24_interpolator <: 1;\n            ^~~~~~~~~~~~~~~~~"
+	.globwrite serial_dac_driver_preserve,p_data_right,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:218:32: note: object used here\n    time = partout_timestamped(p_data_right, DAC_BITS, bitrev(0x80000000));\n                               ^~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1173:92: note: expanded from macro \'partout_timestamped\'\n#define partout_timestamped(p, n, val)                       __builtin_partout_timestamped(p, n, val)\n                                                                                           ^"
+	.globwrite serial_dac_driver_preserve,p_data_left,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:217:32: note: object used here\n    time = partout_timestamped(p_data_left, DAC_BITS, bitrev(0x80000000));\n                               ^~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1173:92: note: expanded from macro \'partout_timestamped\'\n#define partout_timestamped(p, n, val)                       __builtin_partout_timestamped(p, n, val)\n                                                                                           ^"
+	.globwrite serial_dac_driver_preserve,tp5,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:227:5: note: object used here\n    tp5 <: 1;\n    ^~~"
+	.globwrite serial_dac_driver,p_data_right,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:163:32: note: object used here\n    time = partout_timestamped(p_data_right, DAC_BITS, bitrev(0x80000000));\n                               ^~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1173:92: note: expanded from macro \'partout_timestamped\'\n#define partout_timestamped(p, n, val)                       __builtin_partout_timestamped(p, n, val)\n                                                                                           ^"
+	.globwrite serial_dac_driver,p_data_left,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:162:32: note: object used here\n    time = partout_timestamped(p_data_left, DAC_BITS, bitrev(0x80000000));\n                               ^~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1173:92: note: expanded from macro \'partout_timestamped\'\n#define partout_timestamped(p, n, val)                       __builtin_partout_timestamped(p, n, val)\n                                                                                           ^"
+	.globwrite ConfigureSerialDacPorts,p_cs_n_1,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:100:18: note: object used here\n    set_port_inv(p_cs_n_1);\n                 ^~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:829:67: note: expanded from macro \'set_port_inv\'\n#define set_port_inv(p)                   __builtin_set_port_inv (p, XS1_SETC_INV_INVERT)\n                                                                  ^"
+	.globwrite ConfigureSerialDacPorts,p_cs_n_0,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:99:18: note: object used here\n    set_port_inv(p_cs_n_0);\n                 ^~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:829:67: note: expanded from macro \'set_port_inv\'\n#define set_port_inv(p)                   __builtin_set_port_inv (p, XS1_SETC_INV_INVERT)\n                                                                  ^"
+	.globwrite ConfigureSerialDacPorts,p_data_right,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:118:39: note: object used here\n    configure_out_port_strobed_master(p_data_right, p_cs_n_1, clk_spi,0x00);\n                                      ^~~~~~~~~~~~"
+	.globwrite ConfigureSerialDacPorts,p_data_left,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:117:39: note: object used here\n    configure_out_port_strobed_master(p_data_left, p_cs_n_0, clk_spi, 0x00);\n                                      ^~~~~~~~~~~"
+	.globwrite ConfigureSerialDacPorts,clk_spi,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:106:25: note: object used here\n    configure_clock_src(clk_spi, p_spidac_mclk_in);\n                        ^~~~~~~"
+	.globwrite ConfigureSerialDacPorts,p_spidac_mclk_in,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:103:18: note: object used here\n    set_port_inv(p_spidac_mclk_in);\n                 ^~~~~~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:829:67: note: expanded from macro \'set_port_inv\'\n#define set_port_inv(p)                   __builtin_set_port_inv (p, XS1_SETC_INV_INVERT)\n                                                                  ^"
+	.globwrite usage.anon.3,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h:53:13: note: object used here\n            samplesOut[i] = tmp;\n            ^~~~~~~~~~~~~"
 	.call ssdac_core,configure_audio_process
 	.call ssdac_core,AudioHwInit
 	.call ssdac_core,AudioHwConfig
@@ -179,54 +179,54 @@ p_cs_n_1.info:
 	.call usage.anon.2,delay_ticks_longlong
 	.call usage.anon.1,delay_ticks_longlong
 	.call usage.anon.0,delay_ticks_longlong
-	.par usage.anon.22,interpolator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:732:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par usage.anon.22,clipper,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:732:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par usage.anon.22,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:732:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par usage.anon.22,oneshot_indicator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:732:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par interpolator,clipper,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:732:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par interpolator,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:732:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par interpolator,oneshot_indicator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:732:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par clipper,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:732:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par clipper,oneshot_indicator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:732:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par serial_dac_driver,oneshot_indicator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:732:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par usage.anon.20,usage.anon.21,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:734:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = spline_solver(\n                    ^~~~~~~~~~~~~~~"
-	.par usage.anon.20,spline_solver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:734:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = spline_solver(\n                    ^~~~~~~~~~~~~~~"
-	.par usage.anon.21,spline_solver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:734:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = spline_solver(\n                    ^~~~~~~~~~~~~~~"
-	.par usage.anon.19,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:721:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par usage.anon.17,usage.anon.18,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:723:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = passthrough(\n                    ^~~~~~~~~~~~~~~"
-	.par usage.anon.17,passthrough,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:723:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = passthrough(\n                    ^~~~~~~~~~~~~~~"
-	.par usage.anon.18,passthrough,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:723:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = passthrough(\n                    ^~~~~~~~~~~~~~~"
-	.par usage.anon.16,clipper,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:685:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par usage.anon.16,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:685:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par clipper,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:685:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par usage.anon.14,usage.anon.15,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:687:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = fir_sinc4(\n                    ^~~~~~~~~~~~~~~"
-	.par usage.anon.14,fir_sinc4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:687:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = fir_sinc4(\n                    ^~~~~~~~~~~~~~~"
-	.par usage.anon.15,fir_sinc4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:687:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = fir_sinc4(\n                    ^~~~~~~~~~~~~~~"
-	.par usage.anon.13,clipper,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:673:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par usage.anon.13,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:673:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par clipper,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:673:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
-	.par usage.anon.11,usage.anon.12,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:675:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = fir_sinc8(\n                    ^~~~~~~~~~~~~~~"
-	.par usage.anon.11,fir_sinc8,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:675:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = fir_sinc8(\n                    ^~~~~~~~~~~~~~~"
-	.par usage.anon.12,fir_sinc8,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:675:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = fir_sinc8(\n                    ^~~~~~~~~~~~~~~"
-	.par usage.anon.10,clipper,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:600:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usage.anon.10,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:600:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par clipper,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:600:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usage.anon.8,usage.anon.9,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:602:9: error: use of `%s\' causes an ambiguous evaluation\n        {rc, audio_cmd} = fir_sinc8(c_in, c_super_sample, null, sample_rate);            //FIR Filter\n        ^~~~~~~~~~~~~~~"
-	.par usage.anon.8,fir_sinc8,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:602:9: error: use of `%s\' causes an ambiguous evaluation\n        {rc, audio_cmd} = fir_sinc8(c_in, c_super_sample, null, sample_rate);            //FIR Filter\n        ^~~~~~~~~~~~~~~"
-	.par usage.anon.9,fir_sinc8,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:602:9: error: use of `%s\' causes an ambiguous evaluation\n        {rc, audio_cmd} = fir_sinc8(c_in, c_super_sample, null, sample_rate);            //FIR Filter\n        ^~~~~~~~~~~~~~~"
-	.par usage.anon.7,interpolator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:579:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usage.anon.7,clipper,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:579:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usage.anon.7,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:579:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usage.anon.7,oneshot_indicator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:579:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par interpolator,clipper,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:579:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par interpolator,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:579:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par interpolator,oneshot_indicator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:579:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par clipper,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:579:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par clipper,oneshot_indicator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:579:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par serial_dac_driver,oneshot_indicator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:579:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
-	.par usage.anon.5,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:581:9: error: use of `%s\' causes an ambiguous evaluation\n        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, null, sample_rate);\n        ^~~~~~~~~~~~~~~"
-	.par usage.anon.5,spline_solver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:581:9: error: use of `%s\' causes an ambiguous evaluation\n        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, null, sample_rate);\n        ^~~~~~~~~~~~~~~"
-	.par usage.anon.6,spline_solver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:581:9: error: use of `%s\' causes an ambiguous evaluation\n        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, null, sample_rate);\n        ^~~~~~~~~~~~~~~"
+	.par usage.anon.22,interpolator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:748:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par usage.anon.22,clipper,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:748:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par usage.anon.22,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:748:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par usage.anon.22,oneshot_indicator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:748:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par interpolator,clipper,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:748:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par interpolator,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:748:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par interpolator,oneshot_indicator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:748:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par clipper,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:748:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par clipper,oneshot_indicator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:748:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par serial_dac_driver,oneshot_indicator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:748:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par usage.anon.20,usage.anon.21,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:750:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = spline_solver(\n                    ^~~~~~~~~~~~~~~"
+	.par usage.anon.20,spline_solver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:750:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = spline_solver(\n                    ^~~~~~~~~~~~~~~"
+	.par usage.anon.21,spline_solver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:750:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = spline_solver(\n                    ^~~~~~~~~~~~~~~"
+	.par usage.anon.19,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:737:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par usage.anon.17,usage.anon.18,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:739:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = passthrough(\n                    ^~~~~~~~~~~~~~~"
+	.par usage.anon.17,passthrough,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:739:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = passthrough(\n                    ^~~~~~~~~~~~~~~"
+	.par usage.anon.18,passthrough,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:739:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = passthrough(\n                    ^~~~~~~~~~~~~~~"
+	.par usage.anon.16,clipper,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:701:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par usage.anon.16,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:701:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par clipper,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:701:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par usage.anon.14,usage.anon.15,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:703:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = fir_sinc4(\n                    ^~~~~~~~~~~~~~~"
+	.par usage.anon.14,fir_sinc4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:703:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = fir_sinc4(\n                    ^~~~~~~~~~~~~~~"
+	.par usage.anon.15,fir_sinc4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:703:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = fir_sinc4(\n                    ^~~~~~~~~~~~~~~"
+	.par usage.anon.13,clipper,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:689:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par usage.anon.13,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:689:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par clipper,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:689:17: error: use of `%s\' violates parallel usage rules\n                par\n                ^~~"
+	.par usage.anon.11,usage.anon.12,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:691:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = fir_sinc8(\n                    ^~~~~~~~~~~~~~~"
+	.par usage.anon.11,fir_sinc8,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:691:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = fir_sinc8(\n                    ^~~~~~~~~~~~~~~"
+	.par usage.anon.12,fir_sinc8,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:691:21: error: use of `%s\' causes an ambiguous evaluation\n                    {rc, audio_cmd} = fir_sinc8(\n                    ^~~~~~~~~~~~~~~"
+	.par usage.anon.10,clipper,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:616:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usage.anon.10,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:616:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par clipper,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:616:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usage.anon.8,usage.anon.9,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:618:9: error: use of `%s\' causes an ambiguous evaluation\n        {rc, audio_cmd} = fir_sinc8(c_in, c_super_sample, null, sample_rate);            //FIR Filter\n        ^~~~~~~~~~~~~~~"
+	.par usage.anon.8,fir_sinc8,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:618:9: error: use of `%s\' causes an ambiguous evaluation\n        {rc, audio_cmd} = fir_sinc8(c_in, c_super_sample, null, sample_rate);            //FIR Filter\n        ^~~~~~~~~~~~~~~"
+	.par usage.anon.9,fir_sinc8,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:618:9: error: use of `%s\' causes an ambiguous evaluation\n        {rc, audio_cmd} = fir_sinc8(c_in, c_super_sample, null, sample_rate);            //FIR Filter\n        ^~~~~~~~~~~~~~~"
+	.par usage.anon.7,interpolator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usage.anon.7,clipper,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usage.anon.7,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usage.anon.7,oneshot_indicator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par interpolator,clipper,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par interpolator,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par interpolator,oneshot_indicator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par clipper,serial_dac_driver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par clipper,oneshot_indicator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par serial_dac_driver,oneshot_indicator,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:595:5: error: use of `%s\' violates parallel usage rules\n    par\n    ^~~"
+	.par usage.anon.5,usage.anon.6,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:597:9: error: use of `%s\' causes an ambiguous evaluation\n        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, null, sample_rate);\n        ^~~~~~~~~~~~~~~"
+	.par usage.anon.5,spline_solver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:597:9: error: use of `%s\' causes an ambiguous evaluation\n        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, null, sample_rate);\n        ^~~~~~~~~~~~~~~"
+	.par usage.anon.6,spline_solver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:597:9: error: use of `%s\' causes an ambiguous evaluation\n        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, null, sample_rate);\n        ^~~~~~~~~~~~~~~"
 	.set usage.anon.3.locnoside, 0
 	.set ConfigureSerialDacPorts.locnoside, 0
 	.set oneshot_indicator.locnoside, 0
@@ -253,14 +253,14 @@ p_cs_n_1.info:
 	.set start_ssdac.locnoglobalaccess, 0
 	.set start_fir.locnoglobalaccess, 0
 	.set configure_audio_process.locnoglobalaccess, 0
-	.globpassesref configure_out_port_strobed_master, clk_spi,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:102:5: error: call to `configure_out_port_strobed_master\' in `ConfigureSerialDacPorts\' makes alias of global \'clk_spi\'\n    configure_out_port_strobed_master(p_data_right, p_cs_n_1, clk_spi,0x00);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref configure_out_port_strobed_master, p_cs_n_1,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:102:5: error: call to `configure_out_port_strobed_master\' in `ConfigureSerialDacPorts\' makes alias of global \'p_cs_n_1\'\n    configure_out_port_strobed_master(p_data_right, p_cs_n_1, clk_spi,0x00);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref configure_out_port_strobed_master, p_data_right,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:102:5: error: call to `configure_out_port_strobed_master\' in `ConfigureSerialDacPorts\' makes alias of global \'p_data_right\'\n    configure_out_port_strobed_master(p_data_right, p_cs_n_1, clk_spi,0x00);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref configure_out_port_strobed_master, clk_spi,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:101:5: error: call to `configure_out_port_strobed_master\' in `ConfigureSerialDacPorts\' makes alias of global \'clk_spi\'\n    configure_out_port_strobed_master(p_data_left, p_cs_n_0, clk_spi, 0x00);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref configure_out_port_strobed_master, p_cs_n_0,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:101:5: error: call to `configure_out_port_strobed_master\' in `ConfigureSerialDacPorts\' makes alias of global \'p_cs_n_0\'\n    configure_out_port_strobed_master(p_data_left, p_cs_n_0, clk_spi, 0x00);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref configure_out_port_strobed_master, p_data_left,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:101:5: error: call to `configure_out_port_strobed_master\' in `ConfigureSerialDacPorts\' makes alias of global \'p_data_left\'\n    configure_out_port_strobed_master(p_data_left, p_cs_n_0, clk_spi, 0x00);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref configure_clock_src, p_spidac_mclk_in,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:90:5: error: call to `configure_clock_src\' in `ConfigureSerialDacPorts\' makes alias of global \'p_spidac_mclk_in\'\n    configure_clock_src(clk_spi, p_spidac_mclk_in);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref configure_clock_src, clk_spi,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:90:5: error: call to `configure_clock_src\' in `ConfigureSerialDacPorts\' makes alias of global \'clk_spi\'\n    configure_clock_src(clk_spi, p_spidac_mclk_in);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref configure_out_port_strobed_master, clk_spi,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:118:5: error: call to `configure_out_port_strobed_master\' in `ConfigureSerialDacPorts\' makes alias of global \'clk_spi\'\n    configure_out_port_strobed_master(p_data_right, p_cs_n_1, clk_spi,0x00);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref configure_out_port_strobed_master, p_cs_n_1,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:118:5: error: call to `configure_out_port_strobed_master\' in `ConfigureSerialDacPorts\' makes alias of global \'p_cs_n_1\'\n    configure_out_port_strobed_master(p_data_right, p_cs_n_1, clk_spi,0x00);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref configure_out_port_strobed_master, p_data_right,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:118:5: error: call to `configure_out_port_strobed_master\' in `ConfigureSerialDacPorts\' makes alias of global \'p_data_right\'\n    configure_out_port_strobed_master(p_data_right, p_cs_n_1, clk_spi,0x00);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref configure_out_port_strobed_master, clk_spi,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:117:5: error: call to `configure_out_port_strobed_master\' in `ConfigureSerialDacPorts\' makes alias of global \'clk_spi\'\n    configure_out_port_strobed_master(p_data_left, p_cs_n_0, clk_spi, 0x00);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref configure_out_port_strobed_master, p_cs_n_0,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:117:5: error: call to `configure_out_port_strobed_master\' in `ConfigureSerialDacPorts\' makes alias of global \'p_cs_n_0\'\n    configure_out_port_strobed_master(p_data_left, p_cs_n_0, clk_spi, 0x00);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref configure_out_port_strobed_master, p_data_left,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:117:5: error: call to `configure_out_port_strobed_master\' in `ConfigureSerialDacPorts\' makes alias of global \'p_data_left\'\n    configure_out_port_strobed_master(p_data_left, p_cs_n_0, clk_spi, 0x00);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref configure_clock_src, p_spidac_mclk_in,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:106:5: error: call to `configure_clock_src\' in `ConfigureSerialDacPorts\' makes alias of global \'p_spidac_mclk_in\'\n    configure_clock_src(clk_spi, p_spidac_mclk_in);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref configure_clock_src, clk_spi,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:106:5: error: call to `configure_clock_src\' in `ConfigureSerialDacPorts\' makes alias of global \'clk_spi\'\n    configure_clock_src(clk_spi, p_spidac_mclk_in);\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 	.overlay_subgraph_conflict start_ssdac.task.0, start_ssdac.task.interpolator.1, start_ssdac.task.clipper.2, start_ssdac.task.serial_dac_driver.3, start_ssdac.task.oneshot_indicator.4
 	.overlay_subgraph_conflict start_fir.task.0, start_fir.task.clipper.1, start_fir.task.serial_dac_driver.2
 	.overlay_subgraph_conflict configure_audio_process.task.8, configure_audio_process.task.interpolator.9, configure_audio_process.task.clipper.10, configure_audio_process.task.serial_dac_driver.11, configure_audio_process.task.oneshot_indicator.12
@@ -292,7 +292,7 @@ p_cs_n_1.info:
 	.cc_top ConfigureSerialDacPorts.function,ConfigureSerialDacPorts
 ConfigureSerialDacPorts:                # @ConfigureSerialDacPorts
 .Lfunc_begin0:
-	.loc	2 81 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:81:0
+	.loc	2 97 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:97:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -305,7 +305,7 @@ ConfigureSerialDacPorts:                # @ConfigureSerialDacPorts
 	.cfi_def_cfa_offset 24
 .Ltmp1:
 	.cfi_offset 15, 0
-	.loc	2 83 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:83:0
+	.loc	2 99 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:99:0
 .Ltmp2:
 	std r5, r4, sp[1]               # 4-byte Folded Spill
 .Ltmp3:
@@ -318,41 +318,41 @@ ConfigureSerialDacPorts:                # @ConfigureSerialDacPorts
 .Ltmp6:
 	.cfi_offset 7, -4
 	ldw r4, dp[p_cs_n_0]
-	.loc	2 83 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:83:0
+	.loc	2 99 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:99:0
 	setc res[r4], 24591
-	.loc	2 84 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:84:0
+	.loc	2 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:100:0
 	ldw r5, dp[p_cs_n_1]
-	.loc	2 84 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:84:0
+	.loc	2 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:100:0
 	setc res[r5], 24591
-	.loc	2 87 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:87:0
+	.loc	2 103 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:103:0
 	ldw r1, dp[p_spidac_mclk_in]
-	.loc	2 87 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:87:0
+	.loc	2 103 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:103:0
 	setc res[r1], 24591
-	.loc	2 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:90:0
+	.loc	2 106 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:106:0
 	ldw r6, dp[clk_spi]
-	.loc	2 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:90:0
+	.loc	2 106 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:106:0
 	{
 		mov r0, r6
 		nop
 	}
 .Lxta.call_labels0:
 	bl configure_clock_src
-	.loc	2 101 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:101:0
+	.loc	2 117 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:117:0
 	ldw r0, dp[p_data_left]
 	{
 		ldc r7, 0
 		mov r1, r4
 	}
-	.loc	2 101 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:101:0
+	.loc	2 117 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:117:0
 	{
 		mov r2, r6
 		mov r3, r7
 	}
 .Lxta.call_labels1:
 	bl configure_out_port_strobed_master
-	.loc	2 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:102:0
+	.loc	2 118 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:118:0
 	ldw r0, dp[p_data_right]
-	.loc	2 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:102:0
+	.loc	2 118 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:118:0
 	{
 		mov r1, r5
 		mov r2, r6
@@ -363,7 +363,7 @@ ConfigureSerialDacPorts:                # @ConfigureSerialDacPorts
 	}
 .Lxta.call_labels2:
 	bl configure_out_port_strobed_master
-	.loc	2 106 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:106:0
+	.loc	2 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:0
 	{
 		setc res[r6], 15
 		nop
@@ -396,7 +396,7 @@ ConfigureSerialDacPorts:                # @ConfigureSerialDacPorts
 	.cc_top start_ssdac.function,start_ssdac
 start_ssdac:                            # @start_ssdac
 .Lfunc_begin1:
-	.loc	2 570 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:570:0
+	.loc	2 586 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:586:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -417,81 +417,81 @@ start_ssdac:                            # @start_ssdac
 		getr r0, 2
 		stw r1, sp[3]
 	}
-	.loc	2 572 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:572:0
+	.loc	2 588 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:588:0
 .Ltmp11:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	2 572 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:572:0
+	.loc	2 588 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:588:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	2 572 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:572:0
+	.loc	2 588 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:588:0
 	{
 		setd res[r1], r0
 		stw r0, sp[4]
 	}
-	.loc	2 572 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:572:0
+	.loc	2 588 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:588:0
 	{
 		getr r0, 2
 		stw r1, sp[5]
 	}
-	.loc	2 573 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:573:0
+	.loc	2 589 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:589:0
 .Ltmp12:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	2 573 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:573:0
+	.loc	2 589 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:589:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	2 573 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:573:0
+	.loc	2 589 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:589:0
 	{
 		setd res[r1], r0
 		stw r0, sp[6]
 	}
-	.loc	2 573 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:573:0
+	.loc	2 589 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:589:0
 	{
 		getr r0, 2
 		stw r1, sp[7]
 	}
-	.loc	2 574 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:574:0
+	.loc	2 590 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:590:0
 .Ltmp13:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	2 574 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:574:0
+	.loc	2 590 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:590:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	2 574 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:574:0
+	.loc	2 590 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:590:0
 	{
 		setd res[r1], r0
 		stw r0, sp[8]
 	}
-	.loc	2 574 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:574:0
+	.loc	2 590 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:590:0
 	{
 		getr r0, 2
 		stw r1, sp[9]
 	}
-	.loc	2 575 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:575:0
+	.loc	2 591 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:591:0
 .Ltmp14:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	2 575 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:575:0
+	.loc	2 591 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:591:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	2 575 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:575:0
+	.loc	2 591 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:591:0
 	{
 		setd res[r1], r0
 		stw r0, sp[10]
@@ -500,7 +500,7 @@ start_ssdac:                            # @start_ssdac
 		nop
 		stw r1, sp[11]
 	}
-	.loc	2 575 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:575:0
+	.loc	2 591 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:591:0
 	ldaw r1, dp[par.desc.1]
 	{
 		ldaw r0, sp[2]
@@ -509,7 +509,7 @@ start_ssdac:                            # @start_ssdac
 	#DEBUG_VALUE: start_ssdac:c_in <- [R0+0]
 	bl __start_other_cores
 .Ltmp15:
-	.loc	2 587 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:587:5
+	.loc	2 603 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:603:5
 	ldw r0, dp[audio_cmd]
 	{
 		nop
@@ -633,7 +633,7 @@ start_ssdac:                            # @start_ssdac
 	.cc_top start_fir.function,start_fir
 start_fir:                              # @start_fir
 .Lfunc_begin2:
-	.loc	2 593 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:593:0
+	.loc	2 609 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:609:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -654,39 +654,39 @@ start_fir:                              # @start_fir
 		getr r0, 2
 		stw r1, sp[3]
 	}
-	.loc	2 595 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:595:0
+	.loc	2 611 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:611:0
 .Ltmp20:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	2 595 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:595:0
+	.loc	2 611 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:611:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	2 595 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:595:0
+	.loc	2 611 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:611:0
 	{
 		setd res[r1], r0
 		stw r0, sp[4]
 	}
-	.loc	2 595 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:595:0
+	.loc	2 611 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:611:0
 	{
 		getr r0, 2
 		stw r1, sp[5]
 	}
-	.loc	2 596 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:596:0
+	.loc	2 612 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:612:0
 .Ltmp21:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	2 596 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:596:0
+	.loc	2 612 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:612:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	2 596 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:596:0
+	.loc	2 612 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:612:0
 	{
 		setd res[r1], r0
 		stw r0, sp[6]
@@ -695,7 +695,7 @@ start_fir:                              # @start_fir
 		nop
 		stw r1, sp[7]
 	}
-	.loc	2 596 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:596:0
+	.loc	2 612 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:612:0
 	ldaw r1, dp[par.desc.2]
 	{
 		ldaw r0, sp[2]
@@ -704,7 +704,7 @@ start_fir:                              # @start_fir
 	#DEBUG_VALUE: start_fir:c_in <- [R0+0]
 	bl __start_other_cores
 .Ltmp22:
-	.loc	2 606 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:606:5
+	.loc	2 622 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:622:5
 	ldw r0, dp[audio_cmd]
 	{
 		nop
@@ -796,7 +796,7 @@ start_fir:                              # @start_fir
 	.cc_top ssdac_core.function,ssdac_core
 ssdac_core:                             # @ssdac_core
 .Lfunc_begin3:
-	.loc	2 750 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:750:0
+	.loc	2 766 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:766:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -850,7 +850,7 @@ ssdac_core:                             # @ssdac_core
 	}
 .Ltmp37:
 	#DEBUG_VALUE: firstRun <- 1
-	.loc	2 758 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:758:0
+	.loc	2 774 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:774:0
 .Lxta.call_labels3:
 	bl AudioHwInit
 	ldc r9, 44100
@@ -866,7 +866,7 @@ ssdac_core:                             # @ssdac_core
 	#DEBUG_VALUE: ssdac_core:c_in <- R5
 	#DEBUG_VALUE: ssdac_core:c_control <- R4
 	#DEBUG_VALUE: curSamFreq <- R9
-	.loc	2 781 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:781:0
+	.loc	2 797 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:797:0
 .Lxta.endpoint_labels0:
 	{
 		in r9, res[r5]
@@ -910,7 +910,7 @@ ssdac_core:                             # @ssdac_core
 	#DEBUG_VALUE: ssdac_core:c_control <- R4
 	#DEBUG_VALUE: firstRun <- 0
 	#DEBUG_VALUE: cur_interpolation_mode <- [R7+0]
-	.loc	2 790 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:790:0
+	.loc	2 806 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:806:0
 .Lxta.endpoint_labels1:
 	{
 		in r0, res[r5]
@@ -919,7 +919,7 @@ ssdac_core:                             # @ssdac_core
 .Ltmp42:
 	#DEBUG_VALUE: dsdMode <- R0
 	#DEBUG_VALUE: curSamRes_DAC <- R0
-	.loc	2 791 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:791:0
+	.loc	2 807 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:807:0
 .Lxta.endpoint_labels2:
 	{
 		in r0, res[r5]
@@ -937,14 +937,14 @@ ssdac_core:                             # @ssdac_core
 .Lxtalabel6:
 	#DEBUG_VALUE: ssdac_core:c_in <- R5
 	#DEBUG_VALUE: ssdac_core:c_control <- R4
-	.loc	2 762 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:762:0
+	.loc	2 778 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:778:0
 	{
 		mov r0, r9
 		nop
 	}
 .Lxta.call_labels4:
 	bl _SAudioHwConfig_0
-	.loc	2 764 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:764:9
+	.loc	2 780 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:780:9
 	{
 		zext r8, 1
 		nop
@@ -980,7 +980,7 @@ ssdac_core:                             # @ssdac_core
 .Lxtalabel9:
 	#DEBUG_VALUE: ssdac_core:c_in <- R5
 	#DEBUG_VALUE: ssdac_core:c_control <- R4
-	.loc	2 771 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:771:0
+	.loc	2 787 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:787:0
 .Lxta.endpoint_labels3:
 	{
 		outct res[r5], 1
@@ -994,7 +994,7 @@ ssdac_core:                             # @ssdac_core
 	#DEBUG_VALUE: ssdac_core:c_control <- R4
 	#DEBUG_VALUE: firstRun <- 0
 	#DEBUG_VALUE: cur_interpolation_mode <- [R7+0]
-	.loc	2 777 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:777:0
+	.loc	2 793 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:793:0
 	{
 		mov r0, r5
 		mov r1, r4
@@ -1011,7 +1011,7 @@ ssdac_core:                             # @ssdac_core
 	}
 .Ltmp50:
 	#DEBUG_VALUE: command <- R10
-	.loc	2 779 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:779:9
+	.loc	2 795 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:795:9
 	{
 		eq r0, r10, 8
 		nop
@@ -1035,7 +1035,7 @@ ssdac_core:                             # @ssdac_core
 .Lxtalabel12:
 	#DEBUG_VALUE: ssdac_core:c_in <- R5
 	#DEBUG_VALUE: ssdac_core:c_control <- R4
-	.loc	2 790 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:790:0
+	.loc	2 806 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:806:0
 .Lxta.endpoint_labels4:
 	{
 		in r0, res[r5]
@@ -1043,7 +1043,7 @@ ssdac_core:                             # @ssdac_core
 	}
 .Ltmp53:
 	#DEBUG_VALUE: dsdMode <- R0
-	.loc	2 791 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:791:0
+	.loc	2 807 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:807:0
 .Lxta.endpoint_labels5:
 	{
 		in r0, res[r5]
@@ -1058,7 +1058,7 @@ ssdac_core:                             # @ssdac_core
 	#DEBUG_VALUE: ssdac_core:c_in <- R5
 	#DEBUG_VALUE: ssdac_core:c_control <- R4
 	ldw r6, cp[.LCPI3_0]
-	.loc	2 762 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:762:0
+	.loc	2 778 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:778:0
 	{
 		mov r0, r6
 		nop
@@ -1068,7 +1068,7 @@ ssdac_core:                             # @ssdac_core
 .Ltmp55:
 	#DEBUG_VALUE: cur_interpolation_mode <- [R7+0]
 	#DEBUG_VALUE: firstRun <- 0
-	.loc	2 777 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:777:0
+	.loc	2 793 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:793:0
 	{
 		mov r0, r5
 		mov r1, r4
@@ -1081,7 +1081,7 @@ ssdac_core:                             # @ssdac_core
 	bl configure_audio_process
 .Ltmp56:
 	#DEBUG_VALUE: command <- R0
-	.loc	2 779 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:779:9
+	.loc	2 795 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:795:9
 	{
 		eq r1, r0, 4
 		nop
@@ -1105,7 +1105,7 @@ ssdac_core:                             # @ssdac_core
 .Lxtalabel15:
 	#DEBUG_VALUE: ssdac_core:c_in <- R5
 	#DEBUG_VALUE: ssdac_core:c_control <- R4
-	.loc	2 790 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:790:0
+	.loc	2 806 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:806:0
 .Lxta.endpoint_labels6:
 	{
 		in r0, res[r5]
@@ -1113,7 +1113,7 @@ ssdac_core:                             # @ssdac_core
 	}
 .Ltmp59:
 	#DEBUG_VALUE: dsdMode <- R0
-	.loc	2 791 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:791:0
+	.loc	2 807 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:807:0
 .Lxta.endpoint_labels7:
 	{
 		in r0, res[r5]
@@ -1128,7 +1128,7 @@ ssdac_core:                             # @ssdac_core
 	#DEBUG_VALUE: ssdac_core:c_in <- R5
 	#DEBUG_VALUE: ssdac_core:c_control <- R4
 	ldw r6, cp[.LCPI3_1]
-	.loc	2 762 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:762:0
+	.loc	2 778 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:778:0
 	{
 		mov r0, r6
 		nop
@@ -1138,7 +1138,7 @@ ssdac_core:                             # @ssdac_core
 .Ltmp61:
 	#DEBUG_VALUE: cur_interpolation_mode <- [R7+0]
 	#DEBUG_VALUE: firstRun <- 0
-	.loc	2 777 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:777:0
+	.loc	2 793 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:793:0
 	{
 		mov r0, r5
 		mov r1, r4
@@ -1151,7 +1151,7 @@ ssdac_core:                             # @ssdac_core
 	bl configure_audio_process
 .Ltmp62:
 	#DEBUG_VALUE: command <- R0
-	.loc	2 779 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:779:9
+	.loc	2 795 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:795:9
 	{
 		eq r1, r0, 4
 		nop
@@ -1198,7 +1198,7 @@ ssdac_core:                             # @ssdac_core
 	.cc_top oneshot_indicator.function,oneshot_indicator
 oneshot_indicator:                      # @oneshot_indicator
 .Lfunc_begin4:
-	.loc	2 112 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:112:0
+	.loc	2 128 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:128:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1227,26 +1227,26 @@ oneshot_indicator:                      # @oneshot_indicator
 		stw r6, sp[4]
 	}
 .Ltmp71:
-	.loc	2 122 9 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		get r11, id
 		nop
 	}
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	ldaw r0, dp[__timers]
 	{
 		nop
 		ldw r5, r0[r11]
 	}
 	ldap r11, .Ltmp72
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		setv res[r4], r11
 		nop
 	}
 	ldw r6, cp[.LCPI4_0]
 .Ltmp73:
-	.loc	2 119 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:119:0
+	.loc	2 135 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:135:0
 	{
 		gettime r0
 		nop
@@ -1254,39 +1254,39 @@ oneshot_indicator:                      # @oneshot_indicator
 .Ltmp74:
 	#DEBUG_VALUE: now <- R0
 	#DEBUG_VALUE: timeout <- R0
-	.loc	2 120 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:120:0
+	.loc	2 136 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:136:0
 	{
 		clre
 		add r0, r0, r6
 	}
 .Ltmp75:
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		setd res[r5], r0
 		nop
 	}
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		setc res[r5], 9
 		nop
 	}
 	ldap r11, .Ltmp76
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		setv res[r5], r11
 		nop
 	}
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		eeu res[r5]
 		nop
 	}
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		eeu res[r4]
 		nop
 	}
-	.loc	2 130 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:130:0
+	.loc	2 146 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:146:0
 
 	.xtabranch .LBB4_1, .LBB4_2
 	{
@@ -1300,7 +1300,7 @@ oneshot_indicator:                      # @oneshot_indicator
 .Ltmp77:
 	#DEBUG_VALUE: oneshot_indicator:c_trigger <- R4
 	#DEBUG_VALUE: holdtime <- 10000000
-	.loc	2 123 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:123:0
+	.loc	2 139 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:139:0
 .Lxta.endpoint_labels8:
 	{
 		in r0, res[r5]
@@ -1311,11 +1311,11 @@ oneshot_indicator:                      # @oneshot_indicator
 		nop
 	}
 .Ltmp78:
-	.loc	2 124 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:124:0
+	.loc	2 140 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:140:0
 .Lxta.call_labels10:
 	bl ClipIndicator
 .Ltmp79:
-	.loc	2 119 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:119:0
+	.loc	2 135 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:135:0
 	{
 		gettime r0
 		nop
@@ -1323,39 +1323,39 @@ oneshot_indicator:                      # @oneshot_indicator
 .Ltmp80:
 	#DEBUG_VALUE: now <- R0
 	#DEBUG_VALUE: timeout <- R0
-	.loc	2 120 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:120:0
+	.loc	2 136 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:136:0
 	{
 		clre
 		add r0, r0, r6
 	}
 .Ltmp81:
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		setd res[r5], r0
 		nop
 	}
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		setc res[r5], 9
 		nop
 	}
 	ldap r11, .Ltmp76
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		setv res[r5], r11
 		nop
 	}
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		eeu res[r5]
 		nop
 	}
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		eeu res[r4]
 		nop
 	}
-	.loc	2 130 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:130:0
+	.loc	2 146 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:146:0
 
 	.xtabranch .LBB4_1, .LBB4_2
 	{
@@ -1369,7 +1369,7 @@ oneshot_indicator:                      # @oneshot_indicator
 .Lxtalabel20:
 	#DEBUG_VALUE: oneshot_indicator:c_trigger <- R4
 	#DEBUG_VALUE: holdtime <- 10000000
-	.loc	2 126 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:126:0
+	.loc	2 142 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:142:0
 .Lxta.endpoint_labels9:
 	{
 		in r6, res[r4]
@@ -1377,7 +1377,7 @@ oneshot_indicator:                      # @oneshot_indicator
 	}
 .Ltmp83:
 	#DEBUG_VALUE: holdtime <- R6
-	.loc	2 128 17                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:128:17
+	.loc	2 144 17                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:144:17
 	bf r6, .LBB4_4
 .Ltmp84:
 # BB#3:                                 # %ifdone10
@@ -1389,11 +1389,11 @@ oneshot_indicator:                      # @oneshot_indicator
 		mkmsk r0, 1
 		nop
 	}
-	.loc	2 129 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:129:0
+	.loc	2 145 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:145:0
 .Lxta.call_labels11:
 	bl ClipIndicator
 .Ltmp85:
-	.loc	2 119 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:119:0
+	.loc	2 135 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:135:0
 	{
 		gettime r0
 		nop
@@ -1401,39 +1401,39 @@ oneshot_indicator:                      # @oneshot_indicator
 .Ltmp86:
 	#DEBUG_VALUE: now <- R0
 	#DEBUG_VALUE: timeout <- R0
-	.loc	2 120 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:120:0
+	.loc	2 136 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:136:0
 	{
 		clre
 		add r0, r0, r6
 	}
 .Ltmp87:
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		setd res[r5], r0
 		nop
 	}
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		setc res[r5], 9
 		nop
 	}
 	ldap r11, .Ltmp76
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		setv res[r5], r11
 		nop
 	}
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		eeu res[r5]
 		nop
 	}
-	.loc	2 122 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:122:9
+	.loc	2 138 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:9
 	{
 		eeu res[r4]
 		nop
 	}
-	.loc	2 130 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:130:0
+	.loc	2 146 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:146:0
 
 	.xtabranch .LBB4_1, .LBB4_2
 	{
@@ -1481,7 +1481,7 @@ oneshot_indicator:                      # @oneshot_indicator
 	.cc_top serial_dac_driver.function,serial_dac_driver
 serial_dac_driver:                      # @serial_dac_driver
 .Lfunc_begin5:
-	.loc	2 138 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:138:0
+	.loc	2 154 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:154:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1526,54 +1526,54 @@ serial_dac_driver:                      # @serial_dac_driver
 	}
 .Ltmp101:
 	#DEBUG_VALUE: serial_dac_driver:c_in <- R4
-	.loc	2 146 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:146:0
+	.loc	2 162 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:162:0
 	ldw r6, dp[p_data_left]
 	ldw r7, cp[.LCPI5_0]
-	.loc	2 146 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:146:0
+	.loc	2 162 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:162:0
 	{
 		bitrev r0, r7
 		nop
 	}
-	.loc	2 146 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:146:0
+	.loc	2 162 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:162:0
 .Lxta.endpoint_labels10:
 	outpw res[r6], r0, 16
-	.loc	2 146 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:146:0
+	.loc	2 162 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:162:0
 	{
 		syncr res[r6]
 		nop
 	}
-	.loc	2 146 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:146:0
+	.loc	2 162 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:162:0
 	{
 		getts r1, res[r6]
 		nop
 	}
 .Ltmp102:
 	#DEBUG_VALUE: time <- R1
-	.loc	2 147 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:147:0
+	.loc	2 163 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:163:0
 	ldw r8, dp[p_data_right]
-	.loc	2 147 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:147:0
+	.loc	2 163 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:163:0
 .Lxta.endpoint_labels11:
 	outpw res[r8], r0, 16
-	.loc	2 147 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:147:0
+	.loc	2 163 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:163:0
 	{
 		syncr res[r8]
 		nop
 	}
-	.loc	2 147 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:147:0
+	.loc	2 163 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:163:0
 	{
 		getts r10, res[r8]
 		nop
 	}
 .Ltmp103:
 	#DEBUG_VALUE: time <- R10
-	.loc	2 148 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:148:0
+	.loc	2 164 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:164:0
 	ldaw r9, r5[4]
-	.loc	2 150 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:150:0
+	.loc	2 166 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:166:0
 .Lxta.call_labels12:
 	bl ReleaseMute
-	.loc	2 152 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:152:5
+	.loc	2 168 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:168:5
 	lda16 r0, r10[r5]
-	.loc	2 152 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:152:5
+	.loc	2 168 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:168:5
 	ldaw r0, r0[8]
 	bu .LBB5_1
 .Ltmp104:
@@ -1581,7 +1581,7 @@ serial_dac_driver:                      # @serial_dac_driver
                                         #   in Loop: Header=BB5_1 Depth=1
 .Lxtalabel23:
 	#DEBUG_VALUE: serial_dac_driver:c_in <- R4
-	.loc	2 162 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:162:0
+	.loc	2 178 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:178:0
 .Lxta.endpoint_labels12:
 	{
 		in r1, res[r4]
@@ -1589,7 +1589,7 @@ serial_dac_driver:                      # @serial_dac_driver
 	}
 .Ltmp105:
 	#DEBUG_VALUE: left <- R1
-	.loc	2 163 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:163:0
+	.loc	2 179 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:179:0
 .Lxta.endpoint_labels13:
 	{
 		in r2, res[r4]
@@ -1597,38 +1597,38 @@ serial_dac_driver:                      # @serial_dac_driver
 	}
 .Ltmp106:
 	#DEBUG_VALUE: right <- R2
-	.loc	2 166 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:166:0
+	.loc	2 182 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:182:0
 	xor r1, r1, r7
 .Ltmp107:
-	.loc	2 166 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:166:0
+	.loc	2 182 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:182:0
 	{
 		bitrev r1, r1
 		nop
 	}
 .Ltmp108:
 	#DEBUG_VALUE: data_left <- R1
-	.loc	2 167 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:167:0
+	.loc	2 183 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:183:0
 	xor r2, r2, r7
 .Ltmp109:
 	#DEBUG_VALUE: data_right <- R2
-	.loc	2 167 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:167:0
+	.loc	2 183 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:183:0
 	{
 		setpt res[r6], r0
 		bitrev r2, r2
 	}
 .Ltmp110:
-	.loc	2 172 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:172:0
+	.loc	2 188 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:188:0
 .Lxta.endpoint_labels14:
 	outpw res[r6], r1, 16
-	.loc	2 173 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:173:0
+	.loc	2 189 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:189:0
 	{
 		setpt res[r8], r0
 		nop
 	}
-	.loc	2 173 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:173:0
+	.loc	2 189 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:189:0
 .Lxta.endpoint_labels15:
 	outpw res[r8], r2, 16
-	.loc	2 152 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:152:5
+	.loc	2 168 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:168:5
 	{
 		add r0, r0, r9
 		nop
@@ -1638,7 +1638,7 @@ serial_dac_driver:                      # @serial_dac_driver
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel24:
 	#DEBUG_VALUE: serial_dac_driver:c_in <- R4
-	.loc	2 155 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:155:9
+	.loc	2 171 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:171:9
 	{
 		testct r1, res[r4]
 		nop
@@ -1649,13 +1649,13 @@ serial_dac_driver:                      # @serial_dac_driver
                                         #   in Loop: Header=BB5_1 Depth=1
 .Lxtalabel25:
 	#DEBUG_VALUE: serial_dac_driver:c_in <- R4
-	.loc	2 156 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:156:13
+	.loc	2 172 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:172:13
 .Lxta.endpoint_labels16:
 	{
 		inct r1, res[r4]
 		nop
 	}
-	.loc	2 156 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:156:13
+	.loc	2 172 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:172:13
 	{
 		eq r1, r1, 1
 		nop
@@ -1705,7 +1705,7 @@ serial_dac_driver:                      # @serial_dac_driver
 	.cc_top serial_dac_driver_preserve.function,serial_dac_driver_preserve
 serial_dac_driver_preserve:             # @serial_dac_driver_preserve
 .Lfunc_begin6:
-	.loc	2 181 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:181:0
+	.loc	2 197 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:197:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1743,66 +1743,66 @@ serial_dac_driver_preserve:             # @serial_dac_driver_preserve
 		mov r4, r0
 	}
 .Ltmp124:
-	.loc	2 201 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:201:0
+	.loc	2 217 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:217:0
 	ldw r6, dp[p_data_left]
 	ldw r7, cp[.LCPI6_0]
-	.loc	2 201 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:201:0
+	.loc	2 217 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:217:0
 	{
 		bitrev r0, r7
 		nop
 	}
-	.loc	2 201 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:201:0
+	.loc	2 217 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:217:0
 .Lxta.endpoint_labels17:
 	outpw res[r6], r0, 16
-	.loc	2 201 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:201:0
+	.loc	2 217 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:217:0
 	{
 		syncr res[r6]
 		nop
 	}
-	.loc	2 201 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:201:0
+	.loc	2 217 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:217:0
 	{
 		getts r1, res[r6]
 		nop
 	}
 .Ltmp125:
 	#DEBUG_VALUE: time <- R1
-	.loc	2 202 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:202:0
+	.loc	2 218 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:218:0
 	ldw r8, dp[p_data_right]
-	.loc	2 202 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:202:0
+	.loc	2 218 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:218:0
 .Lxta.endpoint_labels18:
 	outpw res[r8], r0, 16
-	.loc	2 202 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:202:0
+	.loc	2 218 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:218:0
 	{
 		syncr res[r8]
 		nop
 	}
-	.loc	2 202 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:202:0
+	.loc	2 218 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:218:0
 	{
 		getts r9, res[r8]
 		nop
 	}
 .Ltmp126:
 	#DEBUG_VALUE: time <- R9
-	.loc	2 211 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:211:13
+	.loc	2 227 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:227:13
 	ldw r0, dp[tp5]
 	{
 		mkmsk r1, 1
 		nop
 	}
-	.loc	2 211 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:211:13
+	.loc	2 227 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:227:13
 .Lxta.endpoint_labels19:
 	{
 		out res[r0], r1
 		nop
 	}
-	.loc	2 212 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:212:0
+	.loc	2 228 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:228:0
 .Lxta.call_labels13:
 	bl ReleaseMute
-	.loc	2 214 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:214:5
+	.loc	2 230 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:230:5
 	lda16 r0, r9[r5]
-	.loc	2 214 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:214:5
+	.loc	2 230 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:230:5
 	ldaw r0, r0[4]
-	.loc	2 214 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:214:5
+	.loc	2 230 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:230:5
 	ldaw r1, r5[4]
 	bu .LBB6_1
 .Ltmp127:
@@ -1810,7 +1810,7 @@ serial_dac_driver_preserve:             # @serial_dac_driver_preserve
                                         #   in Loop: Header=BB6_1 Depth=1
 .Lxtalabel28:
 	#DEBUG_VALUE: serial_dac_driver_preserve:c_in <- R4
-	.loc	2 224 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:224:0
+	.loc	2 240 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:240:0
 .Lxta.endpoint_labels20:
 	{
 		in r2, res[r4]
@@ -1818,7 +1818,7 @@ serial_dac_driver_preserve:             # @serial_dac_driver_preserve
 	}
 .Ltmp128:
 	#DEBUG_VALUE: left <- R2
-	.loc	2 225 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:225:0
+	.loc	2 241 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:241:0
 .Lxta.endpoint_labels21:
 	{
 		in r3, res[r4]
@@ -1826,38 +1826,38 @@ serial_dac_driver_preserve:             # @serial_dac_driver_preserve
 	}
 .Ltmp129:
 	#DEBUG_VALUE: right <- R3
-	.loc	2 229 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:229:0
+	.loc	2 245 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:245:0
 	xor r2, r2, r7
 .Ltmp130:
-	.loc	2 229 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:229:0
+	.loc	2 245 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:245:0
 	{
 		bitrev r2, r2
 		nop
 	}
 .Ltmp131:
 	#DEBUG_VALUE: data_left <- R2
-	.loc	2 230 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:230:0
+	.loc	2 246 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:246:0
 	xor r3, r3, r7
 .Ltmp132:
 	#DEBUG_VALUE: data_right <- R3
-	.loc	2 230 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:230:0
+	.loc	2 246 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:246:0
 	{
 		setpt res[r6], r0
 		bitrev r3, r3
 	}
 .Ltmp133:
-	.loc	2 244 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:244:0
+	.loc	2 260 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:260:0
 .Lxta.endpoint_labels22:
 	outpw res[r6], r2, 16
-	.loc	2 245 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:245:0
+	.loc	2 261 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:261:0
 	{
 		setpt res[r8], r0
 		nop
 	}
-	.loc	2 245 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:245:0
+	.loc	2 261 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:261:0
 .Lxta.endpoint_labels23:
 	outpw res[r8], r3, 16
-	.loc	2 214 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:214:5
+	.loc	2 230 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:230:5
 	{
 		add r0, r0, r1
 		nop
@@ -1867,7 +1867,7 @@ serial_dac_driver_preserve:             # @serial_dac_driver_preserve
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel29:
 	#DEBUG_VALUE: serial_dac_driver_preserve:c_in <- R4
-	.loc	2 217 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:217:9
+	.loc	2 233 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:233:9
 	{
 		testct r2, res[r4]
 		nop
@@ -1878,13 +1878,13 @@ serial_dac_driver_preserve:             # @serial_dac_driver_preserve
                                         #   in Loop: Header=BB6_1 Depth=1
 .Lxtalabel30:
 	#DEBUG_VALUE: serial_dac_driver_preserve:c_in <- R4
-	.loc	2 218 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:218:13
+	.loc	2 234 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:234:13
 .Lxta.endpoint_labels24:
 	{
 		inct r2, res[r4]
 		nop
 	}
-	.loc	2 218 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:218:13
+	.loc	2 234 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:234:13
 	{
 		eq r2, r2, 1
 		nop
@@ -1965,7 +1965,7 @@ serial_dac_driver_preserve:             # @serial_dac_driver_preserve
 	.cc_top clipper.function,clipper
 clipper:                                # @clipper
 .Lfunc_begin7:
-	.loc	2 259 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:259:0
+	.loc	2 275 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:275:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -2027,18 +2027,18 @@ clipper:                                # @clipper
 	#DEBUG_VALUE: clipper:c_out <- R1
 	#DEBUG_VALUE: clipper:c_error <- [SP+4]
 	#DEBUG_VALUE: ovf <- 0
-	.loc	2 308 27 prologue_end   # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:308:27
+	.loc	2 324 27 prologue_end   # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:324:27
 	{
 		shl r11, r10, 3
 		nop
 	}
-	.loc	2 308 27                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:308:27
+	.loc	2 324 27                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:324:27
 .Lxta.endpoint_labels25:
 	{
 		out res[r1], r11
 		shl r11, r7, 3
 	}
-	.loc	2 309 28                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:309:28
+	.loc	2 325 28                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:325:28
 .Lxta.endpoint_labels26:
 	{
 		out res[r1], r11
@@ -2051,7 +2051,7 @@ clipper:                                # @clipper
 	#DEBUG_VALUE: clipper:c_in <- R0
 	#DEBUG_VALUE: clipper:c_out <- R1
 	#DEBUG_VALUE: clipper:c_error <- [SP+4]
-	.loc	2 268 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:268:9
+	.loc	2 284 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:284:9
 	{
 		testct r11, res[r0]
 		nop
@@ -2064,13 +2064,13 @@ clipper:                                # @clipper
 	#DEBUG_VALUE: clipper:c_in <- R0
 	#DEBUG_VALUE: clipper:c_out <- R1
 	#DEBUG_VALUE: clipper:c_error <- [SP+4]
-	.loc	2 269 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:269:13
+	.loc	2 285 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:285:13
 .Lxta.endpoint_labels27:
 	{
 		inct r11, res[r0]
 		nop
 	}
-	.loc	2 269 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:269:13
+	.loc	2 285 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:285:13
 	{
 		eq r11, r11, 1
 		nop
@@ -2083,7 +2083,7 @@ clipper:                                # @clipper
 	#DEBUG_VALUE: clipper:c_in <- R0
 	#DEBUG_VALUE: clipper:c_out <- R1
 	#DEBUG_VALUE: clipper:c_error <- [SP+4]
-	.loc	2 275 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:275:0
+	.loc	2 291 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:291:0
 .Lxta.endpoint_labels28:
 	{
 		in r10, res[r0]
@@ -2093,14 +2093,14 @@ clipper:                                # @clipper
 	#DEBUG_VALUE: left <- R10
 	#DEBUG_VALUE: ovf <- 0
 	#DEBUG_VALUE: right <- R11
-	.loc	2 276 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:276:0
+	.loc	2 292 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:292:0
 .Lxta.endpoint_labels29:
 	{
 		in r11, res[r0]
 		and r5, r10, r3
 	}
 .Ltmp154:
-	.loc	2 280 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:280:0
+	.loc	2 296 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:296:0
 	{
 		eq r7, r5, r4
 		nop
@@ -2159,12 +2159,12 @@ clipper:                                # @clipper
 	#DEBUG_VALUE: clipper:c_error <- [SP+4]
 	#DEBUG_VALUE: right <- R11
 	#DEBUG_VALUE: ovf <- 0
-	.loc	2 291 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:291:0
+	.loc	2 307 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:307:0
 	{
 		and r9, r11, r3
 		nop
 	}
-	.loc	2 291 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:291:0
+	.loc	2 307 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:307:0
 	{
 		eq r6, r9, r8
 		mov r7, r2
@@ -2218,7 +2218,7 @@ clipper:                                # @clipper
 		ldw r11, sp[1]
 	}
 	ldw r5, cp[.LCPI7_5]
-	.loc	2 304 38                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:304:38
+	.loc	2 320 38                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:320:38
 .Lxta.endpoint_labels30:
 	{
 		out res[r11], r5
@@ -2250,18 +2250,18 @@ clipper:                                # @clipper
 	#DEBUG_VALUE: clipper:c_out <- R1
 	#DEBUG_VALUE: clipper:c_error <- [SP+4]
 	#DEBUG_VALUE: ovf <- 0
-	.loc	2 308 27                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:308:27
+	.loc	2 324 27                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:324:27
 	{
 		shl r2, r8, 3
 		nop
 	}
-	.loc	2 308 27                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:308:27
+	.loc	2 324 27                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:324:27
 .Lxta.endpoint_labels31:
 	{
 		out res[r1], r2
 		shl r2, r7, 3
 	}
-	.loc	2 309 28                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:309:28
+	.loc	2 325 28                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:325:28
 .Lxta.endpoint_labels32:
 	{
 		out res[r1], r2
@@ -2274,7 +2274,7 @@ clipper:                                # @clipper
 	#DEBUG_VALUE: clipper:c_in <- R0
 	#DEBUG_VALUE: clipper:c_out <- R1
 	#DEBUG_VALUE: clipper:c_error <- [SP+4]
-	.loc	2 268 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:268:9
+	.loc	2 284 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:284:9
 	{
 		testct r2, res[r0]
 		nop
@@ -2287,13 +2287,13 @@ clipper:                                # @clipper
 	#DEBUG_VALUE: clipper:c_in <- R0
 	#DEBUG_VALUE: clipper:c_out <- R1
 	#DEBUG_VALUE: clipper:c_error <- [SP+4]
-	.loc	2 269 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:269:13
+	.loc	2 285 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:285:13
 .Lxta.endpoint_labels33:
 	{
 		inct r2, res[r0]
 		nop
 	}
-	.loc	2 269 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:269:13
+	.loc	2 285 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:285:13
 	{
 		eq r2, r2, 1
 		nop
@@ -2306,7 +2306,7 @@ clipper:                                # @clipper
 	#DEBUG_VALUE: clipper:c_in <- R0
 	#DEBUG_VALUE: clipper:c_out <- R1
 	#DEBUG_VALUE: clipper:c_error <- [SP+4]
-	.loc	2 275 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:275:0
+	.loc	2 291 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:291:0
 .Lxta.endpoint_labels34:
 	{
 		in r8, res[r0]
@@ -2316,14 +2316,14 @@ clipper:                                # @clipper
 	#DEBUG_VALUE: left <- R8
 	#DEBUG_VALUE: ovf <- 0
 	#DEBUG_VALUE: right <- R7
-	.loc	2 276 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:276:0
+	.loc	2 292 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:292:0
 .Lxta.endpoint_labels35:
 	{
 		in r7, res[r0]
 		and r9, r8, r3
 	}
 .Ltmp171:
-	.loc	2 280 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:280:0
+	.loc	2 296 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:296:0
 	{
 		eq r2, r9, r11
 		nop
@@ -2378,12 +2378,12 @@ clipper:                                # @clipper
 	#DEBUG_VALUE: clipper:c_error <- [SP+4]
 	#DEBUG_VALUE: right <- R7
 	#DEBUG_VALUE: ovf <- 0
-	.loc	2 291 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:291:0
+	.loc	2 307 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:307:0
 	{
 		and r9, r7, r3
 		nop
 	}
-	.loc	2 291 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:291:0
+	.loc	2 307 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:307:0
 	{
 		eq r2, r9, r11
 		nop
@@ -2435,7 +2435,7 @@ clipper:                                # @clipper
 	#DEBUG_VALUE: clipper:c_out <- R1
 	#DEBUG_VALUE: clipper:c_error <- [SP+4]
 	#DEBUG_VALUE: clipper:c_error <- R1
-	.loc	2 270 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:270:0
+	.loc	2 286 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:286:0
 .Lxta.endpoint_labels36:
 	{
 		outct res[r1], 1
@@ -2450,7 +2450,7 @@ clipper:                                # @clipper
 		ldc r0, 0
 		nop
 	}
-	.loc	2 271 51                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:271:51
+	.loc	2 287 51                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:287:51
 .Lxta.endpoint_labels37:
 	{
 		out res[r1], r0
@@ -2556,7 +2556,7 @@ clipper:                                # @clipper
 	.cc_top interpolator.function,interpolator
 interpolator:                           # @interpolator
 .Lfunc_begin8:
-	.loc	2 320 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:320:0
+	.loc	2 336 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:336:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -2598,7 +2598,7 @@ interpolator:                           # @interpolator
 		stw r1, sp[3]
 	}
 	ldw r3, cp[.LCPI8_0]
-	.loc	2 328 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:328:0
+	.loc	2 344 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:344:0
 .Ltmp193:
 	{
 		lss r3, r3, r2
@@ -2778,7 +2778,7 @@ interpolator:                           # @interpolator
 		mkmsk r7, 1
 		nop
 	}
-	.loc	2 352 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:352:0
+	.loc	2 368 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:368:0
 .Ltmp215:
 	{
 		shl r0, r7, r5
@@ -2791,16 +2791,16 @@ interpolator:                           # @interpolator
 		stw r0, sp[2]
 	}
 .Ltmp217:
-	.loc	2 353 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:353:0
+	.loc	2 369 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:369:0
 	xor r10, r5, r0
 .Ltmp218:
 	#DEBUG_VALUE: msb_pos_x1 <- R10
-	.loc	2 354 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:354:0
+	.loc	2 370 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:370:0
 	{
 		shl r2, r5, 1
 		nop
 	}
-	.loc	2 354 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:354:0
+	.loc	2 370 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:370:0
 	xor r2, r2, r0
 .Ltmp219:
 	#DEBUG_VALUE: msb_pos_x2 <- R2
@@ -2808,11 +2808,11 @@ interpolator:                           # @interpolator
 		nop
 		stw r2, sp[5]
 	}
-	.loc	2 355 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:355:0
+	.loc	2 371 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:371:0
 .Ltmp220:
 	lda16 r2, r5[r5]
 .Ltmp221:
-	.loc	2 355 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:355:0
+	.loc	2 371 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:371:0
 	xor r0, r2, r0
 .Ltmp222:
 	#DEBUG_VALUE: msb_pos_x3 <- R0
@@ -2821,13 +2821,13 @@ interpolator:                           # @interpolator
 		stw r0, sp[4]
 	}
 .Ltmp223:
-	.loc	2 358 20                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:358:20
+	.loc	2 374 20                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:374:20
 .Lxta.endpoint_labels38:
 	{
 		out res[r1], r0
 		nop
 	}
-	.loc	2 359 20                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:359:20
+	.loc	2 375 20                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:375:20
 .Lxta.endpoint_labels39:
 	{
 		out res[r1], r0
@@ -2844,7 +2844,7 @@ interpolator:                           # @interpolator
 	#DEBUG_VALUE: msb_pos_x1 <- R10
 	#DEBUG_VALUE: msb_pos_x2 <- [SP+20]
 	#DEBUG_VALUE: msb_pos_x3 <- [SP+16]
-	.loc	2 374 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:374:0
+	.loc	2 390 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:390:0
 .Lxta.endpoint_labels40:
 	{
 		in r0, res[r5]
@@ -2852,7 +2852,7 @@ interpolator:                           # @interpolator
 	}
 .Ltmp225:
 	#DEBUG_VALUE: la <- R0
-	.loc	2 375 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:375:0
+	.loc	2 391 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:391:0
 .Lxta.endpoint_labels41:
 	{
 		in r4, res[r5]
@@ -2860,7 +2860,7 @@ interpolator:                           # @interpolator
 	}
 .Ltmp226:
 	#DEBUG_VALUE: ra <- R4
-	.loc	2 377 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:377:0
+	.loc	2 393 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:393:0
 .Lxta.endpoint_labels42:
 	{
 		in r2, res[r5]
@@ -2868,7 +2868,7 @@ interpolator:                           # @interpolator
 	}
 .Ltmp227:
 	#DEBUG_VALUE: lb <- R2
-	.loc	2 378 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:378:0
+	.loc	2 394 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:394:0
 .Lxta.endpoint_labels43:
 	{
 		in r11, res[r5]
@@ -2876,7 +2876,7 @@ interpolator:                           # @interpolator
 	}
 .Ltmp228:
 	#DEBUG_VALUE: rb <- R11
-	.loc	2 380 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:380:0
+	.loc	2 396 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:396:0
 .Lxta.endpoint_labels44:
 	{
 		in r3, res[r5]
@@ -2884,7 +2884,7 @@ interpolator:                           # @interpolator
 	}
 .Ltmp229:
 	#DEBUG_VALUE: lc <- R3
-	.loc	2 381 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:381:0
+	.loc	2 397 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:397:0
 .Lxta.endpoint_labels45:
 	{
 		in r6, res[r5]
@@ -2892,7 +2892,7 @@ interpolator:                           # @interpolator
 	}
 .Ltmp230:
 	#DEBUG_VALUE: rc <- R6
-	.loc	2 383 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:383:0
+	.loc	2 399 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:399:0
 .Lxta.endpoint_labels46:
 	{
 		in r9, res[r5]
@@ -2902,7 +2902,7 @@ interpolator:                           # @interpolator
 	#DEBUG_VALUE: ld <- [SP+52]
 	#DEBUG_VALUE: x1 <- 0
 	#DEBUG_VALUE: rd <- [SP+48]
-	.loc	2 384 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:384:0
+	.loc	2 400 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:400:0
 .Lxta.endpoint_labels47:
 	{
 		in r5, res[r5]
@@ -2910,35 +2910,35 @@ interpolator:                           # @interpolator
 	}
 .Ltmp232:
 	#DEBUG_VALUE: interpolator:c_spline_param <- [SP+4]
-	.loc	2 394 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:394:0
+	.loc	2 410 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:410:0
 	{
 		shl r3, r3, 1
 		stw r5, sp[12]
 	}
 .Ltmp233:
-	.loc	2 395 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:395:0
+	.loc	2 411 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:411:0
 	{
 		shl r2, r2, 1
 		stw r3, sp[11]
 	}
 .Ltmp234:
-	.loc	2 396 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:396:0
+	.loc	2 412 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:412:0
 	{
 		shl r0, r0, 1
 		stw r2, sp[10]
 	}
 .Ltmp235:
-	.loc	2 398 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:398:0
+	.loc	2 414 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:414:0
 	{
 		shl r0, r6, 1
 		stw r0, sp[9]
 	}
-	.loc	2 399 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:399:0
+	.loc	2 415 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:415:0
 	{
 		shl r0, r11, 1
 		stw r0, sp[8]
 	}
-	.loc	2 400 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:400:0
+	.loc	2 416 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:416:0
 	{
 		shl r0, r4, 1
 		stw r0, sp[7]
@@ -2954,7 +2954,7 @@ interpolator:                           # @interpolator
 .Ltmp236:
 	#DEBUG_VALUE: msb_pos_x3 <- R0
 	#DEBUG_VALUE: msb_pos_x2 <- R2
-	.loc	2 402 35                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:402:35
+	.loc	2 418 35                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:418:35
 	ldw r0, dp[tp24_interpolator]
 .Ltmp237:
 	{
@@ -2980,16 +2980,16 @@ interpolator:                           # @interpolator
 		mov r3, r7
 		nop
 	}
-	.loc	2 388 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:388:0
+	.loc	2 404 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:404:0
 	mul r7, r6, r6
 .Ltmp239:
 	#DEBUG_VALUE: x2 <- R7
 	#DEBUG_VALUE: ss_factor <- [SP+8]
-	.loc	2 389 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:389:0
+	.loc	2 405 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:405:0
 	mul r8, r7, r6
 .Ltmp240:
 	#DEBUG_VALUE: x3 <- R8
-	.loc	2 394 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:394:0
+	.loc	2 410 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:410:0
 	{
 		shl r1, r6, r10
 		mov r0, r5
@@ -3006,7 +3006,7 @@ interpolator:                           # @interpolator
 		ldw r2, sp[11]
 	}
 .Ltmp243:
-	.loc	2 394 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:394:0
+	.loc	2 410 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:410:0
 	#APP
 	maccs r10, r5, r2, r1
 	#NO_APP
@@ -3014,13 +3014,13 @@ interpolator:                           # @interpolator
 		nop
 		ldw r2, sp[5]
 	}
-	.loc	2 395 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:395:0
+	.loc	2 411 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:411:0
 	{
 		shl r7, r7, r2
 		ldw r2, sp[10]
 	}
 .Ltmp244:
-	.loc	2 395 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:395:0
+	.loc	2 411 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:411:0
 	#APP
 	maccs r10, r5, r2, r7
 	#NO_APP
@@ -3028,17 +3028,17 @@ interpolator:                           # @interpolator
 		nop
 		ldw r2, sp[4]
 	}
-	.loc	2 396 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:396:0
+	.loc	2 412 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:412:0
 	{
 		shl r8, r8, r2
 		ldw r2, sp[9]
 	}
 .Ltmp245:
-	.loc	2 396 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:396:0
+	.loc	2 412 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:412:0
 	#APP
 	maccs r10, r5, r2, r8
 	#NO_APP
-	.loc	2 398 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:398:0
+	.loc	2 414 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:414:0
 	{
 		mov r5, r0
 		ldw r2, sp[12]
@@ -3054,7 +3054,7 @@ interpolator:                           # @interpolator
 		nop
 		ldw r1, sp[7]
 	}
-	.loc	2 399 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:399:0
+	.loc	2 415 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:415:0
 	#APP
 	maccs r2, r5, r1, r7
 	#NO_APP
@@ -3069,7 +3069,7 @@ interpolator:                           # @interpolator
 		nop
 		ldw r3, sp[6]
 	}
-	.loc	2 400 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:400:0
+	.loc	2 416 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:416:0
 	#APP
 	maccs r2, r5, r3, r8
 	#NO_APP
@@ -3079,7 +3079,7 @@ interpolator:                           # @interpolator
 		mov r5, r0
 		ldw r3, sp[2]
 	}
-	.loc	2 402 35                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:402:35
+	.loc	2 418 35                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:418:35
 .Lxta.endpoint_labels48:
 	{
 		out res[r11], r7
@@ -3093,12 +3093,12 @@ interpolator:                           # @interpolator
 		mov r10, r4
 	}
 .Ltmp250:
-	.loc	2 404 42                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:404:42
+	.loc	2 420 42                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:420:42
 	{
 		shl r0, r2, 1
 		nop
 	}
-	.loc	2 404 42                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:404:42
+	.loc	2 420 42                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:420:42
 .Lxta.endpoint_labels50:
 	{
 		out res[r1], r0
@@ -3106,14 +3106,14 @@ interpolator:                           # @interpolator
 	}
 .Ltmp251:
 	#DEBUG_VALUE: x1 <- R6
-	.loc	2 405 35                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:405:35
+	.loc	2 421 35                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:421:35
 .Lxta.endpoint_labels51:
 	{
 		out res[r11], r5
 		add r6, r6, 1
 	}
 .Ltmp252:
-	.loc	2 386 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:386:0
+	.loc	2 402 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:402:0
 	{
 		lsu r0, r6, r3
 		nop
@@ -3140,7 +3140,7 @@ interpolator:                           # @interpolator
 	}
 .Ltmp254:
 	#DEBUG_VALUE: interpolator:c_spline_param <- R5
-	.loc	2 367 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:367:9
+	.loc	2 383 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:383:9
 	{
 		testct r0, res[r5]
 		nop
@@ -3157,14 +3157,14 @@ interpolator:                           # @interpolator
 	#DEBUG_VALUE: msb_pos_x1 <- R10
 	#DEBUG_VALUE: msb_pos_x2 <- [SP+20]
 	#DEBUG_VALUE: msb_pos_x3 <- [SP+16]
-	.loc	2 368 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:368:13
+	.loc	2 384 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:384:13
 .Lxta.endpoint_labels52:
 	{
 		inct r0, res[r5]
 		nop
 	}
 .Ltmp257:
-	.loc	2 368 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:368:13
+	.loc	2 384 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:384:13
 	{
 		eq r0, r0, 1
 		nop
@@ -3174,7 +3174,7 @@ interpolator:                           # @interpolator
 # BB#19:                                # %iftrue24
 .Lxtalabel79:
 	#DEBUG_VALUE: interpolator:c_dac_data <- R1
-	.loc	2 369 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:369:0
+	.loc	2 385 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:385:0
 .Lxta.endpoint_labels53:
 	{
 		outct res[r1], 1
@@ -3232,7 +3232,7 @@ interpolator:                           # @interpolator
 	.cc_top spline_solver.function,spline_solver
 spline_solver:                          # @spline_solver
 .Lfunc_begin9:
-	.loc	2 419 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:419:0
+	.loc	2 435 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:435:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -3324,7 +3324,7 @@ spline_solver:                          # @spline_solver
 		ldc r8, 0
 		stw r2, sp[6]
 	}
-	.loc	2 449 25 prologue_end   # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:449:25
+	.loc	2 465 25 prologue_end   # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:465:25
 .Ltmp273:
 	ldw r3, dp[tp23_solver]
 .Ltmp274:
@@ -3387,14 +3387,14 @@ spline_solver:                          # @spline_solver
 		nop
 		ldw r0, sp[13]
 	}
-	.loc	2 513 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:513:34
+	.loc	2 529 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:529:34
 .Ltmp277:
 .Lxta.endpoint_labels54:
 	{
 		out res[r9], r0
 		nop
 	}
-	.loc	2 514 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:514:34
+	.loc	2 530 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:530:34
 .Lxta.endpoint_labels55:
 	{
 		out res[r9], r1
@@ -3410,7 +3410,7 @@ spline_solver:                          # @spline_solver
 	}
 .Ltmp278:
 	#DEBUG_VALUE: spline_solver:c_in <- R2
-	.loc	2 449 25                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:449:25
+	.loc	2 465 25                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:465:25
 	ldw r3, dp[tp23_solver]
 .Ltmp279:
 .LBB9_1:                                # %LoopBody
@@ -3470,43 +3470,43 @@ spline_solver:                          # @spline_solver
 	}
 .Ltmp281:
 	#DEBUG_VALUE: spline_solver:c_control <- R1
-	.loc	2 440 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:440:49
+	.loc	2 456 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:456:49
 	{
 		outct res[r1], 1
 		nop
 	}
-	.loc	2 440 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:440:49
+	.loc	2 456 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:456:49
 	{
 		chkct res[r1], 1
 		nop
 	}
-	.loc	2 440 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:440:49
+	.loc	2 456 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:456:49
 .Lxta.endpoint_labels56:
 	{
 		out res[r1], r0
 		nop
 	}
-	.loc	2 440 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:440:49
+	.loc	2 456 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:456:49
 	{
 		outct res[r1], 1
 		nop
 	}
-	.loc	2 440 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:440:49
+	.loc	2 456 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:456:49
 	{
 		chkct res[r1], 1
 		nop
 	}
-	.loc	2 441 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:441:0
+	.loc	2 457 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:457:0
 	{
 		chkct res[r1], 1
 		nop
 	}
-	.loc	2 441 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:441:0
+	.loc	2 457 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:457:0
 	{
 		outct res[r1], 1
 		nop
 	}
-	.loc	2 441 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:441:0
+	.loc	2 457 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:457:0
 .Lxta.endpoint_labels57:
 	{
 		in r11, res[r1]
@@ -3514,19 +3514,19 @@ spline_solver:                          # @spline_solver
 	}
 .Ltmp282:
 	#DEBUG_VALUE: mode <- R11
-	.loc	2 441 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:441:0
+	.loc	2 457 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:457:0
 	{
 		chkct res[r1], 1
 		stw r11, sp[11]
 	}
 .Ltmp283:
 	#DEBUG_VALUE: spline_solver:c_control <- [SP+40]
-	.loc	2 441 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:441:0
+	.loc	2 457 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:457:0
 	{
 		outct res[r1], 1
 		ldc r1, 6
 	}
-	.loc	2 442 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:442:13
+	.loc	2 458 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:458:13
 	{
 		lsu r1, r1, r11
 		nop
@@ -3558,25 +3558,25 @@ spline_solver:                          # @spline_solver
 	#DEBUG_VALUE: dr_prev <- 0
 	#DEBUG_VALUE: underflowWord <- 0
 	#DEBUG_VALUE: DoSampleTransfer:underflowWord <- 0
-	.loc	2 449 25                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:449:25
+	.loc	2 465 25                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:465:25
 .Lxta.endpoint_labels58:
 	{
 		out res[r3], r0
 		nop
 	}
-	.loc	1 16 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:16:0
+	.loc	1 39 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:39:0
 .Ltmp286:
 .Lxta.endpoint_labels59:
 	{
 		out res[r2], r8
 		nop
 	}
-	.loc	1 19 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:19:5
+	.loc	1 42 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:42:5
 	{
 		testct r0, res[r2]
 		nop
 	}
-	.loc	1 19 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:19:5
+	.loc	1 42 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:42:5
 	bf r0, .LBB9_5
 .Ltmp287:
 # BB#6:                                 # %DoSampleTransfer.exit
@@ -3602,20 +3602,20 @@ spline_solver:                          # @spline_solver
 	#DEBUG_VALUE: dr_prev <- 0
 	#DEBUG_VALUE: underflowWord <- 0
 	#DEBUG_VALUE: DoSampleTransfer:underflowWord <- 0
-	.loc	1 21 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:21:0
+	.loc	1 44 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:44:0
 .Lxta.endpoint_labels60:
 	{
 		inct r1, res[r2]
 		nop
 	}
 .Ltmp288:
-	.loc	2 451 25                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:451:25
+	.loc	2 467 25                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:467:25
 .Lxta.endpoint_labels61:
 	{
 		out res[r3], r8
 		nop
 	}
-	.loc	2 452 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:452:9
+	.loc	2 468 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:468:9
 	bt r1, .LBB9_18
 .Ltmp289:
 # BB#7:                                 # %DoSampleTransfer.exit.ifdone29_crit_edge
@@ -3641,9 +3641,9 @@ spline_solver:                          # @spline_solver
 	#DEBUG_VALUE: dl_prev <- 0
 	#DEBUG_VALUE: dr_prev <- 0
 	#DEBUG_VALUE: underflowWord <- 0
-	.loc	2 457 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:457:0
+	.loc	2 473 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:473:0
 	ldw r0, dp[samplesOut]
-	.loc	2 457 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:457:0
+	.loc	2 473 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:473:0
 	ldw r1, dp[samplesOut+4]
 	bu .LBB9_8
 .Ltmp290:
@@ -3671,7 +3671,7 @@ spline_solver:                          # @spline_solver
 	#DEBUG_VALUE: dr_prev <- 0
 	#DEBUG_VALUE: underflowWord <- 0
 	#DEBUG_VALUE: DoSampleTransfer:underflowWord <- 0
-	.loc	1 29 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:29:0
+	.loc	1 52 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:52:0
 .Lxta.endpoint_labels62:
 	{
 		in r0, res[r2]
@@ -3679,11 +3679,11 @@ spline_solver:                          # @spline_solver
 	}
 .Ltmp291:
 	#DEBUG_VALUE: tmp <- R0
-	.loc	1 30 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:30:0
+	.loc	1 53 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:53:0
 	stw r0, dp[samplesOut]
 .Ltmp292:
 	#DEBUG_VALUE: i <- 1
-	.loc	1 29 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:29:0
+	.loc	1 52 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:52:0
 .Lxta.endpoint_labels63:
 	{
 		in r1, res[r2]
@@ -3691,10 +3691,10 @@ spline_solver:                          # @spline_solver
 	}
 .Ltmp293:
 	#DEBUG_VALUE: spline_solver:c_in <- [SP+24]
-	.loc	1 30 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:30:0
+	.loc	1 53 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:53:0
 	stw r1, dp[samplesOut+4]
 .Ltmp294:
-	.loc	2 451 25                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:451:25
+	.loc	2 467 25                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:467:25
 .Lxta.endpoint_labels64:
 	{
 		out res[r3], r8
@@ -3723,11 +3723,11 @@ spline_solver:                          # @spline_solver
 	#DEBUG_VALUE: dl_prev <- 0
 	#DEBUG_VALUE: dr_prev <- 0
 	#DEBUG_VALUE: underflowWord <- 0
-	.loc	2 457 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:457:0
+	.loc	2 473 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:473:0
 	ashr r0, r0, 4
-	.loc	2 457 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:457:0
+	.loc	2 473 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:473:0
 	ashr r1, r1, 4
-	.loc	2 457 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:457:0
+	.loc	2 473 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:473:0
 .Lxta.call_labels14:
 	bl add_sample
 .Ltmp296:
@@ -3735,10 +3735,10 @@ spline_solver:                          # @spline_solver
 		mkmsk r0, 32
 		nop
 	}
-	.loc	2 461 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:461:0
+	.loc	2 477 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:477:0
 .Lxta.call_labels15:
 	bl sample_at
-	.loc	2 462 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:462:0
+	.loc	2 478 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:478:0
 	{
 		mov r2, r8
 		nop
@@ -3750,12 +3750,12 @@ spline_solver:                          # @spline_solver
 		nop
 		stw r0, sp[14]
 	}
-	.loc	2 462 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:462:0
+	.loc	2 478 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:478:0
 	{
 		mov r0, r8
 		stw r0, sp[16]
 	}
-	.loc	2 463 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:463:0
+	.loc	2 479 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:479:0
 	#APP
 	maccs r1, r0, r6, r4
 	#NO_APP
@@ -3763,12 +3763,12 @@ spline_solver:                          # @spline_solver
 		nop
 		stw r1, sp[15]
 	}
-	.loc	2 463 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:463:0
+	.loc	2 479 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:479:0
 	{
 		ldc r0, 9
 		stw r1, sp[17]
 	}
-	.loc	2 465 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:465:0
+	.loc	2 481 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:481:0
 .Lxta.call_labels16:
 	bl sample_at
 	{
@@ -3781,7 +3781,7 @@ spline_solver:                          # @spline_solver
 	}
 .Ltmp297:
 	#DEBUG_VALUE: n <- 7
-	.loc	2 467 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:467:0
+	.loc	2 483 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:483:0
 	{
 		mkmsk r9, 3
 		stw r4, sp[26]
@@ -3811,16 +3811,16 @@ spline_solver:                          # @spline_solver
 	#DEBUG_VALUE: dr_prev <- 0
 	#DEBUG_VALUE: underflowWord <- 0
 	#DEBUG_VALUE: n <- 7
-	.loc	2 471 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:471:0
+	.loc	2 487 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:487:0
 	{
 		add r0, r9, 1
 		nop
 	}
-	.loc	2 471 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:471:0
+	.loc	2 487 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:487:0
 .Lxta.call_labels17:
 	bl sample_at
 .Ltmp299:
-	.loc	2 472 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:472:0
+	.loc	2 488 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:488:0
 	{
 		mov r2, r8
 		nop
@@ -3828,9 +3828,9 @@ spline_solver:                          # @spline_solver
 	#APP
 	maccs r0, r2, r6, r7
 	#NO_APP
-	.loc	2 472 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:472:0
+	.loc	2 488 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:488:0
 	stw r0, r5[r9]
-	.loc	2 473 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:473:0
+	.loc	2 489 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:489:0
 	{
 		mov r2, r8
 		nop
@@ -3838,9 +3838,9 @@ spline_solver:                          # @spline_solver
 	#APP
 	maccs r1, r2, r6, r4
 	#NO_APP
-	.loc	2 473 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:473:0
+	.loc	2 489 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:489:0
 	stw r1, r10[r9]
-	.loc	2 470 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:470:0
+	.loc	2 486 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:486:0
 	{
 		sub r9, r9, 1
 		nop
@@ -3849,7 +3849,7 @@ spline_solver:                          # @spline_solver
 	#DEBUG_VALUE: n <- R9
 .Lxta.loop_labels1:
 	# LOOPMARKER 0
-	.loc	2 470 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:470:0
+	.loc	2 486 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:486:0
 	ashr r2, r9, 32
 	{
 		mov r4, r1
@@ -3879,7 +3879,7 @@ spline_solver:                          # @spline_solver
 	#DEBUG_VALUE: dl_prev <- 0
 	#DEBUG_VALUE: dr_prev <- 0
 	#DEBUG_VALUE: underflowWord <- 0
-	.loc	2 476 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:476:0
+	.loc	2 492 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:492:0
 	{
 		mov r0, r8
 		nop
@@ -3895,7 +3895,7 @@ spline_solver:                          # @spline_solver
 		mkmsk r0, 32
 		nop
 	}
-	.loc	2 477 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:477:0
+	.loc	2 493 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:493:0
 .Lxta.call_labels19:
 	bl sample_at
 	{
@@ -3914,7 +3914,7 @@ spline_solver:                          # @spline_solver
 		mov r1, r5
 		mov r2, r8
 	}
-	.loc	2 482 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:482:0
+	.loc	2 498 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:498:0
 .Ltmp303:
 	{
 		mov r11, r8
@@ -3936,12 +3936,12 @@ spline_solver:                          # @spline_solver
 		nop
 		ldw r0, sp[14]
 	}
-	.loc	2 483 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:483:0
+	.loc	2 499 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:499:0
 	{
 		add r3, r3, r0
 		nop
 	}
-	.loc	2 483 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:483:0
+	.loc	2 499 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:499:0
 	{
 		shl r3, r3, 3
 		nop
@@ -3951,16 +3951,16 @@ spline_solver:                          # @spline_solver
 		mov r10, r9
 		nop
 	}
-	.loc	2 483 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:483:0
+	.loc	2 499 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:499:0
 	#APP
 	maccs r2, r11, r10, r3
 	#NO_APP
-	.loc	2 485 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:485:0
+	.loc	2 501 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:501:0
 	{
 		shl r11, r7, 3
 		mov r9, r8
 	}
-	.loc	2 485 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:485:0
+	.loc	2 501 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:501:0
 	{
 		mov r3, r8
 		nop
@@ -3976,31 +3976,31 @@ spline_solver:                          # @spline_solver
 		nop
 		ldw r0, sp[15]
 	}
-	.loc	2 486 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:486:0
+	.loc	2 502 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:502:0
 	{
 		add r11, r11, r0
 		nop
 	}
-	.loc	2 486 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:486:0
+	.loc	2 502 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:502:0
 	{
 		shl r11, r11, 3
 		nop
 	}
-	.loc	2 486 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:486:0
+	.loc	2 502 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:502:0
 	#APP
 	maccs r3, r9, r10, r11
 	#NO_APP
-	.loc	2 491 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:491:0
+	.loc	2 507 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:507:0
 	{
 		sub r11, r1, r4
 		ldw r1, sp[12]
 	}
-	.loc	2 492 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:492:0
+	.loc	2 508 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:508:0
 	{
 		sub r4, r7, r1
 		ldw r5, sp[11]
 	}
-	.loc	2 496 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:496:0
+	.loc	2 512 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:512:0
 	{
 		eq r7, r5, 2
 		nop
@@ -4035,35 +4035,35 @@ spline_solver:                          # @spline_solver
 	}
 .Ltmp305:
 	#DEBUG_VALUE: spline_solver:c_spline_param <- R9
-	.loc	2 503 32                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:503:32
+	.loc	2 519 32                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:519:32
 .Lxta.endpoint_labels65:
 	{
 		out res[r9], r8
 		nop
 	}
-	.loc	2 503 64                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:503:64
+	.loc	2 519 64                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:519:64
 	{
 		out res[r9], r8
 		nop
 	}
-	.loc	2 504 32                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:504:32
+	.loc	2 520 32                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:520:32
 .Lxta.endpoint_labels66:
 	{
 		out res[r9], r8
 		nop
 	}
-	.loc	2 504 64                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:504:64
+	.loc	2 520 64                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:520:64
 	{
 		out res[r9], r8
 		nop
 	}
-	.loc	2 505 43                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:505:43
+	.loc	2 521 43                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:521:43
 .Lxta.endpoint_labels67:
 	{
 		out res[r9], r11
 		nop
 	}
-	.loc	2 505 75                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:505:75
+	.loc	2 521 75                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:521:75
 	{
 		out res[r9], r4
 		ldaw r5, sp[27]
@@ -4102,9 +4102,9 @@ spline_solver:                          # @spline_solver
 		nop
 		ldw r9, sp[8]
 	}
-	.loc	2 492 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:492:0
+	.loc	2 508 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:508:0
 	lda16 r4, r4[-r9]
-	.loc	2 492 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:492:0
+	.loc	2 508 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:508:0
 	{
 		sub r0, r4, r3
 		nop
@@ -4119,9 +4119,9 @@ spline_solver:                          # @spline_solver
 		nop
 		ldw r0, sp[9]
 	}
-	.loc	2 491 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:491:0
+	.loc	2 507 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:507:0
 	lda16 r11, r11[-r0]
-	.loc	2 491 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:491:0
+	.loc	2 507 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:507:0
 	{
 		sub r11, r11, r2
 		nop
@@ -4129,7 +4129,7 @@ spline_solver:                          # @spline_solver
 .Ltmp309:
 	#DEBUG_VALUE: cl_prev <- [SP+56]
 	#DEBUG_VALUE: ar_prev <- R7
-	.loc	2 489 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:489:0
+	.loc	2 505 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:505:0
 	{
 		sub r7, r3, r9
 		stw r11, sp[14]
@@ -4148,40 +4148,40 @@ spline_solver:                          # @spline_solver
 .Ltmp312:
 	#DEBUG_VALUE: spline_solver:c_spline_param <- R11
 	#DEBUG_VALUE: spline_solver:c_spline_param <- R9
-	.loc	2 498 38                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:498:38
+	.loc	2 514 38                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:514:38
 .Lxta.endpoint_labels68:
 	{
 		out res[r11], r9
 		mov r9, r11
 	}
 .Ltmp313:
-	.loc	2 498 70                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:498:70
+	.loc	2 514 70                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:514:70
 	{
 		out res[r9], r7
 		nop
 	}
-	.loc	2 499 43                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:499:43
+	.loc	2 515 43                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:515:43
 	lda16 r7, r0[r0]
-	.loc	2 499 43                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:499:43
+	.loc	2 515 43                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:515:43
 .Lxta.endpoint_labels69:
 	{
 		out res[r9], r7
 		nop
 	}
-	.loc	2 499 75                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:499:75
+	.loc	2 515 75                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:515:75
 	lda16 r7, r4[r4]
-	.loc	2 499 75                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:499:75
+	.loc	2 515 75                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:515:75
 	{
 		out res[r9], r7
 		ldw r0, sp[14]
 	}
-	.loc	2 500 38                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:500:38
+	.loc	2 516 38                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:516:38
 .Lxta.endpoint_labels70:
 	{
 		out res[r9], r0
 		ldw r0, sp[15]
 	}
-	.loc	2 500 70                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:500:70
+	.loc	2 516 70                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:516:70
 	{
 		out res[r9], r0
 		nop
@@ -4201,35 +4201,35 @@ spline_solver:                          # @spline_solver
 	}
 .Ltmp315:
 	#DEBUG_VALUE: spline_solver:c_spline_param <- R9
-	.loc	2 508 32                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:508:32
+	.loc	2 524 32                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:524:32
 .Lxta.endpoint_labels71:
 	{
 		out res[r9], r8
 		nop
 	}
-	.loc	2 508 64                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:508:64
+	.loc	2 524 64                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:524:64
 	{
 		out res[r9], r8
 		nop
 	}
-	.loc	2 509 32                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:509:32
+	.loc	2 525 32                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:525:32
 .Lxta.endpoint_labels72:
 	{
 		out res[r9], r8
 		nop
 	}
-	.loc	2 509 64                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:509:64
+	.loc	2 525 64                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:525:64
 	{
 		out res[r9], r8
 		nop
 	}
-	.loc	2 510 32                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:510:32
+	.loc	2 526 32                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:526:32
 .Lxta.endpoint_labels73:
 	{
 		out res[r9], r8
 		nop
 	}
-	.loc	2 510 64                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:510:64
+	.loc	2 526 64                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:526:64
 	{
 		out res[r9], r8
 		nop
@@ -4262,7 +4262,7 @@ spline_solver:                          # @spline_solver
 .Lxtalabel95:
 	#DEBUG_VALUE: spline_solver:c_spline_param <- R9
 	#DEBUG_VALUE: spline_solver:sample_rate <- R3
-	.loc	2 443 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:443:0
+	.loc	2 459 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:459:0
 .Lxta.endpoint_labels74:
 	{
 		outct res[r9], 1
@@ -4289,7 +4289,7 @@ spline_solver:                          # @spline_solver
 	#DEBUG_VALUE: dl_prev <- 0
 	#DEBUG_VALUE: dr_prev <- 0
 	#DEBUG_VALUE: underflowWord <- 0
-	.loc	2 453 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:453:0
+	.loc	2 469 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:469:0
 .Lxta.endpoint_labels75:
 	{
 		outct res[r9], 1
@@ -4351,7 +4351,7 @@ spline_solver:                          # @spline_solver
 	.cc_top passthrough.function,passthrough
 passthrough:                            # @passthrough
 .Lfunc_begin10:
-	.loc	2 530 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:530:0
+	.loc	2 546 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:546:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -4381,9 +4381,9 @@ passthrough:                            # @passthrough
 	#DEBUG_VALUE: passthrough:c_control <- R2
 .Ltmp326:
 	#DEBUG_VALUE: underflowWord <- 0
-	.loc	2 540 25 prologue_end   # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:540:25
+	.loc	2 556 25 prologue_end   # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:556:25
 	ldw r4, dp[tp23_solver]
-	.loc	2 557 31                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:557:31
+	.loc	2 573 31                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:573:31
 .Ltmp327:
 	ldw r5, dp[tp24_interpolator]
 	bf r2, .LBB10_1
@@ -4404,25 +4404,25 @@ passthrough:                            # @passthrough
 	#DEBUG_VALUE: passthrough:c_in <- R0
 	#DEBUG_VALUE: passthrough:c_dac_data <- R1
 	#DEBUG_VALUE: passthrough:c_control <- R2
-	.loc	2 557 31                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:557:31
+	.loc	2 573 31                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:573:31
 .Lxta.endpoint_labels76:
 	{
 		out res[r5], r3
 		nop
 	}
-	.loc	2 558 36                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:558:36
+	.loc	2 574 36                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:574:36
 .Lxta.endpoint_labels77:
 	{
 		out res[r1], r11
 		nop
 	}
-	.loc	2 559 36                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:559:36
+	.loc	2 575 36                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:575:36
 .Lxta.endpoint_labels78:
 	{
 		out res[r1], r7
 		nop
 	}
-	.loc	2 560 31                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:560:31
+	.loc	2 576 31                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:576:31
 .Lxta.endpoint_labels79:
 	{
 		out res[r5], r6
@@ -4435,49 +4435,49 @@ passthrough:                            # @passthrough
 	#DEBUG_VALUE: passthrough:c_in <- R0
 	#DEBUG_VALUE: passthrough:c_dac_data <- R1
 	#DEBUG_VALUE: passthrough:c_control <- R2
-	.loc	2 540 25                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:540:25
+	.loc	2 556 25                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:556:25
 .Lxta.endpoint_labels80:
 	{
 		out res[r4], r3
 		nop
 	}
-	.loc	2 542 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:542:49
+	.loc	2 558 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:558:49
 	{
 		outct res[r2], 1
 		nop
 	}
-	.loc	2 542 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:542:49
+	.loc	2 558 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:558:49
 	{
 		chkct res[r2], 1
 		nop
 	}
-	.loc	2 542 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:542:49
+	.loc	2 558 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:558:49
 .Lxta.endpoint_labels81:
 	{
 		out res[r2], r3
 		nop
 	}
-	.loc	2 542 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:542:49
+	.loc	2 558 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:558:49
 	{
 		outct res[r2], 1
 		nop
 	}
-	.loc	2 542 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:542:49
+	.loc	2 558 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:558:49
 	{
 		chkct res[r2], 1
 		nop
 	}
-	.loc	2 543 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:543:0
+	.loc	2 559 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:559:0
 	{
 		chkct res[r2], 1
 		nop
 	}
-	.loc	2 543 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:543:0
+	.loc	2 559 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:559:0
 	{
 		outct res[r2], 1
 		nop
 	}
-	.loc	2 543 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:543:0
+	.loc	2 559 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:559:0
 .Lxta.endpoint_labels82:
 	{
 		in r11, res[r2]
@@ -4485,18 +4485,18 @@ passthrough:                            # @passthrough
 	}
 .Ltmp331:
 	#DEBUG_VALUE: mode <- R11
-	.loc	2 543 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:543:0
+	.loc	2 559 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:559:0
 	{
 		chkct res[r2], 1
 		nop
 	}
-	.loc	2 543 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:543:0
+	.loc	2 559 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:559:0
 	{
 		outct res[r2], 1
 		eq r11, r11, 1
 	}
 .Ltmp332:
-	.loc	2 544 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:544:13
+	.loc	2 560 13                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:560:13
 	bf r11, .LBB10_14
 .Ltmp333:
 # BB#9:                                 # %ifdone3
@@ -4506,25 +4506,25 @@ passthrough:                            # @passthrough
 	#DEBUG_VALUE: passthrough:c_dac_data <- R1
 	#DEBUG_VALUE: passthrough:c_control <- R2
 	#DEBUG_VALUE: DoSampleTransfer:underflowWord <- 0
-	.loc	2 549 25                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:549:25
+	.loc	2 565 25                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:565:25
 .Lxta.endpoint_labels83:
 	{
 		out res[r4], r6
 		nop
 	}
-	.loc	1 16 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:16:0
+	.loc	1 39 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:39:0
 .Ltmp334:
 .Lxta.endpoint_labels84:
 	{
 		out res[r0], r6
 		nop
 	}
-	.loc	1 19 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:19:5
+	.loc	1 42 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:42:5
 	{
 		testct r11, res[r0]
 		nop
 	}
-	.loc	1 19 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:19:5
+	.loc	1 42 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:42:5
 	bf r11, .LBB10_10
 .Ltmp335:
 # BB#11:                                # %DoSampleTransfer.exit
@@ -4534,7 +4534,7 @@ passthrough:                            # @passthrough
 	#DEBUG_VALUE: passthrough:c_dac_data <- R1
 	#DEBUG_VALUE: passthrough:c_control <- R2
 	#DEBUG_VALUE: DoSampleTransfer:underflowWord <- 0
-	.loc	1 21 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:21:0
+	.loc	1 44 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:44:0
 .Lxta.endpoint_labels85:
 	{
 		inct r11, res[r0]
@@ -4547,9 +4547,9 @@ passthrough:                            # @passthrough
 	#DEBUG_VALUE: passthrough:c_in <- R0
 	#DEBUG_VALUE: passthrough:c_dac_data <- R1
 	#DEBUG_VALUE: passthrough:c_control <- R2
-	.loc	2 558 36                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:558:36
+	.loc	2 574 36                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:574:36
 	ldw r11, dp[samplesOut]
-	.loc	2 559 36                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:559:36
+	.loc	2 575 36                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:575:36
 	ldw r7, dp[samplesOut+4]
 	bu .LBB10_13
 .Ltmp337:
@@ -4560,7 +4560,7 @@ passthrough:                            # @passthrough
 	#DEBUG_VALUE: passthrough:c_dac_data <- R1
 	#DEBUG_VALUE: passthrough:c_control <- R2
 	#DEBUG_VALUE: DoSampleTransfer:underflowWord <- 0
-	.loc	1 29 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:29:0
+	.loc	1 52 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:52:0
 .Lxta.endpoint_labels86:
 	{
 		in r11, res[r0]
@@ -4568,17 +4568,17 @@ passthrough:                            # @passthrough
 	}
 .Ltmp338:
 	#DEBUG_VALUE: tmp <- R11
-	.loc	1 30 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:30:0
+	.loc	1 53 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:53:0
 	stw r11, dp[samplesOut]
 .Ltmp339:
 	#DEBUG_VALUE: i <- 1
-	.loc	1 29 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:29:0
+	.loc	1 52 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:52:0
 .Lxta.endpoint_labels87:
 	{
 		in r7, res[r0]
 		nop
 	}
-	.loc	1 30 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:30:0
+	.loc	1 53 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:53:0
 	stw r7, dp[samplesOut+4]
 	bu .LBB10_13
 .Ltmp340:
@@ -4596,25 +4596,25 @@ passthrough:                            # @passthrough
 .Lxtalabel103:
 	#DEBUG_VALUE: passthrough:c_in <- R0
 	#DEBUG_VALUE: passthrough:c_dac_data <- R1
-	.loc	2 557 31                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:557:31
+	.loc	2 573 31                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:573:31
 .Lxta.endpoint_labels88:
 	{
 		out res[r5], r2
 		nop
 	}
-	.loc	2 558 36                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:558:36
+	.loc	2 574 36                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:574:36
 .Lxta.endpoint_labels89:
 	{
 		out res[r1], r11
 		nop
 	}
-	.loc	2 559 36                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:559:36
+	.loc	2 575 36                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:575:36
 .Lxta.endpoint_labels90:
 	{
 		out res[r1], r6
 		nop
 	}
-	.loc	2 560 31                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:560:31
+	.loc	2 576 31                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:576:31
 .Lxta.endpoint_labels91:
 	{
 		out res[r5], r3
@@ -4626,32 +4626,32 @@ passthrough:                            # @passthrough
 .Lxtalabel104:
 	#DEBUG_VALUE: passthrough:c_in <- R0
 	#DEBUG_VALUE: passthrough:c_dac_data <- R1
-	.loc	2 540 25                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:540:25
+	.loc	2 556 25                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:556:25
 .Lxta.endpoint_labels92:
 	{
 		out res[r4], r2
 		nop
 	}
 	#DEBUG_VALUE: DoSampleTransfer:underflowWord <- 0
-	.loc	2 549 25                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:549:25
+	.loc	2 565 25                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:565:25
 .Lxta.endpoint_labels93:
 	{
 		out res[r4], r3
 		nop
 	}
-	.loc	1 16 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:16:0
+	.loc	1 39 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:39:0
 .Ltmp343:
 .Lxta.endpoint_labels94:
 	{
 		out res[r0], r3
 		nop
 	}
-	.loc	1 19 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:19:5
+	.loc	1 42 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:42:5
 	{
 		testct r11, res[r0]
 		nop
 	}
-	.loc	1 19 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:19:5
+	.loc	1 42 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:42:5
 	bf r11, .LBB10_5
 .Ltmp344:
 # BB#3:                                 # %DoSampleTransfer.exit.us
@@ -4660,7 +4660,7 @@ passthrough:                            # @passthrough
 	#DEBUG_VALUE: passthrough:c_in <- R0
 	#DEBUG_VALUE: passthrough:c_dac_data <- R1
 	#DEBUG_VALUE: DoSampleTransfer:underflowWord <- 0
-	.loc	1 21 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:21:0
+	.loc	1 44 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:44:0
 .Lxta.endpoint_labels95:
 	{
 		inct r11, res[r0]
@@ -4672,9 +4672,9 @@ passthrough:                            # @passthrough
                                         #   in Loop: Header=BB10_2 Depth=1
 	#DEBUG_VALUE: passthrough:c_in <- R0
 	#DEBUG_VALUE: passthrough:c_dac_data <- R1
-	.loc	2 558 36                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:558:36
+	.loc	2 574 36                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:574:36
 	ldw r11, dp[samplesOut]
-	.loc	2 559 36                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:559:36
+	.loc	2 575 36                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:575:36
 	ldw r6, dp[samplesOut+4]
 	bu .LBB10_6
 .Ltmp346:
@@ -4684,7 +4684,7 @@ passthrough:                            # @passthrough
 	#DEBUG_VALUE: passthrough:c_in <- R0
 	#DEBUG_VALUE: passthrough:c_dac_data <- R1
 	#DEBUG_VALUE: DoSampleTransfer:underflowWord <- 0
-	.loc	1 29 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:29:0
+	.loc	1 52 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:52:0
 .Lxta.endpoint_labels96:
 	{
 		in r11, res[r0]
@@ -4692,16 +4692,16 @@ passthrough:                            # @passthrough
 	}
 .Ltmp347:
 	#DEBUG_VALUE: tmp <- R11
-	.loc	1 30 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:30:0
+	.loc	1 53 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:53:0
 	stw r11, dp[samplesOut]
 	#DEBUG_VALUE: i <- 1
-	.loc	1 29 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:29:0
+	.loc	1 52 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:52:0
 .Lxta.endpoint_labels97:
 	{
 		in r6, res[r0]
 		nop
 	}
-	.loc	1 30 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:30:0
+	.loc	1 53 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:53:0
 	stw r6, dp[samplesOut+4]
 	bu .LBB10_6
 .Ltmp348:
@@ -4709,7 +4709,7 @@ passthrough:                            # @passthrough
 .Lxtalabel107:
 	#DEBUG_VALUE: passthrough:c_dac_data <- R1
 	#DEBUG_VALUE: underflowWord <- 0
-	.loc	2 553 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:553:0
+	.loc	2 569 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:569:0
 .Lxta.endpoint_labels98:
 	{
 		outct res[r1], 1
@@ -4720,7 +4720,7 @@ passthrough:                            # @passthrough
 .LBB10_14:                              # %iftrue8
 .Lxtalabel108:
 	#DEBUG_VALUE: passthrough:c_dac_data <- R1
-	.loc	2 545 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:545:0
+	.loc	2 561 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:561:0
 .Lxta.endpoint_labels99:
 	{
 		outct res[r1], 1
@@ -4762,7 +4762,7 @@ passthrough:                            # @passthrough
 	.cc_top start_ssdac.task.0.function,start_ssdac.task.0
 start_ssdac.task.0:                     # @start_ssdac.task.0
 .Lfunc_begin11:
-	.loc	2 581 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:581:0
+	.loc	2 597 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:597:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -4779,13 +4779,13 @@ start_ssdac.task.0:                     # @start_ssdac.task.0
 		nop
 		ldw r3, r0[0]
 	}
-	.loc	2 581 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:581:0
+	.loc	2 597 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:597:0
 .Ltmp354:
 	{
 		ldc r2, 0
 		ldw r1, r0[2]
 	}
-	.loc	2 581 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:581:0
+	.loc	2 597 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:597:0
 	{
 		mov r0, r3
 		nop
@@ -4793,9 +4793,9 @@ start_ssdac.task.0:                     # @start_ssdac.task.0
 .Ltmp355:
 .Lxta.call_labels20:
 	bl spline_solver
-	.loc	2 581 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:581:0
+	.loc	2 597 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:597:0
 	stw r0, dp[rc]
-	.loc	2 581 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:581:0
+	.loc	2 597 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:597:0
 	stw r1, dp[audio_cmd]
 	{
 		nop
@@ -4818,7 +4818,7 @@ start_ssdac.task.0:                     # @start_ssdac.task.0
 	.cc_top start_ssdac.task.interpolator.1.function,start_ssdac.task.interpolator.1
 start_ssdac.task.interpolator.1:        # @start_ssdac.task.interpolator.1
 .Lfunc_begin12:
-	.loc	2 582 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:582:0
+	.loc	2 598 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:598:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -4839,14 +4839,14 @@ start_ssdac.task.interpolator.1:        # @start_ssdac.task.interpolator.1
 		nop
 		ldw r1, r0[4]
 	}
-	.loc	2 582 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:582:0
+	.loc	2 598 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:598:0
 .Ltmp360:
 	{
 		mov r0, r3
 		ldw r2, r0[1]
 	}
 .Ltmp361:
-	.loc	2 582 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:582:0
+	.loc	2 598 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:598:0
 .Lxta.call_labels21:
 	bl interpolator
 	{
@@ -4870,7 +4870,7 @@ start_ssdac.task.interpolator.1:        # @start_ssdac.task.interpolator.1
 	.cc_top start_ssdac.task.clipper.2.function,start_ssdac.task.clipper.2
 start_ssdac.task.clipper.2:             # @start_ssdac.task.clipper.2
 .Lfunc_begin13:
-	.loc	2 583 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:583:0
+	.loc	2 599 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:599:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -4891,14 +4891,14 @@ start_ssdac.task.clipper.2:             # @start_ssdac.task.clipper.2
 		nop
 		ldw r1, r0[6]
 	}
-	.loc	2 583 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:583:0
+	.loc	2 599 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:599:0
 .Ltmp366:
 	{
 		mov r0, r3
 		ldw r2, r0[8]
 	}
 .Ltmp367:
-	.loc	2 583 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:583:0
+	.loc	2 599 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:599:0
 .Lxta.call_labels22:
 	bl clipper
 	{
@@ -4922,7 +4922,7 @@ start_ssdac.task.clipper.2:             # @start_ssdac.task.clipper.2
 	.cc_top start_ssdac.task.serial_dac_driver.3.function,start_ssdac.task.serial_dac_driver.3
 start_ssdac.task.serial_dac_driver.3:   # @start_ssdac.task.serial_dac_driver.3
 .Lfunc_begin14:
-	.loc	2 584 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:584:0
+	.loc	2 600 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:600:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -4935,14 +4935,14 @@ start_ssdac.task.serial_dac_driver.3:   # @start_ssdac.task.serial_dac_driver.3
 .Ltmp371:
 	.cfi_offset 15, 0
 	#DEBUG_VALUE: start_ssdac.task.serial_dac_driver.3:frame <- R0
-	.loc	2 584 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:584:0
+	.loc	2 600 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:600:0
 .Ltmp372:
 	{
 		ldc r1, 8
 		ldw r0, r0[7]
 	}
 .Ltmp373:
-	.loc	2 584 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:584:0
+	.loc	2 600 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:600:0
 .Lxta.call_labels23:
 	bl serial_dac_driver
 	{
@@ -4966,7 +4966,7 @@ start_ssdac.task.serial_dac_driver.3:   # @start_ssdac.task.serial_dac_driver.3
 	.cc_top start_ssdac.task.oneshot_indicator.4.function,start_ssdac.task.oneshot_indicator.4
 start_ssdac.task.oneshot_indicator.4:   # @start_ssdac.task.oneshot_indicator.4
 .Lfunc_begin15:
-	.loc	2 585 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:585:0
+	.loc	2 601 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:601:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -4984,7 +4984,7 @@ start_ssdac.task.oneshot_indicator.4:   # @start_ssdac.task.oneshot_indicator.4
 		ldw r0, r0[9]
 	}
 .Ltmp378:
-	.loc	2 585 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:585:0
+	.loc	2 601 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:601:0
 .Lxta.call_labels24:
 	bl oneshot_indicator
 	{
@@ -5008,7 +5008,7 @@ start_ssdac.task.oneshot_indicator.4:   # @start_ssdac.task.oneshot_indicator.4
 	.cc_top start_fir.task.0.function,start_fir.task.0
 start_fir.task.0:                       # @start_fir.task.0
 .Lfunc_begin16:
-	.loc	2 602 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:602:0
+	.loc	2 618 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:618:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -5029,13 +5029,13 @@ start_fir.task.0:                       # @start_fir.task.0
 		nop
 		ldw r1, r0[2]
 	}
-	.loc	2 602 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:602:0
+	.loc	2 618 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:618:0
 .Ltmp383:
 	{
 		ldc r2, 0
 		ldw r3, r0[1]
 	}
-	.loc	2 602 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:602:0
+	.loc	2 618 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:618:0
 	{
 		mov r0, r11
 		nop
@@ -5043,9 +5043,9 @@ start_fir.task.0:                       # @start_fir.task.0
 .Ltmp384:
 .Lxta.call_labels25:
 	bl fir_sinc8
-	.loc	2 602 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:602:0
+	.loc	2 618 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:618:0
 	stw r0, dp[rc]
-	.loc	2 602 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:602:0
+	.loc	2 618 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:618:0
 	stw r1, dp[audio_cmd]
 	{
 		nop
@@ -5068,7 +5068,7 @@ start_fir.task.0:                       # @start_fir.task.0
 	.cc_top start_fir.task.clipper.1.function,start_fir.task.clipper.1
 start_fir.task.clipper.1:               # @start_fir.task.clipper.1
 .Lfunc_begin17:
-	.loc	2 603 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:603:0
+	.loc	2 619 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:619:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -5085,13 +5085,13 @@ start_fir.task.clipper.1:               # @start_fir.task.clipper.1
 		nop
 		ldw r3, r0[3]
 	}
-	.loc	2 603 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:603:0
+	.loc	2 619 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:619:0
 .Ltmp389:
 	{
 		ldc r2, 0
 		ldw r1, r0[4]
 	}
-	.loc	2 603 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:603:0
+	.loc	2 619 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:619:0
 	{
 		mov r0, r3
 		nop
@@ -5120,7 +5120,7 @@ start_fir.task.clipper.1:               # @start_fir.task.clipper.1
 	.cc_top start_fir.task.serial_dac_driver.2.function,start_fir.task.serial_dac_driver.2
 start_fir.task.serial_dac_driver.2:     # @start_fir.task.serial_dac_driver.2
 .Lfunc_begin18:
-	.loc	2 604 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:604:0
+	.loc	2 620 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:620:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -5139,7 +5139,7 @@ start_fir.task.serial_dac_driver.2:     # @start_fir.task.serial_dac_driver.2
 	}
 .Ltmp395:
 	ldc r1, 176
-	.loc	2 604 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:604:0
+	.loc	2 620 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:620:0
 .Ltmp396:
 .Lxta.call_labels27:
 	bl serial_dac_driver
@@ -5230,7 +5230,7 @@ start_fir.task.serial_dac_driver.2:     # @start_fir.task.serial_dac_driver.2
 	.cc_top configure_audio_process.function,configure_audio_process
 configure_audio_process:                # @configure_audio_process
 .Lfunc_begin19:
-	.loc	2 612 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:612:0
+	.loc	2 628 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:628:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -5280,81 +5280,81 @@ configure_audio_process:                # @configure_audio_process
 		getr r0, 2
 		stw r2, sp[6]
 	}
-	.loc	2 614 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:614:0
+	.loc	2 630 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:630:0
 .Ltmp410:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	2 614 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:614:0
+	.loc	2 630 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:630:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	2 614 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:614:0
+	.loc	2 630 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:630:0
 	{
 		setd res[r1], r0
 		stw r0, sp[7]
 	}
-	.loc	2 614 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:614:0
+	.loc	2 630 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:630:0
 	{
 		getr r0, 2
 		stw r1, sp[8]
 	}
-	.loc	2 615 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:615:0
+	.loc	2 631 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:631:0
 .Ltmp411:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	2 615 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:615:0
+	.loc	2 631 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:631:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	2 615 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:615:0
+	.loc	2 631 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:631:0
 	{
 		setd res[r1], r0
 		stw r0, sp[9]
 	}
-	.loc	2 615 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:615:0
+	.loc	2 631 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:631:0
 	{
 		getr r0, 2
 		stw r1, sp[10]
 	}
-	.loc	2 616 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:616:0
+	.loc	2 632 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:632:0
 .Ltmp412:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	2 616 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:616:0
+	.loc	2 632 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:632:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	2 616 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:616:0
+	.loc	2 632 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:632:0
 	{
 		setd res[r1], r0
 		stw r0, sp[11]
 	}
-	.loc	2 616 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:616:0
+	.loc	2 632 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:632:0
 	{
 		getr r0, 2
 		stw r1, sp[12]
 	}
-	.loc	2 617 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:617:0
+	.loc	2 633 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:633:0
 .Ltmp413:
 	{
 		getr r1, 2
 		nop
 	}
-	.loc	2 617 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:617:0
+	.loc	2 633 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:633:0
 	{
 		setd res[r0], r1
 		nop
 	}
-	.loc	2 617 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:617:0
+	.loc	2 633 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:633:0
 	{
 		setd res[r1], r0
 		stw r0, sp[13]
@@ -5365,7 +5365,7 @@ configure_audio_process:                # @configure_audio_process
 	}
 .Ltmp414:
 	#DEBUG_VALUE: proposed_mode <- 4
-	.loc	2 623 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:623:0
+	.loc	2 639 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:639:0
 .Lxta.call_labels28:
 	bl init_ring_buff
 	{
@@ -5407,43 +5407,43 @@ configure_audio_process:                # @configure_audio_process
 .Lxtalabel111:
 	#DEBUG_VALUE: configure_audio_process:cur_mode <- R4
 	#DEBUG_VALUE: proposed_mode <- 4
-	.loc	2 629 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:629:49
+	.loc	2 645 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:645:49
 	{
 		outct res[r10], 1
 		nop
 	}
-	.loc	2 629 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:629:49
+	.loc	2 645 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:645:49
 	{
 		chkct res[r10], 1
 		nop
 	}
-	.loc	2 629 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:629:49
+	.loc	2 645 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:645:49
 .Lxta.endpoint_labels100:
 	{
 		out res[r10], r7
 		nop
 	}
-	.loc	2 629 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:629:49
+	.loc	2 645 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:645:49
 	{
 		outct res[r10], 1
 		nop
 	}
-	.loc	2 629 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:629:49
+	.loc	2 645 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:645:49
 	{
 		chkct res[r10], 1
 		nop
 	}
-	.loc	2 630 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:630:0
+	.loc	2 646 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:646:0
 	{
 		chkct res[r10], 1
 		nop
 	}
-	.loc	2 630 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:630:0
+	.loc	2 646 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:646:0
 	{
 		outct res[r10], 1
 		nop
 	}
-	.loc	2 630 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:630:0
+	.loc	2 646 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:646:0
 .Lxta.endpoint_labels101:
 	{
 		in r5, res[r10]
@@ -5451,12 +5451,12 @@ configure_audio_process:                # @configure_audio_process
 	}
 .Ltmp418:
 	#DEBUG_VALUE: proposed_mode <- R5
-	.loc	2 630 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:630:0
+	.loc	2 646 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:646:0
 	{
 		chkct res[r10], 1
 		nop
 	}
-	.loc	2 630 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:630:0
+	.loc	2 646 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:646:0
 	{
 		outct res[r10], 1
 		mov r0, r10
@@ -5467,7 +5467,7 @@ configure_audio_process:                # @configure_audio_process
 .Lxtalabel112:
 	#DEBUG_VALUE: configure_audio_process:cur_mode <- R4
 	#DEBUG_VALUE: proposed_mode <- 4
-	.loc	2 635 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:635:0
+	.loc	2 651 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:651:0
 	{
 		eq r1, r5, 4
 		nop
@@ -5493,7 +5493,7 @@ configure_audio_process:                # @configure_audio_process
 		ldw r1, sp[6]
 	}
 	ldc r2, 48000
-	.loc	2 645 17                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:645:17
+	.loc	2 661 17                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:661:17
 	{
 		lsu r1, r2, r1
 		nop
@@ -5520,7 +5520,7 @@ configure_audio_process:                # @configure_audio_process
 		ldw r1, sp[6]
 	}
 	ldw r2, cp[.LCPI19_0]
-	.loc	2 652 17                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:652:17
+	.loc	2 668 17                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:668:17
 	{
 		lsu r1, r2, r1
 		nop
@@ -5532,7 +5532,7 @@ configure_audio_process:                # @configure_audio_process
 .Lxtalabel117:
 	#DEBUG_VALUE: configure_audio_process:cur_mode <- R4
 	#DEBUG_VALUE: proposed_mode <- 4
-	.loc	2 653 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:653:0
+	.loc	2 669 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:669:0
 	{
 		mov r1, r7
 		stw r7, r4[0]
@@ -5559,7 +5559,7 @@ configure_audio_process:                # @configure_audio_process
 		ldw r1, sp[6]
 	}
 	ldc r2, 48000
-	.loc	2 638 17                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:638:17
+	.loc	2 654 17                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:654:17
 	{
 		lsu r1, r2, r1
 		nop
@@ -5571,7 +5571,7 @@ configure_audio_process:                # @configure_audio_process
 .Lxtalabel120:
 	#DEBUG_VALUE: configure_audio_process:cur_mode <- R4
 	#DEBUG_VALUE: proposed_mode <- 4
-	.loc	2 656 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:656:0
+	.loc	2 672 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:672:0
 	{
 		mov r1, r8
 		stw r8, r4[0]
@@ -5583,7 +5583,7 @@ configure_audio_process:                # @configure_audio_process
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel121:
 	#DEBUG_VALUE: configure_audio_process:cur_mode <- R4
-	.loc	2 661 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:661:0
+	.loc	2 677 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:677:0
 	{
 		mov r1, r5
 		stw r5, r4[0]
@@ -5614,54 +5614,54 @@ configure_audio_process:                # @configure_audio_process
 .Ltmp431:
 	#DEBUG_VALUE: configure_audio_process:cur_mode <- R4
 	#DEBUG_VALUE: proposed_mode <- 4
-	.loc	2 665 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:665:49
+	.loc	2 681 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:681:49
 	{
 		outct res[r0], 1
 		nop
 	}
-	.loc	2 665 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:665:49
+	.loc	2 681 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:681:49
 	{
 		chkct res[r0], 1
 		ldc r2, 2
 	}
-	.loc	2 665 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:665:49
+	.loc	2 681 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:681:49
 .Lxta.endpoint_labels102:
 	{
 		out res[r0], r2
 		nop
 	}
-	.loc	2 665 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:665:49
+	.loc	2 681 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:681:49
 	{
 		outct res[r0], 1
 		nop
 	}
-	.loc	2 665 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:665:49
+	.loc	2 681 49                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:681:49
 	{
 		chkct res[r0], 1
 		nop
 	}
-	.loc	2 666 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:666:34
+	.loc	2 682 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:682:34
 	{
 		outct res[r0], 1
 		nop
 	}
-	.loc	2 666 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:666:34
+	.loc	2 682 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:682:34
 	{
 		chkct res[r0], 1
 		nop
 	}
-	.loc	2 666 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:666:34
+	.loc	2 682 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:682:34
 .Lxta.endpoint_labels103:
 	{
 		out res[r0], r1
 		nop
 	}
-	.loc	2 666 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:666:34
+	.loc	2 682 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:682:34
 	{
 		outct res[r0], 1
 		nop
 	}
-	.loc	2 666 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:666:34
+	.loc	2 682 34                # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:682:34
 	{
 		chkct res[r0], 1
 		nop
@@ -5672,7 +5672,7 @@ configure_audio_process:                # @configure_audio_process
 .Lxtalabel125:
 	#DEBUG_VALUE: configure_audio_process:cur_mode <- R4
 	#DEBUG_VALUE: proposed_mode <- 4
-	.loc	2 669 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:669:0
+	.loc	2 685 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:685:0
 	{
 		eq r0, r1, 1
 		nop
@@ -5693,7 +5693,7 @@ configure_audio_process:                # @configure_audio_process
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel127:
 	#DEBUG_VALUE: configure_audio_process:cur_mode <- R4
-	.loc	2 681 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:681:0
+	.loc	2 697 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:697:0
 	{
 		mov r0, r6
 		nop
@@ -5711,7 +5711,7 @@ configure_audio_process:                # @configure_audio_process
 		ldw r0, sp[6]
 	}
 	ldw r1, cp[.LCPI19_1]
-	.loc	2 698 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:698:0
+	.loc	2 714 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:714:0
 .Ltmp436:
 	{
 		lss r1, r1, r0
@@ -5784,7 +5784,7 @@ configure_audio_process:                # @configure_audio_process
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel135:
 	#DEBUG_VALUE: configure_audio_process:cur_mode <- R4
-	.loc	2 669 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:669:0
+	.loc	2 685 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:685:0
 	{
 		mov r0, r6
 		nop
@@ -5803,7 +5803,7 @@ configure_audio_process:                # @configure_audio_process
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel137:
 	#DEBUG_VALUE: configure_audio_process:cur_mode <- R4
-	.loc	2 728 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:728:0
+	.loc	2 744 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:744:0
 	{
 		mov r0, r6
 		nop
@@ -5874,27 +5874,27 @@ configure_audio_process:                # @configure_audio_process
 .Lxtalabel146:
 	#DEBUG_VALUE: configure_audio_process:cur_mode <- R4
 	#DEBUG_VALUE: proposed_mode <- 4
-	.loc	2 718 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:718:0
+	.loc	2 734 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:734:0
 	{
 		mov r0, r6
 		stw r0, sp[15]
 	}
-	.loc	2 719 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:719:0
+	.loc	2 735 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:735:0
 	ldaw r1, dp[par.desc.5]
 .Ltmp455:
 .LBB19_38:                              # %LoopTest
                                         #   in Loop: Header=BB19_1 Depth=1
 .Lxtalabel147:
-	.loc	2 669 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:669:0
+	.loc	2 685 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:685:0
 	bl __start_other_cores
 .Ltmp456:
 	#DEBUG_VALUE: configure_audio_process:cur_mode <- R4
 	#DEBUG_VALUE: proposed_mode <- 4
-	.loc	2 745 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:745:7
+	.loc	2 761 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:761:7
 	ldw r0, dp[rc]
 .Lxta.loop_labels2:
 	# LOOPMARKER 0
-	.loc	2 745 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:745:7
+	.loc	2 761 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:761:7
 	{
 		eq r0, r0, 1
 		nop
@@ -5904,7 +5904,7 @@ configure_audio_process:                # @configure_audio_process
 # BB#40:                                # %LoopEnd
 .Lxtalabel148:
 	#DEBUG_VALUE: proposed_mode <- 4
-	.loc	2 746 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:746:5
+	.loc	2 762 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:762:5
 	ldw r0, dp[audio_cmd]
 	{
 		nop
@@ -6034,7 +6034,7 @@ configure_audio_process:                # @configure_audio_process
 	.cc_top configure_audio_process.task.0.function,configure_audio_process.task.0
 configure_audio_process.task.0:         # @configure_audio_process.task.0
 .Lfunc_begin20:
-	.loc	2 675 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:675:0
+	.loc	2 691 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:691:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -6059,19 +6059,19 @@ configure_audio_process.task.0:         # @configure_audio_process.task.0
 		nop
 		ldw r2, r0[1]
 	}
-	.loc	2 675 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:675:0
+	.loc	2 691 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:691:0
 .Ltmp462:
 	{
 		mov r0, r11
 		ldw r3, r0[2]
 	}
 .Ltmp463:
-	.loc	2 675 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:675:0
+	.loc	2 691 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:691:0
 .Lxta.call_labels29:
 	bl fir_sinc8
-	.loc	2 675 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:675:0
+	.loc	2 691 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:691:0
 	stw r0, dp[rc]
-	.loc	2 675 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:675:0
+	.loc	2 691 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:691:0
 	stw r1, dp[audio_cmd]
 	{
 		nop
@@ -6094,7 +6094,7 @@ configure_audio_process.task.0:         # @configure_audio_process.task.0
 	.cc_top configure_audio_process.task.clipper.1.function,configure_audio_process.task.clipper.1
 configure_audio_process.task.clipper.1: # @configure_audio_process.task.clipper.1
 .Lfunc_begin21:
-	.loc	2 677 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:677:0
+	.loc	2 693 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:693:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -6111,13 +6111,13 @@ configure_audio_process.task.clipper.1: # @configure_audio_process.task.clipper.
 		nop
 		ldw r3, r0[6]
 	}
-	.loc	2 677 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:677:0
+	.loc	2 693 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:693:0
 .Ltmp468:
 	{
 		ldc r2, 0
 		ldw r1, r0[7]
 	}
-	.loc	2 677 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:677:0
+	.loc	2 693 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:693:0
 	{
 		mov r0, r3
 		nop
@@ -6146,7 +6146,7 @@ configure_audio_process.task.clipper.1: # @configure_audio_process.task.clipper.
 	.cc_top configure_audio_process.task.serial_dac_driver.2.function,configure_audio_process.task.serial_dac_driver.2
 configure_audio_process.task.serial_dac_driver.2: # @configure_audio_process.task.serial_dac_driver.2
 .Lfunc_begin22:
-	.loc	2 678 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:678:0
+	.loc	2 694 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:694:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -6165,7 +6165,7 @@ configure_audio_process.task.serial_dac_driver.2: # @configure_audio_process.tas
 	}
 .Ltmp474:
 	ldc r1, 80
-	.loc	2 678 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:678:0
+	.loc	2 694 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:694:0
 .Ltmp475:
 .Lxta.call_labels31:
 	bl serial_dac_driver
@@ -6190,7 +6190,7 @@ configure_audio_process.task.serial_dac_driver.2: # @configure_audio_process.tas
 	.cc_top configure_audio_process.task.3.function,configure_audio_process.task.3
 configure_audio_process.task.3:         # @configure_audio_process.task.3
 .Lfunc_begin23:
-	.loc	2 687 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:687:0
+	.loc	2 703 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:703:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -6215,19 +6215,19 @@ configure_audio_process.task.3:         # @configure_audio_process.task.3
 		nop
 		ldw r2, r0[1]
 	}
-	.loc	2 687 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:687:0
+	.loc	2 703 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:703:0
 .Ltmp480:
 	{
 		mov r0, r11
 		ldw r3, r0[2]
 	}
 .Ltmp481:
-	.loc	2 687 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:687:0
+	.loc	2 703 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:703:0
 .Lxta.call_labels32:
 	bl fir_sinc4
-	.loc	2 687 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:687:0
+	.loc	2 703 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:703:0
 	stw r0, dp[rc]
-	.loc	2 687 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:687:0
+	.loc	2 703 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:703:0
 	stw r1, dp[audio_cmd]
 	{
 		nop
@@ -6250,7 +6250,7 @@ configure_audio_process.task.3:         # @configure_audio_process.task.3
 	.cc_top configure_audio_process.task.clipper.4.function,configure_audio_process.task.clipper.4
 configure_audio_process.task.clipper.4: # @configure_audio_process.task.clipper.4
 .Lfunc_begin24:
-	.loc	2 689 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:689:0
+	.loc	2 705 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:705:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -6267,13 +6267,13 @@ configure_audio_process.task.clipper.4: # @configure_audio_process.task.clipper.
 		nop
 		ldw r3, r0[6]
 	}
-	.loc	2 689 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:689:0
+	.loc	2 705 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:705:0
 .Ltmp486:
 	{
 		ldc r2, 0
 		ldw r1, r0[7]
 	}
-	.loc	2 689 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:689:0
+	.loc	2 705 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:705:0
 	{
 		mov r0, r3
 		nop
@@ -6302,7 +6302,7 @@ configure_audio_process.task.clipper.4: # @configure_audio_process.task.clipper.
 	.cc_top configure_audio_process.task.serial_dac_driver.5.function,configure_audio_process.task.serial_dac_driver.5
 configure_audio_process.task.serial_dac_driver.5: # @configure_audio_process.task.serial_dac_driver.5
 .Lfunc_begin25:
-	.loc	2 690 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:690:0
+	.loc	2 706 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:706:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -6321,7 +6321,7 @@ configure_audio_process.task.serial_dac_driver.5: # @configure_audio_process.tas
 	}
 .Ltmp492:
 	ldc r1, 176
-	.loc	2 690 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:690:0
+	.loc	2 706 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:706:0
 .Ltmp493:
 .Lxta.call_labels34:
 	bl serial_dac_driver
@@ -6346,7 +6346,7 @@ configure_audio_process.task.serial_dac_driver.5: # @configure_audio_process.tas
 	.cc_top configure_audio_process.task.6.function,configure_audio_process.task.6
 configure_audio_process.task.6:         # @configure_audio_process.task.6
 .Lfunc_begin26:
-	.loc	2 723 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:723:0
+	.loc	2 739 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:739:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -6367,19 +6367,19 @@ configure_audio_process.task.6:         # @configure_audio_process.task.6
 		nop
 		ldw r1, r0[7]
 	}
-	.loc	2 723 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:723:0
+	.loc	2 739 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:739:0
 .Ltmp498:
 	{
 		mov r0, r3
 		ldw r2, r0[1]
 	}
 .Ltmp499:
-	.loc	2 723 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:723:0
+	.loc	2 739 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:739:0
 .Lxta.call_labels35:
 	bl passthrough
-	.loc	2 723 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:723:0
+	.loc	2 739 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:739:0
 	stw r0, dp[rc]
-	.loc	2 723 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:723:0
+	.loc	2 739 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:739:0
 	stw r1, dp[audio_cmd]
 	{
 		nop
@@ -6402,7 +6402,7 @@ configure_audio_process.task.6:         # @configure_audio_process.task.6
 	.cc_top configure_audio_process.task.serial_dac_driver.7.function,configure_audio_process.task.serial_dac_driver.7
 configure_audio_process.task.serial_dac_driver.7: # @configure_audio_process.task.serial_dac_driver.7
 .Lfunc_begin27:
-	.loc	2 725 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:725:0
+	.loc	2 741 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:741:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -6419,14 +6419,14 @@ configure_audio_process.task.serial_dac_driver.7: # @configure_audio_process.tas
 		nop
 		ldw r2, r0[8]
 	}
-	.loc	2 725 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:725:0
+	.loc	2 741 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:741:0
 .Ltmp504:
 	{
 		mov r0, r2
 		ldw r1, r0[11]
 	}
 .Ltmp505:
-	.loc	2 725 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:725:0
+	.loc	2 741 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:741:0
 .Lxta.call_labels36:
 	bl serial_dac_driver
 	{
@@ -6450,7 +6450,7 @@ configure_audio_process.task.serial_dac_driver.7: # @configure_audio_process.tas
 	.cc_top configure_audio_process.task.8.function,configure_audio_process.task.8
 configure_audio_process.task.8:         # @configure_audio_process.task.8
 .Lfunc_begin28:
-	.loc	2 734 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:734:0
+	.loc	2 750 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:750:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -6471,19 +6471,19 @@ configure_audio_process.task.8:         # @configure_audio_process.task.8
 		nop
 		ldw r1, r0[3]
 	}
-	.loc	2 734 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:734:0
+	.loc	2 750 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:750:0
 .Ltmp510:
 	{
 		mov r0, r3
 		ldw r2, r0[1]
 	}
 .Ltmp511:
-	.loc	2 734 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:734:0
+	.loc	2 750 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:750:0
 .Lxta.call_labels37:
 	bl spline_solver
-	.loc	2 734 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:734:0
+	.loc	2 750 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:750:0
 	stw r0, dp[rc]
-	.loc	2 734 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:734:0
+	.loc	2 750 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:750:0
 	stw r1, dp[audio_cmd]
 	{
 		nop
@@ -6506,7 +6506,7 @@ configure_audio_process.task.8:         # @configure_audio_process.task.8
 	.cc_top configure_audio_process.task.interpolator.9.function,configure_audio_process.task.interpolator.9
 configure_audio_process.task.interpolator.9: # @configure_audio_process.task.interpolator.9
 .Lfunc_begin29:
-	.loc	2 736 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:736:0
+	.loc	2 752 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:752:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -6527,14 +6527,14 @@ configure_audio_process.task.interpolator.9: # @configure_audio_process.task.int
 		nop
 		ldw r1, r0[5]
 	}
-	.loc	2 736 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:736:0
+	.loc	2 752 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:752:0
 .Ltmp516:
 	{
 		mov r0, r3
 		ldw r2, r0[2]
 	}
 .Ltmp517:
-	.loc	2 736 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:736:0
+	.loc	2 752 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:752:0
 .Lxta.call_labels38:
 	bl interpolator
 	{
@@ -6558,7 +6558,7 @@ configure_audio_process.task.interpolator.9: # @configure_audio_process.task.int
 	.cc_top configure_audio_process.task.clipper.10.function,configure_audio_process.task.clipper.10
 configure_audio_process.task.clipper.10: # @configure_audio_process.task.clipper.10
 .Lfunc_begin30:
-	.loc	2 737 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:737:0
+	.loc	2 753 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:753:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -6579,14 +6579,14 @@ configure_audio_process.task.clipper.10: # @configure_audio_process.task.clipper
 		nop
 		ldw r1, r0[7]
 	}
-	.loc	2 737 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:737:0
+	.loc	2 753 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:753:0
 .Ltmp522:
 	{
 		mov r0, r3
 		ldw r2, r0[9]
 	}
 .Ltmp523:
-	.loc	2 737 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:737:0
+	.loc	2 753 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:753:0
 .Lxta.call_labels39:
 	bl clipper
 	{
@@ -6610,7 +6610,7 @@ configure_audio_process.task.clipper.10: # @configure_audio_process.task.clipper
 	.cc_top configure_audio_process.task.serial_dac_driver.11.function,configure_audio_process.task.serial_dac_driver.11
 configure_audio_process.task.serial_dac_driver.11: # @configure_audio_process.task.serial_dac_driver.11
 .Lfunc_begin31:
-	.loc	2 738 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:738:0
+	.loc	2 754 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:754:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -6623,14 +6623,14 @@ configure_audio_process.task.serial_dac_driver.11: # @configure_audio_process.ta
 .Ltmp527:
 	.cfi_offset 15, 0
 	#DEBUG_VALUE: configure_audio_process.task.serial_dac_driver.11:frame <- R0
-	.loc	2 738 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:738:0
+	.loc	2 754 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:754:0
 .Ltmp528:
 	{
 		ldc r1, 8
 		ldw r0, r0[8]
 	}
 .Ltmp529:
-	.loc	2 738 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:738:0
+	.loc	2 754 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:754:0
 .Lxta.call_labels40:
 	bl serial_dac_driver
 	{
@@ -6654,7 +6654,7 @@ configure_audio_process.task.serial_dac_driver.11: # @configure_audio_process.ta
 	.cc_top configure_audio_process.task.oneshot_indicator.12.function,configure_audio_process.task.oneshot_indicator.12
 configure_audio_process.task.oneshot_indicator.12: # @configure_audio_process.task.oneshot_indicator.12
 .Lfunc_begin32:
-	.loc	2 739 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:739:0
+	.loc	2 755 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:755:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -6672,7 +6672,7 @@ configure_audio_process.task.oneshot_indicator.12: # @configure_audio_process.ta
 		ldw r0, r0[10]
 	}
 .Ltmp534:
-	.loc	2 739 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:739:0
+	.loc	2 755 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:755:0
 .Lxta.call_labels41:
 	bl oneshot_indicator
 	{
@@ -7109,7 +7109,7 @@ par.desc.6:
 	.long	.Linfo_string3          # DW_AT_name
 	.long	52                      # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	11                      # DW_AT_decl_line
+	.byte	34                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	samplesOut
@@ -7134,7 +7134,7 @@ par.desc.6:
 	.long	101                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	2                       # DW_AT_decl_file
-	.byte	57                      # DW_AT_decl_line
+	.byte	73                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	tp5
@@ -7148,7 +7148,7 @@ par.desc.6:
 	.long	101                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	2                       # DW_AT_decl_file
-	.byte	58                      # DW_AT_decl_line
+	.byte	74                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	tp23_solver
@@ -7158,7 +7158,7 @@ par.desc.6:
 	.long	101                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	2                       # DW_AT_decl_file
-	.byte	59                      # DW_AT_decl_line
+	.byte	75                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	tp24_interpolator
@@ -7168,7 +7168,7 @@ par.desc.6:
 	.long	101                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	2                       # DW_AT_decl_file
-	.byte	64                      # DW_AT_decl_line
+	.byte	80                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	p_spidac_mclk_in
@@ -7178,7 +7178,7 @@ par.desc.6:
 	.long	196                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	2                       # DW_AT_decl_file
-	.byte	65                      # DW_AT_decl_line
+	.byte	81                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	clk_spi
@@ -7192,7 +7192,7 @@ par.desc.6:
 	.long	101                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	2                       # DW_AT_decl_file
-	.byte	67                      # DW_AT_decl_line
+	.byte	83                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	p_data_left
@@ -7202,7 +7202,7 @@ par.desc.6:
 	.long	101                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	2                       # DW_AT_decl_file
-	.byte	68                      # DW_AT_decl_line
+	.byte	84                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	p_data_right
@@ -7212,7 +7212,7 @@ par.desc.6:
 	.long	101                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	2                       # DW_AT_decl_file
-	.byte	75                      # DW_AT_decl_line
+	.byte	91                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	p_cs_n_0
@@ -7222,7 +7222,7 @@ par.desc.6:
 	.long	101                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	2                       # DW_AT_decl_file
-	.byte	76                      # DW_AT_decl_line
+	.byte	92                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	p_cs_n_1
@@ -7232,7 +7232,7 @@ par.desc.6:
 	.long	314                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	2                       # DW_AT_decl_file
-	.short	564                     # DW_AT_decl_line
+	.short	580                     # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	rc
@@ -7246,7 +7246,7 @@ par.desc.6:
 	.long	314                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	2                       # DW_AT_decl_file
-	.short	565                     # DW_AT_decl_line
+	.short	581                     # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	audio_cmd
@@ -7255,7 +7255,7 @@ par.desc.6:
 	.long	.Linfo_string27         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	2                       # DW_AT_decl_file
-	.short	420                     # DW_AT_decl_line
+	.short	436                     # DW_AT_decl_line
 	.byte	10                      # Abbrev [10] 0x161:0x6 DW_TAG_enumerator
 	.long	.Linfo_string20         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
@@ -7282,7 +7282,7 @@ par.desc.6:
 	.long	.Linfo_string27         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	2                       # DW_AT_decl_file
-	.short	531                     # DW_AT_decl_line
+	.short	547                     # DW_AT_decl_line
 	.byte	10                      # Abbrev [10] 0x195:0x6 DW_TAG_enumerator
 	.long	.Linfo_string20         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
@@ -7309,7 +7309,7 @@ par.desc.6:
 	.long	.Linfo_string27         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	2                       # DW_AT_decl_file
-	.short	612                     # DW_AT_decl_line
+	.short	628                     # DW_AT_decl_line
 	.byte	10                      # Abbrev [10] 0x1c9:0x6 DW_TAG_enumerator
 	.long	.Linfo_string20         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
@@ -7336,7 +7336,7 @@ par.desc.6:
 	.long	.Linfo_string27         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	2                       # DW_AT_decl_file
-	.short	619                     # DW_AT_decl_line
+	.short	635                     # DW_AT_decl_line
 	.byte	10                      # Abbrev [10] 0x1fd:0x6 DW_TAG_enumerator
 	.long	.Linfo_string20         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
@@ -7363,7 +7363,7 @@ par.desc.6:
 	.long	.Linfo_string27         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	2                       # DW_AT_decl_file
-	.short	754                     # DW_AT_decl_line
+	.short	770                     # DW_AT_decl_line
 	.byte	10                      # Abbrev [10] 0x231:0x6 DW_TAG_enumerator
 	.long	.Linfo_string20         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
@@ -7394,7 +7394,7 @@ par.desc.6:
 	.long	.Linfo_string38         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string38         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	81                      # DW_AT_decl_line
+	.byte	97                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	12                      # Abbrev [12] 0x26f:0x34 DW_TAG_subprogram
 	.long	.Ldebug_ranges1         # DW_AT_ranges
@@ -7404,7 +7404,7 @@ par.desc.6:
 	.long	.Linfo_string51         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string51         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	570                     # DW_AT_decl_line
+	.short	586                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	13                      # Abbrev [13] 0x287:0xf DW_TAG_formal_parameter
@@ -7413,12 +7413,12 @@ par.desc.6:
 	.byte	8
 	.long	.Linfo_string71         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	570                     # DW_AT_decl_line
+	.short	586                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x296:0xc DW_TAG_formal_parameter
 	.long	.Linfo_string72         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	570                     # DW_AT_decl_line
+	.short	586                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	12                      # Abbrev [12] 0x2a3:0x34 DW_TAG_subprogram
@@ -7429,7 +7429,7 @@ par.desc.6:
 	.long	.Linfo_string55         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string55         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	593                     # DW_AT_decl_line
+	.short	609                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	13                      # Abbrev [13] 0x2bb:0xf DW_TAG_formal_parameter
@@ -7438,12 +7438,12 @@ par.desc.6:
 	.byte	8
 	.long	.Linfo_string71         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	593                     # DW_AT_decl_line
+	.short	609                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x2ca:0xc DW_TAG_formal_parameter
 	.long	.Linfo_string72         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	593                     # DW_AT_decl_line
+	.short	609                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	15                      # Abbrev [15] 0x2d7:0xb9 DW_TAG_subprogram
@@ -7454,19 +7454,19 @@ par.desc.6:
 	.long	.Linfo_string70         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string70         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	750                     # DW_AT_decl_line
+	.short	766                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	16                      # Abbrev [16] 0x2eb:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc0            # DW_AT_location
 	.long	.Linfo_string71         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	749                     # DW_AT_decl_line
+	.short	765                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	16                      # Abbrev [16] 0x2fb:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc1            # DW_AT_location
 	.long	.Linfo_string73         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	749                     # DW_AT_decl_line
+	.short	765                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x30b:0x84 DW_TAG_lexical_block
 	.long	.Ldebug_ranges9         # DW_AT_ranges
@@ -7474,7 +7474,7 @@ par.desc.6:
 	.long	.Ldebug_loc4            # DW_AT_location
 	.long	.Linfo_string76         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	751                     # DW_AT_decl_line
+	.short	767                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x320:0x6e DW_TAG_lexical_block
 	.long	.Ldebug_ranges8         # DW_AT_ranges
@@ -7482,7 +7482,7 @@ par.desc.6:
 	.long	.Ldebug_loc3            # DW_AT_location
 	.long	.Linfo_string75         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	752                     # DW_AT_decl_line
+	.short	768                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x335:0x58 DW_TAG_lexical_block
 	.long	.Ldebug_ranges7         # DW_AT_ranges
@@ -7490,7 +7490,7 @@ par.desc.6:
 	.long	.Ldebug_loc2            # DW_AT_location
 	.long	.Linfo_string74         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	753                     # DW_AT_decl_line
+	.short	769                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x34a:0x42 DW_TAG_lexical_block
 	.long	.Ldebug_ranges6         # DW_AT_ranges
@@ -7498,7 +7498,7 @@ par.desc.6:
 	.long	.Ldebug_loc6            # DW_AT_location
 	.long	.Linfo_string78         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	754                     # DW_AT_decl_line
+	.short	770                     # DW_AT_decl_line
 	.long	552                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x35f:0x2c DW_TAG_lexical_block
 	.long	.Ldebug_ranges5         # DW_AT_ranges
@@ -7506,7 +7506,7 @@ par.desc.6:
 	.long	.Ldebug_loc7            # DW_AT_location
 	.long	.Linfo_string32         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	756                     # DW_AT_decl_line
+	.short	772                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x374:0x16 DW_TAG_lexical_block
 	.long	.Ldebug_ranges4         # DW_AT_ranges
@@ -7514,7 +7514,7 @@ par.desc.6:
 	.long	.Ldebug_loc5            # DW_AT_location
 	.long	.Linfo_string77         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	757                     # DW_AT_decl_line
+	.short	773                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -7531,13 +7531,13 @@ par.desc.6:
 	.long	.Linfo_string39         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string39         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	112                     # DW_AT_decl_line
+	.byte	128                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	20                      # Abbrev [20] 0x3a3:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc8            # DW_AT_location
 	.long	.Linfo_string79         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	112                     # DW_AT_decl_line
+	.byte	128                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x3b2:0x50 DW_TAG_lexical_block
 	.long	.Ldebug_ranges14        # DW_AT_ranges
@@ -7545,7 +7545,7 @@ par.desc.6:
 	.long	.Ldebug_loc10           # DW_AT_location
 	.long	.Linfo_string81         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	113                     # DW_AT_decl_line
+	.byte	129                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x3c6:0x3b DW_TAG_lexical_block
 	.long	.Ldebug_ranges13        # DW_AT_ranges
@@ -7553,7 +7553,7 @@ par.desc.6:
 	.long	.Ldebug_loc9            # DW_AT_location
 	.long	.Linfo_string80         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	114                     # DW_AT_decl_line
+	.byte	130                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x3da:0x26 DW_TAG_lexical_block
 	.long	.Ldebug_ranges12        # DW_AT_ranges
@@ -7561,14 +7561,14 @@ par.desc.6:
 	.long	.Ldebug_loc11           # DW_AT_location
 	.long	.Linfo_string82         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	115                     # DW_AT_decl_line
+	.byte	131                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x3ee:0x11 DW_TAG_lexical_block
 	.long	.Ldebug_ranges11        # DW_AT_ranges
 	.byte	22                      # Abbrev [22] 0x3f3:0xb DW_TAG_variable
 	.long	.Linfo_string83         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	116                     # DW_AT_decl_line
+	.byte	132                     # DW_AT_decl_line
 	.long	3575                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -7583,19 +7583,19 @@ par.desc.6:
 	.long	.Linfo_string40         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string40         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	138                     # DW_AT_decl_line
+	.byte	154                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	20                      # Abbrev [20] 0x416:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc12           # DW_AT_location
 	.long	.Linfo_string71         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	138                     # DW_AT_decl_line
+	.byte	154                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	20                      # Abbrev [20] 0x425:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc13           # DW_AT_location
 	.long	.Linfo_string85         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	138                     # DW_AT_decl_line
+	.byte	154                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x434:0x5d DW_TAG_lexical_block
 	.long	.Ldebug_ranges18        # DW_AT_ranges
@@ -7603,7 +7603,7 @@ par.desc.6:
 	.long	.Ldebug_loc14           # DW_AT_location
 	.long	.Linfo_string86         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	140                     # DW_AT_decl_line
+	.byte	156                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x448:0x48 DW_TAG_lexical_block
 	.long	.Ldebug_ranges17        # DW_AT_ranges
@@ -7611,13 +7611,13 @@ par.desc.6:
 	.long	.Ldebug_loc17           # DW_AT_location
 	.long	.Linfo_string89         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	141                     # DW_AT_decl_line
+	.byte	157                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	21                      # Abbrev [21] 0x45c:0xf DW_TAG_variable
 	.long	.Ldebug_loc18           # DW_AT_location
 	.long	.Linfo_string90         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	141                     # DW_AT_decl_line
+	.byte	157                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x46b:0x24 DW_TAG_lexical_block
 	.long	.Ldebug_ranges16        # DW_AT_ranges
@@ -7625,13 +7625,13 @@ par.desc.6:
 	.long	.Ldebug_loc15           # DW_AT_location
 	.long	.Linfo_string87         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	142                     # DW_AT_decl_line
+	.byte	158                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	21                      # Abbrev [21] 0x47f:0xf DW_TAG_variable
 	.long	.Ldebug_loc16           # DW_AT_location
 	.long	.Linfo_string88         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	142                     # DW_AT_decl_line
+	.byte	158                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -7645,19 +7645,19 @@ par.desc.6:
 	.long	.Linfo_string41         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string41         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	181                     # DW_AT_decl_line
+	.byte	197                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	20                      # Abbrev [20] 0x4a5:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc19           # DW_AT_location
 	.long	.Linfo_string71         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	181                     # DW_AT_decl_line
+	.byte	197                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	20                      # Abbrev [20] 0x4b4:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc20           # DW_AT_location
 	.long	.Linfo_string85         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	181                     # DW_AT_decl_line
+	.byte	197                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x4c3:0x6e DW_TAG_lexical_block
 	.long	.Ldebug_ranges23        # DW_AT_ranges
@@ -7665,7 +7665,7 @@ par.desc.6:
 	.long	.Ldebug_loc21           # DW_AT_location
 	.long	.Linfo_string86         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	183                     # DW_AT_decl_line
+	.byte	199                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x4d7:0x59 DW_TAG_lexical_block
 	.long	.Ldebug_ranges22        # DW_AT_ranges
@@ -7673,13 +7673,13 @@ par.desc.6:
 	.long	.Ldebug_loc24           # DW_AT_location
 	.long	.Linfo_string89         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	184                     # DW_AT_decl_line
+	.byte	200                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	21                      # Abbrev [21] 0x4eb:0xf DW_TAG_variable
 	.long	.Ldebug_loc25           # DW_AT_location
 	.long	.Linfo_string90         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	184                     # DW_AT_decl_line
+	.byte	200                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x4fa:0x35 DW_TAG_lexical_block
 	.long	.Ldebug_ranges21        # DW_AT_ranges
@@ -7687,20 +7687,20 @@ par.desc.6:
 	.long	.Ldebug_loc22           # DW_AT_location
 	.long	.Linfo_string87         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	185                     # DW_AT_decl_line
+	.byte	201                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	21                      # Abbrev [21] 0x50e:0xf DW_TAG_variable
 	.long	.Ldebug_loc23           # DW_AT_location
 	.long	.Linfo_string88         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	185                     # DW_AT_decl_line
+	.byte	201                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x51d:0x11 DW_TAG_lexical_block
 	.long	.Ldebug_ranges20        # DW_AT_ranges
 	.byte	22                      # Abbrev [22] 0x522:0xb DW_TAG_variable
 	.long	.Linfo_string83         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.byte	186                     # DW_AT_decl_line
+	.byte	202                     # DW_AT_decl_line
 	.long	3575                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -7715,25 +7715,25 @@ par.desc.6:
 	.long	.Linfo_string42         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string42         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	259                     # DW_AT_decl_line
+	.short	275                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	16                      # Abbrev [16] 0x546:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc26           # DW_AT_location
 	.long	.Linfo_string71         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	259                     # DW_AT_decl_line
+	.short	275                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	16                      # Abbrev [16] 0x556:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc27           # DW_AT_location
 	.long	.Linfo_string30         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	259                     # DW_AT_decl_line
+	.short	275                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	16                      # Abbrev [16] 0x566:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc28           # DW_AT_location
 	.long	.Linfo_string91         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	259                     # DW_AT_decl_line
+	.short	275                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x576:0x3c DW_TAG_lexical_block
 	.long	.Ldebug_ranges26        # DW_AT_ranges
@@ -7741,13 +7741,13 @@ par.desc.6:
 	.long	.Ldebug_loc30           # DW_AT_location
 	.long	.Linfo_string87         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	261                     # DW_AT_decl_line
+	.short	277                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	18                      # Abbrev [18] 0x58b:0x10 DW_TAG_variable
 	.long	.Ldebug_loc31           # DW_AT_location
 	.long	.Linfo_string88         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	261                     # DW_AT_decl_line
+	.short	277                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x59b:0x16 DW_TAG_lexical_block
 	.long	.Ldebug_ranges25        # DW_AT_ranges
@@ -7755,7 +7755,7 @@ par.desc.6:
 	.long	.Ldebug_loc29           # DW_AT_location
 	.long	.Linfo_string92         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	278                     # DW_AT_decl_line
+	.short	294                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -7768,25 +7768,25 @@ par.desc.6:
 	.long	.Linfo_string43         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string43         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	320                     # DW_AT_decl_line
+	.short	336                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	16                      # Abbrev [16] 0x5c7:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc32           # DW_AT_location
 	.long	.Linfo_string93         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	317                     # DW_AT_decl_line
+	.short	333                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	16                      # Abbrev [16] 0x5d7:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc33           # DW_AT_location
 	.long	.Linfo_string94         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	318                     # DW_AT_decl_line
+	.short	334                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	16                      # Abbrev [16] 0x5e7:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc34           # DW_AT_location
 	.long	.Linfo_string72         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	319                     # DW_AT_decl_line
+	.short	335                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x5f7:0x166 DW_TAG_lexical_block
 	.long	.Ldebug_ranges36        # DW_AT_ranges
@@ -7794,7 +7794,7 @@ par.desc.6:
 	.long	.Ldebug_loc35           # DW_AT_location
 	.long	.Linfo_string95         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	322                     # DW_AT_decl_line
+	.short	338                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x60c:0x150 DW_TAG_lexical_block
 	.long	.Ldebug_ranges35        # DW_AT_ranges
@@ -7802,19 +7802,19 @@ par.desc.6:
 	.long	.Ldebug_loc47           # DW_AT_location
 	.long	.Linfo_string106        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	323                     # DW_AT_decl_line
+	.short	339                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	18                      # Abbrev [18] 0x621:0x10 DW_TAG_variable
 	.long	.Ldebug_loc49           # DW_AT_location
 	.long	.Linfo_string108        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	323                     # DW_AT_decl_line
+	.short	339                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	18                      # Abbrev [18] 0x631:0x10 DW_TAG_variable
 	.long	.Ldebug_loc50           # DW_AT_location
 	.long	.Linfo_string109        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	323                     # DW_AT_decl_line
+	.short	339                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x641:0x11a DW_TAG_lexical_block
 	.long	.Ldebug_ranges34        # DW_AT_ranges
@@ -7822,49 +7822,49 @@ par.desc.6:
 	.long	.Ldebug_loc40           # DW_AT_location
 	.long	.Linfo_string100        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	325                     # DW_AT_decl_line
+	.short	341                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	18                      # Abbrev [18] 0x656:0x10 DW_TAG_variable
 	.long	.Ldebug_loc41           # DW_AT_location
 	.long	.Linfo_string101        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	325                     # DW_AT_decl_line
+	.short	341                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	18                      # Abbrev [18] 0x666:0x10 DW_TAG_variable
 	.long	.Ldebug_loc42           # DW_AT_location
 	.long	.Linfo_string102        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	325                     # DW_AT_decl_line
+	.short	341                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	18                      # Abbrev [18] 0x676:0x10 DW_TAG_variable
 	.long	.Ldebug_loc43           # DW_AT_location
 	.long	.Linfo_string103        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	325                     # DW_AT_decl_line
+	.short	341                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	18                      # Abbrev [18] 0x686:0x10 DW_TAG_variable
 	.long	.Ldebug_loc44           # DW_AT_location
 	.long	.Linfo_string104        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	325                     # DW_AT_decl_line
+	.short	341                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	18                      # Abbrev [18] 0x696:0x10 DW_TAG_variable
 	.long	.Ldebug_loc45           # DW_AT_location
 	.long	.Linfo_string17         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	325                     # DW_AT_decl_line
+	.short	341                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	18                      # Abbrev [18] 0x6a6:0x10 DW_TAG_variable
 	.long	.Ldebug_loc46           # DW_AT_location
 	.long	.Linfo_string105        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	325                     # DW_AT_decl_line
+	.short	341                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	18                      # Abbrev [18] 0x6b6:0x10 DW_TAG_variable
 	.long	.Ldebug_loc48           # DW_AT_location
 	.long	.Linfo_string107        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	325                     # DW_AT_decl_line
+	.short	341                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x6c6:0x94 DW_TAG_lexical_block
 	.long	.Ldebug_ranges33        # DW_AT_ranges
@@ -7872,7 +7872,7 @@ par.desc.6:
 	.long	.Ldebug_loc36           # DW_AT_location
 	.long	.Linfo_string96         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	352                     # DW_AT_decl_line
+	.short	368                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x6db:0x7e DW_TAG_lexical_block
 	.long	.Ldebug_ranges32        # DW_AT_ranges
@@ -7880,7 +7880,7 @@ par.desc.6:
 	.long	.Ldebug_loc37           # DW_AT_location
 	.long	.Linfo_string97         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	353                     # DW_AT_decl_line
+	.short	369                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x6f0:0x68 DW_TAG_lexical_block
 	.long	.Ldebug_ranges31        # DW_AT_ranges
@@ -7888,7 +7888,7 @@ par.desc.6:
 	.long	.Ldebug_loc38           # DW_AT_location
 	.long	.Linfo_string98         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	354                     # DW_AT_decl_line
+	.short	370                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x705:0x52 DW_TAG_lexical_block
 	.long	.Ldebug_ranges30        # DW_AT_ranges
@@ -7896,31 +7896,31 @@ par.desc.6:
 	.long	.Ldebug_loc39           # DW_AT_location
 	.long	.Linfo_string99         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	355                     # DW_AT_decl_line
+	.short	371                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x71a:0x3c DW_TAG_lexical_block
 	.long	.Ldebug_ranges29        # DW_AT_ranges
 	.byte	23                      # Abbrev [23] 0x71f:0xc DW_TAG_variable
 	.long	.Linfo_string110        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	391                     # DW_AT_decl_line
+	.short	407                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	23                      # Abbrev [23] 0x72b:0xc DW_TAG_variable
 	.long	.Linfo_string111        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	391                     # DW_AT_decl_line
+	.short	407                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x737:0x1e DW_TAG_lexical_block
 	.long	.Ldebug_ranges28        # DW_AT_ranges
 	.byte	23                      # Abbrev [23] 0x73c:0xc DW_TAG_variable
 	.long	.Linfo_string112        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	392                     # DW_AT_decl_line
+	.short	408                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	23                      # Abbrev [23] 0x748:0xc DW_TAG_variable
 	.long	.Linfo_string113        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	392                     # DW_AT_decl_line
+	.short	408                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -7936,37 +7936,37 @@ par.desc.6:
 	.long	.Linfo_string28         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string28         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	15                      # DW_AT_decl_line
+	.byte	38                      # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	1                       # DW_AT_inline
 	.byte	25                      # Abbrev [25] 0x76e:0xb DW_TAG_formal_parameter
 	.long	.Linfo_string29         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	14                      # DW_AT_decl_line
+	.byte	37                      # DW_AT_decl_line
 	.long	1964                    # DW_AT_type
 	.byte	25                      # Abbrev [25] 0x779:0xb DW_TAG_formal_parameter
 	.long	.Linfo_string30         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	14                      # DW_AT_decl_line
+	.byte	37                      # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	26                      # Abbrev [26] 0x784:0xd DW_TAG_lexical_block
 	.byte	22                      # Abbrev [22] 0x785:0xb DW_TAG_variable
 	.long	.Linfo_string32         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	21                      # DW_AT_decl_line
+	.byte	44                      # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	26                      # Abbrev [26] 0x791:0x1a DW_TAG_lexical_block
 	.byte	22                      # Abbrev [22] 0x792:0xb DW_TAG_variable
 	.long	.Linfo_string33         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	27                      # DW_AT_decl_line
+	.byte	50                      # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	26                      # Abbrev [26] 0x79d:0xd DW_TAG_lexical_block
 	.byte	22                      # Abbrev [22] 0x79e:0xb DW_TAG_variable
 	.long	.Linfo_string34         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	29                      # DW_AT_decl_line
+	.byte	52                      # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -7985,31 +7985,31 @@ par.desc.6:
 	.long	.Linfo_string44         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string44         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	419                     # DW_AT_decl_line
+	.short	435                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	16                      # Abbrev [16] 0x7cc:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc51           # DW_AT_location
 	.long	.Linfo_string71         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	414                     # DW_AT_decl_line
+	.short	430                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	16                      # Abbrev [16] 0x7dc:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc52           # DW_AT_location
 	.long	.Linfo_string93         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	415                     # DW_AT_decl_line
+	.short	431                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	16                      # Abbrev [16] 0x7ec:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc53           # DW_AT_location
 	.long	.Linfo_string73         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	416                     # DW_AT_decl_line
+	.short	432                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	16                      # Abbrev [16] 0x7fc:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc54           # DW_AT_location
 	.long	.Linfo_string72         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	417                     # DW_AT_decl_line
+	.short	433                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x80c:0x1c7 DW_TAG_lexical_block
 	.long	.Ldebug_ranges55        # DW_AT_ranges
@@ -8017,7 +8017,7 @@ par.desc.6:
 	.long	.Ldebug_loc59           # DW_AT_location
 	.long	.Linfo_string130        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	420                     # DW_AT_decl_line
+	.short	436                     # DW_AT_decl_line
 	.long	344                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x821:0x1b1 DW_TAG_lexical_block
 	.long	.Ldebug_ranges54        # DW_AT_ranges
@@ -8025,20 +8025,20 @@ par.desc.6:
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string128        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	421                     # DW_AT_decl_line
+	.short	437                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	28                      # Abbrev [28] 0x833:0xd DW_TAG_variable
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string129        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	421                     # DW_AT_decl_line
+	.short	437                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x840:0x191 DW_TAG_lexical_block
 	.long	.Ldebug_ranges53        # DW_AT_ranges
 	.byte	23                      # Abbrev [23] 0x845:0xc DW_TAG_variable
 	.long	.Linfo_string132        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	422                     # DW_AT_decl_line
+	.short	438                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x851:0x17f DW_TAG_lexical_block
 	.long	.Ldebug_ranges52        # DW_AT_ranges
@@ -8048,7 +8048,7 @@ par.desc.6:
 .asciiz"\354"
 	.long	.Linfo_string114        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	423                     # DW_AT_decl_line
+	.short	439                     # DW_AT_decl_line
 	.long	3582                    # DW_AT_type
 	.byte	29                      # Abbrev [29] 0x866:0x10 DW_TAG_variable
 	.byte	3                       # DW_AT_location
@@ -8056,7 +8056,7 @@ par.desc.6:
 .asciiz"\310"
 	.long	.Linfo_string115        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	423                     # DW_AT_decl_line
+	.short	439                     # DW_AT_decl_line
 	.long	3582                    # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x876:0x159 DW_TAG_lexical_block
 	.long	.Ldebug_ranges51        # DW_AT_ranges
@@ -8064,13 +8064,13 @@ par.desc.6:
 	.long	.Ldebug_loc57           # DW_AT_location
 	.long	.Linfo_string126        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	424                     # DW_AT_decl_line
+	.short	440                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	18                      # Abbrev [18] 0x88b:0x10 DW_TAG_variable
 	.long	.Ldebug_loc58           # DW_AT_location
 	.long	.Linfo_string127        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	424                     # DW_AT_decl_line
+	.short	440                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x89b:0x133 DW_TAG_lexical_block
 	.long	.Ldebug_ranges50        # DW_AT_ranges
@@ -8078,13 +8078,13 @@ par.desc.6:
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string124        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	425                     # DW_AT_decl_line
+	.short	441                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	28                      # Abbrev [28] 0x8ad:0xd DW_TAG_variable
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string125        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	425                     # DW_AT_decl_line
+	.short	441                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x8ba:0x113 DW_TAG_lexical_block
 	.long	.Ldebug_ranges49        # DW_AT_ranges
@@ -8092,13 +8092,13 @@ par.desc.6:
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string122        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	426                     # DW_AT_decl_line
+	.short	442                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	28                      # Abbrev [28] 0x8cc:0xd DW_TAG_variable
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string123        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	426                     # DW_AT_decl_line
+	.short	442                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x8d9:0xf3 DW_TAG_lexical_block
 	.long	.Ldebug_ranges48        # DW_AT_ranges
@@ -8106,13 +8106,13 @@ par.desc.6:
 	.long	.Ldebug_loc55           # DW_AT_location
 	.long	.Linfo_string120        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	427                     # DW_AT_decl_line
+	.short	443                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	18                      # Abbrev [18] 0x8ee:0x10 DW_TAG_variable
 	.long	.Ldebug_loc56           # DW_AT_location
 	.long	.Linfo_string121        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	427                     # DW_AT_decl_line
+	.short	443                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x8fe:0xcd DW_TAG_lexical_block
 	.long	.Ldebug_ranges47        # DW_AT_ranges
@@ -8120,13 +8120,13 @@ par.desc.6:
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string118        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	428                     # DW_AT_decl_line
+	.short	444                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	28                      # Abbrev [28] 0x910:0xd DW_TAG_variable
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string119        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	428                     # DW_AT_decl_line
+	.short	444                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x91d:0xad DW_TAG_lexical_block
 	.long	.Ldebug_ranges46        # DW_AT_ranges
@@ -8134,13 +8134,13 @@ par.desc.6:
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string116        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	429                     # DW_AT_decl_line
+	.short	445                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	28                      # Abbrev [28] 0x92f:0xd DW_TAG_variable
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string117        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	429                     # DW_AT_decl_line
+	.short	445                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x93c:0x8d DW_TAG_lexical_block
 	.long	.Ldebug_ranges45        # DW_AT_ranges
@@ -8148,28 +8148,28 @@ par.desc.6:
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string29         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	431                     # DW_AT_decl_line
+	.short	447                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x94e:0x7a DW_TAG_lexical_block
 	.long	.Ldebug_ranges44        # DW_AT_ranges
 	.byte	23                      # Abbrev [23] 0x953:0xc DW_TAG_variable
 	.long	.Linfo_string32         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	450                     # DW_AT_decl_line
+	.short	466                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x95f:0x24 DW_TAG_lexical_block
 	.long	.Ldebug_ranges39        # DW_AT_ranges
 	.byte	23                      # Abbrev [23] 0x964:0xc DW_TAG_variable
 	.long	.Linfo_string133        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	479                     # DW_AT_decl_line
+	.short	495                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x970:0x12 DW_TAG_lexical_block
 	.long	.Ldebug_ranges38        # DW_AT_ranges
 	.byte	23                      # Abbrev [23] 0x975:0xc DW_TAG_variable
 	.long	.Linfo_string134        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	480                     # DW_AT_decl_line
+	.short	496                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -8177,7 +8177,7 @@ par.desc.6:
 	.long	1886                    # DW_AT_abstract_origin
 	.long	.Ldebug_ranges40        # DW_AT_ranges
 	.byte	2                       # DW_AT_call_file
-	.short	450                     # DW_AT_call_line
+	.short	466                     # DW_AT_call_line
 	.byte	32                      # Abbrev [32] 0x98f:0x6 DW_TAG_formal_parameter
 	.byte	0                       # DW_AT_const_value
 	.long	1902                    # DW_AT_abstract_origin
@@ -8200,7 +8200,7 @@ par.desc.6:
 	.long	.Ldebug_loc61           # DW_AT_location
 	.long	.Linfo_string131        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	470                     # DW_AT_decl_line
+	.short	486                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -8224,25 +8224,25 @@ par.desc.6:
 	.long	.Linfo_string45         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string45         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	530                     # DW_AT_decl_line
+	.short	546                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	16                      # Abbrev [16] 0x9e8:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc62           # DW_AT_location
 	.long	.Linfo_string71         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	526                     # DW_AT_decl_line
+	.short	542                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	16                      # Abbrev [16] 0x9f8:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc63           # DW_AT_location
 	.long	.Linfo_string94         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	527                     # DW_AT_decl_line
+	.short	543                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	16                      # Abbrev [16] 0xa08:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc64           # DW_AT_location
 	.long	.Linfo_string73         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	528                     # DW_AT_decl_line
+	.short	544                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	17                      # Abbrev [17] 0xa18:0x69 DW_TAG_lexical_block
 	.long	.Ldebug_ranges62        # DW_AT_ranges
@@ -8250,7 +8250,7 @@ par.desc.6:
 	.long	.Ldebug_loc65           # DW_AT_location
 	.long	.Linfo_string130        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	531                     # DW_AT_decl_line
+	.short	547                     # DW_AT_decl_line
 	.long	396                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0xa2d:0x53 DW_TAG_lexical_block
 	.long	.Ldebug_ranges61        # DW_AT_ranges
@@ -8258,20 +8258,20 @@ par.desc.6:
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string29         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	533                     # DW_AT_decl_line
+	.short	549                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0xa3f:0x40 DW_TAG_lexical_block
 	.long	.Ldebug_ranges60        # DW_AT_ranges
 	.byte	23                      # Abbrev [23] 0xa44:0xc DW_TAG_variable
 	.long	.Linfo_string32         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	551                     # DW_AT_decl_line
+	.short	567                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	31                      # Abbrev [31] 0xa50:0x2e DW_TAG_inlined_subroutine
 	.long	1886                    # DW_AT_abstract_origin
 	.long	.Ldebug_ranges57        # DW_AT_ranges
 	.byte	2                       # DW_AT_call_file
-	.short	551                     # DW_AT_call_line
+	.short	567                     # DW_AT_call_line
 	.byte	32                      # Abbrev [32] 0xa5c:0x6 DW_TAG_formal_parameter
 	.byte	0                       # DW_AT_const_value
 	.long	1902                    # DW_AT_abstract_origin
@@ -8300,7 +8300,7 @@ par.desc.6:
 	.long	.Linfo_string46         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string46         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	581                     # DW_AT_decl_line
+	.short	597                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xa95:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc67           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8314,7 +8314,7 @@ par.desc.6:
 	.long	.Linfo_string47         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string47         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	582                     # DW_AT_decl_line
+	.short	598                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xab6:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc68           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8328,7 +8328,7 @@ par.desc.6:
 	.long	.Linfo_string48         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string48         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	583                     # DW_AT_decl_line
+	.short	599                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xad7:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc69           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8342,7 +8342,7 @@ par.desc.6:
 	.long	.Linfo_string49         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string49         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	584                     # DW_AT_decl_line
+	.short	600                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xaf8:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc70           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8356,7 +8356,7 @@ par.desc.6:
 	.long	.Linfo_string50         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string50         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	585                     # DW_AT_decl_line
+	.short	601                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xb19:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc71           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8370,7 +8370,7 @@ par.desc.6:
 	.long	.Linfo_string52         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string52         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	602                     # DW_AT_decl_line
+	.short	618                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xb3a:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc72           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8384,7 +8384,7 @@ par.desc.6:
 	.long	.Linfo_string53         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string53         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	603                     # DW_AT_decl_line
+	.short	619                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xb5b:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc73           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8398,7 +8398,7 @@ par.desc.6:
 	.long	.Linfo_string54         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string54         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	604                     # DW_AT_decl_line
+	.short	620                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xb7c:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc74           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8412,7 +8412,7 @@ par.desc.6:
 	.long	.Linfo_string69         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string69         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	612                     # DW_AT_decl_line
+	.short	628                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	13                      # Abbrev [13] 0xba2:0xf DW_TAG_formal_parameter
@@ -8421,23 +8421,23 @@ par.desc.6:
 	.byte	16
 	.long	.Linfo_string71         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	612                     # DW_AT_decl_line
+	.short	628                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	16                      # Abbrev [16] 0xbb1:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc75           # DW_AT_location
 	.long	.Linfo_string142        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	612                     # DW_AT_decl_line
+	.short	628                     # DW_AT_decl_line
 	.long	3768                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0xbc1:0xc DW_TAG_formal_parameter
 	.long	.Linfo_string73         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	612                     # DW_AT_decl_line
+	.short	628                     # DW_AT_decl_line
 	.long	1969                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0xbcd:0xc DW_TAG_formal_parameter
 	.long	.Linfo_string72         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	612                     # DW_AT_decl_line
+	.short	628                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0xbd9:0x28 DW_TAG_lexical_block
 	.long	.Ldebug_ranges73        # DW_AT_ranges
@@ -8445,14 +8445,14 @@ par.desc.6:
 	.long	.Ldebug_loc76           # DW_AT_location
 	.long	.Linfo_string143        # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	619                     # DW_AT_decl_line
+	.short	635                     # DW_AT_decl_line
 	.long	500                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0xbee:0x12 DW_TAG_lexical_block
 	.long	.Ldebug_ranges72        # DW_AT_ranges
 	.byte	23                      # Abbrev [23] 0xbf3:0xc DW_TAG_variable
 	.long	.Linfo_string85         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	697                     # DW_AT_decl_line
+	.short	713                     # DW_AT_decl_line
 	.long	314                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -8465,7 +8465,7 @@ par.desc.6:
 	.long	.Linfo_string56         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string56         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	675                     # DW_AT_decl_line
+	.short	691                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xc15:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc77           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8479,7 +8479,7 @@ par.desc.6:
 	.long	.Linfo_string57         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string57         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	677                     # DW_AT_decl_line
+	.short	693                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xc36:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc78           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8493,7 +8493,7 @@ par.desc.6:
 	.long	.Linfo_string58         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string58         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	678                     # DW_AT_decl_line
+	.short	694                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xc57:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc79           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8507,7 +8507,7 @@ par.desc.6:
 	.long	.Linfo_string59         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string59         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	687                     # DW_AT_decl_line
+	.short	703                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xc78:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc80           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8521,7 +8521,7 @@ par.desc.6:
 	.long	.Linfo_string60         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string60         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	689                     # DW_AT_decl_line
+	.short	705                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xc99:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc81           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8535,7 +8535,7 @@ par.desc.6:
 	.long	.Linfo_string61         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string61         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	690                     # DW_AT_decl_line
+	.short	706                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xcba:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc82           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8549,7 +8549,7 @@ par.desc.6:
 	.long	.Linfo_string62         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string62         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	723                     # DW_AT_decl_line
+	.short	739                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xcdb:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc83           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8563,7 +8563,7 @@ par.desc.6:
 	.long	.Linfo_string63         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string63         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	725                     # DW_AT_decl_line
+	.short	741                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xcfc:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc84           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8577,7 +8577,7 @@ par.desc.6:
 	.long	.Linfo_string64         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string64         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	734                     # DW_AT_decl_line
+	.short	750                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xd1d:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc85           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8591,7 +8591,7 @@ par.desc.6:
 	.long	.Linfo_string65         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string65         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	736                     # DW_AT_decl_line
+	.short	752                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xd3e:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc86           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8605,7 +8605,7 @@ par.desc.6:
 	.long	.Linfo_string66         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string66         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	737                     # DW_AT_decl_line
+	.short	753                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xd5f:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc87           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8619,7 +8619,7 @@ par.desc.6:
 	.long	.Linfo_string67         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string67         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	738                     # DW_AT_decl_line
+	.short	754                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xd80:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc88           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8633,7 +8633,7 @@ par.desc.6:
 	.long	.Linfo_string68         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string68         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	739                     # DW_AT_decl_line
+	.short	755                     # DW_AT_decl_line
 	.byte	36                      # Abbrev [36] 0xda1:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc89           # DW_AT_location
 	.long	.Linfo_string135        # DW_AT_name
@@ -8692,42 +8692,42 @@ par.desc.6:
 	.long	.Linfo_string140        # DW_AT_name
 	.byte	40                      # DW_AT_byte_size
 	.byte	2                       # DW_AT_decl_file
-	.short	581                     # DW_AT_decl_line
+	.short	597                     # DW_AT_decl_line
 	.byte	40                      # Abbrev [40] 0xe19:0xd DW_TAG_member
 	.long	.Linfo_string71         # DW_AT_name
 	.long	1969                    # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	581                     # DW_AT_decl_line
+	.short	597                     # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	40                      # Abbrev [40] 0xe26:0xd DW_TAG_member
 	.long	.Linfo_string72         # DW_AT_name
 	.long	314                     # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	581                     # DW_AT_decl_line
+	.short	597                     # DW_AT_decl_line
 	.byte	4                       # DW_AT_data_member_location
 	.byte	40                      # Abbrev [40] 0xe33:0xd DW_TAG_member
 	.long	.Linfo_string136        # DW_AT_name
 	.long	3688                    # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	581                     # DW_AT_decl_line
+	.short	597                     # DW_AT_decl_line
 	.byte	8                       # DW_AT_data_member_location
 	.byte	40                      # Abbrev [40] 0xe40:0xd DW_TAG_member
 	.long	.Linfo_string137        # DW_AT_name
 	.long	3688                    # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	581                     # DW_AT_decl_line
+	.short	597                     # DW_AT_decl_line
 	.byte	16                      # DW_AT_data_member_location
 	.byte	40                      # Abbrev [40] 0xe4d:0xd DW_TAG_member
 	.long	.Linfo_string138        # DW_AT_name
 	.long	3688                    # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	581                     # DW_AT_decl_line
+	.short	597                     # DW_AT_decl_line
 	.byte	24                      # DW_AT_data_member_location
 	.byte	40                      # Abbrev [40] 0xe5a:0xd DW_TAG_member
 	.long	.Linfo_string139        # DW_AT_name
 	.long	3688                    # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	581                     # DW_AT_decl_line
+	.short	597                     # DW_AT_decl_line
 	.byte	32                      # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	3                       # Abbrev [3] 0xe68:0xd DW_TAG_array_type
@@ -8743,30 +8743,30 @@ par.desc.6:
 	.long	.Linfo_string141        # DW_AT_name
 	.byte	24                      # DW_AT_byte_size
 	.byte	2                       # DW_AT_decl_file
-	.short	602                     # DW_AT_decl_line
+	.short	618                     # DW_AT_decl_line
 	.byte	40                      # Abbrev [40] 0xe83:0xd DW_TAG_member
 	.long	.Linfo_string71         # DW_AT_name
 	.long	1969                    # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	602                     # DW_AT_decl_line
+	.short	618                     # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	40                      # Abbrev [40] 0xe90:0xd DW_TAG_member
 	.long	.Linfo_string72         # DW_AT_name
 	.long	314                     # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	602                     # DW_AT_decl_line
+	.short	618                     # DW_AT_decl_line
 	.byte	4                       # DW_AT_data_member_location
 	.byte	40                      # Abbrev [40] 0xe9d:0xd DW_TAG_member
 	.long	.Linfo_string137        # DW_AT_name
 	.long	3688                    # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	602                     # DW_AT_decl_line
+	.short	618                     # DW_AT_decl_line
 	.byte	8                       # DW_AT_data_member_location
 	.byte	40                      # Abbrev [40] 0xeaa:0xd DW_TAG_member
 	.long	.Linfo_string138        # DW_AT_name
 	.long	3688                    # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	602                     # DW_AT_decl_line
+	.short	618                     # DW_AT_decl_line
 	.byte	16                      # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	41                      # Abbrev [41] 0xeb8:0x5 DW_TAG_reference_type
@@ -8777,54 +8777,54 @@ par.desc.6:
 	.long	.Linfo_string144        # DW_AT_name
 	.byte	48                      # DW_AT_byte_size
 	.byte	2                       # DW_AT_decl_file
-	.short	675                     # DW_AT_decl_line
+	.short	691                     # DW_AT_decl_line
 	.byte	40                      # Abbrev [40] 0xecb:0xd DW_TAG_member
 	.long	.Linfo_string71         # DW_AT_name
 	.long	1969                    # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	675                     # DW_AT_decl_line
+	.short	691                     # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	40                      # Abbrev [40] 0xed8:0xd DW_TAG_member
 	.long	.Linfo_string73         # DW_AT_name
 	.long	1969                    # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	675                     # DW_AT_decl_line
+	.short	691                     # DW_AT_decl_line
 	.byte	4                       # DW_AT_data_member_location
 	.byte	40                      # Abbrev [40] 0xee5:0xd DW_TAG_member
 	.long	.Linfo_string72         # DW_AT_name
 	.long	314                     # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	675                     # DW_AT_decl_line
+	.short	691                     # DW_AT_decl_line
 	.byte	8                       # DW_AT_data_member_location
 	.byte	40                      # Abbrev [40] 0xef2:0xd DW_TAG_member
 	.long	.Linfo_string136        # DW_AT_name
 	.long	3688                    # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	675                     # DW_AT_decl_line
+	.short	691                     # DW_AT_decl_line
 	.byte	12                      # DW_AT_data_member_location
 	.byte	40                      # Abbrev [40] 0xeff:0xd DW_TAG_member
 	.long	.Linfo_string137        # DW_AT_name
 	.long	3688                    # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	675                     # DW_AT_decl_line
+	.short	691                     # DW_AT_decl_line
 	.byte	20                      # DW_AT_data_member_location
 	.byte	40                      # Abbrev [40] 0xf0c:0xd DW_TAG_member
 	.long	.Linfo_string138        # DW_AT_name
 	.long	3688                    # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	675                     # DW_AT_decl_line
+	.short	691                     # DW_AT_decl_line
 	.byte	28                      # DW_AT_data_member_location
 	.byte	40                      # Abbrev [40] 0xf19:0xd DW_TAG_member
 	.long	.Linfo_string139        # DW_AT_name
 	.long	3688                    # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	675                     # DW_AT_decl_line
+	.short	691                     # DW_AT_decl_line
 	.byte	36                      # DW_AT_data_member_location
 	.byte	40                      # Abbrev [40] 0xf26:0xd DW_TAG_member
 	.long	.Linfo_string85         # DW_AT_name
 	.long	314                     # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	675                     # DW_AT_decl_line
+	.short	691                     # DW_AT_decl_line
 	.byte	44                      # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -12042,253 +12042,253 @@ par.desc.6:
 .cc_top cc_0,.Lxta.call_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	90
+	.long	106
 	.long	.Lxta.call_labels0
 .cc_bottom cc_0
 .cc_top cc_1,.Lxta.call_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	101
+	.long	117
 	.long	.Lxta.call_labels1
 .cc_bottom cc_1
 .cc_top cc_2,.Lxta.call_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	102
+	.long	118
 	.long	.Lxta.call_labels2
 .cc_bottom cc_2
 .cc_top cc_3,.Lxta.call_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	124
+	.long	140
 	.long	.Lxta.call_labels10
 .cc_bottom cc_3
 .cc_top cc_4,.Lxta.call_labels11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	129
+	.long	145
 	.long	.Lxta.call_labels11
 .cc_bottom cc_4
 .cc_top cc_5,.Lxta.call_labels12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	150
+	.long	166
 	.long	.Lxta.call_labels12
 .cc_bottom cc_5
 .cc_top cc_6,.Lxta.call_labels13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	212
+	.long	228
 	.long	.Lxta.call_labels13
 .cc_bottom cc_6
 .cc_top cc_7,.Lxta.call_labels14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	457
+	.long	473
 	.long	.Lxta.call_labels14
 .cc_bottom cc_7
 .cc_top cc_8,.Lxta.call_labels15
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	461
+	.long	477
 	.long	.Lxta.call_labels15
 .cc_bottom cc_8
 .cc_top cc_9,.Lxta.call_labels16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	465
+	.long	481
 	.long	.Lxta.call_labels16
 .cc_bottom cc_9
 .cc_top cc_10,.Lxta.call_labels17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	471
+	.long	487
 	.long	.Lxta.call_labels17
 .cc_bottom cc_10
 .cc_top cc_11,.Lxta.call_labels18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	476
+	.long	492
 	.long	.Lxta.call_labels18
 .cc_bottom cc_11
 .cc_top cc_12,.Lxta.call_labels19
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	477
+	.long	493
 	.long	.Lxta.call_labels19
 .cc_bottom cc_12
 .cc_top cc_13,.Lxta.call_labels20
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	581
+	.long	597
 	.long	.Lxta.call_labels20
 .cc_bottom cc_13
 .cc_top cc_14,.Lxta.call_labels21
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	582
+	.long	598
 	.long	.Lxta.call_labels21
 .cc_bottom cc_14
 .cc_top cc_15,.Lxta.call_labels22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	583
+	.long	599
 	.long	.Lxta.call_labels22
 .cc_bottom cc_15
 .cc_top cc_16,.Lxta.call_labels23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	584
+	.long	600
 	.long	.Lxta.call_labels23
 .cc_bottom cc_16
 .cc_top cc_17,.Lxta.call_labels24
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	585
+	.long	601
 	.long	.Lxta.call_labels24
 .cc_bottom cc_17
 .cc_top cc_18,.Lxta.call_labels25
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	602
+	.long	618
 	.long	.Lxta.call_labels25
 .cc_bottom cc_18
 .cc_top cc_19,.Lxta.call_labels26
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	603
+	.long	619
 	.long	.Lxta.call_labels26
 .cc_bottom cc_19
 .cc_top cc_20,.Lxta.call_labels27
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	604
+	.long	620
 	.long	.Lxta.call_labels27
 .cc_bottom cc_20
 .cc_top cc_21,.Lxta.call_labels28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	623
+	.long	639
 	.long	.Lxta.call_labels28
 .cc_bottom cc_21
 .cc_top cc_22,.Lxta.call_labels29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	675
+	.long	691
 	.long	.Lxta.call_labels29
 .cc_bottom cc_22
 .cc_top cc_23,.Lxta.call_labels30
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	677
+	.long	693
 	.long	.Lxta.call_labels30
 .cc_bottom cc_23
 .cc_top cc_24,.Lxta.call_labels31
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	678
+	.long	694
 	.long	.Lxta.call_labels31
 .cc_bottom cc_24
 .cc_top cc_25,.Lxta.call_labels32
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	687
+	.long	703
 	.long	.Lxta.call_labels32
 .cc_bottom cc_25
 .cc_top cc_26,.Lxta.call_labels33
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	689
+	.long	705
 	.long	.Lxta.call_labels33
 .cc_bottom cc_26
 .cc_top cc_27,.Lxta.call_labels34
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	690
+	.long	706
 	.long	.Lxta.call_labels34
 .cc_bottom cc_27
 .cc_top cc_28,.Lxta.call_labels35
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	723
+	.long	739
 	.long	.Lxta.call_labels35
 .cc_bottom cc_28
 .cc_top cc_29,.Lxta.call_labels36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	725
+	.long	741
 	.long	.Lxta.call_labels36
 .cc_bottom cc_29
 .cc_top cc_30,.Lxta.call_labels37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	734
+	.long	750
 	.long	.Lxta.call_labels37
 .cc_bottom cc_30
 .cc_top cc_31,.Lxta.call_labels38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	736
+	.long	752
 	.long	.Lxta.call_labels38
 .cc_bottom cc_31
 .cc_top cc_32,.Lxta.call_labels39
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	737
+	.long	753
 	.long	.Lxta.call_labels39
 .cc_bottom cc_32
 .cc_top cc_33,.Lxta.call_labels40
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	738
+	.long	754
 	.long	.Lxta.call_labels40
 .cc_bottom cc_33
 .cc_top cc_34,.Lxta.call_labels41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	739
+	.long	755
 	.long	.Lxta.call_labels41
 .cc_bottom cc_34
 .cc_top cc_35,.Lxta.call_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	758
+	.long	774
 	.long	.Lxta.call_labels3
 .cc_bottom cc_35
 .cc_top cc_36,.Lxta.call_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	762
+	.long	778
 	.long	.Lxta.call_labels4
 .cc_bottom cc_36
 .cc_top cc_37,.Lxta.call_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	762
+	.long	778
 	.long	.Lxta.call_labels6
 .cc_bottom cc_37
 .cc_top cc_38,.Lxta.call_labels8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	762
+	.long	778
 	.long	.Lxta.call_labels8
 .cc_bottom cc_38
 .cc_top cc_39,.Lxta.call_labels7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	777
+	.long	793
 	.long	.Lxta.call_labels7
 .cc_bottom cc_39
 .cc_top cc_40,.Lxta.call_labels9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	777
+	.long	793
 	.long	.Lxta.call_labels9
 .cc_bottom cc_40
 .cc_top cc_41,.Lxta.call_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	777
+	.long	793
 	.long	.Lxta.call_labels5
 .cc_bottom cc_41
 .Lentries_end1:
@@ -12302,7 +12302,7 @@ par.desc.6:
 	.byte	0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	494
+	.long	510
 	.long	.Laddr_end1-.Laddr_start0
 .Laddr_start0:
 .cc_top cc_42,.Lxta.endpoint_labels68
@@ -12314,7 +12314,7 @@ par.desc.6:
 	.byte	0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	459
+	.long	475
 	.long	.Laddr_end3-.Laddr_start2
 .Laddr_start2:
 .cc_top cc_43,.Lxta.endpoint_labels68
@@ -12332,625 +12332,625 @@ par.desc.6:
 .cc_top cc_44,.Lxta.endpoint_labels8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	122
+	.long	138
 	.long	.Lxta.endpoint_labels8
 .cc_bottom cc_44
 .cc_top cc_45,.Lxta.endpoint_labels9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	122
+	.long	138
 	.long	.Lxta.endpoint_labels9
 .cc_bottom cc_45
 .cc_top cc_46,.Lxta.endpoint_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	146
+	.long	162
 	.long	.Lxta.endpoint_labels10
 .cc_bottom cc_46
 .cc_top cc_47,.Lxta.endpoint_labels11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	147
+	.long	163
 	.long	.Lxta.endpoint_labels11
 .cc_bottom cc_47
 .cc_top cc_48,.Lxta.endpoint_labels16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	156
+	.long	172
 	.long	.Lxta.endpoint_labels16
 .cc_bottom cc_48
 .cc_top cc_49,.Lxta.endpoint_labels12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	162
+	.long	178
 	.long	.Lxta.endpoint_labels12
 .cc_bottom cc_49
 .cc_top cc_50,.Lxta.endpoint_labels13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	163
+	.long	179
 	.long	.Lxta.endpoint_labels13
 .cc_bottom cc_50
 .cc_top cc_51,.Lxta.endpoint_labels14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	172
+	.long	188
 	.long	.Lxta.endpoint_labels14
 .cc_bottom cc_51
 .cc_top cc_52,.Lxta.endpoint_labels15
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	173
+	.long	189
 	.long	.Lxta.endpoint_labels15
 .cc_bottom cc_52
 .cc_top cc_53,.Lxta.endpoint_labels17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	201
+	.long	217
 	.long	.Lxta.endpoint_labels17
 .cc_bottom cc_53
 .cc_top cc_54,.Lxta.endpoint_labels18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	202
+	.long	218
 	.long	.Lxta.endpoint_labels18
 .cc_bottom cc_54
 .cc_top cc_55,.Lxta.endpoint_labels19
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	211
+	.long	227
 	.long	.Lxta.endpoint_labels19
 .cc_bottom cc_55
 .cc_top cc_56,.Lxta.endpoint_labels24
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	218
+	.long	234
 	.long	.Lxta.endpoint_labels24
 .cc_bottom cc_56
 .cc_top cc_57,.Lxta.endpoint_labels20
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	224
+	.long	240
 	.long	.Lxta.endpoint_labels20
 .cc_bottom cc_57
 .cc_top cc_58,.Lxta.endpoint_labels21
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	225
+	.long	241
 	.long	.Lxta.endpoint_labels21
 .cc_bottom cc_58
 .cc_top cc_59,.Lxta.endpoint_labels22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	244
+	.long	260
 	.long	.Lxta.endpoint_labels22
 .cc_bottom cc_59
 .cc_top cc_60,.Lxta.endpoint_labels23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	245
+	.long	261
 	.long	.Lxta.endpoint_labels23
 .cc_bottom cc_60
 .cc_top cc_61,.Lxta.endpoint_labels33
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	269
+	.long	285
 	.long	.Lxta.endpoint_labels33
 .cc_bottom cc_61
 .cc_top cc_62,.Lxta.endpoint_labels27
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	269
+	.long	285
 	.long	.Lxta.endpoint_labels27
 .cc_bottom cc_62
 .cc_top cc_63,.Lxta.endpoint_labels36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	270
+	.long	286
 	.long	.Lxta.endpoint_labels36
 .cc_bottom cc_63
 .cc_top cc_64,.Lxta.endpoint_labels37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	271
+	.long	287
 	.long	.Lxta.endpoint_labels37
 .cc_bottom cc_64
 .cc_top cc_65,.Lxta.endpoint_labels34
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	275
+	.long	291
 	.long	.Lxta.endpoint_labels34
 .cc_bottom cc_65
 .cc_top cc_66,.Lxta.endpoint_labels28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	275
+	.long	291
 	.long	.Lxta.endpoint_labels28
 .cc_bottom cc_66
 .cc_top cc_67,.Lxta.endpoint_labels35
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	276
+	.long	292
 	.long	.Lxta.endpoint_labels35
 .cc_bottom cc_67
 .cc_top cc_68,.Lxta.endpoint_labels29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	276
+	.long	292
 	.long	.Lxta.endpoint_labels29
 .cc_bottom cc_68
 .cc_top cc_69,.Lxta.endpoint_labels30
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	304
+	.long	320
 	.long	.Lxta.endpoint_labels30
 .cc_bottom cc_69
 .cc_top cc_70,.Lxta.endpoint_labels25
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	308
+	.long	324
 	.long	.Lxta.endpoint_labels25
 .cc_bottom cc_70
 .cc_top cc_71,.Lxta.endpoint_labels31
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	308
+	.long	324
 	.long	.Lxta.endpoint_labels31
 .cc_bottom cc_71
 .cc_top cc_72,.Lxta.endpoint_labels32
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	309
+	.long	325
 	.long	.Lxta.endpoint_labels32
 .cc_bottom cc_72
 .cc_top cc_73,.Lxta.endpoint_labels26
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	309
+	.long	325
 	.long	.Lxta.endpoint_labels26
 .cc_bottom cc_73
 .cc_top cc_74,.Lxta.endpoint_labels38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	358
+	.long	374
 	.long	.Lxta.endpoint_labels38
 .cc_bottom cc_74
 .cc_top cc_75,.Lxta.endpoint_labels39
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	359
+	.long	375
 	.long	.Lxta.endpoint_labels39
 .cc_bottom cc_75
 .cc_top cc_76,.Lxta.endpoint_labels52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	368
+	.long	384
 	.long	.Lxta.endpoint_labels52
 .cc_bottom cc_76
 .cc_top cc_77,.Lxta.endpoint_labels53
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	369
+	.long	385
 	.long	.Lxta.endpoint_labels53
 .cc_bottom cc_77
 .cc_top cc_78,.Lxta.endpoint_labels40
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	374
+	.long	390
 	.long	.Lxta.endpoint_labels40
 .cc_bottom cc_78
 .cc_top cc_79,.Lxta.endpoint_labels41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	375
+	.long	391
 	.long	.Lxta.endpoint_labels41
 .cc_bottom cc_79
 .cc_top cc_80,.Lxta.endpoint_labels42
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	377
+	.long	393
 	.long	.Lxta.endpoint_labels42
 .cc_bottom cc_80
 .cc_top cc_81,.Lxta.endpoint_labels43
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	378
+	.long	394
 	.long	.Lxta.endpoint_labels43
 .cc_bottom cc_81
 .cc_top cc_82,.Lxta.endpoint_labels44
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	380
+	.long	396
 	.long	.Lxta.endpoint_labels44
 .cc_bottom cc_82
 .cc_top cc_83,.Lxta.endpoint_labels45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	381
+	.long	397
 	.long	.Lxta.endpoint_labels45
 .cc_bottom cc_83
 .cc_top cc_84,.Lxta.endpoint_labels46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	383
+	.long	399
 	.long	.Lxta.endpoint_labels46
 .cc_bottom cc_84
 .cc_top cc_85,.Lxta.endpoint_labels47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	384
+	.long	400
 	.long	.Lxta.endpoint_labels47
 .cc_bottom cc_85
 .cc_top cc_86,.Lxta.endpoint_labels48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	402
+	.long	418
 	.long	.Lxta.endpoint_labels48
 .cc_bottom cc_86
 .cc_top cc_87,.Lxta.endpoint_labels49
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	403
+	.long	419
 	.long	.Lxta.endpoint_labels49
 .cc_bottom cc_87
 .cc_top cc_88,.Lxta.endpoint_labels50
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	404
+	.long	420
 	.long	.Lxta.endpoint_labels50
 .cc_bottom cc_88
 .cc_top cc_89,.Lxta.endpoint_labels51
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	405
+	.long	421
 	.long	.Lxta.endpoint_labels51
 .cc_bottom cc_89
 .cc_top cc_90,.Lxta.endpoint_labels56
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	440
+	.long	456
 	.long	.Lxta.endpoint_labels56
 .cc_bottom cc_90
 .cc_top cc_91,.Lxta.endpoint_labels57
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	441
+	.long	457
 	.long	.Lxta.endpoint_labels57
 .cc_bottom cc_91
 .cc_top cc_92,.Lxta.endpoint_labels74
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	443
+	.long	459
 	.long	.Lxta.endpoint_labels74
 .cc_bottom cc_92
 .cc_top cc_93,.Lxta.endpoint_labels58
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	449
+	.long	465
 	.long	.Lxta.endpoint_labels58
 .cc_bottom cc_93
 .cc_top cc_94,.Lxta.endpoint_labels61
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	451
+	.long	467
 	.long	.Lxta.endpoint_labels61
 .cc_bottom cc_94
 .cc_top cc_95,.Lxta.endpoint_labels64
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	451
+	.long	467
 	.long	.Lxta.endpoint_labels64
 .cc_bottom cc_95
 .cc_top cc_96,.Lxta.endpoint_labels75
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	453
+	.long	469
 	.long	.Lxta.endpoint_labels75
 .cc_bottom cc_96
 .cc_top cc_97,.Lxta.endpoint_labels68
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	498
+	.long	514
 	.long	.Lxta.endpoint_labels68
 .cc_bottom cc_97
 .cc_top cc_98,.Lxta.endpoint_labels69
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	499
+	.long	515
 	.long	.Lxta.endpoint_labels69
 .cc_bottom cc_98
 .cc_top cc_99,.Lxta.endpoint_labels70
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	500
+	.long	516
 	.long	.Lxta.endpoint_labels70
 .cc_bottom cc_99
 .cc_top cc_100,.Lxta.endpoint_labels65
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	503
+	.long	519
 	.long	.Lxta.endpoint_labels65
 .cc_bottom cc_100
 .cc_top cc_101,.Lxta.endpoint_labels66
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	504
+	.long	520
 	.long	.Lxta.endpoint_labels66
 .cc_bottom cc_101
 .cc_top cc_102,.Lxta.endpoint_labels67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	505
+	.long	521
 	.long	.Lxta.endpoint_labels67
 .cc_bottom cc_102
 .cc_top cc_103,.Lxta.endpoint_labels71
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	508
+	.long	524
 	.long	.Lxta.endpoint_labels71
 .cc_bottom cc_103
 .cc_top cc_104,.Lxta.endpoint_labels72
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	509
+	.long	525
 	.long	.Lxta.endpoint_labels72
 .cc_bottom cc_104
 .cc_top cc_105,.Lxta.endpoint_labels73
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	510
+	.long	526
 	.long	.Lxta.endpoint_labels73
 .cc_bottom cc_105
 .cc_top cc_106,.Lxta.endpoint_labels54
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	513
+	.long	529
 	.long	.Lxta.endpoint_labels54
 .cc_bottom cc_106
 .cc_top cc_107,.Lxta.endpoint_labels55
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	514
+	.long	530
 	.long	.Lxta.endpoint_labels55
 .cc_bottom cc_107
 .cc_top cc_108,.Lxta.endpoint_labels80
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	540
+	.long	556
 	.long	.Lxta.endpoint_labels80
 .cc_bottom cc_108
 .cc_top cc_109,.Lxta.endpoint_labels92
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	540
+	.long	556
 	.long	.Lxta.endpoint_labels92
 .cc_bottom cc_109
 .cc_top cc_110,.Lxta.endpoint_labels81
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	542
+	.long	558
 	.long	.Lxta.endpoint_labels81
 .cc_bottom cc_110
 .cc_top cc_111,.Lxta.endpoint_labels82
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	543
+	.long	559
 	.long	.Lxta.endpoint_labels82
 .cc_bottom cc_111
 .cc_top cc_112,.Lxta.endpoint_labels99
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	545
+	.long	561
 	.long	.Lxta.endpoint_labels99
 .cc_bottom cc_112
 .cc_top cc_113,.Lxta.endpoint_labels83
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	549
+	.long	565
 	.long	.Lxta.endpoint_labels83
 .cc_bottom cc_113
 .cc_top cc_114,.Lxta.endpoint_labels93
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	549
+	.long	565
 	.long	.Lxta.endpoint_labels93
 .cc_bottom cc_114
 .cc_top cc_115,.Lxta.endpoint_labels98
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	553
+	.long	569
 	.long	.Lxta.endpoint_labels98
 .cc_bottom cc_115
 .cc_top cc_116,.Lxta.endpoint_labels76
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	557
+	.long	573
 	.long	.Lxta.endpoint_labels76
 .cc_bottom cc_116
 .cc_top cc_117,.Lxta.endpoint_labels88
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	557
+	.long	573
 	.long	.Lxta.endpoint_labels88
 .cc_bottom cc_117
 .cc_top cc_118,.Lxta.endpoint_labels77
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	558
+	.long	574
 	.long	.Lxta.endpoint_labels77
 .cc_bottom cc_118
 .cc_top cc_119,.Lxta.endpoint_labels89
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	558
+	.long	574
 	.long	.Lxta.endpoint_labels89
 .cc_bottom cc_119
 .cc_top cc_120,.Lxta.endpoint_labels78
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	559
+	.long	575
 	.long	.Lxta.endpoint_labels78
 .cc_bottom cc_120
 .cc_top cc_121,.Lxta.endpoint_labels90
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	559
+	.long	575
 	.long	.Lxta.endpoint_labels90
 .cc_bottom cc_121
 .cc_top cc_122,.Lxta.endpoint_labels79
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	560
+	.long	576
 	.long	.Lxta.endpoint_labels79
 .cc_bottom cc_122
 .cc_top cc_123,.Lxta.endpoint_labels91
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	560
+	.long	576
 	.long	.Lxta.endpoint_labels91
 .cc_bottom cc_123
 .cc_top cc_124,.Lxta.endpoint_labels100
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	629
+	.long	645
 	.long	.Lxta.endpoint_labels100
 .cc_bottom cc_124
 .cc_top cc_125,.Lxta.endpoint_labels101
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	630
+	.long	646
 	.long	.Lxta.endpoint_labels101
 .cc_bottom cc_125
 .cc_top cc_126,.Lxta.endpoint_labels102
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	665
+	.long	681
 	.long	.Lxta.endpoint_labels102
 .cc_bottom cc_126
 .cc_top cc_127,.Lxta.endpoint_labels103
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	666
+	.long	682
 	.long	.Lxta.endpoint_labels103
 .cc_bottom cc_127
 .cc_top cc_128,.Lxta.endpoint_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	771
+	.long	787
 	.long	.Lxta.endpoint_labels3
 .cc_bottom cc_128
 .cc_top cc_129,.Lxta.endpoint_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	781
+	.long	797
 	.long	.Lxta.endpoint_labels0
 .cc_bottom cc_129
 .cc_top cc_130,.Lxta.endpoint_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	790
+	.long	806
 	.long	.Lxta.endpoint_labels6
 .cc_bottom cc_130
 .cc_top cc_131,.Lxta.endpoint_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	790
+	.long	806
 	.long	.Lxta.endpoint_labels4
 .cc_bottom cc_131
 .cc_top cc_132,.Lxta.endpoint_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	790
+	.long	806
 	.long	.Lxta.endpoint_labels1
 .cc_bottom cc_132
 .cc_top cc_133,.Lxta.endpoint_labels7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	791
+	.long	807
 	.long	.Lxta.endpoint_labels7
 .cc_bottom cc_133
 .cc_top cc_134,.Lxta.endpoint_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	791
+	.long	807
 	.long	.Lxta.endpoint_labels5
 .cc_bottom cc_134
 .cc_top cc_135,.Lxta.endpoint_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	791
+	.long	807
 	.long	.Lxta.endpoint_labels2
 .cc_bottom cc_135
 .cc_top cc_136,.Lxta.endpoint_labels84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	16
+	.long	39
 	.long	.Lxta.endpoint_labels84
 .cc_bottom cc_136
 .cc_top cc_137,.Lxta.endpoint_labels59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	16
+	.long	39
 	.long	.Lxta.endpoint_labels59
 .cc_bottom cc_137
 .cc_top cc_138,.Lxta.endpoint_labels94
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	16
+	.long	39
 	.long	.Lxta.endpoint_labels94
 .cc_bottom cc_138
 .cc_top cc_139,.Lxta.endpoint_labels60
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	21
+	.long	44
 	.long	.Lxta.endpoint_labels60
 .cc_bottom cc_139
 .cc_top cc_140,.Lxta.endpoint_labels85
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	21
+	.long	44
 	.long	.Lxta.endpoint_labels85
 .cc_bottom cc_140
 .cc_top cc_141,.Lxta.endpoint_labels95
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	21
+	.long	44
 	.long	.Lxta.endpoint_labels95
 .cc_bottom cc_141
 .cc_top cc_142,.Lxta.endpoint_labels86
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	29
+	.long	52
 	.long	.Lxta.endpoint_labels86
 .cc_bottom cc_142
 .cc_top cc_143,.Lxta.endpoint_labels63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	29
+	.long	52
 	.long	.Lxta.endpoint_labels63
 .cc_bottom cc_143
 .cc_top cc_144,.Lxta.endpoint_labels62
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	29
+	.long	52
 	.long	.Lxta.endpoint_labels62
 .cc_bottom cc_144
 .cc_top cc_145,.Lxta.endpoint_labels96
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	29
+	.long	52
 	.long	.Lxta.endpoint_labels96
 .cc_bottom cc_145
 .cc_top cc_146,.Lxta.endpoint_labels97
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	29
+	.long	52
 	.long	.Lxta.endpoint_labels97
 .cc_bottom cc_146
 .cc_top cc_147,.Lxta.endpoint_labels87
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	29
+	.long	52
 	.long	.Lxta.endpoint_labels87
 .cc_bottom cc_147
 .Lentries_end5:
@@ -12963,2563 +12963,2563 @@ par.desc.6:
 .cc_top cc_148,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	83
-	.long	83
+	.long	99
+	.long	99
 	.long	.Lxtalabel0
 .cc_bottom cc_148
 .cc_top cc_149,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	84
-	.long	84
+	.long	100
+	.long	100
 	.long	.Lxtalabel0
 .cc_bottom cc_149
 .cc_top cc_150,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	87
-	.long	87
+	.long	103
+	.long	103
 	.long	.Lxtalabel0
 .cc_bottom cc_150
 .cc_top cc_151,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	90
-	.long	90
+	.long	106
+	.long	106
 	.long	.Lxtalabel0
 .cc_bottom cc_151
 .cc_top cc_152,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	101
-	.long	102
+	.long	117
+	.long	118
 	.long	.Lxtalabel0
 .cc_bottom cc_152
 .cc_top cc_153,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	106
-	.long	106
+	.long	122
+	.long	122
 	.long	.Lxtalabel0
 .cc_bottom cc_153
 .cc_top cc_154,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	107
-	.long	107
+	.long	123
+	.long	123
 	.long	.Lxtalabel0
 .cc_bottom cc_154
 .cc_top cc_155,.Lxtalabel18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	113
-	.long	116
+	.long	129
+	.long	132
 	.long	.Lxtalabel18
 .cc_bottom cc_155
 .cc_top cc_156,.Lxtalabel18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	118
-	.long	118
+	.long	134
+	.long	134
 	.long	.Lxtalabel18
 .cc_bottom cc_156
 .cc_top cc_157,.Lxtalabel19
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	124
-	.long	126
+	.long	140
+	.long	142
 	.long	.Lxtalabel19
 .cc_bottom cc_157
 .cc_top cc_158,.Lxtalabel20
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	128
-	.long	128
+	.long	144
+	.long	144
 	.long	.Lxtalabel20
 .cc_bottom cc_158
 .cc_top cc_159,.Lxtalabel21
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	129
-	.long	131
+	.long	145
+	.long	147
 	.long	.Lxtalabel21
 .cc_bottom cc_159
 .cc_top cc_160,.Lxtalabel22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	140
-	.long	142
+	.long	156
+	.long	158
 	.long	.Lxtalabel22
 .cc_bottom cc_160
 .cc_top cc_161,.Lxtalabel22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	144
-	.long	144
+	.long	160
+	.long	160
 	.long	.Lxtalabel22
 .cc_bottom cc_161
 .cc_top cc_162,.Lxtalabel22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	146
-	.long	148
+	.long	162
+	.long	164
 	.long	.Lxtalabel22
 .cc_bottom cc_162
 .cc_top cc_163,.Lxtalabel22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	150
-	.long	150
+	.long	166
+	.long	166
 	.long	.Lxtalabel22
 .cc_bottom cc_163
 .cc_top cc_164,.Lxtalabel22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	152
-	.long	152
+	.long	168
+	.long	168
 	.long	.Lxtalabel22
 .cc_bottom cc_164
 .cc_top cc_165,.Lxtalabel24
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	155
-	.long	155
+	.long	171
+	.long	171
 	.long	.Lxtalabel24
 .cc_bottom cc_165
 .cc_top cc_166,.Lxtalabel25
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	156
-	.long	156
+	.long	172
+	.long	172
 	.long	.Lxtalabel25
 .cc_bottom cc_166
 .cc_top cc_167,.Lxtalabel26
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	157
-	.long	158
+	.long	173
+	.long	174
 	.long	.Lxtalabel26
 .cc_bottom cc_167
 .cc_top cc_168,.Lxtalabel25
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	159
-	.long	159
+	.long	175
+	.long	175
 	.long	.Lxtalabel25
 .cc_bottom cc_168
 .cc_top cc_169,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	162
-	.long	163
+	.long	178
+	.long	179
 	.long	.Lxtalabel23
 .cc_bottom cc_169
 .cc_top cc_170,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	166
-	.long	167
+	.long	182
+	.long	183
 	.long	.Lxtalabel23
 .cc_bottom cc_170
 .cc_top cc_171,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	170
-	.long	170
+	.long	186
+	.long	186
 	.long	.Lxtalabel23
 .cc_bottom cc_171
 .cc_top cc_172,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	172
-	.long	172
+	.long	188
+	.long	188
 	.long	.Lxtalabel23
 .cc_bottom cc_172
 .cc_top cc_173,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	173
-	.long	173
+	.long	189
+	.long	189
 	.long	.Lxtalabel23
 .cc_bottom cc_173
 .cc_top cc_174,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	179
-	.long	179
+	.long	195
+	.long	195
 	.long	.Lxtalabel23
 .cc_bottom cc_174
 .cc_top cc_175,.Lxtalabel27
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	183
-	.long	186
+	.long	199
+	.long	202
 	.long	.Lxtalabel27
 .cc_bottom cc_175
 .cc_top cc_176,.Lxtalabel27
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	201
-	.long	202
+	.long	217
+	.long	218
 	.long	.Lxtalabel27
 .cc_bottom cc_176
 .cc_top cc_177,.Lxtalabel27
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	206
-	.long	206
+	.long	222
+	.long	222
 	.long	.Lxtalabel27
 .cc_bottom cc_177
 .cc_top cc_178,.Lxtalabel27
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	211
-	.long	212
+	.long	227
+	.long	228
 	.long	.Lxtalabel27
 .cc_bottom cc_178
 .cc_top cc_179,.Lxtalabel27
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	214
-	.long	214
+	.long	230
+	.long	230
 	.long	.Lxtalabel27
 .cc_bottom cc_179
 .cc_top cc_180,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	217
-	.long	217
+	.long	233
+	.long	233
 	.long	.Lxtalabel29
 .cc_bottom cc_180
 .cc_top cc_181,.Lxtalabel30
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	218
-	.long	218
+	.long	234
+	.long	234
 	.long	.Lxtalabel30
 .cc_bottom cc_181
 .cc_top cc_182,.Lxtalabel31
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	219
-	.long	220
+	.long	235
+	.long	236
 	.long	.Lxtalabel31
 .cc_bottom cc_182
 .cc_top cc_183,.Lxtalabel30
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	221
-	.long	221
+	.long	237
+	.long	237
 	.long	.Lxtalabel30
 .cc_bottom cc_183
 .cc_top cc_184,.Lxtalabel28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	224
-	.long	225
+	.long	240
+	.long	241
 	.long	.Lxtalabel28
 .cc_bottom cc_184
 .cc_top cc_185,.Lxtalabel28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	229
-	.long	230
+	.long	245
+	.long	246
 	.long	.Lxtalabel28
 .cc_bottom cc_185
 .cc_top cc_186,.Lxtalabel28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	239
-	.long	239
+	.long	255
+	.long	255
 	.long	.Lxtalabel28
 .cc_bottom cc_186
 .cc_top cc_187,.Lxtalabel28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	244
-	.long	244
+	.long	260
+	.long	260
 	.long	.Lxtalabel28
 .cc_bottom cc_187
 .cc_top cc_188,.Lxtalabel28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	245
-	.long	245
+	.long	261
+	.long	261
 	.long	.Lxtalabel28
 .cc_bottom cc_188
 .cc_top cc_189,.Lxtalabel28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	249
-	.long	249
+	.long	265
+	.long	265
 	.long	.Lxtalabel28
 .cc_bottom cc_189
 .cc_top cc_190,.Lxtalabel28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	253
-	.long	253
+	.long	269
+	.long	269
 	.long	.Lxtalabel28
 .cc_bottom cc_190
 .cc_top cc_191,.Lxtalabel32
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	261
-	.long	261
+	.long	277
+	.long	277
 	.long	.Lxtalabel32
 .cc_bottom cc_191
 .cc_top cc_192,.Lxtalabel32
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	263
-	.long	263
+	.long	279
+	.long	279
 	.long	.Lxtalabel32
 .cc_bottom cc_192
 .cc_top cc_193,.Lxtalabel32
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	265
-	.long	265
+	.long	281
+	.long	281
 	.long	.Lxtalabel32
 .cc_bottom cc_193
 .cc_top cc_194,.Lxtalabel34
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	268
-	.long	268
+	.long	284
+	.long	284
 	.long	.Lxtalabel34
 .cc_bottom cc_194
 .cc_top cc_195,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	268
-	.long	268
+	.long	284
+	.long	284
 	.long	.Lxtalabel47
 .cc_bottom cc_195
 .cc_top cc_196,.Lxtalabel35
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	269
-	.long	269
+	.long	285
+	.long	285
 	.long	.Lxtalabel35
 .cc_bottom cc_196
 .cc_top cc_197,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	269
-	.long	269
+	.long	285
+	.long	285
 	.long	.Lxtalabel48
 .cc_bottom cc_197
 .cc_top cc_198,.Lxtalabel57
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	270
-	.long	270
+	.long	286
+	.long	286
 	.long	.Lxtalabel57
 .cc_bottom cc_198
 .cc_top cc_199,.Lxtalabel57
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	271
-	.long	271
+	.long	287
+	.long	287
 	.long	.Lxtalabel57
 .cc_bottom cc_199
 .cc_top cc_200,.Lxtalabel58
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	272
-	.long	273
+	.long	288
+	.long	289
 	.long	.Lxtalabel58
 .cc_bottom cc_200
 .cc_top cc_201,.Lxtalabel35
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	274
-	.long	274
+	.long	290
+	.long	290
 	.long	.Lxtalabel35
 .cc_bottom cc_201
 .cc_top cc_202,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	274
-	.long	274
+	.long	290
+	.long	290
 	.long	.Lxtalabel48
 .cc_bottom cc_202
 .cc_top cc_203,.Lxtalabel51
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	275
-	.long	276
+	.long	291
+	.long	292
 	.long	.Lxtalabel51
 .cc_bottom cc_203
 .cc_top cc_204,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	275
-	.long	276
+	.long	291
+	.long	292
 	.long	.Lxtalabel38
 .cc_bottom cc_204
 .cc_top cc_205,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	275
-	.long	276
+	.long	291
+	.long	292
 	.long	.Lxtalabel36
 .cc_bottom cc_205
 .cc_top cc_206,.Lxtalabel49
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	275
-	.long	276
+	.long	291
+	.long	292
 	.long	.Lxtalabel49
 .cc_bottom cc_206
 .cc_top cc_207,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	278
-	.long	278
+	.long	294
+	.long	294
 	.long	.Lxtalabel36
 .cc_bottom cc_207
 .cc_top cc_208,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	278
-	.long	278
+	.long	294
+	.long	294
 	.long	.Lxtalabel38
 .cc_bottom cc_208
 .cc_top cc_209,.Lxtalabel49
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	278
-	.long	278
+	.long	294
+	.long	294
 	.long	.Lxtalabel49
 .cc_bottom cc_209
 .cc_top cc_210,.Lxtalabel51
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	278
-	.long	278
+	.long	294
+	.long	294
 	.long	.Lxtalabel51
 .cc_bottom cc_210
 .cc_top cc_211,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	280
-	.long	281
+	.long	296
+	.long	297
 	.long	.Lxtalabel38
 .cc_bottom cc_211
 .cc_top cc_212,.Lxtalabel49
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	280
-	.long	281
+	.long	296
+	.long	297
 	.long	.Lxtalabel49
 .cc_bottom cc_212
 .cc_top cc_213,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	280
-	.long	281
+	.long	296
+	.long	297
 	.long	.Lxtalabel36
 .cc_bottom cc_213
 .cc_top cc_214,.Lxtalabel51
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	280
-	.long	281
+	.long	296
+	.long	297
 	.long	.Lxtalabel51
 .cc_bottom cc_214
 .cc_top cc_215,.Lxtalabel50
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	282
-	.long	285
+	.long	298
+	.long	301
 	.long	.Lxtalabel50
 .cc_bottom cc_215
 .cc_top cc_216,.Lxtalabel37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	282
-	.long	285
+	.long	298
+	.long	301
 	.long	.Lxtalabel37
 .cc_bottom cc_216
 .cc_top cc_217,.Lxtalabel39
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	286
-	.long	289
+	.long	302
+	.long	305
 	.long	.Lxtalabel39
 .cc_bottom cc_217
 .cc_top cc_218,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	286
-	.long	289
+	.long	302
+	.long	305
 	.long	.Lxtalabel52
 .cc_bottom cc_218
 .cc_top cc_219,.Lxtalabel55
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	291
-	.long	292
+	.long	307
+	.long	308
 	.long	.Lxtalabel55
 .cc_bottom cc_219
 .cc_top cc_220,.Lxtalabel42
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	291
-	.long	292
+	.long	307
+	.long	308
 	.long	.Lxtalabel42
 .cc_bottom cc_220
 .cc_top cc_221,.Lxtalabel41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	291
-	.long	292
+	.long	307
+	.long	308
 	.long	.Lxtalabel41
 .cc_bottom cc_221
 .cc_top cc_222,.Lxtalabel40
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	291
-	.long	292
+	.long	307
+	.long	308
 	.long	.Lxtalabel40
 .cc_bottom cc_222
 .cc_top cc_223,.Lxtalabel53
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	291
-	.long	292
+	.long	307
+	.long	308
 	.long	.Lxtalabel53
 .cc_bottom cc_223
 .cc_top cc_224,.Lxtalabel43
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	293
-	.long	296
+	.long	309
+	.long	312
 	.long	.Lxtalabel43
 .cc_bottom cc_224
 .cc_top cc_225,.Lxtalabel54
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	293
-	.long	296
+	.long	309
+	.long	312
 	.long	.Lxtalabel54
 .cc_bottom cc_225
 .cc_top cc_226,.Lxtalabel56
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	297
-	.long	300
+	.long	313
+	.long	316
 	.long	.Lxtalabel56
 .cc_bottom cc_226
 .cc_top cc_227,.Lxtalabel42
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	297
-	.long	300
+	.long	313
+	.long	316
 	.long	.Lxtalabel42
 .cc_bottom cc_227
 .cc_top cc_228,.Lxtalabel41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	297
-	.long	300
+	.long	313
+	.long	316
 	.long	.Lxtalabel41
 .cc_bottom cc_228
 .cc_top cc_229,.Lxtalabel40
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	297
-	.long	300
+	.long	313
+	.long	316
 	.long	.Lxtalabel40
 .cc_bottom cc_229
 .cc_top cc_230,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	302
-	.long	302
+	.long	318
+	.long	318
 	.long	.Lxtalabel46
 .cc_bottom cc_230
 .cc_top cc_231,.Lxtalabel44
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	302
-	.long	302
+	.long	318
+	.long	318
 	.long	.Lxtalabel44
 .cc_bottom cc_231
 .cc_top cc_232,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	304
-	.long	305
+	.long	320
+	.long	321
 	.long	.Lxtalabel45
 .cc_bottom cc_232
 .cc_top cc_233,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	308
-	.long	310
+	.long	324
+	.long	326
 	.long	.Lxtalabel46
 .cc_bottom cc_233
 .cc_top cc_234,.Lxtalabel33
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	308
-	.long	310
+	.long	324
+	.long	326
 	.long	.Lxtalabel33
 .cc_bottom cc_234
 .cc_top cc_235,.Lxtalabel61
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	320
-	.long	320
+	.long	336
+	.long	336
 	.long	.Lxtalabel61
 .cc_bottom cc_235
 .cc_top cc_236,.Lxtalabel69
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	320
-	.long	320
+	.long	336
+	.long	336
 	.long	.Lxtalabel69
 .cc_bottom cc_236
 .cc_top cc_237,.Lxtalabel71
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	320
-	.long	320
+	.long	336
+	.long	336
 	.long	.Lxtalabel71
 .cc_bottom cc_237
 .cc_top cc_238,.Lxtalabel62
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	320
-	.long	320
+	.long	336
+	.long	336
 	.long	.Lxtalabel62
 .cc_bottom cc_238
 .cc_top cc_239,.Lxtalabel60
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	320
-	.long	320
+	.long	336
+	.long	336
 	.long	.Lxtalabel60
 .cc_bottom cc_239
 .cc_top cc_240,.Lxtalabel66
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	320
-	.long	320
+	.long	336
+	.long	336
 	.long	.Lxtalabel66
 .cc_bottom cc_240
 .cc_top cc_241,.Lxtalabel72
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	320
-	.long	320
+	.long	336
+	.long	336
 	.long	.Lxtalabel72
 .cc_bottom cc_241
 .cc_top cc_242,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	320
-	.long	320
+	.long	336
+	.long	336
 	.long	.Lxtalabel67
 .cc_bottom cc_242
 .cc_top cc_243,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	320
-	.long	320
+	.long	336
+	.long	336
 	.long	.Lxtalabel63
 .cc_bottom cc_243
 .cc_top cc_244,.Lxtalabel65
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	320
-	.long	320
+	.long	336
+	.long	336
 	.long	.Lxtalabel65
 .cc_bottom cc_244
 .cc_top cc_245,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	320
-	.long	320
+	.long	336
+	.long	336
 	.long	.Lxtalabel59
 .cc_bottom cc_245
 .cc_top cc_246,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	322
-	.long	323
+	.long	338
+	.long	339
 	.long	.Lxtalabel63
 .cc_bottom cc_246
 .cc_top cc_247,.Lxtalabel61
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	322
-	.long	323
+	.long	338
+	.long	339
 	.long	.Lxtalabel61
 .cc_bottom cc_247
 .cc_top cc_248,.Lxtalabel71
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	322
-	.long	323
+	.long	338
+	.long	339
 	.long	.Lxtalabel71
 .cc_bottom cc_248
 .cc_top cc_249,.Lxtalabel72
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	322
-	.long	323
+	.long	338
+	.long	339
 	.long	.Lxtalabel72
 .cc_bottom cc_249
 .cc_top cc_250,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	322
-	.long	323
+	.long	338
+	.long	339
 	.long	.Lxtalabel59
 .cc_bottom cc_250
 .cc_top cc_251,.Lxtalabel66
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	322
-	.long	323
+	.long	338
+	.long	339
 	.long	.Lxtalabel66
 .cc_bottom cc_251
 .cc_top cc_252,.Lxtalabel62
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	322
-	.long	323
+	.long	338
+	.long	339
 	.long	.Lxtalabel62
 .cc_bottom cc_252
 .cc_top cc_253,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	322
-	.long	323
+	.long	338
+	.long	339
 	.long	.Lxtalabel67
 .cc_bottom cc_253
 .cc_top cc_254,.Lxtalabel60
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	322
-	.long	323
+	.long	338
+	.long	339
 	.long	.Lxtalabel60
 .cc_bottom cc_254
 .cc_top cc_255,.Lxtalabel65
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	322
-	.long	323
+	.long	338
+	.long	339
 	.long	.Lxtalabel65
 .cc_bottom cc_255
 .cc_top cc_256,.Lxtalabel69
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	322
-	.long	323
+	.long	338
+	.long	339
 	.long	.Lxtalabel69
 .cc_bottom cc_256
 .cc_top cc_257,.Lxtalabel69
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	325
-	.long	325
+	.long	341
+	.long	341
 	.long	.Lxtalabel69
 .cc_bottom cc_257
 .cc_top cc_258,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	325
-	.long	325
+	.long	341
+	.long	341
 	.long	.Lxtalabel67
 .cc_bottom cc_258
 .cc_top cc_259,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	325
-	.long	325
+	.long	341
+	.long	341
 	.long	.Lxtalabel59
 .cc_bottom cc_259
 .cc_top cc_260,.Lxtalabel60
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	325
-	.long	325
+	.long	341
+	.long	341
 	.long	.Lxtalabel60
 .cc_bottom cc_260
 .cc_top cc_261,.Lxtalabel61
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	325
-	.long	325
+	.long	341
+	.long	341
 	.long	.Lxtalabel61
 .cc_bottom cc_261
 .cc_top cc_262,.Lxtalabel72
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	325
-	.long	325
+	.long	341
+	.long	341
 	.long	.Lxtalabel72
 .cc_bottom cc_262
 .cc_top cc_263,.Lxtalabel62
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	325
-	.long	325
+	.long	341
+	.long	341
 	.long	.Lxtalabel62
 .cc_bottom cc_263
 .cc_top cc_264,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	325
-	.long	325
+	.long	341
+	.long	341
 	.long	.Lxtalabel63
 .cc_bottom cc_264
 .cc_top cc_265,.Lxtalabel66
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	325
-	.long	325
+	.long	341
+	.long	341
 	.long	.Lxtalabel66
 .cc_bottom cc_265
 .cc_top cc_266,.Lxtalabel71
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	325
-	.long	325
+	.long	341
+	.long	341
 	.long	.Lxtalabel71
 .cc_bottom cc_266
 .cc_top cc_267,.Lxtalabel65
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	325
-	.long	325
+	.long	341
+	.long	341
 	.long	.Lxtalabel65
 .cc_bottom cc_267
 .cc_top cc_268,.Lxtalabel72
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	328
-	.long	329
+	.long	344
+	.long	345
 	.long	.Lxtalabel72
 .cc_bottom cc_268
 .cc_top cc_269,.Lxtalabel65
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	328
-	.long	329
+	.long	344
+	.long	345
 	.long	.Lxtalabel65
 .cc_bottom cc_269
 .cc_top cc_270,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	328
-	.long	329
+	.long	344
+	.long	345
 	.long	.Lxtalabel59
 .cc_bottom cc_270
 .cc_top cc_271,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	328
-	.long	329
+	.long	344
+	.long	345
 	.long	.Lxtalabel63
 .cc_bottom cc_271
 .cc_top cc_272,.Lxtalabel60
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	328
-	.long	329
+	.long	344
+	.long	345
 	.long	.Lxtalabel60
 .cc_bottom cc_272
 .cc_top cc_273,.Lxtalabel61
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	328
-	.long	329
+	.long	344
+	.long	345
 	.long	.Lxtalabel61
 .cc_bottom cc_273
 .cc_top cc_274,.Lxtalabel62
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	328
-	.long	329
+	.long	344
+	.long	345
 	.long	.Lxtalabel62
 .cc_bottom cc_274
 .cc_top cc_275,.Lxtalabel71
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	328
-	.long	329
+	.long	344
+	.long	345
 	.long	.Lxtalabel71
 .cc_bottom cc_275
 .cc_top cc_276,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	328
-	.long	329
+	.long	344
+	.long	345
 	.long	.Lxtalabel67
 .cc_bottom cc_276
 .cc_top cc_277,.Lxtalabel66
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	328
-	.long	329
+	.long	344
+	.long	345
 	.long	.Lxtalabel66
 .cc_bottom cc_277
 .cc_top cc_278,.Lxtalabel69
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	328
-	.long	329
+	.long	344
+	.long	345
 	.long	.Lxtalabel69
 .cc_bottom cc_278
 .cc_top cc_279,.Lxtalabel68
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	333
-	.long	335
+	.long	349
+	.long	351
 	.long	.Lxtalabel68
 .cc_bottom cc_279
 .cc_top cc_280,.Lxtalabel73
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	339
-	.long	341
+	.long	355
+	.long	357
 	.long	.Lxtalabel73
 .cc_bottom cc_280
 .cc_top cc_281,.Lxtalabel64
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	342
-	.long	344
+	.long	358
+	.long	360
 	.long	.Lxtalabel64
 .cc_bottom cc_281
 .cc_top cc_282,.Lxtalabel70
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	345
-	.long	347
+	.long	361
+	.long	363
 	.long	.Lxtalabel70
 .cc_bottom cc_282
 .cc_top cc_283,.Lxtalabel62
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	348
-	.long	350
+	.long	364
+	.long	366
 	.long	.Lxtalabel62
 .cc_bottom cc_283
 .cc_top cc_284,.Lxtalabel60
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	348
-	.long	350
+	.long	364
+	.long	366
 	.long	.Lxtalabel60
 .cc_bottom cc_284
 .cc_top cc_285,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	348
-	.long	350
+	.long	364
+	.long	366
 	.long	.Lxtalabel59
 .cc_bottom cc_285
 .cc_top cc_286,.Lxtalabel72
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	348
-	.long	350
+	.long	364
+	.long	366
 	.long	.Lxtalabel72
 .cc_bottom cc_286
 .cc_top cc_287,.Lxtalabel71
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	348
-	.long	350
+	.long	364
+	.long	366
 	.long	.Lxtalabel71
 .cc_bottom cc_287
 .cc_top cc_288,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	348
-	.long	350
+	.long	364
+	.long	366
 	.long	.Lxtalabel67
 .cc_bottom cc_288
 .cc_top cc_289,.Lxtalabel69
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	348
-	.long	350
+	.long	364
+	.long	366
 	.long	.Lxtalabel69
 .cc_bottom cc_289
 .cc_top cc_290,.Lxtalabel66
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	348
-	.long	350
+	.long	364
+	.long	366
 	.long	.Lxtalabel66
 .cc_bottom cc_290
 .cc_top cc_291,.Lxtalabel65
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	348
-	.long	350
+	.long	364
+	.long	366
 	.long	.Lxtalabel65
 .cc_bottom cc_291
 .cc_top cc_292,.Lxtalabel61
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	348
-	.long	350
+	.long	364
+	.long	366
 	.long	.Lxtalabel61
 .cc_bottom cc_292
 .cc_top cc_293,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	348
-	.long	350
+	.long	364
+	.long	366
 	.long	.Lxtalabel63
 .cc_bottom cc_293
 .cc_top cc_294,.Lxtalabel74
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	352
-	.long	355
+	.long	368
+	.long	371
 	.long	.Lxtalabel74
 .cc_bottom cc_294
 .cc_top cc_295,.Lxtalabel74
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	358
-	.long	359
+	.long	374
+	.long	375
 	.long	.Lxtalabel74
 .cc_bottom cc_295
 .cc_top cc_296,.Lxtalabel74
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	364
-	.long	364
+	.long	380
+	.long	380
 	.long	.Lxtalabel74
 .cc_bottom cc_296
 .cc_top cc_297,.Lxtalabel77
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	367
-	.long	367
+	.long	383
+	.long	383
 	.long	.Lxtalabel77
 .cc_bottom cc_297
 .cc_top cc_298,.Lxtalabel78
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	368
-	.long	368
+	.long	384
+	.long	384
 	.long	.Lxtalabel78
 .cc_bottom cc_298
 .cc_top cc_299,.Lxtalabel79
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	369
-	.long	369
+	.long	385
+	.long	385
 	.long	.Lxtalabel79
 .cc_bottom cc_299
 .cc_top cc_300,.Lxtalabel79
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	370
-	.long	371
+	.long	386
+	.long	387
 	.long	.Lxtalabel79
 .cc_bottom cc_300
 .cc_top cc_301,.Lxtalabel78
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	372
-	.long	372
+	.long	388
+	.long	388
 	.long	.Lxtalabel78
 .cc_bottom cc_301
 .cc_top cc_302,.Lxtalabel75
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	374
-	.long	375
+	.long	390
+	.long	391
 	.long	.Lxtalabel75
 .cc_bottom cc_302
 .cc_top cc_303,.Lxtalabel75
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	377
-	.long	378
+	.long	393
+	.long	394
 	.long	.Lxtalabel75
 .cc_bottom cc_303
 .cc_top cc_304,.Lxtalabel75
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	380
-	.long	381
+	.long	396
+	.long	397
 	.long	.Lxtalabel75
 .cc_bottom cc_304
 .cc_top cc_305,.Lxtalabel75
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	383
-	.long	384
+	.long	399
+	.long	400
 	.long	.Lxtalabel75
 .cc_bottom cc_305
 .cc_top cc_306,.Lxtalabel75
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	386
-	.long	386
+	.long	402
+	.long	402
 	.long	.Lxtalabel75
 .cc_bottom cc_306
 .cc_top cc_307,.Lxtalabel76
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	388
-	.long	389
+	.long	404
+	.long	405
 	.long	.Lxtalabel76
 .cc_bottom cc_307
 .cc_top cc_308,.Lxtalabel76
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	391
-	.long	392
+	.long	407
+	.long	408
 	.long	.Lxtalabel76
 .cc_bottom cc_308
 .cc_top cc_309,.Lxtalabel76
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	394
-	.long	396
+	.long	410
+	.long	412
 	.long	.Lxtalabel76
 .cc_bottom cc_309
 .cc_top cc_310,.Lxtalabel76
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	398
-	.long	400
+	.long	414
+	.long	416
 	.long	.Lxtalabel76
 .cc_bottom cc_310
 .cc_top cc_311,.Lxtalabel76
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	402
-	.long	406
+	.long	418
+	.long	422
 	.long	.Lxtalabel76
 .cc_bottom cc_311
 .cc_top cc_312,.Lxtalabel80
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	419
-	.long	429
+	.long	435
+	.long	445
 	.long	.Lxtalabel80
 .cc_bottom cc_312
 .cc_top cc_313,.Lxtalabel80
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	431
-	.long	431
+	.long	447
+	.long	447
 	.long	.Lxtalabel80
 .cc_bottom cc_313
 .cc_top cc_314,.Lxtalabel80
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	433
-	.long	433
+	.long	449
+	.long	449
 	.long	.Lxtalabel80
 .cc_bottom cc_314
 .cc_top cc_315,.Lxtalabel80
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	435
-	.long	435
+	.long	451
+	.long	451
 	.long	.Lxtalabel80
 .cc_bottom cc_315
 .cc_top cc_316,.Lxtalabel82
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	439
-	.long	439
+	.long	455
+	.long	455
 	.long	.Lxtalabel82
 .cc_bottom cc_316
 .cc_top cc_317,.Lxtalabel94
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	440
-	.long	442
+	.long	456
+	.long	458
 	.long	.Lxtalabel94
 .cc_bottom cc_317
 .cc_top cc_318,.Lxtalabel83
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	440
-	.long	442
+	.long	456
+	.long	458
 	.long	.Lxtalabel83
 .cc_bottom cc_318
 .cc_top cc_319,.Lxtalabel95
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	443
-	.long	443
+	.long	459
+	.long	459
 	.long	.Lxtalabel95
 .cc_bottom cc_319
 .cc_top cc_320,.Lxtalabel95
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	444
-	.long	445
+	.long	460
+	.long	461
 	.long	.Lxtalabel95
 .cc_bottom cc_320
 .cc_top cc_321,.Lxtalabel94
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	446
-	.long	446
+	.long	462
+	.long	462
 	.long	.Lxtalabel94
 .cc_bottom cc_321
 .cc_top cc_322,.Lxtalabel83
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	446
-	.long	446
+	.long	462
+	.long	462
 	.long	.Lxtalabel83
 .cc_bottom cc_322
 .cc_top cc_323,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	449
-	.long	452
+	.long	465
+	.long	468
 	.long	.Lxtalabel84
 .cc_bottom cc_323
 .cc_top cc_324,.Lxtalabel96
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	453
-	.long	453
+	.long	469
+	.long	469
 	.long	.Lxtalabel96
 .cc_bottom cc_324
 .cc_top cc_325,.Lxtalabel96
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	454
-	.long	455
+	.long	470
+	.long	471
 	.long	.Lxtalabel96
 .cc_bottom cc_325
 .cc_top cc_326,.Lxtalabel87
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	457
-	.long	457
+	.long	473
+	.long	473
 	.long	.Lxtalabel87
 .cc_bottom cc_326
 .cc_top cc_327,.Lxtalabel87
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	461
-	.long	463
+	.long	477
+	.long	479
 	.long	.Lxtalabel87
 .cc_bottom cc_327
 .cc_top cc_328,.Lxtalabel87
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	465
-	.long	467
+	.long	481
+	.long	483
 	.long	.Lxtalabel87
 .cc_bottom cc_328
 .cc_top cc_329,.Lxtalabel87
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	470
-	.long	470
+	.long	486
+	.long	486
 	.long	.Lxtalabel87
 .cc_bottom cc_329
 .cc_top cc_330,.Lxtalabel88
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	471
-	.long	474
+	.long	487
+	.long	490
 	.long	.Lxtalabel88
 .cc_bottom cc_330
 .cc_top cc_331,.Lxtalabel89
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	476
-	.long	477
+	.long	492
+	.long	493
 	.long	.Lxtalabel89
 .cc_bottom cc_331
 .cc_top cc_332,.Lxtalabel91
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	476
-	.long	477
+	.long	492
+	.long	493
 	.long	.Lxtalabel91
 .cc_bottom cc_332
 .cc_top cc_333,.Lxtalabel89
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	479
-	.long	480
+	.long	495
+	.long	496
 	.long	.Lxtalabel89
 .cc_bottom cc_333
 .cc_top cc_334,.Lxtalabel91
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	479
-	.long	480
+	.long	495
+	.long	496
 	.long	.Lxtalabel91
 .cc_bottom cc_334
 .cc_top cc_335,.Lxtalabel89
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	482
-	.long	483
+	.long	498
+	.long	499
 	.long	.Lxtalabel89
 .cc_bottom cc_335
 .cc_top cc_336,.Lxtalabel91
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	482
-	.long	483
+	.long	498
+	.long	499
 	.long	.Lxtalabel91
 .cc_bottom cc_336
 .cc_top cc_337,.Lxtalabel89
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	485
-	.long	486
+	.long	501
+	.long	502
 	.long	.Lxtalabel89
 .cc_bottom cc_337
 .cc_top cc_338,.Lxtalabel91
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	485
-	.long	486
+	.long	501
+	.long	502
 	.long	.Lxtalabel91
 .cc_bottom cc_338
 .cc_top cc_339,.Lxtalabel89
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	488
-	.long	489
+	.long	504
+	.long	505
 	.long	.Lxtalabel89
 .cc_bottom cc_339
 .cc_top cc_340,.Lxtalabel91
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	488
-	.long	489
+	.long	504
+	.long	505
 	.long	.Lxtalabel91
 .cc_bottom cc_340
 .cc_top cc_341,.Lxtalabel89
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	491
-	.long	492
+	.long	507
+	.long	508
 	.long	.Lxtalabel89
 .cc_bottom cc_341
 .cc_top cc_342,.Lxtalabel91
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	491
-	.long	492
+	.long	507
+	.long	508
 	.long	.Lxtalabel91
 .cc_bottom cc_342
 .cc_top cc_343,.Lxtalabel91
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	496
-	.long	497
+	.long	512
+	.long	513
 	.long	.Lxtalabel91
 .cc_bottom cc_343
 .cc_top cc_344,.Lxtalabel89
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	496
-	.long	497
+	.long	512
+	.long	513
 	.long	.Lxtalabel89
 .cc_bottom cc_344
 .cc_top cc_345,.Lxtalabel92
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	498
-	.long	502
+	.long	514
+	.long	518
 	.long	.Lxtalabel92
 .cc_bottom cc_345
 .cc_top cc_346,.Lxtalabel90
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	503
-	.long	507
+	.long	519
+	.long	523
 	.long	.Lxtalabel90
 .cc_bottom cc_346
 .cc_top cc_347,.Lxtalabel93
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	508
-	.long	512
+	.long	524
+	.long	528
 	.long	.Lxtalabel93
 .cc_bottom cc_347
 .cc_top cc_348,.Lxtalabel81
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	513
-	.long	514
+	.long	529
+	.long	530
 	.long	.Lxtalabel81
 .cc_bottom cc_348
 .cc_top cc_349,.Lxtalabel81
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	516
-	.long	517
+	.long	532
+	.long	533
 	.long	.Lxtalabel81
 .cc_bottom cc_349
 .cc_top cc_350,.Lxtalabel81
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	519
-	.long	519
+	.long	535
+	.long	535
 	.long	.Lxtalabel81
 .cc_bottom cc_350
 .cc_top cc_351,.Lxtalabel97
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	530
-	.long	531
+	.long	546
+	.long	547
 	.long	.Lxtalabel97
 .cc_bottom cc_351
 .cc_top cc_352,.Lxtalabel97
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	533
-	.long	533
+	.long	549
+	.long	549
 	.long	.Lxtalabel97
 .cc_bottom cc_352
 .cc_top cc_353,.Lxtalabel97
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	535
-	.long	535
+	.long	551
+	.long	551
 	.long	.Lxtalabel97
 .cc_bottom cc_353
 .cc_top cc_354,.Lxtalabel97
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	537
-	.long	537
+	.long	553
+	.long	553
 	.long	.Lxtalabel97
 .cc_bottom cc_354
 .cc_top cc_355,.Lxtalabel99
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	540
-	.long	541
+	.long	556
+	.long	557
 	.long	.Lxtalabel99
 .cc_bottom cc_355
 .cc_top cc_356,.Lxtalabel104
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	540
-	.long	541
+	.long	556
+	.long	557
 	.long	.Lxtalabel104
 .cc_bottom cc_356
 .cc_top cc_357,.Lxtalabel99
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	542
-	.long	544
+	.long	558
+	.long	560
 	.long	.Lxtalabel99
 .cc_bottom cc_357
 .cc_top cc_358,.Lxtalabel108
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	545
-	.long	545
+	.long	561
+	.long	561
 	.long	.Lxtalabel108
 .cc_bottom cc_358
 .cc_top cc_359,.Lxtalabel108
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	546
-	.long	547
+	.long	562
+	.long	563
 	.long	.Lxtalabel108
 .cc_bottom cc_359
 .cc_top cc_360,.Lxtalabel99
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	548
-	.long	548
+	.long	564
+	.long	564
 	.long	.Lxtalabel99
 .cc_bottom cc_360
 .cc_top cc_361,.Lxtalabel104
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	549
-	.long	549
+	.long	565
+	.long	565
 	.long	.Lxtalabel104
 .cc_bottom cc_361
 .cc_top cc_362,.Lxtalabel100
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	549
-	.long	549
+	.long	565
+	.long	565
 	.long	.Lxtalabel100
 .cc_bottom cc_362
 .cc_top cc_363,.Lxtalabel104
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	551
-	.long	552
+	.long	567
+	.long	568
 	.long	.Lxtalabel104
 .cc_bottom cc_363
 .cc_top cc_364,.Lxtalabel100
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	551
-	.long	552
+	.long	567
+	.long	568
 	.long	.Lxtalabel100
 .cc_bottom cc_364
 .cc_top cc_365,.Lxtalabel107
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	553
-	.long	553
+	.long	569
+	.long	569
 	.long	.Lxtalabel107
 .cc_bottom cc_365
 .cc_top cc_366,.Lxtalabel107
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	554
-	.long	555
+	.long	570
+	.long	571
 	.long	.Lxtalabel107
 .cc_bottom cc_366
 .cc_top cc_367,.Lxtalabel98
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	557
-	.long	561
+	.long	573
+	.long	577
 	.long	.Lxtalabel98
 .cc_bottom cc_367
 .cc_top cc_368,.Lxtalabel103
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	557
-	.long	561
+	.long	573
+	.long	577
 	.long	.Lxtalabel103
 .cc_bottom cc_368
 .cc_top cc_369,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	572
-	.long	575
+	.long	588
+	.long	591
 	.long	.Lxtalabel1
 .cc_bottom cc_369
 .cc_top cc_370,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	577
-	.long	577
+	.long	593
+	.long	593
 	.long	.Lxtalabel1
 .cc_bottom cc_370
 .cc_top cc_371,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	579
-	.long	588
+	.long	595
+	.long	604
 	.long	.Lxtalabel1
 .cc_bottom cc_371
 .cc_top cc_372,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	595
-	.long	596
+	.long	611
+	.long	612
 	.long	.Lxtalabel2
 .cc_bottom cc_372
 .cc_top cc_373,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	598
-	.long	598
+	.long	614
+	.long	614
 	.long	.Lxtalabel2
 .cc_bottom cc_373
 .cc_top cc_374,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	600
-	.long	607
+	.long	616
+	.long	623
 	.long	.Lxtalabel2
 .cc_bottom cc_374
 .cc_top cc_375,.Lxtalabel109
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	614
-	.long	617
+	.long	630
+	.long	633
 	.long	.Lxtalabel109
 .cc_bottom cc_375
 .cc_top cc_376,.Lxtalabel109
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	619
-	.long	619
+	.long	635
+	.long	635
 	.long	.Lxtalabel109
 .cc_bottom cc_376
 .cc_top cc_377,.Lxtalabel109
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	621
-	.long	621
+	.long	637
+	.long	637
 	.long	.Lxtalabel109
 .cc_bottom cc_377
 .cc_top cc_378,.Lxtalabel109
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	623
-	.long	623
+	.long	639
+	.long	639
 	.long	.Lxtalabel109
 .cc_bottom cc_378
 .cc_top cc_379,.Lxtalabel109
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	625
-	.long	625
+	.long	641
+	.long	641
 	.long	.Lxtalabel109
 .cc_bottom cc_379
 .cc_top cc_380,.Lxtalabel110
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	626
-	.long	626
+	.long	642
+	.long	642
 	.long	.Lxtalabel110
 .cc_bottom cc_380
 .cc_top cc_381,.Lxtalabel110
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	628
-	.long	628
+	.long	644
+	.long	644
 	.long	.Lxtalabel110
 .cc_bottom cc_381
 .cc_top cc_382,.Lxtalabel111
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	629
-	.long	631
+	.long	645
+	.long	647
 	.long	.Lxtalabel111
 .cc_bottom cc_382
 .cc_top cc_383,.Lxtalabel112
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	633
-	.long	633
+	.long	649
+	.long	649
 	.long	.Lxtalabel112
 .cc_bottom cc_383
 .cc_top cc_384,.Lxtalabel113
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	633
-	.long	633
+	.long	649
+	.long	649
 	.long	.Lxtalabel113
 .cc_bottom cc_384
 .cc_top cc_385,.Lxtalabel118
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	633
-	.long	633
+	.long	649
+	.long	649
 	.long	.Lxtalabel118
 .cc_bottom cc_385
 .cc_top cc_386,.Lxtalabel113
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	635
-	.long	637
+	.long	651
+	.long	653
 	.long	.Lxtalabel113
 .cc_bottom cc_386
 .cc_top cc_387,.Lxtalabel112
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	635
-	.long	637
+	.long	651
+	.long	653
 	.long	.Lxtalabel112
 .cc_bottom cc_387
 .cc_top cc_388,.Lxtalabel118
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	635
-	.long	637
+	.long	651
+	.long	653
 	.long	.Lxtalabel118
 .cc_bottom cc_388
 .cc_top cc_389,.Lxtalabel119
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	638
-	.long	638
+	.long	654
+	.long	654
 	.long	.Lxtalabel119
 .cc_bottom cc_389
 .cc_top cc_390,.Lxtalabel122
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	642
-	.long	642
+	.long	658
+	.long	658
 	.long	.Lxtalabel122
 .cc_bottom cc_390
 .cc_top cc_391,.Lxtalabel123
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	642
-	.long	642
+	.long	658
+	.long	658
 	.long	.Lxtalabel123
 .cc_bottom cc_391
 .cc_top cc_392,.Lxtalabel114
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	645
-	.long	645
+	.long	661
+	.long	661
 	.long	.Lxtalabel114
 .cc_bottom cc_392
 .cc_top cc_393,.Lxtalabel115
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	649
-	.long	649
+	.long	665
+	.long	665
 	.long	.Lxtalabel115
 .cc_bottom cc_393
 .cc_top cc_394,.Lxtalabel116
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	652
-	.long	652
+	.long	668
+	.long	668
 	.long	.Lxtalabel116
 .cc_bottom cc_394
 .cc_top cc_395,.Lxtalabel117
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	653
-	.long	655
+	.long	669
+	.long	671
 	.long	.Lxtalabel117
 .cc_bottom cc_395
 .cc_top cc_396,.Lxtalabel120
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	656
-	.long	656
+	.long	672
+	.long	672
 	.long	.Lxtalabel120
 .cc_bottom cc_396
 .cc_top cc_397,.Lxtalabel121
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	661
-	.long	663
+	.long	677
+	.long	679
 	.long	.Lxtalabel121
 .cc_bottom cc_397
 .cc_top cc_398,.Lxtalabel124
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	665
-	.long	667
+	.long	681
+	.long	683
 	.long	.Lxtalabel124
 .cc_bottom cc_398
 .cc_top cc_399,.Lxtalabel126
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	668
-	.long	671
+	.long	684
+	.long	687
 	.long	.Lxtalabel126
 .cc_bottom cc_399
 .cc_top cc_400,.Lxtalabel125
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	668
-	.long	671
+	.long	684
+	.long	687
 	.long	.Lxtalabel125
 .cc_bottom cc_400
 .cc_top cc_401,.Lxtalabel134
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	668
-	.long	671
+	.long	684
+	.long	687
 	.long	.Lxtalabel134
 .cc_bottom cc_401
 .cc_top cc_402,.Lxtalabel135
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	672
-	.long	681
+	.long	688
+	.long	697
 	.long	.Lxtalabel135
 .cc_bottom cc_402
 .cc_top cc_403,.Lxtalabel135
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	683
-	.long	683
+	.long	699
+	.long	699
 	.long	.Lxtalabel135
 .cc_bottom cc_403
 .cc_top cc_404,.Lxtalabel127
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	684
-	.long	693
+	.long	700
+	.long	709
 	.long	.Lxtalabel127
 .cc_bottom cc_404
 .cc_top cc_405,.Lxtalabel127
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	695
-	.long	695
+	.long	711
+	.long	711
 	.long	.Lxtalabel127
 .cc_bottom cc_405
 .cc_top cc_406,.Lxtalabel132
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	696
-	.long	699
+	.long	712
+	.long	715
 	.long	.Lxtalabel132
 .cc_bottom cc_406
 .cc_top cc_407,.Lxtalabel142
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	696
-	.long	699
+	.long	712
+	.long	715
 	.long	.Lxtalabel142
 .cc_bottom cc_407
 .cc_top cc_408,.Lxtalabel139
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	696
-	.long	699
+	.long	712
+	.long	715
 	.long	.Lxtalabel139
 .cc_bottom cc_408
 .cc_top cc_409,.Lxtalabel138
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	696
-	.long	699
+	.long	712
+	.long	715
 	.long	.Lxtalabel138
 .cc_bottom cc_409
 .cc_top cc_410,.Lxtalabel128
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	696
-	.long	699
+	.long	712
+	.long	715
 	.long	.Lxtalabel128
 .cc_bottom cc_410
 .cc_top cc_411,.Lxtalabel129
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	696
-	.long	699
+	.long	712
+	.long	715
 	.long	.Lxtalabel129
 .cc_bottom cc_411
 .cc_top cc_412,.Lxtalabel130
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	696
-	.long	699
+	.long	712
+	.long	715
 	.long	.Lxtalabel130
 .cc_bottom cc_412
 .cc_top cc_413,.Lxtalabel136
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	696
-	.long	699
+	.long	712
+	.long	715
 	.long	.Lxtalabel136
 .cc_bottom cc_413
 .cc_top cc_414,.Lxtalabel131
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	696
-	.long	699
+	.long	712
+	.long	715
 	.long	.Lxtalabel131
 .cc_bottom cc_414
 .cc_top cc_415,.Lxtalabel141
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	696
-	.long	699
+	.long	712
+	.long	715
 	.long	.Lxtalabel141
 .cc_bottom cc_415
 .cc_top cc_416,.Lxtalabel143
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	696
-	.long	699
+	.long	712
+	.long	715
 	.long	.Lxtalabel143
 .cc_bottom cc_416
 .cc_top cc_417,.Lxtalabel140
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	703
-	.long	705
+	.long	719
+	.long	721
 	.long	.Lxtalabel140
 .cc_bottom cc_417
 .cc_top cc_418,.Lxtalabel144
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	709
-	.long	711
+	.long	725
+	.long	727
 	.long	.Lxtalabel144
 .cc_bottom cc_418
 .cc_top cc_419,.Lxtalabel133
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	715
-	.long	717
+	.long	731
+	.long	733
 	.long	.Lxtalabel133
 .cc_bottom cc_419
 .cc_top cc_420,.Lxtalabel145
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	718
-	.long	720
+	.long	734
+	.long	736
 	.long	.Lxtalabel145
 .cc_bottom cc_420
 .cc_top cc_421,.Lxtalabel146
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	721
-	.long	728
+	.long	737
+	.long	744
 	.long	.Lxtalabel146
 .cc_bottom cc_421
 .cc_top cc_422,.Lxtalabel146
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	730
-	.long	730
+	.long	746
+	.long	746
 	.long	.Lxtalabel146
 .cc_bottom cc_422
 .cc_top cc_423,.Lxtalabel137
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	731
-	.long	743
+	.long	747
+	.long	759
 	.long	.Lxtalabel137
 .cc_bottom cc_423
 .cc_top cc_424,.Lxtalabel147
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	745
-	.long	745
+	.long	761
+	.long	761
 	.long	.Lxtalabel147
 .cc_bottom cc_424
 .cc_top cc_425,.Lxtalabel148
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	746
-	.long	747
+	.long	762
+	.long	763
 	.long	.Lxtalabel148
 .cc_bottom cc_425
 .cc_top cc_426,.Lxtalabel3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	750
-	.long	754
+	.long	766
+	.long	770
 	.long	.Lxtalabel3
 .cc_bottom cc_426
 .cc_top cc_427,.Lxtalabel3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	756
-	.long	759
+	.long	772
+	.long	775
 	.long	.Lxtalabel3
 .cc_bottom cc_427
 .cc_top cc_428,.Lxtalabel13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	760
-	.long	762
+	.long	776
+	.long	778
 	.long	.Lxtalabel13
 .cc_bottom cc_428
 .cc_top cc_429,.Lxtalabel17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	760
-	.long	762
+	.long	776
+	.long	778
 	.long	.Lxtalabel17
 .cc_bottom cc_429
 .cc_top cc_430,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	760
-	.long	762
+	.long	776
+	.long	778
 	.long	.Lxtalabel16
 .cc_bottom cc_430
 .cc_top cc_431,.Lxtalabel6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	760
-	.long	762
+	.long	776
+	.long	778
 	.long	.Lxtalabel6
 .cc_bottom cc_431
 .cc_top cc_432,.Lxtalabel14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	760
-	.long	762
+	.long	776
+	.long	778
 	.long	.Lxtalabel14
 .cc_bottom cc_432
 .cc_top cc_433,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	764
-	.long	764
+	.long	780
+	.long	780
 	.long	.Lxtalabel16
 .cc_bottom cc_433
 .cc_top cc_434,.Lxtalabel17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	764
-	.long	764
+	.long	780
+	.long	780
 	.long	.Lxtalabel17
 .cc_bottom cc_434
 .cc_top cc_435,.Lxtalabel14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	764
-	.long	764
+	.long	780
+	.long	780
 	.long	.Lxtalabel14
 .cc_bottom cc_435
 .cc_top cc_436,.Lxtalabel13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	764
-	.long	764
+	.long	780
+	.long	780
 	.long	.Lxtalabel13
 .cc_bottom cc_436
 .cc_top cc_437,.Lxtalabel6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	764
-	.long	764
+	.long	780
+	.long	780
 	.long	.Lxtalabel6
 .cc_bottom cc_437
 .cc_top cc_438,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	765
-	.long	765
+	.long	781
+	.long	781
 	.long	.Lxtalabel8
 .cc_bottom cc_438
 .cc_top cc_439,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	765
-	.long	765
+	.long	781
+	.long	781
 	.long	.Lxtalabel16
 .cc_bottom cc_439
 .cc_top cc_440,.Lxtalabel14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	765
-	.long	765
+	.long	781
+	.long	781
 	.long	.Lxtalabel14
 .cc_bottom cc_440
 .cc_top cc_441,.Lxtalabel13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	765
-	.long	765
+	.long	781
+	.long	781
 	.long	.Lxtalabel13
 .cc_bottom cc_441
 .cc_top cc_442,.Lxtalabel17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	765
-	.long	765
+	.long	781
+	.long	781
 	.long	.Lxtalabel17
 .cc_bottom cc_442
 .cc_top cc_443,.Lxtalabel7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	765
-	.long	765
+	.long	781
+	.long	781
 	.long	.Lxtalabel7
 .cc_bottom cc_443
 .cc_top cc_444,.Lxtalabel14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	768
-	.long	768
+	.long	784
+	.long	784
 	.long	.Lxtalabel14
 .cc_bottom cc_444
 .cc_top cc_445,.Lxtalabel17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	768
-	.long	768
+	.long	784
+	.long	784
 	.long	.Lxtalabel17
 .cc_bottom cc_445
 .cc_top cc_446,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	768
-	.long	768
+	.long	784
+	.long	784
 	.long	.Lxtalabel8
 .cc_bottom cc_446
 .cc_top cc_447,.Lxtalabel7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	768
-	.long	768
+	.long	784
+	.long	784
 	.long	.Lxtalabel7
 .cc_bottom cc_447
 .cc_top cc_448,.Lxtalabel13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	768
-	.long	768
+	.long	784
+	.long	784
 	.long	.Lxtalabel13
 .cc_bottom cc_448
 .cc_top cc_449,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	768
-	.long	768
+	.long	784
+	.long	784
 	.long	.Lxtalabel16
 .cc_bottom cc_449
 .cc_top cc_450,.Lxtalabel9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	769
-	.long	769
+	.long	785
+	.long	785
 	.long	.Lxtalabel9
 .cc_bottom cc_450
 .cc_top cc_451,.Lxtalabel9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	771
-	.long	771
+	.long	787
+	.long	787
 	.long	.Lxtalabel9
 .cc_bottom cc_451
 .cc_top cc_452,.Lxtalabel9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	772
-	.long	772
+	.long	788
+	.long	788
 	.long	.Lxtalabel9
 .cc_bottom cc_452
 .cc_top cc_453,.Lxtalabel11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	774
-	.long	774
+	.long	790
+	.long	790
 	.long	.Lxtalabel11
 .cc_bottom cc_453
 .cc_top cc_454,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	774
-	.long	774
+	.long	790
+	.long	790
 	.long	.Lxtalabel16
 .cc_bottom cc_454
 .cc_top cc_455,.Lxtalabel13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	774
-	.long	774
+	.long	790
+	.long	790
 	.long	.Lxtalabel13
 .cc_bottom cc_455
 .cc_top cc_456,.Lxtalabel14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	774
-	.long	774
+	.long	790
+	.long	790
 	.long	.Lxtalabel14
 .cc_bottom cc_456
 .cc_top cc_457,.Lxtalabel17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	774
-	.long	774
+	.long	790
+	.long	790
 	.long	.Lxtalabel17
 .cc_bottom cc_457
 .cc_top cc_458,.Lxtalabel10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	774
-	.long	774
+	.long	790
+	.long	790
 	.long	.Lxtalabel10
 .cc_bottom cc_458
 .cc_top cc_459,.Lxtalabel10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	777
-	.long	777
+	.long	793
+	.long	793
 	.long	.Lxtalabel10
 .cc_bottom cc_459
 .cc_top cc_460,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	777
-	.long	777
+	.long	793
+	.long	793
 	.long	.Lxtalabel16
 .cc_bottom cc_460
 .cc_top cc_461,.Lxtalabel17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	777
-	.long	777
+	.long	793
+	.long	793
 	.long	.Lxtalabel17
 .cc_bottom cc_461
 .cc_top cc_462,.Lxtalabel14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	777
-	.long	777
+	.long	793
+	.long	793
 	.long	.Lxtalabel14
 .cc_bottom cc_462
 .cc_top cc_463,.Lxtalabel13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	777
-	.long	777
+	.long	793
+	.long	793
 	.long	.Lxtalabel13
 .cc_bottom cc_463
 .cc_top cc_464,.Lxtalabel11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	777
-	.long	777
+	.long	793
+	.long	793
 	.long	.Lxtalabel11
 .cc_bottom cc_464
 .cc_top cc_465,.Lxtalabel10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	779
-	.long	779
+	.long	795
+	.long	795
 	.long	.Lxtalabel10
 .cc_bottom cc_465
 .cc_top cc_466,.Lxtalabel17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	779
-	.long	779
+	.long	795
+	.long	795
 	.long	.Lxtalabel17
 .cc_bottom cc_466
 .cc_top cc_467,.Lxtalabel13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	779
-	.long	779
+	.long	795
+	.long	795
 	.long	.Lxtalabel13
 .cc_bottom cc_467
 .cc_top cc_468,.Lxtalabel11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	779
-	.long	779
+	.long	795
+	.long	795
 	.long	.Lxtalabel11
 .cc_bottom cc_468
 .cc_top cc_469,.Lxtalabel14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	779
-	.long	779
+	.long	795
+	.long	795
 	.long	.Lxtalabel14
 .cc_bottom cc_469
 .cc_top cc_470,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	779
-	.long	779
+	.long	795
+	.long	795
 	.long	.Lxtalabel16
 .cc_bottom cc_470
 .cc_top cc_471,.Lxtalabel4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	780
-	.long	783
+	.long	796
+	.long	799
 	.long	.Lxtalabel4
 .cc_bottom cc_471
 .cc_top cc_472,.Lxtalabel12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	785
-	.long	785
+	.long	801
+	.long	801
 	.long	.Lxtalabel12
 .cc_bottom cc_472
 .cc_top cc_473,.Lxtalabel15
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	785
-	.long	785
+	.long	801
+	.long	801
 	.long	.Lxtalabel15
 .cc_bottom cc_473
 .cc_top cc_474,.Lxtalabel5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	785
-	.long	785
+	.long	801
+	.long	801
 	.long	.Lxtalabel5
 .cc_bottom cc_474
 .cc_top cc_475,.Lxtalabel15
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	790
-	.long	793
+	.long	806
+	.long	809
 	.long	.Lxtalabel15
 .cc_bottom cc_475
 .cc_top cc_476,.Lxtalabel12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	790
-	.long	793
+	.long	806
+	.long	809
 	.long	.Lxtalabel12
 .cc_bottom cc_476
 .cc_top cc_477,.Lxtalabel5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	790
-	.long	793
+	.long	806
+	.long	809
 	.long	.Lxtalabel5
 .cc_bottom cc_477
 .cc_top cc_478,.Lxtalabel104
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	15
-	.long	15
+	.long	38
+	.long	38
 	.long	.Lxtalabel104
 .cc_bottom cc_478
 .cc_top cc_479,.Lxtalabel100
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	15
-	.long	15
+	.long	38
+	.long	38
 	.long	.Lxtalabel100
 .cc_bottom cc_479
 .cc_top cc_480,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	15
-	.long	15
+	.long	38
+	.long	38
 	.long	.Lxtalabel84
 .cc_bottom cc_480
 .cc_top cc_481,.Lxtalabel104
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	16
-	.long	16
+	.long	39
+	.long	39
 	.long	.Lxtalabel104
 .cc_bottom cc_481
 .cc_top cc_482,.Lxtalabel100
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	16
-	.long	16
+	.long	39
+	.long	39
 	.long	.Lxtalabel100
 .cc_bottom cc_482
 .cc_top cc_483,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	16
-	.long	16
+	.long	39
+	.long	39
 	.long	.Lxtalabel84
 .cc_bottom cc_483
 .cc_top cc_484,.Lxtalabel104
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	19
-	.long	19
+	.long	42
+	.long	42
 	.long	.Lxtalabel104
 .cc_bottom cc_484
 .cc_top cc_485,.Lxtalabel100
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	19
-	.long	19
+	.long	42
+	.long	42
 	.long	.Lxtalabel100
 .cc_bottom cc_485
 .cc_top cc_486,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	19
-	.long	19
+	.long	42
+	.long	42
 	.long	.Lxtalabel84
 .cc_bottom cc_486
 .cc_top cc_487,.Lxtalabel105
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	20
-	.long	23
+	.long	43
+	.long	46
 	.long	.Lxtalabel105
 .cc_bottom cc_487
 .cc_top cc_488,.Lxtalabel101
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	20
-	.long	23
+	.long	43
+	.long	46
 	.long	.Lxtalabel101
 .cc_bottom cc_488
 .cc_top cc_489,.Lxtalabel85
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	20
-	.long	23
+	.long	43
+	.long	46
 	.long	.Lxtalabel85
 .cc_bottom cc_489
 .cc_top cc_490,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	24
-	.long	25
+	.long	47
+	.long	48
 	.long	.Lxtalabel84
 .cc_bottom cc_490
 .cc_top cc_491,.Lxtalabel104
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	24
-	.long	25
+	.long	47
+	.long	48
 	.long	.Lxtalabel104
 .cc_bottom cc_491
 .cc_top cc_492,.Lxtalabel100
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	24
-	.long	25
+	.long	47
+	.long	48
 	.long	.Lxtalabel100
 .cc_bottom cc_492
 .cc_top cc_493,.Lxtalabel104
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	27
-	.long	27
+	.long	50
+	.long	50
 	.long	.Lxtalabel104
 .cc_bottom cc_493
 .cc_top cc_494,.Lxtalabel100
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	27
-	.long	27
+	.long	50
+	.long	50
 	.long	.Lxtalabel100
 .cc_bottom cc_494
 .cc_top cc_495,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	27
-	.long	27
+	.long	50
+	.long	50
 	.long	.Lxtalabel84
 .cc_bottom cc_495
 .cc_top cc_496,.Lxtalabel106
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	28
-	.long	31
+	.long	51
+	.long	54
 	.long	.Lxtalabel106
 .cc_bottom cc_496
 .cc_top cc_497,.Lxtalabel86
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	28
-	.long	31
+	.long	51
+	.long	54
 	.long	.Lxtalabel86
 .cc_bottom cc_497
 .cc_top cc_498,.Lxtalabel86
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	28
-	.long	31
+	.long	51
+	.long	54
 	.long	.Lxtalabel86
 .cc_bottom cc_498
 .cc_top cc_499,.Lxtalabel102
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	28
-	.long	31
+	.long	51
+	.long	54
 	.long	.Lxtalabel102
 .cc_bottom cc_499
 .cc_top cc_500,.Lxtalabel102
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	28
-	.long	31
+	.long	51
+	.long	54
 	.long	.Lxtalabel102
 .cc_bottom cc_500
 .cc_top cc_501,.Lxtalabel106
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	28
-	.long	31
+	.long	51
+	.long	54
 	.long	.Lxtalabel106
 .cc_bottom cc_501
 .cc_top cc_502,.Lxtalabel106
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	32
-	.long	32
+	.long	55
+	.long	55
 	.long	.Lxtalabel106
 .cc_bottom cc_502
 .cc_top cc_503,.Lxtalabel106
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	32
-	.long	32
+	.long	55
+	.long	55
 	.long	.Lxtalabel106
 .cc_bottom cc_503
 .cc_top cc_504,.Lxtalabel102
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	32
-	.long	32
+	.long	55
+	.long	55
 	.long	.Lxtalabel102
 .cc_bottom cc_504
 .cc_top cc_505,.Lxtalabel86
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	32
-	.long	32
+	.long	55
+	.long	55
 	.long	.Lxtalabel86
 .cc_bottom cc_505
 .cc_top cc_506,.Lxtalabel102
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	32
-	.long	32
+	.long	55
+	.long	55
 	.long	.Lxtalabel102
 .cc_bottom cc_506
 .cc_top cc_507,.Lxtalabel86
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	32
-	.long	32
+	.long	55
+	.long	55
 	.long	.Lxtalabel86
 .cc_bottom cc_507
 .cc_top cc_508,.Lxtalabel106
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	33
-	.long	34
+	.long	56
+	.long	57
 	.long	.Lxtalabel106
 .cc_bottom cc_508
 .cc_top cc_509,.Lxtalabel102
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	33
-	.long	34
+	.long	56
+	.long	57
 	.long	.Lxtalabel102
 .cc_bottom cc_509
 .cc_top cc_510,.Lxtalabel86
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	33
-	.long	34
+	.long	56
+	.long	57
 	.long	.Lxtalabel86
 .cc_bottom cc_510
 .cc_top cc_511,.Lxtalabel102
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	33
-	.long	34
+	.long	56
+	.long	57
 	.long	.Lxtalabel102
 .cc_bottom cc_511
 .cc_top cc_512,.Lxtalabel106
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	33
-	.long	34
+	.long	56
+	.long	57
 	.long	.Lxtalabel106
 .cc_bottom cc_512
 .cc_top cc_513,.Lxtalabel86
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	33
-	.long	34
+	.long	56
+	.long	57
 	.long	.Lxtalabel86
 .cc_bottom cc_513
 .Lentries_end7:
@@ -15532,106 +15532,106 @@ par.desc.6:
 .cc_top cc_514,.Lxta.loop_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	388
-	.long	389
+	.long	404
+	.long	405
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_514
 .cc_top cc_515,.Lxta.loop_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	391
-	.long	392
+	.long	407
+	.long	408
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_515
 .cc_top cc_516,.Lxta.loop_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	394
-	.long	396
+	.long	410
+	.long	412
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_516
 .cc_top cc_517,.Lxta.loop_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	398
-	.long	400
+	.long	414
+	.long	416
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_517
 .cc_top cc_518,.Lxta.loop_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	402
-	.long	406
+	.long	418
+	.long	422
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_518
 .cc_top cc_519,.Lxta.loop_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	471
-	.long	474
+	.long	487
+	.long	490
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_519
 .cc_top cc_520,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	626
-	.long	626
+	.long	642
+	.long	642
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_520
 .cc_top cc_521,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	628
-	.long	631
+	.long	644
+	.long	647
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_521
 .cc_top cc_522,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	633
-	.long	633
+	.long	649
+	.long	649
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_522
 .cc_top cc_523,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	635
-	.long	657
+	.long	651
+	.long	673
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_523
 .cc_top cc_524,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	660
-	.long	681
+	.long	676
+	.long	697
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_524
 .cc_top cc_525,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	683
-	.long	693
+	.long	699
+	.long	709
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_525
 .cc_top cc_526,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	695
-	.long	728
+	.long	711
+	.long	744
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_526
 .cc_top cc_527,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	730
-	.long	743
+	.long	746
+	.long	759
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_527
 .cc_top cc_528,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc"
 	.byte	0
-	.long	745
-	.long	745
+	.long	761
+	.long	761
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_528
 .Lentries_end9:

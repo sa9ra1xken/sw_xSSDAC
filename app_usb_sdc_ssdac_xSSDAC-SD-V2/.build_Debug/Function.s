@@ -260,13 +260,13 @@ NextSample:
 		nop
 	}
 	ldw r1, cp[.LCPI1_0]
-	.loc	1 31 5
+	.loc	1 26 5
 	bl __mulsf3
-	.loc	1 31 5
+	.loc	1 26 5
 	bl __extendsfdf2
 	ldw r6, cp[.LCPI1_1]
 	ldw r3, cp[.LCPI1_2]
-	.loc	1 31 5
+	.loc	1 26 5
 	{
 		mov r2, r6
 		nop
@@ -277,15 +277,15 @@ NextSample:
 		nop
 	}
 	ldw r3, cp[.LCPI1_3]
-	.loc	1 31 5
+	.loc	1 26 5
 	bl __adddf3
-	.loc	1 31 5
+	.loc	1 26 5
 	bl __truncdfsf2
 	{
 		mov r5, r0
 		mov r0, r4
 	}
-	.loc	1 33 9
+	.loc	1 28 9
 .Ltmp21:
 	bl __extendsfdf2
 	{
@@ -293,7 +293,7 @@ NextSample:
 		mov r8, r1
 	}
 	ldw r9, cp[.LCPI1_4]
-	.loc	1 33 9
+	.loc	1 28 9
 	{
 		mov r2, r6
 		mov r3, r9
@@ -331,13 +331,13 @@ NextSample:
 	bt r0, .LBB1_2
 	ldw r2, cp[.LCPI1_1]
 	ldw r3, cp[.LCPI1_5]
-	.loc	1 33 32
+	.loc	1 28 32
 	{
 		mov r0, r7
 		mov r1, r8
 	}
 	bl __adddf3
-	.loc	1 33 32
+	.loc	1 28 32
 	bl __truncdfsf2
 	{
 		mov r4, r0
@@ -348,19 +348,19 @@ NextSample:
 	.loc	1 22 5
 	stw r4, dp[phase]
 	ldw r1, cp[.LCPI1_6]
-	.loc	1 35 5
+	.loc	1 29 5
 	{
 		mov r0, r5
 		nop
 	}
 	bl __mulsf3
-	.loc	1 35 5
+	.loc	1 29 5
 	bl __fixsfsi
 	{
 		nop
 		ldw r10, sp[8]
 	}
-	.loc	1 37 5
+	.loc	1 30 5
 	ldd r9, r8, sp[3]
 	ldd r7, r6, sp[2]
 	ldd r5, r4, sp[1]
@@ -527,7 +527,7 @@ dphase:
 	.byte	7
 	.long	.Linfo_string13
 	.byte	1
-	.byte	35
+	.byte	29
 	.long	163
 	.byte	0
 	.byte	3

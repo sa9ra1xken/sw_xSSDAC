@@ -5,14 +5,7 @@
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
-
-
-
-
-
-
-
-
+# 33 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 1 3
 # 29 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\stdio.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/_ansi.h" 1 3
@@ -634,13 +627,13 @@ typedef struct
   cookie_close_function_t *close;
 } cookie_io_functions_t;
 FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __functions);
-# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
+# 33 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
 
 # 1 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h" 1
 # 77 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h"
 void debug_printf(char fmt[], ...);
-# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
+# 35 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 1 3
@@ -650,7 +643,7 @@ unsigned bitrev(unsigned x);
 unsigned byterev(unsigned x);
 # 59 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 int clz(unsigned x);
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
+# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h" 1
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\button_listener.h"
@@ -798,7 +791,7 @@ void KeyScan();
 void SendBackTrackControl(chanend c_track_control);
 void HandleDacCommand(chanend c_control, DAC_COMMAND command);
 void HandlePlayCommand(chanend c_control, QUERY_TYPE type);
-# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
+# 38 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h" 1
 # 24 "C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\\ff.h"
@@ -983,12 +976,12 @@ DWORD get_fattime (void);
 
 WCHAR ff_convert (WCHAR, UINT);
 WCHAR ff_wtoupper (WCHAR);
-# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
+# 39 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/timing.h" 1
 # 10 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/timing.h"
 unsigned int get_time(void);
-# 16 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
+# 40 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.h" 1
@@ -997,7 +990,7 @@ typedef enum {
     _FALSE = 0,
     _TRUE = 1
 } BOOL;
-# 18 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
+# 42 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.h" 1
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.h"
@@ -1010,7 +1003,7 @@ typedef enum {
     _RC_PREVIOUS_FOLDER,
     _RC_ERROR
 } PLAY_TRACK_RC;
-# 19 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
+# 43 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h" 1
 # 12 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src\\display_control.h"
@@ -1431,7 +1424,7 @@ typedef enum {
 
 CONSOLE_MODE get_console_mode();
 void set_console_mode(CONSOLE_MODE value);
-# 20 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
+# 44 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play_utils.h" 1
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play_utils.h"
@@ -1441,7 +1434,7 @@ void set_console_mode(CONSOLE_MODE value);
 
 _Bool ReadUnsigned(FIL *fp, uint *dp, uint size);
 void WriteHexString(TCHAR* data, int byte_count);
-# 21 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
+# 45 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\stream_decoder.h" 1
 # 37 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\stream_decoder.h"
@@ -2571,7 +2564,7 @@ typedef void (*FLAC__StreamDecoderErrorCallback)(const FLAC__StreamDecoder *deco
          FLAC__bool FLAC__stream_decoder_skip_single_frame(FLAC__StreamDecoder *decoder);
 # 1576 "C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\\stream_decoder.h"
          FLAC__bool FLAC__stream_decoder_seek_absolute(FLAC__StreamDecoder *decoder, FLAC__uint64 sample);
-# 22 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
+# 46 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\inttypes.h" 1 3
 # 19 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\inttypes.h" 3
@@ -2594,7 +2587,7 @@ extern uintmax_t strtoumax(const char * __restrict, char ** __restrict, int);
 
 extern intmax_t wcstoimax(const wchar_t * __restrict, wchar_t ** __restrict, int);
 extern uintmax_t wcstoumax(const wchar_t * __restrict, wchar_t ** __restrict, int);
-# 23 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
+# 47 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.h" 1
 # 11 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.h"
@@ -4246,7 +4239,7 @@ USER_CONTROL_TYPE TestUserControl(
         PLAY_TRACK_RC *rc,
         SKIP_RESULT (*skip_callback)(int)
 );
-# 24 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
+# 48 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c" 2
 
 
 

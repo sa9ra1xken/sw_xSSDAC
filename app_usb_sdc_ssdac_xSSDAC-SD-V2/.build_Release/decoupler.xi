@@ -5,12 +5,7 @@
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
-
-
-
-
-
-
+# 30 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h" 1 3
 # 23 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h" 3
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/timer.h" 1 3
@@ -395,7 +390,7 @@ unsigned get_local_tile_id(void);
 unsigned get_tile_id(tileref t);
 # 2136 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h" 3
 unsigned get_logical_core_id(void);
-# 7 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
+# 30 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 1 3
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 3
@@ -409,7 +404,7 @@ extern tileref usb_tile;
 
 service xscope_host_data(chanend c);;
 # 21 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\platform.h" 2 3
-# 8 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
+# 31 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 1 3
 
@@ -1040,13 +1035,13 @@ int _safe_fclose(FILE * movable fp);
 int _safe_remove(const char file[]);
 int _safe_rename(const char from[], const char to[]);
 # 6 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include/xc\\stdio.h" 2 3
-# 9 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
+# 32 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
 
 
 # 1 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h" 1
 # 77 "C:/Users/takaaki/git/lib_logging/lib_logging/api\\debug_print.h"
 void debug_printf(char fmt[], ...);
-# 11 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
+# 34 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
 
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\decoupler.h" 1
@@ -1055,7 +1050,7 @@ typedef enum {
     _FALSE = 0,
     _TRUE = 1
 } BOOL;
-# 13 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
+# 36 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
 
 # 1 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 1 3
 # 35 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
@@ -1064,7 +1059,7 @@ unsigned bitrev(unsigned x);
 unsigned byterev(unsigned x);
 # 59 "C:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xclib.h" 3
 int clz(unsigned x);
-# 14 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
+# 37 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc" 2
 
 
 
@@ -1108,7 +1103,7 @@ void send_sample(chanend c){
     }
 
     if (sm_new_track[tx_id]==_TRUE){
-# 66 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
+# 89 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/decoupler.xc"
         ch = 0;
         digit = 0;
         sm_new_track[tx_id] = _FALSE;

@@ -48,11 +48,11 @@ ReadUnsigned:
 .Ltmp6:
 	{
 		mov r4, r1
-		ldaw r5, sp[2]
+		ldaw r5, sp[3]
 	}
 .Ltmp7:
 	{
-		ldaw r3, sp[1]
+		ldaw r3, sp[2]
 		mov r1, r5
 	}
 .Ltmp8:
@@ -61,7 +61,7 @@ ReadUnsigned:
 .Ltmp9:
 	{
 		nop
-		ldw r0, sp[1]
+		ldw r0, sp[2]
 	}
 	.loc	1 19 9
 .Ltmp10:
@@ -341,7 +341,7 @@ WriteHexString:
 	.byte	4
 	.byte	2
 	.byte	145
-	.byte	8
+	.byte	12
 	.long	.Linfo_string6
 	.byte	1
 	.byte	15
@@ -394,7 +394,7 @@ WriteHexString:
 	.long	205
 	.byte	12
 	.long	212
-	.byte	7
+	.byte	3
 	.byte	0
 	.byte	10
 	.long	.Linfo_string7

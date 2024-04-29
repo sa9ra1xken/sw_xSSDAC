@@ -209,7 +209,7 @@ WCHAR ff_wtoupper (WCHAR);
 
 _Bool ReadUnsigned(FIL *fp, UINT *dp, UINT size){
 
-    char buff[8];
+    char buff[4];
     UINT ByteRead;
 
                       f_read (fp, buff, size, &ByteRead);

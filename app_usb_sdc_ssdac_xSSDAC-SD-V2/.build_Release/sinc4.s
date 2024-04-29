@@ -11,15 +11,15 @@
 	.set usage.anon.2,0
 	.set usage.anon.3,0
 	.set usage.anon.4,0
-	.globread fir_sinc4,fir_tap_sinc4_q30,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:31: note: object used here\nFIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h:77:33: note: expanded from macro \'FIR_ENTITY\'\n                                TAP[-n + OFFSET - 1][m],\\\n                                ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1498:66: note: expanded from macro \'macs\'\n#define macs(a, b, c, d)                       __builtin_macs(a, b, c, d)\n                                                                 ^"
-	.globread fir_sinc4,current,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1: note: object used here\nFIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)\n^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h:76:47: note: expanded from macro \'FIR_ENTITY\'\n                                ring_buff_l[( current + n) & ring_buff_mask],\\\n                                              ^~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1498:63: note: expanded from macro \'macs\'\n#define macs(a, b, c, d)                       __builtin_macs(a, b, c, d)\n                                                              ^"
-	.globread fir_sinc4,ring_buff_r,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1: note: object used here\nFIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)\n^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h:81:33: note: expanded from macro \'FIR_ENTITY\'\n                                ring_buff_r[( current + n) & ring_buff_mask],\\\n                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1498:63: note: expanded from macro \'macs\'\n#define macs(a, b, c, d)                       __builtin_macs(a, b, c, d)\n                                                              ^"
-	.globread fir_sinc4,ring_buff_l,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1: note: object used here\nFIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)\n^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h:76:33: note: expanded from macro \'FIR_ENTITY\'\n                                ring_buff_l[( current + n) & ring_buff_mask],\\\n                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1498:63: note: expanded from macro \'macs\'\n#define macs(a, b, c, d)                       __builtin_macs(a, b, c, d)\n                                                              ^"
-	.globread fir_sinc4,ring_buff_mask,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1: note: object used here\nFIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)\n^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h:76:62: note: expanded from macro \'FIR_ENTITY\'\n                                ring_buff_l[( current + n) & ring_buff_mask],\\\n                                                             ^~~~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1498:63: note: expanded from macro \'macs\'\n#define macs(a, b, c, d)                       __builtin_macs(a, b, c, d)\n                                                              ^"
-	.globread fir_sinc4,usage.anon.4,4,4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1: note: object used here (bytes 4..8)\nFIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)\n^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h:54:39: note: expanded from macro \'FIR_ENTITY\'\n        add_sample(samplesOut[0] >> 4,samplesOut[1] >> 4);\\\n                                      ^~~~~~~~~~~~~"
-	.globread fir_sinc4,usage.anon.4,0,4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1: note: object used here (bytes 0..4)\nFIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)\n^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h:54:20: note: expanded from macro \'FIR_ENTITY\'\n        add_sample(samplesOut[0] >> 4,samplesOut[1] >> 4);\\\n                   ^~~~~~~~~~~~~"
-	.globwrite fir_sinc4,tp23_solver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1: note: object used here\nFIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)\n^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h:37:9: note: expanded from macro \'FIR_ENTITY\'\n        tp23_solver <: 1;\\\n        ^~~~~~~~~~~"
-	.globwrite usage.anon.3,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h:30:13: note: object used here\n            samplesOut[i] = tmp;\n            ^~~~~~~~~~~~~"
+	.globread fir_sinc4,fir_tap_sinc4_q30,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:31: note: object used here\nFIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h:77:33: note: expanded from macro \'FIR_ENTITY\'\n                                TAP[-n + OFFSET - 1][m],\\\n                                ^\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1498:66: note: expanded from macro \'macs\'\n#define macs(a, b, c, d)                       __builtin_macs(a, b, c, d)\n                                                                 ^"
+	.globread fir_sinc4,current,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1: note: object used here\nFIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)\n^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h:76:47: note: expanded from macro \'FIR_ENTITY\'\n                                ring_buff_l[( current + n) & ring_buff_mask],\\\n                                              ^~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1498:63: note: expanded from macro \'macs\'\n#define macs(a, b, c, d)                       __builtin_macs(a, b, c, d)\n                                                              ^"
+	.globread fir_sinc4,ring_buff_r,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1: note: object used here\nFIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)\n^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h:81:33: note: expanded from macro \'FIR_ENTITY\'\n                                ring_buff_r[( current + n) & ring_buff_mask],\\\n                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1498:63: note: expanded from macro \'macs\'\n#define macs(a, b, c, d)                       __builtin_macs(a, b, c, d)\n                                                              ^"
+	.globread fir_sinc4,ring_buff_l,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1: note: object used here\nFIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)\n^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h:76:33: note: expanded from macro \'FIR_ENTITY\'\n                                ring_buff_l[( current + n) & ring_buff_mask],\\\n                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1498:63: note: expanded from macro \'macs\'\n#define macs(a, b, c, d)                       __builtin_macs(a, b, c, d)\n                                                              ^"
+	.globread fir_sinc4,ring_buff_mask,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1: note: object used here\nFIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)\n^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h:76:62: note: expanded from macro \'FIR_ENTITY\'\n                                ring_buff_l[( current + n) & ring_buff_mask],\\\n                                                             ^~~~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\XS1.h:1498:63: note: expanded from macro \'macs\'\n#define macs(a, b, c, d)                       __builtin_macs(a, b, c, d)\n                                                              ^"
+	.globread fir_sinc4,usage.anon.4,4,4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1: note: object used here (bytes 4..8)\nFIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)\n^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h:54:39: note: expanded from macro \'FIR_ENTITY\'\n        add_sample(samplesOut[0] >> 4,samplesOut[1] >> 4);\\\n                                      ^~~~~~~~~~~~~"
+	.globread fir_sinc4,usage.anon.4,0,4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1: note: object used here (bytes 0..4)\nFIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)\n^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h:54:20: note: expanded from macro \'FIR_ENTITY\'\n        add_sample(samplesOut[0] >> 4,samplesOut[1] >> 4);\\\n                   ^~~~~~~~~~~~~"
+	.globwrite fir_sinc4,tp23_solver,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1: note: object used here\nFIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)\n^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nC:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\fir_interpolator.h:37:9: note: expanded from macro \'FIR_ENTITY\'\n        tp23_solver <: 1;\\\n        ^~~~~~~~~~~"
+	.globwrite usage.anon.3,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h:53:13: note: object used here\n            samplesOut[i] = tmp;\n            ^~~~~~~~~~~~~"
 	.call fir_sinc4,usage.anon.3
 	.call fir_sinc4,printf
 	.call fir_sinc4,fflush
@@ -60,7 +60,7 @@
 	.cc_top fir_sinc4.function,fir_sinc4
 fir_sinc4:                              # @fir_sinc4
 .Lfunc_begin0:
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -128,7 +128,7 @@ fir_sinc4:                              # @fir_sinc4
 		mov r5, r0
 	}
 .Ltmp11:
-	.loc	2 294 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r11, cp[.str]
 .Ltmp12:
 	#DEBUG_VALUE: fir_sinc4:sample_rate <- R1
@@ -139,13 +139,13 @@ fir_sinc4:                              # @fir_sinc4
 .Ltmp13:
 .Lxta.call_labels0:
 	bl iprintf
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	bl __getstdout
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	bl fflush
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	bl ReleaseMute
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 .Ltmp14:
 	{
 		ldaw r10, sp[21]
@@ -157,7 +157,7 @@ fir_sinc4:                              # @fir_sinc4
 	#DEBUG_VALUE: fir_sinc4:c_in <- R5
 	#DEBUG_VALUE: fir_sinc4:c_out <- R4
 	#DEBUG_VALUE: fir_sinc4:c_control <- R6
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r8, dp[par.desc.1]
 	{
 		ldaw r9, sp[5]
@@ -176,24 +176,24 @@ fir_sinc4:                              # @fir_sinc4
 		ldc r0, 0
 		nop
 	}
-	.loc	2 294 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1
+	.loc	2 317 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1
 	{
 		out res[r1], r0
 		nop
 	}
 .Ltmp17:
-	.loc	1 16 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:16:0
+	.loc	1 39 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:39:0
 .Lxta.endpoint_labels0:
 	{
 		out res[r5], r0
 		nop
 	}
-	.loc	1 19 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:19:5
+	.loc	1 42 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:42:5
 	{
 		testct r0, res[r5]
 		nop
 	}
-	.loc	1 19 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:19:5
+	.loc	1 42 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:42:5
 	bf r0, .LBB0_11
 .Ltmp18:
 # BB#12:                                # %DoSampleTransfer.exit
@@ -203,7 +203,7 @@ fir_sinc4:                              # @fir_sinc4
 	#DEBUG_VALUE: fir_sinc4:c_out <- R4
 	#DEBUG_VALUE: fir_sinc4:c_control <- R6
 	#DEBUG_VALUE: DoSampleTransfer:underflowWord <- 0
-	.loc	1 21 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:21:0
+	.loc	1 44 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:44:0
 .Lxta.endpoint_labels1:
 	{
 		inct r1, res[r5]
@@ -216,9 +216,9 @@ fir_sinc4:                              # @fir_sinc4
 	#DEBUG_VALUE: fir_sinc4:c_in <- R5
 	#DEBUG_VALUE: fir_sinc4:c_out <- R4
 	#DEBUG_VALUE: fir_sinc4:c_control <- R6
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldw r0, dp[samplesOut]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldw r1, dp[samplesOut+4]
 	bu .LBB0_14
 .Ltmp20:
@@ -229,7 +229,7 @@ fir_sinc4:                              # @fir_sinc4
 	#DEBUG_VALUE: fir_sinc4:c_out <- R4
 	#DEBUG_VALUE: fir_sinc4:c_control <- R6
 	#DEBUG_VALUE: DoSampleTransfer:underflowWord <- 0
-	.loc	1 29 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:29:0
+	.loc	1 52 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:52:0
 .Lxta.endpoint_labels2:
 	{
 		in r0, res[r5]
@@ -237,17 +237,17 @@ fir_sinc4:                              # @fir_sinc4
 	}
 .Ltmp21:
 	#DEBUG_VALUE: tmp <- R0
-	.loc	1 30 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:30:0
+	.loc	1 53 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:53:0
 	stw r0, dp[samplesOut]
 .Ltmp22:
 	#DEBUG_VALUE: i <- 1
-	.loc	1 29 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:29:0
+	.loc	1 52 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:52:0
 .Lxta.endpoint_labels3:
 	{
 		in r1, res[r5]
 		nop
 	}
-	.loc	1 30 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:30:0
+	.loc	1 53 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:53:0
 	stw r1, dp[samplesOut+4]
 .Ltmp23:
 .LBB0_14:                               # %ifdone14
@@ -256,11 +256,11 @@ fir_sinc4:                              # @fir_sinc4
 	#DEBUG_VALUE: fir_sinc4:c_in <- R5
 	#DEBUG_VALUE: fir_sinc4:c_out <- R4
 	#DEBUG_VALUE: fir_sinc4:c_control <- R6
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ashr r0, r0, 4
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ashr r1, r1, 4
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	bl add_sample
 	{
 		ldc r0, 0
@@ -278,7 +278,7 @@ fir_sinc4:                              # @fir_sinc4
 	#DEBUG_VALUE: fir_sinc4:c_in <- R5
 	#DEBUG_VALUE: fir_sinc4:c_out <- R4
 	#DEBUG_VALUE: fir_sinc4:c_control <- R6
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		mov r0, r9
 		mov r1, r8
@@ -302,60 +302,60 @@ fir_sinc4:                              # @fir_sinc4
 		nop
 		ldw r2, sp[6]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 .Ltmp27:
 	{
 		add r0, r2, r0
 		ldw r2, sp[14]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r1, r2, r1
 		ldw r2, sp[7]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r2, r0
 		ldw r2, sp[15]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r1, r2, r1
 		ldw r2, sp[8]
 	}
 .Ltmp28:
 	#DEBUG_VALUE: out_l <- R0
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r2, r0
 		ldw r2, sp[16]
 	}
 .Ltmp29:
 	#DEBUG_VALUE: out_r <- R1
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r1, r2, r1
 		shl r0, r0, 3
 	}
 .Ltmp30:
-	.loc	2 294 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1
+	.loc	2 317 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1
 .Lxta.endpoint_labels4:
 	{
 		out res[r4], r0
 		shl r0, r1, 3
 	}
-	.loc	2 294 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1
+	.loc	2 317 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1
 	{
 		out res[r4], r0
 		ldw r0, r10[0]
 	}
 .Ltmp31:
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r0, 1
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		lsu r0, r0, r7
 		stw r0, r10[0]
@@ -370,78 +370,78 @@ fir_sinc4:                              # @fir_sinc4
 	#DEBUG_VALUE: fir_sinc4:c_in <- R5
 	#DEBUG_VALUE: fir_sinc4:c_out <- R4
 	#DEBUG_VALUE: fir_sinc4:c_control <- R6
-	.loc	2 294 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1
+	.loc	2 317 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1
 	ldw r1, dp[tp23_solver]
 	{
 		mkmsk r0, 1
 		nop
 	}
-	.loc	2 294 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1
+	.loc	2 317 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1
 .Lxta.endpoint_labels5:
 	{
 		out res[r1], r0
 		nop
 	}
-	.loc	2 294 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1
+	.loc	2 317 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1
 .Ltmp33:
 	{
 		outct res[r6], 1
 		nop
 	}
-	.loc	2 294 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1
+	.loc	2 317 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1
 	{
 		chkct res[r6], 1
 		nop
 	}
-	.loc	2 294 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1
+	.loc	2 317 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1
 	{
 		out res[r6], r0
 		nop
 	}
-	.loc	2 294 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1
+	.loc	2 317 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1
 	{
 		outct res[r6], 1
 		nop
 	}
-	.loc	2 294 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1
+	.loc	2 317 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1
 	{
 		chkct res[r6], 1
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		chkct res[r6], 1
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		outct res[r6], 1
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		in r2, res[r6]
 		nop
 	}
 .Ltmp34:
 	#DEBUG_VALUE: mode <- R2
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		chkct res[r6], 1
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		outct res[r6], 1
 		eq r2, r2, 5
 	}
 .Ltmp35:
-	.loc	2 294 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1
+	.loc	2 317 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1
 	bt r2, .LBB0_10
 .Ltmp36:
 # BB#16:                                # %iftrue8
 	#DEBUG_VALUE: fir_sinc4:c_out <- R4
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		outct res[r4], 1
 		ldc r1, 0
@@ -455,7 +455,7 @@ fir_sinc4:                              # @fir_sinc4
 		ldc r9, 0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 .Ltmp38:
 	ldaw r6, dp[par.desc.1]
 	{
@@ -468,9 +468,9 @@ fir_sinc4:                              # @fir_sinc4
                                         #   in Loop: Header=BB0_2 Depth=1
 	#DEBUG_VALUE: fir_sinc4:c_in <- R5
 	#DEBUG_VALUE: fir_sinc4:c_out <- R4
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldw r0, dp[samplesOut]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldw r1, dp[samplesOut+4]
 	bu .LBB0_6
 .Ltmp40:
@@ -480,7 +480,7 @@ fir_sinc4:                              # @fir_sinc4
 	#DEBUG_VALUE: fir_sinc4:c_in <- R5
 	#DEBUG_VALUE: fir_sinc4:c_out <- R4
 	#DEBUG_VALUE: DoSampleTransfer:underflowWord <- 0
-	.loc	1 29 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:29:0
+	.loc	1 52 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:52:0
 .Lxta.endpoint_labels6:
 	{
 		in r0, res[r5]
@@ -488,16 +488,16 @@ fir_sinc4:                              # @fir_sinc4
 	}
 .Ltmp41:
 	#DEBUG_VALUE: tmp <- R0
-	.loc	1 30 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:30:0
+	.loc	1 53 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:53:0
 	stw r0, dp[samplesOut]
 	#DEBUG_VALUE: i <- 1
-	.loc	1 29 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:29:0
+	.loc	1 52 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:52:0
 .Lxta.endpoint_labels7:
 	{
 		in r1, res[r5]
 		nop
 	}
-	.loc	1 30 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:30:0
+	.loc	1 53 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:53:0
 	stw r1, dp[samplesOut+4]
 .Ltmp42:
 .LBB0_6:                                # %ifdone14.us
@@ -505,11 +505,11 @@ fir_sinc4:                              # @fir_sinc4
 .Lxtalabel6:
 	#DEBUG_VALUE: fir_sinc4:c_in <- R5
 	#DEBUG_VALUE: fir_sinc4:c_out <- R4
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ashr r0, r0, 4
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ashr r1, r1, 4
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	bl add_sample
 	{
 		nop
@@ -522,7 +522,7 @@ fir_sinc4:                              # @fir_sinc4
 .Lxtalabel7:
 	#DEBUG_VALUE: fir_sinc4:c_in <- R5
 	#DEBUG_VALUE: fir_sinc4:c_out <- R4
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		mov r0, r7
 		mov r1, r6
@@ -546,60 +546,60 @@ fir_sinc4:                              # @fir_sinc4
 		nop
 		ldw r2, sp[6]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 .Ltmp46:
 	{
 		add r0, r2, r0
 		ldw r2, sp[14]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r1, r2, r1
 		ldw r2, sp[7]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r2, r0
 		ldw r2, sp[15]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r1, r2, r1
 		ldw r2, sp[8]
 	}
 .Ltmp47:
 	#DEBUG_VALUE: out_l <- R0
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r2, r0
 		ldw r2, sp[16]
 	}
 .Ltmp48:
 	#DEBUG_VALUE: out_r <- R1
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r1, r2, r1
 		shl r0, r0, 3
 	}
 .Ltmp49:
-	.loc	2 294 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1
+	.loc	2 317 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1
 .Lxta.endpoint_labels8:
 	{
 		out res[r4], r0
 		shl r0, r1, 3
 	}
-	.loc	2 294 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1
+	.loc	2 317 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1
 	{
 		out res[r4], r0
 		ldw r0, r10[0]
 	}
 .Ltmp50:
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r0, 1
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		lsu r0, r0, r8
 		stw r0, r10[0]
@@ -614,37 +614,37 @@ fir_sinc4:                              # @fir_sinc4
 .Lxtalabel8:
 	#DEBUG_VALUE: fir_sinc4:c_in <- R5
 	#DEBUG_VALUE: fir_sinc4:c_out <- R4
-	.loc	2 294 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1
+	.loc	2 317 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1
 	ldw r0, dp[tp23_solver]
 	{
 		mkmsk r1, 1
 		nop
 	}
-	.loc	2 294 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1
+	.loc	2 317 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1
 .Lxta.endpoint_labels9:
 	{
 		out res[r0], r1
 		nop
 	}
 	#DEBUG_VALUE: DoSampleTransfer:underflowWord <- 0
-	.loc	2 294 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:1
+	.loc	2 317 1                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1
 	{
 		out res[r0], r9
 		nop
 	}
 .Ltmp52:
-	.loc	1 16 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:16:0
+	.loc	1 39 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:39:0
 .Lxta.endpoint_labels10:
 	{
 		out res[r5], r9
 		nop
 	}
-	.loc	1 19 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:19:5
+	.loc	1 42 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:42:5
 	{
 		testct r0, res[r5]
 		nop
 	}
-	.loc	1 19 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:19:5
+	.loc	1 42 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:42:5
 	bf r0, .LBB0_5
 .Ltmp53:
 # BB#3:                                 # %DoSampleTransfer.exit.us
@@ -653,7 +653,7 @@ fir_sinc4:                              # @fir_sinc4
 	#DEBUG_VALUE: fir_sinc4:c_in <- R5
 	#DEBUG_VALUE: fir_sinc4:c_out <- R4
 	#DEBUG_VALUE: DoSampleTransfer:underflowWord <- 0
-	.loc	1 21 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:21:0
+	.loc	1 44 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\do_sample_transfer.h:44:0
 .Lxta.endpoint_labels11:
 	{
 		inct r1, res[r5]
@@ -663,7 +663,7 @@ fir_sinc4:                              # @fir_sinc4
 .Ltmp54:
 .LBB0_18:                               # %iftrue13
 	#DEBUG_VALUE: fir_sinc4:c_out <- R4
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		outct res[r4], 1
 		ldc r0, 0
@@ -913,7 +913,7 @@ fir_sinc4:                              # @fir_sinc4
 	.cc_top fir_sinc4.task.0.function,fir_sinc4.task.0
 fir_sinc4.task.0:                       # @fir_sinc4.task.0
 .Lfunc_begin1:
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -959,13 +959,13 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		stw r1, r0[4]
 	}
-	.loc	2 294 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 .Ltmp66:
 	{
 		ldc r2, 48
 		stw r1, r0[8]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r2, r0, r2
 		nop
@@ -979,7 +979,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		stw r1, r2[0]
 	}
 	ldc r3, 68
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 .Ltmp67:
 	{
 		add r2, r0, r3
@@ -994,50 +994,50 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		stw r11, r2[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldw r5, dp[current]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldw r6, dp[ring_buff_mask]
 	ldc r4, 64
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r0, r4
 		nop
 	}
 .Ltmp68:
 	#DEBUG_VALUE: fir_sinc4.task.0:frame <- [SP+4]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r11, r5, r11
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r7, r11, r6
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r8, dp[ring_buff_l]
 	{
 		nop
 		ldw r10, r8[r7]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r11, cp[fir_tap_sinc4_q30]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r9, r11[r4]
 	ldc r11, 2976
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r11, r9, r11
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		mov r11, r1
 		ldw r0, r11[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		mov r4, r1
 		nop
@@ -1045,24 +1045,24 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 	#APP
 	maccs r11, r4, r10, r0
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r10, dp[ring_buff_r]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		mov r7, r1
 		ldw r2, r10[r7]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r2, r0
 	#NO_APP
 	ldw r0, cp[.LCPI1_1]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1072,7 +1072,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2960
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1081,7 +1081,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1089,17 +1089,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_2]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1109,7 +1109,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2944
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1118,7 +1118,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1126,17 +1126,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_3]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1146,7 +1146,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2928
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1155,7 +1155,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1163,17 +1163,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_4]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1183,7 +1183,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2912
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1192,7 +1192,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1200,17 +1200,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_5]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1220,7 +1220,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2896
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1229,7 +1229,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1237,17 +1237,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_6]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1257,7 +1257,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2880
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1266,7 +1266,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1274,17 +1274,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_7]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1294,7 +1294,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2864
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1303,7 +1303,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1311,17 +1311,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_8]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1331,7 +1331,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2848
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1340,7 +1340,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1348,17 +1348,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_9]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1368,7 +1368,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2832
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1377,7 +1377,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1385,17 +1385,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_10]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1405,7 +1405,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2816
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1414,7 +1414,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1422,17 +1422,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_11]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1442,7 +1442,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2800
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1451,7 +1451,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1459,17 +1459,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_12]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1479,7 +1479,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2784
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1488,7 +1488,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1496,17 +1496,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_13]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1516,7 +1516,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2768
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1525,7 +1525,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1533,17 +1533,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_14]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1553,7 +1553,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2752
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1562,7 +1562,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1570,17 +1570,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_15]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1590,7 +1590,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2736
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1599,7 +1599,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1607,13 +1607,13 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r5[-11]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1623,7 +1623,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2720
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1632,7 +1632,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1640,17 +1640,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_16]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1660,7 +1660,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2704
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1669,7 +1669,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1677,17 +1677,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_17]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1697,7 +1697,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2688
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1706,7 +1706,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1714,17 +1714,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_18]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1734,7 +1734,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2672
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1743,7 +1743,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1751,13 +1751,13 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r5[-10]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1767,7 +1767,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2656
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1776,7 +1776,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1784,17 +1784,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_19]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1804,7 +1804,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2640
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1813,7 +1813,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1821,17 +1821,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_20]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1841,7 +1841,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2624
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1850,7 +1850,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1858,17 +1858,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_21]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1878,7 +1878,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2608
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1887,7 +1887,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1895,13 +1895,13 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r5[-9]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1911,7 +1911,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2592
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1920,7 +1920,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1928,17 +1928,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_22]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1948,7 +1948,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2576
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1957,7 +1957,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -1965,17 +1965,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_23]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -1985,7 +1985,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2560
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -1994,7 +1994,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -2002,17 +2002,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_24]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2022,7 +2022,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2544
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -2031,7 +2031,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -2039,13 +2039,13 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r5[-8]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2055,7 +2055,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2528
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -2064,7 +2064,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -2072,17 +2072,17 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI1_25]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2092,7 +2092,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2512
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -2101,7 +2101,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -2109,7 +2109,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
@@ -2277,7 +2277,7 @@ fir_sinc4.task.0:                       # @fir_sinc4.task.0
 	.cc_top fir_sinc4.task.1.function,fir_sinc4.task.1
 fir_sinc4.task.1:                       # @fir_sinc4.task.1
 .Lfunc_begin2:
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -2323,13 +2323,13 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		stw r2, r0[5]
 	}
-	.loc	2 294 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 .Ltmp82:
 	{
 		ldc r1, 52
 		stw r2, r0[9]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r1, r0, r1
 		nop
@@ -2338,13 +2338,13 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		stw r1, sp[3]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		mov r3, r2
 		stw r2, r1[0]
 	}
 	ldc r1, 72
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 .Ltmp83:
 	{
 		add r1, r0, r1
@@ -2362,50 +2362,50 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		stw r0, r1[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldw r5, dp[current]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldw r6, dp[ring_buff_mask]
 	ldc r11, 64
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r11, r2, r11
 		nop
 	}
 .Ltmp86:
 	#DEBUG_VALUE: fir_sinc4.task.1:frame <- [SP+4]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		ldw r4, r11[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r7, r0, r6
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r9, dp[ring_buff_l]
 	{
 		nop
 		ldw r1, r9[r7]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r11, cp[fir_tap_sinc4_q30]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r10, r11[r4]
 	ldc r11, 2496
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r11, r10, r11
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		mov r11, r3
 		ldw r0, r11[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		mov r4, r3
 		nop
@@ -2413,14 +2413,14 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 	#APP
 	maccs r11, r4, r1, r0
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r2, dp[ring_buff_r]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		mov r7, r3
 		ldw r1, r2[r7]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		mov r8, r3
 		nop
@@ -2429,12 +2429,12 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 	maccs r8, r7, r1, r0
 	#NO_APP
 	ldw r0, cp[.LCPI2_1]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2444,7 +2444,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2480
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -2453,7 +2453,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -2461,13 +2461,13 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r5[-7]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2477,7 +2477,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2464
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -2486,7 +2486,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -2494,17 +2494,17 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI2_2]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2514,7 +2514,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2448
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -2523,7 +2523,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -2531,17 +2531,17 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI2_3]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2551,7 +2551,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2432
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -2560,7 +2560,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -2568,17 +2568,17 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI2_4]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2588,7 +2588,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2416
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -2597,7 +2597,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -2605,13 +2605,13 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r5[-6]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2621,7 +2621,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2400
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -2630,7 +2630,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -2638,17 +2638,17 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI2_5]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2658,7 +2658,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2384
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -2667,7 +2667,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -2675,17 +2675,17 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI2_6]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2695,7 +2695,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2368
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -2704,7 +2704,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -2712,17 +2712,17 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI2_7]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2732,7 +2732,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2352
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -2741,7 +2741,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -2749,13 +2749,13 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r5[-5]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2765,7 +2765,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2336
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -2774,7 +2774,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -2782,17 +2782,17 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI2_8]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2802,7 +2802,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2320
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -2811,7 +2811,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -2819,17 +2819,17 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI2_9]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2839,7 +2839,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2304
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -2848,7 +2848,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -2856,17 +2856,17 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI2_10]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2876,7 +2876,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2288
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -2885,7 +2885,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -2893,13 +2893,13 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r5[-4]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2909,7 +2909,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2272
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -2918,7 +2918,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -2926,17 +2926,17 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI2_11]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2946,7 +2946,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2256
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -2955,7 +2955,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -2963,17 +2963,17 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI2_12]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -2983,7 +2983,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2240
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -2992,7 +2992,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -3000,17 +3000,17 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
 	ldw r0, cp[.LCPI2_13]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3020,7 +3020,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2224
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -3029,7 +3029,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -3037,13 +3037,13 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r5[-3]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3053,7 +3053,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2208
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -3062,7 +3062,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -3070,16 +3070,16 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		sub r0, r5, 11
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3089,7 +3089,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2192
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -3098,7 +3098,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -3106,16 +3106,16 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		sub r0, r5, 10
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3125,7 +3125,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2176
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -3134,7 +3134,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -3142,16 +3142,16 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		sub r0, r5, 9
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3161,7 +3161,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2160
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -3170,7 +3170,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -3178,16 +3178,16 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		sub r0, r5, 8
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3197,7 +3197,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2144
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -3206,7 +3206,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -3214,16 +3214,16 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		sub r0, r5, 7
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3233,7 +3233,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2128
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -3242,7 +3242,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -3250,16 +3250,16 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		sub r0, r5, 6
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3269,7 +3269,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2112
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -3278,7 +3278,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -3286,16 +3286,16 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		sub r0, r5, 5
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3305,7 +3305,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2096
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -3314,7 +3314,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -3322,16 +3322,16 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		sub r0, r5, 4
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3341,7 +3341,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2080
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -3350,7 +3350,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -3358,16 +3358,16 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		sub r0, r5, 3
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3377,7 +3377,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2064
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -3386,7 +3386,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -3394,16 +3394,16 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		sub r0, r5, 2
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3413,7 +3413,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2048
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -3422,7 +3422,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -3430,16 +3430,16 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		sub r0, r5, 1
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3449,7 +3449,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		ldw r1, r9[r0]
 	}
 	ldc r3, 2032
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r10, r3
 		nop
@@ -3458,7 +3458,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r1, r3
 	#NO_APP
@@ -3466,11 +3466,11 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 		nop
 		ldw r0, r2[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r7, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		ldc r1, 0
 		ldw r0, sp[2]
@@ -3534,7 +3534,7 @@ fir_sinc4.task.1:                       # @fir_sinc4.task.1
 	.cc_top fir_sinc4.task.2.function,fir_sinc4.task.2
 fir_sinc4.task.2:                       # @fir_sinc4.task.2
 .Lfunc_begin3:
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -3580,13 +3580,13 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		stw r1, r0[6]
 	}
-	.loc	2 294 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 .Ltmp100:
 	{
 		ldc r2, 56
 		stw r1, r0[10]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r2, r0, r2
 		nop
@@ -3600,7 +3600,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		stw r1, r2[0]
 	}
 	ldc r3, 76
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 .Ltmp101:
 	{
 		add r2, r0, r3
@@ -3614,45 +3614,45 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		stw r1, r2[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldw r5, dp[current]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldw r6, dp[ring_buff_mask]
 	ldc r11, 64
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r11, r0, r11
 		nop
 	}
 .Ltmp102:
 	#DEBUG_VALUE: fir_sinc4.task.2:frame <- [SP+4]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r7, r5, r6
 		ldw r4, r11[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r8, dp[ring_buff_l]
 	{
 		nop
 		ldw r10, r8[r7]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r11, cp[fir_tap_sinc4_q30]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r9, r11[r4]
 	ldc r11, 2016
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r11, r9, r11
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		mov r11, r1
 		ldw r0, r11[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		mov r4, r1
 		nop
@@ -3660,23 +3660,23 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 	#APP
 	maccs r11, r4, r10, r0
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r10, dp[ring_buff_r]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		mov r7, r1
 		ldw r2, r10[r7]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r2, r0
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, 1
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3686,7 +3686,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 2000
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -3695,7 +3695,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -3703,16 +3703,16 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, 2
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3722,7 +3722,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1984
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -3731,7 +3731,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -3739,16 +3739,16 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, 3
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3758,7 +3758,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1968
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -3767,7 +3767,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -3775,16 +3775,16 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, 4
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3794,7 +3794,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1952
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -3803,7 +3803,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -3811,16 +3811,16 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, 5
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3830,7 +3830,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1936
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -3839,7 +3839,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -3847,16 +3847,16 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, 6
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3866,7 +3866,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1920
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -3875,7 +3875,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -3883,16 +3883,16 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, 7
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3902,7 +3902,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1904
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -3911,7 +3911,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -3919,16 +3919,16 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, 8
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3938,7 +3938,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1888
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -3947,7 +3947,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -3955,16 +3955,16 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, 9
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -3974,7 +3974,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1872
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -3983,7 +3983,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -3991,16 +3991,16 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, 10
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4010,7 +4010,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1856
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4019,7 +4019,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4027,16 +4027,16 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, 11
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4046,7 +4046,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1840
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4055,7 +4055,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4063,13 +4063,13 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r5[3]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4079,7 +4079,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1824
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4088,7 +4088,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4096,7 +4096,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
@@ -4104,12 +4104,12 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldc r0, 13
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4119,7 +4119,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1808
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4128,7 +4128,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4136,7 +4136,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
@@ -4144,12 +4144,12 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldc r0, 14
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4159,7 +4159,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1792
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4168,7 +4168,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4176,7 +4176,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
@@ -4184,12 +4184,12 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		mkmsk r0, 4
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4199,7 +4199,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1776
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4208,7 +4208,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4216,13 +4216,13 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r5[4]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4232,7 +4232,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1760
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4241,7 +4241,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4249,7 +4249,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
@@ -4257,12 +4257,12 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldc r0, 17
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4272,7 +4272,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1744
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4281,7 +4281,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4289,7 +4289,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
@@ -4297,12 +4297,12 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldc r0, 18
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4312,7 +4312,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1728
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4321,7 +4321,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4329,7 +4329,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
@@ -4337,12 +4337,12 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldc r0, 19
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4352,7 +4352,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1712
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4361,7 +4361,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4369,13 +4369,13 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r5[5]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4385,7 +4385,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1696
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4394,7 +4394,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4402,7 +4402,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
@@ -4410,12 +4410,12 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldc r0, 21
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4425,7 +4425,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1680
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4434,7 +4434,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4442,7 +4442,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
@@ -4450,12 +4450,12 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldc r0, 22
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4465,7 +4465,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1664
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4474,7 +4474,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4482,7 +4482,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
@@ -4490,12 +4490,12 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldc r0, 23
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4505,7 +4505,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1648
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4514,7 +4514,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4522,13 +4522,13 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r5[6]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4538,7 +4538,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1632
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4547,7 +4547,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4555,7 +4555,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
@@ -4563,12 +4563,12 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldc r0, 25
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4578,7 +4578,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1616
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4587,7 +4587,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4595,7 +4595,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
@@ -4603,12 +4603,12 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldc r0, 26
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4618,7 +4618,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1600
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4627,7 +4627,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4635,7 +4635,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
@@ -4643,12 +4643,12 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldc r0, 27
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4658,7 +4658,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1584
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4667,7 +4667,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4675,13 +4675,13 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r5[7]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4691,7 +4691,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1568
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4700,7 +4700,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4708,7 +4708,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
@@ -4716,12 +4716,12 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldc r0, 29
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r5, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r6
 		nop
@@ -4731,7 +4731,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		ldw r2, r8[r0]
 	}
 	ldc r3, 1552
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r3, r9, r3
 		nop
@@ -4740,7 +4740,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r3, r3[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r4, r2, r3
 	#NO_APP
@@ -4748,7 +4748,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 		nop
 		ldw r0, r10[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r7, r1, r0, r3
 	#NO_APP
@@ -4815,7 +4815,7 @@ fir_sinc4.task.2:                       # @fir_sinc4.task.2
 	.cc_top fir_sinc4.task.3.function,fir_sinc4.task.3
 fir_sinc4.task.3:                       # @fir_sinc4.task.3
 .Lfunc_begin4:
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -4861,13 +4861,13 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		stw r1, r0[7]
 	}
-	.loc	2 294 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 .Ltmp116:
 	{
 		ldc r2, 60
 		stw r1, r0[11]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r2, r0, r2
 		nop
@@ -4881,7 +4881,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		stw r1, r2[0]
 	}
 	ldc r2, 80
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 .Ltmp117:
 	{
 		add r2, r0, r2
@@ -4902,50 +4902,50 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		stw r0, r2[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldw r6, dp[current]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldw r7, dp[ring_buff_mask]
 	ldc r11, 64
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r11, r3, r11
 		nop
 	}
 .Ltmp120:
 	#DEBUG_VALUE: fir_sinc4.task.3:frame <- [SP+4]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		ldw r5, r11[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r8, r0, r7
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r9, dp[ring_buff_l]
 	{
 		nop
 		ldw r2, r9[r8]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r11, cp[fir_tap_sinc4_q30]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r10, r11[r5]
 	ldc r11, 1536
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r11, r10, r11
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		mov r11, r1
 		ldw r0, r11[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		mov r5, r1
 		nop
@@ -4953,14 +4953,14 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 	#APP
 	maccs r11, r5, r2, r0
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r3, dp[ring_buff_r]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		mov r8, r1
 		ldw r2, r3[r8]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r2, r0
 	#NO_APP
@@ -4968,12 +4968,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		mkmsk r0, 5
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -4983,7 +4983,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1520
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -4992,7 +4992,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5000,13 +5000,13 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r6[8]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5016,7 +5016,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1504
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5025,7 +5025,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5033,7 +5033,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5041,12 +5041,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 33
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5056,7 +5056,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1488
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5065,7 +5065,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5073,7 +5073,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5081,12 +5081,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 34
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5096,7 +5096,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1472
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5105,7 +5105,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5113,7 +5113,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5121,12 +5121,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 35
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5136,7 +5136,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1456
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5145,7 +5145,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5153,13 +5153,13 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r6[9]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5169,7 +5169,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1440
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5178,7 +5178,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5186,7 +5186,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5194,12 +5194,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 37
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5209,7 +5209,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1424
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5218,7 +5218,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5226,7 +5226,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5234,12 +5234,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 38
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5249,7 +5249,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1408
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5258,7 +5258,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5266,7 +5266,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5274,12 +5274,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 39
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5289,7 +5289,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1392
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5298,7 +5298,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5306,13 +5306,13 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r6[10]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5322,7 +5322,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1376
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5331,7 +5331,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5339,7 +5339,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5347,12 +5347,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 41
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5362,7 +5362,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1360
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5371,7 +5371,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5379,7 +5379,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5387,12 +5387,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 42
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5402,7 +5402,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1344
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5411,7 +5411,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5419,7 +5419,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5427,12 +5427,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 43
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5442,7 +5442,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1328
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5451,7 +5451,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5459,13 +5459,13 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	ldaw r0, r6[11]
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5475,7 +5475,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1312
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5484,7 +5484,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5492,7 +5492,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5500,12 +5500,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 45
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5515,7 +5515,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1296
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5524,7 +5524,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5532,7 +5532,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5540,12 +5540,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 46
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5555,7 +5555,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1280
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5564,7 +5564,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5572,7 +5572,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5580,12 +5580,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 47
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5595,7 +5595,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1264
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5604,7 +5604,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5612,7 +5612,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5620,12 +5620,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 48
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5635,7 +5635,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1248
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5644,7 +5644,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5652,7 +5652,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5660,12 +5660,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 49
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5675,7 +5675,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1232
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5684,7 +5684,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5692,7 +5692,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5700,12 +5700,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 50
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5715,7 +5715,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1216
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5724,7 +5724,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5732,7 +5732,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5740,12 +5740,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 51
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5755,7 +5755,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1200
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5764,7 +5764,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5772,7 +5772,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5780,12 +5780,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 52
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5795,7 +5795,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1184
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5804,7 +5804,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5812,7 +5812,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5820,12 +5820,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 53
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5835,7 +5835,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1168
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5844,7 +5844,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5852,7 +5852,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5860,12 +5860,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 54
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5875,7 +5875,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1152
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5884,7 +5884,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5892,7 +5892,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5900,12 +5900,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 55
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5915,7 +5915,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1136
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5924,7 +5924,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5932,7 +5932,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5940,12 +5940,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 56
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5955,7 +5955,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1120
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -5964,7 +5964,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -5972,7 +5972,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -5980,12 +5980,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 57
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -5995,7 +5995,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1104
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -6004,7 +6004,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -6012,7 +6012,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -6020,12 +6020,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 58
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -6035,7 +6035,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1088
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -6044,7 +6044,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -6052,7 +6052,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -6060,12 +6060,12 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldc r0, 59
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r0, r6, r0
 		nop
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		and r0, r0, r7
 		nop
@@ -6075,7 +6075,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		ldw r2, r9[r0]
 	}
 	ldc r4, 1072
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	{
 		add r4, r10, r4
 		nop
@@ -6084,7 +6084,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r4, r4[0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r11, r5, r2, r4
 	#NO_APP
@@ -6092,7 +6092,7 @@ fir_sinc4.task.3:                       # @fir_sinc4.task.3
 		nop
 		ldw r0, r3[r0]
 	}
-	.loc	2 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:294:0
+	.loc	2 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:0
 	#APP
 	maccs r8, r1, r0, r4
 	#NO_APP
@@ -7332,7 +7332,7 @@ par.desc.1:
 	.long	.Linfo_string3          # DW_AT_name
 	.long	52                      # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	11                      # DW_AT_decl_line
+	.byte	34                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	samplesOut
@@ -7357,7 +7357,7 @@ par.desc.1:
 	.long	101                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	2                       # DW_AT_decl_file
-	.byte	36                      # DW_AT_decl_line
+	.byte	59                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	fir_tap_sinc4_q30
@@ -7379,7 +7379,7 @@ par.desc.1:
 	.long	.Linfo_string14         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.byte	10                      # Abbrev [10] 0x87:0x6 DW_TAG_enumerator
 	.long	.Linfo_string7          # DW_AT_name
 	.byte	0                       # DW_AT_const_value
@@ -7406,37 +7406,37 @@ par.desc.1:
 	.long	.Linfo_string15         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string15         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	15                      # DW_AT_decl_line
+	.byte	38                      # DW_AT_decl_line
 	.long	256                     # DW_AT_type
 	.byte	1                       # DW_AT_inline
 	.byte	12                      # Abbrev [12] 0xc2:0xb DW_TAG_formal_parameter
 	.long	.Linfo_string17         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	14                      # DW_AT_decl_line
+	.byte	37                      # DW_AT_decl_line
 	.long	263                     # DW_AT_type
 	.byte	12                      # Abbrev [12] 0xcd:0xb DW_TAG_formal_parameter
 	.long	.Linfo_string18         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	14                      # DW_AT_decl_line
+	.byte	37                      # DW_AT_decl_line
 	.long	268                     # DW_AT_type
 	.byte	13                      # Abbrev [13] 0xd8:0xd DW_TAG_lexical_block
 	.byte	14                      # Abbrev [14] 0xd9:0xb DW_TAG_variable
 	.long	.Linfo_string20         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	21                      # DW_AT_decl_line
+	.byte	44                      # DW_AT_decl_line
 	.long	256                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	13                      # Abbrev [13] 0xe5:0x1a DW_TAG_lexical_block
 	.byte	14                      # Abbrev [14] 0xe6:0xb DW_TAG_variable
 	.long	.Linfo_string21         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	27                      # DW_AT_decl_line
+	.byte	50                      # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	13                      # Abbrev [13] 0xf1:0xd DW_TAG_lexical_block
 	.byte	14                      # Abbrev [14] 0xf2:0xb DW_TAG_variable
 	.long	.Linfo_string22         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	29                      # DW_AT_decl_line
+	.byte	52                      # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -7459,73 +7459,73 @@ par.desc.1:
 	.long	.Linfo_string30         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string30         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	16                      # Abbrev [16] 0x127:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc0            # DW_AT_location
 	.long	.Linfo_string31         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	268                     # DW_AT_type
 	.byte	16                      # Abbrev [16] 0x137:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc1            # DW_AT_location
 	.long	.Linfo_string18         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	268                     # DW_AT_type
 	.byte	16                      # Abbrev [16] 0x147:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc2            # DW_AT_location
 	.long	.Linfo_string32         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	268                     # DW_AT_type
 	.byte	16                      # Abbrev [16] 0x157:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc3            # DW_AT_location
 	.long	.Linfo_string33         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	256                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x167:0xc4 DW_TAG_lexical_block
 	.long	.Ldebug_ranges10        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x16c:0xc DW_TAG_variable
 	.long	.Linfo_string37         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	878                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x178:0xb2 DW_TAG_lexical_block
 	.long	.Ldebug_ranges9         # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x17d:0xc DW_TAG_variable
 	.long	.Linfo_string38         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	891                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x189:0xa0 DW_TAG_lexical_block
 	.long	.Ldebug_ranges8         # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x18e:0xc DW_TAG_variable
 	.long	.Linfo_string39         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	878                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x19a:0x8e DW_TAG_lexical_block
 	.long	.Ldebug_ranges7         # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x19f:0xc DW_TAG_variable
 	.long	.Linfo_string40         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	891                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x1ab:0x66 DW_TAG_lexical_block
 	.long	.Ldebug_ranges5         # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x1b0:0xc DW_TAG_variable
 	.long	.Linfo_string20         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	256                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x1bc:0x54 DW_TAG_lexical_block
 	.long	.Ldebug_ranges4         # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x1c1:0xc DW_TAG_variable
 	.long	.Linfo_string41         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	256                     # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x1cd:0x42 DW_TAG_lexical_block
 	.long	.Ldebug_ranges3         # DW_AT_ranges
@@ -7533,7 +7533,7 @@ par.desc.1:
 	.long	.Ldebug_loc7            # DW_AT_location
 	.long	.Linfo_string35         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x1e2:0x2c DW_TAG_lexical_block
 	.long	.Ldebug_ranges2         # DW_AT_ranges
@@ -7541,7 +7541,7 @@ par.desc.1:
 	.long	.Ldebug_loc6            # DW_AT_location
 	.long	.Linfo_string34         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	17                      # Abbrev [17] 0x1f7:0x16 DW_TAG_lexical_block
 	.long	.Ldebug_ranges1         # DW_AT_ranges
@@ -7549,7 +7549,7 @@ par.desc.1:
 	.long	.Ldebug_loc5            # DW_AT_location
 	.long	.Linfo_string21         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -7562,7 +7562,7 @@ par.desc.1:
 	.long	.Ldebug_loc8            # DW_AT_location
 	.long	.Linfo_string36         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	126                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -7573,7 +7573,7 @@ par.desc.1:
 	.long	178                     # DW_AT_abstract_origin
 	.long	.Ldebug_ranges11        # DW_AT_ranges
 	.byte	2                       # DW_AT_call_file
-	.short	294                     # DW_AT_call_line
+	.short	317                     # DW_AT_call_line
 	.byte	21                      # Abbrev [21] 0x237:0x6 DW_TAG_formal_parameter
 	.byte	0                       # DW_AT_const_value
 	.long	194                     # DW_AT_abstract_origin
@@ -7599,7 +7599,7 @@ par.desc.1:
 	.long	.Linfo_string26         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string26         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.byte	25                      # Abbrev [25] 0x26d:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc9            # DW_AT_location
 	.long	.Linfo_string42         # DW_AT_name
@@ -7609,7 +7609,7 @@ par.desc.1:
 	.byte	18                      # Abbrev [18] 0x27f:0xc DW_TAG_variable
 	.long	.Linfo_string43         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -7621,7 +7621,7 @@ par.desc.1:
 	.long	.Linfo_string27         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string27         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.byte	25                      # Abbrev [25] 0x2a0:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc10           # DW_AT_location
 	.long	.Linfo_string42         # DW_AT_name
@@ -7631,7 +7631,7 @@ par.desc.1:
 	.byte	18                      # Abbrev [18] 0x2b2:0xc DW_TAG_variable
 	.long	.Linfo_string43         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -7643,7 +7643,7 @@ par.desc.1:
 	.long	.Linfo_string28         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string28         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.byte	25                      # Abbrev [25] 0x2d3:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc11           # DW_AT_location
 	.long	.Linfo_string42         # DW_AT_name
@@ -7653,7 +7653,7 @@ par.desc.1:
 	.byte	18                      # Abbrev [18] 0x2e5:0xc DW_TAG_variable
 	.long	.Linfo_string43         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -7665,7 +7665,7 @@ par.desc.1:
 	.long	.Linfo_string29         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string29         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.byte	25                      # Abbrev [25] 0x306:0xd DW_TAG_formal_parameter
 	.long	.Ldebug_loc12           # DW_AT_location
 	.long	.Linfo_string42         # DW_AT_name
@@ -7675,7 +7675,7 @@ par.desc.1:
 	.byte	18                      # Abbrev [18] 0x318:0xc DW_TAG_variable
 	.long	.Linfo_string43         # DW_AT_name
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.long	65                      # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -7735,60 +7735,60 @@ par.desc.1:
 	.long	.Linfo_string44         # DW_AT_name
 	.byte	84                      # DW_AT_byte_size
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.byte	29                      # Abbrev [29] 0x396:0xd DW_TAG_member
 	.long	.Linfo_string37         # DW_AT_name
 	.long	878                     # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	29                      # Abbrev [29] 0x3a3:0xd DW_TAG_member
 	.long	.Linfo_string38         # DW_AT_name
 	.long	891                     # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.byte	16                      # DW_AT_data_member_location
 	.byte	29                      # Abbrev [29] 0x3b0:0xd DW_TAG_member
 	.long	.Linfo_string39         # DW_AT_name
 	.long	878                     # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.byte	32                      # DW_AT_data_member_location
 	.byte	29                      # Abbrev [29] 0x3bd:0xd DW_TAG_member
 	.long	.Linfo_string40         # DW_AT_name
 	.long	891                     # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.byte	48                      # DW_AT_data_member_location
 	.byte	29                      # Abbrev [29] 0x3ca:0xd DW_TAG_member
 	.long	.Linfo_string41         # DW_AT_name
 	.long	256                     # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.byte	64                      # DW_AT_data_member_location
 	.byte	29                      # Abbrev [29] 0x3d7:0xd DW_TAG_member
 	.long	.Linfo_string43         # DW_AT_name
 	.long	65                      # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.byte	68                      # DW_AT_data_member_location
 	.byte	29                      # Abbrev [29] 0x3e4:0xd DW_TAG_member
 	.long	.Linfo_string43         # DW_AT_name
 	.long	65                      # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.byte	72                      # DW_AT_data_member_location
 	.byte	29                      # Abbrev [29] 0x3f1:0xd DW_TAG_member
 	.long	.Linfo_string43         # DW_AT_name
 	.long	65                      # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.byte	76                      # DW_AT_data_member_location
 	.byte	29                      # Abbrev [29] 0x3fe:0xd DW_TAG_member
 	.long	.Linfo_string43         # DW_AT_name
 	.long	65                      # DW_AT_type
 	.byte	2                       # DW_AT_decl_file
-	.short	294                     # DW_AT_decl_line
+	.short	317                     # DW_AT_decl_line
 	.byte	80                      # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -8745,7 +8745,7 @@ par.desc.1:
 .cc_top cc_0,.Lxta.call_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc"
 	.byte	0
-	.long	294
+	.long	317
 	.long	.Lxta.call_labels0
 .cc_bottom cc_0
 .Lentries_end1:
@@ -8758,73 +8758,73 @@ par.desc.1:
 .cc_top cc_1,.Lxta.endpoint_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc"
 	.byte	0
-	.long	294
+	.long	317
 	.long	.Lxta.endpoint_labels4
 .cc_bottom cc_1
 .cc_top cc_2,.Lxta.endpoint_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc"
 	.byte	0
-	.long	294
+	.long	317
 	.long	.Lxta.endpoint_labels5
 .cc_bottom cc_2
 .cc_top cc_3,.Lxta.endpoint_labels8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc"
 	.byte	0
-	.long	294
+	.long	317
 	.long	.Lxta.endpoint_labels8
 .cc_bottom cc_3
 .cc_top cc_4,.Lxta.endpoint_labels9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc"
 	.byte	0
-	.long	294
+	.long	317
 	.long	.Lxta.endpoint_labels9
 .cc_bottom cc_4
 .cc_top cc_5,.Lxta.endpoint_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	16
+	.long	39
 	.long	.Lxta.endpoint_labels0
 .cc_bottom cc_5
 .cc_top cc_6,.Lxta.endpoint_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	16
+	.long	39
 	.long	.Lxta.endpoint_labels10
 .cc_bottom cc_6
 .cc_top cc_7,.Lxta.endpoint_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	21
+	.long	44
 	.long	.Lxta.endpoint_labels1
 .cc_bottom cc_7
 .cc_top cc_8,.Lxta.endpoint_labels11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	21
+	.long	44
 	.long	.Lxta.endpoint_labels11
 .cc_bottom cc_8
 .cc_top cc_9,.Lxta.endpoint_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	29
+	.long	52
 	.long	.Lxta.endpoint_labels2
 .cc_bottom cc_9
 .cc_top cc_10,.Lxta.endpoint_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	29
+	.long	52
 	.long	.Lxta.endpoint_labels3
 .cc_bottom cc_10
 .cc_top cc_11,.Lxta.endpoint_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	29
+	.long	52
 	.long	.Lxta.endpoint_labels6
 .cc_bottom cc_11
 .cc_top cc_12,.Lxta.endpoint_labels7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	29
+	.long	52
 	.long	.Lxta.endpoint_labels7
 .cc_bottom cc_12
 .Lentries_end3:
@@ -8837,197 +8837,197 @@ par.desc.1:
 .cc_top cc_13,.Lxtalabel3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc"
 	.byte	0
-	.long	294
-	.long	294
+	.long	317
+	.long	317
 	.long	.Lxtalabel3
 .cc_bottom cc_13
 .cc_top cc_14,.Lxtalabel4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc"
 	.byte	0
-	.long	294
-	.long	294
+	.long	317
+	.long	317
 	.long	.Lxtalabel4
 .cc_bottom cc_14
 .cc_top cc_15,.Lxtalabel6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc"
 	.byte	0
-	.long	294
-	.long	294
+	.long	317
+	.long	317
 	.long	.Lxtalabel6
 .cc_bottom cc_15
 .cc_top cc_16,.Lxtalabel7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc"
 	.byte	0
-	.long	294
-	.long	294
+	.long	317
+	.long	317
 	.long	.Lxtalabel7
 .cc_bottom cc_16
 .cc_top cc_17,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	15
-	.long	15
+	.long	38
+	.long	38
 	.long	.Lxtalabel0
 .cc_bottom cc_17
 .cc_top cc_18,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	15
-	.long	15
+	.long	38
+	.long	38
 	.long	.Lxtalabel8
 .cc_bottom cc_18
 .cc_top cc_19,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	16
-	.long	16
+	.long	39
+	.long	39
 	.long	.Lxtalabel0
 .cc_bottom cc_19
 .cc_top cc_20,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	16
-	.long	16
+	.long	39
+	.long	39
 	.long	.Lxtalabel8
 .cc_bottom cc_20
 .cc_top cc_21,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	19
-	.long	19
+	.long	42
+	.long	42
 	.long	.Lxtalabel0
 .cc_bottom cc_21
 .cc_top cc_22,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	19
-	.long	19
+	.long	42
+	.long	42
 	.long	.Lxtalabel8
 .cc_bottom cc_22
 .cc_top cc_23,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	20
-	.long	23
+	.long	43
+	.long	46
 	.long	.Lxtalabel1
 .cc_bottom cc_23
 .cc_top cc_24,.Lxtalabel9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	20
-	.long	23
+	.long	43
+	.long	46
 	.long	.Lxtalabel9
 .cc_bottom cc_24
 .cc_top cc_25,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	24
-	.long	25
+	.long	47
+	.long	48
 	.long	.Lxtalabel0
 .cc_bottom cc_25
 .cc_top cc_26,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	24
-	.long	25
+	.long	47
+	.long	48
 	.long	.Lxtalabel8
 .cc_bottom cc_26
 .cc_top cc_27,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	27
-	.long	27
+	.long	50
+	.long	50
 	.long	.Lxtalabel0
 .cc_bottom cc_27
 .cc_top cc_28,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	27
-	.long	27
+	.long	50
+	.long	50
 	.long	.Lxtalabel8
 .cc_bottom cc_28
 .cc_top cc_29,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	28
-	.long	31
+	.long	51
+	.long	54
 	.long	.Lxtalabel2
 .cc_bottom cc_29
 .cc_top cc_30,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	28
-	.long	31
+	.long	51
+	.long	54
 	.long	.Lxtalabel2
 .cc_bottom cc_30
 .cc_top cc_31,.Lxtalabel5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	28
-	.long	31
+	.long	51
+	.long	54
 	.long	.Lxtalabel5
 .cc_bottom cc_31
 .cc_top cc_32,.Lxtalabel5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	28
-	.long	31
+	.long	51
+	.long	54
 	.long	.Lxtalabel5
 .cc_bottom cc_32
 .cc_top cc_33,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	32
-	.long	32
+	.long	55
+	.long	55
 	.long	.Lxtalabel2
 .cc_bottom cc_33
 .cc_top cc_34,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	32
-	.long	32
+	.long	55
+	.long	55
 	.long	.Lxtalabel2
 .cc_bottom cc_34
 .cc_top cc_35,.Lxtalabel5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	32
-	.long	32
+	.long	55
+	.long	55
 	.long	.Lxtalabel5
 .cc_bottom cc_35
 .cc_top cc_36,.Lxtalabel5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	32
-	.long	32
+	.long	55
+	.long	55
 	.long	.Lxtalabel5
 .cc_bottom cc_36
 .cc_top cc_37,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	33
-	.long	34
+	.long	56
+	.long	57
 	.long	.Lxtalabel2
 .cc_bottom cc_37
 .cc_top cc_38,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	33
-	.long	34
+	.long	56
+	.long	57
 	.long	.Lxtalabel2
 .cc_bottom cc_38
 .cc_top cc_39,.Lxtalabel5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	33
-	.long	34
+	.long	56
+	.long	57
 	.long	.Lxtalabel5
 .cc_bottom cc_39
 .cc_top cc_40,.Lxtalabel5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\\do_sample_transfer.h"
 	.byte	0
-	.long	33
-	.long	34
+	.long	56
+	.long	57
 	.long	.Lxtalabel5
 .cc_bottom cc_40
 .Lentries_end5:
@@ -9040,15 +9040,15 @@ par.desc.1:
 .cc_top cc_41,.Lxta.loop_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc"
 	.byte	0
-	.long	294
-	.long	294
+	.long	317
+	.long	317
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_41
 .cc_top cc_42,.Lxta.loop_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc"
 	.byte	0
-	.long	294
-	.long	294
+	.long	317
+	.long	317
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_42
 .Lentries_end7:

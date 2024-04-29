@@ -5,7 +5,7 @@
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc" 2
-# 15 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc"
+# 34 "C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ring_buffer.xc"
 unsigned ring_buff_mask = ( ( 1 << 8 ) - 1 );
 int ring_buff_l[( 1 << 8 )];
 int ring_buff_r[( 1 << 8 )];

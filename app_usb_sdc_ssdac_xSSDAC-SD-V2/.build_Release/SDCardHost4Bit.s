@@ -30,14 +30,14 @@ __xcc1_internal_3.info:
 	.set usage.anon.2,0
 	.set usage.anon.3,0
 	.set usage.anon.4,0
-	.globread disk_ioctl,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:557:21: note: object used here\n        RetVal[i] = (SDif[IfNum].BlockNr, BYTE[])[i];\n                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globread disk_status,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:539:7: note: object used here\n  if(!SDif[IfNum].Rca) return STA_NOINIT;\n      ^~~~~~~~~~~~~~~"
-	.globread disk_write,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:524:27: note: object used here\n    if(SendCmd(IfNum, 25, SDif[IfNum].Ccs ? sector : 512 * sector, R1, -count, (buff, BYTE[]), Resp)) return RES_ERROR; // multiblock write\n                          ^~~~~~~~~~~~~~~"
-	.globread disk_read,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:506:27: note: object used here\n    if(SendCmd(IfNum, 18, SDif[IfNum].Ccs ? sector : 512 * sector, R1, count, buff, Resp)) return RES_ERROR; // multiblock read\n                          ^~~~~~~~~~~~~~~"
-	.globread usage.anon.3,Is_XS1_G_Core,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:124:6: note: object used here\n  if(Is_XS1_G_Core) // check if an XS1-G can enable internal pull-up\n     ^~~~~~~~~~~~~"
-	.globwrite disk_initialize,Is_XS1_G_Core,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:442:3: note: object used here\n  Is_XS1_G_Core = ((i & 0xFFFF) == 0x0200) ? 1 : 0; // get core type\n  ^~~~~~~~~~~~~"
-	.globwrite disk_initialize,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:445:3: note: object used here\n  SDif[IfNum].Cmd <: 1;\n  ^~~~~~~~~~~~~~~"
-	.globwrite usage.anon.3,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:88:18: note: object used here\n  set_port_drive(SDif[IfNum].Cmd);\n                 ^~~~~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h:647:67: note: expanded from macro \'set_port_drive\'\n#define set_port_drive(p)                 __builtin_set_port_drv (p, XS1_SETC_DRIVE_DRIVE)\n                                                                  ^"
+	.globread disk_ioctl,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:587:21: note: object used here\n        RetVal[i] = (SDif[IfNum].BlockNr, BYTE[])[i];\n                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globread disk_status,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:569:7: note: object used here\n  if(!SDif[IfNum].Rca) return STA_NOINIT;\n      ^~~~~~~~~~~~~~~"
+	.globread disk_write,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:554:27: note: object used here\n    if(SendCmd(IfNum, 25, SDif[IfNum].Ccs ? sector : 512 * sector, R1, -count, (buff, BYTE[]), Resp)) return RES_ERROR; // multiblock write\n                          ^~~~~~~~~~~~~~~"
+	.globread disk_read,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:536:27: note: object used here\n    if(SendCmd(IfNum, 18, SDif[IfNum].Ccs ? sector : 512 * sector, R1, count, buff, Resp)) return RES_ERROR; // multiblock read\n                          ^~~~~~~~~~~~~~~"
+	.globread usage.anon.3,Is_XS1_G_Core,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:154:6: note: object used here\n  if(Is_XS1_G_Core) // check if an XS1-G can enable internal pull-up\n     ^~~~~~~~~~~~~"
+	.globwrite disk_initialize,Is_XS1_G_Core,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:472:3: note: object used here\n  Is_XS1_G_Core = ((i & 0xFFFF) == 0x0200) ? 1 : 0; // get core type\n  ^~~~~~~~~~~~~"
+	.globwrite disk_initialize,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:475:3: note: object used here\n  SDif[IfNum].Cmd <: 1;\n  ^~~~~~~~~~~~~~~"
+	.globwrite usage.anon.3,usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:18: note: object used here\n  set_port_drive(SDif[IfNum].Cmd);\n                 ^~~~~~~~~~~~~~~\nC:\\Program Files (x86)\\XMOS\\xTIMEcomposer\\Community_14.4.1\\target/include\\xs1.h:647:67: note: expanded from macro \'set_port_drive\'\n#define set_port_drive(p)                 __builtin_set_port_drv (p, XS1_SETC_DRIVE_DRIVE)\n                                                                  ^"
 	.call disk_ioctl,disk_status
 	.call disk_status,usage.anon.3
 	.call disk_write,usage.anon.3
@@ -60,8 +60,8 @@ __xcc1_internal_3.info:
 	.set disk_write.locnoglobalaccess, 0
 	.set disk_status.locnoglobalaccess, 0
 	.set disk_ioctl.locnoglobalaccess, 0
-	.globpassesref set_port_pull_up, usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:369:9: error: call to `set_port_pull_up\' in `SendCmd\' makes alias of global \'SDif\'\n        set_port_pull_up(SDif[IfNum].Dat); // otherwise need an external pull-up resistor D0 (Dat3) pin\n        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	.globpassesref set_port_pull_up, usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:125:5: error: call to `set_port_pull_up\' in `SendCmd\' makes alias of global \'SDif\'\n    set_port_pull_up(SDif[IfNum].Cmd); // otherwise need an external pull-up resistor for Cmd pin\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref set_port_pull_up, usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:399:9: error: call to `set_port_pull_up\' in `SendCmd\' makes alias of global \'SDif\'\n        set_port_pull_up(SDif[IfNum].Dat); // otherwise need an external pull-up resistor D0 (Dat3) pin\n        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	.globpassesref set_port_pull_up, usage.anon.4,"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:155:5: error: call to `set_port_pull_up\' in `SendCmd\' makes alias of global \'SDif\'\n    set_port_pull_up(SDif[IfNum].Cmd); // otherwise need an external pull-up resistor for Cmd pin\n    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
                                         # End of file scope inline assembly
 	.section	.debug_info,"",@progbits
@@ -122,7 +122,7 @@ __xcc1_internal_3.info:
 	.cc_top disk_initialize.function,disk_initialize
 disk_initialize:                        # @disk_initialize
 .Lfunc_begin0:
-	.loc	1 434 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:434:0
+	.loc	1 464 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:464:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -160,7 +160,7 @@ disk_initialize:                        # @disk_initialize
 		stw r10, sp[20]
 	}
 .Ltmp10:
-	.loc	1 439 3 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:439:3
+	.loc	1 469 3 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:469:3
 	bf r5, .LBB0_2
 # BB#1:
 	{
@@ -172,18 +172,18 @@ disk_initialize:                        # @disk_initialize
 .Lxtalabel1:
 .Ltmp11:
 	#DEBUG_VALUE: disk_initialize:IfNum <- R5
-	.loc	1 441 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:441:0
+	.loc	1 471 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:471:0
 .Lxta.call_labels0:
 	bl get_local_tile_id
 .Ltmp12:
 	#DEBUG_VALUE: i <- [R6+0]
-	.loc	1 442 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:442:0
+	.loc	1 472 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:472:0
 	{
 		ldc r4, 0
 		ldaw r6, sp[13]
 	}
 .Ltmp13:
-	.loc	1 441 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:441:0
+	.loc	1 471 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:471:0
 	{
 		mov r1, r4
 		mov r2, r6
@@ -194,37 +194,37 @@ disk_initialize:                        # @disk_initialize
 		nop
 		ld16s r0, r6[r4]
 	}
-	.loc	1 442 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:442:0
+	.loc	1 472 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:472:0
 	{
 		zext r0, 16
 		nop
 	}
 	ldc r1, 512
-	.loc	1 442 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:442:0
+	.loc	1 472 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:472:0
 	{
 		eq r0, r0, r1
 		nop
 	}
-	.loc	1 442 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:442:0
+	.loc	1 472 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:472:0
 	stw r0, dp[Is_XS1_G_Core]
 	{
 		ldc r0, 24
 		nop
 	}
-	.loc	1 445 23                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:445:23
+	.loc	1 475 23                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:475:23
 	mul r0, r5, r0
 	ldaw r1, dp[SDif]
 	{
 		add r7, r1, r0
 		nop
 	}
-	.loc	1 445 23                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:445:23
+	.loc	1 475 23                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:475:23
 	{
 		mkmsk r5, 1
 		ldw r0, r7[1]
 	}
 .Ltmp14:
-	.loc	1 445 23                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:445:23
+	.loc	1 475 23                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:475:23
 .Lxta.endpoint_labels0:
 	{
 		out res[r0], r5
@@ -234,24 +234,24 @@ disk_initialize:                        # @disk_initialize
 		mkmsk r1, 4
 		nop
 	}
-	.loc	1 446 25                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:446:25
+	.loc	1 476 25                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:476:25
 .Lxta.endpoint_labels1:
 	{
 		out res[r0], r1
 		ldw r0, r7[0]
 	}
-	.loc	1 447 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:447:27
+	.loc	1 477 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:477:27
 .Lxta.endpoint_labels2:
 	{
 		out res[r0], r5
 		nop
 	}
-	.loc	1 447 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:447:27
+	.loc	1 477 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:477:27
 	{
 		syncr res[r0]
 		nop
 	}
-	.loc	1 447 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:447:27
+	.loc	1 477 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:477:27
 	{
 		getts r6, res[r0]
 		nop
@@ -265,13 +265,13 @@ disk_initialize:                        # @disk_initialize
 	ldc r1, 250
 .Ltmp16:
 	#DEBUG_VALUE: BlockLen <- 74
-	.loc	1 448 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:448:0
+	.loc	1 478 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:478:0
 	{
 		add r2, r6, r1
 		nop
 	}
 	ldc r3, 125
-	.loc	1 448 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:448:0
+	.loc	1 478 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:478:0
 	{
 		add r3, r6, r3
 		nop
@@ -283,29 +283,29 @@ disk_initialize:                        # @disk_initialize
 .Lxtalabel2:
 	#DEBUG_VALUE: i <- R6
 	#DEBUG_VALUE: BlockLen <- 74
-	.loc	1 451 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:451:29
+	.loc	1 481 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:481:29
 	{
 		setpt res[r0], r3
 		nop
 	}
-	.loc	1 451 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:451:29
+	.loc	1 481 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:481:29
 .Lxta.endpoint_labels3:
 	{
 		out res[r0], r4
 		nop
 	}
-	.loc	1 453 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:453:29
+	.loc	1 483 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:483:29
 	{
 		setpt res[r0], r2
 		nop
 	}
-	.loc	1 453 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:453:29
+	.loc	1 483 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:483:29
 .Lxta.endpoint_labels4:
 	{
 		out res[r0], r5
 		add r2, r2, r1
 	}
-	.loc	1 448 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:448:0
+	.loc	1 478 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:478:0
 	{
 		add r3, r3, r1
 		add r11, r11, 1
@@ -314,7 +314,7 @@ disk_initialize:                        # @disk_initialize
 	# LOOPMARKER 1
 .Lxta.loop_labels0:
 	# LOOPMARKER 0
-	.loc	1 448 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:448:0
+	.loc	1 478 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:478:0
 	bt r11, .LBB0_3
 .Ltmp18:
 # BB#4:                                 # %afterboundcheck52
@@ -322,7 +322,7 @@ disk_initialize:                        # @disk_initialize
 	#DEBUG_VALUE: i <- R6
 	#DEBUG_VALUE: BlockLen <- 74
 	ldc r0, 18500
-	.loc	1 448 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:448:0
+	.loc	1 478 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:478:0
 	{
 		add r0, r6, r0
 		nop
@@ -333,7 +333,7 @@ disk_initialize:                        # @disk_initialize
 		nop
 		stw r0, sp[13]
 	}
-	.loc	1 457 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:457:0
+	.loc	1 487 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:487:0
 	{
 		ldaw r8, sp[8]
 		stw r4, r7[3]
@@ -342,7 +342,7 @@ disk_initialize:                        # @disk_initialize
 		ldaw r10, sp[7]
 		nop
 	}
-	.loc	1 458 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:458:3
+	.loc	1 488 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:488:3
 	std r8, r10, sp[1]
 	{
 		mov r0, r4
@@ -363,7 +363,7 @@ disk_initialize:                        # @disk_initialize
 # BB#5:                                 # %ifdone58
 .Lxtalabel4:
 	#DEBUG_VALUE: BlockLen <- 74
-	.loc	1 459 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:459:0
+	.loc	1 489 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:489:0
 	std r8, r10, sp[1]
 	{
 		ldc r1, 8
@@ -376,7 +376,7 @@ disk_initialize:                        # @disk_initialize
 	}
 .Lxta.call_labels3:
 	bl SendCmd
-	.loc	1 459 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:459:0
+	.loc	1 489 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:489:0
 	bt r0, .LBB0_6
 # BB#7:                                 # %ifdone58
 .Lxtalabel5:
@@ -387,7 +387,7 @@ disk_initialize:                        # @disk_initialize
 .LBB0_8:                                # %ifdone58
 .Lxtalabel6:
 	#DEBUG_VALUE: BlockLen <- 74
-	.loc	1 457 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:457:0
+	.loc	1 487 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:487:0
 	ldaw r0, r7[3]
 .Ltmp21:
 	#DEBUG_VALUE: BlockLen <- R9
@@ -400,13 +400,13 @@ disk_initialize:                        # @disk_initialize
 		stw r7, sp[6]
 	}
 	ldc r0, 18501
-	.loc	1 466 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:466:3
+	.loc	1 496 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:496:3
 	{
 		add r8, r6, r0
 		nop
 	}
 	ldw r0, cp[.LCPI0_3]
-	.loc	1 466 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:466:3
+	.loc	1 496 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:496:3
 	{
 		sub r7, r0, r6
 		mkmsk r5, 1
@@ -420,7 +420,7 @@ disk_initialize:                        # @disk_initialize
                                         # =>This Inner Loop Header: Depth=1
 .Lxtalabel7:
 	#DEBUG_VALUE: BlockLen <- R9
-	.loc	1 462 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:462:5
+	.loc	1 492 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:492:5
 	std r3, r10, sp[1]
 	{
 		mov r0, r4
@@ -442,7 +442,7 @@ disk_initialize:                        # @disk_initialize
                                         #   in Loop: Header=BB0_9 Depth=1
 .Lxtalabel8:
 	#DEBUG_VALUE: BlockLen <- R9
-	.loc	1 463 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:463:5
+	.loc	1 493 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:493:5
 	std r6, r10, sp[1]
 	{
 		mov r0, r4
@@ -478,7 +478,7 @@ disk_initialize:                        # @disk_initialize
 		mov r3, r6
 		nop
 	}
-	.loc	1 466 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:466:3
+	.loc	1 496 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:496:3
 	{
 		or r0, r3, r5
 		nop
@@ -487,7 +487,7 @@ disk_initialize:                        # @disk_initialize
 		nop
 		ld8u r0, r0[r4]
 	}
-	.loc	1 466 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:466:3
+	.loc	1 496 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:496:3
 	{
 		mov r1, r0
 		nop
@@ -496,7 +496,7 @@ disk_initialize:                        # @disk_initialize
 		zext r1, 1
 		add r8, r8, 1
 	}
-	.loc	1 466 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:466:3
+	.loc	1 496 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:496:3
 	{
 		sub r7, r7, 1
 		nop
@@ -507,12 +507,12 @@ disk_initialize:                        # @disk_initialize
 .Ltmp26:
 # BB#13:                                # %afterboundcheck105
 .Lxtalabel11:
-	.loc	1 467 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:467:0
+	.loc	1 497 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:497:0
 	{
 		shr r0, r0, 1
 		nop
 	}
-	.loc	1 467 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:467:0
+	.loc	1 497 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:497:0
 	{
 		zext r0, 1
 		ldc r1, 16
@@ -521,9 +521,9 @@ disk_initialize:                        # @disk_initialize
 		nop
 		ldw r7, sp[6]
 	}
-	.loc	1 467 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:467:0
+	.loc	1 497 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:497:0
 	st8 r0, r7[r1]
-	.loc	1 468 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:468:3
+	.loc	1 498 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:498:3
 	std r3, r10, sp[1]
 	{
 		ldc r9, 2
@@ -546,7 +546,7 @@ disk_initialize:                        # @disk_initialize
 	bt r0, .LBB0_22
 # BB#14:                                # %ifdone120
 .Lxtalabel12:
-	.loc	1 469 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:469:3
+	.loc	1 499 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:499:3
 	std r8, r10, sp[1]
 	{
 		mkmsk r6, 2
@@ -569,7 +569,7 @@ disk_initialize:                        # @disk_initialize
 		mkmsk r5, 1
 		nop
 	}
-	.loc	1 470 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:470:0
+	.loc	1 500 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:500:0
 	{
 		or r0, r8, r5
 		or r1, r8, r9
@@ -578,12 +578,12 @@ disk_initialize:                        # @disk_initialize
 		nop
 		ld8u r1, r1[r4]
 	}
-	.loc	1 470 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:470:0
+	.loc	1 500 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:500:0
 	{
 		shl r1, r1, 8
 		ld8u r0, r0[r4]
 	}
-	.loc	1 470 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:470:0
+	.loc	1 500 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:500:0
 	{
 		or r0, r1, r0
 		or r1, r8, r6
@@ -592,12 +592,12 @@ disk_initialize:                        # @disk_initialize
 		nop
 		ld8u r1, r1[r4]
 	}
-	.loc	1 470 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:470:0
+	.loc	1 500 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:500:0
 	{
 		shl r1, r1, 16
 		nop
 	}
-	.loc	1 470 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:470:0
+	.loc	1 500 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:500:0
 	{
 		or r0, r0, r1
 		ldc r1, 4
@@ -606,23 +606,23 @@ disk_initialize:                        # @disk_initialize
 		nop
 		ld8u r1, r8[r1]
 	}
-	.loc	1 470 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:470:0
+	.loc	1 500 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:500:0
 	{
 		shl r1, r1, 24
 		nop
 	}
-	.loc	1 470 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:470:0
+	.loc	1 500 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:500:0
 	{
 		or r0, r0, r1
 		nop
 	}
-	.loc	1 470 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:470:0
+	.loc	1 500 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:500:0
 	{
 		bitrev r0, r0
 		nop
 	}
 	ldw r1, cp[.LCPI0_4]
-	.loc	1 470 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:470:0
+	.loc	1 500 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:500:0
 	{
 		and r2, r0, r1
 		ldw r0, sp[5]
@@ -631,7 +631,7 @@ disk_initialize:                        # @disk_initialize
 		nop
 		stw r2, r0[0]
 	}
-	.loc	1 471 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:471:3
+	.loc	1 501 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:501:3
 	std r8, r10, sp[1]
 	{
 		ldc r9, 9
@@ -654,7 +654,7 @@ disk_initialize:                        # @disk_initialize
 		mkmsk r5, 1
 		nop
 	}
-	.loc	1 472 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:472:3
+	.loc	1 502 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:502:3
 	{
 		or r0, r8, r5
 		nop
@@ -663,12 +663,12 @@ disk_initialize:                        # @disk_initialize
 		nop
 		ld8u r0, r0[r4]
 	}
-	.loc	1 472 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:472:3
+	.loc	1 502 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:502:3
 	{
 		zext r0, 2
 		nop
 	}
-	.loc	1 472 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:472:3
+	.loc	1 502 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:502:3
 	bf r0, .LBB0_17
 # BB#18:                                # %afterboundcheck287
 .Lxtalabel15:
@@ -680,27 +680,27 @@ disk_initialize:                        # @disk_initialize
 		nop
 		ld8u r1, r8[r0]
 	}
-	.loc	1 485 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:485:0
+	.loc	1 515 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:515:0
 	{
 		bitrev r1, r1
 		nop
 	}
-	.loc	1 485 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:485:0
+	.loc	1 515 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:515:0
 	{
 		shr r1, r1, 24
 		ld8u r2, r8[r9]
 	}
-	.loc	1 485 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:485:0
+	.loc	1 515 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:515:0
 	{
 		bitrev r2, r2
 		nop
 	}
-	.loc	1 485 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:485:0
+	.loc	1 515 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:515:0
 	{
 		shr r2, r2, 16
 		nop
 	}
-	.loc	1 485 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:485:0
+	.loc	1 515 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:515:0
 	{
 		or r1, r2, r1
 		ldc r2, 8
@@ -709,28 +709,28 @@ disk_initialize:                        # @disk_initialize
 		nop
 		ld8u r2, r8[r2]
 	}
-	.loc	1 485 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:485:0
+	.loc	1 515 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:515:0
 	{
 		bitrev r2, r2
 		nop
 	}
-	.loc	1 485 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:485:0
+	.loc	1 515 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:515:0
 	{
 		shr r2, r2, 8
 		nop
 	}
-	.loc	1 485 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:485:0
+	.loc	1 515 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:515:0
 	{
 		or r1, r1, r2
 		nop
 	}
-	.loc	1 486 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:486:0
+	.loc	1 516 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:516:0
 	{
 		shl r0, r1, r0
 		nop
 	}
 	ldc r1, 1024
-	.loc	1 486 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:486:0
+	.loc	1 516 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:516:0
 	{
 		add r0, r0, r1
 		nop
@@ -746,25 +746,25 @@ disk_initialize:                        # @disk_initialize
 		nop
 		ld8u r0, r8[r0]
 	}
-	.loc	1 474 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:474:0
+	.loc	1 504 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:504:0
 	{
 		shl r0, r0, 24
 		nop
 	}
-	.loc	1 474 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:474:0
+	.loc	1 504 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:504:0
 	{
 		bitrev r0, r0
 		nop
 	}
 .Ltmp27:
 	#DEBUG_VALUE: BlockLen <- R0
-	.loc	1 474 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:474:0
+	.loc	1 504 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:504:0
 	{
 		zext r0, 4
 		mkmsk r1, 1
 	}
 .Ltmp28:
-	.loc	1 475 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:475:0
+	.loc	1 505 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:505:0
 	{
 		shl r0, r1, r0
 		mkmsk r1, 3
@@ -773,12 +773,12 @@ disk_initialize:                        # @disk_initialize
 		nop
 		ld8u r1, r8[r1]
 	}
-	.loc	1 476 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:476:0
+	.loc	1 506 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:506:0
 	{
 		bitrev r1, r1
 		ldc r2, 14
 	}
-	.loc	1 476 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:476:0
+	.loc	1 506 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:506:0
 	{
 		shr r1, r1, r2
 		ldc r2, 8
@@ -787,45 +787,45 @@ disk_initialize:                        # @disk_initialize
 		nop
 		ld8u r2, r8[r2]
 	}
-	.loc	1 476 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:476:0
+	.loc	1 506 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:506:0
 	{
 		bitrev r2, r2
 		ldc r3, 22
 	}
-	.loc	1 476 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:476:0
+	.loc	1 506 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:506:0
 	{
 		shr r2, r2, r3
 		ld8u r3, r8[r9]
 	}
-	.loc	1 476 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:476:0
+	.loc	1 506 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:506:0
 	{
 		bitrev r3, r3
 		ldc r11, 30
 	}
-	.loc	1 476 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:476:0
+	.loc	1 506 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:506:0
 	{
 		shr r3, r3, r11
 		nop
 	}
 	ldc r11, 4095
-	.loc	1 476 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:476:0
+	.loc	1 506 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:506:0
 	{
 		and r1, r1, r11
 		nop
 	}
-	.loc	1 476 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:476:0
+	.loc	1 506 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:506:0
 	{
 		or r1, r2, r1
 		nop
 	}
-	.loc	1 476 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:476:0
+	.loc	1 506 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:506:0
 	{
 		or r1, r1, r3
 		nop
 	}
 .Ltmp29:
 	#DEBUG_VALUE: i <- R1
-	.loc	1 476 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:476:0
+	.loc	1 506 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:506:0
 	{
 		ldc r2, 10
 		stw r1, sp[13]
@@ -834,12 +834,12 @@ disk_initialize:                        # @disk_initialize
 		nop
 		ld8u r2, r8[r2]
 	}
-	.loc	1 477 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:477:0
+	.loc	1 507 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:507:0
 	{
 		bitrev r2, r2
 		ldc r3, 23
 	}
-	.loc	1 477 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:477:0
+	.loc	1 507 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:507:0
 	{
 		shr r2, r2, r3
 		ldc r11, 11
@@ -848,39 +848,39 @@ disk_initialize:                        # @disk_initialize
 		nop
 		ld8u r11, r8[r11]
 	}
-	.loc	1 477 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:477:0
+	.loc	1 507 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:507:0
 	{
 		bitrev r11, r11
 		mkmsk r6, 5
 	}
-	.loc	1 477 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:477:0
+	.loc	1 507 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:507:0
 	{
 		shr r11, r11, r6
 		zext r2, 3
 	}
-	.loc	1 477 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:477:0
+	.loc	1 507 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:507:0
 	{
 		or r2, r11, r2
 		ldc r11, 4
 	}
-	.loc	1 478 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:478:0
+	.loc	1 508 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:508:0
 	{
 		shl r2, r11, r2
 		add r1, r1, 1
 	}
 .Ltmp30:
-	.loc	1 479 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:479:0
+	.loc	1 509 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:509:0
 	mul r1, r2, r1
-	.loc	1 480 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:480:0
+	.loc	1 510 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:510:0
 	#APP
 	lmul r0, r1, r1, r0, r4, r4
 	#NO_APP
-	.loc	1 481 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:481:0
+	.loc	1 511 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:511:0
 	{
 		shl r0, r0, r3
 		shr r1, r1, r9
 	}
-	.loc	1 481 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:481:0
+	.loc	1 511 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:511:0
 	{
 		or r0, r0, r1
 		nop
@@ -899,7 +899,7 @@ disk_initialize:                        # @disk_initialize
 		nop
 		ldw r2, r0[0]
 	}
-	.loc	1 488 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:488:3
+	.loc	1 518 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:518:3
 	std r8, r10, sp[1]
 	{
 		mkmsk r1, 3
@@ -922,7 +922,7 @@ disk_initialize:                        # @disk_initialize
 		nop
 		ldw r2, r0[0]
 	}
-	.loc	1 489 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:489:3
+	.loc	1 519 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:519:3
 	std r8, r10, sp[1]
 	{
 		ldc r1, 55
@@ -941,7 +941,7 @@ disk_initialize:                        # @disk_initialize
 	bt r0, .LBB0_22
 # BB#21:                                # %ifdone338
 .Lxtalabel19:
-	.loc	1 490 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:490:3
+	.loc	1 520 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:520:3
 	std r8, r10, sp[1]
 	{
 		ldc r1, 6
@@ -957,7 +957,7 @@ disk_initialize:                        # @disk_initialize
 	}
 .Lxta.call_labels11:
 	bl SendCmd
-	.loc	1 493 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:493:3
+	.loc	1 523 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:523:3
 	{
 		eq r0, r0, 0
 		nop
@@ -1004,7 +1004,7 @@ disk_initialize:                        # @disk_initialize
 	.cc_top disk_status.function,disk_status
 disk_status:                            # @disk_status
 .Lfunc_begin1:
-	.loc	1 533 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:533:0
+	.loc	1 563 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:563:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1028,7 +1028,7 @@ disk_status:                            # @disk_status
 	bt r1, .LBB1_3
 # BB#1:                                 # %afterboundcheck
 .Lxtalabel21:
-	.loc	1 539 3 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:539:3
+	.loc	1 569 3 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:569:3
 .Ltmp37:
 	ldw r2, dp[SDif+12]
 	bf r2, .LBB1_3
@@ -1038,7 +1038,7 @@ disk_status:                            # @disk_status
 		ldaw r0, sp[4]
 		ldaw r1, sp[9]
 	}
-	.loc	1 540 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:540:3
+	.loc	1 570 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:570:3
 	std r0, r1, sp[1]
 	{
 		ldc r0, 0
@@ -1054,7 +1054,7 @@ disk_status:                            # @disk_status
 	}
 .Lxta.call_labels12:
 	bl SendCmd
-	.loc	1 540 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:540:3
+	.loc	1 570 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:570:3
 	{
 		eq r0, r0, 0
 		nop
@@ -1090,7 +1090,7 @@ disk_status:                            # @disk_status
 	.cc_top disk_read.function,disk_read
 disk_read:                              # @disk_read
 .Lfunc_begin2:
-	.loc	1 498 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:498:0
+	.loc	1 528 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:528:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1118,7 +1118,7 @@ disk_read:                              # @disk_read
 	#DEBUG_VALUE: disk_read:buff <- R1
 	#DEBUG_VALUE: disk_read:sector <- R2
 	#DEBUG_VALUE: disk_read:count <- R3
-	.loc	1 502 3 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:502:3
+	.loc	1 532 3 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:532:3
 .Ltmp45:
 	bf r0, .LBB2_3
 .Ltmp46:
@@ -1139,7 +1139,7 @@ disk_read:                              # @disk_read
 	#DEBUG_VALUE: disk_read:buff <- R1
 	#DEBUG_VALUE: disk_read:sector <- R2
 	#DEBUG_VALUE: disk_read:count <- R3
-	.loc	1 506 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:506:5
+	.loc	1 536 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:536:5
 	{
 		ldc r0, 0
 		nop
@@ -1160,7 +1160,7 @@ disk_read:                              # @disk_read
 		ldc r0, 9
 		nop
 	}
-	.loc	1 506 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:506:5
+	.loc	1 536 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:536:5
 	{
 		shl r2, r2, r0
 		nop
@@ -1174,7 +1174,7 @@ disk_read:                              # @disk_read
 		ldc r0, 2
 		nop
 	}
-	.loc	1 503 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:503:3
+	.loc	1 533 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:533:3
 	{
 		lsu r0, r3, r0
 		nop
@@ -1189,7 +1189,7 @@ disk_read:                              # @disk_read
 		ldaw r6, sp[5]
 		nop
 	}
-	.loc	1 506 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:506:5
+	.loc	1 536 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:536:5
 	std r6, r1, sp[1]
 	{
 		ldc r4, 0
@@ -1214,7 +1214,7 @@ disk_read:                              # @disk_read
 		ldaw r0, sp[4]
 		nop
 	}
-	.loc	1 507 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:507:5
+	.loc	1 537 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:537:5
 	std r6, r0, sp[1]
 	{
 		ldc r1, 12
@@ -1237,7 +1237,7 @@ disk_read:                              # @disk_read
 		ldaw r0, sp[5]
 		nop
 	}
-	.loc	1 510 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:510:5
+	.loc	1 540 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:540:5
 	std r0, r1, sp[1]
 	{
 		mkmsk r3, 1
@@ -1256,7 +1256,7 @@ disk_read:                              # @disk_read
 .Lxtalabel30:
 .Lxta.call_labels14:
 	bl SendCmd
-	.loc	1 510 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:510:5
+	.loc	1 540 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:540:5
 	{
 		eq r0, r0, 0
 		nop
@@ -1297,7 +1297,7 @@ disk_read:                              # @disk_read
 	.cc_top disk_write.function,disk_write
 disk_write:                             # @disk_write
 .Lfunc_begin3:
-	.loc	1 516 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:516:0
+	.loc	1 546 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:546:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1327,7 +1327,7 @@ disk_write:                             # @disk_write
 	#DEBUG_VALUE: disk_write:count <- R3
 .Ltmp62:
 	#DEBUG_VALUE: disk_write:count <- undef
-	.loc	1 520 3 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:520:3
+	.loc	1 550 3 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:550:3
 	bf r0, .LBB3_3
 .Ltmp63:
 # BB#1:
@@ -1349,7 +1349,7 @@ disk_write:                             # @disk_write
 	#DEBUG_VALUE: disk_write:buff <- R1
 	#DEBUG_VALUE: disk_write:sector <- R2
 	#DEBUG_VALUE: disk_write:count <- undef
-	.loc	1 524 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:524:5
+	.loc	1 554 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:554:5
 	{
 		ldc r0, 0
 		nop
@@ -1370,7 +1370,7 @@ disk_write:                             # @disk_write
 		ldc r0, 9
 		nop
 	}
-	.loc	1 524 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:524:5
+	.loc	1 554 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:554:5
 	{
 		shl r2, r2, r0
 		nop
@@ -1384,7 +1384,7 @@ disk_write:                             # @disk_write
 		ldc r0, 2
 		nop
 	}
-	.loc	1 521 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:521:3
+	.loc	1 551 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:551:3
 	{
 		lsu r0, r3, r0
 		nop
@@ -1395,12 +1395,12 @@ disk_write:                             # @disk_write
 .Lxtalabel35:
 	#DEBUG_VALUE: disk_write:buff <- R1
 	#DEBUG_VALUE: disk_write:count <- undef
-	.loc	1 524 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:524:5
+	.loc	1 554 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:554:5
 	{
 		neg r0, r3
 		ldaw r6, sp[5]
 	}
-	.loc	1 524 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:524:5
+	.loc	1 554 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:554:5
 	std r6, r1, sp[1]
 	{
 		ldc r4, 0
@@ -1425,7 +1425,7 @@ disk_write:                             # @disk_write
 		ldaw r0, sp[4]
 		nop
 	}
-	.loc	1 525 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:525:5
+	.loc	1 555 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:555:5
 	std r6, r0, sp[1]
 	{
 		ldc r1, 12
@@ -1449,7 +1449,7 @@ disk_write:                             # @disk_write
 		ldaw r0, sp[5]
 		nop
 	}
-	.loc	1 528 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:528:5
+	.loc	1 558 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:558:5
 	std r0, r1, sp[1]
 	{
 		mkmsk r0, 32
@@ -1468,7 +1468,7 @@ disk_write:                             # @disk_write
 .Lxtalabel38:
 .Lxta.call_labels16:
 	bl SendCmd
-	.loc	1 528 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:528:5
+	.loc	1 558 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:558:5
 	{
 		eq r0, r0, 0
 		nop
@@ -1509,7 +1509,7 @@ disk_write:                             # @disk_write
 	.cc_top disk_ioctl.function,disk_ioctl
 disk_ioctl:                             # @disk_ioctl
 .Lfunc_begin4:
-	.loc	1 546 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:546:0
+	.loc	1 576 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:576:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1557,7 +1557,7 @@ disk_ioctl:                             # @disk_ioctl
 		ldc r5, 0
 		nop
 	}
-	.loc	1 550 3 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:550:3
+	.loc	1 580 3 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:580:3
 .Ltmp82:
 	{
 		mov r0, r5
@@ -1565,12 +1565,12 @@ disk_ioctl:                             # @disk_ioctl
 	}
 .Lxta.call_labels17:
 	bl disk_status
-	.loc	1 550 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:550:3
+	.loc	1 580 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:580:3
 	{
 		zext r0, 1
 		nop
 	}
-	.loc	1 550 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:550:3
+	.loc	1 580 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:580:3
 	bf r0, .LBB4_3
 .Ltmp83:
 # BB#2:
@@ -1616,11 +1616,11 @@ disk_ioctl:                             # @disk_ioctl
 .Ltmp88:
 # BB#6:                                 # %LoopBody.preheader
 	#DEBUG_VALUE: disk_ioctl:RetVal <- R6
-	.loc	1 557 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:557:0
+	.loc	1 587 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:587:0
 	ldw r1, dp[SDif+20]
 .Ltmp89:
 .LBB4_8:                                # %return
-	.loc	1 561 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:561:0
+	.loc	1 591 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:591:0
 	{
 		mov r0, r6
 		nop
@@ -1728,7 +1728,7 @@ disk_ioctl:                             # @disk_ioctl
 	.cc_top SendCmd.function,SendCmd
 SendCmd:                                # @SendCmd
 .Lfunc_begin5:
-	.loc	1 77 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:77:0
+	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -1795,7 +1795,7 @@ SendCmd:                                # @SendCmd
 		ldc r1, 24
 		stw r1, sp[15]
 	}
-	.loc	1 88 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:88:0
+	.loc	1 118 0 prologue_end    # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:0
 .Ltmp102:
 	mul r0, r0, r1
 	ldaw r1, dp[SDif]
@@ -1815,23 +1815,23 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r1, r10[1]
 	}
-	.loc	1 88 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:88:0
+	.loc	1 118 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:0
 	{
 		setc res[r1], 3
 		nop
 	}
 	ldc r0, 64
-	.loc	1 89 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:89:0
+	.loc	1 119 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:119:0
 	{
 		or r0, r11, r0
 		nop
 	}
-	.loc	1 89 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:89:0
+	.loc	1 119 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:119:0
 	{
 		bitrev r0, r0
 		nop
 	}
-	.loc	1 89 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:89:0
+	.loc	1 119 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:119:0
 	{
 		shr r5, r0, 24
 		nop
@@ -1843,7 +1843,7 @@ SendCmd:                                # @SendCmd
 		ldc r0, 0
 		nop
 	}
-	.loc	1 90 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:90:0
+	.loc	1 120 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:0
 	{
 		mov r9, r0
 		nop
@@ -1855,7 +1855,7 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp104:
 	#DEBUG_VALUE: time <- R7
-	.loc	1 92 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:3
+	.loc	1 122 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:3
 .Lxta.endpoint_labels5:
 	{
 		out res[r6], r0
@@ -1863,111 +1863,111 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp105:
 	#DEBUG_VALUE: time <- R8
-	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
+	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
 	{
 		add r8, r7, 5
 		get r11, id
 	}
 .Ltmp106:
-	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
+	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
 	ldaw r3, dp[__timers]
 	{
 		nop
 		ldw r3, r3[r11]
 	}
-	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
+	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
 	{
 		setd res[r3], r8
 		nop
 	}
-	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
+	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
 	{
 		setc res[r3], 9
 		nop
 	}
-	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
+	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
 .Ltmp107:
 	{
 		in r11, res[r3]
 		nop
 	}
-	.loc	1 92 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:3
+	.loc	1 122 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:3
 	{
 		outshr res[r1], r5
 		mkmsk r8, 1
 	}
 .Ltmp108:
 	#DEBUG_VALUE: time <- R11
-	.loc	1 92 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:3
+	.loc	1 122 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:3
 	{
 		out res[r6], r8
 		add r11, r7, 10
 	}
 .Ltmp109:
-	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
+	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
 	{
 		setd res[r3], r11
 		nop
 	}
-	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
+	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
 .Ltmp110:
 	{
 		in r11, res[r3]
 		nop
 	}
 	#DEBUG_VALUE: SendCmd:Arg <- R11
-	.loc	1 93 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:93:0
+	.loc	1 123 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:123:0
 .Lxta.endpoint_labels6:
 	{
 		out res[r6], r0
 		bitrev r11, r2
 	}
 .Ltmp111:
-	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:94:0
+	.loc	1 124 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:124:0
 	{
 		gettime r2
 		nop
 	}
 .Ltmp112:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:94:0
+	.loc	1 124 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:124:0
 	{
 		add r7, r2, 5
 		nop
 	}
 .Ltmp113:
 	#DEBUG_VALUE: time <- R7
-	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:94:0
+	.loc	1 124 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:124:0
 	{
 		setd res[r3], r7
 		nop
 	}
-	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:94:0
+	.loc	1 124 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:124:0
 .Ltmp114:
 	{
 		in r7, res[r3]
 		nop
 	}
 .Ltmp115:
-	.loc	1 94 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:94:3
+	.loc	1 124 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:124:3
 	{
 		outshr res[r1], r5
 		nop
 	}
 .Ltmp116:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 94 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:94:3
+	.loc	1 124 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:124:3
 	{
 		out res[r6], r8
 		add r2, r2, 10
 	}
 .Ltmp117:
-	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:94:0
+	.loc	1 124 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:124:0
 	{
 		setd res[r3], r2
 		nop
 	}
-	.loc	1 94 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:94:0
+	.loc	1 124 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:124:0
 .Ltmp118:
 	{
 		in r2, res[r3]
@@ -1975,51 +1975,51 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp119:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 96 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:96:3
+	.loc	1 126 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:126:3
 .Lxta.endpoint_labels7:
 	{
 		out res[r6], r0
 		gettime r2
 	}
 .Ltmp120:
-	.loc	1 96 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:96:0
+	.loc	1 126 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:126:0
 	{
 		add r7, r2, 5
 		nop
 	}
 .Ltmp121:
 	#DEBUG_VALUE: time <- R7
-	.loc	1 96 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:96:0
+	.loc	1 126 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:126:0
 	{
 		setd res[r3], r7
 		nop
 	}
-	.loc	1 96 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:96:0
+	.loc	1 126 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:126:0
 .Ltmp122:
 	{
 		in r7, res[r3]
 		nop
 	}
 .Ltmp123:
-	.loc	1 96 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:96:3
+	.loc	1 126 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:126:3
 	{
 		outshr res[r1], r5
 		nop
 	}
 .Ltmp124:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 96 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:96:3
+	.loc	1 126 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:126:3
 	{
 		out res[r6], r8
 		add r2, r2, 10
 	}
 .Ltmp125:
-	.loc	1 96 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:96:0
+	.loc	1 126 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:126:0
 	{
 		setd res[r3], r2
 		nop
 	}
-	.loc	1 96 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:96:0
+	.loc	1 126 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:126:0
 .Ltmp126:
 	{
 		in r2, res[r3]
@@ -2027,51 +2027,51 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp127:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 98 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:3
+	.loc	1 128 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:128:3
 .Lxta.endpoint_labels8:
 	{
 		out res[r6], r0
 		gettime r2
 	}
 .Ltmp128:
-	.loc	1 98 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:0
+	.loc	1 128 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:128:0
 	{
 		add r7, r2, 5
 		nop
 	}
 .Ltmp129:
 	#DEBUG_VALUE: time <- R7
-	.loc	1 98 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:0
+	.loc	1 128 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:128:0
 	{
 		setd res[r3], r7
 		nop
 	}
-	.loc	1 98 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:0
+	.loc	1 128 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:128:0
 .Ltmp130:
 	{
 		in r7, res[r3]
 		nop
 	}
 .Ltmp131:
-	.loc	1 98 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:3
+	.loc	1 128 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:128:3
 	{
 		outshr res[r1], r5
 		nop
 	}
 .Ltmp132:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 98 3                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:3
+	.loc	1 128 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:128:3
 	{
 		out res[r6], r8
 		add r2, r2, 10
 	}
 .Ltmp133:
-	.loc	1 98 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:0
+	.loc	1 128 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:128:0
 	{
 		setd res[r3], r2
 		nop
 	}
-	.loc	1 98 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:98:0
+	.loc	1 128 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:128:0
 .Ltmp134:
 	{
 		in r2, res[r3]
@@ -2079,51 +2079,51 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp135:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 100 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:3
+	.loc	1 130 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:130:3
 .Lxta.endpoint_labels9:
 	{
 		out res[r6], r0
 		gettime r2
 	}
 .Ltmp136:
-	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:0
+	.loc	1 130 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:130:0
 	{
 		add r7, r2, 5
 		nop
 	}
 .Ltmp137:
 	#DEBUG_VALUE: time <- R7
-	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:0
+	.loc	1 130 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:130:0
 	{
 		setd res[r3], r7
 		nop
 	}
-	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:0
+	.loc	1 130 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:130:0
 .Ltmp138:
 	{
 		in r7, res[r3]
 		nop
 	}
 .Ltmp139:
-	.loc	1 100 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:3
+	.loc	1 130 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:130:3
 	{
 		outshr res[r1], r5
 		nop
 	}
 .Ltmp140:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 100 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:3
+	.loc	1 130 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:130:3
 	{
 		out res[r6], r8
 		add r2, r2, 10
 	}
 .Ltmp141:
-	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:0
+	.loc	1 130 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:130:0
 	{
 		setd res[r3], r2
 		nop
 	}
-	.loc	1 100 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:100:0
+	.loc	1 130 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:130:0
 .Ltmp142:
 	{
 		in r2, res[r3]
@@ -2131,51 +2131,51 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp143:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 102 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:3
+	.loc	1 132 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:132:3
 .Lxta.endpoint_labels10:
 	{
 		out res[r6], r0
 		gettime r2
 	}
 .Ltmp144:
-	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:0
+	.loc	1 132 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:132:0
 	{
 		add r7, r2, 5
 		nop
 	}
 .Ltmp145:
 	#DEBUG_VALUE: time <- R7
-	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:0
+	.loc	1 132 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:132:0
 	{
 		setd res[r3], r7
 		nop
 	}
-	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:0
+	.loc	1 132 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:132:0
 .Ltmp146:
 	{
 		in r7, res[r3]
 		nop
 	}
 .Ltmp147:
-	.loc	1 102 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:3
+	.loc	1 132 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:132:3
 	{
 		outshr res[r1], r5
 		nop
 	}
 .Ltmp148:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 102 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:3
+	.loc	1 132 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:132:3
 	{
 		out res[r6], r8
 		add r2, r2, 10
 	}
 .Ltmp149:
-	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:0
+	.loc	1 132 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:132:0
 	{
 		setd res[r3], r2
 		nop
 	}
-	.loc	1 102 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:102:0
+	.loc	1 132 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:132:0
 .Ltmp150:
 	{
 		in r2, res[r3]
@@ -2183,51 +2183,51 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp151:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 104 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:3
+	.loc	1 134 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:134:3
 .Lxta.endpoint_labels11:
 	{
 		out res[r6], r0
 		gettime r2
 	}
 .Ltmp152:
-	.loc	1 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:0
+	.loc	1 134 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:134:0
 	{
 		add r7, r2, 5
 		nop
 	}
 .Ltmp153:
 	#DEBUG_VALUE: time <- R7
-	.loc	1 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:0
+	.loc	1 134 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:134:0
 	{
 		setd res[r3], r7
 		nop
 	}
-	.loc	1 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:0
+	.loc	1 134 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:134:0
 .Ltmp154:
 	{
 		in r7, res[r3]
 		nop
 	}
 .Ltmp155:
-	.loc	1 104 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:3
+	.loc	1 134 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:134:3
 	{
 		outshr res[r1], r5
 		nop
 	}
 .Ltmp156:
 	#DEBUG_VALUE: time <- R1
-	.loc	1 104 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:3
+	.loc	1 134 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:134:3
 	{
 		out res[r6], r8
 		add r1, r2, 10
 	}
 .Ltmp157:
-	.loc	1 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:0
+	.loc	1 134 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:134:0
 	{
 		setd res[r3], r1
 		nop
 	}
-	.loc	1 104 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:104:0
+	.loc	1 134 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:134:0
 .Ltmp158:
 	{
 		in r1, res[r3]
@@ -2236,26 +2236,26 @@ SendCmd:                                # @SendCmd
 .Ltmp159:
 	#DEBUG_VALUE: RespBitCount <- 0
 	#DEBUG_VALUE: time <- R2
-	.loc	1 106 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:106:3
+	.loc	1 136 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:136:3
 .Lxta.endpoint_labels12:
 	{
 		out res[r6], r0
 		gettime r2
 	}
 .Ltmp160:
-	.loc	1 106 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:106:0
+	.loc	1 136 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:136:0
 	{
 		add r1, r2, 5
 		nop
 	}
 .Ltmp161:
 	#DEBUG_VALUE: time <- R1
-	.loc	1 106 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:106:0
+	.loc	1 136 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:136:0
 	{
 		setd res[r3], r1
 		nop
 	}
-	.loc	1 106 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:106:0
+	.loc	1 136 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:136:0
 .Ltmp162:
 	{
 		in r1, res[r3]
@@ -2266,25 +2266,25 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r1, r10[1]
 	}
-	.loc	1 106 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:106:3
+	.loc	1 136 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:136:3
 	{
 		outshr res[r1], r5
 		nop
 	}
 .Ltmp164:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 106 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:106:3
+	.loc	1 136 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:136:3
 	{
 		out res[r6], r8
 		add r2, r2, 10
 	}
 .Ltmp165:
-	.loc	1 106 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:106:0
+	.loc	1 136 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:136:0
 	{
 		setd res[r3], r2
 		nop
 	}
-	.loc	1 106 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:106:0
+	.loc	1 136 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:136:0
 .Ltmp166:
 	{
 		in r2, res[r3]
@@ -2309,7 +2309,7 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: SendCmd:Arg <- R11
 	#DEBUG_VALUE: RespBitCount <- 0
 	#DEBUG_VALUE: time <- R7
-	.loc	1 107 25                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:25
+	.loc	1 137 25                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:137:25
 .Lxta.endpoint_labels13:
 	{
 		out res[r2], r0
@@ -2322,12 +2322,12 @@ SendCmd:                                # @SendCmd
 		add r8, r7, 5
 	}
 .Ltmp170:
-	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:0
+	.loc	1 137 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:137:0
 	{
 		setd res[r3], r8
 		nop
 	}
-	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:0
+	.loc	1 137 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:137:0
 .Ltmp171:
 	{
 		in r8, res[r3]
@@ -2341,23 +2341,23 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp173:
 	#DEBUG_VALUE: time <- R7
-	.loc	1 107 25                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:25
+	.loc	1 137 25                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:137:25
 	{
 		out res[r2], r8
 		add r7, r7, 10
 	}
 .Ltmp174:
-	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:0
+	.loc	1 137 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:137:0
 	{
 		setd res[r3], r7
 		nop
 	}
-	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:0
+	.loc	1 137 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:137:0
 	{
 		setc res[r3], 9
 		nop
 	}
-	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:0
+	.loc	1 137 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:137:0
 .Ltmp175:
 	{
 		in r7, res[r3]
@@ -2365,7 +2365,7 @@ SendCmd:                                # @SendCmd
 	}
 .xtaloop 32
 	# LOOPMARKER 0
-	.loc	1 107 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:107:0
+	.loc	1 137 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:137:0
 	bt r5, .LBB5_1
 .Ltmp176:
 # BB#2:                                 # %ifdone
@@ -2386,17 +2386,17 @@ SendCmd:                                # @SendCmd
 		stw r5, sp[18]
 	}
 	ldc r3, 72
-	.loc	1 95 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:95:0
+	.loc	1 125 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:125:0
 	crc32 r9, r11, r3
 .Ltmp177:
 	#DEBUG_VALUE: Crc0 <- R9
-	.loc	1 97 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:97:0
+	.loc	1 127 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:127:0
 	crc32 r9, r0, r3
 .Ltmp178:
 	ldc r3, 128
 .Ltmp179:
 	#DEBUG_VALUE: Crc0 <- R3
-	.loc	1 99 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:99:0
+	.loc	1 129 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:129:0
 	{
 		or r3, r9, r3
 		mov r11, r0
@@ -2406,7 +2406,7 @@ SendCmd:                                # @SendCmd
 		nop
 		stw r4, sp[5]
 	}
-	.loc	1 103 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:103:0
+	.loc	1 133 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:133:0
 .Ltmp181:
 	bt r4, .LBB5_3
 # BB#4:                                 # %ifdone
@@ -2432,61 +2432,61 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp183:
 	#DEBUG_VALUE: time <- R0
-	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:0
+	.loc	1 138 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:138:0
 	{
 		gettime r0
 		mov r4, r11
 	}
 .Ltmp184:
 	#DEBUG_VALUE: time <- R6
-	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:0
+	.loc	1 138 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:138:0
 	{
 		add r6, r0, 5
 		get r11, id
 	}
 .Ltmp185:
-	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
+	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
 	ldaw r7, dp[__timers]
 	{
 		nop
 		ldw r11, r7[r11]
 	}
-	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:0
+	.loc	1 138 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:138:0
 .Ltmp186:
 	{
 		setd res[r11], r6
 		nop
 	}
-	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:0
+	.loc	1 138 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:138:0
 	{
 		setc res[r11], 9
 		nop
 	}
-	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:0
+	.loc	1 138 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:138:0
 .Ltmp187:
 	{
 		in r6, res[r11]
 		nop
 	}
-	.loc	1 108 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:3
+	.loc	1 138 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:138:3
 	{
 		outshr res[r1], r3
 		nop
 	}
 .Ltmp188:
 	#DEBUG_VALUE: time <- R0
-	.loc	1 108 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:3
+	.loc	1 138 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:138:3
 	{
 		out res[r2], r8
 		add r0, r0, 10
 	}
 .Ltmp189:
-	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:0
+	.loc	1 138 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:138:0
 	{
 		setd res[r11], r0
 		nop
 	}
-	.loc	1 108 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:108:0
+	.loc	1 138 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:138:0
 .Ltmp190:
 	{
 		in r0, res[r11]
@@ -2495,51 +2495,51 @@ SendCmd:                                # @SendCmd
 .Ltmp191:
 	#DEBUG_VALUE: RespByteCount <- 0
 	#DEBUG_VALUE: time <- R0
-	.loc	1 110 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:3
+	.loc	1 140 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:140:3
 .Lxta.endpoint_labels15:
 	{
 		out res[r2], r4
 		gettime r0
 	}
 .Ltmp192:
-	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:0
+	.loc	1 140 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:140:0
 	{
 		add r6, r0, 5
 		nop
 	}
 .Ltmp193:
 	#DEBUG_VALUE: time <- R6
-	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:0
+	.loc	1 140 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:140:0
 	{
 		setd res[r11], r6
 		nop
 	}
-	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:0
+	.loc	1 140 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:140:0
 .Ltmp194:
 	{
 		in r6, res[r11]
 		nop
 	}
 .Ltmp195:
-	.loc	1 110 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:3
+	.loc	1 140 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:140:3
 	{
 		outshr res[r1], r3
 		nop
 	}
 .Ltmp196:
 	#DEBUG_VALUE: time <- R0
-	.loc	1 110 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:3
+	.loc	1 140 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:140:3
 	{
 		out res[r2], r8
 		add r0, r0, 10
 	}
 .Ltmp197:
-	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:0
+	.loc	1 140 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:140:0
 	{
 		setd res[r11], r0
 		nop
 	}
-	.loc	1 110 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:110:0
+	.loc	1 140 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:140:0
 .Ltmp198:
 	{
 		in r0, res[r11]
@@ -2548,51 +2548,51 @@ SendCmd:                                # @SendCmd
 .Ltmp199:
 	#DEBUG_VALUE: Dat <- -1
 	#DEBUG_VALUE: time <- R0
-	.loc	1 112 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:3
+	.loc	1 142 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:142:3
 .Lxta.endpoint_labels16:
 	{
 		out res[r2], r4
 		gettime r0
 	}
 .Ltmp200:
-	.loc	1 112 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:0
+	.loc	1 142 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:142:0
 	{
 		add r6, r0, 5
 		nop
 	}
 .Ltmp201:
 	#DEBUG_VALUE: time <- R6
-	.loc	1 112 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:0
+	.loc	1 142 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:142:0
 	{
 		setd res[r11], r6
 		nop
 	}
-	.loc	1 112 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:0
+	.loc	1 142 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:142:0
 .Ltmp202:
 	{
 		in r6, res[r11]
 		nop
 	}
 .Ltmp203:
-	.loc	1 112 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:3
+	.loc	1 142 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:142:3
 	{
 		outshr res[r1], r3
 		nop
 	}
 .Ltmp204:
 	#DEBUG_VALUE: time <- R0
-	.loc	1 112 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:3
+	.loc	1 142 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:142:3
 	{
 		out res[r2], r8
 		add r0, r0, 10
 	}
 .Ltmp205:
-	.loc	1 112 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:0
+	.loc	1 142 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:142:0
 	{
 		setd res[r11], r0
 		nop
 	}
-	.loc	1 112 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:112:0
+	.loc	1 142 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:142:0
 .Ltmp206:
 	{
 		in r0, res[r11]
@@ -2601,51 +2601,51 @@ SendCmd:                                # @SendCmd
 .Ltmp207:
 	#DEBUG_VALUE: R <- -1
 	#DEBUG_VALUE: time <- R0
-	.loc	1 114 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:3
+	.loc	1 144 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:144:3
 .Lxta.endpoint_labels17:
 	{
 		out res[r2], r4
 		gettime r0
 	}
 .Ltmp208:
-	.loc	1 114 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:0
+	.loc	1 144 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:144:0
 	{
 		add r6, r0, 5
 		nop
 	}
 .Ltmp209:
 	#DEBUG_VALUE: time <- R6
-	.loc	1 114 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:0
+	.loc	1 144 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:144:0
 	{
 		setd res[r11], r6
 		nop
 	}
-	.loc	1 114 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:0
+	.loc	1 144 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:144:0
 .Ltmp210:
 	{
 		in r6, res[r11]
 		nop
 	}
 .Ltmp211:
-	.loc	1 114 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:3
+	.loc	1 144 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:144:3
 	{
 		outshr res[r1], r3
 		nop
 	}
 .Ltmp212:
 	#DEBUG_VALUE: time <- R0
-	.loc	1 114 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:3
+	.loc	1 144 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:144:3
 	{
 		out res[r2], r8
 		add r0, r0, 10
 	}
 .Ltmp213:
-	.loc	1 114 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:0
+	.loc	1 144 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:144:0
 	{
 		setd res[r11], r0
 		nop
 	}
-	.loc	1 114 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:114:0
+	.loc	1 144 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:144:0
 .Ltmp214:
 	{
 		in r0, res[r11]
@@ -2653,51 +2653,51 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp215:
 	#DEBUG_VALUE: time <- R0
-	.loc	1 116 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:3
+	.loc	1 146 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:146:3
 .Lxta.endpoint_labels18:
 	{
 		out res[r2], r4
 		gettime r0
 	}
 .Ltmp216:
-	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:0
+	.loc	1 146 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:146:0
 	{
 		add r6, r0, 5
 		nop
 	}
 .Ltmp217:
 	#DEBUG_VALUE: time <- R6
-	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:0
+	.loc	1 146 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:146:0
 	{
 		setd res[r11], r6
 		nop
 	}
-	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:0
+	.loc	1 146 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:146:0
 .Ltmp218:
 	{
 		in r6, res[r11]
 		nop
 	}
 .Ltmp219:
-	.loc	1 116 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:3
+	.loc	1 146 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:146:3
 	{
 		outshr res[r1], r3
 		nop
 	}
 .Ltmp220:
 	#DEBUG_VALUE: time <- R0
-	.loc	1 116 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:3
+	.loc	1 146 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:146:3
 	{
 		out res[r2], r8
 		add r0, r0, 10
 	}
 .Ltmp221:
-	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:0
+	.loc	1 146 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:146:0
 	{
 		setd res[r11], r0
 		nop
 	}
-	.loc	1 116 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:116:0
+	.loc	1 146 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:146:0
 .Ltmp222:
 	{
 		in r0, res[r11]
@@ -2705,51 +2705,51 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp223:
 	#DEBUG_VALUE: time <- R0
-	.loc	1 118 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:3
+	.loc	1 148 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:148:3
 .Lxta.endpoint_labels19:
 	{
 		out res[r2], r4
 		gettime r0
 	}
 .Ltmp224:
-	.loc	1 118 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:0
+	.loc	1 148 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:148:0
 	{
 		add r6, r0, 5
 		nop
 	}
 .Ltmp225:
 	#DEBUG_VALUE: time <- R6
-	.loc	1 118 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:0
+	.loc	1 148 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:148:0
 	{
 		setd res[r11], r6
 		nop
 	}
-	.loc	1 118 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:0
+	.loc	1 148 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:148:0
 .Ltmp226:
 	{
 		in r6, res[r11]
 		nop
 	}
 .Ltmp227:
-	.loc	1 118 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:3
+	.loc	1 148 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:148:3
 	{
 		outshr res[r1], r3
 		nop
 	}
 .Ltmp228:
 	#DEBUG_VALUE: time <- R0
-	.loc	1 118 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:3
+	.loc	1 148 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:148:3
 	{
 		out res[r2], r8
 		add r0, r0, 10
 	}
 .Ltmp229:
-	.loc	1 118 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:0
+	.loc	1 148 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:148:0
 	{
 		setd res[r11], r0
 		nop
 	}
-	.loc	1 118 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:118:0
+	.loc	1 148 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:148:0
 .Ltmp230:
 	{
 		in r0, res[r11]
@@ -2758,51 +2758,51 @@ SendCmd:                                # @SendCmd
 .Ltmp231:
 	#DEBUG_VALUE: DatByteCount <- 0
 	#DEBUG_VALUE: time <- R0
-	.loc	1 120 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:3
+	.loc	1 150 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:150:3
 .Lxta.endpoint_labels20:
 	{
 		out res[r2], r4
 		gettime r0
 	}
 .Ltmp232:
-	.loc	1 120 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:0
+	.loc	1 150 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:150:0
 	{
 		add r6, r0, 5
 		nop
 	}
 .Ltmp233:
 	#DEBUG_VALUE: time <- R6
-	.loc	1 120 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:0
+	.loc	1 150 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:150:0
 	{
 		setd res[r11], r6
 		nop
 	}
-	.loc	1 120 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:0
+	.loc	1 150 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:150:0
 .Ltmp234:
 	{
 		in r6, res[r11]
 		nop
 	}
 .Ltmp235:
-	.loc	1 120 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:3
+	.loc	1 150 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:150:3
 	{
 		outshr res[r1], r3
 		nop
 	}
 .Ltmp236:
 	#DEBUG_VALUE: time <- R0
-	.loc	1 120 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:3
+	.loc	1 150 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:150:3
 	{
 		out res[r2], r8
 		add r0, r0, 10
 	}
 .Ltmp237:
-	.loc	1 120 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:0
+	.loc	1 150 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:150:0
 	{
 		setd res[r11], r0
 		nop
 	}
-	.loc	1 120 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:120:0
+	.loc	1 150 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:150:0
 .Ltmp238:
 	{
 		in r0, res[r11]
@@ -2811,26 +2811,26 @@ SendCmd:                                # @SendCmd
 .Ltmp239:
 	#DEBUG_VALUE: i <- 0
 	#DEBUG_VALUE: time <- R1
-	.loc	1 122 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:3
+	.loc	1 152 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:152:3
 .Lxta.endpoint_labels21:
 	{
 		out res[r2], r4
 		gettime r1
 	}
 .Ltmp240:
-	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
+	.loc	1 152 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:152:0
 	{
 		add r0, r1, 5
 		nop
 	}
 .Ltmp241:
 	#DEBUG_VALUE: time <- R0
-	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
+	.loc	1 152 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:152:0
 	{
 		setd res[r11], r0
 		nop
 	}
-	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
+	.loc	1 152 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:152:0
 .Ltmp242:
 	{
 		in r0, res[r11]
@@ -2841,31 +2841,31 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r7, r6[0]
 	}
-	.loc	1 122 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:3
+	.loc	1 152 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:152:3
 	{
 		outshr res[r7], r3
 		ldw r2, r10[0]
 	}
 .Ltmp244:
 	#DEBUG_VALUE: time <- R1
-	.loc	1 122 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:3
+	.loc	1 152 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:152:3
 	{
 		out res[r2], r8
 		add r1, r1, 10
 	}
 .Ltmp245:
-	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
+	.loc	1 152 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:152:0
 	{
 		setd res[r11], r1
 		nop
 	}
-	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
+	.loc	1 152 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:152:0
 .Ltmp246:
 	{
 		in r1, res[r11]
 		nop
 	}
-	.loc	1 124 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:124:3
+	.loc	1 154 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:154:3
 	ldw r1, dp[Is_XS1_G_Core]
 	bf r1, .LBB5_7
 .Ltmp247:
@@ -2878,7 +2878,7 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: Dat <- -1
 	#DEBUG_VALUE: R <- -1
 	#DEBUG_VALUE: DatByteCount <- 0
-	.loc	1 125 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:125:0
+	.loc	1 155 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:155:0
 	{
 		mov r0, r7
 		nop
@@ -2912,7 +2912,7 @@ SendCmd:                                # @SendCmd
 		setc res[r7], 1
 		stw r4, sp[13]
 	}
-	.loc	1 126 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:126:0
+	.loc	1 156 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:156:0
 .Ltmp250:
 .Lxta.endpoint_labels22:
 	{
@@ -2953,7 +2953,7 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp253:
 	#DEBUG_VALUE: DatBytesLen <- [SP+16]
-	.loc	1 115 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:115:0
+	.loc	1 145 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:145:0
 	{
 		lss r9, r2, r0
 		shl r0, r0, r1
@@ -2962,16 +2962,16 @@ SendCmd:                                # @SendCmd
 		nop
 		stw r0, sp[4]
 	}
-	.loc	1 129 25                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:129:25
+	.loc	1 159 25                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:159:25
 .Ltmp254:
 	{
 		get r11, id
 		ldw r2, r10[0]
 	}
 .Ltmp255:
-	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
+	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
 	ldaw r0, dp[__timers]
-	.loc	1 132 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:132:0
+	.loc	1 162 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:162:0
 .Ltmp256:
 	{
 		add r0, r10, 8
@@ -3028,31 +3028,31 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: DatByteCount <- 0
 	#DEBUG_VALUE: DatBytesLen <- [SP+16]
 	#DEBUG_VALUE: time <- R6
-	.loc	1 129 25                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:129:25
+	.loc	1 159 25                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:159:25
 .Lxta.endpoint_labels23:
 	{
 		out res[r2], r0
 		gettime r6
 	}
 .Ltmp258:
-	.loc	1 131 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:131:0
+	.loc	1 161 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:161:0
 	{
 		add r10, r6, 5
 		nop
 	}
 .Ltmp259:
 	#DEBUG_VALUE: time <- R10
-	.loc	1 132 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:132:0
+	.loc	1 162 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:162:0
 	{
 		setd res[r3], r10
 		nop
 	}
-	.loc	1 132 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:132:0
+	.loc	1 162 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:162:0
 	{
 		setc res[r3], 9
 		nop
 	}
-	.loc	1 132 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:132:0
+	.loc	1 162 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:162:0
 .Ltmp260:
 .Lxta.endpoint_labels24:
 	{
@@ -3061,19 +3061,19 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp261:
 	#DEBUG_VALUE: time <- R6
-	.loc	1 133 25                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:133:25
+	.loc	1 163 25                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:163:25
 .Lxta.endpoint_labels25:
 	{
 		out res[r2], r5
 		add r6, r6, 10
 	}
 .Ltmp262:
-	.loc	1 135 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:135:0
+	.loc	1 165 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:165:0
 	{
 		setd res[r3], r6
 		nop
 	}
-	.loc	1 135 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:135:0
+	.loc	1 165 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:165:0
 .Ltmp263:
 .Lxta.endpoint_labels26:
 	{
@@ -3082,7 +3082,7 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp264:
 	#DEBUG_VALUE: i <- R10
-	.loc	1 137 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:137:0
+	.loc	1 167 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:167:0
 	{
 		add r10, r10, 1
 		eq r6, r4, 1
@@ -3092,7 +3092,7 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r1, sp[15]
 	}
-	.loc	1 138 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:138:0
+	.loc	1 168 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:168:0
 	bf r6, .LBB5_18
 .Ltmp266:
 # BB#22:                                # %switchcase
@@ -3106,28 +3106,28 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: R <- -1
 	#DEBUG_VALUE: DatByteCount <- 0
 	#DEBUG_VALUE: DatBytesLen <- [SP+16]
-	.loc	1 141 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:141:0
+	.loc	1 171 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:171:0
 	{
 		setc res[r7], 1
 		shl r4, r11, 24
 	}
-	.loc	1 141 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:141:0
+	.loc	1 171 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:171:0
 .Lxta.endpoint_labels27:
 	{
 		inshr r4, res[r7]
 		nop
 	}
-	.loc	1 141 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:141:0
+	.loc	1 171 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:171:0
 	{
 		shr r11, r4, 24
 		mkmsk r4, 8
 	}
-	.loc	1 142 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:142:9
+	.loc	1 172 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:172:9
 	{
 		eq r4, r11, r4
 		nop
 	}
-	.loc	1 142 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:142:9
+	.loc	1 172 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:172:9
 	bf r4, .LBB5_23
 .Ltmp267:
 # BB#26:                                # %iftrue538
@@ -3142,12 +3142,12 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: DatByteCount <- 0
 	#DEBUG_VALUE: DatBytesLen <- [SP+16]
 	ldw r4, cp[.LCPI5_1]
-	.loc	1 144 11                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:144:11
+	.loc	1 174 11                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:174:11
 	{
 		eq r4, r10, r4
 		nop
 	}
-	.loc	1 144 11                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:144:11
+	.loc	1 174 11                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:174:11
 	bt r4, .LBB5_27
 .Ltmp268:
 # BB#28:                                #   in Loop: Header=BB5_17 Depth=1
@@ -3167,30 +3167,30 @@ SendCmd:                                # @SendCmd
 # BB#24:                                # %switchcase531
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel56:
-	.loc	1 151 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:151:0
+	.loc	1 181 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:181:0
 	{
 		setc res[r7], 1
 		shl r4, r11, 24
 	}
-	.loc	1 151 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:151:0
+	.loc	1 181 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:181:0
 .Lxta.endpoint_labels28:
 	{
 		inshr r4, res[r7]
 		nop
 	}
-	.loc	1 151 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:151:0
+	.loc	1 181 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:181:0
 	{
 		shr r11, r4, 24
 		ldw r6, sp[18]
 	}
-	.loc	1 153 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:153:9
+	.loc	1 183 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:183:9
 	{
 		add r6, r6, 1
 		nop
 	}
 .Ltmp269:
 	#DEBUG_VALUE: RespBitCount <- R6
-	.loc	1 153 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:153:9
+	.loc	1 183 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:183:9
 	{
 		mov r4, r6
 		nop
@@ -3199,7 +3199,7 @@ SendCmd:                                # @SendCmd
 		zext r4, 3
 		nop
 	}
-	.loc	1 153 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:153:9
+	.loc	1 183 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:183:9
 	bf r4, .LBB5_29
 .Ltmp270:
 # BB#25:                                #   in Loop: Header=BB5_17 Depth=1
@@ -3244,12 +3244,12 @@ SendCmd:                                # @SendCmd
 .Ltmp272:
 	#DEBUG_VALUE: RespStat <- 0
 	#DEBUG_VALUE: RespBitCount <- [SP+72]
-	.loc	1 154 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:154:9
+	.loc	1 184 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:184:9
 	{
 		eq r6, r6, r4
 		stw r6, sp[18]
 	}
-	.loc	1 154 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:154:9
+	.loc	1 184 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:184:9
 	{
 		mov r4, r0
 		nop
@@ -3277,13 +3277,13 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp275:
 	#DEBUG_VALUE: RespByteCount <- R6
-	.loc	1 156 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:156:0
+	.loc	1 186 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:186:0
 	{
 		add r6, r10, 1
 		ldw r7, sp[9]
 	}
 .Ltmp276:
-	.loc	1 156 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:156:0
+	.loc	1 186 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:186:0
 	st8 r11, r7[r10]
 	{
 		nop
@@ -3307,7 +3307,7 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: R <- -1
 	#DEBUG_VALUE: DatByteCount <- 0
 	#DEBUG_VALUE: DatBytesLen <- [SP+16]
-	.loc	1 160 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:160:0
+	.loc	1 190 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:190:0
 	{
 		sub r6, r9, 1
 		mkmsk r10, 2
@@ -3341,12 +3341,12 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r6, r1[0]
 	}
-	.loc	1 163 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:163:0
+	.loc	1 193 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:193:0
 	{
 		setc res[r6], 1
 		nop
 	}
-	.loc	1 163 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:163:0
+	.loc	1 193 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:193:0
 .Lxta.endpoint_labels29:
 	{
 		inshr r8, res[r6]
@@ -3355,12 +3355,12 @@ SendCmd:                                # @SendCmd
 .Ltmp280:
 	#DEBUG_VALUE: Dat <- R8
 	ldw r1, cp[.LCPI5_2]
-	.loc	1 164 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:164:9
+	.loc	1 194 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:194:9
 	{
 		eq r6, r8, r1
 		nop
 	}
-	.loc	1 164 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:164:9
+	.loc	1 194 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:194:9
 	bf r6, .LBB5_35
 .Ltmp281:
 # BB#33:                                #   in Loop: Header=BB5_17 Depth=1
@@ -3380,7 +3380,7 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r6, r1[0]
 	}
-	.loc	1 168 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:168:0
+	.loc	1 198 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:198:0
 	{
 		setc res[r6], 1
 		nop
@@ -3388,7 +3388,7 @@ SendCmd:                                # @SendCmd
 .Ltmp282:
 	#DEBUG_VALUE: DatStat <- 3
 	#DEBUG_VALUE: Dat <- R8
-	.loc	1 168 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:168:0
+	.loc	1 198 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:198:0
 .Lxta.endpoint_labels30:
 	{
 		inshr r8, res[r6]
@@ -3411,14 +3411,14 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r9, r6[0]
 	}
-	.loc	1 172 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:172:0
+	.loc	1 202 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:202:0
 	{
 		setc res[r9], 1
 		nop
 	}
 .Ltmp284:
 	#DEBUG_VALUE: Dat <- R8
-	.loc	1 172 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:172:0
+	.loc	1 202 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:202:0
 .Lxta.endpoint_labels31:
 	{
 		inshr r8, res[r9]
@@ -3426,21 +3426,21 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp285:
 	#DEBUG_VALUE: DatByteCount <- R10
-	.loc	1 173 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:173:0
+	.loc	1 203 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:203:0
 	{
 		add r10, r7, 1
 		bitrev r6, r8
 	}
 .Ltmp286:
-	.loc	1 173 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:173:0
+	.loc	1 203 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:203:0
 	st8 r6, r1[r7]
 	ldc r11, 511
-	.loc	1 176 11                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:176:11
+	.loc	1 206 11                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:206:11
 	{
 		and r6, r10, r11
 		nop
 	}
-	.loc	1 174 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:174:9
+	.loc	1 204 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:204:9
 	bf r4, .LBB5_40
 # BB#42:                                # %ifdone616
                                         #   in Loop: Header=BB5_17 Depth=1
@@ -3509,7 +3509,7 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r1, sp[16]
 	}
-	.loc	1 209 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:209:9
+	.loc	1 239 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:239:9
 .Ltmp294:
 	{
 		sub r1, r1, 1
@@ -3517,7 +3517,7 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp295:
 	#DEBUG_VALUE: j <- R1
-	.loc	1 209 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:209:9
+	.loc	1 239 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:239:9
 	bf r1, .LBB5_50
 .Ltmp296:
 # BB#38:                                #   in Loop: Header=BB5_17 Depth=1
@@ -3536,7 +3536,7 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r6, sp[19]
 	}
-	.loc	1 165 14                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:165:14
+	.loc	1 195 14                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:195:14
 	{
 		eq r6, r6, r1
 		mov r9, r5
@@ -3561,31 +3561,31 @@ SendCmd:                                # @SendCmd
                                         # =>  This Inner Loop Header: Depth=2
 .Lxtalabel73:
 	#DEBUG_VALUE: time <- R6
-	.loc	1 180 35                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:180:35
+	.loc	1 210 35                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:210:35
 .Lxta.endpoint_labels32:
 	{
 		out res[r2], r0
 		gettime r6
 	}
 .Ltmp300:
-	.loc	1 182 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:182:0
+	.loc	1 212 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:212:0
 	{
 		add r1, r6, 5
 		nop
 	}
 .Ltmp301:
 	#DEBUG_VALUE: time <- R1
-	.loc	1 183 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:183:0
+	.loc	1 213 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:213:0
 	{
 		setd res[r3], r1
 		nop
 	}
-	.loc	1 183 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:183:0
+	.loc	1 213 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:213:0
 	{
 		setc res[r3], 9
 		nop
 	}
-	.loc	1 183 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:183:0
+	.loc	1 213 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:213:0
 .Ltmp302:
 .Lxta.endpoint_labels33:
 	{
@@ -3594,31 +3594,31 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp303:
 	#DEBUG_VALUE: time <- R1
-	.loc	1 184 35                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:184:35
+	.loc	1 214 35                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:214:35
 .Lxta.endpoint_labels34:
 	{
 		out res[r2], r5
 		add r1, r6, 10
 	}
 .Ltmp304:
-	.loc	1 186 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:186:0
+	.loc	1 216 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:216:0
 	{
 		setd res[r3], r1
 		nop
 	}
-	.loc	1 186 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:186:0
+	.loc	1 216 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:216:0
 .Ltmp305:
 .Lxta.endpoint_labels35:
 	{
 		in r1, res[r3]
 		nop
 	}
-	.loc	1 188 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:188:0
+	.loc	1 218 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:218:0
 	{
 		setc res[r9], 1
 		nop
 	}
-	.loc	1 188 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:188:0
+	.loc	1 218 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:218:0
 .Lxta.endpoint_labels36:
 	{
 		inshr r8, res[r9]
@@ -3627,31 +3627,31 @@ SendCmd:                                # @SendCmd
 .Ltmp306:
 	#DEBUG_VALUE: Dat <- R8
 	#DEBUG_VALUE: time <- R1
-	.loc	1 190 35                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:190:35
+	.loc	1 220 35                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:220:35
 .Lxta.endpoint_labels37:
 	{
 		out res[r2], r0
 		gettime r1
 	}
 .Ltmp307:
-	.loc	1 192 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:192:0
+	.loc	1 222 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:222:0
 	{
 		add r6, r1, 5
 		nop
 	}
 .Ltmp308:
 	#DEBUG_VALUE: time <- R6
-	.loc	1 193 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:193:0
+	.loc	1 223 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:223:0
 	{
 		setd res[r3], r6
 		nop
 	}
-	.loc	1 193 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:193:0
+	.loc	1 223 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:223:0
 	{
 		setc res[r3], 9
 		nop
 	}
-	.loc	1 193 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:193:0
+	.loc	1 223 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:223:0
 .Ltmp309:
 .Lxta.endpoint_labels38:
 	{
@@ -3660,45 +3660,45 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp310:
 	#DEBUG_VALUE: time <- R1
-	.loc	1 194 35                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:194:35
+	.loc	1 224 35                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:224:35
 .Lxta.endpoint_labels39:
 	{
 		out res[r2], r5
 		add r1, r1, 10
 	}
 .Ltmp311:
-	.loc	1 196 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:196:0
+	.loc	1 226 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:226:0
 	{
 		setd res[r3], r1
 		nop
 	}
-	.loc	1 196 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:196:0
+	.loc	1 226 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:226:0
 .Ltmp312:
 .Lxta.endpoint_labels40:
 	{
 		in r1, res[r3]
 		nop
 	}
-	.loc	1 198 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:198:0
+	.loc	1 228 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:228:0
 	{
 		setc res[r9], 1
 		nop
 	}
-	.loc	1 198 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:198:0
+	.loc	1 228 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:228:0
 .Lxta.endpoint_labels41:
 	{
 		inshr r8, res[r9]
 		add r6, r10, 1
 	}
 .Ltmp313:
-	.loc	1 199 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:199:0
+	.loc	1 229 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:229:0
 	{
 		bitrev r1, r8
 		nop
 	}
-	.loc	1 199 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:199:0
+	.loc	1 229 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:229:0
 	st8 r1, r7[r10]
-	.loc	1 176 11                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:176:11
+	.loc	1 206 11                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:206:11
 	{
 		and r1, r6, r11
 		nop
@@ -3709,7 +3709,7 @@ SendCmd:                                # @SendCmd
 		mov r10, r6
 		nop
 	}
-	.loc	1 176 11                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:176:11
+	.loc	1 206 11                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:206:11
 	bt r1, .LBB5_47
 # BB#48:                                #   in Loop: Header=BB5_17 Depth=1
 	{
@@ -3728,7 +3728,7 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r6, sp[4]
 	}
-	.loc	1 210 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:210:9
+	.loc	1 240 9                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:240:9
 	{
 		lsu r9, r1, r6
 		mkmsk r6, 32
@@ -3737,7 +3737,7 @@ SendCmd:                                # @SendCmd
 # BB#51:                                # %ifdone701
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel75:
-	.loc	1 213 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:213:0
+	.loc	1 243 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:243:0
 	{
 		mov r6, r8
 		nop
@@ -3745,7 +3745,7 @@ SendCmd:                                # @SendCmd
 .LBB5_52:                               # %ifdone701
                                         #   in Loop: Header=BB5_17 Depth=1
 .Lxtalabel76:
-	.loc	1 213 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:213:0
+	.loc	1 243 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:243:0
 	{
 		mov r10, r0
 		nop
@@ -3805,7 +3805,7 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: R <- -1
 	#DEBUG_VALUE: DatByteCount <- 0
 	#DEBUG_VALUE: DatBytesLen <- [SP+16]
-	.loc	1 127 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:127:3
+	.loc	1 157 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:157:3
 	{
 		or r1, r9, r4
 		nop
@@ -3826,7 +3826,7 @@ SendCmd:                                # @SendCmd
 		ldc r0, 6
 		ldw r4, sp[12]
 	}
-	.loc	1 220 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:220:0
+	.loc	1 250 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:250:0
 	{
 		lsu r0, r0, r4
 		ldw r10, sp[8]
@@ -3852,7 +3852,7 @@ SendCmd:                                # @SendCmd
 .Lxtalabel83:
 .Ltmp316:
 	#DEBUG_VALUE: Crc0 <- 0
-	.loc	1 228 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:228:0
+	.loc	1 258 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:258:0
 	{
 		ldc r0, 0
 		ldw r1, sp[9]
@@ -3861,20 +3861,20 @@ SendCmd:                                # @SendCmd
 		nop
 		ld8u r1, r1[r0]
 	}
-	.loc	1 229 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:229:0
+	.loc	1 259 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:259:0
 	{
 		bitrev r2, r1
 		nop
 	}
 .Ltmp317:
 	#DEBUG_VALUE: i <- R2
-	.loc	1 229 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:229:0
+	.loc	1 259 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:259:0
 	{
 		shr r2, r2, 24
 		ldw r3, sp[6]
 	}
 .Ltmp318:
-	.loc	1 230 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:230:7
+	.loc	1 260 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:260:7
 	{
 		eq r2, r2, r3
 		nop
@@ -3883,7 +3883,7 @@ SendCmd:                                # @SendCmd
 # BB#59:                                # %ifdone741
 .Lxtalabel84:
 	#DEBUG_VALUE: Crc0 <- 0
-	.loc	1 228 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:228:0
+	.loc	1 258 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:258:0
 	{
 		mov r2, r0
 		nop
@@ -3902,7 +3902,7 @@ SendCmd:                                # @SendCmd
 		nop
 		ld8u r1, r11[r1]
 	}
-	.loc	1 232 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:232:0
+	.loc	1 262 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:262:0
 	{
 		shl r1, r1, 24
 		mkmsk r3, 2
@@ -3911,12 +3911,12 @@ SendCmd:                                # @SendCmd
 		nop
 		ld8u r3, r11[r3]
 	}
-	.loc	1 232 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:232:0
+	.loc	1 262 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:262:0
 	{
 		shl r3, r3, 16
 		nop
 	}
-	.loc	1 232 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:232:0
+	.loc	1 262 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:262:0
 	{
 		or r1, r3, r1
 		ldc r3, 2
@@ -3925,12 +3925,12 @@ SendCmd:                                # @SendCmd
 		nop
 		ld8u r3, r11[r3]
 	}
-	.loc	1 232 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:232:0
+	.loc	1 262 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:262:0
 	{
 		shl r3, r3, 8
 		nop
 	}
-	.loc	1 232 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:232:0
+	.loc	1 262 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:262:0
 	{
 		or r1, r1, r3
 		mkmsk r8, 1
@@ -3939,18 +3939,18 @@ SendCmd:                                # @SendCmd
 		nop
 		ld8u r3, r11[r8]
 	}
-	.loc	1 232 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:232:0
+	.loc	1 262 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:262:0
 	{
 		or r1, r1, r3
 		nop
 	}
 .Ltmp319:
 	#DEBUG_VALUE: SendCmd:Arg <- R1
-	.loc	1 233 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:233:0
+	.loc	1 263 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:263:0
 	crc32 r2, r1, r5
 .Ltmp320:
 	#DEBUG_VALUE: Crc0 <- R2
-	.loc	1 235 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:235:0
+	.loc	1 265 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:265:0
 	crc32 r2, r0, r5
 .Ltmp321:
 	{
@@ -3961,7 +3961,7 @@ SendCmd:                                # @SendCmd
 		nop
 		ld8u r0, r11[r0]
 	}
-	.loc	1 236 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:236:7
+	.loc	1 266 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:266:7
 	{
 		mov r1, r0
 		nop
@@ -3971,7 +3971,7 @@ SendCmd:                                # @SendCmd
 		zext r1, 7
 		nop
 	}
-	.loc	1 236 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:236:7
+	.loc	1 266 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:266:7
 	{
 		eq r1, r2, r1
 		nop
@@ -3995,7 +3995,7 @@ SendCmd:                                # @SendCmd
 	bf r0, .LBB5_13
 # BB#56:                                # %switchcase732
 .Lxtalabel87:
-	.loc	1 242 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:242:7
+	.loc	1 272 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:272:7
 	{
 		ldc r0, 0
 		ldw r2, sp[9]
@@ -4005,7 +4005,7 @@ SendCmd:                                # @SendCmd
 		ld8u r0, r2[r0]
 	}
 	ldc r1, 252
-	.loc	1 242 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:242:7
+	.loc	1 272 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:272:7
 	{
 		eq r0, r0, r1
 		nop
@@ -4021,12 +4021,12 @@ SendCmd:                                # @SendCmd
 		nop
 		ld8u r0, r2[r0]
 	}
-	.loc	1 244 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:244:7
+	.loc	1 274 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:274:7
 	{
 		sext r0, 8
 		nop
 	}
-	.loc	1 244 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:244:7
+	.loc	1 274 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:274:7
 	ashr r0, r0, 32
 	bf r0, .LBB5_86
 	bu .LBB5_61
@@ -4045,7 +4045,7 @@ SendCmd:                                # @SendCmd
 	bf r0, .LBB5_61
 # BB#14:                                # %switchcase791
 .Lxtalabel90:
-	.loc	1 248 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:248:7
+	.loc	1 278 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:278:7
 	{
 		ldc r0, 0
 		ldw r2, sp[9]
@@ -4055,7 +4055,7 @@ SendCmd:                                # @SendCmd
 		ld8u r0, r2[r0]
 	}
 	ldc r1, 252
-	.loc	1 248 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:248:7
+	.loc	1 278 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:278:7
 	{
 		eq r0, r0, r1
 		nop
@@ -4067,12 +4067,12 @@ SendCmd:                                # @SendCmd
 		ldc r0, 5
 		nop
 	}
-	.loc	1 250 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:250:7
+	.loc	1 280 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:280:7
 	{
 		mkmsk r1, 8
 		ld8u r0, r2[r0]
 	}
-	.loc	1 250 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:250:7
+	.loc	1 280 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:280:7
 	{
 		eq r0, r0, r1
 		nop
@@ -4086,19 +4086,19 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: Dat <- -1
 	#DEBUG_VALUE: R <- -1
 	#DEBUG_VALUE: DatByteCount <- 0
-	.loc	1 257 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:257:27
+	.loc	1 287 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:287:27
 	{
 		get r11, id
 		ldw r1, r10[0]
 	}
 .Ltmp324:
-	.loc	1 92 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:92:0
+	.loc	1 122 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:122:0
 	ldaw r0, dp[__timers]
 	{
 		nop
 		ldw r6, r0[r11]
 	}
-	.loc	1 260 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:260:0
+	.loc	1 290 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:290:0
 .Ltmp325:
 	{
 		setc res[r6], 9
@@ -4120,26 +4120,26 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: R <- -1
 	#DEBUG_VALUE: DatByteCount <- 0
 	#DEBUG_VALUE: time <- R2
-	.loc	1 257 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:257:27
+	.loc	1 287 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:287:27
 .Lxta.endpoint_labels42:
 	{
 		out res[r1], r8
 		gettime r2
 	}
 .Ltmp327:
-	.loc	1 259 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:259:0
+	.loc	1 289 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:289:0
 	{
 		add r3, r2, 5
 		nop
 	}
 .Ltmp328:
 	#DEBUG_VALUE: time <- R3
-	.loc	1 260 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:260:0
+	.loc	1 290 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:290:0
 	{
 		setd res[r6], r3
 		nop
 	}
-	.loc	1 260 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:260:0
+	.loc	1 290 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:290:0
 .Ltmp329:
 .Lxta.endpoint_labels43:
 	{
@@ -4148,24 +4148,24 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp330:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 261 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:261:27
+	.loc	1 291 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:291:27
 .Lxta.endpoint_labels44:
 	{
 		out res[r1], r9
 		add r2, r2, 10
 	}
 .Ltmp331:
-	.loc	1 263 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:263:0
+	.loc	1 293 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:293:0
 	{
 		setd res[r6], r2
 		nop
 	}
-	.loc	1 263 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:263:0
+	.loc	1 293 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:293:0
 	{
 		setc res[r6], 9
 		nop
 	}
-	.loc	1 263 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:263:0
+	.loc	1 293 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:293:0
 .Ltmp332:
 .Lxta.endpoint_labels45:
 	{
@@ -4176,7 +4176,7 @@ SendCmd:                                # @SendCmd
 	# LOOPMARKER 4
 .Lxta.loop_labels4:
 	# LOOPMARKER 3
-	.loc	1 255 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:255:0
+	.loc	1 285 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:285:0
 	bt r0, .LBB5_62
 # BB#63:                                # %ifdone832
 .Lxtalabel93:
@@ -4190,7 +4190,7 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r2, sp[29]
 	}
-	.loc	1 266 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:266:3
+	.loc	1 296 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:296:3
 	ashr r0, r2, 32
 	bf r0, .LBB5_73
 # BB#64:                                # %LoopBody872.preheader
@@ -4200,7 +4200,7 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: Dat <- -1
 	#DEBUG_VALUE: R <- -1
 	#DEBUG_VALUE: DatByteCount <- 0
-	.loc	1 270 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:270:0
+	.loc	1 300 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:300:0
 	{
 		add r0, r10, 8
 		nop
@@ -4209,7 +4209,7 @@ SendCmd:                                # @SendCmd
 		nop
 		stw r0, sp[10]
 	}
-	.loc	1 270 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:270:0
+	.loc	1 300 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:300:0
 	{
 		ldc r7, 0
 		ldw r0, r10[2]
@@ -4243,31 +4243,31 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp334:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 278 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:278:27
+	.loc	1 308 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:308:27
 .Lxta.endpoint_labels46:
 	{
 		out res[r1], r7
 		gettime r2
 	}
 .Ltmp335:
-	.loc	1 280 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:280:0
+	.loc	1 310 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:310:0
 	{
 		add r3, r2, 5
 		nop
 	}
 .Ltmp336:
 	#DEBUG_VALUE: time <- R3
-	.loc	1 281 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:281:0
+	.loc	1 311 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:311:0
 	{
 		setd res[r6], r3
 		nop
 	}
-	.loc	1 281 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:281:0
+	.loc	1 311 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:311:0
 	{
 		setc res[r6], 9
 		nop
 	}
-	.loc	1 281 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:281:0
+	.loc	1 311 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:311:0
 .Ltmp337:
 .Lxta.endpoint_labels47:
 	{
@@ -4276,19 +4276,19 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp338:
 	#DEBUG_VALUE: time <- R3
-	.loc	1 282 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:282:27
+	.loc	1 312 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:312:27
 .Lxta.endpoint_labels48:
 	{
 		out res[r0], r7
 		add r3, r2, 10
 	}
 .Ltmp339:
-	.loc	1 284 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:284:0
+	.loc	1 314 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:314:0
 	{
 		setd res[r6], r3
 		nop
 	}
-	.loc	1 284 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:284:0
+	.loc	1 314 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:314:0
 .Ltmp340:
 .Lxta.endpoint_labels49:
 	{
@@ -4297,21 +4297,21 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp341:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 285 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:285:27
+	.loc	1 315 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:315:27
 .Lxta.endpoint_labels50:
 	{
 		out res[r1], r5
 		add r2, r2, r11
 	}
 .Ltmp342:
-	.loc	1 287 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:287:0
+	.loc	1 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:317:0
 	{
 		setd res[r6], r2
 		nop
 	}
 .Ltmp343:
 	#DEBUG_VALUE: j <- 128
-	.loc	1 287 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:287:0
+	.loc	1 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:317:0
 .Lxta.endpoint_labels51:
 	{
 		in r2, res[r6]
@@ -4362,12 +4362,12 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r2, r2[r8]
 	}
-	.loc	1 291 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:291:0
+	.loc	1 321 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:321:0
 	{
 		bitrev r2, r2
 		nop
 	}
-	.loc	1 291 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:291:0
+	.loc	1 321 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:321:0
 	{
 		byterev r9, r2
 		nop
@@ -4375,46 +4375,46 @@ SendCmd:                                # @SendCmd
 .Ltmp344:
 	#DEBUG_VALUE: Dat <- R9
 	ldw r11, cp[.LCPI5_5]
-	.loc	1 293 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:293:0
+	.loc	1 323 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:323:0
 	{
 		and r2, r9, r11
 		nop
 	}
 .Ltmp345:
 	#DEBUG_VALUE: D3 <- R2
-	.loc	1 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:294:0
+	.loc	1 324 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:324:0
 	{
 		shr r3, r2, 3
 		nop
 	}
-	.loc	1 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:294:0
+	.loc	1 324 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:324:0
 	{
 		or r2, r3, r2
 		nop
 	}
 .Ltmp346:
 	ldw r8, cp[.LCPI5_6]
-	.loc	1 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:294:0
+	.loc	1 324 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:324:0
 	{
 		and r2, r2, r8
 		nop
 	}
-	.loc	1 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:294:0
+	.loc	1 324 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:324:0
 	{
 		shr r3, r2, 6
 		nop
 	}
-	.loc	1 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:294:0
+	.loc	1 324 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:324:0
 	{
 		or r2, r3, r2
 		ldc r10, 12
 	}
-	.loc	1 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:294:0
+	.loc	1 324 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:324:0
 	{
 		shr r3, r2, r10
 		nop
 	}
-	.loc	1 294 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:294:0
+	.loc	1 324 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:324:0
 	{
 		or r2, r3, r2
 		nop
@@ -4424,157 +4424,157 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r3, sp[19]
 	}
-	.loc	1 295 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:295:0
+	.loc	1 325 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:325:0
 	crc8 r3, r2, r2, r5
-	.loc	1 297 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:297:0
+	.loc	1 327 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:327:0
 	{
 		shr r2, r9, 1
 		stw r3, sp[19]
 	}
-	.loc	1 297 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:297:0
+	.loc	1 327 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:327:0
 	{
 		and r2, r2, r11
 		nop
 	}
 .Ltmp347:
 	#DEBUG_VALUE: D2 <- R2
-	.loc	1 298 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:298:0
+	.loc	1 328 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:328:0
 	{
 		shr r3, r2, 3
 		nop
 	}
-	.loc	1 298 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:298:0
+	.loc	1 328 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:328:0
 	{
 		or r2, r3, r2
 		nop
 	}
 .Ltmp348:
-	.loc	1 298 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:298:0
+	.loc	1 328 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:328:0
 	{
 		and r2, r2, r8
 		nop
 	}
-	.loc	1 298 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:298:0
+	.loc	1 328 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:328:0
 	{
 		shr r3, r2, 6
 		nop
 	}
-	.loc	1 298 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:298:0
+	.loc	1 328 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:328:0
 	{
 		or r2, r3, r2
 		nop
 	}
-	.loc	1 298 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:298:0
+	.loc	1 328 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:328:0
 	{
 		shr r3, r2, r10
 		nop
 	}
-	.loc	1 298 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:298:0
+	.loc	1 328 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:328:0
 	{
 		or r2, r3, r2
 		ldw r3, sp[18]
 	}
-	.loc	1 299 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:299:0
+	.loc	1 329 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:329:0
 	crc8 r3, r2, r2, r5
-	.loc	1 301 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:301:0
+	.loc	1 331 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:331:0
 	{
 		shr r2, r9, 2
 		stw r3, sp[18]
 	}
-	.loc	1 301 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:301:0
+	.loc	1 331 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:331:0
 	{
 		and r2, r2, r11
 		nop
 	}
 .Ltmp349:
 	#DEBUG_VALUE: D1 <- R2
-	.loc	1 302 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:302:0
+	.loc	1 332 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:332:0
 	{
 		shr r3, r2, 3
 		nop
 	}
-	.loc	1 302 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:302:0
+	.loc	1 332 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:332:0
 	{
 		or r2, r3, r2
 		nop
 	}
 .Ltmp350:
-	.loc	1 302 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:302:0
+	.loc	1 332 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:332:0
 	{
 		and r2, r2, r8
 		nop
 	}
-	.loc	1 302 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:302:0
+	.loc	1 332 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:332:0
 	{
 		shr r3, r2, 6
 		nop
 	}
-	.loc	1 302 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:302:0
+	.loc	1 332 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:332:0
 	{
 		or r2, r3, r2
 		nop
 	}
-	.loc	1 302 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:302:0
+	.loc	1 332 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:332:0
 	{
 		shr r3, r2, r10
 		nop
 	}
-	.loc	1 302 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:302:0
+	.loc	1 332 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:332:0
 	{
 		or r2, r3, r2
 		ldw r3, sp[17]
 	}
-	.loc	1 303 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:303:0
+	.loc	1 333 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:333:0
 	crc8 r3, r2, r2, r5
-	.loc	1 305 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:305:0
+	.loc	1 335 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:335:0
 	{
 		shr r2, r9, 3
 		stw r3, sp[17]
 	}
-	.loc	1 305 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:305:0
+	.loc	1 335 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:335:0
 	{
 		and r2, r2, r11
 		nop
 	}
 .Ltmp351:
 	#DEBUG_VALUE: D0 <- R2
-	.loc	1 306 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:306:0
+	.loc	1 336 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:336:0
 	{
 		shr r3, r2, 3
 		nop
 	}
-	.loc	1 306 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:306:0
+	.loc	1 336 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:336:0
 	{
 		or r2, r3, r2
 		nop
 	}
 .Ltmp352:
-	.loc	1 306 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:306:0
+	.loc	1 336 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:336:0
 	{
 		and r2, r2, r8
 		nop
 	}
-	.loc	1 306 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:306:0
+	.loc	1 336 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:336:0
 	{
 		shr r3, r2, 6
 		nop
 	}
-	.loc	1 306 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:306:0
+	.loc	1 336 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:336:0
 	{
 		or r2, r3, r2
 		nop
 	}
-	.loc	1 306 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:306:0
+	.loc	1 336 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:336:0
 	{
 		shr r3, r2, r10
 		nop
 	}
-	.loc	1 306 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:306:0
+	.loc	1 336 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:336:0
 	{
 		or r2, r3, r2
 		ldw r3, sp[16]
 	}
-	.loc	1 307 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:307:0
+	.loc	1 337 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:337:0
 	crc8 r3, r2, r2, r5
 .Ltmp353:
 	#DEBUG_VALUE: i <- 8
@@ -4599,13 +4599,13 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: Crc3 <- 0
 	#DEBUG_VALUE: Crc2 <- 0
 	#DEBUG_VALUE: Crc1 <- 0
-	.loc	1 315 33                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:315:33
+	.loc	1 345 33                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:345:33
 .Lxta.endpoint_labels52:
 	{
 		out res[r1], r7
 		gettime r3
 	}
-	.loc	1 317 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:317:0
+	.loc	1 347 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:347:0
 .Ltmp355:
 	{
 		add r11, r3, 5
@@ -4613,12 +4613,12 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp356:
 	#DEBUG_VALUE: time <- R11
-	.loc	1 318 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:318:0
+	.loc	1 348 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:348:0
 	{
 		setd res[r6], r11
 		nop
 	}
-	.loc	1 318 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:318:0
+	.loc	1 348 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:348:0
 .Ltmp357:
 .Lxta.endpoint_labels53:
 	{
@@ -4628,31 +4628,31 @@ SendCmd:                                # @SendCmd
 .Ltmp358:
 	#DEBUG_VALUE: Dat <- R9
 	#DEBUG_VALUE: time <- R11
-	.loc	1 319 38                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:319:38
+	.loc	1 349 38                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:349:38
 .Lxta.endpoint_labels54:
 	{
 		outshr res[r0], r9
 		add r11, r3, 10
 	}
 .Ltmp359:
-	.loc	1 321 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:321:0
+	.loc	1 351 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:351:0
 	{
 		setd res[r6], r11
 		nop
 	}
-	.loc	1 321 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:321:0
+	.loc	1 351 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:351:0
 	{
 		setc res[r6], 9
 		nop
 	}
-	.loc	1 321 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:321:0
+	.loc	1 351 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:351:0
 .Ltmp360:
 .Lxta.endpoint_labels55:
 	{
 		in r11, res[r6]
 		nop
 	}
-	.loc	1 322 33                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:322:33
+	.loc	1 352 33                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:352:33
 .Lxta.endpoint_labels56:
 	{
 		out res[r1], r5
@@ -4662,7 +4662,7 @@ SendCmd:                                # @SendCmd
 	# LOOPMARKER 6
 .Lxta.loop_labels5:
 	# LOOPMARKER 5
-	.loc	1 309 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:309:0
+	.loc	1 339 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:339:0
 	bt r2, .LBB5_67
 .Ltmp361:
 # BB#68:                                # %ifdone990
@@ -4683,12 +4683,12 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r8, sp[14]
 	}
-	.loc	1 291 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:291:0
+	.loc	1 321 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:321:0
 	{
 		add r8, r8, 1
 		mkmsk r11, 4
 	}
-	.loc	1 323 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:323:0
+	.loc	1 353 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:353:0
 .Ltmp362:
 	{
 		add r2, r3, r11
@@ -4696,19 +4696,19 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp363:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 324 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:324:0
+	.loc	1 354 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:354:0
 	{
 		setd res[r6], r2
 		nop
 	}
-	.loc	1 324 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:324:0
+	.loc	1 354 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:354:0
 	{
 		setc res[r6], 9
 		nop
 	}
 .Ltmp364:
 	#DEBUG_VALUE: j <- R4
-	.loc	1 324 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:324:0
+	.loc	1 354 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:354:0
 .Lxta.endpoint_labels57:
 	{
 		in r2, res[r6]
@@ -4738,7 +4738,7 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r10, sp[16]
 	}
-	.loc	1 329 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:329:0
+	.loc	1 359 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:359:0
 	crc32 r10, r7, r2
 .Ltmp367:
 	#DEBUG_VALUE: Crc0 <- R10
@@ -4746,7 +4746,7 @@ SendCmd:                                # @SendCmd
 		mov r4, r7
 		ldw r7, sp[17]
 	}
-	.loc	1 330 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:330:0
+	.loc	1 360 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:360:0
 	crc32 r7, r4, r2
 .Ltmp368:
 	#DEBUG_VALUE: Crc1 <- R7
@@ -4754,7 +4754,7 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r9, sp[18]
 	}
-	.loc	1 331 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:331:0
+	.loc	1 361 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:361:0
 	crc32 r9, r4, r2
 .Ltmp369:
 	#DEBUG_VALUE: Crc2 <- R9
@@ -4762,7 +4762,7 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r3, sp[19]
 	}
-	.loc	1 332 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:332:0
+	.loc	1 362 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:362:0
 	crc32 r3, r4, r2
 .Ltmp370:
 	#DEBUG_VALUE: Crc3 <- R3
@@ -4803,7 +4803,7 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r2, sp[19]
 	}
-	.loc	1 335 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:335:0
+	.loc	1 365 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:365:0
 	{
 		zext r2, 1
 		shl r3, r9, 1
@@ -4812,12 +4812,12 @@ SendCmd:                                # @SendCmd
 		ldc r10, 2
 		nop
 	}
-	.loc	1 335 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:335:0
+	.loc	1 365 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:365:0
 	{
 		and r3, r3, r10
 		nop
 	}
-	.loc	1 335 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:335:0
+	.loc	1 365 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:365:0
 	{
 		or r2, r3, r2
 		shl r3, r8, 2
@@ -4826,12 +4826,12 @@ SendCmd:                                # @SendCmd
 		ldc r10, 4
 		nop
 	}
-	.loc	1 335 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:335:0
+	.loc	1 365 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:365:0
 	{
 		and r3, r3, r10
 		nop
 	}
-	.loc	1 335 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:335:0
+	.loc	1 365 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:365:0
 	{
 		or r2, r2, r3
 		shl r3, r7, 3
@@ -4840,21 +4840,21 @@ SendCmd:                                # @SendCmd
 		ldc r10, 8
 		nop
 	}
-	.loc	1 335 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:335:0
+	.loc	1 365 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:365:0
 	{
 		and r3, r3, r10
 		nop
 	}
 .Ltmp373:
 	#DEBUG_VALUE: Dat <- R10
-	.loc	1 335 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:335:0
+	.loc	1 365 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:365:0
 	{
 		or r10, r2, r3
 		ldc r2, 0
 	}
 .Ltmp374:
 	#DEBUG_VALUE: time <- R3
-	.loc	1 340 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:340:29
+	.loc	1 370 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:370:29
 .Lxta.endpoint_labels58:
 	{
 		out res[r1], r2
@@ -4869,7 +4869,7 @@ SendCmd:                                # @SendCmd
 		mov r8, r9
 		mov r9, r11
 	}
-	.loc	1 342 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:342:0
+	.loc	1 372 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:372:0
 .Ltmp376:
 	{
 		add r11, r3, 5
@@ -4877,12 +4877,12 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp377:
 	#DEBUG_VALUE: time <- R11
-	.loc	1 343 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:343:0
+	.loc	1 373 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:373:0
 	{
 		setd res[r6], r11
 		nop
 	}
-	.loc	1 343 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:343:0
+	.loc	1 373 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:373:0
 .Ltmp378:
 .Lxta.endpoint_labels59:
 	{
@@ -4900,24 +4900,24 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp380:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 344 31                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:344:31
+	.loc	1 374 31                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:374:31
 .Lxta.endpoint_labels60:
 	{
 		out res[r0], r10
 		add r2, r3, 10
 	}
 .Ltmp381:
-	.loc	1 346 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:346:0
+	.loc	1 376 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:376:0
 	{
 		setd res[r6], r2
 		nop
 	}
-	.loc	1 346 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:346:0
+	.loc	1 376 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:376:0
 	{
 		setc res[r6], 9
 		nop
 	}
-	.loc	1 346 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:346:0
+	.loc	1 376 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:376:0
 .Ltmp382:
 .Lxta.endpoint_labels61:
 	{
@@ -4926,19 +4926,19 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp383:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 347 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:347:29
+	.loc	1 377 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:377:29
 .Lxta.endpoint_labels62:
 	{
 		out res[r1], r5
 		add r2, r3, r11
 	}
 .Ltmp384:
-	.loc	1 349 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:349:0
+	.loc	1 379 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:379:0
 	{
 		setd res[r6], r2
 		nop
 	}
-	.loc	1 349 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:349:0
+	.loc	1 379 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:379:0
 .Ltmp385:
 .Lxta.endpoint_labels63:
 	{
@@ -4952,7 +4952,7 @@ SendCmd:                                # @SendCmd
 .Ltmp386:
 	#DEBUG_VALUE: Crc3 <- R2
 	#DEBUG_VALUE: Crc2 <- R9
-	.loc	1 351 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:351:0
+	.loc	1 381 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:381:0
 	{
 		shr r2, r2, 1
 		shr r9, r9, 1
@@ -4960,13 +4960,13 @@ SendCmd:                                # @SendCmd
 .Ltmp387:
 	#DEBUG_VALUE: Crc1 <- R8
 	#DEBUG_VALUE: Crc0 <- R7
-	.loc	1 351 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:351:0
+	.loc	1 381 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:381:0
 	{
 		shr r8, r8, 1
 		shr r7, r7, 1
 	}
 .Ltmp388:
-	.loc	1 333 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:333:0
+	.loc	1 363 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:363:0
 	{
 		add r4, r4, 1
 		nop
@@ -4994,31 +4994,31 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp389:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 357 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:357:27
+	.loc	1 387 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:387:27
 .Lxta.endpoint_labels64:
 	{
 		out res[r1], r4
 		gettime r2
 	}
 .Ltmp390:
-	.loc	1 359 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:359:0
+	.loc	1 389 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:389:0
 	{
 		add r3, r2, 5
 		nop
 	}
 .Ltmp391:
 	#DEBUG_VALUE: time <- R3
-	.loc	1 360 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:360:0
+	.loc	1 390 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:390:0
 	{
 		setd res[r6], r3
 		nop
 	}
-	.loc	1 360 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:360:0
+	.loc	1 390 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:390:0
 	{
 		setc res[r6], 9
 		nop
 	}
-	.loc	1 360 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:360:0
+	.loc	1 390 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:390:0
 .Ltmp392:
 .Lxta.endpoint_labels65:
 	{
@@ -5027,19 +5027,19 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp393:
 	#DEBUG_VALUE: time <- R3
-	.loc	1 361 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:361:29
+	.loc	1 391 29                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:391:29
 .Lxta.endpoint_labels66:
 	{
 		out res[r0], r11
 		add r3, r2, 10
 	}
 .Ltmp394:
-	.loc	1 363 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:363:0
+	.loc	1 393 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:393:0
 	{
 		setd res[r6], r3
 		nop
 	}
-	.loc	1 363 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:363:0
+	.loc	1 393 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:393:0
 .Ltmp395:
 .Lxta.endpoint_labels67:
 	{
@@ -5048,26 +5048,26 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp396:
 	#DEBUG_VALUE: time <- R2
-	.loc	1 364 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:364:27
+	.loc	1 394 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:394:27
 .Lxta.endpoint_labels68:
 	{
 		out res[r1], r5
 		add r2, r2, r11
 	}
 .Ltmp397:
-	.loc	1 366 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:366:0
+	.loc	1 396 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:396:0
 	{
 		setd res[r6], r2
 		nop
 	}
-	.loc	1 366 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:366:0
+	.loc	1 396 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:396:0
 .Ltmp398:
 .Lxta.endpoint_labels69:
 	{
 		in r2, res[r6]
 		nop
 	}
-	.loc	1 368 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:368:7
+	.loc	1 398 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:398:7
 	ldw r2, dp[Is_XS1_G_Core]
 	{
 		mov r7, r4
@@ -5082,7 +5082,7 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: RespByteCount <- 0
 	#DEBUG_VALUE: R <- -1
 	#DEBUG_VALUE: DatByteCount <- 0
-	.loc	1 369 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:369:0
+	.loc	1 399 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:399:0
 .Lxta.call_labels19:
 	bl set_port_pull_up
 	{
@@ -5129,7 +5129,7 @@ SendCmd:                                # @SendCmd
 		ldw r2, sp[13]
 	}
 	ldc r3, 128
-	.loc	1 289 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:289:0
+	.loc	1 319 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:319:0
 	{
 		add r2, r2, r3
 		nop
@@ -5137,19 +5137,19 @@ SendCmd:                                # @SendCmd
 .Ltmp400:
 	#DEBUG_VALUE: DatByteCount <- [SP+52]
 	#DEBUG_VALUE: i <- 8
-	.loc	1 370 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:370:0
+	.loc	1 400 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:400:0
 	{
 		setc res[r0], 1
 		stw r2, sp[13]
 	}
-	.loc	1 370 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:370:0
+	.loc	1 400 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:400:0
 .Ltmp401:
 .Lxta.endpoint_labels70:
 	{
 		in r2, res[r0]
 		nop
 	}
-	.loc	1 379 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:379:0
+	.loc	1 409 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:409:0
 .Ltmp402:
 	{
 		setc res[r6], 9
@@ -5167,26 +5167,26 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: R <- -1
 	#DEBUG_VALUE: DatByteCount <- [SP+52]
 	#DEBUG_VALUE: time <- R3
-	.loc	1 376 31                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:376:31
+	.loc	1 406 31                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:406:31
 .Lxta.endpoint_labels71:
 	{
 		out res[r1], r7
 		gettime r3
 	}
 .Ltmp404:
-	.loc	1 378 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:378:0
+	.loc	1 408 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:408:0
 	{
 		add r11, r3, 5
 		nop
 	}
 .Ltmp405:
 	#DEBUG_VALUE: time <- R11
-	.loc	1 379 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:379:0
+	.loc	1 409 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:409:0
 	{
 		setd res[r6], r11
 		nop
 	}
-	.loc	1 379 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:379:0
+	.loc	1 409 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:409:0
 .Ltmp406:
 .Lxta.endpoint_labels72:
 	{
@@ -5195,24 +5195,24 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp407:
 	#DEBUG_VALUE: time <- R3
-	.loc	1 380 31                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:380:31
+	.loc	1 410 31                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:410:31
 .Lxta.endpoint_labels73:
 	{
 		out res[r1], r5
 		add r3, r3, 10
 	}
 .Ltmp408:
-	.loc	1 382 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:382:0
+	.loc	1 412 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:412:0
 	{
 		setd res[r6], r3
 		nop
 	}
-	.loc	1 382 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:382:0
+	.loc	1 412 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:412:0
 	{
 		setc res[r6], 9
 		nop
 	}
-	.loc	1 382 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:382:0
+	.loc	1 412 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:412:0
 .Ltmp409:
 .Lxta.endpoint_labels74:
 	{
@@ -5223,7 +5223,7 @@ SendCmd:                                # @SendCmd
 	# LOOPMARKER 12
 .Lxta.loop_labels8:
 	# LOOPMARKER 11
-	.loc	1 371 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:371:0
+	.loc	1 401 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:401:0
 	bt r2, .LBB5_79
 .Ltmp410:
 # BB#80:                                #   in Loop: Header=BB5_65 Depth=1
@@ -5234,31 +5234,31 @@ SendCmd:                                # @SendCmd
 .Lxtalabel104:
 .Ltmp411:
 	#DEBUG_VALUE: time <- R3
-	.loc	1 391 31                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:391:31
+	.loc	1 421 31                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:421:31
 .Lxta.endpoint_labels75:
 	{
 		out res[r1], r7
 		gettime r3
 	}
 .Ltmp412:
-	.loc	1 393 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:393:0
+	.loc	1 423 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:423:0
 	{
 		add r11, r3, 5
 		nop
 	}
 .Ltmp413:
 	#DEBUG_VALUE: time <- R11
-	.loc	1 394 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:394:0
+	.loc	1 424 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:424:0
 	{
 		setd res[r6], r11
 		nop
 	}
-	.loc	1 394 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:394:0
+	.loc	1 424 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:424:0
 	{
 		setc res[r6], 9
 		nop
 	}
-	.loc	1 394 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:394:0
+	.loc	1 424 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:424:0
 .Ltmp414:
 .Lxta.endpoint_labels76:
 	{
@@ -5267,47 +5267,47 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp415:
 	#DEBUG_VALUE: time <- R3
-	.loc	1 395 31                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:395:31
+	.loc	1 425 31                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:425:31
 .Lxta.endpoint_labels77:
 	{
 		out res[r1], r5
 		add r3, r3, 10
 	}
 .Ltmp416:
-	.loc	1 397 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:397:0
+	.loc	1 427 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:427:0
 	{
 		setd res[r6], r3
 		nop
 	}
-	.loc	1 397 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:397:0
+	.loc	1 427 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:427:0
 .Ltmp417:
 .Lxta.endpoint_labels78:
 	{
 		in r3, res[r6]
 		nop
 	}
-	.loc	1 399 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:399:0
+	.loc	1 429 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:429:0
 	{
 		setc res[r0], 1
 		nop
 	}
 .Ltmp418:
 	#DEBUG_VALUE: Dat <- R3
-	.loc	1 399 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:399:0
+	.loc	1 429 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:429:0
 .Lxta.endpoint_labels79:
 	{
 		in r3, res[r0]
 		add r2, r2, 1
 	}
 .Ltmp419:
-	.loc	1 400 11                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:400:11
+	.loc	1 430 11                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:430:11
 	bf r2, .LBB5_82
 # BB#83:                                # %LoopTest1181
                                         #   in Loop: Header=BB5_81 Depth=2
 .Lxtalabel105:
 .Ltmp420:
 	#DEBUG_VALUE: Dat <- R3
-	.loc	1 402 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:402:7
+	.loc	1 432 7                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:432:7
 	{
 		and r3, r3, r9
 		nop
@@ -5323,7 +5323,7 @@ SendCmd:                                # @SendCmd
 		nop
 		ldw r2, sp[11]
 	}
-	.loc	1 404 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:404:5
+	.loc	1 434 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:434:5
 	{
 		add r2, r2, 1
 		nop
@@ -5345,7 +5345,7 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: Dat <- -1
 	#DEBUG_VALUE: R <- -1
 	#DEBUG_VALUE: DatByteCount <- 0
-	.loc	1 407 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:407:3
+	.loc	1 437 3                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:437:3
 	{
 		eq r0, r4, 2
 		nop
@@ -5378,31 +5378,31 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: DatByteCount <- 0
 .Ltmp423:
 	#DEBUG_VALUE: time <- R11
-	.loc	1 415 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:415:27
+	.loc	1 445 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:445:27
 .Lxta.endpoint_labels80:
 	{
 		out res[r1], r8
 		gettime r11
 	}
 .Ltmp424:
-	.loc	1 417 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:417:0
+	.loc	1 447 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:447:0
 	{
 		add r4, r11, 5
 		nop
 	}
 .Ltmp425:
 	#DEBUG_VALUE: time <- R4
-	.loc	1 418 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:418:0
+	.loc	1 448 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:448:0
 	{
 		setd res[r6], r4
 		nop
 	}
-	.loc	1 418 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:418:0
+	.loc	1 448 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:448:0
 	{
 		setc res[r6], 9
 		nop
 	}
-	.loc	1 418 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:418:0
+	.loc	1 448 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:448:0
 .Ltmp426:
 .Lxta.endpoint_labels81:
 	{
@@ -5411,33 +5411,33 @@ SendCmd:                                # @SendCmd
 	}
 .Ltmp427:
 	#DEBUG_VALUE: time <- R11
-	.loc	1 419 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:419:27
+	.loc	1 449 27                # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:449:27
 .Lxta.endpoint_labels82:
 	{
 		out res[r1], r9
 		add r11, r11, 10
 	}
 .Ltmp428:
-	.loc	1 421 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:421:0
+	.loc	1 451 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:451:0
 	{
 		setd res[r6], r11
 		nop
 	}
-	.loc	1 421 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:421:0
+	.loc	1 451 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:451:0
 .Ltmp429:
 .Lxta.endpoint_labels83:
 	{
 		in r11, res[r6]
 		nop
 	}
-	.loc	1 423 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:423:0
+	.loc	1 453 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:453:0
 	{
 		setc res[r0], 1
 		nop
 	}
 .Ltmp430:
 	#DEBUG_VALUE: Dat <- R11
-	.loc	1 423 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:423:0
+	.loc	1 453 0                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:453:0
 .Lxta.endpoint_labels84:
 	{
 		in r11, res[r0]
@@ -5455,7 +5455,7 @@ SendCmd:                                # @SendCmd
 	#DEBUG_VALUE: Dat <- R11
 	#DEBUG_VALUE: R <- -1
 	#DEBUG_VALUE: DatByteCount <- 0
-	.loc	1 426 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:426:5
+	.loc	1 456 5                 # C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:456:5
 	{
 		and r11, r11, r3
 		nop
@@ -5778,7 +5778,7 @@ __xcc1_internal_3:
 	.long	.Linfo_string3          # DW_AT_name
 	.long	52                      # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	71                      # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	SDif
@@ -5794,42 +5794,42 @@ __xcc1_internal_3:
 	.long	.Linfo_string13         # DW_AT_name
 	.byte	24                      # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	71                      # DW_AT_decl_line
 	.byte	6                       # Abbrev [6] 0x49:0xc DW_TAG_member
 	.long	.Linfo_string4          # DW_AT_name
 	.long	146                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	71                      # DW_AT_decl_line
 	.byte	0                       # DW_AT_data_member_location
 	.byte	6                       # Abbrev [6] 0x55:0xc DW_TAG_member
 	.long	.Linfo_string6          # DW_AT_name
 	.long	146                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	71                      # DW_AT_decl_line
 	.byte	4                       # DW_AT_data_member_location
 	.byte	6                       # Abbrev [6] 0x61:0xc DW_TAG_member
 	.long	.Linfo_string7          # DW_AT_name
 	.long	146                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	71                      # DW_AT_decl_line
 	.byte	8                       # DW_AT_data_member_location
 	.byte	6                       # Abbrev [6] 0x6d:0xc DW_TAG_member
 	.long	.Linfo_string8          # DW_AT_name
 	.long	153                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	71                      # DW_AT_decl_line
 	.byte	12                      # DW_AT_data_member_location
 	.byte	6                       # Abbrev [6] 0x79:0xc DW_TAG_member
 	.long	.Linfo_string10         # DW_AT_name
 	.long	160                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	71                      # DW_AT_decl_line
 	.byte	16                      # DW_AT_data_member_location
 	.byte	6                       # Abbrev [6] 0x85:0xc DW_TAG_member
 	.long	.Linfo_string12         # DW_AT_name
 	.long	153                     # DW_AT_type
 	.byte	1                       # DW_AT_decl_file
-	.byte	41                      # DW_AT_decl_line
+	.byte	71                      # DW_AT_decl_line
 	.byte	20                      # DW_AT_data_member_location
 	.byte	0                       # End Of Children Mark
 	.byte	7                       # Abbrev [7] 0x92:0x7 DW_TAG_base_type
@@ -5853,7 +5853,7 @@ __xcc1_internal_3:
 	.long	196                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	1                       # DW_AT_decl_file
-	.byte	72                      # DW_AT_decl_line
+	.byte	102                     # DW_AT_decl_line
 	.byte	5                       # DW_AT_location
 	.byte	3
 	.long	Is_XS1_G_Core
@@ -5866,7 +5866,7 @@ __xcc1_internal_3:
 	.long	.Linfo_string22         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	77                      # DW_AT_decl_line
+	.byte	107                     # DW_AT_decl_line
 	.byte	11                      # Abbrev [11] 0xd3:0x6 DW_TAG_enumerator
 	.long	.Linfo_string17         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
@@ -5887,7 +5887,7 @@ __xcc1_internal_3:
 	.long	.Linfo_string30         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	77                      # DW_AT_decl_line
+	.byte	107                     # DW_AT_decl_line
 	.byte	11                      # Abbrev [11] 0xfa:0x6 DW_TAG_enumerator
 	.long	.Linfo_string23         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
@@ -5914,7 +5914,7 @@ __xcc1_internal_3:
 	.long	.Linfo_string30         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.byte	76                      # DW_AT_decl_line
+	.byte	106                     # DW_AT_decl_line
 	.byte	11                      # Abbrev [11] 0x12d:0x6 DW_TAG_enumerator
 	.long	.Linfo_string23         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
@@ -5941,7 +5941,7 @@ __xcc1_internal_3:
 	.long	.Linfo_string22         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.short	498                     # DW_AT_decl_line
+	.short	528                     # DW_AT_decl_line
 	.byte	11                      # Abbrev [11] 0x161:0x6 DW_TAG_enumerator
 	.long	.Linfo_string17         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
@@ -5962,7 +5962,7 @@ __xcc1_internal_3:
 	.long	.Linfo_string22         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.short	516                     # DW_AT_decl_line
+	.short	546                     # DW_AT_decl_line
 	.byte	11                      # Abbrev [11] 0x189:0x6 DW_TAG_enumerator
 	.long	.Linfo_string17         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
@@ -5983,7 +5983,7 @@ __xcc1_internal_3:
 	.long	.Linfo_string22         # DW_AT_name
 	.byte	4                       # DW_AT_byte_size
 	.byte	1                       # DW_AT_decl_file
-	.short	546                     # DW_AT_decl_line
+	.short	576                     # DW_AT_decl_line
 	.byte	11                      # Abbrev [11] 0x1b1:0x6 DW_TAG_enumerator
 	.long	.Linfo_string17         # DW_AT_name
 	.byte	0                       # DW_AT_const_value
@@ -6008,14 +6008,14 @@ __xcc1_internal_3:
 	.long	.Linfo_string35         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string35         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	434                     # DW_AT_decl_line
+	.short	464                     # DW_AT_decl_line
 	.long	160                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	14                      # Abbrev [14] 0x1e8:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc0            # DW_AT_location
 	.long	.Linfo_string43         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	433                     # DW_AT_decl_line
+	.short	463                     # DW_AT_decl_line
 	.long	160                     # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x1f8:0x50 DW_TAG_lexical_block
 	.long	.Ldebug_ranges3         # DW_AT_ranges
@@ -6023,13 +6023,13 @@ __xcc1_internal_3:
 	.long	.Ldebug_loc1            # DW_AT_location
 	.long	.Linfo_string44         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	435                     # DW_AT_decl_line
+	.short	465                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	16                      # Abbrev [16] 0x20d:0x10 DW_TAG_variable
 	.long	.Ldebug_loc2            # DW_AT_location
 	.long	.Linfo_string46         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	435                     # DW_AT_decl_line
+	.short	465                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x21d:0x2a DW_TAG_lexical_block
 	.long	.Ldebug_ranges2         # DW_AT_ranges
@@ -6039,7 +6039,7 @@ __xcc1_internal_3:
 	.byte	32
 	.long	.Linfo_string41         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	436                     # DW_AT_decl_line
+	.short	466                     # DW_AT_decl_line
 	.long	1622                    # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x231:0x15 DW_TAG_lexical_block
 	.long	.Ldebug_ranges1         # DW_AT_ranges
@@ -6049,7 +6049,7 @@ __xcc1_internal_3:
 	.byte	28
 	.long	.Linfo_string42         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	437                     # DW_AT_decl_line
+	.short	467                     # DW_AT_decl_line
 	.long	1635                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -6063,21 +6063,21 @@ __xcc1_internal_3:
 	.long	.Linfo_string38         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string38         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	533                     # DW_AT_decl_line
+	.short	563                     # DW_AT_decl_line
 	.long	160                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	14                      # Abbrev [14] 0x261:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc3            # DW_AT_location
 	.long	.Linfo_string43         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	532                     # DW_AT_decl_line
+	.short	562                     # DW_AT_decl_line
 	.long	160                     # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x271:0x3c DW_TAG_lexical_block
 	.long	.Ldebug_ranges7         # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x276:0xc DW_TAG_variable
 	.long	.Linfo_string47         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	534                     # DW_AT_decl_line
+	.short	564                     # DW_AT_decl_line
 	.long	160                     # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x282:0x2a DW_TAG_lexical_block
 	.long	.Ldebug_ranges6         # DW_AT_ranges
@@ -6087,7 +6087,7 @@ __xcc1_internal_3:
 	.byte	36
 	.long	.Linfo_string42         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	535                     # DW_AT_decl_line
+	.short	565                     # DW_AT_decl_line
 	.long	1635                    # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x296:0x15 DW_TAG_lexical_block
 	.long	.Ldebug_ranges5         # DW_AT_ranges
@@ -6097,7 +6097,7 @@ __xcc1_internal_3:
 	.byte	16
 	.long	.Linfo_string41         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	536                     # DW_AT_decl_line
+	.short	566                     # DW_AT_decl_line
 	.long	1622                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -6111,32 +6111,32 @@ __xcc1_internal_3:
 	.long	.Linfo_string36         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string36         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	498                     # DW_AT_decl_line
+	.short	528                     # DW_AT_decl_line
 	.long	344                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	14                      # Abbrev [14] 0x2c6:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc4            # DW_AT_location
 	.long	.Linfo_string43         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	497                     # DW_AT_decl_line
+	.short	527                     # DW_AT_decl_line
 	.long	160                     # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x2d6:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc5            # DW_AT_location
 	.long	.Linfo_string48         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	497                     # DW_AT_decl_line
+	.short	527                     # DW_AT_decl_line
 	.long	1655                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x2e6:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc6            # DW_AT_location
 	.long	.Linfo_string49         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	497                     # DW_AT_decl_line
+	.short	527                     # DW_AT_decl_line
 	.long	153                     # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x2f6:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc7            # DW_AT_location
 	.long	.Linfo_string50         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	497                     # DW_AT_decl_line
+	.short	527                     # DW_AT_decl_line
 	.long	160                     # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x306:0x2a DW_TAG_lexical_block
 	.long	.Ldebug_ranges10        # DW_AT_ranges
@@ -6146,7 +6146,7 @@ __xcc1_internal_3:
 	.byte	20
 	.long	.Linfo_string41         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	499                     # DW_AT_decl_line
+	.short	529                     # DW_AT_decl_line
 	.long	1622                    # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x31a:0x15 DW_TAG_lexical_block
 	.long	.Ldebug_ranges9         # DW_AT_ranges
@@ -6156,7 +6156,7 @@ __xcc1_internal_3:
 	.byte	16
 	.long	.Linfo_string42         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	500                     # DW_AT_decl_line
+	.short	530                     # DW_AT_decl_line
 	.long	1635                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -6169,32 +6169,32 @@ __xcc1_internal_3:
 	.long	.Linfo_string37         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string37         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	516                     # DW_AT_decl_line
+	.short	546                     # DW_AT_decl_line
 	.long	384                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	14                      # Abbrev [14] 0x349:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc8            # DW_AT_location
 	.long	.Linfo_string43         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	515                     # DW_AT_decl_line
+	.short	545                     # DW_AT_decl_line
 	.long	160                     # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x359:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc9            # DW_AT_location
 	.long	.Linfo_string48         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	515                     # DW_AT_decl_line
+	.short	545                     # DW_AT_decl_line
 	.long	1665                    # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x369:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc10           # DW_AT_location
 	.long	.Linfo_string49         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	515                     # DW_AT_decl_line
+	.short	545                     # DW_AT_decl_line
 	.long	153                     # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x379:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc11           # DW_AT_location
 	.long	.Linfo_string50         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	515                     # DW_AT_decl_line
+	.short	545                     # DW_AT_decl_line
 	.long	160                     # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x389:0x2a DW_TAG_lexical_block
 	.long	.Ldebug_ranges13        # DW_AT_ranges
@@ -6204,7 +6204,7 @@ __xcc1_internal_3:
 	.byte	20
 	.long	.Linfo_string41         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	517                     # DW_AT_decl_line
+	.short	547                     # DW_AT_decl_line
 	.long	1622                    # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x39d:0x15 DW_TAG_lexical_block
 	.long	.Ldebug_ranges12        # DW_AT_ranges
@@ -6214,7 +6214,7 @@ __xcc1_internal_3:
 	.byte	16
 	.long	.Linfo_string42         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	518                     # DW_AT_decl_line
+	.short	548                     # DW_AT_decl_line
 	.long	1635                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -6227,33 +6227,33 @@ __xcc1_internal_3:
 	.long	.Linfo_string39         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string39         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	546                     # DW_AT_decl_line
+	.short	576                     # DW_AT_decl_line
 	.long	424                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	14                      # Abbrev [14] 0x3cc:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc12           # DW_AT_location
 	.long	.Linfo_string43         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	545                     # DW_AT_decl_line
+	.short	575                     # DW_AT_decl_line
 	.long	160                     # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x3dc:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc13           # DW_AT_location
 	.long	.Linfo_string51         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	545                     # DW_AT_decl_line
+	.short	575                     # DW_AT_decl_line
 	.long	160                     # DW_AT_type
 	.byte	14                      # Abbrev [14] 0x3ec:0x10 DW_TAG_formal_parameter
 	.long	.Ldebug_loc14           # DW_AT_location
 	.long	.Linfo_string52         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	545                     # DW_AT_decl_line
+	.short	575                     # DW_AT_decl_line
 	.long	1655                    # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x3fc:0x33 DW_TAG_lexical_block
 	.long	.Ldebug_ranges16        # DW_AT_ranges
 	.byte	18                      # Abbrev [18] 0x401:0xc DW_TAG_variable
 	.long	.Linfo_string44         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	547                     # DW_AT_decl_line
+	.short	577                     # DW_AT_decl_line
 	.long	153                     # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x40d:0x21 DW_TAG_lexical_block
 	.long	.Ldebug_ranges15        # DW_AT_ranges
@@ -6261,13 +6261,13 @@ __xcc1_internal_3:
 	.ascii	"\200\001"              # DW_AT_const_value
 	.long	.Linfo_string53         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	560                     # DW_AT_decl_line
+	.short	590                     # DW_AT_decl_line
 	.long	153                     # DW_AT_type
 	.byte	19                      # Abbrev [19] 0x420:0xd DW_TAG_variable
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string44         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	560                     # DW_AT_decl_line
+	.short	590                     # DW_AT_decl_line
 	.long	153                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -6280,44 +6280,44 @@ __xcc1_internal_3:
 	.long	.Linfo_string34         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string34         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	77                      # DW_AT_decl_line
+	.byte	107                     # DW_AT_decl_line
 	.long	203                     # DW_AT_type
 	.byte	21                      # Abbrev [21] 0x446:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc18           # DW_AT_location
 	.long	.Linfo_string56         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	76                      # DW_AT_decl_line
+	.byte	106                     # DW_AT_decl_line
 	.long	153                     # DW_AT_type
 	.byte	21                      # Abbrev [21] 0x455:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc33           # DW_AT_location
 	.long	.Linfo_string73         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	76                      # DW_AT_decl_line
+	.byte	106                     # DW_AT_decl_line
 	.long	196                     # DW_AT_type
 	.byte	22                      # Abbrev [22] 0x464:0xb DW_TAG_formal_parameter
 	.long	.Linfo_string43         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	76                      # DW_AT_decl_line
+	.byte	106                     # DW_AT_decl_line
 	.long	160                     # DW_AT_type
 	.byte	22                      # Abbrev [22] 0x46f:0xb DW_TAG_formal_parameter
 	.long	.Linfo_string6          # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	76                      # DW_AT_decl_line
+	.byte	106                     # DW_AT_decl_line
 	.long	160                     # DW_AT_type
 	.byte	22                      # Abbrev [22] 0x47a:0xb DW_TAG_formal_parameter
 	.long	.Linfo_string30         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	76                      # DW_AT_decl_line
+	.byte	106                     # DW_AT_decl_line
 	.long	293                     # DW_AT_type
 	.byte	22                      # Abbrev [22] 0x485:0xb DW_TAG_formal_parameter
 	.long	.Linfo_string48         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	76                      # DW_AT_decl_line
+	.byte	106                     # DW_AT_decl_line
 	.long	1655                    # DW_AT_type
 	.byte	22                      # Abbrev [22] 0x490:0xb DW_TAG_formal_parameter
 	.long	.Linfo_string41         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	76                      # DW_AT_decl_line
+	.byte	106                     # DW_AT_decl_line
 	.long	1680                    # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x49b:0x161 DW_TAG_lexical_block
 	.long	.Ldebug_ranges24        # DW_AT_ranges
@@ -6325,37 +6325,37 @@ __xcc1_internal_3:
 	.long	.Ldebug_loc15           # DW_AT_location
 	.long	.Linfo_string54         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	78                      # DW_AT_decl_line
+	.byte	108                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	23                      # Abbrev [23] 0x4af:0xf DW_TAG_variable
 	.long	.Ldebug_loc16           # DW_AT_location
 	.long	.Linfo_string44         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	78                      # DW_AT_decl_line
+	.byte	108                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	23                      # Abbrev [23] 0x4be:0xf DW_TAG_variable
 	.long	.Ldebug_loc25           # DW_AT_location
 	.long	.Linfo_string65         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	78                      # DW_AT_decl_line
+	.byte	108                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	23                      # Abbrev [23] 0x4cd:0xf DW_TAG_variable
 	.long	.Ldebug_loc26           # DW_AT_location
 	.long	.Linfo_string66         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	78                      # DW_AT_decl_line
+	.byte	108                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	23                      # Abbrev [23] 0x4dc:0xf DW_TAG_variable
 	.long	.Ldebug_loc27           # DW_AT_location
 	.long	.Linfo_string67         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	78                      # DW_AT_decl_line
+	.byte	108                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	23                      # Abbrev [23] 0x4eb:0xf DW_TAG_variable
 	.long	.Ldebug_loc28           # DW_AT_location
 	.long	.Linfo_string68         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	78                      # DW_AT_decl_line
+	.byte	108                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x4fa:0x101 DW_TAG_lexical_block
 	.long	.Ldebug_ranges23        # DW_AT_ranges
@@ -6363,25 +6363,25 @@ __xcc1_internal_3:
 	.long	.Ldebug_loc29           # DW_AT_location
 	.long	.Linfo_string69         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	79                      # DW_AT_decl_line
+	.byte	109                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	23                      # Abbrev [23] 0x50e:0xf DW_TAG_variable
 	.long	.Ldebug_loc30           # DW_AT_location
 	.long	.Linfo_string70         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	79                      # DW_AT_decl_line
+	.byte	109                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	23                      # Abbrev [23] 0x51d:0xf DW_TAG_variable
 	.long	.Ldebug_loc31           # DW_AT_location
 	.long	.Linfo_string71         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	79                      # DW_AT_decl_line
+	.byte	109                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	23                      # Abbrev [23] 0x52c:0xf DW_TAG_variable
 	.long	.Ldebug_loc32           # DW_AT_location
 	.long	.Linfo_string72         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	79                      # DW_AT_decl_line
+	.byte	109                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x53b:0xbf DW_TAG_lexical_block
 	.long	.Ldebug_ranges22        # DW_AT_ranges
@@ -6389,25 +6389,25 @@ __xcc1_internal_3:
 	.long	.Ldebug_loc19           # DW_AT_location
 	.long	.Linfo_string57         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	80                      # DW_AT_decl_line
+	.byte	110                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	23                      # Abbrev [23] 0x54f:0xf DW_TAG_variable
 	.long	.Ldebug_loc20           # DW_AT_location
 	.long	.Linfo_string58         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	80                      # DW_AT_decl_line
+	.byte	110                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	23                      # Abbrev [23] 0x55e:0xf DW_TAG_variable
 	.long	.Ldebug_loc21           # DW_AT_location
 	.long	.Linfo_string59         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	80                      # DW_AT_decl_line
+	.byte	110                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	24                      # Abbrev [24] 0x56d:0xc DW_TAG_variable
 	.byte	0                       # DW_AT_const_value
 	.long	.Linfo_string63         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	80                      # DW_AT_decl_line
+	.byte	110                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x579:0x80 DW_TAG_lexical_block
 	.long	.Ldebug_ranges21        # DW_AT_ranges
@@ -6415,25 +6415,25 @@ __xcc1_internal_3:
 	.long	.Ldebug_loc22           # DW_AT_location
 	.long	.Linfo_string7          # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	81                      # DW_AT_decl_line
+	.byte	111                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	23                      # Abbrev [23] 0x58d:0xf DW_TAG_variable
 	.long	.Ldebug_loc23           # DW_AT_location
 	.long	.Linfo_string61         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	81                      # DW_AT_decl_line
+	.byte	111                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	23                      # Abbrev [23] 0x59c:0xf DW_TAG_variable
 	.long	.Ldebug_loc24           # DW_AT_location
 	.long	.Linfo_string62         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	81                      # DW_AT_decl_line
+	.byte	111                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	24                      # Abbrev [24] 0x5ab:0xc DW_TAG_variable
 	.byte	3                       # DW_AT_const_value
 	.long	.Linfo_string64         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	81                      # DW_AT_decl_line
+	.byte	111                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x5b7:0x41 DW_TAG_lexical_block
 	.long	.Ldebug_ranges20        # DW_AT_ranges
@@ -6441,14 +6441,14 @@ __xcc1_internal_3:
 	.ascii	"\377\377\377\377\377\377\377\377\377\001" # DW_AT_const_value
 	.long	.Linfo_string60         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	82                      # DW_AT_decl_line
+	.byte	112                     # DW_AT_decl_line
 	.long	160                     # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x5d1:0x26 DW_TAG_lexical_block
 	.long	.Ldebug_ranges19        # DW_AT_ranges
 	.byte	25                      # Abbrev [25] 0x5d6:0xb DW_TAG_variable
 	.long	.Linfo_string74         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	84                      # DW_AT_decl_line
+	.byte	114                     # DW_AT_decl_line
 	.long	1685                    # DW_AT_type
 	.byte	15                      # Abbrev [15] 0x5e1:0x15 DW_TAG_lexical_block
 	.long	.Ldebug_ranges18        # DW_AT_ranges
@@ -6456,7 +6456,7 @@ __xcc1_internal_3:
 	.long	.Ldebug_loc17           # DW_AT_location
 	.long	.Linfo_string55         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	85                      # DW_AT_decl_line
+	.byte	115                     # DW_AT_decl_line
 	.long	1648                    # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -6506,7 +6506,7 @@ __xcc1_internal_3:
 	.long	.Linfo_string40         # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string40         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.short	571                     # DW_AT_decl_line
+	.short	601                     # DW_AT_decl_line
 	.long	153                     # DW_AT_type
 	.byte	1                       # DW_AT_external
 	.byte	3                       # Abbrev [3] 0x656:0xd DW_TAG_array_type
@@ -8753,121 +8753,121 @@ __xcc1_internal_3:
 .cc_top cc_0,.Lxta.call_labels18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	125
+	.long	155
 	.long	.Lxta.call_labels18
 .cc_bottom cc_0
 .cc_top cc_1,.Lxta.call_labels19
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	369
+	.long	399
 	.long	.Lxta.call_labels19
 .cc_bottom cc_1
 .cc_top cc_2,.Lxta.call_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	441
+	.long	471
 	.long	.Lxta.call_labels0
 .cc_bottom cc_2
 .cc_top cc_3,.Lxta.call_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	441
+	.long	471
 	.long	.Lxta.call_labels1
 .cc_bottom cc_3
 .cc_top cc_4,.Lxta.call_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	458
+	.long	488
 	.long	.Lxta.call_labels2
 .cc_bottom cc_4
 .cc_top cc_5,.Lxta.call_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	459
+	.long	489
 	.long	.Lxta.call_labels3
 .cc_bottom cc_5
 .cc_top cc_6,.Lxta.call_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	462
+	.long	492
 	.long	.Lxta.call_labels4
 .cc_bottom cc_6
 .cc_top cc_7,.Lxta.call_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	463
+	.long	493
 	.long	.Lxta.call_labels5
 .cc_bottom cc_7
 .cc_top cc_8,.Lxta.call_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	468
+	.long	498
 	.long	.Lxta.call_labels6
 .cc_bottom cc_8
 .cc_top cc_9,.Lxta.call_labels7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	469
+	.long	499
 	.long	.Lxta.call_labels7
 .cc_bottom cc_9
 .cc_top cc_10,.Lxta.call_labels8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	471
+	.long	501
 	.long	.Lxta.call_labels8
 .cc_bottom cc_10
 .cc_top cc_11,.Lxta.call_labels9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	488
+	.long	518
 	.long	.Lxta.call_labels9
 .cc_bottom cc_11
 .cc_top cc_12,.Lxta.call_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	489
+	.long	519
 	.long	.Lxta.call_labels10
 .cc_bottom cc_12
 .cc_top cc_13,.Lxta.call_labels11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	490
+	.long	520
 	.long	.Lxta.call_labels11
 .cc_bottom cc_13
 .cc_top cc_14,.Lxta.call_labels13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	506
+	.long	536
 	.long	.Lxta.call_labels13
 .cc_bottom cc_14
 .cc_top cc_15,.Lxta.call_labels14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	510
+	.long	540
 	.long	.Lxta.call_labels14
 .cc_bottom cc_15
 .cc_top cc_16,.Lxta.call_labels15
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	524
+	.long	554
 	.long	.Lxta.call_labels15
 .cc_bottom cc_16
 .cc_top cc_17,.Lxta.call_labels16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	528
+	.long	558
 	.long	.Lxta.call_labels16
 .cc_bottom cc_17
 .cc_top cc_18,.Lxta.call_labels12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	540
+	.long	570
 	.long	.Lxta.call_labels12
 .cc_bottom cc_18
 .cc_top cc_19,.Lxta.call_labels17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	550
+	.long	580
 	.long	.Lxta.call_labels17
 .cc_bottom cc_19
 .Lentries_end1:
@@ -8880,511 +8880,511 @@ __xcc1_internal_3:
 .cc_top cc_20,.Lxta.endpoint_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	92
+	.long	122
 	.long	.Lxta.endpoint_labels5
 .cc_bottom cc_20
 .cc_top cc_21,.Lxta.endpoint_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	94
+	.long	124
 	.long	.Lxta.endpoint_labels6
 .cc_bottom cc_21
 .cc_top cc_22,.Lxta.endpoint_labels7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	96
+	.long	126
 	.long	.Lxta.endpoint_labels7
 .cc_bottom cc_22
 .cc_top cc_23,.Lxta.endpoint_labels8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	98
+	.long	128
 	.long	.Lxta.endpoint_labels8
 .cc_bottom cc_23
 .cc_top cc_24,.Lxta.endpoint_labels9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	100
+	.long	130
 	.long	.Lxta.endpoint_labels9
 .cc_bottom cc_24
 .cc_top cc_25,.Lxta.endpoint_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	102
+	.long	132
 	.long	.Lxta.endpoint_labels10
 .cc_bottom cc_25
 .cc_top cc_26,.Lxta.endpoint_labels11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	104
+	.long	134
 	.long	.Lxta.endpoint_labels11
 .cc_bottom cc_26
 .cc_top cc_27,.Lxta.endpoint_labels12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	106
+	.long	136
 	.long	.Lxta.endpoint_labels12
 .cc_bottom cc_27
 .cc_top cc_28,.Lxta.endpoint_labels13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	107
+	.long	137
 	.long	.Lxta.endpoint_labels13
 .cc_bottom cc_28
 .cc_top cc_29,.Lxta.endpoint_labels14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	108
+	.long	138
 	.long	.Lxta.endpoint_labels14
 .cc_bottom cc_29
 .cc_top cc_30,.Lxta.endpoint_labels15
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	110
+	.long	140
 	.long	.Lxta.endpoint_labels15
 .cc_bottom cc_30
 .cc_top cc_31,.Lxta.endpoint_labels16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	112
+	.long	142
 	.long	.Lxta.endpoint_labels16
 .cc_bottom cc_31
 .cc_top cc_32,.Lxta.endpoint_labels17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	114
+	.long	144
 	.long	.Lxta.endpoint_labels17
 .cc_bottom cc_32
 .cc_top cc_33,.Lxta.endpoint_labels18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	116
+	.long	146
 	.long	.Lxta.endpoint_labels18
 .cc_bottom cc_33
 .cc_top cc_34,.Lxta.endpoint_labels19
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	118
+	.long	148
 	.long	.Lxta.endpoint_labels19
 .cc_bottom cc_34
 .cc_top cc_35,.Lxta.endpoint_labels20
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	120
+	.long	150
 	.long	.Lxta.endpoint_labels20
 .cc_bottom cc_35
 .cc_top cc_36,.Lxta.endpoint_labels21
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	122
+	.long	152
 	.long	.Lxta.endpoint_labels21
 .cc_bottom cc_36
 .cc_top cc_37,.Lxta.endpoint_labels22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	126
+	.long	156
 	.long	.Lxta.endpoint_labels22
 .cc_bottom cc_37
 .cc_top cc_38,.Lxta.endpoint_labels23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	129
+	.long	159
 	.long	.Lxta.endpoint_labels23
 .cc_bottom cc_38
 .cc_top cc_39,.Lxta.endpoint_labels24
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	132
+	.long	162
 	.long	.Lxta.endpoint_labels24
 .cc_bottom cc_39
 .cc_top cc_40,.Lxta.endpoint_labels25
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	133
+	.long	163
 	.long	.Lxta.endpoint_labels25
 .cc_bottom cc_40
 .cc_top cc_41,.Lxta.endpoint_labels26
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	135
+	.long	165
 	.long	.Lxta.endpoint_labels26
 .cc_bottom cc_41
 .cc_top cc_42,.Lxta.endpoint_labels27
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	141
+	.long	171
 	.long	.Lxta.endpoint_labels27
 .cc_bottom cc_42
 .cc_top cc_43,.Lxta.endpoint_labels28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	151
+	.long	181
 	.long	.Lxta.endpoint_labels28
 .cc_bottom cc_43
 .cc_top cc_44,.Lxta.endpoint_labels29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	163
+	.long	193
 	.long	.Lxta.endpoint_labels29
 .cc_bottom cc_44
 .cc_top cc_45,.Lxta.endpoint_labels30
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	168
+	.long	198
 	.long	.Lxta.endpoint_labels30
 .cc_bottom cc_45
 .cc_top cc_46,.Lxta.endpoint_labels31
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	172
+	.long	202
 	.long	.Lxta.endpoint_labels31
 .cc_bottom cc_46
 .cc_top cc_47,.Lxta.endpoint_labels32
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	180
+	.long	210
 	.long	.Lxta.endpoint_labels32
 .cc_bottom cc_47
 .cc_top cc_48,.Lxta.endpoint_labels33
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	183
+	.long	213
 	.long	.Lxta.endpoint_labels33
 .cc_bottom cc_48
 .cc_top cc_49,.Lxta.endpoint_labels34
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	184
+	.long	214
 	.long	.Lxta.endpoint_labels34
 .cc_bottom cc_49
 .cc_top cc_50,.Lxta.endpoint_labels35
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	186
+	.long	216
 	.long	.Lxta.endpoint_labels35
 .cc_bottom cc_50
 .cc_top cc_51,.Lxta.endpoint_labels36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	188
+	.long	218
 	.long	.Lxta.endpoint_labels36
 .cc_bottom cc_51
 .cc_top cc_52,.Lxta.endpoint_labels37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	190
+	.long	220
 	.long	.Lxta.endpoint_labels37
 .cc_bottom cc_52
 .cc_top cc_53,.Lxta.endpoint_labels38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	193
+	.long	223
 	.long	.Lxta.endpoint_labels38
 .cc_bottom cc_53
 .cc_top cc_54,.Lxta.endpoint_labels39
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	194
+	.long	224
 	.long	.Lxta.endpoint_labels39
 .cc_bottom cc_54
 .cc_top cc_55,.Lxta.endpoint_labels40
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	196
+	.long	226
 	.long	.Lxta.endpoint_labels40
 .cc_bottom cc_55
 .cc_top cc_56,.Lxta.endpoint_labels41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	198
+	.long	228
 	.long	.Lxta.endpoint_labels41
 .cc_bottom cc_56
 .cc_top cc_57,.Lxta.endpoint_labels42
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	257
+	.long	287
 	.long	.Lxta.endpoint_labels42
 .cc_bottom cc_57
 .cc_top cc_58,.Lxta.endpoint_labels43
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	260
+	.long	290
 	.long	.Lxta.endpoint_labels43
 .cc_bottom cc_58
 .cc_top cc_59,.Lxta.endpoint_labels44
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	261
+	.long	291
 	.long	.Lxta.endpoint_labels44
 .cc_bottom cc_59
 .cc_top cc_60,.Lxta.endpoint_labels45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	263
+	.long	293
 	.long	.Lxta.endpoint_labels45
 .cc_bottom cc_60
 .cc_top cc_61,.Lxta.endpoint_labels46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	278
+	.long	308
 	.long	.Lxta.endpoint_labels46
 .cc_bottom cc_61
 .cc_top cc_62,.Lxta.endpoint_labels47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	281
+	.long	311
 	.long	.Lxta.endpoint_labels47
 .cc_bottom cc_62
 .cc_top cc_63,.Lxta.endpoint_labels48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	282
+	.long	312
 	.long	.Lxta.endpoint_labels48
 .cc_bottom cc_63
 .cc_top cc_64,.Lxta.endpoint_labels49
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	284
+	.long	314
 	.long	.Lxta.endpoint_labels49
 .cc_bottom cc_64
 .cc_top cc_65,.Lxta.endpoint_labels50
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	285
+	.long	315
 	.long	.Lxta.endpoint_labels50
 .cc_bottom cc_65
 .cc_top cc_66,.Lxta.endpoint_labels51
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	287
+	.long	317
 	.long	.Lxta.endpoint_labels51
 .cc_bottom cc_66
 .cc_top cc_67,.Lxta.endpoint_labels52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	315
+	.long	345
 	.long	.Lxta.endpoint_labels52
 .cc_bottom cc_67
 .cc_top cc_68,.Lxta.endpoint_labels53
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	318
+	.long	348
 	.long	.Lxta.endpoint_labels53
 .cc_bottom cc_68
 .cc_top cc_69,.Lxta.endpoint_labels54
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	319
+	.long	349
 	.long	.Lxta.endpoint_labels54
 .cc_bottom cc_69
 .cc_top cc_70,.Lxta.endpoint_labels55
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	321
+	.long	351
 	.long	.Lxta.endpoint_labels55
 .cc_bottom cc_70
 .cc_top cc_71,.Lxta.endpoint_labels56
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	322
+	.long	352
 	.long	.Lxta.endpoint_labels56
 .cc_bottom cc_71
 .cc_top cc_72,.Lxta.endpoint_labels57
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	324
+	.long	354
 	.long	.Lxta.endpoint_labels57
 .cc_bottom cc_72
 .cc_top cc_73,.Lxta.endpoint_labels58
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	340
+	.long	370
 	.long	.Lxta.endpoint_labels58
 .cc_bottom cc_73
 .cc_top cc_74,.Lxta.endpoint_labels59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	343
+	.long	373
 	.long	.Lxta.endpoint_labels59
 .cc_bottom cc_74
 .cc_top cc_75,.Lxta.endpoint_labels60
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	344
+	.long	374
 	.long	.Lxta.endpoint_labels60
 .cc_bottom cc_75
 .cc_top cc_76,.Lxta.endpoint_labels61
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	346
+	.long	376
 	.long	.Lxta.endpoint_labels61
 .cc_bottom cc_76
 .cc_top cc_77,.Lxta.endpoint_labels62
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	347
+	.long	377
 	.long	.Lxta.endpoint_labels62
 .cc_bottom cc_77
 .cc_top cc_78,.Lxta.endpoint_labels63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	349
+	.long	379
 	.long	.Lxta.endpoint_labels63
 .cc_bottom cc_78
 .cc_top cc_79,.Lxta.endpoint_labels64
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	357
+	.long	387
 	.long	.Lxta.endpoint_labels64
 .cc_bottom cc_79
 .cc_top cc_80,.Lxta.endpoint_labels65
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	360
+	.long	390
 	.long	.Lxta.endpoint_labels65
 .cc_bottom cc_80
 .cc_top cc_81,.Lxta.endpoint_labels66
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	361
+	.long	391
 	.long	.Lxta.endpoint_labels66
 .cc_bottom cc_81
 .cc_top cc_82,.Lxta.endpoint_labels67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	363
+	.long	393
 	.long	.Lxta.endpoint_labels67
 .cc_bottom cc_82
 .cc_top cc_83,.Lxta.endpoint_labels68
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	364
+	.long	394
 	.long	.Lxta.endpoint_labels68
 .cc_bottom cc_83
 .cc_top cc_84,.Lxta.endpoint_labels69
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	366
+	.long	396
 	.long	.Lxta.endpoint_labels69
 .cc_bottom cc_84
 .cc_top cc_85,.Lxta.endpoint_labels70
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	370
+	.long	400
 	.long	.Lxta.endpoint_labels70
 .cc_bottom cc_85
 .cc_top cc_86,.Lxta.endpoint_labels71
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	376
+	.long	406
 	.long	.Lxta.endpoint_labels71
 .cc_bottom cc_86
 .cc_top cc_87,.Lxta.endpoint_labels72
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	379
+	.long	409
 	.long	.Lxta.endpoint_labels72
 .cc_bottom cc_87
 .cc_top cc_88,.Lxta.endpoint_labels73
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	380
+	.long	410
 	.long	.Lxta.endpoint_labels73
 .cc_bottom cc_88
 .cc_top cc_89,.Lxta.endpoint_labels74
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	382
+	.long	412
 	.long	.Lxta.endpoint_labels74
 .cc_bottom cc_89
 .cc_top cc_90,.Lxta.endpoint_labels75
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	391
+	.long	421
 	.long	.Lxta.endpoint_labels75
 .cc_bottom cc_90
 .cc_top cc_91,.Lxta.endpoint_labels76
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	394
+	.long	424
 	.long	.Lxta.endpoint_labels76
 .cc_bottom cc_91
 .cc_top cc_92,.Lxta.endpoint_labels77
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	395
+	.long	425
 	.long	.Lxta.endpoint_labels77
 .cc_bottom cc_92
 .cc_top cc_93,.Lxta.endpoint_labels78
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	397
+	.long	427
 	.long	.Lxta.endpoint_labels78
 .cc_bottom cc_93
 .cc_top cc_94,.Lxta.endpoint_labels79
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	399
+	.long	429
 	.long	.Lxta.endpoint_labels79
 .cc_bottom cc_94
 .cc_top cc_95,.Lxta.endpoint_labels80
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	415
+	.long	445
 	.long	.Lxta.endpoint_labels80
 .cc_bottom cc_95
 .cc_top cc_96,.Lxta.endpoint_labels81
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	418
+	.long	448
 	.long	.Lxta.endpoint_labels81
 .cc_bottom cc_96
 .cc_top cc_97,.Lxta.endpoint_labels82
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	419
+	.long	449
 	.long	.Lxta.endpoint_labels82
 .cc_bottom cc_97
 .cc_top cc_98,.Lxta.endpoint_labels83
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	421
+	.long	451
 	.long	.Lxta.endpoint_labels83
 .cc_bottom cc_98
 .cc_top cc_99,.Lxta.endpoint_labels84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	423
+	.long	453
 	.long	.Lxta.endpoint_labels84
 .cc_bottom cc_99
 .cc_top cc_100,.Lxta.endpoint_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	445
+	.long	475
 	.long	.Lxta.endpoint_labels0
 .cc_bottom cc_100
 .cc_top cc_101,.Lxta.endpoint_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	446
+	.long	476
 	.long	.Lxta.endpoint_labels1
 .cc_bottom cc_101
 .cc_top cc_102,.Lxta.endpoint_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	447
+	.long	477
 	.long	.Lxta.endpoint_labels2
 .cc_bottom cc_102
 .cc_top cc_103,.Lxta.endpoint_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	451
+	.long	481
 	.long	.Lxta.endpoint_labels3
 .cc_bottom cc_103
 .cc_top cc_104,.Lxta.endpoint_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	453
+	.long	483
 	.long	.Lxta.endpoint_labels4
 .cc_bottom cc_104
 .Lentries_end3:
@@ -9397,1877 +9397,1877 @@ __xcc1_internal_3:
 .cc_top cc_105,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	77
-	.long	82
+	.long	107
+	.long	112
 	.long	.Lxtalabel45
 .cc_bottom cc_105
 .cc_top cc_106,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	84
-	.long	85
+	.long	114
+	.long	115
 	.long	.Lxtalabel45
 .cc_bottom cc_106
 .cc_top cc_107,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	88
-	.long	88
+	.long	118
+	.long	118
 	.long	.Lxtalabel45
 .cc_bottom cc_107
 .cc_top cc_108,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	89
-	.long	89
+	.long	119
+	.long	119
 	.long	.Lxtalabel45
 .cc_bottom cc_108
 .cc_top cc_109,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	90
-	.long	90
+	.long	120
+	.long	120
 	.long	.Lxtalabel45
 .cc_bottom cc_109
 .cc_top cc_110,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	92
-	.long	92
+	.long	122
+	.long	122
 	.long	.Lxtalabel45
 .cc_bottom cc_110
 .cc_top cc_111,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	93
-	.long	93
+	.long	123
+	.long	123
 	.long	.Lxtalabel45
 .cc_bottom cc_111
 .cc_top cc_112,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	94
-	.long	94
+	.long	124
+	.long	124
 	.long	.Lxtalabel45
 .cc_bottom cc_112
 .cc_top cc_113,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	95
-	.long	95
+	.long	125
+	.long	125
 	.long	.Lxtalabel45
 .cc_bottom cc_113
 .cc_top cc_114,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	96
-	.long	96
+	.long	126
+	.long	126
 	.long	.Lxtalabel45
 .cc_bottom cc_114
 .cc_top cc_115,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	97
-	.long	97
+	.long	127
+	.long	127
 	.long	.Lxtalabel45
 .cc_bottom cc_115
 .cc_top cc_116,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	98
-	.long	98
+	.long	128
+	.long	128
 	.long	.Lxtalabel45
 .cc_bottom cc_116
 .cc_top cc_117,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	99
-	.long	99
+	.long	129
+	.long	129
 	.long	.Lxtalabel45
 .cc_bottom cc_117
 .cc_top cc_118,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	100
-	.long	100
+	.long	130
+	.long	130
 	.long	.Lxtalabel45
 .cc_bottom cc_118
 .cc_top cc_119,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	101
-	.long	101
+	.long	131
+	.long	131
 	.long	.Lxtalabel45
 .cc_bottom cc_119
 .cc_top cc_120,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	102
-	.long	102
+	.long	132
+	.long	132
 	.long	.Lxtalabel45
 .cc_bottom cc_120
 .cc_top cc_121,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	103
-	.long	103
+	.long	133
+	.long	133
 	.long	.Lxtalabel45
 .cc_bottom cc_121
 .cc_top cc_122,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	104
-	.long	104
+	.long	134
+	.long	134
 	.long	.Lxtalabel45
 .cc_bottom cc_122
 .cc_top cc_123,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	105
-	.long	105
+	.long	135
+	.long	135
 	.long	.Lxtalabel45
 .cc_bottom cc_123
 .cc_top cc_124,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	106
-	.long	106
+	.long	136
+	.long	136
 	.long	.Lxtalabel45
 .cc_bottom cc_124
 .cc_top cc_125,.Lxtalabel45
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	107
-	.long	107
+	.long	137
+	.long	137
 	.long	.Lxtalabel45
 .cc_bottom cc_125
 .cc_top cc_126,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	108
-	.long	108
+	.long	138
+	.long	138
 	.long	.Lxtalabel46
 .cc_bottom cc_126
 .cc_top cc_127,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	108
-	.long	108
+	.long	138
+	.long	138
 	.long	.Lxtalabel48
 .cc_bottom cc_127
 .cc_top cc_128,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	108
-	.long	108
+	.long	138
+	.long	138
 	.long	.Lxtalabel47
 .cc_bottom cc_128
 .cc_top cc_129,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	109
-	.long	109
+	.long	139
+	.long	139
 	.long	.Lxtalabel47
 .cc_bottom cc_129
 .cc_top cc_130,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	109
-	.long	109
+	.long	139
+	.long	139
 	.long	.Lxtalabel46
 .cc_bottom cc_130
 .cc_top cc_131,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	109
-	.long	109
+	.long	139
+	.long	139
 	.long	.Lxtalabel48
 .cc_bottom cc_131
 .cc_top cc_132,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	110
-	.long	110
+	.long	140
+	.long	140
 	.long	.Lxtalabel48
 .cc_bottom cc_132
 .cc_top cc_133,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	110
-	.long	110
+	.long	140
+	.long	140
 	.long	.Lxtalabel46
 .cc_bottom cc_133
 .cc_top cc_134,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	110
-	.long	110
+	.long	140
+	.long	140
 	.long	.Lxtalabel47
 .cc_bottom cc_134
 .cc_top cc_135,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	111
-	.long	111
+	.long	141
+	.long	141
 	.long	.Lxtalabel46
 .cc_bottom cc_135
 .cc_top cc_136,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	111
-	.long	111
+	.long	141
+	.long	141
 	.long	.Lxtalabel48
 .cc_bottom cc_136
 .cc_top cc_137,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	111
-	.long	111
+	.long	141
+	.long	141
 	.long	.Lxtalabel47
 .cc_bottom cc_137
 .cc_top cc_138,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	112
-	.long	112
+	.long	142
+	.long	142
 	.long	.Lxtalabel46
 .cc_bottom cc_138
 .cc_top cc_139,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	112
-	.long	112
+	.long	142
+	.long	142
 	.long	.Lxtalabel47
 .cc_bottom cc_139
 .cc_top cc_140,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	112
-	.long	112
+	.long	142
+	.long	142
 	.long	.Lxtalabel48
 .cc_bottom cc_140
 .cc_top cc_141,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	113
-	.long	113
+	.long	143
+	.long	143
 	.long	.Lxtalabel47
 .cc_bottom cc_141
 .cc_top cc_142,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	113
-	.long	113
+	.long	143
+	.long	143
 	.long	.Lxtalabel46
 .cc_bottom cc_142
 .cc_top cc_143,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	113
-	.long	113
+	.long	143
+	.long	143
 	.long	.Lxtalabel48
 .cc_bottom cc_143
 .cc_top cc_144,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	114
-	.long	114
+	.long	144
+	.long	144
 	.long	.Lxtalabel46
 .cc_bottom cc_144
 .cc_top cc_145,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	114
-	.long	114
+	.long	144
+	.long	144
 	.long	.Lxtalabel47
 .cc_bottom cc_145
 .cc_top cc_146,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	114
-	.long	114
+	.long	144
+	.long	144
 	.long	.Lxtalabel48
 .cc_bottom cc_146
 .cc_top cc_147,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	115
-	.long	115
+	.long	145
+	.long	145
 	.long	.Lxtalabel48
 .cc_bottom cc_147
 .cc_top cc_148,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	115
-	.long	115
+	.long	145
+	.long	145
 	.long	.Lxtalabel47
 .cc_bottom cc_148
 .cc_top cc_149,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	115
-	.long	115
+	.long	145
+	.long	145
 	.long	.Lxtalabel46
 .cc_bottom cc_149
 .cc_top cc_150,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	116
-	.long	116
+	.long	146
+	.long	146
 	.long	.Lxtalabel46
 .cc_bottom cc_150
 .cc_top cc_151,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	116
-	.long	116
+	.long	146
+	.long	146
 	.long	.Lxtalabel47
 .cc_bottom cc_151
 .cc_top cc_152,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	116
-	.long	116
+	.long	146
+	.long	146
 	.long	.Lxtalabel48
 .cc_bottom cc_152
 .cc_top cc_153,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	117
-	.long	117
+	.long	147
+	.long	147
 	.long	.Lxtalabel47
 .cc_bottom cc_153
 .cc_top cc_154,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	117
-	.long	117
+	.long	147
+	.long	147
 	.long	.Lxtalabel46
 .cc_bottom cc_154
 .cc_top cc_155,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	117
-	.long	117
+	.long	147
+	.long	147
 	.long	.Lxtalabel48
 .cc_bottom cc_155
 .cc_top cc_156,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	118
-	.long	118
+	.long	148
+	.long	148
 	.long	.Lxtalabel46
 .cc_bottom cc_156
 .cc_top cc_157,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	118
-	.long	118
+	.long	148
+	.long	148
 	.long	.Lxtalabel47
 .cc_bottom cc_157
 .cc_top cc_158,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	118
-	.long	118
+	.long	148
+	.long	148
 	.long	.Lxtalabel48
 .cc_bottom cc_158
 .cc_top cc_159,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	119
-	.long	119
+	.long	149
+	.long	149
 	.long	.Lxtalabel46
 .cc_bottom cc_159
 .cc_top cc_160,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	119
-	.long	119
+	.long	149
+	.long	149
 	.long	.Lxtalabel47
 .cc_bottom cc_160
 .cc_top cc_161,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	119
-	.long	119
+	.long	149
+	.long	149
 	.long	.Lxtalabel48
 .cc_bottom cc_161
 .cc_top cc_162,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	120
-	.long	120
+	.long	150
+	.long	150
 	.long	.Lxtalabel47
 .cc_bottom cc_162
 .cc_top cc_163,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	120
-	.long	120
+	.long	150
+	.long	150
 	.long	.Lxtalabel46
 .cc_bottom cc_163
 .cc_top cc_164,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	120
-	.long	120
+	.long	150
+	.long	150
 	.long	.Lxtalabel48
 .cc_bottom cc_164
 .cc_top cc_165,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	121
-	.long	121
+	.long	151
+	.long	151
 	.long	.Lxtalabel47
 .cc_bottom cc_165
 .cc_top cc_166,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	121
-	.long	121
+	.long	151
+	.long	151
 	.long	.Lxtalabel48
 .cc_bottom cc_166
 .cc_top cc_167,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	121
-	.long	121
+	.long	151
+	.long	151
 	.long	.Lxtalabel46
 .cc_bottom cc_167
 .cc_top cc_168,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	122
-	.long	122
+	.long	152
+	.long	152
 	.long	.Lxtalabel46
 .cc_bottom cc_168
 .cc_top cc_169,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	122
-	.long	122
+	.long	152
+	.long	152
 	.long	.Lxtalabel47
 .cc_bottom cc_169
 .cc_top cc_170,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	122
-	.long	122
+	.long	152
+	.long	152
 	.long	.Lxtalabel48
 .cc_bottom cc_170
 .cc_top cc_171,.Lxtalabel48
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	124
-	.long	124
+	.long	154
+	.long	154
 	.long	.Lxtalabel48
 .cc_bottom cc_171
 .cc_top cc_172,.Lxtalabel46
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	124
-	.long	124
+	.long	154
+	.long	154
 	.long	.Lxtalabel46
 .cc_bottom cc_172
 .cc_top cc_173,.Lxtalabel47
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	124
-	.long	124
+	.long	154
+	.long	154
 	.long	.Lxtalabel47
 .cc_bottom cc_173
 .cc_top cc_174,.Lxtalabel49
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	125
-	.long	125
+	.long	155
+	.long	155
 	.long	.Lxtalabel49
 .cc_bottom cc_174
 .cc_top cc_175,.Lxtalabel51
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	126
-	.long	127
+	.long	156
+	.long	157
 	.long	.Lxtalabel51
 .cc_bottom cc_175
 .cc_top cc_176,.Lxtalabel50
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	126
-	.long	127
+	.long	156
+	.long	157
 	.long	.Lxtalabel50
 .cc_bottom cc_176
 .cc_top cc_177,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	128
-	.long	135
+	.long	158
+	.long	165
 	.long	.Lxtalabel52
 .cc_bottom cc_177
 .cc_top cc_178,.Lxtalabel55
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	128
-	.long	135
+	.long	158
+	.long	165
 	.long	.Lxtalabel55
 .cc_bottom cc_178
 .cc_top cc_179,.Lxtalabel55
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	137
-	.long	140
+	.long	167
+	.long	170
 	.long	.Lxtalabel55
 .cc_bottom cc_179
 .cc_top cc_180,.Lxtalabel52
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	137
-	.long	140
+	.long	167
+	.long	170
 	.long	.Lxtalabel52
 .cc_bottom cc_180
 .cc_top cc_181,.Lxtalabel53
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	141
-	.long	142
+	.long	171
+	.long	172
 	.long	.Lxtalabel53
 .cc_bottom cc_181
 .cc_top cc_182,.Lxtalabel54
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	143
-	.long	144
+	.long	173
+	.long	174
 	.long	.Lxtalabel54
 .cc_bottom cc_182
 .cc_top cc_183,.Lxtalabel54
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	145
-	.long	146
+	.long	175
+	.long	176
 	.long	.Lxtalabel54
 .cc_bottom cc_183
 .cc_top cc_184,.Lxtalabel53
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	147
-	.long	150
+	.long	177
+	.long	180
 	.long	.Lxtalabel53
 .cc_bottom cc_184
 .cc_top cc_185,.Lxtalabel56
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	151
-	.long	151
+	.long	181
+	.long	181
 	.long	.Lxtalabel56
 .cc_bottom cc_185
 .cc_top cc_186,.Lxtalabel56
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	153
-	.long	153
+	.long	183
+	.long	183
 	.long	.Lxtalabel56
 .cc_bottom cc_186
 .cc_top cc_187,.Lxtalabel58
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	154
-	.long	154
+	.long	184
+	.long	184
 	.long	.Lxtalabel58
 .cc_bottom cc_187
 .cc_top cc_188,.Lxtalabel57
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	154
-	.long	154
+	.long	184
+	.long	184
 	.long	.Lxtalabel57
 .cc_bottom cc_188
 .cc_top cc_189,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	154
-	.long	154
+	.long	184
+	.long	184
 	.long	.Lxtalabel59
 .cc_bottom cc_189
 .cc_top cc_190,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	155
-	.long	155
+	.long	185
+	.long	185
 	.long	.Lxtalabel59
 .cc_bottom cc_190
 .cc_top cc_191,.Lxtalabel58
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	155
-	.long	155
+	.long	185
+	.long	185
 	.long	.Lxtalabel58
 .cc_bottom cc_191
 .cc_top cc_192,.Lxtalabel57
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	155
-	.long	155
+	.long	185
+	.long	185
 	.long	.Lxtalabel57
 .cc_bottom cc_192
 .cc_top cc_193,.Lxtalabel58
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	156
-	.long	158
+	.long	186
+	.long	188
 	.long	.Lxtalabel58
 .cc_bottom cc_193
 .cc_top cc_194,.Lxtalabel57
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	156
-	.long	158
+	.long	186
+	.long	188
 	.long	.Lxtalabel57
 .cc_bottom cc_194
 .cc_top cc_195,.Lxtalabel59
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	156
-	.long	158
+	.long	186
+	.long	188
 	.long	.Lxtalabel59
 .cc_bottom cc_195
 .cc_top cc_196,.Lxtalabel61
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	160
-	.long	162
+	.long	190
+	.long	192
 	.long	.Lxtalabel61
 .cc_bottom cc_196
 .cc_top cc_197,.Lxtalabel60
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	160
-	.long	162
+	.long	190
+	.long	192
 	.long	.Lxtalabel60
 .cc_bottom cc_197
 .cc_top cc_198,.Lxtalabel62
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	163
-	.long	164
+	.long	193
+	.long	194
 	.long	.Lxtalabel62
 .cc_bottom cc_198
 .cc_top cc_199,.Lxtalabel71
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	165
-	.long	165
+	.long	195
+	.long	195
 	.long	.Lxtalabel71
 .cc_bottom cc_199
 .cc_top cc_200,.Lxtalabel63
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	168
-	.long	171
+	.long	198
+	.long	201
 	.long	.Lxtalabel63
 .cc_bottom cc_200
 .cc_top cc_201,.Lxtalabel64
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	172
-	.long	174
+	.long	202
+	.long	204
 	.long	.Lxtalabel64
 .cc_bottom cc_201
 .cc_top cc_202,.Lxtalabel72
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	175
-	.long	176
+	.long	205
+	.long	206
 	.long	.Lxtalabel72
 .cc_bottom cc_202
 .cc_top cc_203,.Lxtalabel73
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	177
-	.long	177
+	.long	207
+	.long	207
 	.long	.Lxtalabel73
 .cc_bottom cc_203
 .cc_top cc_204,.Lxtalabel73
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	180
-	.long	186
+	.long	210
+	.long	216
 	.long	.Lxtalabel73
 .cc_bottom cc_204
 .cc_top cc_205,.Lxtalabel73
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	188
-	.long	188
+	.long	218
+	.long	218
 	.long	.Lxtalabel73
 .cc_bottom cc_205
 .cc_top cc_206,.Lxtalabel73
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	190
-	.long	196
+	.long	220
+	.long	226
 	.long	.Lxtalabel73
 .cc_bottom cc_206
 .cc_top cc_207,.Lxtalabel73
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	198
-	.long	200
+	.long	228
+	.long	230
 	.long	.Lxtalabel73
 .cc_bottom cc_207
 .cc_top cc_208,.Lxtalabel65
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	204
-	.long	204
+	.long	234
+	.long	234
 	.long	.Lxtalabel65
 .cc_bottom cc_208
 .cc_top cc_209,.Lxtalabel69
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	204
-	.long	204
+	.long	234
+	.long	234
 	.long	.Lxtalabel69
 .cc_bottom cc_209
 .cc_top cc_210,.Lxtalabel68
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	204
-	.long	204
+	.long	234
+	.long	234
 	.long	.Lxtalabel68
 .cc_bottom cc_210
 .cc_top cc_211,.Lxtalabel66
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	204
-	.long	204
+	.long	234
+	.long	234
 	.long	.Lxtalabel66
 .cc_bottom cc_211
 .cc_top cc_212,.Lxtalabel67
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	204
-	.long	204
+	.long	234
+	.long	234
 	.long	.Lxtalabel67
 .cc_bottom cc_212
 .cc_top cc_213,.Lxtalabel70
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	209
-	.long	209
+	.long	239
+	.long	239
 	.long	.Lxtalabel70
 .cc_bottom cc_213
 .cc_top cc_214,.Lxtalabel74
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	210
-	.long	210
+	.long	240
+	.long	240
 	.long	.Lxtalabel74
 .cc_bottom cc_214
 .cc_top cc_215,.Lxtalabel75
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	210
-	.long	210
+	.long	240
+	.long	240
 	.long	.Lxtalabel75
 .cc_bottom cc_215
 .cc_top cc_216,.Lxtalabel76
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	210
-	.long	210
+	.long	240
+	.long	240
 	.long	.Lxtalabel76
 .cc_bottom cc_216
 .cc_top cc_217,.Lxtalabel77
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	210
-	.long	210
+	.long	240
+	.long	240
 	.long	.Lxtalabel77
 .cc_bottom cc_217
 .cc_top cc_218,.Lxtalabel78
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	210
-	.long	210
+	.long	240
+	.long	240
 	.long	.Lxtalabel78
 .cc_bottom cc_218
 .cc_top cc_219,.Lxtalabel79
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	218
-	.long	218
+	.long	248
+	.long	248
 	.long	.Lxtalabel79
 .cc_bottom cc_219
 .cc_top cc_220,.Lxtalabel80
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	218
-	.long	218
+	.long	248
+	.long	248
 	.long	.Lxtalabel80
 .cc_bottom cc_220
 .cc_top cc_221,.Lxtalabel89
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	220
-	.long	222
+	.long	250
+	.long	252
 	.long	.Lxtalabel89
 .cc_bottom cc_221
 .cc_top cc_222,.Lxtalabel81
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	220
-	.long	222
+	.long	250
+	.long	252
 	.long	.Lxtalabel81
 .cc_bottom cc_222
 .cc_top cc_223,.Lxtalabel82
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	220
-	.long	222
+	.long	250
+	.long	252
 	.long	.Lxtalabel82
 .cc_bottom cc_223
 .cc_top cc_224,.Lxtalabel86
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	220
-	.long	222
+	.long	250
+	.long	252
 	.long	.Lxtalabel86
 .cc_bottom cc_224
 .cc_top cc_225,.Lxtalabel82
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	223
-	.long	223
+	.long	253
+	.long	253
 	.long	.Lxtalabel82
 .cc_bottom cc_225
 .cc_top cc_226,.Lxtalabel81
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	223
-	.long	223
+	.long	253
+	.long	253
 	.long	.Lxtalabel81
 .cc_bottom cc_226
 .cc_top cc_227,.Lxtalabel86
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	223
-	.long	223
+	.long	253
+	.long	253
 	.long	.Lxtalabel86
 .cc_bottom cc_227
 .cc_top cc_228,.Lxtalabel89
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	223
-	.long	223
+	.long	253
+	.long	253
 	.long	.Lxtalabel89
 .cc_bottom cc_228
 .cc_top cc_229,.Lxtalabel82
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	224
-	.long	224
+	.long	254
+	.long	254
 	.long	.Lxtalabel82
 .cc_bottom cc_229
 .cc_top cc_230,.Lxtalabel81
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	224
-	.long	224
+	.long	254
+	.long	254
 	.long	.Lxtalabel81
 .cc_bottom cc_230
 .cc_top cc_231,.Lxtalabel89
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	224
-	.long	224
+	.long	254
+	.long	254
 	.long	.Lxtalabel89
 .cc_bottom cc_231
 .cc_top cc_232,.Lxtalabel86
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	224
-	.long	224
+	.long	254
+	.long	254
 	.long	.Lxtalabel86
 .cc_bottom cc_232
 .cc_top cc_233,.Lxtalabel83
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	227
-	.long	227
+	.long	257
+	.long	257
 	.long	.Lxtalabel83
 .cc_bottom cc_233
 .cc_top cc_234,.Lxtalabel83
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	228
-	.long	228
+	.long	258
+	.long	258
 	.long	.Lxtalabel83
 .cc_bottom cc_234
 .cc_top cc_235,.Lxtalabel83
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	229
-	.long	230
+	.long	259
+	.long	260
 	.long	.Lxtalabel83
 .cc_bottom cc_235
 .cc_top cc_236,.Lxtalabel83
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	231
-	.long	231
+	.long	261
+	.long	261
 	.long	.Lxtalabel83
 .cc_bottom cc_236
 .cc_top cc_237,.Lxtalabel85
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	232
-	.long	232
+	.long	262
+	.long	262
 	.long	.Lxtalabel85
 .cc_bottom cc_237
 .cc_top cc_238,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	232
-	.long	232
+	.long	262
+	.long	262
 	.long	.Lxtalabel84
 .cc_bottom cc_238
 .cc_top cc_239,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	233
-	.long	233
+	.long	263
+	.long	263
 	.long	.Lxtalabel84
 .cc_bottom cc_239
 .cc_top cc_240,.Lxtalabel85
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	233
-	.long	233
+	.long	263
+	.long	263
 	.long	.Lxtalabel85
 .cc_bottom cc_240
 .cc_top cc_241,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	234
-	.long	234
+	.long	264
+	.long	264
 	.long	.Lxtalabel84
 .cc_bottom cc_241
 .cc_top cc_242,.Lxtalabel85
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	234
-	.long	234
+	.long	264
+	.long	264
 	.long	.Lxtalabel85
 .cc_bottom cc_242
 .cc_top cc_243,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	235
-	.long	235
+	.long	265
+	.long	265
 	.long	.Lxtalabel84
 .cc_bottom cc_243
 .cc_top cc_244,.Lxtalabel85
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	235
-	.long	235
+	.long	265
+	.long	265
 	.long	.Lxtalabel85
 .cc_bottom cc_244
 .cc_top cc_245,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	236
-	.long	236
+	.long	266
+	.long	266
 	.long	.Lxtalabel84
 .cc_bottom cc_245
 .cc_top cc_246,.Lxtalabel85
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	236
-	.long	236
+	.long	266
+	.long	266
 	.long	.Lxtalabel85
 .cc_bottom cc_246
 .cc_top cc_247,.Lxtalabel84
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	237
-	.long	237
+	.long	267
+	.long	267
 	.long	.Lxtalabel84
 .cc_bottom cc_247
 .cc_top cc_248,.Lxtalabel85
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	237
-	.long	237
+	.long	267
+	.long	267
 	.long	.Lxtalabel85
 .cc_bottom cc_248
 .cc_top cc_249,.Lxtalabel87
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	242
-	.long	242
+	.long	272
+	.long	272
 	.long	.Lxtalabel87
 .cc_bottom cc_249
 .cc_top cc_250,.Lxtalabel87
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	243
-	.long	243
+	.long	273
+	.long	273
 	.long	.Lxtalabel87
 .cc_bottom cc_250
 .cc_top cc_251,.Lxtalabel88
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	244
-	.long	244
+	.long	274
+	.long	274
 	.long	.Lxtalabel88
 .cc_bottom cc_251
 .cc_top cc_252,.Lxtalabel88
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	245
-	.long	245
+	.long	275
+	.long	275
 	.long	.Lxtalabel88
 .cc_bottom cc_252
 .cc_top cc_253,.Lxtalabel88
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	246
-	.long	247
+	.long	276
+	.long	277
 	.long	.Lxtalabel88
 .cc_bottom cc_253
 .cc_top cc_254,.Lxtalabel90
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	248
-	.long	248
+	.long	278
+	.long	278
 	.long	.Lxtalabel90
 .cc_bottom cc_254
 .cc_top cc_255,.Lxtalabel90
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	249
-	.long	249
+	.long	279
+	.long	279
 	.long	.Lxtalabel90
 .cc_bottom cc_255
 .cc_top cc_256,.Lxtalabel91
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	250
-	.long	250
+	.long	280
+	.long	280
 	.long	.Lxtalabel91
 .cc_bottom cc_256
 .cc_top cc_257,.Lxtalabel91
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	251
-	.long	251
+	.long	281
+	.long	281
 	.long	.Lxtalabel91
 .cc_bottom cc_257
 .cc_top cc_258,.Lxtalabel91
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	252
-	.long	253
+	.long	282
+	.long	283
 	.long	.Lxtalabel91
 .cc_bottom cc_258
 .cc_top cc_259,.Lxtalabel92
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	256
-	.long	264
+	.long	286
+	.long	294
 	.long	.Lxtalabel92
 .cc_bottom cc_259
 .cc_top cc_260,.Lxtalabel93
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	266
-	.long	266
+	.long	296
+	.long	296
 	.long	.Lxtalabel93
 .cc_bottom cc_260
 .cc_top cc_261,.Lxtalabel93
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	267
-	.long	268
+	.long	297
+	.long	298
 	.long	.Lxtalabel93
 .cc_bottom cc_261
 .cc_top cc_262,.Lxtalabel94
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	269
-	.long	269
+	.long	299
+	.long	299
 	.long	.Lxtalabel94
 .cc_bottom cc_262
 .cc_top cc_263,.Lxtalabel94
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	270
-	.long	270
+	.long	300
+	.long	300
 	.long	.Lxtalabel94
 .cc_bottom cc_263
 .cc_top cc_264,.Lxtalabel94
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	272
-	.long	272
+	.long	302
+	.long	302
 	.long	.Lxtalabel94
 .cc_bottom cc_264
 .cc_top cc_265,.Lxtalabel94
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	278
-	.long	287
+	.long	308
+	.long	317
 	.long	.Lxtalabel94
 .cc_bottom cc_265
 .cc_top cc_266,.Lxtalabel94
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	289
-	.long	289
+	.long	319
+	.long	319
 	.long	.Lxtalabel94
 .cc_bottom cc_266
 .cc_top cc_267,.Lxtalabel95
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	290
-	.long	291
+	.long	320
+	.long	321
 	.long	.Lxtalabel95
 .cc_bottom cc_267
 .cc_top cc_268,.Lxtalabel95
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	293
-	.long	294
+	.long	323
+	.long	324
 	.long	.Lxtalabel95
 .cc_bottom cc_268
 .cc_top cc_269,.Lxtalabel95
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	295
-	.long	295
+	.long	325
+	.long	325
 	.long	.Lxtalabel95
 .cc_bottom cc_269
 .cc_top cc_270,.Lxtalabel95
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	297
-	.long	298
+	.long	327
+	.long	328
 	.long	.Lxtalabel95
 .cc_bottom cc_270
 .cc_top cc_271,.Lxtalabel95
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	299
-	.long	299
+	.long	329
+	.long	329
 	.long	.Lxtalabel95
 .cc_bottom cc_271
 .cc_top cc_272,.Lxtalabel95
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	301
-	.long	302
+	.long	331
+	.long	332
 	.long	.Lxtalabel95
 .cc_bottom cc_272
 .cc_top cc_273,.Lxtalabel95
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	303
-	.long	303
+	.long	333
+	.long	333
 	.long	.Lxtalabel95
 .cc_bottom cc_273
 .cc_top cc_274,.Lxtalabel95
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	305
-	.long	306
+	.long	335
+	.long	336
 	.long	.Lxtalabel95
 .cc_bottom cc_274
 .cc_top cc_275,.Lxtalabel95
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	307
-	.long	307
+	.long	337
+	.long	337
 	.long	.Lxtalabel95
 .cc_bottom cc_275
 .cc_top cc_276,.Lxtalabel95
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	309
-	.long	309
+	.long	339
+	.long	339
 	.long	.Lxtalabel95
 .cc_bottom cc_276
 .cc_top cc_277,.Lxtalabel96
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	310
-	.long	310
+	.long	340
+	.long	340
 	.long	.Lxtalabel96
 .cc_bottom cc_277
 .cc_top cc_278,.Lxtalabel96
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	315
-	.long	322
+	.long	345
+	.long	352
 	.long	.Lxtalabel96
 .cc_bottom cc_278
 .cc_top cc_279,.Lxtalabel97
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	323
-	.long	324
+	.long	353
+	.long	354
 	.long	.Lxtalabel97
 .cc_bottom cc_279
 .cc_top cc_280,.Lxtalabel97
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	326
-	.long	326
+	.long	356
+	.long	356
 	.long	.Lxtalabel97
 .cc_bottom cc_280
 .cc_top cc_281,.Lxtalabel98
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	329
-	.long	329
+	.long	359
+	.long	359
 	.long	.Lxtalabel98
 .cc_bottom cc_281
 .cc_top cc_282,.Lxtalabel98
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	330
-	.long	330
+	.long	360
+	.long	360
 	.long	.Lxtalabel98
 .cc_bottom cc_282
 .cc_top cc_283,.Lxtalabel98
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	331
-	.long	331
+	.long	361
+	.long	361
 	.long	.Lxtalabel98
 .cc_bottom cc_283
 .cc_top cc_284,.Lxtalabel98
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	332
-	.long	332
+	.long	362
+	.long	362
 	.long	.Lxtalabel98
 .cc_bottom cc_284
 .cc_top cc_285,.Lxtalabel98
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	333
-	.long	333
+	.long	363
+	.long	363
 	.long	.Lxtalabel98
 .cc_bottom cc_285
 .cc_top cc_286,.Lxtalabel99
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	334
-	.long	335
+	.long	364
+	.long	365
 	.long	.Lxtalabel99
 .cc_bottom cc_286
 .cc_top cc_287,.Lxtalabel99
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	340
-	.long	349
+	.long	370
+	.long	379
 	.long	.Lxtalabel99
 .cc_bottom cc_287
 .cc_top cc_288,.Lxtalabel99
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	351
-	.long	352
+	.long	381
+	.long	382
 	.long	.Lxtalabel99
 .cc_bottom cc_288
 .cc_top cc_289,.Lxtalabel100
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	357
-	.long	366
+	.long	387
+	.long	396
 	.long	.Lxtalabel100
 .cc_bottom cc_289
 .cc_top cc_290,.Lxtalabel100
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	368
-	.long	368
+	.long	398
+	.long	398
 	.long	.Lxtalabel100
 .cc_bottom cc_290
 .cc_top cc_291,.Lxtalabel101
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	369
-	.long	369
+	.long	399
+	.long	399
 	.long	.Lxtalabel101
 .cc_bottom cc_291
 .cc_top cc_292,.Lxtalabel102
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	370
-	.long	371
+	.long	400
+	.long	401
 	.long	.Lxtalabel102
 .cc_bottom cc_292
 .cc_top cc_293,.Lxtalabel103
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	372
-	.long	372
+	.long	402
+	.long	402
 	.long	.Lxtalabel103
 .cc_bottom cc_293
 .cc_top cc_294,.Lxtalabel103
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	376
-	.long	383
+	.long	406
+	.long	413
 	.long	.Lxtalabel103
 .cc_bottom cc_294
 .cc_top cc_295,.Lxtalabel103
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	385
-	.long	386
+	.long	415
+	.long	416
 	.long	.Lxtalabel103
 .cc_bottom cc_295
 .cc_top cc_296,.Lxtalabel104
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	387
-	.long	387
+	.long	417
+	.long	417
 	.long	.Lxtalabel104
 .cc_bottom cc_296
 .cc_top cc_297,.Lxtalabel104
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	391
-	.long	397
+	.long	421
+	.long	427
 	.long	.Lxtalabel104
 .cc_bottom cc_297
 .cc_top cc_298,.Lxtalabel104
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	399
-	.long	400
+	.long	429
+	.long	430
 	.long	.Lxtalabel104
 .cc_bottom cc_298
 .cc_top cc_299,.Lxtalabel105
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	401
-	.long	402
+	.long	431
+	.long	432
 	.long	.Lxtalabel105
 .cc_bottom cc_299
 .cc_top cc_300,.Lxtalabel106
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	403
-	.long	404
+	.long	433
+	.long	434
 	.long	.Lxtalabel106
 .cc_bottom cc_300
 .cc_top cc_301,.Lxtalabel106
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	405
-	.long	405
+	.long	435
+	.long	435
 	.long	.Lxtalabel106
 .cc_bottom cc_301
 .cc_top cc_302,.Lxtalabel107
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	407
-	.long	407
+	.long	437
+	.long	437
 	.long	.Lxtalabel107
 .cc_bottom cc_302
 .cc_top cc_303,.Lxtalabel107
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	408
-	.long	410
+	.long	438
+	.long	440
 	.long	.Lxtalabel107
 .cc_bottom cc_303
 .cc_top cc_304,.Lxtalabel108
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	411
-	.long	411
+	.long	441
+	.long	441
 	.long	.Lxtalabel108
 .cc_bottom cc_304
 .cc_top cc_305,.Lxtalabel108
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	415
-	.long	421
+	.long	445
+	.long	451
 	.long	.Lxtalabel108
 .cc_bottom cc_305
 .cc_top cc_306,.Lxtalabel108
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	423
-	.long	424
+	.long	453
+	.long	454
 	.long	.Lxtalabel108
 .cc_bottom cc_306
 .cc_top cc_307,.Lxtalabel109
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	425
-	.long	426
+	.long	455
+	.long	456
 	.long	.Lxtalabel109
 .cc_bottom cc_307
 .cc_top cc_308,.Lxtalabel109
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	427
-	.long	427
+	.long	457
+	.long	457
 	.long	.Lxtalabel109
 .cc_bottom cc_308
 .cc_top cc_309,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	434
-	.long	437
+	.long	464
+	.long	467
 	.long	.Lxtalabel0
 .cc_bottom cc_309
 .cc_top cc_310,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	439
-	.long	439
+	.long	469
+	.long	469
 	.long	.Lxtalabel0
 .cc_bottom cc_310
 .cc_top cc_311,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	441
-	.long	442
+	.long	471
+	.long	472
 	.long	.Lxtalabel1
 .cc_bottom cc_311
 .cc_top cc_312,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	441
-	.long	441
+	.long	471
+	.long	471
 	.long	.Lxtalabel1
 .cc_bottom cc_312
 .cc_top cc_313,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	445
-	.long	448
+	.long	475
+	.long	478
 	.long	.Lxtalabel1
 .cc_bottom cc_313
 .cc_top cc_314,.Lxtalabel2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	449
-	.long	454
+	.long	479
+	.long	484
 	.long	.Lxtalabel2
 .cc_bottom cc_314
 .cc_top cc_315,.Lxtalabel3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	457
-	.long	458
+	.long	487
+	.long	488
 	.long	.Lxtalabel3
 .cc_bottom cc_315
 .cc_top cc_316,.Lxtalabel6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	459
-	.long	460
+	.long	489
+	.long	490
 	.long	.Lxtalabel6
 .cc_bottom cc_316
 .cc_top cc_317,.Lxtalabel5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	459
-	.long	460
+	.long	489
+	.long	490
 	.long	.Lxtalabel5
 .cc_bottom cc_317
 .cc_top cc_318,.Lxtalabel4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	459
-	.long	460
+	.long	489
+	.long	490
 	.long	.Lxtalabel4
 .cc_bottom cc_318
 .cc_top cc_319,.Lxtalabel7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	461
-	.long	462
+	.long	491
+	.long	492
 	.long	.Lxtalabel7
 .cc_bottom cc_319
 .cc_top cc_320,.Lxtalabel8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	463
-	.long	463
+	.long	493
+	.long	493
 	.long	.Lxtalabel8
 .cc_bottom cc_320
 .cc_top cc_321,.Lxtalabel9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	464
-	.long	464
+	.long	494
+	.long	494
 	.long	.Lxtalabel9
 .cc_bottom cc_321
 .cc_top cc_322,.Lxtalabel10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	465
-	.long	466
+	.long	495
+	.long	496
 	.long	.Lxtalabel10
 .cc_bottom cc_322
 .cc_top cc_323,.Lxtalabel11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	467
-	.long	468
+	.long	497
+	.long	498
 	.long	.Lxtalabel11
 .cc_bottom cc_323
 .cc_top cc_324,.Lxtalabel12
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	469
-	.long	469
+	.long	499
+	.long	499
 	.long	.Lxtalabel12
 .cc_bottom cc_324
 .cc_top cc_325,.Lxtalabel13
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	470
-	.long	471
+	.long	500
+	.long	501
 	.long	.Lxtalabel13
 .cc_bottom cc_325
 .cc_top cc_326,.Lxtalabel14
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	472
-	.long	472
+	.long	502
+	.long	502
 	.long	.Lxtalabel14
 .cc_bottom cc_326
 .cc_top cc_327,.Lxtalabel16
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	473
-	.long	482
+	.long	503
+	.long	512
 	.long	.Lxtalabel16
 .cc_bottom cc_327
 .cc_top cc_328,.Lxtalabel15
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	483
-	.long	487
+	.long	513
+	.long	517
 	.long	.Lxtalabel15
 .cc_bottom cc_328
 .cc_top cc_329,.Lxtalabel17
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	488
-	.long	488
+	.long	518
+	.long	518
 	.long	.Lxtalabel17
 .cc_bottom cc_329
 .cc_top cc_330,.Lxtalabel18
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	489
-	.long	489
+	.long	519
+	.long	519
 	.long	.Lxtalabel18
 .cc_bottom cc_330
 .cc_top cc_331,.Lxtalabel19
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	490
-	.long	490
+	.long	520
+	.long	520
 	.long	.Lxtalabel19
 .cc_bottom cc_331
 .cc_top cc_332,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	498
-	.long	500
+	.long	528
+	.long	530
 	.long	.Lxtalabel23
 .cc_bottom cc_332
 .cc_top cc_333,.Lxtalabel23
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	502
-	.long	502
+	.long	532
+	.long	532
 	.long	.Lxtalabel23
 .cc_bottom cc_333
 .cc_top cc_334,.Lxtalabel26
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	503
-	.long	503
+	.long	533
+	.long	533
 	.long	.Lxtalabel26
 .cc_bottom cc_334
 .cc_top cc_335,.Lxtalabel25
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	503
-	.long	503
+	.long	533
+	.long	533
 	.long	.Lxtalabel25
 .cc_bottom cc_335
 .cc_top cc_336,.Lxtalabel24
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	503
-	.long	503
+	.long	533
+	.long	533
 	.long	.Lxtalabel24
 .cc_bottom cc_336
 .cc_top cc_337,.Lxtalabel27
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	504
-	.long	504
+	.long	534
+	.long	534
 	.long	.Lxtalabel27
 .cc_bottom cc_337
 .cc_top cc_338,.Lxtalabel27
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	506
-	.long	506
+	.long	536
+	.long	536
 	.long	.Lxtalabel27
 .cc_bottom cc_338
 .cc_top cc_339,.Lxtalabel28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	507
-	.long	507
+	.long	537
+	.long	537
 	.long	.Lxtalabel28
 .cc_bottom cc_339
 .cc_top cc_340,.Lxtalabel28
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	508
-	.long	508
+	.long	538
+	.long	538
 	.long	.Lxtalabel28
 .cc_bottom cc_340
 .cc_top cc_341,.Lxtalabel30
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	509
-	.long	510
+	.long	539
+	.long	540
 	.long	.Lxtalabel30
 .cc_bottom cc_341
 .cc_top cc_342,.Lxtalabel29
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	509
-	.long	510
+	.long	539
+	.long	540
 	.long	.Lxtalabel29
 .cc_bottom cc_342
 .cc_top cc_343,.Lxtalabel31
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	516
-	.long	518
+	.long	546
+	.long	548
 	.long	.Lxtalabel31
 .cc_bottom cc_343
 .cc_top cc_344,.Lxtalabel31
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	520
-	.long	520
+	.long	550
+	.long	550
 	.long	.Lxtalabel31
 .cc_bottom cc_344
 .cc_top cc_345,.Lxtalabel32
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	521
-	.long	521
+	.long	551
+	.long	551
 	.long	.Lxtalabel32
 .cc_bottom cc_345
 .cc_top cc_346,.Lxtalabel33
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	521
-	.long	521
+	.long	551
+	.long	551
 	.long	.Lxtalabel33
 .cc_bottom cc_346
 .cc_top cc_347,.Lxtalabel34
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	521
-	.long	521
+	.long	551
+	.long	551
 	.long	.Lxtalabel34
 .cc_bottom cc_347
 .cc_top cc_348,.Lxtalabel35
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	522
-	.long	522
+	.long	552
+	.long	552
 	.long	.Lxtalabel35
 .cc_bottom cc_348
 .cc_top cc_349,.Lxtalabel35
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	524
-	.long	524
+	.long	554
+	.long	554
 	.long	.Lxtalabel35
 .cc_bottom cc_349
 .cc_top cc_350,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	525
-	.long	525
+	.long	555
+	.long	555
 	.long	.Lxtalabel36
 .cc_bottom cc_350
 .cc_top cc_351,.Lxtalabel36
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	526
-	.long	526
+	.long	556
+	.long	556
 	.long	.Lxtalabel36
 .cc_bottom cc_351
 .cc_top cc_352,.Lxtalabel37
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	527
-	.long	528
+	.long	557
+	.long	558
 	.long	.Lxtalabel37
 .cc_bottom cc_352
 .cc_top cc_353,.Lxtalabel38
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	527
-	.long	528
+	.long	557
+	.long	558
 	.long	.Lxtalabel38
 .cc_bottom cc_353
 .cc_top cc_354,.Lxtalabel20
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	533
-	.long	536
+	.long	563
+	.long	566
 	.long	.Lxtalabel20
 .cc_bottom cc_354
 .cc_top cc_355,.Lxtalabel20
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	538
-	.long	538
+	.long	568
+	.long	568
 	.long	.Lxtalabel20
 .cc_bottom cc_355
 .cc_top cc_356,.Lxtalabel21
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	539
-	.long	539
+	.long	569
+	.long	569
 	.long	.Lxtalabel21
 .cc_bottom cc_356
 .cc_top cc_357,.Lxtalabel22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	540
-	.long	540
+	.long	570
+	.long	570
 	.long	.Lxtalabel22
 .cc_bottom cc_357
 .cc_top cc_358,.Lxtalabel22
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	541
-	.long	542
+	.long	571
+	.long	572
 	.long	.Lxtalabel22
 .cc_bottom cc_358
 .cc_top cc_359,.Lxtalabel39
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	546
-	.long	547
+	.long	576
+	.long	577
 	.long	.Lxtalabel39
 .cc_bottom cc_359
 .cc_top cc_360,.Lxtalabel39
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	549
-	.long	549
+	.long	579
+	.long	579
 	.long	.Lxtalabel39
 .cc_bottom cc_360
 .cc_top cc_361,.Lxtalabel40
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	550
-	.long	550
+	.long	580
+	.long	580
 	.long	.Lxtalabel40
 .cc_bottom cc_361
 .cc_top cc_362,.Lxtalabel44
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	551
-	.long	553
+	.long	581
+	.long	583
 	.long	.Lxtalabel44
 .cc_bottom cc_362
 .cc_top cc_363,.Lxtalabel41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	551
-	.long	553
+	.long	581
+	.long	583
 	.long	.Lxtalabel41
 .cc_bottom cc_363
 .cc_top cc_364,.Lxtalabel42
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	551
-	.long	553
+	.long	581
+	.long	583
 	.long	.Lxtalabel42
 .cc_bottom cc_364
 .cc_top cc_365,.Lxtalabel41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	556
-	.long	556
+	.long	586
+	.long	586
 	.long	.Lxtalabel41
 .cc_bottom cc_365
 .cc_top cc_366,.Lxtalabel42
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	556
-	.long	556
+	.long	586
+	.long	586
 	.long	.Lxtalabel42
 .cc_bottom cc_366
 .cc_top cc_367,.Lxtalabel44
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	556
-	.long	556
+	.long	586
+	.long	586
 	.long	.Lxtalabel44
 .cc_bottom cc_367
 .cc_top cc_368,.Lxtalabel43
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	560
-	.long	560
+	.long	590
+	.long	590
 	.long	.Lxtalabel43
 .cc_bottom cc_368
 .cc_top cc_369,.Lxtalabel44
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	564
-	.long	565
+	.long	594
+	.long	595
 	.long	.Lxtalabel44
 .cc_bottom cc_369
 .cc_top cc_370,.Lxtalabel41
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	564
-	.long	565
+	.long	594
+	.long	595
 	.long	.Lxtalabel41
 .cc_bottom cc_370
 .cc_top cc_371,.Lxtalabel42
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	564
-	.long	565
+	.long	594
+	.long	595
 	.long	.Lxtalabel42
 .cc_bottom cc_371
 .cc_top cc_372,.Lxtalabel110
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	571
-	.long	578
+	.long	601
+	.long	608
 	.long	.Lxtalabel110
 .cc_bottom cc_372
 .Lentries_end5:
@@ -11280,372 +11280,372 @@ __xcc1_internal_3:
 .cc_top cc_373,.Lxta.loop_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	128
-	.long	135
+	.long	158
+	.long	165
 	.long	.Lxta.loop_labels3
 .cc_bottom cc_373
 .cc_top cc_374,.Lxta.loop_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	137
-	.long	151
+	.long	167
+	.long	181
 	.long	.Lxta.loop_labels3
 .cc_bottom cc_374
 .cc_top cc_375,.Lxta.loop_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	153
-	.long	158
+	.long	183
+	.long	188
 	.long	.Lxta.loop_labels3
 .cc_bottom cc_375
 .cc_top cc_376,.Lxta.loop_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	160
-	.long	176
+	.long	190
+	.long	206
 	.long	.Lxta.loop_labels3
 .cc_bottom cc_376
 .cc_top cc_377,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	177
-	.long	177
+	.long	207
+	.long	207
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_377
 .cc_top cc_378,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	180
-	.long	186
+	.long	210
+	.long	216
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_378
 .cc_top cc_379,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	188
-	.long	188
+	.long	218
+	.long	218
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_379
 .cc_top cc_380,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	190
-	.long	196
+	.long	220
+	.long	226
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_380
 .cc_top cc_381,.Lxta.loop_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	198
-	.long	200
+	.long	228
+	.long	230
 	.long	.Lxta.loop_labels2
 .cc_bottom cc_381
 .cc_top cc_382,.Lxta.loop_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	201
-	.long	207
+	.long	231
+	.long	237
 	.long	.Lxta.loop_labels3
 .cc_bottom cc_382
 .cc_top cc_383,.Lxta.loop_labels3
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	209
-	.long	218
+	.long	239
+	.long	248
 	.long	.Lxta.loop_labels3
 .cc_bottom cc_383
 .cc_top cc_384,.Lxta.loop_labels4
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	256
-	.long	264
+	.long	286
+	.long	294
 	.long	.Lxta.loop_labels4
 .cc_bottom cc_384
 .cc_top cc_385,.Lxta.loop_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	269
-	.long	269
+	.long	299
+	.long	299
 	.long	.Lxta.loop_labels10
 .cc_bottom cc_385
 .cc_top cc_386,.Lxta.loop_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	270
-	.long	270
+	.long	300
+	.long	300
 	.long	.Lxta.loop_labels10
 .cc_bottom cc_386
 .cc_top cc_387,.Lxta.loop_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	272
-	.long	272
+	.long	302
+	.long	302
 	.long	.Lxta.loop_labels10
 .cc_bottom cc_387
 .cc_top cc_388,.Lxta.loop_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	278
-	.long	287
+	.long	308
+	.long	317
 	.long	.Lxta.loop_labels10
 .cc_bottom cc_388
 .cc_top cc_389,.Lxta.loop_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	289
-	.long	289
+	.long	319
+	.long	319
 	.long	.Lxta.loop_labels10
 .cc_bottom cc_389
 .cc_top cc_390,.Lxta.loop_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	290
-	.long	291
+	.long	320
+	.long	321
 	.long	.Lxta.loop_labels6
 .cc_bottom cc_390
 .cc_top cc_391,.Lxta.loop_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	293
-	.long	294
+	.long	323
+	.long	324
 	.long	.Lxta.loop_labels6
 .cc_bottom cc_391
 .cc_top cc_392,.Lxta.loop_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	295
-	.long	295
+	.long	325
+	.long	325
 	.long	.Lxta.loop_labels6
 .cc_bottom cc_392
 .cc_top cc_393,.Lxta.loop_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	297
-	.long	298
+	.long	327
+	.long	328
 	.long	.Lxta.loop_labels6
 .cc_bottom cc_393
 .cc_top cc_394,.Lxta.loop_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	299
-	.long	299
+	.long	329
+	.long	329
 	.long	.Lxta.loop_labels6
 .cc_bottom cc_394
 .cc_top cc_395,.Lxta.loop_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	301
-	.long	302
+	.long	331
+	.long	332
 	.long	.Lxta.loop_labels6
 .cc_bottom cc_395
 .cc_top cc_396,.Lxta.loop_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	303
-	.long	303
+	.long	333
+	.long	333
 	.long	.Lxta.loop_labels6
 .cc_bottom cc_396
 .cc_top cc_397,.Lxta.loop_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	305
-	.long	306
+	.long	335
+	.long	336
 	.long	.Lxta.loop_labels6
 .cc_bottom cc_397
 .cc_top cc_398,.Lxta.loop_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	307
-	.long	307
+	.long	337
+	.long	337
 	.long	.Lxta.loop_labels6
 .cc_bottom cc_398
 .cc_top cc_399,.Lxta.loop_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	309
-	.long	309
+	.long	339
+	.long	339
 	.long	.Lxta.loop_labels6
 .cc_bottom cc_399
 .cc_top cc_400,.Lxta.loop_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	310
-	.long	310
+	.long	340
+	.long	340
 	.long	.Lxta.loop_labels5
 .cc_bottom cc_400
 .cc_top cc_401,.Lxta.loop_labels5
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	315
-	.long	322
+	.long	345
+	.long	352
 	.long	.Lxta.loop_labels5
 .cc_bottom cc_401
 .cc_top cc_402,.Lxta.loop_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	323
-	.long	324
+	.long	353
+	.long	354
 	.long	.Lxta.loop_labels6
 .cc_bottom cc_402
 .cc_top cc_403,.Lxta.loop_labels6
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	326
-	.long	326
+	.long	356
+	.long	356
 	.long	.Lxta.loop_labels6
 .cc_bottom cc_403
 .cc_top cc_404,.Lxta.loop_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	329
-	.long	329
+	.long	359
+	.long	359
 	.long	.Lxta.loop_labels10
 .cc_bottom cc_404
 .cc_top cc_405,.Lxta.loop_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	330
-	.long	330
+	.long	360
+	.long	360
 	.long	.Lxta.loop_labels10
 .cc_bottom cc_405
 .cc_top cc_406,.Lxta.loop_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	331
-	.long	331
+	.long	361
+	.long	361
 	.long	.Lxta.loop_labels10
 .cc_bottom cc_406
 .cc_top cc_407,.Lxta.loop_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	332
-	.long	332
+	.long	362
+	.long	362
 	.long	.Lxta.loop_labels10
 .cc_bottom cc_407
 .cc_top cc_408,.Lxta.loop_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	333
-	.long	333
+	.long	363
+	.long	363
 	.long	.Lxta.loop_labels10
 .cc_bottom cc_408
 .cc_top cc_409,.Lxta.loop_labels7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	334
-	.long	335
+	.long	364
+	.long	365
 	.long	.Lxta.loop_labels7
 .cc_bottom cc_409
 .cc_top cc_410,.Lxta.loop_labels7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	340
-	.long	349
+	.long	370
+	.long	379
 	.long	.Lxta.loop_labels7
 .cc_bottom cc_410
 .cc_top cc_411,.Lxta.loop_labels7
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	351
-	.long	352
+	.long	381
+	.long	382
 	.long	.Lxta.loop_labels7
 .cc_bottom cc_411
 .cc_top cc_412,.Lxta.loop_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	357
-	.long	366
+	.long	387
+	.long	396
 	.long	.Lxta.loop_labels10
 .cc_bottom cc_412
 .cc_top cc_413,.Lxta.loop_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	368
-	.long	371
+	.long	398
+	.long	401
 	.long	.Lxta.loop_labels10
 .cc_bottom cc_413
 .cc_top cc_414,.Lxta.loop_labels8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	372
-	.long	372
+	.long	402
+	.long	402
 	.long	.Lxta.loop_labels8
 .cc_bottom cc_414
 .cc_top cc_415,.Lxta.loop_labels8
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	376
-	.long	383
+	.long	406
+	.long	413
 	.long	.Lxta.loop_labels8
 .cc_bottom cc_415
 .cc_top cc_416,.Lxta.loop_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	385
-	.long	386
+	.long	415
+	.long	416
 	.long	.Lxta.loop_labels10
 .cc_bottom cc_416
 .cc_top cc_417,.Lxta.loop_labels9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	387
-	.long	387
+	.long	417
+	.long	417
 	.long	.Lxta.loop_labels9
 .cc_bottom cc_417
 .cc_top cc_418,.Lxta.loop_labels9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	391
-	.long	397
+	.long	421
+	.long	427
 	.long	.Lxta.loop_labels9
 .cc_bottom cc_418
 .cc_top cc_419,.Lxta.loop_labels9
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	399
-	.long	402
+	.long	429
+	.long	432
 	.long	.Lxta.loop_labels9
 .cc_bottom cc_419
 .cc_top cc_420,.Lxta.loop_labels10
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	403
-	.long	404
+	.long	433
+	.long	434
 	.long	.Lxta.loop_labels10
 .cc_bottom cc_420
 .cc_top cc_421,.Lxta.loop_labels11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	411
-	.long	411
+	.long	441
+	.long	441
 	.long	.Lxta.loop_labels11
 .cc_bottom cc_421
 .cc_top cc_422,.Lxta.loop_labels11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	415
-	.long	421
+	.long	445
+	.long	451
 	.long	.Lxta.loop_labels11
 .cc_bottom cc_422
 .cc_top cc_423,.Lxta.loop_labels11
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	423
-	.long	426
+	.long	453
+	.long	456
 	.long	.Lxta.loop_labels11
 .cc_bottom cc_423
 .cc_top cc_424,.Lxta.loop_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	449
-	.long	454
+	.long	479
+	.long	484
 	.long	.Lxta.loop_labels0
 .cc_bottom cc_424
 .cc_top cc_425,.Lxta.loop_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc"
 	.byte	0
-	.long	461
-	.long	466
+	.long	491
+	.long	496
 	.long	.Lxta.loop_labels1
 .cc_bottom cc_425
 .Lentries_end7:

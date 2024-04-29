@@ -1,0 +1,487 @@
+21:13:57 **** Incremental Build of configuration Default for project module_i2c_shared ****
+xmake -f .makefile all 
+"** Module only - only builds as part of application **"
+21:13:58 **** Incremental Build of configuration Default for project module_i2c_single_port ****
+xmake -f .makefile all 
+"** Module only - only builds as part of application **"
+21:13:58 **** Incremental Build of configuration Release for project app_usb_sdc_ssdac_xSSDAC-SD-V2 ****
+xmake CONFIG=Release all 
+Checking build modules
+WARNING: Required version of lib_xassert is >=2.0.1 and actual version has greater major version: 4.1.0. There could be API incompatibilities.
+Using build modules: lib_logging(3.1.1) lib_trycatch(1.1.0) lib_xassert(4.1.0) lib_xcore_c(2.0.0) module_FatFs module_dfu module_flash_memory_server module_hw_support_xSSDAC-SD module_i2c_shared module_i2c_single_port module_libFLAC module_locks module_memory_sharing module_oled_SSD1306 module_operation_console module_sd_audio module_sdcard4bit module_ssdac module_usb_audio module_usb_device module_usb_midi module_usb_shared module_xud module_queue
+Analyzing SDCardHost4Bit.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:74:9: warning: missing braces around initializer [-Wmissing-braces]
+        PORT_SDC_CLK,
+        ^~~~~~~~~~~~
+C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release\\xSSDAC-SD-V2.h:53:34: note: expanded from macro 'PORT_SDC_CLK'
+#define PORT_SDC_CLK on tile[1]: XS1_PORT_1C
+                                 ^~~~~~~~~~~
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.4.1\target/include\xs1_g4000b-512.h:39:21: note: expanded from macro 'XS1_PORT_1C'
+#define XS1_PORT_1C 0x10100
+                    ^~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:365:24: warning: suggest parentheses around arithmetic in operand of | [-Wparentheses]
+        Dat = Crc3 & 1 | (Crc2 & 1) << 1 | (Crc1 & 1) << 2 | (Crc0 & 1) << 3;
+              ~~~~~~~~~^~~~~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:471:20: warning: get_core_id is deprecated, use get_local_tile_id instead
+  read_sswitch_reg(get_core_id(), 0, i);
+                   ^
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.4.1\target/include\xs1.h:2145:23: note: expanded from macro 'get_core_id'
+#define get_core_id() _Pragma("warning \"get_core_id is deprecated, use get_local_tile_id instead\"") get_local_tile_id()
+                      ^
+<scratch space>:2:2: note: expanded from here
+ warning "get_core_id is deprecated, use get_local_tile_id instead"
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:564:11: warning: unused variable `s' [-Wunused-variable]
+  DSTATUS s;
+          ^
+Analyzing ring_buffer.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing sinc4.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1: warning: control reaches end of non-void function [-Wreturn-type]
+FIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)
+^
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\fir_interpolator.h:98:6: note: expanded from macro 'FIR_ENTITY'
+    }\
+     ^
+Analyzing sinc8.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+FIR_ENTITY(fir_sinc8, _SINC8, fir_tap_sinc8_q30)
+^
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\fir_interpolator.h:98:6: note: expanded from macro 'FIR_ENTITY'
+    }\
+     ^
+Analyzing ssdac.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:202:11: warning: unused variable `t' [-Wunused-variable]
+    timer t;
+          ^
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:536:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:578:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+Creating dependencies for usb_midi_support.xc
+Creating dependencies for usb_midi.xc
+Creating dependencies for usb_buffer.xc
+Creating dependencies for decouple.xc
+Creating dependencies for audioports.xc
+Creating dependencies for pcm_pdm_mic.xc
+Creating dependencies for mixer.xc
+Creating dependencies for audiorequests.xc
+Creating dependencies for clockgen.xc
+Creating dependencies for warnings.xc
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:11: warning: #warning DEFAULT_FREQ not defined. Using MIN_FREQ
+
+    #warning DEFAULT_FREQ not defined. Using MIN_FREQ
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:15: warning: #warning MIN_FREQ not defined. Using 44100
+
+    #warning MIN_FREQ not defined. Using 44100
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:27: warning: #warning VENDOR_STR not defined. Using "XMOS"
+
+    #warning VENDOR_STR not defined. Using "XMOS"
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:35: warning: #warning PRODUCT_STR_A2 not defined. Using default XMOS string
+
+    #warning PRODUCT_STR_A2 not defined. Using default XMOS string
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:39: warning: #warning PRODUCT_STR_A1 not defined. Using default XMOS string
+
+    #warning PRODUCT_STR_A1 not defined. Using default XMOS string
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:43: warning: #warning BCD_DEVICE not defined. Using XMOS release version number
+
+    #warning BCD_DEVICE not defined. Using XMOS release version number
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:57: warning: #warning AUDIO_CLASS not defined, using 2
+
+    #warning AUDIO_CLASS not defined, using 2
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:61: warning: #warning AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+
+    #warning AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:11: warning: #warning DEFAULT_FREQ not defined. Using MIN_FREQ
+
+    #warning DEFAULT_FREQ not defined. Using MIN_FREQ
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:15: warning: #warning MIN_FREQ not defined. Using 44100
+
+    #warning MIN_FREQ not defined. Using 44100
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:27: warning: #warning VENDOR_STR not defined. Using "XMOS"
+
+    #warning VENDOR_STR not defined. Using "XMOS"
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:35: warning: #warning PRODUCT_STR_A2 not defined. Using default XMOS string
+
+    #warning PRODUCT_STR_A2 not defined. Using default XMOS string
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:39: warning: #warning PRODUCT_STR_A1 not defined. Using default XMOS string
+
+    #warning PRODUCT_STR_A1 not defined. Using default XMOS string
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:43: warning: #warning BCD_DEVICE not defined. Using XMOS release version number
+
+    #warning BCD_DEVICE not defined. Using XMOS release version number
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:57: warning: #warning AUDIO_CLASS not defined, using 2
+
+    #warning AUDIO_CLASS not defined, using 2
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:61: warning: #warning AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+
+    #warning AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+Creating dependencies for main.xc
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.h:10: warning: The macro is redefined
+    #define DEFAULT_FREQ 44100
+    from C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc: 57:    #include "ssdac.h"
+    previously macro "DEFAULT_FREQ" defined as: #define DEFAULT_FREQ (MIN_FREQ) 	/* C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h:159	*/
+Creating dependencies for ssdac.xc
+Creating dependencies for sinc8.xc
+Creating dependencies for sinc4.xc
+Creating dependencies for ring_buffer.xc
+Creating dependencies for SDCardHost4Bit.xc
+Creating dependencies for dfu.xc
+Creating dependencies for main.xc
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.h:10: warning: The macro is redefined
+    #define DEFAULT_FREQ 44100
+    from ../src/main.xc: 56:    #include "ssdac.h"
+    previously macro "DEFAULT_FREQ" defined as: #define DEFAULT_FREQ (MIN_FREQ) 	/* C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h:159	*/
+../src/main.xc:98: warning: #warning Building with fast mode enabled
+
+    #warning Building with fast mode enabled
+../src/main.xc:98: warning: #warning Building with fast mode enabled
+
+    #warning Building with fast mode enabled
+Creating dependencies for xuduser.c
+Creating dependencies for audioports.c
+Creating dependencies for endpoint0.c
+Creating dependencies for flashlib_user.c
+WARNING: Duplicate header found: format.h
+"WARNING: Found in: C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/format.h"
+WARNING: Duplicate header found: macros.h
+"WARNING: Found in: C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src/xcore_c_macros.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/macros.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/macros.h"
+WARNING: Duplicate header found: metadata.h
+"WARNING: Found in: C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/metadata.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/metadata.h"
+WARNING: Duplicate header found: stream_decoder.h
+"WARNING: Found in: C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/stream_decoder.h"
+Compiling flashlib_user.c
+Compiling endpoint0.c
+Compiling audioports.c
+Compiling xuduser.c
+Compiling main.xc
+In file included from ../src/main.xc:56:
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\ssdac.h:10:9: warning: 'DEFAULT_FREQ' macro redefined
+#define DEFAULT_FREQ 44100
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h:159:9: note: previous definition is here
+#define DEFAULT_FREQ             (MIN_FREQ)
+        ^
+../src/main.xc:98:2: warning: Building with fast mode enabled
+#warning Building with fast mode enabled
+ ^
+warning: subword-select option is deprecated and has no effect
+In file included from ../src/main.xc:56:
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\ssdac.h:10:9: warning: 'DEFAULT_FREQ' macro redefined
+#define DEFAULT_FREQ 44100
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h:159:9: note: previous definition is here
+#define DEFAULT_FREQ             (MIN_FREQ)
+        ^
+../src/main.xc:98:2: warning: Building with fast mode enabled
+#warning Building with fast mode enabled
+ ^
+../src/main.xc:256:10: warning: unused variable `c_play_control' [-Wunused-variable]
+    chan c_play_control;
+         ^~~~~~~~~~~~~~
+../src/main.xc:175:21: warning: `dfuInterface' not used in two parallel statements [-Wunusual-code]
+                    dfuInterface);
+                    ^~~~~~~~~~~~
+../src/main.xc:234:48: warning: `c_play_control' not used in two parallel statements [-Wunusual-code]
+            button_listener_core(config.value, c_play_control, c_dac_control );
+                                               ^~~~~~~~~~~~~~
+Compiling dfu.xc
+warning: subword-select option is deprecated and has no effect
+warning: subword-select option is deprecated and has no effect
+Compiling SDCardHost4Bit.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:74:9: warning: missing braces around initializer [-Wmissing-braces]
+        PORT_SDC_CLK,
+        ^~~~~~~~~~~~
+C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release\\xSSDAC-SD-V2.h:53:34: note: expanded from macro 'PORT_SDC_CLK'
+#define PORT_SDC_CLK on tile[1]: XS1_PORT_1C
+                                 ^~~~~~~~~~~
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.4.1\target/include\xs1_g4000b-512.h:39:21: note: expanded from macro 'XS1_PORT_1C'
+#define XS1_PORT_1C 0x10100
+                    ^~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:365:24: warning: suggest parentheses around arithmetic in operand of | [-Wparentheses]
+        Dat = Crc3 & 1 | (Crc2 & 1) << 1 | (Crc1 & 1) << 2 | (Crc0 & 1) << 3;
+              ~~~~~~~~~^~~~~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:471:20: warning: get_core_id is deprecated, use get_local_tile_id instead
+  read_sswitch_reg(get_core_id(), 0, i);
+                   ^
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.4.1\target/include\xs1.h:2145:23: note: expanded from macro 'get_core_id'
+#define get_core_id() _Pragma("warning \"get_core_id is deprecated, use get_local_tile_id instead\"") get_local_tile_id()
+                      ^
+<scratch space>:2:2: note: expanded from here
+ warning "get_core_id is deprecated, use get_local_tile_id instead"
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:564:11: warning: unused variable `s' [-Wunused-variable]
+  DSTATUS s;
+          ^
+Compiling ring_buffer.xc
+warning: subword-select option is deprecated and has no effect
+Compiling sinc4.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1: warning: control reaches end of non-void function [-Wreturn-type]
+FIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)
+^
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\fir_interpolator.h:98:6: note: expanded from macro 'FIR_ENTITY'
+    }\
+     ^
+Compiling sinc8.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+FIR_ENTITY(fir_sinc8, _SINC8, fir_tap_sinc8_q30)
+^
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\fir_interpolator.h:98:6: note: expanded from macro 'FIR_ENTITY'
+    }\
+     ^
+Compiling ssdac.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:202:11: warning: unused variable `t' [-Wunused-variable]
+    timer t;
+          ^
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:536:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:578:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+Compiling main.xc
+In file included from C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:57:
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\ssdac.h:10:9: warning: 'DEFAULT_FREQ' macro redefined
+#define DEFAULT_FREQ 44100
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h:159:9: note: previous definition is here
+#define DEFAULT_FREQ             (MIN_FREQ)
+        ^
+warning: subword-select option is deprecated and has no effect
+In file included from C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:57:
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\ssdac.h:10:9: warning: 'DEFAULT_FREQ' macro redefined
+#define DEFAULT_FREQ 44100
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h:159:9: note: previous definition is here
+#define DEFAULT_FREQ             (MIN_FREQ)
+        ^
+Compiling warnings.xc
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:11:2: warning: DEFAULT_FREQ not defined. Using MIN_FREQ
+#warning DEFAULT_FREQ not defined. Using MIN_FREQ
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:15:2: warning: MIN_FREQ not defined. Using 44100
+#warning MIN_FREQ not defined. Using 44100
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:27:2: warning: VENDOR_STR not defined. Using "XMOS"
+#warning VENDOR_STR not defined. Using "XMOS"
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:35:2: warning: PRODUCT_STR_A2 not defined. Using default XMOS string
+#warning PRODUCT_STR_A2 not defined. Using default XMOS string
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:39:2: warning: PRODUCT_STR_A1 not defined. Using default XMOS string
+#warning PRODUCT_STR_A1 not defined. Using default XMOS string
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:43:2: warning: BCD_DEVICE not defined. Using XMOS release version number
+#warning BCD_DEVICE not defined. Using XMOS release version number
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:57:2: warning: AUDIO_CLASS not defined, using 2
+#warning AUDIO_CLASS not defined, using 2
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:61:2: warning: AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+#warning AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+ ^
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:11:2: warning: DEFAULT_FREQ not defined. Using MIN_FREQ
+#warning DEFAULT_FREQ not defined. Using MIN_FREQ
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:15:2: warning: MIN_FREQ not defined. Using 44100
+#warning MIN_FREQ not defined. Using 44100
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:27:2: warning: VENDOR_STR not defined. Using "XMOS"
+#warning VENDOR_STR not defined. Using "XMOS"
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:35:2: warning: PRODUCT_STR_A2 not defined. Using default XMOS string
+#warning PRODUCT_STR_A2 not defined. Using default XMOS string
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:39:2: warning: PRODUCT_STR_A1 not defined. Using default XMOS string
+#warning PRODUCT_STR_A1 not defined. Using default XMOS string
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:43:2: warning: BCD_DEVICE not defined. Using XMOS release version number
+#warning BCD_DEVICE not defined. Using XMOS release version number
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:57:2: warning: AUDIO_CLASS not defined, using 2
+#warning AUDIO_CLASS not defined, using 2
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:61:2: warning: AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+#warning AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+ ^
+Compiling clockgen.xc
+warning: subword-select option is deprecated and has no effect
+Compiling audiorequests.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:404:41: warning: reinterpretation to type of larger alignment [-Wcast-align]
+                                        (buffer, unsigned[])[0] = g_curSamFreq;
+                                        ^~~~~~~~~~~~~~~~~~~~
+Compiling mixer.xc
+warning: subword-select option is deprecated and has no effect
+Compiling pcm_pdm_mic.xc
+warning: subword-select option is deprecated and has no effect
+Compiling audioports.xc
+warning: subword-select option is deprecated and has no effect
+Compiling decouple.xc
+warning: subword-select option is deprecated and has no effect
+Compiling usb_buffer.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/usb_buffer.xc:244:5: warning: reinterpretation to type of larger alignment [-Wcast-align]
+    (fb_clocks, unsigned[])[0] = 0;
+    ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/usb_buffer.xc:527:33: warning: reinterpretation to type of larger alignment [-Wcast-align]
+                                (fb_clocks, unsigned[])[0] = clocks;
+                                ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/usb_buffer.xc:531:33: warning: reinterpretation to type of larger alignment [-Wcast-align]
+                                (fb_clocks, unsigned[])[0] = clocks >> 2;
+                                ^~~~~~~~~~~~~~~~~~~~~~~
+Compiling usb_midi.xc
+warning: subword-select option is deprecated and has no effect
+Compiling usb_midi_support.xc
+warning: subword-select option is deprecated and has no effect
+Rebuild .build_Release/_obj.rsp
+Creating app_usb_sdc_ssdac_xSSDAC-SD-V2.xe
+Constraint check for tile[0]:
+  Cores available:            8,   used:          7 .  OKAY
+  Timers available:          10,   used:          7 .  OKAY
+  Chanends available:        32,   used:         12 .  OKAY
+  Memory available:       262144,   used:      42828 .  OKAY
+    (Stack: 1396, Code: 28596, Data: 12836)
+Constraints checks PASSED.
+Constraint check for tile[1]:
+  Cores available:            8,   used:          6+.  MAYBE
+  Timers available:          10,   used:          8+.  MAYBE
+  Chanends available:        32,   used:         26+.  MAYBE
+  Memory available:       262144,   used:      165568 .  OKAY
+    (Stack: 3684, Code: 121652, Data: 40232)
+Constraints checks PASSED WITH CAVEATS.
+metadata_object.c: Warning: Undefined reference to 'assert'
+stream_decoder.c: Warning: Undefined reference to 'fstat'
+ogg_helper.c: Warning: Undefined reference to 'ogg_page_checksum_set'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_page_serialno'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_clear'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_flush'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_init'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_packetin'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_packetout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_pagein'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_pageout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_reset'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_buffer'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_clear'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_init'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_pageout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_reset'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_wrote'
+xmap: Warning: More than 6 cores used on a tile. Ensure this is not the case on tile running XUD.
+metadata_object.c: Warning: Undefined reference to 'assert'
+stream_decoder.c: Warning: Undefined reference to 'fstat'
+ogg_helper.c: Warning: Undefined reference to 'ogg_page_checksum_set'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_page_serialno'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_clear'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_flush'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_init'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_packetin'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_packetout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_pagein'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_pageout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_reset'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_buffer'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_clear'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_init'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_pageout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_reset'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_wrote'
+xmap: Warning: port "XS1_PORT_1F" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1G" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1E" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1H" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1J" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1K" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1I" on tile[1] is not connected to any pins in this package.
+Build Complete
+21:16:12 **** Incremental Build of configuration Default for project module_i2c_shared ****
+xmake -f .makefile all 
+"** Module only - only builds as part of application **"
+21:16:12 **** Incremental Build of configuration Default for project module_i2c_single_port ****
+xmake -f .makefile all 
+"** Module only - only builds as part of application **"
+21:16:13 **** Incremental Build of configuration Release for project app_usb_sdc_ssdac_xSSDAC-SD-V2 ****
+xmake CONFIG=Release all 
+Checking build modules
+WARNING: Required version of lib_xassert is >=2.0.1 and actual version has greater major version: 4.1.0. There could be API incompatibilities.
+Using build modules: lib_logging(3.1.1) lib_trycatch(1.1.0) lib_xassert(4.1.0) lib_xcore_c(2.0.0) module_FatFs module_dfu module_flash_memory_server module_hw_support_xSSDAC-SD module_i2c_shared module_i2c_single_port module_libFLAC module_locks module_memory_sharing module_oled_SSD1306 module_operation_console module_sd_audio module_sdcard4bit module_ssdac module_usb_audio module_usb_device module_usb_midi module_usb_shared module_xud module_queue
+WARNING: Duplicate header found: format.h
+"WARNING: Found in: C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/format.h"
+WARNING: Duplicate header found: macros.h
+"WARNING: Found in: C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src/xcore_c_macros.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/macros.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/macros.h"
+WARNING: Duplicate header found: metadata.h
+"WARNING: Found in: C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/metadata.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/metadata.h"
+WARNING: Duplicate header found: stream_decoder.h
+"WARNING: Found in: C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/stream_decoder.h"
+Creating app_usb_sdc_ssdac_xSSDAC-SD-V2.xe
+Constraint check for tile[0]:
+  Cores available:            8,   used:          7 .  OKAY
+  Timers available:          10,   used:          7 .  OKAY
+  Chanends available:        32,   used:         12 .  OKAY
+  Memory available:       262144,   used:      42828 .  OKAY
+    (Stack: 1396, Code: 28596, Data: 12836)
+Constraints checks PASSED.
+Constraint check for tile[1]:
+  Cores available:            8,   used:          6+.  MAYBE
+  Timers available:          10,   used:          8+.  MAYBE
+  Chanends available:        32,   used:         26+.  MAYBE
+  Memory available:       262144,   used:      165568 .  OKAY
+    (Stack: 3684, Code: 121652, Data: 40232)
+Constraints checks PASSED WITH CAVEATS.
+metadata_object.c: Warning: Undefined reference to 'assert'
+stream_decoder.c: Warning: Undefined reference to 'fstat'
+ogg_helper.c: Warning: Undefined reference to 'ogg_page_checksum_set'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_page_serialno'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_clear'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_flush'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_init'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_packetin'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_packetout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_pagein'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_pageout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_reset'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_buffer'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_clear'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_init'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_pageout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_reset'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_wrote'
+xmap: Warning: More than 6 cores used on a tile. Ensure this is not the case on tile running XUD.
+metadata_object.c: Warning: Undefined reference to 'assert'
+stream_decoder.c: Warning: Undefined reference to 'fstat'
+ogg_helper.c: Warning: Undefined reference to 'ogg_page_checksum_set'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_page_serialno'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_clear'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_flush'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_init'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_packetin'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_packetout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_pagein'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_pageout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_reset'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_buffer'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_clear'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_init'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_pageout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_reset'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_wrote'
+xmap: Warning: port "XS1_PORT_1F" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1G" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1E" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1H" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1J" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1K" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1I" on tile[1] is not connected to any pins in this package.
+Build Complete

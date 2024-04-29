@@ -1,0 +1,76 @@
+21:16:13 **** Incremental Build of configuration Release for project app_usb_sdc_ssdac_xSSDAC-SD-V2 ****
+xmake CONFIG=Release all 
+Checking build modules
+WARNING: Required version of lib_xassert is >=2.0.1 and actual version has greater major version: 4.1.0. There could be API incompatibilities.
+Using build modules: lib_logging(3.1.1) lib_trycatch(1.1.0) lib_xassert(4.1.0) lib_xcore_c(2.0.0) module_FatFs module_dfu module_flash_memory_server module_hw_support_xSSDAC-SD module_i2c_shared module_i2c_single_port module_libFLAC module_locks module_memory_sharing module_oled_SSD1306 module_operation_console module_sd_audio module_sdcard4bit module_ssdac module_usb_audio module_usb_device module_usb_midi module_usb_shared module_xud module_queue
+WARNING: Duplicate header found: format.h
+"WARNING: Found in: C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/format.h"
+WARNING: Duplicate header found: macros.h
+"WARNING: Found in: C:/Users/takaaki/git/lib_xcore_c/lib_xcore_c/src/xcore_c_macros.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/macros.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/share/macros.h"
+WARNING: Duplicate header found: metadata.h
+"WARNING: Found in: C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/metadata.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/metadata.h"
+WARNING: Duplicate header found: stream_decoder.h
+"WARNING: Found in: C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/stream_decoder.h"
+Creating app_usb_sdc_ssdac_xSSDAC-SD-V2.xe
+Constraint check for tile[0]:
+  Cores available:            8,   used:          7 .  OKAY
+  Timers available:          10,   used:          7 .  OKAY
+  Chanends available:        32,   used:         12 .  OKAY
+  Memory available:       262144,   used:      42828 .  OKAY
+    (Stack: 1396, Code: 28596, Data: 12836)
+Constraints checks PASSED.
+Constraint check for tile[1]:
+  Cores available:            8,   used:          6+.  MAYBE
+  Timers available:          10,   used:          8+.  MAYBE
+  Chanends available:        32,   used:         26+.  MAYBE
+  Memory available:       262144,   used:      165568 .  OKAY
+    (Stack: 3684, Code: 121652, Data: 40232)
+Constraints checks PASSED WITH CAVEATS.
+metadata_object.c: Warning: Undefined reference to 'assert'
+stream_decoder.c: Warning: Undefined reference to 'fstat'
+ogg_helper.c: Warning: Undefined reference to 'ogg_page_checksum_set'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_page_serialno'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_clear'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_flush'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_init'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_packetin'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_packetout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_pagein'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_pageout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_reset'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_buffer'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_clear'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_init'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_pageout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_reset'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_wrote'
+xmap: Warning: More than 6 cores used on a tile. Ensure this is not the case on tile running XUD.
+metadata_object.c: Warning: Undefined reference to 'assert'
+stream_decoder.c: Warning: Undefined reference to 'fstat'
+ogg_helper.c: Warning: Undefined reference to 'ogg_page_checksum_set'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_page_serialno'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_clear'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_flush'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_init'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_packetin'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_packetout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_pagein'
+ogg_encoder_aspect.c: Warning: Undefined reference to 'ogg_stream_pageout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_stream_reset'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_buffer'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_clear'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_init'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_pageout'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_reset'
+ogg_decoder_aspect.c: Warning: Undefined reference to 'ogg_sync_wrote'
+xmap: Warning: port "XS1_PORT_1F" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1G" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1E" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1H" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1J" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1K" on tile[1] is not connected to any pins in this package.
+xmap: Warning: port "XS1_PORT_1I" on tile[1] is not connected to any pins in this package.
+Build Complete
+
+21:16:39 Build Finished (took 25s.999ms)
+

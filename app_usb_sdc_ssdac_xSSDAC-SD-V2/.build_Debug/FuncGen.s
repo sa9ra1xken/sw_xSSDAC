@@ -37,7 +37,7 @@
 FuncGen:                                # @FuncGen
 .Lfunc_begin0:
 	.file	1 "C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src\\FuncGen.xc"
-	.loc	1 19 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:19:0
+	.loc	1 42 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:42:0
 	.cfi_startproc
 	.issue_mode dual
 # BB#0:                                 # %allocas
@@ -66,11 +66,11 @@ FuncGen:                                # @FuncGen
 		mov r5, r0
 	}
 .Ltmp5:
-	.loc	1 20 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:20:0
+	.loc	1 43 0 prologue_end     # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:43:0
 .Lxta.call_labels0:
 	bl InitFG
 .Ltmp6:
-	.loc	1 21 21                 # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:21:21
+	.loc	1 44 21                 # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:44:21
 .Lxta.endpoint_labels0:
 	{
 		out res[r4], r5
@@ -81,25 +81,25 @@ FuncGen:                                # @FuncGen
 .Lxtalabel1:
 .Ltmp7:
 	#DEBUG_VALUE: FuncGen:c_out <- R4
-	.loc	1 24 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:24:0
+	.loc	1 47 0                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:47:0
 .Lxta.call_labels1:
 	bl NextSample
 .Ltmp8:
 	#DEBUG_VALUE: y <- R0
-	.loc	1 27 19                 # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:27:19
+	.loc	1 50 19                 # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:50:19
 .Lxta.endpoint_labels1:
 	{
 		out res[r4], r0
 		nop
 	}
-	.loc	1 28 19                 # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:28:19
+	.loc	1 51 19                 # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:51:19
 .Lxta.endpoint_labels2:
 	{
 		out res[r4], r0
 		nop
 	}
 .Ltmp9:
-	.loc	1 22 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:22:5
+	.loc	1 45 5                  # C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc:45:5
 	bu .LBB0_1
 .Ltmp10:
 	.cc_bottom FuncGen.function
@@ -170,25 +170,25 @@ FuncGen:                                # @FuncGen
 	.long	.Linfo_string6          # DW_AT_MIPS_linkage_name
 	.long	.Linfo_string6          # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	19                      # DW_AT_decl_line
+	.byte	42                      # DW_AT_decl_line
 	.byte	1                       # DW_AT_external
 	.byte	3                       # Abbrev [3] 0x32:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc0            # DW_AT_location
 	.long	.Linfo_string7          # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	19                      # DW_AT_decl_line
+	.byte	42                      # DW_AT_decl_line
 	.long	187                     # DW_AT_type
 	.byte	3                       # Abbrev [3] 0x41:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc1            # DW_AT_location
 	.long	.Linfo_string9          # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	19                      # DW_AT_decl_line
+	.byte	42                      # DW_AT_decl_line
 	.long	187                     # DW_AT_type
 	.byte	3                       # Abbrev [3] 0x50:0xf DW_TAG_formal_parameter
 	.long	.Ldebug_loc2            # DW_AT_location
 	.long	.Linfo_string10         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	19                      # DW_AT_decl_line
+	.byte	42                      # DW_AT_decl_line
 	.long	194                     # DW_AT_type
 	.byte	4                       # Abbrev [4] 0x5f:0x13 DW_TAG_lexical_block
 	.long	.Ldebug_ranges1         # DW_AT_ranges
@@ -197,7 +197,7 @@ FuncGen:                                # @FuncGen
 	.byte	80
 	.long	.Linfo_string12         # DW_AT_name
 	.byte	1                       # DW_AT_decl_file
-	.byte	24                      # DW_AT_decl_line
+	.byte	47                      # DW_AT_decl_line
 	.long	201                     # DW_AT_type
 	.byte	0                       # End Of Children Mark
 	.byte	0                       # End Of Children Mark
@@ -478,13 +478,13 @@ FuncGen:                                # @FuncGen
 .cc_top cc_0,.Lxta.call_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 	.byte	0
-	.long	20
+	.long	43
 	.long	.Lxta.call_labels0
 .cc_bottom cc_0
 .cc_top cc_1,.Lxta.call_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 	.byte	0
-	.long	24
+	.long	47
 	.long	.Lxta.call_labels1
 .cc_bottom cc_1
 .Lentries_end1:
@@ -497,19 +497,19 @@ FuncGen:                                # @FuncGen
 .cc_top cc_2,.Lxta.endpoint_labels0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 	.byte	0
-	.long	21
+	.long	44
 	.long	.Lxta.endpoint_labels0
 .cc_bottom cc_2
 .cc_top cc_3,.Lxta.endpoint_labels1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 	.byte	0
-	.long	27
+	.long	50
 	.long	.Lxta.endpoint_labels1
 .cc_bottom cc_3
 .cc_top cc_4,.Lxta.endpoint_labels2
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 	.byte	0
-	.long	28
+	.long	51
 	.long	.Lxta.endpoint_labels2
 .cc_bottom cc_4
 .Lentries_end3:
@@ -522,22 +522,22 @@ FuncGen:                                # @FuncGen
 .cc_top cc_5,.Lxtalabel0
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 	.byte	0
-	.long	20
-	.long	22
+	.long	43
+	.long	45
 	.long	.Lxtalabel0
 .cc_bottom cc_5
 .cc_top cc_6,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 	.byte	0
-	.long	24
-	.long	24
+	.long	47
+	.long	47
 	.long	.Lxtalabel1
 .cc_bottom cc_6
 .cc_top cc_7,.Lxtalabel1
 	.ascii	"C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/FuncGen.xc"
 	.byte	0
-	.long	27
-	.long	29
+	.long	50
+	.long	52
 	.long	.Lxtalabel1
 .cc_bottom cc_7
 .Lentries_end5:

@@ -1426,9 +1426,8 @@ int i2c_shared_master_write_part(
 # 19 "C:/Users/takaaki/git/sw_xSSDAC/module_operation_console/src/display_control.xc" 2
 
 # 1 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src\\OLED_SSD1306.h" 1
-# 80 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src\\OLED_SSD1306.h"
+# 76 "C:/Users/takaaki/git/sw_xSSDAC/module_oled_SSD1306/src\\OLED_SSD1306.h"
 void OLED_SSD1306_begin ();
-void OLED_SSD1306_write (unsigned char c);
 void OLED_SSD1306_put_string(int str_row, char string[]);
 
 typedef enum {

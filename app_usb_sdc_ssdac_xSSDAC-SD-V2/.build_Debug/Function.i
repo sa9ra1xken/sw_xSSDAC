@@ -1016,16 +1016,9 @@ int NextSample(){
 
     float valf;
 
-
-
-
-
-
     valf = phase / 2 / 3.14159265358979323846 - 0.5;
 
     if (phase > ( 2 * 3.14159265358979323846 ) ) phase -= ( 2 * 3.14159265358979323846 );
-
     int vali = valf * (float)(0x3fffffff);
-
     return vali;
 }

@@ -1,22 +1,41 @@
 /***************
- *
- * FONT8X16MIN - font 8 x 16 bitmap 96 characters SSD1306 format
- * Original source is FONT8X16MIN.h on https://github.com/askn37/OLED_SSD1306
- *
- * Modefied for XMOS audio application by Takaaki Sakurai
- *
-***************/
+ * @file    OLED_SSD1306.xc
+ * @brief   Character display function for SSD1306 OLED controller
+ * @author  Takaaki Sakurai
 
-#include <OLED_SSD1306.h>
+MIT License
+
+Copyright (c) 2018-2024 Takaaki Sakurai
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
+
+#include "OLED_SSD1306.h"
+#include "console_conf.h"
 #include <xs1.h>
-
 #include <assert.h>
 #include <platform.h>
 #include <stdio.h>
 #include <string.h>
 #include "i2c_shared.h"
 
-//#include <FONT8X16MIN.h>
 //#include "../font/BigRoman-8x16.font.h"//ok
 //#include "../font/bold-8x16.font.h"
 //#include "../font/deco-8x16.font.h"
@@ -34,7 +53,7 @@
 #define PAGE_COUNT 8
 #define PAGE_LENGTH 128
 #define CHAR_COUNT_PAR_LINE 16
-#define SH1106
+//#define SSH1106
 
 const unsigned char OLED_SSD1306_DISPLAY_INIT[] = {
     //SSD1306_CONTROL_CMD_STREAM,       // control byte, Co bit = 0 (continue), D/C# = 0 (command)
@@ -114,14 +133,13 @@ void OLED_SSD1306_begin (){
 
 void send_page(int page, int offset){
 
-#ifdef SH1106
+#ifdef SSH1106
     unsigned char cmd[3];
     cmd[0] = SH1106_SET_PAGE_ADDRESS    | page ;
     cmd[1] = SSD1306_SET_HIGH_COLUMN    | 0;
     cmd[2] = SSD1306_SET_LOW_COLUMN     | 2;
-
-
 #else
+#ifdef SSD1306
     unsigned char cmd[6];
     cmd[0] = SSD1306_SET_MEMORY_ADDR_MODE;
     cmd[1] = 0x00;  // Page addressing mode
@@ -129,7 +147,11 @@ void send_page(int page, int offset){
     cmd[3] = SSD1306_SET_COLUMN_RANGE;
     cmd[4] = 0;
     cmd[5] = PAGE_LENGTH-1;
+#else
+#error No OLED controller defined.
 #endif
+#endif
+
     i2c_shared_master_write_reg(
             r_i2c2,
             SSD1306_ADDR,

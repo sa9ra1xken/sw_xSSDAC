@@ -10,4 +10,7 @@
 
 #define ENABLE_FUNCTION_SELECTOR
 
+#define SSH1106
+//#define SSD1306
+
 #endif /* CONSOLE_CONF_H_ */

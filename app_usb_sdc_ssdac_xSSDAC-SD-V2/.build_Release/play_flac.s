@@ -33,7 +33,7 @@
 	.cc_top PlayFLAC.function,PlayFLAC
 PlayFLAC:
 .Lfunc_begin0:
-	.loc	2 291 0
+	.loc	2 315 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -67,24 +67,24 @@ PlayFLAC:
 		nop
 	}
 .Ltmp9:
-	.loc	2 292 5 prologue_end
+	.loc	2 316 5 prologue_end
 	stw r0, dp[ptr_file]
 	{
 		ldc r6, 0
 		nop
 	}
-	.loc	2 293 5
+	.loc	2 317 5
 	{
 		mov r1, r6
 		nop
 	}
 	bl f_lseek
 .Ltmp10:
-	.loc	2 295 5
+	.loc	2 319 5
 	stw r4, dp[chan_handshake]
-	.loc	2 296 15
+	.loc	2 320 15
 	bl FLAC__stream_decoder_new
-	.loc	2 296 15
+	.loc	2 320 15
 	stw r0, dp[decoder]
 	{
 		ldc r4, 6
@@ -93,15 +93,15 @@ PlayFLAC:
 .Ltmp11:
 	bf r0, .LBB0_9
 .Ltmp12:
-	.loc	2 302 5
+	.loc	2 326 5
 	{
 		mov r1, r6
 		nop
 	}
 	bl FLAC__stream_decoder_set_md5_checking
-	.loc	2 304 5
+	.loc	2 328 5
 	ldw r0, dp[decoder]
-	.loc	2 304 5
+	.loc	2 328 5
 	ldap r11, error_callback
 	{
 		mov r1, r11
@@ -148,12 +148,12 @@ PlayFLAC:
 		mkmsk r8, 1
 		nop
 	}
-	.loc	2 327 5
+	.loc	2 351 5
 	stw r8, dp[new_track]
-	.loc	2 328 5
+	.loc	2 352 5
 	ldaw r0, dp[CurrentPosition]
 	std r6, r6, r0[0]
-	.loc	2 329 5
+	.loc	2 353 5
 	stw r6, dp[SecElapsed]
 	{
 		ldaw r6, sp[7]
@@ -161,7 +161,7 @@ PlayFLAC:
 	}
 .Ltmp15:
 .LBB0_3:
-	.loc	2 335 13
+	.loc	2 359 13
 	ldap r11, Skip
 .Ltmp16:
 	{
@@ -177,33 +177,33 @@ PlayFLAC:
 		mov r1, r0
 		nop
 	}
-	.loc	2 337 13
+	.loc	2 361 13
 .Ltmp17:
 	ldw r0, dp[decoder]
 .Ltmp18:
-	.loc	2 335 13
+	.loc	2 359 13
 	{
 		eq r1, r1, 1
 		nop
 	}
 	bt r1, .LBB0_4
 .Ltmp19:
-	.loc	2 342 30
+	.loc	2 366 30
 	bl FLAC__stream_decoder_process_single
 	{
 		mov r7, r0
 		nop
 	}
 .Ltmp20:
-	.loc	2 343 50
+	.loc	2 367 50
 	ldw r0, dp[decoder]
-	.loc	2 343 50
+	.loc	2 367 50
 	bl FLAC__stream_decoder_get_state
 .Ltmp21:
-	.loc	2 344 13
+	.loc	2 368 13
 	bf r7, .LBB0_6
 .Ltmp22:
-	.loc	2 350 9
+	.loc	2 374 9
 	{
 		eq r0, r0, 4
 		nop
@@ -211,9 +211,9 @@ PlayFLAC:
 .Ltmp23:
 	bf r0, .LBB0_3
 .Ltmp24:
-	.loc	2 353 17
+	.loc	2 377 17
 	ldw r0, dp[decoder]
-	.loc	2 353 17
+	.loc	2 377 17
 	bl FLAC__stream_decoder_delete
 	{
 		mov r4, r8
@@ -222,7 +222,7 @@ PlayFLAC:
 	bu .LBB0_9
 .Ltmp25:
 .LBB0_4:
-	.loc	2 337 13
+	.loc	2 361 13
 	bl FLAC__stream_decoder_delete
 	{
 		nop
@@ -231,13 +231,13 @@ PlayFLAC:
 	bu .LBB0_9
 .Ltmp26:
 .LBB0_6:
-	.loc	2 347 13
+	.loc	2 371 13
 	ldw r0, dp[decoder]
-	.loc	2 347 13
+	.loc	2 371 13
 	bl FLAC__stream_decoder_delete
 .Ltmp27:
 .LBB0_9:
-	.loc	2 361 1
+	.loc	2 385 1
 	{
 		mov r0, r4
 		ldw r8, sp[12]
@@ -269,7 +269,7 @@ PlayFLAC:
 	.cc_top read_callback.function,read_callback
 read_callback:
 .Lfunc_begin1:
-	.loc	2 81 0
+	.loc	2 105 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -290,17 +290,17 @@ read_callback:
 		nop
 	}
 .Ltmp34:
-	.loc	2 89 9 prologue_end
+	.loc	2 113 9 prologue_end
 	{
 		ldc r4, 2
 		ldw r2, r5[0]
 	}
 	bf r2, .LBB1_3
 .Ltmp35:
-	.loc	2 91 11
+	.loc	2 115 11
 	ldw r0, dp[ptr_file]
 .Ltmp36:
-	.loc	2 91 11
+	.loc	2 115 11
 	{
 		mov r3, r5
 		nop
@@ -315,14 +315,14 @@ read_callback:
 		ldw r0, r5[0]
 	}
 .Ltmp40:
-	.loc	2 100 13
+	.loc	2 124 13
 	{
 		eq r4, r0, 0
 		nop
 	}
 .Ltmp41:
 .LBB1_3:
-	.loc	2 104 1
+	.loc	2 128 1
 	{
 		mov r0, r4
 		nop
@@ -350,7 +350,7 @@ read_callback:
 	.cc_top seek_callback.function,seek_callback
 seek_callback:
 .Lfunc_begin2:
-	.loc	2 110 0
+	.loc	2 134 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -361,14 +361,14 @@ seek_callback:
 	.cfi_def_cfa_offset 8
 .Ltmp46:
 	.cfi_offset 15, 0
-	.loc	2 112 19 prologue_end
+	.loc	2 136 19 prologue_end
 .Ltmp47:
 	ldw r0, dp[ptr_file]
 .Ltmp48:
-	.loc	2 112 19
+	.loc	2 136 19
 	bl f_lseek
 .Ltmp49:
-	.loc	2 116 9
+	.loc	2 140 9
 	{
 		eq r0, r0, 0
 		nop
@@ -379,7 +379,7 @@ seek_callback:
 		retsp 2
 	}
 .Ltmp51:
-	.loc	2 123 1
+	.loc	2 147 1
 	# RETURN_REG_HOLDER
 .Ltmp52:
 	.cc_bottom seek_callback.function
@@ -397,30 +397,30 @@ seek_callback:
 	.cc_top tell_callback.function,tell_callback
 tell_callback:
 .Lfunc_begin3:
-	.loc	2 129 0
+	.loc	2 153 0
 	.cfi_startproc
 	.issue_mode dual
 	{
 		nop
 		dualentsp 0
 	}
-	.loc	2 130 5 prologue_end
+	.loc	2 154 5 prologue_end
 .Ltmp54:
 	ldw r0, dp[ptr_file]
 .Ltmp55:
-	.loc	2 130 5
+	.loc	2 154 5
 	{
 		ldc r0, 0
 		ldw r2, r0[2]
 	}
 .Ltmp56:
-	.loc	2 130 5
+	.loc	2 154 5
 	std r0, r2, r1[0]
 	{
 		nop
 		retsp 0
 	}
-	.loc	2 131 5
+	.loc	2 155 5
 	# RETURN_REG_HOLDER
 .Ltmp57:
 	.cc_bottom tell_callback.function
@@ -438,30 +438,30 @@ tell_callback:
 	.cc_top length_callback.function,length_callback
 length_callback:
 .Lfunc_begin4:
-	.loc	2 138 0
+	.loc	2 162 0
 	.cfi_startproc
 	.issue_mode dual
 	{
 		nop
 		dualentsp 0
 	}
-	.loc	2 140 5 prologue_end
+	.loc	2 164 5 prologue_end
 .Ltmp59:
 	ldw r0, dp[ptr_file]
 .Ltmp60:
-	.loc	2 140 5
+	.loc	2 164 5
 	{
 		ldc r0, 0
 		ldw r2, r0[3]
 	}
 .Ltmp61:
-	.loc	2 140 5
+	.loc	2 164 5
 	std r0, r2, r1[0]
 	{
 		nop
 		retsp 0
 	}
-	.loc	2 142 5
+	.loc	2 166 5
 	# RETURN_REG_HOLDER
 .Ltmp62:
 	.cc_bottom length_callback.function
@@ -479,14 +479,14 @@ length_callback:
 	.cc_top eof_callback.function,eof_callback
 eof_callback:
 .Lfunc_begin5:
-	.loc	2 148 0
+	.loc	2 172 0
 	.cfi_startproc
 	.issue_mode dual
 	{
 		nop
 		dualentsp 0
 	}
-	.loc	2 149 5 prologue_end
+	.loc	2 173 5 prologue_end
 .Ltmp64:
 	ldw r0, dp[ptr_file]
 .Ltmp65:
@@ -499,12 +499,12 @@ eof_callback:
 		nop
 		ldw r0, r0[3]
 	}
-	.loc	2 149 5
+	.loc	2 173 5
 	{
 		eq r0, r1, r0
 		retsp 0
 	}
-	.loc	2 150 5
+	.loc	2 174 5
 	# RETURN_REG_HOLDER
 .Ltmp67:
 	.cc_bottom eof_callback.function
@@ -522,7 +522,7 @@ eof_callback:
 	.cc_top write_callback.function,write_callback
 write_callback:
 .Lfunc_begin6:
-	.loc	2 159 0
+	.loc	2 183 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -588,13 +588,13 @@ write_callback:
 		ldw r1, r1[4]
 	}
 .Ltmp83:
-	.loc	2 170 5 prologue_end
+	.loc	2 194 5 prologue_end
 	{
 		shr r1, r1, 3
 		nop
 	}
 .Ltmp84:
-	.loc	2 193 13
+	.loc	2 217 13
 	ldw r2, dp[chan_handshake]
 .Ltmp85:
 	{
@@ -602,9 +602,9 @@ write_callback:
 		stw r2, sp[1]
 	}
 .Ltmp86:
-	.loc	2 175 5
+	.loc	2 199 5
 	mul r2, r9, r1
-	.loc	2 175 5
+	.loc	2 199 5
 	{
 		sub r6, r9, 1
 		stw r2, sp[3]
@@ -629,14 +629,14 @@ write_callback:
 .Ltmp90:
 	bf r1, .LBB6_7
 .Ltmp91:
-	.loc	2 179 17
+	.loc	2 203 17
 	ldw r11, dp[buff_id]
 	{
 		ldc r4, 11
 		nop
 	}
 .Ltmp92:
-	.loc	2 177 17
+	.loc	2 201 17
 	{
 		shl r11, r11, r4
 		nop
@@ -661,7 +661,7 @@ write_callback:
 		ldw r11, r0[r5]
 	}
 .Ltmp94:
-	.loc	2 177 13
+	.loc	2 201 13
 	{
 		mov r9, r3
 		ldw r11, r11[r7]
@@ -672,33 +672,33 @@ write_callback:
 		add r4, r8, r9
 		nop
 	}
-	.loc	2 179 17
+	.loc	2 203 17
 .Ltmp96:
 	st8 r11, r4[r10]
-	.loc	2 180 17
+	.loc	2 204 17
 	ashr r11, r11, 8
 .Ltmp97:
-	.loc	2 178 65
+	.loc	2 202 65
 	{
 		add r9, r9, 1
 		nop
 	}
 .Ltmp98:
-	.loc	2 178 13
+	.loc	2 202 13
 	{
 		lsu r4, r9, r1
 		nop
 	}
-	.loc	2 178 13
+	.loc	2 202 13
 	bt r4, .LBB6_4
 .Ltmp99:
-	.loc	2 182 13
+	.loc	2 206 13
 	{
 		add r10, r10, r1
 		add r11, r5, 1
 	}
 .Ltmp100:
-	.loc	2 176 9
+	.loc	2 200 9
 	{
 		eq r5, r5, r6
 		nop
@@ -707,7 +707,7 @@ write_callback:
 	bu .LBB6_8
 .Ltmp101:
 .LBB6_7:
-	.loc	2 176 9
+	.loc	2 200 9
 	{
 		sub r11, r11, 1
 		nop
@@ -720,7 +720,7 @@ write_callback:
 		ldw r11, sp[3]
 	}
 .Ltmp103:
-	.loc	2 176 9
+	.loc	2 200 9
 	{
 		add r2, r11, r2
 		ldw r5, sp[5]
@@ -732,13 +732,13 @@ write_callback:
 	}
 .Ltmp105:
 .LBB6_9:
-	.loc	2 184 9
+	.loc	2 208 9
 	{
 		add r7, r7, 1
 		nop
 	}
 	ldc r11, 2047
-	.loc	2 186 13
+	.loc	2 210 13
 .Ltmp106:
 	{
 		lss r11, r11, r2
@@ -753,36 +753,36 @@ write_callback:
 	bt r11, .LBB6_16
 .Ltmp108:
 .LBB6_11:
-	.loc	2 187 13
+	.loc	2 211 13
 	ldw r8, dp[buff_id]
 .Ltmp109:
 	{
 		nop
 		ldw r11, sp[2]
 	}
-	.loc	2 187 13
+	.loc	2 211 13
 	ldaw r4, dp[sm_sample_rate]
-	.loc	2 187 13
+	.loc	2 211 13
 	stw r11, r4[r8]
-	.loc	2 188 13
+	.loc	2 212 13
 	ldaw r11, dp[sm_ch_count]
-	.loc	2 188 13
+	.loc	2 212 13
 	stw r9, r11[r8]
-	.loc	2 189 13
+	.loc	2 213 13
 	ldaw r11, dp[sm_byte_per_sample]
-	.loc	2 189 13
+	.loc	2 213 13
 	stw r1, r11[r8]
-	.loc	2 190 13
+	.loc	2 214 13
 	ldaw r11, dp[sm_byte_count]
-	.loc	2 190 13
+	.loc	2 214 13
 	stw r2, r11[r8]
-	.loc	2 191 13
+	.loc	2 215 13
 	ldw r2, dp[new_track]
-	.loc	2 191 13
+	.loc	2 215 13
 	ldaw r11, dp[sm_new_track]
-	.loc	2 191 13
+	.loc	2 215 13
 	stw r2, r11[r8]
-	.loc	2 192 17
+	.loc	2 216 17
 .Ltmp110:
 	{
 		eq r2, r2, 1
@@ -790,7 +790,7 @@ write_callback:
 	}
 	bf r2, .LBB6_13
 .Ltmp111:
-	.loc	2 192 31
+	.loc	2 216 31
 	stw r3, dp[new_track]
 .Ltmp112:
 .LBB6_13:
@@ -825,12 +825,12 @@ write_callback:
 	chkct res[r2], 0x1
 	#NO_APP
 .Ltmp118:
-	.loc	2 194 13
+	.loc	2 218 13
 	{
 		add r2, r8, 1
 		mkmsk r11, 3
 	}
-	.loc	2 195 17
+	.loc	2 219 17
 .Ltmp119:
 	{
 		lsu r4, r11, r2
@@ -838,14 +838,14 @@ write_callback:
 	}
 	bt r4, .LBB6_15
 .Ltmp120:
-	.loc	2 195 17
+	.loc	2 219 17
 	{
 		mov r11, r2
 		nop
 	}
 .Ltmp121:
 .LBB6_15:
-	.loc	2 195 37
+	.loc	2 219 37
 	stw r11, dp[buff_id]
 	{
 		mov r2, r3
@@ -853,7 +853,7 @@ write_callback:
 	}
 .Ltmp122:
 .LBB6_16:
-	.loc	2 186 13
+	.loc	2 210 13
 	{
 		lsu r11, r7, r5
 		nop
@@ -870,7 +870,7 @@ write_callback:
 		ldc r3, 0
 	}
 .Ltmp125:
-	.loc	2 204 13
+	.loc	2 228 13
 	bt r2, .LBB6_18
 .Ltmp126:
 	{
@@ -880,52 +880,52 @@ write_callback:
 	bu .LBB6_20
 .Ltmp127:
 .LBB6_18:
-	.loc	2 204 13
+	.loc	2 228 13
 	ashr r1, r5, 32
 .Ltmp128:
 .LBB6_20:
 	bt r2, .LBB6_22
 .Ltmp129:
-	.loc	2 204 13
+	.loc	2 228 13
 	{
 		mov r5, r0
 		nop
 	}
 .Ltmp130:
 .LBB6_22:
-	.loc	2 204 13
+	.loc	2 228 13
 	ldaw r2, dp[CurrentPosition]
 	ldd r11, r0, r2[0]
 .Ltmp131:
-	.loc	2 204 13
+	.loc	2 228 13
 	ladd r4, r0, r0, r5, r3
 	ladd r11, r1, r11, r1, r4
-	.loc	2 204 13
+	.loc	2 228 13
 	std r1, r0, r2[0]
 	{
 		nop
 		ldw r2, sp[2]
 	}
-	.loc	2 205 13
+	.loc	2 229 13
 	bl __udivdi3
 .Ltmp132:
-	.loc	2 206 17
+	.loc	2 230 17
 	ldw r1, dp[SecElapsed]
-	.loc	2 206 17
+	.loc	2 230 17
 	{
 		eq r1, r0, r1
 		nop
 	}
 	bt r1, .LBB6_24
 .Ltmp133:
-	.loc	2 207 17
+	.loc	2 231 17
 	stw r0, dp[SecElapsed]
 	{
 		ldc r0, 4
 		nop
 	}
 .Ltmp134:
-	.loc	2 208 17
+	.loc	2 232 17
 	bl set_display_control_flag
 .Ltmp135:
 .LBB6_24:
@@ -934,7 +934,7 @@ write_callback:
 		ldw r10, sp[12]
 	}
 .Ltmp136:
-	.loc	2 211 13
+	.loc	2 235 13
 	ldd r9, r8, sp[5]
 	ldd r7, r6, sp[4]
 	ldd r5, r4, sp[3]
@@ -976,7 +976,7 @@ write_callback:
 	.cc_top metadata_callback.function,metadata_callback
 metadata_callback:
 .Lfunc_begin7:
-	.loc	2 222 0
+	.loc	2 246 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -1004,14 +1004,14 @@ metadata_callback:
 		nop
 	}
 .Ltmp145:
-	.loc	2 227 9 prologue_end
+	.loc	2 251 9 prologue_end
 	{
 		add r0, r1, r0
 		nop
 	}
-	.loc	2 227 9
+	.loc	2 251 9
 	ldd r3, r0, r0[0]
-	.loc	2 227 9
+	.loc	2 251 9
 	ldaw r2, dp[total_samples]
 .Ltmp146:
 	std r3, r0, r2[0]
@@ -1019,46 +1019,46 @@ metadata_callback:
 		nop
 		ldw r2, r1[8]
 	}
-	.loc	2 228 9
+	.loc	2 252 9
 	stw r2, dp[sample_rate]
 	{
 		nop
 		ldw r11, r1[9]
 	}
-	.loc	2 229 9
+	.loc	2 253 9
 	stw r11, dp[channels]
 	{
 		nop
 		ldw r1, r1[10]
 	}
 .Ltmp147:
-	.loc	2 230 9
+	.loc	2 254 9
 	stw r1, dp[bits_per_sample]
 	{
 		ldc r4, 0
 		mov r1, r3
 	}
-	.loc	2 232 9
+	.loc	2 256 9
 	{
 		mov r3, r4
 		nop
 	}
 	bl __udivdi3
 	ldw r1, cp[.LCPI7_0]
-	.loc	2 233 9
+	.loc	2 257 9
 	lmul r1, r2, r0, r1, r4, r4
 	{
 		shr r2, r1, 5
 		ldc r1, 60
 	}
-	.loc	2 234 9
+	.loc	2 258 9
 	mul r1, r2, r1
 	{
 		sub r3, r0, r1
 		nop
 	}
 .Ltmp148:
-	.loc	2 235 9
+	.loc	2 259 9
 	ldaw r4, dp[TotalTimeString]
 	ldaw r11, cp[.L.str]
 	{
@@ -1067,24 +1067,24 @@ metadata_callback:
 	}
 	bl siprintf
 .Ltmp149:
-	.loc	2 237 9
+	.loc	2 261 9
 	ldw r5, dp[channels]
-	.loc	2 237 9
+	.loc	2 261 9
 	ldw r0, dp[sample_rate]
-	.loc	2 237 9
+	.loc	2 261 9
 	bl __floatunsisf
 	ldw r1, cp[.LCPI7_1]
-	.loc	2 237 9
+	.loc	2 261 9
 	bl __divsf3
-	.loc	2 237 9
+	.loc	2 261 9
 	bl __extendsfdf2
 	{
 		mov r3, r0
 		nop
 	}
-	.loc	2 237 9
+	.loc	2 261 9
 	ldw r0, dp[bits_per_sample]
-	.loc	2 237 9
+	.loc	2 261 9
 	std r4, r0, sp[1]
 	{
 		nop
@@ -1101,11 +1101,11 @@ metadata_callback:
 		ldc r0, 8
 		nop
 	}
-	.loc	2 243 9
+	.loc	2 267 9
 	bl set_display_control_flag
 .Ltmp150:
 .LBB7_2:
-	.loc	2 253 1
+	.loc	2 277 1
 	ldd r5, r4, sp[2]
 	{
 		nop
@@ -1128,7 +1128,7 @@ metadata_callback:
 	.cc_top error_callback.function,error_callback
 error_callback:
 .Lfunc_begin8:
-	.loc	2 259 0
+	.loc	2 283 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -1139,7 +1139,7 @@ error_callback:
 		nop
 		retsp 0
 	}
-	.loc	2 262 1 prologue_end
+	.loc	2 286 1 prologue_end
 .Ltmp153:
 	# RETURN_REG_HOLDER
 .Ltmp154:
@@ -1158,7 +1158,7 @@ error_callback:
 	.cc_top Skip.function,Skip
 Skip:
 .Lfunc_begin9:
-	.loc	2 264 0
+	.loc	2 288 0
 	.cfi_startproc
 	.issue_mode dual
 	{
@@ -1180,37 +1180,37 @@ Skip:
 	}
 .Ltmp160:
 	.cfi_offset 6, -8
-	.loc	2 266 5 prologue_end
+	.loc	2 290 5 prologue_end
 .Ltmp161:
 	ldw r1, dp[sample_rate]
-	.loc	2 266 5
+	.loc	2 290 5
 	mul r6, r1, r0
 .Ltmp162:
-	.loc	2 267 33
+	.loc	2 291 33
 	ldw r0, dp[decoder]
 .Ltmp163:
-	.loc	2 267 33
+	.loc	2 291 33
 	bl FLAC__stream_decoder_get_total_samples
 	{
 		mov r2, r0
 		nop
 	}
-	.loc	2 276 9
+	.loc	2 300 9
 .Ltmp164:
 	ashr r3, r6, 32
 	bt r3, .LBB9_1
 .Ltmp165:
-	.loc	2 282 9
+	.loc	2 306 9
 	ldaw r0, dp[CurrentPosition]
 	ldd r5, r11, r0[0]
 	{
 		ldc r0, 0
 		nop
 	}
-	.loc	2 282 9
+	.loc	2 306 9
 	ladd r11, r4, r11, r6, r0
 	ladd r3, r5, r5, r3, r11
-	.loc	2 283 14
+	.loc	2 307 14
 .Ltmp166:
 	{
 		eq r3, r5, r1
@@ -1225,17 +1225,17 @@ Skip:
 	bu .LBB9_9
 .Ltmp168:
 .LBB9_1:
-	.loc	2 277 14
+	.loc	2 301 14
 	{
 		neg r2, r6
 		nop
 	}
-	.loc	2 277 14
+	.loc	2 301 14
 	ashr r11, r2, 32
-	.loc	2 277 14
+	.loc	2 301 14
 	ldaw r0, dp[CurrentPosition]
 	ldd r0, r1, r0[0]
-	.loc	2 277 14
+	.loc	2 301 14
 	{
 		eq r4, r11, r0
 		nop
@@ -1249,7 +1249,7 @@ Skip:
 	bu .LBB9_4
 .Ltmp170:
 .LBB9_7:
-	.loc	2 283 14
+	.loc	2 307 14
 	{
 		lsu r1, r2, r4
 		nop
@@ -1260,7 +1260,7 @@ Skip:
 	bu .LBB9_10
 .LBB9_2:
 .Ltmp172:
-	.loc	2 277 14
+	.loc	2 301 14
 	{
 		lsu r2, r1, r2
 		nop
@@ -1281,20 +1281,20 @@ Skip:
 		ldc r2, 0
 		nop
 	}
-	.loc	2 278 14
+	.loc	2 302 14
 	ladd r1, r4, r1, r6, r2
 	ladd r0, r5, r0, r3, r1
 .Ltmp175:
 .LBB9_10:
-	.loc	2 285 22
+	.loc	2 309 22
 	ldw r0, dp[decoder]
-	.loc	2 285 22
+	.loc	2 309 22
 	{
 		mov r1, r4
 		mov r2, r5
 	}
 	bl FLAC__stream_decoder_seek_absolute
-	.loc	2 286 5
+	.loc	2 310 5
 	ldaw r0, dp[CurrentPosition]
 	std r5, r4, r0[0]
 	{
@@ -1306,7 +1306,7 @@ Skip:
 		nop
 		ldw r6, sp[4]
 	}
-	.loc	2 288 1
+	.loc	2 312 1
 	ldd r5, r4, sp[1]
 	{
 		nop
@@ -2206,7 +2206,7 @@ md5sum:
 .asciiz"TargetPosition"
 	.section	.debug_info,"",@progbits
 .L.debug_info_begin0:
-	.long	5390
+	.long	5394
 	.short	3
 	.long	.Lsection_abbrev
 	.byte	4
@@ -2222,7 +2222,7 @@ md5sum:
 	.long	49
 	.byte	1
 	.byte	2
-	.byte	46
+	.byte	70
 	.byte	5
 	.byte	3
 	.long	new_track
@@ -2247,7 +2247,7 @@ md5sum:
 	.long	95
 	.byte	1
 	.byte	2
-	.byte	47
+	.byte	71
 	.byte	5
 	.byte	3
 	.long	chan_handshake
@@ -2264,7 +2264,7 @@ md5sum:
 	.long	.Linfo_string10
 	.long	130
 	.byte	2
-	.byte	49
+	.byte	73
 	.byte	5
 	.byte	3
 	.long	decoder
@@ -2307,7 +2307,7 @@ md5sum:
 	.long	219
 	.byte	1
 	.byte	2
-	.byte	54
+	.byte	78
 	.byte	5
 	.byte	3
 	.long	min_blocksize
@@ -2325,7 +2325,7 @@ md5sum:
 	.long	219
 	.byte	1
 	.byte	2
-	.byte	54
+	.byte	78
 	.byte	5
 	.byte	3
 	.long	max_blocksize
@@ -2334,7 +2334,7 @@ md5sum:
 	.long	219
 	.byte	1
 	.byte	2
-	.byte	55
+	.byte	79
 	.byte	5
 	.byte	3
 	.long	min_framesize
@@ -2343,7 +2343,7 @@ md5sum:
 	.long	219
 	.byte	1
 	.byte	2
-	.byte	55
+	.byte	79
 	.byte	5
 	.byte	3
 	.long	max_framesize
@@ -2352,7 +2352,7 @@ md5sum:
 	.long	219
 	.byte	1
 	.byte	2
-	.byte	56
+	.byte	80
 	.byte	5
 	.byte	3
 	.long	sample_rate
@@ -2361,7 +2361,7 @@ md5sum:
 	.long	219
 	.byte	1
 	.byte	2
-	.byte	57
+	.byte	81
 	.byte	5
 	.byte	3
 	.long	channels
@@ -2370,7 +2370,7 @@ md5sum:
 	.long	219
 	.byte	1
 	.byte	2
-	.byte	58
+	.byte	82
 	.byte	5
 	.byte	3
 	.long	bits_per_sample
@@ -2379,7 +2379,7 @@ md5sum:
 	.long	363
 	.byte	1
 	.byte	2
-	.byte	59
+	.byte	83
 	.byte	5
 	.byte	3
 	.long	total_samples
@@ -2402,7 +2402,7 @@ md5sum:
 	.long	410
 	.byte	1
 	.byte	2
-	.byte	60
+	.byte	84
 	.byte	5
 	.byte	3
 	.long	md5sum
@@ -2440,7 +2440,7 @@ md5sum:
 	.long	487
 	.byte	1
 	.byte	2
-	.byte	65
+	.byte	89
 	.byte	5
 	.byte	3
 	.long	ptr_file
@@ -2680,7 +2680,7 @@ md5sum:
 	.long	363
 	.byte	1
 	.byte	2
-	.byte	70
+	.byte	94
 	.byte	5
 	.byte	3
 	.long	CurrentPosition
@@ -3162,54 +3162,54 @@ md5sum:
 	.byte	1
 	.long	.Linfo_string202
 	.byte	2
-	.short	290
+	.short	314
 	.byte	1
-	.long	3051
+	.long	3055
 	.byte	1
 	.byte	23
 	.long	.Ldebug_loc0
 	.long	.Linfo_string221
 	.byte	2
-	.short	290
+	.short	314
 	.long	487
 	.byte	23
 	.long	.Ldebug_loc1
 	.long	.Linfo_string222
 	.byte	2
-	.short	290
+	.short	314
 	.long	95
 	.byte	23
 	.long	.Ldebug_loc2
 	.long	.Linfo_string223
 	.byte	2
-	.short	290
+	.short	314
 	.long	95
 	.byte	24
 	.long	.Ldebug_loc3
 	.long	.Linfo_string224
 	.byte	2
-	.short	303
-	.long	3151
+	.short	327
+	.long	3155
 	.byte	24
 	.long	.Ldebug_loc4
 	.long	.Linfo_string226
 	.byte	2
-	.short	331
-	.long	3051
+	.short	355
+	.long	3055
 	.byte	25
 	.long	.Ldebug_ranges1
 	.byte	24
 	.long	.Ldebug_loc5
 	.long	.Linfo_string227
 	.byte	2
-	.short	342
-	.long	3085
+	.short	366
+	.long	3089
 	.byte	24
 	.long	.Ldebug_loc6
 	.long	.Linfo_string228
 	.byte	2
-	.short	343
-	.long	3163
+	.short	367
+	.long	3167
 	.byte	0
 	.byte	0
 	.byte	26
@@ -3219,39 +3219,39 @@ md5sum:
 	.byte	1
 	.long	.Linfo_string219
 	.byte	2
-	.byte	76
+	.byte	100
 	.byte	1
-	.long	3139
+	.long	3143
 	.byte	27
 	.long	.Ldebug_loc7
 	.long	.Linfo_string10
 	.byte	2
-	.byte	77
-	.long	3174
+	.byte	101
+	.long	3178
 	.byte	27
 	.long	.Ldebug_loc8
 	.long	.Linfo_string230
 	.byte	2
-	.byte	78
-	.long	3184
+	.byte	102
+	.long	3188
 	.byte	27
 	.long	.Ldebug_loc9
 	.long	.Linfo_string231
 	.byte	2
-	.byte	79
-	.long	3189
+	.byte	103
+	.long	3193
 	.byte	27
 	.long	.Ldebug_loc10
 	.long	.Linfo_string233
 	.byte	2
-	.byte	80
+	.byte	104
 	.long	1812
 	.byte	28
 	.long	.Ldebug_loc11
 	.long	.Linfo_string234
 	.byte	2
-	.byte	90
-	.long	3205
+	.byte	114
+	.long	3209
 	.byte	0
 	.byte	26
 	.long	.Ldebug_ranges3
@@ -3260,32 +3260,32 @@ md5sum:
 	.byte	1
 	.long	.Linfo_string217
 	.byte	2
-	.byte	106
+	.byte	130
 	.byte	1
-	.long	3127
+	.long	3131
 	.byte	27
 	.long	.Ldebug_loc12
 	.long	.Linfo_string10
 	.byte	2
-	.byte	107
-	.long	3174
+	.byte	131
+	.long	3178
 	.byte	29
 	.long	.Linfo_string236
 	.byte	2
-	.byte	108
+	.byte	132
 	.long	363
 	.byte	27
 	.long	.Ldebug_loc13
 	.long	.Linfo_string233
 	.byte	2
-	.byte	109
+	.byte	133
 	.long	1812
 	.byte	28
 	.long	.Ldebug_loc14
 	.long	.Linfo_string234
 	.byte	2
-	.byte	112
-	.long	3205
+	.byte	136
+	.long	3209
 	.byte	0
 	.byte	26
 	.long	.Ldebug_ranges4
@@ -3294,27 +3294,27 @@ md5sum:
 	.byte	1
 	.long	.Linfo_string215
 	.byte	2
-	.byte	125
+	.byte	149
 	.byte	1
-	.long	3115
+	.long	3119
 	.byte	27
 	.long	.Ldebug_loc15
 	.long	.Linfo_string10
 	.byte	2
-	.byte	126
-	.long	3174
+	.byte	150
+	.long	3178
 	.byte	30
 	.byte	1
 	.byte	81
 	.long	.Linfo_string236
 	.byte	2
-	.byte	127
-	.long	3216
+	.byte	151
+	.long	3220
 	.byte	27
 	.long	.Ldebug_loc16
 	.long	.Linfo_string233
 	.byte	2
-	.byte	128
+	.byte	152
 	.long	1812
 	.byte	0
 	.byte	26
@@ -3324,27 +3324,27 @@ md5sum:
 	.byte	1
 	.long	.Linfo_string213
 	.byte	2
-	.byte	134
+	.byte	158
 	.byte	1
-	.long	3103
+	.long	3107
 	.byte	27
 	.long	.Ldebug_loc17
 	.long	.Linfo_string10
 	.byte	2
-	.byte	135
-	.long	3174
+	.byte	159
+	.long	3178
 	.byte	30
 	.byte	1
 	.byte	81
 	.long	.Linfo_string237
 	.byte	2
-	.byte	136
-	.long	3216
+	.byte	160
+	.long	3220
 	.byte	27
 	.long	.Ldebug_loc18
 	.long	.Linfo_string233
 	.byte	2
-	.byte	137
+	.byte	161
 	.long	1812
 	.byte	0
 	.byte	26
@@ -3354,26 +3354,26 @@ md5sum:
 	.byte	1
 	.long	.Linfo_string210
 	.byte	2
-	.byte	145
+	.byte	169
 	.byte	1
-	.long	3085
+	.long	3089
 	.byte	27
 	.long	.Ldebug_loc19
 	.long	.Linfo_string10
 	.byte	2
-	.byte	146
-	.long	3174
+	.byte	170
+	.long	3178
 	.byte	27
 	.long	.Ldebug_loc20
 	.long	.Linfo_string233
 	.byte	2
-	.byte	147
+	.byte	171
 	.long	1812
 	.byte	31
 	.long	.Linfo_string226
 	.byte	2
-	.byte	149
-	.long	3085
+	.byte	173
+	.long	3089
 	.byte	0
 	.byte	32
 	.long	.Linfo_string194
@@ -3455,74 +3455,74 @@ md5sum:
 	.byte	1
 	.long	.Linfo_string208
 	.byte	2
-	.byte	154
+	.byte	178
 	.byte	1
-	.long	3073
+	.long	3077
 	.byte	27
 	.long	.Ldebug_loc21
 	.long	.Linfo_string10
 	.byte	2
-	.byte	155
-	.long	3174
+	.byte	179
+	.long	3178
 	.byte	27
 	.long	.Ldebug_loc22
 	.long	.Linfo_string238
 	.byte	2
-	.byte	156
-	.long	3221
+	.byte	180
+	.long	3225
 	.byte	27
 	.long	.Ldebug_loc23
 	.long	.Linfo_string296
 	.byte	2
-	.byte	157
-	.long	4265
+	.byte	181
+	.long	4269
 	.byte	27
 	.long	.Ldebug_loc24
 	.long	.Linfo_string233
 	.byte	2
-	.byte	158
+	.byte	182
 	.long	1812
 	.byte	28
 	.long	.Ldebug_loc25
 	.long	.Linfo_string297
 	.byte	2
-	.byte	167
+	.byte	191
 	.long	219
 	.byte	28
 	.long	.Ldebug_loc26
 	.long	.Linfo_string298
 	.byte	2
-	.byte	168
+	.byte	192
 	.long	219
 	.byte	28
 	.long	.Ldebug_loc27
 	.long	.Linfo_string299
 	.byte	2
-	.byte	169
+	.byte	193
 	.long	219
 	.byte	34
 	.byte	0
 	.long	.Linfo_string300
 	.byte	2
-	.byte	173
-	.long	3096
+	.byte	197
+	.long	3100
 	.byte	34
 	.byte	0
 	.long	.Linfo_string301
 	.byte	2
-	.byte	172
-	.long	3096
+	.byte	196
+	.long	3100
 	.byte	28
 	.long	.Ldebug_loc28
 	.long	.Linfo_string302
 	.byte	2
-	.byte	170
+	.byte	194
 	.long	219
 	.byte	35
 	.long	2351
 	.long	.Ldebug_ranges8
 	.byte	2
-	.byte	193
+	.byte	217
 	.byte	36
 	.long	.Ldebug_loc29
 	.long	2365
@@ -3566,24 +3566,24 @@ md5sum:
 	.long	.Ldebug_loc33
 	.long	.Linfo_string303
 	.byte	2
-	.byte	176
-	.long	3096
+	.byte	200
+	.long	3100
 	.byte	25
 	.long	.Ldebug_ranges13
 	.byte	28
 	.long	.Ldebug_loc35
 	.long	.Linfo_string305
 	.byte	2
-	.byte	177
-	.long	3096
+	.byte	201
+	.long	3100
 	.byte	25
 	.long	.Ldebug_ranges12
 	.byte	28
 	.long	.Ldebug_loc34
 	.long	.Linfo_string304
 	.byte	2
-	.byte	178
-	.long	3096
+	.byte	202
+	.long	3100
 	.byte	0
 	.byte	0
 	.byte	0
@@ -3592,7 +3592,7 @@ md5sum:
 	.byte	31
 	.long	.Linfo_string306
 	.byte	2
-	.byte	205
+	.byte	229
 	.long	106
 	.byte	0
 	.byte	0
@@ -3603,114 +3603,114 @@ md5sum:
 	.byte	1
 	.long	.Linfo_string207
 	.byte	2
-	.byte	218
+	.byte	242
 	.byte	1
 	.byte	27
 	.long	.Ldebug_loc38
 	.long	.Linfo_string10
 	.byte	2
-	.byte	219
-	.long	3174
+	.byte	243
+	.long	3178
 	.byte	27
 	.long	.Ldebug_loc39
 	.long	.Linfo_string307
 	.byte	2
-	.byte	220
-	.long	4275
+	.byte	244
+	.long	4279
 	.byte	27
 	.long	.Ldebug_loc40
 	.long	.Linfo_string233
 	.byte	2
-	.byte	221
+	.byte	245
 	.long	1812
 	.byte	25
 	.long	.Ldebug_ranges17
-	.byte	28
+	.byte	24
 	.long	.Ldebug_loc41
 	.long	.Linfo_string360
 	.byte	2
-	.byte	234
+	.short	258
 	.long	106
-	.byte	31
+	.byte	38
 	.long	.Linfo_string361
 	.byte	2
-	.byte	232
+	.short	256
 	.long	106
-	.byte	31
+	.byte	38
 	.long	.Linfo_string362
 	.byte	2
-	.byte	233
+	.short	257
 	.long	106
 	.byte	0
 	.byte	0
-	.byte	37
+	.byte	39
 	.long	.Ldebug_ranges18
 	.byte	1
 	.byte	94
 	.byte	1
 	.long	.Linfo_string206
 	.byte	2
-	.byte	255
+	.short	279
 	.byte	1
-	.byte	38
+	.byte	40
 	.byte	1
 	.byte	80
 	.long	.Linfo_string10
 	.byte	2
-	.short	256
-	.long	3174
-	.byte	38
+	.short	280
+	.long	3178
+	.byte	40
 	.byte	1
 	.byte	81
 	.long	.Linfo_string363
 	.byte	2
-	.short	257
-	.long	5381
-	.byte	38
+	.short	281
+	.long	5385
+	.byte	40
 	.byte	1
 	.byte	82
 	.long	.Linfo_string233
 	.byte	2
-	.short	258
+	.short	282
 	.long	1812
 	.byte	0
-	.byte	39
+	.byte	41
 	.long	.Ldebug_ranges19
 	.byte	1
 	.byte	94
 	.byte	1
 	.long	.Linfo_string204
 	.byte	2
-	.short	264
+	.short	288
 	.byte	1
-	.long	3062
+	.long	3066
 	.byte	23
 	.long	.Ldebug_loc42
 	.long	.Linfo_string365
 	.byte	2
-	.short	264
-	.long	3096
+	.short	288
+	.long	3100
 	.byte	24
 	.long	.Ldebug_loc43
 	.long	.Linfo_string366
 	.byte	2
-	.short	266
-	.long	3096
-	.byte	40
+	.short	290
+	.long	3100
+	.byte	38
 	.long	.Linfo_string367
 	.byte	2
-	.short	267
+	.short	291
 	.long	363
-	.byte	40
+	.byte	38
 	.long	.Linfo_string368
 	.byte	2
-	.short	275
+	.short	299
 	.long	363
-	.byte	40
+	.byte	38
 	.long	.Linfo_string234
 	.byte	2
-	.short	285
-	.long	3085
+	.short	309
+	.long	3089
 	.byte	0
 	.byte	3
 	.long	966
@@ -3728,7 +3728,7 @@ md5sum:
 	.byte	4
 	.short	402
 	.byte	3
-	.long	3096
+	.long	3100
 	.long	.Linfo_string212
 	.byte	6
 	.byte	69
@@ -3767,13 +3767,13 @@ md5sum:
 	.byte	4
 	.byte	244
 	.byte	8
-	.long	3179
-	.byte	41
+	.long	3183
+	.byte	42
 	.long	135
 	.byte	8
 	.long	422
 	.byte	8
-	.long	3194
+	.long	3198
 	.byte	3
 	.long	106
 	.long	.Linfo_string232
@@ -3787,39 +3787,39 @@ md5sum:
 	.byte	8
 	.long	363
 	.byte	8
-	.long	3226
-	.byte	41
-	.long	3231
+	.long	3230
+	.byte	42
+	.long	3235
 	.byte	9
-	.long	3243
+	.long	3247
 	.long	.Linfo_string295
 	.byte	11
 	.short	484
-	.byte	42
+	.byte	43
 	.short	3504
 	.byte	11
 	.short	480
 	.byte	11
 	.long	.Linfo_string239
-	.long	3290
+	.long	3294
 	.byte	11
 	.short	481
 	.byte	0
 	.byte	11
 	.long	.Linfo_string251
-	.long	3479
+	.long	3483
 	.byte	11
 	.short	482
 	.byte	40
-	.byte	43
+	.byte	44
 	.long	.Linfo_string291
-	.long	4212
+	.long	4216
 	.byte	11
 	.short	483
 	.short	3496
 	.byte	0
 	.byte	9
-	.long	3302
+	.long	3306
 	.long	.Linfo_string250
 	.byte	11
 	.short	451
@@ -3847,7 +3847,7 @@ md5sum:
 	.byte	8
 	.byte	11
 	.long	.Linfo_string241
-	.long	3444
+	.long	3448
 	.byte	11
 	.short	428
 	.byte	12
@@ -3859,23 +3859,23 @@ md5sum:
 	.byte	16
 	.byte	11
 	.long	.Linfo_string243
-	.long	3456
+	.long	3460
 	.byte	11
 	.short	434
 	.byte	20
 	.byte	11
 	.long	.Linfo_string245
-	.long	3398
+	.long	3402
 	.byte	11
 	.short	442
 	.byte	24
-	.byte	44
+	.byte	45
 	.byte	8
 	.byte	11
 	.short	439
 	.byte	11
 	.long	.Linfo_string246
-	.long	3468
+	.long	3472
 	.byte	11
 	.short	440
 	.byte	0
@@ -3909,62 +3909,62 @@ md5sum:
 	.byte	6
 	.byte	64
 	.byte	13
-	.long	3491
+	.long	3495
 	.byte	14
 	.long	462
 	.byte	7
 	.byte	0
 	.byte	9
-	.long	3503
+	.long	3507
 	.long	.Linfo_string290
 	.byte	11
 	.short	360
-	.byte	42
+	.byte	43
 	.short	432
 	.byte	11
 	.short	351
 	.byte	11
 	.long	.Linfo_string252
-	.long	3609
+	.long	3613
 	.byte	11
 	.short	352
 	.byte	0
 	.byte	11
 	.long	.Linfo_string199
-	.long	3535
+	.long	3539
 	.byte	11
 	.short	358
 	.byte	8
-	.byte	45
+	.byte	46
 	.short	416
 	.byte	11
 	.short	353
 	.byte	11
 	.long	.Linfo_string254
-	.long	3621
+	.long	3625
 	.byte	11
 	.short	354
 	.byte	0
 	.byte	11
 	.long	.Linfo_string260
-	.long	3681
+	.long	3685
 	.byte	11
 	.short	355
 	.byte	0
 	.byte	11
 	.long	.Linfo_string278
-	.long	3979
+	.long	3983
 	.byte	11
 	.short	356
 	.byte	0
 	.byte	11
 	.long	.Linfo_string283
-	.long	4114
+	.long	4118
 	.byte	11
 	.short	357
 	.byte	0
 	.byte	0
-	.byte	43
+	.byte	44
 	.long	.Linfo_string289
 	.long	219
 	.byte	11
@@ -3977,7 +3977,7 @@ md5sum:
 	.byte	11
 	.short	269
 	.byte	9
-	.long	3633
+	.long	3637
 	.long	.Linfo_string259
 	.byte	11
 	.short	283
@@ -3987,18 +3987,18 @@ md5sum:
 	.short	281
 	.byte	11
 	.long	.Linfo_string255
-	.long	3652
+	.long	3656
 	.byte	11
 	.short	282
 	.byte	0
 	.byte	0
 	.byte	3
-	.long	3663
+	.long	3667
 	.long	.Linfo_string258
 	.byte	6
 	.byte	62
 	.byte	3
-	.long	3674
+	.long	3678
 	.long	.Linfo_string257
 	.byte	5
 	.byte	123
@@ -4007,7 +4007,7 @@ md5sum:
 	.byte	5
 	.byte	8
 	.byte	9
-	.long	3693
+	.long	3697
 	.long	.Linfo_string277
 	.byte	11
 	.short	317
@@ -4017,7 +4017,7 @@ md5sum:
 	.short	305
 	.byte	11
 	.long	.Linfo_string261
-	.long	3751
+	.long	3755
 	.byte	11
 	.short	306
 	.byte	0
@@ -4029,19 +4029,19 @@ md5sum:
 	.byte	12
 	.byte	11
 	.long	.Linfo_string272
-	.long	3928
+	.long	3932
 	.byte	11
 	.short	312
 	.byte	16
 	.byte	11
 	.long	.Linfo_string273
-	.long	3940
+	.long	3944
 	.byte	11
 	.short	315
 	.byte	48
 	.byte	0
 	.byte	9
-	.long	3763
+	.long	3767
 	.long	.Linfo_string271
 	.byte	11
 	.short	257
@@ -4051,23 +4051,23 @@ md5sum:
 	.byte	252
 	.byte	17
 	.long	.Linfo_string252
-	.long	3810
+	.long	3814
 	.byte	11
 	.byte	253
 	.byte	0
 	.byte	11
 	.long	.Linfo_string199
-	.long	3792
+	.long	3796
 	.byte	11
 	.short	256
 	.byte	4
-	.byte	46
+	.byte	47
 	.byte	8
 	.byte	11
 	.byte	254
 	.byte	17
 	.long	.Linfo_string263
-	.long	3821
+	.long	3825
 	.byte	11
 	.byte	255
 	.byte	0
@@ -4079,7 +4079,7 @@ md5sum:
 	.byte	11
 	.byte	199
 	.byte	3
-	.long	3832
+	.long	3836
 	.long	.Linfo_string270
 	.byte	11
 	.byte	238
@@ -4095,17 +4095,17 @@ md5sum:
 	.byte	0
 	.byte	17
 	.long	.Linfo_string265
-	.long	3861
+	.long	3865
 	.byte	11
 	.byte	235
 	.byte	4
 	.byte	0
 	.byte	8
-	.long	3866
-	.byte	41
-	.long	3871
+	.long	3870
+	.byte	42
+	.long	3875
 	.byte	3
-	.long	3882
+	.long	3886
 	.long	.Linfo_string269
 	.byte	11
 	.byte	226
@@ -4115,13 +4115,13 @@ md5sum:
 	.byte	211
 	.byte	17
 	.long	.Linfo_string266
-	.long	3923
+	.long	3927
 	.byte	11
 	.byte	213
 	.byte	0
 	.byte	17
 	.long	.Linfo_string267
-	.long	3923
+	.long	3927
 	.byte	11
 	.byte	216
 	.byte	4
@@ -4135,22 +4135,22 @@ md5sum:
 	.byte	8
 	.long	219
 	.byte	13
-	.long	3652
+	.long	3656
 	.byte	14
 	.long	462
 	.byte	3
 	.byte	0
 	.byte	8
-	.long	3945
-	.byte	41
-	.long	3950
+	.long	3949
+	.byte	42
+	.long	3954
 	.byte	3
-	.long	3961
+	.long	3965
 	.long	.Linfo_string276
 	.byte	6
 	.byte	61
 	.byte	3
-	.long	3972
+	.long	3976
 	.long	.Linfo_string275
 	.byte	5
 	.byte	83
@@ -4159,17 +4159,17 @@ md5sum:
 	.byte	5
 	.byte	4
 	.byte	9
-	.long	3991
+	.long	3995
 	.long	.Linfo_string282
 	.byte	11
 	.short	343
-	.byte	42
+	.byte	43
 	.short	416
 	.byte	11
 	.short	322
 	.byte	11
 	.long	.Linfo_string261
-	.long	3751
+	.long	3755
 	.byte	11
 	.short	323
 	.byte	0
@@ -4187,43 +4187,43 @@ md5sum:
 	.byte	16
 	.byte	11
 	.long	.Linfo_string280
-	.long	3096
+	.long	3100
 	.byte	11
 	.short	332
 	.byte	20
 	.byte	11
 	.long	.Linfo_string281
-	.long	4090
+	.long	4094
 	.byte	11
 	.short	335
 	.byte	24
 	.byte	11
 	.long	.Linfo_string272
-	.long	4102
+	.long	4106
 	.byte	11
 	.short	338
 	.byte	152
-	.byte	43
+	.byte	44
 	.long	.Linfo_string273
-	.long	3940
+	.long	3944
 	.byte	11
 	.short	341
 	.short	408
 	.byte	0
 	.byte	13
-	.long	3950
+	.long	3954
 	.byte	14
 	.long	462
 	.byte	31
 	.byte	0
 	.byte	13
-	.long	3652
+	.long	3656
 	.byte	14
 	.long	462
 	.byte	31
 	.byte	0
 	.byte	9
-	.long	4126
+	.long	4130
 	.long	.Linfo_string288
 	.byte	11
 	.short	300
@@ -4233,45 +4233,45 @@ md5sum:
 	.short	294
 	.byte	11
 	.long	.Linfo_string199
-	.long	4144
+	.long	4148
 	.byte	11
 	.short	298
 	.byte	0
-	.byte	44
+	.byte	45
 	.byte	4
 	.byte	11
 	.short	295
 	.byte	11
 	.long	.Linfo_string284
-	.long	3940
+	.long	3944
 	.byte	11
 	.short	296
 	.byte	0
 	.byte	11
 	.long	.Linfo_string285
-	.long	4190
+	.long	4194
 	.byte	11
 	.short	297
 	.byte	0
 	.byte	0
 	.byte	11
 	.long	.Linfo_string286
-	.long	4200
+	.long	4204
 	.byte	11
 	.short	299
 	.byte	4
 	.byte	0
 	.byte	8
-	.long	4195
-	.byte	41
-	.long	3652
+	.long	4199
+	.byte	42
+	.long	3656
 	.byte	9
 	.long	1502
 	.long	.Linfo_string287
 	.byte	11
 	.short	289
 	.byte	9
-	.long	4224
+	.long	4228
 	.long	.Linfo_string294
 	.byte	11
 	.short	473
@@ -4281,13 +4281,13 @@ md5sum:
 	.short	467
 	.byte	11
 	.long	.Linfo_string249
-	.long	4243
+	.long	4247
 	.byte	11
 	.short	468
 	.byte	0
 	.byte	0
 	.byte	3
-	.long	4254
+	.long	4258
 	.long	.Linfo_string293
 	.byte	6
 	.byte	63
@@ -4297,32 +4297,32 @@ md5sum:
 	.byte	5
 	.byte	58
 	.byte	8
-	.long	4270
-	.byte	41
-	.long	3940
+	.long	4274
+	.byte	42
+	.long	3944
 	.byte	8
-	.long	4280
-	.byte	41
-	.long	4285
+	.long	4284
+	.byte	42
+	.long	4289
 	.byte	9
-	.long	4297
+	.long	4301
 	.long	.Linfo_string359
 	.byte	11
 	.short	865
-	.byte	47
+	.byte	48
 	.long	.Linfo_string359
 	.byte	176
 	.byte	11
 	.short	841
 	.byte	11
 	.long	.Linfo_string252
-	.long	4469
+	.long	4473
 	.byte	11
 	.short	842
 	.byte	0
 	.byte	11
 	.long	.Linfo_string309
-	.long	3085
+	.long	3089
 	.byte	11
 	.short	847
 	.byte	4
@@ -4334,59 +4334,59 @@ md5sum:
 	.byte	8
 	.byte	11
 	.long	.Linfo_string199
-	.long	4358
+	.long	4362
 	.byte	11
 	.short	862
 	.byte	16
-	.byte	44
+	.byte	45
 	.byte	160
 	.byte	11
 	.short	853
 	.byte	11
 	.long	.Linfo_string311
-	.long	4481
+	.long	4485
 	.byte	11
 	.short	854
 	.byte	0
 	.byte	11
 	.long	.Linfo_string313
-	.long	4616
+	.long	4620
 	.byte	11
 	.short	855
 	.byte	0
 	.byte	11
 	.long	.Linfo_string316
-	.long	4647
+	.long	4651
 	.byte	11
 	.short	856
 	.byte	0
 	.byte	11
 	.long	.Linfo_string318
-	.long	4703
+	.long	4707
 	.byte	11
 	.short	857
 	.byte	0
 	.byte	11
 	.long	.Linfo_string325
-	.long	4809
+	.long	4813
 	.byte	11
 	.short	858
 	.byte	0
 	.byte	11
 	.long	.Linfo_string332
-	.long	4915
+	.long	4919
 	.byte	11
 	.short	859
 	.byte	0
 	.byte	11
 	.long	.Linfo_string347
-	.long	5198
+	.long	5202
 	.byte	11
 	.short	860
 	.byte	0
 	.byte	11
 	.long	.Linfo_string357
-	.long	5350
+	.long	5354
 	.byte	11
 	.short	861
 	.byte	0
@@ -4398,7 +4398,7 @@ md5sum:
 	.byte	11
 	.short	524
 	.byte	9
-	.long	4493
+	.long	4497
 	.long	.Linfo_string312
 	.byte	11
 	.short	544
@@ -4462,7 +4462,7 @@ md5sum:
 	.byte	40
 	.byte	0
 	.byte	9
-	.long	4628
+	.long	4632
 	.long	.Linfo_string315
 	.byte	11
 	.short	567
@@ -4472,13 +4472,13 @@ md5sum:
 	.short	561
 	.byte	11
 	.long	.Linfo_string314
-	.long	3096
+	.long	3100
 	.byte	11
 	.short	562
 	.byte	0
 	.byte	0
 	.byte	9
-	.long	4659
+	.long	4663
 	.long	.Linfo_string317
 	.byte	11
 	.short	575
@@ -4488,13 +4488,13 @@ md5sum:
 	.short	572
 	.byte	11
 	.long	.Linfo_string44
-	.long	4691
+	.long	4695
 	.byte	11
 	.short	573
 	.byte	0
 	.byte	11
 	.long	.Linfo_string199
-	.long	3184
+	.long	3188
 	.byte	11
 	.short	574
 	.byte	4
@@ -4506,7 +4506,7 @@ md5sum:
 	.byte	3
 	.byte	0
 	.byte	9
-	.long	4715
+	.long	4719
 	.long	.Linfo_string324
 	.byte	11
 	.short	622
@@ -4522,15 +4522,15 @@ md5sum:
 	.byte	0
 	.byte	11
 	.long	.Linfo_string320
-	.long	4747
+	.long	4751
 	.byte	11
 	.short	621
 	.byte	4
 	.byte	0
 	.byte	8
-	.long	4752
+	.long	4756
 	.byte	9
-	.long	4764
+	.long	4768
 	.long	.Linfo_string323
 	.byte	11
 	.short	591
@@ -4558,7 +4558,7 @@ md5sum:
 	.byte	16
 	.byte	0
 	.byte	9
-	.long	4821
+	.long	4825
 	.long	.Linfo_string331
 	.byte	11
 	.short	645
@@ -4568,25 +4568,25 @@ md5sum:
 	.short	641
 	.byte	11
 	.long	.Linfo_string326
-	.long	4866
+	.long	4870
 	.byte	11
 	.short	642
 	.byte	0
 	.byte	11
 	.long	.Linfo_string329
-	.long	3468
+	.long	3472
 	.byte	11
 	.short	643
 	.byte	8
 	.byte	11
 	.long	.Linfo_string330
-	.long	4910
+	.long	4914
 	.byte	11
 	.short	644
 	.byte	12
 	.byte	0
 	.byte	9
-	.long	4878
+	.long	4882
 	.long	.Linfo_string328
 	.byte	11
 	.short	634
@@ -4596,21 +4596,21 @@ md5sum:
 	.short	631
 	.byte	11
 	.long	.Linfo_string310
-	.long	3468
+	.long	3472
 	.byte	11
 	.short	632
 	.byte	0
 	.byte	11
 	.long	.Linfo_string327
-	.long	3184
+	.long	3188
 	.byte	11
 	.short	633
 	.byte	4
 	.byte	0
 	.byte	8
-	.long	4866
+	.long	4870
 	.byte	9
-	.long	4927
+	.long	4931
 	.long	.Linfo_string346
 	.byte	11
 	.short	729
@@ -4620,7 +4620,7 @@ md5sum:
 	.short	710
 	.byte	11
 	.long	.Linfo_string333
-	.long	4998
+	.long	5002
 	.byte	11
 	.short	711
 	.byte	0
@@ -4632,7 +4632,7 @@ md5sum:
 	.byte	136
 	.byte	11
 	.long	.Linfo_string336
-	.long	3085
+	.long	3089
 	.byte	11
 	.short	720
 	.byte	144
@@ -4644,13 +4644,13 @@ md5sum:
 	.byte	148
 	.byte	11
 	.long	.Linfo_string338
-	.long	5017
+	.long	5021
 	.byte	11
 	.short	726
 	.byte	152
 	.byte	0
 	.byte	13
-	.long	5010
+	.long	5014
 	.byte	14
 	.long	462
 	.byte	128
@@ -4660,9 +4660,9 @@ md5sum:
 	.byte	8
 	.byte	1
 	.byte	8
-	.long	5022
+	.long	5026
 	.byte	9
-	.long	5034
+	.long	5038
 	.long	.Linfo_string345
 	.byte	11
 	.short	695
@@ -4684,11 +4684,11 @@ md5sum:
 	.byte	8
 	.byte	11
 	.long	.Linfo_string340
-	.long	5137
+	.long	5141
 	.byte	11
 	.short	680
 	.byte	9
-	.byte	48
+	.byte	49
 	.long	.Linfo_string252
 	.long	219
 	.byte	11
@@ -4697,7 +4697,7 @@ md5sum:
 	.byte	1
 	.byte	15
 	.byte	20
-	.byte	48
+	.byte	49
 	.long	.Linfo_string341
 	.long	219
 	.byte	11
@@ -4714,21 +4714,21 @@ md5sum:
 	.byte	23
 	.byte	11
 	.long	.Linfo_string343
-	.long	5149
+	.long	5153
 	.byte	11
 	.short	692
 	.byte	24
 	.byte	0
 	.byte	13
-	.long	5010
+	.long	5014
 	.byte	14
 	.long	462
 	.byte	12
 	.byte	0
 	.byte	8
-	.long	5154
+	.long	5158
 	.byte	9
-	.long	5166
+	.long	5170
 	.long	.Linfo_string344
 	.byte	11
 	.short	662
@@ -4750,7 +4750,7 @@ md5sum:
 	.byte	8
 	.byte	0
 	.byte	9
-	.long	5210
+	.long	5214
 	.long	.Linfo_string356
 	.byte	11
 	.short	818
@@ -4760,55 +4760,55 @@ md5sum:
 	.short	776
 	.byte	11
 	.long	.Linfo_string252
-	.long	5333
+	.long	5337
 	.byte	11
 	.short	777
 	.byte	0
 	.byte	11
 	.long	.Linfo_string349
-	.long	5345
+	.long	5349
 	.byte	11
 	.short	780
 	.byte	4
 	.byte	11
 	.long	.Linfo_string350
-	.long	3184
+	.long	3188
 	.byte	11
 	.short	791
 	.byte	8
 	.byte	11
 	.long	.Linfo_string351
-	.long	3468
+	.long	3472
 	.byte	11
 	.short	798
 	.byte	12
 	.byte	11
 	.long	.Linfo_string352
-	.long	3468
+	.long	3472
 	.byte	11
 	.short	801
 	.byte	16
 	.byte	11
 	.long	.Linfo_string353
-	.long	3468
+	.long	3472
 	.byte	11
 	.short	804
 	.byte	20
 	.byte	11
 	.long	.Linfo_string354
-	.long	3468
+	.long	3472
 	.byte	11
 	.short	807
 	.byte	24
 	.byte	11
 	.long	.Linfo_string355
-	.long	3468
+	.long	3472
 	.byte	11
 	.short	812
 	.byte	28
 	.byte	11
 	.long	.Linfo_string199
-	.long	3184
+	.long	3188
 	.byte	11
 	.short	815
 	.byte	32
@@ -4819,9 +4819,9 @@ md5sum:
 	.byte	11
 	.short	762
 	.byte	8
-	.long	5010
+	.long	5014
 	.byte	9
-	.long	5362
+	.long	5366
 	.long	.Linfo_string358
 	.byte	11
 	.short	836
@@ -4831,7 +4831,7 @@ md5sum:
 	.short	834
 	.byte	11
 	.long	.Linfo_string199
-	.long	3184
+	.long	3188
 	.byte	11
 	.short	835
 	.byte	0
@@ -5326,10 +5326,8 @@ md5sum:
 	.byte	0
 	.byte	0
 	.byte	38
-	.byte	5
+	.byte	52
 	.byte	0
-	.byte	2
-	.byte	10
 	.byte	3
 	.byte	14
 	.byte	58
@@ -5357,13 +5355,13 @@ md5sum:
 	.byte	5
 	.byte	39
 	.byte	12
-	.byte	73
-	.byte	19
 	.byte	0
 	.byte	0
 	.byte	40
-	.byte	52
+	.byte	5
 	.byte	0
+	.byte	2
+	.byte	10
 	.byte	3
 	.byte	14
 	.byte	58
@@ -5375,13 +5373,34 @@ md5sum:
 	.byte	0
 	.byte	0
 	.byte	41
+	.byte	46
+	.byte	1
+	.byte	85
+	.byte	6
+	.byte	64
+	.byte	10
+	.ascii	"\347\177"
+	.byte	12
+	.byte	3
+	.byte	14
+	.byte	58
+	.byte	11
+	.byte	59
+	.byte	5
+	.byte	39
+	.byte	12
+	.byte	73
+	.byte	19
+	.byte	0
+	.byte	0
+	.byte	42
 	.byte	38
 	.byte	0
 	.byte	73
 	.byte	19
 	.byte	0
 	.byte	0
-	.byte	42
+	.byte	43
 	.byte	19
 	.byte	1
 	.byte	11
@@ -5392,7 +5411,7 @@ md5sum:
 	.byte	5
 	.byte	0
 	.byte	0
-	.byte	43
+	.byte	44
 	.byte	13
 	.byte	0
 	.byte	3
@@ -5407,22 +5426,11 @@ md5sum:
 	.byte	5
 	.byte	0
 	.byte	0
-	.byte	44
-	.byte	23
-	.byte	1
-	.byte	11
-	.byte	11
-	.byte	58
-	.byte	11
-	.byte	59
-	.byte	5
-	.byte	0
-	.byte	0
 	.byte	45
 	.byte	23
 	.byte	1
 	.byte	11
-	.byte	5
+	.byte	11
 	.byte	58
 	.byte	11
 	.byte	59
@@ -5433,6 +5441,17 @@ md5sum:
 	.byte	23
 	.byte	1
 	.byte	11
+	.byte	5
+	.byte	58
+	.byte	11
+	.byte	59
+	.byte	5
+	.byte	0
+	.byte	0
+	.byte	47
+	.byte	23
+	.byte	1
+	.byte	11
 	.byte	11
 	.byte	58
 	.byte	11
@@ -5440,7 +5459,7 @@ md5sum:
 	.byte	11
 	.byte	0
 	.byte	0
-	.byte	47
+	.byte	48
 	.byte	19
 	.byte	1
 	.byte	3
@@ -5453,7 +5472,7 @@ md5sum:
 	.byte	5
 	.byte	0
 	.byte	0
-	.byte	48
+	.byte	49
 	.byte	13
 	.byte	0
 	.byte	3
@@ -6282,9 +6301,9 @@ md5sum:
 .asciiz"_s_chan_check_ct_end"
 	.long	469
 .asciiz"ptr_file"
-	.long	2904
+	.long	2907
 .asciiz"error_callback"
-	.long	2962
+	.long	2966
 .asciiz"Skip"
 	.long	948
 .asciiz"CurrentPosition"
@@ -6332,151 +6351,151 @@ md5sum:
 	.long	.L.debug_info_begin0
 .Lset79 = .L.debug_info_end0-.L.debug_info_begin0
 	.long	.Lset79
-	.long	4915
+	.long	4919
 .asciiz"FLAC__StreamMetadata_CueSheet"
-	.long	4297
+	.long	4301
 .asciiz"FLAC__StreamMetadata"
-	.long	3127
+	.long	3131
 .asciiz"FLAC__StreamDecoderSeekStatus"
-	.long	3961
+	.long	3965
 .asciiz"int32_t"
-	.long	3073
+	.long	3077
 .asciiz"FLAC__StreamDecoderWriteStatus"
-	.long	3444
+	.long	3448
 .asciiz"FLAC__ChannelAssignment"
-	.long	4114
+	.long	4118
 .asciiz"FLAC__Subframe_Verbatim"
-	.long	3491
+	.long	3495
 .asciiz"FLAC__Subframe"
-	.long	5022
+	.long	5026
 .asciiz"FLAC__StreamMetadata_CueSheet_Track"
 	.long	444
 .asciiz"uint8_t"
 	.long	49
 .asciiz"BOOL"
-	.long	5154
+	.long	5158
 .asciiz"FLAC__StreamMetadata_CueSheet_Index"
-	.long	3151
+	.long	3155
 .asciiz"FLAC__StreamDecoderInitStatus"
-	.long	3115
+	.long	3119
 .asciiz"FLAC__StreamDecoderTellStatus"
 	.long	645
 .asciiz"FATFS"
 	.long	135
 .asciiz"FLAC__StreamDecoder"
-	.long	3139
+	.long	3143
 .asciiz"FLAC__StreamDecoderReadStatus"
 	.long	230
 .asciiz"long unsigned int"
-	.long	4481
+	.long	4485
 .asciiz"FLAC__StreamMetadata_StreamInfo"
-	.long	3163
+	.long	3167
 .asciiz"FLAC__StreamDecoderState"
-	.long	3751
+	.long	3755
 .asciiz"FLAC__EntropyCodingMethod"
-	.long	3972
+	.long	3976
 .asciiz"long int"
-	.long	4254
+	.long	4258
 .asciiz"uint16_t"
-	.long	3051
+	.long	3055
 .asciiz"PLAY_TRACK_RC"
 	.long	2388
 .asciiz"xcore_c_error_t"
 	.long	919
 .asciiz"DWORD"
-	.long	3085
+	.long	3089
 .asciiz"FLAC__bool"
-	.long	3231
+	.long	3235
 .asciiz"FLAC__Frame"
-	.long	4866
+	.long	4870
 .asciiz"FLAC__StreamMetadata_VorbisComment_Entry"
-	.long	3821
+	.long	3825
 .asciiz"FLAC__EntropyCodingMethod_PartitionedRice"
-	.long	3290
+	.long	3294
 .asciiz"FLAC__FrameHeader"
-	.long	3663
+	.long	3667
 .asciiz"int64_t"
-	.long	4200
+	.long	4204
 .asciiz"FLAC__VerbatimSubframeDataType"
-	.long	4752
+	.long	4756
 .asciiz"FLAC__StreamMetadata_SeekPoint"
-	.long	5198
+	.long	5202
 .asciiz"FLAC__StreamMetadata_Picture"
 	.long	890
 .asciiz"BYTE"
-	.long	4243
+	.long	4247
 .asciiz"FLAC__uint16"
-	.long	5333
+	.long	5337
 .asciiz"FLAC__StreamMetadata_Picture_Type"
-	.long	3205
+	.long	3209
 .asciiz"FRESULT"
 	.long	422
 .asciiz"FLAC__byte"
 	.long	106
 .asciiz"unsigned int"
-	.long	3652
+	.long	3656
 .asciiz"FLAC__int64"
-	.long	3096
+	.long	3100
 .asciiz"int"
 	.long	2340
 .asciiz"streaming_chanend_t"
-	.long	3194
+	.long	3198
 .asciiz"size_t"
-	.long	4212
+	.long	4216
 .asciiz"FLAC__FrameFooter"
-	.long	4703
+	.long	4707
 .asciiz"FLAC__StreamMetadata_SeekTable"
 	.long	95
 .asciiz"chanend"
-	.long	4809
+	.long	4813
 .asciiz"FLAC__StreamMetadata_VorbisComment"
-	.long	5350
+	.long	5354
 .asciiz"FLAC__StreamMetadata_Unknown"
-	.long	4616
+	.long	4620
 .asciiz"FLAC__StreamMetadata_Padding"
 	.long	219
 .asciiz"uint32_t"
 	.long	901
 .asciiz"WORD"
-	.long	3103
+	.long	3107
 .asciiz"FLAC__StreamDecoderLengthStatus"
 	.long	363
 .asciiz"FLAC__uint64"
-	.long	5010
+	.long	5014
 .asciiz"char"
-	.long	3950
+	.long	3954
 .asciiz"FLAC__int32"
-	.long	5381
+	.long	5385
 .asciiz"FLAC__StreamDecoderErrorStatus"
-	.long	3979
+	.long	3983
 .asciiz"FLAC__Subframe_LPC"
 	.long	385
 .asciiz"long long unsigned int"
-	.long	3456
+	.long	3460
 .asciiz"FLAC__FrameNumberType"
-	.long	3609
+	.long	3613
 .asciiz"FLAC__SubframeType"
 	.long	433
 .asciiz"FLAC__uint8"
 	.long	912
 .asciiz"unsigned short"
-	.long	3674
+	.long	3678
 .asciiz"long long int"
-	.long	3871
+	.long	3875
 .asciiz"FLAC__EntropyCodingMethod_PartitionedRiceContents"
-	.long	3621
+	.long	3625
 .asciiz"FLAC__Subframe_Constant"
-	.long	4647
+	.long	4651
 .asciiz"FLAC__StreamMetadata_Application"
-	.long	3062
+	.long	3066
 .asciiz"SKIP_RESULT"
 	.long	1813
 .asciiz"float"
-	.long	4469
+	.long	4473
 .asciiz"FLAC__MetadataType"
-	.long	3681
+	.long	3685
 .asciiz"FLAC__Subframe_Fixed"
-	.long	3468
+	.long	3472
 .asciiz"FLAC__uint32"
 	.long	455
 .asciiz"unsigned char"
@@ -6484,7 +6503,7 @@ md5sum:
 .asciiz"FIL"
 	.long	374
 .asciiz"uint64_t"
-	.long	3810
+	.long	3814
 .asciiz"FLAC__EntropyCodingMethodType"
 	.long	0
 .LpubTypes_end0:
