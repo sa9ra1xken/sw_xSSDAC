@@ -1,8 +1,772 @@
-21:16:13 **** Incremental Build of configuration Release for project app_usb_sdc_ssdac_xSSDAC-SD-V2 ****
+03:00:05 **** Incremental Build of configuration Release for project app_usb_sdc_ssdac_xSSDAC-SD-V2 ****
 xmake CONFIG=Release all 
 Checking build modules
 WARNING: Required version of lib_xassert is >=2.0.1 and actual version has greater major version: 4.1.0. There could be API incompatibilities.
 Using build modules: lib_logging(3.1.1) lib_trycatch(1.1.0) lib_xassert(4.1.0) lib_xcore_c(2.0.0) module_FatFs module_dfu module_flash_memory_server module_hw_support_xSSDAC-SD module_i2c_shared module_i2c_single_port module_libFLAC module_locks module_memory_sharing module_oled_SSD1306 module_operation_console module_sd_audio module_sdcard4bit module_ssdac module_usb_audio module_usb_device module_usb_midi module_usb_shared module_xud module_queue
+Rebuild .build_Release/_iflag.rsp
+Analyzing debug_printf.c
+Analyzing trycatch.c
+Analyzing xcore_c_chan.c
+Analyzing xcore_c_clock.c
+Analyzing xcore_c_hwtimer.c
+Analyzing xcore_c_interrupt.c
+Analyzing xcore_c_lock.c
+Analyzing xcore_c_port.c
+Analyzing xcore_c_resource.c
+Analyzing xcore_c_select.c
+Analyzing ff.c
+C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src/ff.c:1149:11: warning: explicitly assigning value of variable of type 'int' to itself [-Wself-assign]
+  stretch = stretch;    /* To suppress warning on read-only cfg. */
+  ~~~~~~~ ^ ~~~~~~~
+1 warning generated.
+Analyzing ffunicode.c
+Analyzing flash_interface.c
+C:/Users/takaaki/git/sw_xSSDAC/module_dfu/src/flash_interface.c:105:9: warning: 'fl_readImageRead' is deprecated [-Wdeprecated-declarations]
+    if (fl_readImageRead(current_flash_page_data) == 0)
+        ^
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.4.1\target/include\flash.h:406:47: note: 'fl_readImageRead' has been explicitly marked deprecated here
+__attribute__((deprecated)) static inline int fl_readImageRead(unsigned char page[])
+                                              ^
+1 warning generated.
+Analyzing gpio_access.c
+Analyzing i2c_shared.c
+Analyzing bitmath.c
+Analyzing bitreader.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitreader.c:212:6: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if(!br->read_callback(target, &bytes, br->client_data)){
+            ^
+1 warning generated.
+Analyzing bitwriter.c
+Analyzing cpu.c
+Analyzing crc.c
+Analyzing fixed.c
+Analyzing fixed_intrin_sse2.c
+Analyzing fixed_intrin_ssse3.c
+Analyzing float.c
+Analyzing format.c
+Analyzing lpc.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/lpc.c:293:99: warning: format specifies type 'unsigned int' but the argument has type 'uint32_t' (aka 'unsigned long') [-Wformat]
+                fprintf(stderr,"FLAC__lpc_quantize_coefficients: negative shift=%d order=%u cmax=%f\n", *shift, order, cmax);
+                                                                                         ~~                     ^~~~~
+                                                                                         %lu
+1 warning generated.
+Analyzing lpc_intrin_avx2.c
+Analyzing lpc_intrin_fma.c
+Analyzing lpc_intrin_neon.c
+Analyzing lpc_intrin_sse2.c
+Analyzing lpc_intrin_sse41.c
+Analyzing lpc_intrin_vsx.c
+Analyzing md5.c
+Analyzing memory.c
+Analyzing metadata_object.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/metadata_object.c:67:2: warning: implicit declaration of function 'assert' is invalid in C99 [-Wimplicit-function-declaration]
+        FLAC__ASSERT(to != NULL);
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\assert.h:43:25: note: expanded from macro 'FLAC__ASSERT'
+#define FLAC__ASSERT(x) assert(x)
+                        ^
+1 warning generated.
+Analyzing ogg_decoder_aspect.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_decoder_aspect.c:229:8: warning: implicit declaration of function 'assert' is invalid in C99 [-Wimplicit-function-declaration]
+                                                        FLAC__ASSERT(0);
+                                                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\assert.h:43:25: note: expanded from macro 'FLAC__ASSERT'
+#define FLAC__ASSERT(x) assert(x)
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_decoder_aspect.c:220:13: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                        switch(read_callback(decoder, (FLAC__byte*)oggbuf, &ogg_bytes_read, client_data)) {
+                                               ^
+2 warnings generated.
+Analyzing ogg_encoder_aspect.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_encoder_aspect.c:147:5: warning: implicit declaration of function 'assert' is invalid in C99 [-Wimplicit-function-declaration]
+                                FLAC__ASSERT(0);
+                                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\assert.h:43:25: note: expanded from macro 'FLAC__ASSERT'
+#define FLAC__ASSERT(x) assert(x)
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_encoder_aspect.c:198:8: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                if(write_callback(encoder, aspect->page.header, aspect->page.header_len, 0, current_frame, client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK)
+                                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_encoder_aspect.c:200:8: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                if(write_callback(encoder, aspect->page.body, aspect->page.body_len, 0, current_frame, client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK)
+                                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_encoder_aspect.c:206:8: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                if(write_callback(encoder, aspect->page.header, aspect->page.header_len, 0, current_frame, client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK)
+                                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_encoder_aspect.c:208:8: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                if(write_callback(encoder, aspect->page.body, aspect->page.body_len, 0, current_frame, client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK)
+                                   ^
+5 warnings generated.
+Analyzing ogg_helper.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_helper.c:69:5: warning: implicit declaration of function 'assert' is invalid in C99 [-Wimplicit-function-declaration]
+                                FLAC__ASSERT(0);
+                                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\assert.h:43:25: note: expanded from macro 'FLAC__ASSERT'
+#define FLAC__ASSERT(x) assert(x)
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_helper.c:110:20: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if((seek_status = seek_callback((FLAC__StreamEncoder*)encoder, position, client_data)) != FLAC__STREAM_ENCODER_SEEK_STATUS_OK) {
+                          ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_helper.c:191:20: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if((seek_status = seek_callback((FLAC__StreamEncoder*)encoder, position, client_data)) != FLAC__STREAM_ENCODER_SEEK_STATUS_OK) {
+                          ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_helper.c:200:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if(write_callback((FLAC__StreamEncoder*)encoder, page->header, page->header_len, 0, 0, client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK) {
+           ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_helper.c:204:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if(write_callback((FLAC__StreamEncoder*)encoder, page->body, page->body_len, 0, 0, client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK) {
+           ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_helper.c:49:10: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                switch(read_callback(encoder, buffer, &bytes_read, client_data)) {
+                       ^
+6 warnings generated.
+Analyzing ogg_mapping.c
+Analyzing stream_decoder.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:895:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if(decoder->private_->tell_callback(decoder, position, decoder->private_->client_data) != FLAC__STREAM_DECODER_TELL_STATUS_OK)
+           ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:964:42: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if(decoder->private_->seek_callback && decoder->private_->seek_callback(decoder, 0, decoder->private_->client_data) == FLAC__STREAM_DECODER_SEEK_STATUS_ERROR)
+                                                       ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:1163:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if(decoder->private_->length_callback(decoder, &length, decoder->private_->client_data) != FLAC__STREAM_DECODER_LENGTH_STATUS_OK) {
+           ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:2235:59: warning: format specifies type 'int' but the argument has type 'unsigned long long' [-Wformat]
+                                    fprintf(stderr, "Bitreader was %d bytes short\n", current_decode_position-decoder->private_->last_seen_framesync);
+                                                                   ~~                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                                   %llu
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:2974:73: warning: incompatible pointer types passing 'FLAC__int32 *' (aka 'long *') to parameter of type 'int *' [-Wincompatible-pointer-types]
+                        if(!FLAC__bitreader_read_rice_signed_block(decoder->private_->input, residual + sample, u, rice_parameter)){
+                                                                                             ^~~~~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitreader.h:91:76: note: passing argument to parameter 'vals' here
+FLAC__bool FLAC__bitreader_read_rice_signed_block(FLAC__BitReader *br, int vals[], uint32_t nvals, uint32_t parameter);
+                                                                           ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:2997:67: warning: incompatible pointer types passing 'int *' to parameter of type 'FLAC__int32 *' (aka 'long *') [-Wincompatible-pointer-types]
+                                        if(!FLAC__bitreader_read_raw_int32(decoder->private_->input, &i, rice_parameter))
+                                                                                                     ^~
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitreader.h:82:77: note: passing argument to parameter 'val' here
+FLAC__bool FLAC__bitreader_read_raw_int32(FLAC__BitReader *br, FLAC__int32 *val, uint32_t bits);
+                                                                            ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3434:6: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if(decoder->private_->seek_callback(decoder, (FLAC__uint64)pos, decoder->private_->client_data) != FLAC__STREAM_DECODER_SEEK_STATUS_OK) {
+                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3451:69: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                        if(decoder->protected_->state != FLAC__STREAM_DECODER_ABORTED && decoder->private_->eof_callback(decoder, decoder->private_->client_data) && !seek_from_lower_bound){
+                                                                                         ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:2237:8: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                if(decoder->private_->seek_callback(decoder, decoder->private_->last_seen_framesync, decoder->private_->client_data) == FLAC__STREAM_DECODER_SEEK_STATUS_ERROR) {
+                                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3237:12: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                return decoder->private_->write_callback(decoder, &decoder->private_->last_frame, newbuffer, decoder->private_->client_data);
+                                       ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3241:12: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                return decoder->private_->write_callback(decoder, frame, buffer, decoder->private_->client_data);
+                                       ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3259:10: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                return decoder->private_->write_callback(decoder, frame, buffer, decoder->private_->client_data);
+                       ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3266:3: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                decoder->private_->error_callback(decoder, status, decoder->private_->client_data);
+                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:1428:4: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                        decoder->private_->metadata_callback(decoder, &decoder->private_->stream_info, decoder->private_->client_data);
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:1439:4: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                        decoder->private_->metadata_callback(decoder, &decoder->private_->seek_table, decoder->private_->client_data);
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:1532:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                decoder->private_->metadata_callback(decoder, &block, decoder->private_->client_data);
+                                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3033:38: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                decoder->private_->eof_callback && decoder->private_->eof_callback(decoder, decoder->private_->client_data)
+                                                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3060:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                decoder->private_->read_callback(decoder, buffer, bytes, decoder->private_->client_data)
+                                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3074:42: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                                decoder->private_->eof_callback && decoder->private_->eof_callback(decoder, decoder->private_->client_data)
+                                                                                   ^
+19 warnings generated.
+Analyzing stream_encoder.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:1490:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                encoder->private_->metadata_callback(encoder, &encoder->private_->streaminfo, encoder->private_->client_data);
+                                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:4473:63: warning: format specifies type 'unsigned int' but the argument has type 'uint32_t' (aka 'unsigned long') [-Wformat]
+                        fprintf(stderr, "clipping rice_parameter (%u -> %u) @6\n", rice_parameter, rice_parameter_limit - 1);
+                                                                  ~~               ^~~~~~~~~~~~~~
+                                                                  %lu
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:4473:79: warning: format specifies type 'unsigned int' but the argument has type 'unsigned long' [-Wformat]
+                        fprintf(stderr, "clipping rice_parameter (%u -> %u) @6\n", rice_parameter, rice_parameter_limit - 1);
+                                                                        ~~                         ^~~~~~~~~~~~~~~~~~~~~~~~
+                                                                        %lu
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2757:41: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if(encoder->private_->tell_callback && encoder->private_->tell_callback(encoder, &output_position, encoder->private_->client_data) == FLAC__STREAM_ENCODER_TELL_STATUS_ERROR) {
+                                               ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2823:11: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        status = encoder->private_->write_callback(encoder, buffer, bytes, samples, encoder->private_->current_frame_number, encoder->private_->client_data);
+                 ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:3596:25: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                guess_fixed_order = encoder->private_->local_fixed_compute_best_predictor(((FLAC__int32 *)integer_signal)+FLAC__MAX_FIXED_ORDER, frame_header->blocksize-FLAC__MAX_FIXED_ORDER, fixed_residual_bits_per_sample);
+                                                    ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:3598:25: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                guess_fixed_order = encoder->private_->local_fixed_compute_best_predictor_wide(((FLAC__int32 *)integer_signal)+FLAC__MAX_FIXED_ORDER, frame_header->blocksize-FLAC__MAX_FIXED_ORDER, fixed_residual_bits_per_sample);
+                                                    ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:3710:8: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                                        encoder->private_->local_lpc_compute_autocorrelation(encoder->private_->windowed_signal, frame_header->blocksize, max_lpc_order_this_apodization+1, autoc);
+                                                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:3737:9: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                                                encoder->private_->local_lpc_compute_autocorrelation(encoder->private_->windowed_signal, frame_header->blocksize/b, max_lpc_order_this_apodization+1, autoc);
+                                                                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:4052:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                encoder->private_->local_lpc_compute_residual_from_qlp_coefficients_16bit(((FLAC__int32 *)signal)+order, residual_samples, qlp_coeff, order, quantization, residual);
+                                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:4054:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                encoder->private_->local_lpc_compute_residual_from_qlp_coefficients(((FLAC__int32 *)signal)+order, residual_samples, qlp_coeff, order, quantization, residual);
+                                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:4056:4: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                        encoder->private_->local_lpc_compute_residual_from_qlp_coefficients_64bit(((FLAC__int32 *)signal)+order, residual_samples, qlp_coeff, order, quantization, residual);
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:4163:2: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        private_->local_precompute_partition_info_sums(residual, abs_residual_partition_sums, residual_samples, predictor_order, min_partition_order, max_partition_order, bps);
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2875:21: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if((seek_status = encoder->private_->seek_callback(encoder, encoder->protected_->streaminfo_offset + md5_offset, encoder->private_->client_data)) != FLAC__STREAM_ENCODER_SEEK_STATUS_OK) {
+                                  ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2880:6: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if(encoder->private_->write_callback(encoder, metadata->data.stream_info.md5sum, 16, 0, 0, encoder->private_->client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK) {
+                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2910:21: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if((seek_status = encoder->private_->seek_callback(encoder, encoder->protected_->streaminfo_offset + total_samples_byte_offset, encoder->private_->client_data)) != FLAC__STREAM_ENCODER_SEEK_STATUS_OK) {
+                                  ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2915:6: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if(encoder->private_->write_callback(encoder, b, 5, 0, 0, encoder->private_->client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK) {
+                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2938:21: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if((seek_status = encoder->private_->seek_callback(encoder, encoder->protected_->streaminfo_offset + min_framesize_offset, encoder->private_->client_data)) != FLAC__STREAM_ENCODER_SEEK_STATUS_OK) {
+                                  ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2943:6: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if(encoder->private_->write_callback(encoder, b, 6, 0, 0, encoder->private_->client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK) {
+                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2959:21: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if((seek_status = encoder->private_->seek_callback(encoder, encoder->protected_->seektable_offset + FLAC__STREAM_METADATA_HEADER_LENGTH, encoder->private_->client_data)) != FLAC__STREAM_ENCODER_SEEK_STATUS_OK) {
+                                  ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2989:7: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                        if(encoder->private_->write_callback(encoder, b, 18, 0, 0, encoder->private_->client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK) {
+                           ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:4777:4: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                        encoder->private_->progress_callback(encoder, encoder->private_->bytes_written+bytes, encoder->private_->samples_written+samples, encoder->private_->frames_written+(samples?1:0), encoder->private_->total_frames_estimate, encoder->private_->client_data);
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:1242:41: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if(encoder->private_->tell_callback && encoder->private_->tell_callback(encoder, &encoder->protected_->audio_offset, encoder->private_->client_data) == FLAC__STREAM_ENCODER_TELL_STATUS_ERROR) { /* FLAC__STREAM_ENCODER_TELL_STATUS_UNSUPPORTED just means we didn't get the offset; no error */
+                                               ^
+23 warnings generated.
+Analyzing stream_encoder_framing.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder_framing.c:53:2: warning: implicit declaration of function 'assert' is invalid in C99 [-Wimplicit-function-declaration]
+        FLAC__ASSERT(FLAC__bitwriter_is_byte_aligned(bw));
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\assert.h:43:25: note: expanded from macro 'FLAC__ASSERT'
+#define FLAC__ASSERT(x) assert(x)
+                        ^
+1 warning generated.
+Analyzing stream_encoder_intrin_avx2.c
+Analyzing stream_encoder_intrin_sse2.c
+Analyzing stream_encoder_intrin_ssse3.c
+Analyzing window.c
+Analyzing hwlock.c
+Analyzing swlock.c
+Analyzing Function.c
+Analyzing play_flac.c
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c:262:17: warning: format specifies type 'int' but the argument has type 'uint32_t' (aka 'unsigned long') [-Wformat]
+                channels,
+                ^~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c:264:17: warning: format specifies type 'int' but the argument has type 'uint32_t' (aka 'unsigned long') [-Wformat]
+                bits_per_sample,
+                ^~~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c:309:16: warning: unused variable 'res' [-Wunused-variable]
+    FLAC__bool res = FLAC__stream_decoder_seek_absolute(decoder, TargetPosition);
+               ^
+3 warnings generated.
+Analyzing play_riff.c
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c:226:14: warning: unused variable 'wave_start_offset' [-Wunused-variable]
+    unsigned wave_start_offset = f_tell(p_file);
+             ^
+1 warning generated.
+Analyzing sdcard_play.c
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c:146:15: warning: incompatible pointer types passing 'char (*)[]' to parameter of type 'TCHAR *' (aka 'char *') [-Wincompatible-pointer-types]
+    f_getcwd (&folder_string, FOLDER_STRING_SIZE);
+              ^~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\ff.h:224:25: note: passing argument to parameter here
+FRESULT f_getcwd (TCHAR*, UINT);          /* Get current directory */
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c:158:19: warning: incompatible pointer types passing 'char (*)[]' to parameter of type 'TCHAR *' (aka 'char *') [-Wincompatible-pointer-types]
+        f_getcwd (&folder_string, FOLDER_STRING_SIZE);           //get current directory
+                  ^~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\ff.h:224:25: note: passing argument to parameter here
+FRESULT f_getcwd (TCHAR*, UINT);          /* Get current directory */
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c:266:27: warning: incompatible pointer types passing 'char (*)[]' to parameter of type 'char *' [-Wincompatible-pointer-types]
+    GetDirIndexOf(&track, &track_string );
+                          ^~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c:95:41: note: passing argument to parameter 's1' here
+FRESULT GetDirIndexOf(int *index, char *s1 ){
+                                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c:288:21: warning: 5 enumeration values not handled in switch: '_PLAY_CMD_EMPTY', '_PLAY_CMD_REWIND', '_PLAY_CMD_REVERSE_SKIP'... [-Wswitch]
+            switch (reply){
+                    ^
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c:323:23: warning: incompatible pointer types passing 'TCHAR (*)[256]' to parameter of type 'TCHAR *' (aka 'char *') [-Wincompatible-pointer-types]
+            f_getcwd (&str, sizeof(str));
+                      ^~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\ff.h:224:25: note: passing argument to parameter here
+FRESULT f_getcwd (TCHAR*, UINT);          /* Get current directory */
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c:361:21: warning: enumeration value '_RC_REWIND' not handled in switch [-Wswitch]
+            switch (rc){
+                    ^
+6 warnings generated.
+Analyzing sdcard_play_utils.c
+Analyzing sdcard_test.c
+Analyzing test_user_control.c
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c:70:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c:35:13: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+            skip_callback(-10);
+            ^
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c:41:17: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+            if (skip_callback(10) ==_END_OF_TRACK)
+                ^
+3 warnings generated.
+Analyzing flashlib_user.c
+Analyzing audiostream.c
+Analyzing endpoint0.c
+Analyzing hostactive.c
+Analyzing audioports.c
+Analyzing decouple_interrupt.c
+Analyzing get_adc_counts.c
+Analyzing xuduser.c
+Analyzing main.xc
+In file included from ../src/main.xc:56:
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\ssdac.h:10:9: warning: 'DEFAULT_FREQ' macro redefined
+#define DEFAULT_FREQ 44100
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h:159:9: note: previous definition is here
+#define DEFAULT_FREQ             (MIN_FREQ)
+        ^
+../src/main.xc:98:2: warning: Building with fast mode enabled
+#warning Building with fast mode enabled
+ ^
+warning: subword-select option is deprecated and has no effect
+In file included from ../src/main.xc:56:
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\ssdac.h:10:9: warning: 'DEFAULT_FREQ' macro redefined
+#define DEFAULT_FREQ 44100
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h:159:9: note: previous definition is here
+#define DEFAULT_FREQ             (MIN_FREQ)
+        ^
+../src/main.xc:98:2: warning: Building with fast mode enabled
+#warning Building with fast mode enabled
+ ^
+../src/main.xc:256:10: warning: unused variable `c_play_control' [-Wunused-variable]
+    chan c_play_control;
+         ^~~~~~~~~~~~~~
+../src/main.xc:175:21: warning: `dfuInterface' not used in two parallel statements [-Wunusual-code]
+                    dfuInterface);
+                    ^~~~~~~~~~~~
+../src/main.xc:234:48: warning: `c_play_control' not used in two parallel statements [-Wunusual-code]
+            button_listener_core(config.value, c_play_control, c_dac_control );
+                                               ^~~~~~~~~~~~~~
+Analyzing xassert.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing dfu.xc
+warning: subword-select option is deprecated and has no effect
+warning: subword-select option is deprecated and has no effect
+Analyzing qspi_access.xc
+C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:2:1: warning: '/*' within block comment
+/**
+^
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:2:1: warning: '/*' within block comment
+/**
+^
+Analyzing audiohw.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing i2c-sp.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing OLED_SSD1306.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing button_listener.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing display_control.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing FuncGen.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing decoupler.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing main.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing timing.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing SDCardHost4Bit.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:74:9: warning: missing braces around initializer [-Wmissing-braces]
+        PORT_SDC_CLK,
+        ^~~~~~~~~~~~
+C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release\\xSSDAC-SD-V2.h:53:34: note: expanded from macro 'PORT_SDC_CLK'
+#define PORT_SDC_CLK on tile[1]: XS1_PORT_1C
+                                 ^~~~~~~~~~~
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.4.1\target/include\xs1_g4000b-512.h:39:21: note: expanded from macro 'XS1_PORT_1C'
+#define XS1_PORT_1C 0x10100
+                    ^~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:365:24: warning: suggest parentheses around arithmetic in operand of | [-Wparentheses]
+        Dat = Crc3 & 1 | (Crc2 & 1) << 1 | (Crc1 & 1) << 2 | (Crc0 & 1) << 3;
+              ~~~~~~~~~^~~~~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:471:20: warning: get_core_id is deprecated, use get_local_tile_id instead
+  read_sswitch_reg(get_core_id(), 0, i);
+                   ^
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.4.1\target/include\xs1.h:2145:23: note: expanded from macro 'get_core_id'
+#define get_core_id() _Pragma("warning \"get_core_id is deprecated, use get_local_tile_id instead\"") get_local_tile_id()
+                      ^
+<scratch space>:2:2: note: expanded from here
+ warning "get_core_id is deprecated, use get_local_tile_id instead"
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:564:11: warning: unused variable `s' [-Wunused-variable]
+  DSTATUS s;
+          ^
+Analyzing ring_buffer.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing sinc4.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1: warning: control reaches end of non-void function [-Wreturn-type]
+FIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)
+^
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\fir_interpolator.h:98:6: note: expanded from macro 'FIR_ENTITY'
+    }\
+     ^
+Analyzing sinc8.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+FIR_ENTITY(fir_sinc8, _SINC8, fir_tap_sinc8_q30)
+^
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\fir_interpolator.h:98:6: note: expanded from macro 'FIR_ENTITY'
+    }\
+     ^
+Analyzing ssdac.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:202:11: warning: unused variable `t' [-Wunused-variable]
+    timer t;
+          ^
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:536:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:578:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+Analyzing main.xc
+In file included from C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:57:
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\ssdac.h:10:9: warning: 'DEFAULT_FREQ' macro redefined
+#define DEFAULT_FREQ 44100
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h:159:9: note: previous definition is here
+#define DEFAULT_FREQ             (MIN_FREQ)
+        ^
+warning: subword-select option is deprecated and has no effect
+In file included from C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:57:
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\ssdac.h:10:9: warning: 'DEFAULT_FREQ' macro redefined
+#define DEFAULT_FREQ 44100
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h:159:9: note: previous definition is here
+#define DEFAULT_FREQ             (MIN_FREQ)
+        ^
+Analyzing reboot.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing warnings.xc
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:11:2: warning: DEFAULT_FREQ not defined. Using MIN_FREQ
+#warning DEFAULT_FREQ not defined. Using MIN_FREQ
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:15:2: warning: MIN_FREQ not defined. Using 44100
+#warning MIN_FREQ not defined. Using 44100
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:27:2: warning: VENDOR_STR not defined. Using "XMOS"
+#warning VENDOR_STR not defined. Using "XMOS"
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:35:2: warning: PRODUCT_STR_A2 not defined. Using default XMOS string
+#warning PRODUCT_STR_A2 not defined. Using default XMOS string
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:39:2: warning: PRODUCT_STR_A1 not defined. Using default XMOS string
+#warning PRODUCT_STR_A1 not defined. Using default XMOS string
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:43:2: warning: BCD_DEVICE not defined. Using XMOS release version number
+#warning BCD_DEVICE not defined. Using XMOS release version number
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:57:2: warning: AUDIO_CLASS not defined, using 2
+#warning AUDIO_CLASS not defined, using 2
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:61:2: warning: AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+#warning AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+ ^
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:11:2: warning: DEFAULT_FREQ not defined. Using MIN_FREQ
+#warning DEFAULT_FREQ not defined. Using MIN_FREQ
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:15:2: warning: MIN_FREQ not defined. Using 44100
+#warning MIN_FREQ not defined. Using 44100
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:27:2: warning: VENDOR_STR not defined. Using "XMOS"
+#warning VENDOR_STR not defined. Using "XMOS"
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:35:2: warning: PRODUCT_STR_A2 not defined. Using default XMOS string
+#warning PRODUCT_STR_A2 not defined. Using default XMOS string
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:39:2: warning: PRODUCT_STR_A1 not defined. Using default XMOS string
+#warning PRODUCT_STR_A1 not defined. Using default XMOS string
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:43:2: warning: BCD_DEVICE not defined. Using XMOS release version number
+#warning BCD_DEVICE not defined. Using XMOS release version number
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:57:2: warning: AUDIO_CLASS not defined, using 2
+#warning AUDIO_CLASS not defined, using 2
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:61:2: warning: AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+#warning AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+ ^
+Analyzing clockgen.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing audiorequests.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:404:41: warning: reinterpretation to type of larger alignment [-Wcast-align]
+                                        (buffer, unsigned[])[0] = g_curSamFreq;
+                                        ^~~~~~~~~~~~~~~~~~~~
+Analyzing dbcalc.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing mixer.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing pcm_pdm_mic.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing audioports.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing archU_powerSaving.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing decouple.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing testct_byref.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing usb_buffer.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/usb_buffer.xc:244:5: warning: reinterpretation to type of larger alignment [-Wcast-align]
+    (fb_clocks, unsigned[])[0] = 0;
+    ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/usb_buffer.xc:527:33: warning: reinterpretation to type of larger alignment [-Wcast-align]
+                                (fb_clocks, unsigned[])[0] = clocks;
+                                ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/usb_buffer.xc:531:33: warning: reinterpretation to type of larger alignment [-Wcast-align]
+                                (fb_clocks, unsigned[])[0] = clocks >> 2;
+                                ^~~~~~~~~~~~~~~~~~~~~~~
+Analyzing xc_ptr.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing usb_device.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing midiinparse.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing midioutparse.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing usb_midi.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing usb_midi_support.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing usb_std_requests.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing XUD_EpFunctions.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing XUD_Ports.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing queue.xc
+warning: subword-select option is deprecated and has no effect
+Analyzing trycatch_asm.S
+Analyzing xcore_c_interrupt.S
+Analyzing xcore_c_select.S
+Analyzing swlock_asm.S
+Analyzing write_sswitch_reg_blind.S
+Analyzing lock.S
+Analyzing fastmix.S
+Analyzing XUD_EpFuncs.S
+Rebuild .build_Release/_pca.rsp
+Propagating analysis
+Creating dependencies for XUD_EpFuncs.S
+Creating dependencies for fastmix.S
+Creating dependencies for lock.S
+Creating dependencies for write_sswitch_reg_blind.S
+Creating dependencies for swlock_asm.S
+Creating dependencies for xcore_c_select.S
+Creating dependencies for xcore_c_interrupt.S
+Creating dependencies for trycatch_asm.S
+Creating dependencies for queue.xc
+Creating dependencies for XUD_Ports.xc
+Creating dependencies for XUD_EpFunctions.xc
+Creating dependencies for usb_std_requests.xc
+Creating dependencies for usb_midi_support.xc
+Creating dependencies for usb_midi.xc
+Creating dependencies for midioutparse.xc
+Creating dependencies for midiinparse.xc
+Creating dependencies for usb_device.xc
+Creating dependencies for xc_ptr.xc
+Creating dependencies for usb_buffer.xc
+Creating dependencies for testct_byref.xc
+Creating dependencies for decouple.xc
+Creating dependencies for archU_powerSaving.xc
+Creating dependencies for audioports.xc
+Creating dependencies for pcm_pdm_mic.xc
+Creating dependencies for mixer.xc
+Creating dependencies for dbcalc.xc
+Creating dependencies for audiorequests.xc
+Creating dependencies for clockgen.xc
+Creating dependencies for warnings.xc
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:11: warning: #warning DEFAULT_FREQ not defined. Using MIN_FREQ
+
+    #warning DEFAULT_FREQ not defined. Using MIN_FREQ
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:15: warning: #warning MIN_FREQ not defined. Using 44100
+
+    #warning MIN_FREQ not defined. Using 44100
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:27: warning: #warning VENDOR_STR not defined. Using "XMOS"
+
+    #warning VENDOR_STR not defined. Using "XMOS"
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:35: warning: #warning PRODUCT_STR_A2 not defined. Using default XMOS string
+
+    #warning PRODUCT_STR_A2 not defined. Using default XMOS string
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:39: warning: #warning PRODUCT_STR_A1 not defined. Using default XMOS string
+
+    #warning PRODUCT_STR_A1 not defined. Using default XMOS string
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:43: warning: #warning BCD_DEVICE not defined. Using XMOS release version number
+
+    #warning BCD_DEVICE not defined. Using XMOS release version number
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:57: warning: #warning AUDIO_CLASS not defined, using 2
+
+    #warning AUDIO_CLASS not defined, using 2
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:61: warning: #warning AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+
+    #warning AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:11: warning: #warning DEFAULT_FREQ not defined. Using MIN_FREQ
+
+    #warning DEFAULT_FREQ not defined. Using MIN_FREQ
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:15: warning: #warning MIN_FREQ not defined. Using 44100
+
+    #warning MIN_FREQ not defined. Using 44100
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:27: warning: #warning VENDOR_STR not defined. Using "XMOS"
+
+    #warning VENDOR_STR not defined. Using "XMOS"
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:35: warning: #warning PRODUCT_STR_A2 not defined. Using default XMOS string
+
+    #warning PRODUCT_STR_A2 not defined. Using default XMOS string
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:39: warning: #warning PRODUCT_STR_A1 not defined. Using default XMOS string
+
+    #warning PRODUCT_STR_A1 not defined. Using default XMOS string
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:43: warning: #warning BCD_DEVICE not defined. Using XMOS release version number
+
+    #warning BCD_DEVICE not defined. Using XMOS release version number
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:57: warning: #warning AUDIO_CLASS not defined, using 2
+
+    #warning AUDIO_CLASS not defined, using 2
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:61: warning: #warning AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+
+    #warning AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+Creating dependencies for reboot.xc
+Creating dependencies for main.xc
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.h:10: warning: The macro is redefined
+    #define DEFAULT_FREQ 44100
+    from C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc: 57:    #include "ssdac.h"
+    previously macro "DEFAULT_FREQ" defined as: #define DEFAULT_FREQ (MIN_FREQ) 	/* C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h:159	*/
+Creating dependencies for ssdac.xc
+Creating dependencies for sinc8.xc
+Creating dependencies for sinc4.xc
+Creating dependencies for ring_buffer.xc
+Creating dependencies for SDCardHost4Bit.xc
+Creating dependencies for timing.xc
+Creating dependencies for main.xc
+Creating dependencies for decoupler.xc
+Creating dependencies for FuncGen.xc
+Creating dependencies for display_control.xc
+Creating dependencies for button_listener.xc
+Creating dependencies for OLED_SSD1306.xc
+Creating dependencies for i2c-sp.xc
+Creating dependencies for audiohw.xc
+Creating dependencies for qspi_access.xc
+C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:2: warning: "/*" within comment
+    /**
+Creating dependencies for dfu.xc
+Creating dependencies for xassert.xc
+Creating dependencies for main.xc
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.h:10: warning: The macro is redefined
+    #define DEFAULT_FREQ 44100
+    from ../src/main.xc: 56:    #include "ssdac.h"
+    previously macro "DEFAULT_FREQ" defined as: #define DEFAULT_FREQ (MIN_FREQ) 	/* C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h:159	*/
+../src/main.xc:98: warning: #warning Building with fast mode enabled
+
+    #warning Building with fast mode enabled
+../src/main.xc:98: warning: #warning Building with fast mode enabled
+
+    #warning Building with fast mode enabled
+Creating dependencies for xuduser.c
+Creating dependencies for get_adc_counts.c
+Creating dependencies for decouple_interrupt.c
+Creating dependencies for audioports.c
+Creating dependencies for hostactive.c
+Creating dependencies for endpoint0.c
+Creating dependencies for audiostream.c
+Creating dependencies for flashlib_user.c
+Creating dependencies for test_user_control.c
+Creating dependencies for sdcard_test.c
+Creating dependencies for sdcard_play_utils.c
+Creating dependencies for sdcard_play.c
+Creating dependencies for play_riff.c
+Creating dependencies for play_flac.c
+Creating dependencies for Function.c
+Creating dependencies for swlock.c
+Creating dependencies for hwlock.c
+Creating dependencies for window.c
+Creating dependencies for stream_encoder_intrin_ssse3.c
+Creating dependencies for stream_encoder_intrin_sse2.c
+Creating dependencies for stream_encoder_intrin_avx2.c
+Creating dependencies for stream_encoder_framing.c
+Creating dependencies for stream_encoder.c
+Creating dependencies for stream_decoder.c
+Creating dependencies for ogg_mapping.c
+Creating dependencies for ogg_helper.c
+Creating dependencies for ogg_encoder_aspect.c
+Creating dependencies for ogg_decoder_aspect.c
+Creating dependencies for metadata_object.c
+Creating dependencies for memory.c
+Creating dependencies for md5.c
+Creating dependencies for lpc_intrin_vsx.c
+Creating dependencies for lpc_intrin_sse41.c
+Creating dependencies for lpc_intrin_sse2.c
+Creating dependencies for lpc_intrin_neon.c
+Creating dependencies for lpc_intrin_fma.c
+Creating dependencies for lpc_intrin_avx2.c
+Creating dependencies for lpc.c
+Creating dependencies for format.c
+Creating dependencies for float.c
+Creating dependencies for fixed_intrin_ssse3.c
+Creating dependencies for fixed_intrin_sse2.c
+Creating dependencies for fixed.c
+Creating dependencies for crc.c
+Creating dependencies for cpu.c
+Creating dependencies for bitwriter.c
+Creating dependencies for bitreader.c
+Creating dependencies for bitmath.c
+Creating dependencies for i2c_shared.c
+Creating dependencies for gpio_access.c
+Creating dependencies for flash_interface.c
+Creating dependencies for ffunicode.c
+Creating dependencies for ff.c
+Creating dependencies for xcore_c_select.c
+Creating dependencies for xcore_c_resource.c
+Creating dependencies for xcore_c_port.c
+Creating dependencies for xcore_c_lock.c
+Creating dependencies for xcore_c_interrupt.c
+Creating dependencies for xcore_c_hwtimer.c
+Creating dependencies for xcore_c_clock.c
+Creating dependencies for xcore_c_chan.c
+Creating dependencies for trycatch.c
+Creating dependencies for debug_printf.c
 WARNING: Duplicate header found: format.h
 "WARNING: Found in: C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/format.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/format.h"
 WARNING: Duplicate header found: macros.h
@@ -11,6 +775,592 @@ WARNING: Duplicate header found: metadata.h
 "WARNING: Found in: C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/metadata.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/metadata.h"
 WARNING: Duplicate header found: stream_decoder.h
 "WARNING: Found in: C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC/stream_decoder.h C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/protected/stream_decoder.h"
+Compiling debug_printf.c
+Compiling trycatch.c
+Compiling xcore_c_chan.c
+Compiling xcore_c_clock.c
+Compiling xcore_c_hwtimer.c
+Compiling xcore_c_interrupt.c
+Compiling xcore_c_lock.c
+Compiling xcore_c_port.c
+Compiling xcore_c_resource.c
+Compiling xcore_c_select.c
+Compiling ff.c
+C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src/ff.c:1149:11: warning: explicitly assigning value of variable of type 'int' to itself [-Wself-assign]
+  stretch = stretch;    /* To suppress warning on read-only cfg. */
+  ~~~~~~~ ^ ~~~~~~~
+1 warning generated.
+Compiling ffunicode.c
+Compiling flash_interface.c
+C:/Users/takaaki/git/sw_xSSDAC/module_dfu/src/flash_interface.c:105:9: warning: 'fl_readImageRead' is deprecated [-Wdeprecated-declarations]
+    if (fl_readImageRead(current_flash_page_data) == 0)
+        ^
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.4.1\target/include\flash.h:406:47: note: 'fl_readImageRead' has been explicitly marked deprecated here
+__attribute__((deprecated)) static inline int fl_readImageRead(unsigned char page[])
+                                              ^
+1 warning generated.
+Compiling gpio_access.c
+Compiling i2c_shared.c
+Compiling bitmath.c
+Compiling bitreader.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/bitreader.c:212:6: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if(!br->read_callback(target, &bytes, br->client_data)){
+            ^
+1 warning generated.
+Compiling bitwriter.c
+Compiling cpu.c
+Compiling crc.c
+Compiling fixed.c
+Compiling fixed_intrin_sse2.c
+Compiling fixed_intrin_ssse3.c
+Compiling float.c
+Compiling format.c
+Compiling lpc.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/lpc.c:293:99: warning: format specifies type 'unsigned int' but the argument has type 'uint32_t' (aka 'unsigned long') [-Wformat]
+                fprintf(stderr,"FLAC__lpc_quantize_coefficients: negative shift=%d order=%u cmax=%f\n", *shift, order, cmax);
+                                                                                         ~~                     ^~~~~
+                                                                                         %lu
+1 warning generated.
+Compiling lpc_intrin_avx2.c
+Compiling lpc_intrin_fma.c
+Compiling lpc_intrin_neon.c
+Compiling lpc_intrin_sse2.c
+Compiling lpc_intrin_sse41.c
+Compiling lpc_intrin_vsx.c
+Compiling md5.c
+Compiling memory.c
+Compiling metadata_object.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/metadata_object.c:67:2: warning: implicit declaration of function 'assert' is invalid in C99 [-Wimplicit-function-declaration]
+        FLAC__ASSERT(to != NULL);
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\assert.h:43:25: note: expanded from macro 'FLAC__ASSERT'
+#define FLAC__ASSERT(x) assert(x)
+                        ^
+1 warning generated.
+Compiling ogg_decoder_aspect.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_decoder_aspect.c:229:8: warning: implicit declaration of function 'assert' is invalid in C99 [-Wimplicit-function-declaration]
+                                                        FLAC__ASSERT(0);
+                                                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\assert.h:43:25: note: expanded from macro 'FLAC__ASSERT'
+#define FLAC__ASSERT(x) assert(x)
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_decoder_aspect.c:220:13: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                        switch(read_callback(decoder, (FLAC__byte*)oggbuf, &ogg_bytes_read, client_data)) {
+                                               ^
+2 warnings generated.
+Compiling ogg_encoder_aspect.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_encoder_aspect.c:147:5: warning: implicit declaration of function 'assert' is invalid in C99 [-Wimplicit-function-declaration]
+                                FLAC__ASSERT(0);
+                                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\assert.h:43:25: note: expanded from macro 'FLAC__ASSERT'
+#define FLAC__ASSERT(x) assert(x)
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_encoder_aspect.c:198:8: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                if(write_callback(encoder, aspect->page.header, aspect->page.header_len, 0, current_frame, client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK)
+                                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_encoder_aspect.c:200:8: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                if(write_callback(encoder, aspect->page.body, aspect->page.body_len, 0, current_frame, client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK)
+                                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_encoder_aspect.c:206:8: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                if(write_callback(encoder, aspect->page.header, aspect->page.header_len, 0, current_frame, client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK)
+                                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_encoder_aspect.c:208:8: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                if(write_callback(encoder, aspect->page.body, aspect->page.body_len, 0, current_frame, client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK)
+                                   ^
+5 warnings generated.
+Compiling ogg_helper.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_helper.c:69:5: warning: implicit declaration of function 'assert' is invalid in C99 [-Wimplicit-function-declaration]
+                                FLAC__ASSERT(0);
+                                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\assert.h:43:25: note: expanded from macro 'FLAC__ASSERT'
+#define FLAC__ASSERT(x) assert(x)
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_helper.c:110:20: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if((seek_status = seek_callback((FLAC__StreamEncoder*)encoder, position, client_data)) != FLAC__STREAM_ENCODER_SEEK_STATUS_OK) {
+                          ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_helper.c:191:20: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if((seek_status = seek_callback((FLAC__StreamEncoder*)encoder, position, client_data)) != FLAC__STREAM_ENCODER_SEEK_STATUS_OK) {
+                          ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_helper.c:200:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if(write_callback((FLAC__StreamEncoder*)encoder, page->header, page->header_len, 0, 0, client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK) {
+           ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_helper.c:204:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if(write_callback((FLAC__StreamEncoder*)encoder, page->body, page->body_len, 0, 0, client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK) {
+           ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/ogg_helper.c:49:10: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                switch(read_callback(encoder, buffer, &bytes_read, client_data)) {
+                       ^
+6 warnings generated.
+Compiling ogg_mapping.c
+Compiling stream_decoder.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:895:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if(decoder->private_->tell_callback(decoder, position, decoder->private_->client_data) != FLAC__STREAM_DECODER_TELL_STATUS_OK)
+           ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:964:42: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if(decoder->private_->seek_callback && decoder->private_->seek_callback(decoder, 0, decoder->private_->client_data) == FLAC__STREAM_DECODER_SEEK_STATUS_ERROR)
+                                                       ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:1163:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if(decoder->private_->length_callback(decoder, &length, decoder->private_->client_data) != FLAC__STREAM_DECODER_LENGTH_STATUS_OK) {
+           ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:2235:59: warning: format specifies type 'int' but the argument has type 'unsigned long long' [-Wformat]
+                                    fprintf(stderr, "Bitreader was %d bytes short\n", current_decode_position-decoder->private_->last_seen_framesync);
+                                                                   ~~                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                                   %llu
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:2974:73: warning: incompatible pointer types passing 'FLAC__int32 *' (aka 'long *') to parameter of type 'int *' [-Wincompatible-pointer-types]
+                        if(!FLAC__bitreader_read_rice_signed_block(decoder->private_->input, residual + sample, u, rice_parameter)){
+                                                                                             ^~~~~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitreader.h:91:76: note: passing argument to parameter 'vals' here
+FLAC__bool FLAC__bitreader_read_rice_signed_block(FLAC__BitReader *br, int vals[], uint32_t nvals, uint32_t parameter);
+                                                                           ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:2997:67: warning: incompatible pointer types passing 'int *' to parameter of type 'FLAC__int32 *' (aka 'long *') [-Wincompatible-pointer-types]
+                                        if(!FLAC__bitreader_read_raw_int32(decoder->private_->input, &i, rice_parameter))
+                                                                                                     ^~
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/private/bitreader.h:82:77: note: passing argument to parameter 'val' here
+FLAC__bool FLAC__bitreader_read_raw_int32(FLAC__BitReader *br, FLAC__int32 *val, uint32_t bits);
+                                                                            ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3434:6: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if(decoder->private_->seek_callback(decoder, (FLAC__uint64)pos, decoder->private_->client_data) != FLAC__STREAM_DECODER_SEEK_STATUS_OK) {
+                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3451:69: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                        if(decoder->protected_->state != FLAC__STREAM_DECODER_ABORTED && decoder->private_->eof_callback(decoder, decoder->private_->client_data) && !seek_from_lower_bound){
+                                                                                         ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:2237:8: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                if(decoder->private_->seek_callback(decoder, decoder->private_->last_seen_framesync, decoder->private_->client_data) == FLAC__STREAM_DECODER_SEEK_STATUS_ERROR) {
+                                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3237:12: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                return decoder->private_->write_callback(decoder, &decoder->private_->last_frame, newbuffer, decoder->private_->client_data);
+                                       ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3241:12: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                return decoder->private_->write_callback(decoder, frame, buffer, decoder->private_->client_data);
+                                       ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3259:10: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                return decoder->private_->write_callback(decoder, frame, buffer, decoder->private_->client_data);
+                       ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3266:3: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                decoder->private_->error_callback(decoder, status, decoder->private_->client_data);
+                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:1428:4: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                        decoder->private_->metadata_callback(decoder, &decoder->private_->stream_info, decoder->private_->client_data);
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:1439:4: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                        decoder->private_->metadata_callback(decoder, &decoder->private_->seek_table, decoder->private_->client_data);
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:1532:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                decoder->private_->metadata_callback(decoder, &block, decoder->private_->client_data);
+                                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3033:38: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                decoder->private_->eof_callback && decoder->private_->eof_callback(decoder, decoder->private_->client_data)
+                                                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3060:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                decoder->private_->read_callback(decoder, buffer, bytes, decoder->private_->client_data)
+                                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_decoder.c:3074:42: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                                decoder->private_->eof_callback && decoder->private_->eof_callback(decoder, decoder->private_->client_data)
+                                                                                   ^
+19 warnings generated.
+Compiling stream_encoder.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:1490:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                encoder->private_->metadata_callback(encoder, &encoder->private_->streaminfo, encoder->private_->client_data);
+                                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:4473:63: warning: format specifies type 'unsigned int' but the argument has type 'uint32_t' (aka 'unsigned long') [-Wformat]
+                        fprintf(stderr, "clipping rice_parameter (%u -> %u) @6\n", rice_parameter, rice_parameter_limit - 1);
+                                                                  ~~               ^~~~~~~~~~~~~~
+                                                                  %lu
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:4473:79: warning: format specifies type 'unsigned int' but the argument has type 'unsigned long' [-Wformat]
+                        fprintf(stderr, "clipping rice_parameter (%u -> %u) @6\n", rice_parameter, rice_parameter_limit - 1);
+                                                                        ~~                         ^~~~~~~~~~~~~~~~~~~~~~~~
+                                                                        %lu
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2757:41: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if(encoder->private_->tell_callback && encoder->private_->tell_callback(encoder, &output_position, encoder->private_->client_data) == FLAC__STREAM_ENCODER_TELL_STATUS_ERROR) {
+                                               ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2823:11: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        status = encoder->private_->write_callback(encoder, buffer, bytes, samples, encoder->private_->current_frame_number, encoder->private_->client_data);
+                 ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:3596:25: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                guess_fixed_order = encoder->private_->local_fixed_compute_best_predictor(((FLAC__int32 *)integer_signal)+FLAC__MAX_FIXED_ORDER, frame_header->blocksize-FLAC__MAX_FIXED_ORDER, fixed_residual_bits_per_sample);
+                                                    ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:3598:25: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                guess_fixed_order = encoder->private_->local_fixed_compute_best_predictor_wide(((FLAC__int32 *)integer_signal)+FLAC__MAX_FIXED_ORDER, frame_header->blocksize-FLAC__MAX_FIXED_ORDER, fixed_residual_bits_per_sample);
+                                                    ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:3710:8: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                                        encoder->private_->local_lpc_compute_autocorrelation(encoder->private_->windowed_signal, frame_header->blocksize, max_lpc_order_this_apodization+1, autoc);
+                                                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:3737:9: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                                                encoder->private_->local_lpc_compute_autocorrelation(encoder->private_->windowed_signal, frame_header->blocksize/b, max_lpc_order_this_apodization+1, autoc);
+                                                                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:4052:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                encoder->private_->local_lpc_compute_residual_from_qlp_coefficients_16bit(((FLAC__int32 *)signal)+order, residual_samples, qlp_coeff, order, quantization, residual);
+                                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:4054:5: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                                encoder->private_->local_lpc_compute_residual_from_qlp_coefficients(((FLAC__int32 *)signal)+order, residual_samples, qlp_coeff, order, quantization, residual);
+                                ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:4056:4: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                        encoder->private_->local_lpc_compute_residual_from_qlp_coefficients_64bit(((FLAC__int32 *)signal)+order, residual_samples, qlp_coeff, order, quantization, residual);
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:4163:2: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        private_->local_precompute_partition_info_sums(residual, abs_residual_partition_sums, residual_samples, predictor_order, min_partition_order, max_partition_order, bps);
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2875:21: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if((seek_status = encoder->private_->seek_callback(encoder, encoder->protected_->streaminfo_offset + md5_offset, encoder->private_->client_data)) != FLAC__STREAM_ENCODER_SEEK_STATUS_OK) {
+                                  ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2880:6: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if(encoder->private_->write_callback(encoder, metadata->data.stream_info.md5sum, 16, 0, 0, encoder->private_->client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK) {
+                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2910:21: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if((seek_status = encoder->private_->seek_callback(encoder, encoder->protected_->streaminfo_offset + total_samples_byte_offset, encoder->private_->client_data)) != FLAC__STREAM_ENCODER_SEEK_STATUS_OK) {
+                                  ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2915:6: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if(encoder->private_->write_callback(encoder, b, 5, 0, 0, encoder->private_->client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK) {
+                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2938:21: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if((seek_status = encoder->private_->seek_callback(encoder, encoder->protected_->streaminfo_offset + min_framesize_offset, encoder->private_->client_data)) != FLAC__STREAM_ENCODER_SEEK_STATUS_OK) {
+                                  ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2943:6: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if(encoder->private_->write_callback(encoder, b, 6, 0, 0, encoder->private_->client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK) {
+                   ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2959:21: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                if((seek_status = encoder->private_->seek_callback(encoder, encoder->protected_->seektable_offset + FLAC__STREAM_METADATA_HEADER_LENGTH, encoder->private_->client_data)) != FLAC__STREAM_ENCODER_SEEK_STATUS_OK) {
+                                  ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:2989:7: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                        if(encoder->private_->write_callback(encoder, b, 18, 0, 0, encoder->private_->client_data) != FLAC__STREAM_ENCODER_WRITE_STATUS_OK) {
+                           ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:4777:4: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+                        encoder->private_->progress_callback(encoder, encoder->private_->bytes_written+bytes, encoder->private_->samples_written+samples, encoder->private_->frames_written+(samples?1:0), encoder->private_->total_frames_estimate, encoder->private_->client_data);
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder.c:1242:41: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+        if(encoder->private_->tell_callback && encoder->private_->tell_callback(encoder, &encoder->protected_->audio_offset, encoder->private_->client_data) == FLAC__STREAM_ENCODER_TELL_STATUS_ERROR) { /* FLAC__STREAM_ENCODER_TELL_STATUS_UNSUPPORTED just means we didn't get the offset; no error */
+                                               ^
+23 warnings generated.
+Compiling stream_encoder_framing.c
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/stream_encoder_framing.c:53:2: warning: implicit declaration of function 'assert' is invalid in C99 [-Wimplicit-function-declaration]
+        FLAC__ASSERT(FLAC__bitwriter_is_byte_aligned(bw));
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_libFLAC/source/FLAC\assert.h:43:25: note: expanded from macro 'FLAC__ASSERT'
+#define FLAC__ASSERT(x) assert(x)
+                        ^
+1 warning generated.
+Compiling stream_encoder_intrin_avx2.c
+Compiling stream_encoder_intrin_sse2.c
+Compiling stream_encoder_intrin_ssse3.c
+Compiling window.c
+Compiling hwlock.c
+Compiling swlock.c
+Compiling Function.c
+Compiling play_flac.c
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c:262:17: warning: format specifies type 'int' but the argument has type 'uint32_t' (aka 'unsigned long') [-Wformat]
+                channels,
+                ^~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c:264:17: warning: format specifies type 'int' but the argument has type 'uint32_t' (aka 'unsigned long') [-Wformat]
+                bits_per_sample,
+                ^~~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_flac.c:309:16: warning: unused variable 'res' [-Wunused-variable]
+    FLAC__bool res = FLAC__stream_decoder_seek_absolute(decoder, TargetPosition);
+               ^
+3 warnings generated.
+Compiling play_riff.c
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/play_riff.c:226:14: warning: unused variable 'wave_start_offset' [-Wunused-variable]
+    unsigned wave_start_offset = f_tell(p_file);
+             ^
+1 warning generated.
+Compiling sdcard_play.c
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c:146:15: warning: incompatible pointer types passing 'char (*)[]' to parameter of type 'TCHAR *' (aka 'char *') [-Wincompatible-pointer-types]
+    f_getcwd (&folder_string, FOLDER_STRING_SIZE);
+              ^~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\ff.h:224:25: note: passing argument to parameter here
+FRESULT f_getcwd (TCHAR*, UINT);          /* Get current directory */
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c:158:19: warning: incompatible pointer types passing 'char (*)[]' to parameter of type 'TCHAR *' (aka 'char *') [-Wincompatible-pointer-types]
+        f_getcwd (&folder_string, FOLDER_STRING_SIZE);           //get current directory
+                  ^~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\ff.h:224:25: note: passing argument to parameter here
+FRESULT f_getcwd (TCHAR*, UINT);          /* Get current directory */
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c:266:27: warning: incompatible pointer types passing 'char (*)[]' to parameter of type 'char *' [-Wincompatible-pointer-types]
+    GetDirIndexOf(&track, &track_string );
+                          ^~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c:95:41: note: passing argument to parameter 's1' here
+FRESULT GetDirIndexOf(int *index, char *s1 ){
+                                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c:288:21: warning: 5 enumeration values not handled in switch: '_PLAY_CMD_EMPTY', '_PLAY_CMD_REWIND', '_PLAY_CMD_REVERSE_SKIP'... [-Wswitch]
+            switch (reply){
+                    ^
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c:323:23: warning: incompatible pointer types passing 'TCHAR (*)[256]' to parameter of type 'TCHAR *' (aka 'char *') [-Wincompatible-pointer-types]
+            f_getcwd (&str, sizeof(str));
+                      ^~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_FatFs/src\ff.h:224:25: note: passing argument to parameter here
+FRESULT f_getcwd (TCHAR*, UINT);          /* Get current directory */
+                        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/sdcard_play.c:361:21: warning: enumeration value '_RC_REWIND' not handled in switch [-Wswitch]
+            switch (rc){
+                    ^
+6 warnings generated.
+Compiling sdcard_play_utils.c
+Compiling sdcard_test.c
+Compiling test_user_control.c
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c:70:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c:35:13: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+            skip_callback(-10);
+            ^
+C:/Users/takaaki/git/sw_xSSDAC/module_sd_audio/src/test_user_control.c:41:17: warning: Dereferencing a function pointer whose declaration has no fptrgroup. The stack size will not be calculable. [-Wxcore-fptrgroup]
+            if (skip_callback(10) ==_END_OF_TRACK)
+                ^
+3 warnings generated.
+Compiling flashlib_user.c
+Compiling audiostream.c
+Compiling endpoint0.c
+Compiling hostactive.c
+Compiling audioports.c
+Compiling decouple_interrupt.c
+Compiling get_adc_counts.c
+Compiling xuduser.c
+Compiling main.xc
+In file included from ../src/main.xc:56:
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\ssdac.h:10:9: warning: 'DEFAULT_FREQ' macro redefined
+#define DEFAULT_FREQ 44100
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h:159:9: note: previous definition is here
+#define DEFAULT_FREQ             (MIN_FREQ)
+        ^
+../src/main.xc:98:2: warning: Building with fast mode enabled
+#warning Building with fast mode enabled
+ ^
+warning: subword-select option is deprecated and has no effect
+In file included from ../src/main.xc:56:
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\ssdac.h:10:9: warning: 'DEFAULT_FREQ' macro redefined
+#define DEFAULT_FREQ 44100
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h:159:9: note: previous definition is here
+#define DEFAULT_FREQ             (MIN_FREQ)
+        ^
+../src/main.xc:98:2: warning: Building with fast mode enabled
+#warning Building with fast mode enabled
+ ^
+../src/main.xc:256:10: warning: unused variable `c_play_control' [-Wunused-variable]
+    chan c_play_control;
+         ^~~~~~~~~~~~~~
+../src/main.xc:175:21: warning: `dfuInterface' not used in two parallel statements [-Wunusual-code]
+                    dfuInterface);
+                    ^~~~~~~~~~~~
+../src/main.xc:234:48: warning: `c_play_control' not used in two parallel statements [-Wunusual-code]
+            button_listener_core(config.value, c_play_control, c_dac_control );
+                                               ^~~~~~~~~~~~~~
+Compiling xassert.xc
+warning: subword-select option is deprecated and has no effect
+Compiling dfu.xc
+warning: subword-select option is deprecated and has no effect
+warning: subword-select option is deprecated and has no effect
+Compiling qspi_access.xc
+C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:2:1: warning: '/*' within block comment
+/**
+^
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_flash_memory_server/src/qspi_access.xc:2:1: warning: '/*' within block comment
+/**
+^
+Compiling audiohw.xc
+warning: subword-select option is deprecated and has no effect
+Compiling i2c-sp.xc
+warning: subword-select option is deprecated and has no effect
+Compiling OLED_SSD1306.xc
+warning: subword-select option is deprecated and has no effect
+Compiling button_listener.xc
+warning: subword-select option is deprecated and has no effect
+Compiling display_control.xc
+warning: subword-select option is deprecated and has no effect
+Compiling FuncGen.xc
+warning: subword-select option is deprecated and has no effect
+Compiling decoupler.xc
+warning: subword-select option is deprecated and has no effect
+Compiling main.xc
+warning: subword-select option is deprecated and has no effect
+Compiling timing.xc
+warning: subword-select option is deprecated and has no effect
+Compiling SDCardHost4Bit.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:74:9: warning: missing braces around initializer [-Wmissing-braces]
+        PORT_SDC_CLK,
+        ^~~~~~~~~~~~
+C:\\Users\\takaaki\\git\\sw_xSSDAC\\app_usb_sdc_ssdac_xSSDAC-SD-V2\\.build_Release\\xSSDAC-SD-V2.h:53:34: note: expanded from macro 'PORT_SDC_CLK'
+#define PORT_SDC_CLK on tile[1]: XS1_PORT_1C
+                                 ^~~~~~~~~~~
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.4.1\target/include\xs1_g4000b-512.h:39:21: note: expanded from macro 'XS1_PORT_1C'
+#define XS1_PORT_1C 0x10100
+                    ^~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:365:24: warning: suggest parentheses around arithmetic in operand of | [-Wparentheses]
+        Dat = Crc3 & 1 | (Crc2 & 1) << 1 | (Crc1 & 1) << 2 | (Crc0 & 1) << 3;
+              ~~~~~~~~~^~~~~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:471:20: warning: get_core_id is deprecated, use get_local_tile_id instead
+  read_sswitch_reg(get_core_id(), 0, i);
+                   ^
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.4.1\target/include\xs1.h:2145:23: note: expanded from macro 'get_core_id'
+#define get_core_id() _Pragma("warning \"get_core_id is deprecated, use get_local_tile_id instead\"") get_local_tile_id()
+                      ^
+<scratch space>:2:2: note: expanded from here
+ warning "get_core_id is deprecated, use get_local_tile_id instead"
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_sdcard4bit/src/SDCardHost4Bit.xc:564:11: warning: unused variable `s' [-Wunused-variable]
+  DSTATUS s;
+          ^
+Compiling ring_buffer.xc
+warning: subword-select option is deprecated and has no effect
+Compiling sinc4.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc4.xc:317:1: warning: control reaches end of non-void function [-Wreturn-type]
+FIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)
+^
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\fir_interpolator.h:98:6: note: expanded from macro 'FIR_ENTITY'
+    }\
+     ^
+Compiling sinc8.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/sinc8.xc:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+FIR_ENTITY(fir_sinc8, _SINC8, fir_tap_sinc8_q30)
+^
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\fir_interpolator.h:98:6: note: expanded from macro 'FIR_ENTITY'
+    }\
+     ^
+Compiling ssdac.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:202:11: warning: unused variable `t' [-Wunused-variable]
+    timer t;
+          ^
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:536:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src/ssdac.xc:578:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+Compiling main.xc
+In file included from C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:57:
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\ssdac.h:10:9: warning: 'DEFAULT_FREQ' macro redefined
+#define DEFAULT_FREQ 44100
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h:159:9: note: previous definition is here
+#define DEFAULT_FREQ             (MIN_FREQ)
+        ^
+warning: subword-select option is deprecated and has no effect
+In file included from C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/main.xc:57:
+C:/Users/takaaki/git/sw_xSSDAC/module_ssdac/src\ssdac.h:10:9: warning: 'DEFAULT_FREQ' macro redefined
+#define DEFAULT_FREQ 44100
+        ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/devicedefines.h:159:9: note: previous definition is here
+#define DEFAULT_FREQ             (MIN_FREQ)
+        ^
+Compiling reboot.xc
+warning: subword-select option is deprecated and has no effect
+Compiling warnings.xc
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:11:2: warning: DEFAULT_FREQ not defined. Using MIN_FREQ
+#warning DEFAULT_FREQ not defined. Using MIN_FREQ
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:15:2: warning: MIN_FREQ not defined. Using 44100
+#warning MIN_FREQ not defined. Using 44100
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:27:2: warning: VENDOR_STR not defined. Using "XMOS"
+#warning VENDOR_STR not defined. Using "XMOS"
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:35:2: warning: PRODUCT_STR_A2 not defined. Using default XMOS string
+#warning PRODUCT_STR_A2 not defined. Using default XMOS string
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:39:2: warning: PRODUCT_STR_A1 not defined. Using default XMOS string
+#warning PRODUCT_STR_A1 not defined. Using default XMOS string
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:43:2: warning: BCD_DEVICE not defined. Using XMOS release version number
+#warning BCD_DEVICE not defined. Using XMOS release version number
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:57:2: warning: AUDIO_CLASS not defined, using 2
+#warning AUDIO_CLASS not defined, using 2
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:61:2: warning: AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+#warning AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+ ^
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:11:2: warning: DEFAULT_FREQ not defined. Using MIN_FREQ
+#warning DEFAULT_FREQ not defined. Using MIN_FREQ
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:15:2: warning: MIN_FREQ not defined. Using 44100
+#warning MIN_FREQ not defined. Using 44100
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:27:2: warning: VENDOR_STR not defined. Using "XMOS"
+#warning VENDOR_STR not defined. Using "XMOS"
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:35:2: warning: PRODUCT_STR_A2 not defined. Using default XMOS string
+#warning PRODUCT_STR_A2 not defined. Using default XMOS string
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:39:2: warning: PRODUCT_STR_A1 not defined. Using default XMOS string
+#warning PRODUCT_STR_A1 not defined. Using default XMOS string
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:43:2: warning: BCD_DEVICE not defined. Using XMOS release version number
+#warning BCD_DEVICE not defined. Using XMOS release version number
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:57:2: warning: AUDIO_CLASS not defined, using 2
+#warning AUDIO_CLASS not defined, using 2
+ ^
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/warnings.xc:61:2: warning: AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+#warning AUDIO_CLASS_FALLBACK not defined, using 0 (i.e. disabled)
+ ^
+Compiling clockgen.xc
+warning: subword-select option is deprecated and has no effect
+Compiling audiorequests.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/endpoint0/audiorequests.xc:404:41: warning: reinterpretation to type of larger alignment [-Wcast-align]
+                                        (buffer, unsigned[])[0] = g_curSamFreq;
+                                        ^~~~~~~~~~~~~~~~~~~~
+Compiling dbcalc.xc
+warning: subword-select option is deprecated and has no effect
+Compiling mixer.xc
+warning: subword-select option is deprecated and has no effect
+Compiling pcm_pdm_mic.xc
+warning: subword-select option is deprecated and has no effect
+Compiling audioports.xc
+warning: subword-select option is deprecated and has no effect
+Compiling archU_powerSaving.xc
+warning: subword-select option is deprecated and has no effect
+Compiling decouple.xc
+warning: subword-select option is deprecated and has no effect
+Compiling testct_byref.xc
+warning: subword-select option is deprecated and has no effect
+Compiling usb_buffer.xc
+warning: subword-select option is deprecated and has no effect
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/usb_buffer.xc:244:5: warning: reinterpretation to type of larger alignment [-Wcast-align]
+    (fb_clocks, unsigned[])[0] = 0;
+    ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/usb_buffer.xc:527:33: warning: reinterpretation to type of larger alignment [-Wcast-align]
+                                (fb_clocks, unsigned[])[0] = clocks;
+                                ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/takaaki/git/sw_xSSDAC/module_usb_audio/usb_buffer/usb_buffer.xc:531:33: warning: reinterpretation to type of larger alignment [-Wcast-align]
+                                (fb_clocks, unsigned[])[0] = clocks >> 2;
+                                ^~~~~~~~~~~~~~~~~~~~~~~
+Compiling xc_ptr.xc
+warning: subword-select option is deprecated and has no effect
+Compiling usb_device.xc
+warning: subword-select option is deprecated and has no effect
+Compiling midiinparse.xc
+warning: subword-select option is deprecated and has no effect
+Compiling midioutparse.xc
+warning: subword-select option is deprecated and has no effect
+Compiling usb_midi.xc
+warning: subword-select option is deprecated and has no effect
+Compiling usb_midi_support.xc
+warning: subword-select option is deprecated and has no effect
+Compiling usb_std_requests.xc
+warning: subword-select option is deprecated and has no effect
+Compiling XUD_EpFunctions.xc
+warning: subword-select option is deprecated and has no effect
+Compiling XUD_Ports.xc
+warning: subword-select option is deprecated and has no effect
+Compiling queue.xc
+warning: subword-select option is deprecated and has no effect
+Compiling trycatch_asm.S
+Compiling xcore_c_interrupt.S
+Compiling xcore_c_select.S
+Compiling swlock_asm.S
+Compiling write_sswitch_reg_blind.S
+Compiling lock.S
+Compiling fastmix.S
+Compiling XUD_EpFuncs.S
+Rebuild .build_Release/_obj.rsp
 Creating app_usb_sdc_ssdac_xSSDAC-SD-V2.xe
 Constraint check for tile[0]:
   Cores available:            8,   used:          7 .  OKAY
@@ -72,5 +1422,5 @@ xmap: Warning: port "XS1_PORT_1K" on tile[1] is not connected to any pins in thi
 xmap: Warning: port "XS1_PORT_1I" on tile[1] is not connected to any pins in this package.
 Build Complete
 
-21:16:39 Build Finished (took 25s.999ms)
+03:02:58 Build Finished (took 2m:53s.740ms)
 
