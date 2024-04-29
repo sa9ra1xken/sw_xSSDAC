@@ -1,6 +1,0 @@
-03:00:04 **** Incremental Build of configuration Default for project module_i2c_shared ****
-xmake -f .makefile all 
-"** Module only - only builds as part of application **"
-
-03:00:04 Build Finished (took 200ms)
-

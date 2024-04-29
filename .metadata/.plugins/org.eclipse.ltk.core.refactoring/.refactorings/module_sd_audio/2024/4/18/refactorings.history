@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;module_sd_audio/src/utils.c&apos; to &apos;utils.c.exclude&apos;" description="Rename resource &apos;utils.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/utils.c" name="utils.c.exclude" stamp="1714387609401" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;module_sd_audio/src/utils.h&apos; to &apos;utils.h.exclude&apos;" description="Rename resource &apos;utils.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/utils.h" name="utils.h.exclude" stamp="1714387636802" updateReferences="true"/>
-</session>
