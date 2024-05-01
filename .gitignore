@@ -1,8 +1,31 @@
-*/.build_*/*
-*/bin/*
-*.o
-*.xe
+.metadata
+# Tmp files & logs
+*.settings
+*.bin
+*.zip
+*.log
 *.vcd
-*.s
+*.swp
+*.*~
+*.xmt
+*.swo
+*.swn
+*~
+*.DS_Store
+
+# XMOS temp files
+**/.build*/*
+*/bin/*
+_build
+**/flash_bin_node*
+**/fw-*
+**/s2l-*
+**/spanning-xn-*
+**/target-xn*
 *.xi
+*.o
 *.i
+*.a
+
+# XMOS binaries
+#*.xe

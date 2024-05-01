@@ -10,6 +10,11 @@
 
 #define ENABLE_FUNCTION_SELECTOR
 
+<<<<<<< HEAD
 #define USE_4BIT_PORT
+=======
+#define SSH1106
+//#define SSD1306
+>>>>>>> master
 
 #endif /* CONSOLE_CONF_H_ */

@@ -23,16 +23,9 @@ int NextSample(){
 
     float valf;
 
-    //if (phase < M_PI) valf = -1.0;
-    //else valf = +1.0;
-
-    //valf = sinf(phase);
-
     valf = phase / 2 / M_PI - 0.5;
 
     if (phase > ( 2 * M_PI ) ) phase -= ( 2 * M_PI );
-    //int vali = valf * (float)(0x7fffffff);
     int vali = valf * (float)(0x3fffffff);
-    //printf ("\n%f %08x", valf, vali);
     return vali;
 }

@@ -1,11 +1,8 @@
 /***************
- *
- * OLED_SSD1306 - OLED SSD1306 (i2c) Interface for XMOS
- * Original source is OLED_SSD1306.cpp on https://github.com/askn37/OLED_SSD1306
- *
- * Modefied for XMOS audio application by Takaaki Sakurai
- *
-***************/
+ * @file    OLED_SSD1306.h
+ * @brief   Character display function for SSD1306 OLED controller
+ * @author  Takaaki Sakurai
+*/
 
 #ifndef __OLED_SSD1306_H_
 #define __OLED_SSD1306_H_
@@ -76,9 +73,7 @@
 
 #define SH1106_SET_PAGE_ADDRESS         0xB0
 
-
 void OLED_SSD1306_begin ();
-void OLED_SSD1306_write (unsigned char c);
 void OLED_SSD1306_put_string(int str_row, char string[]);
 
 typedef enum {
@@ -88,94 +83,4 @@ typedef enum {
 
 RC_SCROLL OLED_SSD1306_shift_left(int str_row);
 
-/* sakurai
-
-class OLED_SSD1306 : public Print {
-private :
-    long _speed;
-    uint8_t _addr;
-    uint8_t _o;
-    uint8_t _m;
-    uint8_t _x, _y, _isSleep;
-    bool sendOneCommand (uint8_t);
-    bool sendTwoCommand (uint8_t, uint8_t);
-
-public :
-    OLED_SSD1306 (void) {
-        _o = 0;
-        _m = 0x12;
-    }
-
-    virtual bool begin (const long = I2C_SPEED_FAST, const uint8_t = SSD1306_ADDR);
-    void setClock (long speed) { _speed = speed; Wire.setClock(_speed); }
-    virtual bool clear (void);
-    virtual bool newLine (const int, const int = 0);
-
-    using Print::write;
-    virtual size_t write (const uint8_t);
-    virtual size_t rawWrite (const uint8_t*);
-
-    inline void setOffsetMap (const uint8_t o, const uint8_t m) {
-        _o = o;
-        _m = m;
-    }
-
-    virtual inline void setCursor (const int x, const int y) {
-        _x = x;
-        _y = y;
-    }
-
-    virtual inline void moveCursor (const int x, const int y) {
-        _x += x;
-        _y += y;
-    }
-
-    virtual inline bool setContrust (const uint8_t v) {
-        return sendTwoCommand(SSD1306_SET_CONTRAST, v);
-    }
-
-    virtual inline bool sleep (bool f = true) {
-        _isSleep = f;
-        return sendOneCommand(f ? SSD1306_DISPLAY_OFF : SSD1306_DISPLAY_ON);
-    }
-
-    virtual inline bool invert (bool f = true) {
-        return sendOneCommand(f ? SSD1306_INVERT_DISPLAY : SSD1306_NORMAL_DISPLAY);
-    }
-
-    virtual inline bool mirror (bool f = true) {
-        return sendOneCommand(f ? SSD1306_SET_SEGMENT_REMAP_HIGH : SSD1306_SET_SEGMENT_REMAP_LOW);
-    }
-
-    virtual inline bool flip (bool f = true) {
-        return sendOneCommand(f ? SSD1306_SET_COM_SCAN_DEC : SSD1306_SET_COM_SCAN_INC);
-    }
-
-    virtual inline bool isSleep (void) {
-        return _isSleep;
-    }
-
-    virtual inline bool vOffset (const int y) {
-        return sendTwoCommand(SSD1306_SET_DISPLAY_OFFSET, y & 0x3F);
-    }
-};
-
-class OLED_M096P : public OLED_SSD1306 {
-public :
-    using OLED_SSD1306::OLED_SSD1306;
-    using super = OLED_SSD1306;
-    OLED_M096P (void) {
-        setOffsetMap(1, 0x12);
-    }
-};
-
-class OLED_M091P : public OLED_SSD1306 {
-public :
-    using OLED_SSD1306::OLED_SSD1306;
-    using super = OLED_SSD1306;
-    OLED_M091P (void) {
-        setOffsetMap(0, 2);
-    }
-};
-*/
 #endif

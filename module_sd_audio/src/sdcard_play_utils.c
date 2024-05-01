@@ -12,7 +12,7 @@
 
 bool ReadUnsigned(FIL *fp, UINT *dp, UINT size){
     //char buff[size];
-    char buff[8];
+    char buff[4];
     UINT ByteRead;
 
     /*FRESULT res = */f_read (fp, buff, size, &ByteRead);
