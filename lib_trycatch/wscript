@@ -1,0 +1,4 @@
+def use_module(bld):
+    bld.module(source=['src/trycatch.c', 'src/trycatch_asm.S'],
+               includes=['api', 'src'],
+               version='1.0.0')

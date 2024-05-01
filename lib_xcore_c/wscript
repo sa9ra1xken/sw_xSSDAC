@@ -1,0 +1,5 @@
+def use_module(bld):
+    bld.module(source=bld.path.ant_glob(['src/**/*.c', 'src/**/*.S']),
+               includes=['api', 'src'],
+               depends_on=['lib_trycatch(>=1.0.0)', 'lib_xassert(>=2.0.1)'],
+               version='2.0.0')
