@@ -54,8 +54,10 @@
 #endif
 
 /* below section added for ssdac by sakurai*/
-#include "ssdac.h"
+//#include "ssdac.h"
 #include "ssdac_conf.h"
+#include "console_conf.h"
+
 #ifdef _USB_AUDIO_USE_DISPLAY
 #include "display_control.h" //added for ssdac by sakurai
 #endif

@@ -33,298 +33,27 @@ SOFTWARE.
 #define DEBUG_UNIT SSDAC
 #include <debug_print.h>
 #include <xscope.h>
-#include "ssdac.h"//#include "decoupler.h"
-#include "SSDAC_MODE.h"
-#include "fir_interpolator.h"
+#include "dac_driver.h"
 #include "ring_buffer.h"
-//#include "audiohw.h"
-//#include "customdefines.h"
 #include "ssdac_conf.h"
-#include <do_sample_transfer.h>
-//#include "xc_ptr.h" required for tool version 15?
-//#include "display_control.h"
+#include "do_sample_transfer.h"
+#include "audio_io.h"
 
-//prototypes
-void AudioHwInit(/*chanend ?c_codec*/);
+/**********************************************************
+* Constants
+**********************************************************/
+#define RECURSION_DEPTH 9   /* 9 for 16 bit, 13 for 24bit, 17 for 32bit */
+#define ALPHA_q16    -17560  /* ((-2+SQRT(3))        = -0.2679491924) * 2^16 */
+#define BETA_q13     -17991  /* ((-3*(SQRT(3)-1)     = -2.1961524227) * 2^13 */
+#define GAMMA_q14     22812  /* ((+3*(2*SQRT(3)-3))  =  1.3923048454) * 2^14 */
+#define ALPHA_q24   -4495441    /* ((-2+SQRT(3))        = -0.2679491924) * 2^24 */
+#define BETA3_q24   -12281775   /* ((-3*(SQRT(3)-1)     = -2.1961524227) * 2^24 */
+#define GAMMA3_q24  7786333     /* ((+3*(2*SQRT(3)-3))  =  1.3923048454) * 2^24 */
 
-/* Configure audio hardware (clocking, CODECs etc) for a specific mClk/Sample frquency - run on every sample frequency change */
-void AudioHwConfig(unsigned samFreq, unsigned mClk, /*chanend ?c_codec,*/ unsigned dsdMode,
-        unsigned sampRes_DAC, unsigned sampRes_ADC);
-
-void ReleaseMute();
-
-void ClipIndicator(unsigned state);
-
-
-/* c_audioControl */
-#define SET_SAMPLE_FREQ         4
-#define SET_STREAM_FORMAT_OUT   8
-#define SET_STREAM_FORMAT_IN    9
-
-/*** Internal defines below here. NOT FOR MODIFICATION ***/
-
-#define AUDIO_STOP_FOR_DFU      (0x12345678)
-#define AUDIO_START_FROM_DFU    (0x87654321)
-#define AUDIO_REBOOT_FROM_DFU   (0xa5a5a5a5)
-
-#define DAC_BITS        16
-#define USE_PART_OUT    1
-
-on tile[AUDIO_IO_TILE]: port    tp5                             = PORT_TP5;
 on tile[AUDIO_IO_TILE]: port    tp23_solver                     = PORT_TP23_SOLVER;
 on tile[AUDIO_IO_TILE]: port    tp24_interpolator               = PORT_TP24_INTERPOLATOR;
 
-/**********************************************************
-* Port and clock declaration for ssdac
-**********************************************************/
-on tile[AUDIO_IO_TILE]: port    p_spidac_mclk_in                = PORT_SPIDAC_MCLK_IN;
-on tile[AUDIO_IO_TILE]: clock   clk_spi                         = XS1_CLKBLK_4;
-//TODO AN00246 on tile[AUDIO_IO_TILE]: clock   clk_spi                         = XS1_CLKBLK_1;
-on tile[AUDIO_IO_TILE]: buffered out port:32 p_data_left        = PORT_SPIDAC_LEFT;
-on tile[AUDIO_IO_TILE]: buffered out port:32 p_data_right       = PORT_SPIDAC_RIGHT;
-
-#if ( USEJKFF == 1)
-on tile[AUDIO_IO_TILE]: buffered out port:32 p_data_left_n      = PORT_SPIDAC_LEFT_N;
-on tile[AUDIO_IO_TILE]: buffered out port:32 p_data_right_n     = PORT_SPIDAC_RIGHT_N;
-#endif
-
-on tile[AUDIO_IO_TILE]: out port p_cs_n_0                       = PORT_SPIDAC_CS_N_0;
-on tile[AUDIO_IO_TILE]: out port p_cs_n_1                       = PORT_SPIDAC_CS_N_1;
-
-/**********************************************************
-* Port and clock congiguration for ssdac
-**********************************************************/
-void ConfigureSerialDacPorts(){
-
-    set_port_inv(p_cs_n_0);
-    set_port_inv(p_cs_n_1);
-
-#if (MCLK_PORARITY == 1)
-    set_port_inv(p_spidac_mclk_in);
-#endif
-
-    configure_clock_src(clk_spi, p_spidac_mclk_in);
-
-#if ( USEJKFF == 1)
-    configure_out_port_strobed_master(p_data_left, p_clock_en_p, clk_spi, 0x00);
-    configure_out_port(p_data_right, clk_spi, 0x00);
-    configure_out_port_strobed_master(p_data_left_n, p_clock_en_n, clk_spi, 0xff);
-    configure_out_port(p_data_right_n, clk_spi, 0xff);
-    set_port_no_inv(p_clock_en_p);
-    set_port_inv(p_clock_en_n);
-
-#else
-    configure_out_port_strobed_master(p_data_left, p_cs_n_0, clk_spi, 0x00);
-    configure_out_port_strobed_master(p_data_right, p_cs_n_1, clk_spi,0x00);
-
-#endif
-
-    start_clock(clk_spi);
-}
-
-/*************************************************
-* Oneshot indicator
-*************************************************/
-void oneshot_indicator(streaming chanend c_trigger){
-    unsigned now;
-    unsigned holdtime = TIME_100MS;
-    unsigned timeout;
-    timer t;
-
-    while (1){
-        t :> now;
-        timeout = now + holdtime;
-        /* evend handler */
-        select {
-            case t when timerafter(timeout) :> void:
-                ClipIndicator(0);
-                break;
-            case c_trigger :> holdtime:
-                /* destruct when 0 is sent */
-                if (holdtime == 0) return;
-                ClipIndicator(1);
-                break;
-        }
-    }
-}
-
-/**********************************************************
-* Serial DAC driver
-**********************************************************/
-void serial_dac_driver(streaming chanend c_in, unsigned space_count ){
-
-    unsigned time;
-    unsigned data_left, data_right;
-    unsigned left, right;
-
-    debug_printf("\nserial dac driver started with space count %d", space_count);
-
-    time = partout_timestamped(p_data_left, DAC_BITS, bitrev(0x80000000));
-    time = partout_timestamped(p_data_right, DAC_BITS, bitrev(0x80000000));
-    time += DAC_BITS + space_count;
-
-    ReleaseMute();
-
-    while (1){
-
-        /* Check for termination request */
-        if (stestct(c_in)){
-            if (sinct(c_in)== XS1_CT_END ){
-                return;
-             }
-        }
-
-        /* Receive data */
-        c_in :> left;
-        c_in :> right;
-
-        /* Add offset for unipola DAC */
-        data_left = bitrev(left + 0x80000000/*<<3*/);
-        data_right = bitrev(right + 0x80000000/*<<3*/);
-
-        /* Send data to DAC */
-        time += DAC_BITS + space_count;
-
-        partout_timed(p_data_left, DAC_BITS, data_left, time);
-        partout_timed(p_data_right, DAC_BITS, data_right, time);
-#if ( USEJKFF == 1)
-        partout_timed(p_data_left_n, DAC_BITS, ~data_left, time);
-        partout_timed(p_data_right_n, DAC_BITS, ~data_right, time);
-#endif
-
-    }
-}
-void serial_dac_driver_preserve(streaming chanend c_in, unsigned space_count ){
-
-    unsigned time;
-    unsigned data_left, data_right;
-    unsigned left, right;
-    timer t;
-
-    //debug_printf("\nserial dac driver started with space count %d", space_count);
-    //t :> time;
-    //time += TIME_500MS;
-    //t when timerafter(time) :> void;
-
-    /* activate CS */
-    //p_cs_n_0 <: 0 @ time;
-    //p_cs_n_1 <: 0;
-
-    /* clear DAC resister */
-    //partout_timed(p_data_left, DAC_BITS, bitrev(0x80000000), time);
-    //partout_timed(p_data_right, DAC_BITS, bitrev(0x80000000), time);
-
-    time = partout_timestamped(p_data_left, DAC_BITS, bitrev(0x80000000));
-    time = partout_timestamped(p_data_right, DAC_BITS, bitrev(0x80000000));
-
-    /* inactivate CE when all bit done */
-
-    time += DAC_BITS + space_count;
-
-    //p_cs_n_0 @ time <: 1;
-    //p_cs_n_1 @ time <: 1;
-
-    tp5 <: 1;
-    ReleaseMute();
-
-    while (1){
-
-        /* Check for termination request */
-        if (stestct(c_in)){
-            if (sinct(c_in)== XS1_CT_END ){
-                return;
-             }
-        }
-
-        /* Receive data */
-        c_in :> left;
-        c_in :> right;
-
-#define OFFSET_BINARY
-#ifdef OFFSET_BINARY
-        data_left = bitrev(left + 0x80000000);
-        data_right = bitrev(right + 0x80000000);
-#else
-        data_left = bitrev(left);
-        data_right = bitrev(right);
-#endif
-
-        /* activate CS and start data transmission when specified space period has erapsed
-         * (i.e., space_count is 8 for 24 clock per sample case */
-
-        time += space_count;
-
-        //p_cs_n_0        @ time  <: 0;           //activate CS at specified timing
-        //p_cs_n_1        @ time  <: 0;
-
-        partout_timed(p_data_left, DAC_BITS, data_left, time);
-        partout_timed(p_data_right, DAC_BITS, data_right, time);
-
-        /* inactivate CE when all bit done */
-
-        time += DAC_BITS;
-
-        //p_cs_n_0 @ time <: 1;
-        //p_cs_n_1 @ time <: 1;
-    }
-}
-
-/**********************************************************
-* Clipper
-**********************************************************/
-void clipper(streaming chanend c_in, streaming chanend c_out, streaming chanend ?c_error){
-
-    int left, right;
-
-    debug_printf("\nclipper started");
-
-    while (1){
-
-        /* Check for termination request */
-        if (stestct(c_in)){
-            if (sinct(c_in)== XS1_CT_END ){
-                soutct(c_out, XS1_CT_END);          // destrust serial dac driver
-                if (!isnull(c_error)) c_error <: 0; // destruct error indicatior
-                return;
-             }
-        }
-        c_in :> left;
-        c_in :> right;
-
-        int ovf = 0;
-
-        switch (left & 0x30000000){
-            case 0x10000000: // overflow check
-                left = 0x0fffffff;
-                ovf = 1;
-                break;
-            case 0x20000000: // underflow check
-                left = 0xf0000000;
-                ovf = 1;
-                break;
-        }
-
-        switch (right & 0x30000000){
-            case 0x10000000: // overflow check
-                right = 0x0fffffff;
-                ovf = 1;
-                break;
-            case 0x20000000: // underflow check
-                right = 0xf0000000;
-                ovf = 1;
-                break;
-        }
-
-        if (!isnull(c_error)){
-            if (ovf){
-                c_error <: TIME_100MS;
-            }
-        }
-
-        c_out <: (left<<3);
-        c_out <: (right<<3);
-    }
-}
+//extern unsigned master_clock_count;
 
 /**********************************************************
 * interpolator
@@ -332,16 +61,15 @@ void clipper(streaming chanend c_in, streaming chanend c_out, streaming chanend 
 void interpolator(
         streaming chanend c_spline_param,
         streaming chanend c_dac_data,
-        unsigned sample_rate)
+        /*unsigned sample_rate*/ unsigned exp_ss_factor)
 {
-    //unsigned sample_rate;
     unsigned ss_factor_bits;
     unsigned x1, x2, x3;
-    //int left, right;
     int la, lb, lc, ld, ra, rb, rc, rd;
 
     /* select super sampling factor according to audio sample rate */
-    switch (sample_rate){                                               /*(1)*/
+    /*
+    switch (sample_rate){
         case 384000:
             ss_factor_bits = 2;
             break;
@@ -360,12 +88,16 @@ void interpolator(
         case 88200:
             ss_factor_bits = 4;
             break;
-        default:
+        case 48000:
             ss_factor_bits = 5;
             break;
+        default:
+            ss_factor_bits = 6;
+            break;
     }
+    */
 
-    unsigned ss_factor = 1 << ss_factor_bits;
+    unsigned ss_factor = 1 << /*ss_factor_bits*/exp_ss_factor;
     unsigned msb_pos_x1 = 31 - 1 * ss_factor_bits;
     unsigned msb_pos_x2 = 31 - 2 * ss_factor_bits;
     unsigned msb_pos_x3 = 31 - 3 * ss_factor_bits;
@@ -373,9 +105,6 @@ void interpolator(
     /* clear dac registers */
     c_dac_data <: 0;
     c_dac_data <: 0;
-
-    /* release muting relay */
-    //ReleaseMute();
 
     while (1){                                                          /*(2)*/
 
@@ -429,8 +158,8 @@ void interpolator(
 {DAC_RETURN_CODE, unsigned} spline_solver(
         chanend c_in,
         streaming chanend c_spline_param,
-        chanend ?c_control,
-        unsigned sample_rate
+        chanend ?c_control
+        /*, unsigned sample_rate*/
     )
 {
     INTERPOLATION_MODE mode;
@@ -446,7 +175,7 @@ void interpolator(
 
     unsigned underflowWord = 0;
 
-    debug_printf("\nspline solver started, sps:%d", sample_rate);
+    debug_printf("\nspline solver started");
 
     while (1){                                                      /*(1)*/
 
@@ -536,278 +265,67 @@ void interpolator(
 }
 
 /**********************************************************
-* passthrough
+* Configure SSDAC
 **********************************************************/
-{DAC_RETURN_CODE, unsigned} passthrough(
-        chanend c_in,
-        streaming chanend c_dac_data,
-        chanend ?c_control
-    )
-{
-    INTERPOLATION_MODE mode;
-
-    unsigned underflowWord = 0;
-
-    debug_printf("\npassthrough started");
-
-    while (1){
-
-        /* Inquire mode controller for current mode. Terminate spline solver to start FIR filter */
-        tp23_solver <: 1;
-        if (!isnull(c_control)){
-            c_control <: _GET_INTERPOLATION_MODE;
-            c_control :> mode;
-            if ( mode != _STEP ){
-                soutct(c_dac_data, XS1_CT_END);     //kill serial DAC thread
-                return {_INTERPOLATION_MODE_CHANGE, 0};
-            }
-        }
-        tp23_solver <: 0;
-
-        unsigned command = DoSampleTransfer(c_in, underflowWord);
-        if (command){
-            soutct(c_dac_data, XS1_CT_END);     //kill serial DAC thread
-            return {_AUDIO_FORMAT_CHANGE, command};
-        }
-
-        tp24_interpolator <: 1;
-        c_dac_data <: samplesOut[0];
-        c_dac_data <: samplesOut[1];
-        tp24_interpolator <: 0;
-    }
-}
-
-unsigned rc;
-unsigned audio_cmd;
-
-/**********************************************************
-* SSDAC main function
-**********************************************************/
-unsigned start_ssdac(chanend c_in, unsigned sample_rate){
+{DAC_RETURN_CODE, unsigned} start_ssdac(chanend c_in, chanend ?c_control, unsigned sample_rate){
 
     streaming chan c_coefficients;
     streaming chan c_super_sample;
     streaming chan c_clipped;
     streaming chan c_over;
 
-    debug_printf("\ninitiating audio core with ssdac, sps:%d", sample_rate);
+    DAC_RETURN_CODE rc;
+    unsigned audio_cmd;
+
+    unsigned exp_ss_factor;
+    unsigned space_count;
+
+    switch (sample_rate){
+    case 44100:
+        exp_ss_factor = 6;
+        space_count = 1;
+        break;
+    case 48000:
+        exp_ss_factor = 5;
+        space_count = 8;
+        break;
+    case 88200:
+        exp_ss_factor = 5;
+        space_count = 1;
+        break;
+    case 96000:
+        exp_ss_factor = 4;
+        space_count = 8;
+        break;
+    case 176400:
+        exp_ss_factor = 4;
+        space_count = 1;
+        break;
+    case 192000:
+        exp_ss_factor = 3;
+        space_count = 8;
+        break;
+    case 352800:
+        exp_ss_factor = 3;
+        space_count = 1;
+        break;
+    case 384000:
+        exp_ss_factor = 2;
+        space_count = 8;
+        break;
+    }
+    debug_printf("\ninitiating ssdac, sps:%d, ss_factor:%d, space_count:%d",
+            sample_rate,
+            exp_ss_factor,
+            space_count);
 
     par
     {
-        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, null, sample_rate);
-        interpolator(c_coefficients , c_super_sample, sample_rate);
+        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, c_control);
+        interpolator(c_coefficients , c_super_sample, exp_ss_factor);
         clipper(c_super_sample, c_clipped, c_over);
-        serial_dac_driver(c_clipped, 8);
+        serial_dac_driver(c_clipped, space_count );
         oneshot_indicator(c_over);
     }
-    return audio_cmd;
+    return {rc, audio_cmd};
 }
-
-/**********************************************************
-* initiate FIR filter
-**********************************************************/
-unsigned start_fir(chanend c_in, unsigned sample_rate){
-
-    streaming chan c_super_sample;
-    streaming chan c_clipped;
-
-    debug_printf("\ninitiating audio core with fir_sinc8");
-
-    par
-    {
-        {rc, audio_cmd} = fir_sinc8(c_in, c_super_sample, null, sample_rate);            //FIR Filter
-        clipper(c_super_sample, c_clipped, null);
-        serial_dac_driver(c_clipped, 8+24*7);
-    }
-    return audio_cmd;
-}
-
-/**********************************************************
-* Configure audo_core
-**********************************************************/
-unsigned configure_audio_process(chanend c_in, chanend ?c_control, unsigned sample_rate, INTERPOLATION_MODE &cur_mode){
-
-    streaming chan c_coefficients;
-    streaming chan c_super_sample;
-    streaming chan c_clipped;
-    streaming chan c_over;
-
-    INTERPOLATION_MODE proposed_mode = _CUBIC;
-
-    debug_printf("\ninitializing ring buffer");
-
-    init_ring_buff();
-
-    do
-    {
-        //retleave interpolation_mode from user interface core
-        if (!isnull(c_control)){
-            c_control <: _GET_INTERPOLATION_MODE;
-            c_control :> proposed_mode;
-        }
-
-        debug_printf("\nverifying interpolator mode, sf:%d, proposed mode:%d",sample_rate, proposed_mode);
-
-        switch (proposed_mode)
-        {
-            case _SINC8:
-                if (sample_rate > 48000){
-                    cur_mode = _CUBIC;
-                    debug_printf("\nsample rate is too high to perform sinc8, fall back to cubic interporation");
-                }
-                else cur_mode = proposed_mode;
-                break;
-            case _SINC4:
-                if (sample_rate > 48000){
-                    cur_mode = _CUBIC;
-                    debug_printf("\nsample rate is too high to perform sinc4, fall back to cubic interporation");
-                }
-                else cur_mode = proposed_mode;
-                break;
-            case _CUBIC:
-                if (sample_rate > 192000){
-                    cur_mode = _STEP;
-                    debug_printf("\nsample rate is too high to perform spline solver, fall back to step interporation");
-                }
-                else cur_mode = proposed_mode;
-                break;
-
-
-            default:
-                cur_mode = proposed_mode;
-                break;
-        }
-        if (!isnull(c_control)){
-            c_control <: _SET_INTERPOLATION_MODE;    //inform mode controller of actualy applied mode
-            c_control <: cur_mode;
-        }
-        debug_printf("\nconfigureing interpolator, sf:%d, fixed:%d",sample_rate, cur_mode);
-        switch (cur_mode)
-        {
-            case _SINC8:
-                debug_printf("\nstarting sinc8");
-                par
-                {
-                    {rc, audio_cmd} = fir_sinc8(
-                            c_in, c_super_sample, c_control, sample_rate);
-                    clipper(c_super_sample, c_clipped, null);
-                    serial_dac_driver(c_clipped, 768 / 8 - 16 );
-                }
-                debug_printf("\nsinc8 ended, rc:%d, cmd:%d", rc, audio_cmd);
-                break;
-
-            case _SINC4:
-                debug_printf("\nstarting sinc4");
-                par
-                {
-                    {rc, audio_cmd} = fir_sinc4(
-                            c_in, c_super_sample, c_control, sample_rate);
-                    clipper(c_super_sample, c_clipped, null);
-                    serial_dac_driver(c_clipped, 768 / 4 - 16 );
-                }
-                debug_printf("\nsinc4 ended, rc:%d, cmd:%d", rc, audio_cmd);
-                break;
-
-            case _STEP:
-                debug_printf("\nstarting passthrough");
-                unsigned space_count;
-                switch (sample_rate){
-                    case 384000:
-                        space_count = 768 / 8 - 16;
-                        break;
-                    case 352800:
-                        space_count = 768 / 8 - 16;
-                        break;
-                    case 192000:
-                        space_count = 768 / 4 - 16;
-                        break;
-                    case 176400:
-                        space_count = 768 / 4 - 16;
-                        break;
-                    case 96000:
-                        space_count = 768 / 2 - 16;
-                        break;
-                    case 88200:
-                        space_count = 768 / 2 - 16;
-                        break;
-                    default:
-                        space_count = 768 - 16;
-                        break;
-                }
-                par
-                {
-                    {rc, audio_cmd} = passthrough(
-                            c_in, c_clipped, c_control);
-                    serial_dac_driver(c_clipped, space_count );
-                }
-                debug_printf("\npassthrough ended, rc:%d, cmd:%d", rc, audio_cmd);
-                break;
-
-            default:                                                            //performe cubic interpolation
-                debug_printf("\nstarting ssdac, mode:%d", cur_mode);
-                par
-                {
-                    {rc, audio_cmd} = spline_solver(
-                            c_in, c_coefficients, c_control, sample_rate);
-                    interpolator(c_coefficients, c_super_sample, sample_rate);
-                    clipper(c_super_sample, c_clipped, c_over);
-                    serial_dac_driver(c_clipped, 8);
-                    oneshot_indicator(c_over);
-                }
-                debug_printf("\nssdac ended, rc:%d, cmd:%d", rc, audio_cmd);
-                break;
-        }
-
-    } while ( rc == _INTERPOLATION_MODE_CHANGE);
-    return audio_cmd;
-}
-
-void ssdac_core(chanend c_in, chanend ?c_control)
-{
-    unsigned curSamFreq = DEFAULT_FREQ;
-    unsigned dsdMode = 0; //TODO
-    unsigned curSamRes_DAC = 16; //TODO
-    INTERPOLATION_MODE cur_interpolation_mode = _TBD;
-
-    unsigned command;
-    unsigned firstRun = 1;
-    AudioHwInit(/*null*/);
-    while(1)
-    {
-        debug_printf("\naudio hw config:%d", curSamFreq);
-        AudioHwConfig(curSamFreq, 0, /*null,*/ 0, 0, 0);
-
-        if(!firstRun)
-        {
-            /* TODO wait for good mclk instead of delay */
-            /* No delay for DFU modes */
-            if ((curSamFreq != AUDIO_REBOOT_FROM_DFU) && (curSamFreq != AUDIO_STOP_FOR_DFU) && command)
-            {
-                /* Handshake back */
-                outct(c_in, XS1_CT_END);
-            }
-        }
-        firstRun = 0;
-
-        //command = deliver(c_in,...);
-        command = configure_audio_process(c_in, c_control, curSamFreq, cur_interpolation_mode);
-
-        if (command == SET_SAMPLE_FREQ)
-        {
-            curSamFreq = inuint(c_in);
-            debug_printf("\naudio core received SET_SAMPLE_FREQ %d", curSamFreq);
-        }
-        else if(command == SET_STREAM_FORMAT_OUT)
-        {
-            /* Off = 0
-             * DOP = 1
-             * Native = 2
-             */
-            dsdMode = inuint(c_in);
-            curSamRes_DAC = inuint(c_in);
-            debug_printf("\naudio core received SET_STREAM_FORMAT_OUT %d", curSamRes_DAC);
-        }
-    }
-}
-
-

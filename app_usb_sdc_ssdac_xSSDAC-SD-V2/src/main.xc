@@ -47,6 +47,7 @@ SOFTWARE.
 #include "usb_buffer.h"
 #include "decouple.h"
 #include "audio.h"
+#include "audio_io.h"
 
 #include "clocking.h"
 
@@ -54,6 +55,8 @@ SOFTWARE.
 #include "qspi_access.h"
 #include "ssdac_conf.h"
 #include "ssdac.h"
+#include "console_conf.h"
+
 #include "sdcard_play.h"
 #include "display_control.h"
 #if _DAC_MODE_SELECTOR == _DAC_MODE_SELECTOR_EXPLORER
@@ -231,7 +234,7 @@ void config_audio_source(client interface qspi_access ? i, chanend c_audio, chan
         par
         {
             usb_audio_core(c_audio /*, null, null, dfuInterface*/ );
-            button_listener_core(config.value, c_play_control, c_dac_control );
+            button_listener_core(config.value, c_play_control/*null causes an exception*/, c_dac_control );
             display_control_core(i);
         }
         break;
@@ -268,7 +271,7 @@ int main()
         }
         on tile[AUDIO_IO_TILE]:{
             thread_speed();
-            ssdac_core(c_audio, c_dac_control );
+            audio_io(c_audio, c_dac_control );
         }
     }
     return 0;

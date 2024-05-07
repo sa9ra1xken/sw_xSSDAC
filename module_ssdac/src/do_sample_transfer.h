@@ -31,6 +31,8 @@ SOFTWARE.
 #ifndef DO_SAMPLE_TRANSFER_H_
 #define DO_SAMPLE_TRANSFER_H_
 
+#define UNDERFLOW_WORD  0
+
 static int samplesOut[NUM_SSDAC_CHAN];
 
 #pragma unsafe arrays

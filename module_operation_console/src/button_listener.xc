@@ -33,7 +33,9 @@ SOFTWARE.
 #include "button_listener.h"
 #include "display_control.h"
 #include "ssdac_conf.h"
-#include "SSDAC_MODE.h"
+//#include "SSDAC_MODE.h"
+#include "audio_io.h"
+
 #include <stdio.h>
 //#include <customdefines.h>
 #define DEBUG_UNIT HUMAN_INTERFACE
