@@ -7,7 +7,8 @@
 
 #ifndef FIR_INTERPOLATOR_H_
 #define FIR_INTERPOLATOR_H_
-#define UNDERFLOW_WORD  0
+
+//#define UNDERFLOW_WORD  0
 
 #define TAP_PER_THREAD (FIR_LEN / NUM_THREAD)
 #define START ( - ( FIR_LEN / 2 ) )
@@ -21,16 +22,14 @@ extern port     tp23_solver;
 extern port     tp24_interpolator;
 
 #define FIR_ENTITY(NAME, MODE, TAP)\
-{DAC_RETURN_CODE, unsigned} NAME (chanend c_in, streaming chanend c_out, chanend ?c_control, unsigned sample_rate)\
+{DAC_RETURN_CODE, unsigned} NAME (chanend c_in, streaming chanend c_out, chanend ?c_control)\
 {\
     int acc_l_msb[NUM_THREAD];\
     unsigned acc_l_lsb[NUM_THREAD];\
     int acc_r_msb[NUM_THREAD];\
     unsigned acc_r_lsb[NUM_THREAD];\
-    printf("\nfir_sinc4 started, sps:%d", sample_rate);\
+    printf("\nfir_oversampling started");\
     fflush(stdout);\
-\
-    ReleaseMute();\
 \
     while (1){\
 \
@@ -98,8 +97,8 @@ extern port     tp24_interpolator;
     }\
 }
 
-{DAC_RETURN_CODE, unsigned} fir_sinc8(chanend c_in, streaming chanend c_out, chanend ?c_control, unsigned sample_rate);
+{DAC_RETURN_CODE, unsigned} start_fir_sinc8(chanend c_in, chanend ? c_control, unsigned sample_rate);
 
-{DAC_RETURN_CODE, unsigned} fir_sinc4(chanend c_in, streaming chanend c_out, chanend ?c_control, unsigned sample_rate);
+{DAC_RETURN_CODE, unsigned} start_fir_sinc4(chanend c_in, chanend ? c_control, unsigned sample_rate);
 
 #endif /* FIR_INTERPOLATOR_H_ */

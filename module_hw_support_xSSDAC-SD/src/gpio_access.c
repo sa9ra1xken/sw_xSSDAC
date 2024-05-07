@@ -48,11 +48,3 @@ void set_gpio(unsigned bit, unsigned value)
 	p_gpio_out(port_shadow);             // Write back to port. Will make port an output if not already
 }
 
-/* Release noise muting relay */
-//void ReleaseMute(){
-//    set_gpio(P_GPIO_N_MUTE, 1);         // release muting
-//}
-
-//void ClipIndicator(unsigned state){
-//    set_gpio(P_GPIO_OVER, state);/
-//}

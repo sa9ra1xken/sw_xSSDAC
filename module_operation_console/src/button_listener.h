@@ -9,8 +9,6 @@
 #define CONSOLE_H_
 
 #include <xccompat.h>
-#include "SSDAC_MODE.h"
-
 
 typedef enum {
     _USB_DAC = 0,
@@ -37,15 +35,11 @@ typedef enum {
 } PLAY_COMMAND;
 
 unsigned QueryChannel(chanend ch, unsigned command);
+
 void button_listener_core(
         FUNCTION_SELECTOR func,
         NULLABLE_RESOURCE(chanend, c_play_control),
         NULLABLE_RESOURCE(chanend, c_dac_control)
         );
-void KeyScan();
-void SendBackTrackControl(chanend c_track_control);
-void HandleDacCommand(chanend c_control, DAC_COMMAND command);
-void HandlePlayCommand(chanend c_control, QUERY_TYPE type);
-
 
 #endif /* CONSOLE_H_ */

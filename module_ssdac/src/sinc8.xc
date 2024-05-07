@@ -29,29 +29,16 @@ SOFTWARE.
 
 #include <XS1.h>
 #include <stdio.h>
+#include "dac_driver.h"
 #include "ssdac.h"
-#include "SSDAC_MODE.h"
-//#include "audiohw.h"
 #include "ring_buffer.h"
-//#include "customdefines.h"
 #include "ssdac_conf.h"
 #include "do_sample_transfer.h"
+#define DEBUG_UNIT SSDAC
+#include <debug_print.h>
 #define FIR_LEN 48
 #define NUM_THREAD 4
 #include "fir_interpolator.h"
-
-//prototypes
-void AudioHwInit(/*chanend ?c_codec*/);
-
-/* Configure audio hardware (clocking, CODECs etc) for a specific mClk/Sample frquency - run on every sample frequency change */
-void AudioHwConfig(unsigned samFreq, unsigned mClk, /*chanend ?c_codec,*/ unsigned dsdMode,
-        unsigned sampRes_DAC, unsigned sampRes_ADC);
-
-void ReleaseMute();
-
-void ClipIndicator(unsigned state);
-
-
 #define OFFSET 31
 #define INTERPOLATION_FACTOR 8
 
@@ -122,3 +109,38 @@ const int fir_tap_sinc8_q30[OFFSET * 2 + 1][INTERPOLATION_FACTOR]={
 };
 
 FIR_ENTITY(fir_sinc8, _SINC8, fir_tap_sinc8_q30)
+
+/**********************************************************
+* Configure FIR interpoator of Sinc8
+**********************************************************/
+{DAC_RETURN_CODE, unsigned} start_fir_sinc8(chanend c_in, chanend ? c_control, unsigned sample_rate)
+{
+    streaming chan c_super_sample;
+    streaming chan c_clipped;
+
+    DAC_RETURN_CODE rc;
+    unsigned audio_cmd;
+
+    unsigned space_count;
+
+    switch (sample_rate){
+    case 44100:
+        space_count = 17 * 7 + 1;
+        break;
+    case 48000:
+        space_count = 24 * 3 + 8;
+        break;
+    }
+
+    debug_printf("\ninitiating audio core with fir_sinc8, space:%d", space_count);
+
+    par
+    {
+        {rc, audio_cmd} = fir_sinc8(c_in, c_super_sample, c_control);
+        clipper(c_super_sample, c_clipped, null);
+        serial_dac_driver(c_clipped, space_count);
+    }
+    return {rc, audio_cmd};
+}
+
+

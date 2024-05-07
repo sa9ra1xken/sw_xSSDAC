@@ -31,8 +31,9 @@ SOFTWARE.
 #include <xs1.h>
 #include <xclib.h>
 #include <print.h>
+//#include "ssdac.h"
 #include "ssdac_conf.h"
-#include "ssdac.h"
+#include "console_conf.h"
 //#include "customdefines.h"
 #include "decoupler.h"
 #include <stdio.h>
