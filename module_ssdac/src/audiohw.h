@@ -12,4 +12,6 @@ void AudioHwInit(chanend ?c_codec);
 void AudioHwConfig(unsigned samFreq, unsigned mClk, chanend ?c_codec, unsigned dsdMode,
         unsigned sampRes_DAC, unsigned sampRes_ADC);
 
+void ClipIndicator(unsigned state);
+
 #endif

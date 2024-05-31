@@ -329,7 +329,11 @@ FIR_ENTITY(fir_sinc4, _SINC4, fir_tap_sinc4_q30)
     par
     {
         {rc, audio_cmd} = fir_sinc4(c_in, c_super_sample, c_control);
-        clipper(c_super_sample, c_clipped, null);
+        clipper(c_super_sample, c_clipped
+#ifdef OVERLOAD_SIGNAL_VIA_CHANNEL
+                , null
+#endif
+        );
         serial_dac_driver(c_clipped, space_count);
     }
     return {rc, audio_cmd};

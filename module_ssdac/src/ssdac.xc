@@ -323,9 +323,13 @@ void interpolator(
     {
         {rc, audio_cmd} = spline_solver(c_in, c_coefficients, c_control);
         interpolator(c_coefficients , c_super_sample, exp_ss_factor);
-        clipper(c_super_sample, c_clipped, c_over);
+        clipper(c_super_sample, c_clipped
+#ifdef OVERLOAD_SIGNAL_VIA_CHANNEL
+                , c_over
+#endif
+        );
         serial_dac_driver(c_clipped, space_count );
-        oneshot_indicator(c_over);
+        //oneshot_indicator(c_over);
     }
     return {rc, audio_cmd};
 }

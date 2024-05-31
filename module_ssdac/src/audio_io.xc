@@ -158,41 +158,45 @@ void audio_io(chanend c_in, chanend ? c_control)
     unsigned firstRun = 1;
 
     AudioHwInit(null);
-    while(1)
-    {
-        debug_printf("\naudio hw config:%d", curSamFreq);
-        AudioHwConfig(curSamFreq, 0, null, 0, 0, 0);
-        debug_printf("\nmaster clock count:%d", master_clock_count);
 
-        if(!firstRun)
+    par{
+        oneshot_indicator();
+        while(1)
         {
-            /* TODO wait for good mclk instead of delay */
-            /* No delay for DFU modes */
-            if ((curSamFreq != AUDIO_REBOOT_FROM_DFU) && (curSamFreq != AUDIO_STOP_FOR_DFU) && command)
+            debug_printf("\naudio hw config:%d", curSamFreq);
+            AudioHwConfig(curSamFreq, 0, null, 0, 0, 0);
+            debug_printf("\nmaster clock count:%d", master_clock_count);
+
+            if(!firstRun)
             {
-                /* Handshake back */
-                outct(c_in, XS1_CT_END);
+                /* TODO wait for good mclk instead of delay */
+                /* No delay for DFU modes */
+                if ((curSamFreq != AUDIO_REBOOT_FROM_DFU) && (curSamFreq != AUDIO_STOP_FOR_DFU) && command)
+                {
+                    /* Handshake back */
+                    outct(c_in, XS1_CT_END);
+                }
             }
-        }
-        firstRun = 0;
+            firstRun = 0;
 
-        //command = deliver(c_in,...);
-        command = configure_interpolator(c_in, c_control, curSamFreq, cur_interpolation_mode);
+            //command = deliver(c_in,...);
+            command = configure_interpolator(c_in, c_control, curSamFreq, cur_interpolation_mode);
 
-        if (command == SET_SAMPLE_FREQ)
-        {
-            curSamFreq = inuint(c_in);
-            debug_printf("\naudio core received SET_SAMPLE_FREQ %d", curSamFreq);
-        }
-        else if(command == SET_STREAM_FORMAT_OUT)
-        {
-            /* Off = 0
-             * DOP = 1
-             * Native = 2
-             */
-            dsdMode = inuint(c_in);
-            curSamRes_DAC = inuint(c_in);
-            debug_printf("\naudio core received SET_STREAM_FORMAT_OUT %d", curSamRes_DAC);
+            if (command == SET_SAMPLE_FREQ)
+            {
+                curSamFreq = inuint(c_in);
+                debug_printf("\naudio core received SET_SAMPLE_FREQ %d", curSamFreq);
+            }
+            else if(command == SET_STREAM_FORMAT_OUT)
+            {
+                /* Off = 0
+                 * DOP = 1
+                 * Native = 2
+                 */
+                dsdMode = inuint(c_in);
+                curSamRes_DAC = inuint(c_in);
+                debug_printf("\naudio core received SET_STREAM_FORMAT_OUT %d", curSamRes_DAC);
+            }
         }
     }
 }

@@ -273,6 +273,9 @@ int main()
             thread_speed();
             audio_io(c_audio, c_dac_control );
         }
+        on tile[AUDIO_IO_TILE]:{
+
+        }
     }
     return 0;
 }

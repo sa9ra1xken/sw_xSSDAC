@@ -30,6 +30,6 @@
 
 #define BUS_MODE_4BIT
 
-//#define NUM_USB_CHAN_OUT (2)
+//#define OVERLOAD_SIGNAL_VIA_CHANNEL
 
 #endif /* SSDAC_CONF_H_ */

@@ -323,11 +323,10 @@ void sdcard_play(
             f_getcwd (&str, sizeof(str));
             if (strcmp(str, "0:/" )==0){
                 //state = IDLE;
-                track = 0;  //repeat from the biginning
+                track = 0;  //repeat from the beginning
             }
             else{
-                track = ClimbUp(
-                        )+1;
+                track = ClimbUp()+1;
             }
         }
         else if (attrib & AM_DIR)
