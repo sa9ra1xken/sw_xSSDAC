@@ -63,6 +63,7 @@ void interpolator(
         streaming chanend c_dac_data,
         /*unsigned sample_rate*/ unsigned exp_ss_factor)
 {
+    debug_printf("\ninterparator started (%d)",exp_ss_factor);
     unsigned ss_factor_bits;
     unsigned x1, x2, x3;
     int la, lb, lc, ld, ra, rb, rc, rd;
@@ -98,9 +99,9 @@ void interpolator(
     */
 
     unsigned ss_factor = 1 << /*ss_factor_bits*/exp_ss_factor;
-    unsigned msb_pos_x1 = 31 - 1 * ss_factor_bits;
-    unsigned msb_pos_x2 = 31 - 2 * ss_factor_bits;
-    unsigned msb_pos_x3 = 31 - 3 * ss_factor_bits;
+    unsigned msb_pos_x1 = 31 - 1 * /*ss_factor_bits*/ exp_ss_factor;
+    unsigned msb_pos_x2 = 31 - 2 * /*ss_factor_bits*/ exp_ss_factor;
+    unsigned msb_pos_x3 = 31 - 3 * /*ss_factor_bits*/ exp_ss_factor;
 
     /* clear dac registers */
     c_dac_data <: 0;
@@ -145,8 +146,8 @@ void interpolator(
             {upper_right, lower_right} = macs(ra<<1, x3 << msb_pos_x3, upper_right, lower_right );
 
             tp24_interpolator <: 1;
-            c_dac_data <: upper_left <<1;
-            c_dac_data <: upper_right <<1;
+            c_dac_data <: ( upper_left << 1);
+            c_dac_data <: ( upper_right << 1);
             tp24_interpolator <: 0;
         }
     }
@@ -267,7 +268,12 @@ void interpolator(
 /**********************************************************
 * Configure SSDAC
 **********************************************************/
-{DAC_RETURN_CODE, unsigned} start_ssdac(chanend c_in, chanend ?c_control, unsigned sample_rate){
+{DAC_RETURN_CODE, unsigned} start_ssdac(
+        chanend c_in,
+        chanend ?c_control,
+        unsigned sample_rate
+){
+    debug_printf("\nstarting ssdac, sample rate: %d",sample_rate);
 
     streaming chan c_coefficients;
     streaming chan c_super_sample;
@@ -314,10 +320,6 @@ void interpolator(
         space_count = 8;
         break;
     }
-    debug_printf("\ninitiating ssdac, sps:%d, ss_factor:%d, space_count:%d",
-            sample_rate,
-            exp_ss_factor,
-            space_count);
 
     par
     {

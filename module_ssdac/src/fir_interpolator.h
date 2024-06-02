@@ -28,7 +28,7 @@ extern port     tp24_interpolator;
     unsigned acc_l_lsb[NUM_THREAD];\
     int acc_r_msb[NUM_THREAD];\
     unsigned acc_r_lsb[NUM_THREAD];\
-    printf("\nfir_oversampling started");\
+    debug_printf("\nfir_oversampling started");\
     fflush(stdout);\
 \
     while (1){\

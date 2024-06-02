@@ -130,7 +130,7 @@ void ShowStreamFormat(int row){
     int freq = SampFreq / 1000;
     int freq_p = (SampFreq % 1000) /100;
     sprintf(stream_format_string,"%dch %d.%dksps %dbit\0", NumChan, freq, freq_p, SampRes);
-    printf("\n%s", stream_format_string);
+    //printf("\n%s", stream_format_string);
     OLED_SSD1306_put_string(row, stream_format_string);
     pause_counter = PAUSE_COUNT;
     state = _PAUSING;

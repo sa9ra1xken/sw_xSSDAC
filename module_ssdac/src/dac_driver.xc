@@ -131,33 +131,6 @@ void oneshot_indicator(){
     }
 }
 
-/*
-void set_display_control_flag(unsigned bitmask){
-    volatile unsigned * unsafe ptr ;
-    unsafe {
-        ptr = &display_control_flag;
-        *ptr |= bitmask ;
-    }
-}
-
-int test_display_control_flag(unsigned bitmask){
-    volatile unsigned * unsafe ptr ;
-    unsafe {
-        ptr = &display_control_flag;
-        return *ptr & bitmask ;
-    }
-}
-
-void clear_display_control_flag(unsigned bitmask){
-    volatile unsigned * unsafe ptr ;
-    unsafe {
-        ptr = &display_control_flag;
-        *ptr &= ~bitmask ;
-    }
-}
-*/
-
-
 /*************************************************
 * Oneshot indicator
 *************************************************/
@@ -215,14 +188,14 @@ void serial_dac_driver(streaming chanend c_in, unsigned space_count ){
         c_in :> right;
 
         /* Add offset for unipola DAC */
-        data_left = bitrev((left <<3) + 0x80000000);
-        data_right = bitrev((right <<3) + 0x80000000);
+        data_left = left + 0x80000000;
+        data_right = right + 0x80000000;
 
         /* Send data to DAC */
         time += DAC_BITS + space_count;
 
-        partout_timed(p_data_left, DAC_BITS, data_left, time);
-        partout_timed(p_data_right, DAC_BITS, data_right, time);
+        partout_timed(p_data_left, DAC_BITS, bitrev(data_left), time);
+        partout_timed(p_data_right, DAC_BITS, bitrev(data_right), time);
 #if ( USEJKFF == 1)
         partout_timed(p_data_left_n, DAC_BITS, ~data_left, time);
         partout_timed(p_data_right_n, DAC_BITS, ~data_right, time);
@@ -301,8 +274,8 @@ void clipper(
           }
       }
 #endif
-        c_out <: left;
-        c_out <: right;
+        c_out <: ( left << 3 );
+        c_out <: ( right << 3 );
     }
 }
 
