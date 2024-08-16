@@ -178,6 +178,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_oled_SSD1306/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_ssdac/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/module_flash_memory_server/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_logging/api}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/html}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/app_usb_sdc_ssdac_xSSDAC-SD-V2/html/search}&quot;"/>

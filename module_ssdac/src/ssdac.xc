@@ -64,7 +64,7 @@ void interpolator(
         /*unsigned sample_rate*/ unsigned exp_ss_factor)
 {
     debug_printf("\ninterparator started (%d)",exp_ss_factor);
-    unsigned ss_factor_bits;
+    //unsigned ss_factor_bits;
     unsigned x1, x2, x3;
     int la, lb, lc, ld, ra, rb, rc, rd;
 

@@ -96,52 +96,6 @@ unsigned QueryChannel(chanend ch, unsigned command){
     return reply;
 }
 
-void HandlePlayCommand(chanend c_control, QUERY_TYPE type){
-
-    switch (type){
-    case _PENDING_Q :
-        c_control <: play_command;
-        play_command = _PLAY_CMD_EMPTY;
-        break;
-
-    case _INPUT_Q :
-        play_command = _PLAY_CMD_EMPTY;
-        play_command_request = 1;
-        break;
-
-    case _CURRENT_Q :
-        unsigned temp;
-        p_key :> temp;
-        c_control <: temp;
-        break;
-    }
-}
-
-void SendBackTrackControl(chanend c_track_control){
-    if ( (play_command_request == 1) && ( play_command != _PLAY_CMD_EMPTY ) ){
-        c_track_control <: play_command;
-        play_command = _PLAY_CMD_EMPTY;
-        play_command_request = 0;
-    }
-}
-
-void HandleDacCommand(chanend c_control, DAC_COMMAND command){
-    switch (command){
-    case _GET_INTERPOLATION_MODE :
-        c_control <: fixed_intpol_mode;
-        break;
-    case _SET_INTERPOLATION_MODE :
-        INTERPOLATION_MODE temp;
-        c_control :> temp;
-        volatile INTERPOLATION_MODE * unsafe p;
-        unsafe {p = & fixed_intpol_mode; *p = temp; }
-        set_display_control_flag(BITMASK_SHOW_FIXED_INTPOL);
-        break;
-    default:
-        debug_printf("\nbutton listner received invalid command:%d",command );
-        break;
-    }
-}
 
 void SwitchConsoleMode(CONSOLE_MODE mode){
     unsafe {*p_console_mode = mode; }
@@ -214,7 +168,7 @@ void SwitchConsoleMode(CONSOLE_MODE mode){
         set_display_control_flag(BITMASK_SHOW_PROPOSED_INTPOL);
         break;
     case _BTN_7_DOWN:
-#ifdef ENABLE_FUNCTION_SELECTOR
+#if ENABLE_FUNCTION_SELECTOR == (1)
         SwitchConsoleMode(_FUNCTION_SELECTION);
 #else
         switch(_func){
@@ -365,6 +319,52 @@ void KeyScan(){
             KeyEvent(_BTN_7_DOWN);
             break;
         }
+    }
+}
+void HandlePlayCommand(chanend c_control, QUERY_TYPE type){
+
+    switch (type){
+    case _PENDING_Q :
+        c_control <: play_command;
+        play_command = _PLAY_CMD_EMPTY;
+        break;
+
+    case _INPUT_Q :
+        play_command = _PLAY_CMD_EMPTY;
+        play_command_request = 1;
+        break;
+
+    case _CURRENT_Q :
+        unsigned temp;
+        p_key :> temp;
+        c_control <: temp;
+        break;
+    }
+}
+
+void SendBackTrackControl(chanend c_track_control){
+    if ( (play_command_request == 1) && ( play_command != _PLAY_CMD_EMPTY ) ){
+        c_track_control <: play_command;
+        play_command = _PLAY_CMD_EMPTY;
+        play_command_request = 0;
+    }
+}
+
+void HandleDacCommand(chanend c_control, DAC_COMMAND command){
+    switch (command){
+    case _GET_INTERPOLATION_MODE :
+        c_control <: fixed_intpol_mode;
+        break;
+    case _SET_INTERPOLATION_MODE :
+        INTERPOLATION_MODE temp;
+        c_control :> temp;
+        volatile INTERPOLATION_MODE * unsafe p;
+        unsafe {p = & fixed_intpol_mode; *p = temp; }
+        set_display_control_flag(BITMASK_SHOW_FIXED_INTPOL);
+        break;
+    default:
+        debug_printf("\nbutton listner received invalid command:%d",command );
+        break;
     }
 }
 
