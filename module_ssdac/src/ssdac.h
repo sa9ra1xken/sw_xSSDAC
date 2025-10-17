@@ -9,4 +9,10 @@
         unsigned sample_rate
         );
 
+{DAC_RETURN_CODE, unsigned} start_coarse(
+        chanend c_in,
+        chanend ?c_control,
+        unsigned sample_rate
+        );
+
 #endif // _SSDAC_H_

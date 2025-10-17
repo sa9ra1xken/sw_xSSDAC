@@ -167,8 +167,13 @@ void SwitchConsoleMode(CONSOLE_MODE mode){
         unsafe  { *p_proposed_intpol_mode = _SINC8; }
         set_display_control_flag(BITMASK_SHOW_PROPOSED_INTPOL);
         break;
+    case _BTN_6_DOWN:
+        unsafe  { *p_proposed_intpol_mode = _COARSE; }
+        set_display_control_flag(BITMASK_SHOW_PROPOSED_INTPOL);
+        break;
+
     case _BTN_7_DOWN:
-#if ENABLE_FUNCTION_SELECTOR == (1)
+#ifdef ENABLE_FUNCTION_SELECTOR
         SwitchConsoleMode(_FUNCTION_SELECTION);
 #else
         switch(_func){

@@ -23,14 +23,15 @@ typedef enum {
 * Mode
 **********************************************************/
 typedef enum {
-    _TBD    =0,   //black
-    _STEP   =1,   //blue
-    _LINEAR =2,   //green
-    _QUAD   =3,   //cyan
-    _CUBIC  =4,   //red
-    _SINC4  =5,   //magenta
-    _SINC8  =6    //yellow
+    _STEP   = 0,   //blue
+    _LINEAR = 1,   //green
+    /*_QUAD*/ _COARSE   = 2,   //cyan
+    _CUBIC  = 3,   //red
+    _SINC4  = 4,   //magenta
+    _SINC8  = 5,    //yellow
+    _UNKNOWN = 6
 } INTERPOLATION_MODE;
+#define NUM_INTERPOLATION_MODE = _SINC8 + 1;
 
 /**********************************************************
 * return reason code

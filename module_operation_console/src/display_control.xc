@@ -208,9 +208,16 @@ void ShowInterpolationMode(int row, INTERPOLATION_MODE mode){
     case _LINEAR:
         OLED_SSD1306_put_string(row, "Linear          ");
         break;
+    /*
     case _QUAD:
         OLED_SSD1306_put_string(row, "Quad            ");
         break;
+    */
+
+    case _COARSE:
+        OLED_SSD1306_put_string(row, "Coarse          ");
+            break;
+
     case _CUBIC:
         OLED_SSD1306_put_string(row, "Cubic           ");
         break;

@@ -164,6 +164,8 @@ void interpolator(
     )
 {
     INTERPOLATION_MODE mode;
+    INTERPOLATION_MODE mode_d = _UNKNOWN;
+
     int el = 0, er = 0;
     unsigned discard;
     int fl[RECURSION_DEPTH], fr[RECURSION_DEPTH];
@@ -185,9 +187,17 @@ void interpolator(
         if (!isnull(c_control)){                                    /*(3)*/
             c_control <: _GET_INTERPOLATION_MODE;
             c_control :> mode;
-            if (( mode == _SINC4 )||( mode == _SINC8 )||( mode == _STEP )){
+            /*if (( mode == _SINC4 )||( mode == _SINC8 )||( mode == _STEP )){
                 soutct(c_spline_param, XS1_CT_END); //kill interpolator thread
                 return {_INTERPOLATION_MODE_CHANGE, 0};
+            }
+            */
+            if ((mode_d != _UNKNOWN)&&(mode_d != mode)){
+                soutct(c_spline_param, XS1_CT_END); //kill interpolator thread
+                return {_INTERPOLATION_MODE_CHANGE, 0};
+            }
+            else{
+                mode_d = mode;
             }
         }
         //tp23_solver <: 0;
@@ -335,3 +345,72 @@ void interpolator(
     }
     return {rc, audio_cmd};
 }
+
+{DAC_RETURN_CODE, unsigned} start_coarse(
+        chanend c_in,
+        chanend ?c_control,
+        unsigned sample_rate
+){
+    debug_printf("\nstarting coarse, sample rate: %d",sample_rate);
+
+    streaming chan c_coefficients;
+    streaming chan c_super_sample;
+    streaming chan c_clipped;
+    streaming chan c_over;
+
+    DAC_RETURN_CODE rc;
+    unsigned audio_cmd;
+
+    unsigned exp_ss_factor;
+    unsigned space_count;
+
+    switch (sample_rate){
+    case 44100:
+        exp_ss_factor = 5;
+        space_count = 18;
+        break;
+    case 48000:
+        exp_ss_factor = 5;
+        space_count = 8;
+        break;
+    case 88200:
+        exp_ss_factor = 4;
+        space_count = 18;
+        break;
+    case 96000:
+        exp_ss_factor = 4;
+        space_count = 8;
+        break;
+    case 176400:
+        exp_ss_factor = 3;
+        space_count = 18;
+        break;
+    case 192000:
+        exp_ss_factor = 3;
+        space_count = 8;
+        break;
+    case 352800:
+        exp_ss_factor = 2;
+        space_count = 18;
+        break;
+    case 384000:
+        exp_ss_factor = 2;
+        space_count = 8;
+        break;
+    }
+
+    par
+    {
+        {rc, audio_cmd} = spline_solver(c_in, c_coefficients, c_control);
+        interpolator(c_coefficients , c_super_sample, exp_ss_factor);
+        clipper(c_super_sample, c_clipped
+#ifdef OVERLOAD_SIGNAL_VIA_CHANNEL
+                , c_over
+#endif
+        );
+        serial_dac_driver(c_clipped, space_count );
+        //oneshot_indicator(c_over);
+    }
+    return {rc, audio_cmd};
+}
+

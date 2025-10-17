@@ -106,6 +106,13 @@ unsigned configure_interpolator(chanend c_in, chanend ?c_control, unsigned sampl
                 else cur_mode = proposed_mode;
                 break;
 
+            case _COARSE:
+                if (sample_rate > 192000){
+                    cur_mode = _STEP;
+                    debug_printf("\nsample rate is too high to perform spline solver, fall back to step interporation");
+                }
+                else cur_mode = proposed_mode;
+                break;
             default:
                 cur_mode = proposed_mode;
                 break;
@@ -135,11 +142,18 @@ unsigned configure_interpolator(chanend c_in, chanend ?c_control, unsigned sampl
                 debug_printf("\npassthrough ended, rc:%d, cmd:%d", rc, audio_cmd);
                 break;
 
-            default:    //performe cubic interpolation
-                unsigned exp_ss_factor;
-                debug_printf("\nstarting ssdac, mode:%d", cur_mode);
-                {rc, audio_cmd} = start_ssdac(c_in, c_control, sample_rate);
-                debug_printf("\nssdac ended, rc:%d, cmd:%d", rc, audio_cmd);
+            case _CUBIC:
+                   //unsigned exp_ss_factor;
+                   debug_printf("\nstarting ssdac, mode:%d", cur_mode);
+                   {rc, audio_cmd} = start_ssdac(c_in, c_control, sample_rate);
+                   debug_printf("\nssdac ended, rc:%d, cmd:%d", rc, audio_cmd);
+                   break;
+
+            case _COARSE:
+                //unsigned exp_ss_factor;
+                debug_printf("\nstarting coarse, mode:%d", cur_mode);
+                {rc, audio_cmd} = start_coarse(c_in, c_control, sample_rate);
+                debug_printf("\ncoarse ended, rc:%d, cmd:%d", rc, audio_cmd);
                 break;
         }
 
@@ -152,7 +166,7 @@ void audio_io(chanend c_in, chanend ? c_control)
     unsigned curSamFreq = DEFAULT_FREQ;
     unsigned dsdMode = 0; //TODO
     unsigned curSamRes_DAC = 16; //TODO
-    INTERPOLATION_MODE cur_interpolation_mode = _TBD;
+    INTERPOLATION_MODE cur_interpolation_mode = _CUBIC;
 
     unsigned command;
     unsigned firstRun = 1;
