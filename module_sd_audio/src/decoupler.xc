@@ -37,6 +37,20 @@ SOFTWARE.
 #include <xclib.h>
 //#include <stdbool.h>
 //#include "xc_ptr.h"
+#include "ssdac_conf.h"
+
+#define TIME_10MS   1000000
+#define TIME_20MS   2000000
+#define TIME_50MS   5000000
+#define TIME_100MS 10000000
+#define TIME_200MS 20000000
+#define TIME_500MS 50000000
+#define TIME_1SEC 100000000
+
+on tile[SDC_TILE]: out port led_underrun = PORT_TP35;
+on tile[SDC_TILE]: out port led_noslack = PORT_TP36;
+//timer timer_underrun;
+//unsigned led_timeout;
 
 unsigned int buff_id = 0;
 
@@ -124,9 +138,12 @@ void decoupler(
         chanend c_out
 #endif
 ){
+    timer t;
+    unsigned led_underrun_timeout;
+    unsigned led_noslack_timeout;
 
     DECOUP_STATE state;
-    state = EMPTY;
+    state = EMPTY; led_underrun <: 0;
     tx_id = 0;
     rx_id = 0;
 
@@ -137,6 +154,15 @@ void decoupler(
     digit = 0;
 
     while(1){
+        unsigned time;
+        t :> time;
+        if (time > led_underrun_timeout){
+            led_underrun <: 0;
+        }
+        if (time > led_noslack_timeout){
+            led_noslack <: 0;
+        }
+
         if (state == EMPTY){
             int tmp;
             c_buff_control :> tmp;
@@ -158,8 +184,24 @@ void decoupler(
                 if (byte_ptr == sm_byte_count[tx_id]){
                     byte_ptr = 0;
                     tx_id++;
-                    if ( tx_id == NUM_BUF) tx_id = 0;
-                    if ( tx_id == rx_id ) state = EMPTY;
+                    if (tx_id == NUM_BUF) tx_id = 0;
+
+                    unsigned rx_id_unwrap = rx_id;
+                    if ( rx_id < tx_id ) rx_id_unwrap = rx_id + NUM_BUF;
+
+                    if ( rx_id_unwrap - tx_id <= 0 ) {
+                        state = EMPTY;
+                        debug_printf("\nunderrun");
+                        led_underrun <: 1;
+                        t :> led_underrun_timeout;
+                        led_underrun_timeout += TIME_100MS;
+                    }
+                    if ( rx_id_unwrap - tx_id <= 1 ){
+                        debug_printf("\nno slack");
+                        led_noslack <: 1;
+                        t :> led_noslack_timeout;
+                        led_noslack_timeout += TIME_100MS;
+                    }
                 }
                 break;
             } // end of select

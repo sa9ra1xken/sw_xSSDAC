@@ -45,7 +45,10 @@ SOFTWARE.
 //#include "memory_sharing.h"
 
 #define TIME_10MS   1000000
+#define TIME_200MS 20000000
+#define TIME_300MS 30000000
 #define TIME_500MS 50000000
+#define TIME_LONG_PRESS TIME_300MS
 
 on tile[1] : in port p_key = PORT_HUMAN_INTERFACE;
 FUNCTION_SELECTOR _func;
@@ -273,31 +276,31 @@ void KeyScan(){
         case 0b1111111:
             switch (key_buff[2]&0b1111111){
               case 0b0111111:
-                  if (elapsed_time > TIME_500MS) KeyEvent(_BTN_1_LONG);
+                  if (elapsed_time > TIME_LONG_PRESS) KeyEvent(_BTN_1_LONG);
                   else KeyEvent(_BTN_1_SHORT);
                   break;
               case 0b1011111:
-                  if (elapsed_time > TIME_500MS) KeyEvent(_BTN_2_LONG);
+                  if (elapsed_time > TIME_LONG_PRESS) KeyEvent(_BTN_2_LONG);
                   else KeyEvent(_BTN_2_SHORT);
                   break;
               case 0b1101111:
-                  if (elapsed_time > TIME_500MS) KeyEvent(_BTN_3_LONG);
+                  if (elapsed_time > TIME_LONG_PRESS) KeyEvent(_BTN_3_LONG);
                   else KeyEvent(_BTN_3_SHORT);
                   break;
               case 0b1110111:
-                  if (elapsed_time > TIME_500MS) KeyEvent(_BTN_4_LONG);
+                  if (elapsed_time > TIME_LONG_PRESS) KeyEvent(_BTN_4_LONG);
                   else KeyEvent(_BTN_4_SHORT);
                   break;
               case 0b1111011:
-                  if (elapsed_time > TIME_500MS) KeyEvent(_BTN_5_LONG);
+                  if (elapsed_time > TIME_LONG_PRESS) KeyEvent(_BTN_5_LONG);
                   else KeyEvent(_BTN_5_SHORT);
                   break;
               case 0b1111101:
-                  if (elapsed_time > TIME_500MS) KeyEvent(_BTN_6_LONG);
+                  if (elapsed_time > TIME_LONG_PRESS) KeyEvent(_BTN_6_LONG);
                   else KeyEvent(_BTN_6_SHORT);
                   break;
               case 0b1111110:
-                  if (elapsed_time > TIME_500MS) KeyEvent(_BTN_7_LONG);
+                  if (elapsed_time > TIME_LONG_PRESS) KeyEvent(_BTN_7_LONG);
                   else KeyEvent(_BTN_7_SHORT);
                   break;
             }
