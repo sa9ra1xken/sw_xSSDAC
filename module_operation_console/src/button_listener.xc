@@ -350,6 +350,7 @@ void HandlePlayCommand(chanend c_control, QUERY_TYPE type){
     }
 }
 
+/*
 void SendBackTrackControl(chanend c_track_control){
     if ( (play_command_request == 1) && ( play_command != _PLAY_CMD_EMPTY ) ){
         c_track_control <: play_command;
@@ -357,6 +358,7 @@ void SendBackTrackControl(chanend c_track_control){
         play_command_request = 0;
     }
 }
+*/
 
 void HandleDacCommand(chanend c_control, DAC_COMMAND command){
     switch (command){
@@ -397,23 +399,28 @@ void button_listener_core(
 
     while (1)
     {
-        SendBackTrackControl(c_play_control);
+        //SendBackTrackControl(c_play_control);
+        if ( (play_command_request == 1) && ( play_command != _PLAY_CMD_EMPTY ) ){
+            c_play_control <: play_command;
+            play_command = _PLAY_CMD_EMPTY;
+            play_command_request = 0;
+        }
 
         select {
-
         case c_play_control :> query_type:
-                HandlePlayCommand(c_play_control, query_type);
-                break;
+            HandlePlayCommand(c_play_control, query_type);
+            break;
 
 #if _DAC_MODE_SELECTOR == _DAC_MODE_SELECTOR_BTN_LSTN
+
         case c_dac_control :> dac_command:
-                HandleDacCommand(c_dac_control, dac_command);
-                break;
+            HandleDacCommand(c_dac_control, dac_command);
+            break;
 #endif
         case t when timerafter(scan_time) :> void:
-                KeyScan();
-                scan_time += TIME_10MS;
-                break;
+            KeyScan();
+            scan_time += TIME_10MS;
+            break;
         }
     }
 }

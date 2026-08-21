@@ -68,7 +68,7 @@ fl_QuadDeviceSpec deviceSpecs[] =
     FL_QUADDEVICE_ISSI_IS25LQ032B,
 };
 
-void qspi_server(server interface qspi_access i){
+ void qspi_server(server interface qspi_access i){
 
     // Connect to the QuadSPI device using the quadflash library function fl_connectToDevice.
     if(fl_connectToDevice(ports, deviceSpecs, sizeof(deviceSpecs)/sizeof(fl_QuadDeviceSpec)) != 0)
@@ -118,15 +118,27 @@ void qspi_server(server interface qspi_access i){
             case i.write(int offset, int size, char buffer[]):
                 //debug_printf("\nquadflash write sync, %d, %d, %s", offset, size, buffer);
                 write_buffer = (char *)malloc(size);
-                memcpy(write_buffer, buffer, size );
-                write_count = size;
-                write_offset = offset;
-                write_pending = TRUE;
+                if (write_buffer != NULL) {
+                    memcpy(write_buffer, buffer, size);
+                    write_count = size;
+                    write_offset = offset;
+                    write_pending = TRUE;
+                }
+                else {
+                    debug_printf("\nwrite buffer allocation failed");
+                }
+
+                //memcpy(write_buffer, buffer, size );
+                //write_count = size;
+                //write_offset = offset;
+                //write_pending = TRUE;
+
                 break;
             case i.read(int offset, int size, char buffer[]):
                 char * read_buffer = (char *)malloc(size);
                 int rc2 = fl_readData(offset, size, read_buffer);
                 memcpy(buffer, read_buffer, size );
+                free(read_buffer);
                 break;
         }
     }
